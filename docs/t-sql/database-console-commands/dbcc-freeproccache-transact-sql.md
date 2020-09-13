@@ -40,13 +40,13 @@ Removes all elements from the plan cache, removes a specific plan from the plan 
 ## Syntax  
 Syntax for SQL Server:
 
-```sql
+```syntaxsql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
   
-```sql
+```syntaxsql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  

@@ -54,11 +54,10 @@ SET ARITHIGNORE OFF
   
  To view the current setting for this setting, run the following query.  
   
-```  
+```sql  
 DECLARE @ARITHIGNORE VARCHAR(3) = 'OFF';  
 IF ( (128 & @@OPTIONS) = 128 ) SET @ARITHIGNORE = 'ON';  
 SELECT @ARITHIGNORE AS ARITHIGNORE;  
-  
 ```  
   
 ## Permissions  
@@ -67,7 +66,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
 ## Examples  
  The following example demonstrates using both `SET ARITHIGNORE` settings with both types of query errors.  
   
-```  
+```sql  
 SET ARITHABORT OFF;  
 SET ANSI_WARNINGS OFF  
 GO  
@@ -96,12 +95,11 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example demonstrates the divide by zero and the overflow errors. This example does not return an error message for these errors because ARITHIGNORE is OFF.  
   
-```  
+```sql  
 -- SET ARITHIGNORE OFF and testing.  
 SET ARITHIGNORE OFF;  
 SELECT 1 / 0 AS DivideByZero;  
 SELECT CAST(256 AS TINYINT) AS Overflow;  
-  
 ```  
   
 ## See Also  

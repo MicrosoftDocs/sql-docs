@@ -44,9 +44,11 @@ DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]
 ```  
 Syntax for Azure SQL Warehouse and Parallel Data Warehouse:
 
-```sql  
+```syntaxsql
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -67,7 +69,7 @@ To drop clean buffers from the buffer pool and columnstore objects from the colu
 ## Result Sets  
 DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

@@ -126,88 +126,87 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
   
 ```sql  
 -- Transact-SQL.  
-go  
 -- Preparations.  
 SET NOCOUNT ON;  
 SET IMPLICIT_TRANSACTIONS OFF;  
-go  
+GO  
 WHILE (@@TranCount > 0) COMMIT TRANSACTION;  
-go  
+GO  
 IF (OBJECT_ID(N'dbo.t1',N'U') IS NOT NULL) DROP TABLE dbo.t1;  
-go  
-CREATE table dbo.t1 (a int);  
-go  
+GO  
+CREATE table dbo.t1 (a INT);  
+GO  
   
 PRINT N'-------- [Test A] ---- OFF ----';  
 PRINT N'[A.01] Now, SET IMPLICIT_TRANSACTIONS OFF.';  
 PRINT N'[A.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS OFF;  
-go  
+GO 
 INSERT INTO dbo.t1 VALUES (11);  
 INSERT INTO dbo.t1 VALUES (12);  
 PRINT N'[A.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO  
   
 PRINT N' ';  
 PRINT N'-------- [Test B] ---- ON ----';  
 PRINT N'[B.01] Now, SET IMPLICIT_TRANSACTIONS ON.';  
 PRINT N'[B.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS ON;  
-go  
+GO
 INSERT INTO dbo.t1 VALUES (21);  
 INSERT INTO dbo.t1 VALUES (22);  
 PRINT N'[B.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO 
 COMMIT TRANSACTION;  
 PRINT N'[B.04] @@TranCount, after COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO
   
 PRINT N' ';  
 PRINT N'-------- [Test C] ---- ON, then BEGIN TRAN ----';  
 PRINT N'[C.01] Now, SET IMPLICIT_TRANSACTIONS ON.';  
 PRINT N'[C.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS ON;  
-go  
+GO  
 BEGIN TRANSACTION;  
 INSERT INTO dbo.t1 VALUES (31);  
 INSERT INTO dbo.t1 VALUES (32);  
 PRINT N'[C.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO  
 COMMIT TRANSACTION;  
 PRINT N'[C.04] @@TranCount, after a COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 COMMIT TRANSACTION;  
 PRINT N'[C.05] @@TranCount, after another COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO
   
 PRINT N' ';  
 PRINT N'-------- [Test D] ---- ON, INSERT, BEGIN TRAN, INSERT ----';  
 PRINT N'[D.01] Now, SET IMPLICIT_TRANSACTIONS ON.';  
 PRINT N'[D.02] @@TranCount, at start, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 SET IMPLICIT_TRANSACTIONS ON;  
-go  
+GO 
 INSERT INTO dbo.t1 VALUES (41);  
 BEGIN TRANSACTION;  
 INSERT INTO dbo.t1 VALUES (42);  
 PRINT N'[D.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO 
 COMMIT TRANSACTION;  
 PRINT N'[D.04] @@TranCount, after a COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 COMMIT TRANSACTION;  
 PRINT N'[D.05] @@TranCount, after another COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
-go  
+GO
   
 -- Clean up.  
 SET IMPLICIT_TRANSACTIONS OFF;  
-go  
+GO  
 WHILE (@@TranCount > 0) COMMIT TRANSACTION;  
-go  
+GO  
 DROP TABLE dbo.t1;  
-go  
+GO
 ```  
   
  Next is the text output from the preceding Transact-SQL script.  
   
-```sql  
+```
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

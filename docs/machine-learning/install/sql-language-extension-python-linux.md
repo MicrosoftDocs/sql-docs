@@ -1,5 +1,5 @@
 ---
-title: Install your own runtime for Python for Linux
+title: Install your own Python language extension for Linux
 description: Learn how to install your own runtime for Python  for SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -15,18 +15,15 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 >[!Note] 
->Python language extension to bring your own runtime runs on SQL Server 2019 or later
+>Python language extension to bring your own runtime runs on SQL Server 2019 or later.
  
 This article describes how to install the language extension for running Python scripts with SQL Server. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
-
-
 
 The runtime language extension can be used with the following scenarios:
 
 + An installation of SQL Server with extensibility framework.
 
-+ An existing installation of Machine Learning Services with the mssql-mlservices-packages-py installed in Linux. The runtime can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
-.
++ An existing installation of Machine Learning Services with  mssql-mlservices-packages-py installed in Linux. The runtime can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 

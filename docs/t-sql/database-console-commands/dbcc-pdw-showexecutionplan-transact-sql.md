@@ -30,13 +30,14 @@ Syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]:
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
-[;]  
+[ ; ]  
 ```  
-Syntax Azure Parallel Data Warehouse:
+
+Syntax for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
-[;]  
+[ ; ]  
 ```  
 
 ## Arguments  

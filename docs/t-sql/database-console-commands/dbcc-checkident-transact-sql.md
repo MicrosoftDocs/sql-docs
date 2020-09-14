@@ -43,7 +43,6 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 ## Syntax  
   
 ```syntaxsql
-
 -- Syntax for SQL Server and Azure SQL Database  
 
 DBCC CHECKIDENT
@@ -54,7 +53,7 @@ DBCC CHECKIDENT
 [ WITH NO_INFOMSGS ]  
 ```  
 
-```console
+```syntaxsql
 -- Syntax for Azure Synapse Analytics
 DBCC CHECKIDENT   
  (   
@@ -62,8 +61,8 @@ DBCC CHECKIDENT
         [RESEED, new_reseed_value ]   
 )  
 [ WITH NO_INFOMSGS ]  
-
 ```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

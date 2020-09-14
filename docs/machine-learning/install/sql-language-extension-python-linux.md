@@ -89,7 +89,7 @@ RECONFIGURE WITH OVERRIDE;
 ## Update environment path for Linux
 
  Create the environment variable called PYTHONHOME point to the Python installation location
- For example: /usr/bin/python
+ For example: /usr/
 
 >[!Note] 
 >To use the Python runtime provided with SQL Machine Learning Services, set PYTHONHOME to /opt/mssql/mlservices/runtime/python
@@ -113,6 +113,18 @@ GO
 This script tests the functionality of the installed language extension. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
 
 ```sql
+EXEC sp_execute_external_script
+@language =N'mypython',
+@script=N'
+import sys
+print(sys.path)
+print(sys.version)
+print(sys.executable)
+```
+
+## Verify parameters and datasets of different data types
+
+```sql
 exec sp_execute_external_script
 @language = N'myPython',
 @script = N'
@@ -124,22 +136,6 @@ print(OutputDataSet);
 print(sys.version)',
 @input_data_1 = N'select 1, cast(1.4 as real), ''Hi'', cast(''1'' as bit)'
 WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit))
-```
-
-```sql
-**Results shown here**
-```
-
-## Verify parameters and datasets of different data types
-
-```sql
-EXEC sp_execute_external_script
-@language =N'mypython',
-@script=N'
-import sys
-print(sys.path)
-print(sys.version)
-print(sys.executable)
 ```
 
 ## Next steps

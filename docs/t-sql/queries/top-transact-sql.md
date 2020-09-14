@@ -41,7 +41,7 @@ Limits the rows returned in a query result set to a specified number of rows or 
 ]  
 ```  
 
-Following is syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
+Following is syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```sql  
 [   

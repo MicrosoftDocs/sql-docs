@@ -35,8 +35,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'   
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
@@ -59,7 +58,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
 ## Examples  
  In the following example, the service master key is backed up to a file.  
   
-```  
+```sql  
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
 ```  
   

@@ -51,7 +51,7 @@
     - name: PostgreSQL extension
       href: postgres-extension.md
     - name: Data Virtualization extension
-      href: extensions/data-virtualization-extension.md
+      href: extensions/data-virtualization-extension.md 
     - name: SQL Database Projects extension
       items:
       - name: SQL Database Projects extension overview

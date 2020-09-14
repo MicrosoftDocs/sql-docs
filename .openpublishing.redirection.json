@@ -58912,7 +58912,7 @@
     },
     {
       "source_path": "docs/azure-data-studio/azure-sql-managed-instance-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extension/azure-sql-managed-instance-extension",
+      "redirect_url": "/sql/azure-data-studio/extensions/azure-sql-managed-instance-extension",
       "redirect_document_id": true
       }
   ]

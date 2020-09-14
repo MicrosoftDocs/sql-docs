@@ -40,7 +40,7 @@ SERVERPROPERTY ( 'propertyname' )
 ```  
 
 > [!IMPORTANT]
-> The database engine version numbers for SQL Server and Azure SQL Database are not comparable with each other, and rather are internal build numbers for these separate products. The database engine for Azure SQL Database is based on the same code base as the SQL Server database engine. Most importantly, the database engine in Azure SQL Database always has the newest SQL database engine bits. Version 12 of Azure SQL Database is newer than version 15 of SQL Server.
+> The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] version numbers for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] are not comparable with each other, and represent internal build numbers for these separate products. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is based on the same code base as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Most importantly, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] always has the newest SQL [!INCLUDE[ssde_md](../../includes/ssde_md.md)] bits. Version 12 of [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is newer than version 15 of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

@@ -34,7 +34,7 @@ TRIM ( [ characters FROM ] string )
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```
 

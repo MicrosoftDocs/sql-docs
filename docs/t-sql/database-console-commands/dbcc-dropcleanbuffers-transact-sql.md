@@ -37,12 +37,12 @@ Removes all clean buffers from the buffer pool, and columnstore objects from the
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax
-Syntax for SQL Server:
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Syntax for Azure SQL Warehouse and Parallel Data Warehouse:
+Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -72,14 +72,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## Permissions  
-
-Applies to: SQL Server, Parallel Data Warehouse 
-
-- Requires membership in the **sysadmin** fixed server role.  
-
-Applies to: Azure SQL Data Warehouse
-
-- Requires membership in the DB_OWNER fixed server role.  
+Requires membership in the `sysadmin` fixed server role for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+Requires membership in the `DB_OWNER` fixed server role for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## See Also  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

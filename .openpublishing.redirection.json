@@ -58912,7 +58912,7 @@
     },
     {
       "source_path": "docs/azure-data-studio/data-virtualization-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extension/data-virtualization-extension",
+      "redirect_url": "/sql/azure-data-studio/extensions/data-virtualization-extension",
       "redirect_document_id": true
       }
   ]

@@ -249,7 +249,7 @@ Execute a character string
 
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
 [ { EXEC | EXECUTE } ]  

@@ -95,7 +95,7 @@ To use the Machine Learning extension for R package management in your database,
 
 To use the Machine Learning extension in Azure Data Studio, follow the steps below.
 
-1. Open the connections in Azure Data Studio.
+1. Open the **Connections** viewlet in Azure Data Studio.
 
 1. Right click on your server and select **Manage**.
 

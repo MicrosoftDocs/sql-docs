@@ -33,7 +33,7 @@ With the extension installed, you'll see a **Managed Instance** tab in Azure Dat
 
 The extension displays technical characteristics and some resource usage of your managed instance.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab1.png" alt-text="Managed Instance properties":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-5.png" alt-text="Managed Instance properties":::
 
 The top pane shows the following details:
 
@@ -46,7 +46,7 @@ The top pane shows the following details:
 
 When you select the second pane in the **Managed Instance** tab, you get recommendations and alerts to help optimize your managed instance.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab2.png" alt-text="Managed Instance recommendations":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-6.png" alt-text="Managed Instance recommendations":::
 
 You might see some of the following recommendations:
 
@@ -63,7 +63,7 @@ Periodically review these recommendations, investigate the root causes, and take
 
 The third pane in the **Managed Instance** tab shows you the state of database replicas in your managed instance.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab3.png" alt-text="Managed Instance replicas":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-7.png" alt-text="Managed Instance replicas":::
 
 On the general-purpose service tier, every database has a single (primary) replica. On a business-critical tier instance, every database has one primary and three secondary replicas, one of which is used for read-only workloads. On the **Replicas** pane, you can monitor the synchronization process and verify that all secondary replicas are synchronized with the primary replica.
 
@@ -71,7 +71,7 @@ On the general-purpose service tier, every database has a single (primary) repli
 
 The fourth pane of **Managed Instance** shows the most recent and relevant SQL error log entries.
 
-:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab4.png" alt-text="Managed Instance log entries":::
+:::image type="content" source="media/azure-sql-managed-instance-extension/azure-sql-managed-instance-extension-tab-8.png" alt-text="Managed Instance log entries":::
 
 Although your managed instance generates a large number of log entries, most of them are internal/system information. Also, some log entries show physical database names (`GUID` values) instead of actual logical database names.
 
@@ -90,7 +90,3 @@ For more information, see the [Code of Conduct FAQ][https://opensource.microsoft
 ## Next steps
 
 For more information, visit [the GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
-
-- [Code of conduct](https://opensource.microsoft.com/codeofconduct/)
-- [FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
-- [Email](mailto:opencode@microsoft.com)

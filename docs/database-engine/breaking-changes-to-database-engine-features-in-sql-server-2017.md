@@ -1,9 +1,9 @@
 ---
 title: "Database Engine: Breaking changes | Microsoft Docs"
 titleSuffix: "SQL Server 2017"
-description: "Breaking changes to Database Engine Features in SQL Server 2017"
+description: "Learn about changes that might break applications, scripts, or functionalities that are based on earlier versions of SQL Server."
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -17,7 +17,7 @@ ms.author: mikeray
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Breaking Changes to Database Engine Features in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
 
   This topic describes breaking changes in the [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
@@ -33,7 +33,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 
 - [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 
-- [Breaking Changes to Database Engine Features in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14)
+- [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14)
 
 #### Archived Documentation for Very Old Versions of SQL Server
 

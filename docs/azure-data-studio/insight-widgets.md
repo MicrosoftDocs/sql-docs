@@ -1,17 +1,16 @@
 ---
 title: Use Insight widgets to monitor servers and databases
-titleSuffix: Azure Data Studio
-description: Learn about insight widgets in Azure Data Studio
+description: Learn how to use Azure Data Studio insight widgets to turn queries that monitor servers and databases into insightful visualizations.
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: "05/14/2019"
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
-# Manage servers and databases with Insight widgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Manage servers and databases with Insight widgets in Azure Data Studio
 
 Insight widgets take the Transact-SQL (T-SQL) queries you use to monitor servers & databases and turns them into insightful visualizations.
 
@@ -30,7 +29,7 @@ To jump in and start creating different types of insight widgets, check out the 
 
 ## SQL Queries
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] tries to avoid introducing yet another language or heavy user interface so it tries to use T-SQL as much as possible with minimal JSON configuration. Configuring insight widgets with T-SQL leverages the countless number of existing sources of useful T-SQL queries that can be turned into insightful widgets.
+Azure Data Studio tries to avoid introducing yet another language or heavy user interface so it tries to use T-SQL as much as possible with minimal JSON configuration. Configuring insight widgets with T-SQL leverages the countless number of existing sources of useful T-SQL queries that can be turned into insightful widgets.
 
 Insight widgets are composed of one or two T-SQL queries:
 * *Insight widget query* is mandatory, and is the query that returns the data that appears in the widget.
@@ -38,7 +37,7 @@ Insight widgets are composed of one or two T-SQL queries:
 
 An insight widget query defines a dataset that renders a count, chart, or graph. Insight details query is used to list relevant insight detail information in a tabular format in the insight details panel. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] executes insight widget queries and maps the query result set to a chart's dataset then renders it. When users open up an insight's details, it executes the insight details query and prints out the result in a grid view within the dialog.
+Azure Data Studio executes insight widget queries and maps the query result set to a chart's dataset then renders it. When users open up an insight's details, it executes the insight details query and prints out the result in a grid view within the dialog.
 
 The basic idea is to write a T-SQL query in a way so it can be used as a dataset of a count, chart, and graph widget. 
 

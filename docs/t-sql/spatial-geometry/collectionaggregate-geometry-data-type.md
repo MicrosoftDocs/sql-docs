@@ -1,4 +1,5 @@
 ---
+description: "CollectionAggregate (geometry Data Type)"
 title: "CollectionAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -16,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # CollectionAggregate (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a **GeometryCollection** instance from a set of **geometry** types.
   
@@ -27,7 +28,9 @@ Creates a **GeometryCollection** instance from a set of **geometry** types.
 CollectionAggregate ( geometry_operand )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometry_operand*  
  Is a **geometry** type table column that represents a set of **geometry** objects to be listed in the **GeometryCollection** instance.  
   

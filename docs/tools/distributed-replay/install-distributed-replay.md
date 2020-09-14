@@ -1,20 +1,21 @@
 ---
 title: Install Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: "This article describes the ways you can install Distributed Replay: using the Installation Wizard, the Command Prompt window, or a configuration file."
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ---
 
 # Install Distributed Replay
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 You can install Distributed Replay in one of three ways:  
   
@@ -186,7 +187,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   Command-line values overwrite the values in the configuration file  
   
- For more information about how to use a configuration file, see [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+ For more information about how to use a configuration file, see [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md?view=sql-server-ver15).  
   
 > [!IMPORTANT]  
 >  After you install Distributed Replay you must create firewall rules on the controller and client computers, and grant each client computer permissions on the target server. For more information, see [Complete the Post-Installation Steps](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
@@ -205,18 +206,17 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  Following is an example on how to specify the configuration file at the command prompt:  
   
-```  
+```
 Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / ConfigurationFile=ConfigurationFile.INI\  
-```  
-  
-> [!NOTE]  
->  You must specify both passwords in the command line because you cannot configure them in the configuration file.  
-  
-## See Also  
- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
-  
-  
+```
+
+> [!NOTE]
+> You must specify both passwords in the command line because you cannot configure them in the configuration file.  
+
+## See Also
+
+- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)
+- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
+- [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

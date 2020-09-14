@@ -1,7 +1,8 @@
 ---
+description: "INSERT (Transact-SQL)"
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "04/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -29,12 +30,12 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], INSERT statement"
   - "inserting data"
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
@@ -126,7 +127,9 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set, also known as common table expression, defined within the scope of the INSERT statement. The result set is derived from a SELECT statement. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
@@ -193,7 +196,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 OUTPUT Clause  
  Returns inserted rows as part of the insert operation. The results can be returned to the processing application or inserted into a table or table variable for further processing.  
   
- The [OUTPUT clause](../../t-sql/queries/output-clause-transact-sql.md) is not supported in DML statements that reference local partitioned views, distributed partitioned views, or remote tables, or INSERT statements that contain an *execute_statement*. The OUTPUT INTO clause is not supported in INSERT statements that contain a \<dml_table_source> clause. 
+ The OUTPUT clause is not supported in DML statements that reference local partitioned views, distributed partitioned views, or remote tables, or INSERT statements that contain an *execute_statement*. The OUTPUT INTO clause is not supported in INSERT statements that contain a \<dml_table_source> clause. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Introduces the list or lists of data values to be inserted. There must be one data value for each column in *column_list*, if specified, or in the table. The value list must be enclosed in parentheses.  
@@ -297,37 +300,43 @@ For information specific to inserting data into SQL graph tables, see [INSERT (S
   
 ### Best Practices for Bulk Importing Data  
   
-#### Using INSERT INTO...SELECT to Bulk Import Data with Minimal Logging  
- You can use `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` to efficiently transfer a large number of rows from one table, such as a staging table, to another table with minimal logging. Minimal logging can improve the performance of the statement and reduce the possibility of the operation filling the available transaction log space during the transaction.  
+#### Using INSERT INTO...SELECT to Bulk Import data with minimal logging and parallelism 
+You can use `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` to efficiently transfer a large number of rows from one table, such as a staging table, to another table with minimal logging. Minimal logging can improve the performance of the statement and reduce the possibility of the operation filling the available transaction log space during the transaction.  
   
- Minimal logging for this statement has the following requirements:  
-  
+Minimal logging for this statement has the following requirements:  
 -   The recovery model of the database is set to simple or bulk-logged.  
-  
--   The target table is an empty or nonempty heap.  
-  
+-   The target table is an empty or non-empty heap.  
 -   The target table is not used in replication.  
-  
--   The TABLOCK hint is specified for the target table.  
+-   The `TABLOCK` hint is specified for the target table.  
   
 Rows that are inserted into a heap as the result of an insert action in a MERGE statement may also be minimally logged.  
   
- Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update lock, INSERT INTO...SELECT with the TABLOCK hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using parallel insert operations.  
+Unlike the `BULK INSERT` statement, which holds a less restrictive Bulk Update (BU) lock, `INSERT INTO … SELECT` with the `TABLOCK` hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using multiple insert operations executing simultaneously. 
+
+However, starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and database compatibility level 130, a single `INSERT INTO … SELECT` statement can be executed in parallel when inserting into heaps or clustered columnstore indexes (CCI). Parallel inserts are possible when using the `TABLOCK` hint.  
+
+Parallelism for the statement above has the following requirements, which are similar to the requirements for minimal logging:  
+-   The target table is an empty or non-empty heap.  
+-   The target table has a clustered columnstore index (CCI) but no non-clustered indexes.  
+-   The target table does not have an identity column with IDENTITY_INSERT set to OFF.  
+-   The `TABLOCK` hint is specified for the target table.
+
+For scenarios where requirements for minimal logging and parallel insert are met, both improvements will work together to ensure maximum throughput of your data load operations.
+
+> [!NOTE]
+> Inserts into local temporary tables (identified by the # prefix) and global temporary tables (identified by ## prefixes) are also enabled for parallelism using the TABLOCK hint.
   
-#### Using OPENROWSET and BULK to Bulk Import Data  
+#### Using OPENROWSET and BULK to Bulk Import data  
  The OPENROWSET function can accept the following table hints, which provide bulk-load optimizations with the INSERT statement:  
   
--   The TABLOCK hint can minimize the number of log records for the insert operation. The recovery model of the database must be set to simple or bulk-logged and the target table cannot be used in replication. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   The `TABLOCK` hint can minimize the number of log records for the insert operation. The recovery model of the database must be set to simple or bulk-logged and the target table cannot be used in replication. For more information, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   The `TABLOCK` hint can enable parallel insert operations. The target table is a heap or clustered columnstore index (CCI) with no non-clustered indexes, and the target table cannot have an identity column specified.  
+-   The `IGNORE_CONSTRAINTS` hint can temporarily disable FOREIGN KEY and CHECK constraint checking.  
+-   The `IGNORE_TRIGGERS` hint can temporarily disable trigger execution.  
+-   The `KEEPDEFAULTS` hint allows the insertion of a table column's default value, if any, instead of NULL when the data record lacks a value for the column.  
+-   The `KEEPIDENTITY` hint allows the identity values in the imported data file to be used for the identity column in the target table.  
   
--   The IGNORE_CONSTRAINTS hint can temporarily disable FOREIGN KEY and CHECK constraint checking.  
-  
--   The IGNORE_TRIGGERS hint can temporarily disable trigger execution.  
-  
--   The KEEPDEFAULTS hint allows the insertion of a table column's default value, if any, instead of NULL when the data record lacks a value for the column.  
-  
--   The KEEPIDENTITY hint allows the identity values in the imported data file to be used for the identity column in the target table.  
-  
-These optimizations are similar to those available with the BULK INSERT command. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+These optimizations are similar to those available with the `BULK INSERT` command. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## Data Types  
  When you insert rows, consider the following data type behavior:  
@@ -379,7 +388,7 @@ These optimizations are similar to those available with the BULK INSERT command.
  When an INSERT statement encounters an arithmetic error (overflow, divide by zero, or a domain error) occurring during expression evaluation, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] handles these errors as if SET ARITHABORT is set to ON. The batch is stopped, and an error message is returned. During expression evaluation when SET ARITHABORT and SET ANSI_WARNINGS are OFF, if an INSERT, DELETE or UPDATE statement encounters an arithmetic error, overflow, divide-by-zero, or a domain error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserts or updates a NULL value. If the target column is not nullable, the insert or update action fails and the user receives an error.  
   
 ## Interoperability  
- When an INSTEAD OF trigger is defined on INSERT actions against a table or view, the trigger executes instead of the INSERT statement. For more information about INSTEAD OF triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ When an `INSTEAD OF` trigger is defined on INSERT actions against a table or view, the trigger executes instead of the INSERT statement. For more information about `INSTEAD OF` triggers, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## Limitations and Restrictions  
  When you insert values into remote tables and not all values for all columns are specified, you must identify the columns to which the specified values are to be inserted.  
@@ -401,9 +410,9 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
 ### Permissions  
  INSERT permission is required on the target table.  
   
- INSERT permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_datawriter** fixed database roles, and the table owner. Members of the **sysadmin**, **db_owner**, and the **db_securityadmin** roles, and the table owner can transfer permissions to other users.  
+ INSERT permissions default to members of the `sysadmin` fixed server role, the `db_owner` and `db_datawriter` fixed database roles, and the table owner. Members of the `sysadmin`, `db_owner`, and the `db_securityadmin` roles, and the table owner can transfer permissions to other users.  
   
- To execute INSERT with the OPENROWSET function BULK option, you must be a member of the **sysadmin** fixed server role or of the **bulkadmin** fixed server role.  
+ To execute INSERT with the OPENROWSET function BULK option, you must be a member of the `sysadmin` fixed server role or of the `bulkadmin` fixed server role.  
   
 ##  <a name="InsertExamples"></a> Examples  
   
@@ -511,7 +520,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### G. Inserting data into user-defined type columns  

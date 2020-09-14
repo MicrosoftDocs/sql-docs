@@ -1,4 +1,5 @@
 ---
+description: "Move System Databases"
 title: "Move System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
@@ -29,7 +30,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Move System Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to move system databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Moving system databases may be useful in the following situations:  
   

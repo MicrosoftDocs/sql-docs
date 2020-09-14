@@ -1,4 +1,5 @@
 ---
+description: "ALTER ROUTE (Transact-SQL)"
 title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "removing routes"
   - "routes [Service Broker], modifying"
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifies route information for an existing route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -46,7 +47,10 @@ WITH
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *route_name*  
  Is the name of the route to change. Server, database, and schema names cannot be specified.  
   
@@ -77,7 +81,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='**_next\_hop\_address_'  
 
- For Azure SQL Database managed instance, `ADDRESS` must be local.
+ For Azure SQL Managed Instance, `ADDRESS` must be local.
 
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   

@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Getting Started with the Database Engine"
 title: "Tutorial: Getting Started with the Database Engine"
 ms.custom: seo-dt-2019
 ms.date: "06/21/2017"
@@ -19,7 +20,7 @@ ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Getting Started with the Database Engine
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 Welcome to the Getting Started with the [!INCLUDE[ssDE](../includes/ssde-md.md)] tutorial. This tutorial is intended for users who are new to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and who have installed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. This brief tutorial helps you get started using the [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   

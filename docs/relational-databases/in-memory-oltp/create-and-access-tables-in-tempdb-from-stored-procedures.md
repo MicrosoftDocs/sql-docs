@@ -1,5 +1,6 @@
 ---
 title: "Create & access tempdb tables from stored procedures"
+description: TempDB does not support creating and accessing tables from natively compiled stored procedures. Use memory-optimized tables, or table types and table variables.
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Access Tables in TempDB from Stored Procedures
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creating and accessing tables in TempDB from natively compiled stored procedures is not supported. Instead, use either memory-optimized tables with DURABILITY=SCHEMA_ONLY or use table types and table variables. 
 

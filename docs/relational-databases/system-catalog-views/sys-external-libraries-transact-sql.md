@@ -1,7 +1,8 @@
 ---
+description: "sys.external_libraries (Transact-SQL)"
 title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
@@ -18,15 +19,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # sys.external_libraries (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Supports the management of package libraries related to external runtimes such as R, Python, and Java.
 
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 and later.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 and later. On Azure SQL Managed Instance, R and Python are supported.
 
 ## sys.external_libraries
 
@@ -45,5 +46,5 @@ The catalog view sys.external_libraries lists a row for each external library th
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [Install new R packages on SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
-+ [Install new Python packages on SQL Server](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  
++ [Install new R packages](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
++ [Install new Python packages](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  

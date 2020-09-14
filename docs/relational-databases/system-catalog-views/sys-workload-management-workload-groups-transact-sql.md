@@ -1,4 +1,5 @@
 ---
+description: "sys.workload_management_workload_groups (Transact-SQL)"
 title: "sys.workload_management_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom:
 ms.date: 11/05/2019
@@ -11,12 +12,11 @@ dev_langs:
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # sys.workload_management_workload_groups (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
  Returns details for workload groups.  
   

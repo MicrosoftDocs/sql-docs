@@ -1,31 +1,40 @@
 ---
 title: "Python tutorial: Prepare data"
-description: In part two of this four-part tutorial series, you'll use Python to prepare data to predict ski rentals in SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In part two of this four-part tutorial series, you'll use Python to prepare data to predict ski rentals with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# Python Tutorial: Prepare data to train a linear regression model in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Python Tutorial: Prepare data to train a linear regression model with SQL machine learning
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-In part two of this four-part tutorial series, you'll prepare data from a SQL Server database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services or on Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll prepare data from a database using Python. Later in this series, you'll use this data to train and deploy a linear regression model in Python with Azure SQL Managed Instance Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Load the data from the SQL Server database into a **pandas** data frame
+> * Load the data from the database into a **pandas** data frame
 > * Prepare the data in Python by removing some columns
 
 In [part one](python-ski-rental-linear-regression.md), you learned how to restore the sample database.
 
 In [part three](python-ski-rental-linear-regression-train-model.md), you'll learn how to train a linear regression machine learning model in Python.
 
-In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
+In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll learn how to store the model in a database, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run on the server to make predictions based on new data.
 
 ## Prerequisites
 
@@ -33,9 +42,9 @@ In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll lear
 
 ## Explore and prepare the data
 
-To use the data in Python, you'll load the data from the SQL Server database into a pandas data frame.
+To use the data in Python, you'll load the data from the database into a pandas data frame.
 
-Create a new Python notebook in Azure Data Studio and run the following script. Replace `<SQL Server>` with your own SQL Server name.
+Create a new Python notebook in Azure Data Studio and run the script below. 
 
 The Python script below imports the dataset from the **dbo.rental_data** table in your database to a pandas data frame **df**.
 
@@ -48,7 +57,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
@@ -86,7 +95,7 @@ Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
 
 In part two of this tutorial series, you completed these steps:
 
-* Load the data from the SQL Server database into a **pandas** data frame
+* Load the data from the database into a **pandas** data frame
 * Prepare the data in Python by removing some columns
 
 To train a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:

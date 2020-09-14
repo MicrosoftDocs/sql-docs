@@ -1,8 +1,9 @@
 ---
+description: "Command (Visual C++ Syntax Index with #import)"
 title: "Command (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Command collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command (Visual C++ Syntax Index with #import)
 ## Methods  
@@ -54,4 +55,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)

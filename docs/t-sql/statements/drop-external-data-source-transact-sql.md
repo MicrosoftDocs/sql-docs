@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -10,12 +11,12 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   Removes a PolyBase external data source.  
   
@@ -36,7 +37,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
 ## Metadata  
  To view a list of external data sources use the sys.external_data_sources system view.  
   
-```  
+```sql  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
@@ -53,7 +54,7 @@ SELECT * FROM sys.external_data_sources;
   
 ### A. Using basic syntax  
   
-```  
+```sql  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: "Advanced Connection Properties"
 title: "Advanced Connection Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Advanced Connection Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Advanced Connection Properties** dialog box to add more connection parameters to the connection string.  

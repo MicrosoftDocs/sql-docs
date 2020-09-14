@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - Arguments (Transact-SQL)"
 title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2018"
@@ -17,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic documents the arguments that are described in the Syntax sections of the RESTORE {DATABASE|LOG} statement and of the associated set of auxiliary statements: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY, and RESTORE VERIFYONLY. Most of the arguments are supported by only a subset of these six statements. The support for each argument is indicated in the description of the argument.  
   
@@ -38,7 +39,9 @@ This topic documents the arguments that are described in the Syntax sections of 
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  DATABASE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
@@ -249,7 +252,7 @@ CREDENTIAL
  Used only when restoring a backup from the Microsoft Azure Blob storage service.  
   
 > [!NOTE]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell).  
   
  REPLACE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

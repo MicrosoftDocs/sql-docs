@@ -1,4 +1,5 @@
 ---
+description: "BREAK (Transact-SQL)"
 title: "BREAK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"
@@ -23,7 +24,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BREAK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 BREAK exits the current WHILE loop. If the current WHILE loop is nested inside another, BREAK exits only the current loop, and control is given to the next statement in the outer loop.
 

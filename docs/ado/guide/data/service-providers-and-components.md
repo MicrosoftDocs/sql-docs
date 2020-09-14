@@ -1,8 +1,9 @@
 ---
+description: "Service Providers and Components"
 title: "Service Providers and Components | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "ADO, OLE DB providers"
   - "service providers [ADO]"
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Service Providers and Components
 Service providers are components that extend the functionality of data providers by implementing extended interfaces that are not natively supported by the data store.  

@@ -1,4 +1,5 @@
 ---
+description: "SQLDescribeParam Function"
 title: "SQLDescribeParam Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -41,7 +42,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## Argument  
+## Arguments  
  *StatementHandle*  
  [Input] Statement handle.  
   

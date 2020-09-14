@@ -1,4 +1,5 @@
 ---
+description: "sp_procoption (Transact-SQL)"
 title: "sp_procoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_procoption"
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_procoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets or clears a stored procedure for automatic execution. A stored procedure that is set to automatic execution runs every time an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started.  
   

@@ -1,6 +1,6 @@
 ---
-title: "Fetching a Single Row with IRow | Microsoft Docs"
-description: "Fetching a single row using IRow interface of OLE DB Driver for SQL Server"
+title: "Fetch single row with IRow (OLE DB driver) | Microsoft Docs"
+description: IRow allows direct access to columns of a single row object. The IRow interface in the OLE DB Driver for SQL Server is simplified to increase performance.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "OLE DB rowsets, fetching"
   - "rowsets [OLE DB], fetching"
   - "OLE DB Driver for SQL Server, fetching"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
-# Fetching a Single Row with IRow
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Fetching a Single Row with IRow (OLE DB Driver)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

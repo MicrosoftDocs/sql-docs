@@ -1,4 +1,5 @@
 ---
+description: "Post-migration Validation and Optimization Guide"
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.date: 01/09/2019
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: "harinid"
 ---
 # Post-migration Validation and Optimization Guide
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 

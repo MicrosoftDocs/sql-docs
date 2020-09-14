@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xtp_system_memory_consumers (Transact-SQL)"
 title: "sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_system_memory_consumers dynamic management view"
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Reports system level memory consumers for [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. The memory for these consumers comes either from the default pool (when the allocation is in the context of a user thread) or from internal pool (if the allocation is in the context of a system thread).  
   

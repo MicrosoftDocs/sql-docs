@@ -1,5 +1,6 @@
 ---
 title: "Publish Data and Database Objects | Microsoft Docs"
+description: This article summarizes the tables and other database objects you can publish for replication in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -44,7 +45,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publish Data and Database Objects
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  
   
 |Database object|Snapshot replication and transactional replication|Merge replication|  

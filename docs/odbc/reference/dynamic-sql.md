@@ -1,7 +1,8 @@
 ---
+description: "Dynamic SQL"
 title: "Dynamic SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "06/03/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -33,4 +34,4 @@ Although static SQL works well in many situations, there is a class of applicati
   
 3.  The program can use the EXECUTE statement repeatedly, supplying different parameter values each time the dynamic statement is executed.  
   
- Prepared execution is still not the same as static SQL. In static SQL, the first four steps of processing an SQL statement take place at compile time. In prepared execution, these steps still take place at run time, but they are performed only once; execution of the plan takes place only when EXECUTE is called. This helps eliminate some of the performance disadvantages inherent in the architecture of dynamic SQL. The next illustration shows the differences between static SQL, dynamic SQL with immediate execution, and dynamic SQL with prepared execution.
+ Prepared execution is still not the same as static SQL. In static SQL, the first four steps of processing an SQL statement take place at compile time. In prepared execution, these steps still take place at run time, but they are performed only once; execution of the plan takes place only when EXECUTE is called. This helps eliminate some of the performance disadvantages inherent in the architecture of dynamic SQL.

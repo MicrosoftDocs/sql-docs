@@ -1,4 +1,5 @@
 ---
+description: "Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output"
 title: "Stored Procedure, ODBC CALL, Output"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Execute Stored Procedure with ODBC CALL and Process Output
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stored procedures can have integer return codes and output parameters. The return codes and output parameters are sent in the last packet from the server and are therefore not available to the application until the rowset is completely released. If the command returns multiple results, output parameter data is available when **IMultipleResults::GetResult** returns DB_S_NORESULT or the **IMultipleResults** interface is completely released, whichever occurs first.  
   

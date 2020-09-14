@@ -1,4 +1,5 @@
 ---
+description: "FILESTREAM Support"
 title: "FILESTREAM Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -15,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # FILESTREAM Support
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM provides a way to store and access large binary values, either through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or by direct access to the Windows file system. A large binary value is a value larger than 2 gigabytes (GB). For more information about enhanced FILESTREAM support, see [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   

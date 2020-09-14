@@ -1,5 +1,6 @@
 ---
 title: Start, stop, pause, resume, restart SQL Server services
+description: Find out how to start, stop, pause, resume, or restart various SQL Server services. See how to use Transact-SQL, PowerShell, and other tools for these actions.
 ms.custom: ""
 ms.date: "03/05/2020"
 ms.prod: sql
@@ -37,14 +38,14 @@ helpviewer_keywords:
   - "administering SQL Server, starting and stopping services"
   - "Management Studio [SQL Server], starting or stopping services"
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ""
 ---
 
 # Start, stop, pause, resume, restart SQL Server services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to start, stop, pause, resume, or restart the SQL Server Database Engine, the SQL Server Agent, or the SQL Server Browser service by using SQL Server Configuration Manager, SQL Server Management Studio (SSMS), net commands from a command prompt, Transact-SQL, or PowerShell.
 
@@ -108,7 +109,7 @@ On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Serve
 
 Because the SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a stand-alone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows. Here are the paths to the last four versions when Windows is installed on the C drive.  
 
-|||
+|Version|Path|
 |-|-|
 |SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|

@@ -1,4 +1,5 @@
 ---
+description: "Copy Package Objects"
 title: "Copy Package Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Copy Package Objects
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This topic describes how to copy control flow items, data flow items, and connection managers within a package or between packages.  

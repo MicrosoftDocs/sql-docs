@@ -1,4 +1,5 @@
 ---
+description: "Creating Script Files (OracleToSQL)"
 title: "Creating Script Files (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -11,9 +12,9 @@ helpviewer_keywords:
   - "Script File Creation, Non-Configurable option"
   - "Script File Creation, Script File Validation"
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Creating Script Files (OracleToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  

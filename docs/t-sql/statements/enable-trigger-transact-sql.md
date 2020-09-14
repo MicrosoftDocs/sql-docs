@@ -1,4 +1,5 @@
 ---
+description: "ENABLE TRIGGER (Transact-SQL)"
 title: "ENABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "DML triggers, enabling"
   - "ENABLE TRIGGER statement"
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ENABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Enables a DML, DDL, or logon trigger.  
   
@@ -37,7 +38,9 @@ ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *schema_name*  
 Is the name of the schema to which the trigger belongs. *schema_name* can't be specified for DDL or logon triggers.  
   

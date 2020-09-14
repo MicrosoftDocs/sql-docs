@@ -1,8 +1,8 @@
 ---
-title: "IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs"
-description: "IBCPSession::BCPColFmt (OLE DB)"
+title: "IBCPSession::BCPColFmt (OLE DB driver) | Microsoft Docs"
+description: Learn how the IBCPSession::BCPColFmt method creates a binding between program variables and SQL Server columns in OLE DB Driver for SQL Server.
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -13,11 +13,11 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPColFmt method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -54,10 +54,14 @@ HRESULT BCPColFmt(
   
 -   The maximum length of data per user-file field.  
   
--   The optional terminating byte sequence for each field.  
+-   The optional terminating byte sequence for each field <a href="#terminator_note"><sup>**1**</sup></a>.  
   
--   The length of the optional terminating byte sequence.  
+-   The length of the optional terminating byte sequence <a href="#terminator_note"><sup>**1**</sup></a>.  
   
+
+> [!IMPORTANT]
+> <b id="terminator_note">[1]:</b> Using the terminator sequence in scenarios where the data file code page is set to UTF-8 is not supported. In such scenarios, **pbUserDataTerm** must be set to `nullptr` and **cbUserDataTerm** must be set to `0`.
+
  Each call to **BCPColFmt** specifies the format for one user-file field. For example, to change the default settings for three fields in a five-field user data file, first call `BCPColumns(5)`, and then call **BCPColFmt** five times, with three of those calls setting your custom format. For the remaining two calls, set *eUserDataType* to BCP_TYPE_DEFAULT, and set *cbIndicator*, *cbUserData*, and *cbUserDataTerm* to 0, BCP_VARIABLE_LENGTH, and 0 respectively. This procedure copies all five columns, three with your customized format and two with the default format.  
   
 > [!NOTE]  
@@ -99,11 +103,11 @@ HRESULT BCPColFmt(
   
  If more than one means of specifying a user-file column length is used (such as a terminator and a length indicator, or a terminator and a maximum column length), bulk copy chooses the one that results in the least amount of data being copied.  
   
- The bulk copy API performs Unicode-to-MBCS character conversion as required. Care must be taken to ensure that both the terminator byte string and the length of the byte string are set correctly.  
-  
+ The bulk copy API performs Unicode-to-MBCS character conversion as required. Care must be taken to ensure that both the terminator byte string and the length of the byte string are set correctly. See the [Remarks](#remarks) section above for the UTF-8 encoding limitations.
+
  *cbUserDataTerm*[in]  
- The length, in bytes, of the terminator sequence to be used for the column. If no terminator is present or desired in the data, set this value to 0.  
-  
+ The length, in bytes, of the terminator sequence to be used for the column. If no terminator is present or desired in the data, set this value to 0. See the [Remarks](#remarks) section above for the UTF-8 encoding limitations.
+
  *idxServerCol*[in]  
  The ordinal position of the column in the database table. The first column number is 1. The ordinal position of a column is reported by **IColumnsInfo::GetColumnInfo** or similar methods. If this value is 0, bulk copy ignores the field in the data file.  
   
@@ -112,7 +116,7 @@ HRESULT BCPColFmt(
  The method succeeded.  
   
  E_FAIL  
- A provider specific error occurred, for detailed information use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider specific error occurred, for detailed information use the [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) method was not called before calling this method.  

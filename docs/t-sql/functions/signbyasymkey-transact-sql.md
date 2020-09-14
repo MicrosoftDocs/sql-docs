@@ -1,4 +1,5 @@
 ---
+description: "SIGNBYASYMKEY (Transact-SQL)"
 title: "SIGNBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -25,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SIGNBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Signs plaintext with an asymmetric key  
   
@@ -38,7 +39,9 @@ ms.author: vanto
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
  Is the ID of an asymmetric key in the current database. *Asym_Key_ID* is**int**.  
   

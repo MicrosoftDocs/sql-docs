@@ -1,4 +1,5 @@
 ---
+description: "Scalar Function Escape Sequence"
 title: "Scalar Function Escape Sequence | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

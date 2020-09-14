@@ -1,4 +1,5 @@
 ---
+description: "OPENROWSET (Transact-SQL)"
 title: "OPENROWSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2019"
@@ -22,13 +23,13 @@ helpviewer_keywords:
   - "OLE DB data sources [SQL Server]"
   - "ad hoc connection information"
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # OPENROWSET (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). The `OPENROWSET` function can be referenced in the FROM clause of a query as if it were a table name. The `OPENROWSET` function can also be referenced as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
 
@@ -40,9 +41,9 @@ Includes all connection information that is required to access remote data from 
 
 ```syntaxsql
 OPENROWSET
-( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
-   | 'provider_string' }
-   , {   <table_or_view> | 'query' }
+( { 'provider_name' 
+    , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
+    , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }
@@ -55,7 +56,7 @@ OPENROWSET
    [ , DATASOURCE = 'data_source_name' ]
 
    [ , ERRORFILE = 'file_name' ]
-   [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ , MAXERRORS = maximum_errors ]
 
    [ , FIRSTROW = first_row ]
@@ -68,8 +69,10 @@ OPENROWSET
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
-   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -231,7 +234,7 @@ SELECT *
 #### BULK Input file format options
 
 ##### CODEPAGE
-`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' }
 Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.
 
 > [!IMPORTANT]
@@ -533,6 +536,31 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
+Another way to access the storage account is via [Managed Identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). To do this follow the [Steps 1 thru 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) to configure SQL Database to access Storage via Managed Identity, after which you can implement code sample as below
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+INSERT INTO achievements with (TABLOCK) (id, description)
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
+```
 ### Additional Examples
 
 For additional examples that show using `INSERT...SELECT * FROM OPENROWSET(BULK...)`, see the following topics:

@@ -1,4 +1,5 @@
 ---
+description: "Mapping Deprecated Functions"
 title: "Mapping Deprecated Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,6 @@
 ---
 title: "Columns with a Name | Microsoft Docs"
+description: Learn about columns with a name in SQL queries and the specific conditions in which rowset columns with a name are mapped to the resulting XML.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: genemi
 ---
 # Columns with a Name
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  
   

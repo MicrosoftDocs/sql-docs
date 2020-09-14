@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE SET HADR (Transact-SQL)"
 title: "ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains the ALTER DATABASE syntax for setting [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] options on a secondary database. Only one SET HADR option is permitted per ALTER DATABASE statement. These options are supported only on secondary replicas.  
   
@@ -44,7 +45,9 @@ ALTER DATABASE database_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  Is the name of the secondary database to be modified.  
   

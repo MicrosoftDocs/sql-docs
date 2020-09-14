@@ -1,8 +1,9 @@
 ---
+description: "Parameter Object"
 title: "Parameter Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "Parameter object [ADO]"
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameter Object
-Represents a parameter or argument associated with a [Command](../../../ado/reference/ado-api/command-object-ado.md) object based on a parameterized query or stored procedure.  
+Represents a parameter or argument associated with a [Command](./command-object-ado.md) object based on a parameterized query or stored procedure.  
   
 ## Remarks  
  Many providers support parameterized commands. These are commands in which the desired action is defined once, but variables (or parameters) are used to alter some details of the command. For example, an SQL SELECT statement could use a parameter to define the matching criteria of a WHERE clause, and another to define the column name for a SORT BY clause.  
@@ -26,26 +27,26 @@ Represents a parameter or argument associated with a [Command](../../../ado/refe
   
  With the collections, methods, and properties of a **Parameter** object, you can do the following:  
   
--   Set or return the name of a parameter with the [Name](../../../ado/reference/ado-api/name-property-ado.md) property.  
+-   Set or return the name of a parameter with the [Name](./name-property-ado.md) property.  
   
--   Set or return the value of a parameter with the [Value](../../../ado/reference/ado-api/value-property-ado.md) property. **Value** is the default property of the **Parameter** object.  
+-   Set or return the value of a parameter with the [Value](./value-property-ado.md) property. **Value** is the default property of the **Parameter** object.  
   
--   Set or return parameter characteristics with the [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md), [Direction](../../../ado/reference/ado-api/direction-property.md), [Precision](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), and [Type](../../../ado/reference/ado-api/type-property-ado.md) properties.  
+-   Set or return parameter characteristics with the [Attributes](./attributes-property-ado.md), [Direction](./direction-property.md), [Precision](./precision-property-ado.md), [NumericScale](./numericscale-property-ado.md), [Size](./size-property-ado-parameter.md), and [Type](./type-property-ado.md) properties.  
   
--   Pass long binary or character data to a parameter with the [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) method.  
+-   Pass long binary or character data to a parameter with the [AppendChunk](./appendchunk-method-ado.md) method.  
   
--   Access provider-specific attributes by using the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Access provider-specific attributes by using the [Properties](./properties-collection-ado.md) collection.  
   
- If you know the names and properties of the parameters associated with the stored procedure or parameterized query you want to call, you can use the [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) method to create **Parameter** objects with the appropriate property settings and use the [Append](../../../ado/reference/ado-api/append-method-ado.md) method to add them to the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection. This lets you set and return parameter values without having to call the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method on the **Parameters** collection to retrieve the parameter information from the provider, a potentially resource-intensive operation.  
+ If you know the names and properties of the parameters associated with the stored procedure or parameterized query you want to call, you can use the [CreateParameter](./createparameter-method-ado.md) method to create **Parameter** objects with the appropriate property settings and use the [Append](./append-method-ado.md) method to add them to the [Parameters](./parameters-collection-ado.md) collection. This lets you set and return parameter values without having to call the [Refresh](./refresh-method-ado.md) method on the **Parameters** collection to retrieve the parameter information from the provider, a potentially resource-intensive operation.  
   
  The **Parameter** object is not safe for scripting.  
   
  This section contains the following topic.  
   
--   [Parameter Object Properties, Methods, and Events](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Parameter Object Properties, Methods, and Events](./parameter-object-properties-methods-and-events.md)  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)   
+ [CreateParameter Method (ADO)](./createparameter-method-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)   
+ [Properties Collection (ADO)](./properties-collection-ado.md)

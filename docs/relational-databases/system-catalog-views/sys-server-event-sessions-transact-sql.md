@@ -1,4 +1,5 @@
 ---
+description: "sys.server_event_sessions (Transact-SQL)"
 title: "sys.server_event_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.server_event_sessions catalog view"
   - "xe"
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sys.server_event_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists all the event session definitions that exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

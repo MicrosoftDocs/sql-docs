@@ -1,5 +1,6 @@
 ---
 title: "upper-case  Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery function upper-case(), that converts characters to their upper case equivalent.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on String Values - upper-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This function converts each character in *$arg* to its upper case equivalent. The Microsoft Windows binary case conversion for Unicode code points specifies how characters are converted to upper case. This standard is different than the mapping for Unicode standard code point standard.  
   
@@ -30,9 +31,8 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 ## Arguments  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|
 |*$arg*|The string value to be converted to upper case.|  
   
 ## Remarks  

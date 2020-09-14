@@ -1,4 +1,5 @@
 ---
+description: "sp_sequence_get_range (Transact-SQL)"
 title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "sequence number object, sp_sequence_get_range procedure"
   - "sp_sequence_get_range"
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns a range of sequence values from a sequence object. The sequence object generates and issues the number of values requested and provides the application with metadata related to the range.  
   

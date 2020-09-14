@@ -1,5 +1,6 @@
 ---
 title: "Encryption Hierarchy | Microsoft Docs"
+description: Learn about the hierarchical encryption and key management infrastructure in SQL Server. Store keys in an Extensible Key Management module.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Encryption Hierarchy
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encrypts data with a hierarchical encryption and key management infrastructure. Each layer encrypts the layer below it by using a combination of certificates, asymmetric keys, and symmetric keys. Asymmetric keys and symmetric keys can be stored outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an Extensible Key Management (EKM) module.  
   
  The following illustration shows that each layer of the encryption hierarchy encrypts the layer beneath it, and displays the most common encryption configurations. The access to the start of the hierarchy is usually protected by a password.  

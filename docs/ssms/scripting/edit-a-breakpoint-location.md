@@ -1,9 +1,10 @@
 ---
 title: Edit a Breakpoint Location
+description: Learn how to move a breakpoint in a Transact-SQL script file to another location in the script, or to a different script. 
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint location"
@@ -18,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Edit a Breakpoint Location
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The breakpoint location specifies the line and character where the breakpoint resides in a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file. You can edit the breakpoint location to move the breakpoint to another location in the script, or to a different script.
 

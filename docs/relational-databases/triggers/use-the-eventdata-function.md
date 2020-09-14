@@ -1,4 +1,5 @@
 ---
+description: "Use the EVENTDATA Function"
 title: "Use the EVENTDATA Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the EVENTDATA Function
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Information about an event that fires a DDL trigger is captured by using the EVENTDATA function. This function returns an **xml** value. The XML schema includes information about the following:  
   
 -   The time of the event.  

@@ -1,20 +1,19 @@
 ---
 title: Enable the five slowest queries sample widget
-titleSuffix: Azure Data Studio
 description: This tutorial demonstrates how to enable the five slowest queries sample widget on the database dashboard.
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
+ms.date: 06/01/2020
 ---
 
 # Tutorial: Add the *five slowest queries* sample widget to the database dashboard
 
-This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in sample widgets to the *database dashboard* to quickly view a database's five slowest queries. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. During this tutorial, you learn how to:
+This tutorial demonstrates the process of adding one of the built-in Azure Data Studio sample widgets to the *database dashboard* to quickly view a database's five slowest queries. You also learn how to view the details of the slow queries and query plans using Azure Data Studio features. During this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Store on a database
@@ -22,7 +21,7 @@ This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../i
 > * View details about the database's slowest queries
 > * View query execution plans for the slow queries
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] includes several insight widgets out-of-the-box. This tutorial shows how to add the *query-data-store-db-insight* widget, but the steps are basically the same for adding any widget.
+Azure Data Studio includes several insight widgets out-of-the-box. This tutorial shows how to add the *query-data-store-db-insight* widget, but the steps are basically the same for adding any widget.
 
 ## Prerequisites
 
@@ -112,9 +111,7 @@ To add the *slow queries widget* to your dashboard, edit the *dashboard.database
 
    ![Insight detail dialog](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Right-click the cell to the right of **query_sql_txt** in **Item Details** and click **Copy Cell**.
-
-4. Close the **Insights** pane.
+3. Close the **Insights** pane.
 
 ## View the query plan
 

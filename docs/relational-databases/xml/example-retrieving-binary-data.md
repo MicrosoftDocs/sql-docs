@@ -1,5 +1,6 @@
 ---
 title: "Example: Retrieving Binary Data | Microsoft Docs"
+description: View an example of an SQL query that retrieves binary data using the RAW and BINARY BASE64 options with the FOR XML clause.
 ms.custom: ""
 ms.date: 04/03/2020
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: jroth
 ---
 # Example: Retrieving Binary Data
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The following query returns the product photo stored in a **varbinary(max)** type column. The `BINARY BASE64` option is specified in the query to return the binary data in base64-encoded format.
 

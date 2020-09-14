@@ -1,7 +1,8 @@
 ---
+description: "sys.dm_os_job_object (Azure SQL Database)"
 title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2020"
+ms.date: "06/03/2020"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "language-reference"
@@ -21,7 +22,7 @@ ms.author: jrasnick
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_os_job_object (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Returns a single row describing the configuration of the job object that manages the SQL Server process, as well as certain resource consumption statistics at the job object level. Returns an empty set if SQL Server is not running in a job object.
 
@@ -29,7 +30,7 @@ A job object is a Windows construct that implements CPU, memory, and IO resource
   
 |Columns|Data Type|Description|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**int**|Specifies the portion of processor cycles that the SQL Server threads can use during each scheduling interval. The value is reported as a percentage of available cycles within a 10000-cycle scheduling interval. For example, the value 100 means that threads can use CPU cores are their full capacity.|
+|cpu_rate|**int**|Specifies the portion of processor cycles that SQL Server threads can use during each scheduling interval. The value is reported as a percentage of available cycles within a 10000-cycle scheduling interval, multiplied by the number of logical CPUs. For example, the value 800 on a SQL Server instance with 8 logical CPUs means that threads can use CPUs are their full capacity.|
 |cpu_affinity_mask|**bigint**|A bit mask describing which logical processors the SQL Server process can use within the processor group. For example, cpu_affinity_mask 255 (1111 1111 in binary) means that the first eight logical processors can be used. <br /><br />This column is provided for backwards compatibility. It does not report the processor group, and the reported value may be incorrect when a processor group contains more than 64 logical processors. Use the `process_physical_affinity` column to determine processor affinity instead.|
 |cpu_affinity_group|**int**|The number of the processor group that is used by SQL Server.|
 |memory_limit_mb|**bigint**|The maximum amount of committed memory, in MB, that all processes in the job object, including SQL Server, can use cumulatively.| 
@@ -46,10 +47,10 @@ A job object is a Windows construct that implements CPU, memory, and IO resource
 |process_physical_affinity|**nvarchar(3072)**|Bit masks describing which logical processors the SQL Server process can use in each processor group. The value in this column is formed by one or more value pairs, each enclosed in curly brackets. In each pair, the first value is the processor group number, and the second value is the affinity bit mask for that processor group. For example, the value `{{0,a}{1,2}}` means that the affinity mask for processor group `0` is `a` (`1010` in binary, indicating that processors 2 and 4 are used), and the affinity mask for processor group `1` is `2` (`10` in binary, indicating that processor 2 is used).|
   
 ## Permissions  
-On SQL Database Managed Instance, requires `VIEW SERVER STATE` permission. 
+On SQL Managed Instance, requires `VIEW SERVER STATE` permission. 
 On SQL Database, requires the `VIEW DATABASE STATE` permission in the database.  
  
 ## See Also  
 
-For information on Managed Instances, see [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+For information on Managed Instances, see [SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

@@ -1,8 +1,9 @@
 ---
+description: "Enabling a DLL to Run on DCOM"
 title: "Enabling a DLL to Run on DCOM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "DCOM in RDS [ADO]"
   - "business objects in RDS [ADO]"
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Enabling a DLL to Run on DCOM
 > [!IMPORTANT]
@@ -29,12 +30,10 @@ ms.author: genemi
   
      -or-  
   
-     Import the [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) object into the package.  
+     Import the [RDSServer.DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) object into the package.  
   
 3.  Set the Activation attribute for the package to **In the creator's process** (Library application).  
   
      To make the .dll accessible through DCOM and IIS on the same computer, you must set the component's Activation attribute in the Component Services MMC snap-in. After you set the attribute to **In the creator's process**, you will notice that an **Inproc** server key in the registry has been added that points to a Component Services surrogate .dll.  
   
  For more information about Component Services (or Microsoft Transaction Service, if you are using Windows NT) and how to perform these steps, visit the Microsoft Transaction Server Web site.
-
-

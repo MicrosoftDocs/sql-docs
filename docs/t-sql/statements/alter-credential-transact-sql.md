@@ -1,4 +1,5 @@
-﻿---
+---
+description: "ALTER CREDENTIAL (Transact-SQL)"
 title: "ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/07/2018
@@ -22,7 +23,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a credential.  
 
@@ -37,7 +38,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Specifies the name of the credential that is being altered.  
   

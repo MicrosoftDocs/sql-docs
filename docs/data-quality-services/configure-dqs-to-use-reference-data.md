@@ -1,4 +1,5 @@
 ---
+description: "Configure DQS to Use Reference Data"
 title: "Configure DQS to Use Reference Data"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: sawinark
 ---
 # Configure DQS to Use Reference Data
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Azure Marketplace or from direct online third-party reference data providers.  
 

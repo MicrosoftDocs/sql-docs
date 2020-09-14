@@ -1,4 +1,5 @@
 ---
+description: "sp_add_log_shipping_alert_job (Transact-SQL)"
 title: "sp_add_log_shipping_alert_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure checks to see if an alert job has been created on this server. If an alert job does not exist, this stored procedure creates the alert job and adds its job ID to the **log_shipping_monitor_alert** table. The alert job is enabled by default and runs on a schedule of once every two minutes.  
   

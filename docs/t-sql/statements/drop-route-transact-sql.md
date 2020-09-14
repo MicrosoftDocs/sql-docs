@@ -1,4 +1,5 @@
 ---
+description: "DROP ROUTE (Transact-SQL)"
 title: "DROP ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "routes [Service Broker], removing"
   - "removing routes"
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a route, deleting the information for the route from the routing table of the current database.  
   
@@ -37,7 +38,9 @@ DROP ROUTE route_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *route_name*  
  The name of the route to drop. Server, database, and schema names cannot be specified.  
   

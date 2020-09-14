@@ -1,4 +1,5 @@
 ---
+description: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
 title: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Alters a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
@@ -35,7 +36,10 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
     ENABLE | DISABLE  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Name of the Extensible Key Management provider.  
   

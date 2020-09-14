@@ -1,4 +1,5 @@
 ---
+description: "ALTER QUEUE (Transact-SQL)"
 title: "ALTER QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2016"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a queue.  
   
@@ -72,7 +73,10 @@ WITH
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* (object)  
  Is the name of the database that contains the queue to be changed. When no *database_name* is provided, this defaults to the current database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_trace_create (Transact-SQL)"
 title: "sp_trace_create (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_create"
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_trace_create (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a trace definition. The new trace will be in a stopped state.  
   

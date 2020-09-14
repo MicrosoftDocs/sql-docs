@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_compute_pools (Transact-SQL)"
 title: "sys.dm_exec_compute_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
@@ -16,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_compute_pools dynamic management view"
 ms.assetid: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.dm_exec_compute_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

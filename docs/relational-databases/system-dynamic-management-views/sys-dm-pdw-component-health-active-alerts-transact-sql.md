@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_component_health_active_alerts (Transact-SQL)"
 title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL"
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
@@ -7,12 +8,12 @@ ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_component_health_active_alerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Stores active alerts on [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] components.  
   

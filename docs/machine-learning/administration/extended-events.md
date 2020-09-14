@@ -2,16 +2,16 @@
 title: Monitor scripts with extended events
 description: Learn how to use extended events to monitor and troubleshooting operations related to the SQL Server Machine Learning Services, SQL Server Launchpad, and Python or R jobs external scripts.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Monitor Python and R scripts with extended events in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Learn how to use extended events to monitor and troubleshooting operations related to the SQL Server Machine Learning Services, SQL Server Launchpad, and Python or R jobs external scripts.
 
@@ -47,8 +47,8 @@ For more information about how to do this, see the section, [Collecting events f
 |satellite_abort_connection|Abort connection record||  
 |satellite_abort_received|Fires when an abort message is received over a satellite connection.||  
 |satellite_abort_sent|Fires when an abort message is sent over satellite connection.||  
-|satellite_authentication_completion|Fires when authentication completes for a connection over TCP or Namedpipe.||  
-|satellite_authorization_completion|Fires when authorization completes for a connection over TCP or Namedpipe.||  
+|satellite_authentication_completion|Fires when authentication completes for a connection over TCP or Named pipe.||  
+|satellite_authorization_completion|Fires when authorization completes for a connection over TCP or Named pipe.||  
 |satellite_cleanup|Fires when satellite calls cleanup.|Fired only from external process. See instructions on collecting events from external processes.|  
 |satellite_data_chunk_sent|Fires when the satellite connection finishes sending a single data chunk.|The event reports the number of rows sent, the number of columns, the number of SNI packets used and time elapsed in milliseconds while sending the chunk. The information can help you understand how much time is spent passing different types of data, and how many packets are used.|  
 |satellite_data_receive_completion|Fires when all the required data by a query is received over the satellite connection.|Fired only from external process. See instructions on collecting events from external processes.|  
@@ -96,7 +96,7 @@ SQL Server Machine Learning Services starts some services that run outside of th
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
-    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`.
 
 The configuration file must be named the same as the executable, using the format "[name].xevents.xml". In other words, the files must be named as follows:
 
@@ -106,7 +106,7 @@ The configuration file must be named the same as the executable, using the forma
 The configuration file itself has the following format:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  
@@ -129,7 +129,7 @@ The configuration file itself has the following format:
 The following example shows the definition of an event trace for the Launchpad service:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -152,7 +152,7 @@ The following example shows the definition of an event trace for the Launchpad s
 The following example shows the definition of an event trace for the BXLServer executable.
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

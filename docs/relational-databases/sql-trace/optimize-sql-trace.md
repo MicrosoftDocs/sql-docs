@@ -1,4 +1,5 @@
 ---
+description: "Optimize SQL Trace"
 title: "Optimize SQL Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Optimize SQL Trace
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Although running SQL Trace incurs a performance cost because it uses system resources to gather data, you can do many things to minimize it. To minimize the performance cost incurred by a trace, try the following:  
   
 -   Consider using the command prompt to run traces. Using a graphical user interface hinders performance. For more information, see [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  

@@ -1,4 +1,5 @@
 ---
+description: "restorehistory (Transact-SQL)"
 title: "restorehistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "restorehistory system table"
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # restorehistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each restore operation. This table is stored in the **msdb** database.  
   

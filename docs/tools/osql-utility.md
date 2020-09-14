@@ -1,5 +1,6 @@
 ---
 title: osql Utility
+description: In SQL Server, the osql utility lets you enter Transact-SQL statements, system procedures, and script files. Osql uses ODBC to communicate with the server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # osql Utility
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The **osql** utility allows you to enter [!INCLUDE[tsql](../includes/tsql-md.md)] statements, system procedures, and script files. This utility uses ODBC to communicate with the server.  
   

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Encryption | Microsoft Docs"
+description: Use these resources to understand how SQL Server uses encryption to enhance security for your databases.
 ms.custom: ""
 ms.date: "05/15/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Encryption
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Encryption is the process of obfuscating data by the use of a key or password. This can make the data useless without the corresponding decryption key or password. Encryption does not solve access control problems. However, it enhances security by limiting data loss even if access controls are bypassed. For example, if the database host computer is misconfigured and a hacker obtains sensitive data, that stolen information might be useless if it is encrypted.  
   
 

@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 title: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"
@@ -19,7 +20,7 @@ ms.author: vanto
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Changes the properties of a database scoped credential.  
   
@@ -33,7 +34,9 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Specifies the name of the database scoped credential that is being altered.  
   

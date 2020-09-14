@@ -1,8 +1,9 @@
 ---
+description: "ADO Events Model Example (VC++)"
 title: "ADO Events Model Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Visual C++ code examples [ADO], event model"
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Events Model Example (VC++)
-The Visual C++ section of [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md) gives a general description of how to instantiate the ADO event model. The following is a specific example of instantiating the event model within the environment created by the **#import** directive.  
+The Visual C++ section of [ADO Event Instantiation by Language](../../guide/data/ado-event-instantiation-by-language.md) gives a general description of how to instantiate the ADO event model. The following is a specific example of instantiating the event model within the environment created by the **#import** directive.  
   
  The general description uses **adoint.h** as a reference for method signatures. However, a few details in the general description change slightly as a result of using the **#import** directive:  
   

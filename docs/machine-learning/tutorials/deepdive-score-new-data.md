@@ -1,8 +1,8 @@
 ---
 title: Score data using RevoScaleR
-description: "RevoScaleR tutorial 8: How to score data using the R language on SQL Server."
+description: "Use the logistic regression model that you created in the previous tutorial to score another data set that uses the same independent variables as inputs."
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Score new data (SQL Server and RevoScaleR tutorial)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This is tutorial 8 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

@@ -1,4 +1,5 @@
 ---
+description: "Analysis Services Processing Task"
 title: "Analysis Services Processing Task | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Analysis Services Processing Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Processing task processes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects such as tabular models, cubes, dimensions, and mining models.  

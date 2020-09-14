@@ -1,4 +1,5 @@
 ---
+description: "Creating Variable Value Files (SybaseToSQL)"
 title: "Creating Variable Value Files (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ helpviewer_keywords:
   - "Sybase Console,Creating Variable Value Files"
   - "Sybase Console,Variable Value File Validation"
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Creating Variable Value Files (SybaseToSQL)
 Variable Value File is an XML file comprising the parameter values of commands like, the source or destination server name that frequently change from one server migration to another. When a large number of database migrations occur, multiple variable files for storing the value of each source server will be created and referenced in a master script file with the **-v** switch at command line. This helps in maintaining static values in a few script files with the variable values in multiple variable files.  

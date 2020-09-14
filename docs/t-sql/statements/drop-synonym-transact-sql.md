@@ -1,4 +1,5 @@
 ---
+description: "DROP SYNONYM (Transact-SQL)"
 title: "DROP SYNONYM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "DROP SYNONYM statement"
   - "dropping synonyms"
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP SYNONYM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a synonym from a specified schema.  
   
@@ -36,7 +37,9 @@ ms.author: carlrab
 DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   

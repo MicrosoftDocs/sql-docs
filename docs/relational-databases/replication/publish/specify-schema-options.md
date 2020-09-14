@@ -1,4 +1,5 @@
 ---
+description: "Specify Schema Options for SQL Server replication"
 title: "Specify Schema Options for SQL Server replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +19,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Specify Schema Options for SQL Server replication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to specify schema options in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. When you are publishing a table or view, you can control the object creation options that are replicated for the published object. You can set these option when the article is created, and you can also change them at a later time. If you do not explicitly specify these options for an article, a default set of options will be defined.  
   
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Manipulation - SELECT"
 title: "SELECT Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -110,7 +111,7 @@ FROM
   
  The NON VISUAL option in the subselect statement enables you to filter out members while keeping the true totals instead of filtered totals. This enables you to query for the top ten sales (persons/products/regions) and obtain the true total of sales for all queried members, instead of the total value of sales for the top ten returned. See the examples below for more information.  
   
- Calculated members can be included in \<SELECT query axis clause> whenever the connection was opened using the connection string parameter *subqueries=1*; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage. An example is provided on calculated members in subselects.  
+ Calculated members can be included in \<SELECT query axis clause> whenever the connection was opened using the connection string parameter *subqueries=1*; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage. An example is provided on calculated members in subselects.  
   
 ## Autoexists  
  When two or more attributes of the dimension are used in a SELECT statement, Analysis Services evaluates the attributes' expressions to make sure that the members of those attributes are properly confined to meet the criteria of all other attributes. For example, suppose you are working with attributes from the Geography dimension. If you have one expression that returns all members from the City attribute, and another expression that confines members from the Country attribute to all countries in Europe, then this will result in the City members being confined to only those cities that belong to countries in Europe. This characteristic of Analysis Services is called Autoexists and applies only to attributes in the same dimension. Autoexists only applies to attributes from the same dimension because it tries to prevent the dimension records excluded in one attribute expression from being included by the other attribute expressions. Autoexists can also be understood as the resulting intersection of the different attributes expressions over the dimension records. See the following examples below:  
@@ -153,9 +154,8 @@ FROM
   
  The obtained result set is:  
   
-|||||  
+|Model Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
@@ -205,9 +205,8 @@ FROM
   
  As per the following results, both sets (Top10SellingProducts, Preferred10Products) are the same  
   
-|||||  
+|Model Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
@@ -239,9 +238,8 @@ FROM
   
  Produces the following result set:  
   
-|||||  
+|Model Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -297,9 +295,8 @@ FROM
   
  Produces the following result set:  
   
-|||||  
+|Model Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -326,14 +323,13 @@ FROM
   
  The following result set now shows the shallow behavior of Autoexists.  
   
-|||||  
+|Model Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
+ Autoexists behavior can be modified by using the AUTOEXISTS=[1|2|3] parameter in the connection string; see [Supported XMLA Properties &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) and <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> for parameter usage.  
   
 ## Examples  
  The following example returns the sum of the `Measures.[Order Quantity]` member, aggregated over the first eight months of calendar year 2003 that are contained in the `Date` dimension, from the **Adventure Works** cube.  
@@ -369,9 +365,8 @@ WHERE
   
  Produces the following results:  
   
-|||||||  
+|Business Type + Category|All Products|Accessories|Bikes|Clothing|Components|  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -393,9 +388,8 @@ WHERE
   
  Produces the following results:  
   
-|||||  
+|Business Type + Category|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**Clothing**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -420,9 +414,8 @@ WHERE
   
  The above query produces the following results:  
   
-|||||  
+|Business Type + Category|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -451,9 +444,8 @@ WHERE
   
  The above query produces the following results:  
   
-|||||  
-|-|-|-|-|  
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
+|-|-|-|-|  
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
 ## See Also  

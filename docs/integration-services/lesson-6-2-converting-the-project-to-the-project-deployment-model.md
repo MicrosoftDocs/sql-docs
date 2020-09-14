@@ -1,4 +1,5 @@
 ---
+description: "Lesson 6-2: Convert the project to the Project Deployment Model"
 title: "Step 2: Convert the project to the Project Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 6-2: Convert the project to the Project Deployment Model
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

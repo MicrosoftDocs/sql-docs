@@ -2,20 +2,20 @@
 title: Manage with Resource Governor
 description: Learn how to use Resource Governor to manage CPU, physical IO, and memory resources allocation for Python and R workloads in SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/02/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 08/06/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Manage Python and R workloads with Resource Governor in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Learn how to use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage CPU, physical IO, and memory resources allocation for Python and R workloads in SQL Server Machine Learning Services.
 
-Machine learning algorithms in Python and R are typically compute intensive. Depending on your workload priorities, you might need to increase or decrease the resources available for Machine Learning Services.
+Machine learning algorithms in Python and R are computed intensive. Depending on your workload priorities, you might need to increase or decrease the resources available for Machine Learning Services.
 
 For more general information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 
@@ -28,11 +28,11 @@ By default, the external script runtimes for machine learning are limited to no 
 
 ## Manage resources with Resource Governor
  
-By default, external processes use up to 20% of total host memory on the local server. You can modify the default resource pool to make server-wide changes, with R and Python processes utilizing whatever capacity you make available to external processes.
+By default, external processes use up to 20% of total host memory on the local server. You can modify the default resource pool to make server-wide changes, with R and Python processes using whatever capacity you make available to external processes.
 
-Alternatively, you can create custom **external resource pools**, with associated workload groups and classifiers, to determine resource allocation for requests originating from specific programs, hosts, or other criteria that you provide. An external resource pool is a type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
+Optionally, you can create custom **external resource pools**, with associated workload groups and classifiers, to determine resource allocation for requests originating from specific programs, hosts, or other criteria that you provide. An external resource pool is a type of resource pool introduced in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] to help manage the R and Python processes external to the database engine.
 
-1. [Enable resource governance](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (it is off by default).
+1. [Enable resource governance](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (it's off by default).
 
 2. Run [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) to create and configure the resource pool, followed by [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) to implement it.
 

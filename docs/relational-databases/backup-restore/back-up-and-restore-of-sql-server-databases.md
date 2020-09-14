@@ -1,5 +1,6 @@
 ---
 title: "Back Up and Restore of SQL Server Databases | Microsoft Docs"
+description: This article describes the benefits of backing up SQL Server databases and introduces backup and restore strategies and security considerations.
 ms.custom: ""
 ms.date: "03/30/2018"
 ms.prod: sql
@@ -24,7 +25,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Back Up and Restore of SQL Server Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This article describes the benefits of backing up [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, basic backup and restore terms, and introduces backup and restore strategies for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and security considerations for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore. 
 
 > This article introduces SQL Server backups. For specific steps to back up SQL Server databases, see [Creating backups](#creating-backups).

@@ -1,4 +1,5 @@
 ---
+description: "sp_control_dbmasterkey_password (Transact-SQL)"
 title: "sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/09/2020"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds or drops a credential containing the password needed to open a database master key.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_help_category (Transact-SQL)"
 title: "sp_help_category (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_category"
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides information about the specified classes of jobs, alerts, or operators.  
    

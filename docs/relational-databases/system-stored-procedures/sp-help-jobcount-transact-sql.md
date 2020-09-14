@@ -1,4 +1,5 @@
 ---
+description: "sp_help_jobcount (Transact-SQL)"
 title: "sp_help_jobcount (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobcount"
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_jobcount (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides the number of jobs that a schedule is attached to.  
   

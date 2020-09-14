@@ -1,7 +1,8 @@
 ---
+description: "sys.external_library_files (Transact-SQL)"
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2019"
+ms.date: "06/25/2020"
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: "language-reference"
@@ -17,10 +18,10 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # sys.external_library_files (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Lists a row for each file that makes up an external library.
 
@@ -35,4 +36,3 @@ Lists a row for each file that makes up an external library.
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
-

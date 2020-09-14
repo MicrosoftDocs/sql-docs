@@ -1,5 +1,6 @@
 ---
 title: "Replication Merge Agent | Microsoft Docs"
+description: The Replication Merge Agent applies the initial snapshot held in database tables to the Subscribers, merges incremental data changes, and reconciles conflicts.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The Replication Merge Agent is a utility executable that applies the initial snapshot held in the database tables to the Subscribers. It also merges incremental data changes that occurred at the Publisher after the initial snapshot was created, and reconciles conflicts either according to the rules you configure or using a custom resolver you create.  
   
 > [!NOTE]  
@@ -143,7 +144,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  Is the Distributor password.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -158,7 +159,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Is the location of the filtered data snapshot files when the publication uses parameterized row filters.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Is the level of Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption used by the Merge Agent when making connections.  
   
 |EncryptionLevel value|Description|  
@@ -172,7 +173,7 @@ replmerg [-?]
 
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the **\@subscriber_upload_options** of **sp_addmergearticle** instead.  
   
@@ -188,13 +189,13 @@ replmerg [-?]
   
  If using **ExchangeType** to separate the upload and download phase of merge replication into separate sessions, you must run the merge agent with **ExchangeType** set to 1 first and then run the merge agent again with the value 2. Failure to run the merge agent with both parameters will cause metadata to be deleted and require you to reinitialize the subscription (without upload).  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  Specifies what type of rowcount calculation method should be used for rowcount validation. A value of **1** (default) indicates the fast method. A value of **0** indicates the full rowcount method.  
   
- **-FileTransferType** [**0**|**1**]  
+ **-FileTransferType** [**0**\|**1**]  
  Specifies the file transfer type. A value of **0** indicates UNC (universal naming convention), and a value of **1** indicates FTP (file transfer protocol).  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**\|**1**\|**2** ( **Publisher**\| **Subscriber**\| **Both**)]  
  Specifies the level of convergence the Merge Agent should use, and can be one of the following:  
   
 |ForceConvergenceLevel value|Description|  
@@ -215,7 +216,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  Is the user name used to connect to the FTP service. When not specified, anonymous is used.  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  Specifies the amount of history logged during a merge operation. You can minimize the effect of history logging on performance by selecting **1**.  
   
 |HistoryVerboseLevel value|Description|  
@@ -228,7 +229,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  Is the network name of the local computer. The default is the local computer name.  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  Specifies whether interactive conflict resolution is used when a conflict occurs during synchronization. The default is **0**, indicating that interactive conflict resolution is not used.  
   
  **-InternetLogin** _internet_login_  
@@ -246,7 +247,7 @@ replmerg [-?]
  **-InternetProxyServer**  *internet_proxy_server*  
  Specifies the proxy server to use when accessing the HTTP resource specified in *internet_url*.  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  Specifies the IIS security mode used when connecting to the Web server during Web synchronization. A value of **0** indicates Basic Authentication, and a value of **1** indicates Windows Integrated Authentication (default).  
   
  **-InternetTimeout** _internet_timeout_  
@@ -275,16 +276,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  Specifies the maximum number of changed rows that should be uploaded from the Subscriber to the Publisher. The number of rows uploaded may be higher than the specified maximum because: complete generations are processed; and parallel destination threads may run, each of which processes at least 100 changes in its first pass. By default all changes that are ready to be uploaded are sent.  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  Specifies if metadata is removed from [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md), and [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) based on the publication retention period. The default is **1**, indicating that cleanup should occur. A value of **0** indicates that cleanup should not occur automatically.  
   
  **-Output** _output_path_and_file_name_  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
  Specifies whether the output should be verbose. If the verbose level is **0**, only error messages are printed. If the verbose level is **1**, all of the progress report messages are printed. If the verbose level is **2** (default), all error messages and progress report messages are printed, which is useful for debugging.  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  Specifies whether the Merge Agent should process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber, which is useful in high volume environments with high network bandwidth. If **ParallelUploadDownload** is **1**, then parallel processing is enabled.  
   
  **-PacketSize**  
@@ -305,7 +306,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  Is the Publisher password. If **PublisherSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  Specifies the security mode of the Publisher. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -320,7 +321,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ **-SubscriberDBAddOption** [**0**\| **1**\| **2**\| **3**]  
  Specifies whether there is an existing Subscriber database.  
   
 |SubscriberDBAddOption value|Description|  
@@ -339,22 +340,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  Is the Subscriber password. If **SubscriberSecurityMode** is **0** (for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication), this parameter must be specified.  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ **-SubscriberSecurityMode** [ **0**\| **1**]  
  Specifies the security mode of the Subscriber. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication (default), and a value of **1** indicates Windows Authentication Mode.  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ **-SubscriberConflictClean** [ **0**\| **1**]  
  Is if conflict tables are cleaned-up at the Subscriber during the synchronization process, where a value of **1** indicates that conflict tables at the Subscriber are cleaned-up. This parameter is used only for subscriptions to publications with decentralized conflict logging.  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**\| **1**\| **3**\| **4**\| **5**\| **6**\| **7**\| **8**]  
  Specifies the type of Subscriber connection used by the Merge Agent. Only the default value of **0** is supported for this parameter.  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ **-SubscriptionType**[ **0**\| **1**\| **2**]  
  Specifies the subscription type for distribution. A value of **0** indicates a push subscription (default), a value of **1** indicates a pull subscription, and a value of **2** indicates an anonymous subscription.  
   
- **-SyncToAlternate** [ **0|1**]  
+ **-SyncToAlternate** [ **0\|1**]  
  Specifies whether the Merge Agent is synchronizing between a Subscriber and an alternate Publisher. A value of **1** indicates that it is an alternate Publisher. The default is **0**.  
  
- **-T** [**101|102**]  
+ **-T** [**101\|102**]  
  Trace flags that enable additional functionality for the Merge Agent. A value of **101** enables additional verbose logging information to help determine how much time each step of the merge replication synchronization process takes. A value of **102** writes the same statistics as trace flag **101** but to the <Distribution server>..msmerge_history table instead. Enable merge agent logging when you use trace flag 101 by using the `-output` and `-outputverboselevel` parameters.  For example,  add the following parameters to the merge agent, and then restart the agent: `-T 101, -output, -outputverboselevel`. 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -369,7 +370,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  Improves the performance of the initial snapshot by causing the Merge Agent to use the BULK INSERT command when applying snapshot files to the Subscriber. This parameter is deprecated because it is not compatible with the XML data type. If you are not replicating XML data, this parameter can be used. This parameter cannot be used with character mode snapshots. If you use this parameter, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account at the Subscriber must have read permissions on the directory where the snapshot .bcp data files are located. When this parameter is not used, the ODBC driver loaded by the agent reads from the files, so the security context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account is not used.  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  Specifies whether validation should be done at the end of the merge session, and, if so, what type of validation. The value of **3** is the recommended value.  
   
 |Validate value|Description|  

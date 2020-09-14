@@ -1,4 +1,5 @@
 ---
+description: "DBMS-Based Driver Diagnostic Example"
 title: "DBMS-Based Driver Diagnostic Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

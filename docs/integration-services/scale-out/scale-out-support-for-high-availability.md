@@ -1,6 +1,6 @@
 ---
 title: "Scale Out Support for High Availability | Microsoft Docs"
-description: "This article describes how to configure SSIS Scale Out for high availability"
+description: "Learn to configure SQL Server Integration Services (SSIS) Scale Out Master side for high availability."
 ms.custom: performance
 ms.date: "05/23/2018"
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Scale Out support for high availability
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -26,7 +26,7 @@ Alternatively, high availability on the Scale Out Master side can be achieved wi
 To set up high availability on the Scale Out Master side with always on for SSIS catalog, do the following things:
 
 ## 1. Prerequisites
-Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) for instructions. Install the feature and tools on all cluster nodes.
+Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) for instructions. Install the feature and tools on all cluster nodes.
 
 ## 2. Install Scale Out Master on the primary node
 Install SQL Server Database Engine Services, Integration Services, and Scale Out Master on the primary node for Scale Out Master. 

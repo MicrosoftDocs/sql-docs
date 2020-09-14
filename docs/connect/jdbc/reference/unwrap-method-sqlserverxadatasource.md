@@ -1,4 +1,5 @@
 ---
+description: "unwrap Method (SQLServerXADataSource)"
 title: "unwrap Method (SQLServerXADataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

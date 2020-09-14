@@ -1,5 +1,6 @@
 ---
 title: "Security Role Requirements for Replication | Microsoft Docs"
+description: Learn about the authentication level necessary for common replication setup tasks and for common replication maintenance tasks in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Security Role Requirements for Replication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Replication restricts the specific actions that a user can perform based on the roles to which the user's login is mapped. Replication has granted certain permissions to the **sysadmin** fixed server role, the **db_owner** fixed database role, and the logins in the publication access list (PAL).  
   
 ## Security Role Requirements for Replication Setup  

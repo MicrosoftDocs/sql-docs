@@ -1,4 +1,5 @@
 ---
+description: "DROP DATABASE (Transact-SQL)"
 title: "DROP DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -22,13 +23,13 @@ helpviewer_keywords:
   - "DROP DATABASE statement"
   - "database removal [SQL Server], DROP DATABASE statement"
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Removes one or more user databases or database snapshots from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -45,6 +46,8 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 -- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

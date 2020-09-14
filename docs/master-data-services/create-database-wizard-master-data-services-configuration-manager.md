@@ -1,4 +1,5 @@
 ---
+description: "Create Database Wizard (Master Data Services Configuration Manager)"
 title: Create Database Wizard
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -15,7 +16,7 @@ ms.author: lle
 ---
 # Create Database Wizard (Master Data Services Configuration Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Create Database** wizard to create a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   

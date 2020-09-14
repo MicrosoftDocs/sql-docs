@@ -1,4 +1,5 @@
 ---
+description: "getFunctionColumns Method (SQLServerDatabaseMetaData)"
 title: "getFunctionColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -73,7 +74,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |REMARKS|**String**|The comments about a column or a parameter.|  
 |COLUMN_DEF|**String**|The default value of the column.<br /><br /> **Note:** This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is JDBC driver-specific.|  
 |SQL_DATA_TYPE|**smallint**|This column is the same as the **DATA_TYPE** column, except for the **datetime** and ISO **interval** data types.<br /><br /> **Note:** This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is JDBC driver-specific.|  
-|SQL_DATETIME_SUB|**smallint**|The **datetime** ISO **interval** subcode if the value of **SQL_DATA_TYPE** is **SQL_DATETIME** or **SQL_INTERVAL**. For data types other than **datetime** and ISO **interval**, this column is NULL.<br /><br /> **Note:**This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is JDBC driver-specific.|  
+|SQL_DATETIME_SUB|**smallint**|The **datetime** ISO **interval** subcode if the value of **SQL_DATA_TYPE** is **SQL_DATETIME** or **SQL_INTERVAL**. For data types other than **datetime** and ISO **interval**, this column is NULL.<br /><br /> **Note:** This information is available with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and is JDBC driver-specific.|  
 |CHAR_OCTET_LENGTH|**int**|The maximum length of binary and character based parameters or columns. For other data types, it is NULL.|  
 |ORDINAL_POSITION|**int**|For input and output parameters, it represents the position starting from 1.<br /><br /> For result set columns, it is the position of the column in the result set starting from 1.<br /><br /> For return value, it is 0.|  
 |IS_NULLABLE|**String**|Determines the nullability of a parameter or column.<br /><br /> It can be one of the following values:<br /><br /> **YES**: The parameter or column can include NULL values.<br /><br /> **NO**: The parameter or column can not include NULL values.<br /><br /> Empty string (""): Unknown.|  

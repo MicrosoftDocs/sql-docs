@@ -1,4 +1,5 @@
 ---
+description: "Connect to a SQL Server or Azure SQL Database"
 title: "Connect to a SQL Server or Azure SQL Database"
 ms.custom: seo-lt-2019
 ms.date: "01/28/2019"
@@ -13,7 +14,7 @@ ms.author: "maghan"
 ---
 # Connect to a SQL Server or Azure SQL Database
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To work with servers and databases, you must first connect to the server. You can connect to multiple servers at the same time.
 
 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) supports several types of connections. This article provides details for connecting to SQL Server and Azure SQL Database (connecting to an Azure SQL single database or elastic pool). For information on the other connection options, see the [links](#see-also) at the bottom of this page.

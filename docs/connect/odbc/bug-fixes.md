@@ -2,7 +2,7 @@
 title: "List of bugs fixed"
 description: "This page contains a listing of bugs fixed in each release, starting with Microsoft ODBC Driver 17 for SQL Server."
 ms.custom: ""
-ms.date: "06/29/2018"
+ms.date: "04/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -18,6 +18,18 @@ manager: kenvh
 # List of bugs fixed
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix ADAL error when authenticating with a federated account (Windows)
+- Fix an issue where the driver becomes unresponsive when a timeout occurs during an asynchronous notification operation
+- Fix driver reference count upon upgrade in Alpine Linux
+- Fix libc6 dependency version for Ubuntu
+- Add missing defines to Linux/Mac msodbcsql.h
+
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Alpine Linux only)
+
+- Fix a crash when using Always Encrypted with secure enclaves on Alpine Linux
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -41,8 +53,8 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Fix for intermittent hang when Multiple Active Results Sets (MARS) is enabled
-- Fix connection resiliency hang when async notification is enabled
+- Fix for intermittent issue when Multiple Active Results Sets (MARS) is enabled where the driver stops responding
+- Fix connection resiliency issue when async notification is enabled where the driver stops responding
 - Fix crash when retrieving diagnostic records for multithreaded connection attempts
 - Fix 'Encryption not supported' upon reconnect after calling SQLGetInfo() with SQL_USER_NAME and SQL_DATA_SOURCE_READ_ONLY
 - Fix COM initialization error during Azure Active Directory Interactive Authentication
@@ -84,7 +96,7 @@ This page contains a listing of bugs fixed in each release, starting with [!INCL
 
 - Fixed a bug where when using Kerberos authentication, bulk insert could fail with "access denied" error
 - Removed workaround for a unixODBC bug present in version below 2.3.1 (driver doubled the sizes of certain buffers passed to unixODBC)
-- Fixed Connection Resiliency (reconnect) hanging when using ColumnEncryption=enabled
+- Fixed Connection Resiliency (reconnect) stopping to respond when using ColumnEncryption=enabled
 - Fixed DSN creation bug, where when using "Active Directory Interactive authentication" option Azure Authentication window could become unresponsive (Windows)
 - Fixed a rare crash during ODBC shutdown when asynchronous execution is enabled (happened when clearing connection handle)
 - Fixed an issue where SQL Driver caused high CPU consumption while executing long stored procedures

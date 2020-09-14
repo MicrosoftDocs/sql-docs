@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_index_physical_stats (Transact-SQL)"
 title: "sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "sys.dm_db_index_physical_stats dynamic management function"
   - "fragmentation [SQL Server]"
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns size and fragmentation information for the data and indexes of the specified table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For an index, one row is returned for each level of the B-tree in each partition. For a heap, one row is returned for the IN_ROW_DATA allocation unit of each partition. For large object (LOB) data, one row is returned for the LOB_DATA allocation unit of each partition. If row-overflow data exists in the table, one row is returned for the ROW_OVERFLOW_DATA allocation unit in each partition. Does not return information about xVelocity memory optimized columnstore indexes.  
   
@@ -49,33 +50,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## Arguments  
- *database_id* | NULL | 0 | DEFAULT  
+ *database_id* \| NULL \| 0 \| DEFAULT  
  Is the ID of the database. *database_id* is **smallint**. Valid inputs are the ID number of a database, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.  
   
  Specify NULL to return information for all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you specify NULL for *database_id*, you must also specify NULL for *object_id*, *index_id*, and *partition_number*.  
   
  The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified. When using DB_ID without specifying a database name, the compatibility level of the current database must be 90 or greater.  
   
- *object_id* | NULL | 0 | DEFAULT  
+ *object_id* \| NULL \| 0 \| DEFAULT  
  Is the object ID of the table or view the index is on. *object_id* is **int**.  
   
  Valid inputs are the ID number of a table and view, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context. As of [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], valid inputs also include the service broker queue name or the queue internal table name. When default parameters are applied (i.e. all objects, all indexes, etc), fragmentation information for all queues are included in the result set.  
   
  Specify NULL to return information for all tables and views in the specified database. If you specify NULL for *object_id*, you must also specify NULL for *index_id* and *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | DEFAULT  
+ *index_id* \| 0 \| NULL \| -1 \| DEFAULT  
  Is the ID of the index. *index_id* is **int**. Valid inputs are the ID number of an index, 0 if *object_id* is a heap, NULL, -1, or DEFAULT. The default is -1. NULL, -1, and DEFAULT are equivalent values in this context.  
   
  Specify NULL to return information for all indexes for a base table or view. If you specify NULL for *index_id*, you must also specify NULL for *partition_number*.  
   
- *partition_number* | NULL | 0 | DEFAULT  
+ *partition_number* \| NULL \| 0 \| DEFAULT  
  Is the partition number in the object. *partition_number* is **int**. Valid inputs are the *partion_number* of an index or heap, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.  
   
  Specify NULL to return information for all partitions of the owning object.  
   
  *partition_number* is 1-based. A nonpartitioned index or heap has *partition_number* set to 1.  
   
- *mode* | NULL | DEFAULT  
+ *mode* \| NULL \| DEFAULT  
  Is the name of the mode. *mode* specifies the scan level that is used to obtain statistics. *mode* is **sysname**. Valid inputs are DEFAULT, NULL, LIMITED, SAMPLED, or DETAILED. The default (NULL) is LIMITED.  
   
 ## Table Returned  
@@ -104,10 +105,16 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Average record size in bytes.<br /><br /> For an index, the average record size applies to the current level of the b-tree in the IN_ROW_DATA allocation unit.<br /><br /> For a heap, the average record size in the IN_ROW_DATA allocation unit.<br /><br /> For LOB_DATA or ROW_OVERFLOW_DATA allocation units, the average record size in the complete allocation unit.<br /><br /> NULL when *mode* = LIMITED.|  
 |forwarded_record_count|**bigint**|Number of records in a heap that have forward pointers to another data location. (This state occurs during an update, when there is not enough room to store the new row in the original location.)<br /><br /> NULL for any allocation unit other than the IN_ROW_DATA allocation units for a heap.<br /><br /> NULL for heaps when *mode* = LIMITED.|  
 |compressed_page_count|**bigint**|The number of compressed pages.<br /><br /> For heaps, newly allocated pages are not PAGE compressed. A heap is PAGE compressed under two special conditions: when data is bulk imported or when a heap is rebuilt. Typical DML operations that cause page allocations will not be PAGE compressed. Rebuild a heap when the compressed_page_count value grows larger than the threshold you want.<br /><br /> For tables that have a clustered index, the compressed_page_count value indicates the effectiveness of PAGE compression.|  
-|hobt_id|bigint|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> For columnstore indexes only, this is the ID for a rowset that tracks internal columnstore data for a partition. The rowsets are stored as data heaps or binary trees. They have the same index ID as the parent columnstore index. For more information, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL if|  
-|column_store_delete_buffer_state|tinyint|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINING<br /><br /> 3 = FLUSHING<br /><br /> 4 = RETIRING<br /><br /> 5 = READY|  
-|column_store_delete_buff_state_desc||**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT VALID -the parent index is not a columnstore index.<br /><br /> OPEN - deleters and scanners use this.<br /><br /> DRAINING - deleters are draining out but scanners still use it.<br /><br /> FLUSHING - buffer is closed and rows in the buffer are being written to the delete bitmap.<br /><br /> RETIRING - rows in the closed delete buffer have been written to the delete bitmap, but the buffer has not been truncated because scanners are still using it. New scanners don't need to use the retiring buffer because the open buffer is enough.<br /><br /> READY - This delete buffer is ready for use.|  
-  
+|hobt_id|bigint|For columnstore indexes only, this is the ID for a rowset that tracks internal columnstore data for a partition. The rowsets are stored as data heaps or binary trees. They have the same index ID as the parent columnstore index. For more information, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL if <br /><br /> **Applies to**: SQL Server 2016 and later, Azure SQL Database, Azure SQL Managed Instance|  
+|column_store_delete_buffer_state|tinyint| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINING<br /><br /> 3 = FLUSHING<br /><br /> 4 = RETIRING<br /><br /> 5 = READY<br /><br />**Applies to**: SQL Server 2016 and later, Azure SQL Database, Azure SQL Managed Instance|  
+|column_store_delete_buff_state_desc|| NOT VALID -the parent index is not a columnstore index.<br /><br /> OPEN - deleters and scanners use this.<br /><br /> DRAINING - deleters are draining out but scanners still use it.<br /><br /> FLUSHING - buffer is closed and rows in the buffer are being written to the delete bitmap.<br /><br /> RETIRING - rows in the closed delete buffer have been written to the delete bitmap, but the buffer has not been truncated because scanners are still using it. New scanners don't need to use the retiring buffer because the open buffer is enough.<br /><br /> READY - This delete buffer is ready for use. <br /><br /> **Applies to**: SQL Server 2016 and later, Azure SQL Database, Azure SQL Managed Instance|  
+|version_record_count|**bigint**|This is the count of the row version records being maintained in this index.  These row versions are maintained by the [Accelerated Database Recovery](../../relational-databases/accelerated-database-recovery-concepts.md) feature. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|Count of ADR version records kept in the data row for fast retrieval. <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]e|  
+|inrow_diff_version_record_count|**bigint**| Count of ADR version records kept in the form of differences from the base version. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|Total size in bytes of the inrow version records for this index. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|Count of version records being kept outside the original data row. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|Count of version records considered long term. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
 ## Remarks  
  The sys.dm_db_index_physical_stats dynamic management function replaces the DBCC SHOWCONTIG statement.  
   

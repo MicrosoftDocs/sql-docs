@@ -1,19 +1,50 @@
 ---
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
-authors: "HJToland3;nahk-ivanov"
+description: Find out about changes to SQL Server Migration Assistant (SSMA) for DB2 (DB2ToSQL) for each release.
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "4/2/2020"
+ms.date: "7/31/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for DB2 contains the following changes:
+
+* Conversion of `STRIP` function
+* Improved parsing of procedure options
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for DB2 contains the following changes:
+
+* Support for DB2 for i (v7.1 and above)
+* Translation of `SQLSTATE` and `SQLCODE`
+* Conversion error message for side-effecting operators within a function
+* Use MSAL.NET library for interactive Azure Active Directory authentication
+
+## SSMA v8.10
+
+The v8.10 release of SSMA for DB2 addresses a regression in foreign keys discovery and contains minor performance improvements.
+
+## SSMA v8.9
+
+The v8.9 release of SSMA for DB2 contains the following changes:
+
+* Fix for conversion of `TIMESTAMPDIFF` function
+* Fix for indexes discovery when partitioned index is present
+* Fix for foreign keys discovery when primary index is defined in another schema
+* Improved conversion for columns that match built-in function names
+* Fix for the issue with special characters in project name
 
 ## SSMA v8.8
 
@@ -37,7 +68,7 @@ In addition, SSMA for DB2 now provides:
 * Improved conversion for `COUNT` function in MQ tables.
 * Conversion of `SAVEPOINT` statements.
 * Conversion to emulate DB2's behavior for `NULL` values in `ORDER BY` clause.
-* Parsing support for ASSOCIATE RESULT SET statement.
+* Parsing support for `ASSOCIATE RESULT SET` statement.
 
 > [!IMPORTANT]
 > With SSMA v8.5 and later, .NET 4.7.2 is an installation pre-requisite. If you need to install this version, you can download the runtime file from [here](https://dotnet.microsoft.com/download/dotnet-framework/net472).
@@ -116,9 +147,9 @@ The v8.1 release of SSMA for DB2 is enhanced to provide targeted fixes that are 
 
 The v8.0 release of SSMA for DB2 is enhanced to provide targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

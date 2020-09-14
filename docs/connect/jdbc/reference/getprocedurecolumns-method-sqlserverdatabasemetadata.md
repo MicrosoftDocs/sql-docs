@@ -1,4 +1,5 @@
 ---
+description: "getProcedureColumns Method (SQLServerDatabaseMetaData)"
 title: "getProcedureColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

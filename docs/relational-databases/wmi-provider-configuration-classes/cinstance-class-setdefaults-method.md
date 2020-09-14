@@ -1,4 +1,5 @@
 ---
+description: "CInstance Class - SetDefaults Method"
 title: "SetDefaults Method (CInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDefaults method"
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # CInstance Class - SetDefaults Method
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Sets all the default values for the instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client with the option to overwrite existing data.  
   
 ## Syntax  

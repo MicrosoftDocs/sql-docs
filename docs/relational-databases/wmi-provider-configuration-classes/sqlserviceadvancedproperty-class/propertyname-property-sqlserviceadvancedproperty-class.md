@@ -1,4 +1,5 @@
 ---
+description: "PropertyName Property (SqlServiceAdvancedProperty Class)"
 title: "PropertyName Property (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyName property"
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyName Property (SqlServiceAdvancedProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets or sets the name of an advanced property.  
   
 ## Syntax  

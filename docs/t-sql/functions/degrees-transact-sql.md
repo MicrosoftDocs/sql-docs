@@ -1,4 +1,5 @@
 ---
+description: "DEGREES (Transact-SQL)"
 title: "DEGREES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "DEGREES function"
   - "number of degrees"
 ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DEGREES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the corresponding angle, in degrees, for an angle specified in radians.  
   
@@ -33,7 +34,9 @@ This function returns the corresponding angle, in degrees, for an angle specifie
 DEGREES ( numeric_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   
@@ -45,7 +48,7 @@ This example returns the number of degrees in an angle of PI/2 radians.
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
-CONVERT(varchar, DEGREES((PI()/2)));  
+CONVERT(VARCHAR, DEGREES((PI()/2)));  
 GO  
 ```  
   

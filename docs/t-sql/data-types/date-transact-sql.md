@@ -1,4 +1,5 @@
 ---
+description: "date (Transact-SQL)"
 title: "date (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -23,11 +24,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # date (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Defines a date in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
+
 ## date description
   
 |Property|Value|  
@@ -208,7 +211,9 @@ SELECT
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
-  
+
+First introduced in SQL Server 2008.
+
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

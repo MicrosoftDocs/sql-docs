@@ -1,5 +1,6 @@
 ---
 title: "Requirements for Using Memory-Optimized Tables | Microsoft Docs"
+description: Learn about the requirements for using In-Memory OLTP, including SQL Database version, memory & storage considerations, and installation.
 ms.custom: ""
 ms.date: "11/24/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Requirements for Using Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   For using In-Memory OLTP in Azure DB see [Get started with In-Memory in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   

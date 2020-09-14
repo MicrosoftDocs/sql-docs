@@ -1,4 +1,5 @@
 ---
+description: "setClob Method (java.lang.String, java.sql.Clob)"
 title: "setClob Method (java.lang.String, java.sql.Clob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

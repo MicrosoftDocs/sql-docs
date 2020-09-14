@@ -1,10 +1,11 @@
 ---
+description: "URL Property Example (VBScript)"
 title: "URL Property Example (VBScript) | Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
+ms.prod: sql
 ms.prod_service: connectivity
 ms.topic: conceptual
 dev_langs: 
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "URL property [ADO], VBScript example"
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # URL Property Example (VBScript)
 > [!IMPORTANT]
@@ -133,6 +134,4 @@ End Sub
 ```  
   
 ## See Also  
- [URL Property (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
-
-
+ [URL Property (RDS)](./url-property-rds.md)

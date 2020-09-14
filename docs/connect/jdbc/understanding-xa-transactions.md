@@ -54,7 +54,7 @@ The following additional guidelines apply to tightly coupled transactions:
 The following steps are required if you want to use XA data sources together with Microsoft Distributed Transaction Coordinator (MS DTC) for handling distributed transactions.  
 
 > [!NOTE]  
-> The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files.  
+> The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.  
 
 > [!NOTE]  
 > Starting with SQL Server 2019 public preview CTP 2.0, the JDBC XA distributed transaction components are included in the SQL Server engine, and can be enabled or disabled with a system stored procedure.

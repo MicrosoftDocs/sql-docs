@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_start_collection_set (Transact-SQL)"
 title: "sp_syscollector_start_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_start_collection_set"
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_start_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts a collection set if the collector is already enabled and the collection set is not running. If the collector is not enabled, enable the collector by running [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) and then use this stored procedure to start a collection set.  
 

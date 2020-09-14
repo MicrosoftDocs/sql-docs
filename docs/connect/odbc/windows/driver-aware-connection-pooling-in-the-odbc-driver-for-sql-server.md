@@ -1,7 +1,8 @@
 ---
-title: "Driver-Aware Connection Pooling in the ODBC Driver for SQL Server | Microsoft Docs"
+title: "Driver-Aware Connection Pooling in the ODBC Driver"
+description: "Learn about enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,7 +15,7 @@ ms.author: v-daenge
 # Driver-Aware Connection Pooling in the ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Driver-Aware Connection Pooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). This topic describes the enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows:  
+  The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports [Driver-Aware Connection Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). This topic describes the enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows:  
   
 -   Regardless of the connection properties, connections that use `SQLDriverConnect` go into a separate pool from connections that use `SQLConnect`.
 - When using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication and driver-aware connection pooling, the driver does not use the Windows user's security context for the current thread to separate connections in the pool. That is, if connections are equivalent in their parameters for Windows impersonation scenarios with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, and they are using the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication credentials to connect to the backend, different Windows users can potentially use the same pool of connections. When using Windows Authentication and driver-aware connection pooling, the driver uses the current Windows user's security context to separate connections in the pool. That is, for Windows impersonation scenarios, different Windows users do not share connections even if the connections use the same parameters.
@@ -36,7 +37,7 @@ If one of the following connection-attribute IDs or connection string keywords i
   
 -   If there is a difference in any of the following connection keywords between your connection string and a pooled connection string, a pooled connection is not used.  
   
-    |Keyword|ODBC Driver 13|ODBC Driver 11|
+    |Keyword|ODBC Driver 17/13|ODBC Driver 11|
     |-|-|-|
     |`Address`|Yes|Yes|
     |`AnsiNPW`|Yes|Yes|
@@ -61,7 +62,7 @@ If one of the following connection-attribute IDs or connection string keywords i
     
 - If there is a difference in any of the following connection attributes between your connection string and a pooled connection string, a pooled connection is not used.  
   
-    |Attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Attribute|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Yes|Yes|
     |`SQL_ATTR_PACKET_SIZE`|Yes|Yes|
@@ -87,7 +88,7 @@ If one of the following connection-attribute IDs or connection string keywords i
   
      These connection keywords are not considered when the Driver Manager tries to match your connection with a connection in the pool. (Even if you change one of these parameters, an existing connection can be reused. The driver will reset the options, as needed.) These attributes can be reset in the client side without making an extra network call.  
   
-    |Keyword|ODBC Driver 13|ODBC Driver 11|  
+    |Keyword|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|Yes|Yes|
     |`Description`|Yes|Yes|
@@ -101,7 +102,7 @@ If one of the following connection-attribute IDs or connection string keywords i
   
      If you change one of the following connection attributes, an existing connection can be reused.  The driver will reset the value, as needed. The driver can reset these attributes in the client without making an extra network call.  
   
-    |Attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Attribute|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |All statement attributes|Yes|Yes|
     |`SQL_ATTR_AUTOCOMMIT`|Yes|Yes|

@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_operator (Transact-SQL)"
 title: "sp_delete_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_operator"
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an operator.  
   

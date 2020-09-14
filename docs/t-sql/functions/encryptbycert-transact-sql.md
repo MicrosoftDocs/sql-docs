@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYCERT (Transact-SQL)"
 title: "ENCRYPTBYCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ENCRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Encrypts data with the public key of a certificate.  
   
@@ -34,7 +35,9 @@ Encrypts data with the public key of a certificate.
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _certificate\_ID_  
 The ID of a certificate in the database. **int**.  
   

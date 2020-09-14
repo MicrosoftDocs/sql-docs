@@ -7,21 +7,21 @@ ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: "ulvii"
-ms.author: "v-ulibra"
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
-The following instructions assume a clean environment and show how to install PHP 7.x, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 19.10, RedHat 7 and 8, Debian 8, 9, and 10, Suse 12 and 15, Alpine 3.11, and macOS 10.13, 10.14, and 10.15. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+The following instructions assume a clean environment and show how to install PHP 7.x, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 20.04, RedHat 7 and 8, Debian 8, 9, and 10, Suse 12 and 15, Alpine 3.11, and macOS 10.13, 10.14, and 10.15. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 These instructions install PHP 7.4 by default using `pecl install`. You may need to run `pecl channel-update pecl.php.net` first. Note that some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server -- please see the notes at the beginning of each section to install PHP 7.2 or 7.3 instead.
 
 Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if using the nginx web server instead of Apache.
 
-## Contents of this page:
+## Contents of this page
 
-- [Installing the drivers on Ubuntu 16.04, 18.04, and 19.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Installing the drivers on Ubuntu 16.04, 18.04, and 20.04](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Installing the drivers with PHP-FPM on Ubuntu](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Installing the drivers on Red Hat 7 and 8](#installing-the-drivers-on-red-hat-7-and-8)
 - [Installing the drivers on Debian 8, 9, and 10](#installing-the-drivers-on-debian-8-9-and-10)
@@ -29,7 +29,7 @@ Also included are instructions for installing the PHP FastCGI Process Manager, P
 - [Installing the drivers on Alpine 3.11](#installing-the-drivers-on-alpine-311)
 - [Installing the drivers on macOS High Sierra, Mojave, and Catalina](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## Installing the drivers on Ubuntu 16.04, 18.04, and 19.10
+## Installing the drivers on Ubuntu 16.04, 18.04, and 20.04
 
 > [!NOTE]
 > To install PHP 7.2 or 7.3, replace 7.4 with 7.2 or 7.3 in the following commands.
@@ -93,7 +93,7 @@ Install the ODBC driver for Ubuntu by following the instructions on the [Linux i
 
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
-sudo pecl config-set php_ini /etc/php/7.3/fpm/php.ini
+sudo pecl config-set php_ini /etc/php/7.4/fpm/php.ini
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su

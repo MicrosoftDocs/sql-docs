@@ -1,8 +1,9 @@
 ---
+description: "Cancel Method Example (VBScript)"
 title: "Cancel Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,14 +13,14 @@ dev_langs:
 helpviewer_keywords: 
   - "Cancel method [ADO], VBScript example"
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Cancel Method Example (VBScript)
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The following example shows how to read the [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) method at run time. Cut and paste the following code to Notepad or another text editor and save it as CancelVBS.asp. You can view the result in any client browser.  
+ The following example shows how to read the [Cancel](../ado-api/cancel-method-ado.md) method at run time. Cut and paste the following code to Notepad or another text editor and save it as CancelVBS.asp. You can view the result in any client browser.  
   
 ```  
 <!-- BeginCancelVBS -->  
@@ -63,6 +64,4 @@ End Sub
 ```  
   
 ## See Also  
- [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
-
-
+ [Cancel Method (ADO)](../ado-api/cancel-method-ado.md)

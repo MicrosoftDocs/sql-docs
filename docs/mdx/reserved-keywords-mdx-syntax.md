@@ -1,4 +1,5 @@
 ---
+description: "Reserved Keywords (MDX Syntax)"
 title: "Reserved Keywords (MDX Syntax) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

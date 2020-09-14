@@ -1,8 +1,9 @@
 ---
+description: "OpenSchema Method Example (VB)"
 title: "OpenSchema Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "OpenSchema method [ADO], Visual Basic example"
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # OpenSchema Method Example (VB)
-This example uses the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method to display the name and type of each table in the ***Pubs*** database.  
+This example uses the [OpenSchema](./openschema-method.md) method to display the name and type of each table in the ***Pubs*** database.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -79,5 +80,5 @@ Attribute VB_Name = "OpenSchema"
 ```  
   
 ## See Also  
- [OpenSchema Method](../../../ado/reference/ado-api/openschema-method.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [OpenSchema Method](./openschema-method.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

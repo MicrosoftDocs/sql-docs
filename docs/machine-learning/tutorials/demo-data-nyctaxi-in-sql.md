@@ -2,17 +2,17 @@
 title: NYC Taxi demo data for tutorials
 description: Create a database containing the New York City taxi sample data. This dataset is used in R and Python tutorials for SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 10/31/2018  
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # NYC Taxi demo data for SQL Server Python and R tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 This article explains how to set up a sample database consisting of public data from the [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). This data is used in several R and Python tutorials for in-database analytics on SQL Server. To make the sample code run quicker, we created a representative 1% sampling of the data. On your system, the database backup file is slightly over 90 MB, providing 1.7 million rows in the primary data table.
 
@@ -20,14 +20,24 @@ To complete this exercise, you should have [SQL Server Management Studio](https:
 
 Tutorials and quickstarts using this data set include the following:
 
-+ [Learn in-database analytics using R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Learn in-database analytics using Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Learn in-database analytics using R in SQL Server](r-taxi-classification-introduction.md)
++ [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)
 
 ## Download files
 
 The sample database is a SQL Server 2016 BAK file hosted by Microsoft. You can restore it on SQL Server 2016 and later. File download begins immediately when you click the link. 
 
 File size is approximately 90 MB.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>To restore the sample database on [SQL Server Big Data Clusters](../../big-data-cluster/big-data-cluster-overview.md), download [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) and follow the directions in [Restore a database into the SQL Server big data cluster master instance](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
+
+::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+>[!NOTE]
+>To restore the sample database on [Machine Learning Services in Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/machine-learning-services-overview), follow the instructions in [Quickstart: Restore a database to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) using the NYC Taxi demo database .bak file: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
+::: moniker-end
 
 1. Click [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) to download the database backup file.
 
@@ -54,19 +64,19 @@ The following table summarizes the objects created in the NYC Taxi demo database
 |**Object name**|**Object type**|**Description**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | database | Creates a database and two tables:<br /><br />dbo.nyctaxi_sample table: Contains the main NYC Taxi dataset. A clustered columnstore index is added to the table to improve storage and query performance. The 1% sample of the NYC Taxi dataset is inserted into this table.<br /><br />dbo.nyc_taxi_models table: Used to persist the trained advanced analytics model.|
-|**fnCalculateDistance** |scalar-valued function | Calculates the direct distance between pickup and dropoff locations. This function is used in [Create data features](sqldev-create-data-features-using-t-sql.md), [Train and save a model](sqldev-train-and-save-a-model-using-t-sql.md)  and [Operationalize the R model](sqldev-operationalize-the-model.md).|
-|**fnEngineerFeatures** |table-valued function | Creates new data features for model training. This function is used in [Create data features](sqldev-create-data-features-using-t-sql.md) and [Operationalize the R model](sqldev-operationalize-the-model.md).|
+|**fnCalculateDistance** |scalar-valued function | Calculates the direct distance between pickup and dropoff locations. This function is used in [Create data features](r-taxi-classification-create-features.md), [Train and save a model](r-taxi-classification-train-model.md)  and [Operationalize the R model](r-taxi-classification-deploy-model.md).|
+|**fnEngineerFeatures** |table-valued function | Creates new data features for model training. This function is used in [Create data features](r-taxi-classification-create-features.md) and [Operationalize the R model](r-taxi-classification-deploy-model.md).|
 
 
 Stored procedures are created using R and Python script found in various tutorials. The following table summarizes the stored procedures that you can optionally add to the NYC Taxi demo database when you run script from various lessons.
 
 |**Stored procedure**|**Language**|**Description**|
 |-------------------------|------------|---------------|
-|**RxPlotHistogram** |R | Calls the RevoScaleR rxHistogram function to plot the histogram of a variable and then returns the plot as a binary object. This stored procedure is used in [Explore and visualize data](sqldev-explore-and-visualize-the-data.md).|
-|**RPlotRHist** |R| Creates a graphic using the Hist function and saves the output as a local PDF file. This stored procedure is used in [Explore and visualize data](sqldev-explore-and-visualize-the-data.md).|
-|**RxTrainLogitModel**  |R| Trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models. This stored procedure is used in [Train and save a model](sqldev-train-and-save-a-model-using-t-sql.md).|
-|**RxPredictBatchOutput**  |R | Calls the trained model to create predictions using the model. The stored procedure accepts a query as its input parameter and returns a column of numeric values containing the scores for the input rows. This stored procedure is used in [Predict potential outcomes](sqldev-operationalize-the-model.md).|
-|**RxPredictSingleRow**  |R| Calls the trained model to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation. This stored procedure is used in [Predict potential outcomes](sqldev-operationalize-the-model.md).|
+|**RxPlotHistogram** |R | Calls the RevoScaleR rxHistogram function to plot the histogram of a variable and then returns the plot as a binary object. This stored procedure is used in [Explore and visualize data](r-taxi-classification-explore-data.md).|
+|**RPlotRHist** |R| Creates a graphic using the Hist function and saves the output as a local PDF file. This stored procedure is used in [Explore and visualize data](r-taxi-classification-explore-data.md).|
+|**RxTrainLogitModel**  |R| Trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models. This stored procedure is used in [Train and save a model](r-taxi-classification-train-model.md).|
+|**RxPredictBatchOutput**  |R | Calls the trained model to create predictions using the model. The stored procedure accepts a query as its input parameter and returns a column of numeric values containing the scores for the input rows. This stored procedure is used in [Predict potential outcomes](r-taxi-classification-deploy-model.md).|
+|**RxPredictSingleRow**  |R| Calls the trained model to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation. This stored procedure is used in [Predict potential outcomes](r-taxi-classification-deploy-model.md).|
 
 ## Query the data
 
@@ -100,5 +110,5 @@ Results should be similar to those showing in the following screenshot.
 
 NYC Taxi sample data is now available for hands-on learning.
 
-+ [Learn in-database analytics using R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Learn in-database analytics using Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Learn in-database analytics using R in SQL Server](r-taxi-classification-introduction.md)
++ [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)

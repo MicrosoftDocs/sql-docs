@@ -1,7 +1,8 @@
 ---
-title: "ODBC Driver on Linux and macOS - High Availability and Disaster Recovery | Microsoft Docs"
+title: "ODBC Driver on Linux and macOS - High Availability and Disaster Recovery"
+description: "Learn about how the Microsoft ODBC Driver for Linux and macOS support AlwaysOn Availability Groups."
 ms.custom: ""
-ms.date: "04/05/2018"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,13 +17,13 @@ ms.author: v-daenge
 
 The ODBC drivers for Linux and macOS support [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see:  
   
--   [Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [Creation and Configuration of Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [Creation and Configuration of Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [Failover Clustering and AlwaysOn Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [Failover Clustering and AlwaysOn Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Active Secondaries: Readable Secondary Replicas (AlwaysOn Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [Active Secondaries: Readable Secondary Replicas (AlwaysOn Availability Groups)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 You can specify the availability group listener of a given availability group in the connection string. If an ODBC application on Linux or macOS is connected to a database in an availability group that fails over, the original connection is broken and the application must open a new connection to continue work after the failover.
 

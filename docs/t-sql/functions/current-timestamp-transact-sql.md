@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_TIMESTAMP (Transact-SQL)"
 title: "CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -28,12 +29,12 @@ helpviewer_keywords:
   - "CURRENT_TIMESTAMP function [SQL Server]"
   - "time [SQL Server], system"
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CURRENT_TIMESTAMP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the current database system timestamp as a **datetime** value, without the database time zone offset. `CURRENT_TIMESTAMP` derives this value from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs.
   
@@ -52,7 +53,9 @@ See [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time
 CURRENT_TIMESTAMP  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 This function takes no arguments.
   
 ## Return Type  
@@ -88,12 +91,12 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### B. Get the Current System Date  
   
 ```sql
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
+SELECT CONVERT (DATE, SYSDATETIME())  
+    ,CONVERT (DATE, SYSDATETIMEOFFSET())  
+    ,CONVERT (DATE, SYSUTCDATETIME())  
+    ,CONVERT (DATE, CURRENT_TIMESTAMP)  
+    ,CONVERT (DATE, GETDATE())  
+    ,CONVERT (DATE, GETUTCDATE());  
   
 /* Returned   
 SYSDATETIME()      2007-05-03  
@@ -108,12 +111,12 @@ GETUTCDATE()       2007-05-04
 ### C. Get the Current System Time  
   
 ```sql
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, SYSDATETIMEOFFSET())  
-    ,CONVERT (time, SYSUTCDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE())  
-    ,CONVERT (time, GETUTCDATE());  
+SELECT CONVERT (TIME, SYSDATETIME())  
+    ,CONVERT (TIME, SYSDATETIMEOFFSET())  
+    ,CONVERT (TIME, SYSUTCDATETIME())  
+    ,CONVERT (TIME, CURRENT_TIMESTAMP)  
+    ,CONVERT (TIME, GETDATE())  
+    ,CONVERT (TIME, GETUTCDATE());  
   
 /* Returned  
 SYSDATETIME()      13:18:45.3490361  

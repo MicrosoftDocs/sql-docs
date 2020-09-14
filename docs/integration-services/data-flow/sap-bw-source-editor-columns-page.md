@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Source Editor (Columns Page)"
 title: "SAP BW Source Editor (Columns Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # SAP BW Source Editor (Columns Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Columns** page of the **SAP BW Source Editor** to map an output column to each external (source) column.  

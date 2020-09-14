@@ -1,19 +1,19 @@
 ---
 title: Download and install Azure Data Studio
-description: Download and Install Azure Data Studio for Windows, macOS, or Linux
-ms.prod: sql
+description: Download and Install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 3/18/2020
-ms.reviewer: maghan, sstein
+ms.date: 8/12/2020
 ---
 
 # Download and install Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
+Azure Data Studio runs on Windows, macOS, and Linux.
 
 Download and install the latest release:
 
@@ -22,46 +22,46 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2121609)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2121612)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2121511)|March 18, 2020|1.16.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2121611)|March 18, 2020|1.16.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2121610)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2121613)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2121510)|March 18, 2020|1.16.0|
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2138608)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2138704)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2138705) | August 12, 2020 | 1.21.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | August 12, 2020 | 1.21.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | August 12, 2020| 1.21.0 |
 
-For details about the latest release, see the [release notes](release-notes.md).
+For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md?view=sql-server-ver15).
 
 ## Get Azure Data Studio for Windows
 
-This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip file.
+This release of Azure Data Studio includes a standard Windows Installer experience, and a .zip file.
 
-The *user installer* is recommended because it does not require administrator privileges, which simplifies both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+The *user installer* is recommended because it does not require administrator privileges, which simplify both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
 **User Installer** (recommended)
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2121609).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2138608).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2121612).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2138704).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2121511).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2138705).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2121611).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2138609).
 2. To expand the contents of the zip, double-click it.
-3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
+3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2121610)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2121613)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2121510)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -97,16 +97,19 @@ The *user installer* is recommended because it does not require administrator pr
    > On Debian, Redhat, and Ubuntu, you may have missing dependencies. Use the following commands to install these dependencies depending on your version of Linux:
 
    **Debian:**
+
    ```bash
    sudo apt-get install libunwind8
    ```
 
    **Redhat:**
+
    ```bash
    yum install libXScrnSaver
    ```
 
    **Ubuntu:**
+
    ```bash
    sudo apt-get install libxss1
 
@@ -117,24 +120,24 @@ The *user installer* is recommended because it does not require administrator pr
 
 ## Download Insiders build of Azure Data Studio
 
-In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
+In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
 
 ## Uninstall Azure Data Studio
 
-If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows installer, then uninstall the same way you remove any Windows application.
+If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] using the Windows Installer, then uninstall the same way you remove any Windows application.
 
 If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with a .zip or other archive, then simply delete the files.
 
 ## Supported Operating Systems
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
+Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the following platforms:
 
 ### Windows
 
 - Windows 10 (64-bit)
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)
-- Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767)
+- Windows 7 (SP1)
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2 (64-bit)
@@ -157,15 +160,16 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 
 ## Recommended System Requirements
 
-|             | CPU Cores | Memory/RAM |
-|:-----------|:---------|:----------|
-| Recommended |     4     |      8 GB    |
-|   Minimum   |     2     |      4 GB     |
-|             |           |            |
+| Recommended/Minimum | CPU Cores | Memory/RAM |
+|---------------------|-----------|------------|
+| Recommended         |     4     |   8 GB     |
+|   Minimum           |     2     |   4 GB     |
 
 ## Check for updates
 
-To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
+To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**.
+
+In an offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version.  Uninstalling prior versions of Azure Data Studio is not necessary as the installer updates a currently installed application, if present.
 
 ## Supported SQL offerings
 

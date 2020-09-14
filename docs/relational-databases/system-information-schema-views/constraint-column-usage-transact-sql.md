@@ -1,4 +1,5 @@
 ---
+description: "CONSTRAINT_COLUMN_USAGE (Transact-SQL)"
 title: "CONSTRAINT_COLUMN_USAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE view"
   - "CONSTRAINT_COLUMN_USAGE view"
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONSTRAINT_COLUMN_USAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one row for each column in the current database that has a constraint defined on the column. This information schema view returns information about the objects to which the current user has permissions.  
   
@@ -30,11 +31,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Table qualifier.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table owner.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table owner.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**TABLE_NAME**|**nvarchar(**128**)**|Table name.|  
 |**COLUMN_NAME**|**nvarchar(**128**)**|Column name.|  
 |**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|Constraint qualifier.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the constraint.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the constraint.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**CONSTRAINT_NAME**|**nvarchar(**128**)**|Constraint name.|  
   
 ## See Also  

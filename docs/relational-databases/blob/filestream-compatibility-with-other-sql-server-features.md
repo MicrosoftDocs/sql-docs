@@ -1,6 +1,6 @@
 ---
 title: "FILESTREAM compatibility | Microsoft Docs"
-description: "FILESTREAM compatibility with other SQL Server features"
+description: FILESTREAM stores data in the file system. Read about guidelines, limitations, and tips to keep in mind when using FILESTREAM with various SQL Server features.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -17,7 +17,7 @@ ms.author: mikeray
 ---
 # FILESTREAM compatibility with other SQL Server features
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Because FILESTREAM data is in the file system, this topic provides some considerations, guidelines, and limitations for using FILESTREAM with the following features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  

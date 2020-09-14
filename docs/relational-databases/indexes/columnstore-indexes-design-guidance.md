@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Design guidance"
 title: "Columnstore indexes - Design guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
@@ -13,7 +14,7 @@ ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Design guidance
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 High-level recommendations for designing columnstore indexes. A small number of good design decisions helps you achieve the high data compression and query performance that columnstore indexes are designed to provide. 
 

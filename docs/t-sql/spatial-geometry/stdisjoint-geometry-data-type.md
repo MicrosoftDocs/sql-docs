@@ -1,4 +1,5 @@
 ---
+description: "STDisjoint (geometry Data Type)"
 title: "STDisjoint (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STDisjoint (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns 1 if a **geometry** instance is spatially disjoint from another **geometry** instance. Returns 0 if it is not.  
   
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STDisjoint ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STDisjoint()` is invoked.  
   

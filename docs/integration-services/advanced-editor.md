@@ -1,4 +1,5 @@
 ---
+description: "Advanced Editor"
 title: "Advanced Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Advanced Editor
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Advanced Editor** dialog box to configure to configure properties for the selected [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object.  

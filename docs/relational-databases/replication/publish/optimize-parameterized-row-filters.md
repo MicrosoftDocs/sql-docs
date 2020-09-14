@@ -1,4 +1,5 @@
 ---
+description: "Optimize Parameterized Row Filters"
 title: "Optimize Parameterized Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Optimize Parameterized Row Filters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to optimize parameterized row filters in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **In This Topic**  

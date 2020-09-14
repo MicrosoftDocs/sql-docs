@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_delete_execution_log_tree (Transact-SQL)"
 title: "sp_syscollector_delete_execution_log_tree (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_syscollector_delete_execution_log_tree"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_delete_execution_log_tree (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes all the log entries for the run of a single collection set. It also deletes the log entries from the [!INCLUDE[ssIS](../../includes/ssis-md.md)] tables for that run.  
   

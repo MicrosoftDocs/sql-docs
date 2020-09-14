@@ -1,4 +1,5 @@
 ---
+description: "sys.syslockinfo (Transact-SQL)"
 title: "sys.syslockinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about all granted, converting, and waiting lock requests.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Monitor SQL Server Components | Microsoft Docs"
+description: Learn how monitoring lets you identify performance trends. SQL Server provides a service in a dynamic environment, so changes may be necessary over time.
 ms.custom: ""
 ms.date: "11/27/2018"
 ms.prod: sql
@@ -11,7 +12,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Monitor SQL Server Components
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitoring is important because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a service in a dynamic environment. The data in the application changes. The type of access that users require changes. The way that users connect changes. The types of applications accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may even change, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically manages system-level resources, such as memory and disk space, to minimize the need for extensive system-level manual tuning. Monitoring lets administrators identify performance trends to determine if changes are necessary.  
   
 To monitor any component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectively:  

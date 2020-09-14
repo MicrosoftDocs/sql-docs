@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-7: Add and configure the OLE DB destination"
 title: "Step 7: Add and configure the OLE DB destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-7: Add and configure the OLE DB destination
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

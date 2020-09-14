@@ -1,4 +1,5 @@
 ---
+description: "MDX Statement Reference (MDX)"
 title: "MDX Statement Reference (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

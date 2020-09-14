@@ -1,11 +1,12 @@
 ---
+description: "Create Master Data Manager Web Service Proxy Classes"
 title: Create Master Data Manager Web Service Proxy Classes
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: master-data-services
 
 ms.topic: "reference"
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
@@ -14,7 +15,7 @@ ms.author: lle
 ---
 # Create Master Data Manager Web Service Proxy Classes
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   The [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web service lets you make programmatic use of the features of [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] from any computer that can access your [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web site. Before you can start writing code to access the web service, you must generate proxy classes. The main proxy class you use to perform web service operations is the <xref:Microsoft.MasterDataServices.ServiceClient> class, which implements the <xref:Microsoft.MasterDataServices.IService> interface.  
   
@@ -26,7 +27,7 @@ ms.author: lle
 2.  Find the **mdsWsHttpBehavior** section under **\<serviceBehaviors>**. For the **\<serviceMetadata>** element, set **httpGetEnabled** to **true**.  
   
     > [!NOTE]  
-    >  If you want to enable Web services over Secure Sockets Layer (SSL), set **httpsGetEnabled** to **true** in the **mdsWsHttpBehavior** section of the web.config file. You also need to change **mdsWsHTTPBinding** so that it is configured for SSL, as well, and comment out the non-SSL section.  
+    >  If you want to enable Web services over Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), set **httpsGetEnabled** to **true** in the **mdsWsHttpBehavior** section of the web.config file. You also need to change **mdsWsHTTPBinding** so that it is configured for TLS, as well, and comment out the non-TLS section.  
   
 3.  Save changes to the file.  
   

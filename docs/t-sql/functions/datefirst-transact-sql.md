@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;DATEFIRST (Transact-SQL)"
 title: "@@DATEFIRST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -29,12 +30,12 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "options [SQL Server], date"
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &#x40;&#x40;DATEFIRST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the current value of [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md), for a specific session.
   
@@ -47,7 +48,9 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 ```
 @@DATEFIRST  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Type  
 **tinyint**
   

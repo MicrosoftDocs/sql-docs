@@ -1,18 +1,19 @@
 ---
+description: "Migrate a Reporting Services Installation (Native Mode)"
 title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/06/2018
+ms.date: 05/01/2020
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)
 
 This topic provides step-by-step instructions for migrating one of the following supported versions of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment to a new SQL Server Reporting Services instance:  
   
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -142,9 +143,11 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
  Click one of the following links to view instructions on how to install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-* [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [Install SQL Server Reporting Services 2016 and older from the Installation Wizard &#40;Setup&#41; ](install-reporting-services-native-mode-report-server.md) 
   
-* [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+* [Install SQL Server Reporting Services 2016 and older from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+
+* [Install SQL Server Reporting Services 2017 and later](install-reporting-services.md)
 
 ## <a name="bkmk_move_database"></a> Move the Report Server Database
 

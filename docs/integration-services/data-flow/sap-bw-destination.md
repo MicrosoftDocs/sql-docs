@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Destination"
 title: "SAP BW Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # SAP BW Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The SAP BW destination is the destination component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Thus, the SAP BW destination loads data from the data flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package into an SAP Netweaver BW version 7 system.  

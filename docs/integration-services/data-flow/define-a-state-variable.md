@@ -1,4 +1,5 @@
 ---
+description: "Define a State Variable"
 title: "Define a State Variable | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Define a State Variable
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to define a package variable where the CDC state is stored.  

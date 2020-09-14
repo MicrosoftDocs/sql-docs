@@ -1,4 +1,5 @@
 ---
+description: "SELECT (Transact-SQL)"
 title: "SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
@@ -27,7 +28,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:  
   
@@ -93,19 +94,68 @@ SELECT <select_criteria>
     [ OPTION ( <query_option> [ ,...n ] ) ]  
   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
  Because of the complexity of the SELECT statement, detailed syntax elements and arguments are shown by clause:  
-  
-|||  
-|-|-|  
-|[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[HAVING](../../t-sql/queries/select-having-transact-sql.md)|  
-|[SELECT Clause](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
-|[INTO Clause](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT and INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
-|[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
-|[WHERE](../../t-sql/queries/where-transact-sql.md)|[FOR Clause](../../t-sql/queries/select-for-clause-transact-sql.md)|  
-|[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)|[OPTION Clause](../../t-sql/queries/option-clause-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)
+    :::column-end:::
+    :::column:::
+        [HAVING](../../t-sql/queries/select-having-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WITH common_table_expression](../../t-sql/queries/with-common-table-expression-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SELECT Clause](../../t-sql/queries/select-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [EXCEPT and INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [INTO Clause](../../t-sql/queries/select-into-clause-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FROM](../../t-sql/queries/from-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [FOR Clause](../../t-sql/queries/select-for-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [WHERE](../../t-sql/queries/where-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [OPTION Clause](../../t-sql/queries/option-clause-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
  The order of the clauses in the SELECT statement is significant. Any one of the optional clauses can be omitted, but when the optional clauses are used, they must appear in the appropriate order.  
   
  SELECT statements are permitted in user-defined functions only if the select lists of these statements contain expressions that assign values to variables that are local to the functions.  

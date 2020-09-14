@@ -1,4 +1,5 @@
 ---
+description: "Azure Blob Source"
 title: "Azure Blob Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2018"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Azure Blob Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The **Azure Blob Source** component enables an SSIS package to read data from an Azure blob. The supported file formats are: CSV and AVRO.

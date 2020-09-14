@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Always On availability groups: interoperability (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 This topic documents interoperability of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].
 
@@ -59,7 +59,7 @@ The following features interoperate with [!INCLUDE[ssHADR](../../../includes/ssh
 
   [Migration Guide: Migrating to SQL Server 2012 Failover Clustering and Availability Groups from Prior Clustering and Mirroring Deployments](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
   [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)
+  [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)
 
 - **Whitepapers:**
 

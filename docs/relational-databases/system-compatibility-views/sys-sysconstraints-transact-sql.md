@@ -1,4 +1,5 @@
 ---
+description: "sys.sysconstraints (Transact-SQL)"
 title: "sys.sysconstraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains mappings of constraints to the objects that own the constraints within the database.  
   

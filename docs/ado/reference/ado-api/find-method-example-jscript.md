@@ -1,8 +1,9 @@
 ---
+description: "Find Method Example (JScript)"
 title: "Find Method Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Find method [ADO], JScript example"
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Find Method Example (JScript)
-This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Find](../../../ado/reference/ado-api/find-method-ado.md) method to locate and display the companies in the ***Northwind*** database whose name begins with the letter G. Cut and paste the following code to Notepad or another text editor, and save it as **FindJS.asp**.  
+This example uses the [Recordset](./recordset-object-ado.md) object's [Find](./find-method-ado.md) method to locate and display the companies in the ***Northwind*** database whose name begins with the letter G. Cut and paste the following code to Notepad or another text editor, and save it as **FindJS.asp**.  
   
 ```  
 <!-- BeginFindJS -->  
@@ -147,5 +148,5 @@ BODY {
 ```  
   
 ## See Also  
- [Find Method (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find Method (ADO)](./find-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

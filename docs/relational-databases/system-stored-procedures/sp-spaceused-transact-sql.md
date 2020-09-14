@@ -1,4 +1,5 @@
 ---
+description: "sp_spaceused (Transact-SQL)"
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_spaceused"
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Displays the number of rows, disk space reserved, and disk space used by a table, indexed view, or [!INCLUDE[ssSB](../../includes/sssb-md.md)] queue in the current database, or displays the disk space reserved and used by the whole database.  
   
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
@@ -162,7 +163,7 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
 |**xtp_pending_truncation**|**varchar(18)**|Total size of checkpoint files with state WAITING_FOR_LOG_TRUNCATION, in KB. This is the disk space used for checkpoint files that are awaiting cleanup, once log truncation happens. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. This column is only included if `@include_total_xtp_storage=1`.|
 
 ## Remarks  
- **database_size** is always larger than the sum of **reserved** + **unallocated space** because it includes the size of log files, but **reserved** and **unallocated_space** consider only data pages.  
+ **database_size** is generally larger than the sum of **reserved** + **unallocated space** because it includes the size of log files, but **reserved** and **unallocated_space** consider only data pages. In some cases with Azure Synapse Analytics, this statement may not be true. 
   
  Pages that are used by XML indexes and full-text indexes are included in **index_size** for both result sets. When *objname* is specified, the pages for the XML indexes and full-text indexes for the object are also counted in the total **reserved** and **index_size** results.  
   

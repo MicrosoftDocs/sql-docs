@@ -1,4 +1,5 @@
 ---
+description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the lowest active **rowversion** value in the current database. A **rowversion** value is active if it is used in a transaction that has not yet been committed. For more information, see [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
@@ -31,11 +32,12 @@ ms.author: mikeray
 ## Syntax  
   
 ```  
-  
-MIN_ACTIVE_ROWVERSION  
+MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns a **binary(8)** value.  
   
 ## Remarks  

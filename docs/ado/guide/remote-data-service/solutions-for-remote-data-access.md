@@ -1,8 +1,9 @@
 ---
+description: "Solutions for Remote Data Access"
 title: "Solutions for Remote Data Access | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS [ADO]"
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Solutions for Remote Data Access
 ## The Issue  
@@ -37,9 +38,7 @@ ms.author: genemi
  RDS defines a programming model - the sequence of activities necessary to gain access to and update a data source - to gain access to data through an intermediary, such as Internet Information Services (IIS). The programming model summarizes the entire functionality of RDS.  
   
 ## See Also  
- [Basic RDS Programming Model](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS Usage and Security](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Basic RDS Programming Model](./basic-rds-programming-model.md)   
+ [RDS Scenario](./rds-scenario.md)   
+ [RDS Tutorial](./rds-tutorial.md)   
+ [RDS Usage and Security](./rds-usage-and-security.md)

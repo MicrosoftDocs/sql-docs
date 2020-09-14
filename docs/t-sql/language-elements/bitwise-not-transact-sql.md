@@ -1,4 +1,5 @@
 ---
+description: "~ (Bitwise NOT) (Transact-SQL)"
 title: "~ (Bitwise NOT) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
@@ -25,7 +26,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ~ (Bitwise NOT) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Performs a bitwise logical NOT operation on an integer value.  
   
@@ -37,7 +38,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ~ expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types of the integer data type category, the **bit**, or the **binary** or **varbinary** data types. *expression* is treated as a binary number for the bitwise operation.  
   
@@ -63,11 +66,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The following example creates a table using the **int** data type to store the values and inserts the two values into one row.  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (  
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL); 
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

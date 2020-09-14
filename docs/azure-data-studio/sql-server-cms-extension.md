@@ -1,9 +1,8 @@
 ---
 title: SQL Server Central Management Servers extension
-titleSuffix: Azure Data Studio
-description: Install and use the SQL Server Central Management Servers extension (preview) for Azure Data Studio
-ms.reviewer: "alayu; sstein"
-ms.prod: sql
+description: Learn how to install and use the SQL Server Central Management Servers extension (preview)—an extension for grouping servers and applying actions to the group.
+ms.reviewer: "alayu, maghan, sstein"
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
@@ -30,6 +29,4 @@ This experience is currently in its initial preview. Report issues and feature r
  Central Management Servers can be viewed by clicking on the Connections icon (Ctrl/Cmd + G). The first time you download the extension, the CMS view will be minimized, and you can open it by click on **Central Management Servers**
 
 ## Next steps
-To learn more conceptually about Central Management Servers, [you can read more here.](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)
-
-
+To learn more conceptually about Central Management Servers, [you can read more here.](../ssms/register-servers/create-a-central-management-server-and-server-group.md)

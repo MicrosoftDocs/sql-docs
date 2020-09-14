@@ -1,4 +1,5 @@
 ---
+description: "Create and Manage Full-Text Indexes"
 title: "Create and Manage Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/31/2020"
@@ -15,7 +16,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Manage Full-Text Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 This topic describes how to create, populate, and manage full-text indexes in SQL Server.
   
 ## Prerequisite - Create a full-text catalog

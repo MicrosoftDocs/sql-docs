@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdbfixedrole (Transact-SQL)"
 title: "sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpdbfixedrole"
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpdbfixedrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of the fixed database roles.  
   

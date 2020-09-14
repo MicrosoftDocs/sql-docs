@@ -1,4 +1,5 @@
 ---
+description: "DQS Cleansing Connection Manager"
 title: "DQS Cleansing Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # DQS Cleansing Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A DQS Cleansing connection manager enables a package to connect to a [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] server. The DQS Cleansing transformation uses the DQS Cleansing connection manager.  

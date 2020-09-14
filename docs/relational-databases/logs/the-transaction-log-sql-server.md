@@ -1,5 +1,6 @@
 ---
 title: "The Transaction Log (SQL Server) | Microsoft Docs"
+description: Learn about the transaction log. Every SQL Server database records all transactions and database modifications that you need if there is a system failure.
 ms.custom: ""
 ms.date: "10/23/2019"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # The Transaction Log (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database has a transaction log that records all transactions and the database modifications made by each transaction.
   
 The transaction log is a critical component of the database. If there is a system failure, you will need that log to bring your database back to a consistent state. 
@@ -152,8 +153,11 @@ When transactional replication is enabled, `SELECT INTO` operations are fully lo
         > [!WARNING]
         > The `DBCC DBREINDEX` statement is **deprecated**; Do not use it in new applications.  
   
+        > [!NOTE]
+        > Index build operations use minimial logging but may be delayed when there is a concurrently executing backup. This delay is caused by the synchronization requirements of minimally logged buffer pool pages when using the simple or bulk-logged recovery model. 
+      
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) new heap rebuild (if applicable). Index page deallocation during a `DROP INDEX` operation is **always** fully logged.
-  
+
 ##  <a name="RelatedTasks"></a> Related tasks  
 **Managing the transaction log**  
   

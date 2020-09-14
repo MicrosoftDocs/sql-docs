@@ -1,8 +1,9 @@
 ---
+description: "BeginTrans, CommitTrans, and RollbackTrans Methods Example (VC++)"
 title: "BeginTrans, CommitTrans, and RollbackTrans Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "RollbackTrans method [ADO], VC++ example"
   - "CommitTrans method [ADO], VC++ example"
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods Example (VC++)
-This example changes the book type of all psychology books in the ***Titles*** table of the database. After the [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method starts a transaction that isolates all the changes made to the ***Titles*** table, the [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method saves the changes. You can use the [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method to undo changes that you saved using the [Update](../../../ado/reference/ado-api/update-method.md) method.  
+This example changes the book type of all psychology books in the ***Titles*** table of the database. After the [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) method starts a transaction that isolates all the changes made to the ***Titles*** table, the [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) method saves the changes. You can use the [Rollback](./begintrans-committrans-and-rollbacktrans-methods-ado.md) method to undo changes that you saved using the [Update](./update-method.md) method.  
   
 ## Example  
   
@@ -261,5 +262,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## See Also  
- [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Update Method](../../../ado/reference/ado-api/update-method.md)
+ [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Update Method](./update-method.md)

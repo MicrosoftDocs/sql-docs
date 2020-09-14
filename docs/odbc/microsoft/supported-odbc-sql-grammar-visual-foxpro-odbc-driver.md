@@ -1,4 +1,5 @@
 ---
+description: "Supported ODBC SQL Grammar (Visual FoxPro ODBC Driver)"
 title: "Supported ODBC SQL Grammar (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

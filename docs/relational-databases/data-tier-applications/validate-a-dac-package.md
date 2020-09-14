@@ -1,4 +1,5 @@
 ---
+description: "Validate a DAC Package"
 title: "Validate a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Validate a DAC Package
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   It is a good practice to review the contents of a DAC package before deploying it in production, and to validate the upgrade actions before upgrading an existing DAC. This is especially true when deploying packages that were not developed in your organization.  
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  

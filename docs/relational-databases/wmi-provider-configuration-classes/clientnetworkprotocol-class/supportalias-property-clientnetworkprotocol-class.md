@@ -1,4 +1,5 @@
 ---
+description: "SupportAlias Property (ClientNetworkProtocol Class)"
 title: "SupportAlias Property (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SupportAlias property"
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SupportAlias Property (ClientNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the Boolean property that specifies whether the current network protocol specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md) support aliases.  
   
 ## Syntax  

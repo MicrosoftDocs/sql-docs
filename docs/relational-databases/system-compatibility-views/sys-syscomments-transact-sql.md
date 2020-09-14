@@ -1,4 +1,5 @@
 ---
+description: "sys.syscomments (Transact-SQL)"
 title: "sys.syscomments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.syscomments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains entries for each view, rule, default, trigger, CHECK constraint, DEFAULT constraint, and stored procedure within the database. The **text** column contains the original SQL definition statements.  
   

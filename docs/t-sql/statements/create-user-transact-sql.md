@@ -1,5 +1,6 @@
 ---
-title: "CREATE USER (Transact-SQL) | Microsoft Docs"
+description: "CREATE USER (Transact-SQL)"
+title: CREATE USER (Transact-SQL)
 ms.custom: ""
 ms.date: "11/06/2019"
 ms.prod: sql
@@ -30,8 +31,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CREATE USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Adds a user to the current database. The 12 types of users are listed below with a sample of the most basic syntax:  
   
@@ -67,7 +70,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -120,7 +123,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
+-- Syntax for users based on Azure AD logins for Azure SQL Managed Instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -134,7 +137,7 @@ CREATE USER user_name
 ```
 
 > [!NOTE]
-> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> The Azure AD admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
@@ -165,7 +168,9 @@ CREATE USER user_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *user_name*  
  Specifies the name by which the user is identified inside this database. *user_name* is a **sysname**. It can be up to 128 characters long. When creating a user based on a Windows principal, the Windows principal name becomes the user name unless another user name is specified.  
   
@@ -216,7 +221,7 @@ ASYMMETRIC KEY *asym_key_name*
   
  Specifies the asymmetric key for which the database user is being created.  
   
-DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later,   [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user will be the default language of the database. If the default language for the user is not specified and the default language of the database is later changed, the default language of the user will change to the new default language for the database.  
@@ -263,11 +268,11 @@ GO
   
  Information about database users is visible in the [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) catalog view.
 
-A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in SQL Database managed instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
+A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in SQL Managed Instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-When creating the user in the SQL Database managed instance database, the login_name must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
+When creating the user in the SQL Managed Instance database, the login_name must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -458,7 +463,7 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### I. Create an Azure AD user from an Azure AD login in SQL Database managed instance
+### I. Create an Azure AD user from an Azure AD login in SQL Managed Instance
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
@@ -488,7 +493,7 @@ GO
 
 ### J. Create an Azure AD user without an AAD login for the database
 
-The following syntax is used to create an Azure AD user bob@contoso.com, in the SQL Database managed instance database (contained user):
+The following syntax is used to create an Azure AD user bob@contoso.com, in the SQL Managed Instance database (contained user):
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

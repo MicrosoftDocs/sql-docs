@@ -18,7 +18,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Configure a flexible automatic failover policy for an Always On availability group
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   This topic describes how to configure the flexible failover policy for an Always On availability group by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell in SQL Server. A flexible failover policy provides granular control over the conditions that cause [automatic failover](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
 
@@ -63,7 +63,7 @@ ms.custom: "seo-lt-2019"
   
 |Level|Failure Condition|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|PowerShell Value|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|One|On server down. Specifies that an automatic failover is initiated when one the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> <br /><br /> This is the least restrictive level.|1|**OnServerDown**|  
+|One|On server down. Specifies that an automatic failover is initiated when one the following occurs:<br /><br /> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is down.<br /><br /> The lease of the availability group for connecting to the WSFC cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268).<br /><br /> <br /><br /> This is the least restrictive level.|1|**OnServerDown**|  
 |Two|On server unresponsive. Specifies that an automatic failover is initiated when one of the following occurs:<br /><br /> The instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified health check timeout threshold of the availability group is exceeded.<br /><br /> The availability replica is in failed state.|2|**OnServerUnresponsive**|  
 |Three|On critical server error. Specifies that an automatic failover is initiated on critical [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default level.|3|**OnCriticalServerError**|  
 |Four|On moderate server error. Specifies that an automatic failover is initiated on moderate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] internal resource pool.|4|**OnModerateServerError**|  
@@ -166,7 +166,7 @@ ms.custom: "seo-lt-2019"
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
+-   [How It Works: SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

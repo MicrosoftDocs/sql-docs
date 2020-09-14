@@ -1,4 +1,5 @@
 ---
+description: "Mapping the Cursor Attributes1 Information Types"
 title: "Mapping the Cursor Attributes1 Information Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

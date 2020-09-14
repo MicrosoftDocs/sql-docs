@@ -1,10 +1,11 @@
 ---
+description: "Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
 title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"
@@ -32,12 +33,11 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: rothj
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 
@@ -45,7 +45,6 @@ For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)
-* [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -158,13 +157,13 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
-|Accelerated database recovery|Yes|Yes|No|No|No|
+|Accelerated database recovery|Yes|Yes|Yes|No|No|
 |Mirrored backups|Yes|No|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Cluster-less availability group|Yes|Yes|No|No|No|
+|Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery in Azure<sup>7</sup>|Yes|Yes|No|No|No|
@@ -187,10 +186,10 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 |Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
 |------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
-|Columnstore<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
+|Columnstore<sup>1</sup> <sup>2</sup>|Yes|Yes|Yes|Yes|Yes|
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
-|In-Memory Database: In-Memory OLTP<sup>1</sup>|Yes|Yes|Yes|Yes<sup>2</sup>|Yes|
+|In-Memory Database: In-Memory OLTP<sup>1</sup>|Yes|Yes|Yes|Yes<sup>3</sup>|Yes|
 |In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
 |In-Memory Database: memory-optimized tempdb metadata|Yes|No|No|No|No|
 |In-Memory Database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
@@ -203,12 +202,12 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Multiple filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA aware and large page memory and buffer array allocation|Yes|No|No|No|No|
 |Buffer pool extension|Yes|Yes|No|No|No|
-|IO resource governance|Yes|No|No|No|No|
+|I/O resource governance|Yes|No|No|No|No|
 |Read-ahead|Yes|No|No|No|No|
 |Advanced scanning|Yes|No|No|No|No|
 |Delayed durability|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: automatic tuning|Yes|No|No|No|No|
-|Intelligent Database: batch mode for row store|Yes|No|No|No|No|
+|Intelligent Database: batch mode for row store <sup>1</sup>|Yes|No|No|No|No|
 |Intelligent Database: row mode memory grant feedback|Yes|No|No|No|No|
 |Intelligent Database: approximate count distinct|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: table variable deferred compilation|Yes|Yes|Yes|Yes|Yes|
@@ -218,9 +217,11 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Interleaved execution for multi-statement table valued functions|Yes|Yes|Yes|Yes|Yes|
 |Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
 
-<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the [Scale Limits](#Cross-BoxScaleLimits) section. The degree of parallelism (DOP) for [batch mode](../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition and 1 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> This feature is not included in the LocalDB installation option.
+<sup>2</sup> Aggregate Pushdown, String Predicate Pushdown, and SIMD Optimizations are [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition scalability enhancements. For more detail, see [Columnstore indexes - what's new](../relational-databases/indexes/columnstore-indexes-what-s-new.md).
+
+<sup>3</sup> This feature is not included in the LocalDB installation option.
 
 ## <a name="RDBMSS"></a> RDBMS security
 
@@ -251,7 +252,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tracking|Yes|Yes|Yes|Yes|Yes|
 |Transactional replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |Transactional replication to Azure|Yes|Yes|No|No|No|
-|Transactional replication updateable subscription|Yes|No|No|No|No|
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|
 
 <sup>1</sup> Subscriber only
 
@@ -415,11 +416,10 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No|
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|
 
-[![Download SSMS](https://docs.microsoft.com/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**
-
 ## Next steps
 
 [Product Specifications for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
 [Installation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../database-engine/install-windows/installation-for-sql-server-2016.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

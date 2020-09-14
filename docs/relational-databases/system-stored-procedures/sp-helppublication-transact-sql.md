@@ -1,4 +1,5 @@
 ---
+description: "sp_helppublication (Transact-SQL)"
 title: "sp_helppublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/18/2019
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helppublication"
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information about a publication. For a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication, this stored procedure is executed at the Publisher on the publication database. For an Oracle publication, this stored procedure is executed at the Distributor on any database.  
   

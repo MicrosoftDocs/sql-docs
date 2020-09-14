@@ -1,7 +1,7 @@
 ---
 title: Known issues for the ODBC driver on Linux and macOS
 description: "Learn about known issues with the Microsoft ODBC Driver for SQL Server on Linux and macOS and steps for troubleshooting connectivity issues."
-ms.date: 03/05/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
@@ -20,7 +20,7 @@ This article contains a list of known issues with the Microsoft ODBC Driver 13, 
 
 ## Known issues
 
-Additional issues will be posted on the [Microsoft ODBC driver team blog](https://blogs.msdn.com/b/sqlnativeclient/).  
+Additional issues will be posted on the [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers).  
 
 - Due to system library limitations, Alpine Linux supports fewer character encodings and locales. For example, en_US.UTF-8 is not available. See [musl libc - functional differences from glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html) for more information.
 
@@ -53,7 +53,7 @@ If you get another connection failure and do not see a log file, there (possibly
         Entry:  
             Connection = 0x17c858e0  
             Window Hdl = (nil)  
-            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
+            Str In = [DRIVER={ODBC Driver 17 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
             Str Out = (nil)  
             Str Out Max = 0  
             Str Out Ptr = (nil)  
@@ -77,7 +77,7 @@ For more information about resolving connection failures, see:
   
 - [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
   
-- [SQL Server Authentication Troubleshooter](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+- [SQL Server Authentication Troubleshooter](/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
 
 ## Next steps
 

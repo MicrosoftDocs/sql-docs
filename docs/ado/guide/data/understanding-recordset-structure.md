@@ -1,8 +1,9 @@
 ---
+description: "Understanding Recordset Structure"
 title: "Understanding Recordset Structure | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset object [ADO]"
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Understanding Recordset Structure
 Every **Recordset** has a **Fields** collection consisting of one or more **Field** objects. A **Field** object usually represents a table column. The following topics will explain how to navigate through the **Fields** collection and get information about each field. Then they will discuss what kind of information is available to you via the **Field** object and how to use it.  

@@ -1,6 +1,6 @@
 ---
 title: "Availability replica is not joined to an availability group"
-description: "Identify possible reasons why a replica is not joined to an Always On availability group."
+description: "Learn how to identify possible reasons why a replica is not joined to an Always On availability group."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Availability replica is not joined to an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

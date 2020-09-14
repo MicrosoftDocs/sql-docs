@@ -1,4 +1,5 @@
 ---
+description: "CREATE AGGREGATE (Transact-SQL)"
 title: "CREATE AGGREGATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a user-defined aggregate function whose implementation is defined in a class of an assembly in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to bind the aggregate function to its implementation, the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly that contains the implementation must first be uploaded into an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using a CREATE ASSEMBLY statement.  
   
@@ -47,7 +48,9 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the user-defined aggregate function belongs.  
   

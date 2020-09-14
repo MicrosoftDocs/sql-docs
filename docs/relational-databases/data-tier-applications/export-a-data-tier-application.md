@@ -1,4 +1,5 @@
 ---
+description: "Export a Data-tier Application"
 title: "Export a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,7 +26,7 @@ ms.author: sstein
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export a Data-tier Application
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Exporting a deployed data-tier application (DAC) or database creates an export file that includes both the definitions of the objects in the database and all of the data contained in the tables. The export file can then be imported to another instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or to [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. The export-import operations can be combined to migrate a DAC between instances, to create an archive, or to create an on-premise copy of a database deployed in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## Before You Begin  
@@ -46,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ###  <a name="Permissions"></a> Permissions  
  Exporting a DAC requires at least ALTER ANY LOGIN and database scope VIEW DEFINITION permissions, as well as SELECT permissions on **sys.sql_expression_dependencies**. Exporting a DAC can be done by members of the securityadmin fixed server role who are also members of the database_owner fixed database role in the database from which the DAC is exported. Members of the sysadmin fixed server role or the built-in SQL Server system administrator account named **sa** can also export a DAC.
  
-On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELECT permission on all tables or on specific tables
+On Azure SQL Database you need to grant **for each database** VIEW DEFINITION and SELECT permission on all tables or on specific tables
 
   
 ##  <a name="UsingDeployDACWizard"></a> Using the Export Data-tier Application Wizard  

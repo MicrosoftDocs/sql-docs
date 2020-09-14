@@ -1,4 +1,5 @@
 ---
+description: "STATS_DATE (Transact-SQL)"
 title: "STATS_DATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "last time statistics updated"
   - "stats update date"
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STATS_DATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the date of the most recent update for statistics on a table or indexed view.  
   
@@ -38,7 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 STATS_DATE ( object_id , stats_id )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_id*  
  ID of the table or indexed view with the statistics.  
   

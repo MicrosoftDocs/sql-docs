@@ -1,4 +1,5 @@
 ---
+description: "Revert word breakers used by Search to previous version (SQL Server Search)"
 title: "Revert word breakers used by Search to previous version"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # Revert word breakers used by Search to previous version (SQL Server Search)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
   
  This article does not discuss the following languages:  
@@ -374,5 +375,5 @@ ms.custom: "seo-lt-2019"
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)
+ [Behavior Changes to Full-Text Search](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
  

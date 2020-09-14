@@ -1,11 +1,12 @@
 ---
 title: "Named Pipes Properties"
+description: Use the Protocol page on the Named Pipes Properties dialog box to view or change the named pipe that SQL Server listens to when using the Named Pipes protocol.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pipes [SQL Server]"
@@ -18,7 +19,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Named Pipes Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use the **Protocol**page on the **Named Pipes Properties** dialog box to view or change the named pipe that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens to, when using the Named Pipes protocol.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be restarted to enable or disable the protocol, or change the named pipe.  
@@ -40,7 +41,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 ## See Also  
  [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
- [Choosing a Network Protocol](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [Creating a Valid Connection String Using Named Pipes](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
-  
+ [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   
+ [Creating a Valid Connection String Using Named Pipes](/previous-versions/sql/sql-server-2016/ms189307(v=sql.130))  
   

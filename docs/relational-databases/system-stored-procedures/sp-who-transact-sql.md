@@ -1,4 +1,5 @@
 ---
+description: "sp_who (Transact-SQL)"
 title: "sp_who (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_who (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides information about current users, sessions, and processes in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. The information can be filtered to return only those processes that are not idle, that belong to a specific user, or that belong to a specific session.  
   

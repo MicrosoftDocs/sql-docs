@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Database Scoped Credential (Transact-SQL)"
 title: "REVOKE Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
@@ -21,7 +22,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE Database Scoped Credential (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Revokes permissions on a database scoped credential.  
   
@@ -38,7 +39,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
     [ AS revoking_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked. The permission itself will not be revoked.  
   

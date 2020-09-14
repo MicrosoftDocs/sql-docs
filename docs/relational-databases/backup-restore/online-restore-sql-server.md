@@ -1,5 +1,6 @@
 ---
 title: "Online Restore (SQL Server) | Microsoft Docs"
+description: In SQL Server Enterprise edition, in some cases, you can restore data by file, page, or piecemeal restore while a database remains online. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # Online Restore (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Online restore is supported only on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. In this edition, a file, page, or piecemeal restore is online by default. This topic is relevant for databases that contain multiple files or filegroups (and, under the simple recovery model, only for read-only filegroups).  
   
  Restoring data while the database is online is called an *online restore*. A database is considered to be online whenever the primary filegroup is online, even if one or more of its secondary filegroups are offline. Under any recovery model, you can restore a file that is offline while the database is online. Under the full recovery model, you can also restore pages while the database is online.  

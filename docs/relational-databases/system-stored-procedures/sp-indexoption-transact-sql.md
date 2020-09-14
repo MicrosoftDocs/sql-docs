@@ -1,4 +1,5 @@
 ---
+description: "sp_indexoption (Transact-SQL)"
 title: "sp_indexoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_indexoption"
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_indexoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets locking option values for user-defined clustered and nonclustered indexes or tables with no clustered index.  
   

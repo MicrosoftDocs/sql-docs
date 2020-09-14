@@ -1,8 +1,9 @@
 ---
+description: "RDS Scenario"
 title: "RDS Scenario | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Scenario
 > [!IMPORTANT]
@@ -43,22 +44,20 @@ ms.author: genemi
   
  This scenario contains the following topics.  
   
--   [System Requirements for the Address Book Application](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [System Requirements for the Address Book Application](./system-requirements-for-the-address-book-application.md)  
   
--   [Running the Address Book SQL Script](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [Running the Address Book SQL Script](./running-the-address-book-sql-script.md)  
   
--   [Running the Address Book Sample Application](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [Running the Address Book Sample Application](./running-the-address-book-sample-application.md)  
   
--   [Address Book Data-Binding Object](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [Address Book Data-Binding Object](./address-book-data-binding-object.md)  
   
--   [Address Book Command Buttons](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [Address Book Command Buttons](./address-book-command-buttons.md)  
   
--   [Address Book Navigation Buttons](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [Address Book Navigation Buttons](./address-book-navigation-buttons.md)  
   
 ## See Also  
- [System Requirements for the Address Book Application](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [System Requirements for the Address Book Application](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [RDS Fundamentals](./rds-fundamentals.md)   
+ [RDS Tutorial](./rds-tutorial.md)

@@ -1,4 +1,5 @@
 ---
+description: "Installing Integration Services Versions Side by Side"
 title: "Installing Integration Services Versions Side by Side | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Installing Integration Services Versions Side by Side
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can install   

@@ -1,4 +1,5 @@
 ---
+description: "Data Flow Performance Features"
 title: "Data Flow Performance Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: chugu
 ---
 # Data Flow Performance Features
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This topic provides suggestions about how to design [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to avoid common performance issues. This topic also provides information about features and tools that you can use to troubleshoot the performance of packages.  
@@ -182,7 +183,7 @@ ms.author: chugu
   
 -   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
   
--   Blog post, [Troubleshooting SSIS Package Performance Issues](https://go.microsoft.com/fwlink/?LinkId=238156), on blogs.msdn.com  
+-   Blog post, [Troubleshooting SSIS Package Performance Issues](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), on blogs.msdn.com  
   
  **Videos**  
   

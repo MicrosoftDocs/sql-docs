@@ -1,4 +1,5 @@
 ---
+description: "CREATE EVENT NOTIFICATION (Transact-SQL)"
 title: "CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "events [SQL Server], notifications"
   - "event notifications [SQL Server], creating"
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an object that sends information about a database or server event to a service broker service. Event notifications are created only by using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
@@ -43,7 +44,9 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *event_notification_name*  
  Is the name of the event notification. An event notification name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the scope in which they are created: SERVER, DATABASE, or *object_name*.  
   

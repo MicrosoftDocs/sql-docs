@@ -11,7 +11,7 @@ ms.technology: linux
 ---
 # Configure failover cluster instance - SMB - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains how to configure SMB storage for a failover cluster instance (FCI) on Linux. 
  

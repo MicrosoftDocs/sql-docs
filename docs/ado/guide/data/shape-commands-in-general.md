@@ -1,8 +1,9 @@
 ---
+description: "Shape Commands in General"
 title: "Shape Commands in General | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "shape commands [ADO]"
   - "data shaping [ADO], shape commands"
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Shape Commands in General
 Data shaping defines the columns of a shaped **Recordset**, the relationships between the entities represented by the columns, and the manner in which the **Recordset** is populated with data.  

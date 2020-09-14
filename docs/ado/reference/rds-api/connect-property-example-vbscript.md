@@ -1,8 +1,9 @@
 ---
+description: "Connect Property Example (VBScript)"
 title: "Connect Property Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,14 +13,14 @@ dev_langs:
 helpviewer_keywords: 
   - "Connect property [ADO], VBScript example"
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connect Property Example (VBScript)
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- This code shows how to set the [Connect](../../../ado/reference/rds-api/connect-property-rds.md) property at design time:  
+ This code shows how to set the [Connect](./connect-property-rds.md) property at design time:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -120,25 +121,4 @@ BODY {
 ```  
   
 ## See Also  
- [Connect Property (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Connect Property (RDS)](./connect-property-rds.md)

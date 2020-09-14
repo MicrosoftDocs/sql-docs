@@ -1,4 +1,5 @@
 ---
+description: "Null (geography Data Type)"
 title: "Null (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Null (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A read-only property providing a null instance of the **geography** type.
   
@@ -29,8 +30,10 @@ A read-only property providing a null instance of the **geography** type.
   
 Null  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **geography**  

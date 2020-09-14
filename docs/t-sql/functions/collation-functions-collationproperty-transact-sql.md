@@ -1,4 +1,5 @@
 ---
+description: "Collation Functions - COLLATIONPROPERTY (Transact-SQL)"
 title: "COLLATIONPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "collations [SQL Server], properties"
   - "COLLATIONPROPERTY function"
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Functions - COLLATIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the requested property of a specified collation.
   
@@ -33,7 +34,9 @@ This function returns the requested property of a specified collation.
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *collation_name*  
 The name of the collation. The *collation_name* argument has an **nvarchar(128)** data type, with no default value.
   

@@ -1,6 +1,6 @@
 ---
 title: "Configure FailureConditionLevel property settings"
-describes: "Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. "
+description: "Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart."
 ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure FailureConditionLevel property settings
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. Changes to this property are applied immediately without requiring a restart of the Windows Server Failover Cluster (WSFC) service or the FCI resource.  
   
 -   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
@@ -55,7 +55,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Failover Clustering and Network Load Balancing Team Blog)  
   
 -   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   

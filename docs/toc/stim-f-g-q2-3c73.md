@@ -1,6 +1,7 @@
 ---
-title: Data Profiling and Notifications in DQS
-ms.date: 02/29/2020
+description: "Data Profiling and Notifications in DQS (3c73)"
+title: Data Profiling and Notifications in DQS (3c73)
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
@@ -11,9 +12,9 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.localizationpriority: "null"
 localization_priority: "None"
 ---
-# Data Profiling and Notifications in DQS
+# Data Profiling and Notifications in DQS (3c73)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Data profiling in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) is the process of analyzing the data in an existing data source, and displaying statistics about the data in DQS activities. It provides you with automated measurements of data quality. DQS profiling is integrated into DQS knowledge management and data-quality projects. it's dynamic and adjustable. Profiling has two major goals: first, to guide you through data quality processes and support your decisions, and second, to assess the effectiveness of the processes. The DQS profiling process has the following benefits:  
   

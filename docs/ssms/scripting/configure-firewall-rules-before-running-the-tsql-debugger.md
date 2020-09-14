@@ -4,7 +4,7 @@ description: Learn how to configure the Windows Firewall rules before running th
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
   - "vs.debug.error.sqlde_accessdenied"
@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Configure firewall rules before running the TSQL Debugger
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Windows Firewall rules must be configured to enable [!INCLUDE[tsql](../../includes/tsql-md.md)] debugging when connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that is running on a different computer than the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor.
 

@@ -1,4 +1,5 @@
 ---
+description: "Exec Prepared SQL Event Class"
 title: "Exec Prepared SQL Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Exec Prepared SQL Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Exec Prepared SQL event class indicates that the SqlClient, ODBC, OLE DB, or DB-Library has executed a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.  
   
 ## Exec Prepared SQL Event Class Data Columns  

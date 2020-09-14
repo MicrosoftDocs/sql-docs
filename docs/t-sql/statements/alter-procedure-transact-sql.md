@@ -1,4 +1,5 @@
 ---
+description: "ALTER PROCEDURE (Transact-SQL)"
 title: "ALTER PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "modifying stored procedures"
   - "stored procedures [SQL Server], modifying"
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifies a previously created procedure that was created by executing the CREATE PROCEDURE statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -33,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -51,7 +52,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server CLR Stored Procedure  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -63,7 +64,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```sql  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -72,7 +73,10 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 [;]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  The name of the schema to which the procedure belongs.  
   
@@ -163,8 +167,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ## Examples  
  The following example creates the `uspVendorAllInfo` stored procedure. This procedure returns the names of all the vendors that supply [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], the products they supply, their credit ratings, and their availability. After this procedure is created, it is then modified to return a different result set.  
   
-```  
-  
+```sql
 IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE Purchasing.uspVendorAllInfo;  
 GO  
@@ -181,17 +184,16 @@ AS
     INNER JOIN Production.Product p  
       ON pv.ProductID = p.ProductID   
     ORDER BY v.Name ASC;  
-GO  
-  
+GO    
 ```  
   
  The following example alters the `uspVendorAllInfo` stored procedure. It removes the EXECUTE AS CALLER clause and modifies the body of the procedure to return only those vendors that supply the specified product. The `LEFT` and `CASE` functions customize the appearance of the result set.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER PROCEDURE Purchasing.uspVendorAllInfo  
-    @Product varchar(25)   
+    @Product VARCHAR(25)   
 AS  
     SET NOCOUNT ON;  
     SELECT LEFT(v.Name, 25) AS Vendor, LEFT(p.Name, 25) AS 'Product name',   
@@ -215,7 +217,6 @@ AS
     WHERE p.Name LIKE @Product  
     ORDER BY v.Name ASC;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

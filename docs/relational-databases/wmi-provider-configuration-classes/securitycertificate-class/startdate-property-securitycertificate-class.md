@@ -1,4 +1,5 @@
 ---
+description: "StartDate Property (SecurityCertificate Class)"
 title: "StartDate Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "StartDate property"
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # StartDate Property (SecurityCertificate Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the date when the security certificate starts being in effect.  
   
 ## Syntax  

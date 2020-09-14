@@ -1,5 +1,5 @@
 ---
-title: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) | Microsoft Docs"
+title: "Bulk copy data using IRowsetFastLoad (OLE DB driver) | Microsoft Docs"
 description: "Bulk copy data into a SQL Server table Using IRowsetFastLoad interface of OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "bulk copy [OLE DB]"
   - "bulk copy [OLE DB], data files"
   - "bulk copy [OLE DB], about bulk copy"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,16 +1,16 @@
 ---
 title: Monitor SQL Server partners | Microsoft Docs
 description: Lists of third-party partners with solutions to monitor Server.
-services: sql-server
 ms.topic: conceptual
 ms.custom: ""
 ms.date: 11/02/2017 
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server monitoring partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To monitor your SQL Server services, choose from a wide variety of industry-leading tools. This article highlights Microsoft partner companies with monitoring solutions supporting Microsoft SQL Server.
 
 ## Microsoft monitoring partners
@@ -56,7 +56,7 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
 
-[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlightcloud?tab=Overview
 [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->

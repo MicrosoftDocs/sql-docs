@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Introducing Expressions | Microsoft Docs"
+description: Learn to use expressions with common functions and operators to create powerful and flexible Reporting Services paginated reports.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

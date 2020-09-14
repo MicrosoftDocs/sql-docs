@@ -1,4 +1,5 @@
 ---
+description: "DROP INDEX (Transact-SQL)"
 title: "DROP INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -29,12 +30,12 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], dropping"
   - "DROP INDEX statement"
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes one or more relational, spatial, filtered, or XML indexes from the current database. You can drop a clustered index and move the resulting table to another filegroup or partition scheme in a single transaction by specifying the MOVE TO option.  
   
@@ -100,7 +101,9 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
@@ -265,7 +268,7 @@ When a clustered index is dropped OFFLINE, only the upper levels of clustered in
 ### A. Dropping an index  
  The following example deletes the index `IX_ProductVendor_VendorID` on the `ProductVendor` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
     ON Purchasing.ProductVendor;  
 GO  
@@ -274,7 +277,7 @@ GO
 ### B. Dropping multiple indexes  
  The following example deletes two indexes in a single transaction in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 DROP INDEX  
     IX_PurchaseOrderHeader_EmployeeID ON Purchasing.PurchaseOrderHeader,  
     IX_Address_StateProvinceID ON Person.Address;  
@@ -286,7 +289,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
     ON Production.BillOfMaterials WITH (ONLINE = ON, MAXDOP = 2);  
 GO  
@@ -297,7 +300,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
-```  
+```sql  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
 CREATE UNIQUE CLUSTERED INDEX  
     AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -350,7 +353,7 @@ GO
   
  The following example deletes a clustered index with a PRIMARY KEY constraint by dropping the constraint. The `ProductCostHistory` table has no FOREIGN KEY constraints. If it did, those constraints would have to be removed first.  
   
-```  
+```sql  
 -- Set ONLINE = OFF to execute this example on editions other than Enterprise Edition.  
 ALTER TABLE Production.TransactionHistoryArchive  
 DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID  
@@ -360,7 +363,7 @@ WITH (ONLINE = ON);
 ### F. Dropping an XML index  
  The following example drops an XML index on the `ProductModel` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 DROP INDEX PXML_ProductModel_CatalogDescription   
     ON Production.ProductModel;  
 ```  
@@ -370,7 +373,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
-```  
+```sql  
 DROP INDEX PK_MyClusteredIndex   
     ON dbo.MyTable   
     WITH (MOVE TO MyPartitionScheme,  

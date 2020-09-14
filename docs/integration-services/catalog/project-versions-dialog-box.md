@@ -1,4 +1,5 @@
 ---
+description: "Project Versions Dialog Box"
 title: "Project Versions Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Project Versions Dialog Box
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Project Versions** dialog box to view versions of a project and to restore a previous version.  

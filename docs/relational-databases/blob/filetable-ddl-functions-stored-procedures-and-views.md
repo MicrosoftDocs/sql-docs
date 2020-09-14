@@ -1,5 +1,7 @@
 ---
+description: "FileTable DDL, functions, stored procedures, and views"
 title: "FileTable functions, stored procedures, views | Microsoft Docs"
+descriptions: Learn which Transact-SQL statements and which SQL Server functions, stored procedures, and views have been added or changed to support the FileTable feature.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -15,7 +17,7 @@ ms.author: mikeray
 ---
 # FileTable DDL, functions, stored procedures, and views
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that have been added or changed to support the FileTable feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The Status column in the following tables indicates whether the item is new in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or was present in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but has been changed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to support semantic search.  

@@ -1,4 +1,5 @@
 ---
+description: "PERCENTILE_CONT (Transact-SQL)"
 title: "PERCENTILE_CONT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Calculates a percentile based on a continuous distribution of the column value in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The result is interpolated and might not be equal to any of the specific values in the column.  
   
@@ -35,7 +36,9 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_literal*  
  The percentile to compute. The value must range between 0.0 and 1.0.  
   

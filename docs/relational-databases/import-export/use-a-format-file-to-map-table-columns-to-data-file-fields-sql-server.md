@@ -17,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ms.custom: "seo-lt-2019"
 ---
 # Use a format file to map table columns to data-file fields (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A data file can contain fields arranged in a different order from the corresponding columns in the table. This topic presents both non-XML and XML format files that have been modified to accommodate a data file whose fields are arranged in a different order from the table columns. The modified format file maps the data fields to their corresponding table columns.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
 |Outline|
@@ -115,37 +115,37 @@ See [Schema Syntax for XML Format Files](../../relational-databases/import-expor
 Compare the changes  
 **Before**
 ```
-\<?xml version="1.0"?>
-\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  \<COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```
 **After**
 ```
-\<?xml version="1.0"?>
-\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
-  \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
-  \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
-  \<FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="30" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
  </RECORD>
  <ROW>
-  \<COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  \<COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
-  \<COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
+  <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
+  <COLUMN SOURCE="3" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="4" NAME="Gender" xsi:type="SQLCHAR"/>
  </ROW>
 </BCPFORMAT>
 ```

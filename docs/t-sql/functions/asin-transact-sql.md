@@ -1,4 +1,5 @@
 ---
+description: "ASIN (Transact-SQL)"
 title: "ASIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "sine"
   - "arcsine"
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ASIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A function that returns the angle, in radians, whose sine is the specified **float** expression. This is also called **arcsine**.
   
@@ -34,7 +35,9 @@ A function that returns the angle, in radians, whose sine is the specified **flo
 ASIN ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of either type **float** or of a type that can implicitly convert to float. Only a value ranging from -1.00 to 1.00 is valid. Values outside this range return NULL, and ASIN will report a domain error.
   

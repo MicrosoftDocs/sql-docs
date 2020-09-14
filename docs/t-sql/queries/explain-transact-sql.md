@@ -1,4 +1,5 @@
 ---
+description: "EXPLAIN (Transact-SQL)"
 title: "EXPLAIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -13,11 +14,9 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to Azure SQL Data Warehouse (preview).
-  
- For more information about query plans, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
+  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to Azure SQL Data Warehouse.
   
 ## Syntax  
   
@@ -32,7 +31,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
 
-*WITH_RECOMMENDATIONS* (Preview)
+*WITH_RECOMMENDATIONS* 
 
 Return the query plan with recommendations to optimize the SQL statement performance.  
   

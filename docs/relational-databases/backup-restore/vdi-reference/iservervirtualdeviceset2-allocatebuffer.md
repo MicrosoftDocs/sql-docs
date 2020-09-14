@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDeviceSet2::AllocateBuffer (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **AllocateBuffer** function obtains a shared memory buffer from the virtual device set.
 

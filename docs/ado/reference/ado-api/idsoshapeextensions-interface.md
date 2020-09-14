@@ -1,8 +1,9 @@
 ---
+description: "IDSOShapeExtensions Interface"
 title: "IDSOShapeExtensions Interface | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "IDSOShapeExtensions interface [ADO]"
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # IDSOShapeExtensions Interface
 Gets the underlying OLE DB Data Source object for the SHAPE provider.  
@@ -30,9 +31,9 @@ public:
   
 ## Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
-|[GetDataProviderDSO Method](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Retrieves the underlying OLE DB Data Source object from the Shape provider.|  
+|[GetDataProviderDSO Method](./getdataproviderdso-method.md)|Retrieves the underlying OLE DB Data Source object from the Shape provider.|  
   
 ## Requirements  
  **Version:** ADO 2.0 and later  

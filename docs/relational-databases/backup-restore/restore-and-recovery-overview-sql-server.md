@@ -1,5 +1,6 @@
 ---
 title: "Restore and Recovery Overview (SQL Server) | Microsoft Docs"
+description: This article is an overview of the operations involved in recovering a SQL Server database from a failure by restoring a set of SQL Server backups in sequence.
 ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
@@ -23,7 +24,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # Restore and Recovery Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   To recover a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database from a failure, a database administrator has to restore a set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups in a logically correct and meaningful restore sequence. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore and recovery supports restoring data from backups of a whole database, a data file, or a data page, as follows:  
   
@@ -167,9 +168,9 @@ The Database Recovery Advisor facilitates constructing restore plans that implem
   
 For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
   
--   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: An Introduction](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor: Using SSMS to create/restore split backups](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="adr"></a> Accelerated database recovery
 [Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) is available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Accelerated database recovery greatly improves database availability, especially in the presence of long-running transactions, by redesigning the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [recovery process](#TlogAndRecovery). A database for which accelerated database recovery was enabled completes the recovery process significantly faster after a failover or other non-clean shut down. When enabled, Accelerated database recovery also completes rollback of canceled long-running transactions significantly faster.

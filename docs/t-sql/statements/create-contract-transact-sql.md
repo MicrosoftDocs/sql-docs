@@ -1,4 +1,5 @@
 ---
+description: "CREATE CONTRACT (Transact-SQL)"
 title: "CREATE CONTRACT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "contracts [Service Broker], creating"
   - "message types [Service Broker], contracts"
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new contract. A contract defines the message types that are used in a [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversation and also determines which side of the conversation can send messages of that type. Each conversation follows a contract. The initiating service specifies the contract for the conversation when the conversation starts. The target service specifies the contracts that the target service accepts conversations for.  
   
@@ -40,8 +41,10 @@ CREATE CONTRACT contract_name
        } [ ,...n] )   
 [ ; ]  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *contract_name*  
  Is the name of the contract to create. A new contract is created in the current database and owned by the principal specified in the AUTHORIZATION clause. Server, database, and schema names cannot be specified. The *contract_name* can be up to 128 characters.  
   

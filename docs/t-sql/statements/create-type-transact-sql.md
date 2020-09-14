@@ -1,4 +1,5 @@
 ---
+description: "CREATE TYPE (Transact-SQL)"
 title: "CREATE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/05/2019"
@@ -24,11 +25,11 @@ helpviewer_keywords:
   - "alias data types [SQL Server], creating"
   - "data types [SQL Server], creating"
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates an alias data type or a user-defined type in the current database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. The implementation of an alias data type is based on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native system type. A user-defined type is implemented through a class of an assembly in the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR). To bind a user-defined type to its implementation, the CLR assembly that contains the implementation of the type must first be registered in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   
@@ -159,7 +160,9 @@ column_name <data_type>
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the alias data type or user-defined type belongs.  
   

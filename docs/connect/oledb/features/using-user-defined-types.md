@@ -1,6 +1,6 @@
 ---
 title: "Using User-Defined Types | Microsoft Docs"
-description: "Using User-Defined Types with OLE DB Driver for SQL Server"
+description: The OLE DB Driver for SQL Server supports user-defined types as binary types with metadata information, which allows you to manage them as objects.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, user-defined types"
   - "data access [OLE DB Driver for SQL Server], user-defined types"
   - "ISSCommandWithParameters interface"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using User-Defined Types
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

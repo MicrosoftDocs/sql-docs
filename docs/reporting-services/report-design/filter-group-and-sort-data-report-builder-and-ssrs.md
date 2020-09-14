@@ -1,5 +1,6 @@
 ---
 title: "Filter, Group, and Sort Data (Report Builder) | Microsoft Docs"
+description: Learn about ways to control, organize, and sort report data with expressions based on dataset fields, parameters in the Report Data pane of Report Builder. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

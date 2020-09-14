@@ -1,4 +1,5 @@
 ---
+description: "GRANT Server Principal Permissions (Transact-SQL)"
 title: "GRANT Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -23,7 +24,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # GRANT Server Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
@@ -49,7 +50,9 @@ GRANT permission [ ,...n ] }
     | server_role  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. For a list of the permissions, see the Remarks section later in this topic.  
   

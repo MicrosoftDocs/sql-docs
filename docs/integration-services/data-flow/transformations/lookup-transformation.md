@@ -1,4 +1,5 @@
 ---
+description: "Lookup Transformation"
 title: "Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: chugu
 ---
 # Lookup Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Lookup transformation performs lookups by joining data in input columns with columns in a reference dataset. You use the lookup to access additional information in a related table that is based on values in common columns.  
@@ -165,7 +166,7 @@ ms.author: chugu
  When you select any other option in the **Specify how to handle rows with no matching entries** list box, the rows are handled as errors. The **Error** option on the **Error Output** page is available.  
   
 ### External Resources  
- Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) on blogs.msdn.com  
   
 ## Lookup Transformation Editor (Connection Page)
   Use the **Connection** page of the **Lookup Transformation Editor** dialog box to select a connection manager. If you select an OLE DB connection manager, you also select a query, table, or view to generate the reference dataset.  
@@ -212,7 +213,7 @@ ms.author: chugu
  Preview results by using the **Preview Query Results** dialog box. This option displays up to 200 rows.  
   
 ### External Resources  
- Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) on blogs.msdn.com  
   
 ## Lookup Transformation Editor (Columns Page)
   Use the **Columns** page of the **Lookup Transformation Editor** dialog box to specify the join between the source table and the reference table, and to select lookup columns from the reference table.  
@@ -269,7 +270,7 @@ ms.author: chugu
  Map input columns to parameters by using the **Set Query Parameters** dialog box.  
   
 ### External Resources  
- Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+ Blog entry, [Lookup cache modes](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) on blogs.msdn.com  
   
 ## See Also  
  [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

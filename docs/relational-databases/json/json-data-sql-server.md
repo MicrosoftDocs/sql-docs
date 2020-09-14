@@ -1,6 +1,7 @@
 ---
+description: "JSON data in SQL Server"
 title: "Work with JSON data"
-ms.date: "05/14/2019"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: 
 ms.topic: quickstart
@@ -10,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

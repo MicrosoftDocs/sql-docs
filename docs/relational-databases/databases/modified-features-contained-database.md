@@ -1,4 +1,5 @@
 ---
+description: "Modified Features (Contained Database)"
 title: "Modified Features (Contained Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Modified Features (Contained Database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following features have been modified to be supported by a partially contained database. Features are usually modified so they do not cross the database boundary.  
   
  For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  

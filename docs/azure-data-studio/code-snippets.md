@@ -1,22 +1,21 @@
 ---
 title: Create reusable code snippets
-titleSuffix: Azure Data Studio
-description: Learn how to create and use SQL code snippets in Azure Data Studio
-ms.prod: sql
+description: Learn how to create and use Azure Data Studio SQL code snippets, which make it easy to create databases and database objects.
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: alayu, sstein
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
 
-# Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in Azure Data Studio
 
-Code snippets in [!INCLUDE[name-sos](../includes/name-sos-short.md)] are templates that make it easy to create databases and database objects. 
+Code snippets in Azure Data Studio are templates that make it easy to create databases and database objects. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides several T-SQL snippets to assist you with quickly generating the proper syntax. 
+Azure Data Studio provides several T-SQL snippets to assist you with quickly generating the proper syntax. 
 
 User-defined code snippets can also be created.
 
@@ -53,7 +52,7 @@ You can define your own snippets. To open up the SQL snippet file for editing:
 1. Select **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its code snippet functionality from Visual Studio Code so this article specifically discusses using SQL snippets. For more detailed information, see [Creating your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) in the Visual Studio Code documentation. 
+   > Azure Data Studio inherits its code snippet functionality from Visual Studio Code so this article specifically discusses using SQL snippets. For more detailed information, see [Creating your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) in the Visual Studio Code documentation. 
 
    ![replace template field](media/code-snippets/select-sql.png)
 

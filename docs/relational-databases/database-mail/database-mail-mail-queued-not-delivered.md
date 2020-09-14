@@ -1,4 +1,5 @@
 ---
+description: "Database mail: Mail queued, not delivered"
 title: "Database mail: Mail queued, not delivered| Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Database mail: Mail queued, not delivered 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes how to troubleshoot a problem where e-mail messages are successfully queued, but the messages are not delivered.
 

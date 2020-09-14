@@ -1,4 +1,5 @@
 ---
+description: "ServerSettingsGeneralFlag Class"
 title: "ServerSettingsGeneralFlag Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerSettingsGeneralFlag class"
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServerSettingsGeneralFlag Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [ServerSettingsGeneralFlag Class](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) represents the general flag settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  This class can be used to do the following:  

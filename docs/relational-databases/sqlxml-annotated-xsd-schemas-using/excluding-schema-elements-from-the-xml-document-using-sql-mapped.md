@@ -1,5 +1,6 @@
 ---
 title: "Exclude schema elements from XML Doc with sql:mapped"
+description: Learn how to use the sql:mapped annotation to create an element in the XSD schema that does not map to a database table (view) or column.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -25,7 +26,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Excluding Schema Elements from the XML Document Using sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Every element and attribute in the XSD schema maps to a database table/view and column because of the default mapping. If you want to create an element in the XSD schema that does not map to any database table (view) or column and that does not appear in the XML, you can specify the **sql:mapped** annotation.  
   
  The **sql:mapped** annotation is especially useful if the schema cannot be modified or if the schema is used to validate XML from other sources and yet contains data that is not stored in your database. The **sql:mapped** annotation differs from **sql:is-constant** in that the unmapped elements and attributes do not appear in the XML document.  

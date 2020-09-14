@@ -1,6 +1,7 @@
 ---
+description: "Install SQL Server Reporting Services"
 title: "Install SQL Server Reporting Services | Microsoft Docs"
-ms.date: 10/02/2019
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
@@ -27,6 +28,8 @@ Download [SQL Server 2017 Reporting Services](https://www.microsoft.com/download
 
 > [!NOTE]
 > Looking for Power BI Report Server? See [Install Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
+> 
+> Upgrading or migrating from a SQL Server 2016 or earlier version of Reporting Services? See [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).
 
 ## Before you begin
 

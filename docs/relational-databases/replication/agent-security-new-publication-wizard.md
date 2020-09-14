@@ -1,4 +1,5 @@
 ---
+description: "Agent Security (New Publication Wizard)"
 title: "Agent Security (New Publication Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Agent Security (New Publication Wizard)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Agent Security** page allows you to specify the accounts under which the following agents run and make connections to the computers in a replication topology:  
   
 -   The Snapshot Agent for all publications.  

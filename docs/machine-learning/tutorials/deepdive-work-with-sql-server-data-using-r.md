@@ -1,8 +1,8 @@
 ---
 title: Database for RevoScaleR tutorials
-description: "RevoScaleR tutorial 1: How to create a SQL Server database for R tutorials."
+description: "Create a SQL Server database and set the permissions necessary for completing the other R tutorials."
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a database and permissions (SQL Server and RevoScaleR tutorial)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This is tutorial 1 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

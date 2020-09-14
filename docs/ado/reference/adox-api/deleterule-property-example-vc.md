@@ -1,8 +1,9 @@
 ---
+description: "DeleteRule Property Example (VC++)"
 title: "DeleteRule Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "DeleteRule property [ADOX], VC++ example"
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DeleteRule Property Example (VC++)
-This example demonstrates the [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) property of a [Key](../../../ado/reference/adox-api/key-object-adox.md) object. The code appends a new [Table](../../../ado/reference/adox-api/table-object-adox.md) and then defines a new primary key, setting **DeleteRule** to **adRICascade**.  
+This example demonstrates the [DeleteRule](./deleterule-property-adox.md) property of a [Key](./key-object-adox.md) object. The code appends a new [Table](./table-object-adox.md) and then defines a new primary key, setting **DeleteRule** to **adRICascade**.  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -102,5 +103,5 @@ int main() {
 ```  
   
 ## See Also  
- [DeleteRule Property (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [DeleteRule Property (ADOX)](./deleterule-property-adox.md)   
+ [Key Object (ADOX)](./key-object-adox.md)

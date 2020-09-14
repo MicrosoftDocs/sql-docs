@@ -1,4 +1,5 @@
 ---
+description: "Securing Replication Over the Internet"
 title: "Securing Replication Over the Internet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Securing Replication Over the Internet
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Replication over the Internet can provide flexibility, particularly for mobile Subscribers, but you must configure Internet replication appropriately to ensure adequate security. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends using one of two techniques for securely sharing information over the Internet:  
   
 -   Virtual private network (VPN)  

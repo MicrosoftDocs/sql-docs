@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG014162"
 title: "MSSQL_ENG014162 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # MSSQL_ENG014162
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|14162|  

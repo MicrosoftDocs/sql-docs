@@ -5,7 +5,7 @@ ms.custom: "seo-lt-2019"
 ms.date: "02/19/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Setup [SQL Server], software"
@@ -43,11 +43,11 @@ helpviewer_keywords:
   - "disk space [SQL Server]"
   - "localized SQL Server versions"
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-author: MashaMSFT
-ms.author: mathoma
+ms.author: mikeray
+author: MikeRayMSFT
 ---
 # SQL Server 2016 and 2017: Hardware and software requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2016 and SQL Server 2017 on the Windows operating system.  
 
@@ -136,13 +136,44 @@ For minimum version requirements to install [!INCLUDE[ssNoVersion](../../include
 
 Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
 
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
-| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| &nbsp; | &nbsp; |
+:::row:::
+    :::column:::
+        Windows Server 2019 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2019 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2016 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 R2 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 R2  Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 

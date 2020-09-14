@@ -1,8 +1,9 @@
 ---
 title: Generate and Publish Scripts Wizard
+description: Learn how to use the Generate and Publish Scripts Wizard to create scripts to transfer a database between database instances. The instances can be instances of the SQL Server Database Engine or Azure SQL Database.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -45,9 +46,9 @@ ms.date: 04/07/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
-# Generate and Publish Scripts Wizard 
+# Generate and Publish Scripts Wizard
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.
 
@@ -123,7 +124,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 **Save Scripts to a Specific Location** - save one or more Transact-SQL script files to a location you specify.
 
-![Save](media/generate-and-publish-scripts-wizard/save.png)
+![Save as notebook](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** - Save the script to one or more .sql files. Select the browse button (**...**) to specify a name and location for the file.
 
@@ -152,6 +153,8 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 - **ANSI Padding** - Includes **ANSI PADDING ON** in the script. The default is **True**.
 
 - **Append to file** - When **True**, this script is added to the bottom of an existing script, specified on the **Set Scripting Options** page. When **False**, the new script overwrites a previous script. The default is **False**.
+
+- **Check for object existence** - When **True**, adds the existence check before generating the create statement for your SQL Objects. For example: tables, views, functions, or stored procedures. The CREATE statement is wrapped in an IF statement. If you know your target is clean, the script is a lot cleaner. If you do NOT expect the objects to exist on the target, you get an error. The default is **False**.
 
 - **Continue scripting on error** - When **False**, scripting stops when an error occurs. When **True**, scripting continues. The default is **False**.
 
@@ -215,7 +218,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 ### <a name="Summary"></a> Summary Page
 
-![Summary](media/generate-and-publish-scripts-wizard/summary.png)
+![GS Summary](media/generate-and-publish-scripts-wizard/summary.png)
 
 This page summarizes the options that you have selected in this wizard. To change an option, select **Previous**. To begin generating scripts that are saved or published, select **Next**.
 
@@ -225,7 +228,7 @@ This page summarizes the options that you have selected in this wizard. To chang
 
 Use this page to monitor the progress of the wizard as it occurs.
 
-**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps are complete, Select the value in the **Result** column to see the outcome of the corresponding step.
+**Details** - View the **Action** column to see the progress of the wizard. After generating the scripts, the wizard saves the scripts to a file or uses them to publish to a Web service, depending on your selections. When each of these steps is complete, Select the value in the **Result** column to see the outcome of the corresponding step.
 
 **Save Report** - Select to save the results of the wizard's progress to a file.
 

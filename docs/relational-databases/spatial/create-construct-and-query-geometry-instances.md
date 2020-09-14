@@ -1,4 +1,5 @@
 ---
+description: "Create, Construct, and Query geometry Instances"
 title: "Create, Construct, and Query geometry Instances | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Construct, and Query geometry Instances
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The planar spatial data type, **geometry**, represents data in a Euclidean (flat) coordinate system. This type is implemented as a common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The **geometry** type is predefined and available in each database. You can create table columns of type **geometry** and operate on **geometry** data in the same manner as you would use other CLR types.  

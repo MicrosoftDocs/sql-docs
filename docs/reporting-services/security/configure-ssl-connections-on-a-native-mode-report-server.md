@@ -1,4 +1,5 @@
 ---
+description: "Configure TLS Connections on a Native Mode Report Server"
 title: "Configure TLS Connections on a Native Mode Report Server | Microsoft Docs"
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -17,7 +18,7 @@ ms.author: maggies
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode uses the HTTP SSL (Secure Sockets Layer) service to establish encrypted connections to a report server. Transport Layer Security (TLS) was previously known as Secure Sockets Layer (SSL). If you have certificate (.cer) file installed in a local certificate store on the report server computer, you can bind the certificate to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL reservation to support report server connections through an encrypted channel.  
   
 > [!TIP]  
->  If you are using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, see SharePoint documentation for more information. For example [How to enable TLS on a SharePoint 2010 web application](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx).  
+>  If you are using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, see SharePoint documentation for more information. For example [How to enable TLS on a SharePoint 2010 web application](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
   
  Because Internet Information Services (IIS) also uses HTTP SSL, there are significant interoperability issues that you must account for if you run IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer. Be sure to review the Interoperability Issues with IIS section for guidance on how to address these issues.  
   

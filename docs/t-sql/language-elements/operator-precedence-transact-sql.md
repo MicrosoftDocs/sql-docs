@@ -1,4 +1,5 @@
 ---
+description: "Operator Precedence (Transact-SQL)"
 title: "Operator Precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # Operator Precedence (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   When a complex expression has multiple operators, operator precedence determines the sequence of operations. The order of execution can significantly affect the resulting value.  
   

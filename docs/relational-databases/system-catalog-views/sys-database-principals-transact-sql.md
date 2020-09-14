@@ -1,4 +1,5 @@
 ---
+description: "sys.database_principals (Transact-SQL)"
 title: "sys.database_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2016"
@@ -22,7 +23,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a row for each security principal in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Rebuild System Databases"
 title: "Rebuild System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"
@@ -17,7 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Rebuild System Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   System databases must be rebuilt to fix corruption problems in the [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md), or [resource](../../relational-databases/databases/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **In This Topic**  

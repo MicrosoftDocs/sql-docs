@@ -1,4 +1,5 @@
 ---
+description: "sp_execute_remote (Azure SQL Database)"
 title: "sp_execute_remote (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"
@@ -12,12 +13,12 @@ helpviewer_keywords:
   - "remote execution"
   - "queries, remote execution"
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_execute_remote (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Executes a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement on a single remote Azure SQL Database or set of databases serving as shards in a horizontal partitioning scheme.  
   

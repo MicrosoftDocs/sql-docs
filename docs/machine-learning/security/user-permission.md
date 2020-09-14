@@ -1,20 +1,19 @@
 ---
-title: Grant permissions for scripts
-description: How to grant database user permissions for R and Python script execution on SQL Server Machine Learning Services.
+title: Grant permissions to execute Python and R scripts
+description: Learn how you can give users permission to run external Python and R scripts in SQL Server Machine Learning Services and give read, write, or data definition language (DDL) permissions to databases.
 ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 10/17/2018  
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 06/03/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, contperfq4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Give users permission to SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Grant users permission to execute Python and R scripts with SQL Server Machine Learning Services
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes how you can give users permission to run external scripts in SQL Server Machine Learning Services and give read, write, or data definition language (DDL) permissions to databases.
+Learn how you can give users permission to run external Python and R scripts in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and give read, write, or data definition language (DDL) permissions to databases.
 
 For more information, see the permissions section in [Security overview for the extensibility framework](../../machine-learning/concepts/security.md#permissions).
 
@@ -22,9 +21,9 @@ For more information, see the permissions section in [Security overview for the 
 
 ## Permission to run scripts
 
-If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself, and you are running R or Python scripts in your own instance, you typically execute scripts as an administrator. Thus, you have implicit permission over various operations and all data in the database.
+For each user who runs Python or R scripts with SQL Server Machine Learning Services, and who are not an administrator, you must grant them the permission to run external scripts in each database where the language is used.
 
-Most users, however, do not have such elevated permissions. For example, users in an organization who use SQL logins to access the database generally do not have elevated permissions. Therefore, for each user who is using R or Python, you must grant users of Machine Learning Services the permission to run external scripts in each database where the language is used. Here's how:
+To grant permission to execute external script, run the following script:
 
 ```sql
 USE <database_name>
@@ -33,15 +32,19 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> Permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script versus Python script. If you need to maintain separate permissions for these languages, install R and Python on separate instances.
+> Permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script versus Python script.
 
-<a name="permissions-db"></a> 
+<a name="permissions-db"></a>
 
 ## Grant databases permissions
 
 While a user is running scripts, the user might need to read data from other databases. The user might also need to create new tables to store results, and write data into tables.
 
-For each Windows user account or SQL login that is running R or Python scripts, ensure that it has the appropriate permissions on the specific database:  `db_datareader` to read data, `db_datawriter` to save objects to the database, or `db_ddladmin` to create objects such as stored procedures or tables containing trained and serialized data.
+For each Windows user account or SQL login that is running R or Python scripts, ensure that it has the appropriate permissions on the specific database: 
+
++ `db_datareader` to read data.
++ `db_datawriter` to save objects to the database.
++ `db_ddladmin` to create objects such as stored procedures or tables containing trained and serialized data.
 
 For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *ML_Samples* database. To run this statement, the SQL login must already exist in the security context of the server.
 

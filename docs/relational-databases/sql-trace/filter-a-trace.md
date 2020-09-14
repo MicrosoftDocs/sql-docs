@@ -1,4 +1,5 @@
 ---
+description: "Filter a Trace"
 title: "Filter a Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +19,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Filter a Trace
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Filters limit the events collected in a trace. If a filter is not set, all events of the selected event classes are returned in the trace output. For example, limiting the Windows user names in a trace to specific users reduces the output data to those users only.  
   
  It is not mandatory to set a filter for a trace. However, a filter minimizes the overhead that is incurred during a trace. A filter returns focused data and thus makes performance analysis and audits easier.  

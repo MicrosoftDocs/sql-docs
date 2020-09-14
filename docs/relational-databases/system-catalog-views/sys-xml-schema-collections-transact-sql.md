@@ -1,4 +1,5 @@
 ---
+description: "sys.xml_schema_collections (Transact-SQL)"
 title: "sys.xml_schema_collections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.xml_schema_collections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a row per XML schema collection. An XML schema collection is a named set of XSD definitions. The XML schema collection itself is contained in a relational schema, and it is identified by a schema-scoped [!INCLUDE[tsql](../../includes/tsql-md.md)] name. The following tuples are unique: xml_collection_id, and schema_id and name.  
   

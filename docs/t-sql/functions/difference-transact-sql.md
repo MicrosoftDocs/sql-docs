@@ -1,4 +1,5 @@
 ---
+description: "DIFFERENCE (Transact-SQL)"
 title: "DIFFERENCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "comparing SOUNDEX values"
   - "SOUNDEX values"
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DIFFERENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns an integer value measuring the difference between the [SOUNDEX()](./soundex-transact-sql.md) values of two different character expressions.  
   
@@ -34,7 +35,9 @@ This function returns an integer value measuring the difference between the [SOU
 DIFFERENCE ( character_expression , character_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *character_expression*  
 An alphanumeric [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column.  
   

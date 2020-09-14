@@ -1,4 +1,5 @@
 ---
+description: "TYPE_ID (Transact-SQL)"
 title: "TYPE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "type IDs [SQL Server]"
   - "data types [SQL Server], IDs"
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TYPE_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the ID for a specified data type name.  
   
@@ -35,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 TYPE_ID ( [ schema_name ] type_name )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *type_name*  
  Is the name of the data type. *type_name* is of type **nvarchar**. *type_name* can be a system or user-defined data type.  
   

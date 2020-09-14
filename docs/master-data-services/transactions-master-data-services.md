@@ -1,4 +1,5 @@
 ---
+description: "Transactions (Master Data Services)"
 title: Transactions
 ms.custom: ""
 ms.date: "01/10/2017"
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Transactions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 
 
@@ -87,7 +88,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 |Undo an action by reversing a transaction (administrators only).|[Reverse a Transaction &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## External Resources  
- Blog post, [Transactions, Validation Issue and Staging table cleanup](https://go.microsoft.com/fwlink/p/?LinkId=615374), on msdn.com.  
+ Blog post, [Transactions, Validation Issue and Staging table cleanup](https://techcommunity.microsoft.com/t5/sql-server-integration-services/transactions-validation-issue-and-staging-table-cleanup/ba-p/388209), on msdn.com.  
   
 ## Related Content  
   

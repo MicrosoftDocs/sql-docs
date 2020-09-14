@@ -1,4 +1,5 @@
 ---
+description: "DROP SIGNATURE (Transact-SQL)"
 title: "DROP SIGNATURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -24,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DROP SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Drops a digital signature from a stored procedure, function, trigger, or assembly.  
   
@@ -42,7 +43,9 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
     | ASYMMETRIC KEY Asym_key_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *module_name*  
  Is the name of a stored procedure, function, assembly, or trigger.  
   

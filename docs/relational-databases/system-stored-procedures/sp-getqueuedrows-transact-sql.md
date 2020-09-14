@@ -1,4 +1,5 @@
 ---
+description: "sp_getqueuedrows (Transact-SQL)"
 title: "sp_getqueuedrows (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_getqueuedrows"
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_getqueuedrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retrieves rows at the Subscriber that have updates pending in the queue. This stored procedure is executed at the Subscriber on the subscription database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Install and Configure Semantic Search"
 title: "Install and Configure Semantic Search | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # Install and Configure Semantic Search
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes the prerequisites for statistical semantic search and how to install or check them.  
   
 ## Install Semantic Search  

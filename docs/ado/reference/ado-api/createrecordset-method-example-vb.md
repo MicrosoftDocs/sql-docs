@@ -1,8 +1,9 @@
 ---
+description: "CreateRecordset Method Example (VB)"
 title: "CreateRecordset Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,13 +13,13 @@ dev_langs:
 helpviewer_keywords: 
   - "CreateRecordset method [RDS], Visual Basic example"
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CreateRecordset Method Example (VB)
-You can create a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and specify the column information. You can then insert data into the **Recordset** object; the underlying rowset buffers the inserts.  
+You can create a [Recordset](./recordset-object-ado.md) object and specify the column information. You can then insert data into the **Recordset** object; the underlying rowset buffers the inserts.  
   
- The following code example shows how to define a **Recordset** by using the [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) object. You can also do this with the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object.  
+ The following code example shows how to define a **Recordset** by using the [RDSServer.DataFactory](../rds-api/datafactory-object-rdsserver.md) object. You can also do this with the [RDS.DataControl](../rds-api/datacontrol-object-rds.md) object.  
   
 ```  
 'BeginRsDefineShapeVB  

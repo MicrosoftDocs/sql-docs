@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture - sys.dm_cdc_errors"
 title: "sys.dm_cdc_errors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "sys.dm_cdc_errors dynamic management view"
   - "change data capture [SQL Server], error reporting"
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # Change Data Capture - sys.dm_cdc_errors
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for each error encountered during the change data capture log scan session.  
  

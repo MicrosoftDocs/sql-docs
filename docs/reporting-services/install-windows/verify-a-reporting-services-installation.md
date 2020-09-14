@@ -1,4 +1,5 @@
 ---
+description: "Verify a Reporting Services Installation"
 title: "Verify a Reporting Services Installation | Microsoft Docs"
 ms.date: 06/03/2016
 ms.prod: reporting-services

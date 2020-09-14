@@ -1,8 +1,7 @@
 ---
 title: Connect and query an Azure SQL database
-titleSuffix: Azure Data Studio
-description: This quickstart shows how to use Azure Data Studio to connect to a SQL database and run a query
-ms.prod: sql
+description: Do a quickstart in which you use Azure Data Studio to connect to an Azure SQL Database server, and then create and query a database. 
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
@@ -11,28 +10,28 @@ ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
 ---
-# Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
+# Quickstart: Use Azure Data Studio to connect and query Azure SQL database
 
-In this quickstart, you'll  use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL Database server. You'll then run Transact-SQL (T-SQL) statements to create and query the TutorialDB database, which is used in other [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+In this quickstart, you'll  use Azure Data Studio to connect to an Azure SQL Database server. You'll then run Transact-SQL (T-SQL) statements to create and query the TutorialDB database, which is used in other Azure Data Studio tutorials.
 
 ## Prerequisites
 
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL Database server.
+To complete this quickstart, you need Azure Data Studio, and an Azure SQL Database server.
 
-- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 
 If you don't have an Azure SQL server, complete one of the following Azure SQL Database quickstarts. Remember the fully qualified server name and sign in credentials for later steps:
 
-- [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Create DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [Create DB - Portal](/azure/sql-database/sql-database-get-started-portal)
+- [Create DB - CLI](/azure/sql-database/sql-database-get-started-cli)
+- [Create DB - PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## Connect to your Azure SQL Database server
 
-Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Database server.
+Use Azure Data Studio to establish a connection to your Azure SQL Database server.
 
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
+1. The first time you run Azure Data Studio the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
    
    ![New Connection Icon](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -52,7 +51,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
 3. Select **Connect**.
 
-4. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](/azure/sql-database/sql-database-firewall-configure).
 
    ![New firewall rule](media/quickstart-sql-database/firewall.png)  
 
@@ -60,7 +59,7 @@ After successfully connecting, your server opens in the **SERVERS** sidebar.
 
 ## Create the tutorial database
 
-The next sections create the TutorialDB database that's used in other [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+The next sections create the TutorialDB database that's used in other Azure Data Studio tutorials.
 
 1. Right-click on your Azure SQL server in the **SERVERS** sidebar and select **New Query**.
 
@@ -145,7 +144,7 @@ The query results display:
 
 ## Clean up resources
 
-Later quickstart articles build upon the resources created here. If you plan to work through these articles, be sure not to delete these resources. Otherwise, in the Azure portal, delete the resources you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Later quickstart articles build upon the resources created here. If you plan to work through these articles, be sure not to delete these resources. Otherwise, in the Azure portal, delete the resources you no longer need. For details, see [Clean up resources](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
 

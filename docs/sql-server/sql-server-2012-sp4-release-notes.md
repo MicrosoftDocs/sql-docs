@@ -1,18 +1,19 @@
 ---
 title: "SQL Server 2012 Service Pack release notes | Microsoft Docs"
+description: This article contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ""
-ms.date: 02/26/2018
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-author: craigg-msft
-ms.author: craigg
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+author: rothja
+ms.author: jroth
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Service Pack release notes
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 This topic contains the aggregated release notes of the four service packs for SQL Server 2012. Each service pack is cumulative of prior service packs.
 
 The Service Packs are available online only, not on the installation media, and can be downloaded as follows:

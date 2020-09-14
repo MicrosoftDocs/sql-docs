@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot full transaction log error 9002"
-ms.custom: ""
+description: Learn about possible responses to a full transaction log in SQL Server and how to avoid the problem in the future.
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -21,7 +21,7 @@ ms.author: "mathoma"
 ms.custom: "seo-lt-2019"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 
   
   When the transaction log becomes full, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] issues a **9002 error**. The log can fill when the database is online, or in recovery. If the log fills while the database is online, the database remains online but can only be read, not updated. If the log fills during recovery, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] marks the database as RESOURCE PENDING. In either case, user action is required to make log space available.  
@@ -106,7 +106,6 @@ This statement lets you identify the user ID of the owner of the transaction, so
 Sometimes you just have to end the process; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## See also  
-[KB support article - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/kb/317375)
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   

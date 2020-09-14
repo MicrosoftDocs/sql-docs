@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_validate_plan_guide (Transact-SQL)"
 title: "sys.fn_validate_plan_guide (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifies the validity of the specified plan guide. The sys.fn_validate_plan_guide function returns the first error message that is encountered when the plan guide is applied to its query. An empty rowset is returned when the plan guide is valid. Plan guides can become invalid after changes are made to the physical design of the database. For example, if a plan guide specifies a particular index and that index is subsequently dropped, the query will no longer be able to use the plan guide.  
   

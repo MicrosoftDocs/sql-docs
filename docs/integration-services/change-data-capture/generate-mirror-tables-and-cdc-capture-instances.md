@@ -1,4 +1,5 @@
 ---
+description: "Generate Mirror Tables and CDC Capture Instances"
 title: "Generate Mirror Tables and CDC Capture Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Generate Mirror Tables and CDC Capture Instances
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Generate Mirror Tables page to generate the mirror tables for the tables you included in the CDC instance  

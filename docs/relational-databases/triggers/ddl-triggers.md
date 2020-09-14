@@ -1,4 +1,5 @@
 ---
+description: "DDL Triggers"
 title: "DDL Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Triggers
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DDL triggers fire in response to a variety of Data Definition Language (DDL) events. These events primarily correspond to [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that start with the keywords CREATE, ALTER, DROP, GRANT, DENY, REVOKE or UPDATE STATISTICS. Certain system stored procedures that perform DDL-like operations can also fire DDL triggers.  
   
  Use DDL triggers when you want to do the following:  

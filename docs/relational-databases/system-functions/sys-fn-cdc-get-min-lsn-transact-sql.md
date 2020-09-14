@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_get_min_lsn (Transact-SQL)"
 title: "sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.fn_cdc_get_min_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the start_lsn column value for the specified capture instance from the [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) system table. This value represents the low endpoint of the validity interval for the capture instance.  
   

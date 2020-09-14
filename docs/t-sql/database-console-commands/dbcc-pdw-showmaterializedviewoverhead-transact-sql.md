@@ -1,4 +1,5 @@
 ---
+description: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)"
 title: "DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "07/03/2019"
@@ -13,9 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
+
 # DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
@@ -27,7 +29,7 @@ Displays the number of incremental changes in the base tables that are held for 
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_name  " )
 [;]
 ```
-  
+
 ## Arguments
 
  *schema_name*     
@@ -148,6 +150,6 @@ Output
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[System views supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[T-SQL statements supported in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

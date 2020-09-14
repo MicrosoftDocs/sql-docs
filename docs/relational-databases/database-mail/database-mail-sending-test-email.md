@@ -1,4 +1,5 @@
 ---
+description: "Send a test email with database mail"
 title: "Send a test email with database mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Send a test email with database mail  
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Use the Send Test E-Mail dialog box to test the ability to send mail using a specific profile.
 

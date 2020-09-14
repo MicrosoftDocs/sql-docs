@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;LANGUAGE (Transact-SQL)"
 title: "@@LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "current language in use"
   - "names [SQL Server], language in use"
 ms.assetid: 3e13b477-7dfa-4da6-9948-da2050d42527
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &#x40;&#x40;LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the name of the language currently being used.  
   
@@ -35,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 @@LANGUAGE  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar**  
   
 ## Remarks  

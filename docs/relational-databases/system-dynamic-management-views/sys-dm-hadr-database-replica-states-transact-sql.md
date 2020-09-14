@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_database_replica_states (Transact-SQL)"
 title: "sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2018"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_database_replica_states dynamic management view"
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_database_replica_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each database that is participating in an Always On availability group for which the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is hosting an availability replica. This dynamic management view exposes state information on both the primary and secondary replicas. On a secondary replica, this view returns a row for every secondary database on the server instance. On the primary replica, this view returns a row for each primary database and an additional row for the corresponding secondary database.  
   

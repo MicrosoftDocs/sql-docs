@@ -12,7 +12,7 @@ ms.custom: seo-dt-2019
 ---
 
 # Monitor loads into Parallel Data Warehouse
-Monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) [System Views](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+Monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) [System Views](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views). 
   
 > [!TIP]  
 > Some loads are initiated by using INSERT statements or business intelligence tools that use SQL statements to perform the load. 
@@ -44,7 +44,7 @@ See these system views for information on the metadata about the load that is sh
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -78,4 +78,3 @@ To monitor active and recent loads by using SQL Server PDW views, follow the ste
 ## See Also  
 [Common metadata query examples](metadata-query-examples.md)
 -->  
-  

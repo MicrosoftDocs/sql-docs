@@ -1,4 +1,5 @@
 ---
+description: "FREETEXT (Transact-SQL)"
 title: "FREETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
@@ -23,7 +24,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Is a predicate used in the [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types. This predicate searches for values that match the meaning and not just the exact wording of the words in the search condition. When FREETEXT is used, the full-text query engine internally performs the following actions on the *freetext_string*, assigns each term a weight, and then finds the matches:  
   
@@ -48,7 +49,9 @@ FREETEXT ( { column_name | (column_list) | * }
           , 'freetext_string' [ , LANGUAGE language_term ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *column_name*  
  Is the name of one or more full-text indexed columns of the table specified in the FROM clause. The columns can be of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, or **varbinary(max)**.  
   

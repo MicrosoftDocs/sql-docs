@@ -10,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
@@ -18,7 +17,7 @@ ms.date: 03/01/2017
 
 # Lesson 1: Basic Navigation in Database Engine Tuning Advisor (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Database Engine Tuning Advisor provides a graphical user interface (GUI) based way to view tuning sessions and tuning recommendation reports. This lesson shows you how to start the tool and how to configure the display. At the end of this lesson, you will know the different ways you can start the tool and how to configure its display to support the tuning tasks that you regularly perform.  
 
@@ -26,12 +25,12 @@ Database Engine Tuning Advisor provides a graphical user interface (GUI) based w
 
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+- Install [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
 - Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample databases.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
+- Download [AdventureWorks2017 sample databases.](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
 
 
-Instructions for restoring databases in SSMS are here: [Restore a database.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > This tutorial is meant for a user familiar with using SQL Server Management Studio and basic database administration tasks. 
@@ -85,6 +84,5 @@ Two main panes are displayed in the Database Engine Tuning Advisor GUI when it i
   
 ## Next Lesson  
 [Lesson 2: Using Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
-  
   
   

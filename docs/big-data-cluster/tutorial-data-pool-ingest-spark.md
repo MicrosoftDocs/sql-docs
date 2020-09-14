@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Tutorial: Ingest data into a SQL Server data pool with Spark jobs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial demonstrates how to use Spark jobs to load data into the [data pool](concept-data-pool.md) of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
@@ -55,9 +55,12 @@ The following steps create an external table in the data pool named **web_clicks
    -- To create external tables in data pools
    GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
 
-   -- To create external table
+   -- To create external tables
    GRANT CREATE TABLE TO sample_user;
    GRANT ALTER ANY SCHEMA TO sample_user;
+
+   -- To view database state for Sales
+   GRANT VIEW DATABASE STATE ON DATABASE::Sales TO sample_user;
 
    ALTER ROLE [db_datareader] ADD MEMBER sample_user
    ALTER ROLE [db_datawriter] ADD MEMBER sample_user
@@ -106,7 +109,12 @@ The next step is to create a Spark streaming job that loads web clickstream data
 2. Create a new notebook and select Spark | Scala as your kernel.
 
 3. Run the Spark Ingestion Job
+
    1. Configure the Spark-SQL connector parameters
+
+    > [!NOTE]
+    > If your big data cluster is deployed with Active Directory integration, replace the value of **hostname** below to include the FQDN appended to the the service name. E.g. *hostname=master-p-svc.\<domainName>*.
+
       ```
       import org.apache.spark.sql.types._
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
@@ -124,7 +132,7 @@ The next step is to create a Spark streaming job that loads web clickstream data
       StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
-      val hostname = "master-0.master-svc"
+      val hostname = "master-p-svc"
       val port = 1433
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```

@@ -1,4 +1,5 @@
 ---
+description: "Filter Table Rows"
 title: "Filter Table Rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Filter Table Rows
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Filter Table Rows** page allows you to:  
   
 -   Apply static row filters to table articles in snapshot, transactional, and merge publications.  

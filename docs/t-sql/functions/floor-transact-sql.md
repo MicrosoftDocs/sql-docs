@@ -1,4 +1,5 @@
 ---
+description: "FLOOR (Transact-SQL)"
 title: "FLOOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "largest integers"
   - "FLOOR function [Transact-SQL]"
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FLOOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the largest integer less than or equal to the specified numeric expression.  
   
@@ -34,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 FLOOR ( numeric_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
  Is an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   

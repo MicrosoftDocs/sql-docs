@@ -1,11 +1,12 @@
 ---
+description: "sp_execute_external_script (Transact-SQL)"
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/04/2019"
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_execute_external_script_TSQL"
@@ -19,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # sp_execute_external_script (Transact-SQL)
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/index.yml) and [Language Extensions](../../language-extensions/language-extensions-overview.md). 
+The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) and [Language Extensions](../../language-extensions/language-extensions-overview.md). 
 
 For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages. For Language Extensions, Java is supported but must be defined with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
@@ -34,9 +34,9 @@ To execute **sp_execute_external_script**, you must first install Machine Learni
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/index.yml) on SQL Server 2017. 
+The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) on SQL Server 2017.
 
-For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages. 
+For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages.
 
 To execute **sp_execute_external_script**, you must first install Machine Learning Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
@@ -49,18 +49,26 @@ For R Services,  [R](../../machine-learning/concepts/extension-r.md) is the supp
 To execute **sp_execute_external_script**, you must first install R Services. For more information, see [Install SQL Server Machine Learning Services (Python and R) on Windows](../../machine-learning/install/sql-r-services-windows-install.md).
 ::: moniker-end
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+For Machine Learning Services, [Python](../../machine-learning/concepts/extension-python.md) and [R](../../machine-learning/concepts/extension-r.md) are supported languages.
+
+To execute **sp_execute_external_script**, you must first enable Machine Learning Services. For more information, see the [Machine Learning Services in Azure SQL Managed Instance documentation](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
+
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ## Syntax
 
 ```
-sp_execute_external_script   
-    @language = N'language',   
+sp_execute_external_script
+    @language = N'language',
     @script = N'script'  
-    [ , @input_data_1 = N'input_data_1' ]   
+    [ , @input_data_1 = N'input_data_1' ]
     [ , @input_data_1_name = N'input_data_1_name' ]  
-    [ , @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]    
+    [ , @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]
     [ , @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]  
     [ , @output_data_1_name = N'output_data_1_name' ]  
     [ , @parallel = 0 | 1 ]  
@@ -69,7 +77,7 @@ sp_execute_external_script
 ```
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-## Syntax for 2017 and earlier
+## Syntax for SQL Server 2017 and earlier
 
 ```
 sp_execute_external_script   
@@ -94,6 +102,9 @@ sp_execute_external_script
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
  Indicates the script language. *language* is **sysname**. In SQL Server 2016, the only valid value is **R**.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+ Indicates the script language. *language* is **sysname**. In Azure SQL Managed Instance, valid values are **R** and **Python**.
 ::: moniker-end
 
  **\@script** = N'*script*' 
@@ -132,7 +143,7 @@ sp_execute_external_script
 ## Remarks
 
 > [!IMPORTANT]
-> The query tree is controlled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and users cannot perform arbitrary operations on the query. 
+> The query tree is controlled by SQL machine learning and users cannot perform arbitrary operations on the query.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** used with Machine Learning Services, and any language defined with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) (for example, Java) used with Language Extensions.
@@ -143,28 +154,33 @@ Use **sp_execute_external_script** to execute scripts written in a supported lan
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Use **sp_execute_external_script** to execute scripts written in a supported language. The only supported language is **R** in SQL Server 2016 R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Use **sp_execute_external_script** to execute scripts written in a supported language. Supported languages are **Python** and **R** in Azure SQL Managed Instance Machine Learning Services.
+::: moniker-end
 
 By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and are not reflected in the outputted result set. To name result set columns, use the `WITH RESULT SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md).
 
-In addition to returning a result set, you can return scalar values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using OUTPUT parameters. 
-  
+In addition to returning a result set, you can return scalar values to using OUTPUT parameters.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 You can control the resources used by external scripts by configuring an external resource pool. For more information, see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md). Information about the workload can be obtained from the resource governor catalog views, DMV's, and counters. For more information, see [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md), [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md), and [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md).  
+::: moniker-end
 
 ### Monitor script execution
 
-Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
+Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### Parameters for partition modeling
 
 You can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
- 
+
 The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
 
 You can execute script in parallel by specifying `@parallel=1`. If the input query can be parallelized, you should set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
 
 > [!Tip]
-> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameters in SQL Server vNext, you can parallelize a script that calls functions not specifically engineered with that capability.
+> For training workoads, you can use `@parallel` with any arbitrary training script, even those using non-Microsoft-rx algorithms. Typically, only RevoScaleR algorithms (with the rx prefix) offer parallelism in training scenarios in SQL Server. But with the new parameters in SQL Server 2019 and later, you can parallelize a script that calls functions not specifically engineered with that capability.
 ::: moniker-end
 
 ### Streaming execution for Python and R scripts  
@@ -184,29 +200,29 @@ The following data types are not supported when used in the input query or param
 
 As a workaround, **CAST** the column or value to a supported type in [!INCLUDE[tsql](../../includes/tsql-md.md)] before sending it to the external script.  
   
--   **cursor**  
++ **cursor**  
   
--   **timestamp**  
++ **timestamp**  
   
--   **datetime2**, **datetimeoffset**, **time**  
++ **datetime2**, **datetimeoffset**, **time**  
   
--   **sql_variant**  
++ **sql_variant**  
   
--   **text**, **image**  
++ **text**, **image**  
   
--   **xml**  
++ **xml**  
   
--   **hierarchyid**, **geometry**, **geography**  
++ **hierarchyid**, **geometry**, **geography**  
   
--   CLR user-defined types
++ CLR user-defined types
 
 In general, any result set that cannot be mapped to a [!INCLUDE[tsql](../../includes/tsql-md.md)] data type, is output as NULL.  
 
 ### Restrictions specific to R
 
-If the input includes **datetime** values that do not fit the permissible range of values in R, values are converted to **NA**. This is required because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permits a larger range of values than is supported in the R language.
+If the input includes **datetime** values that do not fit the permissible range of values in R, values are converted to **NA**. This is required because SQL machine learning permits a larger range of values than is supported in the R language.
 
-Float values (for example, `+Inf`, `-Inf`, `NaN`) are not supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] even though both languages use IEEE 754. Current behavior just sends the values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directly; as a result, the SQL client in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] throws an error. Therefore, these values are converted to **NULL**.
+Float values (for example, `+Inf`, `-Inf`, `NaN`) are not supported in SQL machine learning even though both languages use IEEE 754. Current behavior just sends the values to SQL directly; as a result, the SQL client throws an error. Therefore, these values are converted to **NULL**.
 
 ## Permissions
 
@@ -218,7 +234,7 @@ This section contains examples of how this stored procedure can be used to execu
 
 ### A. Return an R data set to SQL Server  
 
-The following example creates a stored procedure that uses **sp_execute_external_script** to return the Iris dataset included with R to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+The following example creates a stored procedure that uses **sp_execute_external_script** to return the Iris dataset included with R.  
 
 ```sql
 DROP PROC IF EXISTS get_iris_dataset;  
@@ -231,47 +247,17 @@ BEGIN
      , @script = N'iris_data <- iris;'
      , @input_data_1 = N''  
      , @output_data_1_name = N'iris_data'
-     WITH RESULT SETS (("Sepal.Length" float not null,   
+     WITH RESULT SETS (("Sepal.Length" float not null,
            "Sepal.Width" float not null,  
-        "Petal.Length" float not null,   
+        "Petal.Length" float not null,
         "Petal.Width" float not null, "Species" varchar(100)));  
 END;
 GO
 ```
 
-### B. Generate an R model based on data from SQL Server  
+### B. Create a Python model and generate scores from it
 
-The following example creates a stored procedure that uses **sp_execute_external_script** to generate an iris model and return the model to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-> [!NOTE]
->  This example requires advance installation of the e1071 package. For more information, see [Install additional R packages on SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md).
-
-```sql
-DROP PROC IF EXISTS generate_iris_model;
-GO
-CREATE PROC generate_iris_model
-AS
-BEGIN
- EXEC sp_execute_external_script  
-      @language = N'R'  
-     , @script = N'  
-          library(e1071);  
-          irismodel <-naiveBayes(iris_data[,1:4], iris_data[,5]);  
-          trained_model <- data.frame(payload = as.raw(serialize(irismodel, connection=NULL)));  
-'  
-     , @input_data_1 = N'select "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species" from iris_data'  
-     , @input_data_1_name = N'iris_data'  
-     , @output_data_1_name = N'trained_model'  
-    WITH RESULT SETS ((model varbinary(max)));  
-END;
-GO
-```
-
-To generate a similar model using Python, you would change the language identifier from `@language=N'R'` to `@language = N'Python'`, and make necessary modifications to the `@script` argument. Otherwise, all parameters function the same way as for R.
-
-### C. Create a Python model and generate scores from it
-
-This example illustrates how to use sp\_execute\_external\_script to generate scores on a simple Python model. 
+This example illustrates how to use `sp_execute_external_script` to generate scores on a simple Python model.
 
 ```sql
 CREATE PROCEDURE [dbo].[py_generate_customer_scores]
@@ -305,17 +291,45 @@ GO
 
 Column headings used in Python code are not output to SQL Server; therefore, use the WITH RESULT statement to specify the column names and data types for SQL to use.
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### C. Generate an R model based on data from SQL Server  
+
+The following example creates a stored procedure that uses **sp_execute_external_script** to generate an iris model and return the model.  
+
+> [!NOTE]
+> This example requires advance installation of the e1071 package. For more information, see [Install additional R packages on SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md).
+
+```sql
+DROP PROC IF EXISTS generate_iris_model;
+GO
+CREATE PROC generate_iris_model
+AS
+BEGIN
+ EXEC sp_execute_external_script  
+      @language = N'R'  
+     , @script = N'  
+          library(e1071);  
+          irismodel <-naiveBayes(iris_data[,1:4], iris_data[,5]);  
+          trained_model <- data.frame(payload = as.raw(serialize(irismodel, connection=NULL)));  
+'  
+     , @input_data_1 = N'select "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species" from iris_data'  
+     , @input_data_1_name = N'iris_data'  
+     , @output_data_1_name = N'trained_model'  
+    WITH RESULT SETS ((model varbinary(max)));  
+END;
+GO
+```
+
+To generate a similar model using Python, you would change the language identifier from `@language=N'R'` to `@language = N'Python'`, and make necessary modifications to the `@script` argument. Otherwise, all parameters function the same way as for R.
+::: moniker-end
+
 For scoring, you can also use the native [PREDICT](../../t-sql/queries/predict-transact-sql.md) function, which is typically faster because it avoids calling the Python or R runtime.
 
 ## See also
 
-+ [SQL Server Machine Learning Services](../../machine-learning/index.yml)
++ [SQL machine learning](../../machine-learning/index.yml)
 + [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md). 
 + [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
-+ [Python Libraries and Data Types](../../machine-learning/python/python-libraries-and-data-types.md)  
-+ [R Libraries and R Data Types](../../machine-learning/r/r-libraries-and-data-types.md)  
-+ [SQL Server R Services](../../machine-learning/r/sql-server-r-services.md)   
-+ [Known Issues for SQL Server Machine Learning Services](../../machine-learning/known-issues-for-sql-server-machine-learning-services.md)   
 + [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
 + [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

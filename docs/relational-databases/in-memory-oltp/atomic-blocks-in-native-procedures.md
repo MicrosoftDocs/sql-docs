@@ -1,5 +1,6 @@
 ---
 title: "Atomic Blocks | Microsoft Docs"
+description: Learn about BEGIN ATOMIC, part of the ANSI SQL standard. SQL Server supports atomic blocks in native procedures. 
 ms.custom: ""
 ms.date: "10/26/2017"
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Atomic Blocks in Native Procedures
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **BEGIN ATOMIC** is part of the ANSI SQL standard. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports atomic blocks at the top-level of natively compiled stored procedures, as well as for natively compiled, scalar user-defined functions. For more information about these functions, see [Scalar User-Defined Functions for In-Memory OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   

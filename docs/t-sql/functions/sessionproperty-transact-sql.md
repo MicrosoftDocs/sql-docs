@@ -1,4 +1,5 @@
 ---
+description: "SESSIONPROPERTY (Transact-SQL)"
 title: "SESSIONPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the SET options settings of a session.  
   
@@ -34,7 +35,9 @@ ms.author: vanto
 SESSIONPROPERTY (option)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *option*  
  Is the current option setting for this session. *option* can be any of the following values.  
   

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "ALTER DATABASE SCOPED CONFIGURATION statement"
   - "configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement"
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions"
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
@@ -31,7 +31,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
 
 This command enables several database configuration settings at the **individual database** level. 
 
-Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: 
+Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as indicated by the **APPLIES TO** line for each setting in the [Arguments](#arguments) section: 
 
 - Clear procedure cache.
 - Set the MAXDOP parameter to an arbitrary value (1,2, ...) for the primary database based on what works best for that particular database and set a different value (such as 0) for all secondary database used (such as for reporting queries).
@@ -50,6 +50,7 @@ Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsful
 - Enable or disable the new `String or binary data would be truncated` error message.
 - Enable or disable collection of last actual execution plan in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Specify the number of minutes that a paused resumable index operation is paused before it is automatically aborted by the SQL Server engine.
+- Enable or disable waiting for locks at low priority for asynchronous statistics update
 
 This setting is only available in Azure Synapse Analytics (Formerly SQL DW).
 - Set the compatibility level of a user database
@@ -95,6 +96,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
@@ -104,8 +106,8 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` changed to `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
 
-```syntaxsql
--- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+```SQL
+-- Syntax for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -115,7 +117,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
 }
 ```
 
@@ -184,6 +186,8 @@ This value is only valid on secondaries while the database in on the primary, an
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**, which disables query optimization hotfixes that were released after the highest available compatibility level was introduced for a specific version (post-RTM). Setting this to **ON** is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+
+**APPLIES TO**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 > [!TIP]
 > To accomplish this at the query level, add the **QUERYTRACEON** [query hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
@@ -341,7 +345,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 Allows setting the auto-drop functionality for [global temporary tables](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). The default is ON, which means that the global temporary tables are automatically dropped when not in use by any session. When set to OFF, global temporary tables need to be explicitly dropped using a DROP TABLE statement or will be automatically dropped on server restart.
 
 - With [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single databases and elastic pools, this option can be set in the individual user databases of the SQL Database server.
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, this option is set in `TempDB` and the setting of the individual user databases has no effect.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, this option is set in `TempDB` and the setting of the individual user databases has no effect.
 
 <a name="lqp"></a>
 
@@ -392,7 +396,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Allows you to control whether a [Row-Level Security](../../relational-databases/security/row-level-security.md) (RLS) predicate affects the cardinality of the execution plan of the overall user query. When ISOLATE_SECURITY_POLICY_CARDINALITY is ON, an RLS predicate does not affect the cardinality of an execution plan. For example, consider a table containing 1 million rows and an RLS predicate that restricts the result to 10 rows for a specific user issuing the query. With this database scoped configuration set to OFF, the cardinality estimate of this predicate will be 10. When this database scoped configuration is ON, query optimization will estimate 1 million rows. It is recommended to use the default value for most workloads.
 
-DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 **APPLIES TO**: Azure Synapse Analytics only (Formerly SQL DW)
 
@@ -400,13 +404,19 @@ Sets Transact-SQL and query processing behaviors to be compatible with the speci
 
 |Compatibility Level    |   Comments|  
 |-----------------------|--------------|
-|**AUTO**| Default.  Its value is equal to the latest supported compatibility level.|
+|**AUTO**| Default.  Its value is automatically updated by the Synapse Analytics engine.  The current value is 20.|
 |**10**| Exercises the Transact-SQL and query processing behaviors before the introduction of compatibility level support.|
 |**20**| 1st compatibility level that includes gated Transact-SQL and query processing behaviors. |
 
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+
+**APPLIES TO**: Azure SQL Database only (feature is in public preview)
+
+If asynchronous statistics update is enabled, enabling this configuration will cause the background request updating statistics to wait for a Sch-M lock on a low priority queue, to avoid blocking other sessions in high concurrency scenarios. For more information, see [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
+
 ## <a name="Permissions"></a> Permissions
 
-Requires `ALTER ANY DATABASE SCOPE CONFIGURATION` on the database. This permission can be granted by a user with CONTROL permission on a database.
+Requires `ALTER ANY DATABASE SCOPED CONFIGURATION` on the database. This permission can be granted by a user with CONTROL permission on a database.
 
 ## General Remarks
 
@@ -414,7 +424,7 @@ While you can configure secondary databases to have different scoped configurati
 
 Executing this statement clears the procedure cache in the current database, which means that all queries have to recompile.
 
-For 3-part name queries, the settings for the current database connection for the query are honored, other than for SQL modules (such as procedures, functions, and triggers) that are compiled in the current database context and therefore uses the options of the database in which they reside.
+For 3-part name queries, the settings for the current database connection for the query are honored, other than for SQL modules (such as procedures, functions, and triggers) that are compiled in another database context and therefore use the options of the database in which they reside. Similarly, when updating statistics asynchronously, the setting of ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY for the database where statistics reside is honored.
 
 The `ALTER_DATABASE_SCOPED_CONFIGURATION` event is added as a DDL event that can be used to fire a DDL trigger, and is a child of the `ALTER_DATABASE_EVENTS` trigger group.
 

@@ -1,5 +1,6 @@
 ---
 title: "Access the WMI Provider with WQL and scripting"
+description: Learn how to access SQL Server services and network settings using the WMI Provider by using a WQL editor or query tool or a scripting language.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, WQL"
   - "WMI Provider for Configuration Management, scripts"
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Using WQL and Scripting Languages with the WMI Provider
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Management applications access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services and network settings using the Windows Management Instrumentation (WMI) Provider for Configuration Management objects in two ways:  
   
 -   Using a WQL editor or query tool, such as WBEMTest.exe to query the object set with the Windows Management Instrumentation Language (WQL).  

@@ -1,8 +1,9 @@
 ---
+description: "Customization File UserList Section"
 title: "Customization File UserList Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "UserList section in rds [ADO]"
   - "customization file in RDS [ADO]"
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Customization File UserList Section
 The **userlist** section pertains to the **connect** section with the same section *identifier* parameter.  
@@ -34,12 +35,10 @@ The **userlist** section pertains to the **connect** section with the same secti
 |**_accessRights_**|One of the following access rights:<br /><br /> -   **NoAccess** - User cannot access the data source.<br />-   **ReadOnly** - User can read the data source.<br />-   **ReadWrite** - User can read or write to the data source.|  
   
 ## See Also  
- [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Required Client Settings](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Understanding the Customization File](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Writing Your Own Customized Handler](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [Customization File Connect Section](./customization-file-connect-section.md)   
+ [Customization File Logs Section](./customization-file-logs-section.md)   
+ [Customization File SQL Section](./customization-file-sql-section.md)   
+ [DataFactory Customization](./datafactory-customization.md)   
+ [Required Client Settings](./required-client-settings.md)   
+ [Understanding the Customization File](./understanding-the-customization-file.md)   
+ [Writing Your Own Customized Handler](./writing-your-own-customized-handler.md)

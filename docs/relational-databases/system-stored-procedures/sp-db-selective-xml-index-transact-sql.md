@@ -1,4 +1,5 @@
 ---
+description: "sp_db_selective_xml_index (Transact-SQL)"
 title: "sp_db_selective_xml_index (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_db_selective_xml_index procedure"
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_db_selective_xml_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enables and disables Selective XML Index functionality on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. If called without any parameters, the stored procedure returns 1 if the Selective XML Index is enabled on a particular database.  
   

@@ -1,21 +1,25 @@
 ---
 title: "Add Transact-SQL Snippets"
-ms.custom: seo-lt-2019
-ms.date: "03/14/2017"
+description: Learn how to add your own Transact-SQL code snippets to the set of pre-defined snippets included in SQL Server.
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Add Transact-SQL Snippets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  You can add your own Transact-SQL code snippets to the set of pre-defined snippets included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+You can add your own Transact-SQL code snippets to the set of pre-defined snippets included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
 ## Creating a Transact-SQL Snippet File  
  The first part of creating a [!INCLUDE[tsql](../../includes/tsql-md.md)] code snippet is to create an XML file with the text of your code snippet. The file must have a .snippet file extension, and meet the requirements of the [Code Snippets Schema](https://go.microsoft.com/fwlink/?LinkId=207504). Set the snippet language to SQL.  
   

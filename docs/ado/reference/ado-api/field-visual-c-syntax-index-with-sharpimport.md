@@ -1,8 +1,9 @@
 ---
+description: "Field (Visual C++ Syntax Index with #import)"
 title: "Field (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Field collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Field (Visual C++ Syntax Index with #import)
 ## Methods  

@@ -1,4 +1,5 @@
 ---
+description: "Back Up Database Task"
 title: "Back Up Database Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Back Up Database Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Back Up Database task performs different types of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database backups. For more information, see [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

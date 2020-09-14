@@ -1,7 +1,7 @@
 ---
 title: Data persistence on Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Learn about how data persistence works in a SQL Server 2019 big data cluster.
+description: Learn how persistent volumes provide a plug-in model for storage in Kubernetes. Also learn how data persistence works in a SQL Server 2019 Big Data Cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Data persistence with SQL Server big data cluster in Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [Persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plug-in model for storage in Kubernetes. In this model, the way that storage is provided is abstracted from how it's consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster. This gives you full control over the type of storage, availability, and performance you require. Kubernetes supports [various kinds of storage solutions](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), including Azure disks and files, Network File System (NFS), and local storage.
 
@@ -23,7 +23,7 @@ A SQL Server big data cluster consumes these persistent volumes by using [storag
 
 Here are some important aspects to consider when you're planning storage configuration for your big data cluster:
 
-- For a successful big data cluster deployment, make sure you have the required number of persistent volumes available. If you're deploying on an Azure Kubernetes Service (AKS) cluster and you're using a built-in storage class (`default` or `managed-premium`), this class supports dynamic provisioning for the persistent volumes. Therefore, you don't have to pre-create the persistent volumes, but you must make sure the available worker nodes in the AKS cluster can attach as many disks as the number of persistent volumes that are required for the deployment. Depending on the [VM size](https://docs.microsoft.com/azure/virtual-machines/linux/sizes) specified for the worker nodes, each node can attach a certain number of disks. For a default size cluster (with no high availability), a minimum of 24 disks are required. If you're enabling high availability or scaling up any pool, make sure you have at least two persisted volumes per each additional replica, regardless of the resource you're scaling up.
+- For a successful big data cluster deployment, make sure you have the required number of persistent volumes available. If you're deploying on an Azure Kubernetes Service (AKS) cluster and you're using a built-in storage class (`default` or `managed-premium`), this class supports dynamic provisioning for the persistent volumes. Therefore, you don't have to pre-create the persistent volumes, but you must make sure the available worker nodes in the AKS cluster can attach as many disks as the number of persistent volumes that are required for the deployment. Depending on the [VM size](/azure/virtual-machines/linux/sizes) specified for the worker nodes, each node can attach a certain number of disks. For a default size cluster (with no high availability), a minimum of 24 disks are required. If you're enabling high availability or scaling up any pool, make sure you have at least two persisted volumes per each additional replica, regardless of the resource you're scaling up.
 
 - If the storage provisioner for the storage class you're providing in the configuration doesn't support dynamic provisioning, you must pre-create the persisted volumes. For example, the `local-storage` provisioner doesn't enable dynamic provisioning. See this [sample script](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) for guidance on how to proceed in a Kubernetes cluster deployed with `kubeadm`.
 

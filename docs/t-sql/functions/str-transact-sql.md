@@ -1,4 +1,5 @@
 ---
+description: "STR (Transact-SQL)"
 title: "STR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "character data [SQL Server]"
   - "STR function"
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns character data converted from numeric data. The character data is right-justified, with a specified length and decimal precision. 
   
@@ -35,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 STR ( float_expression [ , length [ , decimal ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an expression of approximate numeric (**float**) data type with a decimal point.  
   

@@ -1,4 +1,5 @@
 ---
+description: "SET ARITHABORT (Transact-SQL)"
 title: "SET ARITHABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"
@@ -24,12 +25,12 @@ helpviewer_keywords:
   - "ending queries [SQL Server]"
   - "stopping queries"
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ARITHABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Ends a query when an overflow or divide-by-zero error occurs during query execution.  
   
@@ -49,7 +50,9 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
 Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.  
   
 > [!WARNING]  
@@ -78,7 +81,7 @@ The setting of SET ARITHABORT happens at execute or run time and not at parse ti
   
 To view the current setting for SET ARITHABORT, run the following query:
   
-```  
+```sql  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
 IF ( (64 & @@OPTIONS) = 64 ) SET @ARITHABORT = 'ON';  
 SELECT @ARITHABORT AS ARITHABORT;  

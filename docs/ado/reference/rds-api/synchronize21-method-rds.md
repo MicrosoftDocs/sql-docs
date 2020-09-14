@@ -1,18 +1,19 @@
 ---
+description: "Synchronize21 Method (RDS)"
 title: "Synchronize21 Method (RDS) | Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
+ms.prod: sql
 ms.prod_service: connectivity
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Synchronize21 method [ADO]"
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Synchronize21 Method (RDS)
 Synchronize the given recordset with the database specified by the connection string for use with ADO 2.1.  
@@ -55,9 +56,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  The *HandlerString* parameter can be null. What happens in this case depends on how the RDS server is configured. A handler string of "MSDFMAP.handler" indicates that the Microsoft supplied handler (Msdfmap.dll) should be used. A handler string of "MASDFMAP.handler,sample.ini" indicates that the Msdfmap.dll handler should be used and that the argument "sample.ini" should be passed to the handler. Msdfmap.dll will then interpret the argument as a direction to use the sample.ini to check the connection and query strings.  
   
 > [!NOTE]
->  The **Synchronize21** method is simply a version of the [Synchronize Method (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Where you need to use the **Synchronize** method to communicate with ADO 2.1, the **Synchronize21** method can be called instead. The capabilities of the **Synchronize** method in ADO 2.5 and later are a superset of the capabilities provided for the same method in ADO 2.1.  
+>  The **Synchronize21** method is simply a version of the [Synchronize Method (RDS)](./synchronize-method-rds.md). Where you need to use the **Synchronize** method to communicate with ADO 2.1, the **Synchronize21** method can be called instead. The capabilities of the **Synchronize** method in ADO 2.5 and later are a superset of the capabilities provided for the same method in ADO 2.1.  
   
 ## Applies To  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)

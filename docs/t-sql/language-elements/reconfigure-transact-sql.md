@@ -1,4 +1,5 @@
 ---
+description: "RECONFIGURE (Transact-SQL)"
 title: "RECONFIGURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/20/2016"
@@ -24,7 +25,7 @@ author: rothja
 ms.author: jroth
 ---
 # RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the currently configured value (the **config_value** column in the **sp_configure** result set) of a configuration option changed with the **sp_configure** system stored procedure. Because some configuration options require a server stop and restart to update the currently running value, RECONFIGURE does not always update the currently running value (the **run_value** column in the **sp_configure** result set) for a changed configuration value.    
     
@@ -37,7 +38,9 @@ ms.author: jroth
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
-## Arguments    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  RECONFIGURE    
  Specifies that if the configuration setting does not require a server stop and restart, the currently running value should be updated. RECONFIGURE also checks the new configuration values for either values that are not valid (for example, a sort order value that does not exist in **syscharsets**) or nonrecommended values. With those configuration options not requiring a server stop and restart, the currently running value and the currently configured values for the configuration option should be the same value after RECONFIGURE is specified.    
     

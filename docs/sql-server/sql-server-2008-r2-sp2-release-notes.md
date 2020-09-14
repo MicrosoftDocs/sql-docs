@@ -1,21 +1,22 @@
 ---
 title: "SQL Server 2008 R2 SP2 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2008 R2 Service Pack 2.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ""
-ms.date: "10/15/2019"
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2008 R2 SP2"
   - "Release Notes, SQL Server 2008 R2 SP2"
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-author: craigg-msft
-ms.author: craigg
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+author: rothja
+ms.author: jroth
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2008 R2 Service Pack 2. This Release Notes document applies to all editions of SQL Server 2008 R2 SP2 and is available online only. It is updated periodically.  
   
 ## 1.0 What's New in Service Pack 2  
@@ -24,7 +25,7 @@ Added the dynamic management view (DMV) **sys.dm_db_stats_properties**. You can 
 ## 2.0 Before You Install  
 For information about how to install [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] updates, see [SQL Server 2008 R2 Servicing Documentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-For general information about how to get started and install SQL Server 2008 R2, see the SQL Server 2008 R2 Readme. The Readme document is available on the installation media. You can also find more information on the [SQL Server Forums](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+For general information about how to get started and install SQL Server 2008 R2, see the SQL Server 2008 R2 Readme. The Readme document is available on the installation media.
   
 ### 2.1 Choose the Correct File to Download and Install  
 Use the following table to determine which file to download and install. Verify that you have the correct system requirements before installing the service pack. The system requirements are provided on the download pages that are linked to in the table.  

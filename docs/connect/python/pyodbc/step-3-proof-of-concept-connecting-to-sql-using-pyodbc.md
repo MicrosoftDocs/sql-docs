@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
-author: arob98
-ms.author: angrobe
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
 
@@ -56,7 +56,7 @@ while row:
   
 ## Insert a row  
   
-In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters, which protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters. The parameters protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```python

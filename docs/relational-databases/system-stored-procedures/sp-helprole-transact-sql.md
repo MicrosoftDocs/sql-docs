@@ -1,4 +1,5 @@
 ---
+description: "sp_helprole (Transact-SQL)"
 title: "sp_helprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helprole"
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information about the roles in the current database.  
   

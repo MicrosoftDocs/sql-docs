@@ -1,5 +1,6 @@
 ---
 title: "Estimate the Size of a Nonclustered Index | Microsoft Docs"
+description: Use this procedure to estimate the amount of space that is required to store a nonclustered index in SQL Server.
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql  
@@ -23,7 +24,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ---
 # Estimate the Size of a Nonclustered Index
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Follow these steps to estimate the amount of space that is required to store a nonclustered index:  
   
@@ -169,13 +170,13 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 4.  Calculate the variable length data size:  
   
-     If there are variable-length columns in the index key, including any necessary clustering key columns as described previously in Step 2.2, determine how much space is used to store the columns within the index row:  
+     If there are variable-length columns (key columns or included), including any necessary clustering key columns as described previously in Step 2.2, determine how much space is used to store the columns within the index row:  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      The bytes added to ***Max_Var_Key_Size*** are for tracking each variable column.This formula assumes that all variable-length columns are 100 percent full. If you anticipate that a smaller percentage of the variable-length column storage space will be used, you can adjust the ***Max_Var_Leaf_Size*** value by that percentage to yield a more accurate estimate of the overall table size.  
   
-     If there are no variable-length columns, set ***Variable_Leaf_Size*** to 0.  
+     If there are no variable-length columns (key columns or included), set ***Variable_Leaf_Size*** to 0.  
   
 5.  Calculate the index row size:  
   

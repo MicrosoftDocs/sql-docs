@@ -1,6 +1,6 @@
 ---
+description: "Customize behavior of word breakers with a custom dictionary (SQL Server Search)"
 title: "Customize behavior of word breakers with a custom dictionary"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # Customize behavior of word breakers with a custom dictionary (SQL Server Search)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can customize the behavior of the word breaker for a particular language by creating a language-specific custom dictionary file. For example, you can prevent the word breaker from breaking certain terms or patterns.  
   
  For more information, see the following SharePoint article:  

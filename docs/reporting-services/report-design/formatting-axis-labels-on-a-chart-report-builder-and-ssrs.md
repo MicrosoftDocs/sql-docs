@@ -1,5 +1,6 @@
 ---
 title: "Formatting Axis Labels on a Chart (Report Builder) | Microsoft Docs"
+description: Learn how to format axis labels on a chart using a dialog box or by using the properties pane to categorize and display relationships in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

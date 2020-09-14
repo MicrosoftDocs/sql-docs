@@ -1,5 +1,6 @@
 ---
 title: "Create a Credential | Microsoft Docs"
+description: Learn how to create a credential in SQL Server by using SQL Server Management Studio or Transact-SQL. Find out how to work within the limitations and restrictions.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Create a Credential
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create a credential in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Credentials provide a way to allow [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication users to have an identity outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is primarily used to execute code in Assemblies with EXTERNAL_ACCESS permission set. Credentials can also be used when a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication user needs access to a domain resource, such as a file location to store a backup.  

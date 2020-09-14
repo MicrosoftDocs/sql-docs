@@ -1,4 +1,5 @@
 ---
+description: "READTEXT (Transact-SQL)"
 title: "READTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # READTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **image** column. Starts reading from a specified offset and reading the specified number of bytes.  
   
@@ -37,7 +38,9 @@ Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _table_ **.** _column_  
 Is the name of a table and column from which to read. Table and column names must fulfill the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Specifying the table and column names is required; however, specifying the database name and owner names is optional.  
   
@@ -67,7 +70,7 @@ READTEXT permissions default to users that have SELECT permissions on the specif
 The following example reads the second through 26th characters of the `pr_info` column in the `pub_info` table.  
   
 > [!NOTE]  
->  To run this example, you must install the **pubs** sample database.  
+>  To run this example, you must install the [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) sample database.  
   
 ```  
 USE pubs;  

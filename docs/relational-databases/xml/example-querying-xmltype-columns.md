@@ -1,5 +1,6 @@
 ---
 title: "Example: Querying XMLType Columns | Microsoft Docs"
+description: View an example of how to query columns of the xml data type.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Querying XMLType Columns
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following query includes columns of **xml** type. The query retrieves product model ID, name, and manufacturing steps at the first location from the `Instructions` column of the **xml** type.  
   
 ## Example  

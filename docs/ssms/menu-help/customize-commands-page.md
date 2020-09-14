@@ -1,4 +1,5 @@
 ---
+description: "Customize (Commands Page)"
 title: "Customize (Commands Page)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -14,10 +15,10 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Customize (Commands Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This dialog box enables you to add and remove commands on toolbars and menus as well as change the images used for toolbar buttons or menu commands. You can access the **Commands** page by clicking **Customize** on the **Tools** menu and then clicking **Commands**.  
   
-## UIElement List  
+## UI element list  
 **Categories**  
 Specifies the set of commands that are displayed in the **Commands** list box. The categories of commands are based on menu titles provided by the tools and designers that the environment is currently supporting. This list of titles is dynamic so that the order of categories and the menu titles change, depending on the tools and the designer, as well as any customizations made to them. Therefore, it is possible for two menus from different designers to have the same name, so the same title can appear twice but offer different command sets.  
   

@@ -1,4 +1,5 @@
 ---
+description: "OPENQUERY (Transact-SQL)"
 title: "OPENQUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "pass-through queries [SQL Server]"
   - "INSERT statement [SQL Server], OPENQUERY function"
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Executes the specified pass-through query on the specified linked server. This server is an OLE DB data source. OPENQUERY can be referenced in the FROM clause of a query as if it were a table name. OPENQUERY can also be referenced as the target table of an INSERT, UPDATE, or DELETE statement. This is subject to the capabilities of the OLE DB provider. Although the query may return multiple result sets, OPENQUERY returns only the first one.  
   
@@ -36,7 +37,9 @@ ms.author: mikeray
 OPENQUERY ( linked_server ,'query' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *linked_server*  
  Is an identifier representing the name of the linked server.  
   

@@ -1,6 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
-ms.date: 04/06/2020
+description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -45,6 +46,42 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## SQL Server 2019 Reporting Services
+
+## 15.0.7545.4810, 2020/08/31 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates  | &nbsp; |
+| Constrained Comment attachment support to no longer allow PDF documents  | &nbsp; |
+| Fixed filename truncation when exporting reports containing a period in the name  | &nbsp; |
+| Fixed an issue related to Subscriptions and the zh-TW culture that resulted in invalid date format errors  | &nbsp; |
+| Fixed an issue with certain reports where accessing the parameters option leads to indefinite spinny  | &nbsp; |
+| Fixed issues relating to single quotes in report names  | &nbsp; |
+| Fixed an issue in URL Access causing FindString to not locate matches  | &nbsp; |
+| Fixed an issue where alt text for PDF export were not correctly encoded for multi-byte characters  | &nbsp; |
+| Fixed unwanted appearance of an empty image under a linear element  | &nbsp; |
+| Fixed erroneous Unsupported error for Custom Authentication in Web Edition  | &nbsp; |
+| Fixed an issue where a screen reader was reading an extra row and extra column in a Tablix  | &nbsp; |
+| Fixed an image truncation issue with fit to size when zoomed to whole page  | &nbsp; |
+| Command line upgrade no longer requires EULA flag  | &nbsp; |
+
+## 15.0.7243.37714, 2019/11/01
+
+Initial release.
+
+
+## SQL Server 2017 Reporting Services
+
+## 14.0.600.1669, 2020/08/31 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates  | &nbsp; |
+| Constrained Comment attachment support to no longer allow PDF documents  | &nbsp; |
+| Fixed filename truncation when exporting reports containing a period in the name  | &nbsp; |
+| Fixed an issue related to Subscriptions and the zh-TW culture that resulted in invalid date format errors  | &nbsp; |
+
 ## 14.0.600.1572, 2020/04/06 
 
 | Fixed issue | Details |

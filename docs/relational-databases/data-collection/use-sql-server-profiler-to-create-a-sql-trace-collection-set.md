@@ -1,7 +1,7 @@
 ---
+description: "Use SQL Server Profiler to Create a SQL Trace Collection Set"
 title: "Create SQL Trace collection set with Profiler"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -14,7 +14,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Use SQL Server Profiler to Create a SQL Trace Collection Set
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] you can exploit the server-side trace capabilities of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type. There are two parts to this process:  
   
 1.  Create and export a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace.  
@@ -108,13 +108,13 @@ ms.custom: "seo-lt-2019"
 ## Example  
  The following code sample is the final script resulting from the steps documented in the preceding procedures.  
   
-```  
+```sql
 /*************************************************************/  
 -- SQL Trace collection set generated from SQL Server Profiler  
 -- Date: 11/19/2007  12:55:31 AM  
 /*************************************************************/  
   
-USE msdb  
+USE msdb;
 GO  
   
 BEGIN TRANSACTION  
@@ -160,7 +160,9 @@ N'<ns:SqlTraceCollector xmlns:ns"DataCollectorType" use_default="0">
   
 -- Retrieve the collector type GUID for the trace collector type.  
 DECLARE @collector_type_GUID uniqueidentifier;  
-SELECT @collector_type_GUID = collector_type_uid FROM [dbo].[syscollector_collector_types] WHERE name = N'Generic SQL Trace Collector Type';  
+SELECT @collector_type_GUID = collector_type_uid
+  FROM [dbo].[syscollector_collector_types]
+  WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
 -- ***  
@@ -194,7 +196,8 @@ SELECT @ErrorLine = ERROR_LINE(),
        @ErrorNumber = ERROR_NUMBER(),  
        @ErrorMessage = ERROR_MESSAGE(),  
        @ErrorProcedure = ISNULL(ERROR_PROCEDURE(), '-');  
-RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber, @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
+RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber,
+  @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
 END CATCH;  
 GO  
 ```  

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)"
 title: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"
@@ -20,9 +21,9 @@ author: joesackmsft
 ms.author: josack
 ---
 # sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Returns snapshot at 20 seconds interval for last 32 minutes (128 recs in total) of resource pools stats for an Azure SQL Database.
+Returns snapshot at 20 seconds interval for last 32 minutes (128 secs in total) of resource pools stats for an Azure SQL Database.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

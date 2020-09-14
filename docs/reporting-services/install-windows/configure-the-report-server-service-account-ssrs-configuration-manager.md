@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 ms.custom: seo-lt-2019​, seo-mmd-2019
-ms.date: 12/04/2019 
+ms.date: 06/09/2020 
 ---
 
 # Configure the Report Server Service Account (SSRS Configuration Manager)
@@ -47,7 +47,7 @@ ms.date: 12/04/2019
   
 2. On the Service Account page, select the option that describes the type of account you want to use.  
   
-3. If you selected a Windows user account, specify the new account and password. The account can't be more than 20 characters.  
+3. If you selected a Windows user account, specify the new account and password. The account can't be more than 20 characters and can't contain special characters " / \ [ ] : ; | = , + * ? < > ' per Windows user account naming rules.  
   
      If the report server is deployed in a network that supports Kerberos authentication, you must register the report server Service Principal Name (SPN) with the domain user account you specified. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
@@ -67,7 +67,8 @@ ms.date: 12/04/2019
   
 |Account|Explanation|  
 |-------------|-----------------|  
-|Domain user accounts|If you have a Windows domain user account that has the minimum permissions required for report server operations, you should use it.<br /><br /> A domain user account is recommended because it isolates the Report Server service from other applications. Running multiple applications under a shared account, such as Network Service, increases the risk of a malicious user taking control of the report server because a security breach for any one application can easily extend to all applications that run under the same account.<br /><br /> If you use a domain user account, you have to change the password periodically if your organization enforces a password expiration policy. You might also need to register the service with the user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Avoid using a local Windows user account. Local accounts typically don't have sufficient permission to access resources on other computers. For more information about how using a local account limits report server functionality, see [Considerations for Using Local Accounts](#localaccounts) in this topic.|  
+|Domain user accounts|If you have a Windows domain user account that has the minimum permissions required for report server operations, you should use it.<br /><br /> A domain user account is recommended because it isolates the Report Server service from other applications. Running multiple applications under a shared account, such as Network Service, increases the risk of a malicious user taking control of the report server because a security breach for any one application can easily extend to all applications that run under the same account.<br /><br /> If you use a domain user account, you have to change the password periodically if your organization enforces a password expiration policy. You might also need to register the service with the user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Avoid using a local Windows user account. Local accounts typically don't have sufficient permission to access resources on other computers. For more information about how using a local account limits report server functionality, see [Considerations for Using Local Accounts](#localaccounts) in this topic.| 
+| **Group Managed Service Account (gMSA)** | Standalone Managed Service Accounts were introduced in Windows Server 2008 R2 and Windows 7. They're managed domain accounts that provide automatic password management and simplified SPN management, including delegation of management to other administrators. The **Group Managed Service Account** provides the same functionality within the domain but also extends that functionality over multiple servers. |
 |**Virtual Service Account**|**Virtual Service Account** represents the windows service. It is a built-in least-privilege account that has network log on permissions. This account is recommended if you don't have a domain user account available or if you want to avoid any service disruptions that might occur as a result of password expiration policies.|  
 |**Network Service**|**Network Service** is a built-in least-privilege account that has network log on permissions. <br /><br /> If you select **Network Service**, try to minimize the number of other services that run under the same account. A security breach for any one application compromises the security of all other applications that run under the same account.|  
 |**Local Service**|**Local Service** is a built-in account that is like an authenticated local Windows user account. Services that run as the **Local Service** account access network resources as a null session with no credentials. This account is not appropriate for intranet deployment scenarios where the report server must connect to a remote report server database or a network domain controller to authenticate a user prior to opening a report or processing a subscription.|  
@@ -89,7 +90,7 @@ The following guidelines and links in this section can help you decide on an app
   
 - [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [The Services and Service Accounts Security Planning Guide](https://www.zubairalexander.com/blog/services-and-service-accounts-security-planning-guide/).  
   
 ## Updating an Expired Password
 

@@ -1,4 +1,5 @@
 ---
+description: "sql_variant Support for Date and Time Types"
 title: "sql_variant Support for Date and Time Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,7 +16,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sql_variant Support for Date and Time Types
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes how the **sql_variant** data type supports enhanced date and time functionality.  
   

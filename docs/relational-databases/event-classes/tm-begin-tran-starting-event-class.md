@@ -1,4 +1,5 @@
 ---
+description: "TM: Begin Tran Starting Event Class"
 title: "TM: Begin Tran Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Begin Tran Starting Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The TM: Begin Tran Starting event class indicates that a BEGIN TRANSACTION request is starting. The request is sent from the client through the transaction management interface.  
   
 ## TM: Begin Tran Starting Event Class Data Columns  

@@ -1,8 +1,9 @@
 ---
+description: "RDS Tutorial"
 title: "RDS Tutorial | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO]"
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Tutorial
 This tutorial illustrates using the RDS programming model to query and update a data source. First, it describes the steps necessary to accomplish this task. Then the tutorial is repeated in Microsoft® Visual Basic Scripting Edition (featuring ADO for Windows Foundation Classes (ADO/WFC)).  
@@ -38,7 +39,7 @@ This tutorial illustrates using the RDS programming model to query and update a 
   
 -   Invoke the server program. Pass parameters to the server program that identifies the data source and the command to issue.  
   
--   The server program obtains a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object from the data source, typically by using ADO. Optionally, the **Recordset** object is processed on the server.  
+-   The server program obtains a [Recordset](../../reference/ado-api/recordset-object-ado.md) object from the data source, typically by using ADO. Optionally, the **Recordset** object is processed on the server.  
   
 -   The server program returns the final **Recordset** object to the client application.  
   
@@ -48,20 +49,20 @@ This tutorial illustrates using the RDS programming model to query and update a 
   
  This tutorial contains the following topics.  
   
--   [Step 1: Specify a Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Step 1: Specify a Server Program (RDS Tutorial)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Step 2: Invoke the Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Step 2: Invoke the Server Program (RDS Tutorial)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Step 3: Server Obtains a Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Step 3: Server Obtains a Recordset (RDS Tutorial)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Step 4: Server Returns the Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Step 4: Server Returns the Recordset (RDS Tutorial)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Step 5: DataControl is Made Usable (RDS Tutorial)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Step 5: DataControl is Made Usable (RDS Tutorial)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Step 6: Changes are Sent to the Server (RDS Tutorial)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Step 6: Changes are Sent to the Server (RDS Tutorial)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## See Also  
- [Step 1: Specify a Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Step 1: Specify a Server Program (RDS Tutorial)](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)

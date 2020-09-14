@@ -1,4 +1,5 @@
 ---
+description: "KEY_NAME (Transact-SQL)"
 title: "KEY_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # KEY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the name of the symmetric key from either a symmetric key GUID or cipher text.  
   
@@ -32,7 +33,9 @@ ms.author: vanto
 KEY_NAME ( ciphertext | key_guid )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ciphertext*  
  Is the text encrypted by the symmetric key. *cyphertext* is type **varbinary(8000)**.  
   

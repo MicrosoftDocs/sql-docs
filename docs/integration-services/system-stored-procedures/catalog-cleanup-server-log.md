@@ -1,4 +1,5 @@
 ---
+description: "catalog.cleanup_server_log"
 title: "catalog.cleanup_server_log | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,10 +14,10 @@ ms.author: chugu
 ---
 # catalog.cleanup_server_log 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cleans up operation logs to bring the SSISDB database into a state that lets you change the value of the SERVER_OPERATION_ENCRYPTION_LEVEL property.  
   

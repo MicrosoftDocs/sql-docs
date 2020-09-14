@@ -1,4 +1,5 @@
 ---
+description: "MDX Reserved Words"
 title: "MDX Reserved Words | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -13,66 +14,232 @@ author: minewiskan
 
 
   The following table contains words reserved for use by Multidimensional Expressions (MDX). You should not use these words as part of any identifier, such as a cube name, or user-defined function name, in MDX.  
-  
-|||||  
-|-|-|-|-|  
-|ABSOLUTE|DESC|LEAVES|SELF_BEFORE_AFTER|  
-|ACTIONPARAMETERSET|DESCENDANTS|LEVEL|SESSION|  
-|ADDCALCULATEDMEMBERS|DESCRIPTION|LEVELS|SET|  
-|AFTER|DIMENSION|LINKMEMBER|SETTOARRAY|  
-|AGGREGATE|DIMENSIONS|LINREGINTERCEPT|SETTOSTR|  
-|ALL|DISTINCT|LINREGPOINT|SORT|  
-|ALLMEMBERS|DISTINCTCOUNT|LINREGR2|STDDEV|  
-|ANCESTOR|DRILLDOWNLEVEL|LINREGSLOPE|STDDEVP|  
-|ANCESTORS|DRILLDOWNLEVELBOTTOM|LINREGVARIANCE|STDEV|  
-|AND|DRILLDOWNLEVELTOP|LOOKUPCUBE|STDEVP|  
-|AS|DRILLDOWNMEMBER|MAX|STORAGE|  
-|ASC|DRILLDOWNMEMBERBOTTOM|MEASURE|STRIPCALCULATEDMEMBERS|  
-|ASCENDANTS|DRILLDOWNMEMBERTOP|MEDIAN|STRTOMEMBER|  
-|AVERAGE|DRILLUPLEVEL|MEMBER|STRTOSET|  
-|AXIS|DRILLUPMEMBER|MEMBERS|STRTOTUPLE|  
-|BASC|DROP|MEMBERTOSTR|STRTOVAL|  
-|BDESC|EMPTY|MIN|STRTOVALUE|  
-|BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|ERROR|NAME|SUM|  
-|BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
-|BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
-|BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
-|BY|FALSE|NO_ALLOCATION|TOPCOUNT|  
-|CACHE|FILTER|NO_PROPERTIES|TOPPERCENT|  
-|CALCULATE|FIRSTCHILD|NON|TOPSUM|  
-|CALCULATION|FIRSTSIBLING|NONEMPTYCROSSJOIN|TOTALS|  
-|CALCULATIONCURRENTPASS|FOR|NOT_RELATED_TO_FACTS|TREE|  
-|CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
-|CALCULATIONS|FROM|ON|TUPLETOSTR|  
-|CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|OR|UNION|  
-|CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
-|CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
-|CHILDREN|HEAD|PARENT|UPDATE|  
-|CLEAR|HIDDEN|PASS|USE|  
-|CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
-|COALESCEEMPTY|HIERARCHY|POST|USE_WEIGHTED_ALLOCATION|  
-|COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
-|COLUMNS|IIF|PREVMEMBER|USERNAME|  
-|CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|VALUE|  
-|COUSIN|INTERSECT|QTD|VAR|  
-|COVARIANCE|IS|RANK|VARIANCE|  
-|COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
-|CREATE|ISEMPTY|RELATIVE|VARP|  
-|CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
-|CREATEVIRTUALDIMENSION|ISLEAF|ROOT|VISUALTOTALS|  
-|CROSSJOIN|ISSIBLING|ROWS|WHERE|  
-|CUBE|ITEM|SCOPE|WITH|  
-|CURRENT|LAG|SECTIONS|WTD|  
-|CURRENTCUBE|LASTCHILD|SELECT|XOR|  
-|CURRENTMEMBER|LASTPERIODS|SELF|YTD|  
-|DEFAULT_MEMBER|LASTSIBLING|SELF_AND_AFTER||  
-|DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
-  
+
+:::row:::
+    :::column:::
+        ABSOLUTE  
+        ACTIONPARAMETERSET  
+        ADDCALCULATEDMEMBERS  
+        AFTER  
+        AGGREGATE  
+        ALL  
+        ALLMEMBERS  
+        ANCESTOR  
+        ANCESTORS  
+        AND  
+        AS  
+        ASC  
+        ASCENDANTS  
+        AVERAGE  
+        AXIS  
+        BASC  
+        BDESC  
+        BEFORE  
+        BEFORE_AND_AFTER  
+        BOTTOMCOUNT  
+        BOTTOMPERCENT  
+        BOTTOMSUM  
+        BY  
+        CACHE  
+        CALCULATE  
+        CALCULATION  
+        CALCULATIONCURRENTPASS  
+        CALCULATIONPASSVALUE  
+        CALCULATIONS  
+        CALL  
+        CELL  
+        CELLFORMULASETLIST  
+        CHAPTERS  
+        CHILDREN  
+        CLEAR  
+        CLOSINGPERIOD  
+        COALESCEEMPTY  
+        COLUMN  
+        COLUMNS  
+        CORRELATION  
+        COUNT  
+        COUSIN  
+        COVARIANCE  
+        COVARIANCEN  
+        CREATE  
+        CREATEPROPERTYSET  
+        CREATEVIRTUALDIMENSION  
+        CROSSJOIN  
+        CUBE  
+        CURRENT  
+        CURRENTCUBE  
+        CURRENTMEMBER  
+        DEFAULT_MEMBER  
+        DEFAULTMEMBER  
+    :::column-end:::
+    :::column:::
+        DESC  
+        DESCENDANTS  
+        DESCRIPTION  
+        DIMENSION  
+        DIMENSIONS  
+        DISTINCT  
+        DISTINCTCOUNT  
+        DRILLDOWNLEVEL  
+        DRILLDOWNLEVELBOTTOM  
+        DRILLDOWNLEVELTOP  
+        DRILLDOWNMEMBER  
+        DRILLDOWNMEMBERBOTTOM  
+        DRILLDOWNMEMBERTOP  
+        DRILLUPLEVEL  
+        DRILLUPMEMBER  
+        DROP  
+        EMPTY  
+        END  
+        ERROR  
+        EXCEPT  
+        EXCLUDEEMPTY  
+        EXTRACT  
+        FALSE  
+        FILTER  
+        FIRSTCHILD  
+        FIRSTSIBLING  
+        FOR  
+        FREEZE  
+        FROM  
+        GENERATE  
+        GLOBAL  
+        GROUP  
+        GROUPING  
+        HEAD  
+        HIDDEN  
+        HIERARCHIZE  
+        HIERARCHY  
+        IGNORE  
+        IIF  
+        INCLUDEEMPTY  
+        INDEX  
+        INTERSECT  
+        IS  
+        ISANCESTOR  
+        ISEMPTY  
+        ISGENERATION  
+        ISLEAF  
+        ISSIBLING  
+        ITEM  
+        LAG  
+        LASTCHILD  
+        LASTPERIODS  
+        LASTSIBLING  
+        LEAD  
+    :::column-end:::
+    :::column:::
+        LEAVES  
+        LEVEL  
+        LEVELS  
+        LINKMEMBER  
+        LINREGINTERCEPT  
+        LINREGPOINT  
+        LINREGR2  
+        LINREGSLOPE  
+        LINREGVARIANCE  
+        LOOKUPCUBE  
+        MAX  
+        MEASURE  
+        MEDIAN  
+        MEMBER  
+        MEMBERS  
+        MEMBERTOSTR  
+        MIN  
+        MTD  
+        NAME  
+        NAMETOSET  
+        NEST  
+        NEXTMEMBER  
+        NO_ALLOCATION  
+        NO_PROPERTIES  
+        NON  
+        NONEMPTYCROSSJOIN  
+        NOT_RELATED_TO_FACTS  
+        NULL  
+        ON  
+        OPENINGPERIOD  
+        OR  
+        PAGES  
+        PARALLELPERIOD  
+        PARENT  
+        PASS  
+        PERIODSTODATE  
+        POST  
+        PREDICT  
+        PREVMEMBER  
+        PROPERTIES  
+        PROPERTY  
+        QTD  
+        RANK  
+        RECURSIVE  
+        RELATIVE  
+        ROLLUPCHILDREN  
+        ROOT  
+        ROWS  
+        SCOPE  
+        SECTIONS  
+        SELECT  
+        SELF  
+        SELF_AND_AFTER  
+        SELF_AND_BEFORE  
+    :::column-end:::
+    :::column:::
+        SELF_BEFORE_AFTER  
+        SESSION  
+        SET  
+        SETTOARRAY  
+        SETTOSTR  
+        SORT  
+        STDDEV  
+        STDDEVP  
+        STDEV  
+        STDEVP  
+        STORAGE  
+        STRIPCALCULATEDMEMBERS  
+        STRTOMEMBER  
+        STRTOSET  
+        STRTOTUPLE  
+        STRTOVAL  
+        STRTOVALUE  
+        SUBSET  
+        SUM  
+        TAIL  
+        THIS  
+        TOGGLEDRILLSTATE  
+        TOPCOUNT  
+        TOPPERCENT  
+        TOPSUM  
+        TOTALS  
+        TREE  
+        TRUE  
+        TUPLETOSTR  
+        TYPE  
+        UNION  
+        UNIQUE  
+        UNIQUENAME  
+        UPDATE  
+        USE  
+        USE_EQUAL_ALLOCATION  
+        USE_WEIGHTED_ALLOCATION  
+        USE_WEIGHTED_INCREMENT  
+        USERNAME  
+        VALIDMEASURE  
+        VALUE  
+        VAR  
+        VARIANCE  
+        VARIANCEP  
+        VARP  
+        VISUAL  
+        VISUALTOTALS  
+        WHERE  
+        WITH  
+        WTD  
+        XOR  
+        YTD  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Reserved Keywords &#40;MDX Syntax&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
  [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
-  
-  

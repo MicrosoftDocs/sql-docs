@@ -1,12 +1,15 @@
 ---
+description: "Manage Metadata When Making a Database Available on Another Server"
 title: "Manage metadata when making a database available on another server"
-ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
+ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
+author: "stevestein"
+ms.author: "sstein"
+ms.custom: seo-dt-2019
 helpviewer_keywords: 
   - "cross-database queries [SQL Server]"
   - "logins [SQL Server], recreating on another server instance"
@@ -31,13 +34,9 @@ helpviewer_keywords:
   - "extended stored procedures [SQL Server], metadata"
   - "credentials [SQL Server], metadata"
   - "copying databases"
-ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-author: "stevestein"
-ms.author: "sstein"
-ms.custom: seo-dt-2019
 ---
 # Manage Metadata When Making a Database Available on Another Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This article is relevant in the following situations:  
   
 -   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group.  

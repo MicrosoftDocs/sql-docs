@@ -1,8 +1,9 @@
 ---
+description: "Append and CreateParameter Methods Example (VB)"
 title: "Append and CreateParameter Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "CreateParameter method [ADO], Visual Basic example"
   - "Append method [ADO], Visual Basic example"
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Append and CreateParameter Methods Example (VB)
-This example uses the [Append](../../../ado/reference/ado-api/append-method-ado.md) and [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) methods to execute a stored procedure with an input parameter.  
+This example uses the [Append](./append-method-ado.md) and [CreateParameter](./createparameter-method-ado.md) methods to execute a stored procedure with an input parameter.  
   
 ```  
 'BeginAppendVB  
@@ -114,8 +115,8 @@ End Sub
 ```  
   
 ## See Also  
- [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Append Method (ADO)](./append-method-ado.md)   
+ [CreateParameter Method (ADO)](./createparameter-method-ado.md)   
+ [Field Object](./field-object.md)   
+ [Fields Collection (ADO)](./fields-collection-ado.md)   
+ [Parameter Object](./parameter-object.md)

@@ -1,5 +1,6 @@
 ---
 title: "Set query parameterization behavior using plan guides"
+description: Learn about options for parameterization, where parameters are substituted for literal values in a query in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Specify Query Parameterization Behavior by Using Plan Guides
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   When the PARAMETERIZATION database option is set to SIMPLE, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer may choose to parameterize the queries. This means that any literal values that are contained in a query are substituted with parameters. This process is referred to as simple parameterization. When SIMPLE parameterization is in effect, you cannot control which queries are parameterized and which queries are not. However, you can specify that all queries in a database be parameterized by setting the PARAMETERIZATION database option to FORCED. This process is referred to as forced parameterization.  
   
  You can override the parameterization behavior of a database by using plan guides in the following ways:  

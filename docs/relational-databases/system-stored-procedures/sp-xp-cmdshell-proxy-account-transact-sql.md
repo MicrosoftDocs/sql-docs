@@ -1,4 +1,5 @@
 ---
+description: "sp_xp_cmdshell_proxy_account (Transact-SQL)"
 title: "sp_xp_cmdshell_proxy_account (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "sp_xp_cmdshell_proxy_account"
   - "xp_cmdshell"
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_xp_cmdshell_proxy_account (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a proxy credential for **xp_cmdshell**.  
   

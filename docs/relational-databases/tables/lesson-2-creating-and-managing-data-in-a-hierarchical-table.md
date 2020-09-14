@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
 title: "Lesson 2: Creating and Managing Data in a Hierarchical Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,7 +15,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Lesson 2: Create and Manage Data in a Hierarchical Table
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In Lesson 1, you modified an existing table to use the **hierarchyid** data type, and populated the **hierarchyid** column with the representation of the existing data. In this lesson, you will start with a new table, and insert data by using the hierarchical methods. Then, you will query and manipulate the data by using the hierarchical methods. 
 
 ## Prerequisites  
@@ -283,7 +284,7 @@ Now that the HumanResources.EmployeeOrg table is fully populated, this task will
    
   
 ## Reorder data in a hierarchical table using hierarchical methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Reorganizing a hierarchy is a common maintenance task. In this task, we will use an UPDATE statement with the [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) method to first move a single row to a new location in the hierarchy. Then we will move an entire sub-tree to a new location.  
   
 The `GetReparentedValue` method takes two arguments. The first argument describes the part of the hierarchy to be modified. For example, if a hierarchy is **/1/4/2/3/** and you want to change the **/1/4/** section, the hierarchy becomes **/2/1/2/3/**, leaving the last two nodes (**2/3/**) unchanged, you must provide the changing nodes (**/1/4/**) as the first argument. The second argument provides the new hierarchy level, in our example **/2/1/**. The two arguments do not have to contain the same number of levels.  

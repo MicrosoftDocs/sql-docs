@@ -1,24 +1,23 @@
 ---
 title: PowerShell extension
-titleSuffix: Azure Data Studio
-description: Install and use the PowerShell for Azure Data Studio
+description: Learn how to install and use the Azure Data Studio PowerShell extension, which provides rich PowerShell editor support for writing and debugging scripts.
 ms.custom: "seodec18"
 ms.date: "04/19/2019"
-ms.reviewer: "alayu; sstein"
-ms.prod: sql
+ms.reviewer: "alayu, maghan, sstein"
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"
 manager: matthend
 ---
+
 # PowerShell Editor Support for Azure Data Studio
 
 This extension provides rich PowerShell editor support in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
 Now you can write and debug PowerShell scripts using the excellent IDE-like interface that Azure Data Studio provides.
 
 ![PowerShell extension](media/powershell-extension/powershell-extension.png)
-
 
 ## Features
 
@@ -33,11 +32,10 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 - Launch online help for the symbol under the cursor using <kbd>Ctrl</kbd>+<kbd>F1</kbd>
 - Basic interactive console support!
 
-
 ## Installing the Extension
 
 You can install the official release of the PowerShell extension by following the steps
-in the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+in the [Azure Data Studio documentation](./extensions.md).
 In the Extensions pane, search for "PowerShell" extension and install it there.  You will
 get notified automatically about any future extension updates!
 
@@ -57,13 +55,13 @@ Read the [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) for ans
 
 ## Installing PowerShell Core
 
-If you are running Azure Data Studio on MacOS or Linux, you may also need to install PowerShell Core.
+If you are running Azure Data Studio on macOS or Linux, you may also need to install PowerShell Core.
 
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
-For more information on installing PowerShell Core on MacOS or Linux platforms, see the following articles:
+For more information on installing PowerShell Core on macOS or Linux platforms, see the following articles:
 
-- [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Installing PowerShell Core on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Installing PowerShell Core on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Installing PowerShell Core on macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## Example Scripts
 
@@ -145,7 +143,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-The `SqlServer` module contains a Provider called `SQLRegistration` which allows you to programatically access the follwing types of saved SQL Server connections:
+The `SqlServer` module contains a Provider called `SQLRegistration` which allows you to programatically access the following types of saved SQL Server connections:
 
 + Database Engine Server (Registered Servers)
 + Central Management Server (CMS)
@@ -261,7 +259,7 @@ on how to contribute to this extension!
 This extension is [licensed under the MIT License](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). For details on the third-party
 binaries that we include with releases of this project, see the [third-party notices](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) file.
 
-## [Code of Conduct][conduct-md]
+## Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct][conduct-code].
 For more information, see the [Code of Conduct FAQ][conduct-FAQ] or contact [opencode@microsoft.com][conduct-email] with any additional questions or comments.

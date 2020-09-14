@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Service Broker | Microsoft Docs"
+description: Learn about Service Broker. See how it provides native support for messaging in the SQL Server Database Engine and Azure SQL  Managed Instance.
 ms.custom: ""
 ms.date: "09/07/2018"
 ms.prod: sql
@@ -20,14 +21,14 @@ helpviewer_keywords:
   - "SQL Server Service Broker"
   - "Service Broker"
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Service Broker
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] provide native support for messaging and queuing in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Developers can easily create sophisticated applications that use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components to communicate between disparate databases, and build distributed and reliable applications.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] provide native support for messaging and queuing in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Developers can easily create sophisticated applications that use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components to communicate between disparate databases, and build distributed and reliable applications.  
   
 ## When to use Service Broker
 
@@ -96,7 +97,7 @@ FROM ExpenseQueue;
 ## What's new in Service Broker  
  No significant changes are introduced in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  The following changes were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
-### Service broker and Azure SQL Database Managed Instance
+### Service broker and Azure SQL Managed Instance
 
 - Cross-instance service broker is not supported 
  - `sys.routes` - Prerequisite: select address from sys.routes. Address must be LOCAL on every route. See [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).

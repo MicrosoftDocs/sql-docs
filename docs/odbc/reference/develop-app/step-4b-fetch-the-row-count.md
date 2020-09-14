@@ -1,4 +1,5 @@
 ---
+description: "Step 4b: Fetch the Row Count"
 title: "Step 4b: Fetch the Row Count | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,8 +1,9 @@
 ---
+description: "Parameters Collection, Command Property Example (VC++)"
 title: "Parameters Collection, Command Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "Parameters collection [ADOX], VC++ example"
   - "Command property [ADOX], VC++ example"
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameters Collection, Command Property Example (VC++)
-The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property with the [Command](../../../ado/reference/ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  
+The following code demonstrates how to use the [Command](./command-property-adox.md) property with the [Command](../ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  
   
 ```  
 // BeginProcedureParametersCpp.cpp  

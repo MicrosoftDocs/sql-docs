@@ -1,8 +1,9 @@
 ---
+description: "Command (ADO for Visual C++ Syntax)"
 title: "Command (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Command collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command (ADO for Visual C++ Syntax)
 ## Methods  
@@ -46,4 +47,4 @@ get_Parameters(ADOParameters **ppvObject)
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)

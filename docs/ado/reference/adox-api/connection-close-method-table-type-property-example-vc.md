@@ -1,8 +1,9 @@
 ---
+description: "Connection Close Method, Table Type Property Example (VC++)"
 title: "Connection Close Method, Table Type Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "Type property [ADOX], VC++ example"
   - "Close method [ADOX], VC++ example"
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connection Close Method, Table Type Property Example (VC++)
-Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to **Nothing** should "close" the catalog. Associated collections will be empty. Any objects that were created from schema objects in the catalog will be orphaned. Any properties on those objects that have been cached will still be available, but attempting to read properties that require a call to the provider will fail.  
+Setting the [ActiveConnection](./activeconnection-property-adox.md) property to **Nothing** should "close" the catalog. Associated collections will be empty. Any objects that were created from schema objects in the catalog will be orphaned. Any properties on those objects that have been cached will still be available, but attempting to read properties that require a call to the provider will fail.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -137,4 +138,4 @@ void CloseConnectionX() {
 ```  
   
 ## See Also  
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)

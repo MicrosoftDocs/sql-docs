@@ -1,4 +1,5 @@
 ---
+description: "Types of Changes"
 title: "Types of Changes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

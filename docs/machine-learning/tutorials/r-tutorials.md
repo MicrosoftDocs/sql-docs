@@ -1,45 +1,63 @@
 ---
 title: R tutorials
-description: This article describes the R tutorials and quickstarts for SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning 
+description: This article describes R tutorials for SQL machine learning. Learn how to run scripts and build machine learning models.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/13/2020  
 ms.topic: tutorial
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/21/2020  
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# R tutorials for SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+# R tutorials for SQL machine learning
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+This article describes the R tutorials and quickstarts for [Machine Learning Services on SQL Server](../sql-server-machine-learning-services.md) and on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 This article describes the R tutorials and quickstarts for [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
-
-+ Learn how to run R scripts.
-+ Build, train, and deploy R models to SQL Server.
-+ Learn about remote and local compute contexts.
-+ Explore the Microsoft R  packages for data science and machine learning.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+This article describes the R tutorials and quickstarts for [SQL Server 2016 R Services](../r/sql-server-r-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+This article describes the Python tutorials and quickstarts for [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
-## R quickstarts and tutorials
+## R tutorials
 
-| Link | Description |
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+| Tutorial | Description |
 |------|-------------|
-| [Quickstart: Create and run simple R scripts](quickstart-r-create-script.md) | First of several quickstarts, with this one illustrating the basic syntax for calling an R function using a T-SQL query editor such as SQL Server Management Studio. |
-| [Tutorial: Learn in-database R analytics for data scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | For R developers new to SQL Server, this tutorial explains how to perform common data science tasks in SQL Server. Load and visualize data, train and save a model to SQL Server, and use the model for predictive analytics. |
-| [Tutorial: Learn in-database R analytics for SQL developers](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Build and deploy a complete R solution, using only [!INCLUDE[tsql](../../includes/tsql-md.md)] tools. Focuses on moving a solution into production. You'll learn how to wrap R code in a stored procedure, save an R model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, and make parameterized calls to the R model for prediction. |
-| [Tutorial: RevoScaleR deep dive](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Learn how to use the functions in the RevoScaleR packages. Move data between R and SQL Server, and switch compute contexts to suit a particular task. Create models and plots, and move them between your development environment and the database server. |
-
-<a name ="bkmk_samples"></a>
-
-## Code samples
-
-| Link | Description |
+| [Predict ski rental with decision tree](r-predictive-model-introduction.md) | Use R and a decision tree model to predict the number of future ski rentals. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
+| [Categorizing customers using k-means clustering](r-clustering-model-introduction.md) | Use R to develop and deploy a K-Means clustering model to categorize customers. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
+| [In-database R analytics for data scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | For R developers new to SQL machine learning, this tutorial explains how to perform common data science tasks in SQL. Load and visualize data, train and save a model in a database, and use the model for predictive analytics. |
+| [In-database R analytics for SQL developers](../tutorials/r-taxi-classification-introduction.md) | Build and deploy a complete R solution, using only SQL tools. Focuses on moving a solution into production. You'll learn how to wrap R code in a stored procedure, save an R model in a database, and make parameterized calls to the R model for prediction. |
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+| Tutorial | Description |
 |------|-------------|
-| [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. |
-| [Perform customer clustering using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Use unsupervised learning to segment customers based on sales data. |
+| [Predict ski rental with decision tree](r-predictive-model-introduction.md) | Use R and a decision tree model to predict the number of future ski rentals. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
+| [Categorizing customers using k-means clustering](r-clustering-model-introduction.md) | Use R to develop and deploy a K-Means clustering model to categorize customers. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
+::: moniker-end
 
-## See also
+## R quickstarts
 
-+ [R extension to SQL Server](../concepts/extension-r.md)
+If you are new to SQL machine learning, you can also try the R quickstarts.
+
+| Quickstart | Description |
+|-|-|
+| [Run simple R scripts](quickstart-r-create-script.md) | Learn the basics of how to call R in T-SQL using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Data structures and objects using R](quickstart-r-data-types-and-objects.md) | Shows how SQL uses the R to handle data structures. |
+| [Create and score a predictive model in R](quickstart-r-data-types-and-objects.md) | Explains how to create, train, and use a R model to make predictions from new data. |
+
+## Next steps
+
++ [Python extension in SQL Server](../concepts/extension-r.md)

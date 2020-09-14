@@ -1,5 +1,6 @@
 ---
-title: "Performing batch operations | Microsoft Docs"
+title: "Performing batch operations"
+description: "Learn how to use batch operations to improve performance using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

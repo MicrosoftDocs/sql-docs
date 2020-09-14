@@ -1,4 +1,5 @@
 ---
+description: "updateRef Method (int, java.sql.Ref)"
 title: "updateRef Method (int, java.sql.Ref) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

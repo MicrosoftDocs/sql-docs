@@ -1,6 +1,7 @@
 ---
+description: "ALTER MASTER KEY (Transact-SQL)"
 title: "ALTER MASTER KEY (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+ms.custom: "fasttrack-edit"
 ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
@@ -30,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # ALTER MASTER KEY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Changes the properties of a database master key.
 
@@ -82,11 +83,15 @@ ALTER MASTER KEY <alter_option>
     <regenerate_option> | <encryption_option>
 
 <regenerate_option> ::=
-    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'<encryption_option> ::=
+    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'
+
+<encryption_option> ::=
     ADD ENCRYPTION BY SERVICE MASTER KEY
     |
     DROP ENCRYPTION BY SERVICE MASTER KEY
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

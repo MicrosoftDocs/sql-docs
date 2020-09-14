@@ -1,4 +1,5 @@
 ---
+description: "Configure Web Synchronization"
 title: "Configure Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
@@ -34,7 +35,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Configure Web Synchronization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The Web synchronization option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Merge Replication enables data replication using the HTTPS protocol over the Internet. To use Web synchronization, you first need to perform the following configuration actions:  
   

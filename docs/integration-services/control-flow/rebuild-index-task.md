@@ -1,4 +1,5 @@
 ---
+description: "Rebuild Index Task"
 title: "Rebuild Index Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Rebuild Index Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Rebuild Index task rebuilds indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables and views. For more information about managing indexes, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  

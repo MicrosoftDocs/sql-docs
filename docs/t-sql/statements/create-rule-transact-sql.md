@@ -1,4 +1,5 @@
 ---
+description: "CREATE RULE (Transact-SQL)"
 title: "CREATE RULE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -27,11 +28,11 @@ helpviewer_keywords:
   - "binding rules [SQL Server]"
   - "rules [SQL Server], creating"
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an object called a rule. When bound to a column or an alias data type, a rule specifies the acceptable values that can be inserted into that column.  
   
@@ -51,7 +52,9 @@ AS condition_expression
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the rule belongs.  
   

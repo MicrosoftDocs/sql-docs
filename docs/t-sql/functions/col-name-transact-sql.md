@@ -1,4 +1,5 @@
 ---
+description: "COL_NAME (Transact-SQL)"
 title: "COL_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "column names [SQL Server]"
   - "names [SQL Server], columns"
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COL_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the name of a table column, based on the table identification number and column identification number values of that table column.
   
@@ -35,7 +36,9 @@ This function returns the name of a table column, based on the table identificat
 COL_NAME ( table_id , column_id )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *table_id*  
 The identification number of the table containing that column. The *table_id* argument has an **int** data type.
   

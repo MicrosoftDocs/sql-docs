@@ -28,13 +28,13 @@ helpviewer_keywords:
   - "crossing date time boundaries [SQL Server]"
   - "calculating dates times [SQL Server]"
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEDIFF (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the count (as a signed integer value) of the specified datepart boundaries crossed between the specified *startdate* and *enddate*.
   
@@ -48,7 +48,9 @@ See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-tra
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 *datepart*  
 The units in which **DATEDIFF** reports the difference between the _startdate_ and _enddate_. Commonly used _datepart_ units include `month` or `second`.

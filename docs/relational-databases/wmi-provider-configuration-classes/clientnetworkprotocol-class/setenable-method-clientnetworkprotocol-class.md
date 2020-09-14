@@ -1,4 +1,5 @@
 ---
+description: "SetEnable Method (ClientNetworkProtocol Class)"
 title: "SetEnable Method (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetEnable method"
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetEnable Method (ClientNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Enables the client network protocol that is specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  

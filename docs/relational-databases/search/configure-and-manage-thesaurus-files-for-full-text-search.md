@@ -1,6 +1,7 @@
 ---
+description: "Configure and Manage Thesaurus Files for Full-Text Search"
 title: "Configure & manage thesaurus files for Full-Text Search"
-ms.date: "12/04/2017"
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
@@ -16,7 +17,7 @@ ms.reviewer: mikeray
 ms.custom: "seo-lt-2019"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search queries can search for synonyms of user-specified terms through the use of a Full-Text Search *thesaurus*. Each thesaurus defines a set of synonyms for a specific language. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data.
 
 Thesaurus matching occurs for all [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) queries and for any [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries that specify the `FORMSOF THESAURUS` clause.
@@ -46,30 +47,30 @@ A Full-Text Search thesaurus is an XML text file.
 ##  <a name="location"></a> Location of thesaurus files  
  The default location of the thesaurus files is:  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- This default location contains the following files:  
+This default location contains the following files:  
   
 -   **Language-specific** thesaurus files  
 
     Setup installs empty thesaurus files in the above location. A separate file is provided for each supported language. A system administrator can customize these files.  
   
-     The default file names of the thesaurus files use following format:  
+    The default file names of the thesaurus files use following format:  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     The name of the thesaurus file for a given language is specified in the registry in the following value:
+    The name of the thesaurus file for a given language is specified in the registry in the following value:
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   The **global** thesaurus file  
   
-     An empty global thesaurus file, tsGlobal.xml.  
+    An empty global thesaurus file, tsGlobal.xml.  
 
 ### Change the location of a thesaurus file 
 You can change the location and names of a thesaurus file by changing its registry key. For each language, the location of the thesaurus file is specified in the following value in the registry:  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  The global thesaurus file corresponds to the Neutral language with LCID 0. This value can be changed by administrators only.  
 

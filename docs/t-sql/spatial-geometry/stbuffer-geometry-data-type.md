@@ -1,4 +1,5 @@
 ---
+description: "STBuffer (geometry Data Type)"
 title: "STBuffer (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STBuffer (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a geometric object that represents the union of all points whose distance from a **geometry** instance is less than or equal to a specified value.
   
@@ -30,7 +31,9 @@ Returns a geometric object that represents the union of all points whose distanc
 .STBuffer ( distance )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *distance*  
  Is a value of type **float** (**double** in the .NET Framework) specifying the distance from the geometry instance around which to calculate the buffer.  
   

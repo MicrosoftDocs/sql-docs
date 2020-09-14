@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT STOPLIST (Transact-SQL)"
 title: "ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Inserts or deletes a stop word in the default full-text stoplist of the current database.  
   
@@ -45,7 +46,9 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *stoplist_name*  
  Is the name of the stoplist being altered. *stoplist_name* can be a maximum of 128 characters.  
   

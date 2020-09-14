@@ -1,4 +1,5 @@
 ---
+description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 08/21/2019
@@ -44,11 +45,13 @@ helpviewer_keywords:
   - "index reorganize [SQL Server]"
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
-ms.author: carlrab
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifies an existing table or view index (rowstore, columnstore, or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on the index.  
   
@@ -167,6 +170,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *index_name*  
@@ -251,10 +257,13 @@ PARTITION
  REORGANIZE a **rowstore** index  
  For rowstore indexes, REORGANIZE specifies to reorganize the index leaf level. The REORGANIZE operation is:  
   
--   Always performed online. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the ALTER INDEX REORGANIZE transaction.  
--   Not allowed for a disabled index  
--   Not allowed when ALLOW_PAGE_LOCKS is set to OFF  
--   Not rolled back when it is performed within a transaction and the transaction is rolled back.  
+-   Always performed online. This means long-term blocking table locks are not held and queries or updates to the underlying table can continue during the ALTER INDEX REORGANIZE transaction.
+-   Not allowed for a disabled index.
+-   Not allowed when ALLOW_PAGE_LOCKS is set to OFF.
+-   Not rolled back when it is performed within a transaction and the transaction is rolled back.
+
+> [!NOTE]
+> When ALTER INDEX REORGANIZE uses explicit transactions (for example, ALTER INDEX inside a BEGIN TRAN ... COMMIT/ROLLBACK) instead of the default implicit transaction mode, the locking behavior of REORGANIZE becomes more restrictive, potentially causing blocking. For more information about implicit transactions, see [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).
 
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
@@ -281,11 +290,11 @@ LOB_COMPACTION = OFF
   
 For columnstore indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], REORGANIZE performs the following additional defragmentation optimizations online:  
   
--   Physically removes rows from a rowgroup when 10% or more of the rows have been logically deleted. The deleted bytes are reclaimed on the physical media. For example, if a compressed row group of 1 million rows has 100K rows deleted, SQL Server will remove the deleted rows and recompress the rowgroup with 900k rows. It saves on the storage by removing deleted rows.  
+-   Physically removes rows from a rowgroup when 10% or more of the rows have been logically deleted. The deleted bytes are reclaimed on the physical media. For example, if a compressed row group of 1 million rows has 100K rows deleted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will remove the deleted rows and recompress the rowgroup with 900k rows. It saves on the storage by removing deleted rows.  
   
--   Combines one or more compressed rowgroups to increase rows per rowgroup up to the maximum of  1,024,576 rows. For example, if you bulk import 5 batches of 102,400 rows you will get 5 compressed rowgroups. If you run REORGANIZE, these rowgroups will get merged into 1 compressed rowgroup of size 512,000 rows. This assumes there were no dictionary size or memory limitations.  
+-   Combines one or more compressed rowgroups to increase rows per rowgroup up to the maximum of 1,048,576 rows. For example, if you bulk import 5 batches of 102,400 rows you will get 5 compressed rowgroups. If you run REORGANIZE, these rowgroups will get merged into 1 compressed rowgroup of size 512,000 rows. This assumes there were no dictionary size or memory limitations.  
   
--   For rowgroups in which 10% or more of the rows  have been logically deleted, SQL Server will try to combine this rowgroup with one or more rowgroups. For example, rowgroup 1 is compressed with 500,000 rows and rowgroup 21 is compressed with the maximum of 1,048,576 rows.  Rowgroup 21 has 60% of the rows deleted which leaves 409,830 rows. SQL Server favors combining these two rowgroups to compress a new rowgroup that has 909,830 rows.  
+-   For rowgroups in which 10% or more of the rows  have been logically deleted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will try to combine this rowgroup with one or more rowgroups. For example, rowgroup 1 is compressed with 500,000 rows and rowgroup 21 is compressed with the maximum of 1,048,576 rows. Rowgroup 21 has 60% of the rows deleted which leaves 409,830 rows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] favors combining these two rowgroups to compress a new rowgroup that has 909,830 rows.  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  Applies to columnstore indexes. 
@@ -670,8 +679,8 @@ When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level loc
   
 If ALL is specified when the row or page lock options are set, the settings are applied to all indexes. When the underlying table is a heap, the settings are applied in the following ways:  
   
-|||  
-|-|-|  
+|Option|Details|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON or OFF|To the heap and any associated nonclustered indexes.|  
 |ALLOW_PAGE_LOCKS = ON|To the heap and any associated nonclustered indexes.|  
 |ALLOW_PAGE_LOCKS = OFF|Fully to the nonclustered indexes. This means that all page locks are not allowed on the nonclustered indexes. On the heap, only the shared (S), update (U) and exclusive (X) locks for the page are not allowed. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can still acquire an intent page lock (IS, IU or IX) for internal purposes.|  

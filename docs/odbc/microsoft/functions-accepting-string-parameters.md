@@ -1,4 +1,5 @@
 ---
+description: "Functions Accepting String Parameters"
 title: "Functions Accepting String Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

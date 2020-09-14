@@ -1,8 +1,9 @@
 ---
+description: "NumericScale and Precision Properties Example (VC++)"
 title: "NumericScale and Precision Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ helpviewer_keywords:
   - "NumericScale property [ADO], VC++ example"
   - "Precision property [ADO], VC++ example"
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # NumericScale and Precision Properties Example (VC++)
-This example uses the [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) and [Precision](../../../ado/reference/ado-api/precision-property-ado.md) properties to display the numeric scale and precision of fields in the ***Discounts*** table of the ***Pubs*** database.  
+This example uses the [NumericScale](./numericscale-property-ado.md) and [Precision](./precision-property-ado.md) properties to display the numeric scale and precision of fields in the ***Discounts*** table of the ***Pubs*** database.  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -128,5 +129,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [NumericScale Property (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Precision Property (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [NumericScale Property (ADO)](./numericscale-property-ado.md)   
+ [Precision Property (ADO)](./precision-property-ado.md)

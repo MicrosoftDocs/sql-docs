@@ -16,7 +16,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
 # sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Monitors real time data warehouse query progress while the query is in execution.   
   

@@ -1,4 +1,5 @@
 ---
+description: "ALTER INDEX (Selective XML Indexes)"
 title: "ALTER INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -10,11 +11,11 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifies an existing selective XML index. The ALTER INDEX statement changes one or more of the following items:  
   
@@ -131,7 +132,9 @@ identifier
  [WITH **(** \<index_options> **)**]  
  You can only specify \<index_options> when you use ALTER INDEX without the FOR clause. When you use ALTER INDEX to add or remove paths in the index, the index options are not valid arguments. For information about the index options, see [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
   
 > [!IMPORTANT]  
 >  When you run an ALTER INDEX statement, the selective XML index is always rebuilt. Be sure to consider the impact of this process on server resources.  

@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_groups (Transact-SQL)"
 title: "sys.availability_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_groups catalog view"
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # sys.availability_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each availability group for which the local instance of SQL Server hosts an availability replica. Each row contains a cached copy of the availability group metadata.  
    
@@ -40,14 +41,19 @@ ms.author: mikeray
 |**basic_features**|**bit**|Specifies whether this is a Basic availability group. For more information, see [Basic Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Specifies whether DTC support has been enabled for this availability group. The **DTC_SUPPORT** option of **CREATE AVAILABILITY GROUP** controls this setting.|  
 |**db_failover**|**bit**|Specifies whether the availability group supports failover for database health conditions. The **DB_FAILOVER** option of **CREATE AVAILABILITY GROUP** controls this setting.|  
-|**is_distributed**|**bit**|Specifies whether this is a distributed availability group. For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
+|**is_distributed**|**bit**|Specifies whether this is a distributed availability group. For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**cluster_type**|**tinyint**|0: Windows Server failover cluster <br/><br/>1: External cluster (for example, Linux Pacemaker)<br/><br/>2: None|
+|**cluster_type_desc**|**nvarchar(60)**|Text description of cluster type|
+|**required_synchronized_secondaries_to_commit**|**int**| The number of secondary replicas that must be in a synchronized state for a commit  to complete|
+|**sequence_number**|**bigint**|Identifies the availability group configuration sequence. Incrementally increases every time the availability group primary replica updates the configuration of the group.|
+|**is_contained**|**bit**|1: Big data cluster master instance configured for high-availability. <br/><br/> 0: all other.|
   
 ## Failure condition level  values  
  The following table describes the possible failure condition levels for the **failure_condition_level** column.  
   
 |Value|Failure condition|  
 |-----------|-----------------------|  
-|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> <br /><br /> - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is down.<br /><br /> - The lease of the availability group for connecting to the WSFC failover cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|1|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> <br /><br /> - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is down.<br /><br /> - The lease of the availability group for connecting to the WSFC failover cluster expires because no ACK is received from the server instance. For more information, see [How It Works: SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268).|  
 |2|Specifies that an automatic failover should be initiated when any of the following occurs:<br /><br /> <br /><br /> - The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not connect to cluster, and the user-specified **health_check_timeout** threshold of the availability group is exceeded.<br /><br /> - The availability replica is in failed state.|  
 |3|Specifies that an automatic failover should be initiated on critical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.<br /><br /> This is the default value.|  
 |4|Specifies that an automatic failover should be initiated on moderate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal errors, such as a persistent out-of-memory condition in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internal resource pool.|  

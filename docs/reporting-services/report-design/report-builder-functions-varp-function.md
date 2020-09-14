@@ -1,5 +1,6 @@
 ---
 title: "VarP Function (Report Builder) | Microsoft Docs"
+description: The VarP Function in Report Builder returns the population variance of all non-null numeric values specified by the expression.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

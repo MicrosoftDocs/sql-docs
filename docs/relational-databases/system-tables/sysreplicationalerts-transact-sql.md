@@ -1,4 +1,5 @@
 ---
+description: "sysreplicationalerts (Transact-SQL)"
 title: "sysreplicationalerts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysreplicationalerts system table"
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sysreplicationalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about the conditions causing a replication alert to fire. This table is stored in the **msdb** database.  
   

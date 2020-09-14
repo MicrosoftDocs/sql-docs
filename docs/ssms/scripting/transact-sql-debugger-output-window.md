@@ -1,8 +1,9 @@
 ---
 title: Output Window
+description: Learn how to use the Output window to view status messages and other output from the SQL Server Management Studio debugger and other tools.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Output Window [Transact-SQL]"
@@ -18,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Transact-SQL Debugger - Output Window
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This window displays status messages for various features in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Output is delivered to special panes in the **Output** window from the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, external tools features, or commands that are run in the debugger **Command Window**. Output that is usually displayed in the Command Prompt window from external tools, such as .bat or .com files, is also available.
 

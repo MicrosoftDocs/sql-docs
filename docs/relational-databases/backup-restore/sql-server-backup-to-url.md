@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Backup to URL | Microsoft Docs"
+description: Learn about the concepts, requirements, and components necessary for SQL Server to use the Microsoft Azure Blob storage as a backup destination.
 ms.custom: ""
 ms.date: "03/25/2019"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # SQL Server Backup to URL
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This topic introduces the concepts, requirements and components necessary to use the Microsoft Azure Blob storage service as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. These differences and a few code examples are included in this topic.  
   
@@ -33,7 +34,7 @@ ms.author: mathoma
 - Customers that need to backup to page blobs via a proxy server will need to use backuptourl.exe. 
 
 
-Backup of a large database to blob storage is subject to the limitations listed in [Managed instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+Backup of a large database to blob storage is subject to the limitations listed in [Managed Instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
  If the database is too large, either:
 - Use backup compression
@@ -98,7 +99,7 @@ Backup of a large database to blob storage is subject to the limitations listed 
 
 - If your server accesses Azure via a proxy server, you must use trace flag 1819 and then set the WinHTTP proxy configuration via one of the following methods:
    - The [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) utility on Windows XP or Windows Server 2003 and earlier. 
-   - The [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) utility on Windows Vista and Windows Server 2008 or later. 
+   - The [netsh.exe](/windows/win32/winsock/netsh-exe) utility on Windows Vista and Windows Server 2008 or later. 
   
 ## Supported arguments & statements
 
@@ -191,7 +192,7 @@ Backup of a large database to blob storage is subject to the limitations listed 
   
  For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-##  <a name="BackupTaskSSMS"></a> Back up up with SSMS  
+##  <a name="BackupTaskSSMS"></a> Back up with SSMS  
 You can back up a database to URL through the Back Up task in SQL Server Management Studio using a SQL Server Credential.  
   
 > [!NOTE]  

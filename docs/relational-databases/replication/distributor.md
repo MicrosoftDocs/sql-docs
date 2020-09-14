@@ -1,4 +1,5 @@
 ---
+description: "Distributor"
 title: "Distributor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Distributor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Distributor** page appears in the Configure Distribution Wizard and in the New Publication Wizard. The Distributor is a server that contains the distribution database and stores metadata and history data for all types of replication. The Distributor also stores transactions for transactional replication. The Distributor can be the same server as the Publisher (a local Distributor) or it can be a separate server from the Publisher (a remote Distributor). The role of the Distributor varies, depending on which type of replication you implement. In general, its role is much greater for transactional replication than it is for merge replication and snapshot replication. Merge and snapshot replication typically use a local Distributor, but transactional replication on a very busy system can benefit from using a remote Distributor.  
   
  The Distributor uses these additional resources on the server where it is located:  

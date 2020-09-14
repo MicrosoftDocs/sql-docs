@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 01/10/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -22,13 +22,14 @@ helpviewer_keywords:
   - "snapshot isolation framework option"
   - "checksums [SQL Server]"
   - "Automatic tuning"
+  - " Data Retention Policy"
   - "query plan regression correction"
   - "auto_create_statistics"
   - "auto_update_statistics"
   - "Query Store options"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE SET options (Transact-SQL)
@@ -45,9 +46,20 @@ In the following row, select whichever product name you're interested in. Doing 
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -98,6 +110,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -177,11 +190,13 @@ SET
   | TRANSFORM_NOISE_WORDS = { OFF | ON }
   | TWO_DIGIT_YEAR_CUTOFF = { 1753, ..., 2049, ..., 9999 }
 }
+
 <FILESTREAM_option> ::=
 {
     NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL
   | DIRECTORY_NAME = <directory_name>
 }
+
 <HADR_options> ::=
     ALTER DATABASE SET HADR
 
@@ -195,7 +210,7 @@ SET
 {
     QUERY_STORE
     {
- = OFF
+          = OFF [ FORCED ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -218,7 +233,7 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+      STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
     | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
     | TOTAL_EXECUTION_CPU_TIME_MS = number
@@ -236,11 +251,12 @@ SET
     REMOTE_DATA_ARCHIVE =
     {
         ON ( SERVER = <server_name> ,
-{CREDENTIAL = <db_scoped_credential_name>
-   | FEDERATED_SERVICE_ACCOUNT = ON | OFF
-}
-      )
-      | OFF
+             { 
+                  CREDENTIAL = <db_scoped_credential_name>
+                  | FEDERATED_SERVICE_ACCOUNT = ON | OFF
+             }
+        )
+        | OFF
     }
 }
 
@@ -256,8 +272,8 @@ SET
 <snapshot_option> ::=
 {
     ALLOW_SNAPSHOT_ISOLATION { ON | OFF }
-  | READ_COMMITTED_SNAPSHOT {ON | OFF }
-  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = {ON | OFF }
+  | READ_COMMITTED_SNAPSHOT { ON | OFF }
+  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = { ON | OFF }
 }
 <sql_option> ::=
 {
@@ -282,7 +298,13 @@ SET
   | ROLLBACK IMMEDIATE
   | NO_WAIT
 }
-<temporal_history_retention>::=TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<temporal_history_retention> ::=
+    TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## Arguments
@@ -291,7 +313,7 @@ SET
 The name of the database to be modified.
 
 CURRENT     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Runs the action in the current database. `CURRENT` isn't supported for all options in all contexts. If `CURRENT` fails, provide the database name.
 
@@ -320,25 +342,25 @@ The AUTO_CLOSE option is useful for desktop databases because it allows for data
 >
 > When AUTO_CLOSE is set to ON, some columns in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view and the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function will return NULL because the database is unavailable to retrieve the data. To resolve this issue, run a USE statement to open the database.
 >
-> Database mirroring requires AUTO_CLOSE OFF.
+> Database mirroring requires AUTO_CLOSE set to OFF.
 
-When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later, for each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations." This message is logged every five minutes as long as the cache is flushed within that time interval.
+When the database is set to `AUTOCLOSE = ON`, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, for each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     
-Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when Query Optimizer compiles queries. The single-column statistics are created only on columns that aren't already the first column of an existing statistics object.
+The Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when Query Optimizer compiles queries. The single-column statistics are created only on columns that aren't already the first column of an existing statistics object.
 
 The default setting is ON. We recommend that you use the default setting for most databases.
 
 OFF     
-Query Optimizer doesn't create statistics on single columns in query predicates when it's compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
+The Query Optimizer doesn't create statistics on single columns in query predicates when it's compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
 
 You can determine this option's status by examining the `is_auto_create_stats_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsAutoCreateStatistics` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 For more information, see the section "Using the Database-wide statistics options" in [Statistics](../../relational-databases/statistics/statistics.md).
 
 INCREMENTAL = ON | **OFF**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Set AUTO_CREATE_STATISTICS to ON, and set INCREMENTAL to ON. This sets automatically created stats as incremental whenever incremental stats are supported. The default value is OFF. For more information, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
@@ -440,7 +462,7 @@ OFF
 Disables change tracking for the database. Disable change tracking on all tables before you disable change tracking off the database.
 
 **\<containment_option> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Controls database containment options.
 
@@ -483,6 +505,17 @@ The cursor is implicitly deallocated only at disconnect. For more information, s
 
 You can determine this option's status by examining the `is_local_cursor_default` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsLocalCursorsDefault` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
+**\<data_retention_policy> ::=**
+
+**Applies to**: Azure SQL Edge *Only*
+
+DATA_RETENTION { ON | OFF }   
+ON    
+Enables Data Retention policy based cleanup on a database.
+
+OFF   
+Disables Data Retention policy based cleanup on a database.
+
 **\<database_mirroring>**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -507,7 +540,7 @@ The current setting of this option can be determined by examining the `is_date_c
 **\<db_encryption_option> ::=**     
 Controls the database encryption state.
 
-ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
+ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
 ON     
 Sets the database to be encrypted.
 
@@ -566,7 +599,7 @@ The database is available for read and write operations.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]
-> On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.
+> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 **\<db_user_access_option> ::=**     
 Controls user access to the database.
@@ -595,18 +628,18 @@ All users that have the appropriate permissions to connect to the database are a
 You can determine this option's status by examining the `user_access` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `UserAccess` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 **\<delayed_durability_option> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 Controls whether transactions commit fully durable or delayed durable.
 
 DISABLED     
-All transactions following SET DISABLED are fully durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET DISABLED` are fully durable. Any durability options set in an atomic block or commit statement are ignored.
 
 ALLOWED     
-All transactions following SET ALLOWED are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
+All transactions following `SET ALLOWED` are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
 
 FORCED     
-All transactions following SET FORCED are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET FORCED` are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
 
 **\<external_access_option> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -645,7 +678,7 @@ To set this option, requires `CONTROL SERVER` permission on the database.
 You can determine this option's status by examining the `is_trustworthy_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Specifies the default language value for full-text indexed columns.
 
@@ -653,27 +686,27 @@ Specifies the default language value for full-text indexed columns.
 > This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.
 
 DEFAULT_LANGUAGE     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Specifies the default language for all newly created logins. Language can be specified by providing the local ID (lcid), the language name, or the language alias. For a list of acceptable language names and aliases, see [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.
 
 NESTED_TRIGGERS     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Specifies whether an AFTER trigger can cascade; that is, perform an action that initiates another trigger, which initiates another trigger, and so on. This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.
 
 TRANSFORM_NOISE_WORDS     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Used to suppress an error message if noise words, or stopwords, cause a Boolean operation on a full-text query to fail. This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.
 
 TWO_DIGIT_YEAR_CUTOFF     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Specifies an integer from 1753 to 9999 that represents the cutoff year for interpreting two-digit years as four-digit years. This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.
 
 **\<FILESTREAM_option> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Controls the settings for FileTables.
 
@@ -696,7 +729,7 @@ A windows-compatible directory name. This name should be unique among all the da
 See [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Controls whether the database can create initial pages using a mixed extent for the first eight pages of a table or index.
 
@@ -722,19 +755,22 @@ FORCED
 The current setting of this option can be determined by examining the `is_parameterization_forced column` in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
 <a name="query-store"></a> **\<query_store_options> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Enables the Query Store.
 
-OFF     
-Disables the Query Store. OFF is the default value.
+OFF      
+Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 and later builds.
+
+> [!NOTE]  
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Remove the contents of the Query Store.
+Removes query-related data from the Query Store. ALL is optional. ALL removes query-related data and metadata from the Query Store.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Describes the operation mode of the Query Store.
@@ -746,21 +782,25 @@ READ_ONLY
 Information can be read from the Query Store, but new information isn't added. If the maximum issued space of the Query Store has been exhausted, the Query Store will change is operation mode to READ_ONLY.
 
 CLEANUP_POLICY     
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**.
+Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**. The default value is **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
+Determines the space issued to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. The default value is **100 MB** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is **1 GB**.
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the DATA_FLUSH_INTERVAL_SECONDS option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
-> If the Query Store has breached the MAX_STORAGE_SIZE_MB limit between storage size checks, it will transition to read-only mode. If SIZE_BASED_CLEANUP_MODE is enabled, the cleanup mechanism to enforce the MAX_STORAGE_SIZE_MB limit is also triggered.
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
+> [!IMPORTANT]
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+
 INTERVAL_LENGTH_MINUTES     
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
+Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**. The default value is **60**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 Controls whether cleanup automatically activates when the total amount of data gets close to maximum size.
@@ -773,7 +813,7 @@ Size-based cleanup won't be automatically activated.
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode. Each mode defines specific query capture policies.
 
 > [!NOTE]
@@ -789,17 +829,28 @@ NONE
 Stop capturing new queries. The Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 CUSTOM     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Allows control over the QUERY_CAPTURE_POLICY options.
 
-QUERY_CAPTURE_MODE is type **nvarchar**.
+QUERY_CAPTURE_MODE is type **nvarchar**. 
 
 MAX_PLANS_PER_QUERY     
-Defines the maximum number of plans maintained for each query. The default is 200. MAX_PLANS_PER_QUERY is type **int**.
+Defines the maximum number of plans maintained for each query. MAX_PLANS_PER_QUERY is type **int**. The default value is **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]))
+
+Controls whether wait statistics will be captured per query.
+
+ON    
+Wait statistics information per query is captured. This value is the default configuration value.
+
+OFF    
+Wait statistics information per query won't be captured.
 
 **\<query_capture_policy_option_list> :: =**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Controls the Query Store capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
 
@@ -866,7 +917,7 @@ Consider the following important points when you use the PAGE_VERIFY option:
 - When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or a later version, the PAGE_VERIFY value (NONE or TORN_PAGE_DETECTION) isn't changed. We recommend that you change to CHECKSUM.
 
     > [!NOTE]
-    > In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the TempDB database and can't be modified. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions, the default value for the TempDB database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.
+    > In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the PAGE_VERIFY database option is set to NONE for the TempDB database and can't be modified. Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the default value for the TempDB database is CHECKSUM for new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When upgrading an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default value remains NONE. The option can be modified. We recommend that you use CHECKSUM for the tempdb database.
 
 - TORN_PAGE_DETECTION may use fewer resources but provides a minimal subset of the CHECKSUM protection.
 - PAGE_VERIFY can be set without taking the database offline, locking the database, or otherwise impeding concurrency on that database.
@@ -885,11 +936,11 @@ For more information about error messages 823, 824 and 825, see:
 The current setting of this option can be determined by examining the `page_verify_option` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsTornPageDetectionEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 **\<remote_data_archive_option> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ON     
 Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
@@ -990,7 +1041,7 @@ The current setting of this option can be determined by examining the `is_read_c
 > When a table is created with **DURABILITY = SCHEMA_ONLY**, and **READ_COMMITTED_SNAPSHOT** is subsequently changed using **ALTER DATABASE**, data in the table will be lost.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 ON     
 When the transaction isolation level is set to any isolation level lower than SNAPSHOT, all interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] operations on memory-optimized tables are run under SNAPSHOT isolation. Examples of isolation levels lower than snapshot are READ COMMITTED or READ UNCOMMITTED. These operations run whether the transaction isolation level is set explicitly at the session level, or the default is used implicitly.
@@ -1145,7 +1196,7 @@ You can determine this option's status by examining the `is_recursive_triggers_o
 You can determine this option's status by examining the `is_recursive_triggers_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the `IsRecursiveTriggersEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
 **\<target_recovery_time_option> ::=**     
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Specifies the frequency of indirect checkpoints on a per-database basis. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the default value for new databases is **1 minute**, which indicates database will use indirect checkpoints. For older versions the default is 0, which indicates that the database will use automatic checkpoints, whose frequency depends on the recovery interval setting of the server instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends 1 minute for most systems.
 
@@ -1206,13 +1257,39 @@ Not all database options use the WITH \<termination> clause or can be specified 
 
 The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options:
 
-|||
-|-|-|
-|OFFLINE|READ_WRITE|
-|ONLINE|MODIFY FILEGROUP DEFAULT|
-|MODIFY_NAME|MODIFY FILEGROUP READ_WRITE|
-|COLLATE|MODIFY FILEGROUP READ_ONLY|
-|READ_ONLY||
+:::row:::
+    :::column:::
+        OFFLINE
+    :::column-end:::
+    :::column:::
+        ONLINE
+    :::column-end:::
+    :::column:::
+        MODIFY_NAME
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        COLLATE
+    :::column-end:::
+    :::column:::
+        READ_ONLY
+    :::column-end:::
+    :::column:::
+        READ_WRITE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        MODIFY FILEGROUP DEFAULT
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_WRITE
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_ONLY
+    :::column-end:::
+:::row-end:::
 
 The plan cache is also flushed in the following scenarios.
 
@@ -1223,7 +1300,7 @@ The plan cache is also flushed in the following scenarios.
 - You restore a database backup.
 - You detach a database.
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 ## Examples
 
@@ -1315,7 +1392,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### E. Enabling the Query Store
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 The following example enables the Query Store and configures its parameters.
 
@@ -1400,13 +1477,24 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -1512,9 +1600,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1744,13 +1842,13 @@ The database is available for read and write operations.
 To change this state, you must have exclusive access to the database. For more information, see the SINGLE_USER clause.
 
 > [!NOTE]
-> On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.
+> On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] federated databases, `SET { READ_ONLY | READ_WRITE }` is disabled.
 
 **\<db_user_access_option> ::=**     
 Controls user access to the database.
 
 RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Database managed instance.
+Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
 
 MULTI_USER     
 All users that have the appropriate permissions to connect to the database are allowed.
@@ -1761,13 +1859,13 @@ You can determine this option's status by examining the `user_access` column in 
 Controls whether transactions commit fully durable or delayed durable.
 
 DISABLED     
-All transactions following SET DISABLED are fully durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET DISABLED` are fully durable. Any durability options set in an atomic block or commit statement are ignored.
 
 ALLOWED     
-All transactions following SET ALLOWED are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
+All transactions following `SET ALLOWED` are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
 
 FORCED     
-All transactions following SET FORCED are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET FORCED` are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
 
 **\<PARAMETERIZATION_option> ::=**     
 Controls the parameterization option.
@@ -1781,16 +1879,19 @@ FORCED
 
 The current setting of this option can be determined by examining the `is_parameterization_forced` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
 
 ON     
-Enables the Query Store.
+Enables the Query Store. ON is the default value.
 
 OFF     
-Disables the Query Store. This is the default value.
+Disables the Query Store. 
+
+> [!NOTE]  
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Remove the contents of the Query Store.
@@ -1799,21 +1900,28 @@ OPERATION_MODE
 Describes the operation mode of the Query Store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the Query Store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the Query Store, but new information isn't added. If the maximum allocated space of the Query Store has been exhausted, the Query Store will change is operation mode to READ_ONLY.
 
 CLEANUP_POLICY     
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**.
+Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**. The default value is **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
+Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium edition, default is **1 GB** and for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **10 MB**.
 
 > [!NOTE]
-> MAX_STORAGE_SIZE_MB limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the DATA_FLUSH_INTERVAL_SECONDS option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
-> If the Query Store has breached the MAX_STORAGE_SIZE_MB limit between storage size checks, it will transition to read-only mode. If SIZE_BASED_CLEANUP_MODE is enabled, the cleanup mechanism to enforce the MAX_STORAGE_SIZE_MB limit is also triggered.
+> `MAX_STORAGE_SIZE_MB` setting limit is 10,240 MB on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
 > Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
 
+> [!IMPORTANT]
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
+
 INTERVAL_LENGTH_MINUTES     
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
+Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**. The default value is **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Controls whether cleanup will be automatically activated when the total amount of data gets close to maximum size.
@@ -1826,11 +1934,14 @@ Size-based cleanup will be automatically activated when size on disk reaches 90%
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE     
-Designates the currently active query capture mode:
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
+Designates the currently active query capture mode. Each mode defines specific query capture policies.   
+
+> [!NOTE]
+> Cursors, queries inside Stored Procedures, and Natively compiled queries are always captured when the query capture mode is set to ALL, AUTO, or CUSTOM.
 
 ALL     
-All queries are captured.
+Captures all queries.
 
 AUTO     
 Capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1838,10 +1949,37 @@ Capture relevant queries based on execution count and resource consumption. This
 NONE     
 Stop capturing new queries. The Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
+CUSTOM     
+Allows control over the QUERY_CAPTURE_POLICY options.
+
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
 MAX_PLANS_PER_QUERY     
-An integer representing the maximum number of plans maintained for each query. Default is 200.
+Defines the maximum number of plans maintained for each query. MAX_PLANS_PER_QUERY is type **int**. The default value is **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Controls whether wait statistics will be captured per query.
+
+ON    
+Wait statistics information per query is captured. This value is the default configuration value.
+
+OFF    
+Wait statistics information per query won't be captured.
+
+**\<query_capture_policy_option_list> :: =**     
+Controls the Query Store capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Defines the evaluation interval period to determine if a query should be captured. The default is 1 day, and it can be set from 1 hour to seven days. *number* is type **int**.
+
+EXECUTION_COUNT     
+Defines the number of times a query is executed over the evaluation period. The default is 30, which means that for the default Stale Capture Policy Threshold, a query must execute at least 30 times in one day to be persisted in the Query Store. EXECUTION_COUNT is type **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Defines total elapsed compile CPU time used by a query over the evaluation period. The default is 1000 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least one second of CPU time spent during query compilation in one day to be persisted in the Query Store. TOTAL_COMPILE_CPU_TIME_MS is type **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Defines total elapsed execution CPU time used by a query over the evaluation period. The default is 100 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least 100 ms of CPU time spent during execution in one day to be persisted in the Query Store. TOTAL_EXECUTION_CPU_TIME_MS is type **int**.
 
 **\<snapshot_option> ::=**     
 Determines the transaction isolation level.
@@ -1975,7 +2113,7 @@ A warning message is displayed when one of these errors occurs. The query, batch
 
 You can determine this option's status by examining the `is_arithabort_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsArithmeticAbortEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2092,7 +2230,6 @@ Not all database options use the WITH \<termination> clause or can be specified 
 ## Examples
 
 ### A. Setting the database to READ_ONLY
-
 Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to limit access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
 
 ```sql
@@ -2111,7 +2248,6 @@ GO
 ```
 
 ### B. Enabling snapshot isolation on a database
-
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
@@ -2137,7 +2273,6 @@ The result set shows that the snapshot isolation framework is enabled.
 |[database_name] |1| ON |
 
 ### C. Enabling, modifying, and disabling change tracking
-
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
 
 ```sql
@@ -2161,18 +2296,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### D. Enabling the Query Store
-
 The following example enables the Query Store and configures Query Store parameters.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### E. Enabling the Query Store with wait statistics
+The following example enables the Query Store and configures its parameters.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### F. Enabling the Query Store with custom capture policy options
+The following example enables the Query Store and configures its parameters.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2194,13 +2372,24 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />managed instance \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -2293,9 +2482,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2482,7 +2681,7 @@ To change this state, you must have exclusive access to the database.
 Controls user access to the database.
 
 RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Database managed instance.
+Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
 
 MULTI_USER     
 All users that have the appropriate permissions to connect to the database are allowed.
@@ -2493,13 +2692,13 @@ You can determine this option's status by examining the user_access column in th
 Controls whether transactions commit fully durable or delayed durable.
 
 DISABLED     
-All transactions following SET DISABLED are fully durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET DISABLED` are fully durable. Any durability options set in an atomic block or commit statement are ignored.
 
 ALLOWED     
-All transactions following SET ALLOWED are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
+All transactions following `SET ALLOWED` are either fully durable or delayed durable, depending upon the durability option set in the atomic block or commit statement.
 
 FORCED     
-All transactions following SET FORCED are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
+All transactions following `SET FORCED` are delayed durable. Any durability options set in an atomic block or commit statement are ignored.
 
 **\<PARAMETERIZATION_option> ::=**     
 Controls the parameterization option.
@@ -2513,7 +2712,7 @@ FORCED
 
 The current setting of this option can be determined by examining the `is_parameterization_forced` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
@@ -2531,16 +2730,25 @@ OPERATION_MODE
 Describes the operation mode of the Query Store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the Query Store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the Query Store, but new information isn't added. If the maximum allocated space of the Query Store has been exhausted, the Query Store will change is operation mode to READ_ONLY.
 
 CLEANUP_POLICY     
-Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**.
+Describes the data retention policy of the Query Store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the Query Store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**.
+Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the Query Store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**. The default value is **900** (15 min).
 
 MAX_STORAGE_SIZE_MB     
-Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**.
+Determines the space allocated to the Query Store. MAX_STORAGE_SIZE_MB is type **bigint**. The default value is **100 MB**.
+
+> [!NOTE]
+> `MAX_STORAGE_SIZE_MB` limit isn't strictly enforced. Storage size is checked only when Query Store writes data to disk. This interval is set by the `DATA_FLUSH_INTERVAL_SECONDS` option or the [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] Query Store dialog box option **Data Flush Interval**. The interval default value is 900 seconds (or 15 minutes).
+> If the Query Store has breached the `MAX_STORAGE_SIZE_MB` limit between storage size checks, it will transition to read-only mode. If `SIZE_BASED_CLEANUP_MODE` is enabled, the cleanup mechanism to enforce the `MAX_STORAGE_SIZE_MB` limit is also triggered.
+> Once enough space has been cleared, the Query Store mode will automatically switch back to read-write.
+
+> [!IMPORTANT]
+> If you think that your workload capture will need more than 10 GB of disk space, you should probably rethink and optimize your workload to reuse query plans (for example using [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), or adjust the Query Store configurations.    
+> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you can set `QUERY_CAPTURE_MODE` to CUSTOM for additional control over the query capture policy.
 
 INTERVAL_LENGTH_MINUTES     
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
+Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**. The default value is **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Controls whether cleanup will be automatically activated when the total amount of data gets close to maximum size.
@@ -2553,7 +2761,7 @@ Size-based cleanup will be automatically activated when size on disk reaches 90%
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode.
 
 ALL     
@@ -2568,7 +2776,31 @@ Stop capturing new queries. The Query Store will continue to collect compile and
 QUERY_CAPTURE_MODE is type **nvarchar**.
 
 MAX_PLANS_PER_QUERY     
-An integer representing the maximum number of plans maintained for each query. Default is 200.
+An integer representing the maximum number of plans maintained for each query. MAX_PLANS_PER_QUERY is type **int**. The default value is **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Controls whether wait statistics will be captured per query.
+
+ON    
+Wait statistics information per query is captured. This value is the default configuration value.
+
+OFF    
+Wait statistics information per query won't be captured.
+
+**\<query_capture_policy_option_list> :: =**     
+Controls the Query Store capture policy options. Except for STALE_CAPTURE_POLICY_THRESHOLD, these options define the OR conditions that need to happen for queries to be captured in the defined Stale Capture Policy Threshold value.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Defines the evaluation interval period to determine if a query should be captured. The default is 1 day, and it can be set from 1 hour to seven days. *number* is type **int**.
+
+EXECUTION_COUNT     
+Defines the number of times a query is executed over the evaluation period. The default is 30, which means that for the default Stale Capture Policy Threshold, a query must execute at least 30 times in one day to be persisted in the Query Store. EXECUTION_COUNT is type **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Defines total elapsed compile CPU time used by a query over the evaluation period. The default is 1000 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least one second of CPU time spent during query compilation in one day to be persisted in the Query Store. TOTAL_COMPILE_CPU_TIME_MS is type **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Defines total elapsed execution CPU time used by a query over the evaluation period. The default is 100 which means that for the default Stale Capture Policy Threshold, a query must have a total of at least 100 ms of CPU time spent during execution in one day to be persisted in the Query Store. TOTAL_EXECUTION_CPU_TIME_MS is type **int**.
 
 **\<snapshot_option> ::=**
 
@@ -2703,7 +2935,7 @@ A warning message is displayed when one of these errors occurs. The query, batch
 
   You can determine this option's status by examining the `is_arithabort_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsArithmeticAbortEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2794,7 +3026,6 @@ You can change the default values for any one of the database options for all ne
 ## Examples
 
 ### A. Setting the database to READ_ONLY
-
 Changing the state of a database or file group to READ_ONLY or READ_WRITE requires exclusive access to the database. The following example sets the database to `RESTRICTED_USER` mode to restricted access. The example then sets the state of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to `READ_ONLY` and returns access to the database to all users.
 
 ```sql
@@ -2812,7 +3043,6 @@ GO
 ```
 
 ### B. Enabling snapshot isolation on a database
-
 The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
 
 ```sql
@@ -2838,7 +3068,6 @@ The result set shows that the snapshot isolation framework is enabled.
 |[database_name] |1| ON |
 
 ### C. Enabling, modifying, and disabling change tracking
-
 The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
 
 ```sql
@@ -2862,18 +3091,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### D. Enabling the Query Store
-
 The following example enables the Query Store and configures Query Store parameters.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### E. Enabling the Query Store with wait statistics
+The following example enables the Query Store and configures its parameters.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### F. Enabling the Query Store with custom capture policy options
+The following example enables the Query Store and configures its parameters.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2895,9 +3167,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -3030,10 +3313,10 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-Run this command to check if a query was executed using cached result.  The result_set_cache column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching was not used.  Check [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7) for details.  
+Run this command to check if a query was executed using cached result.  The result_cache_hit column returns 1 for cache hit, 0 for cache miss, and negative values for reasons why result set caching was not used.  Check [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7) for details.  
 
 ```sql
-SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 ```
 
@@ -3061,7 +3344,7 @@ Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
 ### Remarks
 
-This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABSE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABASE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 

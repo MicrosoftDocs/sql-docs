@@ -1,6 +1,6 @@
 ---
 title: "Failed availability group add-file operation"
-decription: Possible resolutions for failing to add a file to an availability group.
+description: Troubleshoot failed add-file operations in an Always On availability group. File paths can differ between systems that host the primary and secondary replicas. 
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Troubleshoot a Failed Add-File Operation (Always On Availability Groups)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   In some Always On availability group deployments, file paths differ between the system that hosts the primary replica and systems that host a secondary replica. If the file path of an add-file operation does not exist on a secondary replica, the add-file operation will succeed on the primary database. But the add-file operation will cause the secondary database to be suspended. This, in turn, causes the secondary replica to enter the NOT SYNCHRONIZING state.  
   

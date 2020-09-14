@@ -1,5 +1,6 @@
 ---
-title: "ROLLBACK WORK (Transact-SQL) | Microsoft Docs"
+description: "ROLLBACK WORK (Transact-SQL)"
+title: ROLLBACK WORK (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "rolling back transactions, ROLLBACK WORK"
   - "savepoints [SQL Server]"
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # ROLLBACK WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Rolls back a user-specified transaction to the beginning of the transaction.  
   
@@ -34,11 +35,12 @@ ms.author: jroth
 ## Syntax  
   
 ```syntaxsql
-  
 ROLLBACK [ WORK ]  
 [ ; ]  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
  This statement functions identically to ROLLBACK TRANSACTION except that ROLLBACK TRANSACTION accepts a user-defined transaction name. With or without specifying the optional WORK keyword, this ROLLBACK syntax is ISO-compatible.  
   

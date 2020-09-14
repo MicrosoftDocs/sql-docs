@@ -1,5 +1,6 @@
 ---
-title: "Accelerated database recovery | Microsoft Docs"
+description: "Manage accelerated database recovery"
+title: "Manage accelerated database recovery | Microsoft Docs"
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -15,7 +16,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Manage accelerated database recovery
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## Enabling and controlling ADR
 
@@ -97,6 +98,9 @@ Changing the location of the PVS is a three-step process.
    ```
 
 ## Troubleshooting
+
+> [!NOTE]
+> This section also applies to Azure SQL Database.
 
 Query `sys.dm_tran_persistent_version_store_stats` to check PVS sizes.
 

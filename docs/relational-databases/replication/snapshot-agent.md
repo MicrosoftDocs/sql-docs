@@ -1,4 +1,5 @@
 ---
+description: "Snapshot Agent"
 title: "Snapshot Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -17,7 +18,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Snapshot Agent
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Snapshot Agent** dialog box displays detailed information on the Snapshot Agent, including status, history, informational messages, and any error messages.  
   
 ## Options  

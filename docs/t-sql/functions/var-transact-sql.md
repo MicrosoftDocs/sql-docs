@@ -1,4 +1,5 @@
 ---
+description: "VAR (Transact-SQL)"
 title: "VAR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical variance"
   - "VAR function [Transact-SQL]"
 ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # VAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the statistical variance of all values in the specified expression. May be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
@@ -30,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 VAR ( [ ALL | DISTINCT ] expression )  
   
@@ -38,7 +39,9 @@ VAR ( [ ALL | DISTINCT ] expression )
 VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Applies the function to all values. ALL is the default.  
   
@@ -64,7 +67,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### A: Using VAR  
  The following example returns the variance for all bonus values in the `SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT VAR(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -75,7 +78,7 @@ GO
 ### B: Using VAR  
  The following example returns the statistical variance of the sales quota values in the table `dbo.FactSalesQuota`. The first column contains the variance of all distinct values and the second column contains the variance of all values including any duplicates values.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT VAR(DISTINCT SalesAmountQuota)AS Distinct_Values, VAR(SalesAmountQuota) AS All_Values  
@@ -93,7 +96,7 @@ Distinct_Values   All_Values
 ### C. Using VAR with OVER  
  The following example returns the statistical variance of the sales quota values for each quarter in a calendar year. Notice that the ORDER BY in the OVER clause orders the statistical variance and the ORDER BY of the SELECT statement orders the result set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

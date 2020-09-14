@@ -1,8 +1,9 @@
 ---
+description: "Read, ReadText, Write, and WriteText Methods Example (VB)"
 title: "Read, ReadText, Write, and WriteText Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "Read method [ADO], Visual Basic example"
   - "WriteText method [ADO], Visual Basic example"
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Read, ReadText, Write, and WriteText Methods Example (VB)
-This example demonstrates how to read the contents of a text box into both a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) and a binary **Stream**. Other properties and methods shown include [Position](../../../ado/reference/ado-api/position-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), and [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+This example demonstrates how to read the contents of a text box into both a text [Stream](./stream-object-ado.md) and a binary **Stream**. Other properties and methods shown include [Position](./position-property-ado.md), [Size](./size-property-ado-parameter.md), [Charset](./charset-property-ado.md), and [SetEOS](./seteos-method.md).  
   
 ```  
 'BeginReadVB  
@@ -105,12 +106,12 @@ End Sub
 ```  
   
 ## See Also  
- [Charset Property (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
- [Position Property (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
- [Read Method](../../../ado/reference/ado-api/read-method.md)   
- [ReadText Method](../../../ado/reference/ado-api/readtext-method.md)   
- [SetEOS Method](../../../ado/reference/ado-api/seteos-method.md)   
- [Size Property (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Write Method](../../../ado/reference/ado-api/write-method.md)   
- [WriteText Method](../../../ado/reference/ado-api/writetext-method.md)
+ [Charset Property (ADO)](./charset-property-ado.md)   
+ [Position Property (ADO)](./position-property-ado.md)   
+ [Read Method](./read-method.md)   
+ [ReadText Method](./readtext-method.md)   
+ [SetEOS Method](./seteos-method.md)   
+ [Size Property (ADO Stream)](./size-property-ado-stream.md)   
+ [Stream Object (ADO)](./stream-object-ado.md)   
+ [Write Method](./write-method.md)   
+ [WriteText Method](./writetext-method.md)

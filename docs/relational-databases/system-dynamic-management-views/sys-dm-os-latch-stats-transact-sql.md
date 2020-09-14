@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_latch_stats (Transact-SQL)"
 title: "sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_latch_stats dynamic management view"
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns information about all latch waits organized by class. 
   
@@ -29,7 +30,7 @@ Returns information about all latch waits organized by class.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Name of the latch class.|  
+|latch_class|**nvarchar(60)**|Name of the latch class.|  
 |waiting_requests_count|**bigint**|Number of waits on latches in this class. This counter is incremented at the start of a latch wait.|  
 |wait_time_ms|**bigint**|Total wait time, in milliseconds, on latches in this class.<br /><br /> **Note:** This column is updated every five minutes during a latch wait and at the end of a latch wait.|  
 |max_wait_time_ms|**bigint**|Maximum time a memory object has waited on this latch. If this value is unusually high, it might indicate an internal deadlock.|  

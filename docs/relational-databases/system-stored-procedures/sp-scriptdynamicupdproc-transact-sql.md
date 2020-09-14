@@ -1,4 +1,5 @@
 ---
+description: "sp_scriptdynamicupdproc (Transact-SQL)"
 title: "sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_scriptdynamicupdproc"
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Generates the CREATE PROCEDURE statement that creates a dynamic update stored procedure. The UPDATE statement within the custom stored procedure is built dynamically based on the MCALL syntax that indicates which columns to change. Use this stored procedure if the number of indexes on the subscribing table is growing and the number of columns being changed is small. This stored procedure is run at the Publisher on the publication database.  
   

@@ -1,11 +1,12 @@
 ---
 title: "NS$&lt;service name&gt; Properties (Service Tab)"
+description: Learn about the options on the Service tab in the Notification Services Properties dialog box, such as the binary path, the host name, and the start mode.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: markingmyname
@@ -13,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # NS$&lt;service name&gt; Properties (Service Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   This service is the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] service. The property values in light gray cannot be changed using this application.  
   
 ## Options  

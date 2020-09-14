@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobschedules (Transact-SQL)"
 title: "dbo.sysjobschedules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobschedules system table"
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysjobschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains schedule information for jobs to be executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This table is stored in the **msdb** database.  
   

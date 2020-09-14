@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_create_collection_set (Transact-SQL)"
 title: "sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_create_collection_set"
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_create_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new collection set. You can use this stored procedure to create a custom collection set for data collection.  
   

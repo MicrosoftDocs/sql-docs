@@ -1,23 +1,24 @@
 ---
+description: "SQL Property"
 title: "SQL Property | Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
+ms.prod: sql
 ms.prod_service: connectivity
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "SQL property [RDS]"
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SQL Property
-Indicates the query string used to retrieve the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indicates the query string used to retrieve the [Recordset](../ado-api/recordset-object-ado.md).  
   
- You can set the **SQL** property at design time in the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object's OBJECT tags, or at run time in scripting code.  
+ You can set the **SQL** property at design time in the [RDS.DataControl](./datacontrol-object-rds.md) object's OBJECT tags, or at run time in scripting code.  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -43,13 +44,11 @@ Run time: DataControl.SQL = "QueryString"
  The **SQL** property is optional if a custom server-side business object retrieves the data for the client.  
   
 ## Applies To  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)  
   
 ## See Also  
- [SQL Property Example (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [Connect Property (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Query Method (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
- [Refresh Method (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [SubmitChanges Method (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [SQL Property Example (VBScript)](./sql-property-example-vbscript.md)   
+ [Connect Property (RDS)](./connect-property-rds.md)   
+ [Query Method (RDS)](./query-method-rds.md)   
+ [Refresh Method (RDS)](./refresh-method-rds.md)   
+ [SubmitChanges Method (RDS)](./submitchanges-method-rds.md)

@@ -1,16 +1,16 @@
 ---
 title: SQL Server high availability & disaster recovery partners
 description: Lists of third-party partners with solutions to monitor Server.
-services: sql-server
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017    
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server high availability and disaster recovery partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To provide high availability and disaster recovery for your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with high availability and disaster recovery solutions supporting Microsoft SQL Server.
 
 ## High availability and disaster recovery partners
@@ -19,7 +19,7 @@ To provide high availability and disaster recovery for your SQL Server services,
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery replicates workloads running on virtual machines or physical servers so that they remain available in a secondary location if the primary site isn't available. You can replicate and fail over SQL Server virtual machines from on-premises data center to Azure or to another on-premises data center or from one Azure data centers to another Azure data center.<br><br> Enterprise and Standard editions of SQL Server 2008 R2- SQL Server 2016|[Website][azure_website]<br>[Marketplace][azure_marketplace]<br>[Datasheet][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Video][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise is Smart Availability software for Windows, Linux & Docker that helps you achieve the nearest-to-zero planned and unplanned downtime, unlocks huge cost savings, drastically simplifies management, and gets you both physical and logical consolidation.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[Website][dh2i_website]<br>[Datasheet][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Video][dh2i_youtube]|
-|![HPE][4] |**HPE Serviceguard**<br>Protect your critical SQL Server 2017 workloads on Linux ® from unplanned and planned downtime through a multitude of infrastructure and applications faults across physical and virtual environments over any distance with HPE Serviceguard for Linux (SGLX). HPE SGLX A.12.20.00 and later offers context-sensitive monitoring and recovery options for Failover Cluster Instance and Always On Availability Groups SQL Server workloads. Maximize uptime with HPE SGLX without compromising data integrity and performance.<br><br>SQL Server 2017 on Linux - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Website][hpe_website]<br>[Datasheet][hpe]<br>[Download Evaluation][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
+|![HPE][4] |**HPE Serviceguard**<br>Protect your critical SQL Server 2017 workloads on Linux &reg; from unplanned and planned downtime through a multitude of infrastructure and applications faults across physical and virtual environments over any distance with HPE Serviceguard for Linux (SGLX). HPE SGLX A.12.20.00 and later offers context-sensitive monitoring and recovery options for Failover Cluster Instance and Always On Availability Groups SQL Server workloads. Maximize uptime with HPE SGLX without compromising data integrity and performance.<br><br>SQL Server 2017 on Linux - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Website][hpe_website]<br>[Datasheet][hpe]<br>[Download Evaluation][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
 |![IDERA][3]|**IDERA**<br>SQL Safe Backup is a high-performance backup and recovery solution for SQL Server that saves money by reducing database backup time and backup file size, and by providing instant read and write access to databases within backup files.<br><br>Microsoft SQL Server: 2005 SP1 or later, 2008, 2008 R2, 2012, 2014, 2016; all editions |[Website][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster is a comprehensive and fully automated high-availability and disaster recovery solution against all major failures including hardware, software, network, and site failures for SQL Server and associated applications running on physical or virtual machines in on-premises or cloud environments.<br><br>Microsoft SQL Server: 2005 or later; all editions |[Website][necec_website]<br>[Datasheet][necec_datasheet]<br>[Video][necec_youtube]<br>[Download][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx is the solution for stateful containers running in production. With Portworx, users can manage any database or stateful service on any infrastructure using any container scheduler, including Kubernetes, Mesosphere DC/OS, and Docker Swarm. Portworx solves the five most common problems DevOps teams encounter when running containerized databases and other stateful services in production: persistence, high availability, data automation, support for multiple data stores and infrastructure, and security.<br><br>SQL Server 2017 on Docker |[Website][portworx_website]<br>[Documentation][portworx_docs]<br>[Video][portworx_youtube]|

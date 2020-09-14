@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Replication 'Publisher Settings' dialog box"
 title: "'Publisher Settings' (SSMS) | Microsoft Docs"
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -18,7 +19,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Replication 'Publisher Settings' dialog box
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Publisher Settings** dialog box allows you to change settings for Publishers that have been added to the left pane in Replication Monitor.  
   
 ## Options  

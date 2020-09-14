@@ -1,4 +1,5 @@
 ---
+description: "sys.query_store_plan (Transact-SQL)"
 title: "sys.query_store_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/23/2019"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "query_store_plan catalog view"
   - "sys.query_store_plan catalog view"
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contains information about each execution plan associated with a query.  
   

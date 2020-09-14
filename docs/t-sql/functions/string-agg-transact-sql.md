@@ -1,4 +1,5 @@
 ---
+description: "STRING_AGG (Transact-SQL)"
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"
@@ -13,12 +14,15 @@ f1_keywords:
 helpviewer_keywords: 
   - "STRING_AGG function"
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+<!--[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]-->
+
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Concatenates the values of string expressions and places separator values between them. The separator is not added at the end of string. 
  
@@ -32,6 +36,8 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 <order_clause> ::=   
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

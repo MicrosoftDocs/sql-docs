@@ -1,4 +1,5 @@
 ---
+description: "Run Integration Services (SSIS) Packages"
 title: "Run Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/04/2018
@@ -24,7 +25,7 @@ ms.author: chugu
 ---
 # Run Integration Services (SSIS) Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can use one of several tools depending on where those packages are stored. The tools are listed in the table below.  

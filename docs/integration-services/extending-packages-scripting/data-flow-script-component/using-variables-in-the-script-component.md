@@ -1,4 +1,5 @@
 ---
+description: "Using Variables in the Script Component"
 title: "Using Variables in the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Using Variables in the Script Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Variables store values that a package and its containers, tasks, and event handlers can use at run time. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  

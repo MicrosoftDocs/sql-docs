@@ -1,4 +1,5 @@
 ---
+description: "sp_dbcmptlevel (Transact-SQL)"
 title: "sp_dbcmptlevel (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbcmptlevel"
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbcmptlevel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets certain database behaviors to be compatible with the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

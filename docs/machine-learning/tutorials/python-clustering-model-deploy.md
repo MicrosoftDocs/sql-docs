@@ -1,38 +1,45 @@
 ---
 title: "Python tutorial: Deploy cluster model"
-description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In part four of this four-part tutorial series, you'll deploy a clustering model in Python with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
+# Python tutorial: Deploy a model to categorize customers with SQL machine learning
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-# Tutorial: Deploy a model in Python to categorize customers with SQL Server Machine Learning Services
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a database using SQL Server Machine Learning Services or on Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a database using SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a database using Azure SQL Managed Instance Machine Learning Services.
+::: moniker-end
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the Python script from any App. To do that, you can deploy the Python script in a database by putting the Python script inside a SQL stored procedure. Because your model executes in the database, it can easily be trained against data stored in the database.
 
-In part four of this four-part tutorial series, you'll deploy a clustering model, developed in Python, into a SQL database using SQL Server Machine Learning Services.
-
-In order to perform clustering on a regular basis, as new customers are registering, you need to be able call the Python script from any App. To do that, you can deploy the Python script in SQL Server by putting the Python script inside a SQL stored procedure in the database. Because your model executes in the SQL database, it can easily be trained against data stored in the database.
-
-In this section, you'll move the Python code you just wrote into SQL Server and deploy clustering with the help of SQL Server Machine Learning Services.
+In this section, you'll move the Python code you just wrote onto the server and deploy clustering.
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Create a stored procedure that generates the model
-> * Perform clustering in SQL Server
+> * Perform clustering on the server
 > * Use the clustering information
 
 In [part one](python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
-In [part two](python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
+In [part two](python-clustering-model-prepare-data.md), you learned how to prepare the data from a database to perform clustering.
 
 In [part three](python-clustering-model-build.md), you learned how to create and train a K-Means clustering model in Python.
 
@@ -55,10 +62,10 @@ CREATE procedure [dbo].[py_generate_customer_return_clusters]
 AS
 
 BEGIN
-	DECLARE
+    DECLARE
 
 -- Input query to generate the purchase history & return metrics
-	 @input_query NVARCHAR(MAX) = N'
+     @input_query NVARCHAR(MAX) = N'
 SELECT
   ss_customer_sk AS customer,
   CAST( (ROUND(COALESCE(returns_count / NULLIF(1.0*orders_count, 0), 0), 7) ) AS FLOAT) AS orderRatio,
@@ -94,8 +101,8 @@ FROM
  '
 
 EXEC sp_execute_external_script
-	  @language = N'Python'
-	, @script = N'
+      @language = N'Python'
+    , @script = N'
 
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -113,14 +120,14 @@ customer_data["cluster"] = clusters
 
 OutputDataSet = customer_data
 '
-	, @input_data_1 = @input_query
-	, @input_data_1_name = N'my_input_data'
-			 with result sets (("Customer" int, "orderRatio" float,"itemsRatio" float,"monetaryRatio" float,"frequency" float,"cluster" float));
+    , @input_data_1 = @input_query
+    , @input_data_1_name = N'my_input_data'
+             with result sets (("Customer" int, "orderRatio" float,"itemsRatio" float,"monetaryRatio" float,"frequency" float,"cluster" float));
 END;
 GO
 ```
 
-## Perform clustering in SQL Database
+## Perform clustering
 
 Now that you've created the stored procedure, execute the following script to perform clustering using the procedure.
 
@@ -170,19 +177,18 @@ You can change the **c.cluster** value to return email addresses for customers i
 
 ## Clean up resources
 
-When you're finished with this tutorial, you can delete the tpcxbb_1gb database from SQL Server.
+When you're finished with this tutorial, you can delete the tpcxbb_1gb database.
 
 ## Next steps
 
 In part four of this tutorial series, you completed these steps:
 
 * Create a stored procedure that generates the model
-* Perform clustering in SQL Server
+* Perform clustering on the server
 * Use the clustering information
 
-To learn more about using Python in SQL Server Machine Learning Services, see:
+To learn more about using Python in SQL machine learning, see:
 
-* [Quickstart: Create and run simple Python scripts with SQL Server Machine Learning Services](quickstart-python-create-script.md)
-* [Other Python tutorials for SQL Server Machine Learning Services](sql-server-python-tutorials.md)
+* [Quickstart: Create and run simple Python scripts](quickstart-python-create-script.md)
+* [Other Python tutorials for SQL machine learning](python-tutorials.md)
 * [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
-

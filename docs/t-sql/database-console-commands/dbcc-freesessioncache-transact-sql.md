@@ -1,4 +1,5 @@
 ---
+description: "DBCC FREESESSIONCACHE (Transact-SQL)"
 title: "DBCC FREESESSIONCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -24,7 +25,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC FREESESSIONCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -35,7 +36,9 @@ Flushes the distributed query connection cache used by distributed queries again
 DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH NO_INFOMSGS  
  Suppresses all informational messages.  
   

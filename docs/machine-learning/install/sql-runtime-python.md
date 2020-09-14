@@ -31,7 +31,7 @@ The runtime language extension can be used with the following scenarios:
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
 + [SQL Server 2019 for Linux.](../../linux/sql-server-linux-setup.md)
-When you install SQL Server on Linux, you must configure a Microsoft repository. For more information see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
+When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 
@@ -45,15 +45,6 @@ Language Extensions use the extensibility framework for executing external code.
 
 > [!Tip]
 > If possible, `update` to refresh packages on the system prior to installation. Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
- https://review.docs.microsoft.com/en-us/sql/linux/sql-server-linux-change-repo?view=sql-server-linux-ver15&branch=pr-en-us-16984&pivots=ld2-ubuntu
-
-Import the public repository GPG keys:
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-
-Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019:
-sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
-
-FYI: they would have this configured before hand if they have installed sql server alread
 
 ## Ubuntu
 ```bash
@@ -98,9 +89,9 @@ RECONFIGURE WITH OVERRIDE;
 
 **GitHub link goes here**
 
-# Update environment path for Linux
+## Update environment path for Linux
 
- Create the enviornment variable called PYTHONHOME point to the Python installation location
+ Create the environment variable called PYTHONHOME point to the Python installation location
  For example: /usr/bin/python
 
 >[!Note] 

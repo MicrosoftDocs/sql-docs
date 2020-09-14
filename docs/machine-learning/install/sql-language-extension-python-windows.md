@@ -48,7 +48,7 @@ Complete the setup for SQL Server 2019.
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
     
-    ![SQL Server 2019 installation](../media/2019setup-installation-page-mlsvcs.png) 
+    ![SQL Server 2019 installation](../install/media/2019setup-installation-page-mlsvcs.png) 
 
 1. On the **Feature Selection** page, select these options:
   
@@ -60,7 +60,7 @@ Complete the setup for SQL Server 2019.
    
        Select **Machine Learning Services and Language Extensions** Don't select Python.
 
-    ![SQL Server 2019 installation features](../media/sql-feature-selection.png) 
+    ![SQL Server 2019 installation features](../install/media/sql-feature-selection.png) 
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   

@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  
   
@@ -58,7 +57,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## Examples  
  The following example assumes the partition function `myRangePF` has been created in the current database.  
   
-```  
+```sql 
 DROP PARTITION FUNCTION myRangePF;  
 ```  
   

@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP MESSAGE TYPE message_type_name  
 [ ; ]  
 ```  
@@ -53,7 +52,7 @@ DROP MESSAGE TYPE message_type_name
 ## Examples  
  The following example deletes the `//Adventure-Works.com/Expenses/SubmitExpense` message type from the database.  
   
-```  
+```sql  
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   

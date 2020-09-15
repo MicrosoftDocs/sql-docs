@@ -1,4 +1,5 @@
 ---
+description: "CInstance Class - SetDefaults Method"
 title: "SetDefaults Method (CInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDefaults method"
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # CInstance Class - SetDefaults Method
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

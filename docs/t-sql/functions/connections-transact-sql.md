@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CONNECTIONS (Transact-SQL)"
 title: "@@CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -34,7 +35,9 @@ This function returns the number of attempted connections - both successful and 
 ```sql
 @@CONNECTIONS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **integer**
   

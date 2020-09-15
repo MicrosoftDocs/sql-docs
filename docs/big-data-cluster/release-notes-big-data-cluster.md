@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -42,7 +42,7 @@ This section explains platforms that are supported with BDC.
 
 |Edition|Notes|
 |---------|---------|
-|Enterprise<br/>Standard<br/>Developer| Big Data Cluster edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition after deployment. See [Configure SQL Server master instance](../big-data-cluster/configure-sql-server-master-instance.md). |
+|Enterprise<br/>Standard<br/>Developer| Big Data Cluster edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition after deployment. See [Configure SQL Server master instance](./configure-sql-server-master-instance.md). |
 
 ## Tools
 
@@ -59,6 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release          | BDC Version    | `azdata` Version| Release date |
 |------------------|----------------|-----------------|--------------|
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
@@ -66,9 +67,31 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
+> [!NOTE]
+> There are no SQL Server 2019 Big Data Clusters updates for CU7.
+
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu6"></a> CU6 (July 2020)
+
+Cumulative Update 6 (CU6) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+This release includes minor fixes and enhancements. The following articles include information related to these updates:
+
+- [Manage big data cluster access in Active Directory mode](manage-user-access.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md)
+- [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
+- [Configure a SQL Server Big Data Cluster](configure-cluster.md)
+- [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
+- [SQL Server master instance configuration properties.](reference-config-master-instance.md)
+- [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
+- [Kubernetes RBAC model & impact on users and service accounts managing BDC](kubernetes-rbac.md)
 
 ## <a id="cu5"></a> CU5 (June 2020)
 
@@ -84,7 +107,7 @@ Cumulative Update 5 (CU5) release for SQL Server 2019.
 - Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5. 
 - Added support for deploying multiple big data clusters against an Active Directory domain.
 - `azdata` CLI has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
-- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
+- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
 - Added support to persist customizations performed in Grafana. Before CU5 customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
 - Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
 - Added two feature switches to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to false in control.json deployment configuration file. For OpenShift environments, these settings are set to false by default in the built-in deployment profiles, since collecting pod and node metrics required privileged capabilities.
@@ -139,6 +162,28 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## Known issues
+
+### Empty Livy jobs before you apply cumulative updates
+
+- **Affected releases**: Through current cumulative update
+
+- **Issue and customer impact**: During an upgrade, sparkhead returns 404 error.
+
+- **Workaround**: Before upgrading BDC, ensure that there are no active Livy sessions or batch jobs. Follow the instructions under [Upgrade from supported release](deployment-upgrade.md#upgrade-from-supported-release) to avoid this. 
+
+   If Livy returns a 404 error during the upgrade process, restart the Livy server on both sparkhead nodes. For example:
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### Big data cluster generated service accounts passwords expiration
+
+- **Affected releases**: All big data cluster deployments with Active Directory integration, irrespective of the release
+
+- **Issue and customer impact**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md).Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met.
+
+- **Workaround**: Update the expiration policy for the BDC service accounts to “Password never expires” in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
 
 ### Credentials for accessing services through gateway endpoint
 

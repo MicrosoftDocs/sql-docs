@@ -1,4 +1,5 @@
 ---
+description: "NCHAR (Transact-SQL)"
 title: "NCHAR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -21,7 +22,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NCHAR (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the Unicode character with the specified integer code, as defined by the Unicode standard.  
   
@@ -33,7 +34,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 NCHAR ( integer_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *integer_expression*  
  When the collation of the database does not contain the [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) flag, this is a positive integer from 0 through 65535 (0 through 0xFFFF). If a value outside this range is specified, NULL is returned. For more information about supplementary characters, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -48,7 +51,7 @@ NCHAR ( integer_expression )
   
 ```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'𣅿';
+DECLARE @d NVARCHAR(10) = N'𣅿';
 -- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
@@ -65,7 +68,7 @@ SELECT NCHAR(UNICODE(@d));
  The following example uses the `UNICODE` and `NCHAR` functions to print the `UNICODE` value and the `NCHAR` (Unicode character) of the second character of the `København` character string, and to print the actual second character, `ø`.  
   
 ```sql  
-DECLARE @nstring nchar(8);  
+DECLARE @nstring NCHAR(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
    NCHAR(UNICODE(SUBSTRING(@nstring, 2, 1)));  
@@ -87,7 +90,7 @@ GO
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(9);  
+DECLARE @position INT, @nstring NCHAR(9);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  

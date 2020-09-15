@@ -1,4 +1,5 @@
 ---
+description: "CHECKSUM (Transact-SQL)"
 title: "CHECKSUM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -23,7 +24,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 
 ---
 # CHECKSUM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 The `CHECKSUM` function returns the checksum value computed over a table row, or over an expression list. Use `CHECKSUM` to build hash indexes.
   
@@ -35,7 +36,9 @@ The `CHECKSUM` function returns the checksum value computed over a table row, or
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \*  
 This argument specifies that the checksum computation covers all table columns. `CHECKSUM` returns an error if any column has a noncomparable data type. Noncomparable data types include:
 

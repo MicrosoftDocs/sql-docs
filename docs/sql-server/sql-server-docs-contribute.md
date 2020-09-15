@@ -1,4 +1,5 @@
 ---
+description: "How to contribute to SQL Server Documentation"
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "08/13/2018"
 ms.prod: sql
@@ -19,7 +20,7 @@ Anyone can contribute to SQL Server documentation. This includes correcting typo
 
 There are two main workflows you can use to contribute:
 
-|||
+|Workflow|Description|
 |---|---|
 | [Edit in your browser](#githubui) | Good for small, quick edits of any article. |
 | [Edit locally with tools](#tools) | Good for more complex edits, edits involving multiple articles, and frequent contributions to docs.microsoft.com. |
@@ -89,7 +90,7 @@ Each SQL Server article contains an **applies-to** include file after the title.
 Consider the following Markdown example that pulls in the **appliesto-ss-asdb-asdw-pdw-md.md** include file.
 
 ```Markdown
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 This adds the following text at the top of the article:

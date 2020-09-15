@@ -1,8 +1,9 @@
 ---
 title: Threads Window
+description: Learn about the Threads window, which displays information about the Database Engine thread being debugged. The information displays only in debug mode.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Threads Window [Transact-SQL]"

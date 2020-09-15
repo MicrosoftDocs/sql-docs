@@ -1,4 +1,5 @@
 ---
+description: "Backup and Restore Tables (Transact-SQL)"
 title: "Backup and Restore Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "system tables [SQL Server], restore tables"
   - "restore system tables [SQL Server]"
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Backup and Restore Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

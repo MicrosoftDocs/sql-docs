@@ -1,4 +1,5 @@
 ---
+description: "Open File Dialog Box"
 title: Open File Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,7 +15,7 @@ ms.author: maghan
 ms.reviewer: 
 ---
 # Open File Dialog Box
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Open File** dialog box to open an existing file from disk. You can also use this dialog box to open an already opened file using different language encoding options.  
   
 To access this dialog box, select **Open** from the **File** menu and then choose **File**. This dialog box also appears when you are opening files from other elements, such as the **External Tools** dialog box. From the **File** menu, select **Open**, and then choose **Project/Solution** to open the similar **Open Project** dialog box.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_create_collection_set (Transact-SQL)"
 title: "sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_create_collection_set"
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

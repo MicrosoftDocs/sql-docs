@@ -1,4 +1,5 @@
 ---
+description: "EnvelopeAggregate (geometry Data Type)"
 title: "EnvelopeAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -27,7 +28,9 @@ Returns a bounding box for a given set of **geometry** objects.
 EnvelopeAggregate ( geometry_operand )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometry_operand*  
  Is a **geometry** type table column that represents the set of **geometry** objects.  
   

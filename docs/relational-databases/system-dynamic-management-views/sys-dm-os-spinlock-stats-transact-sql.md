@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_spinlock_stats (Transact-SQL)"
 title: "sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2019"
@@ -406,7 +407,6 @@ GO
 
  [When is Spinlock a Significant Driver of CPU utilization in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [Diagnosing and Resolving Spinlock Contention on SQL Server](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 

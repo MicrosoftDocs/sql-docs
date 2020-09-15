@@ -1,4 +1,5 @@
 ---
+description: "sys.database_role_members (Transact-SQL)"
 title: "sys.database_role_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
@@ -22,7 +23,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_role_members (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns one row for each member of each database role.  Database users, application roles, and other database roles can be members of a database role. To add members to a role, use the [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) statement with the `ADD MEMBER` option. Join with [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) to return the names of the `principal_id` values.
   

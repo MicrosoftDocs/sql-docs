@@ -1,4 +1,5 @@
 ---
+description: "sp_cycle_errorlog (Transact-SQL)"
 title: "sp_cycle_errorlog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cycle_errorlog"
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

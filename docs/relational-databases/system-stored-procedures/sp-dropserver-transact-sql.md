@@ -1,4 +1,5 @@
 ---
+description: "sp_dropserver (Transact-SQL)"
 title: "sp_dropserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropserver"
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sp_dropserver (Transact-SQL)

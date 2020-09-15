@@ -1,4 +1,5 @@
 ---
+description: "ExpirationDate Property (SecurityCertificate Class)"
 title: "ExpirationDate Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ExpirationDate property"
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ExpirationDate Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

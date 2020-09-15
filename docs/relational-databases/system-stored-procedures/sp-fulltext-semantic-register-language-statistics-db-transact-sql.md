@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)"
 title: "sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_semantic_register_language_statistics_db"
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

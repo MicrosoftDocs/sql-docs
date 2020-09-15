@@ -1,4 +1,5 @@
 ---
+description: "CREATE BROKER PRIORITY (Transact-SQL)"
 title: "CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -23,8 +24,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE BROKER PRIORITY statement"
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,9 @@ FOR CONVERSATION
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ConversationPriorityName*  
  Specifies the name for this conversation priority. The name must be unique in the current database, and must conform to the rules for [!INCLUDE[ssDE](../../includes/ssde-md.md)] [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

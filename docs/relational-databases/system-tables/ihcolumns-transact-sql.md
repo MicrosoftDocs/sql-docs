@@ -1,4 +1,5 @@
 ---
+description: "IHcolumns (Transact-SQL)"
 title: "IHcolumns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHcolumns system table"
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHcolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

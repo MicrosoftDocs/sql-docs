@@ -1,4 +1,5 @@
 ---
+description: "Use the Query and View Designer with International Data (Visual Database Tools)"
 title: Use the Query and View Designer with International Data
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,7 +26,7 @@ ms.reviewer:
 
 ---
 # Use the Query and View Designer with International Data (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can use the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) with data in any language and in any version of the Windows operating system. The following guidelines outline the differences you will notice and provide information about managing data in international applications.  
   
 ## Localized Information in the Criteria and SQL Panes  

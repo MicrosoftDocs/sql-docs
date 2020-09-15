@@ -1,4 +1,5 @@
 ---
+description: "Transact-SQL Reference (Database Engine)"
 title: "Transact-SQL Reference (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/29/2020"
@@ -53,14 +54,14 @@ For example, this topic applies to all versions, and has the following label.
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-Another example, the following label indicates a topic that applies only to Azure SQL Data Warehouse and Parallel Data Warehouse.
+Another example, the following label indicates a topic that applies only to Azure Synapse Analytics and Parallel Data Warehouse.
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 In some cases, the topic is used by a product or service, but all of the arguments are not supported. In this case, additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the topic.  
  
-## Get help from the MSDN forum  
-For online help, see the [MSDN Transact-SQL Forum](https://social.msdn.microsoft.com/Forums/home).  
+## Get help from Microsoft Q & A  
+For online help, see the [Microsoft Q & A Transact-SQL Forum](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## See other language references
 The SQL docs include these other language references:

@@ -1,4 +1,5 @@
 ---
+description: "SHORTEST_PATH (Transact-SQL)"
 title: "SHORTEST PATH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/01/2020
@@ -20,7 +21,7 @@ ms.author: shkale
 monikerRange: "=azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Specifies a search condition for a graph, which is searched recursively or repetitively. SHORTEST_PATH can be used inside MATCH with graph node and edge tables, in the SELECT statement. 
   

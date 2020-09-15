@@ -1,4 +1,5 @@
 ---
+description: "sp_send_dbmail (Transact-SQL)"
 title: "sp_send_dbmail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_send_dbmail"
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_send_dbmail (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Hints (Transact-SQL) - Join"
 title: "Join Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -49,8 +50,10 @@ ms.author: vanto
      { LOOP | HASH | MERGE | REMOTE }  
 ```  
   
-## Arguments  
- LOOP | HASH | MERGE  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ LOOP \| HASH \| MERGE  
  Specifies that the join in the query should use looping, hashing, or merging. Using LOOP |HASH | MERGE JOIN enforces a particular join between two tables. LOOP cannot be specified together with RIGHT or FULL as a join type. For more information, see [Joins](../../relational-databases/performance/joins.md).
   
  REMOTE  

@@ -1,4 +1,5 @@
 ---
+description: "END CONVERSATION (Transact-SQL)"
 title: "END CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -22,8 +23,8 @@ helpviewer_keywords:
   - "conversations [Service Broker], ending"
   - "ending conversations [SQL Server]"
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +44,9 @@ END CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is the conversation handle for the conversation to end.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Bitwise Operators (Transact-SQL)"
 title: "Bitwise Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/04/2019"
@@ -19,7 +20,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bitwise Operators (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Bitwise operators perform bit manipulations between two expressions of any of the data types of the integer data type category.  
   Bitwise operators convert two integer values to binary bits, perform the AND, OR, or NOT operation on each bit, producing a result. Then converts the result to an integer.  

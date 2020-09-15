@@ -1,4 +1,5 @@
 ---
+description: "Set the Properties of a Data Flow Component"
 title: "Set the Properties of a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Set the Properties of a Data Flow Component
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To set the properties of data flow components, which include sources, destinations, and transformations, use one of the following features:  

@@ -1,4 +1,5 @@
 ---
+description: "DENY Schema Permissions (Transact-SQL)"
 title: "DENY Schema Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -35,7 +36,9 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *permission*  
 Specifies a permission that can be denied on a schema. For a list of these permissions, see the Remarks section later in this article.  
   

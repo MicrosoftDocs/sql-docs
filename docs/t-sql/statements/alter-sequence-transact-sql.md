@@ -1,4 +1,5 @@
 ---
+description: "ALTER SEQUENCE (Transact-SQL)"
 title: "ALTER SEQUENCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "sequence number object, altering"
   - "ALTER SEQUENCE statement"
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ALTER SEQUENCE [schema_name. ] sequence_name
     [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *sequence_name*  
  Specifies the unique name by which the sequence is known in the database. Type is **sysname**.  
   

@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_articlehistory (Transact-SQL)"
 title: "MSmerge_articlehistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_articlehistory system table"
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

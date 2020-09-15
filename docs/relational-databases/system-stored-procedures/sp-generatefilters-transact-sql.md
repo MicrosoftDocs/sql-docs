@@ -1,4 +1,5 @@
 ---
+description: "sp_generatefilters (Transact-SQL)"
 title: "sp_generatefilters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_generatefilters"
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_generatefilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

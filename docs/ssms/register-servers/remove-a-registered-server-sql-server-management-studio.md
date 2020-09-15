@@ -1,4 +1,5 @@
 ---
+description: "Remove a Registered Server (SQL Server Management Studio)"
 title: Remove a Registered Server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,7 +19,7 @@ ms.date: 03/01/2017
 
 # Remove a Registered Server (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to remove a server from Registered Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 

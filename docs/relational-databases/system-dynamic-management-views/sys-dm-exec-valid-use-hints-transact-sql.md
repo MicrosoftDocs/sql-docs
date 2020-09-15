@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_valid_use_hints (Transact-SQL)"
 title: "sys.dm_exec_valid_use_hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"
@@ -20,7 +21,7 @@ author: "pmasl"
 ms.author: "pelopes"
 ---
 # sys.dm_exec_valid_use_hints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Returns [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) supported hint names. It lists one hint name per row.  
   

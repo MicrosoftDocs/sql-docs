@@ -1,4 +1,5 @@
 ---
+description: "InstanceName Property (SInstance Class)"
 title: "InstanceName Property (SInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # InstanceName Property (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

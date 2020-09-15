@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_helpcollations (Transact-SQL)"
 title: "sys.fn_helpcollations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
@@ -23,7 +24,7 @@ monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sq
 ---
 # sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a list of all supported collations.  
   

@@ -1,4 +1,5 @@
 ---
+description: "IS_OBJECTSIGNED (Transact-SQL)"
 title: "IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/10/2016"
@@ -34,7 +35,9 @@ IS_OBJECTSIGNED (
   )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'OBJECT'**  
  The type of securable class.  
   

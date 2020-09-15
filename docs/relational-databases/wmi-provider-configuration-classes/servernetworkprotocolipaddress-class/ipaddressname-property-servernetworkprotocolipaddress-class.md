@@ -1,4 +1,5 @@
 ---
+description: "IpAddressName Property (ServerNetworkProtocolIPAddress Class)"
 title: "IpAddressName Property (ServerNetworkProtocolIPAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "IpAddressName property"
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # IpAddressName Property (ServerNetworkProtocolIPAddress Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

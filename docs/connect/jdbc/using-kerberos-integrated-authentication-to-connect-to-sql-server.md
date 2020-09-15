@@ -1,4 +1,5 @@
 ---
+description: "Using Kerberos integrated authentication to connect to SQL Server"
 title: "Using Kerberos integrated authentication to connect to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/29/2020"
@@ -66,7 +67,7 @@ For example, your SPN might look like: "MSSQLSvc/some-server.zzz.corp.contoso.co
 
 For more information about service principal names (SPNs), see:
 
-- [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)
+- [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [Using Kerberos with SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

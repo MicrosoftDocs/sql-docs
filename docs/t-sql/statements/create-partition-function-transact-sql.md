@@ -1,4 +1,5 @@
 ---
+description: "CREATE PARTITION FUNCTION (Transact-SQL)"
 title: "CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"
@@ -25,8 +26,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], functions"
   - "CREATE PARTITION FUNCTION statement"
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_function_name*  
  Is the name of the partition function. Partition function names must be unique within the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

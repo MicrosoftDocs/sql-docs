@@ -1,4 +1,5 @@
 ---
+description: "Change a Business Rule Name (Master Data Services)"
 title: Change a Business Rule Name
 ms.custom: ""
 ms.date: "03/01/2017"

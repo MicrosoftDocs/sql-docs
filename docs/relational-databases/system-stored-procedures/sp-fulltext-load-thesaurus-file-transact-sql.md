@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_load_thesaurus_file (Transact-SQL)"
 title: "sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], thesaurus files"
   - "thesaurus [full-text search], editing"
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_fulltext_load_thesaurus_file (Transact-SQL)
 

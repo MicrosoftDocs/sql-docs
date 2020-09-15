@@ -1,4 +1,5 @@
 ---
+description: "ServerSettings Class"
 title: "ServerSettings Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerSettings class"
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServerSettings Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

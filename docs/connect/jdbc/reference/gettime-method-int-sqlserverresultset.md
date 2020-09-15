@@ -1,4 +1,5 @@
 ---
+description: "getTime Method (int) (SQLServerResultSet)"
 title: "getTime Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

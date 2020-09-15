@@ -1,4 +1,5 @@
 ---
+description: "sys.elastic_pool_resource_stats (Azure SQL Database)"
 title: "sys.elastic_pool_resource_stats"
 titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "elastic_pool_resource_stats_TSQL"
   - "elastic_pool_resource_stats"
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
@@ -41,7 +42,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |**max_session_percent**|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the pool.|  
 |**elastic_pool_dtu_limit**|**int**|Current max elastic pool DTU setting for this elastic pool during this interval.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Current max elastic pool storage limit setting for this elastic pool in megabytes during this interval.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|The percentage of data space allocated by all databases in the elastic pool.  This is the ratio of data space allocated to data max size for the elastic pool.  For more information see: [File space management in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## Remarks
 

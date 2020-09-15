@@ -1,4 +1,5 @@
 ---
+description: "sp_post_msx_operation (Transact-SQL)"
 title: "sp_post_msx_operation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_post_msx_operation"
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

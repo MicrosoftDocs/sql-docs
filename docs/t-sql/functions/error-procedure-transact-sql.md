@@ -1,4 +1,5 @@
 ---
+description: "ERROR_PROCEDURE (Transact-SQL)"
 title: "ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -26,7 +27,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_PROCEDURE (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]  
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 
 This function returns the name of the stored procedure or trigger where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute. 
 - SQL Server 2017 thru [current version](../../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15) returns schema_name.stored_procedure_name
@@ -40,7 +41,9 @@ This function returns the name of the stored procedure or trigger where an error
 ERROR_PROCEDURE ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 **nvarchar(128)**  
   
 ## Return Value  

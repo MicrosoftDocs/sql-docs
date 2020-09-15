@@ -1,4 +1,5 @@
 ---
+description: "Properties Property (ServerNetworkProtocol Class)"
 title: "Properties Property (ServerNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Properties property"
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Properties Property (ServerNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

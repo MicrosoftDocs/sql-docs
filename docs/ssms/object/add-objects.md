@@ -1,4 +1,5 @@
 ---
+description: "Add Objects"
 title: "Add Objects"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Add Objects
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Limits the object selection dialog boxes to the types of objects you want to see.  
   
 ## Options  

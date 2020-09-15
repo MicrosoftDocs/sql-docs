@@ -4,7 +4,7 @@ description: This Release Notes document describes known issues that you should 
 ms.prod: sql
 ms.technology: release-landing
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Release Notes
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
-This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012 ([click here to download it](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
+This Release Notes document describes known issues that you should read about before you install or troubleshoot [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
   
 For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](https://go.microsoft.com/fwlink/?LinkId=190948) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -378,9 +378,9 @@ In a cleansing data quality project, if you have mapped a field in your source d
 ### 4.14 Issue with Date or DateTime Values in Unmapped Source Fields in Excel during Cleansing and Matching  
 **Issue**: If your source data is Excel and you have not mapped the source fields containing values of **Date** or **DateTime** data type, the following happens during the cleansing and matching activities:  
   
--   The unmapped **Date** values are displayed and exported in the yyyymmdd format.  
+-   The unmapped **Date** values are displayed and exported in the yyyy-mm-dd format.  
   
--   The time value is lost for the unmapped **DateTime** values, and they are displayed and exported in the yyyymmdd format.  
+-   The time value is lost for the unmapped **DateTime** values, and they are displayed and exported in the yyyy-mm-dd format.  
   
 **Workaround:** You can view the unmapped field values in the right-lower pane on the **Manage and view results** page in the cleansing activity, and on the **Matching** page in the matching activity.  
   
@@ -631,9 +631,8 @@ SQL Server 2012 includes StreamInsight 2.0. StreamInsight 2.0 requires a Microso
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   
 ### 10.1 Link to Install Upgrade Advisor Is Not Enabled on Chinese (HK) Operating Systems  
-Issue: When you try to install Upgrade Advisor on any supported Windows version in Chinese (Hong Kong) operating systems (OS), you might find that the link to install Upgrade Advisor is not enabled.  
+Issue: When you try to install Upgrade Advisor on any supported Windows version in Chinese (Hong Kong SAR) operating systems (OS), you might find that the link to install Upgrade Advisor is not enabled.  
   
 **Workaround**: Locate the **SQLUA.msi** file on your SQL Server 2012 media at `\1028_CHT_LP\x64\redist\Upgrade Advisor` or at `\1028_CHT_LP\x86\redist\Upgrade Advisor`, depending on your operating system architecture.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

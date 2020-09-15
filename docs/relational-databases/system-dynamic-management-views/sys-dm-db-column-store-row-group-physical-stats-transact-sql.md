@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)"
 title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
@@ -17,13 +18,14 @@ dev_langs:
 helpviewer_keywords: 
   - "dm_db_column_store_row_group_physical_stats"
   - "sys.dm_db_column_store_row_group_physical_stats dynamic management view"
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Provides current rowgroup-level information about all of the columnstore indexes in the current database.  
 

@@ -1,4 +1,5 @@
 ---
+description: "IDENT_CURRENT (Transact-SQL)"
 title: "IDENT_CURRENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,7 +35,9 @@ Returns the last identity value generated for a specified table or view. The las
 IDENT_CURRENT( 'table_or_view' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *table_or_view*  
 Is the name of the table or view whose identity value is returned. *table_or_view* is **varchar**, with no default.  
   

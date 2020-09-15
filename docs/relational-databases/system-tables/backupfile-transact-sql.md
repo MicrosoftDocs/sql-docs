@@ -1,4 +1,5 @@
 ---
+description: "backupfile (Transact-SQL)"
 title: "backupfile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "file backups [SQL Server], backupfile system table"
   - "backupfile system table"
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

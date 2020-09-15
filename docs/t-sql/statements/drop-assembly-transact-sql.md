@@ -1,4 +1,5 @@
 ---
+description: "DROP ASSEMBLY (Transact-SQL)"
 title: "DROP ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "dropping assemblies"
   - "WITH NO DEPENDENTS option"
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,9 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

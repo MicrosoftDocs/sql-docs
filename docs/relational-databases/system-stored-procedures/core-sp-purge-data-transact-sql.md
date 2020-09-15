@@ -1,4 +1,5 @@
 ---
+description: "core.sp_purge_data (Transact-SQL)"
 title: "core.sp_purge_data (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "core.sp_purge_data stored procedure"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

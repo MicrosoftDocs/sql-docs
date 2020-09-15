@@ -1,4 +1,5 @@
 ---
+description: "ProtocolOrder Property (ClientNetworkProtocol Class)"
 title: "ProtocolOrder Property (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolOrder property"
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ProtocolOrder Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Analysis Services"
 title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
@@ -72,7 +73,7 @@ manager: erikre
   
  For background purposes, the following table summarizes the compatibility levels, but you should review the detail articles to understand what each level provides.  
   
-||||  
+|Database model|Compatibility level|Compatible versions|  
 |-|-|-|  
 |Tabular|1400|SQL Server 2017|
 |Tabular|1200|SQL Server 2016|  

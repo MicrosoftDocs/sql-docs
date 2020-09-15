@@ -1,4 +1,5 @@
 ---
+description: "STArea (geography Data Type)"
 title: "STArea (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,9 @@ Returns the total surface area of a **geography** instance. Results for STArea()
 .STArea ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **float**  
   
 CLR return type: **SqlDouble**  

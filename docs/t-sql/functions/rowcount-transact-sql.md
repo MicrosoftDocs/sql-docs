@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;ROWCOUNT (Transact-SQL)"
 title: "@@ROWCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -35,7 +36,9 @@ ms.author: jrasnick
 @@ROWCOUNT  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **int**  
   
 ## Remarks  

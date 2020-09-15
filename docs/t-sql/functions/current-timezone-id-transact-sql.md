@@ -1,5 +1,6 @@
 ---
-title: "CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs"
+description: "CURRENT_TIMEZONE_ID (Transact-SQL)"
+title: "CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2020"
 ms.prod: sql
@@ -33,7 +34,7 @@ ms.author: mlandzic
 This function returns the ID of the time zone observed by a server or an instance. For Azure SQL Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
   
 > [!NOTE]  
-> For single and pooled SQL Databases time zone is always set to UTC and `CURRENT_TIMEZONE_ID` returns the id of the UTC time zone.
+> For SQL Database time zone is always set to UTC and `CURRENT_TIMEZONE_ID` returns the id of the UTC time zone.
   
 ## Syntax  
   
@@ -66,6 +67,6 @@ W. Europe Standard Time
   
 ## See also
 
-[SQL Database Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)

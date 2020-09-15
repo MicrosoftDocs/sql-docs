@@ -1,8 +1,9 @@
 ---
+description: "FieldAttributeEnum"
 title: "FieldAttributeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -58,7 +59,12 @@ Specifies one or more attributes of a [Field](../../../ado/reference/ado-api/fie
 |AdoEnums.FieldAttribute.UPDATABLE|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)  
+    :::column-end:::
+:::row-end:::

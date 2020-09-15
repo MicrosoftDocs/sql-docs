@@ -1,4 +1,5 @@
 ---
+description: "sp_cursorfetch (Transact-SQL)"
 title: "sp_cursorfetch (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorfetch"
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "IDENT_INCR (Transact-SQL)"
 title: "IDENT_INCR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -33,7 +34,9 @@ Returns the increment value specified when creating a table or view's identity c
 IDENT_INCR ( 'table_or_view' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **'** *table_or_view* **'**  
 Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) specifying the table or view to check for a valid identity increment value. *table_or_view* can be a character string constant enclosed in quotation marks. It can also be a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Importing and Exporting Knowledge"
 title: "Importing and Exporting Knowledge"
 ms.date: "07/31/2012"
 ms.prod: sql
@@ -22,7 +23,7 @@ ms.author: sawinark
 ## In This Section  
  You can perform the following import and export operations:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Export a domain in a knowledge base to a .dqs data file|[Export a Domain to a .dqs File](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |Import a domain from a .dqs data file into an existing knowledge base|[Import a Domain from a .dqs File](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

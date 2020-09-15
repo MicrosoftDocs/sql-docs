@@ -1,4 +1,5 @@
 ---
+description: "core.sp_add_collector_type (Transact-SQL)"
 title: "core.sp_add_collector_type (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sp_add_collector_type"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

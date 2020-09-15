@@ -1,5 +1,6 @@
 ---
-title: "WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs"
+description: "WITH XMLNAMESPACES"
+title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
@@ -54,7 +55,9 @@ DEFAULT <xml_namespace_uri>
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *xml_namespace_uri*  
  A Uniform Resource Identifier (URI) that identifies the XML namespace that is being declared. *xml_namespace_uri* is an SQL string.  
   

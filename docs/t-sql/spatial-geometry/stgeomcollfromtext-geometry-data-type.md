@@ -1,4 +1,5 @@
 ---
+description: "STGeomCollFromText (geometry Data Type)"
 title: "STGeomCollFromText (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Kn
 STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometrycollection_tagged_text*  
  Is the WKT representation of the **geometry** instance you wish to return. *geometry_tagged_text* is an **nvarchar(max)** expression.  
   

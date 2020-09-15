@@ -1,4 +1,5 @@
 ---
+description: "Display Query and View Designer Panes (Visual Database Tools)"
 title: Display Query and View Designer Panes
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,7 +21,7 @@ ms.reviewer:
 
 ---
 # Display Query and View Designer Panes (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Query and View Designer is composed of four separate panes: the Diagram pane, the Criteria pane, the SQL pane, and the Results pane. Typically when you open a view or create a new query all four windows open, but if you need to open any of these windows, you can do so as long as the Query and View Designer is open.  
   
 ### To display Query and View Designer panes  

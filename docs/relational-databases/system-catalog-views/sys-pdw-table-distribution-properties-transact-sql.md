@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_table_distribution_properties (Transact-SQL)"
 title: "sys.pdw_table_distribution_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/03/2019"
@@ -14,7 +15,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_table_distribution_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds distribution information for tables.  
   

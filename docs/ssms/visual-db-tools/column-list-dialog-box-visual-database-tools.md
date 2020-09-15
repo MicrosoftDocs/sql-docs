@@ -1,4 +1,5 @@
 ---
+description: "Column List Dialog Box (Visual Database Tools)"
 title: Column List Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,7 +16,7 @@ ms.reviewer:
 
 ---
 # Column List Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 When writing queries, it can be useful to see a list of columns available in your selected table-valued objects.  
   
 To access this dialog box, from the **Query Designer** menu, in the Diagram pane right-click the header of a table-valued object, and then click **Properties**. In the **Properties** window, click the **Column List** field. Then click the ellipses **(...)** to the right of the field.  

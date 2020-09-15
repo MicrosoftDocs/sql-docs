@@ -1,4 +1,5 @@
 ---
+description: "DROP CONTRACT (Transact-SQL)"
 title: "DROP CONTRACT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "contracts [Service Broker], dropping"
   - "DROP CONTRACT statement"
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,9 @@ DROP CONTRACT contract_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *contract_name*  
  The name of the contract to drop. Server, database, and schema names cannot be specified.  
   

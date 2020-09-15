@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;PACK_RECEIVED (Transact-SQL)"
 title: "@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -33,7 +34,9 @@ ms.author: vanto
 @@PACK_RECEIVED  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

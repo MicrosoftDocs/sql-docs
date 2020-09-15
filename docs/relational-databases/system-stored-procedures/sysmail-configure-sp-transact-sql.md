@@ -1,4 +1,5 @@
 ---
+description: "sysmail_configure_sp (Transact-SQL)"
 title: "sysmail_configure_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_configure_sp"
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +54,8 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## Remarks  
  Database Mail uses the following parameters:  
   
-||||  
-|-|-|-|  
-|Parameter name|Description|Default Value|  
+| Parameter name | Description | Default value |
+| -------------- | ----------- | ------------- |
 |*AccountRetryAttempts*|The number of times that the external mail process attempts to send the e-mail message using each account in the specified profile.|**1**|  
 |*AccountRetryDelay*|The amount of time, in seconds, for the external mail process to wait between attempts to send a message.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|The minimum amount of time, in seconds, that the external mail process remains active. When Database Mail is sending many messages, increase this value to keep Database Mail active and avoid the overhead of frequent starts and stops.|**600**|  

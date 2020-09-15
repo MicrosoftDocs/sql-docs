@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_maintenance_plan (Transact-SQL)"
 title: "sp_delete_maintenance_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_maintenance_plan"
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sys.module_assembly_usages (Transact-SQL)"
 title: "sys.module_assembly_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.module_assembly_usages catalog view"
 ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.module_assembly_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "LOGINPROPERTY (Transact-SQL)"
 title: "LOGINPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -47,7 +48,9 @@ ms.author: vanto
 LOGINPROPERTY ( 'login_name' , 'property_name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *login_name*  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for which login property status will be returned.  
   

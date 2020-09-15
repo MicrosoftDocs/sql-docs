@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_clr_appdomains (Transact-SQL)"
 title: "sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_clr_appdomains dynamic management dynamic management view"
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

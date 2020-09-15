@@ -1,4 +1,5 @@
 ---
+description: "SetValue Method (ClientSettingsGeneralFlag Class)"
 title: "SetValue Method (ClientSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetValue method"
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetValue Method (ClientSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

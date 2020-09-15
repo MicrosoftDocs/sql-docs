@@ -1,4 +1,5 @@
 ---
+description: "SetEnable Method (ServerNetworkProtocolIPAddress Class)"
 title: "SetEnable Method (ServerNetworkProtocolIPAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetEnable method"
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetEnable Method (ServerNetworkProtocolIPAddress Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

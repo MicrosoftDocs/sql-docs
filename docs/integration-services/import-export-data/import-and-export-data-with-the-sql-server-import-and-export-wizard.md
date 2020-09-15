@@ -1,4 +1,5 @@
 ---
+description: "Import and Export Data with the SQL Server Import and Export Wizard"
 title: "Import and Export Data with the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
@@ -25,7 +26,7 @@ ms.author: chugu
 ---
 # Import and Export Data with the SQL Server Import and Export Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -1,4 +1,5 @@
 ---
+description: "SQLBulkOperations Function"
 title: "SQLBulkOperations Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"

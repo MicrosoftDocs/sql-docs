@@ -1,4 +1,5 @@
 ---
+description: "sys.database_mirroring_endpoints (Transact-SQL)"
 title: "sys.database_mirroring_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], catalog views"
   - "sys.database_mirroring_endpoints catalog view"
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "CREATE PARTITION SCHEME (Transact-SQL)"
 title: "CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -26,8 +27,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], filegroups"
   - "mapping partitions [SQL Server]"
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,9 @@ AS PARTITION partition_function_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme. Partition scheme names must be unique within the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

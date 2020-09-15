@@ -1,4 +1,5 @@
 ---
+description: "sp_help_fulltext_catalogs_cursor (Transact-SQL)"
 title: "sp_help_fulltext_catalogs_cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_catalogs_cursor"
 ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help_fulltext_catalogs_cursor (Transact-SQL)

@@ -1,6 +1,6 @@
 ---
 title: Custom R functions using rxExec
-description: "RevoScaleR tutorial 14: How to run custom R scripts on SQL Server using RevoScaleR functions."
+description: "Learn to use simulated data to demonstrate execution of a custom R function that runs on a remote server."
 ms.prod: sql
 ms.technology: machine-learning-services
 
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Run custom R functions on SQL Server using rxExec (SQL Server and RevoScaleR tutorial)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This is tutorial 14 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 

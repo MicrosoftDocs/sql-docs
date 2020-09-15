@@ -1,4 +1,5 @@
 ---
+description: "DROP MINING MODEL (DMX)"
 title: "DROP MINING MODEL (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # DROP MINING MODEL (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Deletes a mining model from the database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "FT:Crawl Aborted Event Class"
 title: "FT:Crawl Aborted Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_cleanup_log_shipping_history (Transact-SQL)"
 title: "sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cleanup_log_shipping_history"
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

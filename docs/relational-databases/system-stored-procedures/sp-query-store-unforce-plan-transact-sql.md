@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_unforce_plan (Transact-SQL)"
 title: "sp_query_store_unforce_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
@@ -18,12 +19,13 @@ helpviewer_keywords:
   - "sys.sp_query_store_unforce_plan"
   - "sp_query_store_unforce_plan"
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_unforce_plan (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Enables unforcing a previously forced plan for a particular query.  
   

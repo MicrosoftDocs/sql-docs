@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_contents (Transact-SQL)"
 title: "MSmerge_contents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_contents system table"
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_contents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "RAND (Transact-SQL)"
 title: "RAND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -22,7 +23,7 @@ ms.author: jrasnick
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RAND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns a pseudo-random **float** value from 0 through 1, exclusive.  
   
@@ -35,7 +36,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 RAND ( [ seed ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *seed*  
  Is an integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, or **int**) that gives the seed value. If *seed* is not specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assigns a seed value at random. For a specified seed value, the result returned is always the same.  
   

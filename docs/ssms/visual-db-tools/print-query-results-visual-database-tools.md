@@ -1,4 +1,5 @@
 ---
+description: "Print Query Results (Visual Database Tools)"
 title: Print Query Results
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,7 +19,7 @@ ms.reviewer:
 
 ---
 # Print Query Results (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To print the results of your query, you can copy the contents of the [Results pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) to another Windows program, such as a word processing program, then format and print it there.  
   
 The Query and View Designer puts query results onto the Clipboard using tabs as delimiters between columns and carriage return and linefeed characters as delimiters between rows.  

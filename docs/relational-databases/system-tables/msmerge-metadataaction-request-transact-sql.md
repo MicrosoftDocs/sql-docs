@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_metadataaction_request (Transact-SQL)"
 title: "MSmerge_metadataaction_request (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_metadataaction_request system table"
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,8 +1,9 @@
 ---
+description: "ConnectPromptEnum"
 title: "ConnectPromptEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -37,4 +38,4 @@ Specifies whether a dialog box should be displayed to prompt for missing paramet
 |AdoEnums.ConnectPrompt.NEVER|  
   
 ## Applies To  
- [Prompt Property-Dynamic (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
+ [Prompt Property-Dynamic (ADO)](./prompt-property-dynamic-ado.md)

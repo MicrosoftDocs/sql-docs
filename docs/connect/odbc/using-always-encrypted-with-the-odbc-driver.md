@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the ODBC Driver"
 description: "Learn how to develop ODBC applications using Always Encrypted and the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -35,7 +35,7 @@ Configure Always Encrypted in your database. This involves provisioning Always E
 The easiest way to enable both parameter encryption and resultset encrypted column decryption is by setting the value of the `ColumnEncryption` connection string keyword to **Enabled**. The following is an example of a connection string which enables Always Encrypted:
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 Always Encrypted may also be enabled in the DSN configuration, using the same key and value (which will be overridden by the connection string setting, if present), or programmatically with the `SQL_COPT_SS_COLUMN_ENCRYPTION` pre-connection attribute. Setting it this way overrides the value set in the connection string or DSN:
@@ -303,6 +303,8 @@ This section describes the built-in performance optimizations in the ODBC Driver
 
 If Always Encrypted is enabled for a connection, the driver will, by default, call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them. The above behavior ensures a high-level of transparency to the client application: The application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
+Beginning in version 17.6, the driver also caches the encryption metadata for prepared statements, improving performance by allowing subsequent calls to `SQLExecute` to not require an additional round-trip to retrieve the encryption metadata.
+
 ### Per-Statement Always Encrypted Behavior
 
 To control the performance impact of retrieving encryption metadata for parameterized queries, you can alter the Always Encrypted behavior for individual queries if it has been enabled on the connection. This way, you can ensure that `sys.sp_describe_parameter_encryption` is invoked only for queries that you know have parameters targeting encrypted columns. Note, however, that by doing so, you reduce transparency of encryption: if you encrypt additional columns in your database, you may need to change the code of your application to align it with the schema changes.
@@ -324,6 +326,8 @@ If most of the queries of a client application access encrypted columns, the fol
 - Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_DISABLED` on statements which do not access any encrypted columns. This will disable both calling `sys.sp_describe_parameter_encryption` as well as attempts to decrypt any values in the result set.
     
 - Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_RESULTSETONLY` on statements which do not have any parameters requiring encryption, but retrieve data from encrypted columns. This will disable calling `sys.sp_describe_parameter_encryption` and parameter encryption. Results containing encrypted columns will continue to be decrypted.
+
+- Use prepared statements for queries which will be executed more than once; prepare the query with `SQLPrepare` and save the statement handle, reusing it with `SQLExecute` each time it is executed. This is the preferred approach for performance even when there are no encrypted columns, and allows the driver to take advantage of cached metadata.
 
 ## Always Encrypted Security Settings
 
@@ -389,7 +393,7 @@ The driver supports authenticating to Azure Key Vault using the following creden
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 
-|Credential Type| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|Credential Type|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |Username/password| `KeyVaultPassword`|User Principal Name|Password|
 |Client ID/secret| `KeyVaultClientSecret`|Client ID|Secret|
@@ -402,13 +406,13 @@ The following connection strings show how to authenticate to Azure Key Vault wit
 **ClientID/Secret**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **Username/Password**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **Managed Identity (system-assigned)**
@@ -590,7 +594,7 @@ When using the **bcp** utility: To control the `ColumnEncryption` setting, use t
 
 The following table provides a summary of the actions when operating on an encrypted column:
 
-|`ColumnEncryption`|BCP Direction|Description|
+|<code>ColumnEncryption</code>|BCP Direction|Description|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (to client)|Retrieves ciphertext. The observed datatype is **varbinary(max)**.|
 |`Enabled`|OUT (to client)|Retrieves plaintext. The driver will decrypt the column data.|
@@ -635,7 +639,7 @@ See [Migrate Sensitive Data Protected by Always Encrypted](../../relational-data
 
 |IPD Field|Size/Type|Default Value|Description|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|When 0 (default): decision to encrypt this parameter is determined by availability of encryption metadata.<br><br>When nonzero: if encryption metadata is available for this parameter, it is encrypted. Otherwise, the request fails with error [CE300] [Microsoft][ODBC Driver 13 for SQL Server]Mandatory encryption was specified for a parameter but no encryption metadata was provided by the server.|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|When 0 (default): decision to encrypt this parameter is determined by availability of encryption metadata.<br><br>When nonzero: if encryption metadata is available for this parameter, it is encrypted. Otherwise, the request fails with error [CE300] [Microsoft][ODBC Driver 17 for SQL Server]Mandatory encryption was specified for a parameter but no encryption metadata was provided by the server.|
 
 ### bcp_control Options
 

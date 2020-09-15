@@ -22,7 +22,7 @@ ms.author: mathoma
   Within the context of an availability group, the primary role and secondary role of availability replicas are typically interchangeable in a process known as *failover*. Three forms of failover exist: automatic failover (without data loss), planned manual failover (without data loss), and forced manual failover (with possible data loss), typically called *forced failover*. Automatic and planned manual failover preserve all your data. An availability group fails over at the availability-replica level. That is, an availability group fails over to one of its secondary replicas (the current *failover target*).  
   
 > [!NOTE]  
->  Issues at the database level, such as a database becoming suspect due to the loss of a data file, deletion of a database, or corruption of a transaction log, do not cause an availability group to failover.  
+>   Unless [Database Level Health Detection](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) is configured, issues at the database level, such as a database becoming suspect due to the loss of a data file, deletion of a database, or corruption of a transaction log, do not cause an availability group to failover.  
   
  During the failover, the failover target takes over the primary role, recovers its databases, and brings them online as the new primary databases. The former primary replica, when available, switches to the secondary role, and its databases become secondary databases. Potentially, these roles can switch back and forth (or to a different failover target) in response to multiple failures or for administrative purposes.  
   
@@ -73,8 +73,8 @@ ms.author: mathoma
 ##  <a name="Overview"></a> Overview of Failover  
  The following table summarizes which forms of failover are supported under different availability and failover modes. For each pairing, the effective availability mode and failover mode is determined by the intersection of the modes of the primary replica plus the modes of one or more secondary replicas.  
   
-||Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Failover form|Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
 |Forced failover|Yes|Yes|Yes**&#42;**|  

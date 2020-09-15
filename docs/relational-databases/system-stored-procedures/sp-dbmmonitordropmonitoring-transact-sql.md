@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitordropmonitoring (Transact-SQL)"
 title: "sp_dbmmonitordropmonitoring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "sp_dbmmonitordropmonitoring"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

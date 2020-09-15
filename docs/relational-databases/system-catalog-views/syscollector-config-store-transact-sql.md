@@ -1,4 +1,5 @@
 ---
+description: "syscollector_config_store (Transact-SQL)"
 title: "syscollector_config_store (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_config_store view"
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

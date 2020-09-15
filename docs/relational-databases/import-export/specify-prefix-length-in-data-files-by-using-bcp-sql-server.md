@@ -19,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ms.custom: "seo-lt-2019"
 ---
 # Specify prefix length in data files using bcp (SQL Server)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   To provide the most compact file storage for the bulk export of data in native format to a data file, the **bcp** command precedes each field with one or more characters that indicates the length of the field. These characters are called *length prefix characters*.  
   
 ## The bcp Prompt for Prefix Length  

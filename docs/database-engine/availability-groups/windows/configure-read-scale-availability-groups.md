@@ -1,6 +1,6 @@
 ---
 title: "Configure read-scale for an availability group"
-description: "Configure your Always On availability group for read-scale workloads on Windows."
+description: "Learn how to configure your SQL Server Always On availability group for read-scale workloads on Windows."
 ms.custom: "seodec18"
 author: MashaMSFT
 ms.author: mathoma
@@ -73,7 +73,7 @@ This availability group isn't a high-availability configuration. If you need hig
 
 You can connect to read-only secondary replicas in either of two ways:
 * Applications can connect directly to the SQL Server instance that hosts the secondary replica and query the databases. For more information, see [Readable secondary replicas](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
-* Applications can also use read-only routing, which requires a listener. For more information, see [Read-only routing](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
+* Applications can also use read-only routing, which requires a listener. If you are deploying a read-scale scenario without a cluster manager, you can still create a listener that points to the IP address of the current primary replica and port different from the one SQL Server listens on. You will need to recreate the listener to point to the new primary IP address after a failover. For more information, see [Read-only routing](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
 
 ## Fail over the primary replica on a read-scale availability group
 

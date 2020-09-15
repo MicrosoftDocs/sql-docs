@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "6/2/2020"
+ms.date: "7/31/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,25 @@ ms.author: alexiva
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for Oracle contains the following changes:
+
+* Support for subquery factoring clauses within `INSERT`/`UPDATE`/`MERGE`/`DELETE` statements
+* Conversion message for `ON DELETE SET NULL` clause in cases of multi-path or circular references
+* Improved conversion of cursors created from dynamic SQL string
+* Update ODP.NET to v19.8
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for Oracle contains the following changes:
+
+* Support for subqueries in `INSERT ... VALUES` statement
+* Improved conversion of `COMMIT` statement
+* Fix bug in `CONNECT BY LEVEL` clause conversion
+* Updated parser error recovery logic to be less greedy
+* Use MSAL.NET library for interactive Azure Active Directory authentication
 
 ## SSMA v8.10
 
@@ -135,16 +154,16 @@ The v8.1 release of SSMA for Oracle is enhanced with targeted fixes that are des
 
 The v8.0 release of SSMA for Oracle is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > The SSMA for Oracle Extension Pack was also updated to allow remote installations on Azure SQL Database Managed Instance:
+  > The SSMA for Oracle Extension Pack was also updated to allow remote installations on Azure SQL Managed Instance:
   >
   > ![SSMA for Oracle Extension Pack](../media/ssma-oracle-ext-pack.png)
 
-  Some features, including Tester and Server-side data migration, are not supported when targeting Azure SQL Database Managed Instance. Read more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Some features, including Tester and Server-side data migration, are not supported when targeting Azure SQL Managed Instance. Read more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -312,8 +331,8 @@ The January 2014 Maintenance release of SSMA for Oracle contains the following c
 
 The July 2014 release of SSMA for Oracle contains the following changes:
 
-* Added support for Azure SQL DB.
-* Extension pack functionality moved to schema to support Azure SQL DB.
+* Added support for Azure SQL Database.
+* Extension pack functionality moved to schema to support Azure SQL Database.
 * Added support for Oracle Materialized views.
 * Added support for SQL Server 2014 Memory optimized tables.
 * Included performance improvements tested for databases with over 10k objects.

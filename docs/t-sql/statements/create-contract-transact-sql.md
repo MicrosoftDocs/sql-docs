@@ -1,4 +1,5 @@
 ---
+description: "CREATE CONTRACT (Transact-SQL)"
 title: "CREATE CONTRACT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "contracts [Service Broker], creating"
   - "message types [Service Broker], contracts"
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +41,10 @@ CREATE CONTRACT contract_name
        } [ ,...n] )   
 [ ; ]  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *contract_name*  
  Is the name of the contract to create. A new contract is created in the current database and owned by the principal specified in the AUTHORIZATION clause. Server, database, and schema names cannot be specified. The *contract_name* can be up to 128 characters.  
   

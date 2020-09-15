@@ -1,4 +1,5 @@
 ---
+description: "Performance Counters"
 title: "Performance Counters | Microsoft Docs"
 ms.custom: supportability
 ms.date: "08/27/2016"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Performance Counters
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installs a set of performance counters that you can use to monitor the performance of the data flow engine. For example, you can watch the "Buffers spooled" counter to determine whether data buffers are being written to disk temporarily while a package is running. This swapping reduces performance and indicates that the computer has insufficient memory.  

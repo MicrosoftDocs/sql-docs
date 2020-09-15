@@ -1,4 +1,5 @@
 ---
+description: "unwrap Method (SQLServerCallableStatement)"
 title: "unwrap Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

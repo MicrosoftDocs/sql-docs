@@ -1,8 +1,9 @@
 ---
+description: "BOF, EOF, and Bookmark Properties Example (VB)"
 title: "BOF, EOF, and Bookmark Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # BOF, EOF, and Bookmark Properties Example (VB)
-This example uses the [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) and [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) properties to display a message if a user tries to move past the first or last record of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). It uses the [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) property to let the user flag a record in a **Recordset** and return to it later.  
+This example uses the [BOF](./bof-eof-properties-ado.md) and [EOF](./bof-eof-properties-ado.md) properties to display a message if a user tries to move past the first or last record of a [Recordset](./recordset-object-ado.md). It uses the [Bookmark](./bookmark-property-ado.md) property to let the user flag a record in a **Recordset** and return to it later.  
   
 ```  
 'BeginBOFVB  
@@ -123,13 +124,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- This example uses the **Bookmark** and [Filter](../../../ado/reference/ado-api/filter-property.md) properties to create a limited view of the **Recordset**. Only records referenced by the array of bookmarks are accessible.  
+ This example uses the **Bookmark** and [Filter](./filter-property.md) properties to create a limited view of the **Recordset**. Only records referenced by the array of bookmarks are accessible.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## See Also  
- [BOF, EOF Properties (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF, EOF Properties (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark Property (ADO)](./bookmark-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

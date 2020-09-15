@@ -1,4 +1,5 @@
 ---
+description: "sys.xml_schema_facets (Transact-SQL)"
 title: "sys.xml_schema_facets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_facets catalog view"
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.xml_schema_facets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,9 +1,9 @@
 ---
+description: "sys.server_resource_stats (Azure SQL Database)"
 title: "sys.server_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2018"
 ms.service: sql-database
-ms.reviewer: carlrab, edmaca
 ms.topic: "language-reference"
 f1_keywords: 
   - "resource_stats"
@@ -23,9 +23,9 @@ monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 # sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Returns CPU usage, IO, and storage data for an Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and managed instance SKU. Historical data is retained for approximately 14 days.
+Returns CPU usage, IO, and storage data for Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and SKU. Historical data is retained for approximately 14 days.
 
-The **sys.server_resource_stats** view has different definitions depending on the version of the Azure SQL managed instance that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.
+The **sys.server_resource_stats** view has different definitions depending on the version of the Azure SQL Managed Instance that the database is associated with. Consider these differences and any modifications your application requires when upgrading to a new server version.
  
   
  The following table describes the columns available in a v12 server:  
@@ -41,7 +41,7 @@ The **sys.server_resource_stats** view has different definitions depending on th
 |virtual_core_count|int|Represents number of virtual cores per instance (8, 16 or 24 in Public Preview)|
 |avg_cpu_percent|decimal(5,2)|Average compute utilization in percentage of the limit of the Managed Instance service tier utilized by the instance. It is calculated as sum of CPU time of all resource pools for all databases in the instance and divided by available CPU time for that tier in the given interval.|
 |reserved_storage_mb|bigint|Reserved storage per instance (amount of storage space that customer purchased for the managed instance)|
-|storage_space_used_mb|decimal(18,2)|Storage used by all managed instance databases' files (including both user and system databases)|
+|storage_space_used_mb|decimal(18,2)|Storage used by all database files in a managed instance (including both user and system databases)|
 |io_request|bigint|Total number of i/o physical operations within the interval|
 |io_bytes_read|bigint|Number of physical bytes read within the interval|
 |io_bytes_written|bigint|Number of physical bytes written within the interval|

@@ -1,4 +1,5 @@
 ---
+description: "sp_help_agent_profile (Transact-SQL)"
 title: "sp_help_agent_profile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_help_agent_profile"
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

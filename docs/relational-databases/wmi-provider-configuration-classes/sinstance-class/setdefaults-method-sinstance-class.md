@@ -1,4 +1,5 @@
 ---
+description: "SetDefaults Method (SInstance Class)"
 title: "SetDefaults Method (SInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDefaults method"
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetDefaults Method (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

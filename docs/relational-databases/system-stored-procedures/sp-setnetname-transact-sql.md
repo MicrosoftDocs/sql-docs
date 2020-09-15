@@ -1,4 +1,5 @@
 ---
+description: "sp_setnetname (Transact-SQL)"
 title: "sp_setnetname (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_setnetname"
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

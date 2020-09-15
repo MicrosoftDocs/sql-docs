@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Set up a data science client for R development on SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 R integration is available in SQL Server 2016 or later when you include the R language option in an [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) installation. 
 
@@ -33,7 +33,7 @@ Whether you are an R developer new to SQL, or a SQL developer new to R and in-da
 
 For simple R development scenarios, you can use the RGUI executable, bundled in the base R distribution in MRO and SQL Server. This article explains how to use RGUI for both local and remote R sessions. For improved productivity, you should use a full-featured IDE such as [RStudio or Visual Studio](#install-ide).
 
-SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing R code. Almost any R code that you write in a development environment can be embedded in a stored procedure. You can step through other tutorials to learn about [SSMS and embedded R](../tutorials/sqldev-in-database-r-for-sql-developers.md).
+SSMS is a separate download, useful for creating and running stored procedures on SQL Server, including those containing R code. Almost any R code that you write in a development environment can be embedded in a stored procedure. You can step through other tutorials to learn about [SSMS and embedded R](../tutorials/r-taxi-classification-introduction.md).
 
 ## 1 - Install R packages
 

@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_job (Transact-SQL)"
 title: "sp_delete_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_job"
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_disable_collector (Transact-SQL)"
 title: "sp_syscollector_disable_collector (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_disable_collector"
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

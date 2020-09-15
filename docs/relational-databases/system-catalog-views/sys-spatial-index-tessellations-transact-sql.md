@@ -1,4 +1,5 @@
 ---
+description: "sys.spatial_index_tessellations (Transact-SQL)"
 title: "sys.spatial_index_tessellations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.spatial_index_tessellations catalog view"
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

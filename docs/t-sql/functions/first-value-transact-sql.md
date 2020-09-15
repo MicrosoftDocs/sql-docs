@@ -1,4 +1,5 @@
 ---
+description: "FIRST_VALUE (Transact-SQL)"
 title: "FIRST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2016"
@@ -21,7 +22,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FIRST_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the first value in an ordered set of values in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -35,7 +36,9 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *scalar_expression*  
  Is the value to be returned. *scalar_expression* can be a column, subquery, or other arbitrary expression that results in a single value. Other analytic functions are not permitted.  
   

@@ -1,4 +1,5 @@
 ---
+description: "INDEX_COL (Transact-SQL)"
 title: "INDEX_COL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -37,7 +38,9 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
     table_or_view_name', index_id , key_id )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  Is the name of the database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "GeneralFlags Property (SInstance Class)"
 title: "GeneralFlags Property (SInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "GeneralFlags property"
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # GeneralFlags Property (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

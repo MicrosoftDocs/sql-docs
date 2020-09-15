@@ -1,4 +1,5 @@
 ---
+description: "GET CONVERSATION GROUP (Transact-SQL)"
 title: "GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -22,8 +23,8 @@ helpviewer_keywords:
   - "GET CONVERSATION GROUP statement"
   - "conversations [Service Broker], groups"
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,9 @@ ms.author: carlrab
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WAITFOR  
  Specifies that the GET CONVERSATION GROUP statement waits for a message to arrive on the queue if no messages are currently present.  
   

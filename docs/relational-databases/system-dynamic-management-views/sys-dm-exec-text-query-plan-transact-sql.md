@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_text_query_plan (Transact-SQL)"
 title: "sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_text_query_plan dynamic management function"
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_text_query_plan (Transact-SQL)

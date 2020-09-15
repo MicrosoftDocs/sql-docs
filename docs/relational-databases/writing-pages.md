@@ -1,4 +1,5 @@
 ---
+description: "Writing Pages"
 title: "Writing Pages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: "pelopes"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Writing Pages
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The I/O from an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] includes logical and physical writes. A logical write occurs when data is modified in a page in the buffer cache. A physical write occurs when the page is written from the [buffer cache](../relational-databases/memory-management-architecture-guide.md) to disk.
 
@@ -42,7 +43,7 @@ A dirty page is written to disk in one of three ways:
  The lazy writer is a system process that keeps free buffers available by removing infrequently used pages from the buffer cache. Dirty pages are first written to disk. 
 
 * Eager writing   
- The eager write process writes dirty data pages associated with nonlogged operations such as bulk insert and select into. This process allows creating and writing new pages to take place in parallel. That is, the calling operation does not have to wait until the entire operation finishes before writing the pages to disk.
+ The eager write process writes dirty data pages associated with minimally logged operations such as bulk insert and select into. This process allows creating and writing new pages to take place in parallel. That is, the calling operation does not have to wait until the entire operation finishes before writing the pages to disk.
 
 * Checkpoint   
  The checkpoint process periodically scans the buffer cache for buffers with pages from a specified database and writes all dirty pages to disk. Checkpoints save time during a later recovery by creating a point at which all dirty pages are guaranteed to have been written to disk. The user may request a checkpoint operation by using the CHECKPOINT command, or the [!INCLUDE[ssDE](../includes/ssde-md.md)] may generate automatic checkpoints based on the amount of log space used and time elapsed since the last checkpoint. In addition, a checkpoint is generated when certain activities occur. For example, when a data or log file is added or removed from a database, or when the instance of SQL Server is stopped. For more information, see [Checkpoints and the Active Portion of the Log](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

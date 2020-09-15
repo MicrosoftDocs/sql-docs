@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_column_store_object_pool (Transact-SQL)"
 title: "sys.dm_column_store_object_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -10,12 +11,13 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_column_store_object_pool (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
  Returns counts of different types of object memory pool usage for columnstore index objects.  
   

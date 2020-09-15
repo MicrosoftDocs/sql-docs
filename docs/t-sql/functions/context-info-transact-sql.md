@@ -1,4 +1,5 @@
 ---
+description: "CONTEXT_INFO  (Transact-SQL)"
 title: "CONTEXT_INFO  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -34,7 +35,9 @@ This function returns the **context_info** value either set for the current sess
 ```sql
 CONTEXT_INFO()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return value
 The **context_info** value.
   

@@ -1,4 +1,5 @@
 ---
+description: "MSsubscription_agents (Transact-SQL)"
 title: "MSsubscription_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscription_agents system table"
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

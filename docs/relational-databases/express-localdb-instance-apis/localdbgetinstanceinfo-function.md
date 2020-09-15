@@ -1,4 +1,5 @@
 ---
+description: "LocalDBGetInstanceInfo Function"
 title: "LocalDBGetInstanceInfo Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBGetInstanceInfo Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

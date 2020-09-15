@@ -1,4 +1,5 @@
 ---
+description: "sp_helplogreader_agent (Transact-SQL)"
 title: "sp_helplogreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helplogreader_agent"
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

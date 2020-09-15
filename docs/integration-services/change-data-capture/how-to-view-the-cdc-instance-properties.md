@@ -1,4 +1,5 @@
 ---
+description: "How to View the CDC Instance Properties"
 title: "How to View the CDC Instance Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # How to View the CDC Instance Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to use the CDC Designer Console to view information about the instances that you create to help manage the operation of the instances.  

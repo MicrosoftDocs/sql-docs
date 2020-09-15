@@ -1,4 +1,5 @@
 ---
+description: "sp_replrestart (Transact-SQL)"
 title: "sp_replrestart (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replrestart"
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replrestart (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

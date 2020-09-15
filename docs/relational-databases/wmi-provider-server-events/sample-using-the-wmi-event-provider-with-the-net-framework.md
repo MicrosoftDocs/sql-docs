@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "sample applications [WMI]"
   - "managed code [WMI]"
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Sample: Using the WMI Event Provider with the .NET Framework
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

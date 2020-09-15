@@ -1,4 +1,5 @@
 ---
+description: "Exclude Duplicate Rows (Visual Database Tools)"
 title: Exclude Duplicate Rows
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,7 +21,7 @@ ms.reviewer:
 
 ---
 # Exclude Duplicate Rows (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 If you want to see only unique values in a result set, you can specify that you want to exclude duplicates from the result set.  
   
 ### To exclude duplicate rows from the result set  

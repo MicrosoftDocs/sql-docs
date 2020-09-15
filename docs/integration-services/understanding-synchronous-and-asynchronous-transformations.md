@@ -1,4 +1,5 @@
 ---
+description: "Understanding Synchronous and Asynchronous Transformations"
 title: "Understanding Synchronous and Asynchronous Transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Understanding Synchronous and Asynchronous Transformations
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To understand the difference between a synchronous and an asynchronous transformation in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], it is easiest to start with an understanding of a synchronous transformation. If a synchronous transformation does not meet your needs, your design might require an asynchronous transformation.  

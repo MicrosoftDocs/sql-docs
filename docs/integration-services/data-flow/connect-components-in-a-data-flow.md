@@ -1,4 +1,5 @@
 ---
+description: "Connect Components in a Data Flow"
 title: "Connect Components in a Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Connect Components in a Data Flow
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to connect the output of components in a data flow to other components within the same data flow.  

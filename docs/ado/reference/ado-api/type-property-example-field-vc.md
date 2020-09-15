@@ -1,8 +1,9 @@
 ---
+description: "Type Property Example (Field) (VC++)"
 title: "Type Property Example (Field) (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Type Property Example (Field) (VC++)
-This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the **Type** property of all the [Field](../../../ado/reference/ado-api/field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  
+This example demonstrates the [Type](./type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the **Type** property of all the [Field](./field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  
   
 ## Example  
   
@@ -165,5 +166,5 @@ void PrintComError(_com_error &e) {
  **Name: hire_date**  
  **Type: adDBTimeStamp**   
 ## See Also  
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field Object](./field-object.md)   
+ [Type Property (ADO)](./type-property-ado.md)

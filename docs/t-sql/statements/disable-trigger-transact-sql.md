@@ -1,4 +1,5 @@
 ---
+description: "DISABLE TRIGGER (Transact-SQL)"
 title: "DISABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -21,8 +22,8 @@ helpviewer_keywords:
   - "triggers [SQL Server], disabling"
   - "disabling triggers"
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +39,9 @@ DISABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the trigger belongs. *schema_name* cannot be specified for DDL or logon triggers.  
   

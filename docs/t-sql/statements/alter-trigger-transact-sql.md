@@ -1,4 +1,5 @@
 ---
+description: "ALTER TRIGGER (Transact-SQL)"
 title: "ALTER TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/08/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "ALTER TRIGGER statement"
   - "DML triggers, modifying"
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +130,9 @@ AS { sql_statement
     [ <EXECUTE AS Clause> ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which a DML trigger belongs. DML triggers are scoped to the schema of the table or view on which they are created. *schema**_name* is optional only if the DML trigger and its corresponding table or view belong to the default schema. *schema_name* cannot be specified for DDL or logon triggers.  
   

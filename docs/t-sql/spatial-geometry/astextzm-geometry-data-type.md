@@ -1,4 +1,5 @@
 ---
+description: "AsTextZM (geometry Data Type)"
 title: "AsTextZM (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -32,7 +33,9 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representatio
 .AsTextZM ()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
   
  CLR return type: **SqlChars**  

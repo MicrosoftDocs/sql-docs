@@ -1,8 +1,8 @@
 ---
 title: Connect your SQL Server using Windows authentication (Kerberos)
-description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio
+description: Learn how to connect Azure Data Studio to SQL Server using Microsoft Kerberos integrated authentication.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
@@ -20,7 +20,7 @@ In order to use Integrated Authentication (Windows Authentication) on macOS or L
 ## Prerequisites
 
 - Access to a Windows domain-joined machine in order to query your Kerberos Domain Controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be SPNs registered for each instance of Sql Server you are trying to connect to. For more information, see [Registering a Service Principal Name](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be SPNs registered for each instance of Sql Server you are trying to connect to. For more information, see [Registering a Service Principal Name](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats).
 
 
 ## Checking if Sql Server has Kerberos Setup
@@ -120,8 +120,6 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 ### macOS
 
 - Join your macOS to the Active Directory Domain Controller by following these steps:
-
-
 
 ## Configure KDC in krb5.conf
 

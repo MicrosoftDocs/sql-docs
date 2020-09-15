@@ -1,6 +1,6 @@
 ---
-title: "Updating Data in Rowsets | Microsoft Docs"
-description: "Updating data in rowsets using OLE DB Driver for SQL Server"
+title: Updating data in rowsets (OLE DB driver)
+description: Learn how the OLE DB Driver for SQL Server updates SQL Server data when a consumer updates a modifiable rowset that contains that data.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -15,11 +15,11 @@ helpviewer_keywords:
   - "OLE DB rowsets, updating data"
   - "OLE DB Driver for SQL Server, data updates"
   - "data updates [SQL Server], OLE DB"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Updating Data in Rowsets
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

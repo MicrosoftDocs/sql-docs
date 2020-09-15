@@ -1,4 +1,5 @@
 ---
+description: "ALTER VIEW (Transact-SQL)"
 title: "ALTER VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2018"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "modifying views"
   - "ALTER VIEW statement"
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER VIEW (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifies a previously created view. This includes an indexed view. ALTER VIEW does not affect dependent stored procedures or triggers and does not change permissions.  
   
@@ -53,7 +54,9 @@ AS <select_statement>
 
 ``` 
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the view belongs.  
   

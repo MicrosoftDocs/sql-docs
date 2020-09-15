@@ -1,4 +1,5 @@
 ---
+description: "sys.asymmetric_keys (Transact-SQL)"
 title: "sys.asymmetric_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.asymmetric_keys catalog view"
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.asymmetric_keys (Transact-SQL)

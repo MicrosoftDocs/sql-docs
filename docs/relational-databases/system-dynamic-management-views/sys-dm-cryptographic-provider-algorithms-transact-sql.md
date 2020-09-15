@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_cryptographic_provider_algorithms (Transact-SQL)"
 title: "sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_algorithms dynamic management function"
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

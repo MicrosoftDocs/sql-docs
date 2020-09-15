@@ -1,4 +1,5 @@
 ---
+description: "SetNumValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetNumValue Method (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetNumValue method"
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetNumValue Method (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

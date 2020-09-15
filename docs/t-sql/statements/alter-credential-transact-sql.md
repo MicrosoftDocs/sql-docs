@@ -1,4 +1,5 @@
-﻿---
+---
+description: "ALTER CREDENTIAL (Transact-SQL)"
 title: "ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/07/2018
@@ -37,7 +38,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Specifies the name of the credential that is being altered.  
   

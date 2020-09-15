@@ -1,4 +1,5 @@
 ---
+description: "setFetchDirection Method (SQLServerStatement)"
 title: "setFetchDirection Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

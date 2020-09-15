@@ -1,4 +1,5 @@
 ---
+description: "sp_helpmergearticlecolumn (Transact-SQL)"
 title: "sp_helpmergearticlecolumn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpmergearticlecolumn"
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

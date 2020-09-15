@@ -1,4 +1,5 @@
 ---
+description: "DROP FULLTEXT CATALOG (Transact-SQL)"
 title: "DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "deleting full-text catalogs"
   - "DROP FULLTEXT CATALOG statement"
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,9 @@ ms.author: carlrab
 DROP FULLTEXT CATALOG catalog_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *catalog_name*  
  Is the name of the catalog to be removed. If *catalog_name* does not exist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error and does not perform the DROP operation. The filegroup of the full-text catalog must not be marked OFFLINE or READONLY for the command to succeed.  
   

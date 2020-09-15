@@ -1,4 +1,5 @@
 ---
+description: "FULLTEXTCATALOGPROPERTY (Transact-SQL)"
 title: "FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,7 +35,9 @@ Returns information about full-text catalog properties in [!INCLUDE[ssCurrent](.
 FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 > [!NOTE]  
 >  The following properties will be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** and **PopulateStatus**. Avoid using these properties in new development work, and plan to modify applications that currently use any of them.  

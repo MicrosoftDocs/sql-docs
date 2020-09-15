@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_packages (Transact-SQL)"
 title: "sys.dm_xe_packages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_xe_packages dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +47,8 @@ ms.author: carlrab
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Many to one|  
   
 ## See also  

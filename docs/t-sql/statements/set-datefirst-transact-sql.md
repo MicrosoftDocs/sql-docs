@@ -1,4 +1,5 @@
 ---
+description: "SET DATEFIRST (Transact-SQL)"
 title: "SET DATEFIRST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,12 +23,12 @@ helpviewer_keywords:
   - "weekdays [SQL Server]"
   - "options [SQL Server], date"
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFIRST (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sets the first day of the week to a number from 1 through 7.  
   
@@ -49,7 +50,9 @@ SET DATEFIRST { number | @number_var }
 SET DATEFIRST 7 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *number* | **@**_number_var_  
  Is an integer that indicates the first day of the week. It can be one of the following values.  
   

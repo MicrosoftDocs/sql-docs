@@ -1,4 +1,5 @@
 ---
+description: "Monitoring Memory-Optimized System-Versioned Temporal Tables"
 title: "Monitoring Memory-Optimized System-Versioned Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -8,14 +9,16 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ---
 # Monitoring Memory-Optimized System-Versioned Temporal Tables
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 You can use existing views to track detailed and summarized memory consumption for every system-versioned memory-optimized table.
 

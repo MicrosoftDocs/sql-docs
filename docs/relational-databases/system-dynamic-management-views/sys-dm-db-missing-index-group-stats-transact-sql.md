@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_missing_index_group_stats (Transact-SQL)"
 title: "sys.dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_db_missing_index_group_stats dynamic management view"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view"
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_group_stats (Transact-SQL)

@@ -1,11 +1,12 @@
 ---
+description: "ADO Programmer's Guide for using ADO Objects"
 title: "ADO Programmer's Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, programmer's guide"
@@ -18,14 +19,14 @@ This documentation provides an overview of how to use ADO objects to work with d
 
  This section contains the following topics.
 
--   [Introduction](../../ado/guide/ado-introduction.md)
+-   [Introduction](./ado-introduction.md)
 
--   [ActiveX Data Objects (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
+-   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15)
 
--   [Remote Data Services (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [Remote Data Services (RDS)](./remote-data-service/remote-data-service-rds.md)
 
--   [ADO (Multidimensional) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
+-   [ADO (Multidimensional) (ADO MD)](./multidimensional/ado-multidimensional-ado-md.md)
 
--   [ADO Extensions for Data Definition Language and Security (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+-   [ADO Extensions for Data Definition Language and Security (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [Appendixes](../../ado/guide/appendixes/ado-appendixes.md)
+-   [Appendixes](./appendixes/appendix-a-providers.md?view=sql-server-ver15)

@@ -1,4 +1,5 @@
 ---
+description: "FILE_IDEX (Transact-SQL)"
 title: "FILE_IDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -36,7 +37,9 @@ This function returns the file identification (ID) number for the specified logi
 FILE_IDEX ( file_name )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *file_name*  
 An expression of type **sysname** that returns the file ID value 'FILE_IDEX' for the name of the file. 
   

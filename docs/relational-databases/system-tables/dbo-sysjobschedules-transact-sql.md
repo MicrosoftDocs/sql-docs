@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobschedules (Transact-SQL)"
 title: "dbo.sysjobschedules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobschedules system table"
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

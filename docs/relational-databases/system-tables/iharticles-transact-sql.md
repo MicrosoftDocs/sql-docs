@@ -1,4 +1,5 @@
 ---
+description: "IHarticles (Transact-SQL)"
 title: "IHarticles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHarticles system table"
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

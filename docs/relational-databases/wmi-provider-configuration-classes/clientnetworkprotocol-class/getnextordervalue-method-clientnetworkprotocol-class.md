@@ -1,4 +1,5 @@
 ---
+description: "GetNextOrderValue Method (ClientNetworkProtocol Class)"
 title: "GetNextOrderValue Method (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "GetNextOrderValue method"
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

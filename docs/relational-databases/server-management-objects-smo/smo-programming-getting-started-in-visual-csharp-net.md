@@ -1,4 +1,5 @@
 ---
+description: "SMO Programming - Getting Started in Visual C# .NET"
 title: "Getting Started in Visual C# .NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
@@ -13,7 +14,7 @@ ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Programming - Getting Started in Visual C# .NET
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET is one of the managed programming languages that are supported by the common language runtime (CLR) in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Many For more information about the C# language, see the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET documentation. You can use [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] to develop SMO applications.  
   

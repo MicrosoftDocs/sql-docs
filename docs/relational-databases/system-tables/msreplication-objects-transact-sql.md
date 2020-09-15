@@ -1,4 +1,5 @@
 ---
+description: "MSreplication_objects (Transact-SQL)"
 title: "MSreplication_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_objects system table"
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSreplication_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

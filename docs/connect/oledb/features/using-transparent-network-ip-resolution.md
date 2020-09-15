@@ -1,4 +1,5 @@
 ---
+description: "Using Transparent Network IP Resolution"
 title: "Using Transparent Network IP Resolution | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/02/2020"
@@ -11,7 +12,7 @@ author: chris-rossi
 ms.author: v-chross
 ---
 # Using Transparent Network IP Resolution
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

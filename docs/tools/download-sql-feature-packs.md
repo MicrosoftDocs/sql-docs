@@ -14,7 +14,7 @@ ms.date: 12/15/2019
 ---
 # Download SQL Server extended features and tools
 
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
 
@@ -38,13 +38,13 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
-| [Drivers for PHP for Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=239640) | The Microsoft Drivers for PHP for SQL Server are PHP 5 extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
-| [JDBC Drivers for Microsoft SQL Server®](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11774) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
+| [Drivers for PHP for SQL Server](https://aka.ms/downloadmsphpsql) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
+| [JDBC Driver for SQL Server](https://aka.ms/downloadmssqljdbc) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | The SQL Server Data-tier Application (DAC) framework is a component based on the .NET Framework that provides application lifecycle services for database development and management. |
-| [SQL Server Semantic Language Statistics](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
-| [SQL Server Shared Management Objects](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
+| [SQL Server Semantic Language Statistics](../relational-databases/search/install-and-configure-semantic-search.md) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
+| [SQL Server Shared Management Objects](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
 | [System CLR Types](https://go.microsoft.com/fwlink/?linkid=2108808) | The SQL Server System CLR Types package contains the components implementing the geometry, geography, and hierarchy ID types in SQL Server. **Note: This component also requires [Windows Installer 4.5](https://go.microsoft.com/fwlink/?LinkId=123373)**. |
-| [Windows PowerShell Extensions for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-powershell?view=sql-server-2017) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
+| [Windows PowerShell Extensions for Microsoft SQL Server](../database-engine/install-windows/install-sql-server-powershell.md?view=sql-server-2017) | The Microsoft Windows PowerShell Extensions for SQL Server include a provider and a set of cmdlets that enable administrators and developers to build PowerShell scripts for managing instances of SQL Server. |
 |||
 
 ## Database engine
@@ -53,14 +53,14 @@ This article provides a brief explanation of the various downloads and stand-alo
 |----|-----|
 | [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | The SQL Server Remote Blob Store is a method for storing blobs of unstructured data in an external Content Addressable data store. The component consists of a client-side DLL that is linked into a user application, and a set of stored procedures to be installed on SQL Server. |
-| [SQL Server Upgrade Advisor](https://docs.microsoft.com/sql/sql-server/install/how-to-install-upgrade-advisor) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
+| [SQL Server Upgrade Advisor](../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
 |||
 
 ## Integration Services
 
 | Feature | Description |
 |----|-----|
-| [Integration Services Feature Pack for Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis) | The Microsoft Integration Services Feature Pack for Azure provides tools for using IS to connect to the Azure Stack. |
+| [Integration Services Feature Pack for Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md) | The Microsoft Integration Services Feature Pack for Azure provides tools for using IS to connect to the Azure Stack. |
 | [Integration Services Feature Pack for latest SQL Server](https://www.microsoft.com/download/details.aspx?id=100303) | These stand-alone packages provide additional value for the latest Microsoft SQL Server Integration Services. |
 |||
 
@@ -83,7 +83,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [ODBC Drivers for Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=852531) | The Microsoft ODBC Drivers for SQL Server provide native connectivity from Windows and Unix to Microsoft SQL Server and Microsoft Azure SQL Database. |
-| [OLEDB Provider for DB2 for Microsoft SQL Server](https://docs.microsoft.com/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | The Microsoft OLE DB Provider for DB2 v5.0 offers a set of technologies and tools for integrating vital data stored in IBM DB2 databases with new solutions. SQL Server developers and administrators can use the data provider with integration Services, Analysis Services, Replication, Reporting Services, and Distributed Query Processor. Read the Installing Data Provider section of the product documentation, which is available on-line or as a download. |
+| [OLEDB Provider for DB2 for Microsoft SQL Server](/host-integration-server/db2oledbv/installing-data-provider-version-6-0) | The Microsoft OLE DB Provider for DB2 v5.0 offers a set of technologies and tools for integrating vital data stored in IBM DB2 databases with new solutions. SQL Server developers and administrators can use the data provider with integration Services, Analysis Services, Replication, Reporting Services, and Distributed Query Processor. Read the Installing Data Provider section of the product documentation, which is available on-line or as a download. |
 |||
 
 ## Reporting Services
@@ -91,7 +91,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [Report Builder](https://www.microsoft.com/download/details.aspx?id=53613) | Report Builder provides a productive report-authoring environment for IT professionals and power users. It supports the full operational reporting capabilities of SQL Server Reporting Services. |
-| [Reporting Services Add-in for Microsoft SharePoint](https://docs.microsoft.com/sql/reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products)| Reporting Services Add-in for Microsoft SharePoint technologies allows you to integrate Reporting Services features with the collaborative SharePoint experience. |
+| [Reporting Services Add-in for Microsoft SharePoint](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)| Reporting Services Add-in for Microsoft SharePoint technologies allows you to integrate Reporting Services features with the collaborative SharePoint experience. |
 | [Report Viewer control for ASP.NET Web Forms apps](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/) | This Report Viewer control enables you to embed SQL Server Reporting Services paginated reports into your ASP.NET Web Forms apps. |
 | [Report Viewer control for Windows Forms apps](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/) | This Report Viewer control enables you to embed SQL Server Reporting Services paginated reports into your Windows Forms apps. |
 |||
@@ -100,14 +100,14 @@ This article provides a brief explanation of the various downloads and stand-alo
 
 | Feature | Description |
 |----|-----|
-| [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| SQL Server Data Tools is a modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)| SQL Server Data Tools is a modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio.|
 |||
 
 ## See also
 
 - [SQL Server Management Studio documentation](../ssms/download-sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/download.md)
-- [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15)
+- [Additional updates and service packs](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md?view=sql-server-ver15)
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

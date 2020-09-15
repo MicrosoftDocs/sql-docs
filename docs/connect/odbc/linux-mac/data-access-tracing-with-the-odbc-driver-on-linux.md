@@ -1,7 +1,8 @@
 ---
-title: "Data Access Tracing with the ODBC Driver on Linux and macOS | Microsoft Docs"
+title: "Data Access Tracing with the ODBC Driver on Linux and macOS"
+description: "Learn how to enable tracing on Linux and macOS with the Microsoft ODBC Driver for SQL Server to output a log file when troubleshooting application behavior."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -39,7 +40,7 @@ Tracing applies to all applications that use the driver in `odbcinst.ini`. To no
 $ ODBCSYSINI=/home/myappuser myapp
 ```
 
-In this case, you can add `Trace=Yes` to the `[ODBC Driver 13 for SQL Server]` section of `/home/myappuser/odbcinst.ini`.
+In this case, you can add `Trace=Yes` to the `[ODBC Driver 17 for SQL Server]` section of `/home/myappuser/odbcinst.ini`.
 
 ## Determining which odbc.ini File the Driver is Using
 

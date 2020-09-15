@@ -1,4 +1,5 @@
 ---
+description: "IHconstrainttypes (Transact-SQL)"
 title: "IHconstrainttypes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHconstrainttypes system table"
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHconstrainttypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

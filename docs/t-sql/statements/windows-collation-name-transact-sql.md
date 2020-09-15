@@ -1,4 +1,5 @@
 ---
+description: "Windows Collation Name (Transact-SQL)"
 title: "Windows Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2019"
@@ -15,13 +16,13 @@ helpviewer_keywords:
   - "collations [SQL Server], Windows collations"
   - "Collation Designator"
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Windows Collation Name (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The Windows collation name is composed of the collation designator and the comparison styles.
 
@@ -39,6 +40,8 @@ CollationDesignator_<ComparisonStyle>
 | { _UTF8 }
 | { _BIN | _BIN2 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

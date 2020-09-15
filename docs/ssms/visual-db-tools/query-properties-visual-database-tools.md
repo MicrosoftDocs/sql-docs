@@ -1,4 +1,5 @@
 ---
+description: "Query Properties (Visual Database Tools)"
 title: Query Properties
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Query Properties (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 These properties appear in the Properties window when you have a query open in Query and View Designer. Unless otherwise noted, you can edit these properties in the Properties window.  
   
 > [!NOTE]  

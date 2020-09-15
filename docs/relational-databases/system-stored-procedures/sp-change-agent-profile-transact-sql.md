@@ -1,4 +1,5 @@
 ---
+description: "sp_change_agent_profile (Transact-SQL)"
 title: "sp_change_agent_profile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_change_agent_profile"
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

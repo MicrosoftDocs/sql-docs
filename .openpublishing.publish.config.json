@@ -12,8 +12,7 @@
       ],
       "monikers": [],
       "moniker_ranges": [
-        "sql-server-2014",
-        "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions"
+        "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sqlallproducts-allversions"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -67,10 +66,6 @@
     }
   ],
   "branch_target_mapping": {
-    "release-sqlseattle": [
-      "Publish",
-      "PDF"
-    ],
     "live": [
       "Publish",
       "PDF"

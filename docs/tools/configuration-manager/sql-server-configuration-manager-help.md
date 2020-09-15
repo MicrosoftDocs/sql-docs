@@ -6,7 +6,7 @@ ms.date: "02/01/2018"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, help"
@@ -77,6 +77,5 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  [SQL Server Services](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server Network Configuration](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 Configuration](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
- [Choosing a Network Protocol](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
-  
+ [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))  
   

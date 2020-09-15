@@ -1,4 +1,5 @@
 ---
+description: "STCurveN (geography Data Type)"
 title: "STCurveN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STCurveN( n )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *n*  
  Is an **int** expression between 1 and the number of curves in the **geography** instance.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_memory_cache_entries (Transact-SQL)"
 title: "sys.dm_os_memory_cache_entries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_cache_entries dynamic management view"
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

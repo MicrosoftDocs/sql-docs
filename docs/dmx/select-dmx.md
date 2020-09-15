@@ -1,4 +1,5 @@
 ---
+description: "SELECT (DMX)"
 title: "SELECT (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The **SELECT** statement in Data Mining Extensions (DMX) is used for the following tasks in data mining:  
   

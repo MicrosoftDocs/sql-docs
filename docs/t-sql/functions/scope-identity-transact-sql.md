@@ -1,4 +1,5 @@
 ---
+description: "SCOPE_IDENTITY (Transact-SQL)"
 title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
@@ -34,7 +35,9 @@ ms.author: vanto
 SCOPE_IDENTITY()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **numeric(38,0)**  
   
 ## Remarks  

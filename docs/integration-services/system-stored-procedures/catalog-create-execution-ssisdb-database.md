@@ -1,4 +1,5 @@
 ---
+description: "catalog.create_execution (SSISDB Database)"
 title: "catalog.create_execution (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # catalog.create_execution (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Enabled Property (ServerNetworkProtocolIpAddress Class)"
 title: "Enabled Property (ServerNetworkProtocolIpAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Enabled property"
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Enabled Property (ServerNetworkProtocolIpAddress Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

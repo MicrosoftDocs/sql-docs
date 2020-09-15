@@ -1,4 +1,5 @@
 ---
+description: "sp_dropdynamicsnapshot_job (Transact-SQL)"
 title: "sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropdynamicsnapshot_job"
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

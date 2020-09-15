@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergesubscription (Transact-SQL)"
 title: "sp_addmergesubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergesubscription"
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

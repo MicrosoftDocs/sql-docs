@@ -1,4 +1,5 @@
 ---
+description: "EXECUTE AS Clause (Transact-SQL)"
 title: "EXECUTE AS Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -65,7 +66,9 @@ DDL Triggers with Database Scope
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **CALLER**  
  Specifies the statements inside the module are executed in the context of the caller of the module. The user executing the module must have appropriate permissions not only on the module itself, but also on any database objects that are referenced by the module.  
   

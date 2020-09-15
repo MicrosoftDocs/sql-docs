@@ -1,4 +1,5 @@
 ---
+description: "Filestream and FileTable Catalog Views (Transact-SQL)"
 title: "Filestream and FileTable Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FileTables [SQL Server], catalog views"
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Filestream and FileTable Catalog Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

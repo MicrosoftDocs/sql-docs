@@ -1,4 +1,5 @@
 ---
+description: "ProtocolDisplayName Property (ClientNetLibInfo Class)"
 title: "ProtocolDisplayName Property (ClientNetLibInfo)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolDisplayName property"
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ProtocolDisplayName Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

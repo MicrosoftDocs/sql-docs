@@ -1,4 +1,5 @@
 ---
+description: "NEXT VALUE FOR (Transact-SQL)"
 title: "NEXT VALUE FOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2016"
@@ -40,7 +41,9 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
    [ OVER (<over_order_by_clause>) ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  The name of the database that contains the sequence object.  
   

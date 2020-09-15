@@ -1,4 +1,5 @@
 ---
+description: "sp_helpqreader_agent (Transact-SQL)"
 title: "sp_helpqreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpqreader_agent"
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

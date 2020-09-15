@@ -1,4 +1,5 @@
 ---
+description: "sys.sensitivity_classifications (Transact-SQL)"
 title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
 ms.date: 03/25/2019
 ms.reviewer: ""
@@ -25,7 +26,7 @@ helpviewer_keywords:
 monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns a row for each classified item in the database.
 

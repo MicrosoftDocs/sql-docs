@@ -1,4 +1,5 @@
 ---
+description: "TABLE_CONSTRAINTS (Transact-SQL)"
 title: "TABLE_CONSTRAINTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.TABLE_CONSTRAINTS view"
   - "TABLE_CONSTRAINTS view"
 ms.assetid: 687f3284-2849-4853-8a5c-fc936deceae0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLE_CONSTRAINTS (Transact-SQL)

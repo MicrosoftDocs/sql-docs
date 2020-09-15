@@ -1,4 +1,5 @@
 ---
+description: "Add Steps to a SQL Server Agent Master Job"
 title: "Add Steps to a SQL Server Agent Master Job"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -12,7 +13,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Add Steps to a SQL Server Agent Master Job
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This topic describes how to add steps to a SQL Server Agent master job in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **In This Topic**  

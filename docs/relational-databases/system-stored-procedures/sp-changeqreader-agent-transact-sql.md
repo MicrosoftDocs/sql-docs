@@ -1,4 +1,5 @@
 ---
+description: "sp_changeqreader_agent (Transact-SQL)"
 title: "sp_changeqreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changeqreader_agent"
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

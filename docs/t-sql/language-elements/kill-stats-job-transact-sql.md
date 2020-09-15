@@ -1,4 +1,5 @@
 ---
+description: "KILL STATS JOB (Transact-SQL)"
 title: "KILL STATS JOB (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
@@ -37,7 +38,9 @@ ms.author: jroth
 KILL STATS JOB job_id   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *job_id*  
  Is the job_id field returned by the sys.dm_exec_background_job_queue dynamic management view for the job.  
   

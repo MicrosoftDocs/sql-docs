@@ -1,4 +1,5 @@
 ---
+description: "Database Maintenance Plan Tables (Transact-SQL)"
 title: "Database Maintenance Plan Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], system tables"
   - "system tables [SQL Server], database maintenance plans"
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Maintenance Plan Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

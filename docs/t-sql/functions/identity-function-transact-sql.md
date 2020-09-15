@@ -1,4 +1,5 @@
 ---
+description: "IDENTITY (Function) (Transact-SQL)"
 title: "IDENTITY (Function) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -39,7 +40,9 @@ ms.author: vanto
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *data_type*  
  Is the data type of the identity column. Valid data types for an identity column are any data types of the integer data type category, except for the **bit** data type, or **decimal** data type.  
   

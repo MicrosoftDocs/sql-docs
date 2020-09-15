@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_drop_job (Transact-SQL)"
 title: "sys.sp_cdc_drop_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_drop_job"
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

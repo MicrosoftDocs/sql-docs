@@ -18,9 +18,8 @@ Before you can start to write unit tests that evaluate database objects, you mus
   
 You can place all of your SQL Server unit tests for a given database project within a single test project. However, you might want to create additional test projects based on your answers to the following questions:  
   
-|||  
-|-|-|  
-|**Question**|**Decision**|  
+|Question|Decision|  
+|-|-|   
 |Do different SQL Server unit tests need to access different database connections for test execution or test validation?|If yes, you need more than one test project. You cannot specify more than one database connection for test execution. However, you can specify a different database connection for test validation.|  
 |Do you want to deploy different database projects for different unit tests?|If yes, you need more than one test project. A test project can only deploy a single database project.|  
   

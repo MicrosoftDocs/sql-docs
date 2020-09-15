@@ -1,4 +1,5 @@
 ---
+description: "DROP REMOTE SERVICE BINDING (Transact-SQL)"
 title: "DROP REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], dropping"
   - "DROP REMOTE SERVICE BINDING statement"
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,9 @@ DROP REMOTE SERVICE BINDING binding_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *binding_name*  
  Is the name of the remote service binding to drop. Server, database, and schema names cannot be specified.  
   

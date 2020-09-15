@@ -1,6 +1,6 @@
 ---
 title: "Change the account for SSIS Scale Out logging | Microsoft Docs"
-description: "This article describes how to change the user account for SSIS Scale Out logging"
+description: "Learn how to change the account you use for SQL Server Integration Services (SSIS) Scale Out logging."
 ms.custom: performance
 ms.date: 06/29/2020
 ms.prod: sql
@@ -12,7 +12,7 @@ ms.reviewer: maghan
 ---
 # Change the account for Scale Out logging
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 When you run SSIS packages in Scale Out, the event messages are logged in the SSISDB database with an auto-created user account named **##MS_SSISLogDBWorkerAgentLogin##**. The login for this user uses SQL Server authentication.

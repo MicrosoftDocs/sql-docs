@@ -1,4 +1,5 @@
 ---
+description: "DENY Asymmetric Key Permissions (Transact-SQL)"
 title: "DENY Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -39,7 +40,9 @@ DENY { permission  [ ,...n ] }
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an asymmetric key. Listed below.  
   

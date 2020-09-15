@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_force_plan (Transact-SQL)"
 title: "sp_query_store_force_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
@@ -18,14 +19,15 @@ helpviewer_keywords:
   - "sys.sp_query_store_force_plan"
   - "sp_query_store_force_plan"
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_force_plan (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
-  Enables forcing a particular plan for a particular query.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+Enables forcing a particular plan for a particular query.  
   
  When a plan is forced for a particular query, every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encounters the query, it tries to force the plan in the Query Optimizer. If plan forcing fails, an Extended Event is fired and the Query Optimizer is instructed to optimize in the normal way.  
   

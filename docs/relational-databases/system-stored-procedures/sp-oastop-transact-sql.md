@@ -1,4 +1,5 @@
 ---
+description: "sp_OAStop (Transact-SQL)"
 title: "sp_OAStop (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAStop"
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OAStop (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

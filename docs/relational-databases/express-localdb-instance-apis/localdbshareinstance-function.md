@@ -1,4 +1,5 @@
 ---
+description: "LocalDBShareInstance Function"
 title: "LocalDBShareInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBShareInstance Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

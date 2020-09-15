@@ -1,4 +1,5 @@
 ---
+description: "sys.resource_governor_configuration (Transact-SQL)"
 title: "sys.resource_governor_configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_configuration catalog view"
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

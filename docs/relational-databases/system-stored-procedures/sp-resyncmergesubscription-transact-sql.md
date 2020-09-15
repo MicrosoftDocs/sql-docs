@@ -1,4 +1,5 @@
 ---
+description: "sp_resyncmergesubscription (Transact-SQL)"
 title: "sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_resyncmergesubscription"
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

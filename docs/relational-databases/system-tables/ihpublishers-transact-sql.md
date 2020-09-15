@@ -1,4 +1,5 @@
 ---
+description: "IHpublishers (Transact-SQL)"
 title: "IHpublishers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishers system table"
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

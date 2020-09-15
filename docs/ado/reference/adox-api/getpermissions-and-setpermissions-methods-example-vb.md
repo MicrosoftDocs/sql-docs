@@ -1,8 +1,9 @@
 ---
+description: "GetPermissions and SetPermissions Methods Example (VB)"
 title: "GetPermissions and SetPermissions Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # GetPermissions and SetPermissions Methods Example (VB)
-This example demonstrates the [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) and [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) methods. The following code gives full access for the Orders table to the Admin user.  
+This example demonstrates the [GetPermissions](./getpermissions-method-adox.md) and [SetPermissions](./setpermissions-method-adox.md) methods. The following code gives full access for the Orders table to the Admin user.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -89,8 +90,8 @@ End Sub
 ```  
   
 ## See Also  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [GetPermissions Method (ADOX)](./getpermissions-method-adox.md)   
+ [SetPermissions Method (ADOX)](./setpermissions-method-adox.md)   
+ [User Object (ADOX)](./user-object-adox.md)   
+ [Users Collection (ADOX)](./users-collection-adox.md)

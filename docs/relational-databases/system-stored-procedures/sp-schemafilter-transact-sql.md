@@ -1,4 +1,5 @@
 ---
+description: "sp_schemafilter (Transact-SQL)"
 title: "sp_schemafilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_schemafilter"
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_schemafilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

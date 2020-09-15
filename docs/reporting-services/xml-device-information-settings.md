@@ -1,5 +1,6 @@
 ---
 title: "XML Device Information Settings | Microsoft Docs"
+description: Learn details about the various device information settings you can use to render in XML format.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

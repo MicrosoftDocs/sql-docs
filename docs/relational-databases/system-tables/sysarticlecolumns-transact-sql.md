@@ -1,4 +1,5 @@
 ---
+description: "sysarticlecolumns (Transact-SQL)"
 title: "sysarticlecolumns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticlecolumns system table"
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysarticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

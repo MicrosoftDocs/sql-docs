@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG002601"
 title: "MSSQL_ENG002601 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -19,7 +20,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|2601|  

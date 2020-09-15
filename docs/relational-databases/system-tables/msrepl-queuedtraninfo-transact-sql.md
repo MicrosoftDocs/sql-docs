@@ -1,4 +1,5 @@
 ---
+description: "MSrepl_queuedtraninfo (Transact-SQL)"
 title: "MSrepl_queuedtraninfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_queuedtraninfo system table"
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

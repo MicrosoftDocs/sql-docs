@@ -1,4 +1,5 @@
 ---
+description: "Change the Order of Attributes"
 title: Change the Order of Attributes
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SELECT DISTINCT FROM &lt;model &gt; (DMX)"
 title: "SELECT DISTINCT FROM &lt;model &gt; (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT DISTINCT FROM &lt;model &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns all possible states for the selected column in the model. The values that are returned vary depending on whether the specified column contains discrete values, discretized numeric values, or continuous numeric values.  
   

@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CURSOR_ROWS (Transact-SQL)"
 title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -33,7 +34,9 @@ This returns the number of qualifying rows currently in the last cursor opened o
 ```
 @@CURSOR_ROWS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **integer**
   

@@ -1,4 +1,5 @@
 ---
+description: "READTEXT (Transact-SQL)"
 title: "READTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
@@ -37,7 +38,9 @@ Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _table_ **.** _column_  
 Is the name of a table and column from which to read. Table and column names must fulfill the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Specifying the table and column names is required; however, specifying the database name and owner names is optional.  
   

@@ -1,6 +1,6 @@
 ---
-title: "IRowsetFastLoad::Commit (OLE DB) | Microsoft Docs"
-description: "IRowsetFastLoad::Commit (OLE DB)"
+title: "IRowsetFastLoad::Commit (OLE DB driver) | Microsoft Docs"
+description: Learn how the IRowsetFastLoad::Commit method marks the end of a batch of inserted rows and writes them to a SQL Server table in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,11 +13,11 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "Commit method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # IRowsetFastLoad::Commit (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

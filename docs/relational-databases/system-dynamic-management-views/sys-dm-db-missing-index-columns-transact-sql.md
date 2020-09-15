@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_missing_index_columns (Transact-SQL)"
 title: "sys.dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_db_missing_index_columns dynamic management function"
   - "missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function"
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_columns (Transact-SQL)

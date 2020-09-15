@@ -1,4 +1,5 @@
 ---
+description: "System-Versioned Temporal Tables with Memory-Optimized Tables"
 title: "System-Versioned Temporal Tables with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2016"
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 System-versioned temporal tables for [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) are designed to provide cost-effective solution for scenarios where [data audit and point in time analysis](https://msdn.microsoft.com/library/mt631669.aspx) are required on top of data collected with In-Memory OLTP workloads. They provide high transactional throughput, lock-free concurrency and at the same time, ability to store large amount of history data that can be easily queried.
 

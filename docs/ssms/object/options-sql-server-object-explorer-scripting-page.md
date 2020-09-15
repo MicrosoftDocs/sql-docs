@@ -1,4 +1,5 @@
 ---
+description: "Options (SQL Server Object Explorer - Scripting Page)"
 title: "Options (SQL Server Object Explorer - Scripting Page)"
 ms.custom: seo-lt-2019
 ms.date: "08/01/2017"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (SQL Server Object Explorer - Scripting Page)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this page to set scripting options that apply to the following commands on object context menus in **Object Explorer**:  
   
 -   **Edit** commands for user tables and views.  

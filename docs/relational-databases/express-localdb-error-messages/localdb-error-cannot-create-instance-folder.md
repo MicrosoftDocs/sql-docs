@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER"
 title: "LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|256|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

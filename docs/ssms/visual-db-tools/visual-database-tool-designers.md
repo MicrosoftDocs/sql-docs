@@ -1,4 +1,5 @@
 ---
+description: "Visual Database Tool Designers"
 title: Visual Database Tool Designers
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,7 +23,7 @@ ms.author: maghan
 ms.reviewer: 
 ---
 # Visual Database Tool Designers
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Visual Database Tools are a combination of design tools you can use to work with a data source. You can use them to create queries, design or modify a database structure, or update data. The tools are Database Diagram Designer, Table Designer, and Query and View Designer.  
   
 ## Properties Window  

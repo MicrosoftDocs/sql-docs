@@ -1,4 +1,5 @@
 ---
+description: "Creating, Altering, and Removing Databases"
 title: "Creating, Altering, and Removing Databases"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
@@ -19,7 +20,7 @@ ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Databases
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In SMO, a database is represented by the <xref:Microsoft.SqlServer.Management.Smo.Database> object.  
   

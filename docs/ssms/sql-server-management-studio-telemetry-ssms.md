@@ -1,4 +1,5 @@
 ---
+description: "Local audit for SSMS usage and diagnostic data collection"
 title: Usage and Diagnostic Data
 ms.custom: seo-lt-2019
 ms.date: "04/16/2019"
@@ -13,7 +14,7 @@ ms.author: "maghan"
 ---
 
 # Local audit for SSMS usage and diagnostic data collection
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SSMS may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We do not collect your name, address, or other contact information. For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](https://go.microsoft.com/fwlink/?LinkID=868444).
 

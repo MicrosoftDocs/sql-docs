@@ -1,4 +1,5 @@
 ---
+description: "DB_NAME (Transact-SQL)"
 title: "DB_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -24,7 +25,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DB_NAME (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the name of a specified database.
   
@@ -32,11 +33,13 @@ This function returns the name of a specified database.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DB_NAME ( [ database_id ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *database_id*  
 
 The identification number (ID) of the database whose name `DB_NAME` will return. If the call to `DB_NAME` omits *database_id*, `DB_NAME` returns the name of the current database.
@@ -67,7 +70,7 @@ This example returns the database name for database ID `3`.
 ```sql
 USE master;  
 GO  
-SELECT DB_NAME(3)AS [Database Name];  
+SELECT DB_NAME(3) AS [Database Name];  
 GO  
 ```  
   

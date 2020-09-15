@@ -1,4 +1,5 @@
 ---
+description: "CERTENCODED (Transact-SQL)"
 title: "CERTENCODED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -29,7 +30,9 @@ This function returns the public portion of a certificate in binary format. This
 CERTENCODED ( cert_id )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *cert_id*  
 The **certificate_id** of the certificate. Find this value in sys.certificates; the [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) function will return it as well. *cert_id* has data type **int**.
   

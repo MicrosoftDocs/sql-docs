@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_topologyrequest (Transact-SQL)"
 title: "MSpeer_topologyrequest (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_topologyrequest"
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

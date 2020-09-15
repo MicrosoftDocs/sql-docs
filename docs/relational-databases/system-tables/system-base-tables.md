@@ -1,4 +1,5 @@
 ---
+description: "System Base Tables"
 title: "System Base Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "hobt [SQL Server]"
   - "base tables"
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # System Base Tables
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

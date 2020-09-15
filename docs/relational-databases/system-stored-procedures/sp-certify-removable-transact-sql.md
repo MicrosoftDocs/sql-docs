@@ -1,4 +1,5 @@
 ---
+description: "sp_certify_removable (Transact-SQL)"
 title: "sp_certify_removable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_certify_removable"
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

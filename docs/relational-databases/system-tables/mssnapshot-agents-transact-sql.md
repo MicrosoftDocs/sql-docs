@@ -1,4 +1,5 @@
 ---
+description: "MSsnapshot_agents (Transact-SQL)"
 title: "MSsnapshot_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshot_agents system table"
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

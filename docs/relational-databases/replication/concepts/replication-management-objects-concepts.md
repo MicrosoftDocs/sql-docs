@@ -1,4 +1,5 @@
 ---
+description: "Replication Management Objects Concepts"
 title: "Replication Management Objects Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2017"
@@ -23,7 +24,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication Management Objects Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Replication Management Objects (RMO) is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO is implemented by the <xref:Microsoft.SqlServer.Replication> namespace.  
   

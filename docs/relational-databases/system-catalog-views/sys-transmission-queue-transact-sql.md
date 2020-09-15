@@ -1,4 +1,5 @@
 ---
+description: "sys.transmission_queue (Transact-SQL)"
 title: "sys.transmission_queue (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.transmission_queue catalog view"
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

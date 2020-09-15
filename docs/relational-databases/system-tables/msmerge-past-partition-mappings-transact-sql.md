@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_past_partition_mappings (Transact-SQL)"
 title: "MSmerge_past_partition_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_past_partition_mappings system table"
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

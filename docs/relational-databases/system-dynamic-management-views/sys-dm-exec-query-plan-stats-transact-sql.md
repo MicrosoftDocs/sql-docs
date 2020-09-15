@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_plan_stats (Transact-SQL)"
 title: "sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/22/2019
@@ -56,39 +57,37 @@ The *plan_handle* can be obtained from the following dynamic management objects:
 |**query_plan**|**xml**|Contains the last known runtime Showplan representation of the actual query execution plan that is specified with *plan_handle*. The Showplan is in XML format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls.<br /><br /> Column is nullable.| 
 
 ## Remarks
-This system function is available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
-
-This is an opt-in feature and requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, to accomplish this at the database level, see the LAST_QUERY_PLAN_STATS option in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+This is an opt-in feature. To enable at the server level, use [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. To enable at the database level, use the LAST_QUERY_PLAN_STATS option in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 This system function works under the **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-The Showplan output by sys.dm_exec_query_plan_stats contains the following information:
+The Showplan output by `sys.dm_exec_query_plan_stats` contains the following information:
 -  All the compile-time information found in the cached plan
 -  Runtime information such as the actual number of rows per operator, the total query CPU time and execution time, spill warnings, actual DOP, the maximum used memory and granted memory
 
-Under the following conditions, a Showplan output **equivalent to an actual execution plan** is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
+Under the following conditions, a Showplan output **equivalent to an actual execution plan** is returned in the **query_plan** column of the returned table for `sys.dm_exec_query_plan_stats`:  
 
 -   The plan can be found in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   The query being executed is complex or resource consuming.
 
-Under the following conditions, a **simplified <sup>1</sup>** Showplan output is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_plan_stats**:  
+Under the following conditions, a **simplified <sup>1</sup>** Showplan output is returned in the **query_plan** column of the returned table for `sys.dm_exec_query_plan_stats`:  
 
 -   The plan can be found in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   The query is simple enough, usually categorized as part of an OLTP workload.
 
-<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, this refers to a Showplan that only contains the root node operator (SELECT). For [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 this refers to the cached plan as available through `sys.dm_exec_cached_plans`.
+<sup>1</sup> Refers to a Showplan that only contains the root node operator (SELECT).
 
-Under the following conditions, **no output is returned** from **sys.dm_exec_query_plan_stats**:
+Under the following conditions, **no output is returned** from `sys.dm_exec_query_plan_stats`:
 
--   The query plan that is specified by using *plan_handle* has been evicted from the plan cache.     
+-   The query plan that is specified by using `plan_handle` has been evicted from the plan cache.     
     **OR**    
 -   The query plan was not cacheable in the first place. For more information, see [Execution Plan Caching and Reuse
 ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.  
+> Due to a limitation in the number of nested levels allowed in the **xml** data type, `sys.dm_exec_query_plan` cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the `query_plan` column returns NULL.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

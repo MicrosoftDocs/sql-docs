@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)"
 title: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_describe_first_result_set_for_object catalog view"
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_parser (Transact-SQL)"
 title: "sys.dm_fts_parser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "NumberOfFlags Property (SInstance Class)"
 title: "NumberOfFlags Property (SInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "NumberOfFlags property"
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # NumberOfFlags Property (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_buffer_descriptors (Transact-SQL)"
 title: "sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_buffer_descriptors dynamic management view"
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_buffer_descriptors (Transact-SQL)

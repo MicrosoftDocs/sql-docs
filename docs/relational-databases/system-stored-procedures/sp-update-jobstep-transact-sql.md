@@ -1,4 +1,5 @@
 ---
+description: "sp_update_jobstep (Transact-SQL)"
 title: "sp_update_jobstep (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_jobstep"
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

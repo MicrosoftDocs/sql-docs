@@ -1,5 +1,6 @@
 ---
 title: "New System Role (Management Studio) | Microsoft Docs"
+description: Learn about the New System Role page in Management Studio where you create a system-level role definition that specifies a set of tasks that apply to a report server as a whole.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

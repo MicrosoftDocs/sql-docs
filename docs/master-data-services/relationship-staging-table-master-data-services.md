@@ -1,4 +1,5 @@
 ---
+description: "Relationship Staging Table (Master Data Services)"
 title: Relationship Staging Table
 ms.custom: ""
 ms.date: "04/01/2016"

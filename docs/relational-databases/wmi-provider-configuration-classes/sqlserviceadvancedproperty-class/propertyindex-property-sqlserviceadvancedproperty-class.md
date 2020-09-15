@@ -1,4 +1,5 @@
 ---
+description: "PropertyIndex Property (SqlServiceAdvancedProperty Class)"
 title: "PropertyIndex Property (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyIndex property"
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyIndex Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

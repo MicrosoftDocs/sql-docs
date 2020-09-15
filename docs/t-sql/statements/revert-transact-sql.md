@@ -1,4 +1,5 @@
 ---
+description: "REVERT (Transact-SQL)"
 title: "REVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -25,7 +26,7 @@ ms.author: vanto
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # REVERT (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]   
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
 
   Switches the execution context back to the caller of the last EXECUTE AS statement.  
   
@@ -39,7 +40,9 @@ REVERT
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH COOKIE = @*varbinary_variable*  
  Specifies the cookie that was created in a corresponding [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) stand-alone statement. *\@varbinary_variable* is **varbinary(100)**.  
   

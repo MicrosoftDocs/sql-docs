@@ -1,4 +1,5 @@
 ---
+description: "SET FMTONLY (Transact-SQL)"
 title: "SET FMTONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2019"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "SET FMTONLY statement"
   - "FMTONLY option"
 ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET FMTONLY (Transact-SQL)

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_availability_replica_states (Transact-SQL)"
 title: "sys.dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_availability_replica_states dynamic management view"
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

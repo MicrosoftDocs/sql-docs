@@ -1,6 +1,6 @@
 ---
 title: "Calling a Stored Procedure (OLE DB) | Microsoft Docs"
-description: "Calling a Stored Procedure (OLE DB)"
+description: Learn how to call a stored procedure in the OLE DB Driver for SQL Server, including how to pass parameter values. 
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "ODBC CALL escape sequence"
   - "stored procedures [OLE DB], calling"
   - "OLE DB Driver for SQL Server, stored procedures"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Stored Procedures - Calling
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

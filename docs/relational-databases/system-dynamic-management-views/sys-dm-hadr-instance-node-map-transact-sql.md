@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_instance_node_map (Transact-SQL)"
 title: "sys.dm_hadr_instance_node_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC"
   - "sys.sys.dm_hadr_instance_node_map dynamic management view"
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

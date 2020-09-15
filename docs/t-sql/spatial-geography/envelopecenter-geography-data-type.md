@@ -1,4 +1,5 @@
 ---
+description: "EnvelopeCenter (geography Data Type )"
 title: "EnvelopeCenter (geography Data Type ) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,7 +35,9 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 EnvelopeCenter( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
   
 CLR return type: **SqlGeography**  

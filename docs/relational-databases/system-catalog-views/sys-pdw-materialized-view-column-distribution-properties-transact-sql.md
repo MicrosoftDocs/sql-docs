@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)"
 title: "sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "07/03/2019"
@@ -15,7 +16,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Displays distribution information for columns in a materialized view.  
   

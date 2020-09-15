@@ -1,4 +1,5 @@
 ---
+description: "CONSTRAINT_TABLE_USAGE (Transact-SQL)"
 title: "CONSTRAINT_TABLE_USAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "CONSTRAINT_TABLE_USAGE view"
   - "INFORMATION_SCHEMA.CONSTRAINT_TABLE_USAGE view"
 ms.assetid: 5770b696-6c04-4d5c-a8db-9eb92022fa42
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONSTRAINT_TABLE_USAGE (Transact-SQL)

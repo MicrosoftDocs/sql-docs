@@ -1,4 +1,5 @@
 ---
+description: "LocalDBStopTracing Function"
 title: "LocalDBStopTracing Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBStopTracing Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

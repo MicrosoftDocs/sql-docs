@@ -1,11 +1,11 @@
 ---
 title: PowerShell extension
-description: Install and use the PowerShell for Azure Data Studio
+description: Learn how to install and use the Azure Data Studio PowerShell extension, which provides rich PowerShell editor support for writing and debugging scripts.
 ms.custom: "seodec18"
 ms.date: "04/19/2019"
 ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"
@@ -35,7 +35,7 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 ## Installing the Extension
 
 You can install the official release of the PowerShell extension by following the steps
-in the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+in the [Azure Data Studio documentation](./extensions.md).
 In the Extensions pane, search for "PowerShell" extension and install it there.  You will
 get notified automatically about any future extension updates!
 
@@ -60,8 +60,8 @@ If you are running Azure Data Studio on macOS or Linux, you may also need to ins
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
 For more information on installing PowerShell Core on macOS or Linux platforms, see the following articles:
 
-- [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Installing PowerShell Core on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Installing PowerShell Core on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Installing PowerShell Core on macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## Example Scripts
 

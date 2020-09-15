@@ -1,4 +1,5 @@
 ---
+description: "Using Variables in the Script Task"
 title: "Using Variables in the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -23,7 +24,7 @@ ms.author: chugu
 ---
 # Using Variables in the Script Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Variables make it possible for the Script task to exchange data with other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  

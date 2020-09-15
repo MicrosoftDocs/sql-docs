@@ -1,6 +1,6 @@
 ---
-title: "Finding More OLE DB Driver for SQL Server Information | Microsoft Docs"
-description: "Where to find more OLE DB Driver for SQL Server information"
+title: "Finding More OLE DB Driver for SQL Server Information"
+description: Use these resources for more information about OLE DB Driver for SQL Server and other types of data access programming.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -11,11 +11,11 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "MSOLEDBSQL, additional resources"
   - "OLE DB Driver for SQL Server, additional resources"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Finding More OLE DB Driver for SQL Server Information
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -24,7 +24,7 @@ ms.author: pelopes
  [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)  
  This site provides technical articles, sample code, and other resources for OLE DB Driver for SQL Server and other data access technologies.  
   
- [Data Access Blog](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Data Access Blog](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  This blog site provides information about data access technologies and allows you to interact directly with members of the product team.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  

@@ -1,4 +1,5 @@
 ---
+description: "TABLES (Transact-SQL)"
 title: "TABLES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/20/2019"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "TABLES view"
   - "INFORMATION_SCHEMA.TABLES view"
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLES (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns one row for each table or view in the current database for which the current user has permissions.  
   

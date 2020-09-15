@@ -1,4 +1,5 @@
 ---
+description: "sp_resetstatus (Transact-SQL)"
 title: "sp_resetstatus (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_resetstatus"
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_resetstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

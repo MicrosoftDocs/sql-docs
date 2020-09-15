@@ -1,4 +1,5 @@
 ---
+description: "sp_helpsubscriberinfo (Transact-SQL)"
 title: "sp_helpsubscriberinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpsubscriberinfo"
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

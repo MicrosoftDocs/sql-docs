@@ -1,4 +1,5 @@
 ---
+description: "sp_help_jobactivity (Transact-SQL)"
 title: "sp_help_jobactivity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobactivity"
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sp_create_removable (Transact-SQL)"
 title: "sp_create_removable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_create_removable"
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

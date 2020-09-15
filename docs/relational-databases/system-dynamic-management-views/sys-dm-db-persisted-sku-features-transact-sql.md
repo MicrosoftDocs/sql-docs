@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_persisted_sku_features (Transact-SQL)"
 title: "sys.dm_db_persisted_sku_features (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "editions [SQL Server]"
   - "sys.dm_db_persisted_sku_features dynamic management view"
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

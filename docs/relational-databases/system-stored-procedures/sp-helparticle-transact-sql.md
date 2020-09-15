@@ -1,4 +1,5 @@
 ---
+description: "sp_helparticle (Transact-SQL)"
 title: "sp_helparticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helparticle"
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

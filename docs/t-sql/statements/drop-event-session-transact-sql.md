@@ -1,4 +1,5 @@
 ---
+description: "DROP EVENT SESSION (Transact-SQL)"
 title: "DROP EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,7 +34,9 @@ DROP EVENT SESSION event_session_name
 ON SERVER  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *event_session_name*  
  Is the name of an existing event session.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Integration Services"
 title: "Upgrade Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ manager: erikre
 ---
 # Upgrade Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   If [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] or later is currently installed on your computer, you can upgrade to [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -143,6 +144,6 @@ manager: erikre
 -   You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs on [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] computers to run [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages that are stored in the upgraded instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## External Resources  
- Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://go.microsoft.com/fwlink/?LinkId=238157), on blogs.msdn.com.  
+ Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951), on blogs.msdn.com.  
   
   

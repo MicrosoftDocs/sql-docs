@@ -1,4 +1,5 @@
 ---
+description: "sp_addsrvrolemember (Transact-SQL)"
 title: "sp_addsrvrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addsrvrolemember"
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Join Dialog Box (Visual Database Tools)"
 title: Join Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Join Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to specify options for joining tables. To access this dialog, in the **Design** pane select a join line. Then in the **Properties** window click **Join Condition And Type**, and click the ellipses **(...)** that appear to the right of the property.  
   
 By default, related tables are joined using an inner join that creates a result set based on rows containing matching information in the join columns. By setting options in the **Join** dialog box, you can specify a join based on a different operator, and you can specify an outer join.  

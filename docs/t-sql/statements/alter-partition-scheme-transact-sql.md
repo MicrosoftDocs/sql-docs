@@ -1,4 +1,5 @@
 ---
+description: "ALTER PARTITION SCHEME (Transact-SQL)"
 title: "ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "adding filegroups"
   - "NEXT USED filegroups"
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -41,7 +42,10 @@ ALTER PARTITION SCHEME partition_scheme_name
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme to be altered.  
   

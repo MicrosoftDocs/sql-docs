@@ -1,4 +1,5 @@
 ---
+description: "sp_dsninfo (Transact-SQL)"
 title: "sp_dsninfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dsninfo"
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

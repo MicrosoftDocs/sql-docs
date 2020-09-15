@@ -1,4 +1,5 @@
 ---
+description: "ALTER RESOURCE GOVERNOR (Transact-SQL)"
 title: "ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "ALTER RESOURCE GOVERNOR"
   - "RECONFIGURE, ALTER RESOURCE GOVERNOR"
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,10 @@ ALTER RESOURCE GOVERNOR
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  DISABLE  
  Disables Resource Governor. Disabling Resource Governor has the following results:  
   

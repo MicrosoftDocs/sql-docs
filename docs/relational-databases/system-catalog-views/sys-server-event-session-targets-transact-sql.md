@@ -1,4 +1,5 @@
 ---
+description: "sys.server_event_session_targets (Transact-SQL)"
 title: "sys.server_event_session_targets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.server_event_session_targets catalog view"
   - "xe"
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each event target for an event session.  
   
@@ -40,9 +41,8 @@ ms.author: carlrab
 ## Remarks  
  This view has the following relationship cardinalities.  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|sys.server_event_sessions.event_session_id|Many to one|  
   
 ## See Also  

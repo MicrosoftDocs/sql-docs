@@ -1,4 +1,5 @@
 ---
+description: "MSpublication_access (Transact-SQL)"
 title: "MSpublication_access (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpublication_access system table"
 ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSpublication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

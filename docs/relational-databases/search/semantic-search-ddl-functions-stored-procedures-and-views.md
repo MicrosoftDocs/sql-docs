@@ -1,4 +1,5 @@
 ---
+description: "Semantic Search DDL, Functions, Stored Procedures, and Views"
 title: "Semantic Search DDL, functions, stored procedures, & views"
 ms.date: "03/20/2017"
 ms.prod: sql

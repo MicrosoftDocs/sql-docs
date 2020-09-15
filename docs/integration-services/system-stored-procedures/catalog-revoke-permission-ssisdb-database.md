@@ -1,4 +1,5 @@
 ---
+description: "catalog.revoke_permission (SSISDB Database)"
 title: "catalog.revoke_permission (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # catalog.revoke_permission (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

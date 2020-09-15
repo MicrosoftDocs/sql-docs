@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYKEY (Transact-SQL)"
 title: "ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -37,7 +38,9 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
      , { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *key_GUID*  
  Is the GUID of the key to be used to encrypt the *cleartext*. **uniqueidentifier**.  
   

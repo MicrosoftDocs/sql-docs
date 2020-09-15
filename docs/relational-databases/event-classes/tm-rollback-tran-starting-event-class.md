@@ -1,4 +1,5 @@
 ---
+description: "TM: Rollback Tran Starting Event Class"
 title: "TM: Rollback Tran Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

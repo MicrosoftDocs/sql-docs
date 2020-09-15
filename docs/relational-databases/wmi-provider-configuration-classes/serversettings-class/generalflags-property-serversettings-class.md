@@ -1,4 +1,5 @@
 ---
+description: "GeneralFlags Property (ServerSettings Class)"
 title: "GeneralFlags Property (ServerSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "GeneralFlags property"
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # GeneralFlags Property (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_map_values (Transact-SQL)"
 title: "sys.dm_xe_map_values (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_xe_map_values dynamic management view"
   - "xe"
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

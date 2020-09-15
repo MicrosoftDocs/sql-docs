@@ -1,4 +1,5 @@
 ---
+description: "sp_help_notification (Transact-SQL)"
 title: "sp_help_notification (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_notification"
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

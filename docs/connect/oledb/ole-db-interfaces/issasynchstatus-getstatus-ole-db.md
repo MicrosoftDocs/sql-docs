@@ -1,6 +1,6 @@
 ---
-title: "ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs"
-description: "ISSAsynchStatus::GetStatus (OLE DB)"
+title: "ISSAsynchStatus::GetStatus (OLE DB driver) | Microsoft Docs"
+description: "Learn how the ISSAsynchStatus::GetStatus method returns the status of an asynchronously executing operation in OLE DB Driver for SQL Server."
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,11 +13,11 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "GetStatus method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # ISSAsynchStatus::GetStatus (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

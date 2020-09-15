@@ -1,4 +1,5 @@
 ---
+description: "DOMAINS (Transact-SQL)"
 title: "DOMAINS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "DOMAINS view"
   - "INFORMATION_SCHEMA.DOMAINS view"
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DOMAINS (Transact-SQL)

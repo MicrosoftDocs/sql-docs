@@ -1,4 +1,5 @@
 ---
+description: "sp_restoredbreplication (Transact-SQL)"
 title: "sp_restoredbreplication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_restoredbreplication"
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_restoredbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

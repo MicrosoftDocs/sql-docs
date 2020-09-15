@@ -1,11 +1,11 @@
 ---
 title: SQL Server Profiler extension
-description: Install and use the SQL Server Profiler extension (preview) for Azure Data Studio
+description: Learn how to install and use the SQL Server Profiler extension (preview)—an easy-to-use SQL Server tracing solution similar to SSMS Profiler.
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
@@ -43,9 +43,4 @@ The SQL Server Profiler extension (preview) provides a simple SQL Server tracing
 
 ## Next steps
 
-To learn more about Profiler and extended events, see [Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
-
-
-
-
-
+To learn more about Profiler and extended events, see [Extended Events](../relational-databases/extended-events/extended-events.md).

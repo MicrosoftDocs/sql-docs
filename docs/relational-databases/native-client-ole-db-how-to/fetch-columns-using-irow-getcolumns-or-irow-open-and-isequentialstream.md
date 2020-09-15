@@ -1,4 +1,5 @@
 ---
+description: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
 title: "Fetch, IRow::GetColumns and ISequentialStream"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Large data can be bound or retrieved using the **ISequentialStream** interface. For bound columns, the status flag DBSTATUS_S_TRUNCATED indicates that the data is truncated.  
   

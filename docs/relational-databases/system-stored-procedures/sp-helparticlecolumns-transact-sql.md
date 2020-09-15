@@ -1,4 +1,5 @@
 ---
+description: "sp_helparticlecolumns (Transact-SQL)"
 title: "sp_helparticlecolumns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helparticlecolumns"
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

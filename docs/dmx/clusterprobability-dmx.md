@@ -1,4 +1,5 @@
 ---
+description: "ClusterProbability (DMX)"
 title: "ClusterProbability (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the probability that the input case belongs to the specified cluster.  
   
@@ -34,7 +35,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- For more information about using this syntax, see [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). For more information about the mining model content schema rowset, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ For more information about using this syntax, see [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). For more information about the mining model content schema rowset, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
  If a \<node caption> is not specified, the function returns the probability that the input cases belong to the most likely cluster. Use the **Cluster** function to return the most likely cluster.  
   

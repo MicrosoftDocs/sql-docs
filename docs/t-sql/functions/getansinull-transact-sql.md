@@ -1,4 +1,5 @@
 ---
+description: "GETANSINULL (Transact-SQL)"
 title: "GETANSINULL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -35,7 +36,9 @@ ms.author: maghan
 GETANSINULL ( [ 'database' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  '*database*'  
  Is the name of the database for which to return nullability information. *database is either **char** or **nchar**. If **char**, *database* is implicitly converted to **nchar**.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_vupgrade_mergeobjects (Transact-SQL)"
 title: "sp_vupgrade_mergeobjects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_vupgrade_mergeobjects"
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "restorefilegroup (Transact-SQL)"
 title: "restorefilegroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], restorefilegroup system table"
   - "restorefilegroup system table"
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # restorefilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

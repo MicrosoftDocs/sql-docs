@@ -1,4 +1,5 @@
 ---
+description: "sys.trace_columns (Transact-SQL)"
 title: "sys.trace_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_columns catalog view"
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.trace_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

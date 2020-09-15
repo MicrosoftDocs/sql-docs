@@ -1,4 +1,5 @@
 ---
+description: "GOTO (Transact-SQL)"
 title: "GOTO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -39,7 +40,9 @@ Alter the execution:
 GOTO label   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *label*  
  Is the point after which processing starts if a GOTO is targeted to that label. Labels must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). A label can be used as a commenting method whether GOTO is used.  
   

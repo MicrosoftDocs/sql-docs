@@ -1,4 +1,5 @@
 ---
+description: "sp_table_privileges (Transact-SQL)"
 title: "sp_table_privileges (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_table_privileges"
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_table_privileges (Transact-SQL)
 

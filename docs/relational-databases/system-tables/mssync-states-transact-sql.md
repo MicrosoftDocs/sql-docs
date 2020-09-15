@@ -1,4 +1,5 @@
 ---
+description: "MSsync_states (Transact-SQL)"
 title: "MSsync_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsync_states system table"
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSsync_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

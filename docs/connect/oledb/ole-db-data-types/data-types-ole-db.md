@@ -1,6 +1,6 @@
 ---
-title: "Data Types (OLE DB) | Microsoft Docs"
-description: "Data Types (OLE DB)"
+title: "Data types (OLE DB driver) | Microsoft Docs"
+description: Learn how OLE DB Driver for SQL Server maps SQL Server data types to OLE DB types for binding parameters/columns and creating tables using ITableDefinition.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, data types"
   - "data types [OLE DB]"
   - "OLE DB, data types"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Types (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

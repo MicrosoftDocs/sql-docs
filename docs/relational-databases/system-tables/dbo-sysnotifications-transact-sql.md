@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysnotifications (Transact-SQL)"
 title: "dbo.sysnotifications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysnotifications system table"
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysnotifications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Upgrading a 3.5 Driver to a 3.8 Driver"
 title: "Upgrading a 3.5 Driver to a 3.8 Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

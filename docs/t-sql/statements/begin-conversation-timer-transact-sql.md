@@ -1,4 +1,5 @@
 ---
+description: "BEGIN CONVERSATION TIMER (Transact-SQL)"
 title: "BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -30,8 +31,8 @@ helpviewer_keywords:
   - "starting timers [Service Broker]"
   - "https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +50,9 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Specifies the conversation to time. The *conversation_handle* must be of type **uniqueidentifier**.  
   

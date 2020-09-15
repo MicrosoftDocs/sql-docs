@@ -1,5 +1,5 @@
 - name: Azure Data Studio documentation
-  href: ../azure-data-studio/index.yml
+  href: ./index.yml
 
 - name: Download Azure Data Studio
   href: download-azure-data-studio.md
@@ -56,8 +56,12 @@
       items:
       - name: SQL Database Projects extension overview
         href: sql-database-project-extension.md
+      - name: Getting Started with the SQL Database Projects extension
+        href: sql-database-project-extension-getting-started.md
       - name: Build and Publish a Project
         href: sql-database-project-extension-build.md
+      - name: Build a Project from the Command Line
+        href: sql-database-project-extension-build-from-command-line.md
     - name: SQL Server Agent
       href: sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
@@ -73,7 +77,7 @@
     - name: PowerShell extension
       href: powershell-extension.md        
     - name: Managed Instance extension
-      href: azure-sql-managed-instance-extension.md        
+      href: extensions/azure-sql-managed-instance-extension.md
     - name: SandDance extension
       href: sanddance-extension.md
   - name: Extension Authoring
@@ -82,10 +86,18 @@
       href: extensibility.md
     - name: Extension authoring
       href: extension-authoring.md
-    - name: Create an extension
-      href: tutorial-create-extension.md
     - name: Extensibility APIs
       href: extensibility-apis.md
+    - name: Keymap extension
+      href: extensions/keymap-extension.md
+    - name: Dashboard extension
+      href: extensions/dashboard-extension.md
+    - name: Notebook extension
+      href: extensions/notebook-extension.md
+    - name: Jupyter Book extension
+      href: extensions/jupyter-book-extension.md
+    - name: Wizard extension
+      href: extensions/wizard-extension.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Keyboard shortcuts
@@ -104,10 +116,8 @@
       href: notebooks-tutorial-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks-tutorial-python-kernel.md
-    - name: Kqlmagic
+    - name: Kqlmagic extension
       href: notebooks-kqlmagic.md
-    - name: Manage a notebook
-      href: notebooks-manage-sql-server.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets
@@ -126,10 +136,8 @@
   items:
   - name: SQL tools
     href: ../tools/overview-sql-tools.md
-  - name: SQL tools
-    href: ../tools/overview-sql-tools.md
   - name: Azure Developer tools
-    href: https://docs.microsoft.com/azure/?product=developer-tools
+    href: /azure/?product=developer-tools
 - name: Resources
   items:
   - name: FAQ

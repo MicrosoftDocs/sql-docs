@@ -1,4 +1,5 @@
 ---
+description: "Stopping System-Versioning on a System-Versioned Temporal Table"
 title: "Stopping System-Versioning on a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/28/2020
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stopping system-versioning on a system-versioned temporal table
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 You may want to stop versioning on your temporal table either temporarily or permanently. You can do that by setting **SYSTEM_VERSIONING** clause to **OFF**.
 

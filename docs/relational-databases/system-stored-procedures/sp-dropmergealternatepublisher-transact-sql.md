@@ -1,4 +1,5 @@
 ---
+description: "sp_dropmergealternatepublisher (Transact-SQL)"
 title: "sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergealternatepublisher"
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

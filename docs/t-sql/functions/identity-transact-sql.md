@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;IDENTITY (Transact-SQL)"
 title: "@@IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -33,7 +34,9 @@ ms.author: vanto
 @@IDENTITY  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **numeric(38,0)**  
   
 ## Remarks  

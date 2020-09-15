@@ -1,5 +1,6 @@
 ---
 title: "srv_sendmsg (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_sendmsg in the Extended Stored Procedure API and how it can send a message to the client.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

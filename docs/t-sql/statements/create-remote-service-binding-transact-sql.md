@@ -1,4 +1,5 @@
 ---
+description: "CREATE REMOTE SERVICE BINDING (Transact-SQL)"
 title: "CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -56,7 +57,9 @@ CREATE REMOTE SERVICE BINDING binding_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *binding_name*  
  Is the name of the remote service binding to be created. Server, database, and schema names cannot be specified. The *binding_name* must be a valid **sysname**.  
   

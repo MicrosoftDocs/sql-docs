@@ -1,4 +1,5 @@
 ---
+description: "DBCC USEROPTIONS (Transact-SQL)"
 title: "DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -36,7 +37,9 @@ DBCC USEROPTIONS
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 NO_INFOMSGS  
 Suppresses all informational messages that have severity levels from 0 through 10.
   

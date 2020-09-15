@@ -1,4 +1,5 @@
 ---
+description: "ClientSettings Class - InstanceName Property"
 title: "InstanceName Property (ClientSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ClientSettings Class - InstanceName Property
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

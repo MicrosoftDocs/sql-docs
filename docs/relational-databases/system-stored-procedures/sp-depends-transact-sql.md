@@ -1,4 +1,5 @@
 ---
+description: "sp_depends (Transact-SQL)"
 title: "sp_depends (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_depends"
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

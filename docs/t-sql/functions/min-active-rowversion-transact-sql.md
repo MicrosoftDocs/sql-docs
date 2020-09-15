@@ -1,4 +1,5 @@
 ---
+description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -31,11 +32,12 @@ ms.author: maghan
 ## Syntax  
   
 ```  
-  
-MIN_ACTIVE_ROWVERSION  
+MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns a **binary(8)** value.  
   
 ## Remarks  

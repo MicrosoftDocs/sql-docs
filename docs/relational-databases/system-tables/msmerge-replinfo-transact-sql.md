@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_replinfo (Transact-SQL)"
 title: "MSmerge_replinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_replinfo system table"
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_replinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

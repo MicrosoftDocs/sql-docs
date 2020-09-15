@@ -1,4 +1,5 @@
 ---
+description: "sp_browsereplcmds (Transact-SQL)"
 title: "sp_browsereplcmds (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_browsereplcmds"
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_browsereplcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

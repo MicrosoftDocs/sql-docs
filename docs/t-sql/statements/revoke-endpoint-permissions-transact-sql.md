@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Endpoint Permissions (Transact-SQL)"
 title: "REVOKE Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -41,7 +42,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   

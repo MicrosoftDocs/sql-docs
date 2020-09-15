@@ -1,5 +1,5 @@
 ---
-title: "Deprecated Database Engine Features | Microsoft Docs"
+title: "Deprecated database engine features in SQL Server 2017 | Microsoft Docs"
 titleSuffix: "SQL Server 2019"
 description: Find out about deprecated database engine features that are still available in SQL Server 2017 (14.x), but shouldn't be used in new applications.
 ms.custom: "seo-lt-2019"
@@ -32,7 +32,7 @@ When a feature is marked deprecated, it means:\
 
 You can monitor the use of deprecated features by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features Object performance counter and trace events. For more information, see [Use SQL Server Objects](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-The value of these counters are also available by executing the following statement:  
+The values of these counters are also available by executing the following statement:  
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
@@ -121,7 +121,7 @@ The following SQL Server Database Engine features are supported in the next vers
 | **timestamp** syntax for **rowversion** data type | **rowversion** data type syntax | TIMESTAMP |
 | Ability to insert null values into **timestamp** columns. | Use a DEFAULT instead. | INSERT NULL into TIMESTAMP columns |
 | 'text in row' table option|Use **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For more information, see [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Text in row table option |
-| Data types:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Use **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types.|Data types: **text**, **ntext** or **image** |
+| Data types:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Use **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types.|Data types: **text**, **ntext**, or **image** |
 
 ### Database management
 

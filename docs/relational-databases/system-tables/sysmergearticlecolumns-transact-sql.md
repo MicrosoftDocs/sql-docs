@@ -1,4 +1,5 @@
 ---
+description: "sysmergearticlecolumns (Transact-SQL)"
 title: "sysmergearticlecolumns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergearticlecolumns system table"
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

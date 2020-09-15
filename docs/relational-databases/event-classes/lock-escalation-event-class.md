@@ -1,4 +1,5 @@
 ---
+description: "Lock:Escalation Event Class"
 title: "Lock:Escalation Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

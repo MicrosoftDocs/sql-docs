@@ -1,4 +1,5 @@
 ---
+description: "Install and Configure Semantic Search"
 title: "Install and Configure Semantic Search | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

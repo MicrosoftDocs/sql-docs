@@ -1,4 +1,5 @@
 ---
+description: "CurveToLineWithTolerance (geography Data Type)"
 title: "CurveToLineWithTolerance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,9 @@ Returns a polygonal approximation of a **geography** instance that contains circ
 .CurveToLineWithTolerance( tolerance, relative )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _tolerance_  
 Is a **double** expression that defines the maximum error between the original circular arc segment and its linear approximation.  
   

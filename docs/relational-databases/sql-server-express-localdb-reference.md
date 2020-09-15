@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Express LocalDB Reference"
 title: "SQL Server Express LocalDB Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -9,11 +10,11 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Express LocalDB Reference
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   This section contains information about the SQL Server Express LocalDB:  
   
 -   [SQL Server Express LocalDB Error Message Reference](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  

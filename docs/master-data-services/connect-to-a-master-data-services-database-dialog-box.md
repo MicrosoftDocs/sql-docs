@@ -1,4 +1,5 @@
 ---
+description: "Connect to a Master Data Services Database Dialog Box"
 title: Connect to a MDS Database Dialog Box
 ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"

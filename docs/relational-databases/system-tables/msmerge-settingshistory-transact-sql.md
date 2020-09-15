@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_settingshistory (Transact-SQL)"
 title: "MSmerge_settingshistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_settingshistory system table"
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

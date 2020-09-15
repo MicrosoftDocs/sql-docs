@@ -1,4 +1,5 @@
 ---
+description: "CREATE FUNCTION (Transact-SQL)"
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/16/2020
@@ -38,8 +39,8 @@ helpviewer_keywords:
   - "TVF"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE FUNCTION (Transact-SQL)
 
@@ -258,6 +259,8 @@ RETURNS return_data_type
 }
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

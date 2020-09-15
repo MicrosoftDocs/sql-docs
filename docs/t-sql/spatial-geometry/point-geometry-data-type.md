@@ -1,4 +1,5 @@
 ---
+description: "Point (geometry Data Type)"
 title: "Point (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Constructs a **geometry** instance representing a **Point** instance from its X 
 Point ( X, Y, SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *X*  
  Is a **float** expression representing the X-coordinate of the **Point** being generated.  
   

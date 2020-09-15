@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_run_collection_set (Transact-SQL)"
 title: "sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "sp_syscollector_run_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sp_xml_preparedocument (Transact-SQL)"
 title: "sp_xml_preparedocument (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_xml_preparedocument"
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

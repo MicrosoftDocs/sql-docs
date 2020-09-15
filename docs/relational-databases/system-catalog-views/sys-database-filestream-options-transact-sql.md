@@ -1,4 +1,5 @@
 ---
+description: "sys.database_filestream_options (Transact-SQL)"
 title: "sys.database_filestream_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_filestream_options catalog view"
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

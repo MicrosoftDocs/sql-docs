@@ -1,4 +1,5 @@
 ---
+description: "sys.server_trigger_events (Transact-SQL)"
 title: "sys.server_trigger_events (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_trigger_events catalog view"
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.server_trigger_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

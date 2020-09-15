@@ -1,10 +1,11 @@
 ---
 title: "Query Expressions and Uniform Resource Names | Microsoft Docs"
+description: Learn about Query Expressions, which enumerate one or more objects in an object model hierarchy, and about Uniform Resource names (URNs), which uniquely identify a single object.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query expressions"
@@ -16,7 +17,7 @@ ms.author: maghan
 ---
 # Query Expressions and Uniform Resource Names
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
 
@@ -84,9 +85,9 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Enumerates all objects where the value of the specified string property is exactly the same as the character pattern that is specified in '*PatternString*'.  
   
  \@*DatePropertyName*= datetime('*DateString*')  
- Enumerates all objects where the value of the specified date property matches the date that is specified in '*DateString*'. *DateString* must follow the format yyyy-mm-dd hh:mi:ss.mmm  
+ Enumerates all objects where the value of the specified date property matches the date that is specified in '*DateString*'. *DateString* must follow the format yyyy-mm-dd hh:mi:ss.mmm.  
   
-|||  
+|DateString component|Description|  
 |-|-|  
 |yyyy|Four digit year.|  
 |mm|Two digit month (01 through 12).|  

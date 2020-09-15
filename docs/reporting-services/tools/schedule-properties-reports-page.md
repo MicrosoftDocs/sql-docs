@@ -1,5 +1,6 @@
 ---
 title: "Schedule Properties (Reports Page) | Microsoft Docs"
+description: Learn about the Reporting Services schedule properties page in SQL Server Management Studio that lists all reports for a specific shared schedule.
 ms.date: 06/30/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -42,7 +43,7 @@ ms.author: maggies
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Report Server in Management Studio F1 Help](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configure General Properties for a Report (Report Manager)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Configure General Properties for a Report (Report Manager)](https://docs.microsoft.com/sql/reporting-services/reports/configure-execution-properties-for-a-report-report-manager)  
   
   
 

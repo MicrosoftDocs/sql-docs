@@ -1,4 +1,5 @@
 ---
+description: "SetStringValue Method (ClientNetworkProtocolProperty Class)"
 title: "SetStringValue Method (ClientNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetStringValue method"
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetStringValue Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

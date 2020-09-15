@@ -1,7 +1,8 @@
 ---
 title: Download SQL Server PowerShell Module
+description: Learn how to install the SqlServer PowerShell module, which provides cmdlets that support the latest SQL features, and also contains updated versions of the cmdlets in the SQLPS module. 
 ms.prod: sql
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
@@ -12,7 +13,7 @@ ms.date: 06/11/2020
 
 # Install the SQL Server PowerShell module
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article provides directions for installing the **SqlServer** PowerShell module.
 

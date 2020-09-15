@@ -1,4 +1,5 @@
 ---
+description: "catalog.execution_component_phases"
 title: "catalog.execution_component_phases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # catalog.execution_component_phases 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

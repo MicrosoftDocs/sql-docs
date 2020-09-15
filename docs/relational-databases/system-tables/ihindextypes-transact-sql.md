@@ -1,4 +1,5 @@
 ---
+description: "IHindextypes (Transact-SQL)"
 title: "IHindextypes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHindextypes system table"
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHindextypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "cdc.ddl_history (Transact-SQL)"
 title: "cdc.ddl_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.ddl_history"
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # cdc.ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

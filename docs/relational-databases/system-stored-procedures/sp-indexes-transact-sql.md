@@ -1,4 +1,5 @@
 ---
+description: "sp_indexes (Transact-SQL)"
 title: "sp_indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_indexes"
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

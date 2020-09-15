@@ -1,4 +1,5 @@
 ---
+description: "sp_help_spatial_geography_index (Transact-SQL)"
 title: "sp_help_spatial_geography_index (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geography_index procedure"
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

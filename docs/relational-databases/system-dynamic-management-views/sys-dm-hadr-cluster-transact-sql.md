@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_cluster (Transact-SQL)"
 title: "sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2019"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sys.openkeys (Transact-SQL)"
 title: "sys.openkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.openkeys catalog view"
 ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.openkeys (Transact-SQL)

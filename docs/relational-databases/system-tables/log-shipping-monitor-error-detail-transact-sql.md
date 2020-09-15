@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_monitor_error_detail (Transact-SQL)"
 title: "log_shipping_monitor_error_detail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_error_detail system table"
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

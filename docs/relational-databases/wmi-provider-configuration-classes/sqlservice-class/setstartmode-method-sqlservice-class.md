@@ -1,4 +1,5 @@
 ---
+description: "SetStartMode Method (SqlService Class)"
 title: "SetStartMode Method (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetStartMode method"
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetStartMode Method (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

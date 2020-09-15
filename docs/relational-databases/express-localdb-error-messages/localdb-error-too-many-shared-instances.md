@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES"
 title: "LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|287|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

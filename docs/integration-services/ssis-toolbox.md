@@ -1,4 +1,5 @@
 ---
+description: "SSIS Toolbox"
 title: "SSIS Toolbox | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # SSIS Toolbox
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   All components installed on the local machine automatically appear in the **SSIS Toolbox**. When you install additional components, right-click inside the toolbox and then click **Refresh Toolbox** to add the components.  

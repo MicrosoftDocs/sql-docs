@@ -1,7 +1,8 @@
 ---
+description: "datetime2 (Transact-SQL)"
 title: "datetime2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: "08/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -25,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # datetime2 (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Defines a date that is combined with a time of day that is based on 24-hour clock. **datetime2** can be considered as an extension of the existing **datetime** type that has a larger date range, a larger default fractional precision, and optional user-specified precision.
   
@@ -42,7 +43,7 @@ Defines a date that is combined with a time of day that is based on 24-hour cloc
 |Element ranges|YYYY is a four-digit number, ranging from 0001 through 9999, that represents a year.<br /><br /> MM is a two-digit number, ranging from 01 to 12, that represents a month in the specified year.<br /><br /> DD is a two-digit number, ranging from 01 to 31 depending on the month, that represents a day of the specified month.<br /><br /> hh is a two-digit number, ranging from 00 to 23, that represents the hour.<br /><br /> mm is a two-digit number, ranging from 00 to 59, that represents the minute.<br /><br /> ss is a two-digit number, ranging from 00 to 59, that represents the second.<br /><br /> n* is a zero- to seven-digit number from 0 to 9999999 that represents the fractional seconds. In Informatica, the fractional seconds will be truncated when n > 3.|  
 |Character length|19 positions minimum (YYYY-MM-DD hh:mm:ss ) to 27 maximum (YYYY-MM-DD hh:mm:ss.0000000)|  
 |Precision, scale|0 to 7 digits, with an accuracy of 100ns. The default precision is 7 digits.|  
-|Storage size|6 bytes for precision less than 3.<br/>7 bytes for precision 3 or 4.<br/>All other precision require 8 bytes.<sup>1</sup>|  
+|Storage size <sup>1</sup>|6 bytes for precision less than 3.<br/>7 bytes for precision 3 or 4.<br/>All other precision require 8 bytes.<sup>2</sup>|  
 |Accuracy|100 nanoseconds|  
 |Default value|1900-01-01 00:00:00|  
 |Calendar|Gregorian|  
@@ -50,7 +51,9 @@ Defines a date that is combined with a time of day that is based on 24-hour cloc
 |Time zone offset aware and preservation|No|  
 |Daylight saving aware|No|  
 
-<sup>1</sup> The first byte of a **datetime2** value stores the precision of the value, which means the actual storage required for a **datetime2** value is the storage size indicated in the table above plus 1 additional byte to store the precision.  This makes the maximum size of a **datetime2** value 9 bytes - 1 byte stores precision plus 8 bytes for data storage at maximum precision.
+<sup>1</sup> Provided values are for uncompressed rowstore. Use of [data compression](../../relational-databases/data-compression/data-compression.md) or [columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) may alter storage size for each precision. Additionally, storage size on disk and in memory may differ. For example, **datetime2** values always require 8 bytes in memory when batch mode is used.
+
+<sup>2</sup> When a **datetime2** value is cast to a **varbinary** value, an additional byte is added to the **varbinary** value to store precision.
 
 For data type metadata, see [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) or [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precision and scale are variable for some date and time data types. To obtain the precision and scale for a column, see [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md), or [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

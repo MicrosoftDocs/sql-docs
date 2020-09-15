@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Applications"
 title: "Data-tier Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
@@ -66,7 +67,7 @@ ms.author: "sstein"
   
     -   Can use SQL Server Management Studio to extract a DACPAC from an existing database, and also perform other DAC operations.  
   
-    -   In addition, the DBA for a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use the Management Portal for SQL Azure for DAC operations.  
+    -   In addition, the DBA for a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use the Azure portal for DAC operations.  
   
 -   Independent Software Vendors:  
   
@@ -81,7 +82,7 @@ ms.author: "sstein"
   
 -   **EXTRACT** - the user can extract a database into a DACPAC.  
   
--   **DEPLOY** - the user can deploy a DACPAC to a host server. When the deployment is done from a manageability tool like SQL Server Management Studio or the Management Portal for SQL Azure, the resulting database in the host server is implicitly registered as a data-tier application.  
+-   **DEPLOY** - the user can deploy a DACPAC to a host server. When the deployment is done from a manageability tool like SQL Server Management Studio or the Azure portal, the resulting database in the host server is implicitly registered as a data-tier application.  
   
 -   **REGISTER** - the user can register a database as a data-tier application.  
   

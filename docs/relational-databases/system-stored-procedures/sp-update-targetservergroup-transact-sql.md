@@ -1,4 +1,5 @@
 ---
+description: "sp_update_targetservergroup (Transact-SQL)"
 title: "sp_update_targetservergroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_targetservergroup"
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

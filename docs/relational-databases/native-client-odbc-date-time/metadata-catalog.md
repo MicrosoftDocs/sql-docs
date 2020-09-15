@@ -1,4 +1,5 @@
 ---
+description: "Metadata - Catalog"
 title: "Catalog Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -16,7 +17,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata - Catalog
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes the column metadata returned by **SQLColumns** and **SQLProcedureColumns**, and the data type metadata returned by **SQLGetTypeInfo**.  
   

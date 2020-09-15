@@ -1,4 +1,5 @@
 ---
+description: "sp_attach_schedule (Transact-SQL)"
 title: "sp_attach_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_schedule"
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

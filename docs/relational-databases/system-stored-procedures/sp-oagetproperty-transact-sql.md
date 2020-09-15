@@ -1,4 +1,5 @@
 ---
+description: "sp_OAGetProperty (Transact-SQL)"
 title: "sp_OAGetProperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAGetProperty"
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

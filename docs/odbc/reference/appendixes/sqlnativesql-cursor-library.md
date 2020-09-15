@@ -1,4 +1,5 @@
 ---
+description: "SQLNativeSql (Cursor Library)"
 title: "SQLNativeSql (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

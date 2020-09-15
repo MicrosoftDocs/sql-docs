@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_external_work (Transact-SQL)"
 title: "sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "PolyBase,views"
   - "PolyBase"
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_external_work (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Returns information about the workload per worker, on each compute node.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Server Performance and Activity Monitoring | Microsoft Docs"
+description: Use these resources to learn how to use SQL Server and Windows performance and activity monitoring tools to assess how a server is performing.
 ms.custom: ""
 ms.date: "11/27/2018"
 ms.prod: sql

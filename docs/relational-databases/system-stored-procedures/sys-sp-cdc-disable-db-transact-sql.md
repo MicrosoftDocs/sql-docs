@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_disable_db (Transact-SQL)"
 title: "sys.sp_cdc_disable_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "sys.sp_cdc_disable_db"
   - "change data capture [SQL Server], disabling databases"
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

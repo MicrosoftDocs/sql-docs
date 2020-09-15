@@ -1,4 +1,5 @@
 ---
+description: "Choose Target Table for Insert Results Dialog Box (Visual Database Tools)"
 title: Choose Target Table for Insert Results Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Choose Target Table for Insert Results Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Allows you to specify the table to which rows of data will be added as the result of an INSERT RESULTS query. This dialog box appears when you start an INSERT RESULTS query.  
   
 ## Options  

@@ -1,4 +1,5 @@
 ---
+description: "SQLColAttribute"
 title: "SQLColAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -16,7 +17,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLColAttribute
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   You can use **SQLColAttribute** to retrieve an attribute of a result set column for either prepared or executed ODBC statements. Calling **SQLColAttribute** on prepared statements causes a roundtrip to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver receives result set column data as part of statement execution, so calling **SQLColAttribute** after the completion of **SQLExecute** or **SQLExecDirect** does not involve a server roundtrip.  
   

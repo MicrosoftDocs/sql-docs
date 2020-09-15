@@ -1,4 +1,5 @@
 ---
+description: "sp_db_increased_partitions"
 title: "sp_db_increased_partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_db_increased_partitions"
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_db_increased_partitions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

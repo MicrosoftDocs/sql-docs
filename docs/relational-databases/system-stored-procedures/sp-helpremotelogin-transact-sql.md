@@ -1,4 +1,5 @@
 ---
+description: "sp_helpremotelogin (Transact-SQL)"
 title: "sp_helpremotelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpremotelogin"
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

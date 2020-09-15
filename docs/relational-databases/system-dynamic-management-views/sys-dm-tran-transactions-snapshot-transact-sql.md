@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_transactions_snapshot (Transact-SQL)"
 title: "sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_transactions_snapshot dynamic management view"
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647 
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_transactions_snapshot (Transact-SQL)

@@ -1,4 +1,5 @@
 ---
+description: "time (Transact-SQL)"
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/07/2017
@@ -25,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # time (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
   

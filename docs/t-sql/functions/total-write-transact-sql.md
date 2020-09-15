@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TOTAL_WRITE (Transact-SQL)"
 title: "@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -36,7 +37,9 @@ ms.author: jrasnick
 @@TOTAL_WRITE  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

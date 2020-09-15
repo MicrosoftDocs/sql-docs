@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, WQL"
   - "WMI Provider for Configuration Management, scripts"
 ms.assetid: c1e64905-3c2b-4974-88f4-abf17cf7e289
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Using WQL and Scripting Languages with the WMI Provider
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

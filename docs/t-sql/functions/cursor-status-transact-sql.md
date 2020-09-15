@@ -1,4 +1,5 @@
 ---
+description: "CURSOR_STATUS (Transact-SQL)"
 title: "CURSOR_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -38,7 +39,9 @@ CURSOR_STATUS
      )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 'local'  
 Specifies a constant indicating that the cursor source is a local cursor name.
   

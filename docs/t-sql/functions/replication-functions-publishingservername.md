@@ -1,4 +1,5 @@
 ---
+description: "Replication Functions - PUBLISHINGSERVERNAME"
 title: "PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -33,7 +34,9 @@ ms.author: jrasnick
 PUBLISHINGSERVERNAME()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar**  
   
 ## Remarks  

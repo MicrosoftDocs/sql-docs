@@ -1,4 +1,5 @@
 ---
+description: "ALTER RESOURCE POOL (Transact-SQL)"
 title: "ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER RESOURCE POOL"
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 {NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  { *pool_name* | **"default"** }  
  Is the name of an existing user-defined resource pool or the default resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   

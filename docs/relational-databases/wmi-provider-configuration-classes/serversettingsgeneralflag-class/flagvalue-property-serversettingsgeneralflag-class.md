@@ -1,4 +1,5 @@
 ---
+description: "FlagValue Property (ServerSettingsGeneralFlag Class)"
 title: "FlagValue Property (ServerSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FlagValue property"
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # FlagValue Property (ServerSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

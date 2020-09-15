@@ -1,4 +1,5 @@
 ---
+description: "FETCH (Transact-SQL)"
 title: "FETCH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -45,7 +46,9 @@ FETCH
 [ INTO @variable_name [ ,...n ] ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  NEXT  
  Returns the result row immediately following the current row and increments the current row to the row returned. If `FETCH NEXT` is the first fetch against a cursor, it returns the first row in the result set. `NEXT` is the default cursor fetch option.  
   

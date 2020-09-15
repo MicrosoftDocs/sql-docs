@@ -1,4 +1,5 @@
 ---
+description: "Table Value Constructor (Transact-SQL)"
 title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2019"
@@ -38,7 +39,9 @@ VALUES ( <row value expression list> ) [ ,...n ]
     { DEFAULT | NULL | expression }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  VALUES  
  Introduces the row value expression lists. Each list must be enclosed in parentheses and separated by a comma.  
   

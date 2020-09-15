@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobhistory (Transact-SQL)"
 title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/24/2019"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobhistory system table"
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

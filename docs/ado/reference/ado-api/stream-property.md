@@ -1,8 +1,9 @@
 ---
+description: "Stream Property"
 title: "Stream Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -43,4 +44,4 @@ HRESULT put_Stream([in] IUnknown* pStream);
  This property method returns the standard HRESULT values. This includes S_OK and E_FAIL.  
   
 ## Applies To  
- [ADOStreamConstruction Interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)
+ [ADOStreamConstruction Interface](./adostreamconstruction-interface.md)

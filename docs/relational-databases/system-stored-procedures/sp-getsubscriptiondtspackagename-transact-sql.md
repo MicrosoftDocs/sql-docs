@@ -1,4 +1,5 @@
 ---
+description: "sp_getsubscriptiondtspackagename (Transact-SQL)"
 title: "sp_getsubscriptiondtspackagename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_getsubscriptiondtspackagename"
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

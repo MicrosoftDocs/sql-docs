@@ -1,4 +1,5 @@
 ---
+description: "supportsNonNullableColumns Method (SQLServerDatabaseMetaData)"
 title: "supportsNonNullableColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

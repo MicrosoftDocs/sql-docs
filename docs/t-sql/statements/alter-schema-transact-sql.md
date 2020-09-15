@@ -1,4 +1,5 @@
 ---
+description: "ALTER SCHEMA (Transact-SQL)"
 title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2020"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "schemas [SQL Server], modifying"
   - "modifying schemas"
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SCHEMA (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Transfers a securable between schemas.  
   
@@ -53,7 +54,10 @@ ALTER SCHEMA schema_name
 [;]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of a schema in the current database, into which the securable will be moved. Cannot be SYS or INFORMATION_SCHEMA.  
   
@@ -77,6 +81,8 @@ ALTER SCHEMA schema_name
  Moving an object such as a table or synonym will not automatically update references to that object. You must modify any objects that reference the transferred object manually. For example, if you move a table and that table is referenced in a trigger, you must modify the trigger to reflect the new schema name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before moving it.  
 
  To change the schema of a table by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click on the table and then click **Design**. Press **F4** to open the Properties window. In the **Schema** box, select a new schema.  
+ 
+ ALTER SCHEMA uses a schema level lock.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -93,7 +99,7 @@ ALTER SCHEMA schema_name
 ### A. Transferring ownership of a table  
  The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -103,11 +109,11 @@ GO
 ### B. Transferring ownership of a type  
  The following example creates a type in the `Production` schema, and then transfers the type to the `Person` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
-CREATE TYPE Production.TestType FROM [varchar](10) NOT NULL ;  
+CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
 GO  
   
 -- Check the type owner.  
@@ -134,10 +140,10 @@ GO
 ### C. Transferring ownership of a table  
  The following example creates a table `Region` in the `dbo` schema, creates a `Sales` schema, and then moves the `Region` table from the `dbo` schema to the `Sales` schema.  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
-    (Region_id int NOT NULL,  
-    Region_Name char(5) NOT NULL)  
+    (Region_id INT NOT NULL,  
+    Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
   

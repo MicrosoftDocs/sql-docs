@@ -1,4 +1,5 @@
 ---
+description: "Scalar Types Catalog Views (Transact-SQL)"
 title: "Scalar Types Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -13,18 +14,23 @@ helpviewer_keywords:
   - "scalar types catalog views"
   - "catalog views [SQL Server], scalar types"
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Scalar Types Catalog Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
-  
-|||  
-|-|-|  
-|[sys.assembly_types](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [sys.assembly_types](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

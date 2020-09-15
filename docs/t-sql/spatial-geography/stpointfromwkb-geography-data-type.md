@@ -1,4 +1,5 @@
 ---
+description: "STPointFromWKB (geography Data Type)"
 title: "STPointFromWKB (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -30,7 +31,9 @@ Returns a **geographyPoint** instance from an Open Geospatial Consortium (OGC) W
 STPointFromWKB ( 'WKB_point' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_point*  
  Is the WKB representation of the **geographyPoint** instance you wish to return. *WKB_point* is a **varbinary(max)** expression.  
   

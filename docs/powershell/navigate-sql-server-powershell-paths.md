@@ -1,17 +1,18 @@
 ---
 title: "Navigate SQL Server PowerShell Paths | Microsoft Docs"
+description: Learn how to use PowerShell cmdlets to navigate the path structures that represent the hierarchy of objects supported by a PowerShell provider. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
 ---
 # Navigate SQL Server PowerShell Paths
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell provider exposes the set of objects in an instance of SQL Server in a structure similar to a file path. You can use Windows PowerShell cmdlets to navigate the provider path, and create custom drives to shorten the path you have to type.  
 

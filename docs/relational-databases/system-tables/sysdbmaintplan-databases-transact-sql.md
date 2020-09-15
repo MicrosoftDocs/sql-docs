@@ -1,4 +1,5 @@
 ---
+description: "sysdbmaintplan_databases (Transact-SQL)"
 title: "sysdbmaintplan_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdbmaintplan_databases system table"
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysdbmaintplan_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

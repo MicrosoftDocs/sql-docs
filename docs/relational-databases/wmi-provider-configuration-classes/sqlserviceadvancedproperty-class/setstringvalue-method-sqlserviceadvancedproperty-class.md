@@ -1,4 +1,5 @@
 ---
+description: "SetStringValue Method (SqlServiceAdvancedProperty Class )"
 title: "SetStringValue Method (SqlServiceAdvancedProperty Class )"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetStringValue method"
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetStringValue Method (SqlServiceAdvancedProperty Class )
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

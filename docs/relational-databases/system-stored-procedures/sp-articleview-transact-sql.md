@@ -1,4 +1,5 @@
 ---
+description: "sp_articleview (Transact-SQL)"
 title: "sp_articleview (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_articleview"
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

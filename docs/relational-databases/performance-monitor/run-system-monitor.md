@@ -1,5 +1,6 @@
 ---
 title: "Run System Monitor | Microsoft Docs"
+description: System Monitor uses remote procedure calls to collect information from SQL Server. Any user who has permissions to run System Monitor can monitor SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

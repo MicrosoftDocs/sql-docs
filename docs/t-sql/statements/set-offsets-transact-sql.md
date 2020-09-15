@@ -1,4 +1,5 @@
 ---
+description: "SET OFFSETS (Transact-SQL)"
 title: "SET OFFSETS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "offsets [SQL Server]"
   - "SET OFFSETS statement"
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET OFFSETS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,9 @@ ms.author: carlrab
 SET OFFSETS keyword_list { ON | OFF }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *keyword_list*  
  Is a comma-separated list of [!INCLUDE[tsql](../../includes/tsql-md.md)] constructs including SELECT, FROM, ORDER, TABLE, PROCEDURE, STATEMENT, PARAM, and EXECUTE.  
   

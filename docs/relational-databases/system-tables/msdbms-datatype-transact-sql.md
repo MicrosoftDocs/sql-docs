@@ -1,4 +1,5 @@
 ---
+description: "MSdbms_datatype (Transact-SQL)"
 title: "MSdbms_datatype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdbms_datatype system table"
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

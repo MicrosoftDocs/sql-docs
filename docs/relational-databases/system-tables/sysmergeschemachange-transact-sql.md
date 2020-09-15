@@ -1,4 +1,5 @@
 ---
+description: "sysmergeschemachange (Transact-SQL)"
 title: "sysmergeschemachange (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergeschemachange system table"
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmergeschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

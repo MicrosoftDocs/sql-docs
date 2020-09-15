@@ -1,4 +1,5 @@
 ---
+description: "Using Test Repositories (SybaseToSQL)"
 title: "Using Test Repositories (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Test Repositories"
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Using Test Repositories (SybaseToSQL)
 The SSMA Test Repository stores SSMA Tester test cases and test results for later use. The Repository data are saved in the SQL Server tables **TestCaseRepository** and **RunTestCaseResultRepository** in the schema **ssma_sybase_utilities** of **ssmatesterdb_syb** database.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_schedule (Transact-SQL)"
 title: "sp_delete_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_schedule"
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

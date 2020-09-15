@@ -1,4 +1,5 @@
 ---
+description: "ServerName Property (SqlServerAlias Class)"
 title: "ServerName Property (SqlServerAlias)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerName property"
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServerName Property (SqlServerAlias Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

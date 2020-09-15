@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_os_performance_counters (Transact-SQL)"
 title: "sys.dm_pdw_os_performance_counters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -9,12 +10,12 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_os_performance_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contains information about Windows performance counters for the nodes in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   

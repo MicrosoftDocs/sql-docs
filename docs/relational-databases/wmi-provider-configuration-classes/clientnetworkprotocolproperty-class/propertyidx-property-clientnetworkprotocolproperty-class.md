@@ -1,4 +1,5 @@
 ---
+description: "PropertyIdx Property (ClientNetworkProtocolProperty Class)"
 title: "PropertyIdx Property (ClientNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyIdx property"
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyIdx Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

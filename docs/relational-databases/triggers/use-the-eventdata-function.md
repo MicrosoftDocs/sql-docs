@@ -1,4 +1,5 @@
 ---
+description: "Use the EVENTDATA Function"
 title: "Use the EVENTDATA Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

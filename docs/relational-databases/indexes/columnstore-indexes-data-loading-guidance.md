@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Data loading guidance"
 title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/03/2017"
@@ -14,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Columnstore indexes - Data loading guidance
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Options and recommendations for loading data into a columnstore index by using the standard SQL bulk loading and trickle insert methods. Loading data into a columnstore index is an essential part of any data warehousing process because it moves data into the index in preparation for analytics.
   
@@ -46,6 +47,8 @@ Bulk loading has these built-in performance optimizations:
 -   **Locking Optimization:** The X lock on a row group is automatically acquired when loading data into a compressed row group. However, when bulk loading into a delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
 If you have a nonclustered B-tree index on a columnstore index, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are applicable.  
+
+Please note, DML (insert, delete, update) is not a batch mode operation because it is not parallel.
   
 ## Plan bulk load sizes to minimize delta rowgroups
 Columnstore indexes perform best when most of the rows are compressed into the columnstore and not sitting in delta rowgroups. It's best to size your loads so that rows go directly to the columnstore and bypass the deltastore as much as possible.

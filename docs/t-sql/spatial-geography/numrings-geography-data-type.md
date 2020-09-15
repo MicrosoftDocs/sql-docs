@@ -1,4 +1,5 @@
 ---
+description: "NumRings (geography Data Type)"
 title: "NumRings (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,7 +30,9 @@ ms.author: mlandzic
   
 .NumRings ()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Type  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **int**  
   

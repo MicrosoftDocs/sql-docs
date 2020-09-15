@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Source Editor (Connection Manager Page)"
 title: "SAP BW Source Editor (Connection Manager Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # SAP BW Source Editor (Connection Manager Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Connection Manager** page of the **SAP BW Source Editor** to select the SAP BW connection manager for the SAP BW source. On this page, you also select the execution mode and the parameters for extracting the data from the SAP Netweaver BW system.  

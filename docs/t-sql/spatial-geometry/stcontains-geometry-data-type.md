@@ -1,4 +1,5 @@
 ---
+description: "STContains (geometry Data Type)"
 title: "STContains (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns 1 if a **geometry** instance completely contains another **geometry** in
 .STContains ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STContains()` is invoked.  
   

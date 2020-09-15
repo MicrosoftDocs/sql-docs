@@ -1,4 +1,5 @@
 ---
+description: "ExitCode Property (SqlService Class)"
 title: "ExitCode Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ExitCode property"
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ExitCode Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

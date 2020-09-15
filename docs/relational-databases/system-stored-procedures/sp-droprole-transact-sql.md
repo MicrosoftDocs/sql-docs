@@ -1,4 +1,5 @@
 ---
+description: "sp_droprole (Transact-SQL)"
 title: "sp_droprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droprole"
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

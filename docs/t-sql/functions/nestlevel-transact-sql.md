@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;NESTLEVEL (Transact-SQL)"
 title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2017"
@@ -33,7 +34,9 @@ ms.author: jrasnick
 @@NESTLEVEL  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **int**  
   
 ## Remarks  

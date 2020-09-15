@@ -1,4 +1,5 @@
 ---
+description: "DROP SERVER AUDIT  (Transact-SQL)"
 title: "DROP SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,7 +34,9 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  You must set the State of an audit to the OFF option in order to make any changes to an Audit. If DROP AUDIT is run while an audit is enabled with any options other than STATE=OFF, you will receive a MSG_NEED_AUDIT_DISABLED error message.  
   
  A DROP SERVER AUDIT removes the metadata for the Audit, but not the audit data that was collected before the command was issued.  

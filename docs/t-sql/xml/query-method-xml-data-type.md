@@ -1,5 +1,6 @@
 ---
-title: "query() Method (xml Data Type) | Microsoft Docs"
+description: "query() Method (xml Data Type)"
+title: query() Method (xml Data Type)
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
@@ -27,7 +28,9 @@ Specifies an XQuery against an instance of the **xml** data type. The result is 
 query ('XQuery')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 XQuery  
 Is a string, an XQuery expression, that queries for XML nodes, such as elements and attributes, in an XML instance.  
   

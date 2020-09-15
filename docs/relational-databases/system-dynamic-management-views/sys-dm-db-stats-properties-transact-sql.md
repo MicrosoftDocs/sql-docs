@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_stats_properties (Transact-SQL)"
 title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_stats_properties"
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_stats_properties (Transact-SQL)

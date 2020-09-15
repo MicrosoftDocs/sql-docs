@@ -1,5 +1,6 @@
 ---
 title: "Start System Monitor (Windows) | Microsoft Docs"
+description: Use System Monitor to collect performance data counters, such as processor and memory use, and for SQL Server resources, such as locks and transactions.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Description Property (SqlService Class)"
 title: "Description Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Description property"
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Description Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,6 +1,6 @@
 ---
 title: "Create & configure availability groups (content index)"
-description: "An index of links that help you create and configure Always On availability groups for SQL Server."
+description: "Learn about references you can use to create and configure Always On availability groups for SQL Server."
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -88,7 +88,7 @@ ms.author: mathoma
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Videos:**  
   

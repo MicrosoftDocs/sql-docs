@@ -1,5 +1,6 @@
 ---
-title: "float and real (Transact-SQL) | Microsoft Docs"
+description: "float and real (Transact-SQL)"
+title: float and real (Transact-SQL)
 ms.custom: ""
 ms.date: "09/10/2019"
 ms.prod: sql
@@ -24,8 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # float and real (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Approximate-number data types for use with floating point numeric data. Floating point data is approximate; therefore, not all values in the data type range can be represented exactly. The ISO synonym for **real** is **float(24)**.
   
@@ -44,7 +47,9 @@ Where *n* is the number of bits that are used to store the mantissa of the **flo
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] treats *n* as one of two possible values. If **1**<=n<=**24**, *n* is treated as **24**. If **25**<=n<=**53**, *n* is treated as **53**.  
   
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**] data type complies with the ISO standard for all values of *n* from **1** through **53**. The synonym for **double precision** is **float(53)**.
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
   
 |Data type|Range|Storage|  

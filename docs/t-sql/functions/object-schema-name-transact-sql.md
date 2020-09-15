@@ -1,4 +1,5 @@
 ---
+description: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 title: "OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2018"
@@ -23,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # OBJECT_SCHEMA_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns the database schema name for schema-scoped objects. For a list of schema-scoped objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
@@ -36,7 +37,9 @@ ms.author: jrasnick
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_id*  
  Is the ID of the object to be used. *object_id* is **int** and is assumed to be a schema-scoped object in the specified database, or in the current database context.  
   

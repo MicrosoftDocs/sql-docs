@@ -1,4 +1,5 @@
 ---
+description: "SQLPostInstallerError Function"
 title: "SQLPostInstallerError Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

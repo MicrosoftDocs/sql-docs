@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_get_sql (Transact-SQL)"
 title: "sys.fn_get_sql (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

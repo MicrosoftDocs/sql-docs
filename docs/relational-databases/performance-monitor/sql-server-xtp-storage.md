@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP Storage | Microsoft Docs"
+description: Learn about the SQL Server XTP Storage performance object, which contains counters related to on-disk storage for In-Memory OLTP in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "SystemStore Property (SecurityCertificate Class)"
 title: "SystemStore Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SystemStore property"
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SystemStore Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

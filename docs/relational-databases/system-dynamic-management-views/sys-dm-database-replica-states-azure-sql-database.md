@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_database_replica_states (Azure SQL Database)"
 title: "sys.dm_database_replica_states (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_database_replica_states dynamic management view"
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

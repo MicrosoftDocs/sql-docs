@@ -1,5 +1,6 @@
 ---
-title: "exist() Method (xml Data Type) | Microsoft Docs"
+description: "exist() Method (xml Data Type)"
+title: exist() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -33,7 +34,9 @@ ms.author: genemi
 exist (XQuery)   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  XQuery  
  Is an XQuery expression, a string literal.  
   

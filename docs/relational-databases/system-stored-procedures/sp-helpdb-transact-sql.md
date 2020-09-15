@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdb (Transact-SQL)"
 title: "sp_helpdb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpdb"
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

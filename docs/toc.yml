@@ -9050,7 +9050,7 @@
         href: ssms/scripting/database-engine-scripting.md
         items:
         - name: Query & Text Editors
-          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+          href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
         - name: Database Engine Query Editor
           href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor

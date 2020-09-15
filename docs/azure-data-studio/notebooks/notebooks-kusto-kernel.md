@@ -15,7 +15,7 @@ ms.date: 09/22/2020
 
 This article shows you how to create and run an [Azure Data Studio notebook](../notebooks-guidance.md) using the [Kusto (KQL) extension](../extensions/kusto-extension.md), connecting to an Azure Data Explorer cluster.
 
-With the Kusto extension, you can change the kernel option to **Kusto**.
+With the Kusto (KQL) extension, you can change the kernel option to **Kusto**.
 
 This feature is currently in preview.
 
@@ -25,7 +25,7 @@ If you don't have an Azure subscription, create a [free Azure account](https://a
 
 - [An Azure Data Explorer cluster with a database that you can connect to](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md).
-- [Kusto extension for Azure Data Studio](notebooks-kusto-kernel.md).
+- [Kusto (KQL) extension for Azure Data Studio](../extensions/kusto-extension.md).
 
 ## Create a Kusto (KQL) notebook
 
@@ -65,7 +65,7 @@ To change the Kusto connection for a notebook:
 
 ## Run a code cell
 
-You can create cells containing Kusto that you can run in place by selecting the **Run cell** button to the cell's left. The results are shown in the notebook after the cell runs.
+You can create cells containing KQL queries that you can run in place by selecting the **Run cell** button to the cell's left. The results are shown in the notebook after the cell runs.
 
 For example:
 
@@ -73,7 +73,7 @@ For example:
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto kernel code block":::
 
-2. Copy and paste the following example into the cell and select **Run cell**. This example creates a new database.
+2. Copy and paste the following example into the cell and select **Run cell**. This example queries the StormEvents data for a speciific event type.
 
    ```kusto
     StormEvents
@@ -103,7 +103,7 @@ If you run a script that returns a result, you can save that result in different
 
 Learn more about notebooks:
 
-- [Kusto extension for Azure Data Studio](notebooks-kusto-kernel.md)
+- [Kusto (KQL) extension for Azure Data Studio](../extensions/kusto-extension.md)
 - [How to use notebooks in Azure Data Studio](../notebooks-guidance.md)
 - [Create and run a Python notebook](../notebooks-tutorial-python-kernel.md)
 - [Create and run a SQL Server notebook](../notebooks-tutorial-sql-kernel.md)

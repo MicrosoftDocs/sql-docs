@@ -1,6 +1,6 @@
 ---
-description: "Duplicate Tables"
-title: "Duplicate Tables | Microsoft Docs"
+description: "Duplicate Table Structures"
+title: "Duplicate Table Structures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,13 +12,14 @@ helpviewer_keywords:
   - "copying tables"
   - "tables [SQL Server], duplicating"
   - "duplicating tables"
+  - "duplicating table structures"
   - "table copying [SQL Server]"
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Duplicate Tables
+# Duplicate Table Structures
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   You can duplicate an existing table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] by creating a new table and then copying column information from an existing table.  

@@ -20,7 +20,7 @@ Deletes an existing external language.
 
 ## Syntax
 
-```text
+```syntaxsql
 DROP EXTERNAL LANGUAGE <language_name>
 ```
 

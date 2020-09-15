@@ -37,7 +37,6 @@ ms.author: "mikeray"
 ## Syntax  
   
 ```syntaxsql
-  
 DROP AVAILABILITY GROUP group_name   
 [ ; ]  
 ```  
@@ -69,7 +68,7 @@ DROP AVAILABILITY GROUP group_name
 ## Examples  
  The following example drops the `AccountsAG` availability group.  
   
-```  
+```sql  
 DROP AVAILABILITY GROUP AccountsAG;  
 ```  
   

@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
@@ -48,7 +48,7 @@ DROP DATABASE ENCRYPTION KEY
 ## Examples  
  The following example removes the database encryption and drops the database encryption key.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET ENCRYPTION OFF;  
 GO  
@@ -66,7 +66,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example removes the TDE encryption and then drops the database encryption key.  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorksPDW2012  
     SET ENCRYPTION OFF;  
 GO  

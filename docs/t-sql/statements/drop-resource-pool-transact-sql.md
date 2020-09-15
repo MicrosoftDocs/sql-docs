@@ -29,7 +29,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP RESOURCE POOL pool_name  
 [ ; ]  
 ```  
@@ -53,7 +52,7 @@ DROP RESOURCE POOL pool_name
 ## Examples  
  The following example drops the resource pool named `big_pool`.  
   
-```  
+```sql  
 DROP RESOURCE POOL big_pool;  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  

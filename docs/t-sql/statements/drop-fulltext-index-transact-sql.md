@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT INDEX ON table_name  
 ```  
   
@@ -52,7 +51,7 @@ DROP FULLTEXT INDEX ON table_name
 ## Examples  
  The following example drops the full-text index that exists on the `JobCandidate` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DROP FULLTEXT INDEX ON HumanResources.JobCandidate;  

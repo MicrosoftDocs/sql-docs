@@ -44,11 +44,11 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 
  [ IGNORE NULLS | RESPECT NULLS ]     
  **Applies to**: Azure SQL Edge
-  For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
 
-  IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.     
-  RESPECT NULLS - Respect null values in the dataset when computing last value over a partition.     
+ IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.     
+ RESPECT NULLS - Respect null values in the dataset when computing last value over a partition.     
  
+  For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the logical order in which the operation is performed. *order_by_clause* is required. *rows_range_clause* further limits the rows within the partition by specifying start and end points. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -128,4 +128,5 @@ Accounts Receivable Specialist      Walton                    62            Poe
   
 ## See Also  
  [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
+ [Last_Value &#40;Transact-SQL&#41;](last-value-transact-sql.md)  
+

@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install runtime for R - DRAFT IN PROGRESS CONVERTING FROM PYTHON
+# Install runtime for R - DRAFT IN PROGRESS
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
@@ -34,7 +34,9 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 
 + [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio ](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) for T-SQL commands.
 
-+ [Python3.7](https://www.python.org/)
++ [R Version 3.3 or higher](https://cran.r-project.org/)
+
++ [R Studio ](https://rstudio.com/products/rstudio/download/) for executing R code.
 
 ## Add SQL Server Language Extensions for Linux
 
@@ -64,17 +66,42 @@ sudo zypper install mssql-server-extensibility
 >[!Note]
 >For Machine Learning Services using SQL Server 2019 mssql-server-extensibility is already installed.
 
-## Python 3.7
+## Install R - Do these steps work for any version of R?
 
- R runs in a separate process from SQL Server.
+[Complete installation of R and add to path.](https://cran.r-project.org/)
 
-[Complete installation for Python 3.7](https://www.python.org/)
+```bash
+export DEBIAN_FRONTEND=noninteractive
+sudo apt-get update
+sudo apt-get --no-install-recommends -y install curl zip unzip apt-transport-https libstdc++6
 
-+ Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
+# Add R CRAN repository.
+#
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/'
+sudo apt-get update
+
+# Install R runtime.
+#
+sudo apt-get --no-install-recommends -y install r-base-core
+```
+## Install Rcapp package
+
+ *** Is RStudio needed for this? Can be typed at prompt. ***
+
++ Locate installation directory for R
+    /usr/lib/R/bin/
+
++ Start R
+    /usr/lib/R/bin/R
+        install.packages("Rcpp")
+
+*** (there is a prompt that states "would you like to use a personable library", does that need to be included, or does that appear normally? are there permissions that need to be set in advance) ***
+
 
 ## Enable external script execution in SQL Server
 
-An external script is a stored procedure used by Python against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+An external script is a stored procedure used by R against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
 
 After setup, enable execution of external scripts, execute the following script:
 
@@ -86,26 +113,26 @@ RECONFIGURE WITH OVERRIDE;
 
 **GitHub link goes here**
 
-## Add PYTHONHOME environment variable
+## Add R_HOME environment variable
 
-Create the environment variable called PYTHONHOME to point to the Python installation location.
+Create the environment variable called R_HOME to point to the R installation location.
 
-For login sessions:
+For logged sessions:
 
 
 ```bash
-echo 'export PYTHONHOME="/usr"' >> ~/.bash_profile
+echo 'export R_HOME="/usr"' >> ~/.bash_profile
 ```
 
-For non-login sessions:
+For non-logged sessions:
 
 ```bash
-echo 'export PYTHONHOME="/usr"' >> ~/.bashrc
+echo 'export R_HOME="/usr"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 >[!Note] 
->To use the Python runtime provided with SQL Machine Learning Services, set PYTHONHOME to /opt/mssql/mlservices/runtime/python.
+>To use the R runtime provided with SQL Machine Learning Services, set R_HOME to /opt/mssql/mlservices/runtime/r.
 
 ## Create external language
 
@@ -113,11 +140,12 @@ Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
 Modify the path to reflect the location of the download.
 
 >[!Note] 
->Python is a reserved word. It can't be used as a name for the external Python language extension.
+>R is a reserved word. **Is this still true for R**.
 
 ```sql
-CREATE EXTERNAL LANGUAGE mypython 
-FROM (CONTENT = N'/PATH/TO/python-lang-extension.zip', FILE_NAME = 'libPythonExtension.so.1.0');
+CREATE EXTERNAL LANGUAGE myR
+FROM (CONTENT = N'/home/ani/RExtension/Data-SQL-Language-Extensions/build-output/RExtension/target/release/R-lang-extension.zip', FILE_NAME = 'libRExtension.so.1.0',
+ENVIRONMENT_VARIABLES = N'{"R_HOME": "/usr/lib/R"}');
 GO
 ```
 
@@ -127,7 +155,7 @@ This script tests the functionality of the installed language extension. Use SQL
 
 ```sql
 EXEC sp_execute_external_script
-@language =N'mypython',
+@language =N'myR',
 @script=N'
 import sys
 print(sys.path)
@@ -137,18 +165,16 @@ print(sys.executable)
 
 ## Verify parameters and datasets of different data types
 
-The functionality is tested by the script in the section parameters and datasets of different data types
+The scripts tests the function of different data types.
 
 ```sql
-exec sp_execute_external_script
-@language = N'myPython',
-@script = N'
-import sys
-print(''Hello PythonExtension!'');
-OutputDataSet = InputDataSet;
+exec sp_execute_external_script 
+@language = N'myR',
+@script = N'print(''Hello RExtension!'');
+OutputDataSet <- InputDataSet;
 print(InputDataSet);
 print(OutputDataSet);
-print(sys.version)',
+print(R.version)',
 @input_data_1 = N'select 1, cast(1.4 as real), ''Hi'', cast(''1'' as bit)'
 WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit))
 ```

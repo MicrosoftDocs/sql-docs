@@ -10,14 +10,14 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install language extension for R - DRAFT from Python
+# Install language extension for R - DRAFT IN PROGRESS
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 >[!Note] 
->Python language extension to bring your own runtime runs on SQL Server 2019 CU3 or later
+>R language extension to bring your own runtime runs on SQL Server 2019 CU3 or later
  
-This article describes how to install the language extension for running Python scripts with [SQL Server for Windows.](../../database-engine/install-windows/install-sql-server.md)
+This article describes how to install the language extension for running R scripts with [SQL Server for Windows.](../../database-engine/install-windows/install-sql-server.md)
 
 The language extension can be used with the following scenarios:
 
@@ -33,7 +33,9 @@ The language extension can be used with the following scenarios:
 
 + [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
-+ [Python3.7](https://www.python.org/)
++ [R Version 3.3 or higher](https://cran.r-project.org/)
+
++ [R Studio ](https://rstudio.com/products/rstudio/download/) for executing R code.
 
 ## Add SQL Server Language Extensions for Windows
 
@@ -58,7 +60,7 @@ Complete the setup for SQL Server 2019.
   
     - **Machine Learning Services and Language Extensions**
    
-       Select **Machine Learning Services and Language Extensions** There no need select Python.
+       Select **Machine Learning Services and Language Extensions** There no need select R.
 
     ![SQL Server 2019 installation features](../install/media/sql-feature-selection.png) 
 
@@ -72,17 +74,20 @@ Complete the setup for SQL Server 2019.
 1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 
-## Install Python 3.7 
+## Install R - Do these steps work for any version of R?
 
-[Complete installation of Python 3.7 and add to path.](https://www.python.org/)
+[Complete installation of R and add to path.](https://cran.r-project.org/)
 
-![Add Python 3.7 to path.](../install/media/python378.png)
 
-+ Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
+## Install Rcapp package
+
+install.packages("Rcpp")
+
+*** is there more for the windows installation?***
 
 ## Enable external script execution in SQL Server
 
-An external script is a stored procedure used by Python against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+An external script is a stored procedure used by R against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
 
 After setup, enable execution of external scripts, execute the following script:
 
@@ -96,8 +101,8 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Update environment path for Windows
 
-Add PYTHONHOME as an environment variable. Path modified during installation. For example: C:\Python3.7 install directory.
-![Create PYTHONHOME system variable.](../install/media/sys-pythonhome.png)
+Add R_HOME as an environment variable. Path modified during installation. For example: C:\Program Files\R\R-3.6.3
+![Create R_HOME system variable.](../install/media/sys-env-r-home.png)
 
 >[!Note] 
 >For SQL Machine Learning Services a new path for the language extension will need to be created.
@@ -108,13 +113,14 @@ Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
 Modify the path to reflect the location of the download.
 
 >[!Note] 
->Python is a reserved word. It can't be used as a name for the external Python language extension.
+>R is a reserved word. **Is this a true statement for R?**.
 
 ```sql
-CREATE EXTERNAL LANGUAGE mypython 
-FROM (CONTENT = N'C:\Users\username\Desktop\pythonextension.zip', FILE_NAME = 'pythonextension.dll');
+CREATE EXTERNAL LANGUAGE [myR]
+FROM (CONTENT = N'D:\Data-SQL-Language-Extensions\build-output\RExtension\target\debug\R-lang-extension.zip', FILE_NAME = 'libRExtension.dll');
 GO
 ```
+**Removed environment variable in Create External Language. Confirm?** 
 
 ## Verify language extension
 
@@ -122,7 +128,7 @@ This script tests the functionality of the installed language extension. Use SQL
 
 ```sql
 EXEC sp_execute_external_script
-@language =N'mypython',
+@language =N'myR',
 @script=N'
 import sys
 print(sys.path)
@@ -135,15 +141,13 @@ print(sys.executable)
 The scripts tests the function of different data types.
 
 ```sql
-exec sp_execute_external_script
-@language = N'myPython',
-@script = N'
-import sys
-print(''Hello PythonExtension!'');
-OutputDataSet = InputDataSet;
+exec sp_execute_external_script 
+@language = N'myR',
+@script = N'print(''Hello RExtension!'');
+OutputDataSet <- InputDataSet;
 print(InputDataSet);
 print(OutputDataSet);
-print(sys.version)',
+print(R.version)',
 @input_data_1 = N'select 1, cast(1.4 as real), ''Hi'', cast(''1'' as bit)'
 WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit))
 ```

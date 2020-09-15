@@ -6,7 +6,7 @@ ms.date: "08/30/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma

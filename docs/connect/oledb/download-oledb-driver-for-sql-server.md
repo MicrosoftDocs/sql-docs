@@ -16,6 +16,8 @@ The OLE DB Driver for SQL Server is a stand-alone data access application progra
 
 ## Download
 
+The redistributable installer for Microsoft OLE DB Driver for SQL Server installs the client components required during run time to take advantage of newer SQL Server features. Starting with version 18.3, the installer also includes and installs the Microsoft Active Directory Authentication Library (ADAL.dll).
+
 Microsoft OLE DB Driver 18.5 for SQL Server is the latest general availability (GA) version. If you have a previous version of Microsoft OLE DB Driver 18 for SQL Server installed, installing 18.5 upgrades it to 18.5.
 
 **[![Download](../../ssms/media/download-icon.png) Download Microsoft OLE DB Driver for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2135577)**  

@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 >[!Note] 
->Python language extension to bring your own runtime runs on SQL Server 2019 or later.
+>Python language extension to bring your own runtime runs on SQL Server 2019 CU3 or later.
  
 This article describes how to install the language extension for running Python scripts with SQL Server. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
@@ -86,9 +86,9 @@ RECONFIGURE WITH OVERRIDE;
 
 **GitHub link goes here**
 
-## Update environment path for Linux
+## Add PYTHONHOME environment variable
 
-Create the environment variable called PYTHONHOME point to the Python installation location.
+Create the environment variable called PYTHONHOME to point to the Python installation location.
 
 For login sessions:
 

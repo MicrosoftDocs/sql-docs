@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 >[!Note] 
->Python language extension to bring your own runtime runs on SQL Server 2019 or later
+>Python language extension to bring your own runtime runs on SQL Server 2019 CU3 or later
  
 This article describes how to install the language extension for running Python scripts with [SQL Server for Windows.](../../database-engine/install-windows/install-sql-server.md)
 

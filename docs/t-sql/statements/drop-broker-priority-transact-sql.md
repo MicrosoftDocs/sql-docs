@@ -29,7 +29,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP BROKER PRIORITY ConversationPriorityName  
 [;]  
 ```  
@@ -49,9 +48,8 @@ DROP BROKER PRIORITY ConversationPriorityName
 ## Examples  
  The following example drops the conversation priority named `InitiatorAToTargetPriority`.  
   
-```  
-DROP BROKER PRIORITY InitiatorAToTargetPriority;  
-  
+```sql  
+DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
 ## See Also  

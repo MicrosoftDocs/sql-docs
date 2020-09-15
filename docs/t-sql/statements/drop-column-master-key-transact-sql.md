@@ -31,8 +31,7 @@ ms.author: jaszymas
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP COLUMN MASTER KEY key_name;  
 ```  
 
@@ -51,7 +50,7 @@ DROP COLUMN MASTER KEY key_name;
 ### A. Dropping a column master key  
  The following example drops a column master key called `MyCMK`.  
   
-```  
+```sql  
 DROP COLUMN MASTER KEY MyCMK;  
 GO  
 ```  

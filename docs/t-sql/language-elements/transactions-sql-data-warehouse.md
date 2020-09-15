@@ -108,7 +108,8 @@ COMMIT;
 ### B. Rolling back a transaction  
  The following example shows the effect of rolling back a transaction.  In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.  
   
-```sql  
+
+```sql
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

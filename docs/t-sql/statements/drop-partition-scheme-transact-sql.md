@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
   
@@ -58,7 +57,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
 ## Examples  
  The following example drops the partition scheme `myRangePS1` from the current database:  
   
-```  
+```sql  
 DROP PARTITION SCHEME myRangePS1;  
 ```  
   

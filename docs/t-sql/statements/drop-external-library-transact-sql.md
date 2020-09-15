@@ -36,7 +36,7 @@ Deletes an existing package library. Package libraries are used by supported ext
 
 ## Syntax
 
-```sql
+```syntaxsql
 DROP EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ];
 ```

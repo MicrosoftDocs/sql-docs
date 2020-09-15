@@ -35,7 +35,7 @@ An organizational unit (OU) is a subdivision within an Active Directory into whe
 The organizational unit (OU) represents administrative boundaries and enable customers to control the scope of authority of data administrators. 
 >
 
-You can follow [OU Design Principes](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts.md) to decide on the best structure on working with OUs within your organization. 
+You can follow [OU Design Principles](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts.md) to decide on the best structure on working with OUs within your organization. 
 
 ### AD account for BDC domain service account
 

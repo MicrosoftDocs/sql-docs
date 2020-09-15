@@ -68,7 +68,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ## Examples  
  The following example assumes the assembly `HelloWorld` is already created in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 DROP ASSEMBLY Helloworld ;  
 ```  
   

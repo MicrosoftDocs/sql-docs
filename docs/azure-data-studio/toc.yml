@@ -55,7 +55,7 @@
       - name: Import and view models
         href: machine-learning-extension-import-view-models.md
     - name: Managed Instance extension
-      href: azure-sql-managed-instance-extension.md
+      href: extensions/azure-sql-managed-instance-extension.md
     - name: PostgreSQL extension
       href: postgres-extension.md
     - name: PowerShell extension

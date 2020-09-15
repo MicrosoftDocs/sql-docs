@@ -29,21 +29,11 @@ First, find and select Azure SQL Database in the deployment wizard.
  1. In Azure Data Studio, select the Connections viewlet on the left-side navigation.
  2. Select the **...** button at the top of the Connections panel and choose **New Deployment...**
  3. In the deployment wizard, select the **Azure SQL Database** tile and check the terms acceptance checkbox
- 4. If prompted to, install the required tools and then select the **Select** button at the bottom.
+ 4. In the **Resource type** dropdown select what you would like to create - either a database, database server, or elastic pool. If you do not have any SQL databases in Azure, we recommend starting by creating a database.
+ 5. Select **Create in Azure portal**
 
-Next, enter all of the required parameters in the Azure SQL Database wizard.
-
- 1. Sign in to your Azure account if you have not already. You can refresh your connection if you have issues on this page of the wizard.
- 2. Select your desired subscription and server. Then select **Next**.
- 3. Enter a database name.
- 4. Enter a firewall rule name. By default the firewall start and end range will be set to the IP of the machine running Azure Data Studio. This is so you can connect to the server and database from ADS right after it has been created.
- 5. Select **Next**.
- 6. Review the parameters you have entered and then select **Script to Notebook**.
-
-Once the Notebook opens, you can review the content and the code and make changes if you like. However making changes is not recommended since it could cause validation errors.
-
-The last step is to select **Run all** to run all cells in the Notebook. Once this completes you should have a fully created and running SQL Database that you can connect to and query from ADS.
+Next, enter all preferred settings for creating your database, server, or pool. You can find some guidance on how to configure these settings in the [Azure SQL documentation](https://docs.microsoft.com/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal).
 
 ## Next steps
 
-[Connect and query](quickstart-sql-database.md) your database in Azure Data Studio.
+After you have created your database, server, or pool, you can [connect and query](quickstart-sql-database.md) your database in Azure Data Studio.

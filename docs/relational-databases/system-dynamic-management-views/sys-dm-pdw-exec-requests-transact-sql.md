@@ -39,7 +39,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |group_name|**sysname** |For requests utilizing resources, group_name is the name of the workload group the request is running under.  If the request does not utilize resources, group_name is null.</br>Applies to: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|For requests utilizing resources, The name of the classifier used for assigning resources and importance.||
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure SQL Data Warehouse|
-|result_cache_hit|**decimal**|Details whether a completed query used result set cache.  </br>Applies to: Azure SQL Data Warehouse| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative values = Reasons why result set caching was not used.  See remarks section for details.|
+|result_cache_hit|**int**|Details whether a completed query used result set cache.  </br>Applies to: Azure SQL Data Warehouse| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative values = Reasons why result set caching was not used.  See remarks section for details.|
 ||||
   
 ## Remarks 

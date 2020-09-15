@@ -26,7 +26,7 @@ authentication mode. The cluster uses an existing AD domain for authentication.
 
 To enable Active Directory (AD) authentication, the BDC automatically creates the users, groups, machine accounts, and service principal names (SPN) that the various services in the cluster need. To provide some containment of these accounts and allow scoping permissions, we suggest create an organizational unit (OU) before cluster deployment. All BDC-related AD objects will be created during deployment. 
 
-## Object name collisions
+## Pre-requisites
 
 ### Organizational Unit (OU)
 An organizational unit (OU) is a subdivision within an Active Directory into where place users, groups, and even other organizational units. Big picture Organizational units can be used to mirror an organization's functional or business structure. This article we'll create an OU called bdc as an example. 

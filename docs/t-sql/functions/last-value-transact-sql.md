@@ -2,7 +2,7 @@
 description: "LAST_VALUE (Transact-SQL)"
 title: "LAST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2015"
+ms.date: "09/22/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.reviewer: ""
@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ```syntaxsql
   
-LAST_VALUE ( [ scalar_expression ] )   
+LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   
@@ -41,6 +41,13 @@ LAST_VALUE ( [ scalar_expression ] )
 ## Arguments
  *scalar_expression*  
  Is the value to be returned. *scalar_expression* can be a column, subquery, or other expression that results in a single value. Other analytic functions are not permitted.  
+  
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **Applies to**: Azure SQL Edge
+  For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
+
+  IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.     
+  RESPECT NULLS - Respect null values in the dataset when computing last value over a partition.     
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group.  

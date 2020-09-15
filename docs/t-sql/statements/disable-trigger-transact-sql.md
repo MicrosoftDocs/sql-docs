@@ -107,7 +107,7 @@ GO
 ### C. Disabling all triggers that were defined with the same scope  
  The following example disables all DDL triggers that were created at the server scope.  
   
-```  
+```sql  
 DISABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

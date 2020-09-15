@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "index dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], index"
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Index Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

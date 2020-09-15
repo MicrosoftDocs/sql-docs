@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent [WMI]"
   - "WMI Provider for Server Events, about WMI Provider for Server Events"
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Understanding the WMI Provider for Server Events
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

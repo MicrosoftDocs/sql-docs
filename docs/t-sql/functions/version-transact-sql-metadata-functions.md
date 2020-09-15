@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ## Syntax  
   
 ```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
   

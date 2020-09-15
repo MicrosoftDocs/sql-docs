@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "syscollector_collection_items view"
   - "add data collector view"
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_collection_items (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

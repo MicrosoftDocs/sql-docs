@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "partition functions [SQL Server], modifying"
   - "partitioned tables [SQL Server], merging"
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

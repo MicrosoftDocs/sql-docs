@@ -74,10 +74,10 @@ The installer lists available Visual Studio instances to add SSDT tools. If Visu
 
 ## SSDT for VS 2017 (standalone installer)
 
-:::image type="icon" source="media/download.png" border="false"::: **[Download SSDT for Visual Studio 2017 (15.9.5)](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: **[Download SSDT for Visual Studio 2017 (15.9.6)](https://go.microsoft.com/fwlink/?linkid=2139376)**
 
 > [!IMPORTANT]
-> * Before installing SSDT for Visual Studio 2017 (15.9.5), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances. 
+> * Before installing SSDT for Visual Studio 2017 (15.9.6), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances. 
 > * Removed the inbox component Power Query Source for SQL Server 2017. Now we have announced Power Query Source for SQL Server 2017 & 2019 as out-of-box component, which can be downloaded [here](https://www.microsoft.com/download/details.aspx?id=100619).
 > * To design packages using Oracle and Teradata connectors and targeting an earlier version of SQL Server prior to SQL 2019, in addition to the [Microsoft Oracle Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) and [Microsoft Teradata Connector for SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599), you need to also install the corresponding version of Microsoft Connector for Oracle and Teradata by Attunity.
 >    * [Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity targeting SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -97,17 +97,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:
 
-* [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [English (United States)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [French](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [German](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [Italian](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [Japanese](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [Korean](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [Russian](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [Spanish](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [English (United States)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [French](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [German](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [Italian](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [Japanese](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [Korean](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [Russian](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [Spanish](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### Considerations and limitations
 
@@ -161,7 +161,7 @@ To download and install SSDT for Visual Studio 2015, or an older version of SSDT
 
 * [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)
+* [SSDT Team Blog](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
 

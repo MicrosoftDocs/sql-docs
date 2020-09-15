@@ -31,7 +31,7 @@ ms.author: mathoma
 -   When the availability group is online, deleting it from a secondary replica causes the primary replica to transition to the RESTORING state. Therefore, if possible, remove the availability group only from the server instance that hosts the primary replica.    
 -   If you delete an availability group from a computer that has been removed or evicted from the WSFC failover cluster, the availability group is only deleted locally. 
 -   Avoid dropping an availability group when the Windows Server Failover Clustering (WSFC) cluster has no quorum. If you must drop an availability group while the cluster lacks quorum, the metadata availability group that is stored in the cluster is not removed. After the cluster regains quorum, you will need to drop the availability group again to remove it from the WSFC cluster.    
--   On a secondary replica, DROP AVAILABILITY GROUP should only be used only for emergency purposes. This is because dropping an availability group takes the availability group offline. If you drop the availability group from a secondary replica, the primary replica cannot determine whether the OFFLINE state occurred because of quorum loss, a forced failover, or a DROP AVAILABILITY GROUP command. The primary replica transitions to the RESTORING state to prevent a possible split-brain situation. For more information, see [How It Works: DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server Engineers blog).  
+-   On a secondary replica, DROP AVAILABILITY GROUP should only be used only for emergency purposes. This is because dropping an availability group takes the availability group offline. If you drop the availability group from a secondary replica, the primary replica cannot determine whether the OFFLINE state occurred because of quorum loss, a forced failover, or a DROP AVAILABILITY GROUP command. The primary replica transitions to the RESTORING state to prevent a possible split-brain situation. For more information, see [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog).  
   
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission. To drop an availability group that is not hosted by the local server instance you need CONTROL SERVER permission or CONTROL permission on that Availability Group.  
@@ -95,7 +95,7 @@ ms.author: mathoma
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [How It Works: DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server Engineers blog)  
+-   [How It Works: DROP AVAILABILITY GROUP Behaviors](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (CSS SQL Server Engineers blog)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

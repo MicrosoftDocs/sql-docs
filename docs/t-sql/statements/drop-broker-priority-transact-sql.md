@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP BROKER PRIORITY statement"
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

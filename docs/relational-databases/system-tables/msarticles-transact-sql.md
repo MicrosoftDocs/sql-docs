@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSarticles system table"
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

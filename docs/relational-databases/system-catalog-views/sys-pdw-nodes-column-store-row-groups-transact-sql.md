@@ -101,8 +101,6 @@ FROM sys.pdw_nodes_column_store_row_groups rg
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
->[!TIP]
-> For improved performance in Synapse SQL, consider using **sys.pdw_permanent_table_mappings** instead of **sys.pdw_table_mappings** on permanent user tables. See **[sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** for more information.
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

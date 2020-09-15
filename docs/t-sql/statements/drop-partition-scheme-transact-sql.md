@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "removing partition schemes"
   - "partition schemes [SQL Server], removing"
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]

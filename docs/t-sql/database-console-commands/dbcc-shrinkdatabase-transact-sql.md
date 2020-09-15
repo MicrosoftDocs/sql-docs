@@ -69,14 +69,14 @@ _target\_percent_
 Is the percentage of free space that you want left in the database file after the database has been shrunk.  
   
 NOTRUNCATE  
-Moves assigned pages from the file's end to unassigned pages in the front of the file. This action compacts the data within the file. _target\_percent_ is optional. Azure SQL Data Warehouse doesn't support this option. 
+Moves assigned pages from the file's end to unassigned pages in the front of the file. This action compacts the data within the file. _target\_percent_ is optional. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] doesn't support this option. 
   
 The free space at the end of the file isn't returned to the operating system, and the physical size of the file doesn't change. As such, the database appears not to shrink when you specify NOTRUNCATE.  
   
 NOTRUNCATE is applicable only to data files. NOTRUNCATE doesn't affect the log file.  
   
 TRUNCATEONLY  
-Releases all free space at the end of the file to the operating system. Doesn't move any pages inside the file. The data file shrinks only to the last assigned extent. Ignores _target\_percent_ if specified with TRUNCATEONLY. Azure SQL Data Warehouse doesn't support this option.
+Releases all free space at the end of the file to the operating system. Doesn't move any pages inside the file. The data file shrinks only to the last assigned extent. Ignores _target\_percent_ if specified with TRUNCATEONLY. [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] doesn't support this option.
   
 TRUNCATEONLY affects the log file. To truncate only the data file, use DBCC SHRINKFILE.  
   

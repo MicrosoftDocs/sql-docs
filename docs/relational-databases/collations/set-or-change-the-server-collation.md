@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: "stevestein"
 ms.author: "sstein"
-ms.reviewer: carlrab
 ---
 # Set or Change the Server Collation
 

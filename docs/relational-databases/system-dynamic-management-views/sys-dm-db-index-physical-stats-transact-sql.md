@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.dm_db_index_physical_stats dynamic management function"
   - "fragmentation [SQL Server]"
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)

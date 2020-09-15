@@ -19,7 +19,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] provides built-in procedures that you can use to perform operations related to database roles. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] includes the following system procedures:  
   
-##  <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+<a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   

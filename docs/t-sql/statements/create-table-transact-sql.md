@@ -2,7 +2,7 @@
 description: "CREATE TABLE (Transact-SQL)"
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
-ms.date: 02/24/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -44,9 +44,10 @@ helpviewer_keywords:
   - "CREATE TABLE statement"
   - "number of columns per table"
   - "maximum number of bytes per row"
+  - "data retention policy"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE TABLE (Transact-SQL)
 
@@ -231,14 +232,21 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION =  {OFF | ON }  
+          [(    
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                      | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]
+     ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -845,7 +853,7 @@ SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table
 
 Enables system versioning of the table if the datatype, nullability constraint, and primary key constraint requirements are met. If the `HISTORY_TABLE` argument is not used, the system generates a new history table matching the schema of the current table in the same filegroup as the current table, creating a link between the two tables and enables the system to record the history of each record in the current table in the history table. The name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. By default, the history table is **PAGE** compressed. If the `HISTORY_TABLE` argument is used to create a link to and use an existing history table, the link is created between the current table and the specified table. If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table. If the name of a history table is specified during history table creation, you must specify the schema and table name. When creating a link to an existing history table, you can choose to perform a data consistency check. This data consistency check ensures that existing records do not overlap. Performing the data consistency check is the default. Use this argument in conjunction with the `PERIOD FOR SYSTEM_TIME` and `GENERATED ALWAYS AS ROW { START | END }` arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }
+REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
 
 Creates the new table with Stretch Database enabled or disabled. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
@@ -879,6 +887,29 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
    This operation incurs data transfer costs, and it can't be canceled.
 
 - Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
+
+[ DATA_DELETION =  {OFF | ON }  
+          [(  
+              [ FILTER_COLUMN = column_name ],   
+              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                      | MONTH | MONTHS | YEAR | YEARS }}]    
+          )]  
+     ]  
+**Applies to:** Azure SQL Edge *only*
+
+Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
+
+- FILTER_COLUMN = { column_name }  
+Specifies the column, that should be used to determine if the rows in the table are obselete or not. The following data types are allowed for the filter column.
+  - Date
+  - DateTime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }}       
+Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit.   
 
 MEMORY_OPTIMIZED
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance does not support memory optimized tables.
@@ -1664,6 +1695,20 @@ Addressing system object in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### W. Enable Data Retention Policy on a table
+
+The following example creates a table with data retention enabled and a retention period of 1 week. This example applies to **Azure SQL Edge** only.
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## Next steps

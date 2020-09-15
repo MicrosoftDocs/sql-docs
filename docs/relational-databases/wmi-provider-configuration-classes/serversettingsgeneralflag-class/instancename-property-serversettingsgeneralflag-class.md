@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # InstanceName Property (ServerSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

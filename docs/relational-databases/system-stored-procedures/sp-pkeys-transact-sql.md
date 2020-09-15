@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_pkeys"
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_pkeys (Transact-SQL)

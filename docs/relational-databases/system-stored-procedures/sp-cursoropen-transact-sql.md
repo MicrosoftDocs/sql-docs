@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursoropen"
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

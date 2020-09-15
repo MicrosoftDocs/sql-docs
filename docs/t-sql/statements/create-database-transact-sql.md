@@ -78,7 +78,7 @@ In SQL Server, this statement creates a new database and the files used and thei
 
 ## Syntax
 
-Create a database.
+Create a database
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -127,14 +127,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 Attach a database
@@ -151,6 +143,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 

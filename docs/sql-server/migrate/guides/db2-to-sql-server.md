@@ -26,12 +26,14 @@ For other migration guides, see [Database Migration](https://datamigration.micro
 
 To migrate your DB2 database to SQL Server, you need:
 
-- [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254)
+- To verify your source environment is supported
+- Download [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254)
+
 
 
 ## Pre-migration
 
-Before you begin your migration, discover the topology of your environment and assess the feasibility of your intended migration.
+Before you begin your migration discover the topology of your environment and assess the feasibility of your intended migration.
 
 ### Assess and convert
 
@@ -81,7 +83,7 @@ To convert the schema, follow these steps:
 1. (Optional) Add dynamic or ad-hoc queries to statements. Right-click the node, and then choose **Add statements**. 
 1. Select **Connect to SQL Server**. 
     1. Enter connection details to connect to your SQL Server instance. 
-    1. Choose an existing database on the target server, or provide a new name to create a new database. 
+    1. Choose to connect to an existing database on the target server, or provide a new name to create a new database on the target server. 
     1. Select **Connect**. 
 
    :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="Fill in details to connect to SQL Server":::
@@ -143,8 +145,7 @@ The test approach for database migration consists of the following activities:
 
 ## Migration assets 
 
-The following resources were developed in support of a real-world migration project engagement and are intended to be used as examples for this migration scenario. 
-
+For additional assistance, see the following resources, which were developed in support of a real-world migration project engagement:
 
 |Asset  |Description  |
 |---------|---------|
@@ -153,7 +154,7 @@ The following resources were developed in support of a real-world migration proj
 |[IBM DB2 LUW inventory scripts and artifacts](https://github.com/Microsoft/DataMigrationTeam/tree/master/IBM%20DB2%20LUW%20Inventory%20Scripts%20and%20Artifacts)|This asset includes a SQL query that hits IBM DB2 LUW version 11.1 system tables and provides a count of objects by schema and object type, a rough estimate of 'Raw Data' in each schema, and the sizing of tables in each schema, with results stored in a CSV format.|
 |[DB2 LUW pure scale on Azure - setup guide](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/DB2%20PureScale%20on%20Azure.pdf)|This guide serves as a starting point for a DB2 implementation plan. While business requirements will differ, the same basic pattern applies. This architectural pattern may also be used for OLAP applications on Azure.|
 
-These resources were developed as part of the Data Migration Jumpstart Program (DM Jumpstart), which is sponsored by the Azure Data Group engineering team. The core charter DM Jumpstart is to unblock and accelerate complex modernization and compete data platform migration opportunities to Microsoft’s Azure Data platform. If you think your organization would be interested in participating in the DM Jumpstart program, please contact your account team and ask that they submit a nomination.
+These resources were developed as part of the Data SQL Ninja Program, which is sponsored by the Azure Data Group engineering team. The core charter of the Data SQL Ninja program is to unblock and accelerate complex modernization and compete data platform migration opportunities to Microsoft's Azure Data platform. If you think your organization would be interested in participating in the Data SQL Ninja program, please contact your account team and ask them to submit a nomination.
 
 ## Partners
 

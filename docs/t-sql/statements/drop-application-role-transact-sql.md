@@ -32,8 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP APPLICATION ROLE rolename  
 ```  
   
@@ -55,7 +54,7 @@ DROP APPLICATION ROLE rolename
 ## Examples  
  Drop application role "weekly_ledger" from the database.  
   
-```  
+```sql  
 DROP APPLICATION ROLE weekly_ledger;  
 GO  
 ```  

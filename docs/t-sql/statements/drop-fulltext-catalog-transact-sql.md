@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 DROP FULLTEXT CATALOG catalog_name  
 ```  
   

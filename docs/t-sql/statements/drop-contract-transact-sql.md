@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP CONTRACT contract_name   
 [ ; ]  
 ```  
@@ -55,9 +54,8 @@ DROP CONTRACT contract_name
 ## Examples  
  The following example removes the contract `//Adventure-Works.com/Expenses/ExpenseSubmission` from the database.  
   
-```  
-DROP CONTRACT   
-    [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
+```sql  
+DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
 ## See Also  

@@ -88,11 +88,24 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Update environment path for Linux
 
- Create the environment variable called PYTHONHOME point to the Python installation location
- For example: /usr/
+Create the environment variable called PYTHONHOME point to the Python installation location.
+
+For login sessions:
+
+
+```bash
+echo 'export PYTHONHOME="/usr"' >> ~/.bash_profile
+```
+
+For non-login sessions:
+
+```bash
+echo 'export PYTHONHOME="/usr"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 >[!Note] 
->To use the Python runtime provided with SQL Machine Learning Services, set PYTHONHOME to /opt/mssql/mlservices/runtime/python
+>To use the Python runtime provided with SQL Machine Learning Services, set PYTHONHOME to /opt/mssql/mlservices/runtime/python.
 
 ## Create external language
 
@@ -123,6 +136,8 @@ print(sys.executable)
 ```
 
 ## Verify parameters and datasets of different data types
+
+The functionality is tested by the script in the section parameters and datasets of different data types
 
 ```sql
 exec sp_execute_external_script

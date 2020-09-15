@@ -38,7 +38,7 @@ The language extension can be used with the following scenarios:
 ## Add SQL Server Language Extensions for Windows
 
 >[!Note]
->For Machine Learning Services using SQL Server 2019 mssql-server-extensibility is already installed.
+>For Machine Learning Services using SQL Server 2019, **mssql-server-extensibility is already installed.**
 
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
@@ -58,7 +58,7 @@ Complete the setup for SQL Server 2019.
   
     - **Machine Learning Services and Language Extensions**
    
-       Select **Machine Learning Services and Language Extensions** Don't select Python.
+       Select **Machine Learning Services and Language Extensions** There no need select Python.
 
     ![SQL Server 2019 installation features](../install/media/sql-feature-selection.png) 
 
@@ -71,23 +71,12 @@ Complete the setup for SQL Server 2019.
 
 1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## Add the PYTHONHOME variable
 
-`PYTHONHOME` is a system environment variable that specifies the location of the Python interpreter. In this step, create a system environment variable for it on Windows.
+## Install Python 3.7 
 
-1. Find and copy the Python home path.
+[Complete installation of Python 3.7 and add to path.](https://www.python.org/)
 
-    For example, the Python home path is `C:\Python3.7\`.
-
-    Depending on your SQL Server installation path, your location of Python might be different than the example path above. r`.
-
-
-
-## Python 3.7
-
- Python runs in a separate process from SQL Server.
-
-[Complete installation of Python 3.7](https://www.python.org/)
+![Add Python 3.7 to path.](../install/media/python378.png)
 
 + Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
 
@@ -107,10 +96,11 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Update environment path for Windows
 
-Add PYTHONHOME as an environment variable, and modify the PATH. For example: C:\Python3.7 install directory.
+Add PYTHONHOME as an environment variable. Path modified during installation. For example: C:\Python3.7 install directory.
+![Create PYTHONHOME system variable.](../install/media/sys-pythonhome.png)
 
 >[!Note] 
->For SQL Machine Learning Services a new path for the language extension will need to be created. Example
+>For SQL Machine Learning Services a new path for the language extension will need to be created.
 
 ## Create external language
 
@@ -141,6 +131,8 @@ print(sys.executable)
 ```
 
 ## Verify parameters and datasets of different data types
+
+The scripts tests the function of different data types.
 
 ```sql
 exec sp_execute_external_script

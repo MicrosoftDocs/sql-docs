@@ -58909,6 +58909,11 @@
     "source_path": "docs/linux/sql-server-linux-configure-docker.md",
     "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
     "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "docs/azure-data-studio/data-virtualization-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/data-virtualization-extension",
+      "redirect_document_id": true
+      }
   ]
 }

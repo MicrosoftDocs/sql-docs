@@ -81,9 +81,11 @@ Complete the setup for SQL Server 2019.
 
 ## Install Rcapp package
 
-install.packages("Rcpp")
+Start RStudio Desktop. Select **Tools** > **Install Packages** > Type **Rcpp**
 
-*** is there more for the windows installation?***
+![RStudio Desktop](../install/media/rcapp.png)
+
+Select **Install**.
 
 ## Enable external script execution in SQL Server
 

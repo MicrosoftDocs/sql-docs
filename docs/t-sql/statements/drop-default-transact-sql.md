@@ -63,7 +63,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ### A. Dropping a default  
  If a default has not been bound to a column or to an alias data type, it can just be dropped using DROP DEFAULT. The following example removes the user-created default named `datedflt`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
@@ -75,7 +75,7 @@ GO
   
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you can use the following syntax.  
   
-```  
+```sql  
 DROP DEFAULT IF EXISTS datedflt;  
 GO  
 ```  
@@ -83,7 +83,7 @@ GO
 ### B. Dropping a default that has been bound to a column  
  The following example unbinds the default associated with the `EmergencyContactPhone` column of the `Contact` table and then drops the default named `phonedflt`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
    BEGIN   

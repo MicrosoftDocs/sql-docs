@@ -35,8 +35,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT STOPLIST stoplist_name  
 ;  
 ```  
@@ -56,7 +55,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## Examples  
  The following example drops a full-text stoplist named `myStoplist`.  
   
-```  
+```sql 
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   

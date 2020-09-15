@@ -1,7 +1,8 @@
 ---
 title: "Using Data Classification with Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
+description: Learn how to use Microsoft OLE DB Driver for SQL Server to obtain classification information.
 ms.custom: ""
-ms.date: "08/28/2020"
+ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -36,8 +37,8 @@ GO
 
 CREATE TABLE [dbo].[mytable](
     [col1] [int] NULL,
-    [col2] [int] NULL,
-) ON [PRIMARY]
+    [col2] [int] NULL
+)
 GO
 
 ADD SENSITIVITY CLASSIFICATION TO [dbo].[mytable].[col1] WITH (label = 'Label1', label_id = 'LabelId1', information_type = 'Type1', information_type_id = 'TypeId1', rank = Medium)

@@ -29,7 +29,7 @@ To enable Active Directory (AD) authentication, the BDC automatically creates th
 ## Pre-requisites
 
 ### Organizational Unit (OU)
-An organizational unit (OU) is a subdivision within an Active Directory into where place users, groups, and even other organizational units. Big picture Organizational units can be used to mirror an organization's functional or business structure. This article we'll create an OU called bdc as an example. 
+An organizational unit (OU) is a subdivision within an Active Directory into where place users, groups, and even other organizational units. Big picture Organizational units can be used to mirror an organization's functional or business structure. This article we'll create an OU called `bdc` as an example. 
 
 >[!Note]
 The organizational unit (OU) represents administrative boundaries and enable customers to control the scope of authority of data administrators. 
@@ -39,7 +39,7 @@ You can follow [OU Design Principles](/windows-server/identity/ad-ds/plan/review
 
 ### AD account for BDC domain service account
 
-To be able to create all the required objects in Active Directory automatically, the BDC needs an AD account which have specific permissions to create users, groups, and machine accounts inside the provided organizational unit (OU). This article will explain how to configure the permission of this AD account. We use an AD Account call bdcDSA as an example in this article.
+To be able to create all the required objects in Active Directory automatically, the BDC needs an AD account which have specific permissions to create users, groups, and machine accounts inside the provided organizational unit (OU). This article will explain how to configure the permission of this AD account. We use an AD Account call `bdcDSA` as an example in this article.
 
 ### Auto generated Active Directory objects
 BDC deployment automatically generates account and group names. Each of the accounts represents a service in BDC and will be managed by BDC throughout the lifetime where BDC cluster is in use. Those accounts own the Service Principal Names (SPNs) are required by each service.  For a full list of AD auto-generated accounts, groups, and service that they managed, see [Auto generated Active Directory objects](active-directory-objects.md).

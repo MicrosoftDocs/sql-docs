@@ -115,7 +115,7 @@ The extensions settings look like this:
 
 :::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Kusto (KQL) extension settings":::
 
-## SandDance Interactive visualization
+## SandDance visualization
 
 The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
 

@@ -18,7 +18,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new in SQL Server 2019. ADR is also available for databases in Azure SQL Database, Azure SQL Managed Instance and Azure Synapse SQL. ADR is enabled by default in SQL Database and SQL Managed Instance and cannot be disabled. 
+Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new in SQL Server 2019. 
+
+ADR is also available for databases in Azure SQL Database, Azure SQL Managed Instance and Azure Synapse SQL. ADR is enabled by default in SQL Database and SQL Managed Instance and cannot be disabled. 
 
 ## Overview
 

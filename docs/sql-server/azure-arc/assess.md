@@ -21,7 +21,7 @@ You can enable SQL assessment for your SQL Server instances by following these s
 
 * Your SQL Server has the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-* The [SQL Server browser](../../tools/configuration-manager/sql-server-browser-service) is running if you are operating a named instance of SQL Server.
+* The [SQL Server browser](../../tools/configuration-manager/sql-server-browser-service.md) is running if you are operating a named instance of SQL Server.
 
 * You reviewed the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 

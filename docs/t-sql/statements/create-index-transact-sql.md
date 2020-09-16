@@ -891,7 +891,7 @@ INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
 
 The resulting error message is:
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
@@ -953,7 +953,7 @@ GO
 
 Here are the results of the second `INSERT` statement.
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 5
 Cannot insert duplicate key row in object '#Test' with unique index
 'AK_Index'. The statement has been terminated.

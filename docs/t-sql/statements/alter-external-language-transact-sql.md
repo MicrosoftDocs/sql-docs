@@ -20,7 +20,7 @@ Modifies the content in an existing external language extension in the database.
 
 ## Syntax
 
-```text
+```syntaxsql
 ALTER EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]
 {

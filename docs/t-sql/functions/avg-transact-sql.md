@@ -33,7 +33,7 @@ This function returns the average of the values in a group. It ignores null valu
   
 ## Syntax  
   
-```sql
+```syntaxsql
 AVG ( [ ALL | DISTINCT ] expression )  
    [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
@@ -205,7 +205,7 @@ SELECT BusinessEntityID, TerritoryID
    ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
    ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  

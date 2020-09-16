@@ -27,7 +27,7 @@ The Azure Data Studio functionality available for PostgreSQL includes:
 
 ## Install the PostgreSQL extension (preview)
 
-If you don't already have Azure Data Studio installed, see its [install instructions](./download-azure-data-studio.md?view=sql-server-ver15).
+If you don't already have Azure Data Studio installed, see its [install instructions](./download-azure-data-studio.md).
 
 1. Select the extensions icon from the sidebar in Azure Data Studio.
 

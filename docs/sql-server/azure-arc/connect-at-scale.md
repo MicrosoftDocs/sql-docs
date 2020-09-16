@@ -50,7 +50,7 @@ To create the service principal using PowerShell, perform the following.
     ```
 
 > [!NOTE]
-> To create a custom role, follow the instructions
+> To create a custom role, follow the instructions in [Required permissions](overview.md#required-permissions).
 >
 
 2. To retrieve the password stored in the `$sp` variable, run the following command:

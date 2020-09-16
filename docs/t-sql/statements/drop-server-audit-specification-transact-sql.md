@@ -30,8 +30,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
@@ -51,7 +50,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 ## Examples  
  The following example drops a server audit specification called `HIPAA_Audit_Specification`.  
   
-```  
+```sql  
 DROP SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification;  
 GO  
 ```  

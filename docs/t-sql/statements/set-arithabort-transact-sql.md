@@ -94,7 +94,7 @@ Requires membership in the **public** role.
 ## Examples  
 The following example demonstrates the divide-by-zero and overflow errors that have `SET ARITHABORT` settings.  
   
-```  
+```sql  
 -- SET ARITHABORT  
 -------------------------------------------------------------------------------  
 -- Create tables t1 and t2 and insert data values.  

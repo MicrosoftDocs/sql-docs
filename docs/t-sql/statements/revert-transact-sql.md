@@ -34,8 +34,7 @@ monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 REVERT  
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
@@ -49,7 +48,7 @@ REVERT
 ## Remarks  
  REVERT can be specified within a module such as a stored procedure or user-defined function, or as a stand-alone statement. When specified inside a module, REVERT is applicable only to EXECUTE AS statements defined in the module. For example, the following stored procedure issues an `EXECUTE AS` statement followed by a `REVERT` statement.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_myproc   
   WITH EXECUTE AS CALLER  
 AS   
@@ -63,7 +62,7 @@ GO
   
  Assume that in the session in which the stored procedure is run, the execution context of the session is explicitly changed to `login1`, as shown in the following example.  
   
-```  
+```sql 
   -- Sets the execution context of the session to 'login1'.  
 EXECUTE AS LOGIN = 'login1';  
 GO  
@@ -87,7 +86,7 @@ EXECUTE dbo.usp_myproc;
 ### A. Using EXECUTE AS and REVERT to switch context  
  The following example creates a context execution stack by using multiple principals. The REVERT statement is then used to reset the execution context to the previous caller. The REVERT statement is executed multiple times moving up the stack until the execution context is set to the original caller.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create two temporary principals.  
@@ -131,8 +130,8 @@ GO
 ### B. Using the WITH COOKIE clause  
  The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = @*varbinary_variable* clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
   
-```  
-DECLARE @cookie varbinary(100);  
+```sql 
+DECLARE @cookie VARBINARY(100);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie somewhere safe in your application.  
 -- Verify the context switch.  
@@ -141,7 +140,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(100);  
+DECLARE @cookie VARBINARY(100);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

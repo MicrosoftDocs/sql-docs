@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_configure_peerconflictdetection"
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

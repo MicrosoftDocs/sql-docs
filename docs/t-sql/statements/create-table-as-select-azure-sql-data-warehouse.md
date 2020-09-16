@@ -280,7 +280,7 @@ WITH (DISTRIBUTION = ROUND_ROBIN);
  
 As a final step, you can use [RENAME &#40;Transact-SQL&#41;](../../t-sql/statements/rename-transact-sql.md) to switch the table names. This makes DimCustomer2 be the new table.
 
-```
+```sql
 RENAME OBJECT DimCustomer2 TO DimCustomer2_old;
 RENAME OBJECT test TO DimCustomer2;
 

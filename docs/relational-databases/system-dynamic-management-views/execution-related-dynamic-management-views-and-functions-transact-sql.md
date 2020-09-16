@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], execution"
   - "execution-related dynamic management objects [SQL Server]"
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Execution Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

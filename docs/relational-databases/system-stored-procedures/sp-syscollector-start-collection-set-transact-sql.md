@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_start_collection_set"
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

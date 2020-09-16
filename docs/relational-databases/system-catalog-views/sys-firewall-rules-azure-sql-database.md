@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "firewall_rules"
   - "sys.firewall_rules"
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.firewall_rules (Azure SQL Database)

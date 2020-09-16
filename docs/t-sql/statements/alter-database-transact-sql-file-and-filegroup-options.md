@@ -41,8 +41,8 @@ helpviewer_keywords:
   - "files [SQL Server], adding"
   - "databases [SQL Server], moving"
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
@@ -112,7 +112,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## Arguments
@@ -650,15 +649,15 @@ GO
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN
@@ -767,7 +766,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## Arguments
@@ -962,7 +960,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;
 GO
-
 ```
 
 ### C. Removing a file from a database
@@ -1057,15 +1054,15 @@ The following example generates the required `ALTER DATABASE` statements to modi
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN

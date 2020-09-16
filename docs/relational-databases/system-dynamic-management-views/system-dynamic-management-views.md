@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "server scoped dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server]"
 ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Dynamic Management Views

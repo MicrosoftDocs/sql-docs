@@ -149,7 +149,7 @@ The use of AS in this statement does not imply the ability to impersonate anothe
 ### A. Denying CONNECT SQL permission to a SQL Server login and principals to which the login has regranted it  
  The following example denies `CONNECT SQL` permission to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Annika` and to the principals to which she has granted the permission.  
   
-```  
+```sql  
 USE master;  
 DENY CONNECT SQL TO Annika CASCADE;  
 GO  
@@ -158,7 +158,7 @@ GO
 ### B. Denying CREATE ENDPOINT permission to a SQL Server login using the AS option  
  The following example denies `CREATE ENDPOINT` permission to the user `ArifS`. The example uses the `AS` option to specify `MandarP` as the principal from which the executing principal derives the authority to do so.  
   
-```  
+```sql  
 USE master;  
 DENY CREATE ENDPOINT TO ArifS AS MandarP;  
 GO  

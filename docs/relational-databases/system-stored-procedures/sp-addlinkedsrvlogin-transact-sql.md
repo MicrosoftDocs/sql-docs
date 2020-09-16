@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addlinkedsrvlogin"
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

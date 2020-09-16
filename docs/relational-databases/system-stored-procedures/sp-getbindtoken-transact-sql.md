@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_getbindtoken"
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_getbindtoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

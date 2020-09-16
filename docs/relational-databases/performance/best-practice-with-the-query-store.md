@@ -2,10 +2,9 @@
 title: "Best practices with Query Store | Microsoft Docs"
 description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
-ms.date: "03/04/2020"
+ms.date: "09/02/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -415,7 +414,7 @@ Execution plans reference objects by using three-part names like `database.schem
 
 If you rename a database, plan forcing fails, which causes recompilation in all subsequent query executions.
 
-## <a name="Recovery"></a> Use trace flags on mission-critical servers
+## <a name="Recovery"></a> Using Query Store in mission-critical servers
 
 The global trace flags 7745 and 7752 can be used to improve availability of databases by using Query Store. For more information, see [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -426,7 +425,10 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
 > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this behavior is controlled by the engine, and trace flag 7752 has no effect.
 
 > [!IMPORTANT]
-> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible.
+> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability improvements in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) as soon as possible. Without these improvements, when the database is under heavy workloads, spinlock contention may occur and server performance may become slow. In particular, you may see heavy contention on the `QUERY_STORE_ASYNC_PERSIST` spinlock or `SPL_QUERY_STORE_STATS_COOKIE_CACHE` spinlock. After this improvement is applied, Query Store will no longer cause spinlock contention.
+
+> [!IMPORTANT]
+> If you're using Query Store for just-in-time workload insights in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], plan to install the performance scalability improvement in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 as soon as possible. Without this improvement, when the database is under heavy ad-hoc workloads, the Query Store may use a large amount of memory and server performance may become slow. After this improvement is applied, Query Store imposes internal limits to the amount of memory its various components can use, and can automatically change the operation mode to read-only until enough memory has been returned to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Note that Query Store internal memory limits are not documented because they are subject to change.  
 
 ## See also
 

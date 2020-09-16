@@ -24,7 +24,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
@@ -133,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ### A. Creating a remote table  
  This example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP remote table called `MyOrdersTable` on database `OrderReporting` and schema `Orders`. The `OrderReporting` database is on a server named `SQLA` that listens on the default port 1433. The connection to the server uses the credentials of the user `David`, whose password is `e4n8@3`.  
   
-```  
+```sql  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  
 AS SELECT <select_criteria>;  
@@ -142,7 +141,7 @@ AS SELECT <select_criteria>;
 ### B. Querying the sys.dm_pdw_dms_workers DMV for remote table copy status  
  This query shows how to view copy status for a remote table copy.  
   
-```  
+```sql  
 SELECT * FROM sys.dm_pdw_dms_workers   
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
@@ -150,7 +149,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ### C. Using a query join hint with CREATE REMOTE TABLE  
  This query shows the basic syntax for using a query join hint with CREATE REMOTE TABLE. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when generating the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
-```  
+```sql  
 USE ssawPDW;  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  

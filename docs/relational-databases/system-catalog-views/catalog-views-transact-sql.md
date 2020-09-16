@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], metadata"
   - "catalog views [SQL Server], about catalog views"
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Catalog Views (Transact-SQL)

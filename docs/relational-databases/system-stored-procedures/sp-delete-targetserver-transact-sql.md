@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_targetserver"
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

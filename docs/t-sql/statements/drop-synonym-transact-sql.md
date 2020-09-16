@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name  
 ```  
   
@@ -68,7 +67,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ## Examples  
  The following example first creates a synonym, `MyProduct`, and then drops the synonym.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 -- Create a synonym for the Product table in AdventureWorks2012.  

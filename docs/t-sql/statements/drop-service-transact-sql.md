@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP SERVICE service_name  
 [ ; ]  
 ```  
@@ -55,7 +54,7 @@ DROP SERVICE service_name
 ## Examples  
  The following example drops the service `//Adventure-Works.com/Expenses`.  
   
-```  
+```sql  
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   

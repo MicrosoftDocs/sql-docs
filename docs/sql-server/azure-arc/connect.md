@@ -41,7 +41,7 @@ In this step you generate a script that discovers all SQL Server instances insta
 In this step you will take the script you downloaded from Azure portal and execute it on the target physical or virtual machine. As a result, each installed SQL Server instance on the machine will be registered as a __SQL Server - Azure Arc__ resource. In addition, if the machines itself does not have the guest configuration agent installed, it will be installed automatically and registered as a __Machine - Azure Arc__ resource.
 
 > [!NOTE]
-> Make to execute the script using an account that meets the minimum permission requirements described in [prerequisites](overview.md#prerequisites).
+> Make sure to execute the script using an account that meets the minimum permission requirements described in [prerequisites](overview.md#prerequisites).
 
 ### Windows
 

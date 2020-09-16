@@ -40,7 +40,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ## Syntax  
   
 ```syntaxsql
-  
 RESTORE VERIFYONLY  
 FROM <backup_device> [ ,...n ]  
 [ WITH    
@@ -119,7 +118,7 @@ FROM <backup_device> [ ,...n ]
 ## Examples  
  The following example verifies the backup from disk.
   
-```  
+```sql  
 RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
 GO
 ```  

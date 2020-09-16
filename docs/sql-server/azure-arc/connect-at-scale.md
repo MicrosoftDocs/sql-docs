@@ -16,7 +16,7 @@ You can enable Azure Arc enabled SQL Servers (preview) for multiple Windows or L
 
 The installation methods to install and configure the Connected Machine agent requires that the automated method you use has  administrator permissions on the machines. On Linux, by using the root account and on Windows, as a member of the Local Administrators group.
 
-Before you get started, be sure to review the [prerequisites](overview.md#prerequisites) and verify that your subscription and resources meet the requirements.
+Before you get started, be sure to review the [prerequisites](overview.md#prerequisites) and make sure that you have created a custom role that meets the required permissions.
 
 If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
 
@@ -35,7 +35,7 @@ To create the service principal using PowerShell, perform the following.
 1. Run the following command. You must store the output of the [`New-AzADServicePrincipal`](/powershell/module/az.resources/new-azadserviceprincipal) cmdlet in a variable, or you will not be able to retrieve the password needed in a later step.
 
     ```azurepowershell-interactive
-    $sp = New-AzADServicePrincipal -DisplayName "Arc-for-servers" -Role "Azure Connected Machine Onboarding"
+    $sp = New-AzADServicePrincipal -DisplayName "Arc-for-servers" -Role <your custom role>
     $sp
     ```
 
@@ -48,6 +48,10 @@ To create the service principal using PowerShell, perform the following.
     Id                    : 5be92c87-01c4-42f5-bade-c1c10af87758
     Type                  :
     ```
+
+> [!NOTE]
+> To create a custom role, follow the instructions
+>
 
 2. To retrieve the password stored in the `$sp` variable, run the following command:
 

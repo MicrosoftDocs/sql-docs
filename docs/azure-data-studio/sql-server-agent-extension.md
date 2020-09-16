@@ -42,4 +42,4 @@ When you connect to the SQL Server Agent extension, the first thing you see is a
 
 ## Next steps
 
-To learn more about SQL Server Agent, [check our documentation.](../ssms/agent/sql-server-agent.md?view=sql-server-2017)
+To learn more about SQL Server Agent, [check our documentation.](../ssms/agent/sql-server-agent.md)

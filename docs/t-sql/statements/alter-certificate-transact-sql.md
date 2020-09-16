@@ -128,7 +128,7 @@ ALTER CERTIFICATE certificate_name
   
 ### A. Removing the private key of a certificate  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping04   
     REMOVE PRIVATE KEY;  
 GO  
@@ -136,7 +136,7 @@ GO
   
 ### B. Changing the password that is used to encrypt the private key  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping11   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hkjdskghFDGGG4%',  
     ENCRYPTION BY PASSWORD = '34958tosdgfkh##38');  
@@ -145,7 +145,7 @@ GO
   
 ### C. Importing a private key for a certificate that is already present in the database  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping13   
     WITH PRIVATE KEY (FILE = 'c:\importedkeys\Shipping13',  
     DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
@@ -154,7 +154,7 @@ GO
   
 ### D. Changing the protection of the private key from a password to the database master key  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
 GO  

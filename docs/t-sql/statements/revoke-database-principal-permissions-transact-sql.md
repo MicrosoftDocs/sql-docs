@@ -31,7 +31,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -160,7 +159,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### A. Revoking CONTROL permission on a user from another user  
  The following example revokes `CONTROL` permission on [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] user `Wanida` from user `RolandX`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
@@ -169,7 +168,7 @@ GO
 ### B. Revoking VIEW DEFINITION permission on a role from a user to which it was granted WITH GRANT OPTION  
  The following example revokes `VIEW DEFINITION` permission on [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] role `SammamishParking` from database user `JinghaoLiu`. The `CASCADE` option is specified because the user `JinghaoLiu` was granted `VIEW DEFINITION` permission `WITH GRANT OPTION`.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
@@ -181,7 +180,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    

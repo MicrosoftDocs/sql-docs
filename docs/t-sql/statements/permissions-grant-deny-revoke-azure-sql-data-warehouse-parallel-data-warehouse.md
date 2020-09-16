@@ -265,55 +265,55 @@ REVOKE
 ### A. Granting a server level permission to a login  
  The following two statements grant a server level permission to a login.  
   
-```  
+```sql  
 GRANT CONTROL SERVER TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
 ### B. Granting a server level permission to a login  
  The following example grants a server level permission on a login to a server principal (another login).  
   
-```  
+```sql  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### C. Granting a database level permission to a user  
  The following example grants a database level permission on a user to a database principal (another user).  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### D. Granting, denying, and revoking a schema permission  
  The following **GRANT** statement grants Yuen the ability to select data from any table or view in the dbo schema.  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  The following **DENY** statement prevents Yuen from selecting data from any table or view in the dbo schema. Yuen cannot read the data even if he has permission in some other way, such as through a role membership.  
   
-```  
+```sql  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  The following **REVOKE** statement removes the **DENY** permission. Now Yuen's explicit permissions are neutral. Yuen might be able to select data from any table through some other implicit permission such as a role membership.  
   
-```  
+```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
 ### E. Demonstrating the optional OBJECT:: clause  
  Because OBJECT is the default class for a permission statement, the following two statements are the same. The **OBJECT::** clause is optional.  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   

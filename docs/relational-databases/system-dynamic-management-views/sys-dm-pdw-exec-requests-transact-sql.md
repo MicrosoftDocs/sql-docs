@@ -47,7 +47,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
 The negative integer value in the result_cache_hit column is a bitmap value of all applied reasons why a query's result set cannot be cached.  This column can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of following values:  
   
-|Value       |Description|  
+|Value            |Description|  
 |-----------|-----------------|  
 |**1**|Result set cache hit|  
 |**0x00** (**0**)|Result set cache miss|  

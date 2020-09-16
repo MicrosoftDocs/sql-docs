@@ -209,7 +209,7 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### PDW / SQL Data Warehouse  
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
-```syntaxsql
+```sql
 UPDATE STATISTICS t1 (a,b);   
 ```  
   

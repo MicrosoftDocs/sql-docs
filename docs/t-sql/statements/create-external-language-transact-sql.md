@@ -22,7 +22,7 @@ Registers external language extensions in the database from the specified file p
 
 ## Syntax
 
-```text
+```syntaxsql
 CREATE EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  

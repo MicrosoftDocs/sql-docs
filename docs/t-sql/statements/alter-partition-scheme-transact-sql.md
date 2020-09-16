@@ -37,7 +37,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER PARTITION SCHEME partition_scheme_name   
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
@@ -73,7 +72,7 @@ NEXT USED [ filegroup_name ] [ ; ]
 ## Examples  
  The following example assumes the partition scheme `MyRangePS1` and the filegroup `test5fg` exist in the current database.  
   
-```  
+```sql  
 ALTER PARTITION SCHEME MyRangePS1  
 NEXT USED test5fg;  
 ```  

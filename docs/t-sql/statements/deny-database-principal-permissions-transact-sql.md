@@ -151,7 +151,7 @@ DENY permission [ ,...n ]
 ### A. Denying CONTROL permission on a user to another user  
  The following example denies `CONTROL` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] user `Wanida` to user `RolandX`.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### B. Denying VIEW DEFINITION permission on a role to a user to which it was granted with GRANT OPTION  
  The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] role `SammamishParking` to database user `JinghaoLiu`. The `CASCADE` option is specified because user `JinghaoLiu` was granted VIEW DEFINITION permission WITH GRANT OPTION.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
@@ -172,7 +172,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    

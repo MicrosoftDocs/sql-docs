@@ -47,7 +47,7 @@ FLOOR ( numeric_expression )
 ## Examples  
  The following example shows positive numeric, negative numeric, and currency values with the `FLOOR` function.  
   
-```  
+```sql  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   
@@ -61,7 +61,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example shows positive numeric, negative numeric, and values with the `FLOOR` function.  
   
-```  
+```sql  
 SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);  
 ```  
   

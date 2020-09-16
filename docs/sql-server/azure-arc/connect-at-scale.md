@@ -24,7 +24,7 @@ At the end of this process, you will have successfully connected your hybrid mac
 
 ## Create a Service Principal for onboarding at scale
 
-You can use [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps) to create a service principal with the [New-AzADServicePrincipal](https://docs.microsoft.com/en-us/powershell/module/Az.Resources/New-AzADServicePrincipal) cmdlet. Or you can follow the steps listed under [Create a Service Principal using the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal) to complete this task.
+You can use [Azure PowerShell](/powershell/azure/install-az-ps) to create a service principal with the [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) cmdlet. Or you can follow the steps listed under [Create a Service Principal using the Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal) to complete this task.
 
 > [!NOTE]
 > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines.
@@ -71,7 +71,7 @@ The values from the following properties are used with parameters passed to the 
 > Note that Azure Arc for servers doesn’t currently support signing in with a certificate, so the service principal must have a secret to authenticate with.
 >
 
-The **Azure Connected Machine Resource Administrator** has the permissions required to onboard a machine and to register SQL Server instance. You can assign the service principal permission to allow its scope to include a resource group or a subscription. To add role assignment, see [Add or remove role assignments using Azure RBAC and the Azure portal](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-cli).
+The **Azure Connected Machine Resource Administrator** has the permissions required to onboard a machine and to register SQL Server instance. You can assign the service principal permission to allow its scope to include a resource group or a subscription. To add role assignment, see [Add or remove role assignments using Azure RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
 ## Register the installed SQL Server instances on multiple machines
 
@@ -79,28 +79,32 @@ To discover and register the installed SQL Server instances on multiple machines
 
 ### Windows 
 
-Before you run the registration script on a machine, you must install the Azure powershell module with “Install-Module -Name Az -AllowClobber”, and connect the service principal account to Azure with [Connect-AzAccount](https://docs.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount). Use the following steps to connect SQL Server instances on multiple Windows machines. 
+Before you run the registration script on a machine, you must install the Azure powershell module with "Install-Module -Name Az -AllowClobber", and connect the service principal account to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Use the following steps to connect SQL Server instances on multiple Windows machines. 
 
 1. Download the PowerShell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 
 2. Open the script in an admin instance of PowerShell ISE and replace the following environment variables using the values generated during the service principal provisioning described earlier. These variable are initially empty.
 
     ```azurepowershell-interactive
-    $servicePrincipalAppId=“{serviceprincipalAppID}”
+    $servicePrincipalAppId="{serviceprincipalAppID}"
     $servicePrincipalSecret="{serviceprincipalPassword}"
     ```
 3. Execute the script on each target machines
 
+>[!NOTE]
+>The script only supports running from a 64-bit version of Windows PowerShell.
+>
+
 ### Linux
 
-Each target machine must have the [Azure CLI installed](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). On Linux machines the registration script will automatically sign in to azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
+Each target machine must have the [Azure CLI installed](/cli/azure/install-azure-cli). On Linux machines the registration script will automatically sign in to azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
 
 1. Download the Linux shell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 
-2. Replace the following variables in teh script using the values generated during the service principal provisioning described earlier. These variable are initially empty.
+2. Replace the following variables in the script using the values generated during the service principal provisioning described earlier. These variable are initially empty.
 
     ```bash
-    servicePrincipalAppId=“{serviceprincipalAppID}”
+    servicePrincipalAppId="{serviceprincipalAppID}"
     servicePrincipalSecret="{serviceprincipalPassword}"
     ```
 
@@ -114,9 +118,9 @@ After you register SQL Server instances with Azure Arc enabled SQL Server (previ
 
 ## Next steps
 
-- Learn how to manage your machine using [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview), for such things as VM [guest configuration](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration), verifying the machine is reporting to the expected Log Analytics workspace, enable monitoring with [Azure Monitor with VMs](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-policy), and much more.
+- Learn how to manage your machine using [Azure Policy](/azure/governance/policy/overview), for such things as VM [guest configuration](/azure/governance/policy/concepts/guest-configuration), verifying the machine is reporting to the expected Log Analytics workspace, enable monitoring with [Azure Monitor with VMs](/azure/azure-monitor/insights/vminsights-enable-policy), and much more.
 
-- Learn more about the [Log Analytics agent](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent). The Log Analytics agent for Windows and Linux is required when you want to proactively monitor the OS and workloads running on the machine, manage it using Automation runbooks or solutions like Update Management, or use other Azure services like [Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-intro).
+- Learn more about the [Log Analytics agent](/azure/azure-monitor/platform/log-analytics-agent). The Log Analytics agent for Windows and Linux is required when you want to proactively monitor the OS and workloads running on the machine, manage it using Automation runbooks or solutions like Update Management, or use other Azure services like [Azure Security Center](/azure/security-center/security-center-intro).
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 

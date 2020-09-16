@@ -29,8 +29,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP SEARCH PROPERTY LIST property_list_name  
 ;  
 ```  
@@ -43,7 +42,7 @@ DROP SEARCH PROPERTY LIST property_list_name
   
  To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) catalog view, as follows:  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -71,7 +70,7 @@ SELECT name FROM sys.registered_search_property_lists;
 ## Examples  
  The following example drops the `JobCandidateProperties` property list from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  
 GO  
 ```  

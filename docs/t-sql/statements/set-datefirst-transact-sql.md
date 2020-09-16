@@ -45,7 +45,7 @@ SET DATEFIRST { number | @number_var }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 SET DATEFIRST 7 ;  
 ```  

@@ -22,7 +22,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 
 Controls the result set caching behavior for the current client session.  
 
-Applies to Azure SQL Data Warehouse  
+Applies to [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -45,9 +45,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ## Remarks 
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.
 
-The negative integer value in the result_cache_hit column is a bitmap value of all applied reasons why a query's result set cannot be cached.  This column can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:  
+The negative integer value in the result_cache_hit column is a bitmap value of all applied reasons why a query's result set cannot be cached.  This column can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of following values:  
   
-|Value |Description|  
+|Value       |Description|  
 |-----------|-----------------|  
 |**1**|Result set cache hit|  
 |**0x00** (**0**)|Result set cache miss|  

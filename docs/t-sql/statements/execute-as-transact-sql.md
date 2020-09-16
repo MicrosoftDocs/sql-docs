@@ -141,7 +141,7 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 ###  <a name="_exampleA"></a> A. Using EXECUTE AS and REVERT to switch context  
  The following example creates a context execution stack using multiple principals. The `REVERT` statement is then used to reset the execution context to the previous caller. The `REVERT` statement is executed multiple times moving up the stack until the execution context is set to the original caller.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -185,8 +185,8 @@ GO
 ### B. Using the WITH COOKIE clause  
  The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
   
-```  
-DECLARE @cookie varbinary(8000);  
+```sql 
+DECLARE @cookie VARBINARY(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  
 -- Verify the context switch.  
@@ -195,7 +195,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(8000);  
+DECLARE @cookie VARBINARY(8000);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

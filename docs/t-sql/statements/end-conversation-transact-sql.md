@@ -36,7 +36,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -90,14 +89,14 @@ END CONVERSATION conversation_handle
 ### A. Ending a conversation  
  The following example ends the dialog specified by `@dialog_handle`.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### B. Ending a conversation with an error  
  The following example ends the dialog specified by `@dialog_handle` with an error if the processing statement reports an error. Notice that this is a simplistic approach to error handling, and may not be appropriate for some applications.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -122,7 +121,7 @@ COMMIT TRANSACTION ;
 ### C. Cleaning up a conversation that cannot complete normally  
  The following example ends the dialog specified by `@dialog_handle`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] immediately removes all messages from the service queue and the transmission queue, without notifying the remote service. Since ending a dialog with cleanup does not notify the remote service, you should only use this in cases where the remote service is not available to receive an **EndDialog** or **Error** message.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

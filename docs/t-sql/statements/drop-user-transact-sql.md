@@ -34,13 +34,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP USER [ IF EXISTS ] user_name  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP USER user_name  
@@ -71,7 +71,7 @@ DROP USER user_name
 ## Examples  
  The following example removes database user `AbolrousHazem` from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 DROP USER AbolrousHazem;  
 GO  
 ```  

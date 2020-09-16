@@ -29,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DROP SERVER AUDIT audit_name  
     [ ; ]  
 ```  
@@ -49,7 +48,7 @@ DROP SERVER AUDIT audit_name
 ## Examples  
  The following example drops an audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 ALTER SERVER AUDIT HIPAA_Audit  
 STATE = OFF;  
 GO  

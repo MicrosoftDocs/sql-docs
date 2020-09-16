@@ -4,7 +4,7 @@ description: This article provide performance best practices and guidelines for 
 author: tejasaks 
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/14/2017
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -80,7 +80,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### Kernel settings for Virtual Address Space
 
-The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. Change this value (which is an upper limit) to 256K.
+The default setting of **vm.max_map_count** (which is 65536) may not be high enough for a SQL Server installation. For this reason, change the **vm.max_map_count** value to 262144 for a SQL Server deployment, and refer to the [Proposed Linux settings using a tuned mssql profile](#proposed-linux-settings-using-a-tuned-mssql-profile) section for further tunings of these kernel parameters. The max value for vm.max_map_count is 2147483647.
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -107,7 +107,7 @@ vm.dirty_ratio = 80
 vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
-# For , use
+# For multi-instance SQL deployments, use
 # vm.transparent_hugepages=madvice
 vm.max_map_count=1600000
 net.core.rmem_default = 262144

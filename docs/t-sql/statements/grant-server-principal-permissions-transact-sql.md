@@ -33,7 +33,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -110,7 +109,7 @@ GRANT permission [ ,...n ] }
 ### A. Granting IMPERSONATE permission on a login  
  The following example grants `IMPERSONATE` permission on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `WanidaBenshoof` to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login created from the Windows user `AdvWorks\YoonM`.  
   
-```  
+```sql  
 USE master;  
 GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];  
 GO  
@@ -119,7 +118,7 @@ GO
 ### B. Granting VIEW DEFINITION permission with GRANT OPTION  
  The following example grants `VIEW DEFINITION` on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `EricKurjan` to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `RMeyyappan` with `GRANT OPTION`.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     WITH GRANT OPTION;  
@@ -129,7 +128,7 @@ GO
 ### C. Granting VIEW DEFINITION permission on a server role  
  The following example grants `VIEW DEFINITION` on the `Sales` server role to the `Auditors` server role.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

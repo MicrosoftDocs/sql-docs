@@ -18,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 # CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], the return value may be either a scalar value or a table (Preview). Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   
@@ -115,12 +115,12 @@ RETURNS TABLE
  Specifies the scalar value that the scalar function returns.  
 
  *select_stmt* **APPLIES TO**: Azure Synapse Analytics  
- Is the single SELECT statement that defines the return value of an inline table-valued function (Preview).
+ Is the single SELECT statement that defines the return value of an inline table-valued function (preview).
 
  TABLE **APPLIES TO**: Azure Synapse Analytics  
  Specifies that the return value of the table-valued function (TVF) is a table. Only constants and @*local_variables* can be passed to TVFs.
 
- In inline TVFs, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.
+ In inline TVFs (preview), the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.
   
  **\<function_option>::=** 
   
@@ -212,7 +212,7 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
 
-### A. Creating an inline table-valued function (Preview)
+### A. Creating an inline table-valued function (preview)
  The following example creates an inline table-valued function to return some key information on modules, filtering by the `objectType` parameter. It includes a default value to return all modules when the function is called with the DEFAULT parameter. This example makes use of some of the system catalog views mentioned in [Metadata](#metadata).
 
 ```sql

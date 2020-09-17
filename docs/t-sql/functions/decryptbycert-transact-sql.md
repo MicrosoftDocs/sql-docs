@@ -31,7 +31,6 @@ This function uses the private key of a certificate to decrypt encrypted data.
 ## Syntax  
   
 ```syntaxsql
-  
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
@@ -66,7 +65,7 @@ This function decrypts data with the private key of a certificate. Cryptographic
 ## Examples  
 This example selects rows from `[AdventureWorks2012].[ProtectedData04]` marked as data originally encrypted by certificate `JanainaCert02`. The example first decrypts the private key of certificate `JanainaCert02` with the password of certificate `pGFD4bb925DGvbd2439587y`. Then, the example decrypts the ciphertext with this private key. The example converts the decrypted data from **varbinary** to **nvarchar**.  
 
-```  
+```sql  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  
 FROM [AdventureWorks2012].[ProtectedData04]   

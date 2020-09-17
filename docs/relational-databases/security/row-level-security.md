@@ -343,7 +343,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Create an Azure Synapse external table from the Sales table created.
+Create an Azure Synapse external table from the Sales table you just created.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
@@ -358,7 +358,7 @@ CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=
 AS SELECT * FROM sales;
 ```
 
-Grant SELECT for the three users external table.
+Grant SELECT for the three users on the external table Sales_ext that you created.
 
 ```sql
 GRANT SELECT ON Sales_ext TO Sales1;  

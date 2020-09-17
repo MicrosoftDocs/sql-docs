@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_validatemergepublication"
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Bind a Database with Memory-Optimized Tables to a Resource Pool
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

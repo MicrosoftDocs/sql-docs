@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], filegroups"
   - "mapping partitions [SQL Server]"
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -86,8 +86,8 @@ AS PARTITION partition_function_name
 ### A. Creating a partition scheme that maps each partition to a different filegroup  
  The following example creates a partition function to partition a table or index into four partitions. A partition scheme is then created that specifies the filegroups to hold each one of the four partitions. This example assumes the filegroups already exist in the database.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  
@@ -106,8 +106,8 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ### B. Creating a partition scheme that maps multiple partitions to the same filegroup  
  If all the partitions map to the same filegroup, use the ALL keyword. But if multiple, but not all, partitions are mapped to the same filegroup, the filegroup name must be repeated, as shown in the following example.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF2 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF2 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS2  
@@ -126,8 +126,8 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ### C. Creating a partition scheme that maps all partitions to the same filegroup  
  The following example creates the same partition function as in the previous examples, and a partition scheme is created that maps all partitions to the same filegroup.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF3 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF3 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS3  
@@ -138,8 +138,8 @@ ALL TO ( test1fg );
 ### D. Creating a partition scheme that specifies a 'NEXT USED' filegroup  
  The following example creates the same partition function as in the previous examples, and a partition scheme is created that lists more filegroups than there are partitions created by the associated partition function.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF4 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF4 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS4  
@@ -158,8 +158,8 @@ Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked
 
  The following example creates a partition function to partition a table or index into four partitions. A partition scheme is then created that specifies that all partitions are created in the PRIMARY filegroup.  
   
-```  
-CREATE PARTITION FUNCTION myRangePF1 (int)  
+```sql  
+CREATE PARTITION FUNCTION myRangePF1 (INT)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 GO  
 CREATE PARTITION SCHEME myRangePS1  

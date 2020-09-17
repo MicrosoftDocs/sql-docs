@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "dm_exec_distributed_request_steps"
   - "sys.dm_exec_distributed_request_steps management view"
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_request_steps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Holds information about all steps that compose a given PolyBase request or query. It lists one row per query step.  
   

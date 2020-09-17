@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpsort"
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpsort (Transact-SQL)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "filegroups [SQL Server], backupfilegroup system table"
   - "backupfilegroup system table"
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

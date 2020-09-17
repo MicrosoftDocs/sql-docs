@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Transact-SQL)
@@ -128,6 +128,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <sql_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
   | <compatibility_level>
       { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 }

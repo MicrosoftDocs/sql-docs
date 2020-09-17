@@ -59,6 +59,8 @@ The negative integer value in the result_cache_hit column is a bitmap value of a
 |-**0x20** (**-32**)|Result set caching is disabled because the query contains runtime constants, user-defined functions, or non-deterministic functions.|  
 |-**0x40**(**-64**)|Result set caching is disabled due to estimated result set size is >10GB.|  
 |-**0x80**(**-128**) |Result set caching is disabled because the result set contains rows with large size (>64kb).|  
+|-**0x100**(**-256**) |Result set caching is disabled because of the use of granular dynamic data masking.|  
+
   
 ## Permissions
 

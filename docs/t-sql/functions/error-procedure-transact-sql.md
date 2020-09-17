@@ -86,6 +86,7 @@ END CATCH;
 GO  
 ```  
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 ```  
 -----------
 
@@ -131,6 +132,7 @@ BEGIN CATCH
 GO
 ``` 
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 ``` 
 -----------
 

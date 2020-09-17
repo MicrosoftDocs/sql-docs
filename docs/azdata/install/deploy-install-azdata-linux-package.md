@@ -47,13 +47,18 @@ This article describes how to install `azdata` on Linux. Before these package ma
 
    For Ubuntu 16.04 client run:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    For Ubuntu 18.04 client run:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
+
+   >[!NOTE]
+   >Previously information was available at:
+   > * `https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list`
+   > * `https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list`
 
 4. Update repository information and install `azdata`:
 

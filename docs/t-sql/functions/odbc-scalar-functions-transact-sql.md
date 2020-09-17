@@ -189,7 +189,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 ### E. Using an ODBC Function in a user-defined function  
  The following example uses an ODBC function in a user-defined function:  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  

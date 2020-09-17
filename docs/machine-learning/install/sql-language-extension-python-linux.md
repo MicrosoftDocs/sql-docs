@@ -10,8 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install runtime for Python 
-
+# Install custom runtime language extension for Python
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 >[!Note] 
@@ -81,16 +80,10 @@ $ sudo apt-get install python3.7 python3-pip
 $ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 ```
 
-## Set Permissions
-**Is this a chmod for permissions for Linux**
-"ALL APPLICATION PACKAGES" permissions
-"NT SERVICE\MSSQLLaunchpad" permissions read/write on the python installation folder.
-
 ## Enable external script execution in SQL Server
 
-An external script is a stored procedure used by Python against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
-
-After setup, enable execution of external scripts, execute the following script:
+An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
+After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 ```sql
 sp_configure 'external scripts enabled', 1;

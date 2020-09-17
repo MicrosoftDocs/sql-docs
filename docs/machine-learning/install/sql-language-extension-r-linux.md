@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install runtime for R - DRAFT IN PROGRESS
+# Install custom runtime for R
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
@@ -32,7 +32,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 
-+ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio ](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) for T-SQL commands.
++ [Azure Data Studio ](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) for T-SQL commands.
 
 + [R Version 3.3 or higher](https://cran.r-project.org/)
 
@@ -101,7 +101,8 @@ sudo apt-get --no-install-recommends -y install r-base-core
 
 ## Enable external script execution in SQL Server
 
-An external script is a stored procedure used by R against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
+After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 After setup, enable execution of external scripts, execute the following script:
 
@@ -144,7 +145,7 @@ Modify the path to reflect the location of the download.
 
 ```sql
 CREATE EXTERNAL LANGUAGE myR
-FROM (CONTENT = N'/home/ani/RExtension/Data-SQL-Language-Extensions/build-output/RExtension/target/release/R-lang-extension.zip', FILE_NAME = 'libRExtension.so.1.0',
+FROM (CONTENT = N'/users/username/R-lang-extension.zip', FILE_NAME = 'libRExtension.so.1.0',
 ENVIRONMENT_VARIABLES = N'{"R_HOME": "/usr/lib/R"}');
 GO
 ```

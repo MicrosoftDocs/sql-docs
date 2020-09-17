@@ -1,5 +1,5 @@
 ---
-title: Install your own R language extension for Windows
+title: Install custom runtime language extension for R
 description: Learn how to install a language extension for R for SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install language extension for R for Windows
+# Install custom runtime language extension for R
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
@@ -31,11 +31,11 @@ The language extension can be used with the following scenarios:
 
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
 
-+ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
++ [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 + [R Version 3.3 or higher](https://cran.r-project.org/)
 
-+ [R Studio ](https://rstudio.com/products/rstudio/download/) for executing R code.
++ [R Studio ](https://rstudio.com/products/rstudio/download/) for executing R code. Optional.
 
 ## Add SQL Server Language Extensions for Windows
 
@@ -83,7 +83,7 @@ Complete the setup for SQL Server 2019.
 
 Start RStudio Desktop. Select **Tools** > **Install Packages** > Type **Rcpp**
 
-![RStudio Desktop](../install/media/rcapp.png) rename file
+![RStudio Desktop](../install/media/rcpp.png) rename file
 
 Select **Install**.
 
@@ -103,15 +103,17 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Update environment path for Windows
 
-Add R_HOME as an environment variable. Path modified during installation. For example: C:\Program Files\R\R-3.6.3
+Add R_HOME as an environment variable. Path modified during installation. For example: C:\Program Files\R\R-4.0.2
 ![Create R_HOME system variable.](../install/media/sys-env-r-home.png)
 
 >[!Note] 
 >For SQL Machine Learning Services a new path for the language extension will need to be created.
 
-## Create external language
+## Enable external script execution in SQL Server
 
-Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
+After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+
 Modify the path to reflect the location of the download.
 
 >[!Note] 

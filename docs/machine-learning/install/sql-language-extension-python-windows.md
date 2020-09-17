@@ -10,12 +10,12 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install language extension for Python 
+# Install custom runtime language extension for Python
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
->[!Note] 
->Python language extension to bring your own runtime runs on SQL Server 2019 CU3 or later
+>[!Note]
+>Python custom runtime language extension runs on SQL Server 2019 CU3 or later
  
 This article describes how to install the language extension for running Python scripts with [SQL Server for Windows.](../../database-engine/install-windows/install-sql-server.md)
 
@@ -27,15 +27,15 @@ The language extension can be used with the following scenarios:
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ [SQL Server 2019 for Windows.](../../database-engine/install-windows/install-sql-server.md)
++ [SQL Server 2019 for Windows CU3 or later.](../../database-engine/install-windows/install-sql-server.md)
 
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
 
-+ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
++ [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 + [Python3.7]( https://www.python.org/downloads/release/python-379/)
 
-## Add SQL Server Language Extensions for Windows
+## Add custom runtime language extension
 
 >[!Note]
 >For Machine Learning Services using SQL Server 2019, **mssql-server-extensibility is already installed.**
@@ -48,7 +48,7 @@ Complete the setup for SQL Server 2019.
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
     
-    ![SQL Server 2019 installation](../install/media/2019setup-installation-page-mlsvcs.png) 
+    ![SQL Server 2019 CU3 or later installation](../install/media/2019setup-installation-page-mlsvcs.png) 
 
 1. On the **Feature Selection** page, select these options:
   
@@ -60,7 +60,7 @@ Complete the setup for SQL Server 2019.
    
        Select **Machine Learning Services and Language Extensions** Python isn't selected.
 
-    ![SQL Server 2019 installation features](../install/media/sql-feature-selection.png) 
+    ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
@@ -76,16 +76,19 @@ Complete the setup for SQL Server 2019.
 
 [Complete installation of Python 3.7 and add to path.]( https://www.python.org/downloads/release/python-379/)
 
-![Add Python 3.7 to path.](../install/media/python378.png) update image - note
+![Add Python 3.7 to path.](../install/media/Python379.png) update image - note
 
 + Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
-**what method did you want to install pandas**
+
+```bash
+python.exe -m pip install pandas
+```
 
 ## Enable external script execution in SQL Server
 
-An external script is a stored procedure used by Python against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
+After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
-After setup, enable execution of external scripts, execute the following script:
 
 ```sql
 sp_configure 'external scripts enabled', 1;

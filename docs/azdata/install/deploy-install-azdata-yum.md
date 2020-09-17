@@ -36,14 +36,19 @@ For Linux distributions with `yum` there is a package for the `azdata-cli`. The 
    For a RHEL 7 client run:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
   
    For a RHEL 8 client run:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
+
+   >[!NOTE]
+   > Previously, the information was available at:
+   > * `https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo`
+   > * `https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo`
 
 1. Install with the `yum install` command
 

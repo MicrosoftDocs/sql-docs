@@ -33,7 +33,7 @@ The language extension can be used with the following scenarios:
 
 + [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
-+ [Python3.7](https://www.python.org/)
++ [Python3.7]( https://www.python.org/downloads/release/python-379/)
 
 ## Add SQL Server Language Extensions for Windows
 
@@ -58,7 +58,7 @@ Complete the setup for SQL Server 2019.
   
     - **Machine Learning Services and Language Extensions**
    
-       Select **Machine Learning Services and Language Extensions** There no need select Python.
+       Select **Machine Learning Services and Language Extensions** Python isn't selected.
 
     ![SQL Server 2019 installation features](../install/media/sql-feature-selection.png) 
 
@@ -74,11 +74,12 @@ Complete the setup for SQL Server 2019.
 
 ## Install Python 3.7 
 
-[Complete installation of Python 3.7 and add to path.](https://www.python.org/)
+[Complete installation of Python 3.7 and add to path.]( https://www.python.org/downloads/release/python-379/)
 
-![Add Python 3.7 to path.](../install/media/python378.png)
+![Add Python 3.7 to path.](../install/media/python378.png) update image - note
 
 + Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
+**what method did you want to install pandas**
 
 ## Enable external script execution in SQL Server
 
@@ -132,7 +133,7 @@ print(sys.executable)
 
 ## Verify parameters and datasets of different data types
 
-The scripts tests the function of different data types.
+This script tests the installed language extension functionality, such as the exchange of different data types for input, output parameters, and datasets.
 
 ```sql
 exec sp_execute_external_script

@@ -1,5 +1,5 @@
 ---
-title: Install your own Python language extension for Linux
+title: Install custom Python language extension for Linux
 description: Learn how to install your own runtime for Python  for SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 >[!Note] 
->Python language extension to bring your own runtime runs on SQL Server 2019 CU3 or later.
+>The custom Python runtime language extension runs on SQL Server 2019 CU3 or later.
  
 This article describes how to install the language extension for running Python scripts with SQL Server. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
@@ -23,18 +23,18 @@ The runtime language extension can be used with the following scenarios:
 
 + An installation of SQL Server with extensibility framework.
 
-+ An existing installation of Machine Learning Services with  mssql-mlservices-packages-py installed in Linux. The runtime can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
++ An existing installation of Machine Learning Services with  mssql-mlservices-python installed in Linux. The runtime can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ [SQL Server 2019 for Linux.](../../linux/sql-server-linux-setup.md)
++ [SQL Server 2019 CU3 and later for Linux.](../../linux/sql-server-linux-setup.md)
 When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 
 + [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio ](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) for T-SQL commands.
 
-+ [Python3.7](https://www.python.org/)
++ [Python3.7](https://www.python.org/downloads/release/python-379/)
 
 ## Add SQL Server Language Extensions for Linux
 
@@ -64,13 +64,27 @@ sudo zypper install mssql-server-extensibility
 >[!Note]
 >For Machine Learning Services using SQL Server 2019 mssql-server-extensibility is already installed.
 
-## Python 3.7
+## Install Python 3.7 and pandas
 
  Python runs in a separate process from SQL Server.
 
-[Complete installation for Python 3.7](https://www.python.org/)
+[Complete installation for Python 3.7](https://www.python.org/downloads/release/python-379/)
 
-+ Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
+```bash
+$ sudo add-apt-repository ppa:deadsnakes/ppa
+$ sudo apt-get update
+$ sudo apt-get install python3.7 python3-pip
+```
+
+```bash
+# Install pandas to /usr/lib:
+$ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
+```
+
+## Set Permissions
+**Is this a chmod for permissions for Linux**
+"ALL APPLICATION PACKAGES" permissions
+"NT SERVICE\MSSQLLaunchpad" permissions read/write on the python installation folder.
 
 ## Enable external script execution in SQL Server
 
@@ -137,8 +151,7 @@ print(sys.executable)
 
 ## Verify parameters and datasets of different data types
 
-The functionality is tested by the script in the section parameters and datasets of different data types
-
+This script tests the installed language extension functionality, such as the exchange of different data types for input, output parameters, and datasets.
 ```sql
 exec sp_execute_external_script
 @language = N'myPython',

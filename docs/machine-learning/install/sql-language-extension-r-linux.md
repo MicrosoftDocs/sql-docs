@@ -27,7 +27,7 @@ The runtime language extension can be used with the following scenarios:
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ [SQL Server 2019 for Linux.](../../linux/sql-server-linux-setup.md)
++ [SQL Server 2019 CU3 and later for Linux.](../../linux/sql-server-linux-setup.md)
 When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
@@ -85,7 +85,7 @@ sudo apt-get update
 #
 sudo apt-get --no-install-recommends -y install r-base-core
 ```
-## Install Rcapp package
+## Install Rcpp package
 
  *** Is RStudio needed for this? Can be typed at prompt. ***
 
@@ -165,7 +165,7 @@ print(sys.executable)
 
 ## Verify parameters and datasets of different data types
 
-The scripts tests the function of different data types.
+This script tests the installed language extension functionality, such as the exchange of different data types for input, output parameters, and datasets.
 
 ```sql
 exec sp_execute_external_script 

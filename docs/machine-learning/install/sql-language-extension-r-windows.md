@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install language extension for R - DRAFT IN PROGRESS
+# Install language extension for R for Windows
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
@@ -60,7 +60,7 @@ Complete the setup for SQL Server 2019.
   
     - **Machine Learning Services and Language Extensions**
    
-       Select **Machine Learning Services and Language Extensions** There no need select R.
+       Select **Machine Learning Services and Language Extensions** R isn't selected.
 
     ![SQL Server 2019 installation features](../install/media/sql-feature-selection.png) 
 
@@ -79,11 +79,11 @@ Complete the setup for SQL Server 2019.
 [Complete installation of R and add to path.](https://cran.r-project.org/)
 
 
-## Install Rcapp package
+## Install Rcpp package
 
 Start RStudio Desktop. Select **Tools** > **Install Packages** > Type **Rcpp**
 
-![RStudio Desktop](../install/media/rcapp.png)
+![RStudio Desktop](../install/media/rcapp.png) rename file
 
 Select **Install**.
 
@@ -126,7 +126,7 @@ GO
 
 ## Verify language extension
 
-This script tests the functionality of the installed language extension. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+This script tests the installed language extension functionality, such as the exchange of different data types for input, output parameters, and datasets.
 
 ```sql
 EXEC sp_execute_external_script

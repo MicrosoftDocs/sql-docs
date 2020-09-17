@@ -121,20 +121,20 @@ By default, the typical ports used by SQL Server and associated database engine 
   
  An alternative to configuring a named instance to listen on a fixed port is to create an exception in the firewall for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] program such as **sqlservr.exe** (for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]). This can be convenient, but the port number will not appear in the **Local Port** column of the **Inbound Rules** page when you are using the Windows Firewall with Advanced Security MMC snap-in. This can make it more difficult to audit which ports are open. Another consideration is that a service pack or cumulative update can change the path to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executable which will invalidate the firewall rule.  
   
-##### To add a program exception to the firewall using Windows Firewall with Advanced Security
+##### To add a program exception to the firewall using Windows Defender Firewall with Advanced Security
   
-1. From the start menu, type *wf.msc*. Select **Windows Firewall with Advanced Security**.
+1. From the start menu, type *wf.msc*. Press Enter or Select the search result wf.msc. This will open **Windows Defender Firewall with Advanced Security**.
 1. In the left pane, select **Inbound rules**.
 1. In the right pane, under **Actions** select **New rule...**. **New Inbound Rule Wizard** opens.
 1. On **Rule type**, select **Program**. Select **Next**.
 1. On **Program**, select **This program path**. Select **Browse** to locate your instance of SQL Server. The program is called sqlservr.exe. It is normally located at:
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    Select **Next**.
 
-1. On **Action**, click **Allow the connection**.  
-1. Profile, include all three profiles. Select **Next**.
+1. On **Action**, click **Allow the connection**. Select Next.
+1. On Profile, include all three profiles. Select **Next**.
 1. On **Name**, type a name for the rule. Select **Finish**.
 
 For more information about endpoints, see [Configure the Database Engine to Listen on Multiple TCP Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) and [Endpoints Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 

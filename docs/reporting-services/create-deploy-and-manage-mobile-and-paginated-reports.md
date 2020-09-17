@@ -33,7 +33,7 @@ SQL Server Reporting Services (SSRS) provides a set of on-premises tools and ser
 
 The SSRS solution flexibly delivers the right information to the right users. Users can consume the reports via a web browser, on their mobile device, or via email.
 
-SQL Server Reporting Services offers an updated suite of products:
+SQL Server Reporting Services crap offers an updated suite of products:
 
 * **"Traditional" paginated reports** brought up to date, so you can create modern-looking reports, with updated tools and new features for creating them.
 * **New mobile reports** with a responsive layout that adapts to different devices and the different ways you hold them.

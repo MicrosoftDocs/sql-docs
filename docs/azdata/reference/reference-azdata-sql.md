@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Reference article for azdata sql commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
+ms.reviewer: seanw
 ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
@@ -13,17 +13,18 @@ ms.technology: big-data-cluster
 
 # azdata sql
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to `azdata`
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | The SQL Database CLI allows the user to interact with SQL Server via T-SQL.
+[azdata sql shell](#azdata-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
 [azdata sql query](#azdata-sql-query) | The query command allows execution of a T-SQL query.
 ## azdata sql shell
-The SQL Database CLI allows the user to interact with SQL Server via T-SQL.
+The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
 ```bash
 azdata sql shell 
 ```
@@ -73,4 +74,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).

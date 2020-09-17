@@ -47,9 +47,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ### Windows
 
-1. Launch an admin instance of __powershell.exe__
-
-1. Sign in your PowerShell module with your Azure credentials. Follow the [sign in instructions](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in).
+1. Launch an admin instance of __powershell.exe__ and sign in your PowerShell module with your Azure credentials. Follow the [sign in instructions](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in).
 
 2. Execute the downloaded script
 
@@ -64,7 +62,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 1. Use Azure CLI to sign in with your Azure credentials. Follow the [sign in instructions](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)
 
-1. Grand the execution permission to the downloaded script and execute it.
+2. Grant the execution permission to the downloaded script and execute it.
 
    ```bash
    sudo chmod +x ./RegisterSqlServerArc.sh

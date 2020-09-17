@@ -1,8 +1,8 @@
 ---
-description: "CREATE FUNCTION (SQL Data Warehouse)"
-title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
+description: "CREATE FUNCTION (Azure Synapse Analytics)"
+title: "CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/08/2020"
+ms.date: "09/17/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -15,10 +15,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# CREATE FUNCTION (SQL Data Warehouse)
+# CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], CREATE FUNCTION can return a table by using the syntax for inline table-valued functions (preview) or it can return a single value by using the syntax for scalar functions. Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   

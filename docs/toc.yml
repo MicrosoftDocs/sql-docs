@@ -16549,7 +16549,7 @@
           href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
         - name: FUNCTION
           href: t-sql/statements/create-function-transact-sql.md
-        - name: FUNCTION (SQL Data Warehouse)
+        - name: FUNCTION (Azure Synapse Analytics)
           href: t-sql/statements/create-function-sql-data-warehouse.md
         - name: INDEX
           href: t-sql/statements/create-index-transact-sql.md

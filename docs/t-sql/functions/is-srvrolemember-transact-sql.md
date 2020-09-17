@@ -33,7 +33,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
@@ -95,7 +94,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## Examples  
  The following example indicates whether the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for the current user is a member of the `sysadmin` fixed server role.  
   
-```  
+```sql  
 IF IS_SRVROLEMEMBER ('sysadmin') = 1  
    print 'Current user''s login is a member of the sysadmin role'  
 ELSE IF IS_SRVROLEMEMBER ('sysadmin') = 0  
@@ -106,7 +105,7 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
   
  The following example indicates whether the domain login Pat is a member of the **diskadmin** fixed server role.  
   
-```  
+```sql  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   

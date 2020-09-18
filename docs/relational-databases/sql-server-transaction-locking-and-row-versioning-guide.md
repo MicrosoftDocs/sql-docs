@@ -2079,7 +2079,7 @@ GO
     Hints like HOLDLOCK or SERIALIZABLE isolation level can cause processes to wait even on shared locks and reduce concurrency
 
 -   Avoid using Implicit transactions when possible
-    Implicit transactions can introduce unpredictable behavior due to their nature (see [Implicit Transactions and concurrency problems]((#implicit-transactions-and-avoiding-concurrency-and-resource-problems))
+    Implicit transactions can introduce unpredictable behavior due to their nature. See [Implicit Transactions and concurrency problems](#implicit-transactions-and-avoiding-concurrency-and-resource-problems)
 
 -   Design indexes with a reduced [fill factor](indexes/specify-fill-factor-for-an-index.md)
     Decreasing the fill factor may help you prevent or decrease fragmentation of index pages and thus reduce index seek times especially when retrieved from disk. To view fragmentation information for the data and indexes of a table or view, you can usesys.dm_db_index_physical_stats. 

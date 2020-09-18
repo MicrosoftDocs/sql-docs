@@ -33,8 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
@@ -66,7 +65,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ### A. Testing for data with a valid signature  
  The following example returns 1 if the selected data has not been changed since it was signed with asymmetric key `WillisKey74`. The example returns 0 if the data has been tampered with.  
   
-```  
+```sql
 SELECT Data,  
      VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), SignedData,  
      DataSignature ) as IsSignatureValid  
@@ -79,7 +78,7 @@ RETURN;
 ### B. Returning a result set that contains data with a valid signature  
  The following example returns rows in `SignedData04` that contain data that has not been changed since it was signed with asymmetric key `WillisKey74`. The example calls the function `AsymKey_ID` to obtain the ID of the asymmetric key from the database.  
   
-```  
+```sql
 SELECT Data   
 FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByAsymKey( AsymKey_Id( 'WillisKey74' ), Data,  

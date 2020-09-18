@@ -36,7 +36,7 @@ The language extension can be used with the following scenarios:
 ## Add custom runtime language extension
 
 >[!Note]
->For Machine Learning Services using SQL Server 2019, **mssql-server-extensibility is already installed.**
+>For Machine Learning Services using SQL Server 2019, the extensibility framework with launchpad service is already installed.
 
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
@@ -91,17 +91,30 @@ An external script in R can be executed via the stored procedure [sp_execute_ext
 sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
 ```
+
 ## Download language extension
 
 **GitHub link goes here**
 
 ## Update environment path for Windows
 
-Add PYTHONHOME as an environment variable. Path modified during installation. For example: C:\Python3.7 install directory.
+Add or modify PYTHONHOME as an environment variable.
+
++ In **Search** type **environment.** Select **Edit system environment variables.**
++ In the section System Variables.
+Select **Advanced** tab.
+Select **Environment Variables.**
+
++ Select **New** to create PYTHONHOME.
+To modify select **Edit** to change PYTHONHOME.
+Select **OK** to close remaining windows.
+
 ![Create PYTHONHOME system variable.](../install/media/sys-pythonhome.png)
 
+
+
 >[!Note] 
->For SQL Machine Learning Services a new path for the language extension will need to be created.
+>For existing SQL Machine Learning Services installations, modify the variable PYTHONHOME.
 
 ## Create external language
 
@@ -119,7 +132,6 @@ GO
 
 ## Verify language extension
 
-This script tests the functionality of the installed language extension. Use Azure Data Studio to connect to SQL Server.
 
 ```sql
 EXEC sp_execute_external_script

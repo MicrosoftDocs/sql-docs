@@ -36,9 +36,7 @@ The language extension can be used with the following scenarios:
 ## Add SQL Server Language Extensions for Windows
 
 >[!Note]
->For Machine Learning Services using SQL Server 2019, **mssql-server-extensibility is already installed.**
-
-Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
+>Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
 Complete the setup for SQL Server 2019.
 
@@ -70,19 +68,21 @@ Complete the setup for SQL Server 2019.
 1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 
-## Install R - Do these steps work for any version of R?
+## Install R 
 
 [Complete installation of R and add to path.](https://cran.r-project.org/)
 
 ## Install Rcpp package
 
-Start RStudio Desktop. Select **Tools** > **Install Packages** > Type **Rcpp**
+In R command prompt, run the following command where R_HOME is the path to your R installation.
 
-![RStudio Desktop](../install/media/rcpp.png) rename file
+```bash
+install.packages("Rcpp", lib="<R_HOME>/library")
+```
 
-Select **Install**.
+>[!Note]
+>Optionally [RStudio Desktop.](https://rstudio.com/products/rstudio/download/) Select **Tools** > **Install Packages** > Type **Rcpp**. Select **Install**.
 
-An external script is a stored procedure used by R against SQL Server. Use Azure Data Studio to connect to SQL Server.
 
 After setup, enable execution of external scripts, execute the following script:
 
@@ -96,11 +96,30 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Update environment path for Windows
 
-Add R_HOME as an environment variable. Path modified during installation. For example: C:\Program Files\R\R-4.0.2
+Add R_HOME as an environment variable. 
++ In **Search** type **environment.** Select **Edit system environment variables.**
++ In the section System Variables.
+Select **Advanced** tab.
+Select **Environment Variables.**
+
++ Select **New** to create R_HOME.
+To modify select **Edit** to change R_HOME.
+
++ To append to Path select **Path** then **Edit**
+
+```bash
+%R_HOME%\bin\x64
+```
+Select **OK** to close remaining windows.
+
+## Restart SQL launchpad service
+Since we aren't using SSMS how did you want to define this step?
+
 ![Create R_HOME system variable.](../install/media/sys-env-r-home.png)
 
+
 >[!Note] 
->For SQL Machine Learning Services a new path for the language extension will need to be created.
+>For SQL Machine Learning Services, set R_HOME to the location of your R_SERVICES folder. e.g. C:\Program Files\Microsoft SQL Server<InstanceName>\R_SERVICES"
 
 ## Enable external script execution in SQL Server
 
@@ -113,7 +132,7 @@ Modify the path to reflect the location of the download.
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myR]
-FROM (CONTENT = N'C:\Users\username\R-lang-extension.zip', FILE_NAME = 'libRExtension.dll');
+FROM (CONTENT = N'\Path\to\\downloaded\R-lang-extension.zip', FILE_NAME = 'libRExtension.dll');
 GO
 ```
 

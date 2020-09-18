@@ -28,7 +28,7 @@ The runtime language extension can be used with the following scenarios:
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
 + [SQL Server 2019 CU3 and later for Linux.](../../linux/sql-server-linux-setup.md)
-When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
+Before you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 
@@ -114,18 +114,20 @@ For logged sessions:
 
 
 ```bash
-echo 'export R_HOME="/usr"' >> ~/.bash_profile
+echo 'export R_HOME="/usr/lib/R"' >> ~/.bash_profile
 ```
 
 For non-logged sessions:
 
 ```bash
-echo 'export R_HOME="/usr"' >> ~/.bashrc
+echo 'export R_HOME="/usr/lib/R"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
+
+
 >[!Note] 
->To use the R runtime provided with SQL Machine Learning Services, set R_HOME to /opt/mssql/mlservices/runtime/r.
+>To use the R runtime provided with SQL Machine Learning Services, set R_HOME to /opt/microsoft/ropen/3.5.2/lib64/R.
 
 ## Create external language
 
@@ -137,8 +139,7 @@ Modify the path to reflect the location of the download.
 
 ```sql
 CREATE EXTERNAL LANGUAGE myR
-FROM (CONTENT = N'/users/username/R-lang-extension.zip', FILE_NAME = 'libRExtension.so.1.0',
-ENVIRONMENT_VARIABLES = N'{"R_HOME": "/usr/lib/R"}');
+FROM (CONTENT = N'/path/to/R-lang-extension.zip', FILE_NAME = 'libRExtension.so.1.0');
 GO
 ```
 

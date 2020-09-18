@@ -52,7 +52,7 @@ UPPER ( character_expression )
 ## Examples  
  The following example uses the `UPPER` and `RTRIM` functions to return the last name of people in the `dbo.DimEmployee` table so that it is in uppercase, trimmed, and concatenated with the first name.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  

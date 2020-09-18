@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
@@ -45,7 +45,7 @@ ms.author: vanto
 ## Examples  
  The following example shows the usage of `@@PACK_RECEIVED`.  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   

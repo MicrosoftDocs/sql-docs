@@ -2074,8 +2074,17 @@ GO
   
 -   Access the least amount of data possible while in a transaction.  
     This lessens the number of locked rows, thereby reducing contention between transactions.  
+    
+-   Avoid pessimistic locking hints such as holdlock whenever possible. 
+    Hints like HOLDLOCK or SERIALIZABLE isolation level can cause processes to wait even on shared locks and reduce concurrency
+
+-   Avoid using Implicit transactions when possible
+    Implicit transactions can introduce unpredictable behavior due to their nature (see [Implicit Transactions and concurrency problems]((#implicit-transactions-and-avoiding-concurrency-and-resource-problems))
+
+-   Design indexes with a reduced [fill factor](indexes/specify-fill-factor-for-an-index.md)
+    Decreasing the fill factor may help you prevent or decrease fragmentation of index pages and thus reduce index seek times especially when retrieved from disk. To view fragmentation information for the data and indexes of a table or view, you can usesys.dm_db_index_physical_stats. 
   
-#### Avoiding concurrency and resource problems  
+#### Implicit transactions and avoiding concurrency and resource problems  
  To prevent concurrency and resource problems, manage implicit transactions carefully. When using implicit transactions, the next [!INCLUDE[tsql](../includes/tsql-md.md)] statement after `COMMIT` or `ROLLBACK` automatically starts a new transaction. This can cause a new transaction to be opened while the application browses through data, or even when it requires input from the user. After completing the last transaction required to protect data modifications, turn off implicit transactions until a transaction is once again required to protect data modifications. This process lets the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] use autocommit mode while the application is browsing data and getting input from the user.  
   
  In addition, when the snapshot isolation level is enabled, although a new transaction will not hold locks, a long-running transaction will prevent the old versions from being removed from `tempdb`.  

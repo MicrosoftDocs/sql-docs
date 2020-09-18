@@ -53,7 +53,7 @@ In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier
  The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the `Åkergatan` 24-character string, and to print the actual first character, `Å`.  
   
 ```sql  
-DECLARE @nstring nchar(12);  
+DECLARE @nstring NCHAR(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
 ```  
@@ -72,7 +72,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(12);  
+DECLARE @position INT, @nstring NCHAR(12);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  
@@ -88,7 +88,7 @@ WHILE @position <= LEN(@nstring)
 -- While these are still characters in the character string,  
    BEGIN;  
    SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
+      CONVERT(CHAR(17), SUBSTRING(@nstring, @position, 1)),  
       UNICODE(SUBSTRING(@nstring, @position, 1));  
    SELECT @position = @position + 1;  
    END;  

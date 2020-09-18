@@ -32,8 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@PACKET_ERRORS  
 ```  
   
@@ -48,7 +47,7 @@ ms.author: vanto
 ## Examples  
  The following example shows using `@@PACKET_ERRORS`.  
   
-```  
+```sql  
 SELECT @@PACKET_ERRORS AS 'Packet Errors';  
 ```  
   

@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
->[!Note] 
+>[!Note]
 >R language extension to bring your own runtime runs on SQL Server 2019 CU3 or later.
  
 This article describes how to install the language extension for running R scripts with SQL Server. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
@@ -32,11 +32,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 
-+ [Azure Data Studio ](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) for T-SQL commands.
-
 + [R Version 3.3 or higher](https://cran.r-project.org/)
-
-+ [R Studio ](https://rstudio.com/products/rstudio/download/) for executing R code.
 
 ## Add SQL Server Language Extensions for Linux
 
@@ -87,8 +83,6 @@ sudo apt-get --no-install-recommends -y install r-base-core
 ```
 ## Install Rcpp package
 
- *** Is RStudio needed for this? Can be typed at prompt. ***
-
 + Locate installation directory for R
     /usr/lib/R/bin/
 
@@ -98,11 +92,9 @@ sudo apt-get --no-install-recommends -y install r-base-core
 
 *** (there is a prompt that states "would you like to use a personable library", does that need to be included, or does that appear normally? are there permissions that need to be set in advance) ***
 
-
 ## Enable external script execution in SQL Server
 
-An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
-After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 After setup, enable execution of external scripts, execute the following script:
 
@@ -137,7 +129,7 @@ source ~/.bashrc
 
 ## Create external language
 
-Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+Use Azure Data Studio to connect to SQL Server.
 Modify the path to reflect the location of the download.
 
 >[!Note] 
@@ -152,7 +144,7 @@ GO
 
 ## Verify language extension
 
-This script tests the functionality of the installed language extension. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+This script tests the functionality of the installed language extension. Use Azure Data Studio to connect to SQL Server.
 
 ```sql
 EXEC sp_execute_external_script

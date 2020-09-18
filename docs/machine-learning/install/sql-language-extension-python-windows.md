@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install custom runtime language extension for Python
+# Install custom runtime language extension for Python for Windows
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
@@ -30,8 +30,6 @@ The language extension can be used with the following scenarios:
 + [SQL Server 2019 for Windows CU3 or later.](../../database-engine/install-windows/install-sql-server.md)
 
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
-
-+ [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 + [Python3.7]( https://www.python.org/downloads/release/python-379/)
 
@@ -76,7 +74,7 @@ Complete the setup for SQL Server 2019.
 
 [Complete installation of Python 3.7 and add to path.]( https://www.python.org/downloads/release/python-379/)
 
-![Add Python 3.7 to path.](../install/media/Python379.png) update image - note
+![Add Python 3.7 to path.](../install/media/python-379.png) update image - note
 
 + Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
 
@@ -86,8 +84,7 @@ python.exe -m pip install pandas
 
 ## Enable external script execution in SQL Server
 
-An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
-After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 
 ```sql
@@ -108,7 +105,7 @@ Add PYTHONHOME as an environment variable. Path modified during installation. Fo
 
 ## Create external language
 
-Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+Use Azure Data Studio to connect to SQL Server.
 Modify the path to reflect the location of the download.
 
 >[!Note] 
@@ -116,13 +113,13 @@ Modify the path to reflect the location of the download.
 
 ```sql
 CREATE EXTERNAL LANGUAGE mypython 
-FROM (CONTENT = N'C:\Users\username\Desktop\pythonextension.zip', FILE_NAME = 'pythonextension.dll');
+FROM (CONTENT = N'C:\Users\username\pythonextension.zip', FILE_NAME = 'pythonextension.dll');
 GO
 ```
 
 ## Verify language extension
 
-This script tests the functionality of the installed language extension. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+This script tests the functionality of the installed language extension. Use Azure Data Studio to connect to SQL Server.
 
 ```sql
 EXEC sp_execute_external_script

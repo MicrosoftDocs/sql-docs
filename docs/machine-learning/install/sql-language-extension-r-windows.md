@@ -31,11 +31,7 @@ The language extension can be used with the following scenarios:
 
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
 
-+ [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
-
 + [R Version 3.3 or higher](https://cran.r-project.org/)
-
-+ [R Studio ](https://rstudio.com/products/rstudio/download/) for executing R code. Optional.
 
 ## Add SQL Server Language Extensions for Windows
 
@@ -50,7 +46,7 @@ Complete the setup for SQL Server 2019.
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
     
-    ![SQL Server 2019 installation](../install/media/2019setup-installation-page-mlsvcs.png) 
+    ![SQL Server 2019 installation CU3 or later](../install/media/2019setup-installation-page-mlsvcs.png) 
 
 1. On the **Feature Selection** page, select these options:
   
@@ -62,7 +58,7 @@ Complete the setup for SQL Server 2019.
    
        Select **Machine Learning Services and Language Extensions** R isn't selected.
 
-    ![SQL Server 2019 installation features](../install/media/sql-feature-selection.png) 
+    ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
 
 1. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
@@ -78,7 +74,6 @@ Complete the setup for SQL Server 2019.
 
 [Complete installation of R and add to path.](https://cran.r-project.org/)
 
-
 ## Install Rcpp package
 
 Start RStudio Desktop. Select **Tools** > **Install Packages** > Type **Rcpp**
@@ -87,9 +82,7 @@ Start RStudio Desktop. Select **Tools** > **Install Packages** > Type **Rcpp**
 
 Select **Install**.
 
-## Enable external script execution in SQL Server
-
-An external script is a stored procedure used by R against SQL Server. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+An external script is a stored procedure used by R against SQL Server. Use Azure Data Studio to connect to SQL Server.
 
 After setup, enable execution of external scripts, execute the following script:
 
@@ -111,20 +104,18 @@ Add R_HOME as an environment variable. Path modified during installation. For ex
 
 ## Enable external script execution in SQL Server
 
-An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
-After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 Modify the path to reflect the location of the download.
 
 >[!Note] 
->R is a reserved word. **Is this a true statement for R?**.
+>R is a reserved word.
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myR]
-FROM (CONTENT = N'D:\Data-SQL-Language-Extensions\build-output\RExtension\target\debug\R-lang-extension.zip', FILE_NAME = 'libRExtension.dll');
+FROM (CONTENT = N'C:\Users\username\R-lang-extension.zip', FILE_NAME = 'libRExtension.dll');
 GO
 ```
-**Removed environment variable in Create External Language. Confirm?** 
 
 ## Verify language extension
 

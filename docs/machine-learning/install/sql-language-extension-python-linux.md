@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install custom runtime language extension for Python
+# Install custom runtime language extension for Python for Linux
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 >[!Note] 
@@ -30,8 +30,6 @@ The runtime language extension can be used with the following scenarios:
 When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
-
-+ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio ](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) for T-SQL commands.
 
 + [Python3.7](https://www.python.org/downloads/release/python-379/)
 
@@ -82,8 +80,7 @@ $ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 
 ## Enable external script execution in SQL Server
 
-An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. 
-After setup, enable execution of external scripts, execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 ```sql
 sp_configure 'external scripts enabled', 1;
@@ -116,10 +113,10 @@ source ~/.bashrc
 
 ## Create external language
 
-Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server.
 Modify the path to reflect the location of the download.
 
->[!Note] 
+>[!Note]
 >Python is a reserved word. It can't be used as a name for the external Python language extension.
 
 ```sql
@@ -130,7 +127,7 @@ GO
 
 ## Verify language extension
 
-This script tests the functionality of the installed language extension. Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
+This script tests the functionality of the installed language extension. Use SQL Azure Data Studio to connect to SQL Server.
 
 ```sql
 EXEC sp_execute_external_script
@@ -145,6 +142,7 @@ print(sys.executable)
 ## Verify parameters and datasets of different data types
 
 This script tests the installed language extension functionality, such as the exchange of different data types for input, output parameters, and datasets.
+
 ```sql
 exec sp_execute_external_script
 @language = N'myPython',

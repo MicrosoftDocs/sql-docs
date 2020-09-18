@@ -18,7 +18,7 @@ ms.technology: big-data-cluster
 This article describes how to install the `azdata` tool on Windows, Linux or macOS/OS X using `pip`.
 
 > [!TIP]
-> For a simpler experience, `azdata` can be installed with a [package manager](./deploy-install-azdata.md/) for Windows, Linux (Ubuntu, Debian, RHEL, CentOS, openSUSE and SLE distributions) and macOS.
+> For a simpler experience, `azdata` can be installed with a [package manager](./deploy-install-azdata.md) for Windows, Linux (Ubuntu, Debian, RHEL, CentOS, openSUSE and SLE distributions) and macOS.
 
 ## <a id="prerequisites"></a> Prerequisites
 

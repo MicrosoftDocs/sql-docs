@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TYPE_NAME ( type_id )   
 ```  
   
@@ -61,7 +61,7 @@ TYPE_NAME ( type_id )
 ## Examples  
  The following example returns the object name, column name, and type name for each column in the `Vendor` table of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+```sql
 SELECT o.name AS obj_name, c.name AS col_name,  
        TYPE_NAME(c.user_type_id) AS type_name  
 FROM sys.objects AS o   
@@ -91,14 +91,14 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the `TYPE ID` for the data type with id `1`.  
   
-```  
+```sql
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
  For a list of types, query sys.types.  
   
-```  
+```sql
 SELECT * FROM sys.types;  
 GO  
 ```  

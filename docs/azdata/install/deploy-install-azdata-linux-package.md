@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata` with apt
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 This article describes how to install `azdata` on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
 

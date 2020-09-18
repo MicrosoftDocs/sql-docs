@@ -40,39 +40,39 @@ In [part four](r-taxi-classification-train-model.md), you loaded the modules and
 
 ## Basic scoring
 
-The stored procedure **RxPredict** illustrates the basic syntax for wrapping a RevoScaleR rxPredict call in a stored procedure.
+The stored procedure **RPredict** illustrates the basic syntax for wrapping a `PREDICT` call in a stored procedure.
 
 ```sql
-CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
+CREATE PROCEDURE [dbo].[RPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
 
 DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
-    mod <- unserialize(as.raw(model)); 
-    print(summary(mod)) 
-    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE); 
-    str(OutputDataSet) 
-    print(OutputDataSet) 
+    mod <- unserialize(as.raw(model));
+    print(summary(mod))
+    OutputDataSet<-Predict(mod, InputDataSet);
+    str(OutputDataSet)
+    print(OutputDataSet)
     ', 
   @input_data_1 = @inquery, 
   @params = N'@model varbinary(max)',
   @model = @lmodel2 
-  WITH RESULT SETS ((Score float));
+  WITH RESULT SETS (("Score" float));
 END
 GO
 ```
 
 + The SELECT statement gets the serialized model from the database, and stores the model in the R variable `mod` for further processing using R.
 
-+ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), which generates the scores.
++ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [PREDICT](/sql/t-sql/queries/predict-transact-sql) function which generates the scores.
   
-  `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
+  `OutputDataSet<-Predict(mod, InputDataSet);`
   
   Because a data.frame can contain a single row, you can use the same code for batch or single scoring.
   
-+ The value returned by the `rxPredict` function is  a **float** that represents the probability that the driver gets a tip of any amount.
++ The value returned by the `PREDICT` function is  a **float** that represents the probability that the driver gets a tip of any amount.
 
 ## Batch scoring (a list of predictions)
 
@@ -103,10 +103,10 @@ A more common scenario is to generate predictions for multiple observations in b
    1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
    ```
 
-2. Create a stored procedure called **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Create a stored procedure called **RPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
+   CREATE PROCEDURE [dbo].[RPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
    AS
    BEGIN
    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
@@ -115,7 +115,7 @@ A more common scenario is to generate predictions for multiple observations in b
      @script = N'
        mod <- unserialize(as.raw(model));
        print(summary(mod))
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
+       OutputDataSet<-Predict(mod, InputDataSet);
        str(OutputDataSet)
        print(OutputDataSet)
      ',
@@ -134,7 +134,7 @@ A more common scenario is to generate predictions for multiple observations in b
    SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
    
    -- Call the stored procedure for scoring and pass the input data
-   EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
+   EXEC [dbo].[RPredictBatchOutput] @model = 'TrainLogModel', @inquery = @query_string;
    ```
   
 The stored procedure returns a series of values representing the prediction for each of the top 10 trips. However, the top trips are also single-passenger trips with a relatively short trip distance, for which the driver is unlikely to get a tip.
@@ -151,10 +151,10 @@ In this section, you learn how to create single predictions using a stored proce
   
 If you call the stored procedure from an external application, make sure that the data matches the requirements of the R model. This might include ensuring that the input data can be cast or converted to an R data type, or validating data type and data length.
 
-1. Create a stored procedure **RxPredictSingleRow**.
+1. Create a stored procedure **RPredictSingleRow**.
   
    ```sql
-   CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+   CREATE PROCEDURE [dbo].[RPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
    AS
    BEGIN
    DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -164,7 +164,7 @@ If you call the stored procedure from an external application, make sure that th
      @script = N'  
        mod <- unserialize(as.raw(model));  
        print(summary(mod));  
-       OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
+       OutputDataSet<-Predict(mod, InputDataSet);
        str(OutputDataSet);
        print(OutputDataSet); 
        ',  
@@ -179,7 +179,7 @@ If you call the stored procedure from an external application, make sure that th
    Open a new **Query** window, and call the stored procedure, providing values for each of the parameters. The parameters represent feature columns used by the model and are required.
 
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+   EXEC [dbo].[RPredictSingleRow] @model = 'TrainLog_model',
    @passenger_count = 1,
    @trip_distance = 2.5,
    @trip_time_in_secs = 631,
@@ -192,7 +192,7 @@ If you call the stored procedure from an external application, make sure that th
    Or, use this shorter form supported for [parameters to a stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
    ```sql
-   EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+   EXEC [dbo].[RPredictSingleRow] 'TrainLog_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
 3. The results indicate that the probability of getting a tip is low (zero) on these top 10 trips, since all are single-passenger trips over a relatively short distance.

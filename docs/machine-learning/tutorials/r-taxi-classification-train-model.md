@@ -38,10 +38,10 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
 
 1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window.
 
-2. Run the following statement to create the stored procedure **RxTrainLogitModel**. This stored procedure defines the input data and uses **rxLogit** from RevoScaleR to create a logistic regression model.
+2. Run the following statement to create the stored procedure **TrainLogModel**. This stored procedure defines the input data and uses **lm** to create a logistic regression model.
 
    ```sql
-   CREATE PROCEDURE [dbo].[RxTrainLogitModel] (@trained_model varbinary(max) OUTPUT)
+   CREATE PROCEDURE [dbo].[TrainLogModel] (@trained_model varbinary(max) OUTPUT)
    
    AS
    BEGIN
@@ -56,7 +56,7 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
      EXEC sp_execute_external_script @language = N'R',
                                      @script = N'
    ## Create model
-   logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
+   logitObj <- lm(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = InputDataSet)
    summary(logitObj)
    
    ## Serialize model 
@@ -73,7 +73,7 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
 
    + The SELECT query uses the custom scalar function *fnCalculateDistance* to calculate the direct distance between the pick-up and drop-off locations. The results of the query are stored in the default R input variable, `InputDataset`.
   
-   + The R script calls the **rxLogit** function, which is one of the enhanced R functions included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], to create the logistic regression model.
+   + The R script calls the R function **lm** to create the logistic regression model.
   
      The binary variable _tipped_ is used as the *label* or outcome column,  and the model is fit using these feature columns:  _passenger_count_, _trip_distance_, _trip_time_in_secs_, and _direct_distance_.
   
@@ -87,24 +87,24 @@ Because the stored procedure already includes a definition of the input data, yo
 
    ```sql
    DECLARE @model VARBINARY(MAX);
-   EXEC RxTrainLogitModel @model OUTPUT;
-   INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
+   EXEC TrainLogModel @model OUTPUT;
+   INSERT INTO nyc_taxi_models (name, model) VALUES('TrainLog_model', @model);
    ```
 
 2. Watch the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for messages that would be piped to R's **stdout** stream, like this message: 
 
    "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
 
-   You might also see messages specific to the individual function, `rxLogit`, displaying the variables and test metrics generated as part of model creation.
+   You might also see messages specific to the individual function, `lm`, displaying the variables and test metrics generated as part of model creation.
 
 3. When the statement has completed, open the table *nyc_taxi_models*. Processing of the data and fitting the model might take a while.
 
-   You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **RxTrainLogit_model** in the column _name_.
+   You can see that one new row has been added, which contains the serialized model in the column _model_ and the model name **TrainLog_model** in the column _name_.
 
    ```text
    model                        name
    ---------------------------- ------------------
-   0x580A00000002000302020....  RxTrainLogit_model
+   0x580A00000002000302020....  TrainLog_model
    ```
 
 In the next part of this tutorial you'll use the trained model to generate predictions.

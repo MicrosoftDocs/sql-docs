@@ -96,7 +96,7 @@ sudo apt-get --no-install-recommends -y install r-base-core
 
 An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
-After setup, enable execution of external scripts, execute the following script:
+After setup, to enable execution of external scripts, execute the following script:
 
 ```sql
 sp_configure 'external scripts enabled', 1;
@@ -112,7 +112,6 @@ Create the environment variable called R_HOME to point to the R installation loc
 
 For logged sessions:
 
-
 ```bash
 echo 'export R_HOME="/usr/lib/R"' >> ~/.bash_profile
 ```
@@ -125,6 +124,31 @@ source ~/.bashrc
 ```
 
 
+>[!Note]
+>If you have installed R in the default location of /usr/lib/R, you can skip this step.
+If you haven't, complete the following steps:
+
+1. Edit configuration file.
+
+```bash
+sudo systemctl edit mssql-launchpadd
+```
+
+1. Edit file and insert the following text:
+
+```bash
+[Service]
+Environment="R_HOME=/path/to/your/R/installation/folder"
+```
+
+Save and close.
+
+
+1. Start launchpadd
+
+```bash
+sudo systemctl restart mssql-launchpadd
+```
 
 >[!Note] 
 >To use the R runtime provided with SQL Machine Learning Services, set R_HOME to /opt/microsoft/ropen/3.5.2/lib64/R.

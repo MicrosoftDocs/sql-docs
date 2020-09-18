@@ -28,12 +28,12 @@ Returns the root of the hierarchy tree. GetRoot() is a static method.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::GetRoot ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  

@@ -32,8 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ROWCOUNT_BIG ( )  
 ```  
   

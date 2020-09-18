@@ -68,7 +68,7 @@ An error is raised if the resulting value is larger than the maximum supported b
 ## Examples  
  The following example returns a character string created by deleting three characters from the first string, `abcdef`, starting at position `2`, at `b`, and inserting the second string at the deletion point.  
   
-```  
+```sql  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
 GO  
 ```  

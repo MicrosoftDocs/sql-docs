@@ -46,6 +46,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Deployment | Added support to ignore change data capture enabled tables when exporting from Azure SQL Database |
 | Deployment | Added support for index option OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL Database |
 | Deployment | Added support for identity columns for Azure SQL Data Warehouse | 
+| Help | Output the sqlpackage version in the help (/?) and support the /version parameter | 
 
 ### Fixes
 | Feature | Details |
@@ -53,7 +54,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Deployment | Fixed an incorrect deployment script generated when targeting Azure SQL Database Managed Instance as a non-sysadmin user  | 
 | Deployment | Fixed loading deployment contributors when running script actions | 
 | Help | Output correct elapsed time in sqlpackage when operation take longer than 1 day | 
-| Help | Output the sqlpackage version in the help (/?) and support the /version parameter | 
 | Deployment | Fixed dacpac registration when deploying for .NET Core | 
 | Deployment | Fixed sqlpackage on .NET Core handling of the /accessToken (/at) parameter | 
 | Deployment | Allow ALTER TABLE statements in stored procedures as non-top level statements | 

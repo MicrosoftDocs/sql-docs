@@ -162,7 +162,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Platform | sqlpackage .NET Core GA for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
-| Deployment | Add Managed Instance support for AAD user and groups. |
+| Deployment | Add Managed Instance support for Azure Active Directory user and groups. |
 | Deployment | Support the /AccessToken parameter for sqlpackage on .NET Core. |
 | &nbsp; | &nbsp; |
 

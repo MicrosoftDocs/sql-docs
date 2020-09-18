@@ -180,7 +180,7 @@ CREATE EXTERNAL TABLE AS SELECT to Parquet or ORC files will cause errors, which
 - /r
 - /n
 
-To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first CREATE EXTERNAL TABLE AS SELECT the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
+To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must first run the CREATE EXTERNAL TABLE AS SELECT statement to export the data to delimited text files where you can then convert them to Parquet or ORC by using an external tool.
 
 ## Locking
  Takes a shared lock on the SCHEMARESOLUTION object.

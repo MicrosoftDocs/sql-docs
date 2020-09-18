@@ -12,7 +12,7 @@ ms.prod: sql
 
 # Install `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 `azdata` is a command-line utility written in Python to bootstrap and manage the data services via REST APIs. 
 

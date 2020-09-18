@@ -87,8 +87,13 @@ sudo apt-get --no-install-recommends -y install r-base-core
     /usr/lib/R/bin/
 
 + Start R
-    /usr/lib/R/bin/R
-        install.packages("Rcpp")
+   sudo /usr/lib/R/bin/R
+
++ Install Rcpp as follows where lib is the path to the library folder under R_HOME."
+
+```bash
+install.packages("Rcpp", lib = "/usr/lib/R/library")
+```
 
 *** (there is a prompt that states "would you like to use a personable library", does that need to be included, or does that appear normally? are there permissions that need to be set in advance) ***
 

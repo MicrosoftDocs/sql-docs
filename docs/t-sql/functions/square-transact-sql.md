@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SQUARE ( float_expression )  
 ```  
   
@@ -46,8 +46,8 @@ SQUARE ( float_expression )
 ## Examples  
  The following example returns the volume of a cylinder having a radius of `1` inch and a height of `5` inches.  
   
-```  
-DECLARE @h float, @r float;  
+```sql  
+DECLARE @h FLOAT, @r FLOAT;  
 SET @h = 5;  
 SET @r = 1;  
 SELECT PI()* SQUARE(@r)* @h AS 'Cyl Vol';  
@@ -64,13 +64,13 @@ Cyl Vol
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the square of each value in the `volume` column in the `containers` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE TABLE Containers (  
-    ID int NOT NULL,  
-    Name varchar(20),  
-    Volume float(24));  
+    ID INT NOT NULL,  
+    Name VARCHAR(20),  
+    Volume FLOAT(24));  
   
 INSERT INTO Containers VALUES (1, 'Cylinder', '125.22');  
 INSERT INTO Containers VALUES (2, 'Cube', '23.98');  

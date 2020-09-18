@@ -1,11 +1,11 @@
 ---
-title: Install azdata with installer on Linux
+title: Install azdata with apt
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing SQL Server Big Data Clusters with the installer (Linux). 
+description: Learn how to install the azdata tool for installing and managing SQL Server Big Data Clusters with apt. 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,95 +15,93 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
+For Linux distributions with `apt` there is a package for the `azdata-cli`. The CLI package has been tested on Linux versions which use `apt`:
+
+- Ubuntu 16.04, Ubuntu 18.04
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
-## <a id="linux"></a>Install `azdata` for Linux
+## Install with apt
 
-`azdata` installation package is available for Ubuntu with `apt`.
+>[!IMPORTANT]
+> The RPM package of the `azdata-cli` depends on the python3 package. On your system, this may be a Python version which predates the requirement of *Python 3.6.x*. If this poses an issue for you, find a replacement python3 package or follow the manual install instructions that use [`pip`](../install/deploy-install-azdata-pip.md).
 
-### <a id="azdata-apt"></a>Install `azdata` with apt (Ubuntu)
+1. Install dependencies necessary to install `azdata-cli`.
 
->[!NOTE]
->The `azdata` package does not use the system Python, rather installs its own Python interpreter.
+   ```bash
+   sudo apt-get update
+   sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
+   ```
 
-1. Get packages needed for the install process:
+2. Import the Microsoft repository key.
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
-    ```
+   ```bash
+   curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+   gpg --dearmor |
+   sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+   ```
 
-2. Download and install the signing key:
-
-    ```bash
-    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
-    gpg --dearmor |
-    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
-    ```
-
-3. Add the `azdata` repository information.
+3. Create local repository information.
 
    For Ubuntu 16.04 client run:
-    ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
-    ```
+
+   ```bash
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
 
    For Ubuntu 18.04 client run:
-    ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
-    ```
 
-4. Update repository information and install `azdata`:
+   ```bash
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+   ```
 
-    ```bash
-    sudo apt-get update
-    sudo apt-get install -y azdata-cli
-    ```
+4. Install `azdata-cli`.
 
-5. Verify installation:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y azdata-cli
+   ```
 
-    ```bash
-    azdata --version
-    ```
+## Verify install
 
-### Update
+```bash
+azdata
+azdata --version
+```
 
-Upgrade `azdata` only:
+## Update
+
+Update the `azdata-cli` with the `apt-get update` and `apt-get install` commands.
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### Uninstall
+## Uninstall
 
-1. Uninstall with apt-get remove:
+1. Remove the package from your system.
 
-    ```bash
-    sudo apt-get remove -y azdata-cli
-    ```
+   ```bash
+   sudo apt-get remove -y azdata-cli
+   ```
 
-2. Remove the `azdata` repository information:
+2. Remove the repository information if you do not plan to reinstall `azdata-cli`.
 
-    >[!NOTE]
-    >This step is not needed if you plan on installing `azdata` in the future
+   ```bash
+   sudo rm /etc/apt/sources.list.d/azdata-cli.list
+   ```
 
-    ```bash
-    sudo rm /etc/apt/sources.list.d/azdata-cli.list
-    ```
+3. Remove the repository key.
 
-3. Remove the signing key:
+   ```bash
+   sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
+   ```
 
-    ```bash
-    sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
-    ```
+4. Remove dependencies no longer required.
 
-4. Remove any unneeded dependencies that were installed with Azdata CLI:
-
-    ```bash
-    sudo apt autoremove
-    ```
+   ```bash
+   sudo apt autoremove
+   ```
 
 ## Next steps
 

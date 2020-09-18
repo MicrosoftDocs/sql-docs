@@ -29,6 +29,41 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## 18.6 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2143544)|September 18, 2020|18.6|15.0.4897.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|September 18, 2020| 18.6|15.0.4897.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|September 18, 2020| 18.6|15.0.4897.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|September 18, 2020| 18.6|15.0.4897.1|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Platform | Updated sqlpackage for .NET Core version to .NET Core 3.1 |
+| Always Encrypted | Added support for secure enclave import and export for SQL Server 2019 |
+| Deployment | Added support to ignore change data capture enabled tables when exporting from Azure SQL Database |
+| Deployment | Added support for index option OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL Database |
+| Deployment | Added support for identity columns for Azure SQL Data Warehouse | 
+
+### Fixes
+| Feature | Details |
+| :------ | :------ | 
+| Deployment | Fixed an incorrect deployment script generated when targeting Azure SQL Database Managed Instance as a non-sysadmin user  | 
+| Deployment | Fixed loading deployment contributors when running script actions | 
+| Help | Output correct elapsed time in sqlpackage when operation take longer than 1 day | 
+| Help | Output the sqlpackage version in the help (/?) and support the /version parameter | 
+| Deployment | Fixed dacpac registration when deploying for .NET Core | 
+| Deployment | Fixed sqlpackage on .NET Core handling of the /accessToken (/at) parameter | 
+| Deployment | Allow ALTER TABLE statements in stored procedures as non-top level statements | 
+| Deployment | Fixed Azure SQL Data Warehouse validation of materialized views to be case insensitive | 
+
+### Known Issues
+| Feature | Details |
+| :------ | :------ |
+| Deployment | The Azure SQL Data Warehouse Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | 
+
 ## 18.5.1 sqlpackage
 
 |Platform|Download|Release date|Version|Build

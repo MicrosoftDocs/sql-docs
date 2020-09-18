@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@SERVICENAME  
 ```  
   
@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ## Examples  
  The following example shows using `@@SERVICENAME`.  
   
-```  
+```sql  
 SELECT @@SERVICENAME AS 'Service Name';  
 ```  
   

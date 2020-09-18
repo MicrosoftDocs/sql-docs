@@ -176,7 +176,7 @@ CONTAINS (
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -188,7 +188,7 @@ WHERE CONTAINS(Description, @SearchWord);
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -271,7 +271,7 @@ CONTAINS(column_name, 'NEAR((AA,BB),5)')
   
  The string `AA one two three four five BB` would be a match. In the following example, the query specifies for three search terms, `AA`, `BB`, and `CC` within a maximum distance of five:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
 ```  
   
@@ -299,7 +299,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  For example, the following proximity term searches the words "`Monday`", "`Tuesday`", and "`Wednesday`" in the specified order with regardless of the distance between them:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   

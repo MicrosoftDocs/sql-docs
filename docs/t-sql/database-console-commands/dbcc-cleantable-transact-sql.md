@@ -38,7 +38,6 @@ Reclaims space from dropped variable-length columns in tables or indexed views.
 ## Syntax  
   
 ```syntaxsql
-  
 DBCC CLEANTABLE  
 (  
     { database_name | database_id | 0 }  
@@ -76,7 +75,7 @@ DBCC CLEANTABLE should not be executed as a routine maintenance task. Instead, u
 ## Result Sets  
 DBCC CLEANTABLE returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

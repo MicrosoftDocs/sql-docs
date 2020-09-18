@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```sql
+```syntaxsql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   

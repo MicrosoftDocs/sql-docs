@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@VERSION  
 ```  
 
@@ -84,7 +84,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A: Return the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following example shows returning the version information for the current installation.  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
@@ -92,7 +92,7 @@ SELECT @@VERSION AS 'SQL Server Version';
   
 ### B. Return the current version of [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server PDW Version';  
 ```  
   

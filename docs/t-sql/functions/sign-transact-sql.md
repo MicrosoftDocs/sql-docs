@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SIGN ( numeric_expression )  
 ```  
   
@@ -59,8 +59,8 @@ SIGN ( numeric_expression )
 ## Examples  
  The following example returns the SIGN values of numbers from -1 to 1.  
   
-```  
-DECLARE @value real  
+```sql  
+DECLARE @value REAL  
 SET @value = -1  
 WHILE @value < 2  
    BEGIN  
@@ -97,7 +97,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the SIGN values of three numbers.  
   
-```  
+```sql  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
 ```  
   

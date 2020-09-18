@@ -60,7 +60,7 @@ RIGHT ( character_expression , integer_expression )
 ### A: Using RIGHT with a column  
  The following example returns the five rightmost characters of the first name for each person in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT RIGHT(FirstName, 5) AS 'First Name'  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -87,7 +87,7 @@ Rob
 ### B. Using RIGHT with a column  
  The following example returns the five rightmost characters of each last name in the `DimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RIGHT(LastName, 5) AS Name  
@@ -109,7 +109,7 @@ lters
 ### C. Using RIGHT with a character string  
  The following example uses `RIGHT` to return the two rightmost characters of the character string `abcdefg`.  
   
-```  
+```sql  
 SELECT RIGHT('abcdefg', 2); 
 ```  
   

@@ -1,6 +1,6 @@
 ---
 title: Install custom Python runtime
-description: Learn how to install a custom Python runtime  for SQL Server.
+description: Learn how to install a custom Python runtime for SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
@@ -13,19 +13,22 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # Install a custom Python runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a custom Python runtime for running Python scripts with SQL Server. The custom Python runtime can be used with the following scenarios:
+This article describes how to install a custom runtime for running Python scripts with SQL Server. The custom runtime for Python can be used with the following scenarios:
 
 + An installation of SQL Server with extensibility framework.
 
 + An installation of SQL Machine Learning Services for SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> This article describes how to install a custom runtime for Python on Windows. To install on Linux, see the [Install a custom Python runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15)
+
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
 + [SQL Server 2019 for Windows CU3 or later.](../../database-engine/install-windows/install-sql-server.md)
 
   > [!Note]
-  > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019 CU3.
+  > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
 
@@ -132,13 +135,16 @@ GO
 ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
+> [!NOTE]
+> This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a custom Python runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15)
+
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
 + [SQL Server 2019 CU3 and later for Linux.](../../linux/sql-server-linux-setup.md)
 When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
   > [!Note]
-  > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019 CU3.
+  > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 

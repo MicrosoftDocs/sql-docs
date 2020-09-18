@@ -251,7 +251,7 @@ Specifies a match for an exact word or a phrase. Examples of valid simple terms 
   
  By default, the custom proximity term returns any rows that contain the specified terms regardless of the intervening distance and regardless of their order. For example, to match the following query, a document would simply need to contain `term1` and "`term3 term4`" anywhere, in any order:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR(term1,"term3 term4")')  
 ```  
   
@@ -265,7 +265,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  For example, the following query searches for `AA` and `BB`, in either order, within a maximum distance of five.  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
@@ -463,7 +463,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'Performance'  
 SELECT Description   
 FROM Production.ProductDescription   

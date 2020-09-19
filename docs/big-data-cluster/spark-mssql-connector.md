@@ -1,88 +1,131 @@
 ---
-title: Connect Spark to SQL Server
+title: Using the Apache Spark Connector for SQL Server and Azure SQL
 titleSuffix: SQL Server big data clusters
-description: Learn how to use the MSSQL Spark Connector in Spark to read and write to SQL Server.
+description: Learn how to use the Apache Spark Connector for SQL Server and Azure SQL to read and write to SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+ms.reviewer: mikeray
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
-# How to read and write to SQL Server from Spark using the MSSQL Spark Connector
+# Use the Apache Spark Connector for SQL Server and Azure SQL
 
-A key big data usage pattern is high volume data processing in Spark, followed by writing the data to SQL Server for access to line-of-business applications. These usage patterns benefit from a connector that utilizes key SQL optimizations and provides an efficient write mechanism.
+The [Apache Spark Connector for SQL Server and Azure SQL](https://github.com/microsoft/sql-spark-connector) is a high-performance connector that enables you to use transactional data in big data analytics and persists results for ad-hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs. The connector uses SQL Server bulk write APIs. Any bulk write parameters can be passed as optional parameters by the user and are passed as-is by the connector to the underlying API. For more information about bulk write operations, see [Using bulk copy with the JDBC driver]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-This article provides an example of how to use the MSSQL Spark connector to read and write to the following locations within a big data cluster:
+The connector is included by default in SQL Server Big Data Clusters.
 
-1. The SQL Server master instance
-1. The SQL Server data pool
+Learn more about the connector at the [open source repository](https://github.com/microsoft/sql-spark-connector). For examples, see [samples](https://github.com/microsoft/sql-spark-connector/tree/master/samples).
 
-   ![MSSQL Spark connector diagram](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+## Write to a new SQL Table
 
-The sample performs the following tasks:
+>[!CAUTION]
+> In `overwrite` mode, the connector first drops the table if it already exists in the database by default. Use this option with due care to avoid unexpected data loss.
+> 
+> When using mode `overwrite` if you do not use the option `truncate`, on re-creation of the table, indexes will be lost. For example, a columnstore table becomes a heap. If you want to maintain existing indexing please also specify option `truncate` with value `true`. For example `.option("truncate",true)`
 
-- Read a file from HDFS and do some basic processing.
-- Write the dataframe to a SQL Server master instance as a SQL table and then read the table to a dataframe.
-- Write the dataframe to a SQL Server data pool as a SQL external table and then read the external table to a dataframe.
+```python
+server_name = "jdbc:sqlserver://{SERVER_ADDR}"
+database_name = "database_name"
+url = server_name + ";" + "databaseName=" + database_name + ";"
 
-## MSSQL Spark Connector Interface
+table_name = "table_name"
+username = "username"
+password = "password123!#" # Please specify password here
 
-SQL Server 2019 preview provides the **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**.
+try:
+  df.write \
+    .format("com.microsoft.sqlserver.jdbc.spark") \
+    .mode("overwrite") \
+    .option("url", url) \
+    .option("dbtable", table_name) \
+    .option("user", username) \
+    .option("password", password) \
+    .save()
+except ValueError as error :
+    print("Connector write failed", error)
+```
 
-The following table describes interface parameters that have changed or are new:
+## Append to SQL Table
+```python
+try:
+  df.write \
+    .format("com.microsoft.sqlserver.jdbc.spark") \
+    .mode("append") \
+    .option("url", url) \
+    .option("dbtable", table_name) \
+    .option("user", username) \
+    .option("password", password) \
+    .save()
+except ValueError as error :
+    print("Connector write failed", error)
+```
 
-| Property name | Optional | Description |
-|---|---|---|
-| **isolationLevel** | Yes | This describes the isolation level of the connection. The default for MSSQLSpark Connector is **READ_COMMITTED** |
+## Specify the isolation level
 
-The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be passed as optional parameters by the user and are passed as-is by the connector to the underlying API. For more information about bulk write operations, see [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
+This connector by default uses READ_COMMITTED isolation level when performing the bulk insert into the database. If you wish to override this to another isolation level, please use the `mssqlIsolationLevel` option as shown below.
+```python
+    .option("mssqlIsolationLevel", "READ_UNCOMMITTED") \
+```
 
-## Prerequisites
+## Read from SQL Table
 
-- A [SQL Server big data cluster](deploy-get-started.md).
+```python
+jdbcDF = spark.read \
+        .format("com.microsoft.sqlserver.jdbc.spark") \
+        .option("url", url) \
+        .option("dbtable", table_name) \
+        .option("user", username) \
+        .option("password", password).load()
+```
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders).
+## Non-Active Directory mode
 
-## Create the target database
+In non-Active Directory mode security, each user has a username and password which need to be provided as parameters during the connector instantiation to perform read and/or writes.
 
-1. Open Azure Data Studio, and [connect to the SQL Server master instance of your big data cluster](connect-to-big-data-cluster.md).
+An example connector instantiation for non-Active Directory mode is below. Before you run the script, replace the `?` with the value for your account.
 
-1. Create a new query, and run the following command to create a sample database named **MyTestDatabase**.
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark" 
 
-   ```sql
-   Create DATABASE MyTestDatabase
-   GO
-   ```
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;"
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("user", ?) \ 
+   .option("password",?) 
+writer.save() 
+```
 
-## Load sample data into HDFS
+## Active Directory mode
 
-1. Download [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) to your local machine.
+In Active Directory mode security, after a user has generated a key tab file, the user needs to provide the `principal` and `keytab` as parameters during the connector instantiation.
 
-1. Launch Azure Data Studio, and [connect to your big data cluster](connect-to-big-data-cluster.md).
+In this mode, the driver loads the keytab file to the respective executor containers. Then, the executors use the principal name and keytab to generate a token that is used to create a JDBC connector for read/write.
 
-1. Right-click on the HDFS folder in your big data cluster, and select **New directory**. Name the directory **spark_data**.
+An example connector instantiation for Active Directory mode is below. Before you run the script, replace the `?` with the value for your account.
 
-1. Right click on the **spark_data** directory, and select **Upload files**. Upload the **AdultCensusIncome.csv** file.
+```python
+# Note: '?' is a placeholder for a necessary user-specified value
+connector_type = "com.microsoft.sqlserver.jdbc.spark"
 
-   ![AdultCensusIncome CSV file](./media/spark-mssql-connector/spark_data.png)
+url = "jdbc:sqlserver://master-p-svc;databaseName=?;integratedSecurity=true;authenticationScheme=JavaKerberos;" 
+writer = df.write \ 
+   .format(connector_type)\ 
+   .mode("overwrite") 
+   .option("url", url) \ 
+   .option("principal", ?) \ 
+   .option("keytab", ?)   
 
-## Run the sample notebook
-
-To demonstrate the use of the MSSQL Spark Connector with this data, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
-
-1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector.ipynb** sample notebook:
-
-   ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
-   ```
-
-1. In Azure Data Studio, open the sample notebook file. Verify that it is connected to your HDFS/Spark Gateway for your big data cluster.
-
-1. Run each code cell in the sample to see usage of MSSQL Spark connector.
+writer.save() 
+```
 
 ## Next steps
 
 For more information about big data clusters, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)
+
+Have feedback or feature recommendations for SQL Server Big Data Clusters? [Leave us a note at SQL Server Big Data Clusters Feedback](https://aka.ms/sql-server-bdc-feedback).

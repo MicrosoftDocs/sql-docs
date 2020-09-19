@@ -1,6 +1,6 @@
 ---
-title: "Using Annotations in XSD Schemas (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Using Annotations in XSD Schemas (SQLXML)"
+description: Learn how to use the annotations supported by the XSD schema language in SQLXML 4.0 to specify XML-to-relational mapping within an XSD schema.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -17,10 +17,11 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotations in XSD Schemas (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, the XSD schema language supports annotations in a manner similar to the annotations introduced in the XML-Data Reduced (XDR) schema language. There are additional annotations introduced in XSD that are not supported in XDR.  
   
  These annotations can be used within the XSD schema to specify XML-to-relational mapping. This includes mapping between elements and attributes in the XSD schema to tables (views) and columns in the databases.  
@@ -68,7 +69,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  [Creating Valid ID, IDREF, and IDREFS Type Attributes Using sql:prefix &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
  Describes and provides examples of the **sql:prefix** annotation.  
   
- [Data Type Coercions and the sql:datatype Annotation &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
+ [Data Type conversions and the sql:datatype Annotation &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
  Describes and provides examples of the **sql:datatype** annotation.  
   
  [Mapping XSD Data Types to XPath Data Types &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  

@@ -1,4 +1,5 @@
 ---
+description: "updateFloat Method (java.lang.String, float)"
 title: "updateFloat Method (java.lang.String, float) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateFloat Method (java.lang.String, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,6 +1,7 @@
 ---
-title: "sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "sys.pdw_replicated_table_cache_state (Transact-SQL)"
+title: "sys.pdw_replicated_table_cache_state (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "07/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse
@@ -13,7 +14,7 @@ ms.author: "rortloff"
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Returns the state of the cache associated with a replicated table by **object_id**.  
   

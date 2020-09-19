@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergepublication (Transact-SQL)"
 title: "sp_addmergepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergepublication"
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new merge publication. This stored procedure is executed at the Publisher on the database that is being published.  
   
@@ -123,7 +124,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Specifies a pointer to an **.sql** file location. *post_snapshot_script* is **nvarchar(255)**, with a default of NULL. The Merge Agent will run the post-snapshot script after all the other replicated object scripts and data have been applied during an initial synchronization. The script is executed in the security context used by the Merge Agent when connecting to the subscription database. Post-snapshot scripts are not run on [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers.  
   
 `[ @compress_snapshot = ] 'compress_snapshot'`
- Specifies that the snapshot written to the **@alt_snapshot_folder** location is to be compressed into the [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB format. *compress_snapshot* is **nvarchar(5)**, with a default of FALSE. **false** specifies that the snapshot will not be compressed; **true** specifies that the snapshot is to be compressed. Snapshot files that are larger than 2GB cannot be compressed. Compressed snapshot files are uncompressed at the location where the Merge Agent runs; pull subscriptions are typically used with compressed snapshots so that files are uncompressed at the Subscriber. The snapshot in the default folder cannot be compressed. To support [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers, you must specify **false**.  
+ Specifies that the snapshot written to the **\@alt_snapshot_folder** location is to be compressed into the [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB format. *compress_snapshot* is **nvarchar(5)**, with a default of FALSE. **false** specifies that the snapshot will not be compressed; **true** specifies that the snapshot is to be compressed. Snapshot files that are larger than 2GB cannot be compressed. Compressed snapshot files are uncompressed at the location where the Merge Agent runs; pull subscriptions are typically used with compressed snapshots so that files are uncompressed at the Subscriber. The snapshot in the default folder cannot be compressed. To support [!INCLUDE[ssEW](../../includes/ssew-md.md)] Subscribers, you must specify **false**.  
   
 `[ @ftp_address = ] 'ftp_address'`
  Is the network address of the FTP service for the Distributor. *ftp_address* is **sysname**, with a default of NULL. Specifies where publication snapshot files are located for the Merge Agent of a subscriber to pick up. Since this property is stored for each publication, each publication can have a different *ftp_address*. The publication must support propagating snapshots using FTP.  
@@ -204,11 +205,11 @@ sp_addmergepublication [ @publication = ] 'publication'
 `[ @replicate_ddl = ] replicate_ddl`
  Indicates if schema replication is supported for the publication. *replicate_ddl* is **int**, with a default of 1. **1** indicates that data definition language (DDL) statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- The *@replicate_ddl* parameter is honored when a DDL statement adds a column. The *@replicate_ddl* parameter is ignored when a DDL statement alters or drops a column for the following reasons.  
+ The *\@replicate_ddl* parameter is honored when a DDL statement adds a column. The *\@replicate_ddl* parameter is ignored when a DDL statement alters or drops a column for the following reasons.  
   
--   When a column is dropped, sysarticlecolumns must be updated to prevent new DML statements from including the dropped column which would cause the distribution agent to fail. The *@replicate_ddl* parameter is ignored because replication must always replicate the schema change.  
+-   When a column is dropped, sysarticlecolumns must be updated to prevent new DML statements from including the dropped column which would cause the distribution agent to fail. The *\@replicate_ddl* parameter is ignored because replication must always replicate the schema change.  
   
--   When a column is altered, the source data type or nullability might have changed, causing DML statements to contain a value that may not be compatible with the table at the subscriber. Such DML statements might cause distribution agent to fail. The *@replicate_ddl* parameter is ignored because replication must always replicate the schema change.  
+-   When a column is altered, the source data type or nullability might have changed, causing DML statements to contain a value that may not be compatible with the table at the subscriber. Such DML statements might cause distribution agent to fail. The *\@replicate_ddl* parameter is ignored because replication must always replicate the schema change.  
   
 -   When a DDL statement adds a new column, sysarticlecolumns does not include the new column. DML statements will not try to replicate data for the new column. The parameter is honored because either replicating or not replicating the DDL is acceptable.  
   
@@ -241,7 +242,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Specifies the number of changes that are contained in a generation. A generation is a collection of changes that are delivered to a Publisher or Subscriber. *generation_leveling_threshold* is **int**, with a default value of 1000.  
   
 `[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy`
- Specifies whether changes are uploaded from the Subscriber before an automatic reinitialization required by a change to the publication, where a value of **1** was specified for **@force_reinit_subscription**. *automatic_reinitialization_policy* is bit, with a default value of 0. **1** means that changes are uploaded from the Subscriber before an automatic reinitialization occurs.  
+ Specifies whether changes are uploaded from the Subscriber before an automatic reinitialization required by a change to the publication, where a value of **1** was specified for **\@force_reinit_subscription**. *automatic_reinitialization_policy* is bit, with a default value of 0. **1** means that changes are uploaded from the Subscriber before an automatic reinitialization occurs.  
   
 > [!IMPORTANT]  
 >  If you add, drop, or change a parameterized filter, pending changes at the Subscriber cannot be uploaded to the Publisher during reinitialization. If you want to upload pending changes, synchronize all subscriptions before changing the filter.  
@@ -262,7 +263,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## Remarks  
  **sp_addmergepublication** is used in merge replication.  
   
- To list publication objects to the Active Directory using the **@add_to_active_directory** parameter, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object must already be created in the Active Directory.  
+ To list publication objects to the Active Directory using the **\@add_to_active_directory** parameter, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object must already be created in the Active Directory.  
   
  If multiple publications exist that publish the same database object, only publications with a *replicate_ddl* value of **1** will replicate ALTER TABLE, ALTER VIEW, ALTER PROCEDURE, ALTER FUNCTION, and ALTER TRIGGER DDL statements. However, an ALTER TABLE DROP COLUMN DDL statement will be replicated by all publications that are publishing the dropped column.  
   

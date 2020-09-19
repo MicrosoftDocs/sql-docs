@@ -1,7 +1,7 @@
 ---
-title: "A reference for the administration of an availability Group"
-description: "A reference page linking you to the basics of administering an Always On availability group, such as altering properties, adding or removing replicas, adding or removing databases, failing over, configuring the listener, etc."
-ms.custom: "seodec18"
+title: "Administration of an availability Group (content index)"
+description: "A reference index linking you to articles describing the basics of administering an Always On availability group, such as altering properties, adding or removing replicas, adding or removing databases, failing over, configuring the listener, etc."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Administration of an availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
  Managing an existing Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] involves one or more of the following tasks:  
   
 -   Altering the properties of an existing availability replica, for example to change client connection access (for configuring readable secondary replicas), changing its failover mode, availability mode, or session timeout setting.    
@@ -100,7 +100,7 @@ ms.author: mathoma
 -   **Blogs:**  
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)    
-     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+[CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Videos:**  
   

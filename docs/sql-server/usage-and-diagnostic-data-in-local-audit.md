@@ -1,6 +1,7 @@
 ---
-title: "Local audit for SQL Server usage and diagnostic data collection | Microsoft Docs"
-ms.custom: ""
+title: "Local audit usage and diagnostic data collection"
+description: Learn about the local audit used by SQL Server to collect and send usage and diagnostic data to Microsoft.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -16,13 +17,13 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ## Introduction
 
 Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The local audit component of [SQL Server Usage and Diagnostic Data collection](usage-and-diagnostic-data-configuration-for-sql-server.md) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the local audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
-As of SQL Server 2016 CU2, is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, local audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have local audit capability for usage and diagnostic data collection.
+For SQL Server 2016 CU2 and CU3, local audit is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). For SQL Server 2016 CU4, 2016 SP1, and later releases, local audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have local audit capability for usage and diagnostic data collection.
 
 ## Remarks
 
@@ -35,7 +36,7 @@ To opt out of the data collection, see [Turning local audit on or off](#turning-
 
 The following are prerequisites to enable local audit on each SQL Server instance: 
 
-1. The instance is patched to SQL Server 2016 RTM CU2 or later. For Integration Services, the instance is patched to either SQL 2016 RTM CU4 or SQL 2016 SP1
+1. The instance is patched to SQL Server 2016 RTM CU2 or later. For Integration Services, the instance is patched to SQL 2016 RTM CU4, SQL 2016 SP1, or later.
 
 1. User must be a System Administrator or a role with access to add and modify Registry Key, create folders, manage folder security and stop/start a Windows Service.  
 
@@ -71,12 +72,12 @@ Create a new folder (local audit directory) where the local audit will write the
   >[!NOTE] 
   >Configure the directory path for local audit outside the SQL Server installation path to avoid allowing auditing functionality and patching to cause potential problems with SQL Server.
 
-  ||Design Decision|Recommendation|  
-  |------|-----------------|----------|  
-  |![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the local audit to write to the same log file from both instances.| 
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CEIP service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP service logon account|
+|Design Decision|Recommendation|  
+|-----------------|----------|  
+|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
+|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
+|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the local audit to write to the same log file from both instances.| 
+|Grant permissions to the SQL Server CEIP service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP service logon account|
 
 
 ### Grant permissions to the SQL Server CEIP service logon account
@@ -105,19 +106,22 @@ Create a new folder (local audit directory) where the local audit will write the
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Your-Instance-Name*\\CPE |
    | &nbsp; | &nbsp; |
 
    | Version | ***Analysis Services*** - Registry key |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Your-Instance-Name*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | Version | ***Integration Services*** - Registry key |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Version | ***Integration Services*** - Registry key |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. Right-click the CPE path and choose **New**. Select **String Value**.
 
@@ -150,6 +154,7 @@ SQL Server CEIP should recognize the local audit setting immediately if the serv
     - For Integration Services, 
         - For SQL 2016, use *SQL Server Integration Services CEIP service 13.0*.
         - For SQL 2017, use *SQL Server Integration Services CEIP service 14.0*.
+	- For SQL 2019, use *SQL Server Integration Services CEIP service 15.0*.
 
 1. Right-click on the service and choose Restart. 
 
@@ -309,7 +314,7 @@ These log files are written in JSON format. Each line will be a JSON object repr
 No local audit file will be written.
 
 **What happens if there is not internet connectivity/machine is behind the firewall?**
-SQL Server 2016 usage and diagnostic data will not be sent to Microsoft. It will still try to write the local audit logs if configured correctly.
+SQL Server usage and diagnostic data will not be sent to Microsoft. It will still try to write the local audit logs if configured correctly.
 
 **How do DBAs disable local audit?**
 Remove the UserRequestedLocalAuditDirectory registry key entry.
@@ -322,7 +327,7 @@ DBAs will need to self-manage the clean-up of the files in the directory to avoi
 
 **Is there a client or tool that I can use to read this JSON output?**
 The output can be read with Notepad, Visual Studio, or any JSON reader of your choice.
-Alternatively, you can read the JSON file and analyze the data in an SQL Server 2016 instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
+Alternatively, you can read the JSON file and analyze the data in an SQL Server instance as illustrated below. More details on how to read JSON file in SQL Server, please visit [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/).
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

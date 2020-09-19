@@ -1,6 +1,7 @@
 ---
-title: "Manually Fail Over a Database Mirroring Session (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Manually fail over a database mirror to partner"
+description: "Instructions to manually fail over a principle database mirror to a secondary partner using Transact-SQL (T-SQL)."
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Manually Fail Over a Database Mirroring Session (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When the mirrored database is synchronized (that is, when the database is in the SYNCHRONIZED state), the database owner can initiate manual failover to the mirror server. Manual failover can be initiated only from the principal server.  
   
 ### To manually fail over a database mirroring session  

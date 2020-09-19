@@ -1,6 +1,7 @@
 ---
-title: "Contained Database Users - Making Your Database Portable | Microsoft Docs"
-ms.custom: ""
+title: "Contained user access to contained databases"
+description: Learn how to configure contained user access for contained databases, and the differences between a traditional login/user model. 
+ms.custom: seo-lt-2019
 ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -17,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 ---
 # Contained Database Users - Making Your Database Portable
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Use contained database users to authenticate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] connections at the database level. A contained database is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (and the master database) that hosts the database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports contained database users for both Windows and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. When using [!INCLUDE[ssSDS](../../includes/sssds-md.md)], combine contained database users with database level firewall rules. This topic reviews the differences and benefits of using the contained database model compared to traditional login/user model and Windows or server-level firewall rules. Specific scenarios, manageability or application business logic may still require use of traditional login/user model and server-level firewall rules.  
   
@@ -67,6 +68,31 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 |Traditional model|Contained database user model|  
 |-----------------------|-----------------------------------|  
 |To change password, in context of master DB:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|To change password, in context of user DB:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+
+### Managed Instance
+
+Azure SQL Managed Instance behaves like SQL Server on-premises in the context of contained databases. Be sure to change the context of your database from the master database to the user database when creating your contained user. Additionally, there should be no active connections to the user database when setting the containment option. 
+
+For example: 
+
+```sql
+Use MASTER;
+GO 
+
+ALTER DATABASE Test
+SET containment=partial
+
+
+USE Test;  
+GO  
+CREATE USER Carlo  
+WITH PASSWORD='Enterpwdhere*'  
+
+
+SELECT containment_desc FROM sys.databases
+WHERE name='test'
+```
+
   
 ## Remarks  
   

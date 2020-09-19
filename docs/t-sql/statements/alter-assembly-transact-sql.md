@@ -1,4 +1,5 @@
 ---
+description: "ALTER ASSEMBLY (Transact-SQL)"
 title: "ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2017"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "adding files"
   - "ALTER ASSEMBLY statement"
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Alters an assembly by modifying the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] catalog properties of an assembly. ALTER ASSEMBLY refreshes it to the latest copy of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation and adds or removes files associated with it. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -36,7 +37,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  
@@ -61,7 +62,9 @@ ALTER ASSEMBLY assembly_name
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *assembly_name*  
  Is the name of the assembly you want to modify. *assembly_name* must already exist in the database.  
   
@@ -194,7 +197,7 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
 > [!NOTE]  
 >  Assembly `ComplexNumber` can be created by running the UserDefinedDataType sample scripts. For more information, see [User Defined Type](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
- ```
+ ```sql
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
@@ -205,7 +208,7 @@ The following permissions required to alter a CLR assembly when `CLR strict secu
 ### B. Adding a file to associate with an assembly  
  The following example uploads the source code file `Class1.cs` to be associated with assembly `MyClass`. This example assumes assembly `MyClass` is already created in the database.  
   
-```  
+```sql  
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
@@ -216,7 +219,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ### C. Changing the permissions of an assembly  
  The following example changes the permission set of assembly `ComplexNumber` from SAFE to `EXTERNAL ACCESS`.  
   
-```  
+```sql  
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   

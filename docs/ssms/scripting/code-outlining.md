@@ -1,10 +1,11 @@
 ---
-title: "Code Outlining | Microsoft Docs"
-ms.custom: ""
+title: "Code Outlining"
+description: Learn how to use the code outlining feature in the SQL Server Management Studio query editors to selectively hide code.
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +17,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Code Outlining
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can use the outlining feature in the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query editors to selectively hide code when you edit queries. This enables you to more easily view the code you are working on, especially in large query files.  
   
 ## Outlining Overview  

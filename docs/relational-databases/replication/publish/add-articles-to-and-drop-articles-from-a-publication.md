@@ -1,6 +1,7 @@
 ---
-title: "Add Articles to and Drop Articles from a Publication | Microsoft Docs"
-ms.custom: ""
+title: "Add & drop publication articles (SSMS)"
+description: Describes how to add articles to and drop articles from a publication using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Add Articles to and Drop Articles from a Publication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Initially add articles to a publication when you create it in the New Publication Wizard. For more information about using this wizard, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
  After a publication is created, add and delete articles on the **Articles** page of the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). For information about the considerations for adding and dropping articles, see [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  

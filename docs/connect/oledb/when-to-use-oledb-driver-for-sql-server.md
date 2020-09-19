@@ -1,6 +1,6 @@
 ---
-title: "When to Use OLE DB Driver for SQL Server | Microsoft Docs"
-description: "When to use OLE DB Driver for SQL Server"
+title: "When to Use OLE DB Driver"
+description: "Learn when to use OLE DB Driver for SQL Server and the high level data access concepts that differentiate the different it from other drivers."
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,11 +12,11 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server"
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
   - "data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # When to Use OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -35,7 +35,7 @@ ms.author: pelopes
  For information about the differences between OLE DB Driver for SQL Server and MDAC, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
 ## See Also  
- [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     
- [OLE DB How-to Topics](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)  
+ [OLE DB How-to Topics](ole-db-how-to/ole-db-how-to-topics.md)  
   
   

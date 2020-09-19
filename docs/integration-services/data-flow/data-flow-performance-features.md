@@ -1,4 +1,5 @@
 ---
+description: "Data Flow Performance Features"
 title: "Data Flow Performance Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: chugu
 ---
 # Data Flow Performance Features
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This topic provides suggestions about how to design [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to avoid common performance issues. This topic also provides information about features and tools that you can use to troubleshoot the performance of packages.  
@@ -145,7 +146,7 @@ ms.author: chugu
   
  Typically, the slowest components in the Slowly Changing Dimension transformation are the OLE DB Command transformations that perform UPDATEs against a single row at a time. Therefore, the most effective way to improve the performance of the Slowly Changing Dimension transformation is to replace the OLE DB Command transformations. You can replace these transformations with destination components that save all rows to be updated to a staging table. Then, you can add an Execute SQL task that performs a single set-based Transact-SQL UPDATE against all rows at the same time.  
   
- Advanced users can design a custom data flow for slowly changing dimension processing that is optimized for large dimensions. For a discussion and example of this approach, see the section, "Unique dimension scenario," in the white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Advanced users can design a custom data flow for slowly changing dimension processing that is optimized for large dimensions. For a discussion and example of this approach, see the section, "Unique dimension scenario," in the white paper, [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### Destinations  
  To achieve better performance with destinations, consider using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination and testing the destination's performance.  
@@ -182,7 +183,7 @@ ms.author: chugu
   
 -   Technical article and sample, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), on sqlcat.com.  
   
--   Blog post, [Troubleshooting SSIS Package Performance Issues](https://go.microsoft.com/fwlink/?LinkId=238156), on blogs.msdn.com  
+-   Blog post, [Troubleshooting SSIS Package Performance Issues](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), on blogs.msdn.com  
   
  **Videos**  
   

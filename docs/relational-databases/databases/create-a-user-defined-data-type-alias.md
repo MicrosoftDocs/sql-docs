@@ -1,5 +1,6 @@
 ---
 title: "Create a User-Defined Data Type Alias | Microsoft Docs"
+description: "Learn how to create a user-defined data type alias in SQL Server 2019 by using SQL Server Management Studio or Transact-SQL."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a User-Defined Data Type Alias
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
@@ -81,7 +82,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
      **Storage**  
      Displays the maximum storage size for the user-defined data type alias. Maximum storage sizes vary, based on precision.  
   
-    |||  
+    |Precision|Maximum storage size|  
     |-|-|  
     |1 - 9|5|  
     |10 - 19|9|  
@@ -103,8 +104,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 6.  Check **Allow NULLs** if the new data type alias can permit NULL values.  
   
 7.  In the **Binding** area, complete the **Default** or **Rule** boxes if you want to bind a default or rule to the new data type alias. Defaults and rules cannot be created in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use [!INCLUDE[tsql](../../includes/tsql-md.md)]. Example code for creating defaults and rules are available in Template Explorer.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

@@ -1,4 +1,5 @@
 ---
+description: "Post-migration Validation and Optimization Guide"
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.date: 01/09/2019
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: "harinid"
 ---
 # Post-migration Validation and Optimization Guide
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 
@@ -101,8 +102,6 @@ Some examples of non-SARGable predicates:
   -   This may involve comparing any user-defined code construct that is stored in the database (such as stored procedures, user-defined functions or views) with system tables that hold information on data types used in underlying tables (such as [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. If unable to traverse all code to the previous point, then for the same purpose, change the data type on the table to match any variable/parameter declaration.
 3. Reason out the usefulness of the following constructs:
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   Functions being used as predicates;
   -   Wildcard searches;

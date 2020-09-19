@@ -1,6 +1,7 @@
 ---
-title: "Optimize Merge Replication Performance with Download-Only Articles | Microsoft Docs"
-ms.custom: ""
+title: "Optimize download-only article performance (Merge)"
+description: Describes how to optimize the performance of download-only articles used by Merge Replication. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Optimize Merge Replication Performance with Download-Only Articles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Merge replication offers two different article types to address different application needs. Publications can contain one or more of each of these article types as appropriate for the application:  
   
 -   Standard articles  

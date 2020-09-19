@@ -1,7 +1,7 @@
 ---
-title: "Availability replica properties (General Page) for availability groups"
+title: "General page (Availability Replica Properties)"
 description: "A description of the various properties found on the 'General' page of the 'Availability Replica Properties' page in SQL Server Management Studio."
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Availability replica properties (General Page) for Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to viewthe properties of an availability replica.  
   
 ## Task List  
@@ -24,7 +24,7 @@ ms.author: mathoma
   
 -   [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## UIElement List  
+## UI element list  
  **Availability group name**  
  Name of the availability group. This is a user-specified name that must be unique within the Windows Server Failover Cluster (WSFC).  
   

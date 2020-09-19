@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;OPTIONS (Transact-SQL)"
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "@@OPTIONS function"
   - "current SET options"
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;OPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information about the current SET options.  
   
@@ -33,17 +34,19 @@ ms.author: mikeray
 @@OPTIONS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
  The options can come from use of the **SET** command or from the **sp_configure user options** value. Session values configured with the **SET** command override the **sp_configure** options. Many tools (such as [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] automatically configure set options. Each user has an @@OPTIONS function that represents the configuration.  
   
- You can change the language and query-processing options for a specific user session by using the SET statement. **@@OPTIONS** can only detect the options which are set to ON or OFF.  
+ You can change the language and query-processing options for a specific user session by using the SET statement. **\@\@OPTIONS** can only detect the options which are set to ON or OFF.  
   
- The **@@OPTIONS** function returns a bitmap of the options, converted to a base 10 (decimal) integer. The bit settings are stored in the locations described in a table in the topic [Configure the user options Server Configuration Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
+ The **\@\@OPTIONS** function returns a bitmap of the options, converted to a base 10 (decimal) integer. The bit settings are stored in the locations described in a table in the topic [Configure the user options Server Configuration Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- To decode the **@@OPTIONS** value, convert the integer returned by **@@OPTIONS** to binary, and then look up the values on the table at [Configure the user options Server Configuration Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). For example, if `SELECT @@OPTIONS;` returns the value `5496`, use the Windows programmer calculator (**calc.exe**) to convert decimal `5496` to binary. The result is `1010101111000`. The right most characters (binary 1, 2, and 4) are 0, indicating that the first three items in the table are off. Consulting the table, you see that those are **DISABLE_DEF_CNST_CHK** and **IMPLICIT_TRANSACTIONS**, and **CURSOR_CLOSE_ON_COMMIT**. The next item (**ANSI_WARNINGS** in the `1000` position) is on. Continue working left though the bit map, and down in the list of options. When the left-most options are 0, they are truncated by the type conversion. The bit map `1010101111000` is actually `001010101111000` to represent all 15 options.  
+ To decode the **\@\@OPTIONS** value, convert the integer returned by **\@\@OPTIONS** to binary, and then look up the values on the table at [Configure the user options Server Configuration Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). For example, if `SELECT @@OPTIONS;` returns the value `5496`, use the Windows programmer calculator (**calc.exe**) to convert decimal `5496` to binary. The result is `1010101111000`. The right most characters (binary 1, 2, and 4) are 0, indicating that the first three items in the table are off. Consulting the table, you see that those are **DISABLE_DEF_CNST_CHK** and **IMPLICIT_TRANSACTIONS**, and **CURSOR_CLOSE_ON_COMMIT**. The next item (**ANSI_WARNINGS** in the `1000` position) is on. Continue working left though the bit map, and down in the list of options. When the left-most options are 0, they are truncated by the type conversion. The bit map `1010101111000` is actually `001010101111000` to represent all 15 options.  
   
 ## Examples  
   

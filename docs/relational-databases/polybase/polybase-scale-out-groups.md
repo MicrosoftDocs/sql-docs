@@ -1,5 +1,6 @@
 ---
 title: "PolyBase scale-out groups | Microsoft Docs"
+description: Use the PolyBase Group feature to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -51,12 +52,15 @@ The PolyBase engine is the key component  behind PolyBase queries. It parses the
   
 The PolyBase data movement service receives instructions from the PolyBase engine and transfers data between HDFS and SQL Server, and between SQL Server instances on the head and compute nodes.
   
-## Editions availability  
-
-After setup of SQL Server, the instance can be designated as either a head node or a compute node. The choice depends on which version of SQL Server PolyBase is running on. On an Enterprise edition installation, the instance can be designated either as head node or a compute node. On a Standard edition, the instance can only be designated as a compute node.
-
 ## Next steps
 
 To configure a PolyBase scale-out group, see the following guide:
 
 [Improve PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md)
+
+## See Also
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

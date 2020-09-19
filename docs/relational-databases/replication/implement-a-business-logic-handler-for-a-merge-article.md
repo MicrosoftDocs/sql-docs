@@ -1,6 +1,7 @@
 ---
-title: "Implement a Business Logic Handler for a Merge Article | Microsoft Docs"
-ms.custom: ""
+title: "Set up a business logic handler for Merge article"
+description: Use replication programming or Replication Management Objects to configure a business logic handler for merge replication synchronization. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -20,7 +21,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Implement a Business Logic Handler for a Merge Article
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to implement a business logic handler for a merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using replication programming or Replication Management Objects (RMO).  
   
  The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events that occur during the merge replication synchronization process. Methods in the business logic handler can be invoked by the replication process for each changed row that is replicated during synchronization.  

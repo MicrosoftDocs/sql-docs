@@ -1,6 +1,8 @@
 ---
-title: "GRANT XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT XML Schema Collection Permissions"
+description: Grants permissions on an XML schema collection.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # GRANT XML Schema Collection Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on an XML schema collection.   
   
@@ -27,7 +29,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  
@@ -47,7 +49,9 @@ GRANT permission  [ ,...n ] ON
     | Database_user_with_no_login  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an XML schema collection. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -120,7 +124,7 @@ GRANT permission  [ ,...n ] ON
 ## Examples  
  The following example grants `EXECUTE` permission on the XML schema collection `Invoices4` to the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the `AdventureWorks2012` database.  
   
- ```
+ ```sql
  USE AdventureWorks2012;  
  GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
  GO

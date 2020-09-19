@@ -1,5 +1,6 @@
 ---
-title: "DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs"
+description: "DBCC CLEANTABLE (Transact-SQL)"
+title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
@@ -27,14 +28,16 @@ ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Reclaims space from dropped variable-length columns in tables or indexed views.
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DBCC CLEANTABLE  
 (  
@@ -45,11 +48,13 @@ DBCC CLEANTABLE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ *database_name* \| *database_id* \| 0  
  Is the database in which the table to be cleaned belongs. If 0 is specified, the current database is used. Database names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- *table_name* | *table_id* | *view_name*| *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Is the table or indexed view to be cleaned.  
   
  *batch_size*  
@@ -153,8 +158,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## See Also  
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
-  
-  
+## See Also
+
+- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)

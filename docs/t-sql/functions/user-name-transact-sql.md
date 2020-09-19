@@ -1,4 +1,5 @@
 ---
+description: "USER_NAME (Transact-SQL)"
 title: "USER_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -26,7 +27,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a database user name from a specified identification number.  
   
@@ -34,26 +35,31 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 USER_NAME ( [ id ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *id*  
  Is the identification number associated with a database user. *id* is **int**. The parentheses are required.  
   
 ## Return Types  
- **nvarchar(256)**  
+ **nvarchar(128)**  
   
 ## Remarks  
  When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word NULL will return NULL. When USER_NAME is called without specifying an *id* after an EXECUTE AS statement, USER_NAME returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, USER_NAME returns the name of the Windows principal instead of the group.  
+ 
+> [!NOTE]
+> Although the USER_NAME function is supported on Azure SQL Database, using *Execute as* with USER_NAME is not supported on Azure SQL Database. 
   
 ## Examples  
   
 ### A. Using USER_NAME  
  The following example returns the user name for user ID `13`.  
   
-```  
+```sql  
 SELECT USER_NAME(13);  
 GO  
 ```  
@@ -61,7 +67,7 @@ GO
 ### B. Using USER_NAME without an ID  
  The following example finds the name of the current user without specifying an ID.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 ```  
@@ -78,7 +84,7 @@ dbo
 ### C. Using USER_NAME in the WHERE clause  
  The following example finds the row in `sysusers` in which the name is equal to the result of applying the system function `USER_NAME` to user identification number `1`.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 GO  
 ```  
@@ -96,7 +102,7 @@ dbo
 ### D. Calling USER_NAME during impersonation with EXECUTE AS  
  The following example shows how `USER_NAME` behaves during impersonation.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 EXECUTE AS USER = 'Zelig';  
@@ -122,7 +128,7 @@ DBO
 ### E. Using USER_NAME without an ID  
  The following example finds the name of the current user without specifying an ID.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 ```  
   
@@ -136,7 +142,7 @@ User7
 ### F. Using USER_NAME in the WHERE clause  
  The following example finds the row in `sysusers` in which the name is equal to the result of applying the system function `USER_NAME` to user identification number `1`.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   
@@ -154,6 +160,6 @@ User7
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   

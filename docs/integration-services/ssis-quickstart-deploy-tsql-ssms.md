@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project from SSMS with Transact-SQL"
 title: "Deploy an SSIS project with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -33,6 +34,10 @@ You cannot use the information in this quickstart to deploy an SSIS package to A
 
 You cannot use the information in this quickstart to deploy an SSIS package to SQL Server on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## Connect to the SSIS Catalog database
 
 Use SQL Server Management Studio to establish a connection to the SSIS Catalog. 
@@ -52,6 +57,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
 3. Click **Connect**. The Object Explorer window opens in SSMS. 
 
 4. In Object Explorer, expand **Integration Services Catalogs** and then expand **SSISDB** to view the objects in the SSIS Catalog database.
+
 
 ## Run the T-SQL code
 Run the following Transact-SQL code to deploy an SSIS project.

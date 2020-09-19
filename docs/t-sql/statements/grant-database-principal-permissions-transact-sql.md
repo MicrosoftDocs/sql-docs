@@ -1,6 +1,8 @@
 ---
-title: "GRANT Database Principal Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Database Principal Permissions"
+description: Grant permissions on a database user, database role, or application role.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "03/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -27,7 +29,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Grants permissions on a database user, database role, or application role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -58,7 +60,9 @@ GRANT permission [ ,...n ]
   | Database_user_with_no_login   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on the database principal. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -85,7 +89,7 @@ GRANT permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies an application role.  
   
@@ -164,7 +168,7 @@ GRANT permission [ ,...n ]
 ### A. Granting CONTROL permission on a user to another user  
  The following example grants `CONTROL` permission on `AdventureWorks2012` user `Wanida` to user `RolandX`.  
   
-```  
+```sql  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -172,7 +176,7 @@ GO
 ### B. Granting VIEW DEFINITION permission on a role to a user with GRANT OPTION  
  The following example grants `VIEW DEFINITION` permission on `AdventureWorks2012` role `SammamishParking` together with `GRANT OPTION` to database user `JinghaoLiu`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu WITH GRANT OPTION;  
 GO  
@@ -181,9 +185,9 @@ GO
 ### C. Granting IMPERSONATE permission on a user to an application role  
  The following example grants `IMPERSONATE` permission on user `HamithaL` to `AdventureWorks2012` application role `AccountsPayable17`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

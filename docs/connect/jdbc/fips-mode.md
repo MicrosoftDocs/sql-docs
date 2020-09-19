@@ -1,4 +1,5 @@
 ---
+description: "FIPS mode in JDBC"
 title: "FIPS mode in JDBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -7,9 +8,8 @@ ms.prod_service: connectivity
 ms.reviewer: genemi
 ms.technology: connectivity
 ms.topic: conceptual
-author: MikeRayMSFT
-ms.author: mikeray
-manager: kenvh
+author: David-Engel
+ms.author: v-daenge
 ---
 # FIPS mode
 
@@ -20,7 +20,7 @@ The Microsoft JDBC Driver for SQL Server supports running in JVMs configured to 
 #### Prerequisites
 
 - FIPS configured JVM
-- Appropriate SSL Certificate
+- Appropriate TLS/SSL Certificate
 - Appropriate policy files
 - Appropriate Configuration parameters
 
@@ -33,11 +33,11 @@ To see the approved modules for FIPS Configuration, refer to [Validated Modules 
 Vendors may have some additional steps to configure a JVM with FIPS.
 
 ## Appropriate SSL certificate
-In order to connect to SQL Server in FIPS mode, a valid SSL Certificate is required. Install or import it into the Java Key Store on the client machine (JVM) where FIPS is enabled.
+In order to connect to SQL Server in FIPS mode, a valid TLS/SSL Certificate is required. Install or import it into the Java Key Store on the client machine (JVM) where FIPS is enabled.
 
 ### Importing SSL certificate in Java keyStore
 For FIPS, most likely you need to import the certificate (.cert) in either PKCS or a provider-specific format.
-Use the following snippet to import the SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST\_STORE\_PASSWORD_ is your password for Java KeyStore.
+Use the following snippet to import the TLS/SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST\_STORE\_PASSWORD_ is your password for Java KeyStore.
 
 ```java
 public void saveGenericKeyStore(
@@ -67,7 +67,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-The following example is importing an Azure SSL Certificate in PKCS12 format with the BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore\_PKCS12_ by using the following snippet:
+The following example is importing an Azure TLS/SSL Certificate in PKCS12 format with the BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore\_PKCS12_ by using the following snippet:
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 

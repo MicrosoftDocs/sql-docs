@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_primary_databases (Transact-SQL)"
 title: "log_shipping_primary_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_primary_databases system table"
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # log_shipping_primary_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stores one record for the primary database in a log shipping configuration. This table is stored in the **msdb** database.  
   
@@ -35,7 +36,7 @@ ms.author: "sstein"
 |**monitor_server_security_mode**|**bit**|The security mode used to connect to the monitor server.<br /><br /> 1 = Windows Authentication.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.|  
 |**last_backup_file**|**nvarchar(500)**|The absolute path of the most recent transaction log backup.|  
 |**last_backup_date**|**datetime**|The time and date of the last log backup operation.|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** and **sp_help_log_shipping_secondary_primary** use this column to control the display of monitor settings in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> 0 = When invoking either of these two stored procedures, the user did not specify an explicit value for the **@monitor_server** parameter.<br /><br /> 1 = An explicit value was specified by the user.|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database** and **sp_help_log_shipping_secondary_primary** use this column to control the display of monitor settings in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> 0 = When invoking either of these two stored procedures, the user did not specify an explicit value for the **\@monitor_server** parameter.<br /><br /> 1 = An explicit value was specified by the user.|  
 |**backup_compression**|**tinyint**|Indicates whether the log shipping configuration overrides the server-level backup compression behavior.<br /><br /> 0 = Disabled. Log backups are never compressed, regardless of the server-configured backup compression settings.<br /><br /> 1 = Enabled. Log backups are always compressed, regardless of the server-configured backup compression settings.<br /><br /> 2 = Uses the server configuration for the [View or Configure the backup compression default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) server-configuration option. This is the default value.<br /><br /> Backup compression is supported only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## See Also  

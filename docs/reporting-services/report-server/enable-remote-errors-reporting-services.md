@@ -1,5 +1,6 @@
 ---
 title: "Enable Remote Errors (Reporting Services) | Microsoft Docs"
+description: Learn how to set server properties on a Reporting Services report server to return additional information about error conditions that occur on remote servers.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -15,7 +16,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Enable Remote Errors (Reporting Services)
-  You can set server properties on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", you can set the **EnableRemoteErrors** property to access additional information that can help you troubleshoot the problem. For more information, see [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+  You can set server properties on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", you can set the **EnableRemoteErrors** property to access additional information that can help you troubleshoot the problem. For more information, see [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
   
  In this topic:  
   
@@ -58,11 +59,11 @@ ms.author: maggies
   
 ##  <a name="bkmk_mgtStudio"></a> Enable remote errors through SQL Server Management Studio (Native Mode)  
   
-1.  Start Management Studio and connect to a report server instance. For more information, see [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+1.  Start Management Studio and connect to a report server instance. For more information, see [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
 2.  Right-click the report server node, and select **Properties**.  
   
-3.  Click **Advanced** to open the properties page. For more information, see [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Click **Advanced** to open the properties page. For more information, see [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md).  
   
 4.  In the **Security** section, in **EnableRemoteErrors**, select **True**.  
   

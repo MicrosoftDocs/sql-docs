@@ -1,4 +1,5 @@
 ---
+description: "isCaseSensitive Method (SQLServerResultSetMetaData)"
 title: "isCaseSensitive Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 4db67eb7-7ff2-4fb8-8052-39f699de53ff
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # isCaseSensitive Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

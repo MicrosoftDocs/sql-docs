@@ -1,4 +1,5 @@
 ---
+description: "sp_reinitpullsubscription (Transact-SQL)"
 title: "sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_reinitpullsubscription"
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Marks a transactional pull or anonymous subscription for reinitialization the next time the Distribution Agent runs. This stored procedure is executed at the Subscriber on the pull subscription database.  
   
@@ -52,7 +53,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** can be called from the Subscriber to reinitialize the subscription, during the next run of the Distribution Agent.  
   
- Subscriptions to publications created with a value of **false** for **@immediate_sync** cannot be reinitialized from the Subscriber.  
+ Subscriptions to publications created with a value of **false** for **\@immediate_sync** cannot be reinitialized from the Subscriber.  
   
  You can reinitialize a pull subscription by either executing **sp_reinitpullsubscription** at the Subscriber or **sp_reinitsubscription** at the Publisher.  
   

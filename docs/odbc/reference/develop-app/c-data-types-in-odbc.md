@@ -1,4 +1,5 @@
 ---
+description: "C Data Types in ODBC"
 title: "C Data Types in ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "C data types [ODBC], about C data types"
   - "C data types [ODBC]"
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # C Data Types in ODBC
 ODBC defines the C data types that are used by application variables and their corresponding type identifiers. These are used by the buffers that are bound to result set columns and statement parameters. For example, suppose an application wants to retrieve data from a result set column in character format. It declares a variable with the SQLCHAR * data type and binds this variable to the result set column with a type identifier of SQL_C_CHAR. For a complete list of C data types and type identifiers, see [Appendix D: Data Types](../../../odbc/reference/appendixes/appendix-d-data-types.md).  

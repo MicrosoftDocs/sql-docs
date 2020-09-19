@@ -1,8 +1,9 @@
 ---
+description: "FetchOptions Property (RDS)"
 title: "FetchOptions Property (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "FetchOptions property [ADO]"
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FetchOptions Property (RDS)
 Indicates the type of asynchronous fetching.  
@@ -25,9 +26,9 @@ Indicates the type of asynchronous fetching.
   
 |Constant|Description|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|All the records of the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) are fetched before control is returned to the application. The complete **Recordset** is fetched before the application is allowed to do anything with it.|  
+|**adcFetchUpFront**|All the records of the [Recordset](../ado-api/recordset-object-ado.md) are fetched before control is returned to the application. The complete **Recordset** is fetched before the application is allowed to do anything with it.|  
 |**adcFetchBackground**|Control can return to the application as soon as the first batch of records has been fetched. A subsequent read of the **Recordset** that attempts to access a record not fetched in the first batch will be delayed until the sought record is actually fetched, at which time control returns to the application.|  
-|**adcFetchAsync**|Default. Control returns immediately to the application while records are fetched in the background. If the application attempts to read a record that hasn't yet been fetched, the record closest to the sought record will be read and control will return immediately, indicating that the current end of the **Recordset** has been reached. For example, a call to [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) will move the current record position to the last record actually fetched, even though more records will continue to populate the **Recordset**.|  
+|**adcFetchAsync**|Default. Control returns immediately to the application while records are fetched in the background. If the application attempts to read a record that hasn't yet been fetched, the record closest to the sought record will be read and control will return immediately, indicating that the current end of the **Recordset** has been reached. For example, a call to [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) will move the current record position to the last record actually fetched, even though more records will continue to populate the **Recordset**.|  
   
 > [!NOTE]
 >  Each client-side executable file that uses these constants must provide declarations for them. You can cut and paste the constant declarations you want from the file Adcvbs.inc, located in the default installation folder for the RDS library.  
@@ -36,10 +37,8 @@ Indicates the type of asynchronous fetching.
  In a Web application, you will usually want to use **adcFetchAsync** (the default value), because it provides better performance. In a compiled client application, you will usually want to use **adcFetchBackground**.  
   
 ## Applies To  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)  
   
 ## See Also  
- [ExecuteOptions and FetchOptions Properties Example (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel Method (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [ExecuteOptions and FetchOptions Properties Example (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel Method (RDS)](./cancel-method-rds.md)

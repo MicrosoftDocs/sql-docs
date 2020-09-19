@@ -1,6 +1,7 @@
 ---
-title: "Prepare a Mirror Database for Mirroring (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Prepare a database for mirroring"
+description: Learn how to prepare a SQL Server database for database mirroring by using SQL Server Management Studio or Transact-SQL in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "11/10/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Prepare a Mirror Database for Mirroring (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Before a database mirroring session can start, the database owner or system administrator must make sure that the mirror database has been created and is ready for mirroring. Creating a new mirror database minimally requires taking a full backup of the principal database and a subsequent log backup and restoring them both onto the mirror server instance, using WITH NORECOVERY.  
   
  This topic describes how to prepare a mirror database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  

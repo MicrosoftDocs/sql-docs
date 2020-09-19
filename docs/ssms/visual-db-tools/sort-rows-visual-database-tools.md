@@ -1,22 +1,23 @@
 ---
-title: "Sort Rows (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Sort Rows (Visual Database Tools)"
+title: Sort Rows
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sorting rows [SQL Server]"
   - "sorting query results [SQL Server]"
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Sort Rows (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can order the rows in a query result. That is, you can name a particular column or set of columns whose values determine the order of rows in the result set.  
   
 > [!NOTE]  

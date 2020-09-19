@@ -1,7 +1,8 @@
 ---
+description: "APPROX_COUNT_DISTINCT (Transact-SQL)"
 title: "APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/17/2019"
+ms.date: "11/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -16,24 +17,22 @@ ms.author: "josack"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
-[!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE [sqlserver2019-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
 This function returns the approximate number of unique non-null values in a group. 
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT is a public preview feature.  
   
 ## Syntax  
   
-```sql
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse  
-
+```syntaxsql
 APPROX_COUNT_DISTINCT ( expression )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type, except **image**, **sql_variant**, **ntext**, or **text**. 
 
@@ -52,7 +51,7 @@ The function implementation guarantees up to a 2% error rate within a 97% probab
 `APPROX_COUNT_DISTINCT` requires less memory than an exhaustive COUNT DISTINCT operation.  Given the smaller memory footprint, `APPROX_COUNT_DISTINCT` is less likely to spill memory to disk compared to a precise COUNT DISTINCT operation. To learn more about the algorithm used to achieve this, see [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
-> With collation sensitive strings, the Public Preview version of APPROX_COUNT_DISTINCT uses a binary match and provides results that would have been generated in the presence of BIN collations and not BIN2. 
+> With collation sensitive strings, APPROX_COUNT_DISTINCT uses a binary match and provides results that would have been generated in the presence of BIN collations and not BIN2. 
   
 ## Examples  
   

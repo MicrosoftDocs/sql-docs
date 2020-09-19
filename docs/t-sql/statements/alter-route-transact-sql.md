@@ -1,4 +1,5 @@
 ---
+description: "ALTER ROUTE (Transact-SQL)"
 title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "removing routes"
   - "routes [Service Broker], modifying"
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifies route information for an existing route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -33,8 +34,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ALTER ROUTE route_name  
 WITH    
   [ SERVICE_NAME = 'service_name' [ , ] ]  
@@ -46,7 +46,10 @@ WITH
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *route_name*  
  Is the name of the route to change. Server, database, and schema names cannot be specified.  
   
@@ -61,7 +64,7 @@ WITH
  BROKER_INSTANCE **='**_broker\_instance_**'**  
  Specifies the database that hosts the target service. The *broker_instance* parameter must be the broker instance identifier for the remote database, which can be obtained by running the following query in the selected database:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID();  
@@ -77,7 +80,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='**_next\_hop\_address_'  
 
- For Azure SQL Database managed instance, `ADDRESS` must be local.
+ For Azure SQL Managed Instance, `ADDRESS` must be local.
 
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   
@@ -85,7 +88,7 @@ WHERE database_id = DB_ID();
   
  The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -109,7 +112,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -141,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### A. Changing the service for a route  
  The following example modifies the `ExpenseRoute` route to point to the remote service `//Adventure-Works.com/Expenses`.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
@@ -150,7 +153,7 @@ ALTER ROUTE ExpenseRoute
 ### B. Changing the target database for a route  
  The following example changes the target database for the `ExpenseRoute` route to the database identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89B1E317.`  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317';  
@@ -159,7 +162,7 @@ ALTER ROUTE ExpenseRoute
 ### C. Changing the address for a route  
  The following example changes the network address for the `ExpenseRoute` route to TCP port `1234` on the host with the IP address `10.2.19.72`.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute   
    WITH   
      ADDRESS = 'TCP://10.2.19.72:1234';  
@@ -168,7 +171,7 @@ ALTER ROUTE ExpenseRoute
 ### D. Changing the database and address for a route  
  The following example changes the network address for the `ExpenseRoute` route to TCP port `1234` on the host with the DNS name `www.Adventure-Works.com`. It also changes the target database to the database identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89B1E317`.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317',  

@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKTABLE (Transact-SQL)"
 title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/14/2017"
 ms.prod: sql
@@ -28,7 +29,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the integrity of all the pages and structures that make up the table or indexed view.
 
@@ -36,7 +37,7 @@ Checks the integrity of all the pages and structures that make up the table or i
     
 ## Syntax    
     
-```    
+```syntaxsql
 DBCC CHECKTABLE     
 (    
     table_name | view_name    
@@ -56,7 +57,9 @@ DBCC CHECKTABLE
     ]    
 ```    
     
-## Arguments    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name* | *view_name*  
  Is the table or indexed view for which to run integrity checks. Table or view names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
     
@@ -119,7 +122,7 @@ DATA_PURITY
  If PHYSICAL_ONLY is specified, column-integrity checks are not performed.  
     
 MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and later).  
  
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
     

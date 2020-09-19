@@ -1,4 +1,5 @@
 ---
+description: "Populate Full-Text Indexes"
 title: "Populate Full-Text Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -26,7 +27,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Populate Full-Text Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  
   
 ##  <a name="types"></a> Types of population  
@@ -201,8 +202,6 @@ In some cases, the request for an incremental population results in a full popul
     -   To **remove** an existing schedule, select the existing schedule and click **Delete**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="crawl"></a> Troubleshoot errors in a full-text population (crawl)  
 When an error occurs during a crawl, the Full-Text Search crawl logging facility creates and maintains a crawl log, which is a plain text file. Each crawl log corresponds to a particular full-text catalog. By default, crawl logs for a given instance (in this example, the default instance) are located in `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` folder.

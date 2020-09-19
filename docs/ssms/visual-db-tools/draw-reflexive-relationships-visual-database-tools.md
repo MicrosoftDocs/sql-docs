@@ -1,10 +1,10 @@
 ---
-title: "Draw Reflexive Relationships (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Draw Reflexive Relationships (Visual Database Tools)"
+title: Draw Reflexive Relationships
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,12 +12,13 @@ helpviewer_keywords:
   - "reflexive relationships"
   - "database diagrams [SQL Server], relationships"
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Draw Reflexive Relationships (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You create a reflexive relationship to link a column or columns in a table with another column or columns in the same table. For example, suppose the `employee` table has an `emp_id` column and a `mgr_id` column. Because each manager is also an employee, you relate these two columns by drawing a relationship line from the table to itself. This relationship ensures each manager ID that is added to the table matches an existing employee ID.  
   
 Before you create a relationship, you must first define a primary key or unique constraint for your table. You then relate the primary key column to a matching column. Once you create the relationship, the matching column becomes a foreign key of the table.  

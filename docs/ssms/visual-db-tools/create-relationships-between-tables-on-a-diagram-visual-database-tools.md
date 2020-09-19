@@ -1,20 +1,21 @@
 ---
-title: "Create Relationships Between Tables on a Diagram | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Create Relationships Between Tables on a Diagram (Visual Database Tools)"
+title: Create Relationships Between Tables on a Diagram
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "diagrams [SQL Server], designing"
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can create relationships between columns in different tables in the Diagram Designer by dragging columns between tables.  
   
 ### To create a relationship graphically  
@@ -43,6 +44,6 @@ You can create relationships between columns in different tables in the Diagram 
   
 ## See Also  
 [Tables and Columns Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Working with Constraints](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Work with Tables in Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

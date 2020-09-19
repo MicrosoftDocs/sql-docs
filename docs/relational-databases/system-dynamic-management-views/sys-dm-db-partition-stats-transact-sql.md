@@ -1,7 +1,8 @@
 ---
+description: "sys.dm_db_partition_stats (Transact-SQL)"
 title: "sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/31/2019"
+ms.date: "05/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,17 +18,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_partition_stats dynamic management view"
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_partition_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns page and row-count information for every partition in the current database.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_partition_stats**. The partition_id in sys.dm_pdw_nodes_db_partition_stats differs from the partition_id in the sys.partitions catalog view for Azure SQL Data Warehouse.
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_partition_stats**. The partition_id in sys.dm_pdw_nodes_db_partition_stats differs from the partition_id in the sys.partitions catalog view for Azure SQL Data Warehouse.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -60,14 +61,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The total count for an individual table or an index can be obtained by adding the counts for all relevant partitions.  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission to query the **sys.dm_db_partition_stats** dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Requires `VIEW DATABASE STATE` and `VIEW DEFINITION` permissions to query the **sys.dm_db_partition_stats** dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## Examples  
   
 ### A. Returning all counts for all partitions of all indexes and heaps in a database  
  The following example shows all counts for all partitions of all indexes and heaps in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
@@ -77,7 +78,7 @@ GO
 ### B. Returning all counts for all partitions of a table and its indexes  
  The following example shows all counts for all partitions of the `HumanResources.Employee` table and its indexes.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
@@ -88,7 +89,7 @@ GO
 ### C. Returning total used pages and total number of rows for a heap or clustered index  
  The following example returns total used pages and total number of rows for the heap or clustered index of the `HumanResources.Employee` table. Because the `Employee` table is not partitioned by default, note the sum includes only one partition.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   

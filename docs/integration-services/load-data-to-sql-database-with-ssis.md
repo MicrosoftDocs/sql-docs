@@ -13,9 +13,7 @@ author: chugugrace
 ---
 # Load data into SQL Server or Azure SQL Database with SQL Server Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[sqlserver-ssis](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Create a SQL Server Integration Services (SSIS) package to load data into SQL Server or [Azure SQL Database](/azure/sql-database/). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 
@@ -24,7 +22,6 @@ This article shows you how to do the following things:
 * Create a new Integration Services project in Visual Studio.
 * Design an SSIS package that loads data from the source into the destination.
 * Run the SSIS package to load the data.
-
 
 ## Basic concepts
 
@@ -72,28 +69,28 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
 * In the middle, the design surface, with multiple tabs. You typically use at least the **Control Flow** and the **Data Flow** tabs.
 * On the right, the **Solution Explorer** and the **Properties** panes.
   
-    ![][01]
+    ![Screenshot of Visual Studio showing the Toolbox pane, the design pane, the Solution Explorer pane, and the Properties pane.][01]
 
 ## Create the basic data flow
 1. Drag a Data Flow Task from the Toolbox to the center of the design surface (on the **Control Flow** tab).
    
-    ![][02]
+    ![Screenshot of Visual Studio showing a Data Flow Task being dragged into the Control Flow tab of the design pane.][02]
 2. Double-click the Data Flow Task to switch to the Data Flow tab.
 3. From the Other Sources list in the Toolbox, drag an ADO.NET Source to the design surface. With the source adapter still selected, change its name to **SQL Server source** in the **Properties** pane.
 4. From the Other Destinations list in the Toolbox, drag an ADO.NET Destination to the design surface under the ADO.NET Source. With the destination adapter still selected, change its name to **SQL destination** in the **Properties** pane.
    
-    ![][09]
+    ![Screenshot of a destination adapter being dragged to a location directly below the source adapter.][09]
 
 ## Configure the source adapter
 1. Double-click the source adapter to open the **ADO.NET Source Editor**.
    
-    ![][03]
+    ![Screenshot of the ADO.NET Source Editor. The Connection Manager tab is visible, and controls are available for configuring data flow properties.][03]
 2. On the **Connection Manager** tab of the **ADO.NET Source Editor**, click the **New** button next to the **ADO.NET connection manager** list to open the **Configure ADO.NET Connection Manager** dialog box and create connection settings for the SQL Server database from which this tutorial loads data.
    
-    ![][04]
+    ![Screenshot of the Configure ADO.NET Connection Manager dialog box. Controls are available for setting up and configuring connection managers.][04]
 3. In the **Configure ADO.NET Connection Manager** dialog box, click the **New** button to open the **Connection Manager** dialog box and create a new data connection.
    
-    ![][05]
+    ![Screenshot of the Connection Manager dialog box. Controls are available for configuring a data connection.][05]
 4. In the **Connection Manager** dialog box, do the following things.
    
    1. For **Provider**, select the SqlClient Data Provider.
@@ -102,16 +99,16 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
    4. In the **Connect to a database** section, select the AdventureWorks sample database.
    5. Click **Test Connection**.
       
-       ![][06]
+       ![Screenshot of a dialog box displaying an OK button and text that indicates that the test connection succeeded.][06]
    6. In the dialog box that reports the results of the connection test, click **OK** to return to the **Connection Manager** dialog box.
    7. In the **Connection Manager** dialog box, click **OK** to return to the **Configure ADO.NET Connection Manager** dialog box.
 5. In the **Configure ADO.NET Connection Manager** dialog box, click **OK** to return to the **ADO.NET Source Editor**.
 6. In the **ADO.NET Source Editor**, in the **Name of the table or the view** list, select the **Sales.SalesOrderDetail** table.
    
-    ![][07]
+    ![Screenshot of the ADO.NET Source Editor. In the Name of the table or the view list, the Sales.SalesOrderDetail table is selected.][07]
 7. Click **Preview** to see the first 200 rows of data in the source table in the **Preview Query Results** dialog box.
    
-    ![][08]
+    ![Screenshot of the Preview Query Results dialog box. Several rows of sales data from the source table are visible.][08]
 8. In the **Preview Query Results** dialog box, click **Close** to return to the **ADO.NET Source Editor**.
 9. In the **ADO.NET Source Editor**, click **OK** to finish configuring the data source.
 
@@ -119,14 +116,14 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
 1. Select the source adapter on the design surface.
 2. Select the blue arrow that extends from the source adapter and drag it to the destination editor until it snaps into place.
    
-    ![][10]
+    ![Screenshot showing the source and destination adapters. A blue arrow points from the source adapter to the destination adapter.][10]
    
     In a typical SSIS package, you use a number of other components from the SSIS Toolbox in between the source and the destination to restructure, transform, and cleanse your data as it passes through the SSIS data flow. To keep this example as simple as possible, we're connecting the source directly to the destination.
 
 ## Configure the destination adapter
 1. Double-click the destination adapter to open the **ADO.NET Destination Editor**.
    
-    ![][11]
+    ![Screenshot of the the ADO.NET Destination Editor. The Connection Manager tab is visible and contains controls for configuring data flow properties.][11]
 2. On the **Connection Manager** tab of the **ADO.NET Destination Editor**, click the **New** button next to the **Connection manager** list to open the **Configure ADO.NET Connection Manager** dialog box and create connection settings for the database into which this tutorial loads data.
 3. In the **Configure ADO.NET Connection Manager** dialog box, click the **New** button to open the **Connection Manager** dialog box and create a new data connection.
 4. In the **Connection Manager** dialog box, do the following things.
@@ -140,17 +137,17 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
 5. In the **Configure ADO.NET Connection Manager** dialog box, click **OK** to return to the **ADO.NET Destination Editor**.
 6. In the **ADO.NET Destination Editor**, click **New** next to the **Use a table or view** list to open the **Create Table** dialog box to create a new destination table with a column list that matches the source table.
    
-    ![][12a]
+    ![Screenshot of the Create Table dialog box. S Q L code for creating a destination table is visible.][12a]
 7. In the **Create Table** dialog box, do the following things.
    
    1. Change the name of the destination table to **SalesOrderDetail**.
       
-       ![][12b]
+       ![Screenshot of the Create Table dialog box. S Q L code is visible for creating a table named SalesOrderDetail.][12b]
 
    2. Click **OK** to create the table and return to the **ADO.NET Destination Editor**.
 8. In the **ADO.NET Destination Editor**, select the **Mappings** tab to see how columns in the source are mapped to columns in the destination.
    
-    ![][13]
+    ![Screenshot of the Mappings tab of the ADO.NET Destination Editor. Lines connect columns with identical names in the source and destination tables.][13]
 9. Click **OK** to finish configuring the destination.
 
 ## Run the package to load the data
@@ -160,11 +157,11 @@ The following paragraphs describe what you see if you created the package with t
 
 As the package begins to run, you see yellow spinning wheels to indicate activity as well as the number of rows processed so far.
 
-![][14]
+![Screenshot showing the source and destination adapters. Yellow, spinning wheels are over each adapter, and the text "89748 rows" is between them.][14]
 
 When the package has finished running, you see green check marks to indicate success as well as the total number of rows of data loaded from the source to the destination.
 
-![][15]
+![Screenshot showing the source and destination adapters. Green check marks are over each adapter, and the text "121317 rows" is between them.][15]
 
 Congratulations! You've successfully used SQL Server Integration Services to load data into SQL Server or Azure SQL Database.
 

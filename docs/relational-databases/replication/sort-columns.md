@@ -1,4 +1,5 @@
 ---
+description: "Sort Columns"
 title: "Sort Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -12,17 +13,15 @@ f1_keywords:
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Sort Columns
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Sort Columns** dialog box lets you sort grids in Replication Monitor based on one or more columns. (You can also sort on a single column by clicking the column header in the Replication Monitor grid). For example, to sort subscriptions on the **All Subscriptions** tab based on status and then connection type, follow these steps:  
   
 1.  In the first row of the grid, select **Status** from the **Column Name** column and a value from the **Sort Order** column  
   
 2.  In the second row of the grid, select **Connection Type** from the **Column Name** column, and a value from the **Sort Order** column.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Options  
  **Column Name**  

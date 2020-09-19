@@ -1,6 +1,7 @@
 ---
-title: "Open With (New File) | Microsoft Docs"
-ms.custom: ""
+description: "Open With (New File)"
+title: "Open With (New File)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Open With (New File)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can open a document in one or more editors by clicking **Open** on the **File** menu and then clicking **File**. In the **Open File** dialog box, select the file, click the **Open** arrow, and then click **Open With**. In the **Open With** dialog box, in the **Select a program to open** list, click the preferred program, and then click **Open**.  
   
 ## Options  

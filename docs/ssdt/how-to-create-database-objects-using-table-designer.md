@@ -1,20 +1,22 @@
 ---
-title: "How to: Create Database Objects Using Table Designer | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Create Database Objects Using Table Designer
+description: Learn how to create a new database in SQL Server Object Explorer. See how to create new tables, constraints, and foreign key references in Table Designer.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.scriptpanel"
   - "sql.data.tools.design.table.context.view"
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Create Database Objects Using Table Designer
+
 Not only is the new **SQL Server** node in **SQL Server Object Explorer** very similar to SSMS visually, but you can create new objects using contextual menus that function like their SSMS-counterparts.  
   
 For example, you can create a new database under the **Databases** node. Similarly, you can select a specific database and create or edit table definitions and their related programming objects on-the-fly using the new Table Designer. From the Table Designer, you can switch to a script pane which allows you to directly edit the script that defines this table.  

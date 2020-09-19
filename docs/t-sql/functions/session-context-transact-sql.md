@@ -1,4 +1,5 @@
 ---
+description: "SESSION_CONTEXT (Transact-SQL)"
 title: "SESSION_CONTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2019"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SESSION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns the value of the specified key in the current session context. The value is set by using the [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) procedure.  
   
@@ -31,7 +32,7 @@ ms.author: vanto
 SESSION_CONTEXT(N'key')  
 ```  
   
-## Arguments  
+## Arguments
  'key'  
  The key (type sysname) of the value being retrieved.  
   

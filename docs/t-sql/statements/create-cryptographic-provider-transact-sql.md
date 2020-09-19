@@ -1,4 +1,5 @@
 ---
+description: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
 title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -24,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
@@ -32,13 +33,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 CREATE CRYPTOGRAPHIC PROVIDER provider_name   
     FROM FILE = path_of_DLL  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Is the name of the Extensible Key Management provider.  
   
@@ -64,7 +66,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## Examples  
  The following example creates a cryptographic provider called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a .dll file. The .dll file is named `c:\SecurityProvider\SecurityProvider_v1.dll` and it is installed on the server. The provider's certificate must first be installed on the server.  
   
-```  
+```sql  
 -- Install the provider  
 CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider  
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  

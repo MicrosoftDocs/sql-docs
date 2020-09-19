@@ -1,5 +1,6 @@
 ---
-title: "Initialize a Report Server (SSRS Configuration Manager) | Microsoft Docs"
+description: "Initialize a Report Server (Configuration Manager)"
+title: "Initialize a Report Server (Configuration Manager) | Microsoft Docs"
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -57,7 +58,7 @@ ms.author: maggies
  A report server will be initialized only if there is a match between the installation identifier and the public key. If the match succeeds, a symmetric key is created that permits reversible encryption. If the match fails, the report server is disabled, in which case you may be required to apply a backup key or delete the encrypted data if a backup key is unavailable or not valid. For more information about encryption keys used by a report server, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
 > [!NOTE]  
->  You can also use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider to initialize a report server programmatically. For more information, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+>  You can also use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider to initialize a report server programmatically. For more information, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 ## How to Confirm a Report Server Initialization  
  To confirm report server initialization, ping the Report Server Web service by typing **https://\<servername>/reportserver** in the command window. If the **RSReportServerNotActivated** error occurs, the initialization failed.  

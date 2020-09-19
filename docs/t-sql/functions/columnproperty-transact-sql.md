@@ -1,4 +1,5 @@
 ---
+description: "COLUMNPROPERTY (Transact-SQL)"
 title: "COLUMNPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "parameters [SQL Server], properties"
   - "COLUMNPROPERTY function"
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # COLUMNPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns column or parameter information.
   
@@ -33,7 +34,9 @@ This function returns column or parameter information.
 COLUMNPROPERTY ( id , column , property )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *id*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the identifier (ID) of the table or procedure.
   
@@ -48,13 +51,13 @@ For the *id* argument, the *property* argument specifies the information type th
 |**AllowsNull**|Allows null values.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**ColumnId**|Column ID value corresponding to **sys.columns.column_id**.|Column ID<br /><br /> **Note:** When querying multiple columns, gaps may appear in the sequence of Column ID values.|  
 |**FullTextTypeColumn**|The TYPE COLUMN in the table holding the document type information of the *column*.|ID of the full-text TYPE COLUMN for the column name expression passed as the second parameter of this function.|  
-|**GeneratedAlwaysType**|Is column value system-generated. Corresponds to **sys.columns.generated_always_type**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Not generated always<br /><br /> 1: Generated always at row start<br /><br /> 2: Generated always at row end|  
+|**GeneratedAlwaysType**|Is column value system-generated. Corresponds to **sys.columns.generated_always_type**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.<br /><br /> 0: Not generated always<br /><br /> 1: Generated always at row start<br /><br /> 2: Generated always at row end|  
 |**IsColumnSet**|Column is a column set. For more information, see [Use Column Sets](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsComputed**|Column is a computed column.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsCursorType**|Procedure parameter is of type CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsDeterministic**|Column is deterministic. This property applies only to computed columns and view columns.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input. Not a computed column or view column.|  
 |**IsFulltextIndexed**|Column is registered for full-text indexing.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
-|**IsHidden**|Is column value system-generated. Corresponds to **sys.columns.is_hidden**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: Not hidden<br /><br /> 1: Hidden|  
+|**IsHidden**|Is column value system-generated. Corresponds to **sys.columns.is_hidden**|**Applies to**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] and later.<br /><br /> 0: Not hidden<br /><br /> 1: Hidden|  
 |**IsIdentity**|Column uses the IDENTITY property.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsIdNotForRepl**|Column checks for the IDENTITY_INSERT setting.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  
 |**IsIndexable**|Column can be indexed.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: invalid input.|  

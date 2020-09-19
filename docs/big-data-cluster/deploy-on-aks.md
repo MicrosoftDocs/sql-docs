@@ -1,11 +1,12 @@
 ---
 title: Configure Azure Kubernetes Service
-titleSuffix: SQL Server big data clusters
-description: Learn how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
+titleSuffix: SQL Server Big Data Clusters
+description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster deployments.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Configure Azure Kubernetes Service for SQL Server big data cluster deployments
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 
@@ -22,7 +23,7 @@ AKS makes it simple to create, configure, and manage a cluster of virtual machin
 This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If you don't have an Azure subscription, create a free account before you begin.
 
 > [!TIP]
-> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
+> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](notebooks-deploy.md).
 
 ## Prerequisites
 
@@ -40,7 +41,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
    - 24 or more attached disks across all nodes
 
    > [!TIP]
-   > Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
+   > Azure infrastructure offers multiple size options for VMs, see [here](/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
 
 ## Create a resource group
 
@@ -62,6 +63,12 @@ An Azure resource group is a logical group in which Azure resources are deployed
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. Identify the Azure region where you want to deploy the cluster and the resources by using this command:
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbdcgroup` in the `westus2` location.
@@ -98,7 +105,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 ## Create a Kubernetes cluster
 
-1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux agent node of size **Standard_L8s**.
+1. Create a Kubernetes cluster in AKS with the [az aks create](/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux agent node of size **Standard_L8s**.
 
    Before you run the script, replace `<version number>` with the version number you identified in the previous step.
 
@@ -126,7 +133,7 @@ Choose the latest available version for your cluster. Record the version number.
    --kubernetes-version <version number>
    ```
 
-   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes.
+   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes. You can also change the `--node-vm-size` to select an appropriate virtual machine size that matches your workload requirements. Use the `az vm list-sizes --location westus2 -o table` command to list available virtual machine sizes in your region.
 
    After several minutes, the command completes and returns JSON-formatted information about the cluster.
 
@@ -137,7 +144,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 ## Connect to the cluster
 
-1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
+1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -153,8 +160,9 @@ Choose the latest available version for your cluster. Record the version number.
 
 If you have any problems creating an Azure Kubernetes Service with the previous commands, try the following resolutions:
 
-- Make sure that you have installed the [latest Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Make sure that you have installed the [latest Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Try the same steps using a different resource group and cluster name.
+- Refer to the detailed [troubleshooting documentation for AKS](/azure/aks/troubleshooting).
 
 ## Next steps
 

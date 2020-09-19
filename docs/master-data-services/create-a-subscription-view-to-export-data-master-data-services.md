@@ -1,5 +1,6 @@
 ---
-title: "Create a Subscription View to Export Data (Master Data Services) | Microsoft Docs"
+title: Create a Subscription View to Export Data
+description: Learn how to create a subscription view to export Master Data Services data to subscribing systems, which creates a view of your data.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Create a Subscription View to Export Data (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Create a subscription view to export Master Data Services data to subscribing systems. You're creating a view of your data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  
   

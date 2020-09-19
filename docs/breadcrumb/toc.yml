@@ -1,34 +1,33 @@
 - name: Docs
-  href: /
-  homepage: /
+  tocHref: /
+  topicHref: /
   items:
 
   - name: SQL
-    href: /sql/
-    homepage: /sql/index
+    tocHref: /sql/
+    topicHref: /sql/index
     items:
 
     - name: APS
-      href: /sql/analytics-platform-system/
-      homepage: /sql/analytics-platform-system/index
-
-    - name: SSAS
-      href: /sql/analysis-services/
-      homepage: /sql/analysis-services/analysis-services
+      tocHref: /sql/analytics-platform-system/
+      topicHref: /sql/analytics-platform-system/index
 
     - name: ML
-      href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/
+      tocHref: /sql/machine-learning/
+      topicHref: /sql/machine-learning/
 
     - name: Connect
-      href: /sql/connect/
-      homepage: /sql/connect/sql-server-drivers
+      tocHref: /sql/connect/
+      topicHref: /sql/connect/sql-server-drivers
 
     - name: SSIS
-      href: /sql/integration-services/
-      homepage: /sql/integration-services/sql-server-integration-services
+      tocHref: /sql/integration-services/
+      topicHref: /sql/integration-services/sql-server-integration-services
 
     - name: SSRS
-      href: /sql/reporting-services/
-      homepage: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
+      tocHref: /sql/reporting-services/
+      topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
 
+    - name: Azure Data Studio
+      tocHref: /sql/azure-data-studio/
+      topicHref: /sql/azure-data-studio/

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_index_population (Transact-SQL)"
 title: "sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"
@@ -22,7 +23,7 @@ ms.author: pelopes
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_index_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information about the full-text index and semantic key phrase populations currently in progress in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
@@ -38,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**range_count**|**int**|Number of sub-ranges into which this population has been parallelized.|  
 |**completed_range_count**|**int**|Number of ranges for which processing is complete.|  
 |**outstanding_batch_count**|**int**|Current number of outstanding batches for this population. For more information, see [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
-|**status**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Status of this Population. Note: some of the states are transient. One of the following:<br /><br /> 3 = Starting<br /><br /> 5 = Processing normally<br /><br /> 7 = Has stopped processing<br /><br /> For example, this status occurs when an auto merge is in progress.<br /><br /> 11 = Population aborted<br /><br /> 12 = Processing a semantic similarity extraction|  
+|**status**|**int**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Status of this Population. Note: some of the states are transient. One of the following:<br /><br /> 3 = Starting<br /><br /> 5 = Processing normally<br /><br /> 7 = Has stopped processing<br /><br /> For example, this status occurs when an auto merge is in progress.<br /><br /> 11 = Population aborted<br /><br /> 12 = Processing a semantic similarity extraction|  
 |**status_description**|**nvarchar(120)**|Description of status of the population.|  
 |**completion_type**|**int**|Status of how this population completed.|  
 |**completion_type_description**|**nvarchar(120)**|Description of the completion type.|  

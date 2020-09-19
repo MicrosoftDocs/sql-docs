@@ -12,31 +12,31 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ---
 
 # Identify the right Azure SQL Database/Managed Instance SKU for your on-premises database
 
 Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure database target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
 
-This article focuses on DMA's Azure SQL Database SKU recommendations feature. Azure SQL Database has several deployment options, including:
+This article focuses on DMA's Azure SQL Database SKU recommendations feature. Azure SQL Database and Azure SQL Managed Instance have several deployment options, including:
 
 - Single database
 - Elastic pools
-- Managed instance
+- Managed Instance
 
-The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or managed instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances in Azure for all recommended databases.
+The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases.
 
 > [!NOTE]
 > This functionality is currently available only via the Command Line Interface (CLI).
 
-The following are instructions to help you determine the Azure SQL Database SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
+The following are instructions to help you determine the SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
 
 ## Prerequisites
 
 - Download and install the latest version of [DMA](https://aka.ms/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
-- Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about findoug out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about how to find out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
 - Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
@@ -75,7 +75,7 @@ Use the performance counters output file you  created as input for this process.
 
 For the single database option, DMA will provide recommendations for the Azure SQL Database single database pricing tier, the compute level, and the maximum data size for each database on your computer. If you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for each database.
 
-For managed instance, the recommendations support a lift-and-shift scenario. As a result, DMA will provide you with recommendations for the Azure SQL Database managed instance pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for managed instance.
+For managed instance, the recommendations support a lift-and-shift scenario. As a result, DMA will provide you with recommendations for the Azure SQL Managed Instance pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for managed instance.
 
 To use the DMA CLI to get SKU recommendations, at the command prompt, run dmacmd.exe with the following arguments:
 
@@ -106,7 +106,7 @@ In addition, select one of the following arguments:
         - **AzureAuthenticationToken**: Set to the certificate token.
 
 > [!NOTE]
-> To get the ClientId and TenantId for interactive authentication, you need to configure a new AAD application. For more information on authentication and getting these credentials, in the article [Microsoft Azure Billing API Code Samples: RateCard API](https://azure.microsoft.com/resources/samples/billing-python-ratecard-api/), follow the instructions under **Step 1: Configure a Native Client application in your AAD tenant**.
+> To get the ClientId and TenantId for interactive authentication, you need to configure a new AAD application. For more information on authentication and getting these credentials, in the article [Microsoft Azure Billing API Code Samples: RateCard API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api), follow the instructions under **Step 1: Configure a Native Client application in your AAD tenant**.
 
 Lastly, there is an optional argument you can use to specify the databases for which you want recommendations: 
 
@@ -171,15 +171,15 @@ For managed instance recommendations, the TSV output file will look as follows:
 A description of each column in the output file follows.
 
 - **DatabaseName** - The name of your database.
-- **MetricType** - Recommended Azure SQL Database single database/managed instance tier.
-- **MetricValue** - Recommended Azure SQL Database single database/managed instance SKU.
+- **MetricType** - Recommended performance tier.
+- **MetricValue** - Recommended SKU.
 - **PricePerMonth** – The estimated price per month for the corresponding SKU.
 - **RegionName** – The region name for the corresponding SKU. 
 - **IsTierRecommended** - We make a minimum SKU recommendation for each tier. We then apply heuristics to determine the right tier for your database. This reflects which tier is recommended for the database. 
 - **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that isn't recommended, we provide the reasons why it wasn't picked.
 - **AppliedRules** - A short notation of the rules that were applied.
 
-The final recommended tier (i.e., **MetricType**) and value (i.e., **MetricValue**) - found where the **IsTierRecommended** column is TRUE - reflects the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For managed instance, DMA currently supports recommendations for the most commonly used 8vcore to 40vcore SKUs. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
+The final recommended tier (i.e., **MetricType**) and value (i.e., **MetricValue**) - found where the **IsTierRecommended** column is TRUE - reflects the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For Azure SQL Managed Instance, DMA currently supports recommendations for the most commonly used 8vcore to 40vcore SKUs. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 
 The HTML file contains this information in a graphical format. It provides a user-friendly means of viewing the final recommendation and provisioning the next part of the process. More information on the HTML output is in the following section.
 
@@ -193,7 +193,7 @@ To input provisioning information and make changes to the recommendations, updat
 
 **For single database recommendations**
 
-![Azure SQL DB SKU Recommendations screen](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL Database SKU Recommendations screen](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. Open the HTML file and enter the following information:
     - **Subscription ID** - The subscription ID of the Azure subscription to which you want to provision the databases.
@@ -209,7 +209,7 @@ To input provisioning information and make changes to the recommendations, updat
 
     This process should create all the databases you selected in the HTML page.
 
-**For managed instance recommendations**
+**For Azure SQL Managed Instance recommendations**
 
 ![Azure SQL MI SKU Recommendations screen](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

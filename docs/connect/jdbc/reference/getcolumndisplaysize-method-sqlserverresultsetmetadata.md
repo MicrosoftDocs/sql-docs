@@ -1,4 +1,5 @@
 ---
+description: "getColumnDisplaySize Method (SQLServerResultSetMetaData)"
 title: "getColumnDisplaySize Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getColumnDisplaySize Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

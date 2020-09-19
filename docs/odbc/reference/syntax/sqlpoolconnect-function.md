@@ -1,4 +1,5 @@
 ---
+description: "SQLPoolConnect Function"
 title: "SQLPoolConnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPoolConnect function [ODBC]"
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLPoolConnect Function
 **Conformance**  

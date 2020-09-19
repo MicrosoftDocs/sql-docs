@@ -1,6 +1,7 @@
 ---
-title: "Understand SQL Server Management Studio Windows Management | Microsoft Docs"
-ms.custom: ""
+description: "Understand SQL Server Management Studio Windows Management"
+title: "Understand SQL Server Management Studio Windows Management"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -17,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Understand SQL Server Management Studio Windows Management
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The tool windows in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] are a highly functional, flexible, and efficient system that allows you to:  
   
 -   Maximize the user workspace for development and management.  

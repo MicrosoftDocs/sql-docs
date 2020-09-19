@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT INDEX (Transact-SQL)"
 title: "ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/27/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "search property lists [SQL Server], associating with full-text indexes"
   - "ALTER FULLTEXT INDEX statement"
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the properties of a full-text index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -31,8 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
    | DISABLE  
@@ -59,7 +59,9 @@ ALTER FULLTEXT INDEX ON table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name*  
  Is the name of the table or indexed view that contains the column or columns included in the full-text index. Specifying database and table owner names is optional.  
   
@@ -72,7 +74,7 @@ ALTER FULLTEXT INDEX ON table_name
  Specifies whether changes (updates, deletes, or inserts) made to table columns that are covered by the full-text index will be propagated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the full-text index. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
 > [!NOTE]  
->  For information about the interaction of change tracking and WITH NO POPULATION, see "Remarks," later in this topic.  
+>  For more information, see [Interactions of Change Tracking and NO POPULATION Parameter](#change-tracking-no-population).
   
  MANUAL  
  Specifies that the tracked changes will be propagated manually by calling the ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
@@ -91,7 +93,8 @@ ALTER FULLTEXT INDEX ON table_name
  Use TYPE COLUMN and LANGUAGE with the ADD clause to set these properties on the *column_name*. When a column is added, the full-text index on the table must be repopulated in order for full-text queries against this column to work.  
   
 > [!NOTE]  
->  Whether the full-text index is populated after a column is added or dropped from a full-text index depends on whether change-tracking is enabled and whether WITH NO POPULATION is specified. For more information, see "Remarks," later in this topic.  
+>  Whether the full-text index is populated after a column is added or dropped from a full-text index depends on whether change-tracking is enabled and whether WITH NO POPULATION is specified. 
+>  For more information, see [Interactions of Change Tracking and NO POPULATION Parameter](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
  Specifies the name of a table column, *type_column_name*, that is used to hold the document type for a **varbinary**, **varbinary(max)**, or **image** document. This column, known as the type column, contains a user-supplied file extension (.doc, .pdf, .xls, and so forth). The type column must be of type **char**, **nchar**, **varchar**, or **nvarchar**.  
@@ -117,7 +120,7 @@ ALTER FULLTEXT INDEX ON table_name
  For non-BLOB and non-XML columns containing text data in multiple languages, or for cases when the language of the text stored in the column is unknown, use the neutral (0x0) language resource. For documents stored in XML- or BLOB-type columns, the language encoding within the document will be used at indexing time. For example, in XML columns, the xml:lang attribute in XML documents will identify the language. At query time, the value previously specified in *language_term* becomes the default language used for full-text queries unless *language_term* is specified as part of a full-text query.  
   
  STATISTICAL_SEMANTICS  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Creates the additional key phrase and document similarity indexes that are part of statistical semantic indexing. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -132,10 +135,10 @@ ALTER FULLTEXT INDEX ON table_name
  If CHANGE_TRACKING is enabled and WITH NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error. If CHANGE_TRACKING is enabled and WITH NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs a full population on the index.  
   
 > [!NOTE]  
->  For more information about the interaction of change tracking and WITH NO POPULATION, see "Remarks," later in this topic.  
+>  For more information, see [Interactions of Change Tracking and NO POPULATION Parameter](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Enables or disables statistical semantic indexing for the specified columns. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -173,7 +176,7 @@ ALTER FULLTEXT INDEX ON table_name
  For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  Changes the search property list that is associated with the index, if any.  
   
@@ -188,7 +191,7 @@ ALTER FULLTEXT INDEX ON table_name
  Adding a search property list to a full-text index requires repopulating the index to index the search properties that are registered for the associated search property list. If you specify WITH NO POPULATION when adding the search property list, you will need to run a population on the index, at an appropriate time.  
   
 > [!IMPORTANT]  
->  If the full-text index was previously associated with a different search it must be rebuilt property list in order to bring the index into a consistent state. The index is truncated immediately and is empty until the full population runs. For more information about when changing the search property list causes rebuilding, see "Remarks," later in this topic.  
+>  If the full-text index was previously associated with a different search it must be rebuilt property list in order to bring the index into a consistent state. The index is truncated immediately and is empty until the full population runs. For more information, see [Changing the Search Property List Causes Rebuilding the Index](#change-search-property-rebuild-index). 
   
 > [!NOTE]  
 >  You can associate a given search property list with more than one full-text index in the same database.  
@@ -199,7 +202,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  For more information about search property lists, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## Interactions of Change Tracking and NO POPULATION Parameter  
+## <a name="change-tracking-no-population"></a> Interactions of Change Tracking and NO POPULATION Parameter  
  Whether the full-text index is populated depends on whether change-tracking is enabled and whether WITH NO POPULATION is specified in the ALTER FULLTEXT INDEX statement. The following table summarizes the result of their interaction.  
   
 |Change Tracking|WITH NO POPULATION|Result|  
@@ -211,7 +214,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  For more information about populating full-text indexes, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## Changing the Search Property List Causes Rebuilding the Index  
+## <a name="change-search-property-rebuild-index"></a> Changing the Search Property List Causes Rebuilding the Index  
  The first time that a full-text index is associated with a search property list, the index must be repopulated to index property-specific search terms. The existing index data is not truncated.  
   
  However, if you associate the full-text index with a different property list, the index is rebuilt. Rebuilding immediately truncates the full-text index, removing all existing data, and the index must be repopulated. While the population progresses, full-text queries on the base table search only on the table rows that have already been indexed by the population. The repopulated index data will include metadata from the registered properties of the newly added search property list.  
@@ -229,7 +232,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  A full-text index is created on `table_1` with a search property list `spl_1`:  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1,   
        CHANGE_TRACKING OFF, NO POPULATION;   
@@ -237,13 +240,13 @@ ALTER FULLTEXT INDEX ON table_name
   
 2.  A full population is run on the full-text index:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 START FULL POPULATION;  
     ```  
   
 3.  The full-text index is later associated a different search property list, `spl_2`, using the following statement:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
@@ -253,14 +256,14 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  A full-text index is created on `table_1` with a search property list `spl_1`, followed by an automatic full population (the default behavior):  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
 2.  The search property list is turned off, as follows:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1   
        SET SEARCH PROPERTY LIST OFF WITH NO POPULATION;   
     ```  
@@ -269,7 +272,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      For example the following statement re-associates the full-text index with the original search property list, `spl_1`:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
     ```  
   
@@ -291,7 +294,7 @@ ALTER FULLTEXT INDEX ON table_name
 ### A. Setting manual change tracking  
  The following example sets manual change tracking on the full-text index on the `JobCandidate` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate  
@@ -301,14 +304,14 @@ GO
   
 ### B. Associating a property list with a full-text index  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  The following example associates the `DocumentPropertyList` property list with the full-text index on the `Production.Document` table. This ALTER FULLTEXT INDEX statement starts a full population, which is the default behavior of the SET SEARCH PROPERTY LIST clause.  
   
 > [!NOTE]  
 >  For an example that creates the `DocumentPropertyList` property list, see [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -318,11 +321,11 @@ GO
   
 ### C. Removing a search property list  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
  The following example removes the `DocumentPropertyList` property list from the full-text index on the `Production.Document`. In this example, there is no hurry for removing the properties from the index, so the WITH NO POPULATION option is specified. However, property-level searching is longer allowed against this full-text index.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -333,7 +336,7 @@ GO
 ### D. Starting a full population  
  The following example starts a full population on the full-text index on the `JobCandidate` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   

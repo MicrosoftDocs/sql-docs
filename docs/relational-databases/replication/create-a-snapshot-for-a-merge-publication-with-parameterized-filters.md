@@ -1,6 +1,7 @@
 ---
-title: "Create a Snapshot for a Merge Publication with Parameterized Filters | Microsoft Docs"
-ms.custom: ""
+title: "Create snapshot with parameterized filters (Merge)"
+description: Learn how to create a snapshot for a Merge Publication using parameterized filters. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create a Snapshot for a Merge Publication with Parameterized Filters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This topic describes how to create a snapshot for a merge publication with parameterized filters in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
 
 When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. First, a schema snapshot is created that contains all objects required by replication and the schema of the published objects, but not the data. Then, each subscription is initialized with a snapshot that includes the objects and schema from the schema snapshot and the data that belongs to the subscription's partition. If more than one subscription receives a given partition (in other words, they receive the same schema and data), the snapshot for that partition is created only once; multiple subscriptions are initialized from the same snapshot. For more information about parameterized row filters, see [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -59,8 +60,6 @@ When parameterized row filters are used in merge publications, replication initi
 1.  Create a merge publication with the New Publication Wizard, and specify one or more parameterized row filters on the **Add Filter** page of the wizard. For more information, see [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Generate a schema snapshot for the publication. By default, a schema snapshot is generated when you complete the New Publication Wizard; you can also generate a schema snapshot from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To generate a schema snapshot  
   

@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_BUSY"
 title: "LOCALDB_ERROR_INSTANCE_BUSY | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -11,12 +12,12 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # LOCALDB_ERROR_INSTANCE_BUSY
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|274|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

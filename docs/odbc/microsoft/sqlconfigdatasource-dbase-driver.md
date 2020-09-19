@@ -1,4 +1,5 @@
 ---
+description: "SQLConfigDataSource (dBASE Driver)"
 title: "SQLConfigDataSource (dBASE Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLConfigDataSource"
   - "SQLConfigDataSource function [ODBC], dBASE Driver"
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLConfigDataSource (dBASE Driver)
 > [!NOTE]  

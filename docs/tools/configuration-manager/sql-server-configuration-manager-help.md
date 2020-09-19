@@ -1,11 +1,12 @@
 ---
-title: "SQL Server Configuration Manager Help | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Configuration Manager Help"
+description: Get acquainted with SQL Server Configuration Manager. Learn how to use it to manage SQL Server services and configure network connectivity.
+ms.custom: seo-lt-2019
 ms.date: "02/01/2018"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, help"
@@ -15,7 +16,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Configuration Manager Help
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services and configure network connectivity. To create or manage database objects, configure security, and write [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
 
  > [!TIP]
@@ -76,6 +77,5 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  [SQL Server Services](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server Network Configuration](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 Configuration](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
- [Choosing a Network Protocol](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
-  
+ [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))  
   

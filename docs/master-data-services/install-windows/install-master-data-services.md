@@ -1,11 +1,12 @@
 ---
-title: "Installation Tasks for Master Data Services | Microsoft Docs"
+title: Installation Tasks
+description: This article provides an overview of installation of Master Data Services, including installation and pre-installation and post-installation tasks.
 ms.custom: ""
 ms.date: "03/24/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Installation Tasks for Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article provides an overview of the installation tasks, with links to instructions. For a walkthrough of installing and configuring Master Data Services, see [Master Data Services Installation and Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
   

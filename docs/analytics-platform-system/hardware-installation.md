@@ -1,5 +1,5 @@
 ---
-title: Hardware installation - Analytics Platform System (APS) | Microsoft Docs
+title: Hardware installation
 description: This article describes how to move, unpack, and install the hardware for your SQL Server PDW appliance. This article is informational only and is intended to help you understand the process. Your appliance should be unpacked, installed, and verified before it is turned over to you. Customer participation is required for items such as data center access, electrical power, and Ethernet connections.  
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Hardware installation for Analytics Platform System (APS) appliance
@@ -48,12 +49,12 @@ Use the following checklist to move each appliance rack from the pallet at the l
 ## <a name="AfterMoving"></a>Install Additional Components  
 Use the following checklist to install the additional components.  
   
-|Task|Description||  
-|--------|---------------|-|  
-|Unpack and rack network switches and PDUs|Use the rack diagrams to place the network switches and PDUs in the proper location in the rack.||  
-|Connect the Infiniband and Ethernet cables according to the cable labels|See the cabling diagram. Each cable has a label on each end that specifies where it needs to be connected.||  
-|Connect all power cables|See the cabling diagram.||  
-|Turn on the power supply to the racks and the PDUs|Connect the power supply to the racks and from the racks to the PDUs. **Do not power on any of the other appliance components at this time.**||  
+|Task|Description|
+|--------|---------------|
+|Unpack and rack network switches and PDUs|Use the rack diagrams to place the network switches and PDUs in the proper location in the rack.|
+|Connect the Infiniband and Ethernet cables according to the cable labels|See the cabling diagram. Each cable has a label on each end that specifies where it needs to be connected.|
+|Connect all power cables|See the cabling diagram.|
+|Turn on the power supply to the racks and the PDUs|Connect the power supply to the racks and from the racks to the PDUs. **Do not power on any of the other appliance components at this time.**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

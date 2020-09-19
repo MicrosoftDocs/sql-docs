@@ -1,5 +1,6 @@
 ---
 title: "Migrating DB2 Databases to SQL Server (DB2ToSQL) | Microsoft Docs"
+description: Use this recommended process to migrate DB2 databases to SQL Server or Azure SQL Database using SQL Server Migration Assistant (SSMA).
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -7,14 +8,14 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Migrating DB2 Databases to SQL Server (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 is a comprehensive environment that helps you quickly migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB. By using SSMA for DB2, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB. Note that you cannot migrate SYS and SYSTEM DB2 schemas.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 is a comprehensive environment that helps you quickly migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database. By using SSMA for DB2, you can review database objects and data, assess databases for migration, migrate database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database. Note that you cannot migrate SYS and SYSTEM DB2 schemas.  
   
 ## Recommended Migration Process  
-To successfully migrate objects and data from DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB, use the following process:  
+To successfully migrate objects and data from DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database, use the following process:  
   
 1.  [New SSMA project](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0).  
   

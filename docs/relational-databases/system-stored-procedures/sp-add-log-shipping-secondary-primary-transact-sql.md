@@ -1,4 +1,5 @@
 ---
+description: "sp_add_log_shipping_secondary_primary (Transact-SQL)"
 title: "sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets up the primary information, adds local and remote monitor links, and creates copy and restore jobs on the secondary server for the specified primary database.  
   
@@ -107,8 +108,6 @@ sp_add_log_shipping_secondary_primary
 1.  Generates a secondary ID for the specified primary server and primary database.  
   
 2.  Does the following:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Adds an entry for the secondary ID in **log_shipping_secondary** using the supplied arguments.  
   

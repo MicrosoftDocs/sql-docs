@@ -1,4 +1,5 @@
 ---
+description: "setNClob Method (java.lang.String, java.sql.NClob)"
 title: "setNClob Method (java.lang.String, java.sql.NClob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4e30d242-0c1b-45db-b75f-41b041692f31
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setNClob Method (java.lang.String, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

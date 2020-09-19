@@ -1,7 +1,8 @@
 ---
-title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
-ms.custom: ""
-ms.date: 08/07/2019
+title: "Tutorial: Always Encrypted with secure enclaves using SSMS"
+description: This tutorial teaches you how to create a basic Always Encrypted with secure enclaves environment, how to encrypt data in-place, and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS). 
+ms.custom: seo-lt-2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -13,8 +14,8 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# Tutorial: Always Encrypted with secure enclaves using SSMS
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
@@ -30,19 +31,16 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 ### SQL Server computer requirements
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later.
-- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
-- If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
-   - 64-bit Processor with Second Level Address Translation (SLAT)
-   - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs)
-   - Virtualization support enabled (Intel VT-x or AMD-V)
-- If your SQL Server computer is a virtual machine, the VM must be configured to support Virtualization Based Security.
-   - On Hyper-V 2016 or later, use a generation 1 VM and [enable nested virtualization extensions](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor, or use a generation 2 VM. For more information about VM generations see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
-   - In Azure, make sure you're running a VM size that supports one of the following:
-      - Nested virtualization, for example the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-      - Generation 2 VMs, for example: the Dsv3 or Esv3 series VMs. See [Support for generation 2 VMs on Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
-   - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-   - Other hypervisors and public clouds may support using Always Encrypted with secure enclaves in a VM as long as virtualization extensions (sometimes called nested virtualization) are exposed to the VM. Check your virtualization solution?s documentation for compatibility and configuration instructions.
-- [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
+- Windows 10 Enterprise version 1809 or later; or Windows Server 2019 Datacenter edition. Other editions of Windows 10 and Windows Server don't support attestation with HGS.
+- CPU support for virtualization technologies:
+  - Intel VT-x with Extended Page Tables.
+  - AMD-V with Rapid Virtualization Indexing.
+  - If you're running [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. 
+    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - In Azure, select a VM size that supports nested virtualization. This includes all v3 series VMs, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.
+- [SQL Server Management Studio (SSMS) 18.3 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 As an alternative, you can install SSMS on another machine.
 
@@ -84,8 +82,6 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 
 4. Find the IP address of the HGS computer by running the following command. Save this IP address for later steps.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    ```powershell
    Get-NetIPAddress  
    ```
@@ -113,14 +109,14 @@ In this step, you will configure the SQL Server computer as a guarded host regis
 
 3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
 
-4. If your SQL Server computer is a virtual machine or if it is a legacy physical machine that does not support UEFI Secure Boot or is not equipped with IOMMU, you need to remove the VBS requirement for platform security features.
-    1. Remove the requirement in Windows registry.
+4. If your SQL Server computer is a virtual machine, a physical machine that does not support UEFI Secure Boot, or a physial machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features.
+    1. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Restart the computer again to get VBS to come online with the lowered requirements.
+    1. Restart the SQL Server computer again to get VBS to come online with the lowered requirements.
 
         ```powershell
        Restart-Computer
@@ -154,7 +150,7 @@ If you get a HostUnreachable error, that means your SQL Server computer cannot c
 
 An UnauthorizedHost error indicates that the public key was not registered with the HGS server - repeat steps 5 and 6 to resolve the error.
 
-If all else fails, run Clear-HgsClientHostKey and repeat steps 4-7.
+If all else fails, run Remove-HgsClientHostKey and repeat steps 4-7.
 
 ## Step 3: Enable Always Encrypted with secure enclaves in SQL Server
 
@@ -339,10 +335,12 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 3. Try the same query again in the SSMS instance that does not have Always Encrypted enabled, and note the failure that occurs.
 
 ## Next Steps
-Go to [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), which is the continuation of this tutorial.
+After completing this tutorial, you can go to one of the following tutorials:
+- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves. For example:
-
-- [Configuring TPM attestation.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Configuring HTTPS for your HGS instance.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- Developing applications that issue rich queries against encrypted columns.
+## See Also
+- [Configure enclave type for Always Encrypted Server Configuration Option](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [Provision enclave-enabled keys](encryption/always-encrypted-enclaves-provision-keys.md)
+- [Configure column encryption in-place with Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Query columns using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-query-columns.md)

@@ -1,6 +1,8 @@
 ---
-title: Configure snapshot folder shares SQL Server Replication on Linux
-description: This article describes how to configure snapshot folder shares SQL Server replication on Linux.
+title: Configure replication snapshot folder (non-default ports) 
+titleSuffix: SQL Server on Linux
+description: Learn to configure snapshot folder shares with non-default ports for SQL Server replication on Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,16 +12,19 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Configure replication with non-default ports
+# Configure replication with non-default ports (SQL Server Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 You can configure replication with SQL Server on Linux instances listening on any port configured with the network.tcpport mssql-conf setting. The port needs to be appended to the server name during configuration if the following conditions are true:
 
 1. Replication set-up involves an instance of SQL Server on Linux
 2. Any instance (Windows or Linux) is listening on a non-default port. 
 
-The server name of an instance can be found by running @@servername on the instance.
+The server name of an instance can be found by running @@servername on the instance. Do not use the IP address instead of the server name. Using the IP address for the publisher, distributor, or subscriber may result in an error.
+
+> [!NOTE]
+> Creating SQL Server replication on Linux with non-default port will only work with SQL Server 2019 and above.
 
 ## Examples
 

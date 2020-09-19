@@ -1,4 +1,5 @@
 ---
+description: "Walkthrough: Publish an SSIS Package as a SQL View"
 title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -260,8 +261,6 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
 -   Left and right square brackets ([ and ]) - These characters are used to indicate leading/rear spaces. For example, "[ some spaces ]" represents the string " some spaces " with one leading space and one trailing space. If these characters themselves are used in the query clause, they must be escaped. For example: \\[ and \\].  
   
 -   Forward Slash (\\) - Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
-  
- Forward Slash (\\) - Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
   
 ## See Also  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

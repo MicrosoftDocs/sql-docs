@@ -1,17 +1,19 @@
 ---
-title: "How to: Add Test Conditions to SQL Server Unit Tests | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Add Test Conditions to SQL Server Unit Tests
+description: Find out how to add test conditions to a SQL Server unit. See how to use the SQL Server Unit Test Designer for this task.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Add Test Conditions to SQL Server Unit Tests
+
 You can add test conditions to a SQL Server unit test by using the **SQL Server Unit Test Designer**. When you save the test class, the test conditions are automatically saved in your test project as Visual C\# or Visual Basic code in the source-code file containing the test class. After you save a test condition, you can edit it either in the **SQL Server Unit Test Designer** or in its source-code file.  
   
 ### To add test conditions to a SQL Server unit test  

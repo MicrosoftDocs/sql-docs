@@ -1,6 +1,7 @@
 ---
-title: "Use SQL Server Connector with SQL Encryption Features | Microsoft Docs"
-ms.custom: ""
+title: "Use SQL Server Connector encryption with Azure Key Vault"
+description: Learn how to use the SQL Server Connector with common encryption features such as TDE, encrypting backups, and column level encryption using Azure Key Vault. 
+ms.custom: seo-lt-2019
 ms.date: "09/12/2019"
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,11 +11,11 @@ helpviewer_keywords:
   - "SQL Server Connector, using"
   - "EKM, with SQL Server Connector"
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Use SQL Server Connector with SQL Encryption Features
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Common [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption activities using an asymmetric key protected by the Azure Key Vault include the following three areas.  
   
 -   Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault  
@@ -46,12 +47,14 @@ You will need to create a credential and a login, and create a database encrypti
         - If you're using **global Azure**, replace the `IDENTITY` argument with the name of your Azure Key Vault from Part II.
         - If you're using a **private Azure cloud** (ex. Azure Government, Azure China 21Vianet, or Azure Germany), replace the `IDENTITY` argument with the Vault URI that is returned in Part II, step 3. Do not include "https://" in the Vault URI.   
   
-    -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Replace the first part of the `SECRET` argument with the Azure Active Directory **Client ID** from Part I. In this example, the **Client ID** is `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  You must remove the hyphens from the **Client ID**.  
   
-    -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I.  In this example the **Client Secret** from Part 1 is `Replace-With-AAD-Client-Secret`. The final string for the `SECRET` argument will be a long sequence of letters and numbers, with *no hyphens*.  
+    -   Complete the second part of the `SECRET` argument with **Client Secret** from Part I. In this example, the **Client Secret** from Part 1 is `ReplaceWithAADClientSecret`. 
+  
+    -   The final string for the SECRET argument will be a long sequence of letters and numbers, with no hyphens.
   
     ```sql  
     USE master;  
@@ -60,7 +63,7 @@ You will need to create a credential and a login, and create a database encrypti
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   

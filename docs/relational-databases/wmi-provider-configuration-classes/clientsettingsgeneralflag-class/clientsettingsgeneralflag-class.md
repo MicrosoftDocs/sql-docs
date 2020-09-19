@@ -1,5 +1,6 @@
 ---
-title: "ClientSettingsGeneralFlag Class | Microsoft Docs"
+description: "ClientSettingsGeneralFlag Class"
+title: "ClientSettingsGeneralFlag Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,11 +16,11 @@ apilocation:
 helpviewer_keywords: 
   - "ClientSettingsGeneralFlag class"
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ClientSettingsGeneralFlag Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [ClientSettingsGeneralFlag Class](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) represents the general flag settings on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
   
  The [ClientSettingsGeneralFlag Class](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) can be used to do the following:  

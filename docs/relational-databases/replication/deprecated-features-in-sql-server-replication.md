@@ -1,4 +1,5 @@
 ---
+description: "Deprecated Features in SQL Server Replication"
 title: "Deprecated Features in SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
@@ -12,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Deprecated Features in SQL Server Replication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes the deprecated Replication features that are still available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   
 ## Items Deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

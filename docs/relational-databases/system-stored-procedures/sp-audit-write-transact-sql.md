@@ -1,4 +1,5 @@
 ---
+description: "sp_audit_write (Transact-SQL)"
 title: "sp_audit_write (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_audit_write"
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_audit_write (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a user-defined audit event to the **USER_DEFINED_AUDIT_GROUP**. If **USER_DEFINED_AUDIT_GROUP** is not enabled, **sp_audit_write** is ignored.  
   
@@ -36,7 +37,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## Arguments  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- A parameter defined by the user and recorded in the **user_defined_event_id** column of the audit log. *@user_defined_event_id* is type **smallint**.  
+ A parameter defined by the user and recorded in the **user_defined_event_id** column of the audit log. *\@user_defined_event_id* is type **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. `@succeeded` is **bit**.  

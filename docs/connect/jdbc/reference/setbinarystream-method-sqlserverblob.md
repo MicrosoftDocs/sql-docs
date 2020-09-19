@@ -1,4 +1,5 @@
 ---
+description: "setBinaryStream Method (SQLServerBlob)"
 title: "setBinaryStream Method (SQLServerBlob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setBinaryStream Method (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

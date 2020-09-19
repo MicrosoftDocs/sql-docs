@@ -1,6 +1,7 @@
 ---
-title: "sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_replmonitorhelpmergesessiondetail (T-SQL)"
+description: Describes the sp_replmonitorhelpmergesessiondetail stored procedure which returns detailed article-level information about a specific replication Merge Agent session. 
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorhelpmergesessiondetail"
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns detailed, article-level information about a specific replication Merge Agent session, which is used to monitor merge replication. The result set includes a detail row for each article that was synchronized during the session. It also includes a row that represents the session initialization and rows that summarize both the upload and download phases of the session. This stored procedure is executed at the Distributor on the distribution database, or at the Subscriber on the subscription database.  
   

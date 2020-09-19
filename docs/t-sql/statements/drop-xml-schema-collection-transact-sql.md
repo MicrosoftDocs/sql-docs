@@ -1,4 +1,5 @@
 ---
+description: "DROP XML SCHEMA COLLECTION (Transact-SQL)"
 title: "DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
@@ -24,7 +25,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # DROP XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Deletes the whole XML schema collection and all of its components.  
   
@@ -37,7 +38,9 @@ Deletes the whole XML schema collection and all of its components.
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *relational_schema*  
 Identifies the relational schema name. If not specified, the default relational schema is assumed.  
   

@@ -1,5 +1,6 @@
 ---
-title: "Derived Hierarchies with Explicit Caps (Master Data Services) | Microsoft Docs"
+description: "Derived Hierarchies with Explicit Caps (Master Data Services)"
+title: Derived Hierarchies with Explicit Caps
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.author: lle
 ---
 # Derived Hierarchies with Explicit Caps (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], when the levels from an explicit hierarchy are used as the top levels of a derived hierarchy, this is called a derived hierarchy with an explicit cap.  
   

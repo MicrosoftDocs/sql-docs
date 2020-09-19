@@ -1,4 +1,5 @@
 ---
+description: "sp_apply_job_to_targets (Transact-SQL)"
 title: "sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_apply_job_to_targets"
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_apply_job_to_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Applies a job to one or more target servers or to the target servers belonging to one or more target server groups.  
   

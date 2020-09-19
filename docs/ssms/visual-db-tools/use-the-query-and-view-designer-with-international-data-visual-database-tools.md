@@ -1,10 +1,10 @@
 ---
-title: "Use the Query and View Designer with International Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Use the Query and View Designer with International Data (Visual Database Tools)"
+title: Use the Query and View Designer with International Data
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,12 +20,13 @@ helpviewer_keywords:
   - "SQL pane [Visual Database Tools]"
   - "multiple language support [SQL Server], Query and View Designer"
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Use the Query and View Designer with International Data (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can use the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) with data in any language and in any version of the Windows operating system. The following guidelines outline the differences you will notice and provide information about managing data in international applications.  
   
 ## Localized Information in the Criteria and SQL Panes  
@@ -52,6 +53,6 @@ The sort order of data in your query is determined by the database. Options that
 ## Using Double-Byte Characters  
 You can enter DBCS characters for literals and for database object names such as table and view names or aliases. You can also use DBCS characters for parameter names and parameter marker characters. However, you cannot use DBCS characters in SQL language elements such as function names or SQL keywords.  
   
-## See Also  
-[Design Queries and Views How-to Topics (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-  
+## See Also
+
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

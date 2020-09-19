@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYCERT (Transact-SQL)"
 title: "DECRYPTBYCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses the private key of a certificate to decrypt encrypted data.  
   
@@ -29,13 +30,15 @@ This function uses the private key of a certificate to decrypt encrypted data.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_ID*  
 The ID of a certificate in the database. *certificate_ID* has an **int** data type.  
   

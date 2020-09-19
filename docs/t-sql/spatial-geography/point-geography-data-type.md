@@ -1,7 +1,8 @@
 ---
+description: "Point (geography Data Type)"
 title: "Point (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2017"
+ms.date: "10/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,7 +21,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Point (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Constructs a **geography** instance representing a **Point** instance from its latitude and longitude values and a spatial reference ID (SRID).
   
@@ -31,23 +32,25 @@ Constructs a **geography** instance representing a **Point** instance from its l
 Point ( Lat, Long, SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Lat*  
- Is a **float** expression representing the x-coordinate of the **Point** being generated.  
+ Is a **float** expression representing the y-coordinate of the **Point** being generated.  
   
  *Long*  
- Is a **float** expression representing the y-coordinate of the **Point** being generated. For more information on valid latitude and longitude values, see [Point](../../relational-databases/spatial/point.md).  
+ Is a **float** expression representing the x-coordinate of the **Point** being generated. For more information on valid latitude and longitude values, see [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Is an **int** expression representing the SRID of the **geography** instance you wish to return.  
+ Is an **int** expression representing the [Spatial Reference Identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) of the **geography** instance you wish to return.  
+  
+> [!NOTE]  
+>  Arguments for the Point (geography Data Type) method have coordinates reversed compared to WKT.  
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  
-  
-> [!NOTE]  
->  Arguments for the Point (geography Data Type) method have coordinates reversed compared to WKT.  
   
 ## Examples  
  The following example uses `Point()` to create a `geography` instance.  
@@ -60,5 +63,3 @@ SELECT @g.ToString();
   
 ## See Also  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  

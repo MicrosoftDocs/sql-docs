@@ -1,6 +1,7 @@
 ---
-title: "Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Change primary & secondary log shipping roles"
+description: Learn how to configure your secondary database to act as the primary for your SQL Server log shipping solution. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Change Roles Between Primary and Secondary Log Shipping Servers (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   After you have failed over a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log shipping configuration to a secondary server, you can configure your secondary database to act as the primary database. Then, you will be able to swap primary and secondary databases as needed.  
   
 ## Performing the Initial Role Change  
@@ -36,17 +37,17 @@ ms.author: mathoma
   
     3.  In the **Secondary Database Settings** dialog box, select **No, the secondary database is initialized**.  
   
-4.  If log shipping monitoring was enabled on your former log shipping configuration, reconfigure log shipping monitoring to monitor the new log shipping configuration.  Execute the following commands, replacing *database_name* with the name of your database:  
+4.  If log shipping monitoring was enabled on your former log shipping configuration, reconfigure log shipping monitoring to monitor the new log shipping configuration.  Setting the threshold_alert_enabled to 1 specifies that an alert will be raised when restore_threshold is exceeded. Execute the following commands, replacing *database_name* with the name of your database:  
   
     1.  **On the new primary server**  
   
          Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -54,11 +55,11 @@ ms.author: mathoma
   
          Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   

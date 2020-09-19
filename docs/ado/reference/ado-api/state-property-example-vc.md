@@ -1,8 +1,9 @@
 ---
+description: "State Property Example (VC++)"
 title: "State Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "State property [ADO], VC++ example"
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # State Property Example (VC++)
-This example uses the [State](../../../ado/reference/ado-api/state-property-ado.md) property to display a message while asynchronous connections are opening and asynchronous commands are executing.  
+This example uses the [State](./state-property-ado.md) property to display a message while asynchronous connections are opening and asynchronous commands are executing.  
   
 ```  
 // BeginStateCpp.cpp  
@@ -130,4 +131,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [State Property (ADO)](./state-property-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "ALTER SECURITY POLICY (Transact-SQL)"
 title: "ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -21,7 +22,8 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Alters a security policy.  
   
@@ -29,7 +31,7 @@ Alters a security policy.
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -40,7 +42,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  
-    )    [ WITH ( STATE = { ON | OFF } ]  
+    )    [ WITH ( STATE = { ON | OFF } ) ]  
     [ NOT FOR REPLICATION ]  
 [;]  
   
@@ -48,8 +50,8 @@ ALTER SECURITY POLICY schema_name.security_policy_name
     [ { AFTER { INSERT | UPDATE } }   
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
-  
-## Arguments  
+
+## Arguments
 security_policy_name  
 The name of the security policy. Security policy names must fulfill the rules for identifiers and must be unique within the database and to its schema.  
   
@@ -82,7 +84,7 @@ Indicates the security policy shouldn't be executed when a replication agent mod
 table_schema_name.table_name  
 Is the target table for the applied security predicate. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
-## Remarks  
+## Remarks
 The ALTER SECURITY POLICY statement is in a transaction's scope. If the transaction is rolled back, the statement is also rolled back.  
   
 When using predicate functions with memory-optimized tables, security policies must include **SCHEMABINDING** and use the **WITH NATIVE_COMPILATION** compilation hint. The SCHEMABINDING argument can't be changed with the ALTER statement because it applies to all predicates. To change schema binding, you must drop and recreate the security policy.  
@@ -104,7 +106,7 @@ The following examples demonstrate the use of the **ALTER SECURITY POLICY** synt
 ### A. Adding an additional predicate to a policy  
 The following syntax alters a security policy, adding a filter predicate on the `mytable` table.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1   
     ADD FILTER PREDICATE schema_preds.SecPredicate(column1)   
     ON myschema.mytable;  
@@ -113,14 +115,14 @@ ALTER SECURITY POLICY pol1
 ### B. Enabling an existing policy  
 The following example uses the ALTER syntax to enable a security policy.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1 WITH ( STATE = ON );  
 ```  
   
 ### C. Adding and dropping multiple predicates  
 The following syntax alters a security policy, adding filter predicates on the `mytable1` and `mytable3` tables, and removing the filter predicate on the `mytable2` table.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
 ADD FILTER PREDICATE schema_preds.SecPredicate1(column1)   
     ON myschema.mytable1,  
@@ -133,7 +135,7 @@ ADD FILTER PREDICATE schema_preds.SecPredicate2(column2, 1)
 ### D. Changing the predicate on a table  
 The following syntax changes the existing filter predicate on the mytable table to be the SecPredicate2 function.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
     ALTER FILTER PREDICATE schema_preds.SecPredicate2(column1)  
         ON myschema.mytable;  
@@ -142,7 +144,7 @@ ALTER SECURITY POLICY pol1
 ### E. Changing a block predicate  
 Changing the block predicate function for an operation on a table.  
   
-```  
+```sql 
 ALTER SECURITY POLICY rls.SecPol  
     ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) 
     ON dbo.Sales AFTER INSERT;  

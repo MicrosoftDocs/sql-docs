@@ -1,4 +1,5 @@
 ---
+description: "Troubleshoot Integration Services (SSIS) Packages"
 title: "Troubleshoot Integration Services (SSIS) Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Troubleshoot Integration Services (SSIS) Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 ## In this section

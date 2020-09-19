@@ -1,4 +1,5 @@
 ---
+description: "STR (Transact-SQL)"
 title: "STR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -18,24 +19,26 @@ helpviewer_keywords:
   - "character data [SQL Server]"
   - "STR function"
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Returns character data converted from numeric data.  
+  Returns character data converted from numeric data. The character data is right-justified, with a specified length and decimal precision. 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql
 STR ( float_expression [ , length [ , decimal ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an expression of approximate numeric (**float**) data type with a decimal point.  
   
@@ -49,7 +52,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## Remarks  
- If supplied, the values for *length* and *decimal* parameters to STR should be positive. The number is rounded to an integer by default or if the decimal parameter is 0. The specified length should be greater than or equal to the part of the number before the decimal point plus the number's sign (if any). A short *float_expression* is right-justified in the specified length, and a long *float_expression* is truncated to the specified number of decimal places. For example, STR(12**,**10) yields the result of 12. This is right-justified in the result set. However, STR(1223**,**2) truncates the result set to **. String functions can be nested.  
+ If supplied, the values for *length* and *decimal* parameters to STR should be positive. The number is rounded to an integer by default or if the decimal parameter is 0. The specified length should be greater than or equal to the part of the number before the decimal point plus the number's sign (if any). A short *float_expression* is right-justified in the specified length, and a long *float_expression* is truncated to the specified number of decimal places. For example, STR(12, 10) yields the result of 12. This is right-justified in the result set. However, STR(1223, 2) truncates the result set to \*\*. String functions can be nested.  
   
 > [!NOTE]  
 >  To convert to Unicode data, use STR inside a CONVERT or [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) conversion function.  

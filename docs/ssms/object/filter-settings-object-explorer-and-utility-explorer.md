@@ -1,6 +1,7 @@
 ---
-title: "Filter Settings (Object Explorer and Utility Explorer) | Microsoft Docs"
-ms.custom: ""
+description: "Filter Settings (Object Explorer and Utility Explorer)"
+title: "Filter Settings (Object Explorer and Utility Explorer)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -15,10 +16,10 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Filter Settings (Object Explorer and Utility Explorer)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to specify a filter. A filter allows you to configure Object Explorer and Utility Explorer to display only items that meet specific criteria. For example, you can use a filter to show only jobs with names that contain the word "Maintenance." The header for the **Filter Settings** dialog box contains the name of the server, and it may contain the name of the database.  
   
-## UIElement List  
+## UI element list  
 **Property**  
 Displays the property to filter on.  
   

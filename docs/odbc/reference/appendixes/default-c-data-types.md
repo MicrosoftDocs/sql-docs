@@ -1,4 +1,5 @@
 ---
+description: "Default C Data Types"
 title: "Default C Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "pseudo-type identifiers [ODBC], about pseudo-type identifiers"
   - "pseudo-type identifiers [ODBC]"
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Default C Data Types
 If an application specifies SQL_C_DEFAULT in **SQLBindCol**, **SQLGetData**, or **SQLBindParameter**, the driver assumes that the C data type of the output or input buffer corresponds to the SQL data type of the column or parameter to which the buffer is bound.  

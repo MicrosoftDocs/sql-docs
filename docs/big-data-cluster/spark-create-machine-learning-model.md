@@ -1,14 +1,15 @@
 ---
-title: Create and export Spark machine learning models with MLeap 
-titleSuffix: SQL Server big data clusters
-description: Use PySpark to train and create machine learning models with Spark on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (preview). Export with MLeap, and then score the model with Java in SQL Server.
+title: "Create, export Spark ML models: MLeap"
+titleSuffix: SQL Server Big Data Clusters
+description: Use PySpark to train and create machine learning models with Spark on SQL Server Big Data Clusters. Export with MLeap, and then score the model with Java in SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
 # Create, export, and score Spark machine learning models on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -46,7 +47,7 @@ For this sample, census data (**AdultCensusIncome.csv**) is used to build a Spar
 
    This notebook contains cells with the required commands for this section of the sample.
 
-1. Open the notebook in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+1. Open the notebook in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 The data is first read into Spark and split into training and testing data sets. Then the code trains a pipeline model with the training data. Finally, it exports the model to an MLeap bundle.
 
@@ -55,7 +56,7 @@ The data is first read into Spark and split into training and testing data sets.
 
 ## Model scoring with SQL Server
 
-Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, you can score the model in Java without the presence of Spark. 
+Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, you can score the model in Java without the presence of Spark.
 
 This sample uses the [Java Language Extension](../language-extensions/language-extensions-overview.md) in SQL Server. In order to score the model in SQL Server, you first need to build a Java application that can load the model into Java and score it. You can find the sample code for this Java application in the [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 

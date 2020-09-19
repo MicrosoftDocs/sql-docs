@@ -1,4 +1,5 @@
 ---
+description: "Specify Merge Replication properties"
 title: "Specify Merge Replication properties| Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Specify Merge Replication properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 This topic explains how to specify various properties for your merge replication. 
 
 ## Merge Article is Download-Only
@@ -39,8 +40,6 @@ On the **Articles** page of the New Publication Wizard select a table, and then 
     -   **Download to Subscriber, prohibit Subscriber changes**    
     -   **Download to Subscriber, allow Subscriber changes**    
 4.  If you are in the **Publication Properties - \<Publication>** dialog box, click **OK** to save and close the dialog box.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  Use Transact-SQL  
   
@@ -165,8 +164,8 @@ This topic describes how to specify the conflict tracking and resolution level f
   
 At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify a value of **false** for `@delete_tracking`. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
   
-    > [!NOTE]  
-    >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
+> [!NOTE]  
+>  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
   
 ### Specify that deletes be ignored for an existing merge article  
   

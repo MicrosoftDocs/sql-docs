@@ -1,6 +1,7 @@
 ---
-title: "Demonstration: Performance Improvement of In-Memory OLTP | Microsoft Docs"
-ms.custom: ""
+title: "Performance improvement - in-memory OLTP"
+description: This code sample demonstrates the fast performance of memory-optimized tables with interpreted Transact-SQL and a natively compiled stored procedure.
+ms.custom: seo-dt-2019
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The code sample in this topic demonstrates the fast performance of memory-optimized tables. The performance improvement is evident when data in a memory-optimized table is accessed from traditional, interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)]. This performance improvement is even greater when data in a memory-optimized table is accessed from a natively compiled stored procedure (NCSProc).  
  

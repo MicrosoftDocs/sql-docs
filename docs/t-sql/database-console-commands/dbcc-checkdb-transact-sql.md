@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKDB (Transact-SQL)"
 title: "DBCC CHECKDB (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
@@ -36,7 +37,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the logical and physical integrity of all the objects in the specified database by performing the following operations:    
     
@@ -58,7 +59,7 @@ This means that the DBCC CHECKALLOC, DBCC CHECKTABLE, or DBCC CHECKCATALOG comma
     
 ## Syntax    
     
-```    
+```syntaxsql
 DBCC CHECKDB     
     [ ( database_name | database_id | 0    
         [ , NOINDEX     
@@ -78,7 +79,10 @@ DBCC CHECKDB
 ]    
 ```    
     
-## Arguments    
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* | *database_id* | 0  
  Is the name or ID of the database for which to run integrity checks. If not specified, or if 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
     
@@ -155,7 +159,7 @@ DATA_PURITY
  Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and later).  
     
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
@@ -215,7 +219,13 @@ After the DBCC CHECKDB command finishes, a message is written to the [!INCLUDE[s
 |3|This indicates a corruption in metadata that terminated the DBCC command.|    
 |4|An assert or access violation was detected.|    
 |5|An unknown error occurred that terminated the DBCC command.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] records the date and time when a consistency check was run for a database with no errors (or "clean" consistency check). This is known as the `last known clean check`. When a database is first started, this date is written to the EventLog (EventID-17573) and ERRORLOG in the following format: 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## Error Reporting    
 A dump file (`SQLDUMP*nnnn*.txt`) is created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKDB detects a corruption error. When the *Feature Usage* data collection and *Error Reporting* features are enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.
 The dump file contains the results of the DBCC CHECKDB command and additional diagnostic output. Access is limited to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows `BUILTIN\Administrators` group and the local administrator's group. The DBCC command does not fail if the data collection process fails.

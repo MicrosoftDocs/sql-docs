@@ -1,5 +1,6 @@
 ---
-title: "OLE DB Table-Valued Parameter Type Support (Methods) | Microsoft Docs"
+description: "OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Methods)"
+title: "OLE DB Table-Valued Parameter type (Methods)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (methods)"
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# OLE DB Table-Valued Parameter Type Support (Methods)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Methods)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The following standard OLE DB methods support table-valued parameters:  
   
@@ -31,7 +31,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |IRowsetInfo::GetProperties|Gets table-valued parameter rowset properties. The consumer can use these properties to optimally set up bindings.|  
 |IColumnsRowset::GetColumnsRowset|Retrieves metadata information about a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. For table-valued parameters, this same interface provides detailed metadata information about each column, such as the following:<br /><br /> DBCOLUMN_FLAGS indicates nullability through the DBCOLUMNFLAGS_ISNULLABLE bit.<br /><br /> DBCOLUMN_ISUNIQUE indicates whether the column is an identity column.<br /><br /> DBCOLUMN_COMPUTEMODE indicates whether the column is computed.|  
 |IAccessor::CreateAccessor|To bind a table-valued parameter rowset object to a command parameter, you create an accessor with its *wType* member set to DBTYPE_TABLE. The DBOBJECT structure will contain IID_IRowset or any other valid rowset object interface in the *iid* member. The rest of the fields are treated similarly to DBTYPE_IUNKNOWN.|  
-  
+|||
+
 ## See Also  
  [OLE DB Table-Valued Parameter Type Support](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Table-Valued Parameter Rowset Creation](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   

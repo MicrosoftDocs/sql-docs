@@ -1,11 +1,12 @@
 ---
-title: Deploy with a bash script to a single node kubeadm cluster
-titleSuffix: SQL Server big data clusters
-description: Use a bash deployment script to deploy a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to a single node kubeadm cluster.
+title: Deploy single node kubeadm cluster
+titleSuffix: SQL Server Big Data Clusters
+description: Use a bash deployment script to deploy a SQL Server 2019 big data cluster to a single node kubeadm cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,9 +14,9 @@ ms.technology: big-data-cluster
 
 # Deploy with a bash script to a single node kubeadm cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In this tutorial, you use a sample bash deployment script to deploy a single node Kubernetes cluster using  kubeadm and a SQL Server big data cluster on it.  
+In this tutorial, you use a sample bash deployment script to deploy a single node Kubernetes cluster using  kubeadm and a SQL Server big data cluster on it.
 
 ## Prerequisites
 

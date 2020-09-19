@@ -1,4 +1,5 @@
 ---
+description: "executeUpdate Method (java.lang.String, int)"
 title: "executeUpdate Method (java.lang.String, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # executeUpdate Method (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

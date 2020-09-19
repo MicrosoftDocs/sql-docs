@@ -1,5 +1,6 @@
 ---
-title: "Import Statuses (Master Data Services) | Microsoft Docs"
+description: "Import Statuses (Master Data Services)"
+title: Import Statuses
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Import Statuses (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the **Integration Management** functional area, on the **Staging Batches** page, the following statuses are possible.  
   

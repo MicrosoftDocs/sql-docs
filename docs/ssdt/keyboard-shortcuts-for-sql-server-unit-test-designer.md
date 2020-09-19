@@ -1,22 +1,23 @@
 ---
-title: "Keyboard Shortcuts for SQL Server Unit Test Designer | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Keyboard Shortcuts for SQL Server Unit Test Designer
+description: Become familiar with the keyboard shortcuts that you can use to navigate within the SQL Server Unit Test Designer.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Keyboard Shortcuts for SQL Server Unit Test Designer
+
 You can use the following keyboard shortcuts to navigate within the SQL Server Unit Test Designer.  
   
-|||  
-|-|-|  
-|**Action or Menu Option**|**Keyboard Shortcut**|  
+|Action or Menu Option|Keyboard Shortcut|  
+|-|-|   
 |Move from the Transact\-SQL editor to the navigation bar.|CTRL + F2|  
 |Move forward through navigation bar elements.|TAB|  
 |Move backward through navigation bar elements.|SHIFT+TAB|  

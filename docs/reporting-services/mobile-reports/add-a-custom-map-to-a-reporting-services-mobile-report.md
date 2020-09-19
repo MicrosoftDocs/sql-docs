@@ -1,6 +1,7 @@
 ---
 title: "Add a custom map to a Reporting Services mobile report | Microsoft Docs"
-ms.date: 03/01/2017
+description: You can add a custom map to a Reporting Services mobile report. This article describes how to load and connect data to a custom map.
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: mobile-reports
@@ -17,7 +18,7 @@ Custom maps require two files:
   
 Read more about [custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).  
   
-Store the two files in the same folder. The file names of the two must match (e.g., canada.shp and canada.dbf). The metadata (DBF file) must include the field "NAME" with the value of the corresponding shape's name (key), to be used when populating the map with data.   
+Store the two files in the same folder. The file names of the two must match (e.g., canada.shp and canada.dbf). The first column of the metadata (DBF file) is used to match with the key value of the corresponding shape's name (key), to be used when populating the map with data.
   
 ## Load a custom map  
   

@@ -1,15 +1,16 @@
 ---
-title: "PDO::exec | Microsoft Docs"
+title: "PDO::exec"
+description: "API reference for the PDO::exec function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

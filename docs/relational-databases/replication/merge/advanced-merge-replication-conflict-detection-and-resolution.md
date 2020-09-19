@@ -1,6 +1,7 @@
 ---
-title: "Advanced Merge Replication Conflict Detection and Resolution | Microsoft Docs"
-ms.custom: ""
+title: "Advanced conflict detection & resolution (Merge)"
+description: Learn advanced methods of conflict detection and resolution with Merge Replication.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -21,7 +22,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Advanced Merge Replication - Conflict Detection and Resolution
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver (which is specified when an article is added to a publication) to determine which data is accepted and propagated to other sites.  
 
  Merge replication offers a variety of methods to detect and resolve conflicts. For most applications, the default method is appropriate:  
@@ -58,7 +59,7 @@ ms.author: "mathoma"
  After a conflict is detected, the Merge Agent launches the selected conflict resolver and uses the resolver to determine the conflict winner. The winning row is applied at the Publisher and Subscriber, and the data from the losing row is written to a conflict table. Conflicts are resolved immediately after the resolver executes, unless you select to resolve conflicts interactively.  
 
 Resolve Merge Replication Conflicts  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]  
   When a Publisher and a Subscriber are connected and synchronization occurs, the Merge Agent detects if there are any conflicts. If conflicts are detected, the Merge Agent uses a conflict resolver to determine which data will be accepted and propagated to other sites.  
   
 > [!NOTE]  

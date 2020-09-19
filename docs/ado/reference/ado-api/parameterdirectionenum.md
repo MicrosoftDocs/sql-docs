@@ -1,8 +1,9 @@
 ---
+description: "ParameterDirectionEnum"
 title: "ParameterDirectionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "ParameterDirectionEnum enumeration [ADO]"
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ParameterDirectionEnum
-Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, both an input and an output parameter, or the return value from a stored procedure.  
+Specifies whether the [Parameter](./parameter-object.md) represents an input parameter, an output parameter, both an input and an output parameter, or the return value from a stored procedure.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -39,7 +40,12 @@ Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-objec
 |AdoEnums.ParameterDirection.UNKNOWN|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|[Direction Property](../../../ado/reference/ado-api/direction-property.md)|
+
+:::row:::
+    :::column:::
+        [CreateParameter Method (ADO)](./createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Direction Property](./direction-property.md)  
+    :::column-end:::
+:::row-end:::

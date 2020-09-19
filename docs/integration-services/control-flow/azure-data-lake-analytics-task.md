@@ -4,8 +4,6 @@ description: You can submit U-SQL jobs to Azure Data Lake Analytics service with
 ms.custom: ""
 ms.date: "06/27/2019"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
@@ -15,10 +13,9 @@ author: "yanancai"
 ms.author: "yanacai"
 ms.reviewer: maghan
 ---
-
 # Azure Data Lake Analytics task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -49,6 +46,7 @@ U-SQL configuration has two settings: **SourceType**, and dynamic options based 
 |**DirectInput**|Specifies the U-SQL script through the inline editor. Selecting this value displays the dynamic option, **USQLStatement**.|  
 |**FileConnection**|Specifies a local .usql file that contains the U-SQL script. Selecting this option displays the dynamic option, **FileConnection**.|  
 |**Variable**|Specifies an SSIS variable that contains the U-SQL script. Selecting this value displays the dynamic option, **SourceVariable**.|
+| &nbsp; | &nbsp; |
 
 **SourceType Dynamic Options** specifies the script content for the U-SQL query. 
 
@@ -57,6 +55,7 @@ U-SQL configuration has two settings: **SourceType**, and dynamic options based 
 |**SourceType = DirectInput**|Type the U-SQL query to be submitted in the option box directly, or select the browse button (...) to type the U-SQL query in the **Enter U-SQL Query** dialog box.|  
 |**SourceType = FileConnection**|Select an existing file connection manager, or select <**New connection...**> to create a new file connection. For related information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) and [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
 |**SourceType = Variable**|Select an existing variable, or select \<**New variable...**> to create a new variable. For related information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+| &nbsp; | &nbsp; |
 
 
 ### Job configuration
@@ -74,6 +73,7 @@ Job configuration specifies U-SQL job submission properties.
   |-----------|-----------------|
   |True|The task result is based on the U-SQL job execution result. Job succeeds > task succeeds. Job fails > task fails. Task succeeds or fails > task completes.|
   |False|The task result is based on the U-SQL job submission and preparation result. Job submission succeeds and passes the preparation phase > task succeeds. Job submission fails or job fails at the preparation phase > task fails. Task succeeds or fails > task completes.|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut:** Specifies a time-out time, in seconds, for job execution. If the job times out, it is cancelled and marked as failed. This property is not available if **Synchronous** is set to false.
 
@@ -121,6 +121,7 @@ Note that the input and output paths are defined in **\@in** and **\@out** param
 |-------------|--------------|
 |User: Variable1|\@in|
 |User: Variable2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## Expression page configuration
 

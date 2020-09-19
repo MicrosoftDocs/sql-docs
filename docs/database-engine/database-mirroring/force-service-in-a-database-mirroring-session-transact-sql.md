@@ -1,6 +1,7 @@
 ---
-title: "Force Service in a Database Mirroring Session (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Force database mirroring service"
+description: If the principal server fails while the mirror server is available, make the database available by forcing the service to fail over to the mirrored database.
+ms.custom: "seo-lt-2019"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Force Service in a Database Mirroring Session (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In high-performance mode and high-safety mode without automatic failover, if the principal server fails while the mirror server is available, the database owner can make the database available by forcing service to fail over (with possible data loss) to the mirror database. This option is available only under all the following conditions:  
   
 -   The principal server is down.  

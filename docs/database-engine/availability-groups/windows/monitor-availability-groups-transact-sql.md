@@ -1,6 +1,6 @@
 ---
 title: "Monitor availability groups using Transact-SQL (T-SQL)"
-description: "A description of how to monitor Always On availability groups using Transact-SQL (T-SQL)."
+description: "Use Transact-SQL SELECT statements to monitor Always On availability groups and their replicas and databases."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Monitor Availability Groups (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   For monitoring availability groups and replicas and the associated databases by using [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a set of catalog and dynamic management views and server properties. Using [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT statements, you can use the views to monitor availability groups and their replicas and databases. The information returned for a given availability group depends on whether you are connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is hosting the primary replica or a secondary replica.  
   
 > [!TIP]  

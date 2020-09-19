@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_backup_config_basic (Transact-SQL)"
 title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "managed_backup.sp_backup_config_basic"
   - "sp_backup_config_basic"
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Configures the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basic settings for a specific database or for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -59,7 +60,7 @@ EXEC managed_backup.sp_backup_config_basic
  The name of the SQL Credential used to authenticate to the Azure storage account. @credentail_name is **SYSNAME**. When specified, the backup is stored to a page blob. If this parameter is NULL, the backup will be stored as a block blob. Backup to page blob is deprecated, so it is preferred to use the new block blob backup functionality. When used to change the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, this parameter is optional. If not specified, then the existing configuration values are retained.  
   
 > [!WARNING]
->  The **@credential_name** parameter is not supported at this time. Only backup to block blob is supported, which requires this parameter to be NULL.  
+>  The **\@credential_name** parameter is not supported at this time. Only backup to block blob is supported, which requires this parameter to be NULL.  
   
 ## Return Code Value  
  0 (success) or 1 (failure)  

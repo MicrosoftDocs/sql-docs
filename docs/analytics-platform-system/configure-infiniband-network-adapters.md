@@ -1,5 +1,5 @@
 ---
-title: Configure InfiniBand - Analytics Platform System | Microsoft Docs
+title: Configure InfiniBand
 description: Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes automatically connect to the active InfiniBand network. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Configure InfiniBand network adapters for Analytics Platform System

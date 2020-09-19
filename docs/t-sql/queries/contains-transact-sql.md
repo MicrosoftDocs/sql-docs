@@ -1,6 +1,6 @@
 ---
 title: "CONTAINS (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the CONTAINS language element. Used to search for words or phrases within another expression."
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -35,9 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ---
-# CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
+# CONTAINS (Transact-SQL)
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Searches for precise or fuzzy (less precise) matches to single words and phrases, words within a certain distance of one another, or weighted matches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS is a predicate used in the [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   
@@ -59,7 +60,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 CONTAINS (   
      {   
         column_name | ( column_list )   
@@ -134,7 +135,9 @@ CONTAINS (
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *column_name*  
  Is the name of a full-text indexed column of the table specified in the FROM clause. The columns can be of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, or **varbinary(max)**.  
   
@@ -145,7 +148,7 @@ CONTAINS (
  Specifies that the query searches all full-text indexed columns in the table specified in the FROM clause for the given search condition. The columns in the CONTAINS clause must come from a single table that has a full-text index. Unless *language_term* is specified, the language of all columns of the table must be the same.  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  Specifies a document property on which to search for the specified search condition.  
   
@@ -240,7 +243,7 @@ Specifies a match for an exact word or a phrase. Examples of valid simple terms 
  For more information about generic proximity terms, see [Search for Words Close to Another Word with NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<custom_proximity_term>  
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
   
  Specifies a match of words or phrases, and optionally, the maximum distance allowed between search terms. you can also specify that search terms must be found in the exact order in which you specify them (\<match_order>).  
   
@@ -312,18 +315,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Specifies a weight value, which is a number from 0.0 through 1.0. Each component in *\<weighted_term>* may include a *weight_value*. *weight_value* is a way to change how various portions of a query affect the rank value assigned to each row matching the query. WEIGHT does not affect the results of CONTAINS queries, but WEIGHT impacts rank in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries.  
   
 > [!NOTE]  
->  The decimal separator is always a period, regardless of the operating system locale.  
+> The decimal separator is always a period, regardless of the operating system locale.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  Specifies a logical operation between two contains search conditions.  
   
- { AND | & }  
+ { AND \| & }  
  Indicates that the two contains search conditions must be met for a match. The ampersand symbol (&) may be used instead of the AND keyword to represent the AND operator.  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  Indicates that the second search condition must not be present for a match. The ampersand followed by the exclamation mark symbol (&!) may be used instead of the AND NOT keyword to represent the AND NOT operator.  
   
- { OR | | }  
+ { OR \| \| }  
  Indicates that either of the two contains search conditions must be met for a match. The bar symbol (|) may be used instead of the OR keyword to represent the OR operator.  
   
  When *\<contains_search_condition>* contains parenthesized groups, these parenthesized groups are evaluated first. After evaluating parenthesized groups, these rules apply when using these logical operators with contains search conditions:  
@@ -416,7 +419,7 @@ GO
   
 ### E. Using CONTAINS with \<proximity_term>  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  The following example searches the `Production.ProductReview` table for all comments that contain the word `bike` within 10 terms of the word "`control`" and in the specified order (that is, where "`bike`" precedes "`control`").  
   
@@ -513,7 +516,7 @@ GO
   
 ### K. Querying on a document property  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. 
   
  The following query searches on an indexed property, `Title`, in the `Document` column of the `Production.Document` table. The query returns only documents whose `Title` property contains the string `Maintenance` or `Repair`.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Processing Results - Process Results"
 title: "Process Results (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -10,13 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "processing results [ODBC]"
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results - Process Results
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Processing results in an ODBC application involves first determining the characteristics of the result set, then retrieving the data into program variables by using either [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) or [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
@@ -52,8 +52,6 @@ Processing results in an ODBC application involves first determining the charact
 5.  Optionally, call [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) with SQL_UNBIND to release any bound column buffers.  
   
 6.  If another result set is available, go to Step 1.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  To cancel processing a result set before [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) returns SQL_NO_DATA, call [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  

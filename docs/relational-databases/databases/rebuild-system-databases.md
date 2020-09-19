@@ -1,4 +1,5 @@
 ---
+description: "Rebuild System Databases"
 title: "Rebuild System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"
@@ -17,7 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Rebuild System Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   System databases must be rebuilt to fix corruption problems in the [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md), or [resource](../../relational-databases/databases/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **In This Topic**  
@@ -54,7 +55,7 @@ ms.author: "sstein"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  Record all service packs and hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these updates after rebuilding the system databases.  
+2.  Record all hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these hotfixes after rebuilding the system databases.  
   
     ```  
     SELECT  
@@ -134,7 +135,7 @@ ms.author: "sstein"
 -   Verify the server-wide configuration values match the values you recorded previously.  
   
 ##  <a name="Resource"></a> Rebuild the resource Database  
- The following procedure rebuilds the resource system database. When you rebuild the resource database, all service packs and hot fixes are lost, and therefore must be reapplied.  
+ The following procedure rebuilds the resource system database. When you rebuild the resource database, all hot fixes are lost, and therefore must be reapplied.  
   
 #### To rebuild the resource system database:  
   
@@ -174,7 +175,7 @@ ms.author: "sstein"
   
 7.  Using the Windows Notepad, open the **instmsdb.out** file and check the output for any errors.  
   
-8.  Re-apply any service packs or hotfix installed on the instance.  
+8.  Re-apply any hotfix installed on the instance.  
   
 9. Recreate the user content stored in the **msdb** database, such as jobs, alert, etc.  
   

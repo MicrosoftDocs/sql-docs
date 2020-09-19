@@ -1,9 +1,8 @@
 ---
-title: "Use OPENJSON with an Explicit Schema (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
+description: "Use OPENJSON with an Explicit Schema (SQL Server)"
+title: "Use OPENJSON with an Explicit Schema"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Use **OPENJSON** with an explicit schema to return a table that's formatted as you specify in the WITH clause.  
   

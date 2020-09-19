@@ -1,6 +1,7 @@
 ---
-title: "Extensible Key Management Using Azure Key Vault (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Extensible Key Management using Azure Key Vault"
+description: Use the SQL Server Connector for Extensible Key Management with Azure Key Vault for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "07/22/2016"
 ms.prod: sql
 ms.reviewer: vanto
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "Key Management with key vault"
   - "SQL Server Connector, about"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption to use the Azure Key Vault service as an [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) provider to protect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption keys.  
   

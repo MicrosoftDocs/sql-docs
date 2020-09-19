@@ -1,6 +1,8 @@
 ---
-title: "ALTER DATABASE File and Filegroup Options (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "ALTER DATABASE File and Filegroups"
+description: Update a database's files and filegroups using Transact-SQL.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "02/21/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -39,8 +41,8 @@ helpviewer_keywords:
   - "files [SQL Server], adding"
   - "databases [SQL Server], moving"
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
@@ -49,30 +51,29 @@ Modifies the files and filegroups associated with the database. Adds or removes 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product!
-
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-|||
-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
-|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-# SQL Server
-
 ## Syntax
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
   | <add_or_modify_filegroups>
 }
-[;
 
 <add_or_modify_files>::=
 {
@@ -111,7 +112,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## Arguments
@@ -139,7 +139,7 @@ Removes the logical file description from an instance of [!INCLUDE[ssNoVersion](
 Is the logical name used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file.
 
 > [!WARNING]
-> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+> Removing a database file that has `FILE_SNAPSHOT` backups associated with it will succeed, but any associated snapshots will not be deleted to avoid invalidating the backups referring to the database file. The file will be truncated, but will not be physically deleted in order to keep the FILE_SNAPSHOT backups intact. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later).
 
 MODIFY FILE
 Specifies the file that should be modified. Only one \<filespec> property can be changed at a time. NAME must always be specified in the \<filespec> to identify the file to be modified. If SIZE is specified, the new size must be larger than the current file size.
@@ -288,7 +288,7 @@ Specifies that the filegroup stores FILESTREAM binary large objects (BLOBs) in t
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
 
 Specifies that the filegroup stores memory optimized data in the file system. For more information, see [In-Memory OLTP - In-Memory Optimization](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Only one `MEMORY_OPTIMIZED_DATA` filegroup is allowed per database. For creating memory optimized tables, the filegroup cannot be empty. There must be at least one file. *filegroup_name* refers to a path. The path up to the last folder must exist, and the last folder must not exist.
 
@@ -311,13 +311,13 @@ NAME = *new_filegroup_name*
 Changes the filegroup name to the *new_filegroup_name*.
 
 AUTOGROW_SINGLE_FILE
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, only that file grows. This is the default.
 
 AUTOGROW_ALL_FILES
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later)
 
 When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.
 
@@ -649,15 +649,15 @@ GO
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN
@@ -709,19 +709,24 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_**<br />&nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
-Use this statement with a database in Azure SQL Database managed instance.
+Use this statement with a database in Azure SQL Managed Instance.
 
-## Syntax for databases in a managed instance
+## Syntax for Azure SQL Managed Instance
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -761,7 +766,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## Arguments
@@ -956,7 +960,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;
 GO
-
 ```
 
 ### C. Removing a file from a database
@@ -1051,15 +1054,15 @@ The following example generates the required `ALTER DATABASE` statements to modi
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN

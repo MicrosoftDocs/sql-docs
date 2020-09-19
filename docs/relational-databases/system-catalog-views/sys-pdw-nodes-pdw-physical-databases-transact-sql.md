@@ -1,6 +1,7 @@
 ---
-title: "sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "sys.pdw_nodes_pdw_physical_databases (Transact-SQL)"
+title: "sys.pdw_nodes_pdw_physical_databases (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.technology: data-warehouse
@@ -14,7 +15,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contains a row for each physical database on a compute node. Aggregate physical database information to get detailed information about databases. To combine information, join the `sys.pdw_nodes_pdw_physical_databases` to the `sys.pdw_database_mappings` and `sys.databases` tables.  
   

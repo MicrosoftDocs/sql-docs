@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Excel Driver Programming Considerations"
 title: "Microsoft Excel Driver Programming Considerations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Excel driver"
   - "ODBC desktop database drivers [ODBC], Excel driver"
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft Excel Driver Programming Considerations
 This section contains the following topics.  

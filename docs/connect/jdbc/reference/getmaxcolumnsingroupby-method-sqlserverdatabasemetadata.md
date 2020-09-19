@@ -1,4 +1,5 @@
 ---
+description: "getMaxColumnsInGroupBy Method (SQLServerDatabaseMetaData)"
 title: "getMaxColumnsInGroupBy Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: a59cfe98-c0f4-46ad-9243-62aa56855f1a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getMaxColumnsInGroupBy Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

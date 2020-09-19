@@ -1,7 +1,7 @@
 ---
-title: "Run Data Migration Assistant from the command line (SQL Server) | Microsoft Docs"
+title: "Run Data Migration Assistant from the command line"
 description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
-ms.custom: ""
+ms.custom: "seo-lt-2019"
 ms.date: "05/06/2019"
 ms.prod: sql
 ms.prod_service: "dma"
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Command Line"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ---
 
@@ -48,11 +48,20 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
 |`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
 |`/AssessmentResultCsv`    | Full path to the CSV result file   | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
-|`/Action`    | Use SkuRecommendation to get SKU recommendations, use AssessTargetReadiness to perform target readiness assessment.   | N
+|`/AssessmentResultDma`    | Full path to the dma result file   | N
+|`/Action`    | Use SkuRecommendation to get SKU recommendations. <br> Use AssessTargetReadiness to perform target readiness assessment. <br> Use AzureMigrateUpload to upload all DMA assessment files in the AzzessmentResultInputFolder to bulk upload to Azure Migrate.Action type usage /Action= AzureMigrateUpload   | N
 |`/SourceConnections`    | Space delimited list of connection strings. Database name (Initial Catalog) is optional. If no database name is provided, then all databases on the source are assessed.   | Y <br> (Required if Action is 'AssessTargetReadiness')
 |`/TargetReadinessConfiguration`    | Full path to the XML file describing values for the name, source connections and result file.   | Y <br> (Either TargetReadinessConfiguration or SourceConnections is required)
 |`/FeatureDiscoveryReportJson`    | Path to the feature discovery JSON report. If this file is generated, then it can be used to run target readiness assessment again without connecting to source. | N
 |`/ImportFeatureDiscoveryReportJson`    | Path to the feature discovery JSON report created earlier. Instead of source connections, this file will be used.   | N
+|`/EnableAssessmentUploadToAzureMigrate`    | Enables uploading and publishing assessment results to Azure Migrate   | N
+|`/AzureCloudEnvironment`    |Selects the Azure cloud environment to connect to, default is Azure Public Cloud. Supported values: Azure (default), AzureChina, AzureGermany, AzureUSGovernment.   | N 
+|`/SubscriptionId`    |Azure subscription ID.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
+|`/AzureMigrateProjectName`    |The Azure Migrate Project name to upload assessment results to.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
+|`/ResourceGroupName`    |Azure Migrate resource group name.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
+|`/AssessmentResultInputFolder`    |The input folder path containing .DMA assessment files to upload to Azure Migrate.   | Y <br> (Required if Action is AzureMigrateUpload)
+
+
 
 ## Examples of assessments using the CLI
 
@@ -92,7 +101,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
+**Single-database assessment for target platform Azure SQL Database, save results to .json and .csv file**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -141,7 +150,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
+**Single-database assessment for target platform Azure SQL Database, save results to .json and .csv file**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -203,7 +212,7 @@ Configuration file contents when using source connections:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
-<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
   <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
@@ -229,10 +238,43 @@ Configuration file contents when importing feature discovery report:
   <OverwriteResult>true</OverwriteResult><!-- or false -->
 </TargetReadinessConfiguration>
 ```
+**Assess and upload to Azure Migrate in Azure Public Cloud (default)**
+```
+DmaCmd.exe
+/Action="Assess" 
+/AssessmentSourcePlatform=SqlOnPrem 
+/AssessmentTargetPlatform=ManagedSqlServer
+/AssessmentEvaluateCompatibilityIssues 
+/AssessmentEvaluateRecommendations 
+/AssessmentEvaluateFeatureParity 
+/AssessmentOverwriteResult 
+/AssessmentName="assess-myDatabase"
+/AssessmentDatabases="Server=myServer;Initial Catalog=myDatabase;Integrated Security=true" 
+/AssessmentResultDma="C:\assessments\results\assess-1.dma"
+/SubscriptionId="Subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project ame" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
 
-## Azure SQL Database/managed instance SKU recommendations using the CLI
+```
+**Batch upload DMA assessment files to Azure Migrate in Azure Public Cloud (default)**
+```
+DmaCmd.exe 
+/Action="AzureMigrateUpload" 
+/AssessmentResultInputFolder="C:\assessments\results" 
+/SubscriptionId="Subscription Id" 
+/AzureMigrateProjectName="Azure Migrate project name" 
+/ResourceGroupName="Resource Group name" 
+/AzureAuthenticationInteractiveAuthentication
+/AzureAuthenticationTenantId="Azure Tenant Id"
+/EnableAssessmentUploadToAzureMigrate
 
-These commands support recommendations for both Azure SQL Database single database and managed instance deployment options.
+```
+## Azure SQL Database / Azure SQL Managed Instance SKU recommendations using the CLI
+
+These commands support recommendations for both Azure SQL Database single database and Azure SQL Managed Instance deployment options.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -257,7 +299,7 @@ These commands support recommendations for both Azure SQL Database single databa
 |`/SkuRecommendationSubscriptionId` | The subscription ID. | Y <br> (For the latest prices)
 |`/SkuRecommendationDatabasesToRecommend` | Space-separated list of databases to recommend for (e.g. “Database1” “Database2” “Database3”). Names are case-sensitive and must be surrounded by double-quotes. If omitted, recommendations are provided for all databases. | N
 |`/AzureAuthenticationTenantId` | The authentication tenant. | Y <br> (For the latest prices)
-|`/AzureAuthenticationClientId` | The client ID of the AAD app used for authentication. | Y <br> (For the latest prices)
+|`/AzureAuthenticationClientId` | The client ID of the Azure AD app used for authentication. | Y <br> (For the latest prices)
 |`/AzureAuthenticationInteractiveAuthentication` | Set to true to pop up the window. | Y <br> (For the latest prices) <br>(Pick one of the 3 authentication options - option 1)
 |`/AzureAuthenticationCertificateStoreLocation` | Set to the certificate store location (e.g. "CurrentUser"). | Y <br>(For the latest prices) <br> (Pick one of the 3 authentication options - option 2)
 |`/AzureAuthenticationCertificateThumbprint` | Set to the cert thumbprint. | Y <br> (For the latest prices) <br>(Pick one of the 3 authentication options - option 2)
@@ -269,7 +311,7 @@ These commands support recommendations for both Azure SQL Database single databa
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Azure SQL DB/MI SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
+**Azure SQL Database / Azure SQL Managed Instance SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -286,7 +328,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Azure SQL DB/MI SKU recommendation with price refresh (get latest prices) - Certificate authentication**
+**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation with price refresh (get latest prices) - Certificate authentication**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -304,7 +346,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Azure SQL DB SKU/MI recommendation with price refresh (get latest prices) - Token authentication and specify databases to recommend**
+**Azure SQL Database / Azure SQL Managed Instance  recommendation with price refresh (get latest prices) - Token authentication and specify databases to recommend**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -322,7 +364,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Azure SQL DB/MI SKU recommendation without price refresh (use static prices)** 
+**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation without price refresh (use static prices)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

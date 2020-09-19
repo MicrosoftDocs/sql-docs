@@ -1,7 +1,9 @@
 ---
+description: "SQL Server 2019 privacy supplement"
 title: "SQL Server 2019 privacy supplement | Microsoft Docs"
 ms.date: 09/20/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: "mikeray"
 ms.custom: ""
 ms.topic: conceptual
@@ -13,7 +15,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server 2019 privacy supplement
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
@@ -111,11 +113,11 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 ## Organization identifiable information (OII)
 
 Data received from an organization, or generated from their use of the product.
--	Linkable to an organization.
--	Does not contain content.
+-   Linkable to an organization.
+-   Does not contain content.
 
 ### Examples of organization identifiable information
--	Organization Name (example: Microsoft Corp.)
+-   Organization Name (example: Microsoft Corp.)
 
 ### Permitted usage scenarios
 |Scenario  |Access Restrictions  |Retention Requirements|

@@ -1,4 +1,5 @@
 ---
+description: "Manage Data Collection"
 title: "Manage Data Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Manage Data Collection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
  Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures and functions to manage different aspects of data collection, such as enabling or disabling data collection, changing a collection set configuration, or viewing data in the management data warehouse.  
   
 ## Manage data collection using SSMS  

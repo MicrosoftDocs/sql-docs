@@ -1,15 +1,16 @@
 ---
-title: "WideWorldImporters OLAP database - use of SQL Server | Microsoft Docs"
+title: "Key features in DW WideWorldImporters database"
+description: Learn how the WideWorldImportersDW database showcases key features of SQL Server that are suitable for data warehousing and analytics. 
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: "samples"
-ms.custom: ""
-ms.date: "08/04/2018"
+ms.date: 07/01/2020
 ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -23,43 +24,53 @@ PolyBase is used to combine sales information from WideWorldImportersDW with a p
 
 To enable the use of PolyBase in the sample database, make sure it is installed, and run the following stored procedure in the database:
 
-    EXEC [Application].[Configuration_ApplyPolyBase]
+```sql
+EXECUTE [Application].[Configuration_ApplyPolyBase]
+```
 
 This will create an external table `dbo.CityPopulationStatistics` that references a public data set that contains population data for cities in the United States, hosted in Azure blob storage. You are encouraged to review the code in the stored procedure to understand the configuration process. If you want to host your own data in Azure blob storage and keep it secure from general public access, you will need to undertake additional configuration steps. The following query returns the data from that external data set:
 
-    SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
+```sql
+SELECT
+        CityID, StateProvinceCode, CityName,
+        YearNumber, LatestRecordedPopulation
+    FROM
+        dbo.CityPopulationStatistics;
+```
 
 To understand which cities might be of interest for further expansion, the following query looks at the growth rate of cities, and returns the top 100 largest cities with significant growth, and where Wide World Importers does not have a sales presence. The query involves a join between the remote table `dbo.CityPopulationStatistics` and the local table `Dimension.City`, and a filter involving the local table `Fact.Sales`.
 
-    WITH PotentialCities
-    AS
-    (
-        SELECT cps.CityName,
-               cps.StateProvinceCode,
-               MAX(cps.LatestRecordedPopulation) AS PopulationIn2016,
-               (MAX(cps.LatestRecordedPopulation) - MIN(cps.LatestRecordedPopulation)) * 100.0
-                   / MIN(cps.LatestRecordedPopulation) AS GrowthRate
-        FROM dbo.CityPopulationStatistics AS cps
-        WHERE cps.LatestRecordedPopulation IS NOT NULL
-        AND cps.LatestRecordedPopulation <> 0
-        GROUP BY cps.CityName, cps.StateProvinceCode
-    ),
-    InterestingCities
-    AS
-    (
-        SELECT DISTINCT pc.CityName,
-                        pc.StateProvinceCode,
-                        pc.PopulationIn2016,
-                        FLOOR(pc.GrowthRate) AS GrowthRate
-        FROM PotentialCities AS pc
-        INNER JOIN Dimension.City AS c
-        ON pc.CityName = c.City
-        WHERE GrowthRate > 2.0
-        AND NOT EXISTS (SELECT 1 FROM Fact.Sale AS s WHERE s.[City Key] = c.[City Key])
-    )
-    SELECT TOP(100) CityName, StateProvinceCode, PopulationIn2016, GrowthRate
-    FROM InterestingCities
-    ORDER BY PopulationIn2016 DESC;
+```sql
+WITH PotentialCities
+AS
+(
+    SELECT cps.CityName,
+            cps.StateProvinceCode,
+            MAX(cps.LatestRecordedPopulation) AS PopulationIn2016,
+            (MAX(cps.LatestRecordedPopulation) - MIN(cps.LatestRecordedPopulation)) * 100.0
+                / MIN(cps.LatestRecordedPopulation) AS GrowthRate
+    FROM dbo.CityPopulationStatistics AS cps
+    WHERE cps.LatestRecordedPopulation IS NOT NULL
+    AND cps.LatestRecordedPopulation <> 0
+    GROUP BY cps.CityName, cps.StateProvinceCode
+),
+InterestingCities
+AS
+(
+    SELECT DISTINCT pc.CityName,
+                    pc.StateProvinceCode,
+                    pc.PopulationIn2016,
+                    FLOOR(pc.GrowthRate) AS GrowthRate
+    FROM PotentialCities AS pc
+    INNER JOIN Dimension.City AS c
+    ON pc.CityName = c.City
+    WHERE GrowthRate > 2.0
+    AND NOT EXISTS (SELECT 1 FROM Fact.Sale AS s WHERE s.[City Key] = c.[City Key])
+)
+SELECT TOP(100) CityName, StateProvinceCode, PopulationIn2016, GrowthRate
+FROM InterestingCities
+ORDER BY PopulationIn2016 DESC;
+```
 
 ## Clustered Columnstore Indexes
 
@@ -75,7 +86,9 @@ The sample database has limited data size, to make it easy to download and insta
 
 You can run the following statement to increase the size of the `Fact.Sales` table by inserting another 12 million rows of sample data. These rows are all inserted for the year 2012, such that there is no interference with the ETL process.
 
+```sql
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
+```
 
 This statement will take around 5 minutes to run. To insert more than 12 million rows, pass the desired number of rows to insert as a parameter to this stored procedure.
 
@@ -83,11 +96,15 @@ To compare query performance with and without columnstore, you can drop and/or r
 
 To drop the index:
 
-    DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```sql
+ DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```
 
 To recreate:
 
-    CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```
 
 ## Partitioning
 

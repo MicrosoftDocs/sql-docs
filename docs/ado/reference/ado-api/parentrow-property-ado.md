@@ -1,8 +1,9 @@
 ---
+description: "ParentRow Property (ADO)"
 title: "ParentRow Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ParentRow property [ADO]"
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ParentRow Property (ADO)
 Sets the container of an OLE DB **Row** object on an **ADORecordConstruction** object, so that the parent of the row is turned into an ADO **Record** object.  
@@ -37,4 +38,4 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  This property method returns the standard HRESULT values, including S_OK and E_FAIL.  
   
 ## Applies To  
- [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction Interface](./adorecordconstruction-interface.md)

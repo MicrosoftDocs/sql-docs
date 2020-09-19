@@ -1,4 +1,5 @@
 ---
+description: "sp_add_operator (Transact-SQL)"
 title: "sp_add_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_operator"
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates an operator (notification recipient) for use with alerts and jobs.  
   
@@ -57,7 +58,7 @@ sp_add_operator [ @name = ] 'name'
   
  You can specify either a physical e-mail address or an alias for *email_address*. For example:  
   
- '**jdoe**' or '**jdoe@xyz.com**'  
+ '**jdoe**' or '**jdoe\@xyz.com**'  
   
 > [!NOTE]  
 >  You must use the e-mail address for Database Mail.  

@@ -1,4 +1,5 @@
 ---
+description: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
 title: "CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
@@ -27,7 +28,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Imports the schema components into a database.  
   
@@ -35,12 +36,13 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *relational_schema*  
  Identifies the relational schema name. If not specified, default relational schema is assumed.  
   
@@ -75,7 +77,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ### A. Creating XML schema collection in the database  
  The following example creates the XML schema collection `ManuInstructionsSchemaCollection`. The collection has only one schema namespace.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -167,7 +169,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
 ### B. Specifying multiple schema namespaces in a schema collection  
  You can specify multiple XML schemas when you create an XML schema collection. For example:  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
@@ -179,7 +181,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
  The following example creates the XML schema collection `ProductDescriptionSchemaCollection` that includes two XML schema namespaces.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -225,7 +227,7 @@ GO
 ### C. Importing a schema that does not specify a target namespace  
  If a schema that does not contain a **targetNamespace** attribute is imported in a collection, its components are associated with the empty string target namespace as shown in the following example. Note that not associating one or more schemas imported in the collection causes multiple schema components (potentially unrelated) to be associated with the default empty string namespace.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
@@ -245,7 +247,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ### D. Using an XML schema collection and batches  
  A schema collection cannot be referenced in the same batch where it is created. If you try to reference a collection in the same batch where it was created, you will get an error saying the collection does not exist. The following example works; however, if you remove `GO` and, therefore, try to reference the XML schema collection to type an `xml` variable in the same batch, it will return an error.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION mySC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  

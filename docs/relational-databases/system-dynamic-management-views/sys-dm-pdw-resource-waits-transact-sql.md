@@ -1,7 +1,8 @@
 ---
+description: "sys.dm_pdw_resource_waits (Transact-SQL)"
 title: "sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "11/26/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
@@ -14,7 +15,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_resource_waits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Displays wait information for all resource types in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
@@ -30,9 +31,29 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |acquire_time|**datetime**|Time at which the lock or resource was acquired.||  
 |state|**nvarchar(50)**|State of the wait state.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|Priority of the waiting item.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|Number of concurrency slots (32 max) reserved for this request.|1 - for SmallRC<br /><br /> 3 - for MediumRC<br /><br /> 7 for LargeRC<br /><br /> 22 - for XLargeRC|  
-|resource_class|**nvarchar(20)**|The resource class for this request.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|concurrency_slots_used|**int**|Internal|See the [Monitor resource waits](#monitor-resource-waits) below|  
+|resource_class|**nvarchar(20)**|Internal |See the [Monitor resource waits](#monitor-resource-waits) below|  
   
+## Monitor resource waits 
+With the introduction of [workload groups](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), concurrency slots are no longer applicable.  Use the below query and the `resources_requested` column to understand the resources needed to execute the request.
+
+```sql
+select rw.wait_id
+      ,rw.session_id
+      ,rw.type
+      ,rw.object_type
+      ,rw.object_name
+      ,rw.request_id
+      ,rw.request_time
+      ,rw.acquire_time
+      ,rw.state
+      ,resources_requested = s.effective_request_min_resource_grant_percent
+      ,r.group_name
+  from sys.dm_workload_management_workload_groups_stats s
+  join sys.dm_pdw_exec_requests r on r.group_name = s.name collate SQL_Latin1_General_CP1_CI_AS
+  join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
+```
+
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   

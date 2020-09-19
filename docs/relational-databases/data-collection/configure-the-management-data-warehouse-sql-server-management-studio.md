@@ -1,5 +1,6 @@
 ---
-title: "Configure the Management Data Warehouse (SQL Server Management Studio) | Microsoft Docs"
+title: "Configure the Management Data Warehouse (SSMS)"
+description: Learn how to configure the management data warehouse to support data storage on one or more instances of SQL Server that are using the data collector. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -24,7 +25,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to configure the management data warehouse to support data storage on a single instance or multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are using the data collector. These instances can be on the same server or on different servers. This topic also provides descriptions of the user interface for the [Configure Data Management Warehouse Wizard](#Wizard) dialog box. For information about configuring a data collector, see [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
@@ -52,8 +53,6 @@ ms.author: mathoma
     -   Right-click **Data Collection**, and then click **Properties**. On the **General** tab, specify the existing management data warehouse and the server that it is installed on.  
   
 6.  Repeat step 5 until all the database instances that use the data collector are configured to upload data to the shared management data warehouse.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ####  <a name="Wizard"></a> Configure Management Data Warehouse Wizard  
  **Welcome Page**  

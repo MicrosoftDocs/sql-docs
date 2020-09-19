@@ -5,12 +5,12 @@ ms.topic: conceptual
 ms.custom: ""
 ms.date: 09/17/2017    
 ms.prod: sql
-ms.technology:
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server managing partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To manage your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with management solutions supporting Microsoft SQL Server.
 
 ## Our management partners
@@ -23,7 +23,7 @@ To manage your SQL Server services, choose from a wide variety of industry-leadi
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][monitor_partners], and [development partners][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 
 
 <!--Article links-->

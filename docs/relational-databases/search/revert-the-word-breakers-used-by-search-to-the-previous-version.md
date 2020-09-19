@@ -1,5 +1,6 @@
 ---
-title: "Revert the Word Breakers Used by Search to the Previous Version | Microsoft Docs"
+description: "Revert word breakers used by Search to previous version (SQL Server Search)"
+title: "Revert word breakers used by Search to previous version"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -10,9 +11,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Revert the Word Breakers Used by Search to the Previous Version
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Revert word breakers used by Search to previous version (SQL Server Search)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
   
  This article does not discuss the following languages:  
@@ -102,8 +104,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
 4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   
@@ -375,5 +375,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)
+ [Behavior Changes to Full-Text Search](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
  

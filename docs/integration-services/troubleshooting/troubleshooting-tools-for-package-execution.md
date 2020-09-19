@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting Tools for Package Execution"
 title: "Troubleshooting Tools for Package Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Troubleshooting Tools for Package Execution
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  
@@ -79,7 +80,7 @@ ms.author: chugu
   
     3.  **Consider capturing row count data**. Consider creating a separate table for row count information, where each instance of package execution is identified by its ExecutionID. Use the Row Count transformation to save the row count into a series of variables at critical points in the data flow. After the data flow ends, use an Execute SQL task to insert the series of values into a row in the table for later analysis and reporting.  
   
-     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     For more information about this approach, see the section, "ETL Auditing and Logging," in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] white paper, [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## Troubleshoot Package Execution by Using Debug Dump Files  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. For more information, see [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
@@ -106,5 +107,3 @@ ms.author: chugu
 ## Related Tasks  
  [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
-## Related Content  
- Blog entry, [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546), on dougbert.com.  

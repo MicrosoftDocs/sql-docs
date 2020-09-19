@@ -1,18 +1,17 @@
 ---
-title: "Tutorial: Enable the table space usage sample insight widget"
-titleSuffix: Azure Data Studio
+title: Enable the table space usage sample insight widget
 description: This tutorial demonstrates how to enable the table space usage sample insight widget on the Azure Data Studio database dashboard.
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: "tutorial"
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
-ms.custom: "seodec18"
-ms.date: "09/10/2019"
+ms.reviewer: "alayu, maghan, sstein"
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/10/2019
 ---
 
-# Tutorial: Enable the table space usage sample insight widget using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Tutorial: Enable the table space usage sample insight widget using Azure Data Studio
 
 This tutorial demonstrates how to enable an insight widget on the database dashboard, providing an at-a-glance view about the space usage for all tables in a database. During this tutorial, you learn how to:
 
@@ -28,9 +27,9 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 * [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## Turn on a management insight on [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s database dashboard
+## Turn on a management insight on Azure Data Studio's database dashboard
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] has a built-in sample widget to monitor the space used by tables in a database.
+Azure Data Studio has a built-in sample widget to monitor the space used by tables in a database.
 
 1. Open *User Settings* by pressing **Ctrl+Shift+P** to open the *Command Palette*.
 
@@ -73,11 +72,11 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ## Working with the insight chart
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight chart provides filtering and mouse-hover details. To try out the following steps:
+Azure Data Studio's insight chart provides filtering and mouse-hover details. To try out the following steps:
 
-1. Click and toggle the *row_count* legend on the chart. [!INCLUDE[name-sos](../includes/name-sos-short.md)] shows and hides data series as you toggle a legend on or off.
+1. Click and toggle the *row_count* legend on the chart. Azure Data Studio shows and hides data series as you toggle a legend on or off.
 
-2. Hover the mouse pointer over the chart. [!INCLUDE[name-sos](../includes/name-sos-short.md)] shows more information about the data series label and its value as shown in the following screenshot.
+2. Hover the mouse pointer over the chart. Azure Data Studio shows more information about the data series label and its value as shown in the following screenshot.
 
    ![chart toggle and legend](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

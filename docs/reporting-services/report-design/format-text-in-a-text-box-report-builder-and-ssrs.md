@@ -1,5 +1,6 @@
 ---
-title: "Format Text in a Text Box (Report Builder and SSRS) | Microsoft Docs"
+title: "Format Text in a Text Box (Report Builder) | Microsoft Docs"
+description: Discover how to format text within a text box and how to mix placeholder text and static text to create mail merges or templates for text in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "Reporting Services Configuration Manager (Native Mode)"
 title: "Reporting Services Configuration Manager (Native Mode) | Microsoft Docs"
 ms.date: 09/20/2017
 ms.prod: reporting-services
@@ -56,7 +57,7 @@ To use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configu
 
 - Windows Management Instrumentation (WMI) service must be enabled and running on any report server you are configuring. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager uses the report server WMI provider to connect to local and remote report servers. If you are configuring a remote report server, the computer must allow remote WMI access. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
 
-- Before you can connect to and configure a remote report server instance, you must enable remote Windows Management Instrumentation (WMI) calls to pass through Windows Firewall. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
+- Before you can connect to and configure a remote report server instance, you must enable remote Windows Management Instrumentation (WMI) calls to pass through Windows Firewall. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
 The Reporting Services Configuration Manager is installed automatically when you install SQL Server Reporting Services.
 

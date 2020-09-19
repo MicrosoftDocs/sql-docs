@@ -1,6 +1,7 @@
 ---
-title: "View or Modify the Properties of a Policy-Based Management Policy | Microsoft Docs"
-ms.custom: ""
+title: "View or modify properties of a Policy-Based Management policy"
+description: Learn to view or modify the properties of a Policy-Based Management policy for SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: "10/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +16,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # View or Modify the Properties of a Policy-Based Management Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view or modify a Policy-Based Management policy's properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   

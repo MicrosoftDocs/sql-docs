@@ -1,8 +1,9 @@
 ---
+description: "Remote Data Service (RDS)"
 title: "Remote Data Service (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Remote Data Service (RDS)"
   - "RDS"
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Remote Data Service (RDS)
 Remote Data Service (RDS) is a feature of ADO, with which you can move data from a server to a client application or Web page, manipulate the data on the client, and return updates to the server in a single round trip.  
@@ -22,30 +23,8 @@ Remote Data Service (RDS) is a feature of ADO, with which you can move data from
   
  The RDS Programmer's Guide contains the following chapters:  
   
--   [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [RDS Fundamentals](./rds-fundamentals.md)  
   
--   [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [RDS Tutorial](./rds-tutorial.md)  
   
--   [RDS Usage and Security](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-   [RDS Usage and Security](./rds-usage-and-security.md)

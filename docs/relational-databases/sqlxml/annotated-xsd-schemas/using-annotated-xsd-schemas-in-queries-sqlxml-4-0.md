@@ -1,6 +1,6 @@
 ---
-title: "Using Annotated XSD Schemas in Queries (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Using Annotated XSD Schemas in Queries (SQLXML)"
+description: Learn how to specify XPath queries against an annotated XSD schema in SQLXML 4.0 to retrieve data from the database.
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -21,10 +21,11 @@ helpviewer_keywords:
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotated XSD Schemas in Queries (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   You can specify queries against an annotated schema to retrieve data from the database by specifying XPath queries in a template against the XSD schema.  
   
  The **\<sql:xpath-query>** element allows you to specify an XPath query against the XML view that is defined by the annotated schema. The annotated schema against which the XPath query is to be executed is identified by using the **mapping-schema** attribute of the **\<sql:xpath-query>** element.  

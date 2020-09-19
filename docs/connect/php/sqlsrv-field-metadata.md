@@ -1,7 +1,8 @@
 ---
+description: "sqlsrv_field_metadata"
 title: "sqlsrv_field_metadata | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_field_metadata"
   - "sqlsrv_field_metadata"
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,6 +70,7 @@ The following table gives more information on the keys for each sub-array (see t
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |smallint|SQL_SMALLINT (5)|||2 bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
+|sql_variant|SQL_SS_VARIANT (-150)|||variable|  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 bytes|  
@@ -86,42 +88,150 @@ The Nullable key can either be yes or no.
 ## Example  
 The following example creates a statement resource, then retrieves and displays the field metadata. The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
-```  
-<?php  
-/* Connect to the local server using Windows Authentication and  
-specify the AdventureWorks database as the database in use. */  
-$serverName = "(local)";  
-$connectionInfo = array( "Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
-     echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+```
+<?php
+/* Connect to the local server using Windows Authentication and
+specify the AdventureWorks database as the database in use. */
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"AdventureWorks");
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+if ($conn === false) {
+    echo "Could not connect.\n";
+    die( print_r( sqlsrv_errors(), true));
+}
+
+/* Prepare the statement. */
+$tsql = "SELECT ReviewerName, Comments FROM Production.ProductReview";
+$stmt = sqlsrv_prepare( $conn, $tsql);
+  
+/* Get and display field metadata. */
+foreach( sqlsrv_field_metadata( $stmt) as $fieldMetadata) {
+    foreach( $fieldMetadata as $name => $value) {
+        echo "$name: $value\n";
+    }  
+    echo "\n";
 }  
   
-/* Prepare the statement. */  
-$tsql = "SELECT ReviewerName, Comments FROM Production.ProductReview";  
-$stmt = sqlsrv_prepare( $conn, $tsql);  
+/* Note: sqlsrv_field_metadata can be called on any statement
+resource, pre- or post-execution. */
   
-/* Get and display field metadata. */  
-foreach( sqlsrv_field_metadata( $stmt) as $fieldMetadata)  
-{  
-      foreach( $fieldMetadata as $name => $value)  
-      {  
-           echo "$name: $value\n";  
-      }  
-      echo "\n";  
-}  
-  
-/* Note: sqlsrv_field_metadata can be called on any statement  
-resource, pre- or post-execution. */  
-  
-/* Free statement and connection resources. */  
-sqlsrv_free_stmt( $stmt);  
-sqlsrv_close( $conn);  
-?>  
-```  
-  
+/* Free statement and connection resources. */
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+?>
+```
+
+## Sensitivity Data Classification Metadata
+
+A new option `DataClassification` is introduced in version 5.8.0 for users to access the [sensitivity data classification metadata](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) in Microsoft SQL Server 2019 using `sqlsrv_field_metadata`, which requires Microsoft ODBC Driver 17.4.2 or above.
+
+By default, the option `DataClassification` is `false`, but when set to `true`, the array returned by `sqlsrv_field_metadata` will be populated with the sensitivity data classification metadata, if it exists. 
+
+Take a Patients table for example:
+
+```
+CREATE TABLE Patients 
+      [PatientId] int identity,
+      [SSN] char(11),
+      [FirstName] nvarchar(50),
+      [LastName] nvarchar(50),
+      [BirthDate] date)
+```
+
+We can classify the SSN and BirthDate columns as shown below:
+
+```
+ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confidential - secure privacy', INFORMATION_TYPE = 'Credentials')
+ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
+```
+
+To access the metadata, invoke `sqlsrv_field_metadata` as shown in the snippet below:
+
+```
+$tableName = 'Patients';
+$tsql = "SELECT * FROM $tableName";
+$stmt = sqlsrv_prepare($conn, $tsql, array(), array('DataClassification' => true));
+if (sqlsrv_execute($stmt)) {
+    $fieldmeta = sqlsrv_field_metadata($stmt);
+
+    foreach ($fieldmeta as $f) {
+        if (count($f['Data Classification']) > 0) {
+            echo $f['Name'] . ": \n";
+            print_r($f['Data Classification']); 
+        }
+    }
+}
+```
+
+The output will be:
+
+```
+SSN: 
+Array
+(
+    [0] => Array
+        (
+            [Label] => Array
+                (
+                    [name] => Highly Confidential - secure privacy
+                    [id] => 
+                )
+
+            [Information Type] => Array
+                (
+                    [name] => Credentials
+                    [id] => 
+                )
+
+        )
+
+)
+BirthDate: 
+Array
+(
+    [0] => Array
+        (
+            [Label] => Array
+                (
+                    [name] => Confidential Personal Data
+                    [id] => 
+                )
+
+            [Information Type] => Array
+                (
+                    [name] => Birthdays
+                    [id] => 
+                )
+
+        )
+
+)
+```
+
+If using `sqlsrv_query` instead of `sqlsrv_prepare`, the above snippet can be modified, like this:
+
+```
+$tableName = 'Patients';
+$tsql = "SELECT * FROM $tableName";
+$stmt = sqlsrv_query($conn, $tsql, array(), array('DataClassification' => true));
+$fieldmeta = sqlsrv_field_metadata($stmt);
+
+foreach ($fieldmeta as $f) {
+    $jstr = json_encode($f);
+    echo $jstr . PHP_EOL;
+}
+```
+
+As you can see in the JSON representation below, the data classification metadata is shown if associated with the columns:
+
+```
+{"Name":"PatientId","Type":4,"Size":null,"Precision":10,"Scale":null,"Nullable":0,"Data Classification":[]}
+{"Name":"SSN","Type":1,"Size":11,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""}}]}
+{"Name":"FirstName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
+{"Name":"LastName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
+{"Name":"BirthDate","Type":91,"Size":null,"Precision":10,"Scale":0,"Nullable":1,"Data Classification":[{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""}}]}
+```
+
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
 

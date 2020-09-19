@@ -1,8 +1,8 @@
 ---
 title: "Universal Data Link (UDL) Configuration | Microsoft Docs"
-description: "Universal Data Link (UDL) Configuration using Microsoft OLE DB Driver for SQL Server"
+description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "10/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ ms.author: "v-beaziz"
 author: bazizi
 ---
 # Universal Data Link (UDL) configuration
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -26,7 +26,7 @@ The Connection tab is provider-specific and displays only the connection propert
 |Option|Description|
 |---   |---        |
 |Select or enter a server name|Select a server name from the drop-down list, or type the location of the server where the database you want to access is located. Selecting the database on the server is a separate action. Update the list by clicking "Refresh".
-|Enter information to sign in to the server|You can select the following authentication options from this drop-down list: <ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials.</li><li>`SQL Server Authentication:` Authentication to SQL Server using login ID and password.</li><li>`Active Directory - Integrated:` Integrated authentication using the currently logged-in user's Windows account credentials.</li><li>`Active Directory - Password:` Active Directory authentication using login ID and password.</li></ul>|
+|Enter information to sign in to the server|You can select the following authentication options from this drop-down list: <ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials.</li><li>`SQL Server Authentication:` Authentication using login ID and password.</li><li>`Active Directory - Integrated:` Integrated authentication with an Azure Active Directory identity. This mode can also be used for Windows authentication to SQL Server.</li><li>`Active Directory - Password:` User ID and password authentication with an Azure Active Directory identity.</li><li>`Active Directory - Universal with MFA support:` Interactive authentication with an Azure Active Directory identity. This mode supports Azure multi-factor authentication (MFA).</li></ul>|
 |Server SPN|If you use a trusted connection, you can specify a service principal name (SPN) for the server.|
 |User name|Type the User ID to use for authentication when you sign in to the data source.|
 |Password|Type the password to use for authentication when you sign in to the data source.|

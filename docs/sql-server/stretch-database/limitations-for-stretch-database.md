@@ -1,5 +1,6 @@
 ---
-title: "Limitations for Stretch Database | Microsoft Docs"
+description: "Limitations for Stretch Database"
+title: "Limitations for Stretch Database"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -12,9 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: rothja
 ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Limitations for Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Learn about limitations for Stretch-enabled tables, and about limitations that currently prevent you from enabling Stretch for a table.  

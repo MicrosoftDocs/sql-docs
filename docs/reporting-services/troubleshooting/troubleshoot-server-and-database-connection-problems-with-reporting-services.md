@@ -1,17 +1,16 @@
 ---
-title: "Troubleshoot Server and Database Connection Problems with Reporting Services | Microsoft Docs"
-ms.date: 05/28/2019
+title: "Troubleshoot Server & Database Connection Problems"
+description: "In this article, diagnose and fix problems you experience when connecting to a report server. Also learn about 'Unexpected error' messages."
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
-
-
 ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Troubleshoot Server and Database Connection Problems with Reporting Services
+# Troubleshoot Server & Database Connection Problems with Reporting Services
 Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## Cannot create a connection to data source 'datasourcename'. (rsErrorOpeningConnection)  

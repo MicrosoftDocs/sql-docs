@@ -1,16 +1,17 @@
 ---
+description: "Comparison Operators (DMX)"
 title: "Comparison Operators (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # Operators - Comparison
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   You can use comparison operators with scalar data in any Data Mining Extensions (DMX) expression in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Comparison operators evaluate to a Boolean data type; they return TRUE or FALSE based on the outcome of the tested condition.  
   

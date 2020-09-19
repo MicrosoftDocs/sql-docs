@@ -1,6 +1,7 @@
 ---
-title: "Advanced Save Options | Microsoft Docs"
-ms.custom: ""
+description: "Advanced Save Options"
+title: "Advanced Save Options"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -16,7 +17,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Advanced Save Options
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to select a language encoding scheme and to specify the characters to be inserted at the end of each line. To access the **Advanced Save Options** dialog box, on the **File** menu, click **Save** <query name>**.sql As** to open the **Save File As** dialog box, click on the down arrow on the **Save** button, and then click **Save with Encoding**.  
   
 ## Options  

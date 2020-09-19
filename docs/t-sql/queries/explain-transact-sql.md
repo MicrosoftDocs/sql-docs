@@ -1,4 +1,5 @@
 ---
+description: "EXPLAIN (Transact-SQL)"
 title: "EXPLAIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -13,15 +14,13 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use **EXPLAIN** to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to Azure SQL Data Warehouse (preview).
-  
- For more information about query plans, see "Understanding Query Plans" in the [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
+  Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use EXPLAIN to preview which operations will require data movement and to view the estimated costs of the query operations. `WITH RECOMMENDATIONS` applies to Azure SQL Data Warehouse.
   
 ## Syntax  
   
-```
+```syntaxsql
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  
@@ -29,9 +28,11 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## Arguments
 
  *SQL_statement*  
- The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which **EXPLAIN** will run. *SQL_statement* can be any of these commands: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.
 
-*WITH_RECOMMENDATIONS*
+ The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which EXPLAIN will run. *SQL_statement* can be any of these commands: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
+
+*WITH_RECOMMENDATIONS* 
+
 Return the query plan with recommendations to optimize the SQL statement performance.  
   
 ## Permissions
@@ -72,7 +73,6 @@ Return the query plan with recommendations to optimize the SQL statement perform
 |Operation Type|Content|Example|  
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE, and TRIM_MOVE|`<operation_cost>` element, with these attributes. Values reflect only the local operation:<br /><br /> -   *cost* is the local operator cost and shows the estimated time for the operation to run, in ms.<br />-   *accumulative_cost* is the sum of all seen operations in the plan including summed values for parallel operations, in ms.<br />-   *average_rowsize* is the estimated average row size (in bytes) of rows retrieved and passed during the operation.<br />-   *output_rows* is the output (node) cardinality and shows the number of output rows.<br /><br /> `<location>`: The nodes or distributions where the operation will occur. Options are: "Control", "ComputeNode", "AllComputeNodes", "AllDistributions", "SubsetDistributions", "Distribution", and "SubsetNodes".<br /><br /> `<source_statement>`: The source data for the shuffle move.<br /><br /> `<destination_table>`: The internal temporary table the data will be moved into.<br /><br /> `<shuffle_columns>`: (Applicable only to SHUFFLE_MOVE operations). One or more columns that will be used as the distribution columns for the temporary table.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`: See `<operation_cost>` above.<br /><br /> `<DestinationCatalog>`: The destination node or nodes.<br /><br /> `<DestinationSchema>`: The destination schema in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Name of the destination table or "TableName".<br /><br /> `<DestinationDatasource>`: The name or connection information for the destination datasource.<br /><br /> `<Username>` and `<Password>`: These fields indicate that a username and password for the destination may be required.<br /><br /> `<BatchSize>`: The batch size for the copy operation.<br /><br /> `<SelectStatement>`: The select statement used to perform the copy.<br /><br /> `<distribution>`: The distribution where the copy is performed.|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
 |MetaDataCreate_Operation|`<source_table>`: The source table for the operation.<br /><br /> `<destination_table>`: The destination table for the operation.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
 |ON|`<location>`: See `<location>` above.<br /><br /> `<sql_operation>`: Identifies the SQL command that will be performed on a node.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`: The destination catalog.<br /><br /> `<DestinationSchema>`: The destination schema in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Name of the destination table or "TableName".<br /><br /> `<DestinationDatasource>`: Name of the destination datasource.<br /><br /> `<Username>` and `<Password>`: These fields indicate that a username and password for the destination may be required.<br /><br /> `<CreateStatement>`: The table creation statement for the destination database.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
@@ -305,7 +305,7 @@ GO
 **Submitting an EXPLAIN statement WITH_RECOMMENDATIONS**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -321,7 +321,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**Example output for EXPLAIN WITH_RECOMMENDATIONS** (preview)
+**Example output for EXPLAIN WITH_RECOMMENDATIONS**  
 
 The output below includes the creation of a recommended materialized view called View1.  
 

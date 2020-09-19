@@ -1,6 +1,7 @@
 ---
-title: "Some availability replicas are disconnected | Microsoft Docs"
-ms.custom: ""
+title: "Some availability replicas are disconnected"
+description: Possible causes and solutions for when your availability group replica is disconnected for an Always On SQL Server availability group. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Some availability replicas are disconnected
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

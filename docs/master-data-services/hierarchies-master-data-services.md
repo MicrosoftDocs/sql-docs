@@ -1,5 +1,6 @@
 ---
-title: "Hierarchies (Master Data Services) | Microsoft Docs"
+title: Hierarchies
+description: A hierarchy is a tree structure that you can use to group similar members and consolidate/summarize members for reporting and analysis in Master Data Services.
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Hierarchies (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a hierarchy is a tree structure that you can use to:  
   

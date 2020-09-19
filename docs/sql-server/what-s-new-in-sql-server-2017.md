@@ -1,10 +1,11 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
+description: Find out what's new for SQL Server 2017, which brings the power of SQL Server to Linux and Linux-based Docker containers as well as Windows.
 ms.custom: ""
 ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
@@ -12,7 +13,7 @@ ms.author: mikeray
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)
 
 [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
@@ -48,8 +49,6 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 - **Memory-optimized object enhancements** include sp_spaceused and elimination of the 8 index limitation for memory-optimized tables, sp_rename for memory-optimized tables and natively compiled T-SQL modules, and CASE and TOP (N) WITH TIES for natively compiled T-SQL modules. Memory-optimized filegroup files can now be stored, backed up and restored on Azure Storage. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** is a new class of securable, supporting CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP, and VIEW DEFINITION permissions. ADMINISTER DATABASE BULK OPERATIONS is now visible in sys.fn_builtin_permissions. (CTP 1.0)
 - Database **COMPATIBILITY_LEVEL 140** is added. (CTP 1.0).  
-
-For more information, see [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
 ## SQL Server 2017 Integration Services (SSIS)
 - The new **Scale Out** feature in SSIS has the following new and changed features. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)
@@ -109,7 +108,7 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 - **Performance improvements** - The stored procedure `sp_execute_external_script` has been optimized to support batch mode execution for columnstore data.
 
 
-For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+For more information, see [What's new in SQL Server Machine Learning Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).

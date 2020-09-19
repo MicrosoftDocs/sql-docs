@@ -1,4 +1,5 @@
 ---
+description: "CREATE APPLICATION ROLE (Transact-SQL)"
 title: "CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Adds an application role to the current database.  
   
@@ -33,13 +34,15 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE APPLICATION ROLE application_role_name   
     WITH PASSWORD = 'password' [ , DEFAULT_SCHEMA = schema_name ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *application_role_name*  
  Specifies the name of the application role. This name must not already be used to refer to any principal in the database.  
   
@@ -67,7 +70,7 @@ CREATE APPLICATION ROLE application_role_name
 ## Examples  
  The following example creates an application role called `weekly_receipts` that has the password `987Gbv876sPYY5m23` and `Sales` as its default schema.  
   
-```  
+```sql  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987G^bv876sPY)Y5m23'   
     , DEFAULT_SCHEMA = Sales;  

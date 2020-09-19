@@ -1,22 +1,23 @@
 ---
-title: "Perform Basic Operations with Queries (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Perform Basic Operations with Queries (Visual Database Tools)"
+title: Perform Basic Operations with Queries
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Visual Database Tools]"
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The following fundamental operations apply to most or all queries.  
   
 ## In This Section  

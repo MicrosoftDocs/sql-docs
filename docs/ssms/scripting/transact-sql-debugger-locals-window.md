@@ -1,24 +1,32 @@
 ---
-title: "Locals Window | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Locals Window
+description: Learn how to use the Locals window of the Transact-SQL debugger to display and modify expressions from the current call stack frame.
+titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Locals Window [Transact-SQL]"
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Transact-SQL Debugger - Locals Window
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  The **Locals** window displays information about the local expressions in the current scope of the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger. The scope is set to the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to display the local expressions.  
-  
-## Task List  
- **To access the Locals window**  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The **Locals** window displays information about the local expressions in the current scope of the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger. The scope is set to the current call stack frame that is selected in the **Call Stack** window. You must be in debug mode to display the local expressions.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## Task List
+
+**To access the Locals window**
   
 -   On the **Debug** menu, click **Windows**, and then click **Locals**.  
   

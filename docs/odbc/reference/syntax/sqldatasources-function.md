@@ -1,4 +1,5 @@
 ---
+description: "SQLDataSources Function"
 title: "SQLDataSources Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDataSources function [ODBC]"
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDataSources Function
 **Conformance**  

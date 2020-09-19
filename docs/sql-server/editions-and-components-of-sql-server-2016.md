@@ -1,10 +1,14 @@
 ---
-title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
-ms.custom: sqlfreshmay19
-ms.date: "05/29/2019"
+title: "Editions and supported features"
+titleSuffix: SQL Server 2016
+description: This article describes features supported by the various editions of SQL Server 2016, which accommodate different performance, runtime, and price requirements.
+ms.custom: 
+   - seo-lt-2019
+   - sqlfreshmay19
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Enterprise Edition [SQL Server]"
@@ -35,14 +39,15 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
 # Editions and supported features of SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 This topic provides details of features supported by the SQL Server editions.
 
-For information about older versions, see:
+For information about other versions, see:
 
-* [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
-* [SQL Server 2014](http://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
+* [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
+* [SQL Server 2017](editions-and-components-of-sql-server-2017.md).  
+* [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -58,7 +63,7 @@ For the latest release notes and what's new information, see the following:
     
 > [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
-> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)**   
+> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**   
   
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -184,7 +189,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a Common Programmability Surface Area (CPSA) across editions.  
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a Common Programmability Surface Area (CPSA) across editions. Aggregate Pushdown, String Predicate Pushdown, and SIMD Optimizations are [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition scalability enhancements. For more detail, see [Columnstore indexes - what's new](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
 
@@ -196,8 +201,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Row-level security|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|  
 |Always Encrypted|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
 |Dynamic data masking|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|   
-|Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
+|Server audit|Yes|Yes|Yes|Yes|Yes| 
+|Database audit|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
 |Transparent database encryption|Yes|No|No|No|No|   
 |Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 
@@ -218,7 +223,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
 |Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |Transactional replication to Azure|Yes|Yes|No|No|No|   
-|Transactional replication updateable subscription|Yes|No|No|No|No|  
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|  
   
 ##  <a name="SSMS"></a> Management Tools  
   

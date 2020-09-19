@@ -1,22 +1,24 @@
 ---
-title: "SQL Server Profiler Templates and Permissions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: SQL Server Profiler Templates and Permissions
+titleSuffix: SQL Server Profiler
+description: Learn how SQL Server Profiler works, how to use it to trace events, and where to find more information on its features.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], about SQL Server Profiler"
-  - "SQL Server Profiler, about SQL Server Profiler"
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # SQL Server Profiler Templates and Permissions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] shows how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resolves queries internally. This allows administrators to see exactly what [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or Multi-Dimensional Expressions are submitted to the server and how the server accesses the database or cube to return result sets.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] shows how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resolves queries internally. This allows administrators to see exactly what [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or Multi-Dimensional Expressions are submitted to the server and how the server accesses the database or cube to return result sets.  
   
  Using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can do the following:  
   

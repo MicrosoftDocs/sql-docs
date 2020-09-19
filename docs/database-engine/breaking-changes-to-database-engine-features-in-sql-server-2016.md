@@ -1,7 +1,9 @@
 ---
-title: "Breaking Changes to Database Engine Features in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/27/2016"
+title: "Database Engine: Breaking changes | Microsoft Docs"
+titleSuffix: "SQL Server 2016"
+description: Learn about Database Engine changes in SQL Server 2016 (13.x) and earlier that might break previous-version functionality when you upgrade.
+ms.custom: "seo-lt-2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -14,10 +16,11 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Breaking Changes to Database Engine Features in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Breaking changes to Database Engine features in SQL Server 2016
 
-  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
+
+  This topic describes breaking changes in the [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
   
 ##  <a name="SQL15"></a> Breaking Changes in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
@@ -31,7 +34,7 @@ ms.author: mikeray
 
 ## <a name="previous-versions"></a> Previous Versions  
 
-For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
+For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016).
 
 #### Archived Documentation for Very Old Versions of SQL Server
 

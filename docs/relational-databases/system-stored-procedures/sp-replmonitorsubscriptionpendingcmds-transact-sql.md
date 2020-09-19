@@ -1,6 +1,7 @@
 ---
-title: "sp_replmonitorsubscriptionpendingcmds (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sp_replmonitorsubscriptionpendingcmds (T-SQL)"
+description: Describes the sp_replmonitorsubscriptionpendingcmds stored procedure which returns information on the number of pending commands for a subscription to a transactional publication. 
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorsubscriptionpendingcmds"
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information on the number of pending commands for a subscription to a transactional publication and a rough estimate of how much time it takes to process them. This stored procedure returns one row for each returned subscription. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   

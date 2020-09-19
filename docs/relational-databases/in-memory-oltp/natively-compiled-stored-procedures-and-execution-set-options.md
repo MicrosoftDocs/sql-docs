@@ -1,6 +1,7 @@
 ---
-title: "Natively Compiled Stored Procedures and Execution Set Options | Microsoft Docs"
-ms.custom: ""
+title: "Natively compiled stored procedures & set options"
+description: The SET options of a session do not affect a stored procedure execution, except that certain SET options cause stored procedures to not run.
+ms.custom: seo-dt-2019
 ms.date: "10/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Natively Compiled Stored Procedures and Execution Set Options
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Session options are fixed in atomic blocks, as described in [Atomic Blocks](atomic-blocks-in-native-procedures.md). A stored procedure's execution is not affected by a session's SET options, since atomic blocks are required. However, certain SET options, such as SET NOEXEC and SET SHOWPLAN_XML, cause stored procedures (including natively compiled stored procedures) to not execute.   
   

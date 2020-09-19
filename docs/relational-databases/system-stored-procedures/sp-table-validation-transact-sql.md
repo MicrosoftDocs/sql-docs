@@ -1,4 +1,5 @@
 ---
+description: "sp_table_validation (Transact-SQL)"
 title: "sp_table_validation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_table_validation"
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_table_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Either returns rowcount or checksum information on a table or indexed view, or compares the provided rowcount or checksum information with the specified table or indexed view. This stored procedure is executed at the Publisher on the publication database and at the Subscriber on the subscription database. *Not supported for Oracle Publishers*.  
   
@@ -73,7 +74,7 @@ sp_table_validation [ @table = ] 'table'
  If the Distribution Agent is executing **sp_table_validation**, specifies whether the Distribution Agent should shut down immediately upon completion of the validation. *shutdown_agent* is **bit**, with a default of **0**. If **0**, the replication agent does not shut down. If **1**, error 20578 is raised and the replication agent is signaled to shut down. This parameter is ignored when **sp_table_validation** is executed directly by a user.  
   
 `[ @table_name = ] table_name`
- Is the table name of the view used for output messages. *table_name* is **sysname**, with a default of **@table**.  
+ Is the table name of the view used for output messages. *table_name* is **sysname**, with a default of **\@table**.  
   
 `[ @column_list = ] 'column_list'`
  Is the list of columns that should be used in the checksum function. *column_list* is **nvarchar(4000)**, with a default of NULL. Enables validation of merge articles to specify a column list that excludes computed and timestamp columns.  

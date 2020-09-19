@@ -1,4 +1,5 @@
 ---
+description: "sp_grantdbaccess (Transact-SQL)"
 title: "sp_grantdbaccess (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -20,7 +21,7 @@ author: VanMSFT
 ---
 # sp_grantdbaccess (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a database user to the current database.  
   
@@ -41,7 +42,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  Is the name of the Windows group, Windows login or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to be mapped to the new database user. Names of Windows groups and Windows logins must be qualified with a Windows domain name in the form *Domain*\\*login*; for example, **LONDON\Joeb**. The login cannot already be mapped to a user in the database. *login* is a **sysname**, with no default.  
   
 ``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``
- Is the name for the new database user. *name_in_db* is an OUTPUT variable with a data type of **sysname**, and a default of NULL. If not specified, *login* is used. If specified as an OUTPUT variable with a value of NULL, **@name_in_db** is set to *login*. *name_in_db* must not already exist in the current database.  
+ Is the name for the new database user. *name_in_db* is an OUTPUT variable with a data type of **sysname**, and a default of NULL. If not specified, *login* is used. If specified as an OUTPUT variable with a value of NULL, **\@name_in_db** is set to *login*. *name_in_db* must not already exist in the current database.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

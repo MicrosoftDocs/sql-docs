@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_enable_db (Transact-SQL)"
 title: "sys.sp_cdc_enable_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "change data capture [SQL Server], enabling databases"
   - "sp_cdc_enable_db"
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_enable_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enables change data capture for the current database. This procedure must be executed for a database before any tables can be enabled for change data capture in that database. Change data capture records insert, update, and delete activity applied to enabled tables, making the details of the changes available in an easily consumed relational format. Column information that mirrors the column structure of a tracked source table is captured for the modified rows, along with the metadata needed to apply the changes to a target environment.  
   

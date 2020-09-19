@@ -1,4 +1,5 @@
 ---
+description: "sysmail_add_account_sp (Transact-SQL)"
 title: "sysmail_add_account_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_add_account_sp"
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_add_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new Database Mail account holding information about an SMTP account.  
   
@@ -49,13 +50,13 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  The name of the account to add. *account_name* is **sysname**, with no default.  
   
 `[ @email_address = ] 'email_address'`
- The e-mail address to send the message from. This address must be an internet e-mail address. *email_address* is **nvarchar(128)**, with no default. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address **SqlAgent@Adventure-Works.com**.  
+ The e-mail address to send the message from. This address must be an internet e-mail address. *email_address* is **nvarchar(128)**, with no default. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address **SqlAgent\@Adventure-Works.com**.  
   
 `[ @display_name = ] 'display_name'`
  The display name to use on e-mail messages from this account. *display_name* is **nvarchar(128)**, with a default of NULL. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name **SQL Server Agent Automated Mailer** on e-mail messages.  
   
 `[ @replyto_address = ] 'replyto_address'`
- The address that responses to messages from this account are sent to. *replyto_address* is **nvarchar(128)**, with a default of NULL. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, **danw@Adventure-Works.com**.  
+ The address that responses to messages from this account are sent to. *replyto_address* is **nvarchar(128)**, with a default of NULL. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, **danw\@Adventure-Works.com**.  
   
 `[ @description = ] 'description'`
  Is a description for the account. *description* is **nvarchar(256)**, with a default of NULL.  

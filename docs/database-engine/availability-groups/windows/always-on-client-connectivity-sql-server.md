@@ -2,7 +2,7 @@
 title: "Driver and client connectivity support for availability groups"
 description: "This topic describes considerations for client connectivity to Always On availability groups, including prerequisites, restrictions, and recommendations for client configurations and settings. "
 ms.custom: "seodec18"
-ms.date: "04/26/2018"
+ms.date: "07/28/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -15,8 +15,8 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Always On Client Connectivity (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Driver and client connectivity support for availability groups
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes considerations for client connectivity to Always On availability groups, including prerequisites, restrictions, and recommendations for client configurations and settings.  
   
@@ -34,14 +34,15 @@ ms.author: mathoma
 |SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|No|  
 |ADO.NET with .NET Framework 4.0 with connectivity patch*|Yes|Yes|Yes|Yes|Yes|  
 |ADO.NET with .NET Framework 3.5 SP1 with connectivity patch**|Yes|Yes|Yes|Yes|Yes|  
-|Microsoft JDBC driver 4.0 for SQL Server|Yes|Yes|Yes|Yes|Yes| 
-|Microsoft OLE DB Driver for SQL Server|Yes|Yes|Yes|Yes|Yes| 
+|[Microsoft ODBC Driver 13.1+ for SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|Yes|Yes|Yes|Yes|Yes|
+|[Microsoft JDBC Driver 4.0+ for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Yes|Yes|Yes|Yes|Yes| 
+|[Microsoft OLE DB Driver for SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Yes|Yes|Yes|Yes|Yes| 
   
  *Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
  **Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- *Download the new Microsoft OLE DB Driver for SQL Server: [https://www.microsoft.com/download/details.aspx?id=56730](https://www.microsoft.com/download/details.aspx?id=56730).  
+ *Download the new Microsoft OLE DB Driver for SQL Server: [https://aka.ms/downloadmsoledbsql](https://aka.ms/downloadmsoledbsql).  
 
 > [!IMPORTANT]  
 >  To connect to an availability group listener, a client must use a TCP connection string.  

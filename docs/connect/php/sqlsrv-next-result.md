@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_next_result"
 title: "sqlsrv_next_result | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "stored procedure support"
   - "API Reference, sqlsrv_next_result"
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

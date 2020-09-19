@@ -1,4 +1,5 @@
 ---
+description: "T-SQL Tutorial: Create & query database objects"
 title: "T-SQL Tutorial: Create & query database objects| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2018"
@@ -18,7 +19,7 @@ This lesson shows you how to create a database, create a table in the database, 
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] statements can be written and submitted to the [!INCLUDE[ssDE](../includes/ssde-md.md)] in the following ways:  
   
--   By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=67359).  
+-   By using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. This tutorial assumes that you are using [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], but you can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, which is available as a free download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   By using the [sqlcmd utility](../tools/sqlcmd-utility.md).  
   
@@ -33,12 +34,12 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
+If you don't have a SQL Server instance, create one. To create one, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## Create a database
-Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the CREATE DATABASE statement has a required parameter: the name of the database. CREATE DATABASE also has many optional parameters, such as the disk location where you want to put the database files. When you execute CREATE DATABASE without the optional parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses default values for many of these parameters. This tutorial uses very few of the optional syntax parameters.   
+Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the [`CREATE DATABASE`](statements/create-database-transact-sql.md) statement has a required parameter: the name of the database.` CREATE DATABASE` also has many optional parameters, such as the disk location where you want to put the database files. When you execute `CREATE DATABASE` without the optional parameters, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses default values for many of these parameters.
 
 1.  In a Query Editor window, type but do not execute the following code:  
   
@@ -47,7 +48,7 @@ Like many [!INCLUDE[tsql](../includes/tsql-md.md)] statements, the CREATE DATABA
     GO  
     ```  
   
-2.  Use the pointer to select the words `CREATE DATABASE`, and then press **F1**. The CREATE DATABASE topic in SQL Server Books Online should open. You can use this technique to find the complete syntax for CREATE DATABASE and for the other statements that are used in this tutorial.  
+2.  Use the pointer to select the words `CREATE DATABASE`, and then press **F1**. The `CREATE DATABASE` topic in SQL Server Books Online should open. You can use this technique to find the complete syntax for `CREATE DATABASE` and for the other statements that are used in this tutorial.  
   
 3.  In Query Editor, press **F5** to execute the statement and create a database named `TestData`.  
   
@@ -57,6 +58,7 @@ When you create a database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > The keyword GO separates statements when more than one statement is submitted in a single batch. GO is optional when the batch contains only one statement.  
 
 ## Create a Table
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 To create a table, you must provide a name for the table, and the names and data types of each column in the table. It is also a good practice to indicate whether null values are allowed in each column. To create a table, you must have the `CREATE TABLE` permission, and the `ALTER SCHEMA` permission on the schema that will contain the table. The [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) fixed database role has these permissions.  
@@ -70,6 +72,7 @@ For a list of data types and links for a description of each, see [Data Types &#
   
   
 ### Switch the Query Editor connection to the TestData database  
+
 In a Query Editor window, type and execute the following code to change your connection to the `TestData` database.  
   
   ```sql  
@@ -78,14 +81,15 @@ In a Query Editor window, type and execute the following code to change your con
   ```  
   
 ### Create the table
-In a Query Editor window, type and execute the following code to create a simple table named `Products`. The columns in the table are named `ProductID`, `ProductName`, `Price`, and `ProductDescription`. The `ProductID` column is the primary key of the table. `int`, `varchar(25)`, `money`, and `text` are all data types. Only the `Price` and `ProductionDescription` columns can have no data when a row is inserted or changed. This statement contains an optional element (`dbo.`) called a schema. The schema is the database object that owns the table. If you are an administrator, `dbo` is the default schema. `dbo` stands for database owner.  
+
+In a Query Editor window, type and execute the following code to create a table named `Products`. The columns in the table are named `ProductID`, `ProductName`, `Price`, and `ProductDescription`. The `ProductID` column is the primary key of the table. `int`, `varchar(25)`, `money`, and `varchar(max)` are all data types. Only the `Price` and `ProductionDescription` columns can have no data when a row is inserted or changed. This statement contains an optional element (`dbo.`) called a schema. The schema is the database object that owns the table. If you are an administrator, `dbo` is the default schema. `dbo` stands for database owner.  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
@@ -97,13 +101,13 @@ Now that you have created the **Products** table, you are ready to insert data i
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0.52||  
   
 The basic syntax is: INSERT, table name, column list, VALUES, and then a list of the values to be inserted. The two hyphens in front of a line indicate that the line is a comment and the text will be ignored by the compiler. In this case, the comment describes a permissible variation of the syntax.  
   
 ### Insert data into a table  
   
-1.  Execute the following statement to insert a row into the `Products` table that was created in the previous task. This is the basic syntax.  
+1.  Execute the following statement to insert a row into the `Products` table that was created in the previous task.
   
    ```sql 
    -- Standard syntax  
@@ -111,7 +115,21 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > If the insert succeeds, proceed to the next step.
+   >
+   > If the insert fails, it may be because the `Product` table already has a row with that product ID in it. To proceed, delete all the rows in the table and repeat the preceding step. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) deletes all the rows in the table. 
+   >
+   > Run the following command to delete all the rows in the table:
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > After you truncate the table, repeat the `INSERT` command in this step.
+
 2.  The following statement shows how you can change the order in which the parameters are provided by switching the placement of the `ProductID` and `ProductName` in both the field list (in parentheses) and in the values list.  
   
    ```sql  
@@ -135,7 +153,7 @@ The basic syntax is: INSERT, table name, column list, VALUES, and then a list of
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -163,7 +181,7 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
   GO  
   ```  
   
-2.  You can use an asterisk to select all the columns in the table. This is often used in ad hoc queries. You should provide the column list in you permanent code so that the statement will return the predicted columns, even if a new column is added to the table later.  
+2.  You can use an asterisk (`*`) to select all the columns in the table. The asterisk is for ad hoc queries. In permanent code, provide the column list so that the statement returns the predicted columns, even if a new column is added to the table later.  
   
   ```sql  
   -- Returns all columns in the table  
@@ -203,11 +221,23 @@ Use the SELECT statement to read the data in a table. The SELECT statement is on
   
 ### Useful functions in a SELECT Statement  
 For information about some functions that you can use to work with data in SELECT statements, see the following topics:  
-  
-|||  
-|-|-|  
-|[String Functions &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[Mathematical Functions &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+
+:::row:::
+    :::column:::
+        [String Functions &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [Mathematical Functions &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+    :::column-end:::
+:::row-end:::
 
 ## Create views and stored procedures
 A view is a stored SELECT statement, and a stored procedure is one or more [!INCLUDE[tsql](../includes/tsql-md.md)] statements that execute as a batch.  
@@ -218,7 +248,7 @@ For this example, you will use CREATE VIEW to create a view that selects only tw
   
 ### Create a view  
   
-Execute the following statement to create a very simple view that executes a select statement, and returns the names and prices of our products to the user.  
+Execute the following statement to create a view that executes a select statement, and returns the names and prices of our products to the user.  
   
   ```sql  
   CREATE VIEW vw_Names  

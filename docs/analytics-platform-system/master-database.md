@@ -1,5 +1,5 @@
 ---
-title: Master database - Parallel Data Warehouse | Microsoft Docs
+title: Master database
 description: Learn about the master database in Parallel Data Warehouse.
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Master database - Parallel Data Warehouse
@@ -38,7 +39,7 @@ You *cannot:*
   
 |Task|Description|  
 |--------|---------------|  
-|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016).|  
 |Restore the master database|To restore the master database, use the [Restore the Master Database](restore-the-master-database.md) page in the Configuration Manager tool.|  
 |View database catalog information.|`SELECT * FROM master.sys.databases;`|  
 |View system-wide login and permission information.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
@@ -47,4 +48,3 @@ You *cannot:*
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-  

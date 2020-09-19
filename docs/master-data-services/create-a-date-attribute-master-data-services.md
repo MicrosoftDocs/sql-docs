@@ -1,5 +1,6 @@
 ---
-title: "Create a Date Attribute (Master Data Services) | Microsoft Docs"
+description: "Create a Date Attribute (Master Data Services)"
+title: Create a Date Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Create a Date Attribute (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a date attribute when you want users to enter a date as an attribute value.  
   
@@ -69,7 +70,7 @@ ms.author: lle
 ## To display the time portion of a datetime value  
  To have the user interface display the time portion of a datetime value, you must select an appropriate input mask for the attribute. None of the built-in masks for Datetime attributes do this, but you can add a new mask that will allow you to display time. To do so, add a row in the mdm.tblList table of the MDS database, where the built-in masks are stored. The row should have the following values:  
   
-|||  
+|Column|Value|  
 |-|-|  
 |ListCode|lstInputMask|  
 |ListName|Input Mask|  

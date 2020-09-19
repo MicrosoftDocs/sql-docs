@@ -1,10 +1,10 @@
 ---
-title: "Reconcile Changes Made by Multiple Users (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Reconcile Changes Made by Multiple Users (Visual Database Tools)"
+title: Reconcile Changes Made by Multiple Users
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,12 +12,13 @@ helpviewer_keywords:
   - "reconciling changes made by multiple users"
   - "modifications made by multiple users"
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Reconcile Changes Made by Multiple Users (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In a multiuser environment, changes can be made on the same object by multiple users at once. This can happen when you're working on the structure of the object in the Table or Database Diagram designers or it can happen to values in the results returned in the Query and View designer's Results pane. This can cause conflicts that you'll want to resolve.  
   
 ## Conflicts in the Table or Database Diagram Designers  

@@ -1,5 +1,6 @@
 ---
-title: "Integration Services (SSIS) Catalog Transact-SQL Reference | Microsoft Docs"
+description: "Integration Services (SSIS) Catalog Transact-SQL Reference"
+title: "Integration Services Catalog Transact-SQL Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  

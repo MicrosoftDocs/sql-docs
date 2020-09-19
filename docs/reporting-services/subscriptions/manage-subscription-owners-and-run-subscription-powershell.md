@@ -1,5 +1,6 @@
 ---
 title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
+description: Learn how to programmatically transfer the ownership of a Reporting Services subscription from one user to another.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
@@ -8,7 +9,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 04/26/2019
+ms.date: 01/16/2020
 ---
 
 # Manage Subscription Owners and Run Subscription - PowerShell
@@ -211,7 +212,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  

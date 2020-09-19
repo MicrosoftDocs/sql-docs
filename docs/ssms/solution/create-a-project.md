@@ -1,5 +1,6 @@
 ---
-title: "Create a Project | Microsoft Docs"
+description: "Create a Project"
+title: "Create a Project"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -10,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ---
 
 # Create a Project
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can create one or more projects within an existing solution.  
   
 ## Create a new project and add it to a solution  

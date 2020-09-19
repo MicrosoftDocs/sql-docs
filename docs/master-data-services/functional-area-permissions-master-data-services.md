@@ -1,5 +1,6 @@
 ---
-title: "Functional Area Permissions (Master Data Services) | Microsoft Docs"
+description: "Functional Area Permissions (Master Data Services)"
+title: Functional Area Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.author: lle
 ---
 # Functional Area Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   You can assign permission to each of the functional areas of the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] user interface (UI). The following are the functional areas:  
   

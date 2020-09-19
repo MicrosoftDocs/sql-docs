@@ -1,4 +1,5 @@
 ---
+description: "ENABLE TRIGGER (Transact-SQL)"
 title: "ENABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "DML triggers, enabling"
   - "ENABLE TRIGGER statement"
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ENABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Enables a DML, DDL, or logon trigger.  
   
@@ -32,12 +33,14 @@ Enables a DML, DDL, or logon trigger.
   
 ## Syntax  
   
-```  
+```syntaxsql
 ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *schema_name*  
 Is the name of the schema to which the trigger belongs. *schema_name* can't be specified for DDL or logon triggers.  
   
@@ -54,7 +57,7 @@ DATABASE
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
 ALL SERVER  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
 For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -74,7 +77,7 @@ To enable a DDL trigger with server scope (ON ALL SERVER) or a logon trigger, a 
 ### A. Enabling a DML trigger on a table  
 The following example disables trigger `uAddress` that was created on table `Address` in the AdventureWorks database, and then enables it.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -84,7 +87,7 @@ GO
 ### B. Enabling a DDL trigger  
 The following example creates a DDL trigger `safety` with database scope, and then disables and enables it.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -101,9 +104,9 @@ GO
 ### C. Enabling all triggers that were defined with the same scope  
 The following example enables all DDL triggers that were created at the server scope.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

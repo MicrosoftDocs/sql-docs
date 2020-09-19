@@ -1,4 +1,5 @@
 ---
+description: "Table Column Properties (SQL Server Management Studio)"
 title: "Table Column Properties (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
@@ -17,7 +18,7 @@ ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table Column Properties (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   These properties appear in the bottom pane of Table Designer. Unless otherwise noted, you can edit these properties in the Properties window when the column is selected. The **Column Properties** can be displayed in categories or alphabetically. Many properties only appear or can only be changed for certain data types.  
   

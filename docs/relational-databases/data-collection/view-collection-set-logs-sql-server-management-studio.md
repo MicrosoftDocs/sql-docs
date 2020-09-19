@@ -1,7 +1,7 @@
 ---
-title: "View Collection Set Logs (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+description: "View collection set logs (SQL Server Management Studio)"
+title: "View collection set logs (SSMS)"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -12,9 +12,10 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
-# View Collection Set Logs (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# View collection set logs (SQL Server Management Studio)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can view all the collection set logs or individual collection set logs from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### To view collection set logs  
@@ -26,8 +27,6 @@ ms.author: mathoma
      This opens the **Log File Viewer**.All the log files for each collection set are listed and pre-selected under the **Data Collection** node in the viewer.  
   
 3.  To view specific collection set logs, clear the check box next to each collection set whose log you do not want to view. The log information for that collection set is removed from the **Log File Viewer** details pane.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### To view a specific collection set log file  
   

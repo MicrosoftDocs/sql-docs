@@ -1,23 +1,17 @@
 ---
 title: Monitor SQL Server partners | Microsoft Docs
 description: Lists of third-party partners with solutions to monitor Server.
-services: sql-server
 ms.topic: conceptual
 ms.custom: ""
 ms.date: 11/02/2017 
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server monitoring partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To monitor your SQL Server services, choose from a wide variety of industry-leading tools. This article highlights Microsoft partner companies with monitoring solutions supporting Microsoft SQL Server.
-
-<!--
-
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
-
--->
 
 ## Microsoft monitoring partners
 
@@ -35,7 +29,7 @@ To monitor your SQL Server services, choose from a wide variety of industry-lead
 To learn more about some of our other partners, see [High availability and disaster recovery partners][hadr_partners], [management partners][management_partners], and [development partners][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 [2]: ./media/partner-hadr-sql-server/sentryone.png
 [3]: ./media/partner-hadr-sql-server/quest.png
 [4]: ./media/partner-hadr-sql-server/redgate.png
@@ -49,7 +43,7 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-[sentryone_website]:https://www.sentryone.com 
+[sentryone_website]:https://www.sentryone.com
 [quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
 [redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
 [solarwinds_website]:https://www.solarwinds.com/database-performance-analyzer
@@ -62,7 +56,7 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
 
-[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlightcloud?tab=Overview
 [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->

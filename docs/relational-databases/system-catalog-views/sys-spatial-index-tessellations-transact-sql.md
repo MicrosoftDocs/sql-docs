@@ -1,4 +1,5 @@
 ---
+description: "sys.spatial_index_tessellations (Transact-SQL)"
 title: "sys.spatial_index_tessellations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.spatial_index_tessellations catalog view"
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sys.spatial_index_tessellations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
  Represents the information about the tessellation scheme and parameters of each of the spatial indexes.  
   

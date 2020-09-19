@@ -1,4 +1,5 @@
 ---
+description: "sp_articlecolumn (Transact-SQL)"
 title: "sp_articlecolumn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_articlecolumn"
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_articlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to specify columns included in an article to vertically filter data in a published table. This stored procedure is executed at the Publisher on the publication database.  
   

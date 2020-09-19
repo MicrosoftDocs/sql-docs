@@ -1,4 +1,5 @@
 ---
+description: "sp_OAMethod (Transact-SQL)"
 title: "sp_OAMethod (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAMethod"
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OAMethod (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Calls a method of an OLE object.  
   
@@ -69,7 +70,7 @@ sp_OAMethod objecttoken , methodname
  Is a placeholder indicating that multiple parameters can be specified.  
   
 > [!NOTE]
->  *@parametername* can be a named parameter because it is part of the specified method and is passed through to the object. The other parameters for this stored procedure are specified by position, not name.  
+>  *\@parametername* can be a named parameter because it is part of the specified method and is passed through to the object. The other parameters for this stored procedure are specified by position, not name.  
   
 ## Return Code Values  
  0 (success) or a nonzero number (failure) that is the integer value of the HRESULT returned by the OLE Automation object.  

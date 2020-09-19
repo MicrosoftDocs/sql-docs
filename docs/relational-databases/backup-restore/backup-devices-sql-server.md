@@ -1,5 +1,6 @@
 ---
 title: "Backup Devices (SQL Server) | Microsoft Docs"
+description: This article describes backup devices for a SQL Server database, including terminology and working with backup devices.
 ms.custom: ""
 ms.date: "08/12/2016"
 ms.prod: sql
@@ -27,7 +28,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Backup Devices (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   During a backup operation on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the backed up data (the *backup*) is written to a physical backup device. This physical backup device is initialized when the first backup in a media set is written to it. Backups on a set of one or more backup devices compose a single media set.  
    
 ##  <a name="TermsAndDefinitions"></a> Terms and definitions  
@@ -202,8 +203,6 @@ GO
 1.  Dropping the original logical backup device.  
   
 2.  Defining a new logical backup device that uses the original logical device name but maps to a different physical backup device. Logical backup devices are especially useful for identifying tape backup devices.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="MirroredMediaSets"></a> Mirrored backup media sets  
  Mirroring of backup media sets reduces the effect of backup-device malfunctions. These malfunctions are especially serious because backups are the last line of defense against data loss. As the sizes of databases grow, the probability increases that a failure of a backup device or media will make a backup nonrestorable. Mirroring backup media increases the reliability of backups by providing redundancy for the physical backup device. For more information, see [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  

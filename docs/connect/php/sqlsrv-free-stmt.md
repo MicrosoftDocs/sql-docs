@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_free_stmt"
 title: "sqlsrv_free_stmt | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "sqlsrv_free_stmt"
   - "API Reference, sqlsrv_free_stmt"
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

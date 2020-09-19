@@ -1,10 +1,10 @@
 ---
-title: "SQL Editor (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "SQL Editor (Visual Database Tools)"
+title: SQL Editor
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -19,11 +19,12 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], SQL Editor"
   - "View Designer, SQL Editor"
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 ---
 # SQL Editor (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the SQL Editor to edit existing stored procedures, functions, triggers, and SQL scripts. This window opens when you open any of those objects. If you want to create a new SQL statement to run against your data source, use the [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) of Query Designer.  
   
 The SQL editor provides many useful SQL text-editing features, including:  

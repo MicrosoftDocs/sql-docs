@@ -1,4 +1,5 @@
 ---
+description: "ODBC Cursor Library Error Codes"
 title: "ODBC Cursor Library Error Codes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "error codes [ODBC], cursor library"
   - "ODBC cursor library [ODBC], error codes"
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Cursor Library Error Codes
 > [!IMPORTANT]  

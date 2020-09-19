@@ -1,10 +1,10 @@
 ---
-title: "View Join Properties (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "View Join Properties (Visual Database Tools)"
+title: View Join Properties
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,12 +12,13 @@ helpviewer_keywords:
   - "viewing join properties"
   - "displaying join properties"
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # View Join Properties (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can see a collection of properties for a view in the Properties window.  
   
 ### To view join properties  

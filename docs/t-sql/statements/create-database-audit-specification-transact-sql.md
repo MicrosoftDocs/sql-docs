@@ -1,7 +1,9 @@
 ---
-title: "CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/04/2017"
+title: "CREATE DATABASE AUDIT SPECIFICATION"
+description: Create a database audit specification object using the SQL Server audit feature.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
+ms.date: "01/03/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -24,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a database audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -32,8 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -47,8 +48,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
       action [ ,...n ]ON [ class :: ] securable BY principal [ ,...n ]  
 }  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  Is the name of the audit specification.  
   
@@ -87,9 +90,9 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Examples
 
 ### A. Audit SELECT and INSERT on a table for any database principal 
- The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by any user (`public`), for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  
+ The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by the `dbo` user, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
@@ -116,7 +119,7 @@ GO
 ### B. Audit any DML (INSERT, UPDATE or DELETE) on _all_ objects in the _sales_ schema for a specific database role  
  The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.

@@ -1,6 +1,6 @@
 ---
-title: "Specify Prefix Length in Data Files by Using bcp (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Specify prefix length in data files with bcp"
+description: This article describes the prefix field, which encodes the length of a field to provide compact file storage for bulk export in native format to a data file.
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -16,9 +16,10 @@ ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Specify Prefix Length in Data Files by Using bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Specify prefix length in data files using bcp (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   To provide the most compact file storage for the bulk export of data in native format to a data file, the **bcp** command precedes each field with one or more characters that indicates the length of the field. These characters are called *length prefix characters*.  
   
 ## The bcp Prompt for Prefix Length  

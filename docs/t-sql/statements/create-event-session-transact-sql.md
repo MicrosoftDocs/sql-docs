@@ -1,4 +1,5 @@
 ---
+description: "CREATE EVENT SESSION (Transact-SQL)"
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2019"
@@ -20,12 +21,12 @@ helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
 
@@ -33,7 +34,7 @@ Creates an Extended Events session that identifies the source of the events, the
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EVENT SESSION event_session_name
 ON { SERVER | DATABASE }
 {  
@@ -98,6 +99,8 @@ ON { SERVER | DATABASE }
     [ [,] STARTUP_STATE = { ON | OFF } ]
 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -177,7 +180,7 @@ Specifies the event retention mode to use for handling event loss.
 An event can be lost from the session. A single event is only dropped when all the event buffers are full. Losing a single event when event buffers are full allows for acceptable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance characteristics, while minimizing the loss of data in the processed event stream.
 
 ALLOW_MULTIPLE_EVENT_LOSS
-Full event buffers containing multiple events can be lost from the session. The number of events lost is dependant upon the memory size allocated to the session, the partitioning of the memory, and the size of the events in the buffer. This option minimizes performance impact on the server when event buffers are quickly filled, but large numbers of events can be lost from the session.
+Full event buffers containing multiple events can be lost from the session. The number of events lost is dependent upon the memory size allocated to the session, the partitioning of the memory, and the size of the events in the buffer. This option minimizes performance impact on the server when event buffers are quickly filled, but large numbers of events can be lost from the session.
 
 NO_EVENT_LOSS
 No event loss is allowed. This option ensures that all events raised will be retained. Using this option forces all tasks that fire events to wait until space is available in an event buffer. This may cause detectable performance issues while the event session is active. User connections may stall while waiting for events to be flushed from the buffer.

@@ -1,4 +1,5 @@
 ---
+description: "sys.tables (Transact-SQL)"
 title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.tables catalog view"
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a row for each user table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -44,15 +45,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |is_tracked_by_cdc|**bit**|1 = Table is enabled for change data capture. For more information, see [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|The value of the LOCK_ESCALATION option for the table:<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
 |lock_escalation_desc|**nvarchar(60)**|A text description of the lock_escalation option for the table. Possible values are: TABLE, AUTO, and DISABLE.|  
-|is_filetable|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = Table is a FileTable.<br /><br /> For more information about FileTables, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).|  
-|durability|**tinyint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The following are possible values:<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> The value of 0 is the default value.|  
-|durability_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The following are the possible values:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> The value of SCHEMA_AND_DATA indicates that the table is a durable, in-memory table. SCHEMA_AND_DATA is the default value for memory optimized tables. The value of SCHEMA_ONLY indicates that the table data will not be persisted upon restart of the database with memory optimized objects.|  
-|is_memory_optimized|**bit**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The following are the possible values:<br /><br /> 0 = not memory optimized.<br /><br /> 1 = is memory optimized.<br /><br /> A value of 0 is the default value.<br /><br /> Memory optimized tables are in-memory user tables, the schema of which is persisted on disk similar to other user tables. Memory optimized tables can be accessed from natively compiled stored procedures.|  
-|temporal_type|**tinyint**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The numeric value representing the type of table:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The text description of the type of table:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> When temporal_type IN (2, 4) returns object_id of the table that maintains historical data, otherwise returns NULL.|  
-|is_remote_data_archive_enabled|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indicates whether the table is Stretch-enabled.<br /><br /> 0 = The table is not Stretch-enabled.<br /><br /> 1 = The table is Stretch-enabled.<br /><br /> For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Indicates table is an external table.<br /><br /> 0 = The table is not an external table.<br /><br /> 1 = The table is an external table.| 
+|is_filetable|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = Table is a FileTable.<br /><br /> For more information about FileTables, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).|  
+|durability|**tinyint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The following are possible values:<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> The value of 0 is the default value.|  
+|durability_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The following are the possible values:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> The value of SCHEMA_AND_DATA indicates that the table is a durable, in-memory table. SCHEMA_AND_DATA is the default value for memory optimized tables. The value of SCHEMA_ONLY indicates that the table data will not be persisted upon restart of the database with memory optimized objects.|  
+|is_memory_optimized|**bit**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The following are the possible values:<br /><br /> 0 = not memory optimized.<br /><br /> 1 = is memory optimized.<br /><br /> A value of 0 is the default value.<br /><br /> Memory optimized tables are in-memory user tables, the schema of which is persisted on disk similar to other user tables. Memory optimized tables can be accessed from natively compiled stored procedures.|  
+|temporal_type|**tinyint**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The numeric value representing the type of table:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> The text description of the type of table:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> When temporal_type IN (2, 4) returns object_id of the table that maintains historical data, otherwise returns NULL.|  
+|is_remote_data_archive_enabled|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indicates whether the table is Stretch-enabled.<br /><br /> 0 = The table is not Stretch-enabled.<br /><br /> 1 = The table is Stretch-enabled.<br /><br /> For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
+|is_external|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], and [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Indicates table is an external table.<br /><br /> 0 = The table is not an external table.<br /><br /> 1 = The table is an external table.| 
 |history_retention_period|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing duration of the temporal history retention period in units specified with history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The numeric value representing type of temporal history retention period unit. <br /><br />-1 :INFINITE <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Applies to**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>The text description of type of temporal history retention period unit. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
@@ -77,7 +78,7 @@ GO
   
 The following example shows how related temporal data can be exposed.  
    
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later and [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  

@@ -1,6 +1,6 @@
 ---
-title: Tips and tricks for using SQL Server Management Studio (SSMS)
-description:  Learn to comment and uncomment your code, indent your text, filter objects in object explorer, access your SQL Server error log, and find your SQL Server instance name using SQL Server Management Studio.
+title: Tips and tricks using SSMS
+description: Learn to comment & uncomment code, indent text, filter objects, access error logs, & find SQL Server instance names with SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "Find SQL Server Instance"
   - "find instance name"
   - "find sql server instance name"
-ms.custom: ""
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ---
 

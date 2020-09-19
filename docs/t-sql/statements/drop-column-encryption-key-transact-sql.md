@@ -1,7 +1,8 @@
 ---
+description: "DROP COLUMN ENCRYPTION KEY (Transact-SQL)"
 title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
+ms.date: "10/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,11 +19,12 @@ helpviewer_keywords:
   - "DROP COLUMN ENCRYPTION KEY statement"
   - "column encryption key, drop"
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Drops a column encryption key from a database.  
   
@@ -30,16 +32,16 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *key_name*  
  Is the name by which the column encryption key to be dropped from the database.  
   
-## Remarks  
+## Remarks
  A column encryption key cannot be dropped if it is used to encrypt any column in the database. All columns using the column encryption key must first be dropped.  
   
 ## Permissions  
@@ -56,9 +58,12 @@ GO
 ```  
   
 ## See Also  
- [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

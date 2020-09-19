@@ -1,4 +1,5 @@
 ---
+description: "Data type synonyms (Transact-SQL)"
 title: "Data type synonyms (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -18,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Data type synonyms (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ISO compatibility. The following table lists the synonyms and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data types that they map to.
   
@@ -42,7 +43,7 @@ Data type synonyms are included in [!INCLUDE[ssNoVersion](../../includes/ssnover
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Data type synonyms can be used instead of the corresponding base data type name in data definition language (DDL) statements. These statements include CREATE TABLE, CREATE PROCEDURE, and DECLARE *@variable*. However, after the object is created, the synonyms have no visibility. When the object is created, the object is assigned the base data type that is associated with the synonym. There's no record that the synonym was specified in the statement that created the object.
+Data type synonyms can be used instead of the corresponding base data type name in data definition language (DDL) statements. These statements include CREATE TABLE, CREATE PROCEDURE, and DECLARE *\@variable*. However, after the object is created, the synonyms have no visibility. When the object is created, the object is assigned the base data type that is associated with the synonym. There's no record that the synonym was specified in the statement that created the object.
   
 Objects that are derived from the original object, such as result set columns or expressions, are assigned the base data type. Any metadata functions that use the original object or any derived objects will report the base data type, not the synonym, including:
 

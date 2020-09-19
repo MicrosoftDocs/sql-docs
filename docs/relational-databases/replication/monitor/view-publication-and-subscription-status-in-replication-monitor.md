@@ -1,6 +1,7 @@
 ---
-title: "View Publication and Subscription Status in Replication Monitor | Microsoft Docs"
-ms.custom: ""
+title: "View Publication & Subscription status (Replication Monitor)"
+description: Learn how to view Publication and Subscription status using the Replication Monitor in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -21,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # View Publication and Subscription Status in Replication Monitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions:  
   
 -   The status of a publication is determined by the highest priority status of its subscriptions. For example, if one subscription to a publication has an error and another has a performance issue, a status of error is displayed for the publication.  

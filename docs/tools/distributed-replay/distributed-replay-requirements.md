@@ -1,17 +1,20 @@
 ---
-title: "Distributed Replay Requirements | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/18/2018"
+description: "Distributed Replay Requirements"
+title: Distributed Replay requirements
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-author: "MikeRayMSFT"
-ms.author: "mikeray"
+author: markingmyname
+ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 01/18/2018
 ---
+
 # Distributed Replay Requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Before using the [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature, consider the product requirements that are outlined in this topic.  
   
 ## Input Trace Requirements  

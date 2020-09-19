@@ -1,10 +1,10 @@
 ---
-title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs"
-ms.custom: ""
+description: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
+title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
@@ -13,7 +13,7 @@ ms.reviewer: jrasnick
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Selects data from a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database and copies that data to a new table in a SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on a remote server. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] uses the appliance, with all the benefits of MPP query processing, to select the data for the remote copy. Use this for scenarios that require [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.  
   
@@ -23,8 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
@@ -133,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ### A. Creating a remote table  
  This example creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP remote table called `MyOrdersTable` on database `OrderReporting` and schema `Orders`. The `OrderReporting` database is on a server named `SQLA` that listens on the default port 1433. The connection to the server uses the credentials of the user `David`, whose password is `e4n8@3`.  
   
-```  
+```sql  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  
 AS SELECT <select_criteria>;  
@@ -142,7 +141,7 @@ AS SELECT <select_criteria>;
 ### B. Querying the sys.dm_pdw_dms_workers DMV for remote table copy status  
  This query shows how to view copy status for a remote table copy.  
   
-```  
+```sql  
 SELECT * FROM sys.dm_pdw_dms_workers   
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
@@ -150,7 +149,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ### C. Using a query join hint with CREATE REMOTE TABLE  
  This query shows the basic syntax for using a query join hint with CREATE REMOTE TABLE. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when generating the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
-```  
+```sql  
 USE ssawPDW;  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  

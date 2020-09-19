@@ -1,5 +1,6 @@
 ---
-title: "Executing Commands Containing Table-Valued Parameters | Microsoft Docs"
+description: "Executing SQL Server Native Client Commands Containing Table-Valued Parameters"
+title: "Commands with Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -10,21 +11,18 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, executing commands containing"
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Executing Commands Containing Table-Valued Parameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# Executing SQL Server Native Client Commands Containing Table-Valued Parameters
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Executing a command that contains table-valued parameters requires two phases:  
   
 1.  Specify the parameter types.  
   
 2.  Bind the parameter data.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Table-Valued Parameter Specification  
  The consumer can specify the type of the table-valued parameter. This information includes the table-valued parameter type name. It also includes the schema name, if the user-defined table type for the table-valued parameter is not in the current default schema for the connection. Depending on server support, the consumer can also specify optional metadata information, such as ordering of columns, and can specify that all rows for particular columns have the default values.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_addsubscriber (Transact-SQL)"
 title: "sp_addsubscriber (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsubscriber"
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Adds a new Subscriber to a Publisher, enabling it to receive publications. This stored procedure is executed at the Publisher on the publication database for snapshot and transactional publications; and for merge publications using a remote Distributor, this stored procedure is executed at the Distributor.  
   
@@ -117,7 +118,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [**@frequency_interval=** ] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Is the value applied to the frequency set by *frequency_type*. *frequency_interval* is **int**, with a default of 1.  
   
 > [!NOTE]  

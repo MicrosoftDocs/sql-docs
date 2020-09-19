@@ -1,4 +1,5 @@
 ---
+description: "sp_helpxactsetjob (Transact-SQL)"
 title: "sp_helpxactsetjob (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpxactsetjob"
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpxactsetjob (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays information on the Xactset job for an Oracle Publisher. This stored procedure is executed at the Distributor on any database.  
   
@@ -31,7 +32,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [**@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher to which the job belongs. *publisher* is **sysname**, with no default.  
   
 ## Result Sets  

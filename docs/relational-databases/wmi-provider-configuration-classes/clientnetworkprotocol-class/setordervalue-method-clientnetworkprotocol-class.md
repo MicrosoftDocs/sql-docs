@@ -1,6 +1,7 @@
 ---
-title: "SetOrderValue Method (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+description: "SetOrderValue Method (ClientNetworkProtocol Class)"
+title: "SetOrderValue Method (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetOrderValue method"
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetOrderValue Method (ClientNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Selects the protocol with the specified order value from the client protocol list.  
   
 ## Syntax  

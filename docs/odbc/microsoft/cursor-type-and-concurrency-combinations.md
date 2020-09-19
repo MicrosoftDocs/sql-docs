@@ -1,4 +1,5 @@
 ---
+description: "Cursor Type and Concurrency Combinations"
 title: "Cursor Type and Concurrency Combinations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "concurrency options [ODBC]"
   - "ODBC driver for Oracle [ODBC], cursor options"
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Cursor Type and Concurrency Combinations
 > [!IMPORTANT]  

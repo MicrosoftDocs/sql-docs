@@ -1,10 +1,10 @@
 ---
-title: "Create Make Table Queries (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Create Make Table Queries (Visual Database Tools)"
+title: Create Make Table Queries
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,12 +14,13 @@ helpviewer_keywords:
   - "Make Table query"
   - "adding tables"
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Create Make Table Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can copy rows into a new table using a Make Table query, which is useful for creating subsets of data to work with or copying the contents of a table from one database to another. A Make Table query is similar to an Insert Results query but creates a new table to copy rows into.  
   
 When you create a Make Table query, you specify:  
@@ -61,24 +62,24 @@ In order to use a Make Table query successfully:
   
     To create a destination table in another database, specify a fully qualified table name including the name of the target database, the owner (if required), and the name of the table.  
   
-4.  Specify the columns to copy by adding them to the query. For details, see [Add Columns to Queries (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Columns will be copied only if you add them to the query. To copy entire rows, choose **&#42; (All Columns)**.  
+4.  Specify the columns to copy by adding them to the query. For details, see [Add Columns to Queries](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Columns will be copied only if you add them to the query. To copy entire rows, choose **&#42; (All Columns)**.  
   
     The Query and View Designer adds the columns you choose to the **Column** column of the Criteria pane.  
   
 5.  If you want to copy rows in a particular order, specify a sort order. For details, see **Sorting and Grouping Query Results**.  
   
-6.  Specify the rows to copy by entering search conditions. For details, see [Specify Search Criteria (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+6.  Specify the rows to copy by entering search conditions. For details, see [Specify Search Criteria](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     If you do not specify a search condition, all rows from the source table will be copied to the destination table.  
   
     > [!NOTE]  
     > When you add a column to search to the Criteria pane, the Query and View Designer also adds it to the list of columns to copy. If you want to use a column for searching but not copy it, clear the check box next to the column name in the rectangle representing the table or table-structured object.  
   
-7.  If you want to copy summary information, specify Group By options. For details, see [Summarize Query Results (Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
+7.  If you want to copy summary information, specify Group By options. For details, see [Summarize Query Results](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md).  
   
 When you execute a Make Table query, no results are reported in the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Instead, a message appears indicating how many rows were copied.  
   
 ## See Also  
-[Design Queries and Views How-to Topics (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Types of Queries (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Design Queries and Views How-to Topics](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Types of Queries(../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

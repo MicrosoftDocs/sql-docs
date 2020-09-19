@@ -1,4 +1,5 @@
 ---
+description: "ALTER QUEUE (Transact-SQL)"
 title: "ALTER QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2016"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a queue.  
   
@@ -33,7 +34,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER QUEUE <object>   
    queue_settings  
    | queue_action  
@@ -69,10 +70,12 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* (object)  
  Is the name of the database that contains the queue to be changed. When no *database_name* is provided, this defaults to the current database.  
   
@@ -98,12 +101,12 @@ WITH
  Specifies whether or not the queue activates the stored procedure. When STATUS = ON, the queue starts the stored procedure specified with PROCEDURE_NAME when the number of procedures currently running is less than MAX_QUEUE_READERS and when messages arrive on the queue faster than the stored procedures receive messages. When STATUS = OFF, the queue does not activate the stored procedure.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
   
  Rebuilds all indexes on the queue internal table. Use this capability when you are experiencing fragmentation problems due to high load. MAXDOP is the only supported queue rebuild option. REBUILD is always an offline operation.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
   
  Reorganize all indexes on the queue internal table.   
 Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as an offline operation because page level locks are explicitly disabled on queues.  
@@ -112,7 +115,7 @@ Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as a
 >  For general guidance  regarding index fragmentation, when fragmentation is between 5% and 30%, reorganize the index. When fragmentation is above 30%, rebuild the index. However, these numbers are only for general guidance as a starting point for your environment. To determine the amount of index  fragmentation, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) - see example G in that article for examples.  
   
  MOVE TO { *file_group* | "default" }  
- **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
   
  Moves the queue internal table (with its indexes) to a user-specified filegroup.  The new filegroup  must not be read-only.  
   
@@ -170,14 +173,14 @@ Unlike REORGANIZE on user tables, REORGANIZE on a queue is always performed as a
 ### A. Making a queue unavailable  
  The following example makes the `ExpenseQueue` queue unavailable to receive messages.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### B. Changing the activation stored procedure  
  The following example changes the stored procedure that the queue starts. The stored procedure executes as the user who ran the `ALTER QUEUE` statement.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -187,14 +190,14 @@ ALTER QUEUE ExpenseQueue
 ### C. Changing the number of queue readers  
  The following example sets to `7` the maximum number of stored procedure instances that [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts for this queue.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### D. Changing the activation stored procedure and the EXECUTE AS account  
  The following example changes the stored procedure that [!INCLUDE[ssSB](../../includes/sssb-md.md)] starts. The stored procedure executes as the user `SecurityAccount`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -204,7 +207,7 @@ ALTER QUEUE ExpenseQueue
 ### E. Setting the queue to retain messages  
  The following example sets the queue to retain messages. The queue retains all messages sent to or from services that use this queue until the conversation that contains the message ends.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -217,29 +220,29 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### G. Rebuilding queue indexes  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
   
  The following example rebuilds queue indexes'  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
 ### H. Reorganizing queue indexes  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
   
  The following example reorganizes queue indexes  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
 ### I: Moving queue internal table to another filegroup  
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

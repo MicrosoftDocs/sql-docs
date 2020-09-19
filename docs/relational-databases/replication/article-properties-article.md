@@ -1,4 +1,5 @@
 ---
+description: "Article Properties - &lt;Article&gt;"
 title: "Article Properties - &lt;Article&gt; | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Article Properties - &lt;Article&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Article Properties** dialog box is available from the New Publication Wizard and the **Publication Properties** dialog box. It allows you to view and set properties for all types of articles. Some properties can be set only when the publication is created, and others can be set only if the publication has no active subscriptions. Properties that cannot be set are displayed as read-only.  
   
 > [!NOTE]  

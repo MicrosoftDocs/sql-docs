@@ -1,5 +1,6 @@
 ---
-title: "Configure and Manage Word Breakers and Stemmers for Search | Microsoft Docs"
+description: "Configure & manage word breakers & stemmers for search (SQL Server)"
+title: "Configure & manage word breakers & stemmers for search"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -20,9 +21,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Configure and Manage Word Breakers and Stemmers for Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Configure & manage word breakers & stemmers for search (SQL Server)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Word breakers and stemmers perform linguistic analysis on all full-text indexed data. Linguistic analysis does the following two things:
 
 -   **Find word boundaries (word-breaking)**. The *word breaker* identifies individual words by determining where word boundaries exist based on the lexical rules of the language. Each word (also known as a *token*) is inserted into the full-text index using a compressed representation to reduce its size.

@@ -1,5 +1,6 @@
 ---
-title: "View or Modify the Properties of a Policy-Based Management Condition | Microsoft Docs"
+title: "View or modify properties of a Policy-Based Management condition"
+description: Learn to view or modify properties of a Policy-Based Management condition using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
 ms.custom: ""
 ms.date: "10/05/2016"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # View or Modify the Properties of a Policy-Based Management Condition
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view or modify the properties of a Policy-Based Management condition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 
@@ -42,8 +43,6 @@ ms.author: vanto
 5.  Right-click the condition that you want to view or edit and select **Properties**. For more information on the available options in the **Open Condition -**_condition_name_ dialog box, see [Create New Condition or Open Condition Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Open Condition Dialog Box, Dependent Policies Page](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Create New Condition or Open Condition Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md), and [Advanced Edit &#40;Condition&#41; Dialog Box](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
   
 6.  When finished, click **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

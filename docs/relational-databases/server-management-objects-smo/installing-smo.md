@@ -1,4 +1,5 @@
 ---
+description: "Installing SMO"
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -21,7 +22,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 
 # Installing SMO
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 
@@ -40,6 +41,6 @@ See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/nuget/quickst
   
 ## System Requirements
   
- SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 to run, so any applications using it must ensure that client machines have that version or higher installed. Some native binaries installed with the NetFx SMO libraries also require the VC 2013 runtime to be installed; that runtime is not included in the package. You can download the redist appropriate to your 
+ SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 or .NET Core 2.0 to run, so any applications using it must ensure that client machines have that version or higher installed. Some native binaries installed with the NetFx SMO libraries also require the VC 2013 runtime to be installed; that runtime is not included in the package. You can download the redist appropriate to your 
 target architecture from https://www.microsoft.com/download/details.aspx?id=40784
   

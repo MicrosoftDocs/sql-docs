@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_cleanup_change_table (Transact-SQL)"
 title: "sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.sp_cdc_cleanup_change_tables"
   - "sp_cdc_cleanup_change_tables"
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes rows from the change table in the current database based on the specified *low_water_mark* value. This stored procedure is provided for users who want to directly manage the change table cleanup process. Caution should be used, however, because the procedure affects all consumers of the data in the change table.  
   
@@ -69,8 +70,6 @@ sys.sp_cdc_cleanup_change_table
     >  The new low watermark might not be the low watermark that is specified in the stored procedure call. If other entries in the cdc.lsn_time_mapping table share the same commit time, the smallest start_lsn represented in the group of entries is selected as the adjusted low watermark. If the @low_water_mark parameter is NULL or the current low watermark is greater than the new lowwatermark, the start_lsn value for the capture instance is left unchanged.  
   
 2.  Change table entries with __$start_lsn values less than the low watermark are then deleted. The delete threshold is used to limit the number of rows deleted in a single transaction. A failure to successfully delete entries is reported, but does not affect any change to the capture instance low watermark that might have been made based on the call.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Use sys.sp_cdc_cleanup_change_table in the following circumstances:  
   

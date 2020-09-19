@@ -1,5 +1,6 @@
 ---
 title: "Lesson 5: Formatting a Report (Reporting Services) | Microsoft Docs"
+description: Learn how to format the date and currency fields and the column headers after you've added a data region and some fields to the Sales Orders report.
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

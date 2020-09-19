@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project from Visual Studio Code with Transact-SQL"
 title: "Deploy an SSIS project with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project from Visual Studio Code with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to deploy an SSIS project to the SSIS Catalog.
@@ -43,6 +44,10 @@ To enable `mssql` commands and T-SQL IntelliSense, set the language mode to **SQ
 2. Click **Plain Text** in the lower right-hand corner of the status bar.
  
 3. In the **Select language mode** drop-down menu that opens, select or enter **SQL**, and then press **ENTER** to set the language mode to SQL. 
+
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## Connect to the SSIS Catalog database
 

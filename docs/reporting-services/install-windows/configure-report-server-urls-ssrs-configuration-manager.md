@@ -1,5 +1,6 @@
 ---
-title: "Configure Report Server URLs  (SSRS Configuration Manager) | Microsoft Docs"
+description: "Configure Report Server URLs  (SSRS Configuration Manager)"
+title: "Configure Report Server URLs  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -28,7 +29,7 @@ ms.author: maggies
 |Host name|A TCP/IP network uses an IP address to uniquely identify a device on the network. There is a physical IP address for each network adapter card installed in a computer. If the IP address resolves to a host header, you can specify the host header. If you are deploying the report server on a corporate network, you can use the network name of the computer.|  
 |Port|A TCP port is an endpoint on the device. The report server will listen for requests on a designated port.|  
 |Virtual directory|A port is often shared by multiple Web services or applications. For this reason, a report server URL always includes a virtual directory that corresponds to the application that gets the request. You must specify unique virtual directory names for each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application that listens on the same IP address and port.|  
-|SSL settings|URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be configured to use an existing SSL certificate that you previously installed on the computer. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.|  
+|SSL settings|URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be configured to use an existing TLS/SSL certificate that you previously installed on the computer. For more information, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
 ## Default URLs  
  When you access a report server or the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] through its URL, the URL should include the host name and not the IP address. On a TCP/IP network, the IP address will resolve to a host name (or the network name of the computer). If you used the default values to configure URLs, you should be able to access the Report Server Web service using URLs that specify the computer name or localhost as the host name:  
@@ -52,7 +53,7 @@ ms.author: maggies
  Permissions on each URL endpoint are granted exclusively to the Report Server service account. Only this account has rights to accept requests that are directed to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URLs. Discretionary Access Control Lists (DACLs) are created and maintained for the account when you configure the service identity through Setup or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If you change the service account, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool will update all URL reservations that you created to pick up the new account information. For more information, see [URL Reservation Syntax  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 ## Authenticating Client Requests Sent to a Report Server URL  
- By default, the authentication type supported on the URL endpoints is Windows Authentication. This is the default security extension. If you are implementing a custom or Forms authentication provider, you must modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ By default, the authentication type supported on the URL endpoints is Windows Authentication. This is the default security extension. If you are implementing a custom or Forms authentication provider, you must modify the authentication settings on the report server. Optionally, you can also change the Windows Authentication settings to match the authentication subsystem used in your network. For more information, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ## In This Section  
  [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

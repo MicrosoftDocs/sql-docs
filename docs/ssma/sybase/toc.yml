@@ -1,0 +1,141 @@
+- name: Sybase
+  href: sql-server-migration-assistant-for-sybase-sybasetosql.md
+- name: Installing SSMA
+  href: installing-ssma-for-sybase-sybasetosql.md
+- name: Getting Started with SSMA for Sybase
+  href: getting-started-with-ssma-for-sybase-sybasetosql.md
+- name: Getting Started with SSMA for Sybase Console
+  href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
+- name: Legal Notice
+  href: legal-notice-ssma-for-sybase.md
+- name: What's New in SSMA
+  href: what-s-new-in-ssma-for-sybase-sybasetosql.md
+- name: Installing SSMA for Sybase client
+  href: installing-ssma-for-sybase-client-sybasetosql.md
+- name: New GUI Features in SSMA
+  href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
+- name: New Project
+  href: new-project-sybasetosql.md
+- name: Initializing Test Cases
+  href: initializing-test-cases-sybasetosql.md
+- name: Working with the Sample Console Script Files
+  href: working-with-the-sample-console-script-files-sybasetosql.md
+- name: Migrating Sybase ASE Databases to Azure SQL Database
+  href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
+- name: Assessing Sybase ASE Database Objects for Conversion
+  href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
+- name: Executing the SSMA Console
+  href: executing-the-ssma-console-sybasetosql.md
+- name: Creating Script Files
+  href: creating-script-files-sybasetosql.md
+- name: Global Settings
+  href: global-settings-dialogs-sybasetosql.md
+- name: Connecting to SQL Server
+  href: connecting-to-sql-server-sybasetosql.md
+- name: Advanced Object Selection
+  href: advanced-object-selection-sybasetosql.md
+- name: Project Settings (GUI)
+  href: project-settings-gui-sybasetosql.md
+- name: Viewing Test Case Reports
+  href: viewing-test-case-reports-sybasetosql.md
+- name: Working with SSMA for Sybase Console
+  href: working-with-ssma-for-sybase-console-sybasetosql.md
+- name: Using Test Repositories
+  href: using-test-repositories-sybasetosql.md
+- name: Data Migration Report
+  href: data-migration-report-sybasetosql.md
+- name: Creating Test Cases
+  href: creating-test-cases-sybasetosql.md
+- name: Save Metadata
+  href: save-metadata-sybasetosql.md
+- name: Assessment Report
+  href: assessment-report-sybasetosql.md
+- name: Removing SSMA for Sybase Components
+  href: removing-ssma-for-sybase-components-sybasetosql.md
+- name: Connecting to Sybase ASE
+  href: connecting-to-sybase-ase-sybasetosql.md
+- name: Selecting & Configuring Affected Objects
+  href: selecting-and-configuring-affected-objects-sybasetosql.md
+- name: Connecting to Azure SQL Database
+  href: connecting-to-azure-sql-db-sybasetosql.md
+- name: Managing Passwords
+  href: managing-passwords-sybasetosql.md
+- name: Setting Project Options
+  href: setting-project-options-sybasetosql.md
+- name: Connect to Azure SQL Database
+  href: connect-to-azure-sql-db-sybasetosql.md
+- name: Data Migration Settings
+  href: data-migration-settings-sybasetosql.md
+- name: Finishing Test Case Preparation
+  href: finishing-test-case-preparation-sybasetosql.md
+- name: Selecting & Configuring Objects to Test
+  href: selecting-and-configuring-objects-to-test-sybasetosql.md
+- name: Troubleshooting
+  href: troubleshooting-sybasetosql.md
+- name: Mapping Sybase ASE & SQL Server Data Types
+  href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
+- name: Installing SSMA components on SQL Server
+  href: installing-ssma-components-on-sql-server-sybasetosql.md
+- name: Migrating Sybase ASE Data into Azure SQL Database
+  href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
+- name: Connect to Sybase
+  href: connect-to-sybase-sybasetosql.md
+- name: Edit Type Mapping
+  href: edit-type-mapping-sybasetosql.md
+- name: Converting Sybase ASE Database Objects
+  href: converting-sybase-ase-database-objects-sybasetosql.md
+- name: Loading Converted Database Objects into SQL Server
+  href: loading-converted-database-objects-into-sql-server-sybasetosql.md
+- name: Testing Migrated Database Objects
+  href: testing-migrated-database-objects-sybasetosql.md
+- name: Customizing Calls Order
+  href: customizing-calls-order-sybasetosql.md
+- name: User Interface Reference
+  href: user-interface-reference-sybasetosql.md
+- name: Creating Variable Value Files
+  href: creating-variable-value-files-sybasetosql.md
+- name: Creating the Server Connection Files
+  href: creating-the-server-connection-files-sybasetosql.md
+- name: Command-Line Options in SSMA Console
+  href: command-line-options-in-ssma-console-sybasetosql.md
+- name: Connect to SQL Server
+  href: connect-to-sql-server-sybasetosql.md
+- name: Shortcut Keys
+  href: shortcut-keys-sybase-to-sql.md
+- name: Mapping Sybase ASE Schemas to SQL Server Schemas
+  href: mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
+- name: Managing Backups
+  href: managing-backups-sybasetosql.md
+- name: Menu commands & other shortcut keys
+  href: menu-commands-and-other-shortcut-keys-sybase-to-sql.md
+- name: Running Test Cases
+  href: running-test-cases-sybasetosql.md
+- name: Generating Reports
+  href: generating-reports-sybasetosql.md
+- name: Working with SSMA Projects
+  href: working-with-ssma-projects-sybasetosql.md
+- name: Appendix - 1
+  href: appendix-1-sybasetosql.md
+- name: Project Settings
+  items:
+  - name: Conversion
+    href: project-settings-conversion-sybasetosql.md
+  - name: Type-Mapping
+    href: project-settings-type-mapping-sybasetosql.md
+  - name: Synchronization
+    href: project-settings-synchronization-sybasetosql.md
+  - name: Azure SQL Database
+    href: project-settings-azure-sql-db-sybasetosql.md
+  - name: (Migration
+    href: project-settings-migration-sybasetosql.md
+- name: Global settings
+  href: global-settings-output-window-sybasetosql.md
+  items:
+  - name: Editor
+    href: global-settings-editor-sybasetosql.md
+  - name: Logging
+    href: global-settings-logging-sybasetosql.md
+  - name: Tester
+    href: global-settings-tester-sybasetosql.md
+- name: Conversion messages
+  href: messages/toc.yml

@@ -1,4 +1,5 @@
 ---
+description: "Tables"
 title: "Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/18/2019
@@ -16,7 +17,7 @@ ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tables
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 Tables are database objects that contain all the data in a database. In tables, data is logically organized in a row-and-column format similar to a spreadsheet. Each row represents a unique record, and each column represents a field in the record. For example, a table that contains employee data for a company might contain a row for each employee and columns representing employee information such as employee number, name, address, job title, and home telephone number. 
 
@@ -40,7 +41,7 @@ Temporary tables are stored in **tempdb**. There are two types of temporary tabl
 
 #### <a name="ctp23"></a> Reduced recompilations for workloads using temporary tables across multiple scopes
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] reduces recompilations for workloads using temporary tables across multiple scopes. Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] under all database compatibility levels reduces recompilations for workloads using temporary tables across multiple scopes. This feature is also enabled in Azure SQL Database under database compatibility level 150 for all deployment models.  Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
 - Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
 - Keep track of any data definition language (DDL) changes made at initial compilation and compare them with DDL operations for consecutive executions.

@@ -1,22 +1,25 @@
 ---
-title: "Change the Scheduling Details for a SQL Server Agent Master Job | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Change the Scheduling Details for a SQL Server Agent Master Job"
+title: Change the Scheduling Details for a Master Job
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Change the Scheduling Details for a SQL Server Agent Master Job
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 This topic describes how to change the scheduling details for a job definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -34,31 +37,31 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 #### To change the scheduling details for a job definition  
   
-1.  In **Object Explorer,** click the plus sign to expand the server that contains the job whose schedule you want to edit.  
+1. In **Object Explorer,** click the plus sign to expand the server that contains the job whose schedule you want to edit.  
   
-2.  Click the plus sign to expand **SQL Server Agent**.  
+2. Click the plus sign to expand **SQL Server Agent**.  
   
-3.  Click the plus sign to expand the **Jobs** folder.  
+3. Click the plus sign to expand the **Jobs** folder.  
   
-4.  Right-click the job whose schedule you want to edit and select **Properties**.  
+4. Right-click the job whose schedule you want to edit and select **Properties**.  
   
-5.  In the **Job Properties -**_job\_name_ dialog box, under **Select a page**, select **Schedules**. For more information on the available options on this page, see [Job Properties - New Job &#40;Schedules Page&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5. In the **Job Properties -**_job\_name_ dialog box, under **Select a page**, select **Schedules**. For more information on the available options on this page, see [Job Properties - New Job &#40;Schedules Page&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
-6.  When finished, click **OK**.  
+6. When finished, click **OK**.  
   
 ## <a name="TsqlProcedure"></a>Using Transact-SQL  
   
-#### To change the scheduling details for a job definition  
+#### To change the scheduling details for a job definition
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-2.  On the Standard bar, click **New Query**.  
+2. On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
+3. Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- changes the enabled status of the NightlyJobs schedule to 0   
-    -- and sets the owner to terrid.   
+    -- changes the enabled status of the NightlyJobs schedule to 0
+    -- and sets the owner to terrid.
     USE msdb ;  
     GO  
   
@@ -69,5 +72,4 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
     GO  
     ```  
   
-For more information, see [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).  
-  
+For more information, see [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe).

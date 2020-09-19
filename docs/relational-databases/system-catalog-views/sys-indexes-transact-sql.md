@@ -1,7 +1,8 @@
 ---
+description: "sys.indexes (Transact-SQL)"
 title: "sys.indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.indexes catalog view"
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row per index or heap of a tabular object, such as a table, view, or table-valued function.  
   
@@ -31,8 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**object_id**|**int**|ID of the object to which this index belongs.|  
 |**name**|**sysname**|Name of the index. **name** is unique only within the object.<br /><br /> NULL = Heap|  
 |**index_id**|**int**|ID of the index. **index_id** is unique only within the object.<br /><br /> 0 = Heap<br /><br /> 1 = Clustered index<br /><br /> > 1 = Nonclustered index|  
-|**type**|**tinyint**|Type of index:<br /><br /> 0 = Heap<br /><br /> 1 = Clustered<br /><br /> 2 = Nonclustered<br /><br /> 3 = XML<br /><br /> 4 = Spatial<br /><br /> 5 = Clustered columnstore index. **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 6 = Nonclustered columnstore index. **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 7 = Nonclustered hash index. **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**type_desc**|**nvarchar(60)**|Description of index type:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> CLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED HASH : NONCLUSTERED HASH indexes are supported only on memory-optimized tables. The sys.hash_indexes view shows the current hash indexes and the hash properties. For more information, see [sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**type**|**tinyint**|Type of index:<br /><br /> 0 = Heap<br /><br /> 1 = Clustered<br /><br /> 2 = Nonclustered<br /><br /> 3 = XML<br /><br /> 4 = Spatial<br /><br /> 5 = Clustered columnstore index. **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> 6 = Nonclustered columnstore index. **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> 7 = Nonclustered hash index. **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.|  
+|**type_desc**|**nvarchar(60)**|Description of index type:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> CLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> NONCLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> NONCLUSTERED HASH : NONCLUSTERED HASH indexes are supported only on memory-optimized tables. The sys.hash_indexes view shows the current hash indexes and the hash properties. For more information, see [sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.|  
 |**is_unique**|**bit**|1 = Index is unique.<br /><br /> 0 = Index is not unique.<br /><br /> Always 0 for clustered columnstore indexes.|  
 |**data_space_id**|**int**|ID of the data space for this index. Data space is either a filegroup or partition scheme.<br /><br /> 0 = **object_id** is a table-valued function or in-memory index.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY is ON.<br /><br /> 0 = IGNORE_DUP_KEY is OFF.|  
@@ -45,10 +46,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**allow_row_locks**|**bit**|1 = Index allows row locks.<br /><br /> 0 = Index does not allow row locks.<br /><br /> Always 0 for clustered columnstore indexes.|  
 |**allow_page_locks**|**bit**|1 = Index allows page locks.<br /><br /> 0 = Index does not allow page locks.<br /><br /> Always 0 for clustered columnstore indexes.|  
 |**has_filter**|**bit**|1 = Index has a filter and only contains rows that satisfy the filter definition.<br /><br /> 0 = Index does not have a filter.|  
-|**filter_definition**|**nvarchar(max)**|Expression for the subset of rows included in the filtered index.<br /><br /> NULL for heap or non-filtered index.|  
+|**filter_definition**|**nvarchar(max)**|Expression for the subset of rows included in the filtered index.<br /><br /> NULL for heap, non-filtered index, or insufficient permissions on the table.|  
 |**auto_created**|**bit**|1 = Index was created by the automatic tuning.<br /><br />0 = Index was created by the user.
 |**optimize_for_sequential_key**|**bit**|1 = Index has last-page insert optimization enabled.<br><br>0 = Default value. Index has last-page insert optimization disabled.|
 
+> [!NOTE]
+> The **optimize_for_sequential_key** bit is only supported in versions SQL Server 2019 CTP 3.1 and higher.
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

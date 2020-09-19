@@ -1,6 +1,7 @@
 ---
-title: "Subscription Validation Options (Transactional Subscriptions) | Microsoft Docs"
-ms.custom: ""
+title: "Subscription validation options dialog box (Transactional)"
+description: Describes the 'Subscription Validation Options' dialog box for Transactional Replication in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Subscription Validation Options (Transactional Subscriptions)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   Use the **Subscription Validation Options** dialog box to specify whether validation should use a row count only, or a row count and a binary checksum. 
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]

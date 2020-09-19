@@ -1,6 +1,6 @@
 ---
-title: "Bulk Load Security Considerations (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Bulk Load Security Considerations (SQLXML)"
+description: Learn about the security guidelines for using XML Bulk Load in SQLXML 4.0.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,10 +15,11 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Load Security Considerations (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The following are security guidelines for using XML Bulk Load:  
   
 -   When you specify that the Bulk Load operation is to be performed as a transaction, you use the **TempFilePath** property to specify a folder in which to create the temporary files.  

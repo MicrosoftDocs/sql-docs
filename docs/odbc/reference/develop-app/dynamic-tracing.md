@@ -1,4 +1,5 @@
 ---
+description: "Dynamic Tracing"
 title: "Dynamic Tracing | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "tracing options [ODBC], dynamic"
   - "dynamic tracing [ODBC]"
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Dynamic Tracing
 Tracing can be enabled or disabled at any point in an application run. This allows an application to trace any number of function calls.  

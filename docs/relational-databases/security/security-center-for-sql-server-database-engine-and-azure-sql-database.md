@@ -1,6 +1,7 @@
 ---
-title: "Security Center for SQL Server Database Engine and Azure SQL Database | Microsoft Docs"
-ms.custom: ""
+title: "Security documentation for SQL Server & Azure SQL Database"
+description: A reference of security and protection-related content for SQL Server and Azure SQL Database. 
+ms.custom: seo-lt-2019
 ms.date: "09/27/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -20,7 +21,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This page provides links to help you locate the information that you need about security and protection in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
@@ -57,7 +58,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |||  
 |-|-|  
 |**Firewall Protection**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows Firewall Settings<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Service Firewall Settings<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Database Firewall Settings|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL Database Firewall Settings](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure Service Firewall Settings](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
-|**Encrypting Data in Transit**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Forced SSL Connections<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Optional SSL Connections|[Secure Sockets Layer for the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Secure Sockets Layer for SQL Database](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
+|**Encrypting Data in Transit**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Forced SSL Connections<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Optional SSL Connections|[Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [Enable Encrypted Connections to the Database Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md), [Network security](/azure/sql-database/sql-database-security-best-practice#network-security) <br /><br /> [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)|  
   
 ##  <a name="Audit"></a> Auditing: Recording Access  
   

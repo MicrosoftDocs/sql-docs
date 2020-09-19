@@ -1,34 +1,34 @@
 ---
-title: SQL Server Reporting Services features supported by its editions
+title: Features supported by different editions - SQL Server Reporting Services | Microsoft Docs
+description: Learn about SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. 
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
+ms.date: 12/16/2019
 ---
 
-# SQL Server Reporting Services features supported by its editions
+# SQL Server Reporting Services features supported by editions
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 This topic explains the SQL Server Reporting Services (SSRS) features supported by the different editions of SQL Server. SQL Server Evaluation edition is available for a 180-day trial period.  
+
+## Related links
   
- For the latest SQL Server release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). For the latest information on what's new, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Release notes for SQL Server Reporting Services (SSRS)](release-notes-reporting-services.md). 
+ - [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [Features supported by the editions of SQL Server](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## Try SQL Server 2017
-
-> [![Download SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download SQL Server 2017 from the Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2017 already installed](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> SQL Server Reporting Services  
 
 For features supported by the Evaluation and Developer editions, see the SQL Server Enterprise edition column in the following table.
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
-  
 |Feature name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|------|---------|---------------|-----------|-------|---------|  
+| Power BI reports and Excel workbooks | Yes, with Software Assurance | | | | Yes |
 |Mobile reports and analytics|Yes||||Yes|  
 |Supported catalog database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Standard or higher|Standard or higher|Web|Express|Standard or higher|  
 |Supported data source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|All   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|Web|Express|All [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions|  
@@ -82,7 +82,8 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 The following software client applications are available on the Microsoft Download Center. They help you create business intelligence documents that run on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. When you host these documents in a server environment, use an edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports that document type. The following table identifies which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition contains the server features required to host the documents created in these client applications.  
   
 |Tool name|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| Power BI Desktop optimized for Power BI Report Server, **.pbix** | Yes, with Software Assurance | | | | Yes |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** and **.rds**|Yes|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|Yes||||Yes|  
 |Power BI apps for mobile devices (iOS, Windows 10, and Android), **.rsmobile**|Yes||||Yes|  

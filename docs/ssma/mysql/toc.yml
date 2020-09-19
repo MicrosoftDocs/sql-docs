@@ -1,0 +1,123 @@
+- name: MySQL
+  href: sql-server-migration-assistant-for-mysql-mysqltosql.md
+- name: Installing SSMA
+  href: installing-ssma-for-mysql-mysqltosql.md
+- name: Getting Started with SSMA for MySQL
+  href: getting-started-with-ssma-for-mysql-mysqltosql.md
+- name: Legal Notice
+  href: legal-notice-mysqltosql.md
+- name: Conversion Settings
+  href: conversion-settings-mysqltosql.md
+- name: Installing SSMA for MySQL client
+  href: installing-ssma-for-mysql-client-mysqltosql.md
+- name: Executing the SSMA Console
+  href: executing-the-ssma-console-mysqltosql.md
+- name: Creating the Server Connection Files
+  href: creating-the-server-connection-files-mysqltosql.md
+- name: SQL Modes
+  href: sql-modes-mysqltosql.md
+- name: Connect to SQL Server
+  href: connect-to-sql-server-mysqltosql.md
+- name: Connecting to Azure SQL Database
+  href: connecting-to-azure-sql-db-mysqltosql.md
+- name: Creating Script Files
+  href: creating-script-files-mysqltosql.md
+- name: Loading Converted Database Objects into SQL Server
+  href: loading-converted-database-objects-into-sql-server-mysqltosql.md
+- name: Converting MySQL Databases
+  href: converting-mysql-databases-mysqltosql.md
+- name: Migrating into SQL Server - Azure SQL Database
+  href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
+- name: Command-Line Options in SSMA Console
+  href: command-line-options-in-ssma-console-mysqltosql.md
+- name: Working with SSMA Projects
+  href: working-with-ssma-projects-mysqltosql.md
+- name: Data Migration Settings
+  href: data-migration-settings-mysqltosql.md
+- name: Save Metadata
+  href: save-metadata-mysqltosql.md
+- name: Menu commands & other shortcut keys
+  href: menu-commands-and-other-shortcut-keys-mysqltosql.md
+- name: Troubleshooting
+  href: troubleshooting-mysqltosql.md
+- name: Connect to MySQL
+  href: connect-to-mysql-mysqltosql.md
+- name: Removing the SSMA for MySQL Components
+  href: removing-the-ssma-for-mysql-components-mysqltosql.md
+- name: Connect to Azure SQL Database
+  href: connect-to-azure-sql-db-mysqltosql.md
+- name: Migrating MySQL Databases to Azure SQL Database
+  href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
+- name: Working with Sample Console Script Files
+  href: working-with-the-sample-console-script-files-mysqltosql.md
+- name: New Project
+  href: new-project-ssma-mysqltosql.md
+- name: Installing SSMA Components on SQL Server
+  href: installing-ssma-components-on-sql-server-mysqltosql.md
+- name: Mapping MySQL Databases to SQL Server Schemas
+  href: mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
+- name: Refresh from database
+  href: refresh-from-database-mysqltosql.md
+- name: Shortcut Keys
+  href: shortcut-keys-mysqltosql.md
+- name: Assessment Report
+  href: assessment-report-mysqltosql.md
+- name: Data Migration Report
+  href: data-migration-report-mysqltosql.md
+- name: Managing Passwords
+  href: managing-passwords-mysqltosql.md
+- name: Advanced Object Selection
+  href: advanced-object-selection-mysqltosql.md
+- name: User Interface Reference
+  href: user-interface-reference-mysqltosql.md
+- name: Appendix - 1
+  href: appendix-1-mysqltosql.md
+- name: Assessing MySQL Databases for Conversion
+  href: assessing-mysql-databases-for-conversion-mysqltosql.md
+- name: Working with SSMA for MySQL Console
+  href: working-with-ssma-for-mysql-console-mysqltosql.md
+- name: Getting Started with SSMA for MySQL Console
+  href: getting-started-with-ssma-for-mysql-console-mysqltosql.md
+- name: Mapping MySQL & SQL Server Character Set
+  href: mapping-mysql-and-sql-server-character-set-mysqltosql.md
+- name: Creating Variable Value Files
+  href: creating-variable-value-files-mysqltosql.md
+- name: Generating Reports
+  href: generating-reports-mysqltosql.md
+- name: Edit Type Mapping
+  href: edit-type-mapping-mysqltosql.md
+- name: Mapping MySQL & SQL Server Data Types
+  href: mapping-mysql-and-sql-server-data-types-mysqltosql.md
+- name: What's New in SSMA for MySQL
+  href: what-s-new-in-ssma-for-mysql-mysqltosql.md
+- name: New GUI Features in SSMA for MySQL
+  href: new-gui-features-in-ssma-for-mysql-mysqltosql.md
+- name: Setting Project Options
+  href: setting-project-options-mysqltosql.md
+- name: Connecting to MySQL
+  href: connecting-to-mysql-mysqltosql.md
+- name: Connecting to SQL Server
+  href: connecting-to-sql-server-mysqltosql.md
+- name: Project settings
+  items:
+  - name: GUI
+    href: project-settings-gui-mysqltosql.md
+  - name: Azure SQL Database
+    href: project-settings-azure-sql-db-mysqltosql.md
+  - name: Type-Mapping
+    href: project-settings-type-mapping-mysqltosql.md
+  - name: Migration
+    href: project-settings-migration-mysqltosql.md
+  - name: Synchronization
+    href: project-settings-synchronization-mysqltosql.md
+  - name: Conversion
+    href: project-settings-conversion-mysqltosql.md
+- name: Global settings
+  href: global-settings-output-window-mysqltosql.md
+  items:
+  - name: Dialogs
+    href: global-settings-dialogs-mysqltosql.md
+  - name: Logging
+    href: global-settings-logging-mysqltosql.md
+  - name: Editor
+    href: global-settings-editor-mysqltosql.md

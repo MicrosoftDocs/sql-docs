@@ -1,5 +1,6 @@
 ---
-title: "Consolidated Member Staging Table (Master Data Services) | Microsoft Docs"
+description: "Consolidated Member Staging Table (Master Data Services)"
+title: Consolidated Member Staging Table
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Consolidated Member Staging Table (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the consolidated members staging table (stg.name_Consolidated) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database to create, update, deactivate, and delete consolidated members. You can also use it to update attribute values for consolidated members.  
   

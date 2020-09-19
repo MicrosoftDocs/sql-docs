@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT STOPLIST (Transact-SQL)"
 title: "CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a new full-text stoplist in the current database.  
   
@@ -40,15 +41,17 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT STOPLIST stoplist_name  
 [ FROM { [ database_name.]source_stoplist_name } | SYSTEM STOPLIST ]  
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *stoplist_name*  
  Is the name of the stoplist. *stoplist_name* can be a maximum of 128 characters. *stoplist_name* must be unique among all stoplists in the current database, and conform to the rules for identifiers.  
   
@@ -80,7 +83,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### A. Creating a new full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -88,7 +91,7 @@ GO
 ### B. Copying a full-text stoplist from an existing full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist2` by copying an existing AdventureWorks stoplist named `Customers.otherStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -96,7 +99,7 @@ GO
 ### C. Copying a full-text stoplist from the system full-text stoplist  
  The following example creates a new full-text stoplist named `myStoplist3` by copying from the system stoplist.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

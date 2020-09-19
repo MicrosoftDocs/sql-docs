@@ -1,4 +1,5 @@
 ---
+description: "Implement a Lookup in No Cache or Partial Cache Mode"
 title: "Implement a Lookup in No Cache or Partial Cache Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can configure the Lookup transformation to use the partial cache or no cache mode:  

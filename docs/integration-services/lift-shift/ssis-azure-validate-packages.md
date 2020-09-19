@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Validate SQL Server Integration Services (SSIS) packages deployed to Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -29,7 +29,7 @@ For more info about the Package Deployment Wizard, see [Deploy Integration Servi
 The wizard checks certain connection managers for the following issues, which may cause the connection to fail:
 - **Windows authentication**. If a connection string uses Windows authentication, validation raises a warning. Windows authentication requires additional configuration steps. For more info, see [Connect to data and file shares with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
 - **File path**. If a connection string contains a hard-coded local file path like `C:\\...`, validation raises a warning. Packages that contain an absolute path may fail.
-- **UNC path**. If a connection string contains a UNC pathif a connection string contains a UNC path, validation raises a warning. Packages that contain a UNC path may fail, typically because a UNC path requires Windows authentication to access.
+- **UNC path**. If a connection string contains a UNC path, validation raises a warning. Packages that contain a UNC path may fail, typically because a UNC path requires Windows authentication to access.
 - **Host name**. If a server property contains host name instead of IP address, validation raises a warning. Packages that contain host name may fail, typically because the Azure virtual network requires the correct DNS configuration to support DNS name resolution.
 - **Provider or driver**. If a provider or driver is not supported, validation raises a warning. Only a small number of built-in providers and drivers are supported at this time.
 
@@ -61,7 +61,7 @@ The following third-party sources and destinations are not supported:
 
 -   Oracle Source and Destination by Attunity
 -   Teradata Source and Destination by Attunity
--   SAP BI Source and Destination
+-   SAP BW Source and Destination
 
 ## Validate tasks and components
 

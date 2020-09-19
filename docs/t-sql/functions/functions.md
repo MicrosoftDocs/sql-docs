@@ -1,4 +1,5 @@
 ---
+description: "What are the Microsoft SQL database functions?"
 title: "What are the Microsoft SQL database functions? | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "scalar functions"
   - "functions [SQL Server]"
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What are the SQL database functions?
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Learn about the categories of built-in functions you can use with SQL databases. You can use the built-in functions or create your own user-defined functions.
   
@@ -58,7 +59,7 @@ Operate on a single value and then return a single value. Scalar functions can b
 |[Metadata Functions](metadata-functions-transact-sql.md)|Return information about the database and database objects.|  
 |[Security Functions](security-functions-transact-sql.md)|Return information about users and roles.|  
 |[String Functions](string-functions-transact-sql.md)|Perform operations on a string (**char** or **varchar**) input value and return a string or numeric value.|  
-|[System Functions](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Perform operations and return information about values, objects, and settings in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[System Functions](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Perform operations and return information about values, objects, and settings in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[System Statistical Functions](system-statistical-functions-transact-sql.md)|Return statistical information about the system.|  
 |[Text and Image Functions](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Perform operations on text or image input values or columns, and return information about the value.|  
   

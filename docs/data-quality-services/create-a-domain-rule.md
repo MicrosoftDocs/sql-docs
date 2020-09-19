@@ -1,6 +1,6 @@
 ---
-title: "Create a Domain Rule | Microsoft Docs"
-ms.custom: ""
+description: "Create a Domain Rule"
+title: "Create a Domain Rule"
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -11,12 +11,12 @@ f1_keywords:
   - "sql13.dqs.dm.testdomainrule.f1"
   - "sql13.dqs.dm.rules.f1"
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Create a Domain Rule
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a domain rule in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A domain rule is a condition that is used to validate, correct, and standardize domain values. A domain rule must hold true across a domain in order for domain values to be considered accurate and conformant to business requirements. Domain rules can include validation rules that are used to validate domain values, but are not used to correct data in a data quality projects. Rules also include standardization rules that are applied against valid data and are used in data correction.  
   
@@ -121,7 +121,7 @@ ms.author: lle
 |Value is date/time|Only values that have a SQL Server date/time data type will be valid. This includes datetime, time, date, etc.|Example operand: N/A<br /><br /> Valid values: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> Not valid values: March 213, 2006|  
 |Value is in|Only values that are in the set in the operand will be valid.<br /><br /> To enter the values in the set, click in the operand text box, enter the first value, press Enter, enter the second value, repeat for as many values as you want to enter in the set, and then click again in the operand text box. DQS will add a comma between the values in the set. If you enter a single string with commas and no carriage return (for example, "A1, B1"), DQS will consider that string a single value in the set.|Example operand: [A1, B1]<br /><br /> Valid values: A1, B1<br /><br /> Not valid values: AA, 11|  
 |Value is not in|Only values that are not in the set in the operand will be valid.|Example operand: [A1, B1]<br /><br /> Valid values: AA, 11<br /><br /> Not valid values: A1, B1|  
-|Value matches pattern|Only values that match the pattern of characters, digits, or special characters in the operand will be valid.<br /><br /> Any letter (A...Z) can be used as a pattern for any letter; case insensitive. Any digit (0...9) can be used as a pattern for any digit. Any special character, except a letter or a digit, can be used as a pattern for itself. Brackets, [], define optional matching.|Example operand: AA:000 (a pattern of *any* two characters followed by a colon (:), which is again followed by *any* three digits.<br /><br /> Valid values: AB:012, df:257<br /><br /> Not valid values: abc:123, FJ-369<br /><br /> For more information about the pattern rules in DQS and examples, see [Pattern Matching in DQS Domain Rules](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|Value matches pattern|Only values that match the pattern of characters, digits, or special characters in the operand will be valid.<br /><br /> Any letter (A...Z) can be used as a pattern for any letter; case insensitive. Any digit (0...9) can be used as a pattern for any digit. Any special character, except a letter or a digit, can be used as a pattern for itself. Brackets, [], define optional matching.|Example operand: AA:000 (a pattern of *any* two characters followed by a colon (:), which is again followed by *any* three digits.<br /><br /> Valid values: AB:012, df:257<br /><br /> Not valid values: abc:123, FJ-369<br /><br /> For more information about the pattern rules in DQS and examples, see [Pattern Matching in DQS Domain Rules](https://techcommunity.microsoft.com/t5/sql-server-integration-services/pattern-matching-in-dqs-domain-rules/ba-p/388103).|  
 |Value does not match pattern|Only values that do not match the pattern of characters, digits, or special characters in the operand will be valid.|Example operand: A1 (value must not match a pattern of *any* one character followed by *any* one digit.)<br /><br /> Valid values: AB1, A, A:5<br /><br /> Not valid values: B7, c9|  
 |Value contains pattern|Only values that contain the pattern of characters, digits, or special characters in the operand will be valid.|Example operand: AA-12 (value contains a pattern of *any* two characters followed by a hyphen (-), which is again followed by *any* two digits.)<br /><br /> Valid values: AAA-01, ab-975<br /><br /> Not valid value: A7, AA-6, C-45, aa;98|  
 |Value does not contain pattern|Only values that do not contain the pattern of characters in the operand will be valid.|Example operand: AB-12 (value must not contain a pattern of *any* two characters followed by a hyphen (-), which is again followed by *any* two digits.)<br /><br /> Valid values: A7, AA-6, C-45, aa;98<br /><br /> Not valid value: AAA-01, ab-975|  

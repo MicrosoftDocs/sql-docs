@@ -1,11 +1,12 @@
 ---
-title: "High Availability and Disaster Recovery for Master Data Services | Microsoft Docs"
-ms.custom: ""
+title: High Availability and Disaster Recovery
+description: Install and configure SQL Master Data Services on an Always On Availability group to improve high availability and disaster recovery of backend data.
+ms.custom: "seo-lt-2019"
 ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: high-availability
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ""
 author: lrtoyou1223
@@ -14,7 +15,7 @@ ms.author: lle
 
 # High Availability and Disaster Recovery for Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article describes a solution for Master Data Service (MDS) hosted on Always On Availability Group configuration. The article describes how to install and configure SQL 2016 Master Data Services on a SQL 2016 Always On Availability group (AG). The main purpose of this solution is to improve high availability and disaster recovery of MDS backend data hosted on a SQL Server database.
 
@@ -386,7 +387,7 @@ This solution presented in this article only requires the MDS backend database r
 
 In this white paper, we have seen how to set up and configure the Master Data Services backend database as part of an AG. This configuration provides high availability and disaster recovery on the Master Data Services backend database. To implement this configuration, you need to install and configure Windows Server Failover Cluster, AG, and Master Data Services.
 
-## Feedback
+## Feedback Comments
 
 Did this paper help you? Please give us your feedback by clicking **Comments** at the top of the article. 
 

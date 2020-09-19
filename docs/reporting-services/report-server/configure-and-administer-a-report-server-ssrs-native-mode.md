@@ -1,5 +1,6 @@
 ---
-title: "Configure and Administer a Report Server (SSRS Native Mode) | Microsoft Docs"
+title: "Configure and Administer a Report Server (Native Mode) | Microsoft Docs"
+description: Learn about approaches that you can use to configure Reporting Services and find articles about how to configure components, features, or server capabilities.
 ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

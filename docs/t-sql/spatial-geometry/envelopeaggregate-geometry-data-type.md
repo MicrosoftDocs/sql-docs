@@ -1,4 +1,5 @@
 ---
+description: "EnvelopeAggregate (geometry Data Type)"
 title: "EnvelopeAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -16,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # EnvelopeAggregate (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a bounding box for a given set of **geometry** objects.
   
@@ -27,7 +28,9 @@ Returns a bounding box for a given set of **geometry** objects.
 EnvelopeAggregate ( geometry_operand )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometry_operand*  
  Is a **geometry** type table column that represents the set of **geometry** objects.  
   

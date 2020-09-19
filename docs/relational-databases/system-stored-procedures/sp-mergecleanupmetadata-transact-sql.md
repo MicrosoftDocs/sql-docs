@@ -1,4 +1,5 @@
 ---
+description: "sp_mergecleanupmetadata (Transact-SQL)"
 title: "sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_mergecleanupmetadata"
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_mergecleanupmetadata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Should be used only in replication topologies that include servers running versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1.**sp_mergecleanupmetadata** allows administrators to clean up metadata in the **MSmerge_genhistory**, **MSmerge_contents** and **MSmerge_tombstone** system tables. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -83,8 +84,6 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  Regenerate snapshot files for all merge publications involved at all levels. If you try to merge without regenerating the snapshot first, you receive a prompt to regenerate the snapshot.  
   
 6.  Back up the publication database. Failure to do so can cause a merge failure after a restore of the publication database.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **Special Considerations for Continuous Mode Merges**  
   

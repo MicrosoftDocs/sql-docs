@@ -1,7 +1,7 @@
 ---
-title: "Determine Which Queries Are Holding Locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Determine Which Queries Are Holding Locks"
+description: This article shows a method of finding which query holds a lock. Database administrators may need to find the source of locks that hinder database performance.
+ms.date: "10/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,17 +20,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Determine Which Queries Are Holding Locks
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Database administrators often need to identify the source of locks that are hindering database performance.  
+Database administrators often need to identify the source of locks that are hindering database performance.  
   
- For example, you suspect that a performance issue on your server could be caused by blocking. When you query the sys.dm_exec_requests, you find several sessions in a suspended mode with a wait type indicating that a lock is the resource being waited on.  
+For example, you suspect that a performance issue on your server could be caused by blocking. When you query the sys.dm_exec_requests, you find several sessions in a suspended mode with a wait type indicating that a lock is the resource being waited on.  
   
- You query sys.dm_tran_locks and the results show that there are many locks outstanding, but the sessions that were granted the locks do not have any active requests showing in sys.dm_exec_requests.  
+You query sys.dm_tran_locks and the results show that there are many locks outstanding, but the sessions that were granted the locks do not have any active requests showing in sys.dm_exec_requests.  
   
- This example demonstrates a method of determining what query took the lock, the plan of the query, and the [!INCLUDE[tsql](../../includes/tsql-md.md)] stack at the time the lock was taken. This example also illustrates how the pairing target is used in an Extended Events session.  
+This example demonstrates a method of determining what query took the lock, the plan of the query, and the [!INCLUDE[tsql](../../includes/tsql-md.md)] stack at the time the lock was taken. This example also illustrates how the pairing target is used in an Extended Events session.  
   
- Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
+Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
   
 > [!NOTE]  
 >  This example uses the AdventureWorks database.  
@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  In Query Editor, issue the following statements.  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -82,12 +82,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  After execution of a workload on the server, issue the following statements in Query Editor to find queries still holding locks.  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -144,11 +143,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  After identifying the issues, drop any temporary tables and the event session.  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> The preceding Transact-SQL code examples runs on SQL Server on-premises, but might _not quite run on Azure SQL Database._ The core portions of the example directly involving Events, such as `ADD EVENT sqlserver.lock_acquired` do work on Azure SQL Database too. But preliminary items, such as `sys.server_event_sessions` must be edited to their Azure SQL Database counterparts like `sys.database_event_sessions` for the example to run.
+> For more information about these minor differences between SQL Server on-premises versus Azure SQL Database, see the following articles:
+> - [Extended events in Azure SQL Database](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [System objects that support extended events](xevents-references-system-objects.md)
+
 ## See Also  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   

@@ -1,6 +1,7 @@
 ---
-title: "Working with the WMI Provider for Configuration Management | Microsoft Docs"
-ms.custom: ""
+title: "Use the WMI Provider for Configuration Management"
+description: Learn about the WMI Provider for Configuration Management, including binding, specifying a connection string, and permissions/server authentication.
+ms.custom: seo-lt-2019
 ms.date: "04/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, late binding"
   - "binding [WMI]"
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Working with the WMI Provider for Configuration Management
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article provides guidance about how to program with the WMI Provider for Computer Management.
 

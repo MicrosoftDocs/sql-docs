@@ -1,10 +1,8 @@
 ---
-title: "dta Utility | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
+title: dta Utility
+description: The dta utility is a command prompt version of Database Engine Tuning Advisor that allows you to use functionality in applications and scripts.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,12 +18,18 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/09/2017
 ---
+
 # dta Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
-  
- Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
+
+Like Database Engine Tuning Advisor, the **dta** utility analyzes a workload and recommends physical design structures to improve server performance for that workload. The workload can be a plan cache, a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file or table, or a [!INCLUDE[tsql](../../includes/tsql-md.md)] script. Physical design structures include indexes, indexed views, and partitioning. After analyzing a workload, the **dta** utility produces a recommendation for the physical design of databases and can generate the necessary script to implement the recommendation. Workloads can be specified from the command prompt with the **-if** or the **-it** argument. You can also specify an XML input file from the command prompt with the **-ix** argument. In that case, the workload is specified in the XML input file.  
   
 ## Syntax  
   
@@ -175,7 +179,7 @@ dta -d AdventureWorks2012 ...
 [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
 
   
  **-fk** _keep_existing_option_  
@@ -208,15 +212,14 @@ dta -d AdventureWorks2012 ...
   
  **-ip**  
  Specifies that the plan cache be used as the workload. The top 1,000 plan cache events for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  
- 
+
 **-iq**  
  Specifies that the Query Store be used as the workload. The top 1,000 events from the Query Store for explicitly selected databases are analyzed. This value can be changed using the **-n** option.  See [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) and 
  [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) for more information.
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
      
-  
  **-if** _workload_file_  
  Specifies the path and name of the workload file to use as input for tuning. The file must be in one of these formats: .trc (SQL Server Profiler trace file), .sql (SQL file), or .log ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace file). Either one workload file or one workload table must be specified.  
   
@@ -236,7 +239,13 @@ dta -d AdventureWorks2012 ...
   
  **-ix** _input_XML_file_name_  
  Specifies the name of the XML file containing **dta** input information. This must be a valid XML document conforming to DTASchema.xsd. Conflicting arguments specified from the command prompt for tuning options override the corresponding value in this XML file. The only exception is if a user-specified configuration is entered in the evaluate mode in the XML input file. For example, if a configuration is entered in the **Configuration** element of the XML input file and the **EvaluateConfiguration** element is also specified as one of the tuning options, the tuning options specified in the XML input file will override any tuning options entered from the command prompt.  
-  
+
+ **-k** _maxtotalindexes_  
+ Maximum number of indexes in the recommendation.  
+
+ **-K** _maxtotalindexes_  
+ Maximum number of indexes per table.
+
  **-m** _minimum_improvement_  
  Specifies the minimum percentage of improvement that the recommended configuration must satisfy.  
   
@@ -268,7 +277,7 @@ dta -iq -I 48
 In this case, DTA will use Query Store as the source of workload and only consider queries that have executed with the past 48 hours.  
   ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
 
 
   
@@ -385,33 +394,32 @@ dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10
 ```  
   
  **D. Tune specific tables listed in a file**  
-  
+
  This example demonstrates the use of *table_list_file* (the **-Tf** argument). The contents of the file table_list.txt are as follows:  
-  
-```  
+
+```
 AdventureWorks2012.Sales.Customer  100000  
 AdventureWorks2012.Sales.Store  
 AdventureWorks2012.Production.Product  2000000  
-```  
+```
+
+The contents of table_list.txt specifies that:  
+
+- Only the **Customer**, **Store**, and **Product** tables in the database should be tuned.  
   
- The contents of table_list.txt specifies that:  
+- The number of rows in the **Customer** and **Product** tables are assumed to be 100,000 and 2,000,000, respectively.  
   
--   Only the **Customer**, **Store**, and **Product** tables in the database should be tuned.  
-  
--   The number of rows in the **Customer** and **Product** tables are assumed to be 100,000 and 2,000,000, respectively.  
-  
--   The number of rows in **Store** are assumed to be the current number of rows in the table.  
-  
- Note that there can be one or more spaces between the number of rows count and the preceding table name in the *table_list_file*.  
-  
- The tuning time is 2 hours (`-A 120`) and the output is written to an XML file (`-ox XMLTune.xml`).  
-  
-```  
+- The number of rows in **Store** are assumed to be the current number of rows in the table.  
+
+    Note that there can be one or more spaces between the number of rows count and the preceding table name in the *table_list_file*.  
+    
+    The tuning time is 2 hours (`-A 120`) and the output is written to an XML file (`-ox XMLTune.xml`).  
+
+``` 
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
-```  
-  
-## See Also  
- [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
-  
-  
+``` 
+
+## See Also
+
+- [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)
+- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)

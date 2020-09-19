@@ -1,6 +1,6 @@
 ---
-title: "Configure DQS to Use Reference Data | Microsoft Docs"
-ms.custom: ""
+description: "Configure DQS to Use Reference Data"
+title: "Configure DQS to Use Reference Data"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,12 +12,12 @@ f1_keywords:
   - "sql13.dqs.administration.configuration.createDirectRDS.f1"
   - "sql13.dqs.admin.config.rds.f1"
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Configure DQS to Use Reference Data
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) to use reference data for cleansing your data. You could either use reference data from Azure Marketplace or from direct online third-party reference data providers.  
 

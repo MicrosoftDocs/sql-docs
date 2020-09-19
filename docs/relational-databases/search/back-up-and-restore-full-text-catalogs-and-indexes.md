@@ -1,5 +1,6 @@
 ---
-title: "Back Up and Restore Full-Text Catalogs and Indexes | Microsoft Docs"
+description: "Back Up and Restore Full-Text Catalogs and Indexes"
+title: "Back up & restore Full-Text catalogs & indexes"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,9 +17,10 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
+ms.custom: "seo-lt-2019"
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic explains how to back up and restore full-text indexes created in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the full-text catalog is a logical concept and does not reside in a filegroup. Therefore, to back up a full-text catalog in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must identify every filegroup that contains a full-text index that belongs to the catalog. Then you must back up those filegroups, one by one.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Replication Backward Compatibility | Microsoft Docs"
+description: Review these resources for backward compatibility in replication before you upgrade or if you have several versions of SQL Server in a replication topology.
 ms.custom: ""
 ms.date: "03/02/2016"
 ms.prod: sql
@@ -18,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication Backward Compatibility
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Backward compatibility is important to understand if you are upgrading, or if you have more than one version of SQL Server in a replication topology. 
 

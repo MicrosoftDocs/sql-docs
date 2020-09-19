@@ -1,5 +1,6 @@
 ---
-title: "sqlsrv_client_info | Microsoft Docs"
+title: "sqlsrv_client_info"
+description: "API reference for the sqlsrv_client_info function in the Microsoft SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_client_info"
   - "sqlsrv_client_info"
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

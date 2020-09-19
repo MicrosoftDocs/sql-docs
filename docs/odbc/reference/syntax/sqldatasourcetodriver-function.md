@@ -1,4 +1,5 @@
 ---
+description: "SQLDataSourceToDriver Function"
 title: "SQLDataSourceToDriver Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDataSourceToDriver function [ODBC]"
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDataSourceToDriver Function
 **SQLDataSourceToDriver** supportstranslations for ODBC drivers. This function is not called by ODBC-enabled applications; applications request translation through **SQLSetConnectAttr**. The driver associated with the *ConnectionHandle* specified in **SQLSetConnectAttr** calls the specified DLL to perform translations of all data flowing from the data source to the driver. A default translation DLL can be specified in the ODBC initialization file.  

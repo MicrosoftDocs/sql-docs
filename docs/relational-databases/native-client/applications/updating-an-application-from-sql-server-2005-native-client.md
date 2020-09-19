@@ -1,5 +1,6 @@
 ---
-title: "Updating an Application from SQL Server 2005 Native Client | Microsoft Docs"
+description: "Updating an Application from SQL Server 2005 Native Client"
+title: "Update from SQL 2005"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -9,13 +10,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client, updating applications"
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updating an Application from SQL Server 2005 Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic discusses the breaking changes in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client since [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

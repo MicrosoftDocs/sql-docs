@@ -1,4 +1,5 @@
 ---
+description: "Reinitialize Subscriptions"
 title: "Reinitialize Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Reinitialize Subscriptions
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Reinitializing a subscription involves applying a new snapshot of one or more articles to one or more Subscribers: transactional and snapshot replication allow individual articles to be reinitialized; merge replication requires all articles to be reinitialized. Nodes in a peer-to-peer transactional replication topology cannot be reinitialized. If you need to ensure a node has a new copy of the data, restore a backup at the node. Reinitialization occurs for one of two reasons:  
   
 -   You explicitly mark a subscription for reinitialization.  

@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEY (Transact-SQL)"
 title: "DECRYPTBYKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -22,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses a symmetric key to decrypt data.  
   
@@ -30,13 +31,15 @@ This function uses a symmetric key to decrypt data.
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DecryptByKey ( { 'ciphertext' | @ciphertext }   
     [ , add_authenticator, { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *ciphertext*  
 A variable of type **varbinary** containing data encrypted with the key.  
   
@@ -50,7 +53,7 @@ Indicates whether the original encryption process included, and encrypted, an au
 The data used as the basis for the generation of the authenticator. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* has a **sysname** data type.  
 
 **\@authenticator**  
-A variable containing data from which an authenticator generates. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* has a **sysname** data type.  
+A variable containing data from which an authenticator generates. Must match the value supplied to [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *\@authenticator* has a **sysname** data type.  
 
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes. `DECRYPTBYKEY` returns NULL if the symmetric key used for data encryption is not open or if *ciphertext* is NULL.  

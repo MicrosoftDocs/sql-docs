@@ -1,7 +1,7 @@
 ---
-title: "Offload supported backups to secondary replicas of an availability group"
-description: "Learn about the different supported back up types when offloading backups to a secondary replica of an Always On availability group."
-ms.custom: "seodec18"
+title: "Offload backups to secondary availability group replica"
+description: "Learn about the different supported backup types when offloading backups to a secondary replica of an Always On availability group."
+ms.custom: "seo-lt-2019"
 ms.date: "09/01/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -20,9 +20,9 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Offload supported backups to secondary replicas of an availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for performing backup operations on secondary replicas. Backup operations can put significant strain on I/O and CPU (with backup compression). Offloading backups to a synchronized or synchronizing secondary replica allows you to use the resources on server instance that hosts the primary replica for your tier-1 workloads.  
+  The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for taking backups on secondary replicas. Backup operations can put significant strain on I/O and CPU (with backup compression). Offloading backups to a synchronized or synchronizing secondary replica allows you to use the resources on server instance that hosts the primary replica for your tier-1 workloads.  
 
 > [!NOTE]  
 >  RESTORE statements are not allowed on either the primary or secondary databases of an availability group.  
@@ -30,9 +30,11 @@ ms.author: mathoma
  
 ##  <a name="SupportedBuTypes"></a> Backup Types Supported on Secondary Replicas  
   
--   **BACKUP DATABASE** supports only copy-only full backups of databases, files, or filegroups when it is executed on secondary replicas. Note that copy-only backups do not impact the log chain or clear the differential bitmap.  
+-   **BACKUP DATABASE** supports only copy-only full backups of databases, files, or filegroups when it's executed on secondary replicas. Copy-only backups don't impact the log chain or clear the differential bitmap.  
   
--   Differential backups are not supported on secondary replicas.  
+-   Differential backups aren't supported on secondary replicas.
+
+-   Concurrent backups, such as executing a transaction log backup on the primary replica while a full database backup is executing on the secondary replica, is currently not supported. 
   
 -   **BACKUP LOG** supports only regular log backups (the COPY_ONLY option is not supported for log backups on secondary replicas).  
   

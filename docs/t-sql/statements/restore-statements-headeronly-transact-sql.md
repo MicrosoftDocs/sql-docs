@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - HEADERONLY (Transact-SQL)"
 title: "RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -36,7 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE HEADERONLY   
 FROM <backup_device>   
@@ -91,9 +92,9 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar(255)**|Backup set description.|  
 |**BackupType**|**smallint**|Backup type:<br /><br /> **1** = Database<br /><br /> **2** = Transaction log<br /><br /> **4** = File<br /><br /> **5** = Differential database<br /><br /> **6** = Differential file<br /><br /> **7** = Partial<br /><br /> **8** = Differential partial|  
 |**ExpirationDate**|**datetime**|Expiration date for the backup set.|  
-|**Compressed**|**BYTE(1)**|Whether the backup set is compressed using software-based compression:<br /><br /> **0** = No<br /><br /> **1** = Yes|  
+|**Compressed**|**BIT(1)**|Whether the backup set is compressed using software-based compression:<br /><br /> **0** = No<br /><br /> **1** = Yes|  
 |**Position**|**smallint**|Position of the backup set in the volume (for use with the FILE = option).|  
-|**DeviceType**|**tinyint**|Number corresponding to the device used for the backup operation.<br /><br /> Disk:<br /><br /> **2** = Logical<br /><br /> **102** = Physical<br /><br /> Tape:<br /><br /> **5** = Logical<br /><br /> **105** = Physical<br /><br /> Virtual Device:<br /><br /> **7** = Logical<br /><br /> **107** = Physical<br /><br /> Logical device names and device numbers are in **sys.backup_devices**; for more information, see [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Number corresponding to the device used for the backup operation.<br /><br /> Disk:<br /><br /> **2** = Logical<br /><br /> **102** = Physical<br /><br /> Tape:<br /><br /> **5** = Logical<br /><br /> **105** = Physical<br /><br /> Virtual Device:<br /><br /> **7** = Logical<br /><br /> **107** = Physical<br /><br /> URL<br /><br /> **9** = Logical<br /><br /> **109** = Physical<br /><br />  Logical device names and device numbers are in **sys.backup_devices**; for more information, see [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|User name that performed the backup operation.|  
 |**ServerName**|**nvarchar(128)**|Name of the server that wrote the backup set.|  
 |**DatabaseName**|**nvarchar(128)**|Name of the database that was backed up.|  
@@ -139,7 +140,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Backup type as string, one of:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Unique identification number of the backup set, by which it is identified on the media.|  
 |**CompressedBackupSize**|**bigint**|Byte count of the backup set. For uncompressed backups, this value is the same as **BackupSize**.<br /><br /> To calculate the compression ratio, use **CompressedBackupSize** and **BackupSize**.<br /><br /> During an **msdb** upgrade, this value is set to match the value of the **BackupSize** column.|  
-|**containment**|**tinyint** not NULL|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates the containment status of the database.<br /><br /> 0 = database containment is off<br /><br /> 1 = database is in partial containment|  
+|**containment**|**tinyint** not NULL|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Indicates the containment status of the database.<br /><br /> 0 = database containment is off<br /><br /> 1 = database is in partial containment|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The encryption algorithm used to encrypt the backup. NO_Encryption indicates that the backup was not encrypted. When the correct value cannot be determined the value should be NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The thumbprint of the encryptor which can be used to find certificate or the asymmetric key in the database. When the backup was not encrypted, this value is NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) through current version.<br /><br /> The type of encryptor used: Certificate or Asymmetric Key. When the backup was not encrypted, this value is NULL.|  
@@ -164,8 +165,7 @@ FROM <backup_device>
   
 ```  
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks-FullBackup.bak'   
-WITH NOUNLOAD;  
+FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  
 ```  
   

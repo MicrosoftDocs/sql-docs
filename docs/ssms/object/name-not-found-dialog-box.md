@@ -1,6 +1,7 @@
 ---
-title: "Name Not Found Dialog Box | Microsoft Docs"
-ms.custom: ""
+description: "Name Not Found Dialog Box"
+title: "Name Not Found Dialog Box"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -16,10 +17,10 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Name Not Found Dialog Box
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 One or more object names in the dialog box could not be found. Select an option to continue.  
   
-## UIElement List  
+## UI element list  
 **Correct this information and search again**  
 Select to allow use of the **Select this object type**, **Object type**, and **Enter the object name** area.  
   

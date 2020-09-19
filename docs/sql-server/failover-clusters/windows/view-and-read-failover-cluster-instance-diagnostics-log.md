@@ -1,6 +1,7 @@
 ---
-title: "View and Read Failover Cluster Instance Diagnostics Log | Microsoft Docs"
-ms.custom: ""
+title: "View & read failover cluster instance diagnostic log"
+description: Learn how to view and read the running diagnostic log produced by a SQL Server failover cluster instance.
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # View and Read Failover Cluster Instance Diagnostics Log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   All critical errors and warning events for the SQL Server Resource DLL are written to the Windows event log. A running log of the diagnostic information specific to SQL Server is captured by the [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure and is written to the SQL Server failover cluster diagnostics (also known as the *SQLDIAG* logs) log files.  
   
 -   **Before you begin:**  [Recommendations](#Recommendations), [Security](#Security)  

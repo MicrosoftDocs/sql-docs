@@ -1,10 +1,11 @@
 ---
-title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL) | Microsoft Docs"
+description: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL)"
+title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL)"
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
-ms.custom: ""
+ms.custom: seo-dt-2019
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -14,14 +15,14 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contains a row for each dictionary used in columnstore indexes. Dictionaries are used to encode some, but not all data types, therefore not all columns in a columnstore index have dictionaries. A dictionary can exist as a primary dictionary (for all segments) and possibly for other secondary dictionaries used for a subset of the column's segments.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indicates the partition ID. Is unique within a database.|  
-|**hobt_id**|**bigint**|ID of the heap or B-tree index (hobt) for the table that has this columnstore index.|  
+|**hobt_id**|**bigint**|ID of the heap or B-tree index (HoBT) for the table that has this columnstore index.|  
 |**column_id**|**int**|ID of the columnstore column.|  
 |**dictionary_id**|**int**|Id of the dictionary.|  
 |**version**|**int**|Version of the dictionary format.|  
@@ -32,7 +33,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |**pdw_node_id**|**int**|Unique identifier of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission.  
+ Requires `VIEW SERVER STATE` permission.  
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

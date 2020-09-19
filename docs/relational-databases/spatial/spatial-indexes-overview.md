@@ -1,4 +1,5 @@
 ---
+description: "Spatial Indexes Overview"
 title: "Spatial Indexes Overview | Microsoft Docs"
 ms.date: "09/12/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Indexes Overview
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports spatial data and spatial indexes. A *spatial index* is a type of extended index that allows you to index a spatial column. A spatial column is a table column that contains data of a spatial data type, such as **geometry** or **geography**.  
   
 > [!IMPORTANT]  
@@ -163,8 +164,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  Flattens the two pyramids.  
   
 3.  Joins the flattened pyramids to form a non-Euclidean plane.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  The following illustration shows a schematic view of the three-step decomposition process. In the pyramids, the dotted lines represent the boundaries of the four facets of each pyramid. Steps 1 and 2 illustrate the geodetic ellipsoid, using a green horizontal line to represent the equatorial latitude line and a series of green vertical lines to represent several longitude lines. Step 1 shows the pyramids being projected over the two hemispheres. Step 2 shows the pyramids being flattened. Step 3 illustrates the flattened pyramids, after they have been combined to form a plane, showing a number of projected longitude lines. Notice that these projected lines are straightened and vary in length, depending on where they fall on the pyramids.  
   

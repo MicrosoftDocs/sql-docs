@@ -1,6 +1,8 @@
 ---
-title: "DENY Availability Group Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Availability Group Permissions"
+description: Deny permissions on an Always On availability group.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "05/15/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Availability Group Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Denies permissions on an Always On availability group in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -28,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  
@@ -41,7 +43,9 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an availability group. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -92,7 +96,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ### A. Denying VIEW DEFINITION permission on an availability group  
  The following example denies `VIEW DEFINITION` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -101,7 +105,7 @@ GO
 ### B. Denying TAKE OWNERSHIP permission with the CASCADE OPTION  
  The following example denies `TAKE OWNERSHIP` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski` with the `CASCADE` option.  
   
-```  
+```sql  
 USE master;  
 DENY TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     CASCADE;  

@@ -1,4 +1,5 @@
 ---
+description: "OData Connection Manager"
 title: "OData Connection Manager | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # OData Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Connect to an OData data source with an OData connection manager. An OData Source component uses an OData connection manager to connect to an OData data source and consume data from the service. For more info, see [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -45,7 +46,7 @@ ms.author: chugu
   
 For anonymous access, select the Windows Authentication option.  
 
-To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you can't use the **Microsoft Online Services** authentication option. You also can't use any option that's configured for multi-factor authentication.
+To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you can't use the **Microsoft Online Services** authentication option. You also can't use any option that's configured for multi-factor authentication. Currently Modern authentication is not supported. 
   
 ### Specifying and Securing Credentials  
  If the OData service requires basic authentication, you can specify a username and password in the [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md). The values you enter in the editor are persisted in the package. The password value is encrypted according to the package protection level.  
@@ -55,9 +56,8 @@ To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you
 ## OData Connection Manager Properties  
  The following list describes the properties of the OData connection manager.  
   
-|||  
-|-|-|  
 |Property|Description|  
+|-|-|  
 |Url|URL to the service document.|  
 |UserName|User name to use for authentication, if required.|  
 |Password|Password to use for authentication, if required.|  

@@ -1,5 +1,6 @@
 ---
-title: "Get started by running the Enable Database for Stretch Wizard | Microsoft Docs"
+description: "Get started by running the Enable Database for Stretch Wizard"
+title: "Get started by running the Enable Database for Stretch Wizard"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -20,9 +21,10 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Get started by running the Enable Database for Stretch Wizard
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  To configure a database for Stretch Database, run the Enable Database for Stretch Wizard.  This article describes the info that you have to enter and the choices that you have to make in the wizard.  

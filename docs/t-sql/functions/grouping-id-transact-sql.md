@@ -1,4 +1,5 @@
 ---
+description: "GROUPING_ID (Transact-SQL)"
 title: "GROUPING_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -20,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Is a function that computes the level of grouping. GROUPING_ID can be used only in the SELECT \<select> list, HAVING, or ORDER BY clauses when GROUP BY is specified.  
   
@@ -28,12 +29,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<column_expression>  
  Is a *column_expression* in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   

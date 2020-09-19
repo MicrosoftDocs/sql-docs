@@ -1,5 +1,6 @@
 ---
-title: "Embedded and Shared Datasets (Report Builder and SSRS) | Microsoft Docs"
+title: "Embedded and Shared Datasets (Report Builder) | Microsoft Docs"
+description: Learn about embedded and shared datasets. Datasets contain a query command, parameters, and data options that include case sensitivity and collation. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -53,11 +54,10 @@ ms.author: maggies
  To create or edit an embedded dataset, use the Report Data pane. After you create a dataset, you can configure the properties in the **Dataset Properties** dialog box.  
   
 ## See Also  
- [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [Compare embedded and shared data sources - Report Builder & SSRS](compare-shared-embedded-data-sources-report-builder-ssrs.md)
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Monitor with Admin Console - Analytics Platform System | Microsoft Docs
+title: Monitor with Admin Console
 description: For Analytics Platform System, the Admin Console is a web application that surfaces the appliance state, health, and performance information. Users connect to the Admin Console through an internet browser.
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Monitor the appliance with the Admin Console - Analytics Platform System
@@ -75,9 +76,8 @@ To connect to the Admin Console, use Internet Explorer and https to browse to th
 ## <a name="RelatedTasks"></a>Admin Console Tasks  
 The Admin Console provides the ability to monitor the following:  
   
-|||  
-|-|-|  
-|**Information Type**|**How to Access in the Admin Console**|  
+|Information Type|How to Access in the Admin Console|
+|-|-|
 |Overall status of the appliance|Click **Appliance State** in the top menu, or **Home**.|  
 |Alerts|Click **Alerts**. For more information, see [Understanding Admin Console Alerts &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Appliance components and their status|Click **Appliance State** in the top menu, or **Home**.|  

@@ -1,5 +1,6 @@
 ---
 title: "Using the Query Store with In-Memory OLTP | Microsoft Docs"
+description: Learn how SQL Server Query Store allows you to monitor the performance of natively compiled code for workloads running in-memory OLTP.
 ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the Query Store with In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store allows you to monitor the performance of natively compiled code for workloads running in-memory OLTP.  
 Compile and runtime statistics are collected and exposed the same way as for disk-based workloads.   
@@ -27,7 +28,7 @@ However, there are some specific aspects that users should be aware of when usin
   
 -   When Query Store is enabled, queries, plans and compile-time statistics are collected by default. However, runtime statistics collection is not activated unless you explicitly enable it with  [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   When you set *@new_collection_value* to 0 Query Store will stop collecting runtime statistics for affected procedure or for the entire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+-   When you set *\@new_collection_value* to 0 Query Store will stop collecting runtime statistics for affected procedure or for the entire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
 -   The value configured with [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) is not persisted. Make sure you check and configure again statistics collection after restarting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

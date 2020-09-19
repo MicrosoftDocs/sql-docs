@@ -1,11 +1,12 @@
 ---
-title: "Breaking Changes to Database Engine Features in SQL Server 2017 | Microsoft Docs"
-description: "Breaking changes to Database Engine Features in SQL Server 2017"
-ms.date: "11/27/2018"
+title: "Database Engine: Breaking changes | Microsoft Docs"
+titleSuffix: "SQL Server 2017"
+description: "Learn about changes that might break applications, scripts, or functionalities that are based on earlier versions of SQL Server."
+ms.custom: "seo-lt-2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.custom: ""
 ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +17,7 @@ ms.author: mikeray
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Breaking Changes to Database Engine Features in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
 
   This topic describes breaking changes in the [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
@@ -25,12 +26,14 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
   
 -  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. Beginning with [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. clr strict security is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` CLR assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. When `clr strict security` is disabled, a CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire **sysadmin** privileges. After enabling strict security, any assemblies that are not signed will fail to load. Also, if a database has `SAFE` or `EXTERNAL_ACCESS` assemblies, `RESTORE` or `ATTACH DATABASE` statements can complete, but the assemblies may fail to load.   
   To load the assemblies, you must either alter or drop and recreate each assembly so that it is signed with a certificate or asymmetric key that has a corresponding login with the `UNSAFE ASSEMBLY` permission on the server. For more information, see [CLR strict security](../database-engine/configure-windows/clr-strict-security.md). 
+  
+-  The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]. Up to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], a self-signed certificate is created using SHA1. Starting with [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], a self-signed certificate is created using SHA2_256.
 
 ## <a name="previous-versions"></a> Previous Versions  
 
 - [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 
-- [Breaking Changes to Database Engine Features in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14)
+- [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014#SQL14)
 
 #### Archived Documentation for Very Old Versions of SQL Server
 

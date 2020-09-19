@@ -1,5 +1,6 @@
 ---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
+description: Learn about checkpoints, known good points from which the SQL Server Database Engine can start applying changes contained in the log during recovery.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -29,7 +30,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Checkpoints (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.
 
 ##  <a name="Overview"></a> Overview   
@@ -53,7 +54,7 @@ For performance reasons, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] perform
 > Long-running, uncommitted transactions increase recovery time for all checkpoint types.   
   
 ##  <a name="InteractionBwnSettings"></a> Interaction of the TARGET_RECOVERY_TIME and 'recovery interval' Options  
- The following table summarizes the interaction between the server-wide **sp_configure'**recovery interval**'** setting and the database-specific ALTER DATABASE ... TARGET_RECOVERY_TIME setting.  
+ The following table summarizes the interaction between the server-wide **sp_configure '**recovery interval**'** setting and the database-specific `ALTER DATABASE ... TARGET_RECOVERY_TIME` setting.  
   
 |TARGET_RECOVERY_TIME|'recovery interval'|Type of Checkpoint Used|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -75,7 +76,7 @@ After a system crash, the length of time required to recover a given database de
 ###  <a name="PerformanceImpact"></a> Impact of recovery interval on recovery performance  
 For an online transaction processing (OLTP) system using short transactions, **recovery interval** is the primary factor determining recovery time. However, the **recovery interval** option does not affect the time required to undo a long-running transaction. Recovery of a database with a long-running transaction can take much longer than the time specified in the **recovery interval** setting. 
  
-For example, if a long-running transaction took two hours to perform updates before the server instance became disabled, the actual recovery takes considerably longer than the **recovery interval** value to recover the long transaction. For more information about the impact of a long running transaction on recovery time, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+For example, if a long-running transaction took two hours to perform updates before the server instance became disabled, the actual recovery takes considerably longer than the **recovery interval** value to recover the long transaction. For more information about the impact of a long running transaction on recovery time, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). For more information about the recovery process, see [Restore and Recovery Overview (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 Typically, the default values provides optimal recovery performance. However, changing the recovery interval might improve performance in the following circumstances:  
   
@@ -86,7 +87,6 @@ Typically, the default values provides optimal recovery performance. However, ch
 If you decide to increase the **recovery interval** setting, we recommend increasing it gradually by small increments and evaluating the effect of each incremental increase on recovery performance. This approach is important because as the **recovery interval** setting increases, database recovery takes that many times longer to complete. For example, if you change **recovery interval** to 10 minutes, recovery takes approximately 10 times longer to complete than when **recovery interval** is set to 1 minute.  
   
 ##  <a name="IndirectChkpt"></a> Indirect checkpoints
-  
 Indirect checkpoints, introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], provide a configurable database-level alternative to automatic checkpoints. This can be configured by specifying the **target recovery time** database configuration option. For more information, see [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 In the event of a system crash, indirect checkpoints provide potentially faster, more predictable recovery time than automatic checkpoints. Indirect checkpoints offer the following advantages:  
   
@@ -105,7 +105,6 @@ However, an online transactional workload on a database configured for indirect 
 > Databases that were upgraded in-place, or restored from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], will use the previous automatic checkpoint behavior unless explicitly altered to use indirect checkpoint.       
 
 ### <a name="ctp23"></a> Improved indirect checkpoint scalability
-
 Prior to [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], you may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces improved scalability for indirect checkpoint, which should help avoid these errors on databases that have a heavy `UPDATE`/`INSERT` workload.
   
 ##  <a name="EventsCausingChkpt"></a> Internal checkpoints  
@@ -123,7 +122,6 @@ Internal Checkpoints are generated by various server components to guarantee tha
   
 -   Bringing a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance (FCI) offline.      
   
-
 ##  <a name="RelatedTasks"></a> Related tasks  
  **To change the recovery interval on a server instance**  
   
@@ -137,9 +135,7 @@ Internal Checkpoints are generated by various server components to guarantee tha
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-  
 ## See also  
 [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Transaction Log Physical Architecture](https://technet.microsoft.com/library/ms179355.aspx) (From [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online but still applicable!)       
-  
-  
+[SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
+ 

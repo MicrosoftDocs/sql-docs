@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_backup_file_snapshot (Transact-SQL)"
 title: "sp_delete_backup_file_snapshot (Transact-SQL) | Microsoft Docs"
 ms.date: "08/09/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_delete_backup_file_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Deletes a specified backup snapshot from the specified database. Use this system stored procedure in conjunction with the **sys.fn_db_backup_file_snapshots** system function to identify and delete orphaned backup snapshots. For more information, see [File-Snapshot Backups for Database Files in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
 

@@ -1,4 +1,5 @@
 ---
+description: "Revert a Database to a Database Snapshot"
 title: "Revert a Database to a Database Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
@@ -15,7 +16,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Revert a Database to a Database Snapshot
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If data in an online database becomes damaged, in some cases, reverting the database to a database snapshot that predates the damage might be an appropriate alternative to restoring the database from a backup. For example, reverting a database might be useful for reverse a recent serious user error, such as a dropped table. However, all changes made after the snapshot was created are lost.  
   
 -   **Before you begin:**  
@@ -111,8 +112,6 @@ ms.author: "sstein"
 5.  Start the database.  
   
 6.  Optionally, back up the reverted database, especially if it uses the full (or bulk-logged) recovery model. To back up a database, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This section contains the following examples of reverting a database to a database snapshot:  

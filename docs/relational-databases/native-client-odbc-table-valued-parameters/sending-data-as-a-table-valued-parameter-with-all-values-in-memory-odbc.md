@@ -1,5 +1,6 @@
 ---
-title: "Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC) | Microsoft Docs"
+description: "Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)"
+title: "Table-Valued Parameter, values in Memory (ODBC)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,20 +11,19 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), sending data to a stored procedure with all values in memory"
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes how to send data to a stored procedure as a table-valued parameter when all values are in memory. For another sample demonstrating table-valued parameters, see [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## Prerequisite  
  This procedure assumes that the following [!INCLUDE[tsql](../../includes/tsql-md.md)] has been executed on the server:  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -41,7 +41,7 @@ from @Items
   
 1.  Declare variables for the SQL parameters. In this case, the table value is held entirely in memory, so values for the columns of the table value are declared as arrays.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
     // Variables for SQL parameters.  
     #define ITEM_ARRAY_SIZE 20  
@@ -58,7 +58,7 @@ from @Items
   
 2.  Bind the parameters. Binding parameters is a two stage process when table-valued parameters are used. In the first stage, step parameters for the stored procedure are bound in the normal way, as follows.  
   
-    ```  
+    ```cpp
     // Bind parameters for call to TVPOrderEntryDirect.  
     // 1 - Custcode input  
     r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT,SQL_VARCHAR, SQL_C_CHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
@@ -86,7 +86,7 @@ from @Items
   
 3.  The second stage of parameter binding is to bind the columns for the table-valued parameter. The parameter focus is first set to the ordinal of the table-valued parameter. Then columns of the table value are bound by using SQLBindParameter in the same way as they would be if they were parameters of the stored procedure, but with column ordinals for ParameterNumber. If there were more table-valued parameters, we would set the focus to each in turn and bind their columns. Finally, the parameter focus is reset to 0.  
   
-    ```  
+    ```cpp
     // Bind columns for the table-valued parameter (param 2).  
     // First set focus on param 2.  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -102,7 +102,7 @@ from @Items
   
 4.  Populate the parameter buffers. `cbTVP` is set to the number of rows to be sent to the server.  
   
-    ```  
+    ```cpp
     // Populate parameters.  
     cbTVP = 0; // Number of rows available for input.  
     strcpy_s((char *) CustCode, sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
@@ -118,9 +118,7 @@ from @Items
   
 5.  Call the procedure:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    ```  
+    ```cpp
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  

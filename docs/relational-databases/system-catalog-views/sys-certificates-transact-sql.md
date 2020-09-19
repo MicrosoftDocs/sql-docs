@@ -1,4 +1,5 @@
 ---
+description: "sys.certificates (Transact-SQL)"
 title: "sys.certificates (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.certificates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a row for each certificate in the database.  
   
@@ -43,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**start_date**|**datetime**|When certificate becomes valid.|  
 |**thumbprint**|**varbinary(32)**|SHA-1 hash of the certificate. The SHA-1 hash is globally unique.|  
 |**attested_by**|**nvarchar(260)**|System use only.|  
-|pvt_key_last_backup_date|**datetime**|The date and time the certificate's private key was last exported.|  
+|**pvt_key_last_backup_date**|**datetime**|The date and time the certificate's private key was last exported.|  
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,5 +1,6 @@
 ---
-title: "Manage and Monitor Full-Text Search for a Server Instance | Microsoft Docs"
+description: "Manage and Monitor Full-Text Search for a Server Instance"
+title: "Manage & monitor Full-Text Search for a SQL Server instance"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -13,9 +14,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Full-text administration for a server instance includes:  
   
 -   System management tasks such as managing the FDHOST Launcher service (MSSQLFDLauncher), restarting filter daemon host process if you change the service account credentials, configuring server-wide full-text properties, and backing up full-text catalogs. At the server level, for example, you can specify a default full-text language that differs from the default language of the server instance as a whole.  
@@ -32,8 +34,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 1.  In Object Explorer, right-click a server, and then click **Properties**.  
   
 2.  In the **Server Properties** dialog box, click the **Advanced** page to view server information about full-text search. The full-text properties are as follows:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **Default Full-Text Language**  
   

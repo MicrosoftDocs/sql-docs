@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_run_collection_set (Transact-SQL)"
 title: "sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_syscollector_run_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_run_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts a collection set if the collector is already enabled and the collection set is configured for non-cached collection mode.  
   
@@ -52,7 +53,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## Remarks  
  Either *collection_set_id* or *name* must have a value, both cannot be NULL.  
   
- This procedure will start the collection and upload jobs for the specified collection set and will immediately start the collection agent job if the collection set has its **@collection_mode** set to non-cached (1). For more information see, [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ This procedure will start the collection and upload jobs for the specified collection set and will immediately start the collection agent job if the collection set has its **\@collection_mode** set to non-cached (1). For more information see, [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set can also be used to run a collection set that does not have a schedule.  
   

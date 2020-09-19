@@ -1,6 +1,7 @@
 ---
-title: "RemoveCertificate Method (ServerSettings Class) | Microsoft Docs"
-ms.custom: ""
+description: "RemoveCertificate Method (ServerSettings Class)"
+title: "RemoveCertificate Method (ServerSettings)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "RemoveCertificate method"
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # RemoveCertificate Method (ServerSettings Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Removes the current security certificate from the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Syntax  

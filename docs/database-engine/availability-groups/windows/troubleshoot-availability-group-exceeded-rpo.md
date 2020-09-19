@@ -1,6 +1,7 @@
 ---
-title: "Troubleshoot: Availability group exceeded RPO (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Availability group exceeded RPO"
+description: "Common issues and resolutions for when your Always On availability group exceeds the recovery point objective (RPO)"
+ms.custom: "seo-lt-2019"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # Troubleshoot: Availability group exceeded RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   After you perform a forced manual failover on an availability group to an asynchronous-commit secondary replica, you may find that data loss is more than your recovery point objective (RPO). Or, when you calculate the potential data loss of an asynchronous-commit secondary replica using the method in [Monitor Performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md), you find that it exceeds your RPO.  
   
  A synchronous-commit secondary replica guarantees zero data loss, but the potential data loss of an asynchronous-commit secondary replica depends on how much log is still waiting to be hardened on the secondary replica.  
@@ -33,7 +34,7 @@ ms.author: jroth
   
  Also, it is useful to check the two performance objects `SQL Server:Availability Replica > Flow Control Time (ms/sec)` and `SQL Server:Availability Replica > Flow Control/sec`. Multiplying these two values shows you in the last second how much time was spent waiting for flow control to clear. The longer the flow control wait time, the lower the send rate.  
   
- The following metrics are useful in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe** and [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865) to evaluate latency and network utilization.  
+ The following metrics are useful in diagnosing network latency and throughput. You can use other Windows tools, such as **ping.exe** and [Network Monitor](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7) to evaluate latency and network utilization.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

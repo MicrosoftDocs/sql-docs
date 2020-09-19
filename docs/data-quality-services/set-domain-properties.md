@@ -1,6 +1,6 @@
 ---
-title: "Set Domain Properties | Microsoft Docs"
-ms.custom: ""
+description: "Set Domain Properties"
+title: "Set Domain Properties"
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -10,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.domainproperties.f1"
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Set Domain Properties
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to set domain properties in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   

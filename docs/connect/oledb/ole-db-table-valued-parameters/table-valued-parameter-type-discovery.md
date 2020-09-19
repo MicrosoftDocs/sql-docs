@@ -1,6 +1,6 @@
 ---
-title: "Table-Valued Parameter Type Discovery | Microsoft Docs"
-description: "Table-Valued Parameter type discovery using OLE DB Driver for SQL Server"
+title: Table-valued parameter type discovery (OLE DB driver)
+description: Learn how a consumer can discover the metadata information for each individual column of the table-valued parameter in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, type discovery"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
-# Table-Valued Parameter Type Discovery
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Table-Valued Parameter Type Discovery (OLE DB driver)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

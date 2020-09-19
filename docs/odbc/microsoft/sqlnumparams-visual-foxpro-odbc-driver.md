@@ -1,4 +1,5 @@
 ---
+description: "SQLNumParams (Visual FoxPro ODBC Driver)"
 title: "SQLNumParams (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNumParams function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLNumParams (Visual FoxPro ODBC Driver)
 > [!NOTE]  

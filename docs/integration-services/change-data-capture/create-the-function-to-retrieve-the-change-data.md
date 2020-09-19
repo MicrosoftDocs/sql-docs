@@ -1,4 +1,5 @@
 ---
+description: "Create the Function to Retrieve the Change Data"
 title: "Create the Function to Retrieve the Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Create the Function to Retrieve the Change Data
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After completing the control flow for an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the next task is to create a table-valued function that retrieves the change data. You only have to create this function one time before the first incremental load.  
@@ -74,7 +75,7 @@ ms.author: chugu
 > [!NOTE]  
 >  For more information about the syntax of this stored procedure and its parameters, see [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
- The stored procedure always generates a wrapper function to return all changes from each capture instance. If the *@supports_net_changes* parameter was set when the capture instance was created, the stored procedure also generates a wrapper function to return net changes from each applicable capture instance.  
+ The stored procedure always generates a wrapper function to return all changes from each capture instance. If the *\@supports_net_changes* parameter was set when the capture instance was created, the stored procedure also generates a wrapper function to return net changes from each applicable capture instance.  
   
  The stored procedure returns a result set with two columns:  
   
@@ -106,7 +107,7 @@ deallocate #hfunctions
 ```  
   
 ### Understanding and Using the Functions Created by the Stored Procedure  
- To systematically walk the timeline of captured change data, the generated wrapper functions expect that the *@end_time* parameter for one interval will be the *@start_time* parameter for the subsequent interval. When this convention is followed, the generated wrapper functions can do the following tasks:  
+ To systematically walk the timeline of captured change data, the generated wrapper functions expect that the *\@end_time* parameter for one interval will be the *\@start_time* parameter for the subsequent interval. When this convention is followed, the generated wrapper functions can do the following tasks:  
   
 -   Map the date/time values to the LSN values that are used internally.  
   
@@ -124,7 +125,7 @@ deallocate #hfunctions
   
 -   The starting date/time value and the ending date/time value for the interval. While the wrapper functions use date/time values as the end points for the query interval, the change data capture functions use two LSN values as the end points.  
   
--   The row filter. For both the wrapper functions and the change data capture functions, the *@row_filter_option* parameter is the same. For more information, see [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) and [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+-   The row filter. For both the wrapper functions and the change data capture functions, the *\@row_filter_option* parameter is the same. For more information, see [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) and [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
  The result set returned by the wrapper functions includesthe following data:  
   
@@ -132,7 +133,7 @@ deallocate #hfunctions
   
 -   A column named __CDC_OPERATION that uses a one- or two-character field to identify the operation that is associated with the row. The valid values for this field are as follows: 'I' for insert, 'D' for delete, 'UO' for update old values, and 'UN' for update new values.  
   
--   Update flags, when you request them, that appear as bit columns after the operation code and in the order that is specified in the *@update_flag_list* parameter. These columns are named by appending '_uflag' to the associated column name.  
+-   Update flags, when you request them, that appear as bit columns after the operation code and in the order that is specified in the *\@update_flag_list* parameter. These columns are named by appending '_uflag' to the associated column name.  
   
  If your package calls a wrapper function that queries for all changes, the wrapper function also returns the columns, __CDC_STARTLSN and \__CDC_SEQVAL. These two columns become the first and second columns, respectively, of the result set. The wrapper function also sorts the result set based on these two columns.  
   

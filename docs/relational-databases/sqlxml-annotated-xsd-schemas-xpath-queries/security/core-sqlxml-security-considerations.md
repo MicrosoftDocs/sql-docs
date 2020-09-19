@@ -1,5 +1,6 @@
 ---
-title: "Core SQLXML Security Considerations | Microsoft Docs"
+title: "Core SQLXML Security Considerations"
+description: Learn the core security guidelines for using SQLXML for data access.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Core SQLXML Security Considerations
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The following are security guidelines for using SQLXML for data access.  
   
 -   The SQLXMLOLEDB provider exposes a **StreamFlags** property which allows you to set flags indicating what SQLXML functionality should be enabled or disabled for each specific instance. You can use this property to customize your use of SQLXML and to make sure that only the components you want are enabled. For more information, see [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  

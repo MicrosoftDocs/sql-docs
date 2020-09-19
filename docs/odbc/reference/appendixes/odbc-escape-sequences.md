@@ -1,4 +1,5 @@
 ---
+description: "ODBC Escape Sequences"
 title: "ODBC Escape Sequences | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Escape Sequences
 The following escape sequences are used in ODBC. The grammar in this section uses some elements defined in [Elements Used in SQL Statements](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  

@@ -1,5 +1,6 @@
 ---
-title: "Derive Column Values by Using the Derived Column Transformation | Microsoft Docs"
+description: "Derive Column Values with the Derived Column Transformation"
+title: "Derive Column Values with the Derived Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,9 +17,9 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
 ---
-# Derive Column Values by Using the Derived Column Transformation
+# Derive Column Values with the Derived Column Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a Derived Column transformation, the package must already include at least one Data Flow task and one source.  

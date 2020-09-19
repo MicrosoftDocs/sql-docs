@@ -1,22 +1,23 @@
 ---
-title: "Copy Tables from One Database Diagrams to Another | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Copy Tables from One Database Diagrams to Another (Visual Database Tools)"
+title: Copy Tables from One Database Diagrams to Another
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copying tables"
   - "duplicating tables"
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Copy Tables from One Database Diagrams to Another (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can copy a table from one database diagram to another in the same database.  
   
 Copying a table from one database diagram to another diagram adds a reference to the table in the second diagram. The table is not duplicated in your database. For example, if you copy the `authors` table from one database diagram to another, each diagram references the same `authors` table in the database.  

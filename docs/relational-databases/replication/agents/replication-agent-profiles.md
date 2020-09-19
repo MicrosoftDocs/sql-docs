@@ -1,4 +1,5 @@
 ---
+description: "Replication Agent Profiles"
 title: "Replication Agent Profiles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -20,10 +21,10 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication Agent Profiles
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When replication is configured, a set of agent profiles is installed on the Distributor. An agent profile contains a set of parameters that are used each time an agent runs: each agent logs in to the Distributor during its startup process and queries for the parameters in its profile. For merge subscriptions that use Web synchronization, profiles are downloaded and stored at the Subscriber. If the profile is changed, the profile at the Subscriber is updated the next time the Merge Agent runs. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  Replication provides a default profile for each agent and additional predefined profiles for the Log Reader Agent, Distribution Agent, and Merge Agent. In addition to the profiles provided, you can create profiles suited to your application requirements. An agent profile allows you to change key parameters easily for all agents associated with that profile. For example, if you have 20 Snapshot Agents and need to change the query timeout value (the **-QueryTimeout** parameter), you can update the profile used by the Snapshot Agents and all agents of that type will begin using the new value automatically the next time they run.  

@@ -1,4 +1,5 @@
 ---
+description: "Specify an Interval of Change Data"
 title: "Specify an Interval of Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Specify an Interval of Change Data
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are **datetime** values and will be stored in package variables for use later in the package.  

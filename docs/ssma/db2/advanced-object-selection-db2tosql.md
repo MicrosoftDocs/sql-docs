@@ -1,4 +1,5 @@
 ---
+description: "Advanced Object Selection (DB2ToSQL)"
 title: "Advanced Object Selection (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Advanced Object Selection (DB2ToSQL)
 The **Advanced Object Section** dialog box lets you filter database objects by using strings and substrings in the object name, and then select or deselect those objects. SSMA performs conversion and migration operations on selected objects.  
@@ -19,7 +20,7 @@ When you first open the dialog box, click **Show Subcategories Items** to displa
   
 Before you use this dialog box, you might want to force SSMA to load all metadata by either converting schemas or saving the project.  
   
-## Options  
+## Options
 **Check All Items**  
 Adds a check mark next to all items. These items will be immediately selected in the metadata explorer.  
   

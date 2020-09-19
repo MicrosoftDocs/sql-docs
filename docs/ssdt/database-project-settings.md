@@ -1,11 +1,8 @@
 ---
-title: "Database Project Settings | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Database Project Settings
+description: Learn about database project settings. See how to use these settings to control aspects of your database, debugging, and build configurations.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.DebugProperties"
@@ -38,10 +35,15 @@ f1_keywords:
   - "sql.data.tools.dbassemblyinfo"
   - "sql.data.tools.extendedpropertieseditor.dialog"
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Database Project Settings
+
 You use database project settings to control aspects of your database, debugging and build configurations. These settings fall into the following categories.  
   
 -   [Project Settings](#bkmk_proj_settings)  
@@ -80,7 +82,7 @@ The settings in the following table apply to all configurations of this database
 |Field|Default value|Description|  
 |---------|-----------------|---------------|  
 |Target Platform|Microsoft SQL Server 2012|Specifies the version of SQL Server that you are targeting with this database project.|  
-|Enable extended Transact\-SQL verification for common objects.|Not enabled when you create a new project.<br /><br />Enabled when you create a project from SQL Server Object Explorer connected to SQL Azure, import a SQL Azure Database into the project, or change a project's Target Platform to SQL Azure.|When this option is enabled, errors found in the project that failed SQL Server Compiler verification are reported. If you change your target platform to SQL Azure, Extended Verification becomes enabled. The option will not be unchecked if you change your Target Platform.<br /><br />You can enable this option for other versions of SQL Server, but validation is limited to Microsoft SQL Server 2012 Partially Contained Databases and SQL Azure. Not all Transact\-SQL syntax is supported for all versions of SQL Server.<br /><br />For more detailed information, see [Extended Transact-SQL Verification](#bkmk_evf) later in this topic|  
+|Enable extended Transact\-SQL verification for common objects.|Not enabled when you create a new project.<br /><br />Enabled when you create a project from SQL Server Object Explorer connected to SQL Azure, import an Azure SQL Database into the project, or change a project's Target Platform to SQL Azure.|When this option is enabled, errors found in the project that failed SQL Server Compiler verification are reported. If you change your target platform to SQL Azure, Extended Verification becomes enabled. The option will not be unchecked if you change your Target Platform.<br /><br />You can enable this option for other versions of SQL Server, but validation is limited to Microsoft SQL Server 2012 Partially Contained Databases and SQL Azure. Not all Transact\-SQL syntax is supported for all versions of SQL Server.<br /><br />For more detailed information, see [Extended Transact-SQL Verification](#bkmk_evf) later in this topic|  
 |Output types|||  
 |Data-tier Application (.dacpac file)|Enabled and locked. The build output of a database project always produces a .dacpac package when the project is built.|If you are using the version of SQL Server Data Tools (SSDT) that has the "Create additional down-level .dacpac file (v2.0)" option, check it if you want for the package to be compatible with SQL Server Management Studio or SQL Azure Management Portal. You can deploy a .dacpac package directly from (SSDT), but you can deploy only a version 2.0 .dacpac file through SQL Server Management Studio at the time SQL Server Data Tools is released.|  
 |Create Script (.sql File)||Specifies whether a full .sql CREATE script is generated for all the objects in the project, and placed in the bin\debug folder when the project is built. You can create an incremental update script using the **Project Publish** command or SQL Compare utility.|  
@@ -125,7 +127,7 @@ Features that are not currently supported for validation including:
 -   SQL Azure Metadata Collation (Compiler Service uses SQL Server 2012 Partially Contained Database metadata collation - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### Enabling/Disabling Extended Verification  
-Extended Transact-SQL Verification is enabled by default in a database project that is created directly from a SQL Azure database or a project whose target platform is set to SQL Azure. It is recommended that Extended Verification be used when developing for SQL Azure or an application-scoped database targeting SQL Server 2012. For more information about application scoped databases, see [Partially Contained Databases](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Extended Transact-SQL Verification is enabled by default in a database project that is created directly from an Azure SQL Database or a project whose target platform is set to SQL Azure. It is recommended that Extended Verification be used when developing for SQL Azure or an application-scoped database targeting SQL Server 2012. For more information about application scoped databases, see [Partially Contained Databases](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 The Extended Verification feature can also be used when developing an application-scoped database for SQL Server 2008/R2 to achieve compatibility with Microsoft SQL Server 2012 and SQL Azure.  
   
@@ -144,7 +146,7 @@ The Extended Verification feature can also be used when developing an applicatio
   
 2.  In **Properties**, change the **Extended T-SQL Verification** property to **False**.  
   
-![File Properties](../ssdt/media/ssdt-evf.gif "File Properties")  
+    ![File Properties](../ssdt/media/ssdt-evf.gif "File Properties")  
   
 ### Special Considerations for Collations  
 For more information regarding collations in partially contained databases, see [Contained Database Collations](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  

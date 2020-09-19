@@ -1,7 +1,8 @@
 ---
-title: "Data Type Support for ODBC Date and Time Improvements | Microsoft Docs"
+title: "Type support, ODBC Date and Time"
+description: Learn about ODBC types that support SQL Server date and time data types, including data type mapping and formats for strings, literals, and data structures.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "date/time [ODBC], data type support"
   - "ODBC, date/time improvements"
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Support for ODBC Date and Time Improvements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types.  
   
@@ -38,7 +38,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-  
+||||
+
  The following table lists the corresponding structures and ODBC C types. Because ODBC does not permit driver defined C types, SQL_C_BINARY is used for time and datetimeoffset as binary structures.  
   
 |SQL data type|Memory layout|Default C data type|Value (sqlext.h)|  
@@ -47,7 +48,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SQL_TYPE_DATE<br /><br /> SQL_DATE|SQL_DATE_STRUCT<br /><br /> DATE_STRUCT|SQL_C_TYPE_DATE<br /><br /> SQL_C_DATE|SQL_TYPE_DATE<br /><br /> SQL_DATE|  
 |SQL_SS_TIME2|SQL_SS_TIME2_STRUCT|SQL_C_SS_TIME2<br /><br /> SQL_C_BINARY (ODBC 3.5 and earlier)|0x4000 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
 |SQL_SS_TIMESTAMPOFFSET|SQL_SS_TIMESTAMPOFFSET_STRUCT|SQL_C_SS_TIMESTAMPOFFSET<br /><br /> SQL_C_BINARY (ODBC 3.5 and earlier)|0x4001 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
-  
+|||||
+
  When SQL_C_BINARY binding is specified, alignment checking will be performed and an error reported for incorrect alignment. The SQLSTATE for this error will be IM016, with the message "Incorrect structure alignment".  
   
 ## Data Formats: Strings and Literals  
@@ -61,7 +63,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Fractional seconds can optionally be specified using up to seven digits.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.9999999]'<br /><br /> Fractional seconds can optionally be specified using up to seven digits.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Fractional seconds can optionally be specified using up to seven digits.|  
-  
+||||
+
  There are no changes to the ODBC escape sequences for date/time literals.  
   
  Fractional seconds in results always use a dot (.), rather than a colon (:).  
@@ -85,7 +88,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Minute range is 0 through 59.  
   
--   Seconds range is 0 through 61.9(n). This allows up to two leap seconds to maintain synchronization with sideral time.  
+-   Seconds range is 0 through 61.9(n). This allows up to two leap seconds to maintain synchronization with sidereal time.  
   
      Note that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow leap seconds, so second values greater than 59 will cause a server error.  
   
@@ -106,7 +109,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### SQL_SS_TIME2_STRUCT  
  This struct is padded to 12 bytes on both 32-bit and 64-bit operating systems.  
   
-```  
+```cpp
 typedef struct tagSS_TIME2_STRUCT {  
    SQLUSMALLINT hour;  
    SQLUSMALLINT minute;  
@@ -117,7 +120,7 @@ typedef struct tagSS_TIME2_STRUCT {
   
 ### SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-```  
+```cpp
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
    SQLSMALLINT year;  
    SQLUSMALLINT month;  
@@ -135,5 +138,3 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  

@@ -1,5 +1,6 @@
 ---
 title: "Resolve Out Of Memory Issues | Microsoft Docs"
+description: Learn about out-of-memory situations in SQL Server In-Memory OLTP, how to restore and resolve impacts, resolve page allocation failures, and best practices.
 ms.custom: ""
 ms.date: "12/21/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Resolve Out Of Memory issues
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] uses more memory and in different ways than does [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is possible that the amount of memory you installed and allocated for [!INCLUDE[hek_2](../../includes/hek-2-md.md)] becomes inadequate for your growing needs. If so, you could run out of memory. This topic covers how to recover from an OOM situation. See [Monitor and Troubleshoot Memory Usage](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) for guidance that can help you avoid many OOM situations.  
   
@@ -70,8 +71,6 @@ If the server does have enough physical memory, but you are still seeing this er
 1.  [Open a DAC (Dedicated Administrator Connection)](#bkmk_openDAC)  
   
 2.  [Take corrective action](#bkmk_takeCorrectiveAction)  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="bkmk_openDAC"></a> Open a DAC (Dedicated Administrator Connection)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server-even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

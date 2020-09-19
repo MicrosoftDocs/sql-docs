@@ -4,8 +4,6 @@ description: "This article shows you everything you need to know to get started 
 ms.custom: performance
 ms.date: "12/13/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
@@ -14,7 +12,7 @@ ms.reviewer: maghan
 ---
 # Get started with Integration Services (SSIS) Scale Out on a single computer
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This section provides guidance for setting up Integration Services Scale Out in a single-computer environment with the default settings.

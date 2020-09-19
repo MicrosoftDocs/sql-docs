@@ -1,5 +1,5 @@
 ---
-title: "Configuring TLS 1.2 in Analytics Platform System | Microsoft Docs "
+title: "Configuring TLS 1.2"
 description: "Recommendation to configure TLS 1.2 in APS"
 author: "mzaman1"
 ms.prod: "sql"

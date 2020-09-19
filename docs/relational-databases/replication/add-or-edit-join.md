@@ -1,4 +1,5 @@
 ---
+description: "Add or Edit Join"
 title: "Add or Edit Join | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Add or Edit Join
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Add Join** and **Edit Join** dialog boxes allow you to add and edit join filters for merge publications.  
   
 > [!NOTE]  
@@ -47,8 +48,6 @@ ms.author: "mathoma"
     -   If you are editing an existing join, you must make edits manually.  
   
 3.  **Specify join options**  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   If the column on which you join in the filtered table is unique, select **Unique key**. The merge process has special performance optimizations available if the column is unique.  
   

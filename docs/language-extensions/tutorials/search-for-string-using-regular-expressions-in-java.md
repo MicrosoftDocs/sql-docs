@@ -1,23 +1,22 @@
 ---
-title: 'Tutorial: Search for a string using regular expressions (regex) in Java'
-titleSuffix: SQL Server Language Extensions
-description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
+title: 'Tutorial: Regex string search in Java'
+description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions (regex).
 author: dphansen
 ms.author: davidph 
-ms.date: 08/27/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Search for a string using regular expressions (regex) in Java
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) and create a Java class that receives two columns (ID and text) from SQL Server and a regular expression as an input parameter. The class returns two columns back to SQL Server (ID and text).
+This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) to create a Java class that receives two columns (ID and text) from SQL Server and a regular expression (regex) as an input parameter. The class returns two columns back to SQL Server (ID and text).
 
 For a given text in the text column sent to the Java class, the code checks if the given regular expression is fulfilled, and returns that text together with the original ID.
 
-This particular sample uses a regular expression that checks if a text contains the word "Java" or "java".
+This sample code uses a regular expression that checks if a text contains the word "Java" or "java".
 
 ## Prerequisites
 
@@ -174,7 +173,7 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 
 ## Create external language
 
-In CTP 3.0 and later, you need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
+You need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
 
 ### Create external language on Windows
 
@@ -183,8 +182,6 @@ If you are using Windows, follow the steps below to create an external language 
 1. Create a .zip file containing the extension.
 
     As part of the SQL Server setup on Windows, the Java extension **.zip** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. This zip file contains the **javaextension.dll**.
-
-    Compress the `javaextension.dll` into a **.zip** file. For example: `javaextension.zip`.
 
 2. Create an external language Java from the .zip file:
 
@@ -222,7 +219,7 @@ Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 CTP 3.0 and later on both Windows and Linux.
+1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 on both Windows and Linux.
 
     + Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
 

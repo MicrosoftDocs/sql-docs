@@ -1,5 +1,6 @@
 ---
-title: "Assign Functional Area Permissions (Master Data Services) | Microsoft Docs"
+description: "Assign Functional Area Permissions (Master Data Services)"
+title: Assign Functional Area Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: lle
 ---
 # Assign Functional Area Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Assign functional area permission to grant users or groups access to the functional areas of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

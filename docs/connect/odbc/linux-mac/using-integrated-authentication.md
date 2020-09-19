@@ -1,7 +1,8 @@
 ---
-title: "Using Integrated Authentication | Microsoft Docs"
+title: "Using Integrated Authentication"
+description: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ""
-ms.date: "01/20/2017"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,25 +11,27 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "integrated authentication"
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Integrated Authentication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS supports connections that use Kerberos integrated authentication. It supports the MIT Kerberos Key Distribution Center (KDC), and works with Generic Security Services Application Program Interface (GSSAPI) and Kerberos v5 libraries.
-  
+
+As of version 17.6, the driver also supports integrated authentication with Azure Active Directory using a federated account, system library limitations notwithstanding. See [Using Azure Active Directory](../using-azure-active-directory.md) for more information.
+
 ## Using Integrated Authentication to Connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from an ODBC Application  
 
 You can enable Kerberos integrated authentication by specifying **Trusted_Connection=yes** in the connection string of **SQLDriverConnect** or **SQLConnect**. For example:  
 
 ```
-Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
 When connecting with a DSN, you can also add **Trusted_Connection=yes** to the DSN entry in `odbc.ini`.
   
-The `-E` option of `sqlcmd` and the `-T` option of `bcp` can also be used to specify integrated authentication; see [Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) and [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md) for more information.
+The `-E` option of `sqlcmd` and the `-T` option of `bcp` can also be used to specify integrated authentication; see [Connecting with **sqlcmd**](connecting-with-sqlcmd.md) and [Connecting with **bcp**](connecting-with-bcp.md) for more information.
 
 Ensure that the client principal which is going to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is already authenticated with the Kerberos KDC.
   
@@ -119,11 +122,11 @@ The time on the Linux or macOS computer and the time on the Kerberos Key Distrib
 
 If Kerberos authentication fails, the ODBC driver on Linux or macOS does not use NTLM authentication.  
 
-For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) and [Best Practices for Integrating OS X with Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+For more information about authenticating Linux or macOS computers with Active Directory, see [Authenticate Linux Clients with Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). For more information about configuring Kerberos, see the [MIT Kerberos Documentation](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## See Also  
-[Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[Programming Guidelines](programming-guidelines.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Release Notes](release-notes-odbc-sql-server-linux-mac.md)
 
-[Using Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Using Azure Active Directory](../using-azure-active-directory.md)

@@ -1,4 +1,5 @@
 ---
+description: "MSlogreader_history (Transact-SQL)"
 title: "MSlogreader_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSlogreader_history system table"
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # MSlogreader_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSlogreader_history** table contains history rows for the Log Reader Agents associated with the local Distributor. This table is stored in the distribution database.  
   

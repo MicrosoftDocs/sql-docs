@@ -1,4 +1,5 @@
 ---
+description: "Upgrade and Migrate Reporting Services"
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -10,31 +11,34 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
+ms.date: 05/01/2020
 ---
 
 # Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  This topic is an overview of the upgrade and migration options for SQL Server Reporting Services. There are two general approaches to upgrading a SQL Server Reporting Services deployment:  
+  This topic is an overview of the upgrade and migration options for SQL Server Reporting Services. Here are the general approaches to upgrading a SQL Server Reporting Services deployment:  
  
--   **Upgrade:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an "in place" upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the 'Native to SharePoint Migration' section later in this document.  
+- **Upgrade *to* Reporting Services 2016 and older *from* Reporting Services 2016 and older:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an "in place" upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the [SharePoint mode upgrade and migration scenarios](#bkmk_sharePoint_scenarios) section later in this document.  
+
+- **Upgrade *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older** isn’t the same upgrade scenario as in previous versions. When upgrading *to* Reporting Services 2016 and older versions, you could following an in-place upgrade process using SQL Server installation media. When upgrading *to* Reporting Services 2017 and later *from* Reporting Services 2016 and older, you can’t follow the same steps because the new Reporting Services installation is a standalone product. It's no longer part of the SQL Server installation media. 
+
+    To upgrade from Reporting Services 2016 and older versions to Reporting Services 2017 and later, follow the [Migrate a Reporting Services Installation (Native Mode)](migrate-a-reporting-services-installation-native-mode.md) article, with Reporting Services 2017 or later as your destination instance. 
+
+- **Upgrade *from* Reporting Services 2017 to future versions** is again an in-place upgrade scenario, because the product installation GUIDs are the same. Run the SQLServerReportingServices.exe installation file to begin the in-place upgrade on the server where Reporting Services is currently installed.
   
--   **Migrate**: You install and configure a new SharePoint environment, copy your report items and resources to the new environment, and configure the new environment to use existing content. A lower level form of migration is to copy the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] databases, configuration files, and if you are using SharePoint mode, the SharePoint content databases.  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode
+- **Migrate**: You install and configure a new SharePoint environment, copy your report items and resources to the new environment, and configure the new environment to use existing content. A lower level form of migration is to copy the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] databases, configuration files, and if you are using SharePoint mode, the SharePoint content databases.  
+
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+> Reporting Services integration with SharePoint isn't available after SQL Server 2016.
    
 ##  <a name="bkmk_known_issues"></a> Known Upgrade Issues and Best Practices  
  For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  For the latest information regarding issues with SQL Server, see the following:  
->   
->  -   [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  For the latest information regarding issues with SQL Server, see [SQL Server 2016 Release Notes](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Side By Side Installations  
@@ -78,7 +82,7 @@ ms.date: 08/17/2017
   
 -   Back up any customizations to existing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] virtual directories in IIS.  
   
--   Remove invalid SSL certificates.  This includes certificates that are expired and you do not plan to update prior to upgrading Reporting Services.  Invalid certificates will cause upgrade to fail and an error message similar to the following will be written to the Reporting Services Log file: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.**.  
+-   Remove invalid TLS/SSL certificates.  This includes certificates that are expired and you do not plan to update prior to upgrading Reporting Services.  Invalid certificates will cause upgrade to fail and an error message similar to the following will be written to the Reporting Services Log file: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: A Secure Sockets Layer (SSL) certificate is not configured on the Web site.**.  
   
  Before you upgrade a production environment, always run a test upgrade in a pre-production environment that has the same configuration as your production environment.  
   

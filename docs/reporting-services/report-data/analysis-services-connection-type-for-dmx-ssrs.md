@@ -1,5 +1,6 @@
 ---
-title: "Analysis Services Connection Type for DMX (SSRS) | Microsoft Docs"
+title: "Analysis Services Connection Type for DMX | Microsoft Docs"
+description: Learn about the Analysis Services connection type for DMX and learn to use the DMX Query Designer to build a DMX query using graphical elements.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -43,6 +44,6 @@ ms.author: maggies
 ## See Also  
  [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
  [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

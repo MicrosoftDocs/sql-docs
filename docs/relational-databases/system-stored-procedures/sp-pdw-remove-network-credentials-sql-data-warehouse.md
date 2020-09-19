@@ -1,6 +1,7 @@
 ---
-title: "sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft Docs"
-ms.custom: ""
+description: "sp_pdw_remove_network_credentials (SQL Data Warehouse)"
+title: "sp_pdw_remove_network_credentials"
+titleSuffix: Azure SQL Data Warehouse
 ms.date: "03/14/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -13,9 +14,10 @@ ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # sp_pdw_remove_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   This removes network credentials stored in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] to access a network file share. For example, use this stored procedure to remove permission for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] to perform backup and restore operations on a server that resides within your own network.  
   
@@ -23,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
@@ -57,7 +59,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ### A. Remove credentials for performing a database backup  
  The following example removes user name and password credentials for accessing the target server which has an IP address of 10.192.147.63.  
   
-```  
+```sql  
 EXEC sp_pdw_remove_network_credentials '10.192.147.63';  
 ```  
   

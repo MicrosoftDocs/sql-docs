@@ -1,5 +1,6 @@
 ---
 title: "Enhance Transactional Replication Performance | Microsoft Docs"
+description: In addition to general performance tips to enhance replication performance in SQL Server, learn about additional techniques for transactional replication.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -21,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Enhance Transactional Replication Performance
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to transactional replication.  
   
 ## Database Design  

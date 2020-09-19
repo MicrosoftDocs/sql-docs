@@ -1,4 +1,5 @@
 ---
+description: "Select a Package"
 title: "Select a Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # Select a Package
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Select a Package** dialog box to specify the package from which the Message Queue task can receive messages.  

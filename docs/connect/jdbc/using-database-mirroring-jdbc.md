@@ -1,4 +1,5 @@
 ---
+description: "Using database mirroring (JDBC)"
 title: "Using database mirroring (JDBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Using database mirroring (JDBC)

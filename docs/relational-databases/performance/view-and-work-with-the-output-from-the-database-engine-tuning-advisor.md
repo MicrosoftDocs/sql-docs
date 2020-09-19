@@ -1,6 +1,7 @@
 ---
-title: "View and Work with the Output from the Database Engine Tuning Advisor | Microsoft Docs"
-ms.custom: ""
+title: "Output from DTA"
+description: Learn about how to use the summaries, recommendations, reports, and tuning logs that the Database Engine Tuning Advisor creates in your SQL Server installation.
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -26,8 +27,9 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 ---
-# View and Work with the Output from the Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# View and Work with the Output from the Database Engine Tuning Advisor (DTA)
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   When the Database Engine Tuning Advisor tunes databases, it creates summaries, recommendations, reports, and tuning logs. You can use the tuning log output to troubleshoot Database Engine Tuning Advisor tuning sessions. You can use the summaries, recommendations, and reports to determine whether you want to implement tuning recommendations or continue tuning until you achieve the query performance improvements that you need for your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. For information about how to use the Database Tuning Advisor to create workloads and tune a database, see [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -54,8 +56,6 @@ ms.author: jrasnick
 5.  Uncheck **Show existing objects** at the bottom of the **Recommendations** tabbed page. This causes the grid to display only those database objects that are referenced in the recommendation. Use the bottom scroll bar to view the right-most column in the recommendations grid, and click an item in the **Definition** column to view or copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] script that creates that object in your database.  
   
 6.  If you want to save all of the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that create or drop all database objects in this recommendation into one script file, click **Save Recommendations** on the **Actions** menu.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To view the tuning summary and reports with the Database Engine Tuning Advisor GUI  
   

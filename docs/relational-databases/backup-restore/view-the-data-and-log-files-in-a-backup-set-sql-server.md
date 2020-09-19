@@ -1,7 +1,8 @@
 ---
-title: "View the Data and Log Files in a Backup Set (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+title: "View backup set data & Log files"
+description: Learn how to view the data and log files in a backup set in SQL Server by using SQL Server Management Studio or Transact-SQL.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -18,8 +19,8 @@ ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# View the Data and Log Files in a Backup Set (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# View the data and log files in a backup set (SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to view the data and log files in a backup set in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -56,8 +57,6 @@ ms.author: mikeray
 4.  In the **Select a Page** pane, click **Files**.  
   
 5.  Look in the **Database files** grid for a list of the data and log files and their properties.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

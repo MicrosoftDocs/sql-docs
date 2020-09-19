@@ -1,30 +1,33 @@
 ---
-title: "Connect to Microsoft Azure Storage | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/12/2017"
+description: "Connect to Microsoft Azure Storage"
+title: Connect to Microsoft Azure Storage
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.windowsazurestorage.connect.f1"
   - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
 ms.assetid:
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
 ---
+
 # Connect to Microsoft Azure Storage
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Azure Storage Connection** dialog to specify a storage account and validate your connection to Azure.  
   
 ## Options  
-Specify the following information about your Azure account, and then click **Next** to continue.  
+Specify the following information about your Azure account, and then select **Next** to continue.  
   
 1.  **Storage Account** - Specify the storage account name.
 
    >[!NOTE]
-   > You can only connect to [General-purpose Storage Accounts](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services). Connecting to other types of storage accounts can result in an error similar to the following:
+   > You can only connect to [General-purpose Storage Accounts](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services). Connecting to other types of storage accounts can result in an error similar to the following:
    >
    >  The value for one of the HTTP headers is not in the correct format. (Microsoft.SqlServer.StorageClient).
    >

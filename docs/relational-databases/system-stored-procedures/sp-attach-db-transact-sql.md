@@ -1,4 +1,5 @@
 ---
+description: "sp_attach_db (Transact-SQL)"
 title: "sp_attach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_db"
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_attach_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Attaches a database to a server.  
   
@@ -45,7 +46,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  Is the name of the database to be attached to the server. The name must be unique. *dbname* is **sysname**, with a default of NULL.  
   
 `[ @filename1 = ] 'filename_n'`
- Is the physical name, including path, of a database file. *filename_n* is **nvarchar(260)**, with a default of NULL. Up to 16 file names can be specified. The parameter names start at **@filename1** and increment to **@filename16**. The file name list must include at least the primary file. The primary file contains the system tables that point to other files in the database. The list must also include any files that were moved after the database was detached.  
+ Is the physical name, including path, of a database file. *filename_n* is **nvarchar(260)**, with a default of NULL. Up to 16 file names can be specified. The parameter names start at **\@filename1** and increment to **\@filename16**. The file name list must include at least the primary file. The primary file contains the system tables that point to other files in the database. The list must also include any files that were moved after the database was detached.  
   
 > [!NOTE]  
 >  This argument maps to the FILENAME parameter of the CREATE DATABASE statement. For more information, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

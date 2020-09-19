@@ -1,6 +1,6 @@
 ---
-title: "Monitor System Activity Using Extended Events | Microsoft Docs"
-ms.custom: ""
+title: "Monitor System Activity Using Extended Events"
+description: Use Extended Events with Event Tracing for Windows to monitor system activity. Learn about CREATE EVENT SESSION, ALTER EVENT SESSION, and DROP EVENT SESSION.
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -17,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Monitor System Activity Using Extended Events
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This procedure illustrates how Extended Events can be used with Event Tracing for Windows (ETW) to monitor system activity. The procedure also shows how the CREATE EVENT SESSION, ALTER EVENT SESSION, and DROP EVENT SESSION statements are used.  
   
@@ -101,8 +101,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```  
   
 8.  Issue the following statements to stop the event session and remove it from the server.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     ALTER EVENT SESSION test0  

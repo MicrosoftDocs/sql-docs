@@ -1,6 +1,6 @@
 ---
-title: "Run a Matching Project | Microsoft Docs"
-ms.custom: ""
+description: "Run a Matching Project"
+title: "Run a Matching Project"
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -12,12 +12,12 @@ f1_keywords:
   - "sql13.dqs.matchingproject.matching.f1"
   - "sql13.dqs.matchingproject.export.f1"
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Run a Matching Project
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to perform data matching in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). The matching process identifies clusters of matching records based upon matching rules in the matching policy, designates one record from each cluster as the survivor based upon a survivorship rule, and exports the results. DQS performs the matching process, also called de-duplication, in a computer-assisted process, but you create matching rules interactively, and you select the survivorship rule from several choices, so you control the matching process.  
   

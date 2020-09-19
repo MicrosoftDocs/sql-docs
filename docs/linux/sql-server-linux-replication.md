@@ -1,21 +1,21 @@
 ---
 title: SQL Server Replication on Linux
-description: This article describes SQL Server replication on Linux.
+description: Learn how SQL Server 2017 (14.x) (CU18) and later support SQL Server Replication for instances of SQL Server on Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 10/17/2018
+ms.date: 12/09/2019
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: linux
-monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # SQL Server Replication on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Replication for instances of SQL Server on Linux.
+[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) and later support SQL Server Replication for instances of SQL Server on Linux.
 
 Configure replication on Linux with SQL Server Management Studio (SSMS) [replication stored procedures](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
@@ -30,19 +30,16 @@ A replication schema can mix and match operating system platforms. For example, 
 SQL Server instances on Linux can participate in any type of replication.
 
 * Transactional
-* Merge
 * Snapshot
 
 For detailed information about replication, see [SQL Server replication documentation](../relational-databases/replication/sql-server-replication.md).
 
 ## Supported features
 
-For [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] the following replication features are supported:
+The following replication features are supported:
 
 * Snapshot replication
 * Transactional replication
-* Merge replication
-* Peer-to-Peer replication
 * Replication with non-default ports <!--Add link to explanation-->
 * Replication with AD authentication
 * Replication configurations across Windows and Linux
@@ -50,9 +47,10 @@ For [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] the following replic
 
 ## Limitations
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] does not support the following features:
+The following features are not supported:
 
-* Immediate update subscribers
+* Merge replication
+* Peer-to-Peer replication
 * Oracle publishing
 
 ## Next steps

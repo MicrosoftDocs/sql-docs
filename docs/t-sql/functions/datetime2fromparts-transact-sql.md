@@ -1,4 +1,5 @@
 ---
+description: "DATETIME2FROMPARTS (Transact-SQL)"
 title: "DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "DATETIME2FROMPARTS function"
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATETIME2FROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns a **datetime2** value for the specified date and time arguments. The returned value has a precision specified by the precision argument.
   
@@ -32,7 +33,9 @@ This function returns a **datetime2** value for the specified date and time argu
 DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *year*  
 An integer expression that specifies a year.
   

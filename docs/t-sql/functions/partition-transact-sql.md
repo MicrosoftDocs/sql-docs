@@ -1,4 +1,5 @@
 ---
+description: "$PARTITION (Transact-SQL)"
 title: "$PARTITION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "$PARTITION function"
   - "partitions [SQL Server], numbers"
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # $PARTITION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the partition number into which a set of partitioning column values would be mapped for any specified partition function in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -33,7 +34,9 @@ ms.author: mikeray
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  Is the name of the database that contains the partition function.  
   

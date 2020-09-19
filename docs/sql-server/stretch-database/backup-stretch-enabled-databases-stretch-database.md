@@ -1,5 +1,6 @@
 ---
-title: "Backup Stretch-enabled databases (Stretch Database) | Microsoft Docs"
+description: "Backup Stretch-enabled databases (Stretch Database)"
+title: "Backup Stretch-enabled databases"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database
 ms.reviewer: ""
@@ -10,9 +11,10 @@ helpviewer_keywords:
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Backup Stretch-enabled databases (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Database backups help you to recover from many types of failures, errors, and disasters.  

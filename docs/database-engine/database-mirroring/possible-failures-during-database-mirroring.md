@@ -1,5 +1,6 @@
 ---
 title: "Possible Failures During Database Mirroring | Microsoft Docs"
+description: Learn about failures in database mirroring sessions caused by physical, operating system, or SQL Server problems, and how to respond to errors.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Possible Failures During Database Mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Physical, operating system, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problems can cause a failure in a database mirroring session. Database mirroring does not regularly check the components on which Sqlservr.exe relies to verify whether they are functioning correctly or have failed. However, for some types of failures, the affected component reports an error to Sqlservr.exe. An error reported by another component is called a *hard error*. To detect other failures that would otherwise go unnoticed, database mirroring implements its own time-out mechanism. When a mirroring time-out occurs, database mirroring assumes that a failure has occurred and declares a *soft error*. However, some failures that happen at the SQL Server instance level do not cause mirroring to time-out and can go undetected.  
   
 > [!IMPORTANT]  

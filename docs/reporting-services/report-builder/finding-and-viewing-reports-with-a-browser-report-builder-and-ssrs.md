@@ -1,5 +1,6 @@
 ---
-title: "Finding and Viewing Reports with a Browser (Report Builder and SSRS) | Microsoft Docs"
+title: "Finding and Viewing Reports with a Browser (Report Builder) | Microsoft Docs"
+description: You can view a report with a Web browser with a direct connection to a report server. The report includes the report toolbar, so you can navigate and search.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -24,7 +25,7 @@ Folders in a browser
 > [!NOTE]  
 >  If you are accessing a report from a handheld device, you must use a browser to open a report. Report Manager is not scaled for handheld devices.  
   
- For more information about types of browsers that you can use, see "Browser Types Supported by Reporting Services" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ For more information about types of browsers that you can use, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -49,6 +50,6 @@ Folders in a browser
   
  The maximum limit for a URL in Internet Explorer is 2,083 characters. For more information, see [Maximum URL length in Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- For more information about how to access a report through a URL, including information on how a URL is constructed, see "URL Access" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ For more information about how to access a report through a URL, including information on how a URL is constructed, see [URL Access](../../reporting-services/url-access-ssrs.md).  
   
   

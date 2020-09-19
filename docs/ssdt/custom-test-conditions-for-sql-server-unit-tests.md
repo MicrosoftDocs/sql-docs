@@ -1,17 +1,19 @@
 ---
-title: "Custom Test Conditions  for SQL Server Unit Tests | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Custom Test Conditions for SQL Server Unit Tests
+description: Find out how to install custom test conditions for SQL Server unit tests. View the risks involved with installing test conditions that you did not create.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
-# Custom Test Conditions  for SQL Server Unit Tests
+
+# Custom Test Conditions for SQL Server Unit Tests
+
 You can add custom test conditions for SQL Server unit tests. However, you must first install the test condition before you can use it, whether you created the extension or you are installing one that someone else created.  
   
 Before you install a test condition that you did not create, you should understand the following risks:  

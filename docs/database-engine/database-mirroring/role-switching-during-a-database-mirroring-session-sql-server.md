@@ -1,6 +1,7 @@
 ---
-title: "Role Switching During a Database Mirroring Session (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Switch database mirror roles"
+description: Learn about switching database mirroring roles, where a mirror server becomes the principal in response to failures or for admin purposes in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -21,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Role Switching During a Database Mirroring Session (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Within the context of a database mirroring session, the principal and mirror roles are typically interchangeable in a process known as *role switching*. In role switching, the mirror server acts as the *failover partner* for the principal server, taking over the principal role, recovering its copy of the database and bringing it online as the new principal database. The former principal server, when available, assumes the mirror role, and its database becomes the new mirror database. Potentially, the roles can switch back and forth either in response to multiple failures or for administrative purposes.  
   
 > [!NOTE]  
@@ -60,7 +61,7 @@ ms.author: mikeray
   
  The following table summarizes which forms of failover are supported under each of the operating modes.  
   
-||High performance|High-safety mode without a witness|High-safety mode with a witness|  
+|Form of failover|High performance|High-safety mode without a witness|High-safety mode with a witness|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Manual failover|No|Yes|Yes|  

@@ -1,5 +1,6 @@
 ---
 title: "Import data from Excel to SQL | Microsoft Docs"
+description: This article describes methods to import data from Excel to SQL Server or Azure SQL Database. Some use a single step, others require an intermediate text file.
 ms.custom: sqlfreshmay19
 ms.date: "09/30/2019"
 ms.prod: sql
@@ -13,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 There are several ways to import data from Excel files to SQL Server or to Azure SQL Database. Some methods let you import data in a single step directly from Excel files; other methods require you to export your Excel data as text (CSV file) before you can import it. This article summarizes the frequently used methods and provides links for more detailed information.
 
@@ -30,7 +31,7 @@ You can use the following tools to import data from Excel:
 | [Azure Data Factory](#adf)                         |                                                   |
 | &nbsp; | &nbsp; |
 
-If you want to import multiple worksheets from an Excel workbook, you typically have to run each of these tools once for each sheet.
+If you want to import multiple worksheets from an Excel workbook, you typically have to run any of these tools once for each sheet.
 
 A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this list. To learn more about the solution that interests you, follow the provided links.
 
@@ -269,7 +270,7 @@ To start learning how to copy data with Azure data factory, see the following to
 
 ### Microsoft.ACE.OLEDB.12.0" has not been registered
 
-This error occurs because the OLEDB provider is not installed. Install it from [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Be sure to install the 64-bit version if Windows and SQL Server are both 64-bit.
+This error occurs because the OLEDB provider is not installed. Install it from [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Be sure to install the 64-bit version if Windows and SQL Server are both 64-bit.
 
 The full error is:
 
@@ -278,7 +279,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
+### Cannot create an instance of OLE DB provider "Microsoft.ACE.OLEDB.12.0" for linked server "(null)"
 
 This indicates that the Microsoft OLEDB has not been configured properly. Run the following Transact-SQL code to resolve this:
 

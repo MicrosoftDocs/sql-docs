@@ -1,6 +1,7 @@
 ---
-title: "SqlServiceType Property (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+description: "SqlServiceType Property (SqlService Class)"
+title: "SqlServiceType Property (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlServiceType property"
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlServiceType Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the type of the managed service.  
   
 ## Syntax  

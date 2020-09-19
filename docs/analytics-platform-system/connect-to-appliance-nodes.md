@@ -1,5 +1,5 @@
 ---
-title: Connect to appliance Nodes - Analytics Platform System | Microsoft Docs
+title: Connect to appliance Nodes
 description: This article explains the various ways to connect to each node in the Analytics Platform System appliance.
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Connect to appliance nodes in Analytics Platform System
@@ -24,9 +25,8 @@ Each of the appliance nodes is accessed directly only under specific usage scena
 > [!WARNING]  
 > Changing database or table settings on Control or Compute nodes without explicit consent of the Product Team or APS Customer Support Team may render your APS appliance out of support.
   
-|||  
-|-|-|  
-|**Node**|**Access Scenarios**|  
+|Node|Access Scenarios|
+|-|-|
 |Control node|Use a web browser to access the Admin Console, which runs on the Control node. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />All client applications and tools connect to the Control node, regardless of whether the connection is using Ethernet or InfiniBand.<br /><br />To configure an Ethernet connection to the Control node, use the Control node Cluster IP address and port **17001**. For example, "192.168.0.1,17001".<br /><br />To configure an InfiniBand connection to the Control node, use <strong>*appliance_domain*-SQLCTL01</strong> and port **17001**. By using <strong>*appliance_domain*-SQLCTL01</strong>, the appliance DNS server will connect your server to the active InfiniBand network. To configure your non-appliance server to use this, see [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md).<br /><br />The appliance administrator connects to the Control node to perform management operations. For example, the appliance administrator performs the following operations from the Control node:<br /><br />Configure Analytics Platform System with the **dwconfig.exe** configuration tool.|  
 |Compute node|Compute node connections are directed by the Control node. The IP addresses of Compute nodes are never entered into application commands as parameters.<br /><br />For loading, backup, Remote Table Copy, and Hadoop, SQL Server PDW does send or receive data directly in parallel between the Compute nodes and the non-appliance nodes or servers. These applications connect with SQL Server PDW by connecting to the Control node, and then the Control node directs SQL Server PDW to establish communication between the Compute nodes and the non-appliance server.<br /><br />For example, these data transfer operations happen in parallel with direct connections to the Compute nodes:<br /><br />Loading from the loading server to SQL Server PDW.<br /><br />Backing up a database from SQL Server PDW to the backup server.<br /><br />Restoring a database from the backup server to SQL Server PDW.<br /><br />Querying Hadoop data from SQL Server PDW.<br /><br />Exporting data from SQL Server PDW to an external Hadoop table.<br /><br />Copying a SQL Server PDW table to a remote SMP SQL Server database.|  
   

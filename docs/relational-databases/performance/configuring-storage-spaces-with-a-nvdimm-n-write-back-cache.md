@@ -1,6 +1,7 @@
 ---
-title: "Configuring Storage Spaces with a NVDIMM-N write-back cache | Microsoft Docs"
-ms.custom: ""
+title: "Configuring Storage - NVDIMM-N write-back cache"
+description: Learn how to set up a mirrored storage space with a mirrored NVDIMM-N write-back cache as a virtual drive to store the SQL Server transaction log.
+ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Configuring Storage Spaces with a NVDIMM-N write-back cache
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows Server 2016 supports NVDIMM-N devices that allow for extremely fast input/output (I/O) operations. One attractive way of using such devices is as a write-back cache to achieve low write latencies. This topic discusses how to set up a mirrored storage space with a mirrored NVDIMM-N write-back cache as a virtual drive to store the SQL Server transaction log. If you are looking to utilize it to also store data tables or other data, you may include more disks in the storage pool, or create multiple pools, if isolation is important.  
   
  To view a Channel 9 video using this technique, see [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466).  

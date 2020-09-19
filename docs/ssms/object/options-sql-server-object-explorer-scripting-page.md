@@ -1,6 +1,7 @@
 ---
-title: "Options (SQL Server Object Explorer - Scripting Page) | Microsoft Docs"
-ms.custom: ""
+description: "Options (SQL Server Object Explorer - Scripting Page)"
+title: "Options (SQL Server Object Explorer - Scripting Page)"
+ms.custom: seo-lt-2019
 ms.date: "08/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (SQL Server Object Explorer - Scripting Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this page to set scripting options that apply to the following commands on object context menus in **Object Explorer**:  
   
 -   **Edit** commands for user tables and views.  
@@ -30,7 +31,10 @@ Use this page to set scripting options that apply to the following commands on o
 The **Edit** and **Modify** commands might produce results that are different from the **Script <object> as** command for the same option setting. The **Edit** and **Modify** commands are designed to modify objects in the current database during a Query Editor session. The **Script <object> as** command is designed to generate a script so that it can be used later to create objects.  
   
 ## Options  
-Specify scripting options by selecting from the available settings in the list to the right of each option.  
+Specify scripting options by selecting from the available settings in the list to the right of each option.
+
+> [!NOTE]
+> The default settings listed only apply to the **Script entire database and all database objects** option and may vary when using the **Select specific database objects** option.
   
 ### General scripting options  
 **Delimit individual statements**  

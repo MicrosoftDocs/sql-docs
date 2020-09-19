@@ -1,6 +1,7 @@
 ---
-title: "Lesson 4: Adding a Table to the Report (Reporting Services) | Microsoft Docs"
-ms.date: 04/29/2019
+title: "Lesson 4: Add a Table to the Report | Microsoft Docs"
+description: You create a report layout by dragging and dropping report objects, like a table, from the Toolbox pane to the Design surface.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -10,9 +11,9 @@ ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Lesson 4: Adding a Table to the Report (Reporting Services)
+# Lesson 4: Add a Table to the Report (Reporting Services)
 
-After the dataset is defined, you can start designing the report. You create a report layout by dragging and dropping *report objects* from the **Toolbox** pane to the **Design surface**. Some of the types of report objects include:
+After you define the dataset, you can start designing the paginated report. You create a report layout by dragging and dropping *report objects* from the **Toolbox** pane to the **Design surface**. Some of the types of report objects include:
 
 - Table
 - Text Box

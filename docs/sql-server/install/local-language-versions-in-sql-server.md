@@ -1,5 +1,6 @@
 ---
 title: "Local Language Versions in SQL Server | Microsoft Docs"
+description: English-language versions of supported operating systems support localized versions of SQL Server by using Windows Multilingual User Interface Pack settings.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
@@ -7,11 +8,11 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Local Language Versions in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports all languages that are supported by Windows operating systems.  
   

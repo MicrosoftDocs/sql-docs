@@ -1,4 +1,5 @@
 ---
+description: "SQLSetDescRec"
 title: "SQLSetDescRec | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -10,13 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLSetDescRec function"
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSetDescRec
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic discusses SQLSetDescRec functionality that is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -41,8 +41,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## SQLSetDescRec Support for Enhanced Date and Time Features  
  The values allowed for date/time types are as follows:  
   
-||*Type*|*SubType*|*Length*|*Precision*|*Scale*|  
-|-|------------|---------------|--------------|-----------------|-------------|  
+| Attribute | *Type* | *SubType* | *Length* | *Precision* | *Scale* |
+| --------- | ------ | --------- | -------- | ----------- | ------- |
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  

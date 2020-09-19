@@ -1,5 +1,6 @@
 ---
-title: "Convert Data Sources (Report Builder and SSRS) | Microsoft Docs"
+title: "Convert Data Sources (Report Builder) | Microsoft Docs"
+description: Learn how to convert your data sources in Report Builder and Report Designer by using options in the Report Data pane. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -57,6 +58,6 @@ ms.author: maggies
   
 ## See Also  
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

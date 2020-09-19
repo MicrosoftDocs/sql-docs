@@ -4,7 +4,7 @@ titleSuffix: SQL Server
 description: Install, update, and uninstall SQL Server on Linux. This article covers online, offline, and unattended scenarios. 
 author: VanMSFT 
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -13,12 +13,18 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Installation guidance for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 preview on Linux.
+This article provides guidance for installing, updating, and uninstalling SQL Server 2017 and SQL Server 2019 on Linux.
+
+For other deployment scenarios, see:
+
+- [Windows](../database-engine/install-windows/install-sql-server.md)
+- [Docker containers](../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
-> This guide coves several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
+> This guide covers several deployment scenarios. If you are only looking for step-by-step installation instructions, jump to one of the quickstarts:
 > - [RHEL quickstart](quickstart-install-connect-red-hat.md)
 > - [SLES quickstart](quickstart-install-connect-suse.md)
 > - [Ubuntu quickstart](quickstart-install-connect-ubuntu.md)
@@ -28,14 +34,26 @@ For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
-SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+SQL Server is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also supported as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Get RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Docker Engine** | 1.8+ | [Get Docker](https://www.docker.com/get-started)
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
+
+::: moniker-end
 
 Microsoft also supports deploying and managing SQL Server containers by using OpenShift and Kubernetes.
 
@@ -44,7 +62,7 @@ Microsoft also supports deploying and managing SQL Server containers by using Op
 
 ## <a id="system"></a> System requirements
 
-SQL Server 2017 has the following system requirements for Linux:
+SQL Server has the following system requirements for Linux:
 
 |||
 |-----|-----|
@@ -63,25 +81,24 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 ## <a id="repositories"></a> Configure source repositories
 
-When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. The quickstarts use the SQL Server 2017 Cumulative Update **CU** repository. But you can instead configure the **GDR** repository or the **Preview (vNext)** repository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. The quickstarts use the Cumulative Update **CU** repository for SQL Server. But you can instead configure a **GDR** repository. For more information on repositories and how to configure them, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
 
-## <a id="platforms"></a> Install SQL Server 2017
+## <a id="platforms"></a> Install SQL Server
 
-You can install SQL Server 2017 on Linux from the command line. For step-by-step instructions, see one of the following quickstarts:
+You can install SQL Server 2017 or SQL Server 2019 on Linux from the command line. For step-by-step instructions, see one of the following quickstarts:
 
-- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-docker.md)
-- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+| Platform | Installation quickstarts |
+|---|---|
+| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
+| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
+
+You can also run SQL Server on Linux in an Azure virtual machine. For more information, see [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
 
 After installing, consider making additional configuration changes for optimal performance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
 
-## <a id="sqlvnext"></a> Install SQL Server 2019 preview
-
-You can install SQL Server 2019 preview on Linux using the same quickstart links in the previous section. However, you must register the **Preview (vNext)** repository instead of the **CU** repository. The quickstarts provide instructions on how to do this.  
-
-## <a id="upgrade"></a> Update SQL Server
+## <a id="upgrade"></a> Update or Upgrade SQL Server
 
 To update the **mssql-server** package to the latest release, use one of the following commands based on your platform:
 
@@ -93,8 +110,7 @@ To update the **mssql-server** package to the latest release, use one of the fol
 
 These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases are not affected by this operation.
 
-> [!TIP]
-> If you first [change your configured repository](sql-server-linux-change-repo.md), it is possible for the **update** command to upgrade your version of SQL Server. This is only the case if the upgrade path is supported between the two repositories.
+To upgrade SQL Server, first [change your configured repository](sql-server-linux-change-repo.md) to the desired version of SQL Server. Then use the same **update** command to upgrade your version of SQL Server. This is only possible if the upgrade path is supported between the two repositories.
 
 ## <a id="rollback"></a> Rollback SQL Server
 
@@ -111,7 +127,7 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> It is only supported to downgrade to a release within the same major version, such as SQL Server 2017.
+> It is only supported to downgrade to a release within the same major version, such as SQL Server 2019.
 
 ## <a id="versioncheck"></a> Check installed SQL Server version
 

@@ -1,5 +1,5 @@
 ---
-title: Create a domain admin - Analytics Platform System | Microsoft Docs
+title: Create a domain admin
 description: Some operations require Analytics Platform System domain administrator privileges. This explains how to create additional appliance domain administrators.  
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Create an APS Domain Administrator

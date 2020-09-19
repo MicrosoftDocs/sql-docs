@@ -1,14 +1,14 @@
 ---
 title: Explore Azure SQL resources with Azure Resource Explorer
-titleSuffix: Azure Data Studio
 description: Learn how to explore and manage Azure SQL Server, Azure SQL Database, and Azure SQL Managed Instance through Azure Resource Explorer.
-ms.custom: "seodec18"
-author: yanancai 
-ms.author: yanacai 
-ms.date: 09/24/2018
+ms.custom: seodec18
+author: yanancai
+ms.author: yanacai
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+ms.date: 09/24/2018
 ---
 
 # Explore and manage Azure SQL resources with Azure Resource Explorer
@@ -16,12 +16,11 @@ ms.technology: azure-data-studio
 In this document, you learn how you can explore and manage Azure SQL Server, Azure SQL database, and Azure SQL Managed Instance resources through Azure Resource Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->The Azure Resource Explorer will be supported in SQL Server 2019 preview in October. After that, you can install the preview extension through [extension manager](extensions.md) or through **File** > **Install Package from VSIX Package**.
-
+>The Azure Resource Explorer is supported in SQL Server 2019. After that, you can install the extension through [extension manager](extensions.md) or through **File** > **Install Package from VSIX Package**.
 
 ## Connect to Azure
 
-After installing the SQL preview plugin, an Azure icon appears in the left menu bar. Click the icon to open Azure Resource Explorer. If you don't see the Azure icon, right click the left menu bar, and select **Azure Resource Explorer**.
+After installing the SQL plugin, an Azure icon appears in the left menu bar. Click the icon to open Azure Resource Explorer. If you don't see the Azure icon, right click the left menu bar, and select **Azure Resource Explorer**.
 
 ### Add an Azure account
 
@@ -82,7 +81,7 @@ Azure Resource Explorer supports Azure SQL Server, Azure SQL Database and Azure 
 
 ## Connect to Azure SQL resources
 
-Azure Resource Explorer provide quick access that helps you connect to SQL Servers and databases for query and management. 
+Azure Resource Explorer provide quick access that helps you connect to SQL Servers and databases for query and management.
 
 1. Explore the SQL resource you would like to connect with from the tree view.
 2. Right click the resource and select **Connect**, you can also find the connect button at the right of the resource.

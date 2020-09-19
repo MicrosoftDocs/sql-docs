@@ -1,6 +1,7 @@
 ---
-title: "StartService Method (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+description: "StartService Method (SqlService Class)"
+title: "StartService Method (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "StartService method"
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # StartService Method (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Attempts to place the service into its started state.  
   
 ## Syntax  

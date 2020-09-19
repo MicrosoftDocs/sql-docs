@@ -1,5 +1,6 @@
 ---
 title: "Column Names with the Path Specified as data() | Microsoft Docs"
+description: Learn about XML queries containing column names with the path specified as data().
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: genemi
 ---
 # Column Names with the Path Specified as data()
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 If the path specified as column name is "data()", the value is treated as an atomic value in the generated XML. A space character is added to the XML if the next item in the serialization is also an atomic value. This is useful when you are creating list typed element and attribute values. The following query retrieves the product model ID, name, and list of products in that product model.  
   

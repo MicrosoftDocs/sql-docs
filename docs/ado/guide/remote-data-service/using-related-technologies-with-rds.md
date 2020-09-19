@@ -1,8 +1,9 @@
 ---
+description: "Using Related Technologies with RDS"
 title: "Using Related Technologies with RDS | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -10,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS related technologies [ADO]"
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using Related Technologies with RDS
 This section contains the following topics.  
   
--   [Using RDS with ODBC Connection Pooling](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
+-   [Using RDS with ODBC Connection Pooling](./using-rds-with-odbc-connection-pooling.md)  
   
--   [Running Business Objects in Component Services](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
+-   [Running Business Objects in Component Services](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -38,7 +39,4 @@ This section contains the following topics.
  **Microsoft Windows NT Server/Windows 2000 Server** For more information about security in Microsoft Windows NT Server or Windows 2000 Server, see the Microsoft Windows Web site.  
   
 ## See Also  
- [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [RDS Fundamentals](./rds-fundamentals.md)

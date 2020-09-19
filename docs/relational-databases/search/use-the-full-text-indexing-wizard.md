@@ -1,4 +1,5 @@
 ---
+description: "Use the Full-Text Indexing Wizard"
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
 ms.date: "08/19/2016"
 ms.prod: sql
@@ -25,7 +26,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Full-Text Indexing Wizard
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The Full-Text Indexing Wizard in SSMS walks you through a series of steps designed to help you create a full-text index.  
   
 ## Create a  Full-Text index 
@@ -40,8 +41,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 4. **Language for Word Breaker.** Select a language from the drop-down list. This choice will be used  to identify the correct word breakers for the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses word breakers to identify word boundaries in the full-text indexed data.  
   
 5.  **Type Column.** Select the name of the column that holds the document type of column being full-text indexed.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **NOTE:** The  **Type Column** is enabled only when the column named in the **Available Columns** column is of type **varbinary(max)** or **image**.  
   

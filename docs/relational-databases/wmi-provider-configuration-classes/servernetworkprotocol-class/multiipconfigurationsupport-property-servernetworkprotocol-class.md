@@ -1,6 +1,7 @@
 ---
-title: "MultiIpConfigurationSupport Property (ServerNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+description: "MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)"
+title: "MultiIpConfigurationSupport Property (ServerNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -8,18 +9,18 @@ ms.reviewer: ""
 ms.technology: wmi
 ms.topic: "reference"
 apiname: 
-  - "MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)"
+  - "MultiIpConfigurationSupport Property (ServerNetworkProtocol"
 apilocation: 
   - "sqlmgmproviderxpsp2up.mof"
 apitype: "MOFDef"
 helpviewer_keywords: 
   - "MultiIpConfigurationSupport property"
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the Boolean property that specifies whether multiple IP addresses are supported by a server network protocol.  
   
 ## Syntax  

@@ -1,22 +1,22 @@
 ---
-title: "SQL and Parallel Data Warehouse Dynamic Management Views | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+description: "SQL and Parallel Data Warehouse Dynamic Management Views"
+title: "SQL and Parallel Data Warehouse Dynamic Management Views"
+ms.custom: seo-dt-2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: e713365e-d44c-4b66-84c9-81a1bcc32414
-author: stevestein
-ms.author: sstein
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL and Parallel Data Warehouse Dynamic Management Views
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamic management views (DMVs).  
+This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dynamic management views (DMVs).  
   
  All [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMVs begin with **sys.dm_pdw**.  
   
@@ -57,8 +57,23 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
  [sys.dm_pdw_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
- [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
-  
+ [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
+
+## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Dynamic Management Views 
+ The following dynamic management views apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] only:
+ 
+[sys.dm_pdw_nodes_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_query_profiles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_query_statistics_xml &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_sql-text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md)  
+
+[sys.dm_pdw_nodes_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md)
+
+ [sys.dm_workload_management_workload_groups_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (Preview)
+
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamic Management Views  
  The following dynamic management views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:  
   
@@ -84,5 +99,4 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
-  
   

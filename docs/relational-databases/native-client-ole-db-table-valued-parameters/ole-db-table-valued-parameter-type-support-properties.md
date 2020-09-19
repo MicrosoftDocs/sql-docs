@@ -1,5 +1,6 @@
 ---
-title: "OLE DB Table-Valued Parameter Type Support (Properties) | Microsoft Docs"
+description: "OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Properties)"
+title: "OLE DB Table-Valued Parameter type (Properties)"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (properties)"
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# OLE DB Table-Valued Parameter Type Support (Properties)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Properties)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic provides information about OLE DB properties and property sets that are associated with table-valued parameter rowset objects.  
   
@@ -67,7 +67,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
 |DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
-  
+|||
+
 ## Property Sets  
  The following property sets support table-valued parameters.  
   
@@ -77,7 +78,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Property ID|Property Value|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W: Read/Write<br /><br /> Default: VARIANT_FALSE<br /><br /> Type: VT_BOOL<br /><br /> Description: When set to VARIANT_TRUE, indicates that the column is a computed column. VARIANT_FALSE indicates that it is not a computed column.|  
-  
+|||
+
 ### DBPROPSET_SQLSERVERPARAMETER  
  These properties are read by the consumer while discovering the table-valued parameter type information in calls to ISSCommandWithParameters::GetParameterProperties and set by the consumer while setting specific properties about the table-valued parameter through ISSCommandWithParameters::SetParameterProperties.  
   
@@ -90,7 +92,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/W: Read only<br /><br /> Default: VT_EMPTY<br /><br /> Type: VT_BSTR<br /><br /> Description: Consumers use this property to get the catalog name of the table-valued parameter type.<br /><br /> This property can also be used with CLR user-defined types. It is an error to set this property; user-defined table types must be in the same database as the table-valued parameters that use them.|  
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: Read/Write<br /><br /> Default: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Description: Consumers use this property to specify which set of columns in the rowset are to be treated as defaults. No values will be sent for those columns. While fetching data from the consumer rowset object, the provider does not require a binding for such columns.<br /><br /> Each element of the array should be an ordinal of a column in the rowset object. Invalid ordinals will result in errors at command execute time.|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: Read/Write<br /><br /> Default: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Description: This property is used by the consumer to provide a hint to the server to indicate the sort ordering of column data. The provider does not perform any validation and assumes that the consumer is conforming to the specification that was provided. The server uses this property to perform optimizations.<br /><br /> Column order information for each column is represented by a pair of elements in the array. The first element in the pair is the number of the column. The second element in the pair will be 1 for ascending order or 2 for descending order.|  
-  
+|||
+
 ## See Also  
  [OLE DB Table-Valued Parameter Type Support](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  

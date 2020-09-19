@@ -1,6 +1,6 @@
 ---
 title: "STRING_SPLIT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the STRING_SPLIT function. This table-valued function splits a string into substrings based on a character delimiter."
 ms.date: "11/28/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STRING_SPLIT function"
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions" 
 ---
 # STRING_SPLIT (Transact-SQL)
@@ -35,9 +35,11 @@ To change the compatibility level of a database, refer to [View or Change the Co
   
 ## Syntax  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -56,6 +58,8 @@ Returns a single-column table whose rows are the substrings. The name of the col
 **STRING_SPLIT** inputs a string that has delimited substrings, and inputs one character to use as the delimiter or separator. STRING_SPLIT outputs a single-column table whose rows contain the substrings. The name of the output column is **value**.
 
 The output rows might be in any order. The order is _not_ guaranteed to match the order of the substrings in the input string. You can override the final sort order by using an ORDER BY clause on the SELECT statement (`ORDER BY value`).
+
+0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in STRING_SPLIT.
 
 Empty zero-length substrings are present when the input string contains two or more consecutive occurrences of the delimiter character. Empty substrings are treated the same as are plain substrings. You can filter out any rows that contain the empty substring by using the WHERE clause (`WHERE value <> ''`). If the input string is NULL, the STRING_SPLIT table-valued function returns an empty table.  
 
@@ -181,10 +185,10 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 
 ## See Also
 
-[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)<br />
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
-[String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)
+- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
+- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
+- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
+- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)
+- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

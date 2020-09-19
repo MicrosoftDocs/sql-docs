@@ -1,6 +1,7 @@
 ---
-title: "Property Pages in SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
+description: "Property Pages in SQL Server Management Studio"
+title: "Property Pages in SQL Server Management Studio"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Property Pages in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Property page dialog boxes in [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] all use a common format displaying information with expanding and collapsing categories. The fields shown depend on the particular property. Properties shown in gray are read-only. Categorized and Alphabetic buttons are near the top of each property page.  
   
 The following table describes the common elements of [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] property page dialog boxes.  

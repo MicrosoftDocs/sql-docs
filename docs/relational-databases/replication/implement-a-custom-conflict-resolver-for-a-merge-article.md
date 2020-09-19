@@ -1,6 +1,7 @@
 ---
-title: "Implement a custom conflict resolver for a merge article | Microsoft Docs"
-ms.custom: ""
+title: "Implement custom conflict resolver (Merge)"
+description: Learn how to implement a custom conflict resolver for a Merge Publication in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -18,7 +19,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Implement a custom conflict resolver for a Merge article
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to implement a custom conflict resolver for a Merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or a [COM-based custom resolver](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
  **In this topic**  
@@ -54,8 +55,6 @@ ms.author: "mathoma"
   
 2.  Grant EXECUTE permissions on the stored procedure to any logins used by Subscribers to connect to the Publisher.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### Use a custom conflict resolver with a new table article  
   
 1. Execute [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) to define an article. 
@@ -71,7 +70,7 @@ ms.author: "mathoma"
 2.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **\@publication**, **\@article**, a value of **resolver_info** for **\@property**, and the name of the stored procedure that implements the conflict resolver logic for **\@value**.  
   
 ##  <a name="COM"></a> Using a COM-based custom resolver  
- The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and to resolve conflicts that occur during the Merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a Merge article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLLs), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. This kind of COM–based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
+ The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and to resolve conflicts that occur during the Merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a Merge article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLLs), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. This kind of COM-based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
   
 #### To create and register a COM-based custom conflict resolver  
   

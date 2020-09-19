@@ -1,7 +1,8 @@
 ---
+description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "02/25/2020"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -26,14 +27,14 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache or from a specified Resource Governor pool cache.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-```sql
+```syntaxsql
 DBCC FREESYSTEMCACHE   
     ( 'ALL' [, pool_name ] )   
     [WITH   
@@ -41,7 +42,9 @@ DBCC FREESYSTEMCACHE
     ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 ( 'ALL' [,_pool\_name_ ] )  
 ALL specifies all supported caches.  
 _pool\_name_ specifies a Resource Governor pool cache. Only entries associated with this pool are freed.  

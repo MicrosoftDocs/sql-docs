@@ -1,7 +1,8 @@
 ---
+description: "Lesson 1-8: Annotate and format the Lesson 1 package"
 title: "Step 8: Annotate and format the Lesson 1 package | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/03/2019"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-8: Annotate and format the Lesson 1 package 
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -45,7 +46,7 @@ In this task, you use the formatting features in [!INCLUDE[ssNoVersion](../inclu
   
 2.  Enter or paste the following text in the annotation box.  
   
-        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
+    The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
   
     To wrap the text in the annotation box, place the cursor where you want to start a new line and press **Enter**.  
   

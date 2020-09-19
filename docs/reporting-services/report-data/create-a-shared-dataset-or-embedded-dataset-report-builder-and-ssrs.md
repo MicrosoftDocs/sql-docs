@@ -1,5 +1,7 @@
 ---
-title: "Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS) | Microsoft Docs"
+title: "Create a Shared Dataset or Embedded Dataset (Report Builder) | Microsoft Docs"
+description: Learn how to create embedded datasets and shared datasets for use in various reports. To create a dataset, you need an embedded or shared data source.
+
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -112,7 +114,7 @@ Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

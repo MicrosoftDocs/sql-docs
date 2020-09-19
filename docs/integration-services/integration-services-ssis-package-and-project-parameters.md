@@ -1,5 +1,6 @@
 ---
-title: "Integration Services (SSIS) Package and Project Parameters | Microsoft Docs"
+description: "Integration Services (SSIS) Package and Project Parameters"
+title: "Package and Project Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Package and Project Parameters
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create *project parameters* at the project level and *package parameters* at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package.  
@@ -70,10 +71,10 @@ ms.author: chugu
  The following Transact-SQL views and stored procedure can be used to display and set parameter values.  
   
  [catalog.execution_parameter_values &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(view)  
- Shows the actual parameter values that will be used by a specific execution  
+ Shows the actual parameter values in a specific execution.
   
  [catalog.get_parameter_values &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (stored procedure)  
- Resolves and shows the actual values for the specified package and environment reference  
+ Resolves and shows the actual values for the specified package and environment reference.
   
  [catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (view)  
  Displays the parameters and properties for all packages and projects in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog, including the design default and server default values.  

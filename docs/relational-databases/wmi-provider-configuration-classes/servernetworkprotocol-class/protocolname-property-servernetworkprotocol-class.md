@@ -1,6 +1,7 @@
 ---
-title: "ProtocolName Property (ServerNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+description: "ProtocolName Property (ServerNetworkProtocol Class)"
+title: "ProtocolName Property (ServerNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolName property"
 ms.assetid: 5894a32b-c2d8-4bba-8f9d-d09e5cd65f71
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ProtocolName Property (ServerNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the server network protocol.  
   
 ## Syntax  

@@ -1,8 +1,9 @@
 ---
+description: "Collections (ADO - WFC Syntax)"
 title: "Collections (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "collections [ADO], ADO/WFC syntax"
   - "ADO/WFC syntax index [ADO]"
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Collections (ADO - WFC Syntax)
 **package com.ms.wfc.data**  
@@ -77,6 +78,6 @@ public int getCount()
 ```  
   
 ## See Also  
- [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Errors Collection (ADO)](./errors-collection-ado.md)   
+ [Fields Collection (ADO)](./fields-collection-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "Hierarchical Data (SQL Server)"
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/04/2019"
@@ -21,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Hierarchical Data (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
   The built-in **hierarchyid** data type makes it easier to store and query hierarchical data. **hierarchyid** is optimized for representing trees, which are the most common type of hierarchical data.  
   
@@ -319,7 +320,7 @@ GO
   
   
 #### Example Using a Serializable Transaction  
- The **Org_BreadthFirst** index ensures that determining **@last_child** uses a range seek. In addition to other error cases an application might want to check, a duplicate key violation after the insert indicates an attempt to add multiple employees with the same id, and therefore **@last_child** must be recomputed. The following code computes the new node value within a serializable transaction:  
+ The **Org_BreadthFirst** index ensures that determining **\@last_child** uses a range seek. In addition to other error cases an application might want to check, a duplicate key violation after the insert indicates an attempt to add multiple employees with the same id, and therefore **\@last_child** must be recomputed. The following code computes the new node value within a serializable transaction:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -506,7 +507,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Moving Subtrees  
- Another common operation is moving subtrees. The procedure below takes the subtree of **@oldMgr** and makes it (including **@oldMgr**) a subtree of **@newMgr**.  
+ Another common operation is moving subtrees. The procedure below takes the subtree of **\@oldMgr** and makes it (including **\@oldMgr**) a subtree of **\@newMgr**.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

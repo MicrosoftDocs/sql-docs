@@ -1,6 +1,6 @@
 ---
-title: "Create Term-Based Relations | Microsoft Docs"
-ms.custom: ""
+description: "Create Term-Based Relations"
+title: "Create Term-Based Relations"
 ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -10,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.kbtermsbased.f1"
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Create Term-Based Relations
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create term-based relations for a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A term-based relation (TBR) enables you to make a correction to a term that is part of a value in a domain. It enables multiple values that are identical except for the spelling of a common part of them to be considered identical synonyms. For example, you can set up a term-based relation that changes the term "Inc." to "Incorporated". The term "Inc." will be changed each time it occurs in the domain. Instances of "Contoso, Inc." will be changed "Contoso, Incorporated", and the two values will be considered exact synonyms.  
   

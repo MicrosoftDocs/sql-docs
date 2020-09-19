@@ -1,5 +1,7 @@
 ---
-title: "SQL Server Always On availability group deployment patterns"
+title: "Availability group deployment patterns - SQL Server on Linux"
+description: Learn supported deployment configurations for SQL Server Always on availability groups on Linux servers. 
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -11,7 +13,7 @@ ms.reviewer: vanto
 ---
 # High availability and data protection for availability group configurations
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article presents supported deployment configurations for SQL Server Always On availability groups on Linux servers. An availability group supports high availability and data protection. Automatic failure detection, automatic failover, and transparent reconnection after failover provide high availability. Synchronized replicas provide data protection. 
 
@@ -51,7 +53,7 @@ This configuration consists of three synchronous replicas. By default, it provid
 
 An availability group with three synchronous replicas can provide read-scale, high availability, and data protection. The following table describes availability behavior. 
 
-| |read-scale|High availability & </br> data protection | Data protection|
+|Availability behavior |read-scale|High availability & </br> data protection | Data protection|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Primary outage |Automatic failover. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. |
@@ -69,7 +71,7 @@ This configuration enables data protection. Like the other availability group co
 
 An availability group with two synchronous replicas provides read-scale and data protection. The following table describes availability behavior. 
 
-| |read-scale |Data protection|
+|Availability behavior |read-scale |Data protection|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Primary outage | Manual failover. Might have data loss. New primary is R/W.| Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary.|
@@ -95,7 +97,7 @@ In the availability group diagram, a primary replica pushes configuration data t
 
 The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
 
-| |High availability & </br> data protection | Data protection|
+|Availability behavior |High availability & </br> data protection | Data protection|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Primary outage | Automatic failover. New primary is R/W. | Automatic failover. New primary is not available for user transactions. |

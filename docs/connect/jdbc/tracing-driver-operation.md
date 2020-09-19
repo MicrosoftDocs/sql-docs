@@ -1,5 +1,6 @@
 ---
-title: "Tracing driver operation | Microsoft Docs"
+title: "Tracing driver operation"
+description: "Learn how to use tracing to log details and resolve issues and problems when using the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Tracing driver operation
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -83,7 +84,7 @@ ms.author: genemi
 |XA|Logs messages for all XA transactions in the [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) class. The applications can set the logging level as FINE and FINER.|  
 |KerbAuthentication|Logs messages regarding type 4 Kerberos authentication (when the **authenticationScheme** connection property is set to **JavaKerberos**). The application can set the logging level as FINE or FINER.|  
 |TDS.DATA|Logs messages containing the TDS protocol-level conversation between the driver and SQL Server. The detailed contents of each TDS packet sent and received are logged in ASCII and hexadecimal. The login credentials (user names and passwords) aren't logged. All other data is logged.<br /><br /> This category creates very verbose and detailed messages, and can only be enabled by setting the logging level to FINEST.|  
-|TDS.Channel|This category traces actions of the TCP communications channel with SQL Server. The logged messages include socket opening and closing as well as reads and writes. It also traces messages related to establishing a Secure Sockets Layer (SSL) connection with SQL Server.<br /><br /> This category can only be enabled by setting the logging level to FINE, FINER, or FINEST.|  
+|TDS.Channel|This category traces actions of the TCP communications channel with SQL Server. The logged messages include socket opening and closing as well as reads and writes. It also traces messages related to establishing a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), connection with SQL Server.<br /><br /> This category can only be enabled by setting the logging level to FINE, FINER, or FINEST.|  
 |TDS.Writer|This category traces writes to the TDS channel. Note that only the length of the writes is traced, not the contents. This category also traces issues when an attention signal is sent to the server to cancel a statement's execution.<br /><br /> This category can only be enabled by setting the logging level to FINEST.|  
 |TDS.Reader|This category traces certain read operations from the TDS channel at the FINEST level. At the FINEST level, tracing can be verbose. At WARNING and SEVERE levels, this category traces when the driver receives an invalid TDS protocol from SQL Server before the driver closes the connection.<br /><br /> This category can only be enabled by setting the logging level to FINER and FINEST.|  
 |TDS.Command|This category traces low-level state transitions and other information associated with executing TDS commands, such as [!INCLUDE[tsql](../../includes/tsql-md.md)] statement executions, ResultSet cursor fetches, commits, and so on.<br /><br /> This category can only be enabled by setting the logging level to FINEST.|  

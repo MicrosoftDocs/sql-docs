@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_log_shipping_primary_database (Transact-SQL)"
 title: "sp_delete_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_delete_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure removes log shipping of primary database including backup job as well as local and remote history. Only use this stored procedure after you have removed the secondary databases using **sp_delete_log_shipping_primary_secondary**.  
   
@@ -59,8 +60,6 @@ sp_delete_log_shipping_primary_database
 6.  Removes the entry in **log_shipping_primary_databases** for this primary database.  
   
 7.  Calls **sp_delete_log_shipping_alert_job** on the monitor server.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Permissions  
  Only members of the **sysadmin** fixed server role can run this procedure.  

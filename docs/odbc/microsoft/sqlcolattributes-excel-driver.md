@@ -1,4 +1,5 @@
 ---
+description: "SQLColAttributes (Excel Driver)"
 title: "SQLColAttributes (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLColAttributes"
   - "SQLColAttribute function [ODBC], Excel Driver"
 ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColAttributes (Excel Driver)
 > [!NOTE]  

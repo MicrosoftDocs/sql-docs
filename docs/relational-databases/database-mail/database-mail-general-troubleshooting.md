@@ -1,9 +1,8 @@
 ---
-title: "General database mail troubleshooting with SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/22/2019"
+description: "General database mail troubleshooting steps"
+title: "General database mail troubleshooting"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -13,9 +12,10 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], components"
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: seo-dt-2019
 ---
 # General database mail troubleshooting steps 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Troubleshooting Database Mail involves checking the following general areas of the Database Mail system. These procedures are presented in a logical order, but can be evaluated in any order.
 
@@ -49,8 +49,6 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
     ```
 
 1. To restore the sp_configure procedure to its default state, which does not show advanced options, execute the following code:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

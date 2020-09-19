@@ -1,4 +1,5 @@
 ---
+description: "Translator Setup DLLs"
 title: "Translator Setup DLLs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "translator setup DLL [ODBC]"
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Translator Setup DLLs
 > [!NOTE]  

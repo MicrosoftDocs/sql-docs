@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_latch_stats (Transact-SQL)"
 title: "sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -16,36 +17,35 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_latch_stats dynamic management view"
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Returns information about all latch waits organized by class.  
+Returns information about all latch waits organized by class. 
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_latch_stats**.  
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_latch_stats**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Name of the latch class.|  
+|latch_class|**nvarchar(60)**|Name of the latch class.|  
 |waiting_requests_count|**bigint**|Number of waits on latches in this class. This counter is incremented at the start of a latch wait.|  
 |wait_time_ms|**bigint**|Total wait time, in milliseconds, on latches in this class.<br /><br /> **Note:** This column is updated every five minutes during a latch wait and at the end of a latch wait.|  
 |max_wait_time_ms|**bigint**|Maximum time a memory object has waited on this latch. If this value is unusually high, it might indicate an internal deadlock.|  
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
-
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
   
 ## Remarks  
  sys.dm_os_latch_stats can be used to identify the source of latch contention by examining the relative wait numbers and wait times for the different latch classes. In some situations, you may be able to resolve or reduce latch contention. However, there might be situations that will require that you to contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Support Services.  
   
- You can reset the contents of sys.dm_os_latch_stats by using `DBCC SQLPERF` as follows:  
+You can reset the contents of sys.dm_os_latch_stats by using `DBCC SQLPERF` as follows:  
   
-```  
+```sql  
 DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);  
 GO  
 ```  
@@ -55,15 +55,15 @@ GO
 > [!NOTE]  
 >  These statistics are not persisted if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. All data is cumulative since the last time the statistics were reset, or since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was started.  
   
-## Latches  
- A latch is a lightweight synchronization object that is used by various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. A latch is primarily used to synchronize database pages. Each latch is associated with a single allocation unit.  
+## <a name="latches"></a> Latches  
+ A latch is an internal lightweight synchronization object similar to a lock, that is used by various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components. A latch is primarily used to synchronize database pages during operations such as buffer or file access. Each latch is associated with a single allocation unit. 
   
  A latch wait occurs when a latch request cannot be granted immediately, because the latch is held by another thread in a conflicting mode. Unlike locks, a latch is released immediately after the operation, even in write operations.  
   
  Latches are grouped into classes based on components and usage. Zero or more latches of a particular class can exist at any point in time in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  sys.dm_os_latch_stats does not track latch requests that were granted immediately, or that failed without waiting.  
+> `sys.dm_os_latch_stats` does not track latch requests that were granted immediately, or that failed without waiting.  
   
  The following table contains brief descriptions of the various latch classes.  
   
@@ -189,11 +189,6 @@ GO
 |KTM_VIRTUAL_CLOCK|Internal use only.|  
   
 ## See Also  
- 
- [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
- 
- [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
-  
-  
-
-
+[DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server, Latches Object](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

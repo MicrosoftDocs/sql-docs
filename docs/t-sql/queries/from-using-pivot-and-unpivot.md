@@ -1,7 +1,7 @@
 ---
 title: "Using PIVOT and UNPIVOT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+description: "Transact-SQL reference for PIVOT and UNPIVOT relational operators. Use these operators on SELECT statements to change a table-valued expression into another table."
+ms.date: "10/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # FROM - Using PIVOT and UNPIVOT
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT` rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output. And `PIVOT` runs aggregations where they're required on any remaining column values that are wanted in the final output. `UNPIVOT` carries out the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
   
@@ -147,10 +147,12 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-The unique values returned by the `EmployeeID` column become fields in the final result set. As such, there's a column for each `EmployeeID` number specified in the pivot clause: in this case employees `164`, `198`, `223`, `231`, and `233`. The `PurchaseOrderID` column serves as the value column, against which the columns returned in the final output, which are called the grouping columns, are grouped. In this case, the grouping columns are aggregated by the `COUNT` function. Notice that a warning message appears that indicates that any null values appearing in the `PurchaseOrderID` column weren't considered when computing the `COUNT` for each employee.  
+The unique values returned by the `EmployeeID` column become fields in the final result set. As such, there's a column for each `EmployeeID` number specified in the pivot clause: in this case employees `250`, `251`, `256`, `257`, and `260`. The `PurchaseOrderID` column serves as the value column, against which the columns returned in the final output, which are called the grouping columns, are grouped. In this case, the grouping columns are aggregated by the `COUNT` function. Notice that a warning message appears that indicates that any null values appearing in the `PurchaseOrderID` column weren't considered when computing the `COUNT` for each employee.  
   
 > [!IMPORTANT]  
 >  When aggregate functions are used with `PIVOT`, the presence of any null values in the value column are not considered when computing an aggregation.  
+
+## UNPIVOT Example
   
 `UNPIVOT` carries out almost the reverse operation of `PIVOT`, by rotating columns into rows. Suppose the table produced in the previous example is stored in the database as `pvt`, and you want to rotate the column identifiers `Emp1`, `Emp2`, `Emp3`, `Emp4`, and `Emp5` into row values that correspond to a particular vendor. As such, you must identify two additional columns. The column that will contain the column values that you're rotating (`Emp1`, `Emp2`,...) will be called `Employee`, and the column that will hold the values that currently exist under the columns being rotated will be called `Orders`. These columns correspond to the *pivot_column* and *value_column*, respectively, in the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition. Here is the query.  
   

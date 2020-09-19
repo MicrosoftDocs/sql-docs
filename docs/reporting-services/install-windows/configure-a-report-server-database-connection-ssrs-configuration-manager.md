@@ -1,13 +1,14 @@
 ---
-title: "Configure a Report Server Database Connection  (SSRS Configuration Manager) | Microsoft Docs"
+title: "Configure a Report Server Database Connection (Configuration Manager) | Microsoft Docs"
+description: "Each report server instance requires a connection to the report server database that stores reports, shared data sources, resources, and metadata managed by the server."
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
 ms.reviewer: ""
-ms.custom: seodec18
-ms.date: 04/26/2019
+ms.custom: seo-lt-2019​, seo-mmd-2019
+ms.date: 01/04/2020
 ---
 
 # Configure a Report Server Database Connection (SSRS Configuration Manager)
@@ -85,6 +86,13 @@ There are three types of credentials that can be used in a connection to a repor
   
 If the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is configured for Windows Authentication and is in the same domain or a trusted domain with the report server computer, you can configure the connection to use the service account or a domain user account that you manage as a connection property through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If the database server is in a different domain or if you are using workgroup security, you must configure the connection to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database login. In this case, be sure to encrypt the connection.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> When using Azure SQL Managed Instance to host report server databases, SQL Server authentication is the only supported credential type. In addition, please note that Managed Instance cannot host report server instance.
+
+::: moniker-end
+
 #### Using Service Accounts and Integrated Security
 
 You can use Windows integrated security to connect through the Report Server service account. The account is granted login rights to the report server database. This is the default credential type chosen by Setup if you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration.  
@@ -99,7 +107,7 @@ You can specify a Windows user account for the report server connection to the r
 
 #### Using a SQL Server Login
 
-You can specify a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to connect to the report server database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and the report server database is on a remote computer, use IPSec to help secure the transmission of data between the servers. If you use a database login, you must update the report server database connection every time you change the password or the account.  
+You can specify a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to connect to the report server database. If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication and the report server database is on a remote computer, use IPSec to help secure the transmission of data between the servers. If you use a database login, you must update the report server database connection every time you change the password or the account.
 
 ### Database Permissions
 

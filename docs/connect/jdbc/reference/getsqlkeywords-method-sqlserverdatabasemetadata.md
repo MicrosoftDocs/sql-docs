@@ -1,4 +1,5 @@
 ---
+description: "getSQLKeywords Method (SQLServerDatabaseMetaData)"
 title: "getSQLKeywords Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getSQLKeywords Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

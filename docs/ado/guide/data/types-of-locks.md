@@ -1,8 +1,9 @@
 ---
+description: "Types of Locks"
 title: "Types of Locks | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "AdLockOptimistic [ADO]"
   - "AdLockPessimistic [ADO]"
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Types of Locks
 ## adLockBatchOptimistic  

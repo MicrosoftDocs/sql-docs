@@ -1,6 +1,6 @@
 ---
-title: "Comparability for IRowsetFind | Microsoft Docs"
-ms.custom: ""
+description: "SQL Server Native Client Comparability for IRowsetFind"
+title: "Comparability for IRowsetFind"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -11,13 +11,13 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetFind comparability [ODBC]"
 ms.assetid: 7d148b56-9bbe-4e55-b31f-43f115705402
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
+ms.custom: seo-dt-2019
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Comparability for IRowsetFind
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# SQL Server Native Client Comparability for IRowsetFind
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   For date/time types only, IRowsetFind supports the following comparisons:  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_change_job (Transact-SQL)"
 title: "sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_change_job"
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_change_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifies the configuration of a change data capture cleanup or capture job in the current database. To view the current configuration of a job, query the [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) table, or use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
@@ -61,9 +62,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  When *continuous* = 0, the **sp_cdc_scan** job executes up to *max_scans* scans of the log, processing up to *max_trans* transactions during each scan, and then exits.  
   
- If **@continuous** is changed from 1 to 0, **@pollinginterval** is automatically set to 0. A value specified for **@pollinginterval** other than 0 is ignored.  
+ If **\@continuous** is changed from 1 to 0, **\@pollinginterval** is automatically set to 0. A value specified for **\@pollinginterval** other than 0 is ignored.  
   
- If **@continuous** is omitted or explicitly set to NULL and **@pollinginterval** is explicitly set to a value greater than 0, **@continuous** is automatically set to 1.  
+ If **\@continuous** is omitted or explicitly set to NULL and **\@pollinginterval** is explicitly set to a value greater than 0, **\@continuous** is automatically set to 1.  
   
  *continuous* is valid only for capture jobs.  
   
@@ -112,7 +113,7 @@ GO
 ```  
   
 ### B. Changing a cleanup job  
- The following example updates a cleanup job in the `AdventureWorks2012` database. All valid parameters for this job type, except **@threshold**, are specified. The value of **@threshold** is not modified.  
+ The following example updates a cleanup job in the `AdventureWorks2012` database. All valid parameters for this job type, except **\@threshold**, are specified. The value of **\@threshold** is not modified.  
   
 ```  
 USE AdventureWorks2012;  

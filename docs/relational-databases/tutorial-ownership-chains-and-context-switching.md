@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
+description: "Tutorial: Ownership Chains and Context Switching"
+title: "Tutorial: Ownership Chains and Context Switching"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Tutorial: Ownership Chains and Context Switching
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
@@ -33,8 +34,6 @@ To fulfill the requirements of this scenario, the example is broken into four pa
 2.  Creating a stored procedure to access data by purchase order.   
 3.  Accessing the data through the stored procedure.  
 4.  Resetting the environment.  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Each code block in this example is explained in line. To copy the complete example, see [Complete Example](#CompleteExample) at the end of this tutorial.
 

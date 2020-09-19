@@ -1,4 +1,5 @@
 ---
+description: "Using Filegroups and Files to Store Data"
 title: "Using Filegroups and Files to Store Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -20,7 +21,7 @@ ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Filegroups and Files to Store Data
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Data files are used to store database files. The data files are subdivided into file groups. The <xref:Microsoft.SqlServer.Management.Smo.Database> object has a <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> property that references a <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> object. Each <xref:Microsoft.SqlServer.Management.Smo.FileGroup> object in that collection has a <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> property. This property refers to a <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> collection that contains all the data files that belong to the database. A file group is principally used to group files together that are used to store a database object. One reason for spreading a database object over several files is that it can improve performance, especially if the files are stored on different disk drives.  
   

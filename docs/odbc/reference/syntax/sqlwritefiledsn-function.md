@@ -1,4 +1,5 @@
 ---
+description: "SQLWriteFileDSN Function"
 title: "SQLWriteFileDSN Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLWriteFileDSN [ODBC]"
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLWriteFileDSN Function
 **Conformance**  

@@ -1,8 +1,9 @@
 ---
+description: "AbsolutePage, PageCount, and PageSize Properties Example (JScript)"
 title: "AbsolutePage, PageCount, and PageSize Properties Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "AbsolutePage property [ADO], JScript example"
   - "PageSize property [ADO], JScript example"
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (JScript)
 This example demonstrates the AbsolutePage, PageCount and PageSize properties. Cut and paste the following code to Notepad or another text editor, and save it as **AbsolutePageJS.asp**.  
@@ -152,7 +153,7 @@ BODY {
 ```  
   
 ## See Also  
- [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize Property (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage Property (ADO)](./absolutepage-property-ado.md)   
+ [PageCount Property (ADO)](./pagecount-property-ado.md)   
+ [PageSize Property (ADO)](./pagesize-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

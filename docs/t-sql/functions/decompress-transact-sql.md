@@ -1,4 +1,5 @@
 ---
+description: "DECOMPRESS (Transact-SQL)"
 title: "DECOMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2018"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # DECOMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 This function will decompress an input expression value, using the GZIP algorithm. `DECOMPRESS` will return a byte array (VARBINARY(MAX) type).  
   
@@ -29,7 +30,7 @@ This function will decompress an input expression value, using the GZIP algorith
 DECOMPRESS ( expression )  
 ```  
   
-## Arguments  
+## Arguments
  *expression*  
 A **varbinary(**_n_**)**, **varbinary(max)**, or **binary(**_n_**)** value. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.  
   

@@ -1,6 +1,7 @@
 ---
-title: "Configure PolyBase to access external data in Hadoop | Microsoft Docs"
-ms.date: 04/23/2019
+title: "Access external data: Hadoop - PolyBase"
+description: The article uses PolyBase on a SQL Server instance with Hardoop. PolyBase is suited for ad-hoc queries of external tables and data import/export.
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,10 +9,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ""
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+ms.custom: seo-dt-2019
 ---
 # Configure PolyBase to access external data in Hadoop
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
 
@@ -33,7 +35,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
   - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 on Linux
 
 > [!NOTE]
-> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Haddop encryption zones.
+> PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Hadoop encryption zones.
 
 ### Configure Hadoop connectivity
 
@@ -53,8 +55,6 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    ```  
 
 2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
@@ -150,15 +150,15 @@ To query the data in your Hadoop data source, you must define an external table 
 
 There are three functions that PolyBase is suited for:  
   
-- Ad-hoc queries against external tables.  
+- Ad hoc queries against external tables.  
 - Importing data.  
 - Exporting data.  
 
 The following queries provide example with fictional car sensor data.
 
-### Ad-hoc queries  
+### Ad hoc queries  
 
-The following ad-hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
+The following ad hoc query joins relational with Hadoop data. It selects customers who drive faster than 35 mph,joining structured customer data stored in SQL Server with car sensor data stored in Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,

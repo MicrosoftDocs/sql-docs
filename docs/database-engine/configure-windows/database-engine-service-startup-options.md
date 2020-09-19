@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Service Startup Options | Microsoft Docs"
+description: Become familiar with SQL Server Database Engine startup options. View tips on how to use them, and learn about the purpose of each option.
 ms.custom: ""
 ms.date: "08/01/2019"
 ms.prod: sql
@@ -23,13 +24,13 @@ helpviewer_keywords:
   - "startup parameters [SQL Server]"
   - "starting SQL Server, parameters"
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 
 # Database Engine Service Startup Options
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Startup options designate certain file locations needed during startup, and specify some server wide conditions. Most users do not need to specify startup options unless you are troubleshooting the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or you have an unusual problem and are directed to use a startup option by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Customer Support.  
   
@@ -58,7 +59,7 @@ Startup options designate certain file locations needed during startup, and spec
 |---------------------------|-----------------|  
 |**-c**|Shortens startup time when starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command prompt. Typically, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] starts as a service by calling the Service Control Manager. Because the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] does not start as a service when starting from the command prompt, use **-c** to skip this step.|  
 |**-f**|Starts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with minimal configuration. This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting. Starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in minimal configuration mode places [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode. For more information, see the description for **-m** that follows.|  
-|**-kDecimalNumber**| This startup parameter limits the number of checkpoint I/O requests per second, where the **DecimalNumber** represents the checkpoint speed in MB per second.  Changing this value can impact the speed of taking backups, or going through the recovery process so proceed with caution. For more information about this startup parameter, please see hot fix where the [-k parameter](https://support.microsoft.com/en-us/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus) was introduced.| 
+|**-kDecimalNumber**| This startup parameter limits the number of checkpoint I/O requests per second, where the **DecimalNumber** represents the checkpoint speed in MB per second.  Changing this value can impact the speed of taking backups, or going through the recovery process so proceed with caution. For more information about this startup parameter, please see hot fix where the [-k parameter](https://support.microsoft.com/help/929240/fix-i-o-requests-that-are-generated-by-the-checkpoint-process-may-caus) was introduced.| 
 |**-m**|Starts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode. When you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode, only a single user can connect, and the CHECKPOINT process is not started. CHECKPOINT guarantees that completed transactions are regularly written from the disk cache to the database device. (Typically, this option is used if you experience problems with system databases that should be repaired.) Enables the sp_configure allow updates option. By default, allow updates is disabled. Starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode enables any member of the computer's local Administrators group to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the sysadmin fixed server role. For more information, see [Connect to SQL Server When System Administrators Are Locked Out](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). For more information about single-user mode, see [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).|  
 |**-mClient Application Name**|Limits the connections to a specified client application. For example, `-mSQLCMD`  limits connections to a single connection and that connection must identify itself as the SQLCMD client program. Use this option when you are starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode and an unknown client application is taking the only available connection. Use `"Microsoft SQL Server Management Studio - Query"` to connect with the SSMS Query Editor. The SSMS Query Editor option cannot be configured by using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager because it includes the dash character which is rejected by the tool.<br /><br /> Client Application Name is case sensitive. Double quotes are required if the application name contains spaces or special characters.<br /><br />**Examples when starting from the command line:**<br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -m"Microsoft SQL Server Management Studio - Query"` <br /><br />`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\sqlservr -s MSSQLSERVER -mSQLCMD` <br /><br /> **Security Note:** Do not use this option as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.|  
 |**-n**|Does not use the Windows application log to record [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. If you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with **-n**, we recommend that you also use the **-e** startup option. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events are not logged.|  

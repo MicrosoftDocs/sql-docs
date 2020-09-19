@@ -1,4 +1,5 @@
 ---
+description: "Audit Database Object GDR Event Class"
 title: "Audit Database Object GDR Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Object GDR Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Database Object GDR** event class occurs when a GRANT, REVOKE, or DENY has been issued for database objects, such as assemblies and schemas.  
   
 ## Audit Database Object GDR Event Class Data Columns  

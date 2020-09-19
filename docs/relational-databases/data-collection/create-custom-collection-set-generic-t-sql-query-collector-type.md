@@ -1,7 +1,7 @@
 ---
-title: "Create Custom Collection Set - Generic T-SQL Query Collector Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+description: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
+title: "Create Custom Collection Set - Generic T-SQL Query Collector Type"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -12,9 +12,10 @@ helpviewer_keywords:
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
 # Create Custom Collection Set - Generic T-SQL Query Collector Type
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can create a custom collection set with collection items that use the Generic T-SQL Query collector type by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedures:  
   
 -   Configure upload schedules.  
@@ -32,10 +33,12 @@ ms.author: mathoma
   
 1.  Define a new collection set using the sp_syscollector_create_collection_set stored procedure.  
   
-    ```  
+    ```sql
     USE msdb;  
+    GO
     DECLARE @collection_set_id int;  
     DECLARE @collection_set_uid uniqueidentifier;  
+
     EXEC sp_syscollector_create_collection_set   
         @name=N'DMV Test 1',   
         @collection_mode=0,   
@@ -45,6 +48,7 @@ ms.author: mathoma
         @schedule_name=N'CollectorSchedule_Every_15min',   
         @collection_set_id=@collection_set_id OUTPUT,   
         @collection_set_uid=@collection_set_uid OUTPUT;  
+
     SELECT @collection_set_id, @collection_set_uid;  
     ```  
   
@@ -74,8 +78,11 @@ ms.author: mathoma
   
     ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
-    SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
-    WHERE name = N'Generic T-SQL Query Collector Type';  
+
+    SELECT @collector_type_uid = collector_type_uid
+      FROM [msdb].[dbo].[syscollector_collector_types]   
+      WHERE name = N'Generic T-SQL Query Collector Type';  
+
     DECLARE @collection_item_id int;  
     ```  
   
@@ -95,6 +102,7 @@ ms.author: mathoma
         @frequency=5,   
         @collection_set_id=@collection_set_id,   
         @collector_type_uid=@collector_type_uid;  
+
     SELECT @collection_item_id;  
     ```  
   
@@ -104,6 +112,7 @@ ms.author: mathoma
   
     ```sql  
     USE msdb;  
+    GO
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
     GO  
@@ -129,28 +138,32 @@ EXEC dbo.sp_syscollector_create_collection_set
     @schedule_name=N'CollectorSchedule_Every_15min',  
     @collection_set_id = @collection_set_id OUTPUT,  
     @collection_set_uid = @collection_set_uid OUTPUT;  
+
 SELECT @collection_set_id,@collection_set_uid;  
   
 DECLARE @collector_type_uid uniqueidentifier;  
-SELECT @collector_type_uid = collector_type_uid FROM syscollector_collector_types   
-WHERE name = N'Generic T-SQL Query Collector Type';  
+
+SELECT @collector_type_uid = collector_type_uid
+  FROM syscollector_collector_types   
+  WHERE name = N'Generic T-SQL Query Collector Type';  
   
 DECLARE @collection_item_id int;  
+
 EXEC sp_syscollector_create_collection_item  
-@name= N'Query Stats - Test 1',  
-@parameters=N'  
-<ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
-<Query>  
-  <Value>select * from sys.dm_exec_query_stats</Value>  
-  <OutputTable>dm_exec_query_stats</OutputTable>  
-</Query>  
- </ns:TSQLQueryCollector>',  
-    @collection_item_id = @collection_item_id OUTPUT,  
-    @frequency = 5, -- This parameter is ignored in cached mode  
-    @collection_set_id = @collection_set_id,  
-    @collector_type_uid = @collector_type_uid;  
+    @name= N'Query Stats - Test 1',  
+    @parameters=N'  
+    <ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
+    <Query>  
+      <Value>select * from sys.dm_exec_query_stats</Value>  
+      <OutputTable>dm_exec_query_stats</OutputTable>  
+    </Query>  
+     </ns:TSQLQueryCollector>',  
+        @collection_item_id = @collection_item_id OUTPUT,  
+        @frequency = 5, -- This parameter is ignored in cached mode  
+        @collection_set_id = @collection_set_id,  
+        @collector_type_uid = @collector_type_uid;  
+        
 SELECT @collection_item_id;  
-  
 GO  
 ```  
   

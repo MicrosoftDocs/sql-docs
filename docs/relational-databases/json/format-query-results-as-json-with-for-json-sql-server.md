@@ -1,9 +1,8 @@
 ---
-title: "Format Query Results as JSON with FOR JSON (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2019"
+description: "Format Query Results as JSON with FOR JSON (SQL Server)"
+title: "Format Query Results as JSON with FOR JSON"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Format query results as JSON, or export data from SQL Server as JSON, by adding the **FOR JSON** clause to a **SELECT** statement. Use the **FOR JSON** clause to simplify client applications by delegating the formatting of JSON output from the app to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -190,21 +190,18 @@ The output of the **FOR JSON** clause has the following characteristics:
   
 3.  Both the names of columns and their values are escaped according to JSON syntax. For more info, see [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### Example
 Here's an example that demonstrates how the **FOR JSON** clause formats the JSON output.  
   
 **Query results**  
-  
-|||||  
-|-|-|-|-|  
-|**A**|**B**|**C**|**D**|  
+
+|A|B|C|D|
+|-|-|-|-|
 |10|11|12|X|  
 |20|21|22|Y|  
 |30|31|32|Z|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  
+
  **JSON output**  
   
 ```json  

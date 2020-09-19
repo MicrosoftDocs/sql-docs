@@ -1,6 +1,7 @@
 ---
-title: "Management of Logins and Jobs After Role Switching (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Manage logins & jobs after mirror failover"
+description: Learn how to manage logins & jobs after failing over your mirrored database from the primary to the secondary database. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Management of Logins and Jobs After Role Switching (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When deploying a high-availability or disaster-recovery solution for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, it is important to reproduce relevant information that is stored for the database in the **master** or **msdb** databases. Typically, the relevant information includes the jobs of the primary/principal database and the logins of users or processes that need to connect to the database. You should duplicate this information on any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary/mirror database. If possible after roles are switched, it is best to programmatically reproduce the information on the new primary/principal database.  
   
 ## Logins  
@@ -30,7 +31,7 @@ ms.author: mikeray
 > [!NOTE]  
 >  This problem affects Windows local accounts on different computers. However, this problem does not occur for domain accounts because the SID is the same on each of the computers.  
   
- For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (a Database Engine blog).  
+ For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (a Database Engine blog).  
   
 ## Jobs  
  Jobs, such as backup jobs, require special consideration. Typically, after a role switch, the database owner or system administrator must re-create the jobs for the new primary/principal database.  

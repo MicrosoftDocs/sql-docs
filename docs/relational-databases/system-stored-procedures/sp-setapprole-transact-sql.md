@@ -1,4 +1,5 @@
 ---
+description: "sp_setapprole (Transact-SQL)"
 title: "sp_setapprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2018"
@@ -20,7 +21,7 @@ ms.author: vanto
 ---
 # sp_setapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Activates the permissions associated with an application role in the current database.  
   
@@ -48,7 +49,7 @@ sp_setapprole [ @rolename = ] 'role',
  The encrypt option is not supported on connections that are using **SqlClient**.  
   
 > [!IMPORTANT]  
-> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use SSL or IPSec.
+> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use TLS or IPSec.
   
  **@encrypt = 'none'**  
  Specifies that no obfuscation be used. The password is passed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as plain text. This is the default.  
@@ -60,7 +61,7 @@ sp_setapprole [ @rolename = ] 'role',
  Specifies whether a cookie is to be created. **true** is implicitly converted to 1. **false** is implicitly converted to 0.  
   
 `[ @cookie = ] @cookie OUTPUT`
- Specifies an output parameter to contain the cookie. The cookie is generated only if the value of **@fCreateCookie** is **true**. **varbinary(8000)**  
+ Specifies an output parameter to contain the cookie. The cookie is generated only if the value of **\@fCreateCookie** is **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. Applications should continue to reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.

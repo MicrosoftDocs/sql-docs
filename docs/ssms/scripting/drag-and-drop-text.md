@@ -1,11 +1,9 @@
 ---
-title: "Drag and Drop Text | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Drag and Drop Text"
+description: Learn how to drag text from an editor or Object Explorer and then drop it in an editor location or the Recycle Bin.
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dragging and dropping text"
@@ -13,11 +11,17 @@ helpviewer_keywords:
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Drag and Drop Text
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  You can select text and then drag and drop it in another location. You can drag and drop text:  
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+You can select text and then drag and drop it in another location. You can drag and drop text:  
   
 -   From Object Explorer into the editor to create a query.  
   

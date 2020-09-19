@@ -1,5 +1,6 @@
 ---
-title: Report Data
+title: Intro to Report Data in SQL Server Reporting Services (SSRS)
+description: Learn introductory information about report data in SQL Server Reporting Services (SRRS), such as how to create data sources.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
@@ -8,23 +9,39 @@ ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/14/2018
+ms.date: 11/18/2019
 ---
 
-# Report Data in SQL Server Reporting Services (SSRS)
+# Intro to Report Data in SQL Server Reporting Services (SSRS)
 
   Report data can come from multiple sources of data in your organization. Your first step in designing a report is to create data sources and datasets that represent the underlying report data. Each data source includes data connection information. Each dataset includes a query command that defines the set of fields to use as data from a data source. To visualize data from each dataset, add a data region, such as a table, matrix, chart, or map. When the report is processed, the queries run on the data source, and each data region expands as needed to display the query results for the dataset.  
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+## Data in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="BkMk_ReportDataTerms"></a> Terms  
+1.  **Data sources in the Report Data pane** A data source appears in the Report Data pane after you create an embedded data source or add a shared data source.  
+  
+2.  **Connection Dialog Box** Use the Connection Dialog Box to build a connection string or to paste a connection string.  
+  
+3.  **Data connection information** The connection string is passed to the data extension.  
+  
+4.  **Credentials** Credentials are managed separately from the connection string.  
+  
+5.  **Data Extension/Data Provider** Connecting to the data can be through multiple data access layers.  
+  
+6.  **External data sources** Retrieve data from relational databases, multidimensional databases, SharePoint lists, or Web services.  
+
+
+##  <a name="BkMk_ReportDataTerms"></a> Defining terms  
   
 - **Data connection.** Also known as a *data source*. A data connection includes a name and connection properties that are dependent on the connection type. By design, a data connection does not include credentials. A data connection does not specify which data to retrieve from the external data source. To do that, you specify a query when you create a dataset.  
   
-- **Data source definition.** A file that contains the XML representation of a report data source. When a report is published, its data sources are saved on the report server or SharePoint site as data source definitions, independently from the report definition. For example, a report server administrator might update the connection string or credentials. On a native report server, the file type is .rds. On a SharePoint site, the file type is .rsds.  
+- **Data source definition.** A file that contains the XML representation of a report data source. When you publish a report, its data sources are saved on the report server or SharePoint site as data source definitions, independent of the report definition. For example, a report server administrator might update the connection string or credentials. On a native report server, the file type is .rds. On a SharePoint site, the file type is .rsds.  
   
-- **Connection string.** A connection string is a string version of the connection properties that are needed to connect to a data source. Connection properties differ based on data connection type. For examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+- **Connection string.** A connection string is a string version of the connection properties that are needed to connect to a data source. Connection properties differ based on data connection type. For examples, see [Create data connection strings - Report Builder & SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 - **Shared data source.** A data source that is available on a report server or SharePoint site to be used by multiple reports.  
   
@@ -42,11 +59,11 @@ ms.date: 12/14/2018
   
 - **Data used by report parts** Report parts can include the data that they depend on. For more information about report parts, see [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-- **Filter data** Report data can be filtered in the query or in the report. You can use datasets and query variables to create cascading parameters, and provide a user the ability to narrow choices from thousands of selections to a more manageable number. You can filter data in a table or chart based on parameter values or other values that you specify.  
+- **Filter data** Report data can be filtered in the query or in the report. You can use datasets and query variables to create cascading parameters. With cascading parameters, users can narrow choices from thousands of selections to a more manageable number. You can filter data in a table or chart based on parameter values or other values that you specify.  
   
-- **Parameters** Dataset query commands that include query variables automatically create matching report parameters. You can also manually create parameters. When you view a report, the report toolbar displays the parameters. Users can select values to control report data or report appearance. To customize report data for specific audiences, you can create sets of report parameters with different default values linked to the same report definition, or use the built-in **UserID** field. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) and [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+- **Parameters** Dataset query commands that include query variables automatically create matching report parameters. You can also manually create parameters. When you view a report, the report toolbar displays the parameters. Users can select values to control report data or report appearance. To customize report data for specific audiences, you can create sets of report parameters with different default values linked to the same report definition. You can also use the built-in **UserID** field to customize data for different audiences. For more information, see [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) and [Built-in Collections in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
-- **Data alerts** After a report is published, you can create alerts based on report data, and receive email messages when it meets rules that you specify.  
+- **Data alerts** After you publish a report, you can create alerts based on report data. Then you receive email messages when it meets rules that you specify.  
   
 - **Group and aggregate data** Report data can be grouped and aggregated in the query or in the report. If you aggregate values in the query, you can continue to combine values in the report within the constraints of what is meaningful.  For more information, see [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) and [Aggregate Function &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
@@ -66,7 +83,7 @@ ms.date: 12/14/2018
   
 - Understand the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] client/server architectures and tools. For example, in Report Designer, you author reports on a client machine that uses built-in data source types. When you publish a report, the data source types must be supported on the report server or SharePoint site.  For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-- Data sources and datasets are authored in a report and published to a report server or SharePoint site from a client authoring tool. Data sources can be created directly on the report server. After they are published, you can configure credentials and other properties on the report server. For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
+- Data sources and datasets are authored in a report and published to a report server or SharePoint site from a client authoring tool. Data sources can be created directly on the report server. After they are published, you can configure credentials and other properties on the report server. For more information, see [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
 - The data sources you can use depend on which [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data extensions are installed. Support for data sources can differ by client authoring tool, report server version, and report server platform. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
@@ -76,10 +93,9 @@ ms.date: 12/14/2018
 
  Tasks related to creating data connections, adding data from external sources, datasets, and queries.  
   
-|||  
+|Common Tasks|Links|  
 |-|-|  
-|**Common Tasks**|**Links**|  
-|Create data connections|[Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
+|Create data connections|[Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Create datasets and queries|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Manage data sources after they are published|[Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)|  
 |Manage shared datasets after they are published|[Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)|  

@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_load_thesaurus_file (Transact-SQL)"
 title: "sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], thesaurus files"
   - "thesaurus [full-text search], editing"
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # sp_fulltext_load_thesaurus_file (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Causes the server instance to parse and load the data from the thesaurus file that corresponds to the language whose LCID is specified. This stored procedure is useful after updating a thesaurus file. Executing **sp_fulltext_load_thesaurus_file** causes recompilation of full-text queries that use the thesaurus of the specified LCID.  
   
@@ -38,7 +39,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Integer mapping the locale identifier (LCID) of the language for which you want to lade the thesaurus XML definition. To obtain the LCIDs of languages that are available on a server instance, use the [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) catalog view.  
   
- **@loadOnlyIfNotLoaded** = *action*  
+ **\@loadOnlyIfNotLoaded** = *action*  
  Specifies whether the thesaurus file is loaded into the internal thesaurus tables even if it has already been loaded. *action* is one of:  
   
 |Value|Definition|  

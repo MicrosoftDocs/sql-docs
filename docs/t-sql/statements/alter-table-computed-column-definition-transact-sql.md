@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE computed_column_definition (Transact-SQL)"
 title: "computed_column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER TABLE statement"
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER TABLE computed_column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies the properties of a computed column that is added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -24,7 +25,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -44,12 +45,14 @@ column_name AS computed_column_expression
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can be 1 through 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. If no *column_name* is specified for a **timestamp** data type column, the name **timestamp** is used.  
   
 *computed_column_expression*  
- Is an expression that defines the value of a computed column. A computed column is a virtual column that is not physically stored in the table but is computed from an expression that uses other columns in the same table. For example, a computed column could have the definition: cost AS price * qty. The expression can be a noncomputed column name, constant, function, variable, and any combination of these connected by one or more operators. The expression cannot be a subquery or include an alias data type.  
+ Is an expression that defines the value of a computed column. A computed column is a virtual column that is not physically stored in the table but is computed from an expression that uses other columns in the same table. An expression must yield a value. For example, a computed column could have the definition: cost AS price * qty. Another example with bitwise operators: is_finalised AS is_checked | is_approved. The expression can be a noncomputed column name, constant, function, variable, and any combination of these connected by one or more operators. The expression cannot be a search condition, subquery or include an alias data type.  
   
  Computed columns can be used in select lists, WHERE clauses, ORDER BY clauses, or any other locations where regular expressions can be used, but with the following exceptions:  
   
@@ -121,7 +124,7 @@ ON UPDATE { **NO ACTION** }
  Specifies what action happens to rows in the table created when those rows have a referential relationship and the referenced row is updated in the parent table. When NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the update action on the Vendor row if there is at least one row in the ProductVendor table that references it.  
   
 NOT FOR REPLICATION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Can be specified for FOREIGN KEY constraints and CHECK constraints. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.  
   
@@ -132,7 +135,7 @@ CHECK
  Is a logical expression that returns TRUE or FALSE. The expression cannot contain a reference to an alias data type.  
   
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the storage location of the index created for the constraint. If *partition_scheme_name* is specified, the index is partitioned and the partitions are mapped to the filegroups that are specified by *partition_scheme_name*. If *filegroup* is specified, the index is created in the named filegroup. If "default" is specified or if ON is not specified at all, the index is created in the same filegroup as the table. If ON is specified when a clustered index is added for a PRIMARY KEY or UNIQUE constraint, the whole table is moved to the specified filegroup when the clustered index is created.  
   

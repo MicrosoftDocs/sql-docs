@@ -1,12 +1,13 @@
 ---
 title: "Configure a Report Server on a Network Load Balancing Cluster | Microsoft Docs"
+description: Learn how to configure a report server scale-out to run on an NLB. Implement an NLB cluster solution to support a Reporting Services scale-out deployment.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
+ms.date: 12/11/2019
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster
@@ -51,21 +52,21 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`MachineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
+1. Generate a validation key and decryption key by using the autogenerate functionality provided by the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. In the end, you must have a single <`machineKey`> entry that you can paste into the Web.config file for each Report Server instance in the scale-out deployment.  
   
     The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`MachineKey`> element that you generated. By default, the Report Manager Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`machineKey`> element that you generated. By default, the Report Manager Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Save the file.  
   
 4. Repeat the previous step for each report server in the scale-out deployment.  
   
-5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`MachineKey`> elements in the <`system.web`> section.  
+5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`machineKey`> elements in the <`system.web`> section.  
 
 ::: moniker-end
 

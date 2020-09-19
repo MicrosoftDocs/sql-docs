@@ -1,4 +1,5 @@
 ---
+description: "sp_redirect_publisher (Transact-SQL)"
 title: "sp_redirect_publisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_redirect_publisher"
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_redirect_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies a redirected publisher for an existing publisher/database pair. If the publisher database belongs to an Always On Availability Group, the redirected publisher is the availability group listener name associated with the availability group.  
   
@@ -52,7 +53,7 @@ sp_redirect_publisher
 ## Remarks  
  **sp_redirect_publisher** is used to allow a replication publisher to be redirected to the current primary of an Always On availability group by associating the publisher/database pair with an availability group's listener. Execute **sp_redirect_publisher** after the AG listener has been configured for the availability group that contains the published database.  
   
- If the publication database at the original publisher is removed from an availability group at the primary replica, execute **sp_redirect_publisher** without specifying a value for the *@redirected_publisher* parameter to remove the redirection for the publisher/database pair. For more information about redirecting the publisher when, see [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ If the publication database at the original publisher is removed from an availability group at the primary replica, execute **sp_redirect_publisher** without specifying a value for the *\@redirected_publisher* parameter to remove the redirection for the publisher/database pair. For more information about redirecting the publisher when, see [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## Permissions  
  Caller must either be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role for the distribution database, or a member of a publication access list for a defined publication associated with the publisher database.  

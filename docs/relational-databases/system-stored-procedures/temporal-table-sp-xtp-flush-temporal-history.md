@@ -1,4 +1,5 @@
 ---
+description: "sp_xtp_flush_temporal_history (Transact-SQL)"
 title: "sp_xtp_flush_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
@@ -15,12 +16,13 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_xtp_flush_temporal_history"
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_xtp_flush_temporal_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Invokes the data flush task to move all committed rows from in-memory staging table to the disk-based history table.  
 
@@ -35,10 +37,10 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## Arguments  
- *@schema_name*  
+ *\@schema_name*  
  The schema name for the current or temporal table  
   
- *@object_name*  
+ *\@object_name*  
  The name of the current or temporal table  
   
 ## Return Code Values  

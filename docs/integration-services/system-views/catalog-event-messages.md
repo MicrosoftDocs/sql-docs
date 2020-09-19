@@ -1,4 +1,5 @@
 ---
+description: "catalog.event_messages"
 title: "catalog.event_messages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,10 +14,10 @@ ms.author: chugu
 ---
 # catalog.event_messages 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays information about messages that were logged during operations.  
   

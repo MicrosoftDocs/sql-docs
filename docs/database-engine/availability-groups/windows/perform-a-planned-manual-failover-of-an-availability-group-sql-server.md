@@ -18,7 +18,7 @@ ms.author: mathoma
 ---
 
 # Perform a planned manual failover of an Always On availability group (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 This topic describes how to perform a manual failover without data loss (a *planned manual failover*) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. A planned manual failover, like any AlwaysOn availability group failover, transitions a secondary replica to primary role. Concurrently, the failover transitions the former primary replica to the secondary role.  
   
 A planned manual failover is supported only when the primary replica and the target secondary replica are running in synchronous-commit mode and are currently synchronized. A planned manual failover preserves all the data in the secondary databases that are joined to the availability group on the target secondary replica. After the former primary replica transitions to the secondary role, its databases become secondary databases. Then they begin to synchronize with the new primary databases. After they all transition into the SYNCHRONIZED state, the new secondary replica becomes eligible to serve as the target of a future planned manual failover.  
@@ -45,7 +45,7 @@ A planned manual failover is supported only when the primary replica and the tar
 -   Currently, the target secondary replica must be synchronized with the primary replica. All the secondary databases on this secondary replica must be joined to the availability group. They also must be synchronized with their corresponding primary databases (that is, the local secondary databases must be SYNCHRONIZED). 
   
     > [!TIP] 
-    >  To determine the failover readiness of a secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view. Or you can look at the **Failover Readiness** column of the [AlwaysOn group dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+    >  To determine the failover readiness of a secondary replica, query the **is_failover_ready** column in the [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) dynamic management view. Or you can look at the **Failover Readiness** column of the [AlwaysOn group dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   This task is supported only on the target secondary replica. You must be connected to the server instance that hosts the target secondary replica. 
   
 ###  <a name="Security"></a> Security 

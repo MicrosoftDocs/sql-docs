@@ -1,6 +1,6 @@
 ---
-title: "WideWorldImporters generate data - SQL sample database | Microsoft Docs"
-ms.custom: ""
+title: "Generate data in SQL samples WideWorldImporters"
+description: Use these SQL statements to generate and import sample data up to the current date for the WideWorldImporters sample databases.
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.prod: sql
@@ -9,10 +9,11 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
+ms.custom: "seo-lt-2019"
 ---
 
 # WideWorldImporters data generation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 The released versions of the WideWorldImporters and WideWorldImportersDW databases have data from January 1, 2013, up to the day that the databases were generated.
 
 When you use these sample databases, you might want to include more recent sample data.
@@ -63,11 +64,11 @@ You can use the `Application.Configuration_PopulateLargeSaleTable` procedure to 
 
 #### Name
 
-    Application.Configuration_PopulateLargeSaleTable
+`Application.Configuration_PopulateLargeSaleTable`
 
 #### Parameters
 
-  `@EstimatedRowsFor2012` **bigint** (with a default of 12000000)
+`@EstimatedRowsFor2012` **bigint** (with a default of 12000000)
 
 #### Result
 

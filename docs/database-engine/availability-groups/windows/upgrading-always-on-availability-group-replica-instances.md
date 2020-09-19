@@ -1,6 +1,7 @@
 ---
-title: "Upgrading Always On Availability Group replica instances | Microsoft Docs"
-ms.custom: ""
+title: "Upgrade availability group replicas"
+description: Learn how to reduce downtime for the primary replica during SQL Server upgrades by performing a rolling upgrade.
+ms.custom: "seo-lt-2019"
 ms.date: "01/10/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Upgrading Always On Availability Group Replica Instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 When upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that hosts an Always On Availability Group (AG) to a new [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic). Also be aware that after the initial failover to a secondary replica running a newer version of SQL Server, the databases in that Availability Group will run through an upgrade process to bring them to the latest version. During this time, there will be no readable replicas for any of these databases. Downtime after the initial failover will depend on the number of databases in the Availability Group. If you plan on failing back to the original primary, this step will not be repeated when you fail back.
   

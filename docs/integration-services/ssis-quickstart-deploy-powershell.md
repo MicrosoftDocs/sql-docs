@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project with PowerShell"
 title: "Deploy an SSIS project with PowerShell | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project with PowerShell
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to use a PowerShell script to connect to a database server and deploy an SSIS project to the SSIS Catalog.
@@ -40,6 +41,10 @@ To deploy the project to Azure SQL Database, get the connection information you 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 5. Click **Show database connection strings**.
 6. Review the complete **ADO.NET** connection string.
+
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## SSIS PowerShell Provider
 Provide appropriate values for the variables at the top of the following script, and then run the script to deploy the SSIS project.

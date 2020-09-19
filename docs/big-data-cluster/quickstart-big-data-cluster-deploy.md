@@ -1,11 +1,11 @@
 ---
 title: Deploy with a python script
-titleSuffix: SQL Server big data clusters
-description: Learn how to use a deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) on Azure Kubernetes Service (AKS).
+titleSuffix: SQL Server Big Data Clusters
+description: Learn how to use a deployment script to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Use a python script to deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to Azure Kubernetes Service (AKS).
 
@@ -21,8 +21,6 @@ In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[
 > AKS is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
 
 The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the AKS default storage classes. The default configuration used in this tutorial is suitable for dev/test environments.
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## Prerequisites
 
@@ -54,7 +52,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## Run the deployment script
 
-Use the following steps to run the deployment script. This script will create an AKS service in Azure and then deploy a SQL Server 2019 big data cluster to AKS. You can also modify the script with other [environment variables](deployment-guidance.md#configfile) to create a custom deployment.
+Use the following steps to run the deployment script in a Windows PowerShell or Linux bash prompt. This script will create an AKS service in Azure and then deploy a SQL Server 2019 big data cluster to AKS. You can also modify the script with other [environment variables](deployment-guidance.md#configfile) to create a custom deployment.
 
 1. Run the script with the following command:
 
@@ -72,23 +70,20 @@ Use the following steps to run the deployment script. This script will create an
    | **Azure subscription ID** | The Azure subscription ID to use for AKS. You can list all of your subscriptions and their IDs by running `az account list` from another command line. |
    | **Azure resource group** | The Azure resource group name to create for the AKS cluster. |
    | **Azure region** | The Azure region for the new AKS cluster (default **westus**). |
-   | **Machine size** | The [machine size](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) to use for nodes in the AKS cluster (default **Standard_L8s**). |
+   | **Machine size** | The [machine size](/azure/virtual-machines/windows/sizes) to use for nodes in the AKS cluster (default **Standard_L8s**). |
    | **Worker nodes** | The number of worker nodes in the AKS cluster (default **1**). |
    | **Cluster name** | The name of both the AKS cluster and the big data cluster. The name of your big data cluster must be only lower case alpha-numeric characters, and no spaces. (default **sqlbigdata**). |
    | **Password** | Password for the controller, HDFS/Spark gateway, and master instance (default **MySQLBigData2019**). |
-   | **Controller user** | Username for the controller user (default: **admin**). |
-
-The following parameters were required for participants in the SQL Server 2019 big data cluster early adopter program: **Docker username**, and **Docker password**. As of CTP 3.2 they are no longer required.
+   | **Username** | Username for the controller user (default: **admin**). |
 
    > [!IMPORTANT]
-   > The default **Standard_L8s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.
+   > The default **Standard_L8s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L8s](/azure/virtual-machines/lsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.
 
    > [!NOTE]
-   > The `sa` account is a system administrator on the SQL Server master instance that gets created during setup. After creating deployment, the `MSSQL_SA_PASSWORD` environment variable is discoverable by running `echo $MSSQL_SA_PASSWORD` in the master instance container. For security purposes, change your `sa` password on the master instance after deployment. For more information, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
+   > The SQL Server `sa` account is disabled during big data cluster deployment. A new sysadmin login is provisioned in SQL Server master instance the same name specified for **Username** input and the password corrsponding to the **Password** input. Same **Username** and **Password** values are used for provisioning a controller admin user. On clusters deployed prior to SQL Server 2019 CU5, the only user supported for gateway (Knox) is **root** and the password is the same as above.
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. The script will start by creating an AKS cluster using the parameters you specified. This step takes several minutes.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## Monitor the status
 

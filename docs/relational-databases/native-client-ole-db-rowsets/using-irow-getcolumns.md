@@ -1,5 +1,6 @@
 ---
-title: "Using IRow::GetColumns | Microsoft Docs"
+description: "Using IRow::GetColumns in SQL Server Native Client"
+title: Using IRow::GetColumns (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -15,13 +16,12 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "GetColumns method"
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Using IRow::GetColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# Using IRow::GetColumns in SQL Server Native Client
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The **IRow** implementation allows forward-only sequential access to the columns. You can either access all the columns in the row with a single call to **IRow::GetColumns** or call **IRow::GetColumns** multiple times every time that you access several columns in the row.  
   

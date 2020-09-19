@@ -1,5 +1,6 @@
 ---
-title: "Find Property Set GUIDs and Property Integer IDs for Search Properties | Microsoft Docs"
+description: "Find property set GUIDs and property integer IDs for Search properties"
+title: "Find property set GUIDs & property integer IDs for Search properties"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -13,9 +14,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Find Property Set GUIDs and Property Integer IDs for Search Properties
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Find property set GUIDs and property integer IDs for Search properties
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic discusses how to obtain the values that are required before you can add a property to a search property list and make it searchable by full-text search. These values include the property set GUID and property integer identifier of a document property.  
   
  Document properties that are extracted by IFilters from binary data - that is, from data stored in a **varbinary**, **varbinary(max)** (including **FILESTREAM**), or **image** data type column - can be made available for full-text search. To make an extracted property searchable, the property must be manually added to a search property list. The search property list must also be associated with one or more full-text indexes. For more information, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -55,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  You run **filtdump.exe** from the command prompt and provide a single argument. This argument is the name of an individual file that has a file type for which an IFilter is installed. The utility displays a list of all the properties discovered by the IFilter in the document, with their property set GUIDs, integer IDs, and additional information.  
   
- For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
+ For information about installing this software, see [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). After you download and install the SDK, look in the following folders for the filtdump.exe utility.  
   
 -   For the 64-bit version, look in `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

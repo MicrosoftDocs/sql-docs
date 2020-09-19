@@ -1,27 +1,31 @@
 ---
-title: "Check Constraint Dialog Box (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Check Constraint Dialog Box (Visual Database Tools)"
+title: Check Constraint Dialog Box
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.checkconstraint"
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
-author: "markingmyname"
-ms.author: "maghan"
-
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # Check Constraint Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 This dialog box appears when you right-click a table definition grid in Table Designer and click **Check Constraints**. The dialog box contains a set of properties for non-unique constraints attached to the tables in your database. Properties applying to unique constraints appear in the **Indexes/Keys** dialog box.  
   
 > [!NOTE]  
 > If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
-## Options  
+## Options
+
 **Selected Check Constraints**  
 Lists available check constraints. To view the properties of a constraint, select it in the list.  
   
@@ -35,7 +39,7 @@ Remove the selected constraint from the table. To cancel the addition of a check
 Expand to show the **Expression** property field.  
   
 **Expression**  
-Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Working with Constraints](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Identity Category**  
 Expand to show properties for **Name** and **Description**.  
@@ -58,7 +62,7 @@ Specify whether the constraint is enforced when data is inserted into or updated
 **Enforce For Replication**  
 Indicates whether to enforce the constraint when a replication agent performs an insert or update on this table.  
   
-## See Also  
-[Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Indexes - Keys Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
-  
+## See Also
+
+[Working with Constraints](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[Indexes - Keys Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

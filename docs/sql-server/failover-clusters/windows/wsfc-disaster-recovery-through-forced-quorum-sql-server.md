@@ -1,6 +1,7 @@
 ---
-title: "WSFC Disaster Recovery through Forced Quorum (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Disaster Recovery through forced quorum"
+description: Recovery from a quorum failure requires manual intervention. Learn how to force quorum in the event of a disaster of a SQL Server failover cluster instance.
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # WSFC Disaster Recovery through Forced Quorum (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Quorum failure is usually caused by a systemic disaster, or a persistent communications failure, or a misconfiguration involving several nodes in the WSFC cluster.  Manual intervention is required to recovery from a quorum failure.  
   
 -   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  

@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT CATALOG (Transact-SQL)"
 title: "ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], modifying"
   - "full-text catalogs [SQL Server], reorganizing"
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the properties of a full-text catalog.  
   
@@ -32,8 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 ALTER FULLTEXT CATALOG catalog_name   
 { REBUILD [ WITH ACCENT_SENSITIVITY = { ON | OFF } ]  
 | REORGANIZE  
@@ -41,7 +41,9 @@ ALTER FULLTEXT CATALOG catalog_name
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *catalog_name*  
  Specifies the name of the catalog to be modified. If a catalog with the specified name does not exist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error and does not perform the ALTER operation.  
   
@@ -74,7 +76,7 @@ ALTER FULLTEXT CATALOG catalog_name
 ## Examples  
  The following example changes the `accentsensitivity` property of the default full-text catalog `ftCatalog`, which is accent sensitive.  
   
-```  
+```sql  
 --Change to accent insensitive  
 USE AdventureWorks2012;  
 GO  

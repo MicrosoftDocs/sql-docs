@@ -1,4 +1,5 @@
 ---
+description: "SQLDescribeCol Function"
 title: "SQLDescribeCol Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDescribeCol function [ODBC]"
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDescribeCol Function
 **Conformance**  

@@ -1,5 +1,6 @@
 ---
-title: "Configure and Manage Stopwords and Stoplists for Full-Text Search | Microsoft Docs"
+description: "Configure and Manage Stopwords and Stoplists for Full-Text Search"
+title: "Configure & manage stopwords & stoplists for Full-Text Search"
 ms.date: "02/02/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -17,9 +18,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   To prevent a full-text index from becoming bloated, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a mechanism that discards commonly occurring strings that do not help the search. These discarded strings are called *stopwords*. During index creation, the Full-Text Engine omits stopwords from the full-text index. This means that full-text queries will not search on stopwords.  
    
 **Stopwords**. A stopword can be a word with meaning in a specific language. For example, in the English language, words such as "a," "and," "is," and "the" are left out of the full-text index since they are known to be useless to a search. A stopword can also be a *token* that does not have linguistic meaning.  

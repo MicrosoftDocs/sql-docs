@@ -1,6 +1,7 @@
 ---
-title: "Piecemeal Restore of Databases With Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Piecemeal restore of databases - memory-optimized tables"
+description: Databases with memory-optimized tables support piecemeal restore in SQL Server. Learn about key scenarios for piecemeal backup and restore.
+ms.custom: seo-dt-2019
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -8,13 +9,13 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Piecemeal Restore of Databases With Memory-Optimized Tables
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Piecemeal restore is supported on databases with memory-optimized tables except for one restriction described below. For more information about piecemeal backup and restore, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) and [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
  A memory-optimized filegroup must be backed up and restored together with the primary filegroup:  

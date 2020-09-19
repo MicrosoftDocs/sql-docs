@@ -1,24 +1,25 @@
 ---
-title: "How to: Create a Test Project for SQL Server Database Unit Testing | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Create a Test Project for SQL Server Database Unit Testing
+description: Learn how to create test projects for SQL Server database unit testing. View different ways of adding test projects to solutions that contain database projects.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Create a Test Project for SQL Server Database Unit Testing
+
 Before you can start to write unit tests that evaluate database objects, you must first create a test project. This project contains SQL Server unit tests, but it could contain other types of tests.  
   
 You can place all of your SQL Server unit tests for a given database project within a single test project. However, you might want to create additional test projects based on your answers to the following questions:  
   
-|||  
-|-|-|  
-|**Question**|**Decision**|  
+|Question|Decision|  
+|-|-|   
 |Do different SQL Server unit tests need to access different database connections for test execution or test validation?|If yes, you need more than one test project. You cannot specify more than one database connection for test execution. However, you can specify a different database connection for test validation.|  
 |Do you want to deploy different database projects for different unit tests?|If yes, you need more than one test project. A test project can only deploy a single database project.|  
   

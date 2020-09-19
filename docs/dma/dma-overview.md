@@ -2,7 +2,7 @@
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to migrate SQL Server databases to other SQL Server or Azure databases
 ms.custom: ""
-ms.date: "08/23/2019"
+ms.date: "11/05/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,20 +12,23 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, overview"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ---
 
 # Overview of Data Migration Assistant
+
 The Data Migration Assistant (DMA) helps you upgrade to a modern data platform by detecting compatibility issues that can impact database functionality in your new version of SQL Server or Azure SQL Database. DMA recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
-> [!NOTE] 
+> [!NOTE]
 > For large migrations (in terms of number and size of databases), we recommend that you use the [Azure Database Migration Service](/azure/dms/dms-overview), which can migrate databases at scale.
   
 ## Get Data Migration Assistant
+
 To install DMA, download the latest version of the tool from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595), and then run the **DataMigrationAssistant.msi** file.
 
 ## Capabilities
+
 - Assess on-premises SQL Server instance(s) migrating to Azure SQL database(s). The assessment workflow helps you to detect the following issues that can affect Azure SQL database migration and provides detailed guidance on how to resolve them.
 
   - Migration blocking issues: Discovers the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s). DMA provides recommendations to help you address those issues.
@@ -53,42 +56,47 @@ To install DMA, download the latest version of the tool from the [Microsoft Down
 
 - After a successful migration, applications can connect to the target SQL Server databases seamlessly.
 
-- Assess on-premises SQL Server Integration Services (SSIS) package(s) migrating to Azure SQL Database or Azure SQL Database managed instance. The assessment helps to discover issues that can affect the migration. These are described as compatibility issues and are organized in the following categories:
+- Assess on-premises SQL Server Integration Services (SSIS) package(s) migrating to Azure SQL Database or Azure SQL Managed Instance. The assessment helps to discover issues that can affect the migration. These are described as compatibility issues and are organized in the following categories:
 
   - Migration blockers: discovers the compatibility issues that block migrating source package(s) to Azure. DMA provides recommendations to help you address those issues.
 
   - Information issues: detects partially supported or deprecated features that are used in source package(s).
 
-  > [!NOTE]
-  > The assessment of packages hosted in File system is supported only.
-  > The assessment of packages hosted in MSDB, Package Store or SSISDB comes later.
-
 ## Prerequisites
+
 To run an assessment, you have to be a member of the SQL Server **sysadmin** role.
 
 ## Supported source and target versions
+
 DMA replaces all previous versions of SQL Server Upgrade Advisor and should be used for upgrades for most SQL Server versions. Supported source and target versions are:
 
 **Sources**
+
 - SQL Server 2005
 - SQL Server 2008
 - SQL Server 2008 R2
-- SQL Server 2012 
+- SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 on Windows
 
 **Targets**
+
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 on Windows and Linux
-- Azure SQL Database
-- Azure SQL Database Managed Instance
+- SQL Server 2019
+- Azure SQL Database single database
+- Azure SQL Managed Instance
 - SQL server running on an Azure Virtual Machine
 
 ## See also
-[Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)     
-[Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)     
-[Migrate On-Premises SQL Server using Data Migration Assistant](../dma/dma-migrateonpremsql.md)     
-[Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)     
+
+[Assess your SQL Server Migration](../dma/dma-assesssqlonprem.md)
+
+[Data Migration Assistant: Configuration settings](../dma/dma-configurationsettings.md)
+
+[Migrate On-Premises SQL Server using Data Migration Assistant](../dma/dma-migrateonpremsql.md)
+
+[Data Migration Assistant: Best Practices](../dma/dma-bestpractices.md)

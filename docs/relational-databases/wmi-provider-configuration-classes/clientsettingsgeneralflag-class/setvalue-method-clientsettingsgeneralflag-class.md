@@ -1,6 +1,7 @@
 ---
-title: "SetValue Method (ClientSettingsGeneralFlag Class) | Microsoft Docs"
-ms.custom: ""
+description: "SetValue Method (ClientSettingsGeneralFlag Class)"
+title: "SetValue Method (ClientSettingsGeneralFlag)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetValue method"
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetValue Method (ClientSettingsGeneralFlag Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets all the values of the referenced flag.  
   
 ## Syntax  

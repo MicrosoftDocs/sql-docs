@@ -1,10 +1,11 @@
 ---
-title: "Create a New SQL Server Failover Cluster (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Create new Failover Cluster Instance"
+description: This article describes how to use the Setup program to install or upgrade a SQL Server Always On failover cluster instance or add a node to an existing failover cluster instance.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"
@@ -17,50 +18,53 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Create a New SQL Server Failover Cluster (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  To install or upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run the Setup program on each node of the failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node to manage the other nodes.  
+
+# Create a New Always On Failover Cluster Instance (Setup)
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+
+  To install or upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance (FCI), you must run the Setup program on each node of the underlying Windows Server failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node to manage the other nodes.  
   
- Depending on how the nodes are clustered, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster is configured in the following ways:  
+ Depending on how the nodes are clustered, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance is configured in the following ways:  
   
 -   Nodes on the same subnet or the same set of subnets - The IP address resource dependency is set to AND for these types of configurations.  
   
--   Nodes on different subnets - The IP address resource dependency is set to OR and this configuration is called a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster configuration. For more information, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
+-   Nodes on different subnets - The IP address resource dependency is set to OR and this configuration is called a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster instance configuration. For more information, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
  The following options are available for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation:  
   
- **Option1: Integration Installation with Add Node**  
+ **Option1: Integration Installation with Add Node**   
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrated failover cluster installation consists of the following steps:  
   
--   Create and configure a single-node [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. When you configure the node successfully, you have a fully functional failover cluster instance. At this point, it does not have high availability because there is only one node in the failover cluster.  
+-   Create and configure a single-node [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. When you configure the node successfully, you have a fully functional failover cluster instance. At this point, it does not have high availability because there is only one node in the failover cluster instance.  
   
--   On each node to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, run Setup with Add Node functionality to add that node.  
+-   On each node to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, run Setup with Add Node functionality to add that node.  
   
-    -   If the node you are adding has additional or different subnets, Setup allows you to specify additional IP addresses. If the node you are adding is on a different subnet, you also need to confirm the IP address resource dependency change to OR. For more information on the different possible scenarios during Add Node operations, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+    -   If the node you are adding has additional or different subnets, Setup allows you to specify additional IP addresses. If the node you are adding is on a different subnet, you also need to confirm the IP address resource dependency change to OR. For more information on the different possible scenarios during Add Node operations, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  **Option 2: Advanced/Enterprise Installation**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Advanced/Enterprise failover cluster installation consists of the following steps:  
   
--   On each node that is a possible owner of the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, follow the Prepare Failover Cluster setup steps that are listed in the [Prepare section](#prepare). After you run the Prepare Failover Cluster on one node, Setup creates the Configuration.ini file that lists all the settings that you specified. On the additional nodes to be prepared, instead of following these steps, you can supply the autogenerated Configuration.ini file from first node as an input to the Setup command line. For more information, see [Install SQL Server 2016 Using a Configuration File](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md). This step prepares the nodes ready to be clustered, but there is no operational instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] at the end of this step.  
+-   On each node that is a possible owner of the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, follow the Prepare Failover Cluster setup steps that are listed in the [Prepare section](#prepare). After you run the Prepare Failover Cluster on one node, Setup creates the Configuration.ini file that lists all the settings that you specified. On the additional nodes to be prepared, instead of following these steps, you can supply the autogenerated Configuration.ini file from the first node as an input to the Setup command line. For more information, see [Install SQL Server 2016 Using a Configuration File](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md). This step prepares the nodes ready to be clustered, but there is no operational instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] at the end of this step.  
   
--   After the nodes are prepared for clustering, run Setup on one of the prepared nodes. This step configures and finishes the failover cluster instance. At the end of this step, you will have an operational [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance and all the nodes that were prepared previously for that instance will be the possible owners of the newly-created [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.  
+-   After the nodes are prepared for clustering, run Setup on one of the prepared nodes. This step configures and finishes the failover cluster instance. At the end of this step, you will have an operational [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance and all the nodes that were prepared previously for that instance will be the possible owners of the newly-created [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
-     If you are clustering nodes on multiple subnets, Setup will detect the union of all the subnets across all nodes that have the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prepared failover cluster instance. You will be able to specify multiple IP addresses for the subnets. Each prepared node must be the possible owner of at least one IP address.  
+     If you are creating a failover cluster instance that spans multiple subnets, Setup will detect the union of all the subnets across all nodes that have the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prepared failover cluster instance. You will be able to specify multiple IP addresses for the subnets. Each prepared node must be the possible owner of at least one IP address.  
   
      If each of the IP addresses specified for the subnets are supported on all the prepared nodes, the dependency is set to AND.  
   
      If each of the IP addresses specified for the subnets are not supported on all the prepared nodes, the dependency is set to OR. For more information, see [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
     > [!NOTE]  
-    >  Complete Failover Cluster requires that the underlying Windows failover cluster exists. If the Windows failover cluster does not exist, Setup gives an error and exits.  
+    >  Complete Failover Cluster requires that the underlying Windows Server failover cluster exists. If the Windows Server failover cluster does not exist, Setup gives an error and exits.  
   
- For more information about how to add nodes to or remove nodes from an existing failover cluster instance, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ For more information about how to add nodes to or remove nodes from an existing failover cluster instance, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  For more information about remote installation, see [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a Windows failover cluster, see [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ For more information about installing [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in a WSFC, see [How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## Prerequisites  
  Before you begin, review the following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online topics:  
@@ -74,9 +78,9 @@ ms.author: mathoma
 -   [SQL Server Multi-Subnet Clustering &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
 > [!NOTE]  
->  Take note of the location of the shared drive in the Cluster Administrator before you run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. You must have this information to create a new failover cluster.  
+>  Take note of the location of the shared drive in the Cluster Administrator before you run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. You must have this information to create a new failover cluster instance.  
   
-### To install a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster using Integrated Install with Add Node.  
+### To install a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance using Integrated Install with Add Node.  
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media, and from the root folder, double-click Setup.exe. To install from a network share, browse to the root folder on the share, and then double-click Setup.exe. For more information about how to install prerequisites, see [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
@@ -117,10 +121,10 @@ ms.author: mathoma
   
 11. On the Instance Configuration page, specify whether to install a default or a named instance. For more information, see [Instance Configuration](../../install/instance-configuration.md).  
   
-     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** - Specify a network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. This is the name that is used to identify your failover cluster on the network.  
+     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Name** - Specify a network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that is used to identify your failover cluster instance on the network.  
   
     > [!NOTE]  
-    >  This is known as the virtual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] name in earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters.  
+    >  This is known as the virtual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] name in earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instances.  
   
      **Instance ID** - By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a nondefault instance ID, select the **Instance ID** box and provide a value.  
   
@@ -131,13 +135,13 @@ ms.author: mathoma
   
      **Detected [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances and features on this computer** - The grid shows instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Click **Next** to continue.  
   
-12. Use the Cluster Resource Group page to specify the cluster resource group name where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual server resources will be located. To specify the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster resource group name, you have two options:  
+12. Use the Cluster Resource Group page to specify the cluster resource group, or role, name where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual server resources will be located. To specify the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster resource group name, you have two options:  
   
     -   Use the drop-down box to specify an existing group to use.  
   
     -   Type the name of a new group to create. Be aware that the name "Available storage" is not a valid group name.  
   
-13. On the Cluster Disk Selection page, select the shared cluster disk resource for your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. The cluster disk is where the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data will be put. More than one disk can be specified. The Available shared disks grid displays a list of available disks, whether each is qualified as a shared disk, and a description of each disk resource. Click **Next** to continue.  
+13. On the Cluster Disk Selection page, select the shared cluster disk resource for your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. The cluster disk is where the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data will be put. More than one disk can be specified. The Available shared disks grid displays a list of available disks, whether each is qualified as a shared disk, and a description of each disk resource. Click **Next** to continue.  
   
     > [!NOTE]  
     >  The first drive is used as the default drive for all databases, but can be changed on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] or [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] configuration pages.  
@@ -185,7 +189,7 @@ ms.author: mathoma
 20. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
-    >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster.  
+    >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster instance.  
   
     > [!NOTE]  
     >  To specify a Server Message Block (SMB) file server as the Data Directory, set **default data root directory** to the fileshare of the format \\\Servername\ShareName\\...  
@@ -199,9 +203,9 @@ ms.author: mathoma
 23. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
-    >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster.  
+    >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster instance.  
    
-24. Use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration page to specify the kind of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation to create. For failover cluster installation, the option is set to Unconfigured [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation. You must configure [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] services after you complete the installation.  
+24. Use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration page to specify the kind of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation to create. For failover cluster instance installations, the option is set to Unconfigured [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation. You must configure [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] services after you complete the installation.  
   
  
 25. The System Configuration Checker runs one more set of rules to validate your configuration with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features that you have specified.  
@@ -214,16 +218,16 @@ ms.author: mathoma
   
 29. If you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For information about Setup log files, see [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-30. To add nodes to the single-node failover you just created, run Setup on each additional node and follow the steps for AddNode operation. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+30. To add nodes to the single-node failover you just created, run Setup on each additional node and follow the steps for AddNode operation. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
     > [!NOTE]  
     >  If you are adding more than one node, you can use the configuration file to deploy the installations. For more information, see [Install SQL Server 2016 Using a Configuration File](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
     >   
-    >  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition you are installing must match across all the nodes in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. When you add a new node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, make sure that you specify that the edition matches the edition of the existing failover cluster.  
+    >  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] edition you are installing must match across all the nodes in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. When you add a new node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, make sure that you specify that the edition matches the edition of the existing failover cluster instance.  
   
 ##  <a name="prepare"></a> Prepare  
   
-#### Advanced/Enterprise Failover Cluster Install Step 1: Prepare  
+#### Advanced/Enterprise Failover Cluster Instance Install Step 1: Prepare  
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media, and from the root folder, double-click Setup.exe. To install from a network share, browse to the root folder on the share, and then double-click Setup.exe. For more information about how to install prerequisites, see [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). You may be asked to install the prerequisites, if they are not previously installed.  
   
@@ -244,7 +248,7 @@ ms.author: mathoma
 8.  On the Product key page, click to indicate whether you are installing a free edition of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
     > [!NOTE]  
-    >  You must specify the same product key on all the nodes that you are preparing for the same failover cluster.  
+    >  You must specify the same product key on all the nodes that you are preparing for the same failover cluster instance.  
   
 9. On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Click **Next** to continue. To end Setup, click **Cancel**.  
   
@@ -265,7 +269,7 @@ ms.author: mathoma
     >  Typical stand-alone instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], whether default or named instances, do not use a nondefault value for the **Instance ID** text box.  
   
     > [!IMPORTANT]  
-    >  Use the same InstanceID for all the nodes that are prepared for the failover cluster  
+    >  Use the same InstanceID for all the nodes that are prepared for the failover cluster instance  
   
      **Instance root directory** - By default, the instance root directory is C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. To specify a nondefault root directory, use the field provided, or click the ellipsis button to locate an installation folder.  
   
@@ -297,7 +301,7 @@ ms.author: mathoma
   
 17. Use the **Server Configuration - Filestream** to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Click **Next** to continue.  
   
-18. Use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration page to specify the kind of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation to create. For failover cluster installation, the option is set to Unconfigured [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation. You must configure [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] services after you complete the installation.  
+18. Use the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration page to specify the kind of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation to create. For failover cluster instance installations, the option is set to Unconfigured [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installation. You must configure [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] services after you complete the installation.  
    
 19. On the Error Reporting page, specify the information that you want to send to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] that will help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. By default, options for error reporting is enabled.  
   
@@ -311,11 +315,11 @@ ms.author: mathoma
   
 23. If you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For information about Setup log files, see [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-24. Repeat the previous steps to prepare the other nodes for the failover cluster. You can also use the autogenerated configuration file to run prepare on the other nodes. For more information, see [Install SQL Server 2016 Using a Configuration File](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+24. Repeat the previous steps to prepare the other nodes for the failover cluster instance. You can also use the autogenerated configuration file to run prepare on the other nodes. For more information, see [Install SQL Server 2016 Using a Configuration File](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
 ## Complete  
   
-#### Advanced/Enterprise Failover Cluster Install Step 2: Complete  
+#### Advanced/Enterprise Failover Cluster Instance Install Step 2: Complete  
   
 1.  After preparing all the nodes as described in the [prepare step](#prepare), run Setup on one of the prepared nodes, preferably the one that owns the shared disk. On the **Advanced** page of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Installation Center, click **Advanced cluster completion**.  
   
@@ -329,10 +333,10 @@ ms.author: mathoma
   
      To continue, click **Next**.  
   
-6.  Use the Cluster node configuration page to select the instance name prepared for clustering, and specify the network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. This is the name that is used to identify your failover cluster on the network.  
+6.  Use the Cluster node configuration page to select the instance name prepared for clustering, and specify the network name for the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. This is the name that is used to identify your failover cluster instance on the network.  
   
     > [!NOTE]  
-    >  This is known as the virtual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] name in earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters.  
+    >  This is known as the virtual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] name in earlier versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instances.  
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup runs one more set of rules that are based on the features you selected to validate your configuration.  
   
@@ -342,14 +346,14 @@ ms.author: mathoma
   
     -   Type the name of a new group to create. Be aware that the name "Available storage" is not a valid group name.  
   
-9. On the Cluster Disk Selection page, select the shared cluster disk resource for your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster. The cluster disk is where the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data will be put. More than one disk can be specified. The Available shared disks grid displays a list of available disks, whether each is qualified as a shared disk, and a description of each disk resource. Click **Next** to continue.  
+9. On the Cluster Disk Selection page, select the shared cluster disk resource for your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. The cluster disk is where the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data will be put. More than one disk can be specified. The Available shared disks grid displays a list of available disks, whether each is qualified as a shared disk, and a description of each disk resource. Click **Next** to continue.  
   
     > [!NOTE]  
     >  The first drive is used as the default drive for all databases, but can be changed on the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] or [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] configuration pages.  
   
 10. On the Cluster Network Configuration page, specify the network resources for your failover cluster instance:  
   
-    -   **Network Settings** - Specify the IP type and IP address for all the nodes and subnets for your failover cluster instance. You can specify multiple IP addresses for a multi-subnet failover cluster, but only one IP address per subnet is supported. Every prepared node should be an owner of at least one IP address. If you have multiple subnets in your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you will be prompted to set the IP address resource dependency to OR.  
+    -   **Network Settings** - Specify the IP type and IP address for all the nodes and subnets for your failover cluster instance. You can specify multiple IP addresses for a multi-subnet failover cluster instance, but only one IP address per subnet is supported. Every prepared node should be an owner of at least one IP address. If you have multiple subnets in your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, you will be prompted to set the IP address resource dependency to OR.  
   
      Click **Next** to continue.  
   
@@ -368,7 +372,7 @@ ms.author: mathoma
 13. Use the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Configuration - Data Directories page to specify nondefault installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
-    >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster.  
+    >  If you specify nondefault installation directories, make sure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The data directories should be located on the shared cluster disk for the failover cluster instance.  
   
   
 14. Use the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -387,7 +391,7 @@ ms.author: mathoma
   
 18. During installation, the Installation Progress page provides status so that you can monitor installation progress as Setup continues.  
   
-19. After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes. To complete the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation process, click **Close**. With this step, all the prepared nodes for the same failover cluster are now part of the completed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.  
+19. After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes. To complete the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation process, click **Close**. With this step, all the prepared nodes for the same failover cluster instance are now part of the completed [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
 ## Next Steps  
  **Configure your new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation** - To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  

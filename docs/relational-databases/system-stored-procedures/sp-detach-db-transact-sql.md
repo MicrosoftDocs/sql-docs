@@ -1,4 +1,5 @@
 ---
+description: "sp_detach_db (Transact-SQL)"
 title: "sp_detach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2015"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_detach_db"
   - "detaching databases [SQL Server]"
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_detach_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Detaches a database that is currently not in use from a server instance and, optionally, runs UPDATE STATISTICS on all tables before detaching.  
   
@@ -51,7 +52,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  Specifies that the full-text index file associated with the database that is being detached will not be dropped during the database detach operation. *KeepFulltextIndexFile* is a **nvarchar(10)** value with a default of **true**. If *KeepFulltextIndexFile* is **false**, all the full-text index files associated with the database and the metadata of the full-text index are dropped, unless the database is read-only. If NULL or **true**, full-text related metadata are kept.  
   
 > [!IMPORTANT]
->  The**@keepfulltextindexfile** parameter will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use this parameter in new development work, and modify applications that currently use this parameter as soon as possible.  
+>  The **\@keepfulltextindexfile** parameter will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not use this parameter in new development work, and modify applications that currently use this parameter as soon as possible.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

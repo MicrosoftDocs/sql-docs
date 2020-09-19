@@ -1,4 +1,5 @@
 ---
+description: "SESSION_USER (Transact-SQL)"
 title: "SESSION_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -25,7 +26,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SESSION_USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   SESSION_USER returns the user name of the current context in the current database.  
   
@@ -37,7 +38,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SESSION_USER  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  
@@ -51,7 +54,7 @@ SESSION_USER
  The following example declares a variable as `nchar`, assigns the current value of `SESSION_USER` to that variable, and then prints the variable with a text description.  
   
 ```  
-DECLARE @session_usr nchar(30);  
+DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
 GO  
@@ -74,12 +77,12 @@ USE AdventureWorks2012;
 GO  
 CREATE TABLE deliveries3  
 (  
- order_id int IDENTITY(5000, 1) NOT NULL,  
- cust_id  int NOT NULL,  
- order_date smalldatetime NOT NULL DEFAULT GETDATE(),  
- delivery_date smalldatetime NOT NULL DEFAULT   
+ order_id INT IDENTITY(5000, 1) NOT NULL,  
+ cust_id  INT NOT NULL,  
+ order_date SMALLDATETIME NOT NULL DEFAULT GETDATE(),  
+ delivery_date SMALLDATETIME NOT NULL DEFAULT   
     DATEADD(dd, 10, GETDATE()),  
- received_shipment nchar(30) NOT NULL DEFAULT SESSION_USER  
+ received_shipment NCHAR(30) NOT NULL DEFAULT SESSION_USER  
 );  
 GO  
 ```  
@@ -146,7 +149,7 @@ SELECT SESSION_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)   
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)   
  [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_sequence_get_range (Transact-SQL)"
 title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "sequence number object, sp_sequence_get_range procedure"
   - "sp_sequence_get_range"
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Returns a range of sequence values from a sequence object. The sequence object generates and issues the number of values requested and provides the application with metadata related to the range.  
   
@@ -49,25 +50,25 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  The name of the sequence object. The schema is optional. *sequence_name* is **nvarchar(776)**.  
   
 `[ @range_size = ] range_size`
- The number of values to fetch from the sequence. **@range_size** is **bigint**.  
+ The number of values to fetch from the sequence. **\@range_size** is **bigint**.  
   
 `[ @range_first_value = ] range_first_value`
- Output parameter returns the first (minimum or maximum) value of the sequence object used to calculate the requested range. **@range_first_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
+ Output parameter returns the first (minimum or maximum) value of the sequence object used to calculate the requested range. **\@range_first_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
   
 `[ @range_last_value = ] range_last_value`
- Optional output parameter returns the last value of the requested range. **@range_last_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
+ Optional output parameter returns the last value of the requested range. **\@range_last_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
   
 `[ @range_cycle_count = ] range_cycle_count`
- Optional output parameter returns the number of times that the sequence object cycled in order to return the requested range. **@range_cycle_count** is **int**.  
+ Optional output parameter returns the number of times that the sequence object cycled in order to return the requested range. **\@range_cycle_count** is **int**.  
   
 `[ @sequence_increment = ] sequence_increment`
- Optional output parameter returns the increment of the sequence object used to calculate the requested range. **@sequence_increment** is **sql_variant** with the same base type as that of the sequence object used in the request.  
+ Optional output parameter returns the increment of the sequence object used to calculate the requested range. **\@sequence_increment** is **sql_variant** with the same base type as that of the sequence object used in the request.  
   
 `[ @sequence_min_value = ] sequence_min_value`
- Optional output parameter returns the minimum value of the sequence object. **@sequence_min_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
+ Optional output parameter returns the minimum value of the sequence object. **\@sequence_min_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
   
 `[ @sequence_max_value = ] sequence_max_value`
- Optional output parameter returns the maximum value of the sequence object. **@sequence_max_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
+ Optional output parameter returns the maximum value of the sequence object. **\@sequence_max_value** is **sql_variant** with the same base type as that of the sequence object used in the request.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  
@@ -111,10 +112,9 @@ CREATE SEQUENCE Test.RangeSeq
  The following statement gets four sequence numbers from the Test.RangeSeq sequence object and returns the first of the numbers to the user.  
   
 ```  
-DECLARE @range_first_value sql_variant ,   
-        @range_first_value_output sql_variant ;  
+DECLARE @range_first_value_output sql_variant ;  
   
-EXEC sp_sequence_get_range  
+EXEC sys.sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
 , @range_size = 4  
 , @range_first_value = @range_first_value_output OUTPUT ;  
@@ -169,7 +169,7 @@ cmd.CommandText = "sys.sp_sequence_get_range";
 cmd.Parameters.AddWithValue("@sequence_name", "Test.RangeSeq");  
 cmd.Parameters.AddWithValue("@range_size", 10);  
   
-// Specify an output parameter to retreive the first value of the generated range.  
+// Specify an output parameter to retrieve the first value of the generated range.  
 SqlParameter firstValueInRange = new SqlParameter("@range_first_value", SqlDbType.Variant);  
 firstValueInRange.Direction = ParameterDirection.Output;  
 cmd.Parameters.Add(firstValueInRange);  

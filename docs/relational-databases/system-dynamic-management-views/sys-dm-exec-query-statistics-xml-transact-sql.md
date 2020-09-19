@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_statistics_xml (Transact-SQL)"
 title: "sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
@@ -18,7 +19,8 @@ author: "pmasl"
 ms.author: "pelopes"
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics. 
 
@@ -49,7 +51,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Contains the runtime Showplan representation of the query execution plan that is specified with *plan_handle* containing partial statistics. The Showplan is in XML format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls. Nullable.|
 
 ## Remarks
-This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. See KB [3190871](https://support.microsoft.com/en-us/help/3190871)
+This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. See KB [3190871](https://support.microsoft.com/help/3190871)
 
 This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -60,7 +62,8 @@ Under the following conditions, no Showplan output is returned in the **query_pl
 Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_statistics_xml** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.   
 
 ## Permissions  
- Requires `VIEW SERVER STATE` permission on the server.  
+On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission on the server.  
+On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the **Server admin** or an **Azure Active Directory admin** account.
 
 ## Examples  
   

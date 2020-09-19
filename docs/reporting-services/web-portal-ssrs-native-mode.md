@@ -1,10 +1,10 @@
 ---
-title: "The web portal of a report server (SSRS Native Mode) | Microsoft Docs"
-ms.date: 12/05/2018
+title: "The web portal of a report server (Native Mode) | Microsoft Docs"
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
+description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
@@ -24,7 +24,7 @@ You can use the web portal to perform the following tasks:
 
 - View, search, print, and subscribe to reports.
 - Create, secure, and maintain the folder hierarchy to organize items on the server.
-- Configure role-based security that determines access to items and operations.
+- Configure role-based security that determines access to items and operations. See [Role definitions - predefined roles](security/role-definitions-predefined-roles.md) for details.
 - Configure report execution properties, report history, and report parameters.
 - Create shared schedules and shared data sources to make schedules and data source connections more manageable.
 - Create data-driven subscriptions that role out reports to a large recipient list.

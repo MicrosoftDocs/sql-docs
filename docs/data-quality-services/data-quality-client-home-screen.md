@@ -1,6 +1,6 @@
 ---
-title: "Data Quality Client Home Screen | Microsoft Docs"
-ms.custom: ""
+description: "Data Quality Client Home Screen"
+title: "Data Quality Client Home Screen"
 ms.date: "02/29/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -10,12 +10,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.clienthome.f1"
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Data Quality Client Home Screen
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  
   

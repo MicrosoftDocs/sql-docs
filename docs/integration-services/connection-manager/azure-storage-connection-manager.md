@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Azure Storage connection manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Azure Storage connection manager enables a SQL Server Integration Services (SSIS) package to connect to an Azure Storage account. The connection manager is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
@@ -27,11 +27,15 @@ The following properties are available.
 
 - **Service:** Specifies the storage service to connect to.
 - **Account name:** Specifies the storage account name.
-- **Authentication:** Specifies the authentication method to use. AccessKey and ServicePrincipal authentication are supported.
+- **Authentication:** Specifies the authentication method to use. AccessKey, ServicePrincipal, and SharedAccessSignature authentication are supported.
     - **AccessKey:** For this authentication method, specify the **Account key**.
     - **ServicePrincipal:** For this authentication method, specify the **Application ID**, **Application key**, and **Tenant ID** of the service principal.
       For **Test Connection** to work, the service principal should be assigned at least the **Storage Blob Data Reader** role to the storage account.
       For more information, see [Grant access to Azure blob and queue data with RBAC in the Azure portal](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+    - **SharedAccessSignature:** For this authentication method, specify at least the **Token** of the shared access signature.
+      To test connection, specify additionally the resource scope to test against. It may be **Service**, **Container**, or **Blob**.
+      For **Container** and **Blob**, specify container name and blob path, respectively.
+      For more information, see [Azure Storage shared access signature overview](https://docs.microsoft.com/azure/storage/common/storage-sas-overview).
 - **Environment:** Specifies the cloud environment hosting the storage account.
 
 ## Managed identities for Azure resources authentication
@@ -58,6 +62,10 @@ Then configure managed identity authentication for the Azure Storage connection 
 
 > [!NOTE]
 >  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) at least once. Redeploy that SSIS project to your Azure-SSIS integration runtime, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all Azure Storage connection managers in your SSIS project. The alternative way is to directly use a property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at runtime.
+
+## Secure network traffic to your storage account
+Azure Data Factory is now a [trusted Microsoft service](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services) to Azure storage. When you use managed identity authentication, it is possible to 
+secure your storage account by [limiting access to selected networks](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule) while still allowing your data factory to access your storage account. Please refer to [Managing exceptions](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions) for instructions.
 
 ## See also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)

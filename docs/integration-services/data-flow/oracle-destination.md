@@ -1,4 +1,5 @@
 ---
+description: "Oracle Destination"
 title: "Oracle Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Oracle destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Oracle destination bulk loads data into Oracle Database.
 
@@ -193,7 +194,7 @@ Use the Error Output page of the Oracle Destination Editor dialog box to select 
 **Error behavior**
 
 Select how the Oracle source should handle errors in a flow: ignore the failure, redirect the row, or fail the component.
-**Related Section**: [Error Handling in Data](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Related Section**: [Error Handling in Data](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Truncation**
 

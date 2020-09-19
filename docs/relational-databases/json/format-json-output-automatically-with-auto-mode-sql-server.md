@@ -1,9 +1,8 @@
 ---
-title: "Format JSON Output Automatically with AUTO Mode (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/17/2017"
+description: "Format JSON Output Automatically with AUTO Mode (SQL Server)"
+title: "Format JSON Output Automatically with AUTO Mode"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 author: jovanpop-msft
 ms.author: jovanpop
-ms.reviewer: genemi
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format JSON Output Automatically with AUTO Mode (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 To format the output of the **FOR JSON** clause automatically based on the structure of the **SELECT** statement, specify the **AUTO** option.  
   

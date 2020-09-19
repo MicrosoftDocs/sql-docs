@@ -1,6 +1,7 @@
 ---
-title: "Create New Policy or Open Policy Dialog Box, Description Page | Microsoft Docs"
-ms.custom: ""
+title: "'Description' page of 'Create New Policy' or 'Open Policy' dialog box"
+description: Describes the 'Description' page of the 'Create New Policy' or 'Open Policy' dialog box for Policy-Based Management for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,7 +13,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Create New Policy or Open Policy Dialog Box, Description Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to add a description and additional information to a Policy-Based Management policy.  
   
 ## Options  

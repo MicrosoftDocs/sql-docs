@@ -1,9 +1,9 @@
 ---
+description: "DELETE (Transact-SQL)"
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: "05/19/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -23,12 +23,13 @@ helpviewer_keywords:
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -73,16 +74,39 @@ DELETE
 }  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+
+[ WITH <common_table_expression> [ ,...n ] ] 
+DELETE [database_name . [ schema ] . | schema. ] table_name  
+FROM [database_name . [ schema ] . | schema. ] table_name 
+JOIN {<join_table_source>}[ ,...n ]  
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( <query_options> [ ,...n ]  ) ]  
+[; ]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set, also known as common table expression, defined within the scope of the DELETE statement. The result set is derived from a SELECT statement.  
   
@@ -98,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  The alias specified in the FROM *table_source* clause representing the table or view from which the rows are to be deleted.  
   
  *server_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  The name of the server (using a linked server name or the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) function as the server name) on which the table or view is located. If *server_name* is specified, *database_name* and *schema_name* are required.  
   
@@ -116,7 +140,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  The view referenced by *table_or_view_name* must be updatable and reference exactly one base table in the FROM clause of the view definition. For more information about updatable views, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
@@ -124,7 +148,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  \<OUTPUT_Clause>  
- Returns deleted rows, or expressions based on them, as part of the DELETE operation. The OUTPUT clause is not supported in any DML statements targeting views or remote tables. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Returns deleted rows, or expressions based on them, as part of the DELETE operation. The OUTPUT clause is not supported in any DML statements targeting views or remote tables. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM *table_source*  
  Specifies an additional FROM clause. This [!INCLUDE[tsql](../../includes/tsql-md.md)] extension to DELETE allows specifying data from \<table_source> and deleting the corresponding rows from the table in the first FROM clause.  
@@ -185,7 +209,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  TOP cannot be used in a DELETE statement against partitioned views.  
   
 ## Locking Behavior  
- By default, a DELETE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive (X) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ By default, a DELETE statement always acquires an intent exclusive (IX) lock on the table object it modifies, and holds that lock until the transaction completes. With an intent exclusive (IX) lock, no other transactions can modify data; read operations can take place only with the use of the NOLOCK hint or read uncommitted isolation level. You can specify table hints to override this default behavior for the duration of the DELETE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  When rows are deleted from a heap the [!INCLUDE[ssDE](../../includes/ssde-md.md)] may use row or page locking for the operation. As a result, the pages made empty by the delete operation remain allocated to the heap. When empty pages are not deallocated, the associated space cannot be reused by other objects in the database.  
   
@@ -193,7 +217,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 -   Specify the TABLOCK hint in the DELETE statement. Using the TABLOCK hint causes the delete operation to take an exclusive lock on the table instead of a row or page lock. This allows the pages to be deallocated. For more information about the TABLOCK hint, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   Use TRUNCATE TABLE if all rows are to be deleted from the table.  
+-   Use `TRUNCATE TABLE` if all rows are to be deleted from the table.  
   
 -   Create a clustered index on the heap before deleting the rows. You can drop the clustered index after the rows are deleted. This method is more time consuming than the previous methods and uses more temporary resources.  
   
@@ -201,14 +225,14 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 >  Empty pages can be removed from a heap at any time by using the `ALTER TABLE <table_name> REBUILD` statement.  
   
 ## Logging Behavior  
- The DELETE statement is always fully logged.  
+The DELETE statement is always fully logged.  
   
 ## Security  
   
 ### Permissions  
- DELETE permissions are required on the target table. SELECT permissions are also required if the statement contains a WHERE clause.  
+ `DELETE` permissions are required on the target table. `SELECT` permissions are also required if the statement contains a WHERE clause.  
   
- DELETE permissions default to members of the **sysadmin** fixed server role, the **db_owner** and **db_datawriter** fixed database roles, and the table owner. Members of the **sysadmin**, **db_owner**, and the **db_securityadmin** roles, and the table owner can transfer permissions to other users.  
+ DELETE permissions default to members of the `sysadmin` fixed server role, the `db_owner` and `db_datawriter` fixed database roles, and the table owner. Members of the `sysadmin`, `db_owner`, and the `db_securityadmin` roles, and the table owner can transfer permissions to other users.  
   
 ## Examples  
   
@@ -242,7 +266,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- The following example shows a more complex WHERE clause. The WHERE clause defines two conditions that must be met to determine the rows to delete. The value in the `StandardCost` column must be between `12.00` and `14.00` and the value in the column `SellEndDate` must be null. The example also prints the value from the **@@ROWCOUNT** function to return the number of deleted rows.  
+ The following example shows a more complex WHERE clause. The WHERE clause defines two conditions that must be met to determine the rows to delete. The value in the `StandardCost` column must be between `12.00` and `14.00` and the value in the column `SellEndDate` must be null. The example also prints the value from the **\@\@ROWCOUNT** function to return the number of deleted rows.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -252,7 +276,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### C. Using a cursor to determine the row to delete  
- The following example deletes a single row from the `EmployeePayHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database using a cursor named `my_cursor`. The delete operation affects only the single row currently fetched from the cursor.  
+ The following example deletes a single row from the `EmployeePayHistory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database using a cursor named `complex_cursor`. The delete operation affects only the single row currently fetched from the cursor.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -331,7 +355,7 @@ GO
 ###  <a name="RemoteTables"></a> Deleting Rows From a Remote Table  
  Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
 #### F. Deleting data from a remote table by using a linked server  
  The following example deletes rows from a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
@@ -433,7 +457,8 @@ GO
 DELETE FROM Table1;  
 ```  
   
-### L. DELETE a set of rows from a table  
+### L. DELETE a set of rows from a table
+
  The following example deletes all rows from the  `Table1` table that have a value greater than 1000.00 in the  `StandardCost` column.  
   
 ```sql
@@ -441,7 +466,8 @@ DELETE FROM Table1
 WHERE StandardCost > 1000.00;  
 ```  
   
-### M. Using LABEL with a DELETE statement  
+### M. Using LABEL with a DELETE statement
+
  The following example uses a label with the DELETE statement.  
   
 ```sql
@@ -450,7 +476,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### N. Using a label and a query hint with the DELETE statement  
+### N. Using a label and a query hint with the DELETE statement
+
  This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION Clause (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
@@ -464,8 +491,42 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
-  
-## See Also  
+
+### O. Delete using a WHERE clause
+
+This query shows how to delete using a WHERE clause and not using a FROM clause.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
+
+### P. Delete based on the result of joining with another table
+
+This example shows how to delete from a table based on the result from joining wiht another table.
+
+```sql
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+DELETE dbo.Table2   
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA)
+    WHERE dboTable2.ColA = 1;  
+```
+
+## See Also
+
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

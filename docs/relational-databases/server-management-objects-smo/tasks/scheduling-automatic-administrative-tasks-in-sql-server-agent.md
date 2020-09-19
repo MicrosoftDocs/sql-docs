@@ -1,6 +1,7 @@
 ---
-title: "Scheduling Automatic Administrative Tasks in SQL Server Agent | Microsoft Docs"
-ms.custom: ""
+description: "Scheduling Automatic Administrative Tasks in SQL Server Agent"
+title: "Scheduling Automatic Administrative Tasks in SQL Server Agent"
+ms.custom: seo-dt-2019
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -18,7 +19,7 @@ ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scheduling Automatic Administrative Tasks in SQL Server Agent
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   In SMO, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is represented by the following objects:  
   

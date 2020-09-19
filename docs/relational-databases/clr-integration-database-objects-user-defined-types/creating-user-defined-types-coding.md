@@ -1,5 +1,6 @@
 ---
 title: "Coding User-Defined Types | Microsoft Docs"
+description: This example shows how to implement a UDT to use in a SQL Server database. It implements the UDT as a structure. 
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -32,7 +33,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Creating User-Defined Types - Coding
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When coding your user-defined type (UDT) definition, you must implement various features, depending on whether you are implementing the UDT as a class or a structure, as well as on the format and serialization options you have chosen.  
   
  The example in this section illustrates implementing a **Point** UDT as a **struct** (or **Structure** in Visual Basic). The **Point** UDT consists of X and Y coordinates implemented as property procedures.  
@@ -607,8 +608,6 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Use the **Write** method for the **Currency** UDT to determine how the UDT is persisted on disk and therefore how UDT values are compared and ordered for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations.  
   
 3.  Save the **Currency** UDT using the following binary format:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Save the culture as a UTF-16 encoded string for bytes 0-19 with padding to the right with null characters.  
   

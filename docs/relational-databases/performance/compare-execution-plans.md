@@ -1,5 +1,6 @@
 ---
 title: "Compare Execution Plans | Microsoft Docs"
+description: Learn how to compare similarities and differences between actual graphical execution plans by using SQL Server Management Studio Plan Comparison feature.
 ms.custom: ""
 ms.date: "11/21/2018"
 ms.prod: sql
@@ -19,8 +20,8 @@ ms.author: pelopes
 manager: amitban
 ---
 # Compare execution plans
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes how to compare similarities and differences between actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan Comparison feature. 
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+This topic describes how to compare similarities and differences between actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan Comparison feature. This feature is available starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.
   
 > [!NOTE]
 > Actual execution plans are generated after the [!INCLUDE[tsql](../../includes/tsql-md.md)] queries or batches execute. Because of this, an actual execution plan contains runtime information, such as actual number of rows, resource usage metrics and runtime warnings (if any). For more information, see [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).
@@ -63,13 +64,11 @@ When two execution plans are compared, regions of the plan that **do essentially
      > [!TIP]
      > All zooming and navigation options available for execution plans work in plan comparison mode. For more details, see [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  A dual properties window also opens on the right side, in the scope of the default selection. Properties that exist in both compared operators but have differences will be preceeded by the *not equal* sign (&ne;) for easier identification.
+5.  A dual properties window also opens on the right side, in the scope of the default selection. Properties that exist in both compared operators but have differences will be preceded by the *not equal* sign (&ne;) for easier identification.
 
     ![Dual properties window](../../relational-databases/performance/media/plancomparison-properties.png "Dual properties window")  
 
 6.  The **Showplan Analysis** comparison navigation window also opens on the bottom. Three tabs are available:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  In the **Statement Options** tab, the default selection is *Highlight similar operations* and the same highlighted operator or node in compared plans share the same color and line pattern. Navigate between similar areas in compared plans by clicking on a lime pattern. You can also choose to highlight differences in plans rather similarities, by selecting *Highlight operations not matching similar segments*. 
     
@@ -98,6 +97,6 @@ When two execution plans are compared, regions of the plan that **do essentially
 
     ![Select two plans in Query Store](../../relational-databases/performance/media/plancomparison-querystore.png "Select two plans in Query Store")   
 
-3.  Use the button **Compare the plans for the select query in a seperate window** to start plan comparison. Then steps 4 through 6 of *To compare execution plans* are applicable. 
+3.  Use the button **Compare the plans for the select query in a separate window** to start plan comparison. Then steps 4 through 6 of *To compare execution plans* are applicable. 
 
     ![Compare Showplan in Query Store](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Compare Showplan in Query Store") 

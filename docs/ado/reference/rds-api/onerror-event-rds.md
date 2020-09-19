@@ -1,8 +1,9 @@
 ---
+description: "onError Event (RDS)"
 title: "onError Event (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "onError event [ADO]"
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # onError Event (RDS)
 The **onError** event is called whenever an error occurs during an operation.  
@@ -41,10 +42,8 @@ onError SCode, Description, Source, CancelDisplay
  A **Boolean** value, which if set to **True**, that prevents the error from being displayed in a dialog box.  
   
 ## Applies To  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)  
   
 ## See Also  
- [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+ [ADO Events Model Example (VC++)](../ado-api/ado-events-model-example-vc.md)   
+ [ADO Event Handler Summary](../../guide/data/ado-event-handler-summary.md)

@@ -1,4 +1,5 @@
 ---
+description: "SELECT - ORDER BY Clause (Transact-SQL)"
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2018"
@@ -42,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -57,7 +58,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## Syntax  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -75,7 +76,7 @@ ORDER BY order_by_expression
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 [ ORDER BY   
@@ -86,7 +87,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *order_by_expression*  
  Specifies a column or expression on which to sort the query result set. A sort column can be specified as a name or column alias, or a nonnegative integer representing the position of the column in the select list.  
   
@@ -110,7 +113,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Specifies the number of rows to skip before it starts to return rows from the query expression. The value can be an integer constant or expression that is greater than or equal to zero.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
   
  *offset_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -118,10 +121,10 @@ ORDER BY SchemaName + ''; -- wrong
   
  In query execution plans, the offset row count value is displayed in the **Offset** attribute of the TOP query operator.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Specifies the number of rows to return after the OFFSET clause has been processed. The value can be an integer constant or expression that is greater than or equal to one.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* can be a variable, parameter, or constant scalar subquery. When a subquery is used, it cannot reference any columns defined in the outer query scope. That is, it cannot be correlated with the outer query.  
   
@@ -358,7 +361,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Limiting the number of rows returned  
  The following examples use OFFSET and FETCH to limit the number of rows returned by a query.  
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### A. Specifying integer constants for OFFSET and FETCH values  
  The following example specifies an integer constant as the value for the OFFSET and FETCH clauses. The first query returns all rows sorted by the column `DepartmentID`. Compare the results returned by this query with the results of the two queries that follow it. The next query uses the clause `OFFSET 5 ROWS` to skip the first 5 rows and return all remaining rows. The final query uses the clause `OFFSET 0 ROWS` to start with the first row and then uses `FETCH NEXT 10 ROWS ONLY` to limit the rows returned to 10 rows from the sorted result set.  
@@ -386,20 +389,19 @@ ORDER BY DepartmentID
 ```  
   
 #### B. Specifying variables for OFFSET and FETCH values  
- The following example declares the variables `@StartingRowNumber` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
+ The following example declares the variables `@RowsToSkip` and `@FetchRows` and specifies these variables in the OFFSET and FETCH clauses.  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
+DECLARE @RowsToSkip tinyint = 2
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### C. Specifying expressions for OFFSET and FETCH values  

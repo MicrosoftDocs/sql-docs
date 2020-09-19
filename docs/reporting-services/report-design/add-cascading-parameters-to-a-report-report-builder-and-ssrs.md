@@ -1,5 +1,6 @@
 ---
-title: "Add Cascading Parameters to a Report (Report Builder and SSRS) | Microsoft Docs"
+title: "Add Cascading Parameters to a Report (Report Builder) | Microsoft Docs"
+description: Find out how to use cascading parameters in your reports in Report Builder to manage large amounts of report data. 
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,5 +1,6 @@
 ---
-title: "Disable SQL Server Managed Backup to Microsoft Azure | Microsoft Docs"
+title: "Disable managed back up to Azure Blob Storage"
+description: This article shows you how to disable or pause SQL Server Managed Backup to Microsoft Azure at both the database and instance levels using Transact-SQL.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Disable SQL Server Managed Backup to Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to disable or pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at both the database and instance levels.  
   
 ##  <a name="DatabaseDisable"></a> Disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database  

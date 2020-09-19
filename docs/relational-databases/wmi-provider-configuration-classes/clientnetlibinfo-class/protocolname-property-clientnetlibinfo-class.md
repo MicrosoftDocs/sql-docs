@@ -1,6 +1,7 @@
 ---
-title: "ProtocolName Property (ClientNetLibInfo Class) | Microsoft Docs"
-ms.custom: ""
+description: "ProtocolName Property (ClientNetLibInfo Class)"
+title: "ProtocolName Property (ClientNetLibInfo)"
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolName property"
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ProtocolName Property (ClientNetLibInfo Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the protocol that is associated with the client network library.  
   
 ## Syntax  

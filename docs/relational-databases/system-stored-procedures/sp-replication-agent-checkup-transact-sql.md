@@ -1,4 +1,5 @@
 ---
+description: "sp_replication_agent_checkup (Transact-SQL)"
 title: "sp_replication_agent_checkup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_replication_agent_checkup (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Checks each distribution database for replication agents that are running but have not logged history within the specified heartbeat interval. This stored procedure is executed at the Distributor on any database.  
   

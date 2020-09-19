@@ -1,5 +1,6 @@
 ---
 title: "Back Up Files and Filegroups | Microsoft Docs"
+description: This article describes how to back up files and filegroups in SQL Server by using SQL Server Management Studio, Transact-SQL, or PowerShell. 
 ms.custom: ""
 ms.date: "08/03/2016"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Back Up Files and Filegroups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to back up files and filegroups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. When the database size and performance requirements make a full database backup impractical, you can create a file backup instead. A *file backup* contains all the data in one or more files (or filegroups).
   
 For more information about file backups, see [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  

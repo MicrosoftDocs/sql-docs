@@ -1,4 +1,5 @@
 ---
+description: "syspublications (Transact-SQL)"
 title: "syspublications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "syspublications system table"
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # syspublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each publication defined in the database. This table is stored in the publication database.  
   

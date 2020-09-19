@@ -1,6 +1,7 @@
 ---
-title: "Release notes for (SSRS) 2017 and later | Microsoft Docs"
-ms.date: 02/18/2019
+title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
+description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -45,6 +46,64 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## SQL Server 2019 Reporting Services
+
+## 15.0.7545.4810, 2020/08/31 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates  | &nbsp; |
+| Constrained Comment attachment support to no longer allow PDF documents  | &nbsp; |
+| Fixed filename truncation when exporting reports containing a period in the name  | &nbsp; |
+| Fixed an issue related to Subscriptions and the zh-TW culture that resulted in invalid date format errors  | &nbsp; |
+| Fixed an issue with certain reports where accessing the parameters option leads to indefinite spinny  | &nbsp; |
+| Fixed issues relating to single quotes in report names  | &nbsp; |
+| Fixed an issue in URL Access causing FindString to not locate matches  | &nbsp; |
+| Fixed an issue where alt text for PDF export were not correctly encoded for multi-byte characters  | &nbsp; |
+| Fixed unwanted appearance of an empty image under a linear element  | &nbsp; |
+| Fixed erroneous Unsupported error for Custom Authentication in Web Edition  | &nbsp; |
+| Fixed an issue where a screen reader was reading an extra row and extra column in a Tablix  | &nbsp; |
+| Fixed an image truncation issue with fit to size when zoomed to whole page  | &nbsp; |
+| Command line upgrade no longer requires EULA flag  | &nbsp; |
+
+## 15.0.7243.37714, 2019/11/01
+
+Initial release.
+
+
+## SQL Server 2017 Reporting Services
+
+## 14.0.600.1669, 2020/08/31 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates  | &nbsp; |
+| Constrained Comment attachment support to no longer allow PDF documents  | &nbsp; |
+| Fixed filename truncation when exporting reports containing a period in the name  | &nbsp; |
+| Fixed an issue related to Subscriptions and the zh-TW culture that resulted in invalid date format errors  | &nbsp; |
+
+## 14.0.600.1572, 2020/04/06 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Updated JQuery UI to 1.12  | &nbsp; |
+| Fixed URL case-sensitivity  | &nbsp; |
+| Fixed Parameter placement when there are many parameters  | &nbsp; |
+| Fixed FindString not working in HTML5 rendering  | &nbsp; |
+| Analysis Services Client Libraries updated to address TLS 1.0/1.1 deprecation | &nbsp; |
+
+## 14.0.600.1451, 2019/11/13 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates | &nbsp; |
+| Paginated reports didn't work properly with filter parameters when snapshot is enabled  | &nbsp; |
+| Users with Browser role and default settings didn't have permissions to download Excel files  | &nbsp; |
+| Upgrading to Power BI Report Server from SQL Server 2016 Reporting Services failed during upgrade | &nbsp; |
+| After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with “An invalid character was found in the mail header: ','” message | &nbsp; |
+| Configuration tool: canceling modal windows in Database section would restart the Reporting Services service | &nbsp; |
+| BorderStyle property expression of Textbox controls weren't rendered to Excel format  | &nbsp; |
+| Pagination issue that could get certain reports stuck with rendering the same page without ever reaching the last page of the report | &nbsp; |
 
 ## 14.0.600.1274, 2019/07/01
 

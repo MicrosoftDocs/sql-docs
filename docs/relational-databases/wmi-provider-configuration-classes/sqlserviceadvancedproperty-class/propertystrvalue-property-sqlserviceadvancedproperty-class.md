@@ -1,6 +1,7 @@
 ---
-title: "PropertyStrValue Property (SqlServiceAdvancedProperty Class) | Microsoft Docs"
-ms.custom: ""
+description: "PropertyStrValue Property (SqlServiceAdvancedProperty Class)"
+title: "PropertyStrValue Property (SqlServiceAdvancedProperty)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyStrValue property"
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyStrValue Property (SqlServiceAdvancedProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the string value of the advanced property.  
   
 ## Syntax  

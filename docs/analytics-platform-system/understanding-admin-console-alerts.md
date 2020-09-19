@@ -1,5 +1,5 @@
 ---
-title: Admin Console alerts - Analytics Platform System | Microsoft Docs
+title: Admin Console alerts
 description: Understanding Admin Console alerts in Analytics Platform System (APS).
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Understanding Admin Console alerts in Analytics Platform System
@@ -145,10 +146,9 @@ Alerts are listed alphabetically by the **Alert Name**. All possible alerts are 
 |Virtual Disk has NON-CRITICAL status.|Yes|Degraded|Warning|The storage spaces virtual disk status is indicating there is a non-critical warning but system is still operational (status: 1-Warning). The status is reported in the component's "virtual_disk_status" property.  The Operational Status, shown in property "virtual_disk_oper_status" might provide more information about the problem.  If the Virtual Disk has moved to another node, then review the state of the cluster shared volume components and move the disks back to the expected owner, indicated by the number after the N in the name, eg. N01D01 belongs on HSA01.|Review the node's events in log 'Application and service logs\Microsoft\Windows\StorageSpaces-Driver\Operational' for further details.  The health of the mirror could be impacted by the loss of a single disk so another alert might have occurred for the disk itself.|  
 |Virtual Disk has NORMAL status.|No|Operational|Informational|The storage spaces virtual disk status is normal (status: 0-Healthy). The status is reported in the component's "virtual_disk_status" property.||  
 |Virtual Disk has UNKNOWN status.|Yes|Operational|Warning|The storage spaces virtual disk status could not be determined (status: 5-Unknown). The status is reported in the component's "virtual_disk_status" property.  The Operational Status, shown in property "virtual_disk_oper_status" might provide more information about the problem.  If the Virtual Disk has moved to another node, then review the state of the cluster shared volume components and move the disks back to the expected owner, indicated by the number after the N in the name, eg. N01D01 belongs on HSA01.|Review the node's events in log 'Application and service logs\Microsoft\Windows\StorageSpaces-Driver\Operational' for further details.|  
-|Volume free space status is CRITICAL.|Yes|Degraded|Error|Volume free space is critically low! The current volume used disk space is beyond 90% of total capacity. Clean up unnecessary files/data to ensure normal appliance operation.|The Admin Console reports allocated space and not necessarily used space. You can use DBCC PDW_SHOWSPACEUSED to investigate used vs. allocated space. You can also use DBCC SHRINKLOG <!-- MISSING LINKS [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-parallel-data-warehouse.md) to shrink databases.|  
-|Volume free space status is NON-CRITICAL.|Optional|Operational|Warning|The current volume used disk space is between 70% and 90% full. Review disk space used on this volume and clean up unnecessary files/data to ensure normal appliance operation.|The Admin Console reports allocated space and not necessarily used space. You can use [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-parallel-data-warehouse.md) to investigate used vs. allocated space. You can also use DBCC SHRINKLOG <!-- MISSING LINKS [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-parallel-data-warehouse.md) to shrink databases.|  
+|Volume free space status is CRITICAL.|Yes|Degraded|Error|Volume free space is critically low! The current volume used disk space is beyond 90% of total capacity. Clean up unnecessary files/data to ensure normal appliance operation.|The Admin Console reports allocated space and not necessarily used space. You can use DBCC PDW_SHOWSPACEUSED to investigate used vs. allocated space. You can also use DBCC SHRINKLOG <!-- MISSING LINKS [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-transact-sql.md?view=sql-server-ver15) to shrink databases.|  
+|Volume free space status is NON-CRITICAL.|Optional|Operational|Warning|The current volume used disk space is between 70% and 90% full. Review disk space used on this volume and clean up unnecessary files/data to ensure normal appliance operation.|The Admin Console reports allocated space and not necessarily used space. You can use [DBCC PDW_SHOWSPACEUSED](../t-sql/statements/alter-database-transact-sql.md?view=sql-server-ver15) to investigate used vs. allocated space. You can also use DBCC SHRINKLOG <!-- MISSING LINKS [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../t-sql/statements/alter-database-transact-sql.md?view=sql-server-ver15) to shrink databases.|  
 |Volume free space status is NORMAL.|No|Operational|Informational|There is enough free disk space on this volume. The current volume used disk space is below 70%.|Indicates that the component previously reported a different status, but has since returned to normal.|  
   
 <!-- MISSING LINKS ## See Also  
 [Error Messages &#40;SQL Server PDW&#41;](../sqlpdw/error-messages-sql-server-pdw.md)  -->
-  

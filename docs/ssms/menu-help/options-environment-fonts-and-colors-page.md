@@ -1,6 +1,7 @@
 ---
-title: "Options (Environment - Fonts and Colors Page) | Microsoft Docs"
-ms.custom: ""
+description: "Options (Environment - Fonts and Colors Page)"
+title: "Options (Environment - Fonts and Colors Page)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -12,12 +13,12 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Environment - Fonts and Colors Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Options** dialog box lets you establish a custom font and color scheme for various user interface elements in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. On the **Tools** menu, click **Options,** expand the **Environment** folder, and select **Fonts and Colors**.  
   
 Color scheme changes do not take effect during the session in which you make them. You can evaluate color changes by opening another instance of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and producing the conditions under which you expect your changes to apply.  
   
-## UIElement List  
+## UI element list  
 **Show settings for**  
 Lists all the user interface elements for which you can change font and color schemes. After selecting an item from this list you can customize color settings for the item selected in **Display items**.  
   
@@ -77,5 +78,3 @@ Displays a sample of the font style, size, and color scheme for the selected val
   
 ## See Also  
 [Color Coding in Code Editors](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Options (Text Editor/Editor Tab and Status Bar Page)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
-  

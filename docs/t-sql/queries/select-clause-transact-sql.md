@@ -1,4 +1,5 @@
 ---
+description: "SELECT Clause (Transact-SQL)"
 title: "SELECT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -28,7 +29,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SELECT Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies the columns to be returned by the query.  
   
@@ -36,7 +37,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
@@ -57,7 +58,9 @@ SELECT [ ALL | DISTINCT ]
     } [ ,...n ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Specifies that duplicate rows can appear in the result set. ALL is the default.  
   

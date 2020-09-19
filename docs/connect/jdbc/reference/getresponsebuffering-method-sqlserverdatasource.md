@@ -1,4 +1,5 @@
 ---
+description: "getResponseBuffering Method (SQLServerDataSource)"
 title: "getResponseBuffering Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "SQLServerDataSource.getResponseBuffering()"
 apitype: "Assembly"
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getResponseBuffering Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

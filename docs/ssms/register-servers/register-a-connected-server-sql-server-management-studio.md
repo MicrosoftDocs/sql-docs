@@ -1,10 +1,8 @@
 ---
-title: "Register a Connected Server (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/28/2016"
+description: "Register a Connected Server (SQL Server Management Studio)"
+title: Register a Connected Server
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -13,12 +11,18 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], register connected servers"
   - "connected server registrations [SQL Server]"
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 07/28/2016
 ---
+
 # Register a Connected Server (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  This topic describes how to register a connected server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  You can view your registered servers in SSMS by navigating to **View**\\**Registered Servers** from the menu.
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+This topic describes how to register a connected server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  You can view your registered servers in SSMS by navigating to **View**\\**Registered Servers** from the menu.
   
  **In This Topic**  
   
@@ -74,7 +78,6 @@ Click to test the connection to the server selected in **Server name**.
 **Save**  
 Click to save the registered server settings. 
 
-## See Also  
+## See Also
+
 [Create a New Registered Server (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
-  
-  

@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Failover and Failover Modes (Always On Availability Groups)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Within the context of an availability group, the primary role and secondary role of availability replicas are typically interchangeable in a process known as *failover*. Three forms of failover exist: automatic failover (without data loss), planned manual failover (without data loss), and forced manual failover (with possible data loss), typically called *forced failover*. Automatic and planned manual failover preserve all your data. An availability group fails over at the availability-replica level. That is, an availability group fails over to one of its secondary replicas (the current *failover target*).  
   
 > [!NOTE]  
->  Issues at the database level, such as a database becoming suspect due to the loss of a data file, deletion of a database, or corruption of a transaction log, do not cause an availability group to failover.  
+>   Unless [Database Level Health Detection](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) is configured, issues at the database level, such as a database becoming suspect due to the loss of a data file, deletion of a database, or corruption of a transaction log, do not cause an availability group to failover.  
   
  During the failover, the failover target takes over the primary role, recovers its databases, and brings them online as the new primary databases. The former primary replica, when available, switches to the secondary role, and its databases become secondary databases. Potentially, these roles can switch back and forth (or to a different failover target) in response to multiple failures or for administrative purposes.  
   
@@ -56,7 +56,7 @@ ms.author: mathoma
  A failover that occurs automatically on the loss of the primary replica. Automatic failover is supported only when the current primary and one secondary replica are both configured with failover mode set to AUTOMATIC and the secondary replica currently synchronized.  If the failover mode of either the primary or secondary replica is MANUAL, automatic failover cannot occur.  
   
  Planned manual failover (without data loss)  
- Planned manual failover, or *manual failover*, is a failover that is initiated by a database administrator, typically, for administrative purposes. A planned manual failover is supported only if both the primary replica and secondary replica are configured for synchronous-commit mode and the secondary replica is currently synchronized (in the SYNCHRONIZED state). When the target secondary replica is synchronized, manual failover (without data loss) is possible even if the primary replica has crashed because the secondary databases are ready for failover. A database administrator manually initiates a manual failover.  
+ Planned manual failover, or *manual failover*, is a failover that is initiated by a database administrator, typically, for administrative purposes. A planned manual failover is supported only if both the primary replica and secondary replica are configured for synchronous-commit mode, and both the primary replica and secondary replica are currently synchronized (in the SYNCHRONIZED state). When the target secondary replica is synchronized, manual failover (without data loss) is possible even if the primary replica has crashed because the secondary databases are ready for failover. A database administrator manually initiates a manual failover.  
   
  Forced failover (with possible data loss)  
  A failover that can be initiated by a database administrator when no secondary replica is SYNCHRONIZED with the primary replica or the primary replica is not running and no secondary replica is failover ready. Forced failover risks possible data loss and is recommended strictly for disaster recovery. Forced failover is also known as forced manual failover because it can only be initiated manually. This is the only form of failover supported by in asynchronous-commit availability mode.  
@@ -73,8 +73,8 @@ ms.author: mathoma
 ##  <a name="Overview"></a> Overview of Failover  
  The following table summarizes which forms of failover are supported under different availability and failover modes. For each pairing, the effective availability mode and failover mode is determined by the intersection of the modes of the primary replica plus the modes of one or more secondary replicas.  
   
-||Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Failover form|Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
 |Forced failover|Yes|Yes|Yes**&#42;**|  

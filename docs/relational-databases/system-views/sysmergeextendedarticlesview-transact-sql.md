@@ -1,4 +1,5 @@
 ---
+description: "sysmergeextendedarticlesview (Transact-SQL)"
 title: "sysmergeextendedarticlesview (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sysmergeextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **sysmergeextendedarticlesview** view exposes article information. This view is stored in the publication database at the Publisher and subscription database at the Subscriber.  
   
@@ -61,7 +62,7 @@ ms.author: "sstein"
 |**identity_support**|**int**|Specifies whether automatic identity range handling is enabled. **1** means that identity range handling is enabled, and **0** means that there is no identity range support.|  
 |**destination_owner**|**sysname**|The name of the owner of the destination object.|  
 |**before_image_objid**|**int**|The tracking table object ID. The tracking table contains certain key column values when a publication is configured to enable partition change optimizations.|  
-|**before_view_objid**|**int**|The object ID of a view table. The view is on a table that tracks whether a row belonged at a particular Subscriber before it was deleted or updated. Applies only when a publication is created with *@keep_partition_changes* = **true**.|  
+|**before_view_objid**|**int**|The object ID of a view table. The view is on a table that tracks whether a row belonged at a particular Subscriber before it was deleted or updated. Applies only when a publication is created with *\@keep_partition_changes* = **true**.|  
 |**verify_resolver_signature**|**int**|Specifies whether a digital signature is verified before using a resolver in merge replication:<br /><br /> **0** = Signature is not verified.<br /><br /> **1** = Signature is verified to see whether it is from a trusted source.|  
 |**allow_interactive_resolver**|**bit**|Specifies whether the use of the Interactive Resolver on an article is enabled. **1** specifies that the Interactive Resolver is used on the article.|  
 |**fast_multicol_updateproc**|**bit**|Specifies whether the Merge Agent has been enabled to apply changes to multiple columns in the same row in one UPDATE statement.<br /><br /> **0** = Issues a separate UPDATE for each column changed.<br /><br /> **1** = Issued on UPDATE statement which causes updates to occur to multiple columns in one statement.|  

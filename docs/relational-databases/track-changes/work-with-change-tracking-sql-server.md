@@ -1,5 +1,7 @@
 ---
-title: "Work with Change Tracking (SQL Server) | Microsoft Docs"
+description: "Work with Change Tracking (SQL Server)"
+title: "Work with Change Tracking"
+ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -23,7 +25,7 @@ ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Work with Change Tracking (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Applications that use change tracking must be able to obtain tracked changes, apply these changes to another data store, and update the source database. This topic describes how to perform these tasks, and also the role change tracking plays when a failover occurs and a database must be restored from a backup.  
   
@@ -58,26 +60,29 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  The following example shows how to obtain the initial synchronization version and the initial data set.  
   
 ```sql  
-    -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
-    SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
+declare @synchronization_version bigint;
+
+-- Obtain the current synchronization version. This will be used next time that changes are obtained.  
+SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
-    -- Obtain initial data set.  
-    SELECT  
-        P.ProductID, P.Name, P.ListPrice  
-    FROM  
-        SalesLT.Product AS P  
+-- Obtain initial data set.  
+SELECT  
+    P.ProductID, P.Name, P.ListPrice  
+FROM  
+   SalesLT.Product AS P  
 ```  
   
 ### Using the Change Tracking Functions to Obtain Changes  
  To obtain the changed rows for a table and information about the changes, use CHANGETABLE(CHANGES...). For example, the following query obtains changes for the `SalesLT.Product` table.  
   
 ```sql  
+declare @last_synchronization_version bigint;
+
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
 FROM  
-    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT  
-  
+    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT
 ```  
   
  Usually, a client will want to obtain the latest data for a row instead of only the primary keys for the row. Therefore, an application would join the results from CHANGETABLE(CHANGES ...) with the data in the user table. For example, the following query joins with the `SalesLT.Product` table to obtain the values for the `Name` and `ListPrice` columns. Note the use of `OUTER JOIN`. This is required to make sure that the change information is returned for those rows that have been deleted from the user table.  
@@ -96,11 +101,11 @@ ON
 ```  
   
  To obtain the version for use in the next change enumeration, use CHANGE_TRACKING_CURRENT_VERSION(), as shown in the following example.  
-  
+
 ```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
-  
+ 
  When an application obtains changes, it must use both CHANGETABLE(CHANGES...) and CHANGE_TRACKING_CURRENT_VERSION(), as shown in the following example.  
   
 ```sql  
@@ -145,7 +150,7 @@ END
 ```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
-  SELECT COUNT(*) FROM sys.change_tracking_tables  
+  SELECT 1 FROM sys.change_tracking_tables  
   WHERE min_valid_version > @last_synchronization_version )  
 BEGIN  
   -- Handle invalid version & do not enumerate changes  
@@ -176,7 +181,7 @@ SELECT
       END AS CT_ThumbNailPhoto,  
       CHANGE_TRACKING_IS_COLUMN_IN_MASK(  
                      @PhotoColumnId, CT.SYS_CHANGE_COLUMNS) AS  
-                                   CT_ThumbNailPhoto_Changed  
+                                   CT_ThumbNailPhoto_Changed,  
      CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
      CT.SYS_CHANGE_CONTEXT  
 FROM  
@@ -200,8 +205,6 @@ ON
 3.  Obtain the changes for the Sales table by using CHANGETABLE(CHANGES ...).  
   
 4.  Obtain the changes for the SalesOrders table by using CHANGETABLE(CHANGES ...).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Two processes are occurring in the database that can affect the results that are returned by the previous steps:  
   
@@ -261,6 +264,11 @@ COMMIT TRAN
   
  For more information about snapshot transactions, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### Cleanup and snapshot isolation   
+Enabling both snapshot isolation and change tracking on either the same database, or on two different databases within the same instance 
+can result in the cleanup process leaving expired rows in sys.syscommittab when there is an open transaction in the database with snapshot isolation. This can happen as the change tracking cleanup process takes an instance-wide low water mark (which is the safe cleanup version) into account when performing the cleanup. This is done to ensure the change tracking auto clean up process doesn't remove any rows that might be required by the open transaction in the database that has snapshot isolation enabled. Keep read committed snapshot isolation, and snapshot isolation transactions as short as possible to ensure expired rows from sys.syscommittab are cleaned up in a timely manner. 
+
+
 #### Alternatives to Using Snapshot Isolation  
  There are alternatives to using snapshot isolation, but they require more work to make sure all application requirements are met. To make sure the *last_synchronization_version* is valid and data is not removed by the cleanup process before changes are obtained, do the following:  
   
@@ -358,20 +366,20 @@ END
  Context information is typically used to identify the source of the changes. If the source of the change can be identified, that information can be used by a data store to avoid obtaining changes when it synchronizes again.  
   
 ```sql  
-  -- Try to update the row and check for a conflict.  
-  WITH CHANGE_TRACKING_CONTEXT (@source_id)  
-  UPDATE  
-     SalesLT.Product  
-  SET  
-      ListPrice = @new_listprice  
-  FROM  
-      SalesLT.Product AS P  
-  WHERE  
-     ProductID = @product_id AND  
-     @last_sync_version >= ISNULL (  
-         (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
-         (ProductID), (P.ProductID)) AS CT),  
-         0)  
+-- Try to update the row and check for a conflict.  
+WITH CHANGE_TRACKING_CONTEXT (@source_id)  
+UPDATE  
+  SalesLT.Product  
+SET  
+  ListPrice = @new_listprice  
+FROM  
+  SalesLT.Product AS P  
+WHERE  
+  ProductID = @product_id AND  
+    @last_sync_version >= ISNULL (  
+    (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
+    (ProductID), (P.ProductID)) AS CT),  
+       0)  
 ```  
   
 ### Ensuring Consistent and Correct Results  

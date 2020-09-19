@@ -1,4 +1,5 @@
 ---
+description: "CREATE PARTITION FUNCTION (Transact-SQL)"
 title: "CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"
@@ -25,11 +26,11 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], functions"
   - "CREATE PARTITION FUNCTION statement"
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a function in the current database that maps the rows of a table or index into partitions based on the values of a specified column. Using CREATE PARTITION FUNCTION is the first step in creating a partitioned table or index. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], a table or index can have a maximum of 15,000 partitions.  
   
@@ -37,14 +38,16 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_function_name*  
  Is the name of the partition function. Partition function names must be unique within the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

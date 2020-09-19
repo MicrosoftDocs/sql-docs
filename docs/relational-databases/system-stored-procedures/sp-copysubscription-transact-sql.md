@@ -1,4 +1,5 @@
 ---
+description: "sp_copysubscription (Transact-SQL)"
 title: "sp_copysubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_copysubscription"
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_copysubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
     
 > [!IMPORTANT]  
@@ -44,7 +45,7 @@ sp_copysubscription [ @filename = ] 'file_name'
  Is the name of the directory that contains the temp files. *temp_dir* is **nvarchar(260)**, with a default of NULL. If NULL, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default data directory will be used. The directory should have enough space to hold a file the size of all the subscriber database files combined.  
   
 `[ @overwrite_existing_file = ] 'overwrite_existing_file'`
- Is an optional Boolean flag that specifies whether or not to overwrite an existing file of the same name specified in **@filename**. *overwrite_existing_file*is **bit**, with a default of **0**. If **1**, it overwrites the file specified by **@filename**, if it exists. If **0**, the stored procedure fails if the file exists, and the file is not overwritten.  
+ Is an optional Boolean flag that specifies whether or not to overwrite an existing file of the same name specified in **\@filename**. *overwrite_existing_file*is **bit**, with a default of **0**. If **1**, it overwrites the file specified by **\@filename**, if it exists. If **0**, the stored procedure fails if the file exists, and the file is not overwritten.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

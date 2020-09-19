@@ -1,4 +1,5 @@
 ---
+description: "sp_changemergefilter (Transact-SQL)"
 title: "sp_changemergefilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changemergefilter"
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changemergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes some merge filter properties. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -85,7 +86,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## Remarks  
  **sp_changemergefilter** is used in merge replication.  
   
- Changing the filter on a merge article requires the snapshot, if one exists, to be recreated. This is performed by setting the **@force_invalidate_snapshot** to **1**. Also, if there are subscriptions to this article, the subscriptions need to be reinitialized. This is done by setting the **@force_reinit_subscription** to **1**.  
+ Changing the filter on a merge article requires the snapshot, if one exists, to be recreated. This is performed by setting the **\@force_invalidate_snapshot** to **1**. Also, if there are subscriptions to this article, the subscriptions need to be reinitialized. This is done by setting the **\@force_reinit_subscription** to **1**.  
   
  To use logical records, the publication and articles must meet a number of requirements. For more information, see [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   

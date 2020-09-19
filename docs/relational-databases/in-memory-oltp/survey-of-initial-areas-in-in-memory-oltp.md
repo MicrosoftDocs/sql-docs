@@ -1,6 +1,7 @@
 ---
-title: "Quick Survey 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
-ms.custom: ""
+title: "In-memory OLTP for faster T-SQL Performance"
+description: Learn the basics of the In-Memory OLTP performance features of SQL Server and Azure SQL Database with quick explanations and core code samples for developers.
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Survey of Initial Areas in In-Memory OLTP
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 This article is for the developer who is in a hurry to learn the basics of the In-Memory OLTP performance features of Microsoft SQL Server and Azure SQL Database.  
@@ -325,8 +326,10 @@ SET @mesg = CONCAT(@LatestSalesOrderId,
 PRINT @mesg;  
 ```
       
-    -- Here is the actual PRINT output:  
-    -- 2 = Latest SalesOrderId, for CustomerId = 42  
+Here is the actual PRINT output:  
+```output
+-- 2 = Latest SalesOrderId, for CustomerId = 42  
+```
   
   
   

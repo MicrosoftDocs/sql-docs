@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture - sys.dm_cdc_log_scan_sessions"
 title: "sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "change data capture [SQL Server], log scan reporting"
   - "sys.dm_cdc_log_scan_sessions dynamic management view"
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # Change Data Capture - sys.dm_cdc_log_scan_sessions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for each log scan session in the current database. The last row returned represents the current session. You can use this view to return status information about the current log scan session, or aggregated information about all sessions since the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  
    
@@ -61,9 +62,9 @@ ms.author: sstein
 ```  
 USE AdventureWorks2012;  
 GO  
-SELECT session_id, start_time, end_time, duration, scan_phase  
-    error_count, start_lsn, current_lsn, end_lsn, tran_count  
-    last_commit_lsn, last_commit_time, log_record_count, schema_change_count  
+SELECT session_id, start_time, end_time, duration, scan_phase,  
+    error_count, start_lsn, current_lsn, end_lsn, tran_count,  
+    last_commit_lsn, last_commit_time, log_record_count, schema_change_count,  
     command_count, first_begin_cdc_lsn, last_commit_cdc_lsn,   
     last_commit_cdc_time, latency, empty_scan_count, failed_sessions_count  
 FROM sys.dm_cdc_log_scan_sessions  

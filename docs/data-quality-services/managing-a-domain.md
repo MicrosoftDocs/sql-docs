@@ -1,6 +1,6 @@
 ---
-title: "Managing a Domain | Microsoft Docs"
-ms.custom: ""
+description: "Managing a Domain"
+title: "Managing a Domain"
 ms.date: "07/31/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,12 +8,12 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Managing a Domain
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the use of domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A domain contains a semantic representation of the data in a specific field in the data source that is to be analyzed. A domain is part of the knowledge base that you create for a data source, and the knowledge that you build up by analyzing a sample data source, or importing data, is added to the domains defined in the knowledge base. The knowledge in those domains is later used to perform cleansing and matching in a data quality project. Domains are at the core of all activities in Data Quality Services.  
   
@@ -39,7 +39,7 @@ ms.author: lle
 ## In This Section  
  Using a domain enables you to do the following:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create a semantic representation for a data field with a specific data type, specify how the domain is populated, and format the output of the domain|[Create a Domain](../data-quality-services/create-a-domain.md)|  
 |Link a domain to another domain, enabling it to share the same settings and values|[Create a Linked Domain](../data-quality-services/create-a-linked-domain.md)|  

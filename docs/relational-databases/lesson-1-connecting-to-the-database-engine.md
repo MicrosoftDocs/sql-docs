@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Connecting to the Database Engine"
 title: "Lesson 1: Connecting to the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/05/2018"
@@ -12,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Lesson 1: Connecting to the Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 When you install the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], the tools that are installed depend upon the edition and your setup choices. This lesson reviews the principal tools, and shows you how to connect and perform a basic function (authorizing more users).  
 
@@ -51,9 +52,7 @@ The sample databases and samples are not included with [!INCLUDE[ssNoVersion](..
 1.  Log into Windows as a member of the Administrators group, and open [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  In the **Connect to Server** dialog box, click **Cancel**.  
 3.  If Registered Servers is not displayed, on the **View** menu, click **Registered Servers**.
-4.  With **Database Engine** selected on the Registered Servers toolbar, expand **Database Engine**, right-click **Local Server Groups**, point to **Tasks**, and then click **Register Local Servers**. All instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on the computer are displayed. The default instance is unnamed and is shown as the computer name. A named instance displays as the computer name followed by a backward slash (\\) and then the name of the instance. For [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the instance is named *<computer_name>*\sqlexpress unless the name was changed during setup.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  With **Database Engine** selected on the Registered Servers toolbar, expand **Database Engine**, right-click **Local Server Groups**, point to **Tasks**, and then click **Register Local Servers**. Expand **Local Server Groups** to see all the instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on the computer displayed. The default instance is unnamed and is shown as the computer name. A named instance displays as the computer name followed by a backward slash (\\) and then the name of the instance. For [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the instance is named *<computer_name>*\sqlexpress unless the name was changed during setup.  
 
 ##### To verify that the Database Engine is running
 
@@ -85,7 +84,7 @@ At least one administrator account was selected when [!INCLUDE[ssNoVersion_md](.
 Now that you have connected to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as an administrator, one of your first tasks is to authorize other users to connect. You do this by creating a login and authorizing that login to access a database as a user. Logins can be either Windows Authentication logins, which use credentials from Windows, or SQL Server Authentication logins, which store the authentication information in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and are independent of your Windows credentials. Use Windows Authentication whenever possible.
 
 > [!TIP]
-> Most organizations have domain users and will use Windows Authentication. You can experiment on your own, by creating additional local users on your computer. Local users will be authenticated by your computer, so the domain is the computer name. For example if your compute is named `MyComputer` and you create a user named `Test`, then the Windows description of the user is `Mycomputer\Test`.  
+> Most organizations have domain users and will use Windows Authentication. You can experiment on your own, by creating additional local users on your computer. Local users will be authenticated by your computer, so the domain is the computer name. For example if your computer is named `MyComputer` and you create a user named `Test`, then the Windows description of the user is `Mycomputer\Test`.  
 
 ##### Create a Windows Authentication login 
 

@@ -1,6 +1,7 @@
 ---
-title: "Define and Modify a Parameterized Row Filter for a Merge Article | Microsoft Docs"
-ms.custom: ""
+title: "Define & modify a parameterized row filter (Merge)"
+description: Learn how to define and modify a parameterized row filter for a Merge Publication article for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -20,7 +21,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Define and Modify a Parameterized Row Filter for a Merge Article
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to define and modify a parameterized row filter in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  When creating table articles, you can use parameterized row filters. These filters use a [WHERE](../../../t-sql/queries/where-transact-sql.md) clause to select the appropriate data to be published. Rather than specifying a literal value in the clause (as you do with a static row filter), you specify one or both of the following system functions: [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) and [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md). For more information, see [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

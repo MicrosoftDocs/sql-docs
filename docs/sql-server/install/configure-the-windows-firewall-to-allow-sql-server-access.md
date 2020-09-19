@@ -1,7 +1,8 @@
 ---
-title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
-ms.custom: sqlfreshmay19
-ms.date: "05/15/2019"
+title: "Configure Windows Firewall"
+description: Learn how to configure the Windows firewall to allow access to an instance of the SQL Server through the firewall.
+ms.custom: "seo-lt-2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "ports [SQL Server], TCP"
   - "netsh to open firewall ports"
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Firewall systems help prevent unauthorized access to computer resources. If a firewall is turned on but not correctly configured, attempts to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might be blocked.  
   
@@ -107,7 +108,7 @@ By default, the typical ports used by SQL Server and associated database engine 
 |Dedicated Admin Connection|TCP port 1434 for the default instance. Other ports are used for named instances. Check the error log for the port number.|By default, remote connections to the Dedicated Administrator Connection (DAC) are not enabled. To enable remote DAC, use the Surface Area Configuration facet. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service|UDP port 1434|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service listens for incoming connections to a named instance and provides the client the TCP port number that corresponds to that named instance. Normally the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is started whenever named instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] are used. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service does not have to be started if the client is configured to connect to the specific port of the named instance.|  
 |Instance with HTTP endpoint.|Can be specified when an HTTP endpoint is created. The default is TCP port 80 for CLEAR_PORT traffic and 443 for SSL_PORT traffic.|Used for an HTTP connection through a URL.|  
-|Default instance with HTTPS endpoint |TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
+|Default instance with HTTPS endpoint |TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP port 4022. To verify the port used, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|There is no default port for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], but this is the conventional configuration used in Books Online examples.|  
 |Database Mirroring|Administrator chosen port. To determine the port, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|There is no default port for database mirroring however Books Online examples use TCP port 5022 or 7022. It is important to avoid interrupting an in-use mirroring endpoint, especially in high-safety mode with automatic failover. Your firewall configuration must avoid breaking quorum. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replication|Replication connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the typical regular [!INCLUDE[ssDE](../../includes/ssde-md.md)] ports (TCP port 1433 for the default instance, etc.)<br /><br /> Web synchronization and FTP/UNC access for replication snapshot require additional ports to be opened on the firewall. To transfer initial data and schema from one location to another, replication can use FTP (TCP port 21), or sync over HTTP (TCP port 80) or File Sharing. File sharing uses UDP port 137 and 138, and TCP port 139 if it using NetBIOS. File Sharing uses TCP port 445.|For sync over HTTP, replication uses the IIS endpoint (ports for which are configurable but is port 80 by default), but the IIS process connects to the backend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the standard ports (1433 for the default instance.<br /><br /> During Web synchronization using FTP, the FTP transfer is between IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher, not between subscriber and IIS.|  
@@ -149,7 +150,7 @@ By default, the typical ports used by SQL Server Analysis Services and associate
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|TCP port 2383 for the default instance|The standard port for the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service|TCP port 2382 only needed for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] named instance|Client connection requests for a named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that do not specify a port number are directed to port 2382, the port on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser then redirects the request to the port that the named instance uses.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTP<br /><br /> (The PivotTable® Service uses HTTP or HTTPS)|TCP port 80|Used for an HTTP connection through a URL.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTPS<br /><br /> (The PivotTable® Service uses HTTP or HTTPS)|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTPS<br /><br /> (The PivotTable® Service uses HTTP or HTTPS)|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses TLS.|  
   
  If users access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] through IIS and the Internet, you must open the port on which IIS is listening and specify that port in the client connection string. In this case, no ports have to be open for direct access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The default port 2389, and port 2382, should be restricted together with all other ports that are not required.  
   
@@ -165,7 +166,7 @@ The following table lists the ports that are frequently used by [!INCLUDE[ssRSno
 |Feature|Port|Comments|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web Services|TCP port 80|Used for an HTTP connection to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] through a URL. We recommend that you do not use the preconfigured rule **World Wide Web Services (HTTP)**. For more information, see the [Interaction with Other Firewall Rules](#BKMK_other_rules) section below.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configured for use through HTTPS|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL). We recommend that you do not use the preconfigured rule **Secure World Wide Web Services (HTTPS)**. For more information, see the [Interaction with Other Firewall Rules](#BKMK_other_rules) section below.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configured for use through HTTPS|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses TLS. We recommend that you do not use the preconfigured rule **Secure World Wide Web Services (HTTPS)**. For more information, see the [Interaction with Other Firewall Rules](#BKMK_other_rules) section below.|  
   
 When [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connects to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you must also open the appropriate ports for those services. For step-by-step instructions to configure the Windows Firewall for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
@@ -176,7 +177,7 @@ When [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connects to a
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] remote procedure calls (MS RPC)<br /><br /> Used by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime.|TCP port 135<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)|The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses DCOM on port 135. The Service Control Manager uses port 135 to perform tasks such as starting and stopping the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service and transmitting control requests to the running service. The port number cannot be changed.<br /><br /> This port is only required to be open if you are connecting to a remote instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or a custom application.|  
   
-For step-by-step instructions to configure the Windows Firewall for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014).  
+For step-by-step instructions to configure the Windows Firewall for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Service &#40;SSIS Service&#41;](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110)).  
   
 ###  <a name="BKMK_additional_ports"></a> Additional Ports and Services  
 The following table lists ports and services that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might depend on.  
@@ -278,7 +279,7 @@ The following table lists ports and services that [!INCLUDE[ssNoVersion](../../i
   
          The **-n** switch instructs **netstat** to numerically display the address and port number of active TCP connections. The **-a** switch instructs **netstat** to display the TCP and UDP ports on which the computer is listening.  
   
--   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=28590).  
+-   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## See Also  
  [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)   

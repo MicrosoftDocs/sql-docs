@@ -1,7 +1,8 @@
 ---
+description: "Specify Default Values for Columns"
 title: "Specify Default Values for Columns | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,9 +18,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Specify Default Values for Columns
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify a default value that will be entered into the table column. You can use the Object Explorer of the user interface that, or you can the general control for submitting [!INCLUDE[tsql](../../includes/tsql-md.md)].
+You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to specify a default value that will be entered into the table column. You can set a default by using the Object Explorer of the user interface or by submitting [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 If you do not assign a default value to the column, and the user leaves the column blank, then:
 
@@ -60,8 +61,6 @@ You can use the Object Explorer to specify a default value for a table column.
 
 4. On the **File** menu, click **Save** _table name_.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="TsqlProcedure"></a> Use Transact-SQL to specify a default
 
 There are various ways that you can specify a default value for a column, by using SSMS to submit T-SQL.
@@ -80,7 +79,7 @@ There are various ways that you can specify a default value for a column, by usi
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -102,7 +101,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).

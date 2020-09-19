@@ -1,4 +1,5 @@
 ---
+description: "Broker:Conversation Event Class"
 title: "Broker:Conversation Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"
@@ -15,7 +16,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # Broker:Conversation Event Class
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Conversation** event to report the progress of a Service Broker conversation.  
   

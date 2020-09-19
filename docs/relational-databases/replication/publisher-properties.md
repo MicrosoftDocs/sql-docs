@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Replication Publisher Properties dialog box | Microsoft Docs"
-ms.custom: ""
+title: "Publisher Properties dialog box (SSMS)"
+description: Describes the 'Publisher Properties' dialog box for a specific publication within SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,10 +16,10 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Replication Publisher Properties dialog box
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This topic describes the different options found within the Publisher properties dialog box. 
 
@@ -27,8 +28,6 @@ This topic describes the different options found within the Publisher properties
   
 1.  Disable publishing on the Publisher. For more information, see [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Reconfigure publishing and distribution. For more information, see [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Distributor 
 The **Publisher Properties** dialog box allows you to view and modify properties associated with the relationship between the Publisher and its Distributor.  

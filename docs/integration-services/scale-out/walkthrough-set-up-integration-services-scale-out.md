@@ -1,11 +1,10 @@
 ---
-title: "Walkthrough: Set Up SQL Server Integration Services Scale Out | Microsoft Docs"
-description: "This article walks you through the setup and configuration of SSIS Scale Out"
+title: "Walkthrough: Set Up SSIS Scale Out | Microsoft Docs"
+description: "Learn details about the setup and configuration of SQL Server Integration Services (SSIS) Scale Out Master."
 ms.custom: performance
 ms.date: "12/13/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 author: "HaoQian-MS"
@@ -14,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out by completing the following tasks. 
@@ -61,9 +60,9 @@ To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../..
 
     ![Master Config](media/master-config.PNG "Master Config")
 
-4.  Specify the SSL certificate used to protect the communication between Scale Out Master and Scale Out Worker by doing one of the following.
-    * Let the setup process create a default, self-signed SSL certificate by clicking **Create a new SSL certificate**.  The default certificate is installed under Trusted Root Certification Authorities, Local Computer. You can specify the CNs in this certificate. The host name of master endpoint should be included in CNs. By default, the machine name and ip of Master Node are included.
-    * Select an existing SSL Certificate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse** to select a certificate. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored here.       
+4.  Specify the TLS/SSL certificate used to protect the communication between Scale Out Master and Scale Out Worker by doing one of the following.
+    * Let the setup process create a default, self-signed TLS/SSL certificate by clicking **Create a new SSL certificate**.  The default certificate is installed under Trusted Root Certification Authorities, Local Computer. You can specify the CNs in this certificate. The host name of master endpoint should be included in CNs. By default, the machine name and ip of Master Node are included.
+    * Select an existing TLS/SSL Certificate on the local computer by clicking **Use an existing SSL certificate** and then clicking **Browse** to select a certificate. The thumbprint of the certificate appears in the text box. Clicking **Browse** displays certificates that are stored in Trusted Root Certification Authorities, Local Computer. The certificate you select must be stored here.       
 
     ![Master Config 2](media/master-config-2.PNG "Master Config 2")
   
@@ -113,14 +112,14 @@ To install the Scale Out Worker feature, use the [!INCLUDE[ssNoVersion_md](../..
     > [!NOTE]
     > You can also skip Worker configuration at this point and associate the Scale Out Worker with the Scale Out Master by using [Scale Out Manager](integration-services-ssis-scale-out-manager.md) after installation.
 
-4. For a **multiple-computer** environment, specify the client SSL certificate that is used to validate Scale Out Master. For a **single-computer** environment, you don't have to specify a client SSL certificate. 
+4. For a **multiple-computer** environment, specify the client TLS/SSL certificate that is used to validate Scale Out Master. For a **single-computer** environment, you don't have to specify a client TLS/SSL certificate. 
   
-    Click **Browse** to find the certificate file (*.cer). To use the default SSL certificate, select the `SSISScaleOutMaster.cer` file located under `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` on the computer on which Scale Out Master is installed.   
+    Click **Browse** to find the certificate file (*.cer). To use the default TLS/SSL certificate, select the `SSISScaleOutMaster.cer` file located under `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` on the computer on which Scale Out Master is installed.   
 
     ![Worker Config 2](media/worker-config-2.PNG "Worker Config 2")
 
     > [!NOTE]
-    > When the SSL certificate used by Scale Out Master is self-signed, a corresponding client SSL certificate has to be installed on the computer with Scale Out Worker. If you provide the file path for the client SSL Certificate on the **Integration Services Scale Out Worker Configuration** page, the certificate will be installed automatically; otherwise, you have to install the certificate manually later. 
+    > When the TLS/SSL certificate used by Scale Out Master is self-signed, a corresponding client TLS/SSL certificate has to be installed on the computer with Scale Out Worker. If you provide the file path for the client TLS/SSL Certificate on the **Integration Services Scale Out Worker Configuration** page, the certificate will be installed automatically; otherwise, you have to install the certificate manually later. 
      
 5. Finish the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] installation wizard.
 

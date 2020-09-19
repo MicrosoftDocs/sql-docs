@@ -1,15 +1,16 @@
 ---
+description: "Using Kerberos integrated authentication to connect to SQL Server"
 title: "Using Kerberos integrated authentication to connect to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "01/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Using Kerberos integrated authentication to connect to SQL Server
@@ -32,13 +33,13 @@ The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sets the follo
 
 ## Remarks
 
-Prior to [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications could specify integrated authentication (using Kerberos or NTLM, depending on which is available) by using the **integratedSecurity** connection property and by referencing **sqljdbc_auth.dll**, as described in [Building the connection URL](../../connect/jdbc/building-the-connection-url.md).
+Prior to [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications could specify integrated authentication (using Kerberos or NTLM, depending on which is available) by using the **integratedSecurity** connection property and by referencing **mssql-jdbc_auth-\<version>-\<arch>.dll**, as described in [Building the connection URL](../../connect/jdbc/building-the-connection-url.md).
 
 Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using Kerberos integrated authentication using the pure Java Kerberos implementation:
 
 - If you want integrated authentication using **Krb5LoginModule**, you must still specify the **integratedSecurity=true** connection property. You would then also specify the **authenticationScheme=JavaKerberos** connection property.
 
-- To continue using integrated authentication with **sqljdbc_auth.dll**, just specify **integratedSecurity=true** connection property (and optionally **authenticationScheme=NativeAuthentication**).
+- To continue using integrated authentication with **mssql-jdbc_auth-\<version>-\<arch>.dll**, just specify **integratedSecurity=true** connection property (and optionally **authenticationScheme=NativeAuthentication**).
 
 - If you specify **authenticationScheme=JavaKerberos** but do not also specify **integratedSecurity=true**, the driver will ignore the **authenticationScheme** connection property and it will expect to find user name and password credentials in the connection string.
 
@@ -66,9 +67,9 @@ For example, your SPN might look like: "MSSQLSvc/some-server.zzz.corp.contoso.co
 
 For more information about service principal names (SPNs), see:
 
-- [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)
+- [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
-- [Using Kerberos with SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Using Kerberos with SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Before 6.2 release of JDBC driver, for proper use of Cross Realm Kerberos, you would need to explicitly set the **serverSpn**.

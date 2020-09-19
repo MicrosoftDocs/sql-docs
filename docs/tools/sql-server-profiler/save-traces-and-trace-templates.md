@@ -1,28 +1,24 @@
 ---
-title: "Save Traces and Trace Templates | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Save Traces and Trace Templates
+titleSuffix: SQL Server Profiler
+description: Discover how to save captured event data to a trace file or a database table in SQL Server Profiler and how to save user-defined trace templates.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "saving traces"
-  - "traces [SQL Server], saving"
-  - "templates [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], templates"
-  - "trace templates [SQL Server]"
-  - "exporting trace templates"
-  - "importing trace templates"
-  - "SQL Server Profiler, templates"
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # Save Traces and Trace Templates
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  It is important to distinguish saving trace files from saving trace templates. Saving a trace file involves saving the captured event data to a specified place. Saving a trace template involves saving the definition of the trace, such as specified data columns, event classes, or filters.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+It is important to distinguish saving trace files from saving trace templates. Saving a trace file involves saving the captured event data to a specified place. Saving a trace template involves saving the definition of the trace, such as specified data columns, event classes, or filters.  
   
 ## Saving Traces  
  Save captured event data to a file or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table when you need to analyze or replay the captured data at a later time. Use a trace file to do the following:  
@@ -45,7 +41,7 @@ ms.author: maghan
  The template definition of a trace includes the event classes, data columns, filters, and all other properties (except the captured event data) that are used to create a trace. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] provides predefined system templates for common tracing tasks and for specific tasks, such as creating a workload that Database Engine Tuning Advisor can use to tune the physical database design. You can also create and save user-defined templates.  
   
 ### Importing and Exporting Templates  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] allows you to import and export templates from one server to another. Exporting a template moves a copy of an existing template to a directory that you specify. Importing a template makes a copy of a template that you specify. When these templates are viewed in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can distinguish them from system templates by the term "(user)" that follows the template name. You cannot overwrite or directly modify a predefined system template.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] allows you to import and export templates from one server to another. Exporting a template moves a copy of an existing template to a directory that you specify. Importing a template makes a copy of a template that you specify. When these templates are viewed in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can distinguish them from system templates by the term"(user)" that follows the template name. You cannot overwrite or directly modify a predefined system template.  
   
 ### Analyzing Performance with Templates  
  If you frequently monitor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use templates to analyze performance. The templates capture the same event data each time and use the same trace definition to monitor the same events. You do not need to define the event classes and data columns every time you create a trace. Also, a template can be given to another user to monitor specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. For example, a support provider can supply a customer with a template. The customer uses the template to capture the required event data, which is then sent to the support provider for analysis.  

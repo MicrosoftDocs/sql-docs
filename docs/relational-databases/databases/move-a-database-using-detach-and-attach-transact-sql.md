@@ -1,7 +1,7 @@
 ---
-title: "Move a Database Using Detach and Attach (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+description: "Move a database using detach and attach (Transact-SQL)"
+title: "Move Database using detach & attach (Transact-SQL)"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,9 +17,10 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: "stevestein"
 ms.author: "sstein"
+ms.custom: seo-dt-2019
 ---
-# Move a Database Using Detach and Attach (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Move a database using detach and attach (Transact-SQL)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to move a detached database to another location and re-attach it to the same or a different server instance in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. However, we recommend that you move databases by using the ALTER DATABASE planned relocation procedure, instead of using detach and attach. For more information, see [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
   
 > [!IMPORTANT]  
@@ -45,7 +46,7 @@ ms.author: "sstein"
   
 1.  Detach the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
@@ -61,7 +62,7 @@ ms.author: "sstein"
   
 3.  Attach the moved database and, optionally, its log by executing the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   

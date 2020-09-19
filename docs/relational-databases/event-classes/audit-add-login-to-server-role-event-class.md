@@ -1,4 +1,5 @@
 ---
+description: "Audit Add Login to Server Role Event Class"
 title: "Audit Add Login to Server Role Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Add Login to Server Role Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Add Login to Server Role** event class occurs whenever a login is added or removed from a fixed server role. This event class is used for the **sp_addsrvrolemember** and **sp_dropsrvrolemember** stored procedures.  
   
 ## Audit Add Login to Server Role Event Class Data Columns  

@@ -1,30 +1,28 @@
 ---
-title: "Run SQL Server Profiler | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/07/2017"
+title: Run SQL Server Profiler
+titleSuffix: SQL Server Profiler
+description: Learn which programs and menus you can start SQL Server Profiler from and which connection contexts, templates, and filters are used with trace output.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], starting"
-  - "SQL Server Profiler, starting"
-  - "starting SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], running"
-  - "SQL Server Profiler, running"
-  - "running SQL Server Profiler"
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 07/07/2017
 ---
+
 # Run SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  You can run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in several different ways, to support gathering trace output in a variety of scenarios. You can start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] from the Windows 10 **Start** menu, from the **Tools** menu in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor, and from several locations in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+You can run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in several different ways, to support gathering trace output in a variety of scenarios. You can start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] from the Windows 10 **Start** menu, from the **Tools** menu in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor, and from several locations in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and select **New Trace** from the **File** menu, the application displays a **Connect to Server** dialog box where you can specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to connect to.  
 ## To start SQL Server Profiler from the Windows 10 Start menu  
--  Click the Windows **Start** icon or press the Windows key and start to type "SQL Server Profiler 17". When the **SQL Server Profiler 17** tile appears, click it.   
+-  Click the Windows **Start** icon or press the Windows key and start to type"SQL Server Profiler 17". When the **SQL Server Profiler 17** tile appears, click it.   
 
 ## To start SQL Server Profiler in Database Engine Tuning Advisor  
 -  On the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor **Tools** menu, click **SQL Server Profiler**.  
@@ -52,4 +50,4 @@ When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md
 
 ## Next steps  
  [SQL Server Profiler overview](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md?view=sql-server-ver15)

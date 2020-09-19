@@ -1,5 +1,6 @@
 ---
-title: "Cursors | Microsoft Docs"
+description: "Cursors (ODBC)"
+title: "Cursors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -16,10 +17,10 @@ helpviewer_keywords:
   - "result sets [ODBC], fetching"
   - "block cursors [ODBC]"
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# Cursors
+# ODBC Cursors
 An application fetches data with a *cursor*. A cursor is different from a result set: A result set is the set of rows that matches particular search criteria, whereas a cursor is the software that returns those rows to the application. The name *cursor,* as it applies to databases, probably originated from the blinking cursor on a computer terminal. Just as that cursor indicates the current position on the screen and where the typed words will appear next, a cursor on a result set indicates the current position in the result set and what row will be returned next.  
   
  The cursor model in ODBC is based on the cursor model in embedded SQL. One notable difference between these models is the way cursors are opened. In embedded SQL, a cursor must be explicitly declared and opened before it can be used. In ODBC, a cursor is implicitly opened when a statement that creates a result set is executed. When the cursor is opened, it is positioned before the first row of the result set. In both embedded SQL and ODBC, a cursor must be closed after the application has finished using it.  

@@ -1,21 +1,21 @@
 ---
-title: "Create a Transact-SQL Script for Running a Trace (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: Create a Transact-SQL Script for Running a Trace
+titleSuffix: SQL Server Profiler
+description: Find out how to create a Transact-SQL script from an existing trace file or table in SQL Server Profiler.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "traces [SQL Server], running"
-  - "scripts [SQL Server], traces"
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Create a Transact-SQL Script for Running a Trace (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create a Transact-SQL script from an existing trace file or table by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### To create a Transact-SQL script to run a trace  

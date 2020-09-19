@@ -1,4 +1,5 @@
 ---
+description: "catalog.get_parameter_values (SSISDB Database)"
 title: "catalog.get_parameter_values (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,10 +14,10 @@ ms.author: chugu
 ---
 # catalog.get_parameter_values (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Resolves and retrieves the default parameter values from a project and corresponding packages in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
@@ -38,7 +39,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  The name of the project where the parameters resides. The *project_name* is **nvarchar(128)**.  
   
  [ @package_name = ] *package_name*  
- The name of the package. Specify the package name to retrieve all project parameters and the parameters from a specific package. Use NULL to retrieve all project parameters and the parameters from all packages. The *package_name* is **nvarchar(260)**.  
+ The name of the package. Specify the package name to retrieve all project parameters and the parameters from a specific package. The *package_name* is **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
  The unique identifier of an environment reference. This parameter is optional. The *reference_id* is **bigint**.  

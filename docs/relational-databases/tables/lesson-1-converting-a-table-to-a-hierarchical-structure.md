@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Converting a Table to a Hierarchical Structure"
 title: "Lesson 1: Converting a Table to a Hierarchical Structure | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2018"
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Lesson 1: Converting a Table to a Hierarchical Structure
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Customers who have tables using self joins to express hierarchical relationships can convert their tables to a hierarchical structure using this lesson as a guide. It is relatively easy to migrate from this representation to one using **hierarchyid**. After migration, users will have a compact and easy to understand hierarchical representation, which can be indexed in several ways for efficient queries.  
   
 This lesson, examines an existing table, creates a new table containing a **hierarchyid** column, populates the table with the data from the source table, and then demonstrates three indexing strategies. This lesson contains the following topics:  
@@ -35,9 +36,6 @@ The sample Adventureworks2017 (or later) database contains an **Employee** table
 ### Copy the Employee table  
   
 1.  In a Query Editor window, run the following code to copy the table structure and data from the **Employee** table into a new table named **EmployeeDemo**. Since the original table already uses hierarchyid, this query essentially flattens the hierarchy to retrieve the manager of the employee. In subsequent parts of this lesson we will be reconstructing this hierarchy.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
    ```sql  
    USE AdventureWorks2017;  

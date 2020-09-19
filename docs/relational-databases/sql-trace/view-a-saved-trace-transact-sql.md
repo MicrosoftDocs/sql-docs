@@ -1,4 +1,5 @@
 ---
+description: "View a Saved Trace (Transact-SQL)"
 title: "View a Saved Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -16,14 +17,12 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # View a Saved Trace (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use built-in functions to view a saved trace.  
   
 ### To view a specific trace  
   
 1.  Execute **fn_trace_getinfo** by specifying the ID of the trace about which information is needed. This function returns a table that lists the trace, trace property, and information about the property.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
      Invoke the function this way:  
   

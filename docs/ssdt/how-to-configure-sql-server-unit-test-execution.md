@@ -1,17 +1,19 @@
 ---
-title: "How to: Configure SQL Server Unit Test Execution | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Configure SQL Server Unit Test Execution
+description: Learn how to configure SQL Server unit tests. See how to specify connection strings and how to deploy a database schema.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Configure SQL Server Unit Test Execution
+
 By configuring your test project, you can specify several settings that control aspects of how your SQL Server unit tests are run. These configuration settings are stored in your test project's app.config file. If you edit this file directly, the new values appear in the test configuration dialog box.  
   
 Your solution can contain multiple test projects. Each test project contains one app.config file (that is, one set of configuration settings). As a result, your solution can contain different sets of unit tests (one set for each test project) that are configured to run differently.  

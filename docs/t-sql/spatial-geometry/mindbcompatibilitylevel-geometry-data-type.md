@@ -1,4 +1,5 @@
 ---
+description: "MinDbCompatibilityLevel (geometry Data Type)"
 title: "MinDbCompatibilityLevel (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -16,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # MinDbCompatibilityLevel (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the minimum database compatibility level that recognizes the **geometry** data type instance.
   
@@ -27,7 +28,9 @@ Returns the minimum database compatibility level that recognizes the **geometry*
 .MinDbCompatibilityLevel ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **int**  
   
  CLR return type: **int**  

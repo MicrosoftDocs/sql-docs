@@ -1,5 +1,6 @@
 ---
 title: "Deleting Backup Blob Files with Active Leases | Microsoft Docs"
+description: If a SQL Server backup or restore fails, a blob in Azure Storage can become orphaned. Learn how to delete an orphaned blob.
 ms.custom: ""
 ms.date: "08/17/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: mikeray
 ---
 # Delete backup blob files with active leases
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 When backing up to or restoring from Microsoft Azure storage, SQL Server acquires an infinite lease to lock exclusive access to the blob. When the backup or restore process is successfully completed, the lease is released. If a backup or restore fails, the backup process attempts to clean up any invalid blobs. However, if the backup fails due to prolonged or sustained network connectivity failure, the backup  process may not be able gain access to the blob and the blob may remain orphaned. This means the blob cannot be written to or deleted until the lease is released. This topic describes how to release (break) the lease and delete the blob.
   
@@ -35,8 +36,6 @@ The follow steps describe how to clean up after failed backup or restore activit
     > SQL Server issues a lease ID to establish exclusive access during the restore operation. The restore lease ID is BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
 1. **Delete the Blob:** To delete a blob with an active lease, you must first break the lease.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="Code_Example"></a> PowerShell script example  
   

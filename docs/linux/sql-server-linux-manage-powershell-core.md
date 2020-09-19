@@ -1,6 +1,6 @@
 ---
 title: Manage SQL Server on Linux with PowerShell Core
-description: This article provides an overview of using PowerShell Core with SQL Server on Linux.
+description: Learn about SQL Server PowerShell by walking through a couple of examples on how to use SQL Server PowerShell with PowerShell Core (PS Core) on macOS and Linux.
 ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux
@@ -192,13 +192,13 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## Explore cmdlets currently available in PS Core
-While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
+While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. A full list of 62 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
 
 The following command will show you all of the cmdlets available on the version of PowerShell you are using.
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
-SORT -Property Noun |
+Sort-Object -Property Noun |
 SELECT Name
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: "Rotate Always Encrypted Keys using PowerShell | Microsoft Docs"
+description: "Rotate Always Encrypted keys using PowerShell"
+title: "Rotate Always Encrypted keys using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
@@ -12,8 +13,8 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Rotate Always Encrypted Keys using PowerShell
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Rotate Always Encrypted keys using PowerShell
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 This article provides the steps to rotate keys for Always Encrypted using the SqlServer PowerShell module. For information about how to start using the SqlServer PowerShell module for Always Encrypted, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
@@ -31,9 +32,9 @@ The method of rotating a column master key described in this section doesn't sup
 
 | Task | Article | Accesses plaintext keys/keystore| Accesses database
 |:---|:---|:---|:---
-|Step 1. Create a new column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module doesn't support this step. To accomplish this task from the command-line, you need to use tools that are specific for your key store. | [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Yes | No
+|Step 1. Create a new column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module doesn't support this step. To accomplish this task from the command-line, you need to use tools that are specific for your key store. | [Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Yes | No
 |Step 2. Start a PowerShell environment and import the SqlServer module | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
-|Step 3. Connect to your server and database. | [Connecting to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
+|Step 3. Connect to your server and database. | [Connecting to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 |Step 4. Create a SqlColumnMasterKeySettings object that contains information about the location of your new column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). To create it, you need to use the cmdlet that is specific to your key store. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | No | No
 |Step 5. Create the metadata about your new column master key in your database. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Note:** under the covers, this cmdlet issues the [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement to create key metadata. | No | Yes
 |Step 6. Authenticate to Azure, if your current column master key or your new column master key is stored in Azure Key Vault | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Yes | No
@@ -49,7 +50,7 @@ The method of rotating a column master key described in this section doesn't sup
 
 The below script is an end-to-end example that replaces an existing column master key (CMK1) with a new column master key (CMK2).
 
-```
+```powershell
 # Create a new column master key in Windows Certificate Store.
 $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:CurrentUser\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage KeyEncipherment -KeySpec KeyExchange -KeyLength 2048
 
@@ -59,12 +60,9 @@ Import-Module "SqlServer"
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Create a SqlColumnMasterKeySettings object for your new column master key. 
 $newCmkSettings = New-SqlCertificateStoreColumnMasterKeySettings -CertificateStoreLocation "CurrentUser" -Thumbprint $cert.Thumbprint
@@ -99,7 +97,7 @@ A DBA retrieves metadata about the column master key to be rotated, and about th
 | Task | Article | Accesses plaintext keys/keystore| Accesses database
 |:---|:---|:---|:---
 |Step 1. Start a PowerShell environment and import the SqlServer module. | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | None
-|Step 2. Connect to your server and a database. | [Connect to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
+|Step 2. Connect to your server and a database. | [Connect to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 |Step 3. Retrieve the metadata about old column master key.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | No | Yes
 |Step 4. Retrieve the metadata about column encryption keys, protected by the old column master key, including their encrypted values. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | No | Yes
 |Step 5. Share the location of the column master key (the provider name and a key path of the column master key) and the encrypted values of the corresponding column encryption keys, protected with the old column master key.| See the examples below. | No | No
@@ -111,7 +109,7 @@ The Security Administrator generates a new column master key, re-encrypts the im
 | Task | Article | Access plaintext keys/keystore| Accesses database
 |:---|:---|:---|:---
 |Step 1. Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, protected with the old column master key, from your DBA.|N/A<br>See the examples below.|No| No
-|Step 2. Create a new column master key in a key store.<br><br>**Note:** The SqlServer module doesn't support this step. To accomplish this task from a command-line, you need to use the tools that are specific the type of your key store.|[Creating and Storing Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Yes | No
+|Step 2. Create a new column master key in a key store.<br><br>**Note:** The SqlServer module doesn't support this step. To accomplish this task from a command-line, you need to use the tools that are specific the type of your key store.|[Create and store column master keys for Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Yes | No
 |Step 3. Start a PowerShell environment and import the SqlServer module. | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 |Step 4. Create a SqlColumnMasterKeySettings object that contains information about the location of your **old** column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). |New-SqlColumnMasterKeySettings| No | No
 |Step 5. Create a SqlColumnMasterKeySettings object that contains information about the location of your **new** column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). To create it, you need to use the cmdlet that is specific to your key store. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| No | No
@@ -130,7 +128,7 @@ The DBA creates metadata for the new column master key and updates the metadata 
 |:---|:---|:---|:---
 |Step 1. Obtain the location of the new column master key and the new set of encrypted values of the corresponding column encryption keys, protected with the old column master key, from your Security Administrator.| See the examples below. | No | No
 |Step 2. Start a PowerShell environment and import the SqlServer module. | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
-|Step 3. Connect to your server and a database. | [Connecting to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
+|Step 3. Connect to your server and a database. | [Connecting to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 |Step 4. Create a SqlColumnMasterKeySettings object that contains information about the location of your new column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). |New-SqlColumnMasterKeySettings| No| No
 |Step 5. Create the metadata about your new column master key in your database.|[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Note:** Under the covers this cmdlet issues the [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) statement to create key metadata. | No | Yes
 |Step 6. Retrieve the metadata about column encryption keys, protected by the old column master key.| [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)| No | Yes
@@ -145,19 +143,16 @@ The below script is an end-to-end example for generating a new column master key
 
 Part 1: DBA
 
-```
+```powershell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Retrieve the data about the old column master key, which needs to be rotated.
 $oldCmkName = "CMK1"
@@ -193,7 +188,7 @@ for($i=0; $i -lt $ceks.Length; $i++){
 
 Part 2: Security Administrator
 
-```
+```powershell
 # Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, from your DBA, via a CSV file on a share drive.
 $oldCmkDataFile = "Z:\oldcmkdata.txt"
 $oldCmkData = Import-Csv $oldCmkDataFile
@@ -235,7 +230,7 @@ $newCmkSettings.KeyStoreProviderName +", " + $newCmkSettings.KeyPath >> $newCmkD
 
 Part 3: DBA
 
-```
+```powershell
 # Obtain the location of the new column master key and the new encrypted values of the corresponding column encryption keys, from your Security Administrator, via a CSV file on a share drive.
 $newCmkDataFile = "Z:\newcmkdata.txt"
 $newCmkData = Import-Csv $newCmkDataFile
@@ -248,12 +243,9 @@ Import-Module "SqlServer"
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Create a SqlColumnMasterKeySettings object for your new column master key. 
 $newCmkSettings = New-SqlColumnMasterKeySettings -KeyStoreProviderName $newCmkData.KeyStoreProviderName -KeyPath $newCmkData.KeyPath
@@ -292,12 +284,12 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 Rotating a column encryption key involves decrypting the data in all columns, encrypted with the key to be rotated, and re-encrypting the data using the new column encryption key. This rotation workflow requires access to both the keys and the database, and therefore can't be performed with role separation. 
 Rotating a column encryption key can take a long time, if the tables containing columns encrypted with the key, being rotated, are large. Therefore, your organization needs to plan a column encryption key rotation carefully.
 
-You can rotate a column encryption key using an offline or an online approach. The former method is likely to be faster, but your applications can't write to the impacted tables. The latter approach will likely to take longer, but you can limit the time interval, during which the impacted tables aren't available to applications. See [Configure Column Encryption using PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) and [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) for more details.
+You can rotate a column encryption key using an offline or an online approach. The former method is likely to be faster, but your applications can't write to the impacted tables. The latter approach will likely to take longer, but you can limit the time interval, during which the impacted tables aren't available to applications. See [Configure column encryption using Always Encrypted with PowerShell](configure-column-encryption-using-powershell.md)  and [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) for more details.
 
 | Task | Article | Accesses plaintext keys/keystore| Accesses database
 |:---|:---|:---|:---
 |Step 1. Start a PowerShell environment and import the SqlServer module. | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
-|Step 2. Connect to your server and a database. | [Connecting to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
+|Step 2. Connect to your server and a database. | [Connecting to a database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 |Step 3. Authenticate to Azure, if your column master key (protecting the column encryption key, to be rotated), is stored in Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Yes | No
 |Step 4. Generate a new column encryption key, encrypt it with the column master key and create column encryption key metadata in the database.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Note:** Use a variation of the cmdlet that internally generates and encrypts a column encryption key.<br>Under the covers this cmdlet issues the [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement to create the key metadata. | Yes | Yes
 |Step 5. Find all columns encrypted with the old column encryption key. | [SQL Server Management Objects (SMO) Programming Guide](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | No | Yes
@@ -307,22 +299,19 @@ You can rotate a column encryption key using an offline or an online approach. T
 
 ### Example - Rotating a Column Encryption Key
 
-The below script demonstrates rotating a column encryption key.  The script assumes, the target database contains some columns encrypted with a column encryption key, named CEK1 (to be rotated), which is protected using a column master key, named CMK1 (the column master key isn't stored in Azure Key Vault).
+The below script demonstrates rotating a column encryption key.  The script assumes, the target database contains some columns encrypted with a column encryption key, named CEK1 (to be rotated), which is protected using a column master key, named CMK1 (the column master key isn't stored in Azure Key Vault). 
 
 
-```
+```powershell
 # Import the SqlServer module.
 Import-Module "SqlServer"
 
 # Connect to your database.
 $serverName = "<server name>"
 $databaseName = "<database name>"
+# Change the authentication method in the connection string, if needed.
 $connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Integrated Security = True"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName]
+$database = Get-SqlDatabase -ConnectionString $connStr
 
 # Generate a new column encryption key, encrypt it with the column master key and create column encryption key metadata in the database. 
 $cmkName = "CMK1"
@@ -351,16 +340,19 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -U
 Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 ```
 
-
+## Next Steps
+- [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Develop applications using Always Encrypted](always-encrypted-client-development.md)
   
-## Next Steps  
-    
-- [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-  
-## Additional Resources  
-
-- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
-- [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-
+## See Also
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+- [Configure Always Encrypted using PowerShell](configure-always-encrypted-using-powershell.md)
+- [Rotate Always Encrypted keys using SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
+- [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
+- [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)
+- [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md)
+- [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 
+- [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
+- [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: "LocalDBStartInstance Function"
 title: "LocalDBStartInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,11 +14,11 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBStartInstance Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Starts the specified SQL Server Express LocalDB instance.  
   
  **Header file:** sqlncli.h  

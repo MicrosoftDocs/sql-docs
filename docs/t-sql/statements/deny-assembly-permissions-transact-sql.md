@@ -1,4 +1,5 @@
 ---
+description: "DENY Assembly Permissions (Transact-SQL)"
 title: "DENY Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Assembly Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Denies permissions on an assembly.  
   
@@ -28,7 +29,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name  
     TO database_principal [ ,...n ]   
@@ -36,7 +37,9 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an assembly. Listed below.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Change the Word Breaker Used for US English and UK English"
 title: "Change the Word Breaker Used for US English and UK English | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,8 +13,8 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change the Word Breaker Used for US English and UK English
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs a new version (version 14.0.4999.1038) of the word breaker and stemmer for the English language, replacing the previous version of these components (version 12.0.6828.0). For information about the changed behavior of the new components, see [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search). This topic describes how to switch from the new version of these components to the previous version, or to switch back from the previous version to the new version. For cluster installations, these changes should be made on all the primary and passive nodes.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs a new version (version 14.0.4999.1038) of the word breaker and stemmer for the English language, replacing the previous version of these components (version 12.0.6828.0). For information about the changed behavior of the new components, see [Behavior Changes to Full-Text Search](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15). This topic describes how to switch from the new version of these components to the previous version, or to switch back from the previous version to the new version. For cluster installations, these changes should be made on all the primary and passive nodes.  
   
  Previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] used different word breakers represented by different CLSIDs for US English (LCID 1033) and UK English (LCID 2057). In this release, both LCIDs use the same components with the same CLSIDs, as shown in the following table:  
   
@@ -49,8 +50,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 5.  Update the **StemmerClass** key value to **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**.  
   
 6.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### To switch from the current version of the UK English word breaker to the previous version  
   
@@ -122,6 +121,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [Revert the Word Breakers Used by Search to the Previous Version](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)  
+ [Behavior Changes to Full-Text Search](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: "Caching Templates, XSL, and Schemas (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Caching Templates, XSL, and Schemas (SQLXML)"
+description: View information about caching templates, XSL, and schemas in SQLXML 4.0. 
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,10 +14,11 @@ helpviewer_keywords:
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Caching Templates, XSL, and Schemas (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   To improve performance, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 supports caching templates, XSL, and schemas.  
   
  All schemas, templates, and XSL files (except the files from an https:// or ftp:// location) are cached. The cached files remain in memory while the process is running. As the process exits, all the cache is lost. Therefore, if you run one process per query, the caching benefit may not be noticeable.  

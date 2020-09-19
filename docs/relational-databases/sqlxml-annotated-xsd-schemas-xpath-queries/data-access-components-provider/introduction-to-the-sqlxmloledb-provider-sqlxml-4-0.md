@@ -1,6 +1,6 @@
 ---
-title: "Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Introduction to the SQLXMLOLEDB Provider (SQLXML)"
+description: Learn about the SQLXMLOLEDB Provider, an OLE DB provider that exposes SQLXML functionality through ActiveX Data Objects (ADO).
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,10 +14,11 @@ helpviewer_keywords:
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to the SQLXMLOLEDB Provider (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML functionality through ActiveX Data Objects (ADO). However, the provider can execute commands only in the "write to an output stream" mode of ADO. The SQLXMLOLEDB Provider is not a rowset provider. When you execute a command, you must specify the adExecuteStream flag, which directs ADO to use the output stream that you have specified.  
   
  The following example shows the syntax for the Execute command in which the adExecuteStream flag is specified:  

@@ -1,5 +1,5 @@
 ---
-title: Acquire and configure a backup server - Parallel Data Warehouse | Microsoft Docs
+title: Acquire & configure backup server
 description: This article describes how to configure a non-appliance Windows system as a backup server for use with the backup and restore features in Analytics Platform System (APS) and Parallel Data Warehouse (PDW). 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Acquire and configure a backup server for Parallel Data Warehouse
@@ -114,9 +115,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 For more information, see: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="Security"></a>Security notices  
 The backup server is not joined to the private domain for the appliance. It is in your own network, and there is no trust relationship between your own domain and private appliance domain.  
@@ -145,4 +146,3 @@ Operations on the loading server can use a UNC path to pull data from outside th
   
 ## See Also  
 [Backup and restore](backup-and-restore-overview.md)  
-  

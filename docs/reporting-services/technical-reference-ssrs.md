@@ -1,5 +1,6 @@
 ---
-title: "Technical Reference (SSRS) | Microsoft Docs"
+title: "Technical Reference | Microsoft Docs"
+description: Learn about the tools and PowerShell reference documentation for using or administering SQL Server Reporting Services.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

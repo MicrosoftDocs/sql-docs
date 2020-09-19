@@ -1,15 +1,16 @@
 ---
-title: "PDOStatement::debugDumpParams | Microsoft Docs"
+title: "PDOStatement::debugDumpParams"
+description: "API reference for the PDOStatement::debugDumpParams function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cf156d65-d933-4235-b89a-18e172d61c15
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDOStatement::debugDumpParams
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

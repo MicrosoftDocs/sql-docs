@@ -1,4 +1,5 @@
 ---
+description: "SQLStatistics (Visual FoxPro ODBC Driver)"
 title: "SQLStatistics (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLStatistics function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: bb48c22f-1fd5-47b4-8eaa-ff69cd431cf9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics (Visual FoxPro ODBC Driver)
 > [!NOTE]  

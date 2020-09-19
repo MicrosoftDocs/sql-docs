@@ -1,6 +1,7 @@
 ---
-title: "Troubleshooting Hash Indexes for Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Troubleshooting hash indexes - memory-optimized tables"
+description: Use this information to troubleshoot hash indexes for memory-optimized tables in SQL Server and Azure SQL Database.
+ms.custom: seo-dt-2019
 ms.date: "12/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Troubleshooting Hash Indexes for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## Prerequisite  
   
@@ -111,8 +112,6 @@ The following T-SQL code block gives you an easy way to test a `SELECT * FROM sy
     a. A modulo operator is used to configure the rate of duplicate values in the StatusCode column.  
     b. The loop inserts 262,144 rows in approximately 1 minute.  
 3. PRINTs a message asking you to run the earlier SELECT from **sys.dm_db_xtp_hash_index_stats**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  

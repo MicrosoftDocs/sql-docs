@@ -1,4 +1,5 @@
 ---
+description: "Verify a Reporting Services Installation"
 title: "Verify a Reporting Services Installation | Microsoft Docs"
 ms.date: 06/03/2016
 ms.prod: reporting-services
@@ -95,11 +96,11 @@ ms.author: maggies
   
 2.  Use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to create a new folder or upload a file to test whether definitions are passed back to the report server database. If these operations are successful, the connection is functional.  
   
-     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 ### To verify that Report Designer is installed and running  
   
-1.  Open [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and create a new project based on a Report Server project type. For more information on using the Report Server Project Wizard, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) in SQL Server Books Online.  
+1.  Open [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and create a new project based on a Report Server project type. For more information on using the Report Server Project Wizard, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 2.  If you installed report samples, open the sample report project files and publish the reports to a report server.  
   

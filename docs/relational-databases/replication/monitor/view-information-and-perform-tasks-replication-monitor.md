@@ -1,6 +1,7 @@
 ---
-title: "View Information and Perform Tasks using Replication Monitor | Microsoft Docs"
-ms.custom: ""
+title: "View information & perform tasks (Replication Monitor)"
+description: Learn how to view information and perform various tasks using Replication Monitor in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # View information and perform tasks using Replication Monitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 Replication monitor provides a number of tabs and options to view information and perform various tasks. This article describes the different things that can be viewed and accomplished when using Replication Monitor. 
 
 

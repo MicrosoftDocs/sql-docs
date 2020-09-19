@@ -1,8 +1,9 @@
 ---
+description: "System Requirements for the Address Book Application"
 title: "System Requirements for the Address Book Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # System Requirements for the Address Book Application
 To set up the Address Book sample application, you need to meet the following software and database requirements:  
@@ -45,8 +46,6 @@ To set up the Address Book sample application, you need to meet the following so
  If you do not have privileges, your database administrator may need to set up the system and give you access permission to the database, or set up the database for you.  
   
 ## See Also  
- [Running the Address Book SQL Script](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Running the Address Book Sample Application](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [Running the Address Book SQL Script](./running-the-address-book-sql-script.md)   
+ [DataControl Object (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Running the Address Book Sample Application](./running-the-address-book-sample-application.md)

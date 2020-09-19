@@ -1,6 +1,7 @@
 ---
-title: "Troubleshoot Orphaned Users (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Troubleshoot orphaned users"
+description: Orphaned users occur when a database user login no longer exist in the master database. This topic discusses how to identify and resolve orphaned users. 
+ms.custom: "seo-lt-2019"
 ms.date: "07/14/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -20,8 +21,8 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Troubleshoot Orphaned Users (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Troubleshoot orphaned users (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occur when a database user is based on  a login in the **master** database, but the login no longer exists in **master**. This can occur when the login is deleted, or when the database is moved to another server where the login does not exist. This topic describes how to find orphaned users, and remap them to logins.  
   
@@ -49,7 +50,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  A database user (based on a login) for which the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is undefined or is incorrectly defined on a server instance cannot log in to the instance. Such a user is said to be an *orphaned user* of the database on that server instance. Orphaning can happen if the database user is mapped to a login SID that is not present in the `master` instance. A database user can become orphaned after a database is restored or attached to a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the login was never created. A database user can also become orphaned if the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is dropped. Even if the login is recreated, it will have a different SID, so the database user will still be orphaned.  
   
-## To Detect Orphaned Users  
+## Detect Orphaned Users  
 
 **For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and PDW**
 
@@ -89,7 +90,7 @@ The `sys.server_principals` table is not available in SQL Database or SQL Data W
 
 3. Compare the two lists to determine if there are user SID's in the user database `sys.database_principals` table which are not matched by login SID's in the master database `sql_logins` table. 
   
-## To Resolve an Orphaned User  
+## Resolve an Orphaned User  
 In the master database, use the [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) statement with the SID option to recreate a missing login, providing the `SID` of the database user obtained in the previous section:  
   
 ```  
@@ -111,9 +112,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 ```  
   
 > [!IMPORTANT]  
->  Any login can change it's own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
-  
- The deprecated procedure [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) also works with orphaned users. `sp_change_users_login` cannot be used with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+>  Any login can change its own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
   
 ## See Also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

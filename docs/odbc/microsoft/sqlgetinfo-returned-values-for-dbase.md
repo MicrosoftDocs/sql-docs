@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo Returned Values for dBASE"
 title: "SQLGetInfo Returned Values for dBASE | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLGetInfo"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetInfo Returned Values for dBASE
 The following table lists the C-language #defines for the *fInfoType* argument and the corresponding values returned by **SQLGetInfo**. This information can be retrieved by passing the listed C-language #defines to **SQLGetInfo** in the *fInfoType* argument. For more information about the values returned by **SQLGetInfo**, see the *ODBC Programmer's Reference*.  

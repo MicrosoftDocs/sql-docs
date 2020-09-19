@@ -1,4 +1,5 @@
 ---
+description: "sp_repldropcolumn (Transact-SQL)"
 title: "sp_repldropcolumn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_repldropcolumn"
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_repldropcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a column from an existing table article that has been published. This stored procedure is executed at the Publisher on the publication database.  
   

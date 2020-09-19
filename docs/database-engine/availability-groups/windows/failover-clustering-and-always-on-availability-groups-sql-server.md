@@ -1,7 +1,7 @@
 ---
-title: "Combine a failover cluster instance with availability groups"
+title: "Failover cluster instance with availability groups"
 description: "Enhance your high availability and disaster recoverability by combining the features of a SQL Server failover cluster instance and an Always On availability group."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "07/02/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the high availability and disaster recovery solution introduced in [!INCLUDE[sssql11](../../../includes/sssql11-md.md)], requires Windows Server Failover Clustering (WSFC). Also, though [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is not dependent upon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Clustering, you can use a failover clustering instance (FCI) to host an availability replica for an availability group. It is important to know the role of each clustering technology, and to know what considerations are necessary as you design your [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] environment.  
   
@@ -111,7 +111,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Whitepapers:**  
   

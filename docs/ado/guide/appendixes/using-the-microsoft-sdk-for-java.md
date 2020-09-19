@@ -1,8 +1,9 @@
 ---
+description: "Using the Microsoft SDK for Java"
 title: "Using the Microsoft SDK for Java | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Java (Microsoft SDK for)"
   - "Microsoft SDK for Java [ADO]"
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using the Microsoft SDK for Java
 
@@ -25,7 +26,7 @@ The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explo
   
  This mechanism reads the ADO type library and generates classes that you can instantiate within your application. It generates those classes in the following location: \\<windows directory\>\Java\trustlib\msado15.  
   
- Creating an ADO application in Java using the Microsoft SDK for Java is fundamentally identical, from the perspective of source code, to using the Java Type Library Wizard. For sample code, see [ADO Java Class Wrappers](../../../ado/guide/appendixes/ado-java-class-wrappers.md). The only real difference is in how you generate the wrapper classes in the first place, as demonstrated in the following steps.  
+ Creating an ADO application in Java using the Microsoft SDK for Java is fundamentally identical, from the perspective of source code, to using the Java Type Library Wizard. For sample code, see [ADO Java Class Wrappers](./ado-java-class-wrappers.md). The only real difference is in how you generate the wrapper classes in the first place, as demonstrated in the following steps.  
   
 ### To create an ADO project with the Microsoft SDK for Java  
   
@@ -44,4 +45,4 @@ The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explo
 3.  To use these files, open your project in Visual J++. From the **Project** menu, choose **Add To Project**. Select **Files**, and add all of the .JAVA files generated in the trustlib\msado15 directory to your project.  
   
 ## See Also  
- [ADO Java Class Wrappers](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+ [ADO Java Class Wrappers](./ado-java-class-wrappers.md)

@@ -1,5 +1,6 @@
 ---
 title: "Performance Monitoring and Tuning Tools | Microsoft Docs"
+description: Learn about SQL Server monitoring and tuning tools and how to choose the right one depending on the type of monitoring and the events to monitor.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -20,14 +21,14 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Performance Monitoring and Tuning Tools
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a comprehensive set of tools for monitoring events in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and for tuning the physical database design. The choice of tool depends on the type of monitoring or tuning to be done and the particular events to be monitored.  
   
  Following are the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] monitoring and tuning tools:  
   
 |Tool|Description|  
 |----------|-----------------|  
-|[Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Built-in functions display snapshot statistics about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activity since the server was started; these statistics are stored in predefined [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] counters. For example, **@@CPU_BUSY** contains the amount of time the CPU has been executing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code; **@@CONNECTIONS** contains the number of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections or attempted connections; and **@@PACKET_ERRORS** contains the number of network packets occurring on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections.|  
+|[Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Built-in functions display snapshot statistics about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activity since the server was started; these statistics are stored in predefined [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] counters. For example, **\@\@CPU_BUSY** contains the amount of time the CPU has been executing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code; **\@\@CONNECTIONS** contains the number of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections or attempted connections; and **\@\@PACKET_ERRORS** contains the number of network packets occurring on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections.|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC (Database Console Command) statements enable you to check performance statistics and the logical and physical consistency of a database.|  
 |[Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|Database Engine Tuning Advisor analyzes the performance effects of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements executed against databases you want to tune. Database Engine Tuning Advisor provides recommendations to add, remove, or modify indexes, indexed views, and partitioning.|  
 |[Database Experimentation Assistant (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|Database Experimentation Assistant (DEA) is a new A/B testing solution for SQL Server. It will assist in evaluating a targeted version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] for a given workload. When upgrading from a previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions (Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) to any newer version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], DEA will be able to provide comparative analysis metrics.|

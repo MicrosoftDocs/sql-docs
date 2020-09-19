@@ -1,5 +1,5 @@
 ---
-title: "What is SQL Server Reporting Services (SSRS) | Microsoft Docs"
+title: "What is SQL Server Reporting Services | Microsoft Docs"
 description: "Learn about tools and services for mobile and paginated Reporting Services reports on premises."
 ms.date: 05/06/2019
 ms.prod: reporting-services
@@ -91,7 +91,7 @@ The content on the web portal is organized by type:
 * shared datasets
 * shared data sources
 
-You can store and manage them securely here, in the traditional folder hierarchy. Tag your favorites reports for quick access. Those with appropriate permissions are able tp manage and administer SSRS content.
+You can store and manage them securely here, in the traditional folder hierarchy. Tag your favorites reports for quick access. Those with appropriate permissions are able to manage and administer SSRS content.
 
 And you can still schedule report processing, access reports on demand, and subscribe to published reports in the new web portal.
 

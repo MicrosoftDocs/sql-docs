@@ -1,4 +1,5 @@
 ---
+description: "sp_rename (Transact-SQL)"
 title: "sp_rename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2018"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "sp_rename"
   - "renaming tables"
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_rename (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the name of a user-created object in the current database. This object can be a table, index, column, alias data type, or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) user-defined type.  
   
@@ -61,7 +62,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|A user-defined database. This object type is required when renaming a database.|  
 |INDEX|A user-defined index. Renaming an index with statistics, also automatically renames the statistics.|  
 |OBJECT|An item of a type tracked in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). For example, OBJECT could be used to rename objects including constraints (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), user tables, and rules.|  
-|STATISTICS|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well.|  
+|STATISTICS|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistics created explicitly by a user or created implicitly with an index. Renaming the statistics of an index automatically renames the index as well.|  
 |USERDATATYPE|A [CLR User-defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## Return Code Values  

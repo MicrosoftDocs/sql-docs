@@ -1,10 +1,9 @@
 ---
-title: "Accelerated database recovery | Microsoft Docs"
-ms.custom: ""
+description: "Manage accelerated database recovery"
+title: "Manage accelerated database recovery | Microsoft Docs"
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,7 +16,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Manage accelerated database recovery
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver2019.md)]
 
 ## Enabling and controlling ADR
 
@@ -79,10 +78,10 @@ Changing the location of the PVS is a three-step process.
    In order to be able to turn on ADR with a new location for the persistent version store, you must first make sure that all of the version information has been purged from the previous PVS location. In order to force that cleanup to happen, run the command:
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   `sys.sp_persistent_version_store_cleanup` stored procedure is synchronous, meaning that it will not complete until all version information is cleaned up from the current PVS.  Once it completes, you can verify that the version information is indeed removed by querying the DMV `sys.dm_persistent_version_store_stats` and examining the value of `persistent_version_store_size_kb`.
+   `sys.sp_persistent_version_cleanup` stored procedure is synchronous, meaning that it will not complete until all version information is cleaned up from the current PVS.  Once it completes, you can verify that the version information is indeed removed by querying the DMV `sys.dm_persistent_version_store_stats` and examining the value of `persistent_version_store_size_kb`.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 
@@ -99,6 +98,9 @@ Changing the location of the PVS is a three-step process.
    ```
 
 ## Troubleshooting
+
+> [!NOTE]
+> This section also applies to Azure SQL Database.
 
 Query `sys.dm_tran_persistent_version_store_stats` to check PVS sizes.
 

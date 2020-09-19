@@ -1,6 +1,7 @@
 ---
-title: "Accessing Memory-Optimized Tables Using Interpreted Transact-SQL | Microsoft Docs"
-ms.custom: ""
+title: "Memory-optimized tables using interpreted T-SQL"
+description: "Learn about accessing memory-optimized tables using interpreted Transact-SQL (Transact-SQL batches or stored procedures in SQL Server)."
+ms.custom: seo-dt-2019
 ms.date: "05/31/2016"
 ms.prod: sql  
 ms.reviewer: ""
@@ -45,14 +46,42 @@ For more information about table hints, see. [Table Hints &#40;Transact-SQL&#41;
   
 The following table hints are not supported when accessing a memory-optimized table using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
-  
-|||||  
-|-|-|-|-|  
-|HOLDLOCK|IGNORE_CONSTRAINTS|IGNORE_TRIGGERS|NOWAIT|  
-|PAGLOCK|READCOMMITTED|READCOMMITTEDLOCK|READPAST|  
-|READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
-|TABLOCKXX|UPDLOCK|XLOCK||  
-  
+:::row:::
+    :::column:::
+        HOLDLOCK
+
+        PAGLOCK
+
+        READUNCOMMITTED
+
+        TABLOCKXX
+    :::column-end:::
+    :::column:::
+        IGNORE_CONSTRAINTS
+
+        READCOMMITTED
+
+        ROWLOCK
+
+        UPDLOCK
+    :::column-end:::
+    :::column:::
+        IGNORE_TRIGGERS
+
+        READCOMMITTEDLOCK
+
+        SPATIAL_WINDOW_MAX_CELLS = *integer*
+
+        XLOCK
+    :::column-end:::
+    :::column:::
+        NOWAIT
+
+        READPAST
+
+        TABLOCK
+    :::column-end:::
+:::row-end:::
 
 When accessing a memory-optimized table from an explicit or implicit transaction using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], you must do at least one of the following:  
   

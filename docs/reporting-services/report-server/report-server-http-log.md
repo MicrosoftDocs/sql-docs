@@ -1,5 +1,6 @@
 ---
 title: "Report Server HTTP Log | Microsoft Docs"
+description: Learn how to enable the Report Server HTTP log after you install Reporting Services. This feature logs every HTTP request and response a report server handles.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -21,7 +22,7 @@ ms.author: maggies
 ## Viewing log information  
  The log is an ASCII text file. You can use any text editor to view the file. The Report Server HTTP log file is equivalent to the W3C extended log file in IIS and uses similar fields so that you can use existing IIS log file viewers to read the report server HTTP log file. The following table provides additional information about the HTTP log file:  
   
-|||  
+|Log file information|Description|  
 |-|-|  
 |File name|By default, the file name is ReportServerService_HTTP_\<timestamp>.log. You can customize the prefix of the file name by modifying the HttpTraceFileName attribute in the ReportingServicesService.exe.config file. The timestamp is based on Coordinated Universal Time (UTC).|  
 |File location|The file is located at \Microsoft SQL Server\\*\<SQL Server Instance>*\Reporting Services\LogFiles.|  

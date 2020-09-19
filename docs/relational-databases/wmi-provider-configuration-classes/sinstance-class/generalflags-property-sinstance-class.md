@@ -1,6 +1,7 @@
 ---
-title: "GeneralFlags Property (SInstance Class) | Microsoft Docs"
-ms.custom: ""
+description: "GeneralFlags Property (SInstance Class)"
+title: "GeneralFlags Property (SInstance)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "GeneralFlags property"
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # GeneralFlags Property (SInstance Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the general flags associated with the an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Syntax  

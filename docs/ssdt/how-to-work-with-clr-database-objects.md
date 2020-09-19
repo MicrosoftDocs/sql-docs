@@ -1,19 +1,21 @@
 ---
-title: "How to: Work with CLR Database Objects | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Work with CLR Database Objects
+description: "Learn how to use .NET Framework languages to retrieve and update data. See how to create and use a Common Language Run (CLR) database object in a project."
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.allowsqlclrdebugging"
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # How to: Work with CLR Database Objects
+
 In addition to the Transact\-SQL programming language, you can use .NET Framework languages to create database objects that retrieve and update data. Database objects that are written in managed code are called SQL Server Common Language Run (CLR) database objects. For an explanation of the advantages of using CLR database objects hosted in SQL Server, as well as how to choose between Transact\-SQL and CLR, see [Advantages of CLR Integration](../relational-databases/clr-integration/clr-integration-overview.md) and [Advantages of Using Managed Code to Create Database Objects](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
   
 To create a CLR database object using SQL Server Data Tools, you create a database project and then add a CLR database object to it. Unlike in previous versions of Visual Studio, you do not need to create a separate CLR project and then add a reference to it from the database project. When you build and publish the database project, you automatically publish the CLR objects in the project at the same time. After you publish these CLR objects, they can be called and executed like any other database objects.  

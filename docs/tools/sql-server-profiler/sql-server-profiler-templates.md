@@ -1,28 +1,26 @@
 ---
-title: "SQL Server Profiler Templates | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Templates
+titleSuffix: SQl Server Profiler
+description: Learn about the predefined templates SQL Server Profiler provides and how to use them. See how to create user-defined templates and change the default template.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "default SQL Server Profiler templates"
-  - "templates [SQL Server], SQL Server Profiler"
-  - "Profiler [SQL Server Profiler], templates"
-  - "trace templates [SQL Server]"
-  - "predefined templates [SQL Server Profiler]"
-  - "SQL Server Profiler, templates"
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # SQL Server Profiler Templates
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  You can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create templates that define the event classes and data columns to include in traces. After you define and save the template, you can run a trace that records the data for each event class you selected. You can use a template on many traces; the template is not itself executed.  
-  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] offers predefined trace templates that allow you to easily configure the event classes that you will most likely need for specific traces. The Standard template, for example, helps you to create a generic trace for recording logins, logouts, batches completed, and connection information. You can use this template to run traces without modification or as a starting point for additional templates with different event configurations.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+You can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create templates that define the event classes and data columns to include in traces. After you define and save the template, you can run a trace that records the data for each event class you selected. You can use a template on many traces; the template is not itself executed.  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] offers predefined trace templates that allow you to easily configure the event classes that you will most likely need for specific traces. The Standard template, for example, helps you to create a generic trace for recording logins, logouts, batches completed, and connection information. You can use this template to run traces without modification or as a starting point for additional templates with different event configurations.  
   
 > [!NOTE]  
 >  In addition to traces from predefined templates, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] also allows you to create them from a blank template, containing no event classes by default. Using the blank trace template can be useful when a planned trace does not resemble the configurations of any of the predefined templates.  
@@ -56,8 +54,7 @@ ms.author: maghan
   
 ## See Also  
  [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Modify a Trace Template &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
  [Export a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Import a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
-  
   

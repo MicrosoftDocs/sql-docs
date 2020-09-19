@@ -1,19 +1,19 @@
 ---
 title: Integrated terminal
-titleSuffix: Azure Data Studio
-description: Learn about the Integrated terminal in Azure Data Studio.
+description: Learn how to open a terminal that is integrated into Azure Data Studio. An integrated terminal can be more convenient than a separate one.
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ---
+
 # Integrated Terminal
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)], you can open an integrated terminal, initially starting at the root of your workspace. This can be convenient as you don't have to switch windows or alter the state of an existing terminal to perform a quick command-line task.
+In Azure Data Studio, you can open an integrated terminal, initially starting at the root of your workspace. This can be convenient as you don't have to switch windows or alter the state of an existing terminal to perform a quick command-line task.
 
 To open the terminal:
 
@@ -24,7 +24,7 @@ To open the terminal:
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside Azure Data Studio.
 
 ## Managing Multiple Terminals
 
@@ -60,7 +60,7 @@ Correctly configuring your shell on Windows is a matter of locating the right ex
 > To be used as an integrated terminal, the shell executable must be a console application so that `stdin/stdout/stderr`  can be redirected.
 
 > [!TIP]
-> The integrated terminal shell is running with the permissions of [!INCLUDE[name-sos](../includes/name-sos-short.md)]. If you need to run a shell command with elevated (administrator) or different permissions, you can use platform utilities such as `runas.exe` within a terminal.
+> The integrated terminal shell is running with the permissions of Azure Data Studio. If you need to run a shell command with elevated (administrator) or different permissions, you can use platform utilities such as `runas.exe` within a terminal.
 
 ### Shell arguments
 
@@ -143,5 +143,5 @@ Integrated Terminal sessions can now be renamed using the **Terminal: Rename** (
 
 ### Forcing key bindings to pass through the terminal
 
-While focus is in the integrated terminal, many key bindings won't work because the keystrokes are passed to and consumed by the terminal itself. The `terminal.integrated.commandsToSkipShell` setting can be used to get around this. It contains an array of command names whose key bindings skip processing by the shell and instead be processed by the [!INCLUDE[name-sos](../includes/name-sos-short.md)] key binding system. By default this includes all terminal key bindings in addition to a select few commonly used key bindings.
+While focus is in the integrated terminal, many key bindings won't work because the keystrokes are passed to and consumed by the terminal itself. The `terminal.integrated.commandsToSkipShell` setting can be used to get around this. It contains an array of command names whose key bindings skip processing by the shell and instead be processed by the Azure Data Studio key binding system. By default this includes all terminal key bindings in addition to a select few commonly used key bindings.
 

@@ -1,5 +1,6 @@
 ---
 title: "sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs"
+description: Use sys.sp_rda_set_query_mode to specify if queries against the current Stretch-enabled database and its tables return local and remote data, or local data only.  
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
@@ -14,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_set_query_mode stored procedure"
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_rda_set_query_mode (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Specifies whether queries against the current Stretch-enabled database and its tables return both local and remote data (the default), or local data only.  
   
@@ -33,7 +34,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## Arguments  
- [ @mode = ] *@mode*  
+ [ @mode = ] *\@mode*  
  Is one of the following values.  
   
 -   **DISABLED** All queries against Stretch-enabled tables fail.  
@@ -42,7 +43,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE** Queries against Stretch-enabled tables return both local and remote data. This is the default behavior.  
   
- [ @force = ]  *@force*  
+ [ @force = ]  *\@force*  
  Is an optional bit value that you can set to 1 if you want to change query mode without validation.  
   
 ## Return Code Values  

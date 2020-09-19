@@ -1,13 +1,15 @@
 ---
+description: "Using Always Encrypted with the PHP Drivers for SQL Server"
 title: "Using Always Encrypted with the PHP Drivers for SQL Server | Microsoft Docs"
-ms.date: "01/08/2018"
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: "v-kaywon"
-ms.author: "v-kaywon"
+ms.reviewer: v-kaywon
+ms.author: v-daenge
+author: David-Engel
 manager: v-mabarw
 ---
 # Using Always Encrypted with the PHP Drivers for SQL Server
@@ -324,6 +326,8 @@ The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL 
   
 ## See Also  
 [Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

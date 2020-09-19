@@ -1,5 +1,6 @@
 ---
 title: "Restore and recovery of memory-optimized tables | Microsoft Docs"
+description: Learn how restoring a database that uses memory-optimized tables in SQL Server differs from restoring a database that uses only disk-based tables.
 ms.custom: ""
 ms.date: "12/31/2017"
 ms.prod: sql
@@ -8,11 +9,11 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Restore and recovery of memory-optimized tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The basic mechanism to recover or restore a database that uses memory-optimized tables is similar to the mechanism for a database that uses only disk-based tables. But unlike disk-based tables, memory-optimized tables must be loaded into memory before the database is available for user access. This requirement adds a new step in the database recovery.  
   
@@ -43,8 +44,6 @@ When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts, each da
     When the preceding operations on disk-based and memory-optimized tables are complete, the database is available for access.  
   
 3.  **Undo**. In this phase, the uncommitted transactions are rolled back.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Process for improving load time
 Loading memory-optimized tables into memory can affect performance of the recovery time objective (RTO). To improve the load time of memory-optimized data from data and delta files, the In-Memory OLTP engine loads the data/delta files in parallel as follows:  

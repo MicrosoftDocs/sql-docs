@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_database_replica_states (Transact-SQL)"
 title: "sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2018"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_database_replica_states dynamic management view"
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_database_replica_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each database that is participating in an Always On availability group for which the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is hosting an availability replica. This dynamic management view exposes state information on both the primary and secondary replicas. On a secondary replica, this view returns a row for every secondary database on the server instance. On the primary replica, this view returns a row for each primary database and an additional row for the corresponding secondary database.  
   
@@ -35,7 +36,7 @@ ms.author: mikeray
 |**replica_id**|**uniqueidentifier**|Identifier of the availability replica within the availability group.|  
 |**group_database_id**|**uniqueidentifier**|Identifier of the database within the availability group. This identifier is identical on every replica to which this database is joined.|  
 |**is_local**|**bit**|Whether the availability database is local, one of:<br /><br /> 0 = The database is not local to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.<br /><br /> 1 = The database is local to the server instance.|  
-|**is_primary_replica**|**bit**|Returns 1 if the replica is primary, or 0 if it is a secondary replica.<br /><br />**Applies to:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**is_primary_replica**|**bit**|Returns 1 if the replica is primary, or 0 if it is a secondary replica.<br /><br />**Applies to:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.|  
 |**synchronization_state**|**tinyint**|Data-movement state, one of the following values.<br /><br /> 0 = Not synchronizing. For a primary database, indicates that the database is not ready to synchronize its transaction log with the corresponding secondary databases. For a secondary database, indicates that the database has not started log synchronization because of a connection issue, is being suspended, or is going through transition states during startup or a role switch.<br /><br /> 1 = Synchronizing. For a primary database, indicates that the database is ready to accept a scan request from a secondary database. For a secondary database, indicates that active data movement is occurring for the database.<br /><br /> 2 = Synchronized. A primary database shows SYNCHRONIZED in place of SYNCHRONIZING. A synchronous-commit secondary database shows synchronized when the local cache says the database is failover ready and is synchronizing.<br /><br /> 3 = Reverting. Indicates the phase in the undo process when a secondary database is actively getting pages from the primary database.<br />**Caution:** When a database on a secondary replica is in the REVERTING state, forcing failover to the secondary replica leaves the database in a state in which it cannot be started  as a primary database. Either the database will need to reconnect as a secondary database, or you will need to apply new log records from a log backup.<br /><br /> 4 = Initializing. Indicates the phase of undo when the transaction log required for a secondary database to catch up to the undo LSN is being shipped and hardened on a secondary replica.<br />**Caution:** When a database on a secondary replica is in the INITIALIZING state, forcing failover to the secondary replica leaves the database in a state in which it cannot be started  as a primary database. Either the database will need to reconnect as a secondary database, or you will need to apply new log records from a log backup.|  
 |**synchronization_state_desc**|**nvarchar(60)**|Description of the data-movement state, one of:<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = Transaction commit is not synchronized with respect to this database.<br /><br /> 1 = Transaction commit is synchronized with respect to this database.<br /><br /> For a database on an asynchronous-commit availability replica, this value is always 0.<br /><br /> For a database on a synchronous-commit availability replica, this value is accurate only on the primary database.|  
@@ -65,7 +66,7 @@ ms.author: mikeray
 |**last_commit_lsn**|**Numeric(25,0)**|Actual log sequence number corresponding to the last commit record in the transaction log.<br /><br /> On the primary database, this corresponds to the last commit record processed. Rows for secondary databases show the log sequence number that the secondary replica has sent to the primary replica.<br /><br /> On the secondary replica, this is the last commit record that was redone.|  
 |**last_commit_time**|**datetime**|Time corresponding to the last commit record.<br /><br /> On the secondary database, this time is the same as on the primary database.<br /><br /> On the primary replica, each secondary database row displays the time that the secondary replica that hosts that secondary database has reported back to the primary replica. The difference in time between the primary-database row and a given secondary-database row represents approximately the recovery point objective (RPO), assuming that the redo process is caught up and that the progress has been reported back to the primary replica by the secondary replica.|  
 |**low_water_mark_for_ghosts**|**bigint**|A monotonically increasing number for the database indicating a low water mark used by ghost cleanup on the primary database. If this number is not increasing over time, it implies that ghost cleanup might not happen. To decide which ghost rows to clean up, the primary replica uses the minimum value of this column for this database across all availability replicas (including the primary replica).|  
-|**secondary_lag_seconds**|**bigint**|The number of seconds that the secondary replica is behind the primary replica during synchronization.<br /><br />**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**secondary_lag_seconds**|**bigint**|The number of seconds that the secondary replica is behind the primary replica during synchronization.<br /><br />**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
   
 ##  <a name="LSNcolumns"></a> Understanding the LSN Column Values  
  The values of the **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recovery_lsn**, and **truncation_lsn** columns are not actual log sequence numbers (LSNs). Rather each of these values reflects a log-block ID padded with zeroes.  

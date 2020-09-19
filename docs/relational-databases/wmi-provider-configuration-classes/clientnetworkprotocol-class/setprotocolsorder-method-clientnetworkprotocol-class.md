@@ -1,6 +1,7 @@
 ---
-title: "SetProtocolsOrder Method (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+description: "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
+title: "SetProtocolsOrder Method (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetProtocolsOrder method"
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Changes the order of the protocol list.  
   
 ## Syntax  

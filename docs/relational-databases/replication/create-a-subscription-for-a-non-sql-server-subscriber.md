@@ -1,6 +1,7 @@
 ---
-title: "Create a Subscription for a Non-SQL Server Subscriber | Microsoft Docs"
-ms.custom: ""
+title: "Create subscription for non-SQL Subscriber"
+description: Describes how to create a subscription for a non-SQL Server Subscriber in SQL Server using SQL Server Management Studio (SSMS) or Transact-SQL (T-SQL). 
+ms.custom: seo-lt-2019
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **In This Topic**  

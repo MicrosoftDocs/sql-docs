@@ -1,5 +1,6 @@
 ---
-title: "Using WQL with the WMI Provider for Server Events | Microsoft Docs"
+title: "Using WQL with the WMI Provider for Server Events"
+description: Learn how management applications access SQL Server events using the WMI Provider for Server Events by issuing WMI Query Language statements.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "WQL [WMI]"
   - "WMI Provider for Server Events, WQL"
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Using WQL with the WMI Provider for Server Events
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Management applications access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events using the WMI Provider for Server Events by issuing WMI Query Language (WQL) statements. WQL is a simplified subset of structured query language (SQL), with some WMI-specific extensions. In using WQL, an application retrieves an event type against a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a database, or a database object (the only object currently supported is queue). The WMI Provider for Server Events translates the query into an event notification that is created in the target database for database-scoped or object-scoped event notifications, or in the **master** database for server-scoped event notifications.  
   
  For example, consider the following WQL query:  

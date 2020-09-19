@@ -1,6 +1,7 @@
 ---
-title: "Lesson 2: Specifying Connection Information (Reporting Services) | Microsoft Docs"
-ms.date: 05/01/2019
+title: "Lesson 2: Specify Connection Information (Reporting Services) | Microsoft Docs"
+description: "In this lesson, you define a data source: connection information the report uses to access data from a relational database or other sources."
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -61,4 +62,4 @@ In this lesson, you've successfully defined a connection to the AdventureWorks20
 
 ## See also
 
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+[Create data connection strings - Report Builder & SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

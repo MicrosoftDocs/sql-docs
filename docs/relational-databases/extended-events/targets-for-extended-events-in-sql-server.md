@@ -1,6 +1,6 @@
 ---
-title: "Targets for Extended Events in SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Targets for Extended Events in SQL Server"
+description: This article explains package0 targets for extended events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=
 ---
 # Targets for Extended Events in SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 This article explains when and how to use the package0 targets for extended events in SQL Server. For each target, the present article explains:
@@ -150,7 +150,7 @@ The **event_file** target writes event session output from buffer to a disk file
 > [!NOTE]
 > Azure SQL Database only supports storing `xel` files on Azure blob storage. 
 >
-> For an **event_file** code example particular to SQL Database (and to SQL Database Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> For an **event_file** code example particular to SQL Database (and to SQL Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 
@@ -514,8 +514,6 @@ To test the event session, we purposely prevented to acquired locks from being r
 3. Purposely not issue a COMMIT TRANSACTION, until after we examined the targets.
 4. Later after testing, we issued a COMMIT TRANSACTION.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 The simple **event_counter** target provided the following output rows. Because 52-50=2, the output tells us we should see 2 unpaired lock_acquired events when we examine the output from the pair-matching target.
 
 
@@ -672,7 +670,7 @@ To see the preceding XML, you can issue the following SELECT while the event ses
 
 ```sql
 SELECT
-		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
 	INTO
 		#XmlAsTable
 	FROM

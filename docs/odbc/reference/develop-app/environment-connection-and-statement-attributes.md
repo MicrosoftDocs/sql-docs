@@ -1,4 +1,5 @@
 ---
+description: "Environment, Connection, and Statement Attributes"
 title: "Environment, Connection, and Statement Attributes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "connection attributes [ODBC]"
   - "statement attributes [ODBC]"
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Environment, Connection, and Statement Attributes
 ODBC defines a number of attributes that are associated with environments, connections, or statements.  

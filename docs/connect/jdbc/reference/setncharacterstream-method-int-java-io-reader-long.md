@@ -1,4 +1,5 @@
 ---
+description: "setNCharacterStream Method to java.io.Reader object - long"
 title: "setNCharacterStream Method to java.io.Reader object - long | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setNCharacterStream Method (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

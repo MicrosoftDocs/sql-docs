@@ -1,4 +1,5 @@
 ---
+description: "How Extended Stored Procedures Work"
 title: "How Extended Stored Procedures Work | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,7 +17,7 @@ ms.author: "jroth"
 ---
 # How Extended Stored Procedures Work
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  
@@ -30,6 +31,4 @@ ms.author: "jroth"
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calls the requested extended stored procedure (implemented as a function inside the DLL).  
   
 4.  The extended stored procedure passes result sets and return parameters back to the server by through the Extended Stored Procedure API.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

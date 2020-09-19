@@ -1,4 +1,5 @@
 ---
+description: "Processing Results - Retrieve Result Set Information"
 title: "Retrieve Result Set Information (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "result sets [ODBC]"
   - "result sets [ODBC], fetching"
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results - Retrieve Result Set Information
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### To get information about a result set  

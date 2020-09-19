@@ -1,8 +1,8 @@
 ---
-title: "Change the failover mode for a replica within an availability group"
+title: "Change replica failover mode for an availability group"
 description: "Describes how to change the failover mode for a replica within an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
-ms.date: "05/17/2016"
+ms.custom: seo-lt-2019
+ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Change the failover mode for a replica within an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to change the failover mode of an availability replica in an Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. The failover mode is a replica property that determines the failover mode for replicas that run under synchronous-commit availability mode. For more information, see [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) and [Availability Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
 ## <a name="Prerequisites"></a> Prerequisites and Restrictions  
@@ -50,28 +50,28 @@ ms.author: mathoma
   
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:
 
-   ```Transact-SQL
-   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
-      WITH ( {  
-           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
-              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
-            }  )
-   ```
+    ```syntaxsql
+    ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+       WITH ( {  
+             AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+                | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+             }  )
+    ```
+    
+    In the preceding script:
 
-   In the preceding script:
-
-      - *group_name* is the name of the availability group.  
+    - *group_name* is the name of the availability group.  
   
-      - *server_name* is either the computer name or the failover cluster network name. For named instances add `\instance_name'. Use the name that hosts the replica that you want to modify.
+    - *server_name* is either the computer name or the failover cluster network name. For named instances add `\instance_name'. Use the name that hosts the replica that you want to modify.
   
-   For more information about these parameters, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
+For more information about these parameters, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-   The following example, entered on the primary replica of the *MyAG* availability group, changes the failover mode to automatic failover on the availability replica that is located on the default server instance on a computer named *COMPUTER01*.  
+The following example, entered on the primary replica of the *MyAG* availability group, changes the failover mode to automatic failover on the availability replica that is located on the default server instance on a computer named *COMPUTER01*.  
   
-    ```  
-    ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
-       (FAILOVER_MODE = AUTOMATIC);  
-    ```  
+```sql
+ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  
+    (FAILOVER_MODE = AUTOMATIC);  
+```  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To change the failover mode of an availability replica**  
@@ -80,9 +80,9 @@ ms.author: mathoma
   
 2.  Use the **Set-SqlAvailabilityReplica** cmdlet with the **FailoverMode** parameter. When setting a replica to automatic failover, you might need to use the **AvailabilityMode** parameter to change the replica to synchronous-commit availability mode.  
   
-     For example, the following command modifies the replica `MyReplica` in the availability group `MyAg` to use synchronous-commit availability mode and to support automatic failover.  
+    For example, the following command modifies the replica `MyReplica` in the availability group `MyAg` to use synchronous-commit availability mode and to support automatic failover.  
   
-    ```  
+    ```powershell
     Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `   
     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\Replicas\MyReplica  
     ```  

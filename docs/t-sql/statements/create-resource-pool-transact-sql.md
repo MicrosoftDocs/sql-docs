@@ -1,4 +1,5 @@
 ---
+description: "CREATE RESOURCE POOL (Transact-SQL)"
 title: "CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -17,18 +18,18 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE RESOURCE POOL"
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Creates a Resource Governor resource pool in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A resource pool represents a subset of the physical resources (memory, CPUs and IO) of an instance of the Database Engine. Resource Governor enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools. Resource Governor is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
-```  
+```syntaxsql
 CREATE RESOURCE POOL pool_name  
 [ WITH  
     (  
@@ -55,7 +56,9 @@ CREATE RESOURCE POOL pool_name
 { NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID }[,...n]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *pool_name*  
 Is the user-defined name for the resource pool. *pool_name* is alphanumeric, can be up to 128 characters, must be unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -66,12 +69,12 @@ MAX_CPU_PERCENT =*value*
 Specifies the maximum average CPU bandwidth that all requests in resource pool will receive when there is CPU contention. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
 CAP_CPU_PERCENT =*value*   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 Specifies a hard cap on the CPU bandwidth that all requests in the resource pool will receive. Limits the maximum CPU bandwidth level to be the same as the specified value. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
 AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 Attach the resource pool to specific schedulers. The default value is AUTO.  
   
@@ -94,12 +97,12 @@ MAX_MEMORY_PERCENT =*value*
 Specifies the total server memory that can be used by requests in this resource pool. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
 MIN_IOPS_PER_VOLUME =*value*    
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
   
 Specifies the minimum I/O operations per second (IOPS) per disk volume to reserve for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to indicate no minimum threshold for the pool. The default is 0.  
   
 MAX_IOPS_PER_VOLUME =*value*    
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
   
 Specifies the maximum I/O operations per second (IOPS) per disk volume to allow for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to set an unlimited threshold for the pool. The default is 0.  
   
@@ -133,7 +136,7 @@ GO
 
 Set the CAP_CPU_PERCENT to a hard cap of 30 percent and sets AFFINITY SCHEDULER to a range of 0 to 63, 128 to 191. 
   
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  
@@ -151,7 +154,7 @@ WITH (
 
 Set MIN_IOPS_PER_VOLUME to 20 and MAX_IOPS_PER_VOLUME to 100. These values govern the physical I/O read and write operations that are available for the resource pool.  
   
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  

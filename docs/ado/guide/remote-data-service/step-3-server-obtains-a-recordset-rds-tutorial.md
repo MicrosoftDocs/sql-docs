@@ -1,8 +1,9 @@
 ---
+description: "Step 3: Server Obtains a Recordset (RDS Tutorial)"
 title: "Step 3: Server Obtains a Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO], server obtains Recordset"
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Step 3: Server Obtains a Recordset (RDS Tutorial)
 The server program uses the connect string and command text to query the data source for the desired rows. ADO is typically used to retrieve this **Recordset**, although other Microsoft data access interfaces, such as OLE DB, could be used.  
@@ -32,5 +33,5 @@ End Function
 ```  
   
 ## See Also  
- [Step 4: Server Returns the Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
- [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Step 4: Server Returns the Recordset (RDS Tutorial)](./step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)

@@ -1,4 +1,5 @@
 ---
+description: "Administrative Password"
 title: "Administrative Password | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,10 @@ f1_keywords:
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Administrative Password
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   If, on the **Distributors** page of this wizard, you selected a remote Distributor for this Publisher, you must enter a password for the connection replication makes between the Publisher and the Distributor using the **distributor_admin** login. The password must match the password specified on the **Distributor Password** page of the Configure Distribution Wizard or the **Publishers** page of the **Distributor Properties** dialog box.  
   
 ## Options  

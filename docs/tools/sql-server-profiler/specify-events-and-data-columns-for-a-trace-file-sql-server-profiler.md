@@ -1,25 +1,24 @@
 ---
-title: "Specify Events and Data Columns for a Trace File (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: Specify Events and Data Columns for a Trace file
+titleSuffix: SQL Server Profiler
+description: Find out how to specify which event classes and data columns SQL Server Profiler includes when it captures event data in traces.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "adding events"
-  - "traces [SQL Server], data columns"
-  - "deleting events"
-  - "removing events"
-  - "traces [SQL Server], events"
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 author: markingmyname
 ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Specify Events and Data Columns for a Trace File (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to specify event classes and data columns for traces by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+This topic describes how to specify event classes and data columns for traces by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### To specify events and data columns for a trace  
   

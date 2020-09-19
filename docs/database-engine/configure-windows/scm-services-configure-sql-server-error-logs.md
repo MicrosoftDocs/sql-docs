@@ -1,5 +1,6 @@
 ---
 title: "Configure SQL Server Error Logs | Microsoft Docs"
+description: Learn about error log recycling. See how to set a maximum log file size and how to set the number of previous log files that SQL Server backs up and archives.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.configurelogs.configureerrorlogs.f1"
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SCM Services - Configure SQL Server Error Logs
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view or modify the way [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error logs are recycled.  
 
 ## To open the Configure SQL Server Error Logs dialog box  
@@ -32,7 +33,7 @@ ms.author: mikeray
   
       **Maximum number of error log files**
 
-      Specify the maximum number of error log files created before they are recycled. The default is 6, one current and the 5 previous backup logs that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains before recycling them.
+      Specify the maximum number of archived error log files created before they are recycled. The default is 6, not including the current one. This value determines the number of previous backup logs that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains before recycling them.
 
     b. Log file size
 

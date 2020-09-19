@@ -1,10 +1,10 @@
 ---
-title: "SQL Server Agent Fixed Database Roles | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "SQL Server Agent Fixed Database Roles"
+title: "SQL Server Agent Fixed Database Roles"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -17,15 +17,16 @@ helpviewer_keywords:
   - "fixed database roles [SQL Server]"
   - "SQLAgentOperatorRole database role"
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent Fixed Database Roles
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has the following **msdb** database fixed database roles, which give administrators finer control over access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. The roles listed from least to most privileged access are:  
   
@@ -82,7 +83,7 @@ The following table summarizes **SQLAgentReaderRole** permissions on [!INCLUDE[s
 ### SQLAgentOperatorRole Permissions  
 **SQLAgentOperatorRole** is the most privileged of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. It includes all the permissions of **SQLAgentUserRole** and **SQLAgentReaderRole**. Members of this role can also view properties for operators and proxies, and enumerate available proxies and alerts on the server.  
   
-**SQLAgentOperatorRole** members have additional permissions on local jobs and schedules. They can execute, stop, or start all local jobs, and they can delete the job history for any local job on the server. They can also enable or disable all local jobs and schedules on the server. To enable or disable local jobs or schedules, members of this role must use the stored procedures **sp_update_job** and **sp_update_schedule**. Only the parameters that specify the job or schedule name or identifier and the **@enabled** parameter can be specified by members of **SQLAgentOperatorRole**. If they specify any other parameters, execution of these stored procedures fails. **SQLAgentOperatorRole** members cannot change job ownership to gain access to jobs that they do not already own.  
+**SQLAgentOperatorRole** members have additional permissions on local jobs and schedules. They can execute, stop, or start all local jobs, and they can delete the job history for any local job on the server. They can also enable or disable all local jobs and schedules on the server. To enable or disable local jobs or schedules, members of this role must use the stored procedures **sp_update_job** and **sp_update_schedule**. Only the parameters that specify the job or schedule name or identifier and the **\@enabled** parameter can be specified by members of **SQLAgentOperatorRole**. If they specify any other parameters, execution of these stored procedures fails. **SQLAgentOperatorRole** members cannot change job ownership to gain access to jobs that they do not already own.  
   
 The **Jobs**, **Alerts**, **Operators**, and **Proxies** nodes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer are visible to members of **SQLAgentOperatorRole**. Only the **Error Logs** node is not visible to members of this role.  
   
@@ -95,7 +96,7 @@ The following table summarizes **SQLAgentOperatorRole** permissions on [!INCLUDE
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Create/modify/delete|No|No|Yes  (owned jobs only)<br /><br />Cannot change job ownership.|No|Yes (owned schedules only)|No|  
 |View list (enumerate)|Yes|Yes<br /><br />Can get list of available operators for use in **sp_notify_operator** and the **Job Properties** dialog box of Management Studio.|Yes|Yes|Yes|Yes|  
-|Enable/disable|No|No|Yes<br /><br />**SQLAgentOperatorRole** members can enable or disable local jobs they do not own by using the stored procedure **sp_update_job** and specifying values for the **@enabled** and the **@job_id** (or **@job_name**) parameters. If a member of this role specifies any other parameters for this stored procedure, execution of the procedure will fail.|No|Yes<br /><br />**SQLAgentOperatorRole** members can enable or disable schedules they do not own by using the stored procedure **sp_update_schedule** and specifying values for the **@enabled** and the **@schedule_id** (or **@name**) parameters. If a member of this role specifies any other parameters for this stored procedure, execution of the procedure will fail.|Not applicable|  
+|Enable/disable|No|No|Yes<br /><br />**SQLAgentOperatorRole** members can enable or disable local jobs they do not own by using the stored procedure **sp_update_job** and specifying values for the **\@enabled** and the **\@job_id** (or **\@job_name**) parameters. If a member of this role specifies any other parameters for this stored procedure, execution of the procedure will fail.|No|Yes<br /><br />**SQLAgentOperatorRole** members can enable or disable schedules they do not own by using the stored procedure **sp_update_schedule** and specifying values for the **\@enabled** and the **\@schedule_id** (or **\@name**) parameters. If a member of this role specifies any other parameters for this stored procedure, execution of the procedure will fail.|Not applicable|  
 |View properties|Yes|Yes|Yes|Yes|Yes|Yes|  
 |Edit properties|No|No|Yes (owned jobs only)|No|Yes (owned schedules only)|No|  
 |Execute/stop/start|Not applicable|Not applicable|Yes|No|Not applicable|Not applicable|  

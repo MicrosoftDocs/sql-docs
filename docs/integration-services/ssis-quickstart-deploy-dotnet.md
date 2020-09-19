@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project with C# code in a .NET app"
 title: "Deploy an SSIS project with .NET code (C#) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project with C# code in a .NET app
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to write C# code to connect to a database server and deploy an SSIS project.
@@ -44,6 +45,10 @@ To deploy the project to Azure SQL Database, get the connection information you 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 5. Click **Show database connection strings**.
 6. Review the complete **ADO.NET** connection string. Optionally, your code can use a `SqlConnectionStringBuilder` to recreate this connection string with the individual parameter values that you provide.
+
+## Supported authentication method
+
+Refer to [authentication methods for deployment](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## Create a new Visual Studio project
 

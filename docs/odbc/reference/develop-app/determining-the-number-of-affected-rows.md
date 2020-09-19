@@ -1,4 +1,5 @@
 ---
+description: "Determining the Number of Affected Rows"
 title: "Determining the Number of Affected Rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "number of rows affected by update [ODBC]"
   - "data updates [ODBC], number of rows affected"
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Determining the Number of Affected Rows
 After an application updates, deletes, or inserts rows, it can call **SQLRowCount** to determine how many rows were affected. **SQLRowCount** returns this value whether or not the rows were updated, deleted, or inserted by executing an **UPDATE**, **DELETE**, or **INSERT** statement, by executing a positioned update or delete statement, or by calling **SQLSetPos**.  

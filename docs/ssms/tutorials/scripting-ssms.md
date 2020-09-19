@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: Script objects in SQL Server Management Studio"
-description: "A tutorial for scripting out objects in SSMS"
+title: SSMS Script objects
+description: "Generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS)."
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
 author: MashaMSFT
 ms.author: mathoma
@@ -205,7 +205,7 @@ This section covers how to script out [extended events](https://docs.microsoft.c
 
 4. Expand your **Sessions** node.
 
-5. Right-click the extended session you're interested in > **Script Session As** > **New Query Editor Window**:
+5. Right-click the extended session you're interested in > **Script Session As** > **CREATE To** > **New Query Editor Window**:
 
     ![Extended New Query Editor Window session](media/scripting-ssms/scriptxevents.png)
 

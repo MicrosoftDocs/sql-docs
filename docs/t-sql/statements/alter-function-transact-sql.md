@@ -1,4 +1,5 @@
 ---
+description: "ALTER FUNCTION (Transact-SQL)"
 title: "ALTER FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "modifying functions"
   - "functions [SQL Server], modifying"
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)
@@ -30,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax    
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -48,7 +49,7 @@ RETURNS return_data_type
 [ ; ]
 ```  
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -63,7 +64,7 @@ RETURNS TABLE
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- Transact-SQL Multistatement Table-valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -81,7 +82,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 [ ; ]  
 ```
 
-```  
+```syntaxsql
 -- Transact-SQL Function Clauses   
 <function_option>::=   
 {  
@@ -141,7 +142,7 @@ column_name AS computed_column_expression
 }  
 ```
   
-```
+```syntaxsql
 -- CLR Scalar and Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type   
@@ -154,7 +155,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- CLR Function Clauses
 <method_specifier>::=  
     assembly_name.class_name.method_name  
@@ -171,7 +172,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for In-Memory OLTP: Natively compiled, scalar user-defined function  
 ALTER FUNCTION [ schema_name. ] function_name    
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -258,7 +259,7 @@ RETURNS return_data_type
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
   
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the method of an assembly to bind with the function. *assembly_name* must match an existing assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current database with visibility on. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). *method_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a static method in the specified class.  
   
@@ -272,7 +273,7 @@ RETURNS return_data_type
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints.  
   
 \< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)**
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types.  
   
@@ -295,12 +296,12 @@ RETURNS return_data_type
  Specifies the function will have one or more of the following options.  
   
  ENCRYPTION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encrypts the catalog view columns that contains the text of the ALTER FUNCTION statement. Using ENCRYPTION prevents the function from being published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. ENCRYPTION cannot be specified for CLR functions.  
   
  SCHEMABINDING  
- Specifies that the function is bound to the database objects that it references. This condition will prevent changes to the function if other schema bound objects are referencing it.  
+ Specifies that the function is bound to the database objects that it references. When SCHEMABINDING is specified, the base objects cannot be modified in a way that would affect the function definition. The function definition itself must first be modified or dropped to remove dependencies on the object that is to be modified..  
   
  The binding of the function to the objects it references is removed only when one of the following actions occurs:  
   

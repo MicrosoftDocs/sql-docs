@@ -1,10 +1,9 @@
 ---
-title: "About OLE DB Properties | Microsoft Docs"
-description: "About OLE DB properties"
+title: "About OLE DB connection properties | Microsoft Docs"
+description: In OLE DB Driver for SQL Server, consumers set property values to request specific object behavior. Learn about setting properties.
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/20/2020"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
@@ -13,13 +12,36 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, properties"
   - "properties [OLE DB]"
   - "property values [OLE DB Driver for SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # About OLE DB Properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+<!--
+NOTE , GeneMi , 2020/May/20:
+    This SQL 2016+ article is a nearly exact duplicate of another SQL 2016+ article.
+    This article resides under docs/connect/oledb/ole-db-driver/.
+
+    The other article resides under docs/relational-databases/native-client-ole-db-provider/.
+    And, the other article has a SQL 2014 counterpart having its same GitHub directory path and filename, to support SQL 2014 OPS Versioning with SQL 2016+.
+
+    This path-file name is:
+'\sql-docs-pr\docs\connect\oledb\ole-db-driver\about-ole-db-properties.md'.
+
+    The other path-file is named:
+'\sql-docs-pr\docs\relational-databases\native-client-ole-db-provider\about-ole-db-properties.md'.
+
+    Therefore, maybe this docs/connect/oledb/... file should be deleted?
+
+1611957:  This NOTE relates to SEO content bug 1611957 about metadata 'title:' value duplication:
+    https://mseng.visualstudio.com/TechnicalContent/_workitems/edit/1611957
+
+PR 15068:  This HTML comment is being added by PR...
+    https://github.com/MicrosoftDocs/sql-docs-pr/pull/15068
+-->
 
   Consumers set property values to request specific object behavior. For example, consumers use properties to specify the interfaces to be exposed by a rowset. Consumers get the property values to determine the capabilities of an object, such as a rowset, a session, or a data source object.  
   

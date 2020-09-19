@@ -1,6 +1,6 @@
 ---
-title: "Fetching Rows | Microsoft Docs"
-description: "Fetching rows using the IRowset interface"
+title: "Fetching rows (OLE DB driver) | Microsoft Docs"
+description: Learn how consumers in OLE DB Driver for SQL Server use the IRowset interface to fetch rows, get data from rows, and manage rows.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -14,11 +14,11 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
   - "IRowset interface"
   - "OLE DB Driver for SQL Server, fetching"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Fetching Rows
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

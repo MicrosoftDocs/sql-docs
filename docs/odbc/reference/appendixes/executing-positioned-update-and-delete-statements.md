@@ -1,4 +1,5 @@
 ---
+description: "Executing Positioned Update and Delete Statements"
 title: "Executing Positioned Update and Delete Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "positioned updates [ODBC]"
   - "ODBC cursor library [ODBC], positioned update or delete"
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Executing Positioned Update and Delete Statements
 > [!IMPORTANT]  

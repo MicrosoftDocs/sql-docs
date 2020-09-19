@@ -1,6 +1,7 @@
 ---
-title: "Lesson 1: Creating a Report Server Project (Reporting Services) | Microsoft Docs"
-ms.date: 05/01/2019
+title: "Lesson 1: Create a Report Server Project | Microsoft Docs"
+description: "In this lesson, you create a report server project and a report definition (.rdl) file using Report Designer."
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -10,7 +11,7 @@ ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Lesson 1: Creating a Report Server Project (Reporting Services)
+# Lesson 1: Create a Report Server Project (Reporting Services)
 
 In this lesson, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*.
 
@@ -30,7 +31,8 @@ When you create reports with Report Designer, it creates a report server project
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > For VS, if you don't see Reporting Services in the left column, add the Report Designer by installing the SSDT workload. From the **Tools** menu, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Tools** menu, select **Extensions and Updates** > **Online**. In the center column, select **Microsoft Reporting Services Projects** > **Download** from the displayed extensions. For SSDT, See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > For VS, if you don't see Reporting Services in the left column, add the Report Designer by installing the SSDT workload. From the **Tools** menu, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Tools** menu, select **Extensions and Updates** > **Online**. In the center column, select **Microsoft Reporting Services Projects** > **Download** from the displayed extensions. For SSDT, See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). In Visual Studio 2019, if previous steps didn't work, try installing [Microsoft Reporting Service Project extension](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
+
 
 3. Select the **Report Server Project** icon &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in the center column of the **New Project** dialog box.
 

@@ -1,4 +1,5 @@
 ---
+description: "SQLWritePrivateProfileString Function"
 title: "SQLWritePrivateProfileString Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLWritePrivateProfileString [ODBC]"
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLWritePrivateProfileString Function
 **Conformance**  

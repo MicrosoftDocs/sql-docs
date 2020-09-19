@@ -1,4 +1,5 @@
 ---
+description: "Configure E-mail for a Reporting Services Service Application"
 title: "Configure E-mail for a Reporting Services Service Application | Microsoft Docs"
 ms.date: 05/10/2017
 ms.prod: reporting-services

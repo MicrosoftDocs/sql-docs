@@ -1,5 +1,6 @@
 ---
-title: "Configure a URL  (SSRS Configuration Manager) | Microsoft Docs"
+description: "Configure a URL  (SSRS Configuration Manager)"
+title: "Configure a URL  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -26,7 +27,7 @@ ms.author: maggies
   
 -   Set advanced URL properties to define additional URLs.  
   
- For more information about how URLs are stored and maintained or interoperability issues, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services Side-by-Side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
+ For more information about how URLs are stored and maintained or interoperability issues, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) and [Install Reporting Services and Internet Information Services Side-by-Side &#40;SSRS Native Mode&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). To review examples of URLs often used in a Reporting Services installation, see [Examples of URLs](#URLExamples) in this topic.  
   
 ## Prerequisites  
  Before you create or modify a URL, remember the following points:  
@@ -79,20 +80,20 @@ ms.author: maggies
   
 6.  If you have not done so already, verify that IIS (if it is installed) does not have virtual directory with the same name you plan to use.  
   
-7.  If you installed an SSL certificate, you can select it now to bind the URL to the SSL certificate that is installed on your computer.  
+7.  If you installed a TLS/SSL certificate, you can select it now to bind the URL to the TLS/SSL certificate that is installed on your computer.  
   
-8.  Optionally, if you select an SSL certificate, you can specify a custom port. The default is 443 but you can use any port that is available.  
+8.  Optionally, if you select a TLS/SSL certificate, you can specify a custom port. The default is 443 but you can use any port that is available.  
   
 9. Click **Apply** to create the URL.  
   
 10. Test the URL by clicking the link in the **URLs** section of page. Note that the report server database must be created and configured before you can test the URL. For instructions, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
->  If you have existing SSL Bindings and URL Reservations and you want to change the SSL Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
+>  If you have existing TLS Bindings and URL Reservations and you want to change the TLS Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
 > 
 >  1.  First remove all URL Reservations.  
-> 2.  Then remove all SSL Bindings.  
-> 3.  Then recreate the URLs and the SSL bindings.  
+> 2.  Then remove all TLS Bindings.  
+> 3.  Then recreate the URLs and the TLS bindings.  
 > 
 >  The previous steps can be completed using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager.  
 > 
@@ -108,9 +109,9 @@ ms.author: maggies
   
 3.  Specify the virtual directory. The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] listens on the same IP address and port as the Report Server Web service. If you configured the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to point to a different Report Server Web service, you must modify the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] URL settings in the RSReportServer.config file.  
   
-4.  If you installed an SSL certificate, you can select it to require that all requests to the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] are routed over HTTPS.  
+4.  If you installed a TLS/SSL certificate, you can select it to require that all requests to the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] are routed over HTTPS.  
   
-     Optionally, if you select an SSL certificate, you can specify a custom port. The default is 443 but you can use any port that is available.  
+     Optionally, if you select a TLS/SSL certificate, you can specify a custom port. The default is 443 but you can use any port that is available.  
   
 5.  Click **Apply** to create the URL.  
   
@@ -131,14 +132,14 @@ ms.author: maggies
  A host header is a unique name that allows multiple Web sites to share a single IP address and port. Host header names are easier to remember and type than IP address and port numbers. An example of a host header name might be www.adventure-works.com.  
   
  **SSL Port**  
- Specifies the port for SSL connections. The default port for SSL is 443.  
+ Specifies the port for TLS/SSL connections. The default port for TLS is 443.  
   
  **SSL Certificate**  
- Specifies the certificate name of an SSL certificate that you installed on this computer. If the certificate maps to a wildcard, you can use it for a report server connection.  
+ Specifies the certificate name of a TLS/SSL certificate that you installed on this computer. If the certificate maps to a wildcard, you can use it for a report server connection.  
   
  Specifies the fully qualified computer name for which the certificate is registered. The name that you specify must be identical to the name for which the certificate is registered.  
   
- You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ You must have a certificate installed to use this option. You must also modify the UrlRoot configuration setting in the RSReportServer.config file so that it specifies the fully qualified name of the computer for which the certificate is registered. For more information, see [Configure TLS Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### To set advanced properties on a URL  
   

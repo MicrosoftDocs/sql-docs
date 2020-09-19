@@ -1,5 +1,6 @@
 ---
 title: "sp_repldone (Transact-SQL) | Microsoft Docs"
+description: Updates the record that identifies the last distributed transaction of the server. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_repldone"
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_repldone (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Updates the record that identifies the last distributed transaction of the server. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -28,8 +29,7 @@ ms.author: sstein
   
 ## Syntax  
   
-```  
-  
+```
 sp_repldone [ @xactid= ] xactid   
         , [ @xact_seqno= ] xact_seqno   
     [ , [ @numtrans= ] numtrans ]   
@@ -71,8 +71,8 @@ sp_repldone [ @xactid= ] xactid
 ## Examples  
  When *xactid* is NULL, *xact_seqno* is NULL, and *reset* is **1**, all replicated transactions in the log are marked as distributed. This is useful when there are replicated transactions in the transaction log that are no longer valid and you want to truncate the log, for example:  
   
-```  
-EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 0, @reset = 1  
+```sql
+EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @reset = 1  
 ```  
   
 > [!CAUTION]  
@@ -83,5 +83,3 @@ EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

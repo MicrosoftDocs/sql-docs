@@ -1,4 +1,5 @@
 ---
+description: "REVOKE (Transact-SQL)"
 title: "REVOKE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -31,7 +32,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes a previously granted or denied permission.  
   
@@ -39,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Simplified syntax for REVOKE  
@@ -54,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ]
       [ CASCADE] [ AS principal ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 REVOKE   
@@ -78,7 +79,9 @@ REVOKE
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked. This is required when you are using the CASCADE argument.  
   
@@ -86,7 +89,7 @@ REVOKE
 >  If the principal has the specified permission without the GRANT option, the permission itself will be revoked.  
   
  ALL  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  This option does not revoke all possible permissions. Revoking ALL is equivalent to revoking the following permissions.  
   
@@ -130,7 +133,7 @@ REVOKE
 >  A cascaded revocation of a permission granted WITH GRANT OPTION will revoke both GRANT and DENY of that permission.  
   
  AS *principal*  
- Use the AS principal clause to indicate that you are revoking a permission that was granted by a principal other than you. For example, presume that user Mary is principal_id 12 and user Raul is principal 15. Both Mary and Raul grant a user named Steven the same permission. The sys.database_permissions table will indicate the permissions twice but they will each have a different grantor_prinicpal_id value. Mary could revoke the permission using the `AS RAUL` clause to remove Raul's grant of the permission.
+ Use the AS principal clause to indicate that you are revoking a permission that was granted by a principal other than you. For example, presume that user Mary is principal_id 12 and user Raul is principal_id 15. Both Mary and Raul grant a user named Steven the same permission. The sys.database_permissions table will indicate the permissions twice but they will each have a different grantor_principal_id value. Mary could revoke the permission using the `AS RAUL` clause to remove Raul's grant of the permission.
  
 The use of AS in this statement does not imply the ability to impersonate another user.  
   

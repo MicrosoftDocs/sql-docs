@@ -1,4 +1,5 @@
 ---
+description: "EXECUTE AS (Transact-SQL)"
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2019"
@@ -20,13 +21,12 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "switching execution context"
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Sets the execution context of a session.  
   
@@ -38,7 +38,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
 ## Syntax  
   
-```  
+```syntaxsql
 { EXEC | EXECUTE } AS <context_specification>  
 [;]  
   
@@ -48,9 +48,11 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 | CALLER  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  LOGIN  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
@@ -63,7 +65,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 > [!IMPORTANT]  
 >  While the context switch to the database user is active, any attempt to access resources outside of the database will cause the statement to fail. This includes USE *database* statements, distributed queries, and queries that reference another database that uses three- or four-part identifiers.  
   
- **'** *name* **'**  
+ '*name*'
  Is a valid user or login name. *name* must be a member of the **sysadmin** fixed server role, or exist as a principal in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) or [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectively.  
   
  *name* can be specified as a local variable.  
@@ -77,10 +79,10 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@***varbinary_variable*  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@***varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@***varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
+ COOKIE INTO @*varbinary_variable*  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct @*varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to @*varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
   
- **@** *varbinary_variable* is **varbinary(8000)**.  
+ @*varbinary_variable* is **varbinary(8000)**.  
   
 > [!NOTE]  
 >  The cookie **OUTPUT** parameter for is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(100)**. Applications should reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.  
@@ -89,7 +91,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
  When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.
  When used outside a module, the statement has no action.
  > [!NOTE]  
->  This option is not available in SQL Datawarehouse.  
+>  This option is not available in SQL Data Warehouse.  
   
 ## Remarks  
  The change in execution context remains in effect until one of the following occurs:  
@@ -124,9 +126,9 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 ## Using WITH NO REVERT  
  When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.  
   
- When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *@varbinary_variable* value.  
+ When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *\@varbinary_variable* value.  
   
- This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
+ This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *\@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
   
 ## Determining the Original Login  
  Use the [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) function to return the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  

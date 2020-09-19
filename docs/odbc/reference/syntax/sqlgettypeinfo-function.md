@@ -1,4 +1,5 @@
 ---
+description: "SQLGetTypeInfo Function"
 title: "SQLGetTypeInfo Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetTypeInfo function [ODBC]"
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetTypeInfo Function
 **Conformance**  

@@ -1,6 +1,7 @@
 ---
-title: "Description Property (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+description: "Description Property (SqlService Class)"
+title: "Description Property (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Description property"
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Description Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets a description of the referenced service.  
   
 ## Syntax  

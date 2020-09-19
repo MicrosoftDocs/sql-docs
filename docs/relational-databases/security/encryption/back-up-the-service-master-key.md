@@ -1,5 +1,6 @@
 ---
 title: "Back Up the Service Master Key | Microsoft Docs"
+description: Learn how to back up the service master key in SQL Server by using Transact-SQL. The service master key is the root of the encryption hierarchy.
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -9,11 +10,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "service master key [SQL Server], exporting"
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ---
 # Back Up the Service Master Key
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This article describes how to back up the Service Master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The service master key is the root of the encryption hierarchy. It should be backed up and stored in a secure, off-site location. Creating this backup should be one of the first administrative actions performed on the server.  
 
 ## Before You Begin  
@@ -62,7 +63,5 @@ Requires CONTROL permission on the database.
 8. Copy the file to the backup medium and verify the copy.  
   
 9. Store the backup in a secure, off-site location.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) and [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  

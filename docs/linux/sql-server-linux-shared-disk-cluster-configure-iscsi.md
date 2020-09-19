@@ -1,17 +1,18 @@
 ---
-title: Configure failover cluster instance storage iSCSI - SQL Server on Linux
-description: 
+title: Configure iSCSI FCI storage  - SQL Server on Linux
+description: Learn to configure a failover cluster instance (FCI) using iSCSI for SQL Server on Linux. 
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ---
 # Configure failover cluster instance - iSCSI - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains how to configure iSCSI storage for a failover cluster instance (FCI) on Linux. 
 
@@ -131,208 +132,209 @@ For more information on iSCSI initiator for the supported distributions, consult
 
 12.	For system databases or anything stored in the default data location, follow these steps. Otherwise, skip to Step 13.
 
-   *	Ensure that SQL Server is stopped on the server that you are working on.
+   * Ensure that SQL Server is stopped on the server that you are working on.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *	Switch fully to be the superuser. You will not receive any acknowledgement if successful.
-
-    ```bash
-    sudo -i
-    ```
-
-   *	Switch to be the mssql user. You will not receive any acknowledgement if successful.
-
-    ```bash
-    su mssql
-    ```
-
-   *	Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    \<TempDir> is the name of the folder. The example below creates a folder named /var/opt/mssql/TempDir.
-
-    ```bash
-    mkdir /var/opt/mssql/TempDir
-    ```
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ```
     
-   *	Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
+   * Switch fully to be the superuser. You will not receive any acknowledgement if successful.
 
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir> is the name of the folder from the previous step.
+        ```bash
+        sudo -i
+        ```
     
-   *	Verify that the files are in the directory.
+   * Switch to be the mssql user. You will not receive any acknowledgement if successful.
 
-    ```bash
-    ls \<TempDir>
-    ```
-    \<TempDir> is the name of the folder from Step d.
+        ```bash
+        su mssql
+        ```
+    
+   * Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
 
-   *	Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
+        ```bash
+        mkdir <TempDir>
+        ```
+    
+        \<TempDir> is the name of the folder. The example below creates a folder named /var/opt/mssql/TempDir.
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+        ```bash
+        mkdir /var/opt/mssql/TempDir
+        ```
+        
+   * Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
 
-   *	Verify that the files have been deleted. The picture below shows an example of the entire sequence from c through h.
+        ```bash
+        cp /var/opt/mssql/data/* <TempDir>
+        ```
+    
+        \<TempDir> is the name of the folder from the previous step.
+    
+   * Verify that the files are in the directory.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-    ![45-CopyMove][8]
+        ```bash
+        ls \<TempDir>
+        ```
  
-   *	Type `exit` to switch back to the root user.
+        \<TempDir> is the name of the folder from Step d.
 
-   *	Mount the iSCSI logical volume in the SQL Server data folder. You will not receive any acknowledgement if successful.
+   * Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
 
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
-    ``` 
+        ```bash
+        rm - f /var/opt/mssql/data/*
+        ```
+    
+   * Verify that the files have been deleted. The picture below shows an example of the entire sequence from c through h.
 
-    \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The following example syntax matches the volume group and logical volume from the previous command.
+        ```bash
+        ls /var/opt/mssql/data
+        ```
+    
+        ![45-CopyMove][8]
 
-    ```bash
-    mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
-    ``` 
+   * Type `exit` to switch back to the root user.
 
-   *	Change the owner of the mount to mssql. You will not receive any acknowledgement if successful.
+   * Mount the iSCSI logical volume in the SQL Server data folder. You will not receive any acknowledgement if successful.
 
-    ```bash
-    chown mssql /var/opt/mssql/data
-    ```
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
+        ```
 
-   *	Change ownership of the group of the mount to mssql. You will not receive any acknowledgement if successful.
+        \<VolumeGroupName> is the name of the volume group and \<LogicalVolumeName> is the name of the logical volume that was created. The following example syntax matches the volume group and logical volume from the previous command.
 
-    ```bash
-    chgrp mssql /var/opt/mssql/data
-    ``` 
+        ```bash
+        mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
+        ```
 
-   *	Switch to the mssql user. You will not receive any acknowledgement if successful.
+   * Change the owner of the mount to mssql. You will not receive any acknowledgement if successful.
 
-    ```bash
-    su mssql
-    ``` 
+        ```bash
+        chown mssql /var/opt/mssql/data
+        ```
 
-   *	Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
+   * Change ownership of the group of the mount to mssql. You will not receive any acknowledgement if successful.
 
-    ```bash
-    cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
-    ``` 
+        ```bash
+        chgrp mssql /var/opt/mssql/data
+        ```
 
-   *	Verify the files are there.
+   * Switch to the mssql user. You will not receive any acknowledgement if successful.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ``` 
- 
+        ```bash
+        su mssql
+        ``` 
+
+   * Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
+
+        ```bash
+        cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
+        ``` 
+    
+   * Verify the files are there.
+
+        ```bash
+        ls /var/opt/mssql/data
+        ``` 
+
    *	Enter `exit` to not be mssql.
-    
+
    *	Enter `exit` to not be root.
 
    *	Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ``` 
- 
+        ```bash
+        sudo systemctl start mssql-server
+        sudo systemctl status mssql-server
+        ``` 
+
    *	Stop SQL Server and verify it is shut down.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ``` 
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ``` 
 
 13.	For things other than system databases, such as user databases or backups, follow these steps. If only using the default location, skip to Step 14.
 
    *	Switch to be the superuser. You will not receive any acknowledgement if successful.
 
-    ```bash
-    sudo -i
-    ```
+        ```bash
+        sudo -i
+        ```
 
    *	Create a folder that will be used by SQL Server. 
 
-    ```bash
-    mkdir <FolderName>
-    ```
+        ```bash
+        mkdir <FolderName>
+        ```
 
-    \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
+        \<FolderName> is the name of the folder. The folder's full path needs to be specified if not in the right location. The example below creates a folder named /var/opt/mssql/userdata.
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+        ```bash
+        mkdir /var/opt/mssql/userdata
+        ```
 
    *	Mount the iSCSI logical volume in the folder that was created in the previous step. You will not receive any acknowledgement if successful.
-    
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
 
-    \<VolumeGroupName> is the name of the volume group, \<LogicalVolumeName> is the name of the logical volume that was created, and \<FolderName> is the name of the folder. Example syntax is shown below.
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    ```bash
-    mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        \<VolumeGroupName> is the name of the volume group, \<LogicalVolumeName> is the name of the logical volume that was created, and \<FolderName> is the name of the folder. Example syntax is shown below.
+
+        ```bash
+        mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
    *	Change ownership of the folder created to mssql. You will not receive any acknowledgement if successful.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> is the name of the folder that was created. An example is shown below.
+        \<FolderName> is the name of the folder that was created. An example is shown below.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
-  
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
+
    *	Change the group of the folder created to mssql. You will not receive any acknowledgement if successful.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> is the name of the folder that was created. An example is shown below.
+        \<FolderName> is the name of the folder that was created. An example is shown below.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
 
    *	Type `exit` to no longer be the superuser.
 
    *	To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
   
-    ![50-ExampleCreateSSMS][9]
+        ![50-ExampleCreateSSMS][9]
 
    *	Unmount the share 
 
-    ```bash
-    sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
+        ```bash
+        sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    \<VolumeGroupName> is the name of the volume group, \<LogicalVolumeName> is the name of the logical volume that was created, and \<FolderName> is the name of the folder. Example syntax is shown below.
+        \<VolumeGroupName> is the name of the volume group, \<LogicalVolumeName> is the name of the logical volume that was created, and \<FolderName> is the name of the folder. Example syntax is shown below.
 
-    ```bash
-    sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        ```bash
+        sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
 14.	Configure the server so that only Pacemaker can activate the volume group.
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
- 
+
 15.	Generate a list of the volume groups on the server. Anything listed that is not the iSCSI disk is used by the system, such as for the OS disk.
 
     ```bash
@@ -348,8 +350,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     \<ListOfVGsNotUsedByPacemaker> is the list of volume groups from the output of Step 20 that will not be used by the FCI. Put each one in quotes and separate by a comma. An example is shown below.
 
     ![55-ListOfVGs][11]
- 
- 
+
 17.	When Linux starts, it will mount the file system. To ensure that only Pacemaker can mount the iSCSI disk, rebuild the root filesystem image. 
 
     Run the following command which may take a few moments to complete. You will get no message back if successful.
@@ -367,6 +368,7 @@ For more information on iSCSI initiator for the supported distributions, consult
     ```bash
     sudo vgs
     ``` 
+
 23.	Start SQL Server and verify it can be started on this server.
 
     ```bash
@@ -380,14 +382,15 @@ For more information on iSCSI initiator for the supported distributions, consult
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
+
 25.	Repeat Steps 1 - 6 on any other servers that will participate in the FCI.
 
 You are now ready to configure the FCI.
 
-|Distribution |Topic 
-|----- |-----
-|**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
+| Distribution | Topic |
+| :----------- | :---- |
+| Red Hat Enterprise Linux with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
+| SUSE Linux Enterprise Server with HA add-on | [Configure](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
 ## Next steps
 

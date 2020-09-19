@@ -1,21 +1,22 @@
 ---
-title: "Table-Valued Object Properties (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Table-Valued Object Properties (Visual Database Tools)"
+title: Table-Valued Object Properties
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.designers.properties.TVO"
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Table-Valued Object Properties (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 These properties appear in the Properties window when you select a table-valued object in **Query and View Designer**. The table-valued object could be a view, synonym, derived table, or table-valued function. Unless otherwise noted, these properties are read-only in the **Properties** window.  
   
 > [!NOTE]  

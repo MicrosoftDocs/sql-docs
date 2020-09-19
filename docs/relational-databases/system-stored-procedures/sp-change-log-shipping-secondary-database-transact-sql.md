@@ -1,4 +1,5 @@
 ---
+description: "sp_change_log_shipping_secondary_database (Transact-SQL)"
 title: "sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_change_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes secondary database settings.  
   
@@ -96,8 +97,6 @@ sp_change_log_shipping_secondary_database
 1.  Changes the settings in the **log_shipping_secondary_database** records as necessary.  
   
 2.  Changes the local monitor record in **log_shipping_monitor_secondary** on the secondary server using supplied arguments, if necessary.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Permissions  
  Only members of the **sysadmin** fixed server role can run this procedure.  

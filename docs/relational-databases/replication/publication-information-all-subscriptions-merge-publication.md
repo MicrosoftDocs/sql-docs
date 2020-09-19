@@ -1,6 +1,7 @@
 ---
-title: "Publication Information, All Subscriptions (Merge Publication) | Microsoft Docs"
-ms.custom: ""
+title: "All Subscriptions (Merge - SSMS)"
+description: Desribes the 'All Subscriptions' tab of the selected Merge Publication in SQL Server Management Studio (SSMS). 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Publication Information, All Subscriptions (Merge Publication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **All Subscriptions** tab displays information on all subscriptions to the selected merge publication.  
   
 ## Options  

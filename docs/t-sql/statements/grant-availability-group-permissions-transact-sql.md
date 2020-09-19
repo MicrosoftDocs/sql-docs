@@ -1,6 +1,8 @@
 ---
-title: "GRANT Availability Group Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Availability Group Permissions"
+description: Grant permissions on an Always On availability group.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "06/12/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -19,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on an Always On availability group.  
   
@@ -28,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
         TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -41,7 +43,9 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an availability group. For a list of the permissions, see the Remarks section later in this topic.  
   

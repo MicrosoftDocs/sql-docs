@@ -1,5 +1,6 @@
 ---
-title: "Add a Filter to a Dataset (Report Builder and SSRS) | Microsoft Docs"
+title: "Add a Filter to a Dataset (Report Builder) | Microsoft Docs"
+description: Learn how to add a filter to a dataset to limit the data in a report after the data is retrieved from an external data source.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

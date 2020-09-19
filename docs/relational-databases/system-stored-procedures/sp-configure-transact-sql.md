@@ -1,7 +1,8 @@
 ---
+description: "sp_configure (Transact-SQL)"
 title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_configure"
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sp_configure (Transact-SQL)
@@ -31,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlal
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 sp_configure [ [ @configname = ] 'option_name'   
@@ -83,6 +84,10 @@ RECONFIGURE
 ## Remarks  
  Use **sp_configure** to display or change server-level settings. To change database-level settings, use ALTER DATABASE. To change settings that affect only the current user session, use the SET statement.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## Updating the Running Configuration Value  
  When you specify a new *value* for an *option*, the result set shows this value in the **config_value** column. This value initially differs from the value in the **run_value** column, which shows the currently running configuration value. To update the running configuration value in the **run_value** column, the system administrator must run either RECONFIGURE or RECONFIGURE WITH OVERRIDE.  
   

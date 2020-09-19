@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting Oracle Publishers"
 title: "Troubleshooting Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Troubleshooting Oracle Publishers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic lists a number of issues that might arise when configuring and using an Oracle Publisher.  
   
 ## An Error Is Raised Regarding Oracle Client and Networking Software  
@@ -72,8 +73,6 @@ ms.author: "mathoma"
 2.  Issue the SQL command `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Issue the SQL command `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## SQL Server Error 21663 Is Raised Regarding the Lack of a Primary Key  
  Articles in transactional publications must have a valid primary key. If they do not have a valid primary key, you will receive the following error message when you attempt to add an article:  

@@ -1,4 +1,5 @@
 ---
+description: "REVERT (Transact-SQL)"
 title: "REVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -22,9 +23,10 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # REVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
 
   Switches the execution context back to the caller of the last EXECUTE AS statement.  
   
@@ -38,9 +40,11 @@ REVERT
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH COOKIE = @*varbinary_variable*  
- Specifies the cookie that was created in a corresponding [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) stand-alone statement. *@varbinary_variable* is **varbinary(100)**.  
+ Specifies the cookie that was created in a corresponding [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) stand-alone statement. *\@varbinary_variable* is **varbinary(100)**.  
   
 ## Remarks  
  REVERT can be specified within a module such as a stored procedure or user-defined function, or as a stand-alone statement. When specified inside a module, REVERT is applicable only to EXECUTE AS statements defined in the module. For example, the following stored procedure issues an `EXECUTE AS` statement followed by a `REVERT` statement.  
@@ -71,9 +75,9 @@ EXECUTE dbo.usp_myproc;
  When specified as a standalone statement, REVERT applies to EXECUTE AS statements defined within a batch or session. REVERT has no effect if the corresponding EXECUTE AS statement contains the WITH NO REVERT clause. In this case, the execution context remains in effect until the session is dropped.  
   
 ## Using REVERT WITH COOKIE  
- The EXECUTE AS statement that is used to set the execution context of a session can include the optional clause WITH NO REVERT COOKIE = @*varbinary_variable*. When this statement is run, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to @*varbinary_variable*. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the correct *@varbinary_variable* value.  
+ The EXECUTE AS statement that is used to set the execution context of a session can include the optional clause WITH NO REVERT COOKIE = @*varbinary_variable*. When this statement is run, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to @*varbinary_variable*. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the correct *\@varbinary_variable* value.  
   
- This mechanism is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications across multiple end users. Because the value passed to *@varbinary_variable* is known only to the caller of the EXECUTE AS statement (in this case, the application), the caller can guarantee that the execution context they establish cannot be changed by the end user that invokes the application. After the execution context is reverted, the application can switch context to another principal.  
+ This mechanism is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications across multiple end users. Because the value passed to *\@varbinary_variable* is known only to the caller of the EXECUTE AS statement (in this case, the application), the caller can guarantee that the execution context they establish cannot be changed by the end user that invokes the application. After the execution context is reverted, the application can switch context to another principal.  
   
 ## Permissions  
  No permissions are required.  

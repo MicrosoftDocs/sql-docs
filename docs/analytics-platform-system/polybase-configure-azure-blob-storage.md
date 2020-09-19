@@ -1,5 +1,5 @@
 ---
-title: "Configure PolyBase to access external data in Azure Blob storage | Microsoft Docs"
+title: "Use PolyBase to access external data in Azure Blob storage"
 description: Explains how to configure PolyBase in Parallel Data Warehouse to connect to external Hadoop. 
 author: mzaman1 
 ms.prod: sql
@@ -8,6 +8,7 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 # Configure PolyBase to access external data in Azure Blob storage
 

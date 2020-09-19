@@ -1,8 +1,9 @@
 ---
+description: "Handler Property Example (VC++)"
 title: "Handler Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,14 +13,14 @@ dev_langs:
 helpviewer_keywords: 
   - "Handler property [ADO], VC++ example"
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Handler Property Example (VC++)
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- This example demonstrates the [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object [Handler](../../../ado/reference/rds-api/handler-property-rds.md) property. (See [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md) for more details.)  
+ This example demonstrates the [RDS DataControl](./datacontrol-object-rds.md) object [Handler](./handler-property-rds.md) property. (See [DataFactory Customization](../../guide/remote-data-service/datafactory-customization.md) for more details.)  
   
  Assume the following sections in the parameter file, Msdfmap.ini, located on the server:  
   
@@ -31,7 +32,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Your code looks like the following. The command assigned to the [SQL](../../../ado/reference/rds-api/sql-property.md) property will match the ***AuthorById*** identifier and will retrieve a row for author Michael O'Leary. Although the [Connect](../../../ado/reference/rds-api/connect-property-rds.md) property in your code specifies the Northwind data source, that data source will be overwritten by the Msdfmap.ini *connect* section. The **DataControl** object [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) property is assigned to a disconnected [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object purely as a coding convenience.  
+ Your code looks like the following. The command assigned to the [SQL](./sql-property.md) property will match the ***AuthorById*** identifier and will retrieve a row for author Michael O'Leary. Although the [Connect](./connect-property-rds.md) property in your code specifies the Northwind data source, that data source will be overwritten by the Msdfmap.ini *connect* section. The **DataControl** object [Recordset](./recordset-sourcerecordset-properties-rds.md) property is assigned to a disconnected [Recordset](../ado-api/recordset-object-ado.md) object purely as a coding convenience.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -123,27 +124,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handler Property (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)   
+ [Handler Property (RDS)](./handler-property-rds.md)

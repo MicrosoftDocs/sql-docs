@@ -1,7 +1,8 @@
 ---
+description: "xp_cmdshell (Transact-SQL)"
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "12/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_cmdshell"
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Spawns a Windows command shell and passes in a string for execution. Any output is returned as rows of text.  
   
@@ -91,7 +92,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
     > [!NOTE]  
     >  You can also configure this proxy account using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] by right-clicking **Properties** on your server name in Object Explorer, and looking on the **Security** tab for the **Server proxy account** section.  
   
-3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], using the master database, execute the `GRANT exec ON xp_cmdshell TO '<somelogin>'` statement to give specific non-**sysadmin** users the ability to execute **xp_cmdshell**. The specified login must be mapped to a user in the master database.  
+3.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], using the master database, execute the `GRANT exec ON xp_cmdshell TO N'<some_user>';` statement to give specific non-**sysadmin** users the ability to execute **xp_cmdshell**. The specified user must exist in the master database.  
   
  Now non-administrators can launch operating system processes with **xp_cmdshell** and those processes run with the permissions of the proxy account that you have configured. Users with CONTROL SERVER permission (members of the **sysadmin** fixed server role) will continue to receive the permissions of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account for child processes that are launched by **xp_cmdshell**.  
   
@@ -118,7 +119,7 @@ REVERT ;
  The following example shows the `xp_cmdshell` extended stored procedure executing a directory command.  
   
 ```  
-EXEC master..xp_cmdshell 'dir *.exe''  
+EXEC master..xp_cmdshell 'dir *.exe'  
 ```  
   
 ### B. Returning no output  
@@ -128,7 +129,7 @@ EXEC master..xp_cmdshell 'dir *.exe''
 USE master;  
   
 EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck  
-    \\server2\backups\SQLbcks, NO_OUTPUT';  
+    \\server2\backups\SQLbcks', NO_OUTPUT;  
 GO  
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_help_spatial_geometry_histogram (Transact-SQL)"
 title: "sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geometry_histogram"
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_spatial_geometry_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Facilitates the keying of bounding box and grid parameters for a spatial index.  
   

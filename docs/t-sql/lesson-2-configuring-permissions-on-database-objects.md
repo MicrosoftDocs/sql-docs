@@ -1,6 +1,7 @@
 ---
-title: "T-SQL Tutorial: Configure permissions on database objects | Microsoft Docs"
-ms.custom: ""
+description: "Lesson 2: Configure permissions on database objects"
+title: "Tutorial: Configure permissions on db objects"
+ms.custom: "seo-lt-2019"
 ms.date: "07/31/2018"
 ms.prod: sql
 ms.technology: t-sql

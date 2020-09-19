@@ -1,5 +1,6 @@
 ---
 title: "Hide an Instance of SQL Server Database Engine | Microsoft Docs"
+description: "Find out how to hide an instance of the SQL Server Database Engine. Client computers can't use the SQL Server Browser service to locate hidden instances."
 ms.custom: ""
 ms.date: "08/19/2015"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], hiding instances"
   - "hiding instances of Database Engine"
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Hide an Instance of SQL Server Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to hide an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service to enumerate instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] installed on the computer. This enables client applications to browse for a server, and helps clients distinguish between multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the same computer. You can use the following procedure to prevent the SQL Server Browser service from exposing an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to client computers that try to locate the instance by using the **Browse** button.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
@@ -43,6 +44,6 @@ To avoid this, create an alias in all the nodes of the clustered instance or all
 ## See Also  
  [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Description of SQL Virtual Server client connections](https://support.microsoft.com/kb/273673)   
- [How to assign a static port to a SQL Server named instance - and avoid a common pitfall](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
+ [How to assign a static port to a SQL Server named instance - and avoid a common pitfall](https://deep.data.blog/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall/)  
   
   

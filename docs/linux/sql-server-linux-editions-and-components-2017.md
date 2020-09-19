@@ -1,6 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2017 ~ Linux"
-ms.date: 09/14/2017
+description: This article describes features supported by the various editions of SQL Server 2017 on Linux. It helps you choose from available editions and components.
+ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -27,17 +28,17 @@ ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2017 on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides details of features supported by the various editions of SQL Server 2017 on Linux. For editions and supported features of SQL Server on Windows, see [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 For the latest release notes and what's new information, see the following:
-- [SQL Server on Linux release notes](sql-server-linux-release-notes.md)
-- [What's new in SQL Server on Linux](sql-server-linux-whats-new.md)
+- [SQL Server 2017 on Linux release notes](sql-server-linux-release-notes.md)
+- [What's new in SQL Server 2017 on Linux](sql-server-linux-whats-new.md)
 
-For a list of SQL Server features not available on Linux, see [Unsupported features and services](sql-server-linux-release-notes.md#Unsupported).
+For a list of SQL Server features not available on Linux, see [Unsupported features and services](#Unsupported).
 
 ### Try SQL Server!    
     
@@ -49,7 +50,7 @@ For a list of SQL Server features not available on Linux, see [Unsupported featu
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Definition|  
 |---------------------------------------|----------------|  
 |Enterprise|The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance enabling high service levels for mission-critical workloads.|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management for departments and small organizations to run their applications and supports common development tools for on-premise and cloud - enabling effective database management with minimal IT resources.|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management for departments and small organizations to run their applications and supports common development tools for on-premises and cloud - enabling effective database management with minimal IT resources.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large scale Web properties.|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications.|  
 |Express edition|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
@@ -69,7 +70,7 @@ SQL Server 2017 on Linux supports the SQL Server database engine. The following 
 **Developer, Enterprise Core, and  Evaluation editions**  
 For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise edition in the following tables.
 
-The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
+The Developer edition continues to support only one client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale limits  
   
@@ -106,7 +107,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Encrypted backup|Yes|Yes|No|No|
 |Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|
   
-<sup>1</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
+<sup>1</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition, there is support for two nodes. 
 
 <sup>2</sup> On Enterprise edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas. 
 
@@ -203,14 +204,40 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Planar and geodetic datatypes|Yes|Yes|Yes|Yes| 
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|   
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|   
+## <a name="Unsupported"></a> Unsupported features & services
 
+The following features and services are not available SQL Server 2017 on Linux. The support of these features will be increasingly enabled over time.
+
+| Area | Unsupported feature or service |
+|-----|-----|
+| **Database engine** | Merge replication |
+| &nbsp; | Stretch DB |
+| &nbsp; | PolyBase |
+| &nbsp; | Distributed query with 3rd-party connections |
+| &nbsp; | Linked Servers to data sources other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
+| &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
+| &nbsp; | Filetable, FILESTREAM |
+| &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
+| &nbsp; | Buffer Pool Extension |
+| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
+| &nbsp; | Alerts |
+| &nbsp; | Log Reader Agent |
+| &nbsp; | Managed Backup |
+| **High Availability** | Database mirroring  |
+| **Security** | Extensible Key Management |
+| &nbsp; | AD Authentication for Linked Servers | 
+| &nbsp; | AD Authentication for Availability Groups (AGs) | 
+| **Services** | SQL Server Browser |
+| &nbsp; | SQL Server R services |
+| &nbsp; | StreamInsight |
+| &nbsp; | Analysis Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | Data Quality Services |
+| &nbsp; | Master Data Services |
   
-## Next steps 
+## Next steps
+ [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Editions and supported features for SQL Server 2014 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
-
-  
-  
+ [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)

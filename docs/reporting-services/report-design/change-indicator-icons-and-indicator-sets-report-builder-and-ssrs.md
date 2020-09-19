@@ -1,5 +1,6 @@
 ---
-title: "Change Indicator Icons and Indicator Sets (Report Builder and SSRS) | Microsoft Docs"
+title: "Change Indicator Icons and Indicator Sets (Report Builder) | Microsoft Docs"
+description: Learn how to change the indicator icons and sets to include different, more, or fewer indicator icons enabling you to depict data better in Report Builder.  
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

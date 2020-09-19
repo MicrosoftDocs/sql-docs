@@ -1,10 +1,8 @@
 ---
-title: "Run the Transact-SQL Debugger | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Run the Transact-SQL Debugger
+description: Learn how customize the Transact-SQL debugger, and how to use it to debug your Transact-SQL code. You can run the debugger on an instance of the Database Engine that is on another computer.
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, sysadmin requirement"
@@ -21,53 +19,63 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "03/14/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Run the Transact-SQL Debugger
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. Then, you can run your [!INCLUDE[tsql](../../includes/tsql-md.md)] code in debug mode until you stop the debugger. You can set options to customize how the debugger runs.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. Then, you can run your [!INCLUDE[tsql](../../includes/tsql-md.md)] code in debug mode until you stop the debugger. You can set options to customize how the debugger runs.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## Starting and Stopping the Debugger
+
+The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger are as follows:
+
+- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
   
-## Starting and Stopping the Debugger  
- The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger are as follows:  
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] must be running under a Windows account that is a member of the sysadmin fixed server roll.
+
+- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window must be connected by using either a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login that is a member of the sysadmin fixed server role.
   
--   If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window must be connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) or later. You cannot run the debugger when the Query Editor window is connected to an instance that is in single-user mode.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] must be running under a Windows account that is a member of the sysadmin fixed server roll.  
+ We recommend that [!INCLUDE[tsql](../../includes/tsql-md.md)] code be debugged on a test server, not a production server, for the following reasons:
   
--   The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window must be connected by using either a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login that is a member of the sysadmin fixed server role.  
+- Debugging is a highly privileged operation. Therefore, only members of the sysadmin fixed server role are allowed to debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
--   The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window must be connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) or later. You cannot run the debugger when the Query Editor window is connected to an instance that is in single-user mode.  
-  
- We recommend that [!INCLUDE[tsql](../../includes/tsql-md.md)] code be debugged on a test server, not a production server, for the following reasons:  
-  
--   Debugging is a highly privileged operation. Therefore, only members of the sysadmin fixed server role are allowed to debug in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
--   Debugging sessions often run for long periods of time while you investigate the operations of several [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Locks, such as update locks, that are acquired by the session might be held for extended periods, until the session is ended or the transaction committed or rolled back.  
+- Debugging sessions often run for long periods of time while you investigate the operations of several [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. Locks, such as update locks, that are acquired by the session might be held for extended periods, until the session is ended or the transaction committed or rolled back.  
   
  Starting the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger puts the Query Editor window into debug mode. When the Query Editor window enters debug mode, the debugger pauses at the first line of code. You can then step through the code, pause the execution on specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and use the debugger windows to view the current execution state. You can start the debugger by either clicking the **Debug** button on the **Query** toolbar or by clicking **Start Debugging** on the **Debug** menu.  
   
  The Query Editor window stays in debug mode until either the last statement in the Query Editor window finishes or you stop debug mode. You can stop debug mode and statement execution by using any one of the following methods:  
   
--   On the **Debug** menu, click **Stop Debugging**.  
+- On the **Debug** menu, click **Stop Debugging**.  
   
--   On the **Debug** toolbar, click the **Stop Debugging** button.  
+- On the **Debug** toolbar, click the **Stop Debugging** button.  
   
--   On the **Query** menu, click **Cancel Executing Query**.  
+- On the **Query** menu, click **Cancel Executing Query**.  
   
--   On the **Query** toolbar, click the **Cancel Executing Query** button.  
+- On the **Query** toolbar, click the **Cancel Executing Query** button.  
   
  You can also stop debug mode and allow for the remaining [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to finish executing by clicking **Detach All** on the **Debug** menu.  
   
-## Controlling the Debugger  
+## Controlling the Debugger
+
  You can control how the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger operates by using the following menu commands, toolbars, and shortcuts:  
   
--   The **Debug** menu and the **Debug** toolbar. Both the **Debug** menu and **Debug** toolbar are inactive until the focus is placed in an open Query Editor window. They remain active until the current project is closed.  
+- The **Debug** menu and the **Debug** toolbar. Both the **Debug** menu and **Debug** toolbar are inactive until the focus is placed in an open Query Editor window. They remain active until the current project is closed.  
   
--   The debugger keyboard shortcuts.  
+- The debugger keyboard shortcuts.  
   
--   The Query Editor shortcut menu. The shortcut menu is displayed when you right-click a line in a Query Editor window. When the Query Editor window is in debug mode, the shortcut menu displays debugger commands that apply to the selected line or string.  
+- The Query Editor shortcut menu. The shortcut menu is displayed when you right-click a line in a Query Editor window. When the Query Editor window is in debug mode, the shortcut menu displays debugger commands that apply to the selected line or string.  
   
--   Menu items and context commands in the windows that are opened by the debugger, such as the **Watch** or **Breakpoints** windows.  
+- Menu items and context commands in the windows that are opened by the debugger, such as the **Watch** or **Breakpoints** windows.  
   
  The following table shows the debugger menu commands, toolbar buttons, and keyboard shortcuts.  
   
@@ -99,11 +107,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**Disable All Breakpoints**|Not available|Not available|Not available|Disable all breakpoints.|  
 |Not available|**Add Watch**|Not available|Not available|Add the selected expression to the **Watch** window.|  
   
-## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
- [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)  
-  
-  
+## See Also
+
+- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
+- [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)

@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_subscriptions (Transact-SQL)"
 title: "MSmerge_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_subscriptions system table"
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_subscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_subscriptions** table contains one row for each subscription serviced by the Merge Agent at the Subscriber. This table is stored in the distribution database.  
   

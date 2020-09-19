@@ -1,5 +1,6 @@
 ---
-title: "Member Revision History (Master Data Services) | Microsoft Docs"
+description: "Member Revision History (Master Data Services)"
+title: Member Revision History
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Member Revision History (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A member revision history is recorded each time a member is changed, if the entity transaction log type is member.  
   

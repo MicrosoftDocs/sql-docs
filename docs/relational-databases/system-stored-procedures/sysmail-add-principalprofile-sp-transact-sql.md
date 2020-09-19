@@ -1,4 +1,5 @@
 ---
+description: "sysmail_add_principalprofile_sp (Transact-SQL)"
 title: "sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_add_principalprofile_sp"
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_add_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permission for an msdb database principal to use a Database Mail profile. The database principal must map to a SQL Server authentication user, a Windows User, or a Windows Group.
   
@@ -54,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- To make a profile public, specify a **@principal_id** of **0** or a **@principal_name** of **public**. A public profile is available to all users in the **msdb** database, though users must also be a member of **DatabaseMailUserRole** to execute **sp_send_dbmail**.  
+ To make a profile public, specify a **\@principal_id** of **0** or a **\@principal_name** of **public**. A public profile is available to all users in the **msdb** database, though users must also be a member of **DatabaseMailUserRole** to execute **sp_send_dbmail**.  
   
- A database user may only have one default profile. When **@is_default** is '**1**' and the user is already associated with one or more profiles, the specified profile becomes the default profile for the user. The profile that was previously the default profile is still associated with the user, but is no longer the default profile.  
+ A database user may only have one default profile. When **\@is_default** is '**1**' and the user is already associated with one or more profiles, the specified profile becomes the default profile for the user. The profile that was previously the default profile is still associated with the user, but is no longer the default profile.  
   
- When **@is_default** is '**0**' and no other association exists, the stored procedure returns an error.  
+ When **\@is_default** is '**0**' and no other association exists, the stored procedure returns an error.  
   
  The stored procedure **sysmail_add_principalprofile_sp** is in the **msdb** database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database is not **msdb**.  
   

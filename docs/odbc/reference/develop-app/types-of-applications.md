@@ -1,4 +1,5 @@
 ---
+description: "Types of Applications"
 title: "Types of Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "application upgrades [ODBC], application types"
   - "application compatibility issues [ODBC]"
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Types of Applications
 ODBC applications can be classified as follows:  

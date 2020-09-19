@@ -1,5 +1,6 @@
 ---
 title: "Defining Durability for Memory-Optimized Objects | Microsoft Docs"
+description: "Learn about the durability options for memory-optimized tables in SQL Server: the default SCHEMA_AND_DATA and SCHEMA_ONLY."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Defining Durability for Memory-Optimized Objects
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   There are two durability options for memory-optimized tables:  
   

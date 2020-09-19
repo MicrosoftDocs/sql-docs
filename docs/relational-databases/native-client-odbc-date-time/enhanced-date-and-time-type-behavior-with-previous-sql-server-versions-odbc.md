@@ -1,7 +1,8 @@
 ---
-title: "Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC) | Microsoft Docs"
+description: "Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)"
+title: "Date Time in SQL versions (ODBC)"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -10,13 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [ODBC], enhanced behavior with earlier SQL Server versions"
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes the expected behavior when a client application that uses enhanced date and time features communicates with a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and when a client application using Microsoft Data Access Components, Windows Data Access Components, or a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client earlier than [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sends commands to a server that supports enhanced date and time features.  
   
@@ -44,14 +44,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Date fields set to current date.|OK (2)<br /><br /> Date ignored. Fails if fractional seconds non-zero.<br /><br /> Works with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
-  
+|||||
+
 ## Key to Symbols  
   
 |Symbol|Meaning|  
 |------------|-------------|  
 |1|If it worked with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] it should continue to work with a more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|An application that worked with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] could fail with a more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-  
+|||
+
  Note that only common schema changes have been considered. The following are common changes:  
   
 -   Using a new type where logically an application requires only a date or time value. However, the application was forced to use datetime or smalldatetime due to the lack of separate date and time types.  
@@ -74,7 +76,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
-  
+||||||||
+
  SQLSpecialColumns does not return SQL_DATA_TYPE, SQL_DATETIME_SUB, CHAR_OCTET_LENGTH, or SS_DATA_TYPE.  
   
 ### Data Type Metadata Returned by SQLGetTypeInfo  
@@ -102,11 +105,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |NUM_PREC_RADIX|NULL|NULL|NULL|NULL|NULL|NULL|  
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
-  
+||||||||
+
 ## Down-Level Server Behavior  
  When connected to a server instance of an earlier version that [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], any attempt to use the new server types or associated metadata codes and descriptor fields will result in SQL_ERROR being returned. A diagnostic record will be generated with SQLSTATE HY004 and the message "Invalid SQL data type for server version on connection", or with 07006 and "Restricted data type attribute violation".  
   
 ## See Also  
  [Date and Time Improvements &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  

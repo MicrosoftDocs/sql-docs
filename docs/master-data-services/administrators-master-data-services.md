@@ -1,5 +1,6 @@
 ---
-title: "Administrators (Master Data Services) | Microsoft Docs"
+title: Administrators
+description: "Learn about the types of administrators in Master Data Services: model administrators, entity administrators, and super user."
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.author: lle
 ---
 # Administrators (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article describes the types of administrators in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: model administrators, entity administrators, and super user.  
   
@@ -65,7 +66,7 @@ ms.author: lle
 |Entity administrator|Can be an entity administrator based on administrator permissions assigned explicitly or permissions inherited from a group.<br /><br /> Has access only to functional areas that access is granted to.<br /><br /> Automatically has all permissions to all objects and members in the specific entity.<br /><br /> Can approve the pending change sets if the entity changes require approval.|  
   
 ## External Resources  
- Blog post, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
+ Blog post, [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
   
 ## See Also  
  [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

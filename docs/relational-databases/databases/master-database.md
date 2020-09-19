@@ -1,4 +1,5 @@
 ---
+description: "master Database"
 title: "master Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
@@ -16,15 +17,15 @@ ms.author: "sstein"
 ---
 # master Database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The **master** database records all the system-level information for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system. This includes instance-wide metadata such as logon accounts, endpoints, linked servers, and system configuration settings. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], system objects are no longer stored in the **master** database; instead, they are stored in the [Resource database](../../relational-databases/databases/resource-database.md). Also, **master** is the database that records the existence of all other databases and the location of those database files and records the initialization information for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot start if the **master** database is unavailable.  
 
 > [!IMPORTANT]
-> For Azure SQL Database single databases and elastic pools, only master database and tempdb database apply. For more information, see [What is an Azure SQL Database server](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Database Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> For Azure SQL Database single databases and elastic pools, only master database and tempdb database apply. For more information, see [What is an Azure SQL Database server](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## Physical Properties of master
 
-The following table lists the initial configuration values of the **master** data and log files for SQL Server and Azure SQL Database Managed Instance. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+The following table lists the initial configuration values of the **master** data and log files for SQL Server and Azure SQL Managed Instance. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Logical name|Physical name|File growth|  
 |----------|------------------|-------------------|-----------------|  
@@ -38,7 +39,7 @@ For information about how to move the **master** data and log files, see [Move S
   
 ### Database Options
 
-The following table lists the default value for each database option in the **master** database for SQL Server and Azure SQL Database Managed Instance and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
+The following table lists the default value for each database option in the **master** database for SQL Server and Azure SQL Managed Instance and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
 > [!IMPORTANT]
 > For Azure SQL Database single databases and elastic pools, the user has no control over these database options.
@@ -81,6 +82,7 @@ For a description of these database options, see [ALTER DATABASE &#40;Transact-S
 The following operations cannot be performed on the **master** database:  
   
 - Adding files or filegroups.  
+- Backups, only a full database backup can be performed on the master database.
 - Changing collation. The default collation is the server collation.  
 - Changing the database owner. **master** is owned by **sa**.  
 - Creating a full-text catalog or full-text index.  

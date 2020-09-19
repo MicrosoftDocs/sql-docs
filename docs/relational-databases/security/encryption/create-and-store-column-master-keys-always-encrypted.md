@@ -1,19 +1,20 @@
 ---
-title: "Create and Store Column Master Keys (Always Encrypted) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
+title: "Create & store column master keys for Always Encrypted"
+description: Learn how to select a key store and create column master keys for SQL Server Always Encrypted. 
+ms.custom: seo-lt-2019
+ms.date: "10/31/2019"
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Create and Store Column Master Keys (Always Encrypted)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Create and store column master keys for Always Encrypted
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 *Column Master Keys* are key-protecting keys used in Always Encrypted to encrypt column encryption keys. Column master keys must be stored in a trusted key store, and the keys need to be accessible to applications that need to encrypt or decrypt data, and tools for configuring Always Encrypted and managing Always Encrypted keys.
 
@@ -21,7 +22,7 @@ This article provides details for selecting a key store and creating column mast
 
 ## Selecting a Key Store for your Column Master Key
 
-Always Encrypted supports multiple key stores for storing Always Encrypted column master keys. Supported key stores vary depending on which driver and version you are using.
+Always Encrypted supports multiple key stores for storing Always Encrypted column master keys. Supported key stores vary depending on which driver and version you're using.
 
 There are two high-level categories of key stores to consider - *Local Key Stores*, and *Centralized Key Stores*.
 
@@ -29,28 +30,20 @@ There are two high-level categories of key stores to consider - *Local Key Store
 
 * **Local Key Stores** - can only be used by applications on computers that contain the local key store. In other words, you need to replicate the key store and key to each computer running your application. An example of a local key store is Windows Certificate Store. When using a local key store, you need to make sure that the key store exists on each machine hosting your application, and that the computer contains the column master keys your application needs to access data protected using Always Encrypted. When you provision a column master key for the first time, or when you change (rotate) the key, you need to make sure the key gets deployed to all machines hosting your application(s).
 
-* **Centralized Key Stores** - serve applications on multiple computers. An example of a centralized key store is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). A centralized key store usually makes key management easier because you don't need to maintain multiple copies of your column master keys on multiple machines. You need to ensure that your applications are configured to connect to the centralized key store.
+* **Centralized Key Stores** - serve applications on multiple computers. An example of a centralized key store is [Azure Key Vault](https://azure.microsoft.com/services/key-vault/). A centralized key store usually makes key management easier because you don't need to maintain multiple copies of your column master keys on multiple machines. Ensure that your applications are configured to connect to the centralized key store.
 
 ### Which Key Stores are Supported in Always Encrypted Enabled Client Drivers?
 
-Always Encrypted enabled client drivers are SQL Server client drivers that have built-in support for incorporating Always Encrypted into your client applications. Always Encrypted enabled drivers include a few built-in providers for popular key stores. Note that some drivers also let you implement and register a custom column master key store provider, so that you can use any key store, even if there is no built-in provider for it. When deciding between a built-in provider and a custom provider consider that using a built-in provider typically means fewer changes to your applications (in some cases, only changing a database connection string is required).
+Always Encrypted enabled client drivers are SQL Server client drivers that have built-in support for incorporating Always Encrypted into your client applications. Always Encrypted enabled drivers include a few built-in providers for popular key stores. Some drivers also let you implement and register a custom column master key store provider, so that you can use any key store, even if there's no built-in provider for it. When deciding between a built-in provider and a custom provider consider that using a built-in provider typically means fewer changes to your applications (in some cases, only changing a database connection string is required).
 
-The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers.
+The available built-in providers depend on which driver, driver version, and operating system is selected.  Please consult Always Encrypted documentation for your specific driver to determine which key stores are supported out-of-the-box and if your driver supports custom key store providers - [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
-- [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### Supported Tools
-
-You can use [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) and the [SqlServer PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) to configure Always Encrypted and manage Always Encrypted keys. For a list of which key stores these tool support, see:
-
-- [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### Which Key Stores are Supported in SQL Tools?
+SQL Server Management Studio and the SqlServer PowerShell module only support column master keys stored in Azure Key Vault, Windows Certificate Store and key stores that provide Cryptography Next Generation (CNG) API or Cryptography API (CAPI). 
 
 ## Creating Column Master Keys in Windows Certificate Store    
 
-A column master key can be a certificate stored in Windows Certificate Store. Note that an Always Encrypted-enabled driver does not verify an expiration date or a certificate authority chain. A certificate is simply used as a key pair consisting of a public and private key.
+A column master key can be a certificate stored in Windows Certificate Store. An Always Encrypted-enabled driver doesn't verify an expiration date or a certificate authority chain. A certificate is simply used as a key pair consisting of a public and private key.
 
 To be a valid column master key, a certificate must:
 * be an X.509 certificate.
@@ -76,7 +69,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### Create a self-signed certificate using SQL Server Management Studio (SSMS)
 
-For details, see [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md).
+For details, see [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in the Windows Certificate Store, see [Always Encrypted Wizard tutorial (Windows Certificate Store)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
@@ -103,13 +96,11 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 8.  From the **Certificates** snap-in, locate the certificate in the **Certificates > Personal** folder, right-click the Certificate, point to **All Tasks**, and then click **Manage Private Keys**.
 9.  In the **Security** dialog box, add read permission for a user account if needed.
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## Creating Column Master Keys in Azure Key Vault
 
 Azure Key Vault helps safeguard cryptographic keys and secrets, and is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault.
 
-#### Using PowerShell
+### Using PowerShell
 
 The following example creates a new Azure Key Vault and key, and then grants permissions to the desired user.
 
@@ -125,11 +116,12 @@ $azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for
 New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
-$akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
+$akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### SQL Server Management Studio (SSMS)
+### Using SQL Server Management Studio (SSMS)
 
+For details on how to create a column master key in Azure Key Vault using SSMS, see [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in an Azure Key Vault, see [Always Encrypted Wizard tutorial (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### Making Azure Key Vault Keys Available to Applications and Users
@@ -140,7 +132,7 @@ To provision column encryption keys that are protected with a column master key 
 
 #### Using PowerShell
 
-To enable users and applications to access the actual keys in the Azure Key Vault you must set the vault access policy ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+To enable users and applications access to the actual keys in the Azure Key Vault, you must set the vault access policy ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -191,8 +183,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### Using SQL Server Management Studio
 
-See [Provisioning Column Master using SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2).
-
+See [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
 ### Making CNG Keys Available to Applications and Users
 
@@ -203,7 +194,9 @@ Consult your HSM and KSP documentation for how to configure the KSP on a machine
 A column master key for Always Encrypted can be stored in a key store that implements the Cryptography API (CAPI). Typically, such a store is a hardware security module (HSM) - a physical device that safeguards and manages digital keys and provides crypto-processing. HSMs traditionally come in the form of a plug-in card or an external device that attaches directly to a computer (local HSMs) or a network server.
 
 To make an HSM available to applications on a given machine, a Cryptography Service Provider (CSP), which implements CAPI, must be installed and configured on the machine. An Always Encrypted client driver (a column master key store provider inside the driver), uses the CSP to encrypt and decrypt column encryption keys, protected with column master key stored in the key store. 
-Note: CAPI is a legacy, deprecated API. If a KSP is available for your HSM, you should use it, instead of a CSP/CAPI.
+
+> [!NOTE]
+> CAPI is a legacy, deprecated API. If a KSP is available for your HSM, you should use it, instead of a CSP/CAPI.
 
 A CSP must support the RSA algorithm to be used with Always Encrypted.
 
@@ -217,25 +210,15 @@ A column master key should be an asymmetric key (a public/private key pair), usi
 Consult the documentation for your HSM.
 
 #### Using SQL Server Management Studio (SSMS)
-See the Provisioning Column Master Keys section in Configuring Always Encrypted using SQL Server Management Studio.
+See [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
- 
 ### Making CNG Keys Available to Applications and Users
-Consult the documentation for your HSM and CSP, for how to configure the CSP on a machine and how to grant applications and users access to the HSM.
- 
+Consult the documentation for your HSM and CSP for how to configure the CSP on a machine, and how to grant applications and users access to the HSM.
  
 ## Next Steps  
+- [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Provision Always Encrypted keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
-- [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## Additional Resources  
-
-- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Develop Applications using Always Encrypted with .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## See Also 
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

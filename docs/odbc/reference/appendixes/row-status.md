@@ -1,4 +1,5 @@
 ---
+description: "Row Status"
 title: "Row Status | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "row status [ODBC]"
   - "cache [ODBC]"
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Row Status
 > [!IMPORTANT]  

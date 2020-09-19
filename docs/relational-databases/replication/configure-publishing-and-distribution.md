@@ -1,5 +1,6 @@
 ---
 title: "Configure Publishing and Distribution | Microsoft Docs"
+description: Learn how to configure publishing and distribution in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "09/23/2018"
 ms.prod: sql
@@ -14,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure Publishing and Distribution
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  This topic describes how to configure publishing and distribution in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin 
@@ -35,8 +36,6 @@ Configure distribution using the New Publication Wizard or the Configure Distrib
 2. Right-click the **Replication** folder, and then click **Configure Distribution**.
 
 3. Follow the Configure Distribution Wizard to: 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - Select a Distributor. To use a local Distributor, select **ServerName will act as its own Distributor; SQL Server will create a distribution database and log**. To use a remote Distributor, select **Use the following server as the Distributor**, and then select a server. The server must already be configured as a Distributor, and the Publisher must be enabled to use the Distributor. For more information, see [Enable a Remote Publisher at a Distributor &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
 
@@ -61,7 +60,7 @@ Replication publishing and distribution can be configured programmatically using
 
 2. At the Distributor, which is also the Publisher, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), specifying the UNC share that will be used as default snapshot folder for `@working_directory`.
 
-   For a distributor on SQL Database Managed Instance, use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
+   For a distributor on SQL Managed Instance, use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
 
 3. At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Specify the database being published for `@dbname`, the type of replication for `@optname`, and a value of `true` for `@value`.
 
@@ -75,7 +74,7 @@ Replication publishing and distribution can be configured programmatically using
 
 2. At the Distributor, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), specifying the UNC share that will be used as default snapshot folder for `@working_directory`. If the Distributor will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of `0` for `@security_mode` and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for `@login` and `@password`.
 
-   For a distributor on SQL Database Managed Instance, use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
+   For a distributor on SQL Managed Instance, use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
 
 3. At the Publisher on the master database, execute [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md). Specify the strong password used in step 1 for `@password`. This password will be used by the Publisher when connecting to the Distributor.
 

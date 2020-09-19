@@ -1,5 +1,6 @@
 ---
-title: "Align the Data in a Chart in a Table or Matrix (Report Builder and SSRS) | Microsoft Docs"
+title: "Align the Data in a Chart in a Table or Matrix (Report Builder) | Microsoft Docs"
+description: Discover uses for sparklines and data bars in Report Builder. These small, simple charts convey a lot of information with the minimum amount of detail.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

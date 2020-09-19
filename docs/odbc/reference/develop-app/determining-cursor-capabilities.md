@@ -1,4 +1,5 @@
 ---
+description: "Determining Cursor Capabilities"
 title: "Determining Cursor Capabilities | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "cursors [ODBC], capabilities"
   - "cursors [ODBC], scrollable"
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Determining Cursor Capabilities
 The following four options in **SQLGetInfo** describe what types of cursors are supported and what their capabilities are:  

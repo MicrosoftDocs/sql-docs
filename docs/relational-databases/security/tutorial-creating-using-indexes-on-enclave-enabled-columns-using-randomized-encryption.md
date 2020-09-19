@@ -1,7 +1,8 @@
 ---
-title: "Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption | Microsoft Docs"
-ms.custom: ""
-ms.date: 06/26/2019
+title: "Indexes on enclave-enabled columns with randomized encryption (Tutorial)"
+description: This tutorial teaches you how to create and use index on enclave-enabled columns using randomized encryption supported in Always Encrypted with secure enclaves for SQL Server. 
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -13,8 +14,8 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This tutorial teaches you how to create and use indexes on enclave-enabled columns using randomized encryption supported in [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 
@@ -27,7 +28,7 @@ This tutorial is the continuation of [Tutorial: Getting Started with Always Encr
 
 ## Step 1: Enable Accelerated Database Recovery (ADR) in your database
 
-Microsoft strongly recommends you enable ADR in your database before creating the first index on an enclave-enabled column using randomized encryption. See the [Database Recovery](./encryption/always-encrypted-enclaves.md##database-recovery) section in [Always Encrypted with Secure Enclaves](./encryption/always-encrypted-enclaves.md).
+Microsoft strongly recommends you enable ADR in your database before creating the first index on an enclave-enabled column using randomized encryption. See the [Database Recovery](./encryption/always-encrypted-enclaves.md#database-recovery) section in [Always Encrypted with secure enclaves](./encryption/always-encrypted-enclaves.md).
 
 1. Close any SSMS instances, you used in the previous tutorial. This will close database connections you've opened, which is required to enable ADR.
 1. Open a new instance of SSMS and connect to your SQL Server instance as sysadmin **without** Always Encrypted enabled for the database connection.
@@ -166,5 +167,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
    1. In the **Live Query Statistics** (in the bottom part of the query window), observe that the query uses the index.
 
 ## Next steps
+- [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves.
+## See also
+- [Create and use indexes on columns using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-create-use-indexes.md)

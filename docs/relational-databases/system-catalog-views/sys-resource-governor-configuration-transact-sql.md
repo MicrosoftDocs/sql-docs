@@ -1,4 +1,5 @@
 ---
+description: "sys.resource_governor_configuration (Transact-SQL)"
 title: "sys.resource_governor_configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_configuration catalog view"
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sys.resource_governor_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the stored Resource Governor state.  
   
@@ -29,7 +30,7 @@ ms.author: "sstein"
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|The ID of the classifier function as it is stored in the metadata. Is not nullable.<br /><br /> **Note** This function is used to classify new sessions and uses rules to route the workload to the appropriate workload group. For more information, see [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_enabled|**bit**|Indicates the current state of the Resource Governor:<br /><br /> 0 = Resource Governor is not enabled.<br /><br /> 1 = Resource Governor is enabled.<br /><br /> Is not nullable.|  
-|max_outstanding_io_per_volume|**int**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The maximum number of outstanding I/O per volume.|  
+|max_outstanding_io_per_volume|**int**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.<br /><br /> The maximum number of outstanding I/O per volume.|  
   
 ## Remarks  
  The catalog view displays the Resource Governor configuration as stored in metadata. To see the in-memory configuration use the corresponding dynamic management view.  

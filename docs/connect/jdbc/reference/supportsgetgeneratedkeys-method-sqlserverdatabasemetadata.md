@@ -1,4 +1,5 @@
 ---
+description: "supportsGetGeneratedKeys Method (SQLServerDatabaseMetaData)"
 title: "supportsGetGeneratedKeys Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsGetGeneratedKeys Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

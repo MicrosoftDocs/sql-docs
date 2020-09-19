@@ -1,4 +1,5 @@
 ---
+description: "sp_tableoption (Transact-SQL)"
 title: "sp_tableoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_tableoption"
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Sets option values for user-defined tables. sp_tableoption can be used to control the in-row behavior of tables with **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, or large user-defined type columns.  
   
@@ -51,8 +52,8 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 |table lock on bulk load|When disabled (the default), it causes the bulk load process on user-defined tables to obtain row locks. When enabled, it causes the bulk load processes on user-defined tables to obtain a bulk update lock.|  
 |insert row lock|No longer supported.<br /><br /> This option has no effect on the locking behavior of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and is included only for compatibility of existing scripts and procedures.|  
 |text in row|When OFF or 0 (disabled, the default), it does not change current behavior, and there is no BLOB in row.<br /><br /> When specified and @OptionValue is ON (enabled) or an integer value from 24 through 7000, new **text**, **ntext**, or **image** strings are stored directly in the data row. All existing BLOB (binary large object: **text**, **ntext**, or **image** data) will be changed to text in row format when the BLOB value is updated. For more information, see Remarks.|  
-|large value types out of row|1 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** and large user-defined type (UDT) columns in the table are stored out of row, with a 16-byte pointer to the root.<br /><br /> 0 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** and large UDT values are stored directly in the data row, up to a limit of 8000 bytes and as long as the value can fit in the record. If the value does not fit in the record, a pointer is stored in-row and the rest is stored out of row in the LOB storage space. 0 is the default value.<br /><br /> Large user-defined type (UDT) applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Use the TEXTIMAGE_ON option of [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) to specify a location for storage of large data types. |  
-|vardecimal storage format|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> When TRUE, ON, or 1, the designated table is enabled for vardecimal storage format. When FALSE, OFF, or 0, the table is not enabled for vardecimal storage format. Vardecimal storage format can be enabled only when the database has been enabled for vardecimal storage format by using [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, **vardecimal** storage format is deprecated. Use ROW compression instead. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md). 0 is the default value.|  
+|large value types out of row|1 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** and large user-defined type (UDT) columns in the table are stored out of row, with a 16-byte pointer to the root.<br /><br /> 0 = **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** and large UDT values are stored directly in the data row, up to a limit of 8000 bytes and as long as the value can fit in the record. If the value does not fit in the record, a pointer is stored in-row and the rest is stored out of row in the LOB storage space. 0 is the default value.<br /><br /> Large user-defined type (UDT) applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later. <br /><br /> Use the TEXTIMAGE_ON option of [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) to specify a location for storage of large data types. |  
+|vardecimal storage format|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.<br /><br /> When TRUE, ON, or 1, the designated table is enabled for vardecimal storage format. When FALSE, OFF, or 0, the table is not enabled for vardecimal storage format. Vardecimal storage format can be enabled only when the database has been enabled for vardecimal storage format by using [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, **vardecimal** storage format is deprecated. Use ROW compression instead. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md). 0 is the default value.|  
   
  [ @OptionValue =] '*value*'  
  Is whether the *option_name* is enabled (TRUE, ON, or 1) or disabled (FALSE, OFF, or 0). *value* is **varchar(12)**, with no default. *value* is case insensitive.  

@@ -1,4 +1,5 @@
 ---
+description: "Create a Database Mail Profile"
 title: "Create a Database Mail Profile | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -16,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Create a Database Mail Profile
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Use either the **Database Mail Configuration Wizard** or [!INCLUDE[tsql](../../includes/tsql-md.md)] to create Database Mail public and private profiles. For more information about mail profiles see [Database Mail Profile](database-mail-configuration-objects.md).
   
 -   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  
@@ -87,35 +88,35 @@ ms.author: sstein
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Profile Name*'  
+     *\@profile_name* = '*Profile Name*'  
   
-     *@description* = '*Desciption*'  
+     *\@description* = '*Desciption*'  
   
-     where *@profile_name* is the name of the profile, and *@description* is the description of the profile. This parameter is optional.  
+     where *\@profile_name* is the name of the profile, and *\@description* is the description of the profile. This parameter is optional.  
   
 -   For each account, run the stored procedure [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) as follows:  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '*Name of the profile*'  
   
-     *@account_name* = '*Name of the account*'  
+     *\@account_name* = '*Name of the account*'  
   
-     *@sequence_number* = '*sequence number of the account within the profile.* '  
+     *\@sequence_number* = '*sequence number of the account within the profile.* '  
   
-     where *@profile_name* is the name of the profile, and *@account_name* is the name of the account to add to the profile, *@sequence_number* determines the order in which the accounts are used in the profile.  
+     where *\@profile_name* is the name of the profile, and *\@account_name* is the name of the account to add to the profile, *\@sequence_number* determines the order in which the accounts are used in the profile.  
   
 -   For each database role or user that will send mail using this profile, grant access to the profile. To do this, run the stored procedure [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) as follows:  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '*Name of the profile*'  
   
-     *@ principal_name* = '*Name of the database user or role*'  
+     *\@ principal_name* = '*Name of the database user or role*'  
   
-     *@is_default* = '*Default Profile status* '  
+     *\@is_default* = '*Default Profile status* '  
   
-     where *@profile_name* is the name of the profile, and *@principal_name* is the name of the database user or role, *@is_default* determines the whether this profile is the default for the database user or role.  
+     where *\@profile_name* is the name of the profile, and *\@principal_name* is the name of the database user or role, *\@is_default* determines the whether this profile is the default for the database user or role.  
   
  The following example creates a Database Mail account, creates a Database Mail private profile, then adds the account to the profile and grants access to the profile to the **DBMailUsers** database role in the **msdb** database.  
   
@@ -155,35 +156,35 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Profile Name*'  
+     *\@profile_name* = '*Profile Name*'  
   
-     *@description* = '*Desciption*'  
+     *\@description* = '*Desciption*'  
   
-     where *@profile_name* is the name of the profile, and *@description* is the description of the profile. This parameter is optional.  
+     where *\@profile_name* is the name of the profile, and *\@description* is the description of the profile. This parameter is optional.  
   
 -   For each account, run the stored procedure [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) as follows:  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '*Name of the profile*'  
   
-     *@account_name* = '*Name of the account*'  
+     *\@account_name* = '*Name of the account*'  
   
-     *@sequence_number* = '*sequence number of the account within the profile.* '  
+     *\@sequence_number* = '*sequence number of the account within the profile.* '  
   
-     where *@profile_name* is the name of the profile, and *@account_name* is the name of the account to add to the profile, *@sequence_number* determines the order in which the accounts are used in the profile.  
+     where *\@profile_name* is the name of the profile, and *\@account_name* is the name of the account to add to the profile, *\@sequence_number* determines the order in which the accounts are used in the profile.  
   
 -   To grant public access, run the stored procedure [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) as follows:  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '*Name of the profile*'  
   
-     *@ principal_name* = '**public** or **0**'  
+     *\@ principal_name* = '**public** or **0**'  
   
-     *@is_default* = '*Default Profile status* '  
+     *\@is_default* = '*Default Profile status* '  
   
-     where *@profile_name* is the name of the profile, and *@principal_name* to indicate this is a public profile, *@is_default* determines the whether this profile is the default for the database user or role.  
+     where *\@profile_name* is the name of the profile, and *\@principal_name* to indicate this is a public profile, *\@is_default* determines the whether this profile is the default for the database user or role.  
   
  The following example creates a Database Mail account, creates a Database Mail private profile, then adds the account to the profile and grants public access to the profile.  
   

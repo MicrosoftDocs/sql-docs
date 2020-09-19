@@ -1,4 +1,5 @@
 ---
+description: "SQL Data Warehouse Stored Procedures"
 title: "SQL Data Warehouse Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -14,11 +15,11 @@ ms.author: rortloff
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL Data Warehouse Stored Procedures
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] provides built-in procedures that you can use to perform operations related to database roles. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] includes the following system procedures:  
   
-##  <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+<a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
@@ -36,7 +37,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 >  Some additional system stored procedures are used only within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or through client APIs and are not intended for general customer use. These procedures are listed at [System Stored Procedures (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). These procedures are subject to change and compatibility is not guaranteed. All procedures on the list are not available in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 ## See Also  
- [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

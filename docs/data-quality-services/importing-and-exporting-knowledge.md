@@ -1,6 +1,6 @@
 ---
-title: "Importing and Exporting Knowledge | Microsoft Docs"
-ms.custom: ""
+description: "Importing and Exporting Knowledge"
+title: "Importing and Exporting Knowledge"
 ms.date: "07/31/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,12 +8,12 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Importing and Exporting Knowledge
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   You can create knowledge bases and domains directly in the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application, or you can import knowledge into, or export it from, a knowledge base. In the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application, you can use a data file for import and export operations, or an Excel file for import operations. The data file used is an encrypted file that is created by [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) with a .dqs extension. The files created by Microsoft Excel can have an extension of .xlsx, .xls, or .csv. These operations give you more flexibility in building and sharing the knowledge that you use to perform data cleansing and matching.  
   
@@ -23,7 +23,7 @@ ms.author: lle
 ## In This Section  
  You can perform the following import and export operations:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Export a domain in a knowledge base to a .dqs data file|[Export a Domain to a .dqs File](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |Import a domain from a .dqs data file into an existing knowledge base|[Import a Domain from a .dqs File](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

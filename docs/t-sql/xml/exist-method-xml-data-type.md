@@ -1,5 +1,6 @@
 ---
-title: "exist() Method (xml Data Type) | Microsoft Docs"
+description: "exist() Method (xml Data Type)"
+title: exist() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # exist() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a **bit** that represents one of the following conditions:  
   
@@ -33,7 +34,9 @@ ms.author: genemi
 exist (XQuery)   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  XQuery  
  Is an XQuery expression, a string literal.  
   
@@ -66,7 +69,7 @@ select @f;
   
 -   The code `cast as xs:date?` is used to cast the value to **xs:date** type for purposes of comparison.  
   
--   The value of the **@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
+-   The value of the **\@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
   
 -   Instead of **cast as xs:date()**, you can use the **xs:date()** constructor function. For more information, see [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   

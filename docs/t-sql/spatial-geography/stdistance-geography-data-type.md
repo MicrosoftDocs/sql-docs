@@ -1,7 +1,8 @@
 ---
+description: "STDistance (geography Data Type)"
 title: "STDistance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "11/19/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STDistance (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the shortest distance between a point in a **geography** instance and a point in another **geography** instance.  
   
@@ -33,7 +34,9 @@ ms.author: mlandzic
 .STDistance ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance from which to measure the distance between the instance on which STDistance() is invoked. If *other_geography* is an empty set, STDistance() returns null.  
   
@@ -43,10 +46,11 @@ ms.author: mlandzic
  CLR return type: **SqlDouble**  
   
 ## Remarks  
- STDistance() always returns null if the spatial reference IDs (SRIDs) of the **geography** instances do not match.  
+ The result is expressed in the unit of measure defined by the [Spatial Reference Identifier &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) of spatial data.
+STDistance() always returns *null* if the spatial reference IDs (SRIDs) of the **geography** instances do not match.  
   
 > [!NOTE]  
->  Methods on the **geography** data type that calculate an area or distance will return different results based on the SRID of the instance used in the method.   For more information about SRIDs, see [Spatial Reference Identifiers &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  Methods on the **geography** data type that calculate an area or distance will return different results based on the SRID of the instance used in the method. For more information about SRIDs, see [Spatial Reference Identifiers &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## Examples  
  The following example finds the distance between two **geography** instances.  

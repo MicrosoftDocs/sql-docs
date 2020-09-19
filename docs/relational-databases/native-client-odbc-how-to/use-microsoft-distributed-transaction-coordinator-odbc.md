@@ -1,5 +1,6 @@
 ---
-title: "Use Microsoft Distributed Transaction Coordinator (ODBC) | Microsoft Docs"
+description: "Use Microsoft Distributed Transaction Coordinator (ODBC)"
+title: "Distributed Transaction Coordinator (ODBC)"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "MS DTC, using"
 ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### To update two or more SQL Servers by using MS DTC  
@@ -32,8 +32,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 5.  Call [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) once for each SQL Server you want to update.  
   
 6.  Call the MS DTC OLE ITransaction::Commit function to commit the MS DTC transaction. The Transaction object is no longer valid.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  To perform a series of MS DTC transactions, repeat Steps 3 through 6.  
   

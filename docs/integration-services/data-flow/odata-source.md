@@ -1,4 +1,5 @@
 ---
+description: "OData Source"
 title: "OData Source | Microsoft Docs"
 ms.date: "09/17/2018"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # OData Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service.
@@ -35,7 +36,7 @@ The component supports the OData v3 and v4 protocols.
 
 The OData source includes support for the following data sources:
 -   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
--   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: https://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: `https://<server>/_vti_bin/ListData.svc`. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## Supported data types
 
@@ -43,8 +44,17 @@ The OData source supports the following simple data types: int, byte[], bool, by
 
 To discover the data types of columns in your data source, check the `https://<OData feed endpoint>/$metadata` page.
 
+For the **Decimal** data type, the precision and scale are determined by the source metadata. If the source metadata does not specify the **Precision** and **Scale** properties, the data may be truncated.
+
 > [!IMPORTANT]
 > The OData Source component does not support complex types, such as multiple-choice items, in SharePoint lists.
+
+> [!Note]
+> If the source only allows TLS 1.2 connection, you need to enforce TLS 1.2 on your machine through registry settings. In an elevated command prompt run the following commands:
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## OData Format and Performance
  Most OData services can return results in multiple formats. You can specify the format of the result set by using the `$format` query option. Formats such as JSON and JSON Light are more efficient than ATOM or XML, and may give you better performance when transferring large amounts of data. The following table provides results from sample tests. As you can see, there was a 30-53% performance gain when switching from ATOM to JSON and a 67% performance gain when switching from ATOM to the new JSON light format (available in WCF Data Services 5.1).  

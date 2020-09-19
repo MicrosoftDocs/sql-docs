@@ -1,7 +1,7 @@
 ---
-title: "Create a database mirroring endpoint for an availability group using PowerShell"
+title: "Powershell: Availability group database mirroring endpoint"
 description: "Describes how to create a database mirroring endpoint for an Always On availability group using PowerShell."
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Create a database mirroring endpoint for an availability group using PowerShell
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a database mirroring endpoint for use by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using PowerShell.  
   

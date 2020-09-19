@@ -1,4 +1,5 @@
 ---
+description: "SELECT Examples (Transact-SQL)"
 title: "SELECT Examples (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -32,7 +33,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SELECT Examples (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic provides examples of using the [SELECT](../../t-sql/queries/select-transact-sql.md) statement.  
   
@@ -72,12 +73,14 @@ ms.author: vanto
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## E. Using correlated subqueries  
- The following example shows queries that are semantically equivalent and illustrates the difference between using the `EXISTS` keyword and the `IN` keyword. Both are examples of a valid subquery that retrieves one instance of each product name for which the product model is a long sleeve logo jersey, and the `ProductModelID` numbers match between the `Product` and `ProductModel` tables.  
+## E. Using correlated subqueries
+A correlated subquery is a query that depends on the outer query for its values. This query can be executed repeatedly, one time for each row that may be selected by the outer query.
+
+The first example shows queries that are semantically equivalent to illustrate the difference between using the `EXISTS` keyword and the `IN` keyword. Both are examples of a valid subquery that retrieves one instance of each product name for which the product model is a long sleeve logo jersey, and the `ProductModelID` numbers match between the `Product` and `ProductModel` tables.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- The following example uses `IN` in a correlated, or repeating, subquery. This is a query that depends on the outer query for its values. The query is executed repeatedly, one time for each row that may be selected by the outer query. This query retrieves one instance of the first and last name of each employee for which the bonus in the `SalesPerson` table is `5000.00` and for which the employee identification numbers match in the `Employee` and `SalesPerson` tables.  
+ The next example uses `IN` and retrieves one instance of the first and last name of each employee for which the bonus in the `SalesPerson` table is `5000.00` and for which the employee identification numbers match in the `Employee` and `SalesPerson` tables.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

@@ -1,8 +1,8 @@
 ---
 title: Performance best practices for SQL Server on Linux
 description: This article provide performance best practices and guidelines for running SQL Server on Linux.
-author: rgward 
-ms.author: bobward
+author: tejasaks 
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.technology: linux
 
 # Performance best practices and configuration guidelines for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides best practices and recommendations to maximize performance for database applications that connect to SQL Server on Linux. These recommendations are specific to running on the Linux platform. All normal SQL Server recommendations, such as index design, still apply.
 
@@ -52,7 +52,7 @@ These are the recommended Linux Operating System settings related to high perfor
 
 
 > [!Note]
-> For Red Hat Enterprise Linux (RHEL) users, the throughput-performance profile will configure these settings automatically (except for C-States).
+> For Red Hat Enterprise Linux (RHEL) users, the [tuned](https://tuned-project.org) throughput-performance profile configure these settings automatically (except for C-States). Starting with RHEL 8.0, a /usr/lib/tuned built-in mssql profile was co-developed with Red Hat and offers finer Linux performance related tunings for SQL Server workloads. This profile includes the RHEL throughput-performance profile and we present its definitions below for your review with other Linux distros and RHEL releases without this profile.
 
 The following table provides recommendations for CPU settings:
 
@@ -86,13 +86,79 @@ The default setting of **vm.max_map_count** (which is 65536) may not be high eno
 sysctl -w vm.max_map_count=262144
 ```
 
+### Proposed Linux settings using a tuned mssql profile
+
+```bash
+#
+# A tuned configuration for SQL Server on Linux
+#
+    
+[main]
+summary=Optimize for Microsoft SQL Server
+include=throughput-performance
+    
+[cpu]
+force_latency=5
+
+[sysctl]
+vm.swappiness = 1
+vm.dirty_background_ratio = 3
+vm.dirty_ratio = 80
+vm.dirty_expire_centisecs = 500
+vm.dirty_writeback_centisecs = 100
+vm.transparent_hugepages=always
+# For , use
+# vm.transparent_hugepages=madvice
+vm.max_map_count=1600000
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+kernel.numa_balancing=0
+kernel.sched_latency_ns = 60000000
+kernel.sched_migration_cost_ns = 500000
+kernel.sched_min_granularity_ns = 15000000
+kernel.sched_wakeup_granularity_ns = 2000000
+```
+
+To enable this tuned profile, save these definitions in a **tuned.conf** file under a /usr/lib/tuned/mssql folder and enable the profile using
+
+```bash
+chmod +x /usr/lib/tuned/mssql/tuned.conf
+tuned-adm profile mssql
+```
+
+Verify its enabling with
+
+```bash
+tuned-adm active
+```
+or
+```bash
+tuned-adm list
+```
+
 ### Disable last accessed date/time on file systems for SQL Server data and log files
 
 Use the **noatime** attribute with any file system that is used to store SQL Server data and log files. Refer to your Linux documentation on how to set this attribute.
 
 ### Leave Transparent Huge Pages (THP) enabled
 
-Most Linux installations should have this option on by default. We recommend for the most consistent performance experience to leave this configuration option enabled.
+Most Linux installations should have this option on by default. We recommend for the most consistent performance experience to leave this configuration option enabled. However, in case of high memory paging activity in SQL Server deployments with multiple instances for example or SQL Server execution with other memory demanding applications on the server, we suggest testing your applications performance after executing the following command 
+
+```bash
+echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+```
+or modifying the mssql tuned profile with the line
+
+```bash
+vm.transparent_hugepages=madvice
+```
+and make the mssql profile active after the modification
+```bash
+tuned-adm off
+tuned-adm profile mssql
+```
 
 ### swapfile
 

@@ -1,17 +1,19 @@
 ---
-title: "How to: Install and Manage Feature Extensions | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "04/26/2017"
-ms.prod: "sql"
+title: Install and Manage Feature Extensions
+description: Learn how to install feature extensions so that you can increase the functionality of SQL Server Data Tools. See where to install different types of extensions.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
 ---
+
 # How to: Install and Manage Feature Extensions
+
 You can add rules for analyzing database code, conditions for database unit tests and build/deployment contributors to increase the functionality that Visual Studio editions including SQL Server Data Tools offer. However, you must first install a feature extension before you can use it, whether you created the extension or you installed one that someone else created.  
   
 Where to install your extension depends on the extension type and where you intend to use it from. In the latest editions of Visual Studio, the install location of some components has moved from the SQL Server install directory to inside the Visual Studio directory. This setup makes it easier to have different versions of the software running side by side, but it means that you may need to install your extension in multiple locations if you wish to use it in different version of SQL Server Data Tools and from the command line.  

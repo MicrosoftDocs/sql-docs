@@ -1,4 +1,5 @@
 ---
+description: "FILE_IDEX (Transact-SQL)"
 title: "FILE_IDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_IDEX"
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the file identification (ID) number for the specified logical name of a data, log, or full-text file of the current database. 
   
@@ -36,7 +37,9 @@ This function returns the file identification (ID) number for the specified logi
 FILE_IDEX ( file_name )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *file_name*  
 An expression of type **sysname** that returns the file ID value 'FILE_IDEX' for the name of the file. 
   

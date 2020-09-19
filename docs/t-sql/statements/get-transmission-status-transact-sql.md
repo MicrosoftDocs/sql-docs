@@ -1,4 +1,5 @@
 ---
+description: "GET_TRANSMISSION_STATUS (Transact-SQL)"
 title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "status information [SQL Server], conversations"
   - "GET_TRANSMISSION_STATUS statement"
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the status for the last transmission for one side of a conversation.  
   
@@ -40,7 +41,9 @@ ms.author: carlrab
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_id*  
  Is the conversation handle for the conversation. This parameter is of type **uniqueidentifier**.  
   

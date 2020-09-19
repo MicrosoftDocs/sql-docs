@@ -1,7 +1,7 @@
 ---
 title: What are data pools?
 titleSuffix: SQL Server big data clusters
-description: This article describes the data pool in a SQL Server 2019 big data cluster.
+description: Learn the role of SQL Server data pools in a SQL Server Big Data Cluster, as well as the architecture and functionality of a SQL data pool.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -13,9 +13,13 @@ ms.technology: big-data-cluster
 
 # What are data pools in a SQL Server big data cluster?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes the role of *SQL Server data pools* in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The following sections describe the architecture and functionality of a SQL data pool.
+
+This 5-minute video introduces data pools and shows you how to query data from data pools:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Querying-Data-from-Big-Data-Cluster-Data-Pool/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Data pool architecture
 

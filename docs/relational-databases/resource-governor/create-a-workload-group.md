@@ -1,5 +1,6 @@
 ---
 title: "Create a Workload Group | Microsoft Docs"
+description: Learn how to create a workload group by using SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
 ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, workload group create"
   - "workload groups [SQL Server], create"
-ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
 ---
 # Create a Workload Group
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   You can create a workload group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -24,17 +25,20 @@ ms.author: jrasnick
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
-###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
+###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions
+
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  The memory consumed by index creation on a non-aligned partitioned table is proportional to the number of partitions involved. If the total required memory exceeds the per-query limit, (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposed by the workload group setting, this index creation may fail. Because the default workload group allows a query to exceed the per-query limit with the minimum required memory to start for SQL Server 2005 compatibility, the user may be able to run the same index creation in the default workload group, if the default resource pool has enough total memory configured to run such a query.  
   
  Index creation is allowed to use more memory workspace than initially granted for performance. This special handling is supported by Resource Governor, however, the initial grant and any additional memory grant are limited by the workload group and resource pool settings.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permissions
+
  Creating a workload group requires CONTROL SERVER permission.  
   
-##  <a name="CreRPProp"></a> Create a Workload Group Using SQL Server Management Studio  
+##  <a name="CreRPProp"></a> Create a Workload Group Using SQL Server Management Studio
+
  **To create a workload group by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  In Object Explorer, recursively expand the **Management** node down to and including the resource pool that contains the workload group to be modified.  
@@ -51,8 +55,6 @@ ms.author: jrasnick
   
 7.  To save the changes, click **OK**  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="CreRPTSQL"></a> Create a Workload Group Using Transact-SQL  
  **To create a workload group by using [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
@@ -60,10 +62,11 @@ ms.author: jrasnick
   
 2.  Run the ALTER RESOURCE GOVERNOR RECONFIGURE statement.  
   
-### Example (Transact-SQL)  
+### Example (Transact-SQL)
+
  The following example creates a workload group named `groupAdhoc` in the resource pool named `poolAdhoc`.  
   
-```  
+```sql
 CREATE WORKLOAD GROUP groupAdhoc  
 USING poolAdhoc;  
 GO  
@@ -71,7 +74,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## See Also  
+## See Also
+
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Enable Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Create a Resource Pool](../../relational-databases/resource-governor/create-a-resource-pool.md)   

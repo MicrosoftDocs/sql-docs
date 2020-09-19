@@ -1,5 +1,6 @@
 ---
-title: "Using bulk copy API for batch insert operation for MSSQL JDBC Driver | Microsoft Docs"
+title: "Bulk copy API for batch insert in JDBC"
+description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch insert operations against Azure Data Warehouse for faster loading of data into the database."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Using bulk copy API for batch insert operation
@@ -65,7 +66,7 @@ If the query fails because of non "SQL server" related errors, the driver will l
 
 ## Example
 
-Below is an example code that demonstrates the use case for a batch insert operation against Azure DW of a thousand rows, for both (regular vs Bulk Copy API) scenarios.
+Below is an example code that demonstrates the use case for a batch insert operation against Azure Synapse Analytics (SQL DW) of a thousand rows, for both (regular vs Bulk Copy API) scenarios.
 
 ```java
     public static void main(String[] args) throws Exception
@@ -136,4 +137,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## See also
 
-[Improving performance and reliability with the JDBC driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)

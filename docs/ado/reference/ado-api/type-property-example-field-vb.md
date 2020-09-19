@@ -1,8 +1,9 @@
 ---
+description: "Type Property Example (Field) (VB)"
 title: "Type Property Example (Field) (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Type property [field] [ADO], Visual Basic example"
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property Example (Field) (VB)
-This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the [Type](../../../ado/reference/ado-api/type-property-ado.md) property of all the [Field](../../../ado/reference/ado-api/field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  
+This example demonstrates the [Type](./type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the [Type](./type-property-ado.md) property of all the [Field](./field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  
   
 ```  
 'BeginTypeFieldVB  
@@ -100,5 +101,5 @@ Attribute VB_Name = "TypeField"
 ```  
   
 ## See Also  
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field Object](./field-object.md)   
+ [Type Property (ADO)](./type-property-ado.md)

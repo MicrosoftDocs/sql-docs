@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Configure replication between a server and mobile clients (merge) | Microsoft Docs"
-ms.custom: ""
+title: "Tutorial: Configure Merge Replication"
+description: This tutorial teaches you how to configure Merge Replication between a SQL Server and a mobile client. 
+ms.custom: seo-lt-2019
 ms.date: "04/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Configure replication between a server and mobile clients (merge)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Merge replication is a good solution to the problem of moving data between a central server and mobile clients that are only occasionally connected. By using the replication wizards, you can easily configure and administer a merge replication topology. 
 
 This tutorial shows you how to configure a replication topology for mobile clients. For more information about merge replication, see the [overview of merge replication](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
@@ -39,7 +40,7 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
    - Any edition of SQL Server, except for SQL Server Express or SQL Server Compact. These editions cannot be a replication publisher.   
    - The [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. To enhance security, the sample databases are not installed by default.  
   
-- At the subscriber server (destination), install any edition of SQL Server, except for [!INCLUDE[ssEW](../../includes/ssew-md.md)]. The publication that's created in this tutorial does not support [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
+- At the subscriber server (destination), install any edition of SQL Server, except SQL Server Express or SQL Server Compact. The publication that's created in this tutorial does not support either SQL Server Express or SQL Server Compact. 
 
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Install [SQL Server 2017 Developer edition](https://www.microsoft.com/sql-server/sql-server-downloads).

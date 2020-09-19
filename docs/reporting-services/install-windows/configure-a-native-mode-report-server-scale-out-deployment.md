@@ -1,4 +1,5 @@
 ---
+description: "Configure a Native Mode Report Server Scale-Out Deployment"
 title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
 ms.date: 11/29/2018
 ms.prod: reporting-services
@@ -89,9 +90,9 @@ The issue will be intermittent is that only the server who created the SQL Agent
   
 2.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
   
-3.  Configure the Report Server Web service URL, Web Portal URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Configure the Report Server Web service URL, Web Portal URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)
   
-4.  Verify that the report server is operational. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+4.  Verify that the report server is operational. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
 ## To install and configure the second report server instance  
   

@@ -1,6 +1,7 @@
 ---
-title: "View Replicated Commands and Information in Distribution Database | Microsoft Docs"
-ms.custom: ""
+title: "View replicated commands & information in Distribution database"
+description: Learn how to view replicated commands and other replication related information in the Distribution database for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,10 +18,10 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # View Replicated Commands and Information in Distribution Database
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When using transactional replication, transaction commands are stored in the distribution database until the Distribution Agent propagates them to all Subscribers or a Distribution Agent at the Subscriber pulls the changes. These pending commands in the distribution database can be viewed programmatically using replication stored procedures. For more information, see [Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 ### To view replicated commands from all transactional publications in the distribution database  

@@ -1,4 +1,5 @@
 ---
+description: "sp_add_jobserver (Transact-SQL)"
 title: "sp_add_jobserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_jobserver"
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_add_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Targets the specified job at the specified server.  
   
@@ -53,7 +54,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  None  
   
 ## Remarks  
- **@automatic_post** exists in **sp_add_jobserver**, but is not listed under Arguments. **@automatic_post** is reserved for internal use.  
+ **\@automatic_post** exists in **sp_add_jobserver**, but is not listed under Arguments. **\@automatic_post** is reserved for internal use.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides an easy, graphical way to manage jobs, and is the recommended way to create and manage the job infrastructure.  
   

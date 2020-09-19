@@ -1,8 +1,9 @@
 ---
+description: "Clone Method Example (VB)"
 title: "Clone Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Clone method [ADO], Visual Basic example"
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Clone Method Example (VB)
-This example uses the [Clone](../../../ado/reference/ado-api/clone-method-ado.md) method to create copies of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  
+This example uses the [Clone](./clone-method-ado.md) method to create copies of a [Recordset](./recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  
   
 ```  
 'BeginCloneVB  
@@ -122,5 +123,5 @@ End Sub
 ```  
   
 ## See Also  
- [Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone Method (ADO)](./clone-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

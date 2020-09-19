@@ -1,6 +1,8 @@
 ---
-title: "Use SQL Server Profiler to Create and Test Plan Guides | Microsoft Docs"
-ms.custom: ""
+title: "Create and test plan guides"
+titleSuffix:  SQL Server Profiler
+description: Use SQL Server Profiler to capture exact query text for use in the statement_text argument of the sp_create_plan_guide stored procedure in SQL Server.
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -22,11 +24,11 @@ ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
 ---
-# Use SQL Server Profiler to Create and Test Plan Guides
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Use SQL Server Profiler to create and test plan guides
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   When you are creating a plan guide, you can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to capture the exact query text for use in the *statement_text* argument of the **sp_create_plan_guide** stored procedure. This helps make sure that the plan guide will be matched to the query at compile time. After the plan guide is created, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can also be used to test that the plan guide is, in fact, being matched to the query. Generally, you should test plan guides by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to verify that your query is being matched to your plan guide.  
   
-## Capturing Query Text by Using SQL Server Profiler  
+## Capturing query text by using SQL Server Profiler  
  If you run a query and capture the text exactly as it was submitted to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], you can create a plan guide of type SQL or TEMPLATE that will match the query text exactly. This makes sure that the plan guide is used by the query optimizer.  
   
  Consider the following query that is submitted by an application as a stand-alone batch:  
@@ -60,7 +62,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Open the batch text file in Notepad and copy the text to the copy and paste buffer.  
   
-8.  Create the plan guide and paste the copied text inside the quotation marks (**''**) specified for the **@stmt** argument. You must escape any single quotation marks in the **@stmt** argument by preceding them with another single quotation mark. Be careful not to add or remove any other characters when you insert these single quotation marks. For example, the date literal **'**20000101**'** must be delimited as **''**20000101**''**.  
+8.  Create the plan guide and paste the copied text inside the quotation marks (**''**) specified for the **\@stmt** argument. You must escape any single quotation marks in the **\@stmt** argument by preceding them with another single quotation mark. Be careful not to add or remove any other characters when you insert these single quotation marks. For example, the date literal **'**20000101**'** must be delimited as **''**20000101**''**.  
   
  Here is the plan guide:  
   
@@ -74,7 +76,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## Testing Plan Guides by Using SQL Server Profiler  
+## Testing plan guides by using SQL Server Profiler  
  To verify that a plan guide is being matched to a query, follow these steps:  
   
 1.  Start a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace, making certain that the **Showplan XML** event type is selected (located under the **Performance** node).  

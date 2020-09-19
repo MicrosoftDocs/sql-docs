@@ -1,6 +1,6 @@
 ---
-title: "Create a Cross-Domain Rule | Microsoft Docs"
-ms.custom: ""
+description: "Create a Cross-Domain Rule"
+title: "Create a Cross-Domain Rule"
 ms.date: "11/22/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -11,12 +11,12 @@ f1_keywords:
   - "sql13.dqs.dm.testcdrule.f1"
   - "sql13.dqs.dm.cdrules.f1"
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: lrtoyou1223
-ms.author: lle
+author: swinarko
+ms.author: sawinark
 ---
 # Create a Cross-Domain Rule
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a cross-domain rule for a composite domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A cross-domain rule tests the relationship between values in single domains that are included in a composite domain. A cross-domain rule must hold true across a composite domain in order for domain values to be considered accurate and conformant to business requirements. A cross-domain rule is used to validate, correct, and standardize domain values.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_publisherproperty (Transact-SQL)"
 title: "sp_publisherproperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_publisherproperty"
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ---
 # sp_publisherproperty (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Displays or changes publisher properties for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. This stored procedure is executed at the Distributor.  
   
@@ -33,10 +34,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [**@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the heterogeneous Publisher. *publisher* is **sysname**, with no default.  
   
- [**@propertyname** = ] **'***propertyname***'**  
+`[ @propertyname = ] 'propertyname'`
  Is the name of the property being set. *propertyname* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -47,7 +48,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  When *propertyname* is omitted all settable properties are returned.  
   
- [**@propertyvalue** = ] **'***propertyvalue***'**  
+ `[ @propertyvalue = ] 'propertyvalue'`  
  Is the new value for the property setting. *propertyvalue* is **sysname**, with a default value of NULL. When *propertyvalue* is omitted, the current setting for the property is returned.  
   
 ## Result Sets  

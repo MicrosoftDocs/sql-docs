@@ -1,5 +1,6 @@
 ---
-title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
+description: "sys.dm_operation_status"
+title: "sys.dm_operation_status | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
 ms.service: sql-database
@@ -16,13 +17,13 @@ helpviewer_keywords:
   - "dm_operation_status dynamic management view"
   - "sys.dm_operation_status dynamic management view"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sys.dm_operation_status (Azure SQL Database)
+# sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
   
@@ -67,7 +68,9 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 -   Restore database  
   
 -   Delete database  
-  
+
+The information in this view is retained for approximately 1 hour. Please use the [Azure Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) to view details of operations in the last 90 days. For retention more than 90 days, consider [sending Activity Log](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) entries to a Log Analytics workspace.
+
 ## Example  
  Show most recent geo-replication operations associated with database 'mydb'.  
   

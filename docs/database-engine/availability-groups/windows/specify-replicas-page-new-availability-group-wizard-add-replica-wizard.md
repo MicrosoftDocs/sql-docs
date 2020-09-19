@@ -1,6 +1,7 @@
 ---
-title: "Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Availability Group Wizard: Specify Replicas Page"
+description: Describes the options of the Specify Replicas page of the New Availability Group Wizard in SQL Server Management Studio (SSMS).
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes the options of the **Specify Replicas** page. This page applies to the **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** and the **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use the **Specify Replicas** page to specify and configure one or more availability replicas to add the availability group. This page contains four tabs, which are introduced in the following table. Click the name of a tab in the table to go to the corresponding section, later in this topic.  
   
 |Tab|Brief Description|  
@@ -60,7 +61,7 @@ ms.author: mathoma
  Click to add a secondary replica to the availability group.  
   
  **Add Azure Replica**  
- Click to create an Azure virtual machine that is running a secondary replica in the availability group. This option is applicable only for an availability group in hybrid IT that contains on-premise replicas. For more information, see [High Availability and Disaster Recovery for SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Click to create an Azure virtual machine that is running a secondary replica in the availability group. This option is applicable only for an availability group in hybrid IT that contains on-premises replicas. For more information, see [High Availability and Disaster Recovery for SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Remove Replica**  
  Click to remove the selected secondary replica from the availability group.  
@@ -125,7 +126,7 @@ ms.author: mathoma
  Displays the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the availability replica.  
   
  **Backup Priority (Lowest=1, Highest=100)**  
- Assign the priority for backups being performed on this replica relative to the other replicas in the same availability group. The default value is 50. You can select any other integer in the range of 0..100. 1 indicates the lowest priority, and 100 indicates the highest priority. If you set **Backup Priority** to 1, the availability replica will be choosen for performing backups only if no higher priority availability replica is currently available.  
+ Assign the priority for backups being performed on this replica relative to the other replicas in the same availability group. The default value is 50. You can select any other integer in the range of 0..100. 1 indicates the lowest priority, and 100 indicates the highest priority. If you set **Backup Priority** to 1, the availability replica will be chosen for performing backups only if no higher priority availability replica is currently available.  
   
  **Exclude Replica**  
  To prevent this availability replica from ever being be chosen for performing backups. This is useful, for example, for a remote availability replica to which you never want backups to fail over.  
@@ -157,7 +158,7 @@ ms.author: mathoma
  **Static IP**  
  Select if you want the listener to listen on more than one subnet. To use the static IP network mode, an availability group listener must listen on every subnet that hosts an availability replica for the availability group. For each subnet, click **Add** to select a subnet address and to specify an IP address.  
   
- If **Static IP** is selected as the network mode (this is the default selection), a grid displays the **Subnet** and **IP Address** columns, and the associated **Add** and **Remove** buttons are displayed. Note that the grid is empty until you add the first subnet.  
+ If **Static IP** is selected as the network mode (this is the default selection), a grid displays the **Subnet** and **IP Address** columns, and the associated **Add** and **Remove** buttons are displayed. The grid is empty until you add the first subnet.  
   
  **Subnet** column  
  Displays the subnet address that you selected for each subnet you have added for the listener.  

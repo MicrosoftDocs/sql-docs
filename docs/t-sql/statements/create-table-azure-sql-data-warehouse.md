@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE (Azure SQL Data Warehouse)"
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"
@@ -14,7 +15,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Creates a new table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
@@ -29,7 +30,7 @@ To understand tables and how to use them, see [Tables in SQL Data Warehouse](htt
 
 ## Syntax
   
-```
+```syntaxsql
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -41,8 +42,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
-    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
-  
+    [ <column_constraint> ]
+
+<column_constraint>::=
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
+
 <table_option> ::=
     {
        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
@@ -161,11 +169,15 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
-### Ordered Clustered columnstore index option (Preview for Azure SQL Data Warehouse)
+### Ordered Clustered columnstore index option 
 
-Clustered columnstore index (CCI) is the default for creating tables in Azure SQL Data Warehouse.  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. Check [Performance tuning with ordered clustered columnstore index](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) for details.  
+Clustered columnstore index (CCI) is the default for creating tables in Azure SQL Data Warehouse.  Data in CCI is not sorted before being compressed into columnstore segments.  When creating a CCI with ORDER, data is sorted before being added to index segments and query performance can be improved. See [Performance Tuning with Ordered Clustered Columnstore Index](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest) for details.  
 
-Users can query column_store_order_ordinal column in sys.index_columns for the column(s) a table is ordered on and the sequence in the ordering.  
+An ordered CCI can be created on columns of any data types supported in Azure SQL Data Warehouse except for string columns.  
+
+Users can query **column_store_order_ordinal** column in **sys.index_columns** for the column(s) a table is ordered on and the sequence in the ordering.  
+
+Check [Performance tuning with ordered clustered columnstore index](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci) for details.   
 
 ### <a name="DataTypes"></a> Data type
 
@@ -244,7 +256,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Exact-number data types that use integer data. The storage is shown in the following table.  
   
 | Data Type | Storage bytes |  

@@ -1,4 +1,5 @@
 ---
+description: "setTimestamp Method (int, java.sql.Timestamp)"
 title: "setTimestamp Method (int, java.sql.Timestamp) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 2f7bb89f-ace7-41cb-b596-5aa8d0dd9e3c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setTimestamp Method (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

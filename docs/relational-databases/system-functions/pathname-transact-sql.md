@@ -1,4 +1,5 @@
 ---
+description: "PathName (Transact-SQL)"
 title: "PathName (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
@@ -19,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the path of a FILESTREAM binary large object (BLOB). The OpenSqlFilestream API uses this path to return a handle that an application can use to work with the BLOB data by using Win32 APIs. PathName is read-only.  
   
@@ -38,8 +39,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Requesting the PathName for a column of any other data type or for a **varbinary(max)** columnthat does not have the FILESTREAM storage attribute will cause a query compile-time error.  
   
- *@option*  
- An integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) that defines how the server component of the path should be formatted. *@option* can be one of the following values. The default is 0.  
+ *\@option*  
+ An integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) that defines how the server component of the path should be formatted. *\@option* can be one of the following values. The default is 0.  
   
 |Value|Description|  
 |-----------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: "Monitor Running Packages and Other Operations"
 title: "Monitor Running Packages and Other Operations | Microsoft Docs"
 ms.custom: supportability
 ms.date: 06/04/2018
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Monitor Running Packages and Other Operations
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package executions, project validations, and other operations by using one of more of the following tools. Certain tools such as data taps are available only for projects that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
@@ -67,7 +68,7 @@ ms.author: chugu
  **Type**  
  Specifies the type of operation. The following are the possible values for the **Type** field and the corresponding values in the operations_type column of the Transact-SQL **catalog.operations** view.  
   
-|||  
+|Type field description|operations_type value|  
 |-|-|  
 |Integration Services initialization|1|  
 |Operations cleanup (SQL Agent job)|2|  

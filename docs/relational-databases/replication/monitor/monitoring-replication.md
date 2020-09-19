@@ -1,5 +1,6 @@
 ---
 title: "Monitoring (Replication) | Microsoft Docs"
+description: Learn about the monitoring tools used to track activity and status of replication in SQL Server replication topology.
 ms.custom: ""
 ms.date: "11/20/2018"
 ms.prod: sql
@@ -18,10 +19,10 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Monitoring (Replication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Monitoring a replication topology is an important aspect of deploying replication. Because replication activity is distributed, it is essential to track activity and status across all computers involved in replication. With the use of various monitoring tools, you can answer such common questions as: 
 
 -   Is my replication system healthy?

@@ -1,6 +1,7 @@
 ---
-title: "Troubleshoot Database Mirroring Configuration (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Common issues when configuring database mirroring"
+description: "Provides information to help troubleshoot problems setting up a database mirroring session."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Troubleshoot Database Mirroring Configuration (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic provides information to help you troubleshoot problems in setting up a database mirroring session.  
   
 > [!NOTE]  

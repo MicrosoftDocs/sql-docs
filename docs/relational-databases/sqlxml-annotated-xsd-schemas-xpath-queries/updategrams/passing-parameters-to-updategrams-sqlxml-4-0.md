@@ -1,6 +1,6 @@
 ---
-title: "Passing Parameters to Updategrams (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Passing Parameters to Updategrams (SQLXML)"
+description: Learn how to pass parameters to updategrams in SQLXML 4.0.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -16,10 +16,11 @@ helpviewer_keywords:
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Passing Parameters to Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Updategrams are templates; therefore, you can pass them parameters. For more information about passing parameters to templates, see [Updategram Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
  Updategrams allow you to pass NULL as a parameter value. To pass the NULL parameter value, you specify the **nullvalue** attribute. The value that is assigned to the **nullvalue** attribute is then provided as the parameter value. Updategrams treat this value as NULL.  
@@ -59,8 +60,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 1.  Copy the updategram above into Notepad and save it to file as UpdategramWithParameters.xml.  
   
 2.  Prepare the SQLXML 4.0 test script (Sqlxml4test.vbs) in [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) to execute the updategram by adding the following lines after the `cmd.Properties("Output Stream").Value = outStream`:  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     cmd.NamedParameters = True  

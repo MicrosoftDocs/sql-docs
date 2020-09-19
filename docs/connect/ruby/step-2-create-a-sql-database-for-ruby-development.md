@@ -1,4 +1,5 @@
 ---
+description: "Step 2: Create a SQL database for Ruby development"
 title: "Step 2: Create a SQL database for Ruby development | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bffa9c3d-cf88-4cf4-8110-d11f7948980d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 2: Create a SQL database for Ruby development
 

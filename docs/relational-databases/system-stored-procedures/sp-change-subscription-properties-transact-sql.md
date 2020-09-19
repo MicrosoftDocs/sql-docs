@@ -1,4 +1,5 @@
 ---
+description: "sp_change_subscription_properties (Transact-SQL)"
 title: "sp_change_subscription_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_change_subscription_properties"
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 ---
 # sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Updates information for pull subscriptions. This stored procedure is executed at the Subscriber on the subscription database.  
   
@@ -84,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Login that the Merge Agent uses when connecting to the Web server that is hosting Web synchronization using Basic Authentication.|  
 |**internet_password**||Password that the Merge Agent uses when connecting to the Web server that is hosting Web synchronization using Basic Authentication.|  
 |**internet_security_mode**|**1**|Use Windows Integrated Authentication for Web synchronization. We recommend using Basic Authentication with Web synchronization. For more information, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Use Basic Authentication for Web synchronization.<br /><br /> Note: Web synchronization requires an SSL connection to the Web server.|  
+||**0**|Use Basic Authentication for Web synchronization.<br /><br /> Note: Web synchronization requires a TLS connection to the Web server.|  
 |**internet_timeout**||Length of time, in seconds, before a Web synchronization request expires.|  
 |**internet_url**||URL that represents the location of the replication listener for Web synchronization.|  
 |**merge_job_login**||Login for the Windows account under which the agent runs.|  

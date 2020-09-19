@@ -1,5 +1,6 @@
 ---
 title: "Encrypt a Column of Data | Microsoft Docs"
+description: Learn how to encrypt a column of data by using symmetric encryption in SQL Server using Transact-SQL, sometimes known as column-level or cell-level encryption.
 ms.custom: ""
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
   - "column level encryption"
   - "cell level encryption"
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: jaszymas
+ms.author: jaszymas
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # Encrypt a Column of Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption.  
+  This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption. This feature is in preview for Azure Synapse Analytics (SQL DW)
 
 ## Security  
   
@@ -53,8 +54,6 @@ Always back up your database master key. For more information on database master
 2. On the Standard bar, click **New Query**.  
   
 3. Copy and paste the following example into the query window and click **Execute**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     USE AdventureWorks2012;  

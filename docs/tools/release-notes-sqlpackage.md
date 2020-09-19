@@ -1,5 +1,5 @@
 ---
-title: DacFx and SqlPackage release notes | Microsoft Docs
+title: DacFx and SqlPackage release notes
 description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
 ms.date: 02/02/2019
@@ -29,6 +29,126 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## 18.5.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2134206)|June 24, 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134312)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134311)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134310)|June 24, 2020| 18.5.1|15.0.4826.1|
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
+
+## 18.5 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2128142)|April 28, 2020|18.5|15.0.4769.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128145)|April 28, 2020| 18.5|15.0.4769.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128144)|April 28, 2020| 18.5|15.0.4769.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2128143)|April 28, 2020| 18.5|15.0.4769.1|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Data Sensitivity classification now supported for SQL Server 2008 and up, Azure SQL Database, and Azure SQL Data Warehouse |
+| Deployment | Add Azure SQL Data Warehouse support for table constraints |
+| Deployment | Add Azure SQL Data Warehouse support for ordered clustered column store index |
+| Deployment | Add support for External Data Source (for Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
+| Deployment | Add SQL Database Edge Instance as supported edition |
+| Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
+| Deployment | Add support for copy command in Azure SQL Data Warehouse |
+| Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure SQL Data Warehouse |
+| .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of sqlpackage |
+| &nbsp; | &nbsp; |
+
+### Fixes
+| Fix | Details |
+| :-- | :------ |
+| Deployment | Fix parsing json path as expression |
+| Deployment | Fix generating GRANT statements for AlterAnyDatabaseScopedConfiguration and AlterAnySensitivityClassification permissions |
+| Deployment | Fix External Script permission not being recognized |
+| Deployment | Fix for inline property - the implicit addition of the property should not show in difference but explicit mention should show through script |
+| Deployment | Resolved an issue where changing a Table referenced by a Materialized View (MV) causes Alter View statements to be generated which is not supported for MVs for Azure SQL Data Warehouse |
+| Deployment | Fix publish failing when adding column to a table with data for Azure SQL Data Warehouse |
+| Deployment | Fix update script should move data to a new table when changing the distribution column type (data loss scenario) for Azure SQL Data Warehouse |
+| ScriptDom | Fix ScriptDom bug where it couldn't recognize inline constraints defined after an inline index |
+| ScriptDom | Fix ScriptDom SYSTEM_TIME missing closing parenthesis when in a batch statement |
+| Always Encrypted | Fix #tmpErrors table failing to drop if sqlpackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+| Feature | Details |
+| :------ | :------ |
+| Deployment |  A regression was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| .NET Core | Importing bacpacs with Sensitivity Classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
+| &nbsp; | &nbsp; |
+
+## 18.4.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2113703)|December 13, 2019|18.4.1|15.0.4630.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113705)|December 13, 2019| 18.4.1|15.0.4630.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113331)|December 13, 2019| 18.4.1|15.0.4630.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2113704)|December 13, 2019| 18.4.1|15.0.4630.1|
+
+### Fixes
+| Fix | Details |
+| :-- | :------ |
+| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail.
+| &nbsp; | &nbsp; |
+
+### Known Issues 
+
+| Feature | Details |
+| :------ | :------ |
+| Deployment |  A regression was introduced in 18.4.1 causing there to be a “Object reference not set to an instance of an object.” error when deploying a dacpac or importing a bacpac with a user with external login. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| &nbsp; | &nbsp; |
+
+## 18.4 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2108813)|October 29, 2019|18.4|15.0.4573.2|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108815)|October 29, 2019| 18.4|15.0.4573.2|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2108814)|October 29, 2019| 18.4|15.0.4573.2|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2109019)|October 29, 2019| 18.4|15.0.4573.2|
+
+### Features
+
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Add support to deploy to Azure SQL Data Warehouse (GA). | 
+| Platform | sqlpackage .NET Core GA for macOS, Linux, and Windows. | 
+| Security | Remove SHA1 code signing. |
+| Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
+| Deployment | Add Managed Instance support for AAD user and groups. |
+| Deployment | Support the /AccessToken parameter for sqlpackage on .NET Core. |
+| &nbsp; | &nbsp; |
+
+### Known Issues 
+
+| Feature | Details |
+| :------ | :------ |
+| ScriptDom |  A ScriptDom parsing regression was introduced in 18.3.1 where 'RENAME' is incorrectly treated as a top-level token, cause parsing to fail. This will be fixed in the next sqlpackage release. | 
+| &nbsp; | &nbsp; |
+
+### Known Issues for .NET Core
+
+| Feature | Details |
+| :------ | :------ |
+| Import |  For .bacpac files with compressed files over 4GB in size, you might need to use the .NET Core version of sqlpackage to perform the import.  This behavior is due to how .NET Core generates zip headers, which although valid, are not readable by the .NET Full Framework version of sqlpackage. | 
+| Deployment | The parameter /p:Storage=File is not supported. Only Memory is supported on .NET Core. | 
+| Always Encrypted | sqlpackage .NET Core does not support Always Encrypted columns. | 
+| Security | sqlpackage .NET Core does not support the /ua parameter for multi-factor authentication. | 
+| Deployment | Older V2 .dacpac and .bacpac files that use json data serialization aren't supported. |
+| &nbsp; | &nbsp; |
+
 ## 18.3.1 sqlpackage
 
 |Platform|Download|Release date|Version|Build
@@ -42,7 +162,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | Details |
 | :------ | :------ |
-| Azure SQL Data Warehouse (preview) | Add support to deploy to Azure SQL Data Warehouse. | 
+| Deployment | Add support to deploy to Azure SQL Data Warehouse (preview). | 
 | Deployment | Add /p:DatabaseLockTimeout=(INT32 '60') parameter to sqlpackage. | 
 | Deployment | Add /p:LongRunningCommandTimeout=(INT32) parameter to sqlpackage. |
 | Export/Extract | Add /p:TempDirectoryForTableData=(STRING) parameter to sqlpackage. |
@@ -77,19 +197,19 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | Details |
 | :------ | :------ |
-| Add graph table support for edge constraints and edge constraint clauses. | &nbsp; |
-| Enabled model validation rule to support 32 columns for index keys for SQL Server 2016 and up. | &nbsp; |
+| Graph | Add graph table support for edge constraints and edge constraint clauses. |
+| Deployment | Enabled model validation rule to support 32 columns for index keys for SQL Server 2016 and up. |
 | &nbsp; | &nbsp; |
 
 ### Fixes
 
 | Fix | Details |
 | :-- | :------ |
-| Fix reverse engineering a SQL Server 2016 RTM database due to an unsupported query hint being used. | &nbsp; |
-| Fix deployment ordering of auto close alter statements to occur before create filegroup statements. | &nbsp; |
-| Fix ScriptDom parsing regression where the 'URL' string was interpreted as a top level token. | &nbsp; |
-| Fix a null reference exception when parsing an alter table add index statement. | &nbsp; |
-| Fixed schema compare for nullable persisted computed columns always showing as different.| &nbsp; |
+| Deployment | Fix reverse engineering a SQL Server 2016 RTM database due to an unsupported query hint being used. |
+| Deployment | Fix deployment ordering of auto close alter statements to occur before create filegroup statements. |
+| ScriptDom | Fix ScriptDom parsing regression where the 'URL' string was interpreted as a top level token. |
+| Deployment | Fix a null reference exception when parsing an alter table add index statement. | 
+| Schema Compare | Fixed schema compare for nullable persisted computed columns always showing as different.|
 | &nbsp; | &nbsp; |
 
 ## 18.1 sqlpackage
@@ -102,21 +222,21 @@ Preview release.
 
 | Feature | Details |
 | :------ | :------ |
-| Added support for UTF8 collations. | &nbsp; |
-| Enabled nonclustered columnstore indexes on an indexed view. | &nbsp; |
-| Moved to .NET Core 2.2. | &nbsp; |
-| Use memory backed storage for schema compare on .NET Core. | &nbsp; |
+| Deployment | Added support for UTF8 collations. |
+| Deployment | Enabled nonclustered columnstore indexes on an indexed view. |
+| Platform | Moved to .NET Core 2.2. | 
+| Schema Compare | Use memory backed storage for schema compare on .NET Core. |
 | &nbsp; | &nbsp; |
 
 ### Fixes
 
 | Fix | Details |
 | :-- | :------ |
-| Performance fix to use the legacy cardinality estimator for reverse engineering queries. | &nbsp; |
-| Fixed a significant schema compare performance issue when generating a script. | &nbsp; |
-| Fixed the schema drift detection logic to ignore certain extended event (xevent) sessions. | &nbsp; |
-| Fixed import ordering for graph tables. | &nbsp; |
-| Fixed exporting external tables with object permissions. | &nbsp; |
+| Performance | Performance fix to use the legacy cardinality estimator for reverse engineering queries. | 
+| Performance | Fixed a significant schema compare performance issue when generating a script. | 
+| Schema Compare | Fixed the schema drift detection logic to ignore certain extended event (xevent) sessions. |
+| Graph | Fixed import ordering for graph tables. | 
+| Export | Fixed exporting external tables with object permissions. |
 | &nbsp; | &nbsp; |
 
 ### Known issues
@@ -125,9 +245,9 @@ This release includes cross-platform preview builds of sqlpackage that target .N
 
 | Known issue | Details |
 | :---------- | :------ |
-| Build and deployment contributors aren't supported. | &nbsp; |
-| Older .dacpac and .bacpac files that use json data serialization aren't supported. | &nbsp; |
-| Referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. | A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
+| Deployment | For .NET Core, build and deployment contributors aren't supported. | 
+| Deployment | For .NET Core, older .dacpac and .bacpac files that use json data serialization aren't supported. | 
+| Deployment | For .NET Core referenced .dacpacs (for example master.dacpac) may not resolve due to issues with case-sensitive file systems. | A workaround is to capitalize the name of the reference file (for example MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## 18.0 sqlpackage
@@ -139,22 +259,22 @@ Build: &nbsp; 15.0.4200.1
 
 | Feature | Details |
 | :------ | :------ |
-| Added support for database compatibility level 150. | &nbsp; |
-| Added support for Managed Instances. | &nbsp; |
-| Added MaxParallelism command-line parameter to specify the degree of parallelism for database operations. | &nbsp; |
-| Added AccessToken command-line parameter to specify an authentication token when connecting to SQL Server. | &nbsp; |
-| Added support to stream BLOB/CLOB data types for imports. | &nbsp; |
-| Added support for scalar UDF 'INLINE' option. | &nbsp; |
-| Added support for graph table 'MERGE' syntax. | &nbsp; |
+| Deployment | Added support for database compatibility level 150. | 
+| Deployment | Added support for Managed Instances. | 
+| Performance | Added MaxParallelism command-line parameter to specify the degree of parallelism for database operations. | 
+| Security | Added AccessToken command-line parameter to specify an authentication token when connecting to SQL Server. | 
+| Import | Added support to stream BLOB/CLOB data types for imports. | 
+| Deployment | Added support for scalar UDF 'INLINE' option. | 
+| Graph | Added support for graph table 'MERGE' syntax. |
 | &nbsp; | &nbsp; |
 
 ### Fixes
 
 | Fix | Details |
 | :-- | :------ |
-| Fixed unresolved pseudo-column for graph tables. | &nbsp; |
-| Fixed creating a database with memory optimized file groups when memory optimized tables are used. | &nbsp; |
-| Fixed including extended properties on external tables. | &nbsp; |
+| Graph | Fixed unresolved pseudo-column for graph tables. |
+| Deployment | Fixed creating a database with memory optimized file groups when memory optimized tables are used. |
+| Deployment | Fixed including extended properties on external tables. |
 | &nbsp; | &nbsp; |
 
 ## 17.8 sqlpackage
@@ -166,16 +286,16 @@ Build: &nbsp; 14.0.4079.2
 
 | Feature | Details |
 | :------ | :------ |
-| Improved error messages for connection failures, including the SqlClient exception message. | &nbsp; |
-| Support index compression on single partition indexes for import/export. | &nbsp; |
+| Diagnostics | Improved error messages for connection failures, including the SqlClient exception message. |
+| Deployment | Support index compression on single partition indexes for import/export. |
 | &nbsp; | &nbsp; |
 
 ### Fixes
 
 | Fix | Details |
 | :-- | :------ |
-| Fixed a reverse engineering issue for XML column sets with SQL 2017 and later. | &nbsp; |
-| Fixed an issue where scripting the database compatibility level 140 was ignored for Azure SQL Database. | &nbsp; |
+| Deployment | Fixed a reverse engineering issue for XML column sets with SQL 2017 and later. | 
+| Deployment | Fixed an issue where scripting the database compatibility level 140 was ignored for Azure SQL Database. |
 | &nbsp; | &nbsp; |
 
 ## 17.4.1 sqlpackage
@@ -187,17 +307,17 @@ Build: &nbsp; 14.0.3917.1
 
 | Feature | Details |
 | :------ | :------ |
-| Added ThreadMaxStackSize command-line parameter to parse Transact-SQL with a large number of nested statements. | &nbsp; |
-| Database catalog collation support. | &nbsp; |
+| Import/Export | Added ThreadMaxStackSize command-line parameter to parse Transact-SQL with a large number of nested statements. |
+| Deployment | Database catalog collation support. | 
 | &nbsp; | &nbsp; |
 
 ### Fixes
 
 | Fix | Details |
 | :-- | :------ |
-| When importing an Azure SQL Database .bacpac to an on-premise instance, fixed errors due to _Database master keys without password are not supported in this version of SQL Server_. | &nbsp; |
-| Fixed an unresolved pseudo column error for graph tables. | &nbsp; |
-| Fixed using the SchemaCompareDataModel with SQL authentication to compare schemas. | &nbsp; |
+| Import | When importing an Azure SQL Database .bacpac to an on-premises instance, fixed errors due to _Database master keys without password are not supported in this version of SQL Server_. |
+| Graph | Fixed an unresolved pseudo column error for graph tables. |
+| Schema Compare | Fixed SQL authentication to compare schemas. | 
 | &nbsp; | &nbsp; |
 
 ## 17.4.0 sqlpackage
@@ -209,14 +329,14 @@ Build: &nbsp; 14.0.3881.1
 
 | Feature | Details |
 | :------ | :------ |
-| Added support for _temporal retention policy_ on SQL 2017+ and Azure SQL Database. | &nbsp; |
-| Added /DiagnosticsFile:"C:\Temp\sqlpackage.log" command-line parameter to specify a file path to save diagnostic information. | &nbsp; |
-| Added /Diagnostics command-line parameter to log diagnostic information to the console. | &nbsp; |
+| Deployment |  Added support for _temporal retention policy_ on SQL 2017+ and Azure SQL Database. | 
+| Diagnostics | Added /DiagnosticsFile:"C:\Temp\sqlpackage.log" command-line parameter to specify a file path to save diagnostic information. | 
+| Diagnostics | Added /Diagnostics command-line parameter to log diagnostic information to the console. |
 | &nbsp; | &nbsp; |
 
 ### Fixes
 
 | Fix | Details |
 | :-- | :------ |
-| Do not block when encountering a database compatibility level that is not understood. | Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
+| Deployment | Do not block when encountering a database compatibility level that is not understood. Instead, the latest Azure SQL Database or on-premises platform will be assumed. |
 | &nbsp; | &nbsp; |

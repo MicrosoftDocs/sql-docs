@@ -1,17 +1,17 @@
 ---
-title: Call Java from SQL Server
+title: Call Java runtime
 titleSuffix: SQL Server Language Extensions
-description: Learn how to call Java classes from SQL Server stored procedures using the Java programming language extension in SQL Server 2019.
+description: Learn how to call Java classes from a SQL Server stored procedures using SQL Server Language Extensions.
 author: dphansen
 ms.author: davidph 
-ms.date: 08/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# How to call Java from SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# How to call the Java runtime in SQL Server Language Extensions
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 [SQL Server Language Extensions](../language-extensions-overview.md) uses the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure as the interface to call the Java runtime. 
 
@@ -108,6 +108,20 @@ with result sets ((column1 int))
 ```
 
 For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## Loopback connection to SQL Server
+
+Use a loopback connection to connect back to SQL Server over JDBC to read or write data from Java executed from `sp_execute_external_script`. You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
+To make a loopback connection in Windows use the following example:
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+To make a loopback connection in Linux the JDBC driver requires three connection properties defined in the following Certificate:
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## Next steps
 

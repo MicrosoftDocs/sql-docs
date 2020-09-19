@@ -1,4 +1,5 @@
 ---
+description: "sp_purge_jobhistory (Transact-SQL)"
 title: "sp_purge_jobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_purge_jobhistory"
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_purge_jobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes the history records for a job.  
   
@@ -44,7 +45,7 @@ sp_purge_jobhistory
 >  Members of the **sysadmin** fixed server role or members of the **SQLAgentOperatorRole** fixed database role can execute **sp_purge_jobhistory** without specifying a *job_name* or *job_id*. When **sysadmin** users do not specify these arguments, the job history for all local and multiserver jobs is deleted within the time specified by *oldest_date*. When **SQLAgentOperatorRole** users do not specify these arguments, the job history for all local jobs is deleted within the time specified by *oldest_date*.  
   
 `[ @job_id = ] job_id`
- The job identification number of the job for the records to be deleted. *job_id*is **uniqueidentifier**, with a default of NULL. Either *job_id* or *job_name* must be specified, but both cannot be specified. See the note in the description of **@job_name** for information about how **sysadmin** or **SQLAgentOperatorRole** users can use this argument.  
+ The job identification number of the job for the records to be deleted. *job_id* is **uniqueidentifier**, with a default of NULL. Either *job_id* or *job_name* must be specified, but both cannot be specified. See the note in the description of **\@job_name** for information about how **sysadmin** or **SQLAgentOperatorRole** users can use this argument.  
   
 `[ @oldest_date = ] oldest_date`
  The oldest record to retain in the history. *oldest_date* is **datetime**, with a default of NULL. When *oldest_date* is specified, **sp_purge_jobhistory** only removes records that are older than the value specified.  

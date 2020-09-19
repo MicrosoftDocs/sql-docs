@@ -1,5 +1,6 @@
 ---
-title: "Range Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Range Charts (Report Builder) | Microsoft Docs"
+description: Display a set of data points that are each defined by multiple values for the same category by using range charts in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

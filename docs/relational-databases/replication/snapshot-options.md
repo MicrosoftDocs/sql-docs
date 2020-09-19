@@ -1,6 +1,7 @@
 ---
-title: "Modify Snapshot Initialization Options for SQL Replication | Microsoft Docs"
-ms.custom: ""
+title: "Modify snapshot initialization options"
+description: Modify various Replication snapshot initialization options such as the snapshot format, and the snapshot folder location in SQL Server Management Studio. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Modify Snapshot Initialization Options for SQL Replication 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 There are a number of options to specify when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md).
 
@@ -31,8 +32,6 @@ There are a number of options to specify when [initializing a subscription with 
     >  It is recommended to select the native format unless this publication must support subscriptions to a  SQL Server Compact database or a non-SQL Server database.  
   
 2.  Select **OK**.   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Snapshot Folder Locations
 

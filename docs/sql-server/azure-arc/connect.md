@@ -28,13 +28,16 @@ In this step you generate a script that discovers all SQL Server instances insta
 
 ![Start creation](media/join/start-creation-of-sql-server-azure-arc-resource.png)
     
-1. Review the pre-requisites and go to the **Server details** tab.  
+2. Review the pre-requisites and go to the **Server details** tab.  
 
-1. Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
+3. Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
+
+> [!IMPORTANT]
+> If the machine hosting the SQL Server instance is already [connected to Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding __Machine - Azure Arc__ resource.
 
 ![Server details](media/join/server-details-sql-server-azure-arc.png)
 
-1. Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
+4. Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
 
 ![Download script](media/join/download-script-sql-server-azure-arc.png)
 

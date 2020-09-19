@@ -218,8 +218,6 @@ sudo apt-get --no-install-recommends -y install r-base-core
 install.packages("Rcpp", lib = "/usr/lib/R/library")
 ```
 
-*** (there is a prompt that states "would you like to use a personable library", does that need to be included, or does that appear normally? are there permissions that need to be set in advance) ***
-
 ## Enable external script execution in SQL Server
 
 An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)

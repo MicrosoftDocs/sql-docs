@@ -1,6 +1,6 @@
 ---
-title: Install custom Python runtime
-description: Learn how to install a custom Python runtime for SQL Server.
+title: Install Python custom runtime
+description: Learn how to install a Python custom runtime for SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install a custom Python runtime for SQL Server
+# Install a Python custom runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to install a custom runtime for running Python scripts with SQL Server. The custom runtime for Python can be used with the following scenarios:
@@ -21,7 +21,7 @@ This article describes how to install a custom runtime for running Python script
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> This article describes how to install a custom runtime for Python on Windows. To install on Linux, see the [Install a custom Python runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)
+> This article describes how to install a custom runtime for Python on Windows. To install on Linux, see the [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -136,7 +136,7 @@ GO
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
 > [!NOTE]
-> This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a custom Python runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
+> This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a Python custom runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 

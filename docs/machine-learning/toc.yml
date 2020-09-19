@@ -37,6 +37,12 @@
     href: ../machine-learning/install/sql-ml-component-commandline-install.md
   - name: Install pre-trained models
     href: ../machine-learning/install/sql-pretrained-models-install.md
+  - name: Install custom runtime
+    items:
+    - name: Install custom runtime for Python
+      href: ../machine-learning/install/custom-runtime-python.md
+    - name: Install custom runtime for R
+      href: ../machine-learning/install/custom-runtime-r.md
   - name: Change default Python and R runtime
     href: ../machine-learning/install/change-default-language-runtime-version.md
   - name: Upgrade Python and R

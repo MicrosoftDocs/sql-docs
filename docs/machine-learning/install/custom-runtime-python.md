@@ -32,7 +32,7 @@ This article describes how to install a custom runtime for running Python script
 
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
 
-+ [Python3.7]( https://www.python.org/downloads/release/python-379/)
++ [Python 3.7]( https://www.python.org/downloads/release/python-379/)
 
 ## Add custom runtime language extension
 
@@ -57,7 +57,7 @@ Complete the setup for SQL Server 2019.
   
     - **Machine Learning Services and Language Extensions**
    
-       Select **Machine Learning Services and Language Extensions** Python isn't selected.
+       Select **Machine Learning Services and Language Extensions** There is no need to select Python.
 
     ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
 
@@ -73,11 +73,11 @@ Complete the setup for SQL Server 2019.
 
 ## Install Python 3.7 
 
-[Complete installation of Python 3.7 and add to path.]( https://www.python.org/downloads/release/python-379/)
+[Install Python 3.7 and add it to the PATH.]( https://www.python.org/downloads/release/python-379/)
 
 ![Add Python 3.7 to path.](../install/media/python-379.png) update image - note
 
-+ Install [Pandas](https://pandas.pydata.org/) package for Python 3.7
++ Install the [pandas](https://pandas.pydata.org/) package for Python
 
 ```bash
 python.exe -m pip install pandas
@@ -85,7 +85,7 @@ python.exe -m pip install pandas
 
 ## Enable external script execution in SQL Server
 
-An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 
 ```sql
@@ -107,8 +107,8 @@ Select **Advanced** tab.
 Select **Environment Variables.**
 
 + Select **New** to create PYTHONHOME.
-To modify select **Edit** to change PYTHONHOME.
-Select **OK** to close remaining windows.
+To modify select **Edit** to change PYTHONHOME. Modify PYTHONHOME to point to the Python 3.7 installation location.
++ Select **OK** to close remaining windows.
 
 ![Create PYTHONHOME system variable.](../install/media/sys-pythonhome.png)
 
@@ -127,7 +127,7 @@ Modify the path to reflect the location of the download.
 
 ```sql
 CREATE EXTERNAL LANGUAGE mypython 
-FROM (CONTENT = N'C:\Users\username\pythonextension.zip', FILE_NAME = 'pythonextension.dll');
+FROM (CONTENT = N'PATH\TO\python-lang-extension.zip', FILE_NAME = 'pythonextension.dll');
 GO
 ```
 ::: moniker-end
@@ -182,17 +182,16 @@ sudo zypper install mssql-server-extensibility
 
  Python runs in a separate process from SQL Server.
 
-[Complete installation for Python 3.7](https://www.python.org/downloads/release/python-379/)
-
 ```bash
-$ sudo add-apt-repository ppa:deadsnakes/ppa
-$ sudo apt-get update
-$ sudo apt-get install python3.7 python3-pip
+# Install python3.7 and the corresponding library:
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.7 python3-pip libpython3.7
 ```
 
 ```bash
 # Install pandas to /usr/lib:
-$ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
+sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 ```
 
 ## Enable external script execution in SQL Server
@@ -209,13 +208,14 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Add PYTHONHOME environment variable
 
-Create the environment variable called PYTHONHOME to point to the Python installation location.
+Create the PYTHONHOME environment variable to point to the Python installation location.
 
 For login sessions:
 
 
 ```bash
 echo 'export PYTHONHOME="/usr"' >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 For non-login sessions:
@@ -224,9 +224,6 @@ For non-login sessions:
 echo 'export PYTHONHOME="/usr"' >> ~/.bashrc
 source ~/.bashrc
 ```
-
->[!Note] 
->To use the Python runtime provided with SQL Machine Learning Services, set PYTHONHOME to /opt/mssql/mlservices/runtime/python.
 
 ## Create external language
 
@@ -244,8 +241,9 @@ GO
 ::: moniker-end
 
 ## Verify language extension
+Use SQL Azure Data Studio to connect to SQL Server.
 
-This script tests the functionality of the installed language extension. Use SQL Azure Data Studio to connect to SQL Server.
+This script tests the functionality of the installed language extension. 
 
 ```sql
 EXEC sp_execute_external_script
@@ -254,25 +252,31 @@ EXEC sp_execute_external_script
 import sys
 print(sys.path)
 print(sys.version)
-print(sys.executable)
+print(sys.executable)'
 ```
 
 ## Verify parameters and datasets of different data types
 
-This script tests the installed language extension functionality, such as the exchange of different data types for input, output parameters, and datasets.
+This script tests different data types for input, input/output parameters, and datasets.
 
 ```sql
-exec sp_execute_external_script
-@language = N'myPython',
-@script = N'
-import sys
-print(''Hello PythonExtension!'');
-OutputDataSet = InputDataSet;
-print(InputDataSet);
-print(OutputDataSet);
-print(sys.version)',
-@input_data_1 = N'select 1, cast(1.4 as real), ''Hi'', cast(''1'' as bit)'
-WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit))
+DECLARE @sumVal int = 12;
+DECLARE @charVal VARCHAR(30) = N'Hello'
+
+EXEC sp_execute_external_script
+@language =N'mypython',
+@script=N'
+print(sumVal)
+print(charVal)
+sumVal = sumVal + 300
+OutputDataSet = InputDataSet'
+,@input_data_1 = N'SELECT 1, CAST(1.4 as real), ''Hi'', CAST(''1'' as bit)'
+,@params = N'@sumVal int OUTPUT, @charVal VARCHAR(30)'
+,@sumVal = @sumVal OUTPUT
+,@charVal = @charVal
+WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit));
+
+PRINT @sumVal
 ```
 
 ## Next steps

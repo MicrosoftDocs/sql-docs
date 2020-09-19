@@ -218,8 +218,6 @@ sudo apt-get --no-install-recommends -y install r-base-core
 install.packages("Rcpp", lib = "/usr/lib/R/library")
 ```
 
-*** (there is a prompt that states "would you like to use a personable library", does that need to be included, or does that appear normally? are there permissions that need to be set in advance) ***
-
 ## Enable external script execution in SQL Server
 
 An external script in R can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run again SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
@@ -258,25 +256,24 @@ If you haven't, complete the following steps:
 
 1. Edit configuration file.
 
-```bash
-sudo systemctl edit mssql-launchpadd
-```
+    ```bash
+    sudo systemctl edit mssql-launchpadd
+    ```
 
 1. Edit file and insert the following text:
 
-```bash
-[Service]
-Environment="R_HOME=/path/to/your/R/installation/folder"
-```
+    ```bash
+    [Service]
+    Environment="R_HOME=/path/to/your/R/installation/folder"
+    ```
 
 Save and close.
 
+ 1. Start launchpadd
 
-1. Start launchpadd
-
-```bash
-sudo systemctl restart mssql-launchpadd
-```
+    ```bash
+    sudo systemctl restart mssql-launchpadd
+    ```
 
 >[!Note] 
 >To use the R runtime provided with SQL Machine Learning Services, set R_HOME to /opt/microsoft/ropen/3.5.2/lib64/R.
@@ -287,7 +284,7 @@ Use Azure Data Studio to connect to SQL Server.
 Modify the path to reflect the location of the download.
 
 >[!Note] 
->R is a reserved word. **Is this still true for R**.
+>R is a reserved word.
 
 ```sql
 CREATE EXTERNAL LANGUAGE myR

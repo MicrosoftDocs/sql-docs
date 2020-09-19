@@ -39,9 +39,9 @@
     href: ../machine-learning/install/sql-pretrained-models-install.md
   - name: Install custom runtime
     items:
-    - name: Install custom runtime for Python
+    - name: Install Python custom runtime
       href: ../machine-learning/install/custom-runtime-python.md
-    - name: Install custom runtime for R
+    - name: Install R custom runtime
       href: ../machine-learning/install/custom-runtime-r.md
   - name: Change default Python and R runtime
     href: ../machine-learning/install/change-default-language-runtime-version.md

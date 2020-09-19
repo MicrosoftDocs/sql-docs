@@ -205,7 +205,7 @@ For more information about the Windows and SQL collation names, see [COLLATE](~/
 > Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.
 
 WITH \<option>
-**\<filestream_options>**
+**\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.

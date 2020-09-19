@@ -1,6 +1,6 @@
 ---
-title: Install custom R runtime
-description: Learn how to install a custom R runtime for SQL Server.
+title: Install R custom runtime
+description: Learn how to install an R custom runtime for SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
@@ -10,7 +10,7 @@ ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install a custom R runtime for SQL Server
+# Install an R custom runtime for SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 

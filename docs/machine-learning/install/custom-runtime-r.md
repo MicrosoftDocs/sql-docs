@@ -90,7 +90,8 @@ Complete the setup for SQL Server 2019.
 ```CMD
 <R_HOME>\bin\R.exe
 
-e.g.
+For example,
+```CMD
 >C:\Program Files\R\R-4.0.2\bin\R.exe
 ```
 
@@ -98,8 +99,10 @@ In this *elevated* R prompt (<R_HOME>\bin\R.exe), run the following script where
 
 ```R
 install.packages("Rcpp", lib="<R_HOME>/library");
+```
 
-e.g.
+For example,
+```R
 >install.packages("Rcpp", lib="C:/Program Files/R/R-4.0.2/library");
 ```
 
@@ -124,10 +127,12 @@ e.g.
 Alternatively, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the R custom installation path.
 
 ```CMD
-setx R_HOME "path\to\installation\of\R"
-setx PATH "path\to\installation\of\R\bin\x64;%PATH%"
+setx /m R_HOME "path\to\installation\of\R"
+setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
+```
 
-e.g.
+For example,
+```CMD
 setx R_HOME "C:\Program Files\R\R-4.0.2"
 setx PATH "C:\Program Files\R\R-4.0.2\bin\x64;%PATH%"
 ```
@@ -146,7 +151,8 @@ Run the **icacls** commands from a new *elevated* command prompt to grant READ &
     ```cmd
     icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD$INSTANCENAME":(OI)(CI)RX /T
 
-    e.g.
+    For example,
+    ```CMD
     icacls "D:\R\R-4.0.2" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
     ```
 
@@ -155,7 +161,8 @@ Run the **icacls** commands from a new *elevated* command prompt to grant READ &
     ```cmd
     icacls "%R_HOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
 
-    e.g.
+    For example,
+    ```CMD
     icacls "D:\R\R-4.0.2" /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
 
@@ -170,7 +177,8 @@ Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUCHP
 net stop <Name of the SQL Server Launchpad Service>
 net start <Name of the SQL Server Launchpad Service>
 
-e.g.
+For example,
+```CMD
 net stop MSSQLLAUNCHPAD$MSSQLSERVER
 net start MSSQLLAUNCHPAD$MSSQLSERVER
 ```
@@ -282,7 +290,8 @@ sudo apt-get --no-install-recommends -y install r-base-core
 ```bash
 sudo <R_HOME>/bin/R
 
-e.g.
+For example,
+```bash
 sudo /usr/lib/R/bin/R
 ```
 
@@ -291,7 +300,8 @@ sudo /usr/lib/R/bin/R
 ```R
 install.packages("Rcpp", lib = "<R_HOME>/library");
 
-e.g.
+For example,
+```R
 install.packages("Rcpp", lib = "/usr/lib/R/library");
 ```
 
@@ -361,7 +371,8 @@ Set the datadirectories option in the extensibility section of /var/opt/mssql/ms
 ```bash
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <R_HOME>
 
-e.g.
+For example,
+```bash
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
 ```
 

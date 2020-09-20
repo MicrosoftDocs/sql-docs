@@ -104,18 +104,18 @@ To modify select **Edit** to change PYTHONHOME. Modify PYTHONHOME to point to th
 
 ## Grant access to the custom PYTHONHOME installation folder
 
-Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is of the form *NT Service\MSSQLLAUCHPAD$INSTANCENAME* where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
+Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is of the form *NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
 
 Append the instance name to MSSQLLAUNCHPAD (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
 
 ```CMD
-icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUCHPAD$MSSQLSERVER":(OI)(CI)RX /T
+icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
 icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
 ```
 
 ## Restart SQL Server Launchpad service
 
-Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUCHPAD$INSTANCENAME where INSTANCENAME is the instance name of your SQL Server. From an *elevated* command prompt, run the following commands (in this example, INSTANCENAME is the default instance `MSSQLSERVER`).
+Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUNCHPAD$INSTANCENAME where INSTANCENAME is the instance name of your SQL Server. From an *elevated* command prompt, run the following commands (in this example, INSTANCENAME is the default instance `MSSQLSERVER`).
 
 ```CMD
 net stop MSSQLLAUNCHPAD$MSSQLSERVER

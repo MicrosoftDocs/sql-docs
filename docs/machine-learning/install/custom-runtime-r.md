@@ -320,7 +320,7 @@ Save and close.
 >[!Note]
 >If you have installed R in the default location of /usr/lib/R, you can skip this step.
 
-Set the datadirectories option in the extensibility section of /var/opt/mssql/mssql.conf file.
+Set the datadirectories option in the extensibility section of /var/opt/mssql/mssql.conf file. Replace R_HOME with the R installation you want to use.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <R_HOME>

@@ -105,26 +105,23 @@ e.g.
 
 ## Update the system environment variables for Windows
 
-Add **R_HOME** as an environment variable.
-+ In **Search** type **environment.** Select **Edit the system environment variables.**
-+ In the section System Variables.
-Select **Advanced** tab.
-Select **Environment Variables.**
+1. Add **R_HOME** as a system environment variable.
+    + In **Search** type **environment.** Select **Edit the system environment variables.**
+    + In the section System Variables. Select **Advanced** tab. Select **Environment Variables.**
 
-+ Select **New** to create R_HOME.
-To modify, select **Edit** to change it. Set its value to the R installation location you want to use.
+    + Select **New** to create R_HOME.
+    To modify, select **Edit** to change it. Set its value to the R custom installation path.
 
-![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
+    ![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
 
-Update the **PATH** environment variable.
-+ Append the path to **R.dll** to the system **PATH** environment variable. To do that, select **PATH** then **Edit**
-and add %R_HOME%\bin\x64 to the list of paths.
+2. Update the **PATH** environment variable.
+    + Append the path to **R.dll** to the system **PATH** environment variable. To do that, select **PATH** then **Edit** and add %R_HOME%\bin\x64 to the list of paths.
 
-![Append to PATH system environment variable.](../install/media/sys-env-path-r.png)
+    ![Append to PATH system environment variable.](../install/media/sys-env-path-r.png)
 
-Select **OK** to close remaining windows.
+3. Select **OK** to close remaining windows.
 
-Alternatively, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the path to your installation of R.
+Alternatively, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the R custom installation path.
 
 ```CMD
 setx R_HOME "path\to\installation\of\R"
@@ -137,10 +134,12 @@ setx PATH "C:\Program Files\R\R-4.0.2\bin\x64;%PATH%"
 
 ## Grant access to non-default R_HOME folder
 
-If you didn't install R in the default location "C:\Program Files\R\R-<version>", you need to do the following steps. Run the **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) for accessing the R_HOME. The launchpad service user name is of the form *NT Service\MSSQLLAUCHPAD$INSTANCENAME* where INSTANCENAME is the instance name of your SQL Server.
-The commands will recursively grant access to all files and folders under the given directory path.
+>[!Note]
+>>If you have installed R in the default location of **C:\Program Files\R\R-<version>**, you can skip this step.
 
-1. Give permissions to SQL Server Launchpad Service user name
+Run the **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) for accessing the R_HOME. The launchpad service user name is of the form *NT Service\MSSQLLAUCHPAD$INSTANCENAME* where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
+
+1. Give permissions to **SQL Server Launchpad Service user name**
 
     For a named instance, append the instance name to MSSQLLAUNCHPAD (for example, `MSSQLLAUNCHPAD$INSTANCENAME`).
 
@@ -151,9 +150,7 @@ The commands will recursively grant access to all files and folders under the gi
     icacls "C:\Program Files\R\R-4.0.2" /grant "NT Service\MSSQLLAUCHPAD$MSSQLSERVER":(OI)(CI)RX /T
     ```
 
-    You can skip this step if you installed the R_HOME in the default folder under Program Files on Windows.
-
-2. Give AppContainer permissions
+2. Give permissions to **SID S-1-15-2-1**
 
     ```cmd
     icacls "%R_HOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
@@ -180,7 +177,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 Alternatively, right-click the SQL Server Launchpad service in the **Services** app of the system and click the **Restart** command. Or use [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md) to restart the service.
 
-## Download language extension
+## Download R language extension
 
 Download the zip file containing the R language extension (R-lang-extension.zip) from [here.](**GitHub link goes here**)
 
@@ -223,7 +220,7 @@ Before you install SQL Server on Linux, you must configure a Microsoft repositor
 ## Add SQL Server Language Extensions for Linux
 
 >[!Note]
->For Machine Learning Services using SQL Server 2019, the mssql-server-extensibility package for language-extensions is already installed.
+>For Machine Learning Services using SQL Server 2019, the **mssql-server-extensibility** package for language-extensions is already installed.
 
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
@@ -250,8 +247,9 @@ sudo zypper install mssql-server-extensibility
 ## Install R
 
 >[!Note]
->For SQL Machine Learning Services, R is already installed in /opt/microsoft/ropen/3.5.2/lib64/R. If you want to keep using this as your R_HOME, skip to the next step of installing Rcpp. Otherwise, if you want to use a different runtime of R, you first need to remove microsoft-r-open-mro before continuing to install a new version:
-Example for Ubuntu:
+>For SQL Machine Learning Services, R is already installed in **/opt/microsoft/ropen/3.5.2/lib64/R**. If you want to keep using this as your R_HOME, skip to the next step of installing **Rcpp**.
+
+Otherwise, if you want to use a different runtime of R, you first need to remove **microsoft-r-open-mro** before continuing to install a new version. Example for Ubuntu:
 >```bash
 >sudo apt remove microsoft-r-open-mro-3.5.2
 >```
@@ -265,7 +263,7 @@ export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
 sudo apt-get --no-install-recommends -y install curl zip unzip apt-transport-https libstdc++6
 
-# Add R CRAN repository. This repository works for R 4.0.x
+# Add R CRAN repository. This repository works for R 4.0.x.
 #
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran40/'
@@ -278,7 +276,7 @@ sudo apt-get --no-install-recommends -y install r-base-core
 
 ## Install Rcpp package
 
-+ Locate the R binary in <R_HOME>/bin. By default, it is in /usr/lib/R/bin.
++ Locate the R binary in <R_HOME>/bin. By default, it is in **/usr/lib/R/bin**.
 
 + Start R
 
@@ -289,7 +287,7 @@ e.g.
 sudo /usr/lib/R/bin/R
 ```
 
-+ In this *elevated* R prompt (<R_HOME>/bin/R), run the following script where R_HOME is the path to your R installation as noted above. This script will install the Rcpp package in the <R_HOME>/library folder.
++ In this *elevated* R prompt (<R_HOME>/bin/R), run the following script where R_HOME is the path to your R installation as noted above. This script will install the **Rcpp** package in the <R_HOME>/library folder.
 
 ```R
 install.packages("Rcpp", lib = "<R_HOME>/library");
@@ -298,47 +296,86 @@ e.g.
 install.packages("Rcpp", lib = "/usr/lib/R/library");
 ```
 
-## Add R_HOME environment variable to mssql-launchpadd service config
+## Update the system environment variables for Linux
 
 >[!Note]
->If you have installed R in the default location of /usr/lib/R, you can skip this step.
+>If you have installed R in the default location of **/usr/lib/R**, you can skip this step.
 
-1. Edit mssql-launchpadd service.
+1. Add R_HOME environment variable to mssql-launchpadd service config.
 
-```bash
-sudo systemctl edit mssql-launchpadd
-```
+    +. Edit **mssql-launchpadd** service.
 
-2. Insert the following text in the file that opens. Set value of R_HOME to the R installation you want to use.
+    ```bash
+    sudo systemctl edit mssql-launchpadd
+    ```
 
-```vi editor
-[Service]
-Environment="R_HOME=/path/to/your/R/installation/folder"
-```
+    + Insert the following text in the /etc/systemd/system/mssql-launchpadd.service.d/override.conf file that opens. Set value of R_HOME to the R custom installation path.
 
-Save and close.
+    ```vi editor
+    [Service]
+    Environment="R_HOME=/path/to/installation/of/R"
+    ```
+
+    + Save and close.
+
+2. Make sure **libR.so** can be loaded.
+
+    + Create a custom-r.conf file in **/etc/ld.so.conf.d**.
+
+    ```bash
+    sudo vi /etc/ld.so.conf.d/custom-r.conf
+    ```
+
+    + In the file that opens, add path to **libR.so** from the R custom installation.
+
+    ```vi editor
+    <R_HOME>/lib
+
+    e.g.
+    /path/to/installation/of/R/lib
+    ```
+
+    + Save and close
+
+    + Run ldconfig
+
+    ```bash
+    sudo ldconfig -v
+    ```
+
+    + Verify **libR.so** can be loaded by running the following command and checking all dependent libraries can be found.
+
+    ```bash
+    ldd /path/to/installation/of/R/lib/libR.so
+    ```
 
 >[!Note]
->To keep using the R runtime provided with SQL Machine Learning Services, set R_HOME to /opt/microsoft/ropen/3.5.2/lib64/R.
+>To keep using the R runtime provided with SQL Machine Learning Services, set R_HOME to **/opt/microsoft/ropen/3.5.2/lib64/R**.
 
 ## Grant access to non-default R_HOME folder
 
 >[!Note]
->If you have installed R in the default location of /usr/lib/R, you can skip this step.
+>If you have installed R in the default location of **/usr/lib/R**, you can skip this step.
 
-Set the datadirectories option in the extensibility section of /var/opt/mssql/mssql.conf file. Replace R_HOME with the R installation you want to use.
+Set the datadirectories option in the extensibility section of /var/opt/mssql/mssql.conf file. Replace R_HOME with the custom R installation.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <R_HOME>
+
+e.g.
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
 ```
 
 ## Restart mssql-launchpadd service
+
+>[!Note]
+>If you have installed R in the default location of **/usr/lib/R**, you can skip this step.
 
 ```bash
 sudo systemctl restart mssql-launchpadd
 ```
 
-## Download runtime extension
+## Download R language extension
 
 Download the zip file containing the R language extension (R-lang-extension.zip) from [here.](**GitHub link goes here**)
 

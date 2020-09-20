@@ -167,7 +167,7 @@ The commands will recursively grant access to all files and folders under the gi
 
 ## Restart SQL Server Launchpad service
 
-Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUCHPAD$INSTANCENAME where INSTANCENAME is the instance name of your SQL Server.From an *elevated* command prompt, run the following commands.
+Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUCHPAD$INSTANCENAME where INSTANCENAME is the instance name of your SQL Server. From an *elevated* command prompt, run the following commands.
 
 ```CMD
 net stop <Name of the SQL Server Launchpad Service>
@@ -284,12 +284,18 @@ sudo apt-get --no-install-recommends -y install r-base-core
 
 ```bash
 sudo <R_HOME>/bin/R
+
+e.g.
+sudo /usr/lib/R/bin/R
 ```
 
 + In this *elevated* R prompt (<R_HOME>/bin/R), run the following script where R_HOME is the path to your R installation as noted above. This script will install the Rcpp package in the <R_HOME>/library folder.
 
 ```R
 install.packages("Rcpp", lib = "<R_HOME>/library");
+
+e.g.
+install.packages("Rcpp", lib = "/usr/lib/R/library");
 ```
 
 ## Add R_HOME environment variable to mssql-launchpadd service config

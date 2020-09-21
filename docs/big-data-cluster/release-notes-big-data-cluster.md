@@ -53,6 +53,9 @@ This section explains platforms that are supported with BDC.
 
 For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
 
+> [!NOTE]
+> `azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
+
 ## Release history
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].

@@ -23,8 +23,6 @@ This article describes how to install a custom runtime for running Python script
 > [!NOTE]
 > This article describes how to install a custom runtime for Python on Windows. To install on Linux, see the [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)
 
-## <a name="pre_install_checklist"> </a> 
-
 ## Pre-install checklist
 
 + [SQL Server 2019 for Windows CU3 or later.](../../database-engine/install-windows/install-sql-server.md)
@@ -158,8 +156,6 @@ You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterp
 > [!NOTE]
 > This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a Python custom runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
 
-## <a name="pre_install_checklist"> </a>
-
 ## Pre-install checklist
 
 + [SQL Server 2019 for Linux (Cumulative Update 3 onwards).](../../linux/sql-server-linux-setup.md)
@@ -219,7 +215,7 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 ## Using a custom installation of Python 3.7
 
 > [!NOTE]
-> If you have installed Python in the default location of **/usr/lib/python3.7**, you can skip this section.
+> If you have installed Python in the default location of **/usr/lib/python3.7**, you can skip to [the next section](#Download-Python-language-extension-1).
 
 If you built your own version of Python 3.7, follow the following steps so that SQL Server can find and load your custom installation.
 

@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres server backup commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -22,6 +22,7 @@ The following article provides reference for the **sql** commands in the **azdat
 |Command|Description|
 | --- | --- |
 [azdata arc postgres server backup create](#azdata-arc-postgres-server-backup-create) | Create a backup of a PostgreSQL server group.
+[azdata arc postgres server backup delete](#azdata-arc-postgres-server-backup-delete) | Delete a backup of a PostgreSQL server group.
 [azdata arc postgres server backup restore](#azdata-arc-postgres-server-backup-restore) | Restore a backup of a PostgreSQL server group.
 [azdata arc postgres server backup restorestatus](#azdata-arc-postgres-server-backup-restorestatus) | Get the status of the most recent restore operation, if any.
 [azdata arc postgres server backup show](#azdata-arc-postgres-server-backup-show) | Show details about a backup of a PostgreSQL server group.
@@ -50,6 +51,27 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
+## azdata arc postgres server backup delete
+Delete a backup of a PostgreSQL server group.
+```bash
+azdata arc postgres server backup delete 
+```
+### Examples
+Delete a backup of a PostgreSQL server group.
+```bash
+azdata arc postgres backup delete -sn pg -id e07dd3940e374bd9acbc86869cbc123d
+```
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
 ## azdata arc postgres server backup restore
 Restore a backup of a PostgreSQL server group.
 ```bash
@@ -58,13 +80,10 @@ azdata arc postgres server backup restore
 ### Examples
 Restore the most recent backup.
 ```bash
-azdata arc postgres server restore -sn pg
-```
+azdata arc postgres server restore -sn pg```
 Restore a backup by ID
 ```bash
-azdata arc postgres server restore -sn pg -id 123e4567e89b12d3a456426655440000
-
-```
+azdata arc postgres server restore -sn pg -id 123e4567e89b12d3a456426655440000```
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -124,3 +143,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

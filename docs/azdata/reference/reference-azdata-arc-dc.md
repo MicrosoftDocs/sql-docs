@@ -5,7 +5,7 @@ description: Reference article for azdata arc dc commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -56,9 +56,9 @@ azdata arc dc create
 ```
 ### Required Parameters
 #### `--namespace -ns`
-The Kubernetes namespace to deploy the data controller into. If it exists already it will be used. If it does not exist, an attempt will be made to create it first. This name will also be used for the data controller's local Kubernetes custom resource.
+The Kubernetes namespace to deploy the data controller into. If it exists already it will be used. If it does not exist, an attempt will be made to create it first.
 #### `--name -n`
-The name for the data controller in the Azure Portal.
+The name for the data controller.
 #### `--connectivity-mode`
 The connectivity to Azure - indirect or direct - which the data controller should operate in.
 #### `--resource-group -g`
@@ -69,7 +69,7 @@ The Azure location in which the data controller metadata will be stored (e.g. ea
 The Azure subscription ID in which the data controller resource should be added.
 ### Optional Parameters
 #### `--profile-name`
-The name of an existing configuration profile. Run `azdata arc dc config list` to see available options. One of the following: ['azure-arc-aks-default-storage', 'azure-arc-eks', 'azure-arc-aks-premium-storage', 'azure-arc-azure-openshift', 'azure-arc-kubeadm', 'azure-arc-openshift', 'azure-arc-ake'].
+The name of an existing configuration profile. Run `azdata arc dc config list` to see available options. One of the following: ['azure-arc-aks-premium-storage', 'azure-arc-ake', 'azure-arc-openshift', 'azure-arc-gke', 'azure-arc-aks-default-storage', 'azure-arc-kubeadm', 'azure-arc-eks', 'azure-arc-azure-openshift', 'azure-arc-aks-hci'].
 #### `--path -p`
 The path to a directory containing a custom configuration profile to use. Run `azdata arc dc config init` to create a custom configuration profile.
 #### `--storage-class -sc`
@@ -170,3 +170,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

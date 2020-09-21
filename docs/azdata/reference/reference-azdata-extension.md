@@ -5,7 +5,7 @@ description: Reference article for azdata extension commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -39,16 +39,13 @@ azdata extension add --source -s
 ### Examples
 Add extension from URL.
 ```bash
-azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
-```
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl```
 Add extension from local disk.
 ```bash
-azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
-```
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl```
 Add extension from local disk and use pip proxy for dependencies.
 ```bash
-azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
-```
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080```
 ### Required Parameters
 #### `--source -s`
 Path to a extension wheel on disk or URL to an extension
@@ -81,8 +78,7 @@ azdata extension remove --name -n
 ### Examples
 Remove an extension.
 ```bash
-azdata extension remove --name some-ext
-```
+azdata extension remove --name some-ext```
 ### Required Parameters
 #### `--name -n`
 Name of the extension
@@ -108,8 +104,7 @@ azdata extension list
 ### Examples
 List extensions.
 ```bash
-azdata extension list
-```
+azdata extension list```
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -127,3 +122,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

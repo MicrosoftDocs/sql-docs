@@ -5,7 +5,7 @@ description: Reference article for azdata arc dc debug commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -33,6 +33,10 @@ azdata arc dc debug copy-logs --namespace -ns
                               
 [--pod]  
                               
+[--resource-kind -rk]  
+                              
+[--resource-name -rn]  
+                              
 [--timeout -t]  
                               
 [--skip-compress -sc]  
@@ -49,6 +53,10 @@ Copy the logs for the containers with similar name, Optional, by default copies 
 Target folder path to copy logs to. Optional, by default creates the result in the local folder.  Cannot be specified multiple times. If specified multiple times, last one will be used
 #### `--pod`
 Copy the logs for the pods with similar name. Optional, by default copies logs for all pods. Cannot be specified multiple times. If specified multiple times, last one will be used
+#### `--resource-kind -rk`
+Copy the logs for the resource of a particular kind. Cannot specified multiple times. If specified multiple times, last one will be used. If specified, --resource-name should also be specified to identify the resource.
+#### `--resource-name -rn`
+Copy the logs for the resource of the specified name. Cannot be specified multiple times. If specified multiple times, last one will be used. If specified, --resource-kind should also be specified to identify the resource.
 #### `--timeout -t`
 The number of seconds to wait for the command to complete. The default value is 0 which is unlimited
 #### `--skip-compress -sc`
@@ -101,3 +109,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

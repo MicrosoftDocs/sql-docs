@@ -5,7 +5,7 @@ description: Reference article for azdata bdc commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,6 +21,8 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
+[azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | The HDFS module provides commands to access an HDFS file system.
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
 [azdata bdc delete](#azdata-bdc-delete) | Delete Big Data Cluster.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Update the images deployed in each container in the SQL Server Big Data Cluster.
@@ -34,8 +36,6 @@ The following article provides reference for the **sql** commands in the **azdat
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark service commands.
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Gateway service commands.
 [azdata bdc app](reference-azdata-bdc-app.md) | App service commands.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | The HDFS module provides commands to access an HDFS file system.
-[azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
 ## azdata bdc create
 Create a SQL Server Big Data Cluster - Kubernetes configuration is required on your system along with the following environment variables ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
@@ -69,7 +69,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Big data cluster name, used for kubernetes namespaces.
 #### `--config-profile -c`
-Big data cluster config profile, used for deploying the cluster: ['aks-dev-test-ha', 'aro-dev-test-ha', 'kubeadm-prod', 'openshift-prod', 'openshift-dev-test', 'kubeadm-dev-test', 'aro-dev-test', 'aks-dev-test']
+Big data cluster config profile, used for deploying the cluster: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
 Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for azdata can be viewed at https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
@@ -173,3 +173,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

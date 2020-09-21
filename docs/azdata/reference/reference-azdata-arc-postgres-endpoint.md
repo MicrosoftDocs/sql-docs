@@ -1,17 +1,17 @@
 ---
-title: azdata arc postgres server endpoint reference
+title: azdata arc postgres endpoint reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata arc postgres server endpoint commands.
+description: Reference article for azdata arc postgres endpoint commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata arc postgres server endpoint
+# azdata arc postgres endpoint
 
 Applies to `azdata`
 
@@ -21,24 +21,24 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata arc postgres server endpoint list](#azdata-arc-postgres-server-endpoint-list) | List PostgreSQL server group endpoints.
-## azdata arc postgres server endpoint list
+[azdata arc postgres endpoint list](#azdata-arc-postgres-endpoint-list) | List PostgreSQL server group endpoints.
+## azdata arc postgres endpoint list
 List PostgreSQL server group endpoints.
 ```bash
-azdata arc postgres server endpoint list --name -n 
-                                         [--engine-version -ev]
+azdata arc postgres endpoint list --name -n 
+                                  [--engine-version -ev]
 ```
 ### Examples
 List PostgreSQL server group endpoints.
 ```bash
-azdata arc postgres server endpoint list -n postgres01
+azdata arc postgres endpoint list -n postgres01
 ```
 ### Required Parameters
 #### `--name -n`
 Name of the PostgreSQL server group.
 ### Optional Parameters
 #### `--engine-version -ev`
-Must be 11 or 12. It is possible to create multiple PostgreSQL server groups with the same name but different engine version. Engine version will be used in conjunction with name to uniquely identify the PostgreSQL server group in such case. Otherwise engine version can be optional.
+--engine-version can be used in conjunction with --name to identify a PostgreSQL Hyperscale server group when two server groups of different engine version have the same name. --engine-version is optional and when used to identify a server group, it must be 11 or 12.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -56,3 +56,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

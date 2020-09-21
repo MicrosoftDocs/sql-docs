@@ -81,29 +81,24 @@ Complete the setup for SQL Server 2019.
 
 ![Install Custom R](../install/media/install-custom-r.png)
 
+>[!Note]
+>In all the instructions below, %R_HOME% is the path to your R installation as noted above and should be replaced with that value.
+
 ## Install Rcpp package
 
-+ Locate the R executable in <R_HOME>\bin.
++ Locate the R executable in %R_HOME%\bin. By default, it is in *C:\Program Files\R\R-4.0.2\bin**.
+
 
 + Start R from an *elevated* command prompt:
 
 ```CMD
-<R_HOME>\bin\R.exe
-
-For example,
-```CMD
->C:\Program Files\R\R-4.0.2\bin\R.exe
+%R_HOME%\bin\R.exe
 ```
 
-In this *elevated* R prompt (<R_HOME>\bin\R.exe), run the following script where R_HOME is the path to your R installation as noted above. This script will install the Rcpp package in the <R_HOME>\library folder.
+In this *elevated* R prompt (%R_HOME%\bin\R.exe), run the following script to install the Rcpp package in the %R_HOME%\library folder.
 
 ```R
-install.packages("Rcpp", lib="<R_HOME>/library");
-```
-
-For example,
-```R
->install.packages("Rcpp", lib="C:/Program Files/R/R-4.0.2/library");
+install.packages("Rcpp", lib="%R_HOME%/library");
 ```
 
 ## Update the system environment variables for Windows
@@ -113,7 +108,7 @@ For example,
     + In the section System Variables. Select **Advanced** tab. Select **Environment Variables.**
 
     + Select **New** to create R_HOME.
-    To modify, select **Edit** to change it. Set its value to the R custom installation path.
+    To modify, select **Edit** to change it. Set its value to the custom R installation path.
 
     ![Create R_HOME system environment variable.](../install/media/sys-env-r-home.png)
 
@@ -124,17 +119,11 @@ For example,
 
 3. Select **OK** to close remaining windows.
 
-Alternatively, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the R custom installation path.
+Alternatively, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the custom R installation path.
 
 ```CMD
 setx /m R_HOME "path\to\installation\of\R"
 setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
-```
-
-For example,
-```CMD
-setx R_HOME "C:\Program Files\R\R-4.0.2"
-setx PATH "C:\Program Files\R\R-4.0.2\bin\x64;%PATH%"
 ```
 
 ## Grant access to non-default R_HOME folder
@@ -142,42 +131,27 @@ setx PATH "C:\Program Files\R\R-4.0.2\bin\x64;%PATH%"
 >[!Note]
 >>If you have installed R in the default location of **C:\Program Files\R\R-<version>**, you can skip this step.
 
-Run the **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**) for accessing the R_HOME. The launchpad service user name is of the form *NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
+Run the **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL APPLICATION PACKAGES**) for accessing the %R_HOME%. The launchpad service user name is of the form *NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
 
 1. Give permissions to **SQL Server Launchpad Service user name**
 
-    For a named instance, append the instance name to MSSQLLAUNCHPAD (for example, `MSSQLLAUNCHPAD$INSTANCENAME`).
-
     ```cmd
     icacls "%R_HOME%" /grant "NT Service\MSSQLLAUNCHPAD$INSTANCENAME":(OI)(CI)RX /T
-
-    For example,
-    ```CMD
-    icacls "D:\R\R-4.0.2" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
-    ```
 
 2. Give permissions to **SID S-1-15-2-1**
 
     ```cmd
     icacls "%R_HOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
 
-    For example,
-    ```CMD
-    icacls "D:\R\R-4.0.2" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    ```
-
 >[!Note]
 >The above command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T on an English version of Windows.
 
 ## Restart SQL Server Launchpad service
 
-Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUCHPAD$INSTANCENAME where INSTANCENAME is the instance name of your SQL Server. From an *elevated* command prompt, run the following commands.
+Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUCHPAD$INSTANCENAME where INSTANCENAME is the instance name of your SQL Server. By default, the name is MSSQLLAUNCHPAD$MSSQLSERVER.
 
-```CMD
-net stop <Name of the SQL Server Launchpad Service>
-net start <Name of the SQL Server Launchpad Service>
+From an *elevated* command prompt, run the following commands. Make sure to replace MSSQLLAUNCHPAD$MSSQLSERVER with the name found above.
 
-For example,
 ```CMD
 net stop MSSQLLAUNCHPAD$MSSQLSERVER
 net start MSSQLLAUNCHPAD$MSSQLSERVER
@@ -196,7 +170,7 @@ For each database you want to use this R language extension in, you need to regi
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (R-lang-extension.zip) from above.
 
 >[!Note]
->**R** is a reserved word. So, use a different name for the external language e.g. myR.
+>**R** is a reserved word. Use a different name for the external language e.g. myR.
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myR]
@@ -210,7 +184,7 @@ GO
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
 > [!NOTE]
-> This article describes how to install a custom runtime for R on Linux. To install on Windows, see the [Install an R custom runtime for SQL Server on Windows](custom-runtime-r.md?view=sql-server-ver15&preserve-view=true)
+> This article describes how to install a custom runtime for R on Linux. To install on Windows, see the [Install an R custom for SQL Server on Windows](custom-runtime-r.md?view=sql-server-ver15&preserve-view=true)
 
 <a name="pre_install_checklist"> </a>
 
@@ -281,28 +255,23 @@ sudo apt-get update
 sudo apt-get --no-install-recommends -y install r-base-core
 ```
 
+>[!Note]
+>In all the instructions below, ${R_HOME} is the path to your R installation as noted here and should be replaced with that value.
+
 ## Install Rcpp package
 
-+ Locate the R binary in <R_HOME>/bin. By default, it is in **/usr/lib/R/bin**.
++ Locate the R binary in ${R_HOME}/bin. By default, it is in **/usr/lib/R/bin**.
 
 + Start R
 
 ```bash
-sudo <R_HOME>/bin/R
-
-For example,
-```bash
-sudo /usr/lib/R/bin/R
+sudo ${R_HOME}/bin/R
 ```
 
-+ In this *elevated* R prompt (<R_HOME>/bin/R), run the following script where R_HOME is the path to your R installation as noted above. This script will install the **Rcpp** package in the <R_HOME>/library folder.
++ In this *elevated* R prompt (${R_HOME}/bin/R), run the following script. to install the **Rcpp** package in the ${R_HOME}/library folder.
 
 ```R
-install.packages("Rcpp", lib = "<R_HOME>/library");
-
-For example,
-```R
-install.packages("Rcpp", lib = "/usr/lib/R/library");
+install.packages("Rcpp", lib = "${R_HOME}/library");
 ```
 
 ## Update environment variables for Linux
@@ -318,7 +287,7 @@ install.packages("Rcpp", lib = "/usr/lib/R/library");
     sudo systemctl edit mssql-launchpadd
     ```
 
-    + Insert the following text in the **/etc/systemd/system/mssql-launchpadd.service.d/override.conf** file that opens. Set value of R_HOME to the R custom installation path.
+    + Insert the following text in the **/etc/systemd/system/mssql-launchpadd.service.d/override.conf** file that opens. Set value of R_HOME to the custom R installation path.
 
     ```vi editor
     [Service]
@@ -335,26 +304,18 @@ install.packages("Rcpp", lib = "/usr/lib/R/library");
     sudo vi /etc/ld.so.conf.d/custom-r.conf
     ```
 
-    + In the file that opens, add path to **libR.so** from the R custom installation.
+    + In the file that opens, add path to **libR.so** from the custom R installation.
 
     ```vi editor
-    <R_HOME>/lib
-
-    e.g.
-    /path/to/installation/of/R/lib
+    ${R_HOME}/lib
     ```
 
     + Save and close
 
-    + Run ldconfig
+    + Run ldconfig and verify **libR.so** can be loaded by running the following command and checking all dependent libraries can be found
 
     ```bash
-    sudo ldconfig -v
-    ```
-
-    + Verify **libR.so** can be loaded by running the following command and checking all dependent libraries can be found.
-
-    ```bash
+    sudo ldconfig
     ldd /path/to/installation/of/R/lib/libR.so
     ```
 
@@ -369,11 +330,7 @@ install.packages("Rcpp", lib = "/usr/lib/R/library");
 Set the datadirectories option in the extensibility section of /var/opt/mssql/mssql.conf file. Replace R_HOME with the custom R installation.
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories <R_HOME>
-
-For example,
-```bash
-sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
+sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories ${R_HOME}
 ```
 
 ## Restart mssql-launchpadd service
@@ -396,7 +353,7 @@ For each database you want to use this R language extension in, you need to regi
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (R-lang-extension.zip) from above.
 
 >[!Note]
->**R** is a reserved word. So, use a different name for the external language e.g. myR.
+>**R** is a reserved word. Use a different name for the external language e.g. myR.
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myR]
@@ -431,7 +388,7 @@ print("Hello RExtension!");'
 
 ## Verify parameters and datasets of different data types
 
-This script tests different data types for input or output parameters and datasets.
+This script tests different data types for input/output parameters and datasets.
 
 ```sql
 DECLARE @sumVal INT = 12;

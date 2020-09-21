@@ -31,8 +31,7 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_is_primary_replica ( 'dbname' )  
 ```  
   
@@ -46,13 +45,12 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## Remarks  
  Use this function to conveniently determine whether the local instance is hosting the primary replica of the specified availability database. Sample code could be similar to the following.  
   
-```  
+```tsql
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
 BEGIN  
 -- If this is not the primary replica, exit (probably without error).  
 END  
 -- If this is the primary replica, continue to do the backup.  
-  
 ```  
   
 ## Examples  
@@ -60,7 +58,7 @@ END
 ### A. Using sys.fn_hadr_is_primary_replica  
  The following example returns 1 if the specified database on the local instance is the primary replica.  
   
-```  
+```tsql
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
 ```    

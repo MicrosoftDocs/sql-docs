@@ -1,3 +1,4 @@
+
 ---
 description: "Transactions (Azure Synapse Analytics)"
 title: "Transactions (Azure Synapse Analytics) | Microsoft Docs"
@@ -143,5 +144,3 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
-  

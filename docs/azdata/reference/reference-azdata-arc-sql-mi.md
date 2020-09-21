@@ -5,7 +5,7 @@ description: Reference article for azdata arc sql mi commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -45,15 +45,21 @@ azdata arc sql mi create --name -n
                          
 [--storage-class-logs -scl]  
                          
+[--storage-class-data-logs -scdl]  
+                         
+[--storage-class-backups -scb]  
+                         
 [--volume-size-data -vsd]  
                          
 [--volume-size-logs -vsl]  
                          
+[--volume-size-data-logs -vsdl]  
+                         
+[--volume-size-backups -vsb]  
+                         
 [--no-external-endpoint]  
                          
 [--dev]  
-                         
-[--port]  
                          
 [--no-wait]
 ```
@@ -77,19 +83,25 @@ The limit of the capacity of the managed instance as an integer.
 #### `--memory-request -mr`
 The request for the capcity of the managed instance as an integer amount of memory in GBs.
 #### `--storage-class-data -scd`
-The storage classes to be used for data (.mdf). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
+The storage class to be used for data (.mdf). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
 #### `--storage-class-logs -scl`
-The storage classes to be used for logs (/var/log). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
+The storage class to be used for logs (/var/log). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
+#### `--storage-class-data-logs -scdl`
+The storage class to be used for database logs (.ldf). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
+#### `--storage-class-backups -scb`
+The storage class to be used for backups (/var/opt/mssql/backups). If no value is specified, then no storage class will be specified, which will result in Kubernetes using the default storage class.
 #### `--volume-size-data -vsd`
-The volume size for the storage classes to be used for data.
+The size of the storage volume to be used for data as a positive number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
 #### `--volume-size-logs -vsl`
-The volume size for the storage classes to be used for logs.
+The size of the storage volume to be used for logs as a positive number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
+#### `--volume-size-data-logs -vsdl`
+The size of the storage volume to be used for data logs as a positive number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
+#### `--volume-size-backups -vsb`
+The size of the storage volume to be used for backups as a positive number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
 #### `--no-external-endpoint`
 If specified, no external service will be created. Otherwise, an external service will be created using the same service type as the data controller.
 #### `--dev`
 If this is specified, then it is considered a dev instance and will not be billed for.
-#### `--port`
-Optional.
 #### `--no-wait`
 If given, the command will not wait for the instance to be in a ready state before returning.
 ### Global Arguments
@@ -117,11 +129,7 @@ azdata arc sql mi edit --name -n
                        
 [--memory-request -mr]  
                        
-[--no-external-endpoint]  
-                       
 [--dev]  
-                       
-[--port]  
                        
 [--no-wait]
 ```
@@ -144,12 +152,8 @@ The request for cores of the managed instance as an integer.
 The limit of the capacity of the managed instance as an integer.
 #### `--memory-request -mr`
 The request for the capcity of the managed instance as an integer amount of memory in GBs.
-#### `--no-external-endpoint`
-If specified, no external service will be created. Otherwise, an external service will be created using the same service type as the data controller.
 #### `--dev`
 If this is specified, then it is considered a dev instance and will not be billed for.
-#### `--port`
-Optional.
 #### `--no-wait`
 If given, the command will not wait for the instance to be in a ready state before returning.
 ### Global Arguments
@@ -243,3 +247,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

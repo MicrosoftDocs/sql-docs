@@ -5,7 +5,7 @@ description: Reference article for azdata arc postgres server commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -26,7 +26,6 @@ The following article provides reference for the **sql** commands in the **azdat
 [azdata arc postgres server delete](#azdata-arc-postgres-server-delete) | Delete a PostgreSQL server group.
 [azdata arc postgres server show](#azdata-arc-postgres-server-show) | Show the details of a PostgreSQL server group.
 [azdata arc postgres server list](#azdata-arc-postgres-server-list) | List PostgreSQL server groups.
-[azdata arc postgres server endpoint](reference-azdata-arc-postgres-server-endpoint.md) | Manage PostgreSQL server group endpoints.
 [azdata arc postgres server config](reference-azdata-arc-postgres-server-config.md) | Configuration commands.
 [azdata arc postgres server backup](reference-azdata-arc-postgres-server-backup.md) | Manage PostgreSQL server group backups.
 ## azdata arc postgres server create
@@ -96,19 +95,19 @@ The memory limit of the postgres instance as a number followed by Ki (kilobytes)
 #### `--memory-request -mr`
 The memory request of the postgres instance as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
 #### `--storage-class-data -scd`
-The storage classes to be used for data persistent volumes.
+The storage class to be used for data persistent volumes.
 #### `--storage-class-logs -scl`
-The storage classes to be used logs persistent volumes.
+The storage class to be used for logs persistent volumes.
 #### `--storage-class-backups -scb`
-The storage classes to be used backup persistent volumes.
+The storage class to be used for backup persistent volumes.
 #### `--extensions`
 A comma-separated list of the Postgres extensions that should be loaded on startup. Please refer to the postgres documentation for supported values.
 #### `--volume-size-data -vsd`
-The volume size for the storage classes to be used for data.
+The size of the storage volume to be used for data as a positive number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
 #### `--volume-size-logs -vsl`
-The volume size for the storage classes to be used for logs.
+The size of the storage volume to be used for logs as a positive number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
 #### `--volume-size-backups -vsb`
-The volume size for the storage classes to be used for backups.
+The size of the storage volume to be used for backups as a positive number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes).
 #### `--workers -w`
 The number of worker nodes to provision in a sharded cluster, or zero (the default) for single-node Postgres.
 #### `--engine-version -ev`
@@ -154,8 +153,6 @@ azdata arc postgres server edit --name -n
                                 
 [--extensions]  
                                 
-[--no-external-endpoint]  
-                                
 [--dev]  
                                 
 [--port]  
@@ -190,7 +187,7 @@ The path to the source json file for the PostgreSQL server group. This is option
 #### `--workers -w`
 The number of worker nodes to provision in a sharded cluster, or zero (the default) for single-node Postgres.
 #### `--engine-version -ev`
-Must be 11 or 12. Engine version cannot be changed. It is possible to create multiple PostgreSQL server groups with the same name but different engine version. Engine version will be used in conjunction with name to uniquely identify which PostgreSQL server group to edit in such case. Otherwise engine version can be optional.
+Engine version cannot be changed. --engine-version can be used in conjunction with --name to identify a PostgreSQL Hyperscale server group when two server groups of different engine version have the same name. --engine-version is optional and when used to identify a server group, it must be 11 or 12.
 #### `--cores-limit -cl`
 The maximum number of CPU cores for postgres instance that can be used per node, fractional cores are supported. To remove the cores_limit, specify its value as empty string.
 #### `--cores-request -cr`
@@ -201,8 +198,6 @@ The memory limit for postgres instance as a number followed by Ki (kilobytes), M
 The memory request for postgres instance as a number followed by Ki (kilobytes), Mi (megabytes), or Gi (gigabytes). To remove the memory_request, specify its value as empty string.
 #### `--extensions`
 A comma-separated list of the Postgres extensions that should be loaded on startup. Please refer to the postgres documentation for supported values.
-#### `--no-external-endpoint`
-If specified, no external service will be created. Otherwise, an external service will be created using the same service type as the data controller.
 #### `--dev`
 If this is specified, then it is considered a dev instance and will not be billed for.
 #### `--port`
@@ -242,7 +237,7 @@ azdata arc postgres server delete -n pg1
 Name of the PostgreSQL server group.
 ### Optional Parameters
 #### `--engine-version -ev`
-Must be 11 or 12. It is possible to create multiple PostgreSQL server groups with the same name but different engine version. Engine version will be used in conjunction with name to uniquely identify which PostgreSQL server group to delete in such case. Otherwise engine version can be optional.
+--engine-version can be used in conjunction with --name to identify a PostgreSQL Hyperscale server group when two server groups of different engine version have the same name. --engine-version is optional and when used to identify a server group, it must be 11 or 12.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -272,7 +267,7 @@ azdata arc postgres server show -n pg1
 Name of the PostgreSQL server group.
 ### Optional Parameters
 #### `--engine-version -ev`
-Must be 11 or 12. It is possible to create multiple PostgreSQL server groups with the same name but different engine version. Engine version will be used in conjunction with name to uniquely identify which PostgreSQL server group to show in such case. Otherwise engine version can be optional.
+--engine-version can be used in conjunction with --name to identify a PostgreSQL Hyperscale server group when two server groups of different engine version have the same name. --engine-version is optional and when used to identify a server group, it must be 11 or 12.
 #### `--path -p`
 A path where the full specification for the PostgreSQL server group should be written. If omitted, the specification will be written to standard output.
 ### Global Arguments
@@ -313,3 +308,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

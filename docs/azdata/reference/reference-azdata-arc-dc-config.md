@@ -5,7 +5,7 @@ description: Reference article for azdata arc dc config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -48,7 +48,7 @@ azdata arc dc config init --source aks-dev-test --path custom
 #### `--path -p`
 File path of where you would like the config profile placed, defaults to <cwd>/custom.
 #### `--source -s`
-Config profile source: ['azure-arc-aks-default-storage', 'azure-arc-eks', 'azure-arc-aks-premium-storage', 'azure-arc-azure-openshift', 'azure-arc-aks-dev-test', 'azure-arc-kubeadm', 'azure-arc-openshift', 'azure-arc-kubeadm-dev-test', 'azure-arc-ake']
+Config profile source: ['azure-arc-aks-premium-storage', 'azure-arc-ake', 'azure-arc-openshift', 'azure-arc-gke', 'azure-arc-aks-default-storage', 'azure-arc-aks-dev-test', 'azure-arc-kubeadm', 'azure-arc-kubeadm-dev-test', 'azure-arc-eks', 'azure-arc-azure-openshift', 'azure-arc-aks-hci']
 #### `--force -f`
 Force overwrite of the target file.
 ### Global Arguments
@@ -79,7 +79,7 @@ azdata arc dc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
 #### `--config-profile -c`
-Default config profile: ['azure-arc-aks-default-storage', 'azure-arc-eks', 'azure-arc-aks-premium-storage', 'azure-arc-azure-openshift', 'azure-arc-aks-dev-test', 'azure-arc-kubeadm', 'azure-arc-openshift', 'azure-arc-kubeadm-dev-test', 'azure-arc-ake']
+Default config profile: ['azure-arc-aks-premium-storage', 'azure-arc-ake', 'azure-arc-openshift', 'azure-arc-gke', 'azure-arc-aks-default-storage', 'azure-arc-aks-dev-test', 'azure-arc-kubeadm', 'azure-arc-kubeadm-dev-test', 'azure-arc-eks', 'azure-arc-azure-openshift', 'azure-arc-aks-hci']
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -219,3 +219,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

@@ -5,7 +5,7 @@ description: Reference article for azdata bdc hdfs commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,7 +21,6 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs service status commands.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | The HDFS shell is a simple interactive command shell for HDFS file system.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | List the status of the given file or directory.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Determine if a file or directory exists.  Returns True if exists and False otherwise.
@@ -35,6 +34,7 @@ The following article provides reference for the **sql** commands in the **azdat
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Change the owner or group of the specified file.
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | Copy a file or directory between the local machine and HDFS.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Manage mounting of remote stores in HDFS.
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs service status commands.
 ## azdata bdc hdfs shell
 The HDFS shell is a simple interactive command shell for HDFS file system.
 ```bash
@@ -357,3 +357,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

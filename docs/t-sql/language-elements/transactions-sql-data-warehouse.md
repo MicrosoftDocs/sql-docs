@@ -11,7 +11,7 @@ dev_langs:
   - "TSQL"
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
-ms.author: ronortloff
+ms.author: ron.ortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Transactions (Azure Synapse Analytics)

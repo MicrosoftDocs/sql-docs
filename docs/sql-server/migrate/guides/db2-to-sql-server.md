@@ -33,7 +33,7 @@ To migrate your DB2 database to SQL Server, you need:
 
 ## Pre-migration
 
-Before you begin your migration discover the topology of your environment and assess the feasibility of your intended migration.
+After you have met the prerequisites, you are ready to discover the topology of your environment and assess the feasibility of your migration. 
 
 ### Assess and convert
 
@@ -121,7 +121,7 @@ To publish your schema and migrate your data, follow these steps:
 
 1. Connect to your SQL Server instance by using SQL Server Management Studio and validate the migration by reviewing the data and schema. 
 
-   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Review the data migration report":::
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Compare the schema in SSMS":::
 
 ## Post-migration 
 

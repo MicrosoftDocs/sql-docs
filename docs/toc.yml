@@ -9050,7 +9050,7 @@
         href: ssms/scripting/database-engine-scripting.md
         items:
         - name: Query & Text Editors
-          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+          href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
         - name: Database Engine Query Editor
           href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor
@@ -10129,6 +10129,18 @@
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: Azure Arc enabled SQL Server (preview)
+  items:
+    - name: Overview
+      href: sql-server/azure-arc/overview.md
+    - name: Connect
+      href: sql-server/azure-arc/connect.md
+    - name: Connect at scale
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: Assess
+      href: sql-server/azure-arc/assess.md
+    - name: Configure advanced data Security
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: Resources
   items:
   - name: Offline SQL Server documentation

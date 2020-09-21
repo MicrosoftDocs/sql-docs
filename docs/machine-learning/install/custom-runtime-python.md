@@ -20,7 +20,7 @@ This article describes how to install a custom runtime for running Python script
 + An installation of SQL Machine Learning Services for SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-> [!Note]
+> [!NOTE]
 > This article describes how to install a custom runtime for Python on Windows. To install on Linux, see the [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)
 
 ## <a name="pre_install_checklist"> </a> 
@@ -29,7 +29,7 @@ This article describes how to install a custom runtime for running Python script
 
 + [SQL Server 2019 for Windows CU3 or later.](../../database-engine/install-windows/install-sql-server.md)
 
-  > [!Note]
+  > [!NOTE]
   > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
@@ -38,7 +38,7 @@ This article describes how to install a custom runtime for running Python script
 
 ## Add SQL Server Language Extensions for Windows
 
-> [!Note]
+> [!NOTE]
 > For Machine Learning Services using SQL Server 2019, the extensibility framework for language extensions is already installed and you can skip this step.
 
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
@@ -118,7 +118,7 @@ Append the instance name to MSSQLLAUNCHPAD (`MSSQLLAUNCHPAD$INSTANCENAME`). In t
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
     
->[!Note]
+>[!NOTE]
 >The above command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
 ## Restart SQL Server Launchpad service
@@ -141,7 +141,7 @@ Download the zip file containing the Python language extension (python-lang-exte
 For each database you want to use this Python language extension, you need to register it with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip) from above.
 
-> [!Note]
+> [!NOTE]
 >Python is a reserved word. Use a different name for the external language, e.g. myPython.
 
 ```sql
@@ -155,7 +155,7 @@ GO
 ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
-> [!Note]
+> [!NOTE]
 > This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a Python custom runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
 
 ## <a name="pre_install_checklist"> </a>
@@ -165,7 +165,7 @@ You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterp
 + [SQL Server 2019 for Linux (Cumulative Update 3 onwards).](../../linux/sql-server-linux-setup.md)
 When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
-  > [!Note]
+  > [!NOTE]
   > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
@@ -174,7 +174,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 
 ## Add SQL Server Language Extensions for Linux
 
-> [!Note]
+> [!NOTE]
 > For Machine Learning Services using SQL Server 2019, the **mssql-server-extensibility** package for language extensions is already installed and you can skip this step.
 
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
@@ -218,10 +218,10 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 
 ## Using a custom installation of Python 3.7
 
-> [!Note]
+> [!NOTE]
 > If you have installed Python in the default location of **/usr/lib/python3.7**, you can skip this section.
 
-If you build your own version of Python 3.7, you'll need to follow the following steps so that SQL Server can find and load your custom installation.
+If you built your own version of Python 3.7, follow the following steps so that SQL Server can find and load your custom installation.
 
 #### Update the environment variables
 
@@ -290,7 +290,7 @@ Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/downloa
 
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip) from above.
 
-> [!Note]
+> [!NOTE]
 >Python is a reserved word. Use a different name for the external language e.g. myPython.
 
 ```sql
@@ -350,7 +350,7 @@ WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit))
 PRINT @sumVal
 ```
 
-## See also
+## Next steps
 
 + [Extensibility framework in SQL Server](../concepts/extensibility-framework.md)
 + [Language Extensions Overview](../../language-extensions/language-extensions-overview.md)

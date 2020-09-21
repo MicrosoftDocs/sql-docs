@@ -30,9 +30,6 @@ This article describes how to install a custom runtime for running R scripts wit
 
 + [SQL Server 2019 for Windows (Cumulative Update 3 onwards).](../../database-engine/install-windows/install-sql-server.md)
 
-  > [!Note]
-  > R custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
-
 + [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
 
 + [R Version 3.3 or higher](https://cran.r-project.org/)
@@ -75,7 +72,7 @@ Complete the setup for SQL Server 2019.
 ## Install R
 
 > [!Note]
->For SQL Machine Learning Services, R is already installed in the **R_SERVICES** folder of your SQL Server instance e.g. "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES". If you want to keep using this as your R_HOME, skip to the next step of installing Rcpp. Otherwise, if you want to use a different runtime of R, continue below to install it.
+>For SQL Machine Learning Services, R is already installed in the **R_SERVICES** folder of your SQL Server instance e.g. "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES". If you want to keep using this path as your R_HOME, skip to the next step of installing Rcpp. Otherwise, if you want to use a different runtime of R, continue below to install it.
 
 [Complete installation of R (>= 3.3)](https://cran.r-project.org/bin/windows/base/) and note the path where it's installed. This path is your **R_HOME**. For example, as shown below, R_HOME is "C:\Program Files\R\R-4.0.2"
 
@@ -119,7 +116,7 @@ install.packages("Rcpp", lib="%R_HOME%/library");
 
 3. Select **OK** to close remaining windows.
 
-Alternatively, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the custom R installation path.
+As an alternative, to set these environment variables from an *elevated* command prompt, run the following commands. Make sure to use the custom R installation path.
 
 ```CMD
 setx /m R_HOME "path\to\installation\of\R"
@@ -131,7 +128,7 @@ setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
 > [!Note]
 >If you have installed R in the default location of **C:\Program Files\R\R-version**, you can skip this step.
 
-Run the **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL APPLICATION PACKAGES**) for accessing the %R_HOME%. The launchpad service user name is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME` where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
+Run the **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL APPLICATION PACKAGES**). The launchpad service user name is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME` where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
 
 Append the instance name to MSSQLLAUNCHPAD (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
 
@@ -159,7 +156,7 @@ net stop MSSQLLAUNCHPAD$MSSQLSERVER
 net start MSSQLLAUNCHPAD$MSSQLSERVER
 ```
 
-Alternatively, right-click the SQL Server Launchpad service in the **Services** app of the system and click the **Restart** command. Or use [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md) to restart the service.
+As an alternative, right-click the SQL Server Launchpad service in the **Services** app of the system and select the **Restart** command. Or use [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md) to restart the service.
 
 ## Download R language extension
 
@@ -167,7 +164,7 @@ Download the zip file containing the R language extension (**R-lang-extension.zi
 
 ## Register external language
 
-For each database you want to use this R language extension in, you need to register it with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md). Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL.
+Register this R language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL.
 
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (R-lang-extension.zip) from above.
 
@@ -194,9 +191,6 @@ You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterp
 
 + [SQL Server 2019 for Linux (Cumulative Update 3 onwards).](../../linux/sql-server-linux-setup.md)
 Before you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
-
- > [!Note]
-  > R custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 
@@ -232,7 +226,7 @@ sudo zypper install mssql-server-extensibility
 ## Install R
 
 >[!Note]
->For SQL Machine Learning Services, R is already installed in **/opt/microsoft/ropen/3.5.2/lib64/R**. If you want to keep using this as your R_HOME, skip to the next step of installing **Rcpp**. Otherwise, if you want to use a different runtime of R, you first need to remove **microsoft-r-open-mro** before continuing to install a new version. Example for Ubuntu:
+>For SQL Machine Learning Services, R is already installed in **/opt/microsoft/ropen/3.5.2/lib64/R**. If you want to keep using this path as your R_HOME, skip to the next step of installing **Rcpp**. Otherwise, if you want to use a different runtime of R, you first need to remove **microsoft-r-open-mro** before continuing to install a new version. Example for Ubuntu:
 >```bash
 >sudo apt remove microsoft-r-open-mro-3.5.2
 >```
@@ -257,8 +251,7 @@ sudo apt-get update
 sudo apt-get -y install r-base-core
 ```
 
-> [!Note]
->In all the instructions below, ${R_HOME} is the path to your R installation as noted here and should be replaced with that value.
+In all the instructions below, ${R_HOME} is the path to your R installation as noted here and should be replaced with that value.
 
 ## Install Rcpp package
 
@@ -316,19 +309,16 @@ install.packages("Rcpp", lib = "${R_HOME}/library");
 
     + Save and close the new file.
 
-    + Run ldconfig and verify **libR.so** can be loaded by running the following command and checking that all dependent libraries can be found.
+    + Run `ldconfig` and verify **libR.so** can be loaded by running the following command and checking that all dependent libraries can be found.
 
     ```bash
     sudo ldconfig
     ldd /path/to/installation/of/R/lib/libR.so
     ```
 
-> [!Note]
->To keep using the R runtime provided with SQL Machine Learning Services, set R_HOME to **/opt/microsoft/ropen/3.5.2/lib64/R**.
-
 #### Grant access to the custom R installation folder
 
-Set the datadirectories option in the extensibility section of /var/opt/mssql/mssql.conf file to the custom R installation.
+Set the `datadirectories` option in the extensibility section of /var/opt/mssql/mssql.conf file to the custom R installation.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/R
@@ -349,7 +339,7 @@ Download the zip file containing the R language extension (**R-lang-extension.zi
 
 ## Register external language
 
-For each database you want to use this R language extension in, you need to register it with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md). Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL.
+Register this R language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL.
 
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (R-lang-extension.zip) from above.
 
@@ -375,9 +365,9 @@ RECONFIGURE WITH OVERRIDE;
 
 ## Verify language extension installation
 
-Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run this T-SQL.
+Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run this script.
 
-This script verifies the successful installation of the custom R language extension. Output of this script should display the R_HOME, path to R and the version of the custom R runtime confirming that the script is using it.
+This script verifies the successful installation of the custom R language extension. Output of this script should display the R_HOME, path to R and the version of the custom R runtime. It confirms the script is using your custom runtime.
 
 ```sql
 EXEC sp_execute_external_script

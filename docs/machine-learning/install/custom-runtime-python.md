@@ -215,7 +215,7 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 ## Using a custom installation of Python 3.7
 
 > [!NOTE]
-> If you have installed Python in the default location of **/usr/lib/python3.7**, you can skip to [the next section](#Download-Python-language-extension-1).
+> If you have installed Python in the default location of **/usr/lib/python3.7**, you can skip to [the next section](#download-python-linux).
 
 If you built your own version of Python 3.7, follow the following steps so that SQL Server can find and load your custom installation.
 
@@ -275,7 +275,9 @@ sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/instal
 sudo systemctl restart mssql-launchpadd
 ```
 
-## Download Python language extension
+
+
+## <a name="download-python-linux"></a> Download Python language extension
 
 Download the zip file containing the Python language extension (**python-lang-extension.zip**) from [here.](**GitHub link goes here**)
 

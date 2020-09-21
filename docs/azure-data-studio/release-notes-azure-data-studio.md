@@ -13,7 +13,7 @@ ms.date: 09/22/2020
 
 # Release notes for Azure Data Studio
 
-**[Download and install the latest release!](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[Download and install the latest release!](./download-azure-data-studio.md)**
 
 ## September 2020
 
@@ -87,7 +87,7 @@ June 15, 2020 &nbsp; / &nbsp; version: 1.19.0
 | :----- | :------ |
 | Added Azure Data Studio to Azure portal Integration | Users can now directly launch to Azure portal from an Azure SQL Database connection, Azure Postgres, and more. |
 | New notebook features | &bull; &nbsp; New Notebook toolbar <br/> &bull; &nbsp; New Edit Cell toolbar <br/> &bull; &nbsp; Python dependencies wizard UX updates <br/> &bull; &nbsp; Improved spacing across notebooks |
-| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15) |
+| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md) |
 | [Machine Learning Extension improvements](https://go.microsoft.com/fwlink/?linkid=2129918) | Now supports Azure SQL Managed Instance. |
 | Data Virtualization extension improvements | Now supports MongoDB and Teradata |
 | Postgres extension bug fixes | Fixed Azure MFA |
@@ -459,11 +459,11 @@ February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
 
 | Change | Details |
 | :----- | :------ |
-| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md) |
 | Added filtering extended event support in Profiler extension. | &nbsp; |
 | Added Save as XML feature that can save T-SQL results as XML. | &nbsp; |
 | Added Data-Tier Application Wizard improvements. | &bull; &nbsp; Added Generate script button<br/>&bull; &nbsp; Added view to give warnings of possible data loss during deployment. |
-| Updates to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Updates to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md). |
 | Results streaming enabled by default for long running queries. | &nbsp; |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -491,7 +491,7 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 | Added Azure Active Directory Authentication support. | &nbsp; |
 | Announcing Idera SQL DM Performance Insights (Preview). | &nbsp; |
 | Data-Tier Application Wizard support in SQL Server Import extension. | &nbsp; |
-| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md). |
 | SQL Server Profiler improvements. | &nbsp; |
 | Results Streaming for large queries (preview). | &nbsp; |
 | Community extensions: sp_executesql to sql and New Database. | &nbsp; |
@@ -506,7 +506,7 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 
 | Change | Details |
 | :----- | :------ |
-| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md). |
 | Introducing Paste the Plan extension. | &nbsp; |
 | Introducing High Color queries extension, including SSMS editor theme. | &nbsp; |
 | Fixes in SQL Server Agent, Profiler, and Import extensions. | &nbsp; |
@@ -536,7 +536,7 @@ October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 | Introducing the Azure Resource Explorer to browse Azure SQL Database. | &nbsp; |
 | Improve Object Explorer and Query Editor connectivity robustness. | &nbsp; |
 | SQL Agent extensions improvements. | &nbsp; |
-| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md). |
 | &nbsp; | &nbsp; |
 
 ### Bug Fixes, October 2018

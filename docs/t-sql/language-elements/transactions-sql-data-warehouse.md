@@ -1,17 +1,17 @@
 ---
-description: "Transactions (Azure Synapse Analytics)"
-title: "Transactions (Azure Synapse Analytics) | Microsoft Docs"
+description: Transactions (Azure Synapse Analytics)
+title: Transactions (Azure Synapse Analytics)
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: language-reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
-ms.author: rortloff
+ms.author: ronortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Transactions (Azure Synapse Analytics)

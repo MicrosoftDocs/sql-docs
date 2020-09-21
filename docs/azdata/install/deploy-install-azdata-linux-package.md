@@ -1,7 +1,7 @@
 ---
 title: Install azdata with installer on Linux
-titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing SQL Server Big Data Clusters with the installer (Linux). 
+titleSuffix:
+description: Learn how to install the azdata tool with the installer (Linux). 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -13,9 +13,9 @@ ms.technology: big-data-cluster
 
 # Install `azdata` with apt
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
+This article describes how to install `azdata` on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
@@ -47,12 +47,12 @@ This article describes how to install `azdata` for SQL Server 2019 Big Data Clus
 
    For Ubuntu 16.04 client run:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    For Ubuntu 18.04 client run:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
 4. Update repository information and install `azdata`:
@@ -108,3 +108,5 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

@@ -83,7 +83,8 @@ Restore the most recent backup.
 azdata arc postgres server restore -sn pg```
 Restore a backup by ID
 ```bash
-azdata arc postgres server restore -sn pg -id 123e4567e89b12d3a456426655440000```
+azdata arc postgres server restore -sn pg -id 123e4567e89b12d3a456426655440000
+```
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

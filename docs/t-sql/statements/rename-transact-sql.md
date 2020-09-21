@@ -55,7 +55,7 @@ Change the name of a user-defined table. Specify the table to be renamed with a 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of these [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserved database names:
+Change the name of a user-defined database from *database_name* to *new_database_name*. You can't rename a database to any of the following [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]reserved database names:
 
 - master
 - model
@@ -150,7 +150,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **APPLIES TO:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-It is important to remember that you can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You will need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
+You can't rename a table while it is in use. A rename of a table requires an exclusive lock on the table. If the table is in use, you may need to terminate the session using the table. To terminate a session, you can use the KILL command. Use KILL cautiously since when a session is terminated any uncommitted work will be rolled back. Sessions in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] are prefixed by 'SID'. You will need to include 'SID' and the session number when invoking the KILL command. This example views a list of active or idle sessions and then terminates session 'SID1234'.
 
 ```sql
 -- View a list of the current sessions

@@ -325,7 +325,7 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 - `TRIPLE_DES_3KEY`
 - `NO_ENCRYPTION`
 
-If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
+If you choose to encrypt, you will also have to specify the encryptor using the encryptor options:
 
 - `SERVER CERTIFICATE` = Encryptor_Name
 - `SERVER ASYMMETRIC KEY` = Encryptor_Name
@@ -1306,7 +1306,7 @@ BACKUP DATABASE errors under the following conditions:
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## General Remarks
 
-Before you perform a database backup, use [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
+Before you perform a database backup, use [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database. 
 
 A [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] backup is stored as a set of multiple files within the same directory.
 

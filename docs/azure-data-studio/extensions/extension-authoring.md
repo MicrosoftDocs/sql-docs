@@ -34,11 +34,11 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-For an in-depth guide on how to get started with your extension template, see [Creating an Extension](./tutorial-create-extension.md?view=sql-server-ver15), which walks you through the creation of a [keymap extension](keymap-extension.md).
+For an in-depth guide on how to get started with your extension template, see [keymap extension](keymap-extension.md), which walks you through the creation of an extension.
 
 ### Extensibility References
 
-To learn about Azure Data Studio Extensibility see [Extensibility overview](extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/main/samples).
+To learn about Azure Data Studio Extensibility see [Extensibility overview](../extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/main/samples).
 
 ## Debug an extension
 
@@ -83,8 +83,8 @@ The process to publish updates is similar to publishing the extension. Make sure
 
 Refer to one of the following extension authoring tutorials for step-by-step instructions on how to get started:
 
-- [Keymap Extension Tutorial](extensions/keymap-extension.md)
-- [Dashboard Extension Tutorial](extensions/dashboard-extension.md)
-- [Notebook Extension Tutorial](extensions/notebook-extension.md)
-- [Jupyter Book Extension Tutorial](extensions/jupyter-book-extension.md)
-- [Wizard Extension Tutorial](extensions/wizard-extension.md)
+- [Keymap Extension Tutorial](keymap-extension.md)
+- [Dashboard Extension Tutorial](dashboard-extension.md)
+- [Notebook Extension Tutorial](notebook-extension.md)
+- [Jupyter Book Extension Tutorial](jupyter-book-extension.md)
+- [Wizard Extension Tutorial](wizard-extension.md)

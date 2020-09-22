@@ -74,7 +74,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ## Register SQL Server instances on multiple machines
 
-You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same script you generated for a single machine. Follow the inststructions how [connect SQL Server instances to Azure Arc at scale](connect-at-scale.md).
+You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same script you generated for a single machine. Follow the instructions how [connect SQL Server instances to Azure Arc at scale](connect-at-scale.md).
 
 ## Validate the SQL Server - Azure Arc resources
 

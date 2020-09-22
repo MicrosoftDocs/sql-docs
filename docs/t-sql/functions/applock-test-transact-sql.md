@@ -69,7 +69,7 @@ Two users (**User A** and **User B**), with separate sessions, run the following
   
 **User A** runs:
   
-```syntaxsql
+```sql
 USE AdventureWorks2012;  
 GO  
 BEGIN TRAN;  

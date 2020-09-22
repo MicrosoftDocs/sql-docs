@@ -76,7 +76,7 @@ Complete the setup for SQL Server 2019.
 
 [Complete installation of R (>= 3.3)](https://cran.r-project.org/bin/windows/base/) and note the path where it's installed. This path is your **R_HOME**. For example, as shown below, R_HOME is "C:\Program Files\R\R-4.0.2"
 
-![Install Custom R](../install/media/install-custom-r.png)
+![Install Custom R](../install/media/custom-r-installation.png)
 
 > [!Note]
 >In all the instructions below, %R_HOME% is the path to your R installation as noted above and should be replaced with that value.

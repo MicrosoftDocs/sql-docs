@@ -89,7 +89,7 @@ Is the user-defined name for the external resource pool. *pool_name* is alphanum
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
-The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
+The maximum average CPU bandwidth for all requests that the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
 
 MAX_MEMORY_PERCENT =*value*  
@@ -101,7 +101,7 @@ The maximum number of processes allowed for the external resource pool. 0 = unli
 
 ::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
-The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
+The maximum average CPU bandwidth for all requests that the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
 AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)}
 Attach the external resource pool to specific CPUs.

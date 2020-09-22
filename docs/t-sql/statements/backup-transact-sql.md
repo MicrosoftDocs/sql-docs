@@ -1306,7 +1306,7 @@ BACKUP DATABASE errors under the following conditions:
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## General Remarks
 
-Before you perform a database backup, use [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
+Before you perform a database backup, use [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) to decrease the size of your database.
 
 A [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] backup is stored as a set of multiple files within the same directory.
 

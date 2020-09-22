@@ -46,5 +46,5 @@ To launch the wizard, right-click the Databases folder or right-click a specific
 
 ## Next steps
 
-To learn more about dacpacs, [check out our documentation.](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)
+To learn more about dacpacs, [check out our documentation.](../relational-databases/data-tier-applications/data-tier-applications.md)
 Please report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)

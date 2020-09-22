@@ -69,7 +69,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Extend the functionality of Azure Data Studio
-            url: extensions/extensions.md
+            url: extensions/add-extensions.md
           - text: Extend the functionality by creating Azure Data Studio extensions
             url: extensions/extension-authoring.md
           - text: PostgreSQL extension

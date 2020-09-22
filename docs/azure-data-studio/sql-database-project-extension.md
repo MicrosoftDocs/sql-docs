@@ -8,12 +8,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/30/2020
+ms.date: 09/22/2020
 ---
 
 # SQL Database Projects extension (Preview)
 
-The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. This extension is currently in preview and is available in the [Azure Data Studio Insiders Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
+The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. 
 
 ## Features
 
@@ -55,7 +55,6 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 7. Source control integration and new project creation do not automatically create .gitignore file.
 8. WSL environment support is limited.
 
-## Next step
-
+## Next steps
 - [Getting Started with the SQL Database Projects extension](sql-database-project-extension-getting-started.md)
 - [Build and Publish a project with SQL Database Projects extension for Azure Data Studio](sql-database-project-extension-build.md)

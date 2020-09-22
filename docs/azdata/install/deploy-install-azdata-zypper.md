@@ -39,7 +39,7 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
 1. Create local repository information
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
 1. Install

@@ -1,7 +1,7 @@
 ---
 title: "Connect to an availability group listener"
 description: "Contains information about connecting to an Always On availability group listener, such as how to connect to the primary replica, a read-only secondary replica, use TLS/SSL, and Kerberos." 
-ms.custom: "seodec18"
+ms.custom: contperfq1
 ms.date: "02/27/2020"
 ms.prod: sql
 ms.reviewer: ""

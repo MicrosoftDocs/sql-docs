@@ -33,8 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 CREATE CRYPTOGRAPHIC PROVIDER provider_name   
     FROM FILE = path_of_DLL  
 ```  
@@ -67,7 +66,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## Examples  
  The following example creates a cryptographic provider called `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a .dll file. The .dll file is named `c:\SecurityProvider\SecurityProvider_v1.dll` and it is installed on the server. The provider's certificate must first be installed on the server.  
   
-```  
+```sql  
 -- Install the provider  
 CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider  
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  

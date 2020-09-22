@@ -19,7 +19,7 @@ author: kevinvngo
 ms.author: kevin
 monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
 ---
-# COPY (Transact-SQL) (preview)
+# COPY (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
@@ -34,9 +34,6 @@ This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../in
 - Specify a custom row terminator for CSV files
 - Leverage SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
-
-> [!NOTE]  
-> The COPY statement is currently in public preview.
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
@@ -392,7 +389,7 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Share your performance results with our team during preview! sqldwcopypreview@service.microsoft.com
+The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV.
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 

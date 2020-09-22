@@ -35,7 +35,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -93,7 +92,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ### A. Audit SELECT and INSERT on a table for any database principal 
  The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by the `dbo` user, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
@@ -120,7 +119,7 @@ GO
 ### B. Audit any DML (INSERT, UPDATE or DELETE) on _all_ objects in the _sales_ schema for a specific database role  
  The following example creates a server audit called `DataModification_Security_Audit` and then a database audit specification called `Audit_Data_Modification_On_All_Sales_Tables` that audits `INSERT`, `UPDATE` and `DELETE` statements by users in a new database role `SalesUK`, for all objects in the `Sales` schema in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.

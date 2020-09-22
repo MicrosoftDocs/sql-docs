@@ -31,11 +31,11 @@ To enable Active Directory (AD) authentication, the BDC automatically creates th
 ### Organizational Unit (OU)
 An organizational unit (OU) is a subdivision within an Active Directory into where place users, groups, and even other organizational units. Big picture Organizational units can be used to mirror an organization's functional or business structure. This article we'll create an OU called `bdc` as an example. 
 
->[!Note]
-The organizational unit (OU) represents administrative boundaries and enable customers to control the scope of authority of data administrators. 
->
+>[!NOTE]
+>The organizational unit (OU) represents administrative boundaries and enable customers to control the scope of authority of data administrators. 
 
-You can follow [OU Design Principles](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts.md) to decide on the best structure on working with OUs within your organization. 
+
+You can follow [OU Design Principles](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) to decide on the best structure on working with OUs within your organization. 
 
 ### AD account for BDC domain service account
 

@@ -1,21 +1,22 @@
 ---
 title: SQL Database Projects extension
-description: Install and use the SQL Database Projects extension (preview) for Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "07/30/2020"
-ms.reviewer: "drskwier, maghan, sstein"
+description: Install and use the SQL Database Projects extension for Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "dzsquared"
-ms.author: "drskwier"
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
+ms.custom: seodec18
+ms.date: 09/22/2020
 ---
-# SQL Database Projects extension (preview)
 
-The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. This extension is currently in preview and is available in the [Azure Data Studio Insiders Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
+# SQL Database Projects extension (Preview)
 
+The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. 
 
 ## Features
+
 1. Create project from a connected database 
 2. Create a new blank project
 3. Open a Project previously created in [Azure Data Studio](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../ssdt/sql-server-data-tools.md) 
@@ -47,11 +48,9 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 ## Known limitations
 1. Adding project references and loading existing project references in Azure Data Studio viewlet is not currently supported. 
 2. Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected. 
-3. Pre-Post deploy script adding and loading in viewlet is not supported as of today, however if you manually add these files in project they will be honored at build time. 
 3. SQLCLR objects in project are not supported in .NET Core version of DacFx. 
 3. Tasks (build/publish) are not user-defined
 3. Publish targets defined by DacFx
-3. Source control integration and new project creation do not automatically create .gitignore file 
 3. WSL environment support is limited 
 
 ## Next steps

@@ -53,33 +53,33 @@ Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB C
 Create the job by using a Transact-SQL script similar to the script shown in the following example:
 
 ```sql
--- Create Elastic Jobs target groupÂ 
-EXECÂ jobs.sp_add_target_group 'TargetGroup'Â 
+-- Create Elastic Jobs target group
+EXEC jobs.sp_add_target_group 'TargetGroup'
 
--- Add Elastic Jobs target group memberÂ 
-EXECÂ jobs.sp_add_target_group_memberÂ @target_group_name='TargetGroup',Â 
-	@target_type='SqlDatabase',Â @server_name='YourSQLDBServer.database.windows.net',
-	@database_name='SSISDB'Â 
+-- Add Elastic Jobs target group member
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup',
+	@target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+	@database_name='SSISDB' 
 
 -- Add a job to schedule SSIS package execution
-EXECÂ jobs.sp_add_jobÂ @job_name='ExecutePackageJob',Â @description='Description',Â 
-	@schedule_interval_type='Minutes',Â @schedule_interval_count=60
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+	@schedule_interval_type='Minutes', @schedule_interval_count=60
 
 -- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXECÂ jobs.sp_add_jobstepÂ @job_name='ExecutePackageJob',Â 
-	@command=N'DECLAREÂ @exe_idÂ bigintÂ 
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+	@command=N'DECLARE @exe_id bigint 
 		EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1,Â 
-			@execution_id=@exe_idÂ OUTPUT		Â 
-		EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0',Â 
-	@credential_name='YourDBScopedCredentials',Â 
-	@target_group_name='TargetGroup'Â 
+            @runinscaleout=1, @useanyworker=1, 
+			@execution_id=@exe_id OUTPUT		 
+		EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+	@credential_name='YourDBScopedCredentials', 
+	@target_group_name='TargetGroup' 
 
--- Enable the job scheduleÂ 
-EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
-	@schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+	@schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
 ## <a name="agent"></a> Schedule a package with SQL Server Agent on premises
@@ -139,17 +139,17 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
-    DECLARE	@return_valueÂ int,Â @exe_idÂ bigintÂ 
+    DECLARE	@return_value int, @exe_id bigint 
 
-    EXEC @return_valueÂ =Â [YourLinkedServer].[SSISDB].[catalog].[create_execution]Â 
-        @folder_name=N'folderName',Â @project_name=N'projectName',Â 
-        @package_name=N'packageName',Â @use32bitruntime=0,Â @runincluster=1,Â @useanyworker=1,
-        @execution_id=@exe_idÂ OUTPUTÂ 
+    EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
     EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
         @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution]Â @execution_id=@exe_id
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  Finish configuring and scheduling the job.

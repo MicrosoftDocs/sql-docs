@@ -234,7 +234,7 @@ Azure AD user     |Azure AD user         |Success
   
 To verify an Azure AD owner of the database execute the following Transact-SQL command in a user database (in this example `testdb`).  
     
-```    
+```sql    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
 FROM sys.databases   
 WHERE name = 'testdb';  
@@ -243,7 +243,7 @@ WHERE name = 'testdb';
 The output will be an identifier (such as 6D8B81F6-7C79-444C-8858-4AF896C03C67) which corresponds to Azure AD ObjectID assigned to `richel@cqclinic.onmicrosoft.com`  
 When a SQL Server authentication login user is the database owner, execute the following statement in the master database to verify the database owner:  
     
-```    
+```sql    
 SELECT d.name, d.owner_sid, sl.name   
 FROM sys.databases AS d  
 JOIN sys.sql_logins AS sl  
@@ -254,16 +254,19 @@ ON d.owner_sid = sl.sid;
 ### Best practice  
   
 Instead of using Azure AD users as individual owners of the database, use an Azure AD group as a member of the **db_owner** fixed database role. The following steps, show how to configure a disabled login as the database owner, and make an Azure Active Directory group (`mydbogroup`) a member of the **db_owner** role. 
+
 1.  Login to SQL Server as Azure AD admin, and change the owner of the database to a disabled SQL Server authentication login. For example, from the user database execute:  
-  ```    
+  ```sql    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
-  ```    
+  ```  
+  
 2.  Create an Azure AD group that should own the database and add it as a user to the user database. For example:  
-  ```    
+  ```sql    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
-  ```    
+  ```   
+  
 3.  In the user database add the user representing the Azure AD group, to the **db_owner** fixed database role. For example:  
-  ```    
+  ```sql    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
@@ -273,7 +276,7 @@ Now the `mydbogroup` members can centrally manage the database as members of the
   
 To check if a specific user has the effective dbo permission, have the user execute the following statement:  
     
-```    
+```sql    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
@@ -288,21 +291,21 @@ A return value of 1 indicates the user is a member of the role.
 ### A. Transfer ownership of a table    
  The following example transfers ownership of table `Sprockets` to user `MichikoOsada`. The table is located inside schema `Parts`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- The query could also look like the following:    
+The query could also look like the following:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- If the objects schema is not included as part of the statement, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will look for the object in the users default schema. For example:    
+If the objects schema is not included as part of the statement, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will look for the object in the users default schema. For example:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
@@ -310,7 +313,7 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ### B. Transfer ownership of a view to the schema owner    
  The following example transfers ownership the view `ProductionView06` to the owner of the schema that contains it. The view is located inside schema `Production`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Production.ProductionView06 TO SCHEMA OWNER;    
 GO    
 ```    
@@ -318,7 +321,7 @@ GO
 ### C. Transfer ownership of a schema to a user    
  The following example transfers ownership of the schema `SeattleProduction11` to user `SandraAlayo`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;    
 GO    
 ```    
@@ -328,14 +331,15 @@ GO
     
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
 GO    
 ```    
     
 ### E. Changing the owner of a table    
  Each of the following examples changes the owner of the `Sprockets` table in the `Parts` database to the database user `MichikoOsada`.    
-```    
+ 
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
@@ -347,14 +351,14 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
     
  The following example change the owner of the `Parts` database to the login `MichikoOsada`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
 ### G. Changing the owner of a SQL Database to an Azure AD User  
 In the following example, an Azure Active Directory administrator for SQL Server in an organization with an active directory named `cqclinic.onmicrosoft.com`, can change the current ownership of a database `targetDB` and make an AAD user  `richel@cqclinic.onmicorsoft.com` the new database owner using the following command:  
     
-```    
+```sql    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     

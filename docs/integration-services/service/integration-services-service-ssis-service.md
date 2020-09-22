@@ -362,11 +362,13 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
   
 6.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service.  
   
-### Connecting by using a Local Account  
- If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
+### Connecting by using a Local Account
+
+If you are working in a local Windows account on a client computer, you can connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a remote computer only if a local account that has the same name and password and the appropriate rights exists on the remote computer.  
   
-### SSIS windows service does not support delegation
-SQL Server Integration Services does not support the delegation of credentials, sometimes referred to as a double hop. In this scenario, you are working on a client computer, Integration Services is installed on a second computer, and SQL Server is installed on a third computer. Although SQL Server Management Studio successfully passes your credentials from the client computer to the second computer on which Integration Services is running, Integration Services cannot delegate your credentials from the second computer to the third computer on which SQL Server is running.
+### SSIS Windows service doesn't support delegation
+
+SSIS doesn't support the delegation of credentials, sometimes referred to as a double hop. In this scenario, you're working on a client computer, SSIS is installed on a second computer, and SQL Server is installed on a third computer. Although SSMS successfully passes your credentials from the client computer to the second computer (where SSIS is running), SSIS can't delegate your credentials from the second computer to the third computer (where SQL Server is running).
 
 ## Configure the firewall
   

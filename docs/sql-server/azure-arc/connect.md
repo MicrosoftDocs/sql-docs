@@ -81,6 +81,6 @@ To remove an existing __SQL Server - Azure Arc__ resource, go to the resource gr
 
 ## Next steps
 
-[Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+* [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 
-[Configure on-demand SQL assessment for your SQL Server instance](assess.md)
+* [Configure on-demand SQL assessment for your SQL Server instance](assess.md)

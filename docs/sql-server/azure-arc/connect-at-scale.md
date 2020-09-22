@@ -18,10 +18,6 @@ The installation methods to install and configure the Connected Machine agent re
 
 Before you get started, be sure to review the [prerequisites](overview.md#prerequisites) and make sure that you have created a custom role that meets the required permissions.
 
-If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
-
-At the end of this process, you will have successfully connected your hybrid machines to Azure Arc enabled servers (preview).
-
 ## Connecting multiple SQL Server instances on Windows using Azure PowerShell
 
 Each machine must have [Azure PowerShell](/powershell/azure/install-az-ps) installed.

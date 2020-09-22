@@ -51,7 +51,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 GETUTCDATE()  
 ```  
   
@@ -70,7 +70,7 @@ GETUTCDATE()
   
 ### A. Getting the current system date and time  
   
-```  
+```sql  
 SELECT 'SYSDATETIME()      ', SYSDATETIME();  
 SELECT 'SYSDATETIMEOFFSET()', SYSDATETIMEOFFSET();  
 SELECT 'SYSUTCDATETIME()   ', SYSUTCDATETIME();  
@@ -109,7 +109,7 @@ GETUTCDATE()             2007-05-04
   
 ### C. Getting the current system time  
   
-```  
+```sql  
 SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  
 SELECT 'SYSDATETIMEOFFSET()', CONVERT (time, SYSDATETIMEOFFSET());  
 SELECT 'SYSUTCDATETIME()   ', CONVERT (time, SYSUTCDATETIME());  

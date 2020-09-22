@@ -91,6 +91,9 @@ conceptualContent:
         - text: SQL Server Machine Learning Services
           url: machine-learning/index.yml
           itemType: whats-new
+        - text: SQL Server enabled Azure Arc (preview)
+          url: sql-server/azure-arc/overview.md
+          itemType: whats-new
     - title: Install 
       links:
         - text: SQL Server

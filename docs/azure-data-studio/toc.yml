@@ -36,8 +36,14 @@
   items:
   - name: Extensions
     items:
-    - name: Extensions
+    - name: Extensions overview
       href: extensions.md
+    - name: Azure Arc extension
+      href: extensions/azure-arc-extension.md
+    - name: Data Virtualization extension
+      href: data-virtualization-extension.md
+    - name: Kusto extension
+      href: extensions/kusto-extension.md
     - name: Machine Learning extension
       items:
       - name: Machine Learning extension overview
@@ -48,10 +54,16 @@
         href: machine-learning-extension-predictions.md
       - name: Import and view models
         href: machine-learning-extension-import-view-models.md
+    - name: Managed Instance extension
+      href: extensions/azure-sql-managed-instance-extension.md
     - name: PostgreSQL extension
       href: postgres-extension.md
-    - name: Data Virtualization extension
-      href: data-virtualization-extension.md
+    - name: PowerShell extension
+      href: powershell-extension.md
+    - name: SandDance extension
+      href: sanddance-extension.md
+    - name: Schema Compare extension
+      href: schema-compare-extension.md
     - name: SQL Database Projects extension
       items:
       - name: SQL Database Projects extension overview
@@ -65,21 +77,13 @@
     - name: SQL Server Agent
       href: sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
-      href: sql-server-cms-extension.md        
+      href: sql-server-cms-extension.md
     - name: SQL Server dacpac extension
       href: sql-server-dacpac-extension.md
     - name: SQL Server Import
       href: sql-server-import-extension.md
     - name: SQL Server Profiler
       href: sql-server-profiler-extension.md
-    - name: Schema Compare extension
-      href: schema-compare-extension.md        
-    - name: PowerShell extension
-      href: powershell-extension.md        
-    - name: Managed Instance extension
-      href: extensions/azure-sql-managed-instance-extension.md
-    - name: SandDance extension
-      href: sanddance-extension.md
   - name: Extension Authoring
     items:
     - name: Extensibility overview
@@ -116,8 +120,14 @@
       href: notebooks-tutorial-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks-tutorial-python-kernel.md
+    - name: Use Kusto Kernel
+      href: notebooks/notebooks-kusto-kernel.md
     - name: Kqlmagic extension
       href: notebooks-kqlmagic.md
+  - name: Deployment
+    items:
+    - name: Deploy Azure SQL Edge
+      href: deploy-azure-sql-edge.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

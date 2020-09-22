@@ -1,21 +1,20 @@
 ---
 title: Install azdata
-titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing Big Data Clusters.
+titleSuffix: 
+description: Learn how to install the azdata tool.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
 ---
 
 # Install `azdata`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-`azdata` is a command-line utility written in Python to bootstrap and manage the big data cluster via REST APIs. 
+`azdata` is a command-line utility written in Python to bootstrap and manage the data services via REST APIs. 
 
 ## Find latest version
 
@@ -37,4 +36,6 @@ To find your installed version and see if you need to update, run `azdata --vers
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+Use azdata with Big Data Clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

@@ -71,7 +71,7 @@ landingContent:
           - text: Extend the functionality of Azure Data Studio
             url: extensions.md
           - text: Extend the functionality by creating Azure Data Studio extensions
-            url: extension-authoring.md
+            url: extensions/extension-authoring.md
           - text: PostgreSQL extension
             url: postgres-extension.md
           - text: PowerShell Editor Support

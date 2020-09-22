@@ -109,6 +109,8 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ### tempdb sizes for DTU-based service tiers
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|
 |Basic|13.9|1|13.9|

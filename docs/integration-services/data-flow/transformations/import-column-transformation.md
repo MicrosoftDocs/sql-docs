@@ -1,4 +1,5 @@
 ---
+description: "Import Column Transformation"
 title: "Import Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Import Column Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Import Column transformation reads data from files and adds the data to columns in a data flow. Using this transformation, a package can add text and images stored in separate files to a data flow. For example, a data flow that loads data into a table that stores product information can include the Import Column transformation to import customer reviews of each product from files and add the reviews to the data flow.  

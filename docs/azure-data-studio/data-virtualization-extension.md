@@ -2,7 +2,7 @@
 title: Data Virtualization Extension
 description: Data Virtualization extension for Azure Data Studio
 ms.reviewer: "alayu, sstein, maghan"
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "rajmera3"

@@ -1,4 +1,5 @@
 ---
+description: "Getting Information About Assemblies"
 title: "Getting Information About Assemblies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,7 +16,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Getting Information
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following catalog views and functions can be queried for metadata about assemblies.  
   
  **To get information about individual assemblies**  

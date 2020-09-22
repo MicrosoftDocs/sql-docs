@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, External Scripts Object | Microsoft Docs"
+description: Learn about the SQLServer:External Scripts object, which provides counters to monitor the actions associated with executing external scripts.
 ms.custom: ""
 ms.date: "03/21/2016"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, External Scripts Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **SQLServer:External Scripts** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   

@@ -22,7 +22,7 @@ ms.author: mikeray
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Troubleshoot orphaned users (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Orphaned users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] occur when a database user is based on  a login in the **master** database, but the login no longer exists in **master**. This can occur when the login is deleted, or when the database is moved to another server where the login does not exist. This topic describes how to find orphaned users, and remap them to logins.  
   
@@ -113,8 +113,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
 > [!IMPORTANT]  
 >  Any login can change its own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
-  
- The deprecated procedure [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) also works with orphaned users. `sp_change_users_login` cannot be used with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## See Also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

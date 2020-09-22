@@ -1,8 +1,9 @@
 ---
+description: "IndexNulls Property Example (VB)"
 title: "IndexNulls Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # IndexNulls Property Example (VB)
-This example demonstrates the [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) property of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code creates a new index and sets the value of **IndexNulls** based on user input (from a list box named List1). Then, the **Index** is appended to the **Employees** [Table](../../../ado/reference/adox-api/table-object-adox.md) in the *Northwind* [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). The new **Index** is applied to a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on the **Employees** table, and the **Recordset** is opened. A new record is added to the **Employees** table, with a **Null** value in the indexed field. Whether this new record is displayed depends on the setting of the **IndexNulls** property.  
+This example demonstrates the [IndexNulls](./indexnulls-property-adox.md) property of an [Index](./index-object-adox.md). The code creates a new index and sets the value of **IndexNulls** based on user input (from a list box named List1). Then, the **Index** is appended to the **Employees** [Table](./table-object-adox.md) in the *Northwind* [Catalog](./catalog-object-adox.md). The new **Index** is applied to a [Recordset](../ado-api/recordset-object-ado.md) based on the **Employees** table, and the **Recordset** is opened. A new record is added to the **Employees** table, with a **Null** value in the indexed field. Whether this new record is displayed depends on the setting of the **IndexNulls** property.  
   
 ```  
 ' BeginIndexNullsVB  
@@ -103,5 +104,5 @@ End Sub
 ```  
   
 ## See Also  
- [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [IndexNulls Property (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
+ [Index Object (ADOX)](./index-object-adox.md)   
+ [IndexNulls Property (ADOX)](./indexnulls-property-adox.md)

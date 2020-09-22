@@ -1,6 +1,6 @@
 ---
 title: "Generate & analyze CLUSTER.LOG for availability groups"
-description: "Describes how to generate and analyze the cluster log for an Always On availability group. "
+description: "Learn details about how to generate and analyze the cluster log for an Always On availability group."
 ms.custom: seo-lt-2019
 ms.date: "06/14/2017"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # Generate and analyze the CLUSTER.LOG for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   As a failover cluster resource, there are external interactions between SQL Server, the Windows Server Failover Cluster service (WSFC) cluster, and the SQL Server resource DLL (hadrres.dll), that cannot be monitored within SQL Server. The WSFC log, CLUSTER.LOG, can diagnose issues in the WSFC cluster or in the SQL Server resource DLL. 
   
 ## Generate cluster log  

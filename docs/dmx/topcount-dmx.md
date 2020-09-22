@@ -1,4 +1,5 @@
 ---
+description: "TopCount (DMX)"
 title: "TopCount (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # TopCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the specified number of top-most rows in decreasing order of rank as specified by an expression.  
   

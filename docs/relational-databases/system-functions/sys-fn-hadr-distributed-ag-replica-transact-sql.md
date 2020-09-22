@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_hadr_distributed_ag_replica (Transact-SQL)"
 title: "sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -21,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # sys.fn_hadr_distributed_ag_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Used to  map a replica in a distributed availability group to the local availability group.  
   

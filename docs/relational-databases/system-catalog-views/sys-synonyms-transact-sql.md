@@ -1,4 +1,5 @@
 ---
+description: "sys.synonyms (Transact-SQL)"
 title: "sys.synonyms (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.synonyms catalog view"
 ms.assetid: d6e88ca6-6e3d-4f56-bd3e-d85e26be5499
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.synonyms (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row for each synonym object that is **sys.objects.type** = SN.  
   

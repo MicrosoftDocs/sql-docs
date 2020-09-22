@@ -28,6 +28,56 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## 18.6 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2143544)|September 18, 2020|18.6|15.0.4897.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|September 18, 2020| 18.6|15.0.4897.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|September 18, 2020| 18.6|15.0.4897.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|September 18, 2020| 18.6|15.0.4897.1|
+
+### Features
+| Feature | Details |
+| :------ | :------ |
+| Platform | Updated sqlpackage for .NET Core version to .NET Core 3.1 |
+| Always Encrypted | Added support for secure enclave import and export for SQL Server 2019 |
+| Deployment | Added support to ignore change data capture enabled tables when exporting from Azure SQL Database |
+| Deployment | Added support for index option OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL Database |
+| Deployment | Added support for identity columns for Azure SQL Data Warehouse | 
+| Help | Output the sqlpackage version in the help (/?) and support the /version parameter | 
+
+### Fixes
+| Feature | Details |
+| :------ | :------ | 
+| Deployment | Fixed an incorrect deployment script generated when targeting Azure SQL Database Managed Instance as a non-sysadmin user  | 
+| Deployment | Fixed loading deployment contributors when running script actions | 
+| Help | Output correct elapsed time in sqlpackage when operation take longer than 1 day | 
+| Deployment | Fixed dacpac registration when deploying for .NET Core | 
+| Deployment | Fixed sqlpackage on .NET Core handling of the /accessToken (/at) parameter | 
+| Deployment | Allow ALTER TABLE statements in stored procedures as non-top level statements | 
+| Deployment | Fixed Azure SQL Data Warehouse validation of materialized views to be case insensitive | 
+
+### Known Issues
+| Feature | Details |
+| :------ | :------ |
+| Deployment | The Azure SQL Data Warehouse Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | 
+
+## 18.5.1 sqlpackage
+
+|Platform|Download|Release date|Version|Build
+|:---|:---|:---|:---|:---|
+|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2134206)|June 24, 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134312)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134311)|June 24, 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2134310)|June 24, 2020| 18.5.1|15.0.4826.1|
+
+### Fixes
+| Feature | Details |
+| :------ | :------ |
+| Deployment | Fixed a regression that was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise | 
+
 ## 18.5 sqlpackage
 
 |Platform|Download|Release date|Version|Build
@@ -70,6 +120,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Feature | Details |
 | :------ | :------ |
 | Deployment |  A regression was introduced in 18.5 causing there to be an “Incorrect syntax near 'type'” error when deploying a dacpac or importing a bacpac with a user with external login to on premise. Workaround is to use sqlpackage 18.4 and it will be fixed in the next sqlpackage release. | 
+| .NET Core | Importing bacpacs with Sensitivity Classification fails with "Internal connection fatal error" because of this [known issue](https://github.com/dotnet/SqlClient/issues/559) in Microsoft.Data.SqlClient. This will be fixed in the next sqlpackage release. |
 | &nbsp; | &nbsp; |
 
 ## 18.4.1 sqlpackage
@@ -111,7 +162,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Platform | sqlpackage .NET Core GA for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
-| Deployment | Add Managed Instance support for AAD user and groups. |
+| Deployment | Add Managed Instance support for Azure Active Directory user and groups. |
 | Deployment | Support the /AccessToken parameter for sqlpackage on .NET Core. |
 | &nbsp; | &nbsp; |
 

@@ -1,6 +1,6 @@
 ---
 title: "Availability group is offline"
-description: "Identify possible causes for why an Always On availability group is offline."
+description: "Learn how to identify times when and possible reasons why an Always On availability group may go offline."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Always On Availability group is offline
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

@@ -1,4 +1,5 @@
 ---
+description: "FILEGROUPPROPERTY (Transact-SQL)"
 title: "FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "viewing filegroup properties"
   - "displaying filegroup properties"
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # FILEGROUPPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the filegroup property value for a specified name  and filegroup value.  
   
@@ -34,7 +35,9 @@ This function returns the filegroup property value for a specified name  and fil
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_name*  
 An expression of type **sysname** that represents the filegroup name for which `FILEGROUPPROPERTY` returns the named property information.  
   

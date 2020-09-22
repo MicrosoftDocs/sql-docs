@@ -1,4 +1,5 @@
 ---
+description: "Remove Tables from Queries (Visual Database Tools)"
 title: Remove Tables from Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Remove Tables from Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can remove a table - or any table-valued object - from the query.  
   
 > [!NOTE]  

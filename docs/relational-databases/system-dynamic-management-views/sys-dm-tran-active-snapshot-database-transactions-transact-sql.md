@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)"
 title: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_active_snapshot_database_transactions dynamic management view"
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, this dynamic management view returns a virtual table for all active transactions that generate or potentially access row versions. Transactions are included for one or more of the following conditions:  
   

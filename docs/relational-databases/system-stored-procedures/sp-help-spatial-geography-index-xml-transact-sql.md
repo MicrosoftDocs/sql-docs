@@ -1,4 +1,5 @@
 ---
+description: "sp_help_spatial_geography_index_xml (Transact-SQL)"
 title: "sp_help_spatial_geography_index_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geography_index_xml procedure"
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_spatial_geography_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the name and value for a specified set of properties about a **geography** spatial index. You can choose to return a core set of properties or all properties of the index.  
   

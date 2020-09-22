@@ -1,8 +1,9 @@
 ---
+description: "ADO for Visual C++ Syntax Index for COM"
 title: "ADO for Visual C++ Syntax Index for COM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -26,24 +27,24 @@ This index is a cross-reference to the ADO Language Reference based on Microsoft
   
  Method and property syntax in Visual C++ is listed for the following elements:  
   
--   [Collections](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [Collections](./collections-ado-for-visual-c-syntax.md)  
   
--   [Command object](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
+-   [Command object](./command-ado-for-visual-c-syntax.md)  
   
--   [Connection object](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
+-   [Connection object](./connection-ado-for-visual-c-syntax.md)  
   
--   [Error object](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
+-   [Error object](./error-ado-for-visual-c-syntax.md)  
   
--   [Field object](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
+-   [Field object](./field-ado-for-visual-c-syntax.md)  
   
--   [Parameter object](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
+-   [Parameter object](./parameter-ado-for-visual-c-syntax.md)  
   
--   [Record object](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
+-   [Record object](./record-ado-for-visual-c-syntax.md)  
   
--   [Recordset object](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
+-   [Recordset object](./recordset-ado-for-visual-c-syntax.md)  
   
--   [Stream object](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
+-   [Stream object](./stream-ado-for-visual-c-syntax.md)  
   
 ## See Also  
- [ADO for Visual C++ Syntax Index with #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
+ [ADO for Visual C++ Syntax Index with #import](./ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)

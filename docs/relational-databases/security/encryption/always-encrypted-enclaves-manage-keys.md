@@ -1,4 +1,5 @@
 ---
+description: "Manage keys for Always Encrypted with secure enclaves"
 title: "Manage keys for Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019
@@ -12,7 +13,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Manage keys for Always Encrypted with secure enclaves
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends key management for [Always Encrypted](always-encrypted-database-engine.md) by introducing enclave-enabled keys: 
 

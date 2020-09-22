@@ -11,7 +11,7 @@ ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ---
 # Use SQL Server Management Studio on Windows to manage SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article introduces [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) and walks you through a couple of common tasks. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
@@ -52,7 +52,7 @@ Use the following basic steps to get connected:
    | Setting | Description |
    |-----|-----|
    | **Server type** | The default is database engine; do not change this value. |
-   | **Server name** | Enter the name of the target Linux SQL Server machine or its IP address. |
+   | **Server name** | Enter the name of the target Linux SQL Server machine, or its IP address and port in the format `IP,port`. |
    | **Authentication** | For SQL Server on Linux, use **SQL Server Authentication**. |
    | **Login** | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
    | **Password** | Enter the password for the specified user (for the **SA** account, you created this during setup). |

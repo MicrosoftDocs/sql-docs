@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_plan_attributes (Transact-SQL)"
 title: "sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2017"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_plan_attributes dynamic management function"
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row per plan attribute for the plan specified by the plan handle. You can use this table-valued function to get details about a particular plan, such as the cache key values or the number of current simultaneous executions of the plan.  
   
@@ -88,7 +89,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 |Option|Value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
-|Parallel Plan|2|  
+|ParallelPlan<br /><br /> Indicates that the plan parallelism options have changed.|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
 |ANSI_WARNINGS|16|  

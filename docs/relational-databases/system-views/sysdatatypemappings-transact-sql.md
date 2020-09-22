@@ -1,4 +1,5 @@
 ---
+description: "sysdatatypemappings (Transact-SQL)"
 title: "sysdatatypemappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # sysdatatypemappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **sysdatatypemappings** view is used to show the mapping between SQL Server data types and data types of a non-SQL Server database management system (DBMS). This view is stored in the **msdb** database.  
   

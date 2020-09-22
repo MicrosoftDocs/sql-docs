@@ -1,4 +1,5 @@
 ---
+description: "Results Detailed View Dialog Box"
 title: "Results Detailed View Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Results Detailed View Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This dialog box shows the results of policy evaluation after you have run a policy by using the **Evaluate Policies** dialog box and clicked **Evaluate**. This dialog box is read-only, and helps you understand which part of a property expression might be failing.  
   
 ## Options  

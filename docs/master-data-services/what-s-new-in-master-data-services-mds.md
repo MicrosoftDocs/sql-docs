@@ -1,5 +1,6 @@
 ---
 title: What&#39;s New
+description: Learn about the changes, improvements, and updates in the SQL Server 2019 release of Master Data Services.
 ms.custom: ""
 ms.date: "07/08/2016"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # What&#39;s New in Master Data Services (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
@@ -64,7 +65,7 @@ ms.author: lle
   
  An index with more than 30% fragmentation is rebuilt online. During the rebuild, the performance is affected on the CRUD operation on the same table. If performance degradation is a concern, it is recommended that you run the store procedure during off business hours. For more information about index fragmentation, see [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- For more information, see this post on the Master Data Services Blog, [Performance and Scale Improvement in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375).  
+ For more information, see this post on the Master Data Services Blog, [Performance and Scale Improvement in SQL Server 2016](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225).  
   
 ##  Improved Security  
   

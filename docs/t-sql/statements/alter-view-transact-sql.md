@@ -1,4 +1,5 @@
 ---
+description: "ALTER VIEW (Transact-SQL)"
 title: "ALTER VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2018"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "modifying views"
   - "ALTER VIEW statement"
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifies a previously created view. This includes an indexed view. ALTER VIEW does not affect dependent stored procedures or triggers and does not change permissions.  
   
@@ -50,10 +51,11 @@ AS select_statement
 ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
 [;]  
-
 ``` 
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the view belongs.  
   
@@ -111,7 +113,7 @@ AS <select_statement>
 ## Examples  
  The following example creates a view that contains all employees and their hire dates called `EmployeeHireDate`. Permissions are granted to the view, but requirements are changed to select employees whose hire dates fall before a certain date. Then, `ALTER VIEW` is used to replace the view.  
   
-```  
+```sql 
 USE AdventureWorks2012 ;  
 GO  
 CREATE VIEW HumanResources.EmployeeHireDate  
@@ -120,12 +122,11 @@ SELECT p.FirstName, p.LastName, e.HireDate
 FROM HumanResources.Employee AS e JOIN Person.Person AS  p  
 ON e.BusinessEntityID = p.BusinessEntityID ;  
 GO  
-  
 ```  
   
  The view must be changed to include only the employees that were hired before `2002`. If ALTER VIEW is not used, but instead the view is dropped and re-created, the previously used GRANT statement and any other statements that deal with permissions pertaining to this view must be re-entered.  
   
-```  
+```sql  
 ALTER VIEW HumanResources.EmployeeHireDate  
 AS  
 SELECT p.FirstName, p.LastName, e.HireDate  
@@ -133,7 +134,6 @@ FROM HumanResources.Employee AS e JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID  
 WHERE HireDate < CONVERT(DATETIME,'20020101',101) ;  
 GO  
-  
 ```  
   
 ## See Also  

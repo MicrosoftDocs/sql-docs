@@ -1,4 +1,5 @@
 ---
+description: "CDC Control Task Custom Properties"
 title: "CDC Control Task Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # CDC Control Task Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The following table describes the custom properties of the CDC Control task. All properties are read/write.  

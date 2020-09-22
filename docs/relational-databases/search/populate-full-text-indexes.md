@@ -1,4 +1,5 @@
 ---
+description: "Populate Full-Text Indexes"
 title: "Populate Full-Text Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -26,7 +27,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Populate Full-Text Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  
   
 ##  <a name="types"></a> Types of population  

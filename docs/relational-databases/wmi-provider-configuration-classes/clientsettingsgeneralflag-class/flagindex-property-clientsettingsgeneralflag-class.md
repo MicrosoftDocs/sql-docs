@@ -1,4 +1,5 @@
 ---
+description: "FlagIndex Property (ClientSettingsGeneralFlag Class)"
 title: "FlagIndex Property (ClientSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FlagIndex property"
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # FlagIndex Property (ClientSettingsGeneralFlag Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the index value of the flag.  
   
 ## Syntax  

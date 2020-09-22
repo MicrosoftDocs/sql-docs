@@ -1,6 +1,6 @@
 ---
 title: Deploy a Pacemaker cluster for SQL Server on Linux
-description: This tutorial shows how to deploy a Pacemaker cluster for SQL Server on Linux. 
+description: Learn to deploy a Linux Pacemaker cluster for a SQL Server Always On availability group (AG) or failover cluster instance (FCI). 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -12,7 +12,7 @@ ms.technology: linux
 
 # Deploy a Pacemaker cluster for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
@@ -170,7 +170,7 @@ The process for creating a Pacemaker cluster is completely different on SLES tha
    ```
    
 7. If you configured an IP address for administration, you can test it in a browser, which also tests the password change for *hacluster*.
-   ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
+   ![hacLuster](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. On another SLES server that will be a node of the cluster, run 
    ```bash

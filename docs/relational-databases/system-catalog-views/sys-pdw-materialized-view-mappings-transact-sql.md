@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_materialized_view_mappings (Transact-SQL)"
 title: "sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"
@@ -15,7 +16,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_materialized_view_mappings (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Ties the materialized view to internal object names by object_id.
 

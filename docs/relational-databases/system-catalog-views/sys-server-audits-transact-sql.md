@@ -1,4 +1,5 @@
 ---
+description: "sys.server_audits (Transact-SQL)"
 title: "sys.server_audits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_audits catalog view"
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.server_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit in a server instance. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   

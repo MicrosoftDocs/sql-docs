@@ -1,4 +1,5 @@
 ---
+description: "MSrepl_backup_lsns (Transact-SQL)"
 title: "MSrepl_backup_lsns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_backup_Isns system table"
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSrepl_backup_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSrepl_backup_lsns** table contains transaction log sequence numbers (LSN) for supporting the 'sync with backup' option of the Distribution database. This table is stored in the distribution database.  
   

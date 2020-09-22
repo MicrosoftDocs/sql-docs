@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_cryptographic_provider_sessions (Transact-SQL)"
 title: "sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_sessions dynamic management function"
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_cryptographic_provider_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about open sessions for a cryptographic provider.  
  

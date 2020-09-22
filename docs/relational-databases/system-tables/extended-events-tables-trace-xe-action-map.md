@@ -1,4 +1,5 @@
 ---
+description: "Extended Events Tables - trace_xe_action_map"
 title: "trace_xe_action_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "extended events [SQL Server], tables"
   - "trace_xe_action_map"
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Extended Events Tables - trace_xe_action_map
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each Extended Events action that is mapped to a SQL Trace column ID. This table is stored in the master database, in the sys schema.  
   

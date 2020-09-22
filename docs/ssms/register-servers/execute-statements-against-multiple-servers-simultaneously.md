@@ -1,4 +1,5 @@
 ---
+description: "Execute Statements Against Multiple Servers Simultaneously"
 title: Execute Statements Against Multiple Servers Simultaneously
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 197760f3-0a06-43de-8162-69c27d3fbe56
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
@@ -19,7 +19,7 @@ ms.date: 07/18/2016
 
 # Execute Statements Against Multiple Servers Simultaneously
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to query multiple servers at the same time in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], by creating a local server group, or a Central Management Server and one or more server groups, and one or more registered servers within the groups, and then querying the complete group. 
 

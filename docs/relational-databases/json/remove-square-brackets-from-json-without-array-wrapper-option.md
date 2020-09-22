@@ -1,4 +1,5 @@
 ---
+description: "Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option"
 title: "Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 To remove the square brackets that surround the JSON output of the **FOR JSON** clause by default, specify the **WITHOUT_ARRAY_WRAPPER** option. Use this option with a single-row result to generate a single JSON object as output instead of an array with a single element.
 

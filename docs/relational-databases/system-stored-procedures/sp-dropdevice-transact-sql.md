@@ -1,4 +1,5 @@
 ---
+description: "sp_dropdevice (Transact-SQL)"
 title: "sp_dropdevice (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "backup devices [SQL Server], deleting"
   - "sp_dropdevice"
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a database device or backup device from an instance of the [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)], deleting the entry from **master.dbo.sysdevices**.  
    

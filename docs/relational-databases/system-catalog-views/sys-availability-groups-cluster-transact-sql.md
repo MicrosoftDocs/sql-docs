@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_groups_cluster (Transact-SQL)"
 title: "sys.availability_groups_cluster (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "sys.availability_groups_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.availability_groups_cluster (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each Always On availability group in the Windows Server Failover Clustering (WSFC) . Each row contains the availability group metadata from the WSFC cluster.  
   

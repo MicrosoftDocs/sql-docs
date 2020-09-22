@@ -1,4 +1,5 @@
 ---
+description: "sp_changesubscriptiondtsinfo (Transact-SQL)"
 title: "sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscriptiondtsinfo"
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changesubscriptiondtsinfo (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the Data Transformation Services (DTS) package properties of a subscription. This stored procedure is executed at the Subscriber on the subscription database.  
   

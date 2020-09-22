@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Type Mapping Inheritance"
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Mapping Oracle and SQL Server Data Types (OracleToSQL)
 Oracle database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  

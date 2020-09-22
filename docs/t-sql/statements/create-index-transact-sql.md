@@ -1,4 +1,5 @@
 ---
+description: "CREATE INDEX (Transact-SQL)"
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/17/2020
@@ -52,12 +53,12 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
-ms.author: carlrab
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE INDEX (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Creates a relational index on a table or view. Also called a rowstore index because it is either a clustered or nonclustered B-tree index. You can create a rowstore index before there is data in the table. Use a rowstore index to improve query performance, especially when the queries select from specific columns or require values to be sorted in a particular order.
 
@@ -204,6 +205,8 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -888,7 +891,7 @@ INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
 
 The resulting error message is:
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
@@ -950,7 +953,7 @@ GO
 
 Here are the results of the second `INSERT` statement.
 
-```cmd
+```
 Server: Msg 2601, Level 14, State 1, Line 5
 Cannot insert duplicate key row in object '#Test' with unique index
 'AK_Index'. The statement has been terminated.

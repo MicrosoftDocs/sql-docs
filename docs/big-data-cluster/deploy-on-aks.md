@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Configure Azure Kubernetes Service for SQL Server big data cluster deployments
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 
@@ -41,7 +41,7 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
    - 24 or more attached disks across all nodes
 
    > [!TIP]
-   > Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
+   > Azure infrastructure offers multiple size options for VMs, see [here](/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
 
 ## Create a resource group
 
@@ -105,7 +105,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 ## Create a Kubernetes cluster
 
-1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux agent node of size **Standard_L8s**.
+1. Create a Kubernetes cluster in AKS with the [az aks create](/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux agent node of size **Standard_L8s**.
 
    Before you run the script, replace `<version number>` with the version number you identified in the previous step.
 
@@ -144,7 +144,7 @@ Choose the latest available version for your cluster. Record the version number.
 
 ## Connect to the cluster
 
-1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
+1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -160,9 +160,9 @@ Choose the latest available version for your cluster. Record the version number.
 
 If you have any problems creating an Azure Kubernetes Service with the previous commands, try the following resolutions:
 
-- Make sure that you have installed the [latest Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Make sure that you have installed the [latest Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Try the same steps using a different resource group and cluster name.
-- Refer to the detailed [troubleshooting documentation for AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
+- Refer to the detailed [troubleshooting documentation for AKS](/azure/aks/troubleshooting).
 
 ## Next steps
 

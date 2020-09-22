@@ -1,20 +1,36 @@
 ---
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for DB2 (DB2ToSQL) for each release.
-authors: "HJToland3;nahk-ivanov"
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "6/2/2020"
+ms.date: "7/31/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for DB2 contains the following changes:
+
+* Conversion of `STRIP` function
+* Improved parsing of procedure options
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for DB2 contains the following changes:
+
+* Support for DB2 for i (v7.1 and above)
+* Translation of `SQLSTATE` and `SQLCODE`
+* Conversion error message for side-effecting operators within a function
+* Use MSAL.NET library for interactive Azure Active Directory authentication
 
 ## SSMA v8.10
 
@@ -131,9 +147,9 @@ The v8.1 release of SSMA for DB2 is enhanced to provide targeted fixes that are 
 
 The v8.0 release of SSMA for DB2 is enhanced to provide targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

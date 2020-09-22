@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TOTAL_WRITE (Transact-SQL)"
 title: "@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -23,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;TOTAL_WRITE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of disk writes by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  
   
@@ -36,7 +37,9 @@ ms.author: jrasnick
 @@TOTAL_WRITE  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

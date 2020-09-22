@@ -1,4 +1,5 @@
 ---
+description: "Pushdown computations in PolyBase"
 title: "Pushdown computations in PolyBase | Microsoft Docs"
 dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
 ms.date: 04/23/2019
@@ -14,7 +15,7 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 
 ## DMV
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Pushdown computation improves the performance of queries on your Hadoop cluster.
 

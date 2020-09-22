@@ -1,4 +1,5 @@
 ---
+description: "Create a Trace (Transact-SQL)"
 title: "Create a Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Create a Trace (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use stored procedures to create a trace.  
   
 ### To create a trace  

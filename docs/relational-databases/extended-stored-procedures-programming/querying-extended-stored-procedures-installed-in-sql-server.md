@@ -1,4 +1,5 @@
 ---
+description: "Querying Extended Stored Procedures Installed in SQL Server"
 title: "Querying extended stored procedures"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: "jroth"
 ms.custom: seo-dt-2019
 ---
 # Querying Extended Stored Procedures Installed in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

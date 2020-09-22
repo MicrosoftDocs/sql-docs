@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_605"
 title: "MSSQLSERVER_605 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -13,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_605
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
@@ -39,7 +40,7 @@ A severity level of 12 indicates a potential transient error; that is, it occurs
   
 -   The operating system prematurely notifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that an I/O operation has completed; the error message is displayed even though no actual data corruption exists.  
   
-Running a query with the Optimizer hint NOLOCK or setting the transaction isolation level to READ UNCOMMITTED. When a query that is using NOLOCK or READ UNCOMMITTED tries to read data that is being moved or changed by another user, a 605 error occurs. To verify that it is a transient 605 error, rerun the query later. For more information, see this KB article [235880](https://support.microsoft.com/kb/235880/en-us): "You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server."  
+ - Running a query with the Optimizer hint NOLOCK or setting the transaction isolation level to READ UNCOMMITTED. When a query that is using NOLOCK or READ UNCOMMITTED transaction isolation level tries to read data that is being moved or changed by another user, a 605 error occurs. To verify that it is a transient 605 error, rerun the query later. 
   
 In general, if the error occurs during data access but subsequent DBCC CHECKDB operations complete without error, the 605 error was probably transient.  
   
@@ -48,6 +49,7 @@ If the 605 error is not transient, the problem is severe and must be corrected b
   
 1.  Identify the tables associated with the allocation units specified in the message by running the following query. Replace `allocation_unit_id` with the allocation units specified in the error message.  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
@@ -67,6 +69,7 @@ If the 605 error is not transient, the problem is severe and must be corrected b
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  Execute DBCC CHECKTABLE without a REPAIR clause on the table associated with the second allocation unit ID specified in the error message.  
   

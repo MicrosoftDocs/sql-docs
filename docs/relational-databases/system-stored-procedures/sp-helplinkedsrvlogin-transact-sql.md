@@ -1,4 +1,5 @@
 ---
+description: "sp_helplinkedsrvlogin (Transact-SQL)"
 title: "sp_helplinkedsrvlogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helplinkedsrvlogin"
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helplinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides information about login mappings defined against a specific linked server used for distributed queries and remote stored procedures.  
   

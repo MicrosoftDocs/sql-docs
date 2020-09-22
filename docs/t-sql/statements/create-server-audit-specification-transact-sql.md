@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)"
 title: "CREATE SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a server audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -28,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE SERVER AUDIT SPECIFICATION audit_specification_name  
 FOR SERVER AUDIT audit_name  
 {  
@@ -39,7 +39,9 @@ FOR SERVER AUDIT audit_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  Name of the server audit specification.  
   
@@ -63,7 +65,7 @@ FOR SERVER AUDIT audit_name
 ## Examples  
  The following example creates a server audit specification called `HIPAA_Audit_Specification` that audits failed logins, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP)  

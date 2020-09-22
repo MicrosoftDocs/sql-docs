@@ -1,4 +1,5 @@
 ---
+description: "sp_addpublication_snapshot (Transact-SQL)"
 title: "sp_addpublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2018"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addpublication_snapshot"
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates the Snapshot Agent for the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -127,7 +128,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 >  Do not store authentication information in script files. To help improve security, we recommend that you provide login names and passwords at run time.  
   
 `[ @job_login = ] 'job_login'`
- Is the login for the account under which the agent runs. On Azure SQL Database Managed Instance, use a SQL Server account. *job_login* is **nvarchar(257)**, with a default of NULL. This account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job.  
+ Is the login for the account under which the agent runs. On Azure SQL Managed Instance, use a SQL Server account. *job_login* is **nvarchar(257)**, with a default of NULL. This account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job.  
   
 > [!NOTE]
 >  For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

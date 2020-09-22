@@ -1,5 +1,6 @@
 ---
 title: "Performance Dashboard | Microsoft Docs"
+description: Learn about SQL Server Management Studio Performance Dashboard, which provides fast insight into SQL Server and Azure SQL Managed Instance.
 ms.custom: ""
 ms.date: 12/14/2019
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Performance Dashboard
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 and later includes the Performance Dashboard. This dashboard was designed to visually provide fast insight into the performance state of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] Managed Instance. 
 

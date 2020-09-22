@@ -1,4 +1,5 @@
 ---
+description: "SqlErrorLogEvent Class"
 title: "SqlErrorLogEvent Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "SqlErrorLogEvent class"
   - "SqlErrorLogFile class"
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlErrorLogEvent Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
   Provides properties for viewing events in a specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file.  
   
 ## Syntax  
@@ -35,8 +36,8 @@ class SQLErrorLogEvent
 ## Properties  
  The SQLErrorLogEvent class defines the following properties.  
   
-|||  
-|-|-|  
+| Property | Description |
+| -------- | ----------- |
 |FileName|Data type: **string**<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The name of the error log file.|  
 |InstanceName|Data type: **string**<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the log file resides.|  
 |LogDate|Data type: **datetime**<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> <br /><br /> The date and time that the event was recorded in the log file.|  
@@ -45,8 +46,8 @@ class SQLErrorLogEvent
   
 ## Remarks  
   
-|||  
-|-|-|  
+| Type | Name |
+| ---- | ---- |
 |MOF|Sqlmgmproviderxpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  

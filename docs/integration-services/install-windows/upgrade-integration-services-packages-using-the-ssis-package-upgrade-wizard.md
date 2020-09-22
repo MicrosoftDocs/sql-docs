@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard"
 title: "Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can upgrade packages that were created in earlier versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] format that [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Upgrade Wizard to help in this process. Because you can configure the wizard to backup up your original packages, you can continue to use the original packages if you experience upgrade difficulties.  

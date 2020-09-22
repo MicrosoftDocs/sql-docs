@@ -30,7 +30,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Database Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions granted on a database user, database role, or application role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -61,7 +61,9 @@ DENY permission [ ,...n ]
   | Database_user_with_no_login   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on the database principal. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -149,7 +151,7 @@ DENY permission [ ,...n ]
 ### A. Denying CONTROL permission on a user to another user  
  The following example denies `CONTROL` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] user `Wanida` to user `RolandX`.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 DENY CONTROL ON USER::Wanida TO RolandX;  
 GO  
@@ -158,7 +160,7 @@ GO
 ### B. Denying VIEW DEFINITION permission on a role to a user to which it was granted with GRANT OPTION  
  The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] role `SammamishParking` to database user `JinghaoLiu`. The `CASCADE` option is specified because user `JinghaoLiu` was granted VIEW DEFINITION permission WITH GRANT OPTION.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu CASCADE;  
@@ -170,7 +172,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    

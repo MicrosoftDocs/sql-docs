@@ -3,15 +3,15 @@ title: What is SQL Server Machine Learning Services (Python and R)?
 titleSuffix: 
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft Python and R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 04/16/2020
+ms.technology: machine-learning-services
+ms.date: 06/19/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # What is SQL Server Machine Learning Services (Python and R)?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
 Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the [Microsoft Python and R packages](#packages), for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 
@@ -105,6 +105,6 @@ For more information on which packages are installed with Machine Learning Servi
 
 ## Next steps
 
-+ [Install SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)
++ [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)
 + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
 + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)

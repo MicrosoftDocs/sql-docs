@@ -1,4 +1,5 @@
 ---
+description: "DROP COLUMN MASTER KEY (Transact-SQL)"
 title: "DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"
@@ -21,7 +22,8 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # DROP COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Drops a column master key from a database. This is a metadata operation.  
   
@@ -33,12 +35,12 @@ ms.author: jaszymas
   
 DROP COLUMN MASTER KEY key_name;  
 ```  
-  
-## Arguments  
+
+## Arguments
  *key_name*  
  The name of the column master key.  
   
-## Remarks  
+## Remarks
  The column master key can only be dropped if there are no column encryption key values encrypted with the column master key. To drop column encryption key values, use the [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) statement.  
   
 ## Permissions  

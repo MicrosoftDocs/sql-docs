@@ -1,5 +1,6 @@
 ---
 title: "Isolate Performance Problems | Microsoft Docs"
+description: Use SQL Server Profiler and System Monitor to monitor and troubleshoot Transact-SQL, application-related problems, hardware, and system-related problems.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Isolate Performance Problems
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   It is often more effective to use several [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Microsoft Windows tools together to isolate database performance problems than to use one tool at a time. For example, the graphical Execution Plan feature, also called Showplan, helps you quickly recognize deadlocks in a single query. However, you can recognize some other performance problems more easily if you use the monitoring features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows together.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can be used to monitor and troubleshoot Transact-SQL and application-related problems. System Monitor can be used to monitor hardware and other system-related problems.  

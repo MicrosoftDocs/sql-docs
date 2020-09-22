@@ -1,4 +1,5 @@
 ---
+description: "sys.all_objects (Transact-SQL)"
 title: "sys.all_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/20/2020"
@@ -16,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.all_objects catalog view"
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Shows the UNION of all schema-scoped user-defined objects and system objects.  
   

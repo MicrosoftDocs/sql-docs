@@ -1,4 +1,5 @@
 ---
+description: "DateTimeOffset Members"
 title: "DateTimeOffset Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

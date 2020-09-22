@@ -1,9 +1,9 @@
 ---
+description: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)"
 title: "sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2019"
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ""
 ms.technology: system-objects
@@ -89,7 +89,7 @@ Returns snapshot at 20 seconds interval for last 32 minutes (128 recs in total
 |**avg_data_io_percent**|decimal(5,2)|Average I/O utilization in percentage based on the limit of the pool.|
 |**avg_log_write_percent**|decimal(5,2)|Average write resource utilization in percentage of the limit of the pool.|
 |**avg_storage_percent**|decimal(5,2)|Average storage utilization in percentage of the storage limit of the pool.|
-|**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL DB|
+|**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL Database|
 |**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
 |||

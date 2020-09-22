@@ -1,4 +1,5 @@
 ---
+description: "CONCAT (Transact-SQL)"
 title: "CONCAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT function"
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. (To add a separating value during concatenation, see [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   
@@ -32,7 +33,9 @@ This function returns a string resulting from the concatenation, or joining, of 
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *string_value*  
 A string value to concatenate to the other values. The `CONCAT` function requires at least two *string_value* arguments, and no more than 254 *string_value* arguments.
   

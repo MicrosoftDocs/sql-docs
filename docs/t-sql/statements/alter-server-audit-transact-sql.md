@@ -1,4 +1,5 @@
 ---
+description: "ALTER SERVER AUDIT  (Transact-SQL)"
 title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -22,7 +23,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Alters a server audit object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
@@ -67,13 +68,15 @@ ALTER SERVER AUDIT audit_name
 <predicate_factor>::=   
     event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
 ```  
-  
-## Arguments  
- TO { FILE | APPLICATION_LOG | SECURITY |URL}  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ TO { FILE \| APPLICATION_LOG \| SECURITY \|URL}  
  Determines the location of the audit target. The options are a binary file, the Windows application log, or the Windows security log.  
 
 > [!IMPORTANT]
-> In Azure SQL Database managed instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
+> In Azure SQL Managed Instance, SQL Audit works at the server level and stores `.xel` files in Azure blob storage.
   
  FILEPATH **= '**_os\_file\_path_**'**  
  The path of the audit trail. The file name is generated based on the audit name and audit GUID.  
@@ -148,7 +151,7 @@ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ### A. Changing a server audit name  
  The following example changes the name of the server audit `HIPAA_Audit` to `HIPAA_Audit_Old`.  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  
@@ -165,7 +168,7 @@ GO
 ### B. Changing a server audit target  
  The following example changes the server audit called `HIPAA_Audit` to a file target.  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  

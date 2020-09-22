@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE Database Mirroring (Transact-SQL)"
 title: "ALTER DATABASE Database Mirroring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -15,12 +16,12 @@ helpviewer_keywords:
   - "ALTER DATABASE statement, database mirroring"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.
@@ -56,6 +57,8 @@ SET { <partner_option> | <witness_option> }
             }
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

@@ -1,4 +1,5 @@
 ---
+description: "sp_recompile (Transact-SQL)"
 title: "sp_recompile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_recompile"
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_recompile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Causes stored procedures, triggers, and user-defined functions to be recompiled the next time that they are run. It does this by dropping the existing plan from the procedure cache forcing a new plan to be created the next time that the procedure or trigger is run. In a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] collection, the event SP:CacheInsert is logged instead of the event SP:Recompile.  
   

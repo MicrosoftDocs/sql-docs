@@ -1,4 +1,5 @@
 ---
+description: "ALTER SEARCH PROPERTY LIST (Transact-SQL)"
 title: "ALTER SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "search property lists [SQL Server], altering"
   - "ALTER SEARCH PROPERTY LIST statement"
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a specified search property to, or drops it from the specified search property list.  
   
@@ -46,13 +47,16 @@ ALTER SEARCH PROPERTY LIST list_name
 ;  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *list_name*  
  Is the name of the property list being altered. *list_name* is an identifier.  
   
  To view the names of the existing property lists, use the [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) catalog view, as follows:  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
@@ -69,7 +73,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
  To view the names of properties that currently exist in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) catalog view, as follows:  
   
-```  
+```sql  
 SELECT property_name FROM sys.registered_search_properties;  
 ```  
   
@@ -78,7 +82,7 @@ SELECT property_name FROM sys.registered_search_properties;
   
  To view the property set GUID of any property that exists in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) catalog view, as follows:  
   
-```  
+```sql  
 SELECT property_set_guid FROM sys.registered_search_properties;  
 ```  
   
@@ -87,7 +91,7 @@ SELECT property_set_guid FROM sys.registered_search_properties;
   
  To view the integer identifier of any property that exists in a search property list of the current database, use the [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) catalog view, as follows:  
   
-```  
+```sql  
 SELECT property_int_id FROM sys.registered_search_properties;  
 ```  
   
@@ -107,7 +111,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
   
  When specifying a property you can arrange the PROPERTY_SET_GUID, PROPERTY_INT_ID, and PROPERTY_DESCRIPTION clauses in any order, as a comma-separated list within parentheses, for example:  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST CVitaProperties  
 ADD 'System.Author'   
 WITH (   
@@ -126,7 +130,7 @@ WITH (
 ## Making Added Properties Searchable  
  Adding a search property to a search property list registers the property. A newly added property can be immediately specified in [CONTAINS](../../t-sql/queries/contains-transact-sql.md) queries. However, property-scoped full-text queries on a newly added property will not return documents until the associated full-text index is repopulated. For example, the following property-scoped query on a newly added property, *new_search_property*, will not return any documents until the full-text index associated with the target table (*table_name*) is repopulated:  
   
-```  
+```sql  
 SELECT column_name  
 FROM table_name  
 WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ), 
@@ -136,7 +140,7 @@ GO
   
  To start a full population, use the following [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) statement:  
   
-```  
+```sql  
 USE database_name;  
 GO  
 ALTER FULLTEXT INDEX ON table_name START FULL POPULATION;  
@@ -174,7 +178,7 @@ GO
 > [!NOTE]  
 >  For an example that creates `DocumentPropertyList` property list, see [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
    ADD 'Title'   
    WITH ( PROPERTY_SET_GUID = 'F29F85E0-4FF9-1068-AB91-08002B27B3D9', PROPERTY_INT_ID = 2,   
@@ -198,7 +202,7 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 ### B. Dropping a property  
  The following example drops the `Comments` property from the `DocumentPropertyList` property list.  
   
-```  
+```sql  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
 DROP 'Comments' ;  
 ```  

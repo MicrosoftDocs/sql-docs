@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;OPTIONS (Transact-SQL)"
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -21,7 +22,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;OPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information about the current SET options.  
   
@@ -33,7 +34,9 @@ ms.author: jrasnick
 @@OPTIONS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

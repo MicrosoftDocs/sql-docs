@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysalerts (Transact-SQL)"
 title: "dbo.sysalerts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysalerts system table"
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each alert. An alert is a message sent in response to an event. An alert can forward messages beyond the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment, and an alert can be an e-mail or pager message. An alert also can generate a task.  This table is stored in the **msdb** database.
   

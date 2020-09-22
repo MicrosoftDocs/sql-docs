@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud environments, and operating systems.
 
@@ -33,7 +33,7 @@ The following sections provide an overview of these features.
 
 ## Data virtualization and [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-Businesses today often preside over vast data estates consisting of a wide array of ever-growing data sets that are hosted in siloed data sources across the company. Gain near real-time insights from all your data with SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], which provide a complete environment for working with large sets of data, including machine learning and AI capabilities.
+Businesses today often preside over vast data estates consisting of a wide array of ever-growing data sets that are hosted in siloed data sources across the company. Gain near real-time insights from all your data with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], which provide a complete environment for working with large sets of data, including machine learning and AI capabilities.
 
 | New feature or update | Details |
 |:---|:---|
@@ -154,7 +154,7 @@ When an extract, transform, and load (ETL) process fails because the source and 
 |Always Encrypted with secure enclaves|Expands upon Always Encrypted with in-place encryption and rich computations by enabling computations on plaintext data inside a server-side secure enclave. In-place encryption improves the performance and the reliability of cryptographic operations (encrypting columns, rotating columns, encryption keys, and so on), because it avoids moving data out of the database.<br><br> Support for rich computations (pattern matching and comparison operations) unlocks Always Encrypted to a much broader set of scenarios and applications that demand sensitive data protection, while also requiring richer functionality in Transact-SQL queries. See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Certificate management in SQL Server Configuration Manager|Certificate management tasks such as viewing and deploying certificates is now possible by using SQL Server Configuration Manager. See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
 |Data Discovery & Classification|Data Discovery & Classification provides capabilities for classifying and labeling columns in user tables. Classifying sensitive data (business, financial, healthcare, PII, etc.) can play a pivotal role in an organizational information protection stature. It can serve as infrastructure for:<ul><li>Helping meet data privacy standards and regulatory compliance requirements</li><li>Various security scenarios, such as monitoring (auditing) and alerting on anomalous access to sensitive data</li><li>Making it easier to identify where sensitive data resides in the enterprise so admins can take the right steps securing the database</li></ul>|
-|SQL Server Audit|Auditing[Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field `data_sensitivity_information` in the audit log record, which contains the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
+|SQL Server Audit|[Auditing](../relational-databases/security/auditing/sql-server-audit-database-engine.md) has also been enhanced to include a new field `data_sensitivity_information` in the audit log record, which contains the sensitivity classifications (labels) of the actual data that was returned by the query. For details and examples, see [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## High availability
@@ -256,7 +256,7 @@ This release introduces new features to improve file operations.
 
 | New feature or update | Details |
 |:---|:---|
-|Support for Azure SQL Database managed instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Support for Azure SQL Managed Instance databases| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on Azure SQL Managed Instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
 | &nbsp; | &nbsp; |
 

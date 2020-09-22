@@ -1,4 +1,5 @@
 ---
+description: "Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)"
 title: "Warnings (Snapshot - Replication Monitor)"
 decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -16,7 +17,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Warnings** tab is available for Distributors that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. The **Warnings** tab allows you to perform the following tasks for the selected publication:  
   
 -   Enable warnings.  

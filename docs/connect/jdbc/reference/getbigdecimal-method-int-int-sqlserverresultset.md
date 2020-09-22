@@ -1,4 +1,5 @@
 ---
+description: "getBigDecimal Method (int, int) (SQLServerResultSet)"
 title: "getBigDecimal Method (int, int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

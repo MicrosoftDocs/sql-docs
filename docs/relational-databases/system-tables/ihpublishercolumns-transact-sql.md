@@ -1,4 +1,5 @@
 ---
+description: "IHpublishercolumns (Transact-SQL)"
 title: "IHpublishercolumns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishercolumns system table"
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHpublishercolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublishercolumns** system table represents metadata stored at the publisher. This table contains one row for each column replicated from non-SQL Server Publishers using the current Distributor. Data type information in **IHpublishercolumns** is specific to the non-SQL Server database management system (DBMS) from which the data is published. This table is stored in the distribution database.  
   

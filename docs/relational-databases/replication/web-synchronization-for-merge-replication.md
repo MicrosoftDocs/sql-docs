@@ -1,4 +1,5 @@
 ---
+description: "Web Synchronization for Merge Replication"
 title: "Web Synchronization for Merge Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Web Synchronization for Merge Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Web synchronization for merge replication lets you replicate data by using the HTTPS protocol, and is useful for the following scenarios:  
   
 -   Synchronizing data from mobile users over the Internet.  

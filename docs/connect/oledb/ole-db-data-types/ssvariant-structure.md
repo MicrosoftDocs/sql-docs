@@ -1,5 +1,5 @@
 ---
-title: "SSVARIANT Structure | Microsoft Docs"
+title: SSVARIANT structure (OLE DB driver)
 description: "SSVARIANT structure in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/15/2018"
@@ -12,11 +12,11 @@ f1_keywords:
   - "SSVARIANT"
 helpviewer_keywords: 
   - "SSVARIANT struct"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # SSVARIANT Structure
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

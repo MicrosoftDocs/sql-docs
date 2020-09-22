@@ -1,4 +1,5 @@
 ---
+description: "Extract Data by Using the XML Source"
 title: "Extract Data by Using the XML Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # Extract Data by Using the XML Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure an XML source, the package must already include at least one Data Flow task.  

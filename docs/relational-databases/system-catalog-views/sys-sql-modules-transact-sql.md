@@ -1,4 +1,5 @@
 ---
+description: "sys.sql_modules (Transact-SQL)"
 title: "sys.sql_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/06/2018
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sql_modules catalog view"
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a row for each object that is an SQL language-defined module in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], including natively compiled scalar user-defined function. Objects of type P, RF, V, TR, FN, IF, TF, and R have an associated SQL module. Stand-alone defaults, objects of type D, also have an SQL module definition in this view. For a description of these types, see the **type** column in the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view.  
   

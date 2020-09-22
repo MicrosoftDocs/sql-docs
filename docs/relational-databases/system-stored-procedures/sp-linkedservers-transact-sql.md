@@ -1,4 +1,5 @@
 ---
+description: "sp_linkedservers (Transact-SQL)"
 title: "sp_linkedservers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_linkedservers"
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_linkedservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the list of linked servers defined in the local server.  
   

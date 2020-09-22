@@ -12,7 +12,7 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase scale-out groups on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article describes how to set up a [PolyBase scale-out group](polybase-scale-out-groups.md) on Windows. This creates a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.
 
@@ -28,7 +28,7 @@ The following steps summarize the process for creating a PolyBase scale-out grou
   
 1. Install the same version of SQL Server with PolyBase on N machines.
   
-2. Select one SQL Server instance as the head node. A head node can only be designated on an instance running SQL Server Enterprise.
+2. Select one SQL Server instance as the head node. 
   
 3. Add remaining SQL Server instances as compute nodes using [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
 

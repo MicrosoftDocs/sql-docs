@@ -1,4 +1,5 @@
 ---
+description: "ALTER SYMMETRIC KEY (Transact-SQL)"
 title: "ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -23,7 +24,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the properties of a symmetric key.  
   
@@ -32,7 +33,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   
 <alter_option> ::=  
@@ -48,8 +48,10 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
    |  
    ASYMMETRIC KEY Asym_Key_Name  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_name*  
  Is the name by which the symmetric key to be changed is known in the database.  
   
@@ -89,7 +91,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 ## Examples  
  The following example changes the encryption method that is used to protect a symmetric key. The symmetric key `JanainaKey043` is encrypted using certificate `Shipping04` when the key was created. Because the key can never be stored unencrypted, in this example, encryption is added by password, and then encryption is removed by certificate.  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey043 WITH ALGORITHM = AES_256   
     ENCRYPTION BY CERTIFICATE Shipping04;  
 -- Open the key.   

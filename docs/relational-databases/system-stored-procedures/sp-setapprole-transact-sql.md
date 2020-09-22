@@ -1,4 +1,5 @@
 ---
+description: "sp_setapprole (Transact-SQL)"
 title: "sp_setapprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2018"
@@ -20,7 +21,7 @@ ms.author: vanto
 ---
 # sp_setapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Activates the permissions associated with an application role in the current database.  
   

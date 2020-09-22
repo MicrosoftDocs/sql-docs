@@ -1,5 +1,6 @@
 ---
 title: "Tutorials for SQL Server | Microsoft Docs"
+description: Use these SQL Server tutorials to learn new technologies and features. Tutorials for earlier versions of SQL Server usually work with more recent versions.
 ms.date: "11/01/2017"
 ms.prod: sql
 ms.technology:
@@ -9,7 +10,7 @@ author: rothja
 ms.author: jroth
 ---
 # Tutorials for SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they will indicate the minimum version to complete the tutorial.  
      
 -   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).    
@@ -23,7 +24,7 @@ ms.author: jroth
 |--------------|---------------|  
 |[Analysis Services Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Learn how to develop and deploy [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tabular or multidimensional models. Also learn how to use tools such as PowerPivot to analyze the data in the models.|  
 |[Database Engine Tutorials](../relational-databases/database-engine-tutorials.md)|Learn how to connect to an instance of the database engine and then build and run Transact-SQL statements.|  
-|[Enterprise Information Management Tutorials](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Learn how to manage information in an enterprise using Microsoft EIM technologies.|  
+|[Enterprise Information Management Tutorials](https://wiki.scn.sap.com/wiki/display/EIM/EIM+Tutorials)|Learn how to manage information in an enterprise using Microsoft EIM technologies.|  
 |[Integration Services Tutorials](../integration-services/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
 |[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
@@ -31,7 +32,7 @@ ms.author: jroth
   
  ## Previously published tutorials 
   
- - [Tutorials for SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
+ - [Tutorials for SQL Server 2014](https://www.quackit.com/sql_server/sql_server_2014/tutorial/)  
   
  - [Tutorials for SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   

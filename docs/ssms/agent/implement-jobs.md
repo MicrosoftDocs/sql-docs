@@ -1,4 +1,5 @@
 ---
+description: "Implement Jobs"
 title: "Implement Jobs"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Implement Jobs
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to automate routine administrative tasks and run them on a recurring basis, making administration more efficient.  
   
@@ -32,9 +32,8 @@ You can run a job manually, or you can configure it to run according to a schedu
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Description**|**Topic**|  
+|Description|Topic|  
+|-|-|   
 |Contains information about creating jobs and assigning ownership.|[Create Jobs](../../ssms/agent/create-jobs.md)|  
 |Contains information about organizing jobs into categories.|[Organize Jobs](../../ssms/agent/organize-jobs.md)|  
 |Contains information about the different kinds of job steps you can create and how to manage them.|[Manage Job Steps](../../ssms/agent/manage-job-steps.md)|  

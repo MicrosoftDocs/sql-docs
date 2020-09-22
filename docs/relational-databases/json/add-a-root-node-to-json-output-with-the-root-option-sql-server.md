@@ -1,4 +1,5 @@
 ---
+description: "Add a Root Node to JSON Output with the ROOT Option (SQL Server)"
 title: "Add a Root Node to JSON Output with the ROOT Option"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   To add a single, top-level element to the JSON output of the **FOR JSON** clause, specify the **ROOT** option.  
   

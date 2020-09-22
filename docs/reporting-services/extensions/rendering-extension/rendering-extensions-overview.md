@@ -1,5 +1,6 @@
 ---
 title: "Rendering Extensions Overview | Microsoft Docs"
+description: See which data rendering extensions are included with Reporting Services. Learn how to add custom rendering extensions to generate reports in other formats.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

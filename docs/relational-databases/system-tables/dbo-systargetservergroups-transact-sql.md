@@ -1,4 +1,5 @@
 ---
+description: "dbo.systargetservergroups (Transact-SQL)"
 title: "dbo.systargetservergroups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservergroups system table"
 ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.systargetservergroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Records which target server groups are currently enlisted in this multiserver environment.  
   

@@ -1,5 +1,6 @@
 ---
-title: "CREATE SEQUENCE (Transact-SQL) | Microsoft Docs"
+description: "CREATE SEQUENCE (Transact-SQL)"
+title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ""
 ms.date: "04/11/2017"
 ms.prod: sql
@@ -20,11 +21,13 @@ helpviewer_keywords:
   - "sequence object"
   - "number, sequence"
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
+
 # CREATE SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a sequence object and specifies its properties. A sequence is a user-defined schema bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and can be configured to restart (cycle) when exhausted. Sequences, unlike identity columns, are not associated with specific tables. Applications refer to a sequence object to retrieve its next value. The relationship between sequences and tables is controlled by the application. User applications can reference a sequence object and coordinate the values across multiple rows and tables.  
   
@@ -48,7 +51,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
     [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *sequence_name*  
 Specifies the unique name by which the sequence is known in the database. Type is **sysname**.  
   
@@ -234,7 +239,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  A partial list of the output demonstrates the default values.  
   
-|||  
+| Output | Default value|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  
@@ -244,8 +249,9 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`is_cached`|`1`|  
 |`current_value`|`-9223372036854775808`|  
   
-### F. Creating a sequence with a specific data type  
- The following example creates a sequence using the **smallint** data type, with a range from -32,768 to 32,767.  
+### F. Creating a sequence with a specific data type
+
+The following example creates a sequence using the **smallint** data type, with a range from -32,768 to 32,767.  
   
 ```sql  
 CREATE SEQUENCE SmallSeq 

@@ -1,17 +1,17 @@
 ---
-title: PostgreSQL extension (preview)
-description: PostgreSQL extension (preview) for Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "03/19/2019"
-ms.reviewer: "alayu, maghan, sstein"
-ms.prod: sql
+title: PostgreSQL extension
+description: Learn how to install the Azure Data Studio PostgreSQL extension. It enables you to connect to, query, and develop for Postgres databases.
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "rachel-msft"
-ms.author: "raagyema"
+author: rachel-msft
+ms.author: raagyema
+ms.reviewer: alayu, maghan
+ms.custom: seodec18
+ms.date: 03/19/2019
 ---
 
-# PostgreSQL extension (preview)
+# PostgreSQL extension (Preview)
 
 The PostgreSQL extension (preview) enables you to connect to, query, and develop for Postgres using the capabilities of Azure Data Studio. 
 
@@ -25,20 +25,18 @@ The Azure Data Studio functionality available for PostgreSQL includes:
 - [Source control integration](source-control.md)
 - [Workspace & user settings](settings.md)
 
-
 ## Install the PostgreSQL extension (preview)
 
-If you don't already have Azure Data Studio installed, see its [install instructions](download.md).
+If you don't already have Azure Data Studio installed, see its [install instructions](./download-azure-data-studio.md).
 
 1. Select the extensions icon from the sidebar in Azure Data Studio.
-   ![Extensions icon](media/extensions/postgresql-extension/extensions-icon.png)
+
+    ![Extensions icon](media/extensions/postgresql-extension/extensions-icon.png)
 
 2. Type 'postgresql' into the search bar. Select the PostgreSQL extension.
 
 3. Select **Install**. Once installed, select **Reload** to activate the extension in Azure Data Studio.
 
-
 ## Next steps
 
 Learn [how to connect and query Postgres from Azure Data Studio](quickstart-postgres.md).
-

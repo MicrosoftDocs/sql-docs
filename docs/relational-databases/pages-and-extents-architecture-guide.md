@@ -1,4 +1,5 @@
 ---
+description: "Pages and Extents Architecture Guide"
 title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/12/2019"
@@ -16,7 +17,7 @@ ms.author: "jroth"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Pages and Extents Architecture Guide
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The page is the fundamental unit of data storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. An extent is a collection of eight physically contiguous pages. Extents help efficiently manage pages. This guide describes the data structures that are used to manage pages and extents in all versions of SQL Server. Understanding the architecture of pages and extents is important for designing and developing databases that perform efficiently.
 
@@ -82,14 +83,23 @@ Extents are the basic unit in which space is managed. An extent is eight physica
 * **Uniform** extents are owned by a single object; all eight pages in the extent can only be used by the owning object.
 * **Mixed** extents are shared by up to eight objects. Each of the eight pages in the extent can be owned by a different object.
 
-Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not allocate whole extents to tables with small amounts of data. A new table or index generally allocates pages from mixed extents. When the table or index grows to the point that it has eight pages, it then switches to use uniform extents for subsequent allocations. If you create an index on an existing table that has enough rows to generate eight pages in the index, all allocations to the index are in uniform extents. However, starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the default for all allocations in the database is uniform extents.
+![Uniform and Mixed extents](../relational-databases/media/extents.gif)
 
-![extents](../relational-databases/media/extents.gif)
+Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not allocate whole extents to tables with small amounts of data. A new table or index generally allocates pages from mixed extents. When the table or index grows to the point that it has eight pages, it then switches to use uniform extents for subsequent allocations. If you create an index on an existing table that has enough rows to generate eight pages in the index, all allocations to the index are in uniform extents. 
+
+Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the default for most allocations in a user database and tempdb is to use uniform extents, except for allocations belonging to the first eight pages of an [IAM chain](#IAM). Allocations for master, msdb, and model databases still retain the previous behavior. 
 
 > [!NOTE]
 > Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], trace flag 1118 can be used to change the default allocation to always use uniform extents. For more information about this trace flag, see [DBCC TRACEON - Trace Flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the functionality provided by TF 1118 is automatically enabled for TempDB. For user databases, this behavior is controlled by the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE`, with the default value set to OFF, and trace flag 1118 has no effect. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the functionality provided by TF 1118 is automatically enabled for tempdb. For user databases, this behavior is controlled by the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE`, with the default value set to OFF, and trace flag 1118 has no effect. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+
+Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the `sys.dm_db_database_page_allocations` system function can report page allocation information for a database, table, index, and partition.
+
+> [!IMPORTANT]
+> The `sys.dm_db_database_page_allocations` system function is not documented and is subject to change. Compatibility is not guaranteed. 
+
+Starting with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) system function is available and returns information about a page in a database. The function returns one row that contains the header information from the page, including the object_id, index_id, and partition_id. This function replaces the need to use `DBCC PAGE` in most cases.
 
 ## Managing Extent Allocations and Free Space 
 
@@ -136,7 +146,7 @@ A new PFS, GAM or SGAM page is added in the data file for every additional range
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## Managing space used by objects 
+## <a name="IAM"></a> Managing space used by objects 
 
 An **Index Allocation Map (IAM)** page maps the extents in a 4-GB part of a database file used by an allocation unit. An allocation unit is one of three types:
 
@@ -144,10 +154,10 @@ An **Index Allocation Map (IAM)** page maps the extents in a 4-GB part of a data
     Holds a partition of a heap or index.
 
 - LOB_DATA   
-   Holds large object (LOB) data types, such as xml, varbinary(max), and varchar(max).
+   Holds large object (LOB) data types, such as XML, VARBINARY(max), and VARCHAR(max).
 
 - ROW_OVERFLOW_DATA   
-   Holds variable length data stored in varchar, nvarchar, varbinary, or sql_variant columns that exceed the 8,060 byte row size limit. 
+   Holds variable length data stored in VARCHAR, NVARCHAR, VARBINARY, or SQL_VARIANT columns that exceed the 8,060 byte row size limit. 
 
 Each partition of a heap or index contains at least an IN_ROW_DATA allocation unit. It may also contain a LOB_DATA or ROW_OVERFLOW_DATA allocation unit, depending on the heap or index schema.
 
@@ -155,10 +165,10 @@ An IAM page covers a 4-GB range in a file and is the same coverage as a GAM or S
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-IAM pages are allocated as required for each allocation unit and are located randomly in the file. The system view, sys.system_internals_allocation_units, points to the first IAM page for an allocation unit. All the IAM pages for that allocation unit are linked in a chain.
+IAM pages are allocated as required for each allocation unit and are located randomly in the file. The `sys.system_internals_allocation_units` system view points to the first IAM page for an allocation unit. All the IAM pages for that allocation unit are linked in an IAM chain.
 
 > [!IMPORTANT]
-> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed.
+> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed. This view is not available in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -190,5 +200,6 @@ The interval between DCM pages and BCM pages is the same as the interval between
 ## See Also
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Heaps &#40;Tables without Clustered Indexes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [Reading Pages](../relational-databases/reading-pages.md)   
 [Writing Pages](../relational-databases/writing-pages.md)   

@@ -1,4 +1,5 @@
 ---
+description: "sp_change_users_login (Transact-SQL)"
 title: "sp_change_users_login (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/13/2016"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_change_users_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Maps an existing database user to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. 
   

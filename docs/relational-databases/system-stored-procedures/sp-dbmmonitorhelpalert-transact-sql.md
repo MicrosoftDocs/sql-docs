@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitorhelpalert (Transact-SQL)"
 title: "sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_dbmmonitorhelpalert"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitorhelpalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about warning thresholds on one or all of several key database mirroring monitor performance metrics.  
  

@@ -21,7 +21,7 @@ landingContent:
       links:
       - text: Azure SQL Database single database
         url: /azure/sql-database/sql-database-single-database
-      - text: Azure SQL Database managed instance
+      - text: Azure SQL Managed Instance
         url: /azure/sql-database/sql-database-managed-instance
       - text: Azure Synapse Analytics (SQL DW)
         url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
@@ -60,6 +60,8 @@ landingContent:
         url: ../azure-data-studio/what-is.md
       - text: SQL Server on Linux
         url: ../linux/sql-server-linux-overview.md
+      - text: SQL Server for Azure Arc (preview)
+        url: azure-arc/overview.md
     - linkListType: quickstart
       links:
       - text: Connect & query (SSMS)
@@ -79,7 +81,7 @@ landingContent:
       - text: Transact-SQL (T-SQL)
         url: ../t-sql/language-reference.md
       - text: SQL Server 2014 docs
-        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+        url: https://docs.microsoft.com/sql/sql-server/sql-server-2014-release-notes
       - text: Educational SQL resources
         url: ../sql-server/educational-sql-resources.yml
       - text: Sample databases

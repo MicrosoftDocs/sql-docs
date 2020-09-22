@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE (SQL Graph)"
 title: "CREATE TABLE (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2019"
@@ -34,7 +35,7 @@ ms.author: "shkale"
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE TABLE (SQL Graph)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Creates a new SQL graph table as either a `NODE` or an `EDGE` table. 
   
@@ -89,7 +90,9 @@ CREATE TABLE
 ```  
   
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 This document lists only arguments pertaining to SQL graph. For a full list and description of supported arguments, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
  *database_name*    
@@ -133,7 +136,7 @@ A non-partitioned graph node/edge table cannot be altered into a partitioned gra
 ### A. Create a `NODE` table
  The following example shows how to create a `NODE` table
 
-```
+```sql
  CREATE TABLE Person (
         ID INTEGER PRIMARY KEY, 
         name VARCHAR(100), 
@@ -144,18 +147,16 @@ A non-partitioned graph node/edge table cannot be altered into a partitioned gra
 ### B. Create an `EDGE` table
 The following examples show how to create `EDGE` tables
 
-```
+```sql
  CREATE TABLE friends (
-    id integer PRIMARY KEY,
-    start_date date
+    id INTEGER PRIMARY KEY,
+    start_date DATe
  ) AS EDGE;
-
 ```
 
-```
+```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
-
 ```
 
 

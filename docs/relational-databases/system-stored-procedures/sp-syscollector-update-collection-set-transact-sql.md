@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_update_collection_set (Transact-SQL)"
 title: "sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_syscollector_update_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_update_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to modify the properties of a user-defined collection set or to rename a user-defined collection set.  
   

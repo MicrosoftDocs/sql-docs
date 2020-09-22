@@ -1,4 +1,5 @@
 ---
+description: "Add a Collection Item to a Collection Set (Transact-SQL)"
 title: "Add Collection Item to Collection Set (T-SQL)"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can add a collection item to an existing collection set using the stored procedures that are provided with the data collector.  
   
  Carry out the following steps using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -1,5 +1,6 @@
 ---
-title: Initialize a Subscription with a Snapshot | Microsoft Docs
+description: "Initialize a Subscription with a Snapshot (9a84)"
+title: Initialize a Subscription with a Snapshot (9a84) | Microsoft Docs
 ms.date: 02/29/2020
 ms.prod: sql
 ms.technology: replication
@@ -12,9 +13,9 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.localizationpriority: "null"
 localization_priority: "None"
 ---
-# Initialize a Subscription with a Snapshot
+# Initialize a Subscription with a Snapshot (9a84)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../includes/applies-to-version/sql-asdbmi.md)]
 
 This article describes the processes that occur when a replication publication is initialized. An initial snapshot is applied to the Subscribers.
 

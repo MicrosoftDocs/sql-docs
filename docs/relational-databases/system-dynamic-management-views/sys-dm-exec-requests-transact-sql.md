@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_requests (Transact-SQL)"
 title: "sys.dm_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/01/2019
@@ -23,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns information about each request that is executing in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about requests, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
    
@@ -99,6 +100,9 @@ When executing parallel requests in [row mode](../../relational-databases/query-
 
 ## Permissions
 If the user has `VIEW SERVER STATE` permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session. `VIEW SERVER STATE` cannot be granted in Azure SQL Database so `sys.dm_exec_requests` is always limited to the current connection.
+
+In Always-On scenarios, if the secondary replica is set to **read-intent only**, the connection to the secondary must specify its application intent in connection string parameters by adding `applicationintent=readonly`. Otherwise, the access check for `sys.dm_exec_requests` won't pass for databases in the availability group, even if `VIEW SERVER STATE` permission is present.
+
   
 ## Examples  
   

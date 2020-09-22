@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Connect to SQL Server when system administrators are locked out 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 This article describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator if you've been locked out.  A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to one of the following reasons:  
   
@@ -38,7 +38,7 @@ You can start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 
 When you start the instance in single-user mode, first stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent might connect first, taking the only available connection to the server and blocking you from logging in.
 
-It's also possible for an unknown client application to take the only available connection before you are able to log in. In order to prevent this from happening, you can use the `-m` option followed by an application name to limit connections to a single connection from the specified application. For example, starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with `-m"sqlcmd"` limits connections to a single connection that identifies itself as the **sqlcmd** client program. To connect through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.  
+It's also possible for an unknown client application to take the only available connection before you are able to log in. In order to prevent this from happening, you can use the `-m` option followed by an application name to limit connections to a single connection from the specified application. For example, starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with `-mSQLCMD` limits connections to a single connection that identifies itself as the **sqlcmd** client program. To connect through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.  
 
 
 > [!IMPORTANT]  
@@ -49,7 +49,7 @@ The following table summarizes the different ways to start your instance in sing
 | Option | Description | When to use |
 |:---|:---|:---|
 |`-m` | Limits connections to a single connection | When there are no other users attempting to connect to the instance or you are not sure of the application name you are using to connect to the instance. |
-|`-m"sqlcmd"`| Limits connections to a single connection that must identify itself as the **sqlcmd** client program| When you plan to connect to the instance with **sqlcmd** and you want to prevent other applications from taking the only available connection. |
+|`-mSQLCMD`| Limits connections to a single connection that must identify itself as the **sqlcmd** client program| When you plan to connect to the instance with **sqlcmd** and you want to prevent other applications from taking the only available connection. |
 |`-m"Microsoft SQL Server Management Studio - Query"`| Limits connections to a single connection that must identify itself as the **Microsoft SQL Server Management Studio - Query** application.| When you plan to connect to the instance through the Query Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and you want to prevent other applications from taking the only available connection. |
 |`-f`| Limits connections to a single connection and starts the instance in minimal configuration | When some other configuration is preventing you from starting. |
 | &nbsp; | &nbsp; | &nbsp; |

@@ -1,4 +1,5 @@
 ---
+description: "Creating a System-Versioned Temporal Table"
 title: "Creating a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/15/2019"
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a system-versioned temporal table
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 There are three ways to create a system-versioned temporal table with regards to how the history table is specified:
 
@@ -143,7 +146,7 @@ ALTER TABLE InsurancePolicy
         SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN
             CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
       , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN
-            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59'),
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.9999999'),
         PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
 GO
 
@@ -165,7 +168,7 @@ ALTER TABLE InsurancePolicy
 
 ### Migrate existing tables to built-in support
 
-This example shows how to migrate an existing solution based on triggers to build-in temporal support. For this example, we assume that the current custom solution splits the current and historical data in two separate user tables (**ProjectTaskCurrent** and **ProjectTaskHistory**). If your existing solution uses single table to store actual and historical rows, then you should split the data into two tables prior to the migration steps shown in this example:
+This example shows how to migrate an existing solution based on triggers to built-in temporal support. For this example, we assume that the current custom solution splits the current and historical data in two separate user tables (**ProjectTaskCurrent** and **ProjectTaskHistory**). If your existing solution uses single table to store actual and historical rows, then you should split the data into two tables prior to the migration steps shown in this example:
 
 ```sql
 /*Drop trigger on future temporal table*/

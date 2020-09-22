@@ -1,4 +1,5 @@
 ---
+description: "SAVE TRANSACTION (Transact-SQL)"
 title: "SAVE TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -27,7 +28,7 @@ author: rothja
 ms.author: jroth
 ---
 # SAVE TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Sets a savepoint within a transaction.  
   
@@ -41,7 +42,9 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *savepoint_name*  
  Is the name assigned to the savepoint. Savepoint names must conform to the rules for identifiers, but are limited to 32 characters. *savepoint_name* is always case sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case sensitive.  
   

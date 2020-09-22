@@ -1,4 +1,5 @@
 ---
+description: "Transactions in ODBC ODBC"
 title: "Transactions in ODBC ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

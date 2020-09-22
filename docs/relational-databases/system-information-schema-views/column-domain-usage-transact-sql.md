@@ -1,4 +1,5 @@
 ---
+description: "COLUMN_DOMAIN_USAGE (Transact-SQL)"
 title: "COLUMN_DOMAIN_USAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.COLUMN_DOMAIN_USAGE view"
   - "COLUMN_DOMAIN_USAGE view"
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLUMN_DOMAIN_USAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one row for each column in the current database that has an alias data type. This information schema view returns information about the objects to which the current user has permissions.  
   

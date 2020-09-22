@@ -1,4 +1,5 @@
 ---
+description: "Create Website Dialog Box (Master Data Services Configuration Manager)"
 title: Create Website Dialog Box
 ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"
@@ -15,7 +16,7 @@ ms.author: lle
 ---
 # Create Website Dialog Box (Master Data Services Configuration Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Create Website** dialog box to create a new website on the local computer. When you create a website in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], the site is added to Internet Information Services (IIS) on the local computer with a root application that is configured as the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application. A new application pool is also created and the web application is placed in that application pool.  
   

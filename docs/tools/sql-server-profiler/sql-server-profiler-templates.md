@@ -16,7 +16,7 @@ ms.date: 03/14/2017
 
 # SQL Server Profiler Templates
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 You can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create templates that define the event classes and data columns to include in traces. After you define and save the template, you can run a trace that records the data for each event class you selected. You can use a template on many traces; the template is not itself executed.  
 
@@ -54,8 +54,7 @@ You can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to cre
   
 ## See Also  
  [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Modify a Trace Template &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
  [Export a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Import a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
-  
   

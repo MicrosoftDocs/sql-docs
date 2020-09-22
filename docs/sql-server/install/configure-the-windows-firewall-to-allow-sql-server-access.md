@@ -2,7 +2,7 @@
 title: "Configure Windows Firewall"
 description: Learn how to configure the Windows firewall to allow access to an instance of the SQL Server through the firewall.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -25,7 +25,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Firewall systems help prevent unauthorized access to computer resources. If a firewall is turned on but not correctly configured, attempts to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might be blocked.  
   
@@ -177,7 +177,7 @@ When [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] connects to a
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] remote procedure calls (MS RPC)<br /><br /> Used by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime.|TCP port 135<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)|The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses DCOM on port 135. The Service Control Manager uses port 135 to perform tasks such as starting and stopping the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service and transmitting control requests to the running service. The port number cannot be changed.<br /><br /> This port is only required to be open if you are connecting to a remote instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or a custom application.|  
   
-For step-by-step instructions to configure the Windows Firewall for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014).  
+For step-by-step instructions to configure the Windows Firewall for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Service &#40;SSIS Service&#41;](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110)).  
   
 ###  <a name="BKMK_additional_ports"></a> Additional Ports and Services  
 The following table lists ports and services that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might depend on.  

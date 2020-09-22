@@ -17,7 +17,7 @@ ms.author: genemi
 ---
 # Example: Specifying the ID and IDREF Directives
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This example is almost the same the [Specifying the ELEMENTXSINIL Directive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) example. The only difference is that the query specifies the **ID** and **IDREF** directives. These directives overwrite the types of the **SalesPersonID** attribute in the <`OrderHeader`> and <`OrderDetail`> elements. This forms intra-document links. You need the schema to see the overwritten types. Therefore, the query specifies the **XMLDATA** option in the FOR XML clause to retrieve the schema.  
   

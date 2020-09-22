@@ -18,7 +18,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # sqlagent90 Application
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   The **sqlagent90** application starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent from the command prompt. Usually, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent should be run from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or by using SQL-SMO methods in an application. Only run **sqlagent90** from the command prompt when you are diagnosing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, or when you are directed to it by your primary support provider.  
   
 ## Syntax  
@@ -43,6 +43,5 @@ sqlagent90
  After displaying a copyright message, **sqlagent90** displays output in the command prompt window only when the **-v** switch is specified. To stop **sqlagent90**, press CTRL+C at the command prompt. Do not close the command-prompt window before stopping **sqlagent90**.  
   
 ## See Also  
- [Automated Administration Tasks &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
-  
+ [Automated Administration Tasks &#40;SQL Server Agent&#41;](../ssms/agent/automated-administration-tasks-sql-server-agent.md?view=sql-server-ver15)  
   

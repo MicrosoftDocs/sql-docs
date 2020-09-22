@@ -1,4 +1,5 @@
 ---
+description: "Common errors with database mail"
 title: "Common errors with database mail| Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Common errors with database mail 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This article describes some common errors encountered with database mail and their solutions.
 

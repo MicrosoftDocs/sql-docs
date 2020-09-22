@@ -1,4 +1,5 @@
 ---
+description: "sys.function_order_columns (Transact-SQL)"
 title: "sys.function_order_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.function_order_columns catalog view"
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.function_order_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row per column that is a part of an **ORDER** expression of a commmon language runtime (CLR) table-valued function.  
 

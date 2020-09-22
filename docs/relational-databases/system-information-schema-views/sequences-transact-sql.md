@@ -1,4 +1,5 @@
 ---
+description: "SEQUENCES (Transact-SQL)"
 title: "SEQUENCES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/30/2019"
@@ -14,13 +15,13 @@ dev_langs:
 helpviewer_keywords: 
   - "SEQUENCES view"
   - "INFORMATION_SCHEMA.SEQUENCES view"
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SEQUENCES (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns one row for each sequence that can be accessed by the current user in the current database.
 

@@ -1,4 +1,5 @@
 ---
+description: "Connection Transitions"
 title: "Connection Transitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

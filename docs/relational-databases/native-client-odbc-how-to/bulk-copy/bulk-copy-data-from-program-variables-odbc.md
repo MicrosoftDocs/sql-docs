@@ -1,4 +1,5 @@
 ---
+description: "Bulk Copy Data from Program Variables (ODBC)"
 title: "Bulk Copy Data from Program Variables (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Data from Program Variables (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows how to use bulk copy functions to bulk copy data from program variables to SQL Server using **bcp_bind** and **bcp_sendrow**. (Error-checking code is removed to simplify this example.)  
   

@@ -22,7 +22,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Search Property List Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Grants permissions on a search property list.  
   
@@ -39,7 +39,9 @@ GRANT permission [ ,...n ] ON
     [ AS granting_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
@@ -129,7 +131,7 @@ GRANT permission [ ,...n ] ON
 ### Granting permissions to a search property list  
  The following example grants `Mary` the `VIEW DEFINITION` permission on the search property list `DocumentTablePropertyList`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON SEARCH PROPERTY LIST :: DocumentTablePropertyList  
     TO Mary ;  

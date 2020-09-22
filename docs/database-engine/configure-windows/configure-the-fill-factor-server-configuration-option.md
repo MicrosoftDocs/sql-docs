@@ -1,5 +1,6 @@
 ---
 title: "Configure the fill factor Server Configuration Option | Microsoft Docs"
+description: Learn about the fill factor option. See how to configure it to specify the percentage of space on each leaf-level page that SQL Server fills with data.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the fill factor Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **fill factor** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Fill factor is provided for fine-tuning index data storage and performance. When an index is created or rebuilt, the fill-factor value determines the percentage of space on each leaf-level page to be filled with data, reserving the rest as free space for future growth. For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   

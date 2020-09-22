@@ -1,4 +1,5 @@
 ---
+description: "Filter Settings"
 title: "Filter Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Filter Settings
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Filter Settings** dialog box lets you define filters for grids in Replication Monitor. For example, to show only those subscriptions that are active on the **All Subscriptions** tab, select **Status** from the **Column Name** column, **Equals** from the **Operator** column, and **Active** from the **Value1** column. After you define a filter that is based one or more columns, the filter is applied so that the grid displays only the subset of rows that match the filter criteria.  
   
 ## Options  

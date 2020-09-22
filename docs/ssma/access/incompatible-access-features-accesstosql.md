@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "unique indexes"
   - "validation rules"
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Incompatible Access Features (AccessToSQL)
 Not all Access database features are compatible with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Access have different sets of reserved keywords. Issues such as these can prevent a successful migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use the following table to learn about possible migration issues and what you can do about them.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_kill_filestream_non_transacted_handles (Transact-SQL)"
 title: "sp_kill_filestream_non_transacted_handles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_kill_filestream_non_transacted_handles"
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_kill_filestream_non_transacted_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Closes non-transactional file handles to FileTable data.  
   

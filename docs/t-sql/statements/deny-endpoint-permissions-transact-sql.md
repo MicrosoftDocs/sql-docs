@@ -1,4 +1,5 @@
 ---
+description: "DENY Endpoint Permissions (Transact-SQL)"
 title: "DENY Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Denies permissions on an endpoint.  
 
@@ -41,7 +42,9 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -92,7 +95,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### A. Denying VIEW DEFINITION permission on an endpoint  
  The following example denies `VIEW DEFINITION` permission on the endpoint `Mirror7` to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -101,7 +104,7 @@ GO
 ### B. Denying TAKE OWNERSHIP permission with CASCADE option  
  The following example denies `TAKE OWNERSHIP` permission on the endpoint `Shipping83` to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski` and to principals to which `PKomosinski` granted `TAKE OWNERSHIP`.  
   
-```  
+```sql  
 USE master;  
 DENY TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     CASCADE;  

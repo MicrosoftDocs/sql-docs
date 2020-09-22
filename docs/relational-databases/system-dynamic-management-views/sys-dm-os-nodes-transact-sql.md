@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_nodes (Transact-SQL)"
 title: "sys.dm_os_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/13/2018"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_nodes dynamic management view"
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 An internal component named the SQLOS creates node structures that mimic hardware processor locality. These structures can be changed by using [soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) to create custom node layouts.  
 

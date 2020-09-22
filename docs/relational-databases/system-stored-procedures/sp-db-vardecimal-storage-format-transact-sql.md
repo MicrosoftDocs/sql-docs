@@ -1,4 +1,5 @@
 ---
+description: "sp_db_vardecimal_storage_format (Transact-SQL)"
 title: "sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "database compression [SQL Server]"
   - "table compression [SQL Server]"
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_db_vardecimal_storage_format (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the current vardecimal storage format state of a database or enables a database for vardecimal storage format.  Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], user databases are always enabled. Enabling databases for the vardecimal storage format is only necessary in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   

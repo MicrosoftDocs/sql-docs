@@ -1,7 +1,7 @@
 ---
 title: "Run Spark jobs: Azure Toolkit for IntelliJ"
 titleSuffix: SQL Server Big Data Clusters
-description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
+description: Learn how to submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
@@ -23,7 +23,7 @@ One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbig
 - SQL Server big data cluster.
 - Oracle Java Development Kit. You can install it from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. You can install it from the [JetBrains website](https://www.jetbrains.com/idea/download/).
-- Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
+- Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](/azure/azure-toolkit-for-intellij-installation).
 
 ## Link SQL Server big data cluster
 1. Open the IntelliJ IDEA tool.
@@ -113,7 +113,7 @@ After link a SQL Server big data cluster, you can submit application to it.
       ![The Spark Submission dialog box jar files meaning](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > To upload your Referenced JARs and Referenced Files, refer to: [How to upload resources to cluster](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > To upload your Referenced JARs and Referenced Files, refer to: [How to upload resources to cluster](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
                          
     * **Upload Path**: You can indicate the storage location for the Jar or Scala project resources submission. There are several storage types supported: **Use Spark interactive session to upload** and **Use WebHDFS to upload**
     

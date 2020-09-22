@@ -1,4 +1,5 @@
 ---
+description: "Set or Change the Server Collation"
 title: "Set or Change the Server Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2020"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: "stevestein"
 ms.author: "sstein"
-ms.reviewer: carlrab
 ---
 # Set or Change the Server Collation
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The server collation acts as the default collation for all system databases that are installed with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and also any newly created user databases. You should carefully choose server-level collation because it affects:
  - Sorting and comparison rules in `=`, `JOIN`, `ORDER BY` and other operators that compare textual data.
  - Collation of the `CHAR`, `VARCHAR`, `NCHAR`, and `NVARCHAR` columns in system views, system functions, and the objects in TempDB (for example, temporary tables).

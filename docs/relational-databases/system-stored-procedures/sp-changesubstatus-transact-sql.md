@@ -1,4 +1,5 @@
 ---
+description: "sp_changesubstatus (Transact-SQL)"
 title: "sp_changesubstatus (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubstatus"
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the status of an existing Subscriber. This stored procedure is executed at the Publisher on the publication database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sysarticleupdates (Transact-SQL)"
 title: "sysarticleupdates (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysarticleupdates system table"
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysarticleupdates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each article that supports immediate-updating subscriptions. This table is stored in the replicated database.  
   

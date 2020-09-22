@@ -11,7 +11,7 @@ ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Check out the [Getting Started Tutorials](https://aka.ms/sqldev) to quickly get started with programming languages such as C#, Java, Node.js, PHP, and Python and build an app using SQL Server on Linux or Windows or Docker on macOS.
 
@@ -34,7 +34,7 @@ The following table lists a few examples of Object Relational Mapping (ORM) fram
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
 | Java | Windows, Linux, macOS |[Hibernate ORM](https://hibernate.org/orm)|
 | PHP | Windows, Linux | [Laravel (Eloquent)](https://laravel.com/docs/5.0/eloquent) |
-| Node.js | Windows, Linux, macOS | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Node.js | Windows, Linux, macOS | [Sequelize ORM](http://sequelize.org/) |
 | Python | Windows, Linux, macOS |[Django](https://www.djangoproject.com/) |
 | Ruby | Windows, Linux, macOS | [Ruby on Rails](https://rubyonrails.org/) |
 

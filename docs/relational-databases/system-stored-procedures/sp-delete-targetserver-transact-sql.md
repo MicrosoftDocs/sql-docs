@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_targetserver (Transact-SQL)"
 title: "sp_delete_targetserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_targetserver"
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the specified server from the list of available target servers.  
    

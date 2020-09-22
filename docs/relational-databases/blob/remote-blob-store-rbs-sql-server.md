@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Remote Blob Store (RBS) (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB Store (RBS) is an optional add-on component that lets database administrators store binary large objects in commodity storage solutions instead of directly on the main database server.  
   
@@ -58,7 +58,7 @@ ms.author: mikeray
  RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## RBS Security  
- The SQL Remote Blob Storage Team Blog is a good source of information about this feature. The RBS security model is described in the post at [RBS Security Model](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx).  
+ The SQL Remote Blob Storage Team Blog is a good source of information about this feature. The RBS security model is described in the post at [RBS Security Model](https://docs.microsoft.com/archive/blogs/sqlrbs/rbs-security-model).  
   
 ### Custom providers  
  When you use a custom provider to store BLOBs outside of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that you protect the stored BLOBs with permissions and encryption options that are appropriate to the storage medium used by the custom provider.  
@@ -83,7 +83,7 @@ If your security policies require different key properties (e.g., algorithm or k
  The RBS samples available on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demonstrate how to develop an RBS application, and how to develop and install a custom RBS provider.  
   
  **RBS blog**  
- The [RBS blog](https://go.microsoft.com/fwlink/?LinkId=210315) provides additional information to help you understand, deploy, and maintain RBS.  
+ The [RBS blog](https://docs.microsoft.com/archive/blogs/sqlrbs/) provides additional information to help you understand, deploy, and maintain RBS.  
   
 ##  <a name="Key_rotation"></a> Key rotation script  
  This example creates a stored procedure named `sp_rotate_rbs_symmetric_credential_key` to replace the currently used RBS credential store symmetric key  

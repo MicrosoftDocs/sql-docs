@@ -1,4 +1,5 @@
 ---
+description: "Edit the Table Properties"
 title: "Edit the Table Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Edit the Table Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use this dialog box to edit the specific columns from the selected table where changes are being captured. You can also edit the **Security Role** and **Capture Instance** information.  

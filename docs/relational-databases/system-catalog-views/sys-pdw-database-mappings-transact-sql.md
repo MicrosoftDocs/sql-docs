@@ -1,9 +1,9 @@
 ---
+description: "sys.pdw_database_mappings (Transact-SQL)"
 title: "sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
 ms.prod: sql
-ms.technology: data-warehouse
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
@@ -15,7 +15,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_database_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Maps the **database_id**s of databases to the physical name used on Compute nodes, and provides the **principal id** of the database owner on the system. Join **sys.pdw_database_mappings** to **sys.databases** and **sys.pdw_nodes_pdw_physical_databases**.  
   

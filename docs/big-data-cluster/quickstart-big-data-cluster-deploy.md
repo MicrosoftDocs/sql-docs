@@ -5,7 +5,7 @@ description: Learn how to use a deployment script to deploy SQL Server Big Data 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Use a python script to deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to Azure Kubernetes Service (AKS).
 
@@ -70,17 +70,18 @@ Use the following steps to run the deployment script in a Windows PowerShell or 
    | **Azure subscription ID** | The Azure subscription ID to use for AKS. You can list all of your subscriptions and their IDs by running `az account list` from another command line. |
    | **Azure resource group** | The Azure resource group name to create for the AKS cluster. |
    | **Azure region** | The Azure region for the new AKS cluster (default **westus**). |
-   | **Machine size** | The [machine size](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) to use for nodes in the AKS cluster (default **Standard_L8s**). |
+   | **Machine size** | The [machine size](/azure/virtual-machines/windows/sizes) to use for nodes in the AKS cluster (default **Standard_L8s**). |
    | **Worker nodes** | The number of worker nodes in the AKS cluster (default **1**). |
    | **Cluster name** | The name of both the AKS cluster and the big data cluster. The name of your big data cluster must be only lower case alpha-numeric characters, and no spaces. (default **sqlbigdata**). |
    | **Password** | Password for the controller, HDFS/Spark gateway, and master instance (default **MySQLBigData2019**). |
    | **Username** | Username for the controller user (default: **admin**). |
 
    > [!IMPORTANT]
-   > The default **Standard_L8s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.
+   > The default **Standard_L8s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L8s](/azure/virtual-machines/lsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.
 
    > [!NOTE]
-   > The SQL Server `sa` account is disabled during big data cluster deployment. A new sysadmin login is provisioned in SQL Server master instance the same name specified for **Username** input and the password corrsponding to the **Password** input. Same **Username** and **Password** values are used for provisioning a controller admin user. Only user supported for gateway (Knox) is **root** and the password is the same as above.
+   > The SQL Server `sa` account is disabled during big data cluster deployment. A new sysadmin login is provisioned in SQL Server master instance the same name specified for **Username** input and the password corrsponding to the **Password** input. Same **Username** and **Password** values are used for provisioning a controller admin user. On clusters deployed prior to SQL Server 2019 CU5, the only user supported for gateway (Knox) is **root** and the password is the same as above.
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. The script will start by creating an AKS cluster using the parameters you specified. This step takes several minutes.
 

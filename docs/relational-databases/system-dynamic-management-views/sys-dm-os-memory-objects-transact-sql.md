@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_memory_objects (Transact-SQL)"
 title: "sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_objects dynamic management view"
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns memory objects that are currently allocated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use **sys.dm_os_memory_objects** to analyze memory use and to identify possible memory leaks.  
   
@@ -44,10 +45,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**page_allocator_address**|**varbinary(8)**|Memory address of page allocator. Is not nullable. For more information, see [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |**creation_stack_address**|**varbinary(8)**|Internal use only. Is nullable.|  
 |**sequence_num**|**int**|Internal use only. Is nullable.|  
-|**partition_type**|**int**|The type of partition:<br /><br /> 0 - Non-partitionable memory object<br /><br /> 1 - Partitionable memory object, currently not partitioned<br /><br /> 2 - Partitionable memory object, partitioned by NUMA node. In an environment with a single NUMA node this is equivalent to 1.<br /><br /> 3 - Partitionable memory object, partitioned by CPU.|  
-|**contention_factor**|**real**|A value specifying contention on this memory object, with 0 meaning no contention. The value is updated whenever a specified number of memory allocations were made reflecting contention during that period. Applies only to thread-safe memory objects.|  
-|**waiting_tasks_count**|**bigint**|Number of waits on this memory object. This counter is incremented whenever memory is allocated from this memory object. The increment is the number of tasks currently waiting for access to this memory object. Applies only to thread-safe memory objects. This is a best effort value without a correctness guarantee.|  
-|**exclusive_access_count**|**bigint**|Specifies how often this memory object was accessed exclusively. Applies only to thread-safe memory objects.  This is a best effort value without a correctness guarantee.|  
+|**partition_type**|**int**|**Applies to**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] and later.<br /><br /> The type of partition:<br /><br /> 0 - Non-partitionable memory object<br /><br /> 1 - Partitionable memory object, currently not partitioned<br /><br /> 2 - Partitionable memory object, partitioned by NUMA node. In an environment with a single NUMA node this is equivalent to 1.<br /><br /> 3 - Partitionable memory object, partitioned by CPU.|  
+|**contention_factor**|**real**|**Applies to**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] and later.<br /><br /> A value specifying contention on this memory object, with 0 meaning no contention. The value is updated whenever a specified number of memory allocations were made reflecting contention during that period. Applies only to thread-safe memory objects.|  
+|**waiting_tasks_count**|**bigint**|**Applies to**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] and later.<br /><br /> Number of waits on this memory object. This counter is incremented whenever memory is allocated from this memory object. The increment is the number of tasks currently waiting for access to this memory object. Applies only to thread-safe memory objects. This is a best effort value without a correctness guarantee.|  
+|**exclusive_access_count**|**bigint**|**Applies to**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] and later.<br /><br /> Specifies how often this memory object was accessed exclusively. Applies only to thread-safe memory objects.  This is a best effort value without a correctness guarantee.|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**, and **exclusive_access_count** are not yet implemented in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  

@@ -1,4 +1,5 @@
 ---
+description: "sp_approlepassword (Transact-SQL)"
 title: "sp_approlepassword (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_approlepassword"
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_approlepassword (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the password of an application role in the current database.  
   

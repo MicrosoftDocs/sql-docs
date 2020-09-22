@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEYAUTOCERT (Transact-SQL)"
 title: "DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function decrypts data with a symmetric key. That symmetric key automatically decrypts with a certificate.  
 
@@ -35,7 +36,9 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *cert_ID*  
 The ID of the certificate used to protect the symmetric key. *cert_ID* has an **int** data type.  
   

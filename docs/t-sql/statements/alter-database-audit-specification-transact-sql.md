@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)"
 title: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Alters a database audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -30,7 +31,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     [ FOR SERVER AUDIT audit_name ]  
@@ -46,10 +46,12 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
       <action_specification>[ ,...n ] ON [ class :: ] securable   
      BY principal [ ,...n ]   
 }  
-  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  The name of the audit specification.  
   
@@ -88,7 +90,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Examples  
  The following example alters a database audit specification called `HIPAA_Audit_DB_Specification` that audits the `SELECT` statements by the `dbo` user, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  

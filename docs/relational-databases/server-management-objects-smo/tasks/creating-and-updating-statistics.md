@@ -1,10 +1,12 @@
 ---
+description: "Create and update statistics"
 title: Create and update statistics
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology: smo
+ms.technology: 
 ms.topic: reference
-helpviewer_keywords: statistical information [SMO]
+helpviewer_keywords:
+  - "statistical information [SMO]"
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: markingmyname
 ms.author: maghan
@@ -16,7 +18,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 
 # Create and update statistics
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 In SMO, statistical information about processing queries in the database can be collected by using the <xref:Microsoft.SqlServer.Management.Smo.Statistic> object.
 
@@ -65,7 +67,7 @@ public static void CreatingAndUpdatingStatistics()
     var db = srv.Databases["AdventureWorks"];
 
     // Reference the CreditCard table.
-    var tb = db.Tables["CreditCard", "dbo"];
+    var tb = db.Tables["CreditCard", "Sales"];
 
     // Define a Statistic object by supplying the parent table and name
     // arguments in the constructor.
@@ -81,10 +83,12 @@ public static void CreatingAndUpdatingStatistics()
 
     // List all the statistics object on the table (you will see the newly created one)
     foreach (var s in tb.Statistics.Cast<Statistic>())
-    Console.WriteLine($"{s.ID}\t{s.Name}");
+        Console.WriteLine($"{s.ID}\t{s.Name}");
 
-// Output:
-//   2  Test_Statistics
+    // Output:
+    //  2       AK_CreditCard_CardNumber
+    //  1       PK_CreditCard_CreditCardID
+    //  3       Test_Statistics
  }
 ```
 
@@ -118,4 +122,12 @@ $stat.Create()
 
 # Finally dump all the statistics (you can see the newly created one at the bottom)
 $tb.Statistics
+
+# Output:
+# Name                                Last Updated Is From Index  Statistic Columns
+#                                                  Creation
+# ----                                ------------ -------------- -----------------
+# AK_CreditCard_CardNumber      10/27/2017 2:33 PM True           {CardNumber}
+# PK_CreditCard_CreditCardID    10/27/2017 2:33 PM True           {CreditCardID}
+# Test_Statistics                 6/4/2020 8:11 PM False          {CardType}
 ```

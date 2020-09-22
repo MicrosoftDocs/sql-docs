@@ -1,4 +1,5 @@
 ---
+description: "SET QUOTED_IDENTIFIER (Transact-SQL)"
 title: "SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -22,13 +23,13 @@ helpviewer_keywords:
   - "ISO delimited identifiers rules"
   - "SET QUOTED_IDENTIFIER statement"
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings. Identifiers delimited by double quotation marks can be either [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved keywords or can contain characters not generally allowed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax rules for identifiers.
 
@@ -47,6 +48,8 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 
 SET QUOTED_IDENTIFIER ON
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 When `SET QUOTED_IDENTIFIER` is ON (default), identifiers can be delimited by double quotation marks (" "), and literals must be delimited by single quotation marks (' '). All strings delimited by double quotation marks are interpreted as object identifiers. Therefore, quoted identifiers do not have to follow the [!INCLUDE[tsql](../../includes/tsql-md.md)] rules for identifiers. They can be reserved keywords and can include characters not generally allowed in [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers. Double quotation marks cannot be used to delimit literal string expressions; single quotation marks must be used to enclose literal strings. If a single quotation mark (') is part of the literal string, it can be represented by two single quotation marks (''). `SET QUOTED_IDENTIFIER` must be ON when reserved keywords are used for object names in the database.

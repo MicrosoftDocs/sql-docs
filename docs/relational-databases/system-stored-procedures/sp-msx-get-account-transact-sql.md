@@ -1,4 +1,5 @@
 ---
+description: "sp_msx_get_account (Transact-SQL)"
 title: "sp_msx_get_account (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_get_account"
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_msx_get_account (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists information on the credential that the target server uses to log in to the master server.  
   

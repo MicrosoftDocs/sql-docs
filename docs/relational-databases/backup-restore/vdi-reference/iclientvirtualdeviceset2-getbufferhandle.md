@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IClientVirtualDeviceSet2::GetBufferHandle (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Some applications may require more than one process to operate on the buffers returned by **IClientVirtualDevice2::GetCommand**. In such cases, the process that receives the command can use **GetBufferHandle** to obtain a process independent handle that identifies the buffer. This handle can then be communicated to any other process that also has the same Virtual Device Set open. That process would then use IClientVirtualDeviceSet2::MapBufferHandle to obtain the address of the buffer. The address will likely be a different address than in its partner because each process may be mapping buffers at different addresses.
 

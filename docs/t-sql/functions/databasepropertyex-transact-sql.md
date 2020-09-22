@@ -1,4 +1,5 @@
 ---
+description: "DATABASEPROPERTYEX (Transact-SQL)"
 title: "DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/23/2018"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "displaying database properties"
   - "database properties [SQL Server]"
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATABASEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 For a specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this function returns the current setting of the specified database option or property.
   
@@ -34,7 +35,9 @@ For a specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 DATABASEPROPERTYEX ( database , property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *database*  
 An expression specifying the name of the database for which `DATABASEPROPERTYEX` will return the named property information. *database* has an **nvarchar(128)** data type.  
 

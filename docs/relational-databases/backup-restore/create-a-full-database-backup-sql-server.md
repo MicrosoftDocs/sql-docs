@@ -15,11 +15,10 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: carlrab
 ---
 # Create a Full Database Backup
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.
 
@@ -393,7 +392,7 @@ $credential = Get-Credential
 $container = 'https://<myStorageAccount>blob.core.windows.net/<myContainer>'
 $fileName = '<myDatabase>.bak'
 $server = '<myServer>'
-$database = '<myDatabase>
+$database = '<myDatabase>'
 $backupFile = $container + '/' + $fileName
 
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential

@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKALLOC (Transact-SQL)"
 title: "DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -27,8 +28,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the consistency of disk space allocation structures for a specified database.
   
@@ -54,7 +57,9 @@ DBCC CHECKALLOC
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* | *database_id* | 0   
  The name or the ID of the database for which to check allocation and page usage.
  If not specified, or if 0 is specified, the current database is used.

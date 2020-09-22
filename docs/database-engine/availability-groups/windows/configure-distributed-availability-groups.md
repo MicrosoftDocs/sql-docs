@@ -1,6 +1,6 @@
 ---
 title: "Configure a distributed availability group"
-description: "Describes how to create and configure an Always On distributed availability group. " 
+description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups." 
 ms.custom: "seodec18"
 ms.date: "01/28/2020"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Configure an Always On distributed availability group  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 To create a distributed availability group, you must create two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
 

@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_enable_table (Transact-SQL)"
 title: "sys.sp_cdc_enable_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "sys.sp_cdc_enable_table"
   - "sp_cdc_enable_table"
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_enable_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enables change data capture for the specified source table in the current database. When a table is enabled for change data capture, a record of each data manipulation language (DML) operation applied to the table is written to the transaction log. The change data capture process retrieves this information from the log and writes it to change tables that are accessed by using a set of functions.  
   

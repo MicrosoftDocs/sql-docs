@@ -1,4 +1,5 @@
 ---
+description: "syscollector_config_store (Transact-SQL)"
 title: "syscollector_config_store (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_config_store view"
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_config_store (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns properties that apply to the entire data collector, as opposed to a collection set instance. Each row in this view describes a specific data collector property, such as the name of the management data warehouse, and the instance name where the management data warehouse is located.  
   

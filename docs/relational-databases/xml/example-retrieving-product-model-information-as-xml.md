@@ -1,5 +1,6 @@
 ---
 title: "Example: Retrieving Product Model Information as XML | Microsoft Docs"
+description: View an example of how to retrieve product model information as XML by using RAW mode with the FOR XML clause.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Retrieving Product Model Information as XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following query returns product model information. `RAW` mode is specified in the `FOR XML` clause.  
   
 ## Example  

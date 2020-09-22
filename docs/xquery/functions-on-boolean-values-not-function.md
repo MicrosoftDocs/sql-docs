@@ -1,5 +1,6 @@
 ---
 title: "not Function (XQuery) | Microsoft Docs"
+description: Learn how the XQuery not() function is used with Boolean values.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on Boolean Values - not Function 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns TRUE if the effective Boolean value of *$arg* is false, and returns FALSE if the effective Boolean value of *$arg* is true.  
   

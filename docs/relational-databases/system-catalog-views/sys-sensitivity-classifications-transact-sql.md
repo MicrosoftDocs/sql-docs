@@ -1,4 +1,5 @@
 ---
+description: "sys.sensitivity_classifications (Transact-SQL)"
 title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
 ms.date: 03/25/2019
 ms.reviewer: ""
@@ -25,7 +26,7 @@ helpviewer_keywords:
 monikerRange: ">= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns a row for each classified item in the database.
 
@@ -52,7 +53,7 @@ Returns a row for each classified item in the database.
 
 ### A. Listing all classified columns and their corresponding classification
 
-The following example returns a table listing the table name, column name, label, label ID, information type, information type ID for each classified column in the database.
+The following example returns a table that lists the table name, column name, label, label ID, information type, information type ID, rank, and rank description for each classified column in the database.
 
 > [!NOTE]
 > Label is a keyword for Azure SQL Data Warehouse.

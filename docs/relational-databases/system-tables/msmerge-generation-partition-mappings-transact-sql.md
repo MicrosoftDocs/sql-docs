@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_generation_partition_mappings system table"
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_generation_partition_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_generation_partition_mappings** table is used to track changes to partitions in a merge publication. This table is stored in the publication and scubscription databases.  
   

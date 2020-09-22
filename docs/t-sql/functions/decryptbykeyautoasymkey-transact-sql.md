@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
 title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function decrypts encrypted data. To do this, it first decrypts a symmetric key with a separate asymmetric key, and then decrypts the encrypted data with the symmetric key extracted in the first "step".  
   
@@ -35,7 +36,9 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *akey_ID*  
 The ID of the asymmetric key used to encrypt the symmetric key. *akey_ID* has an **int** data type.  
   

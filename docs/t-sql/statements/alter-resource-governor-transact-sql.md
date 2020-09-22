@@ -1,4 +1,5 @@
 ---
+description: "ALTER RESOURCE GOVERNOR (Transact-SQL)"
 title: "ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "ALTER RESOURCE GOVERNOR"
   - "RECONFIGURE, ALTER RESOURCE GOVERNOR"
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This statement is used to perform the following Resource Governor actions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -49,7 +50,10 @@ ALTER RESOURCE GOVERNOR
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  DISABLE  
  Disables Resource Governor. Disabling Resource Governor has the following results:  
   
@@ -107,14 +111,14 @@ ALTER RESOURCE GOVERNOR
 ### A. Starting the Resource Governor  
  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is first installed Resource Governor is disabled. The following example starts Resource Governor. After the statement executes, Resource Governor is running and can use the predefined workload groups and resource pools.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### B. Assigning new sessions to the default group  
  The following example assigns all new sessions to the default workload group by removing any existing classifier function from the Resource Governor configuration. When no function is designated as a classifier function, all new sessions are assigned to the default workload group. This change applies to new sessions only. Existing sessions are not affected.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -123,7 +127,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### C. Creating and registering a classifier function  
  The following example creates a classifier function named `dbo.rgclassifier_v1`. The function classifies every new session based on either the user name or application name and assigns the session requests and queries to a specific workload group. Sessions that do not map to the specified user or application names are assigned to the default workload group. The classifier function is then registered and the configuration change is applied.  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -168,14 +172,14 @@ GO
 ### D. Resetting Statistics  
  The following example resets all workload group and resource pool statistics.  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### E. Setting the MAX_OUTSTANDING_IO_PER_VOLUME option  
  The following example set the MAX_OUTSTANDING_IO_PER_VOLUME option to 20.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

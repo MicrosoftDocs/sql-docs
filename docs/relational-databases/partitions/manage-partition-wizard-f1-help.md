@@ -1,4 +1,5 @@
 ---
+description: "Manage Partition Wizard"
 title: "Manage Partition Wizard"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,7 +26,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Manage Partition Wizard 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Manage Partition Wizard** to manage and modify existing partitioned tables through partition switching or the implementation of a sliding window scenario. This wizard can ease the management of your partitions and simplify the regular migration of data in and out of your tables.  
   
 ### To start the Manage Partition Wizard  

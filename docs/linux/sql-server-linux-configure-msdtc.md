@@ -1,16 +1,16 @@
 ---
 title: How to configure MSDTC on Linux
-description: This article provides a walk-through for configuring MSDTC on Linux.
+description: In this article, learn how to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux.
 
@@ -30,19 +30,21 @@ MSDTC uses two configuration parameters for the mssql-conf utility:
 
 For more information about these settings and other related MSDTC settings, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
-## Supported MSDTC configurations
+## Supported transaction standards
 
 The following MSDTC configurations are supported:
 
-- OLE-TX Distributed transactions against SQL Server on Linux for ODBC providers.
+| Transaction standard | Data sources | ODBC driver | JDBC driver|
+|---|---|---|---|
+| OLE-TX Transactions | SQL Server on Linux | Yes | No|
+| XA Distributed transactions | SQL Server, other ODBC, and JDBC data sources that support XA | Yes (requires version 17.3 or higher) | Yes |
+| Distributed transactions on Linked server | SQL Server | Yes | No
 
-- XA Distributed transactions against SQL Server on Linux using JDBC and ODBC providers. For XA transactions to be performed using ODBC provider, you need to use Microsoft ODBC Driver for SQL Server version 17.3 or higher. For more information, see [Understanding XA Transactions](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
-
-- Distributed transactions on Linked server.
+For more information, see [Understanding XA Transactions](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
 
 ## MSDTC configuration steps
 
-There are three steps to configure MSDTC communication and functionality. If the necessary configuration steps are not done, SQL Server will not enable MSDTC functionality.
+There are three steps to configure MSDTC communication and functionality. If the necessary configuration steps aren't done, SQL Server will not enable MSDTC functionality.
 
 - Configure **network.rpcport** and **distributedtransaction.servertcpport** using mssql-conf.
 - Configure the firewall to allow communication on **distributedtransaction.servertcpport** and port 135.

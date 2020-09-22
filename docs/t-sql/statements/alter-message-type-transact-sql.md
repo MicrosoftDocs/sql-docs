@@ -1,4 +1,5 @@
 ---
+description: "ALTER MESSAGE TYPE (Transact-SQL)"
 title: "ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "modifying message types"
   - "message types [Service Broker], modifying"
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a message type.  
   
@@ -29,8 +30,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
     {  NONE   
@@ -40,7 +40,10 @@ ALTER MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *message_type_name*  
  The name of the message type to change. Server, database, and schema names cannot be specified.  
   
@@ -72,7 +75,7 @@ ALTER MESSAGE TYPE message_type_name
 ## Examples  
  The following example changes the message type `//Adventure-Works.com/Expenses/SubmitExpense` to require that the message body contain a well-formed XML document.  
   
-```  
+```sql  
 ALTER MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = WELL_FORMED_XML ;  

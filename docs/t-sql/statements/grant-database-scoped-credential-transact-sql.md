@@ -1,4 +1,5 @@
 ---
+description: "GRANT Database Scoped Credential Permissions (Transact-SQL)"
 title: "GRANT Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"
@@ -23,7 +24,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Scoped Credential Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Grants permissions on a database scoped credential. 
   
@@ -38,7 +39,9 @@ GRANT permission  [ ,...n ]
     [ AS granting_principal ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a database scoped credential. Listed below.  
   

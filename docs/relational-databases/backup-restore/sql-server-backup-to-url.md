@@ -13,7 +13,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # SQL Server Backup to URL
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This topic introduces the concepts, requirements and components necessary to use the Microsoft Azure Blob storage service as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. These differences and a few code examples are included in this topic.  
   
@@ -34,7 +34,7 @@ ms.author: mathoma
 - Customers that need to backup to page blobs via a proxy server will need to use backuptourl.exe. 
 
 
-Backup of a large database to blob storage is subject to the limitations listed in [Managed instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+Backup of a large database to blob storage is subject to the limitations listed in [Managed Instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
  If the database is too large, either:
 - Use backup compression
@@ -192,7 +192,7 @@ Backup of a large database to blob storage is subject to the limitations listed 
   
  For more information about Restore arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-##  <a name="BackupTaskSSMS"></a> Back up up with SSMS  
+##  <a name="BackupTaskSSMS"></a> Back up with SSMS  
 You can back up a database to URL through the Back Up task in SQL Server Management Studio using a SQL Server Credential.  
   
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdevice (Transact-SQL)"
 title: "sp_helpdevice (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpdevice"
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about Microsoft® SQL Server™ backup devices.  
   

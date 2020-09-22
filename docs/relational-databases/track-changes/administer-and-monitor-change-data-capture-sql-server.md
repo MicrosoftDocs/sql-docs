@@ -1,4 +1,5 @@
 ---
+description: "Administer and Monitor Change Data Capture (SQL Server)"
 title: "Administer and Monitor Change Data Capture"
 ms.date: "01/02/2019"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.custom: seo-dt-2019
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how to administer and monitor change data capture.  
   
 ## <a name="Capture"></a> Capture Job

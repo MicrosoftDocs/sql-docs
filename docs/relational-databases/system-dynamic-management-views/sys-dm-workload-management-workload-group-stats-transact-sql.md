@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_workload_management_workload_groups_stats (Transact-SQL)"
 title: "sys.dm_workload_management_workload_groups_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/02/2019"
@@ -10,11 +11,10 @@ dev_langs:
   - "TSQL"
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: "= azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # sys.dm_workload_management_workload_groups_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Returns workload group statistics and the effective values of the workload group in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   

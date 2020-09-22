@@ -1,11 +1,12 @@
 ---
+description: "Referencing the ADO Libraries In a Visual C++ Application"
 title: "Referencing the ADO Libraries In a Visual C++ Application | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 dev_langs: 
   - "C++"

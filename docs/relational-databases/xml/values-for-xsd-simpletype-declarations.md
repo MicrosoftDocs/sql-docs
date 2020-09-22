@@ -1,5 +1,6 @@
 ---
 title: "Values for &lt;xsd:simpleType&gt; Declarations | Microsoft Docs"
+description: View a table of the restrictions that are applied for all recognized values of the <xsd:simpleType> declaration.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Values for &lt;xsd:simpleType&gt; Declarations
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following table outlines the restrictions that are applied, based on all recognized XSD simple type enumerations.  
   
  Also, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support the NaN value in **\<xsd:simpleType>** declarations. Schemas that include NaN values are rejected by the server.  

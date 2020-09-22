@@ -1,8 +1,9 @@
 ---
+description: "Properties Collection Properties, Methods, and Events"
 title: "Properties Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -15,15 +16,15 @@ ms.author: jroth
 ---
 # Properties Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](./count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](./item-property-ado.md)  
   
 ## Methods  
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](./refresh-method-ado.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Properties Collection (ADO)](./properties-collection-ado.md)

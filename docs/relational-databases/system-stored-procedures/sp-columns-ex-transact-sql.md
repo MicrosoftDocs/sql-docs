@@ -1,4 +1,5 @@
 ---
+description: "sp_columns_ex (Transact-SQL)"
 title: "sp_columns_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_columns_ex"
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_columns_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the column information, one row per column, for the specified linked server tables. **sp_columns_ex** returns column information for only the specific column if *column* is specified.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Banner Element (ssbdiagnose)"
 title: Banner Element
 diagnose: In SQL Server, the Banner element identifies which utility generated the ssbdiagnose output XML file.
 ms.prod: sql
@@ -12,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -21,7 +21,7 @@ ms.date: 03/01/2017
 # Banner Element (ssbdiagnose)
 
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Identifies which utility generated the **ssbdiagnose** output XML file.  
   

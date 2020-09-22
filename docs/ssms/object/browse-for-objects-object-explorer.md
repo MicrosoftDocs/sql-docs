@@ -1,4 +1,5 @@
 ---
+description: "Browse for Objects (Object Explorer)"
 title: "Browse for Objects (Object Explorer)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Browse for Objects (Object Explorer)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Displays a list of objects of the selected type. Select one of more of the objects from this list by selecting the corresponding check box. The **Browse for Objects** box only displays items appropriate for the action, and only displays items that you have permission to view.  
   
 ## Options  

@@ -1,8 +1,9 @@
 ---
+description: "Intervening Shape COMPUTE Clauses"
 title: "Intervening Shape COMPUTE Clauses | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -30,6 +31,6 @@ RELATE state TO PARAMETER 0)
 ```  
   
 ## See Also  
- [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
- [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Data Shaping Example](./data-shaping-example.md)   
+ [Formal Shape Grammar](./formal-shape-grammar.md)   
+ [Shape Commands in General](./shape-commands-in-general.md)

@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_replinfo (Transact-SQL)"
 title: "MSmerge_replinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_replinfo system table"
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_replinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_replinfo** table contains one row for each subscription. This table tracks information about subscriptions. This table is stored in the publication and subscription databases.  
   

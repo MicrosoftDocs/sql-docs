@@ -1,7 +1,8 @@
 ---
 title: Transact-SQL Code Snippets
+description: You can use Transact-SQL code snippets to aid your code writing. Look here for a list of snippet tasks with links to articles that describe them.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: markingmyname
@@ -14,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Transact-SQL Code Snippets
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A [!INCLUDE[tsql](../../includes/tsql-md.md)].code snippet is a template containing the basic structure of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or block. You can use snippets as a starting point when adding statements in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. You can insert the pre-defined snippets supplied with SQL Server, or create your own.  
 
@@ -29,4 +30,4 @@ A [!INCLUDE[tsql](../../includes/tsql-md.md)].code snippet is a template contain
   
 ## See Also
 
-[Query and Text Editors &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)
+[Query and Text Editors &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)

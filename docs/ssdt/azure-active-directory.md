@@ -1,11 +1,11 @@
 ---
 title: Azure Active Directory in SSDT
+description: "Learn about the Azure Active Directory authentication methods that SQL Server Data Tools (SSDT) provides for Azure SQL Database and Azure SQL Data Warehouse."
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
@@ -84,6 +84,6 @@ The MFA enforcement is provided by Azure AD through this additional MFA pop-up w
 [Multi-factor authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Azure Active Directory authentication with SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)  
+[SSDT Team Blog](https://docs.microsoft.com/archive/blogs/ssdt/)  
 [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Manage: Azure Data Studio notebooks"
 titleSuffix: SQL Server Big Data Clusters
-description: Use a notebook from Azure Data Studio to manage and troubleshoot a big data cluster.
+description: Use a notebook from Azure Data Studio to manage and troubleshoot SQL Server Big Data Clusters.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -14,11 +14,11 @@ ms.technology: big-data-cluster
 
 # Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides an extension for Azure Data Studio that includes notebooks. A notebook provides documentation and code that you can use in Azure Data Studio to manage SQL Server 2019 Big Data Clusters.
 
-Originally implemented as an open-source project, [notebooks](../azure-data-studio/notebooks-guidance.md) have been incorporated into [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
+Originally implemented as an open-source project, [notebooks](../azure-data-studio/notebooks-guidance.md) have been incorporated into [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
 
 You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

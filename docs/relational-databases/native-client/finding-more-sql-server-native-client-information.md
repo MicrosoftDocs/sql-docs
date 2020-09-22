@@ -1,4 +1,5 @@
 ---
+description: "Finding More SQL Server Native Client Information"
 title: "Finding More Information"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,14 +16,14 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Finding More SQL Server Native Client Information
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and other types of data access programming, see the following online resources:  
   
  [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)  
  This site provides technical articles, sample code, and other resources for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and other data access technologies.  
   
- [Data Access Blog](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Data Access Blog](https://docs.microsoft.com/archive/blogs/dataaccess/quick-update-re-data-access-blog)  
  This blog site provides information about data access technologies and allows you to interact directly with members of the product team.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  

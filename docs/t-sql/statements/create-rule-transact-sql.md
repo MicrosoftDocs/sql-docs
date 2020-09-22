@@ -1,4 +1,5 @@
 ---
+description: "CREATE RULE (Transact-SQL)"
 title: "CREATE RULE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -27,11 +28,11 @@ helpviewer_keywords:
   - "binding rules [SQL Server]"
   - "rules [SQL Server], creating"
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an object called a rule. When bound to a column or an alias data type, a rule specifies the acceptable values that can be inserted into that column.  
   
@@ -45,13 +46,14 @@ ms.author: carlrab
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the rule belongs.  
   
@@ -96,7 +98,7 @@ AS condition_expression
 ### A. Creating a rule with a range  
  The following example creates a rule that restricts the range of integers inserted into the column or columns to which this rule is bound.  
   
-```  
+```sql  
 CREATE RULE range_rule  
 AS   
 @range>= $1000 AND @range <$20000;  
@@ -105,7 +107,7 @@ AS
 ### B. Creating a rule with a list  
  The following example creates a rule that restricts the actual values entered into the column or columns (to which this rule is bound) to only those listed in the rule.  
   
-```  
+```sql  
 CREATE RULE list_rule  
 AS   
 @list IN ('1389', '0736', '0877');  
@@ -114,7 +116,7 @@ AS
 ### C. Creating a rule with a pattern  
  The following example creates a rule to follow a pattern of any two characters followed by a hyphen (`-`), any number of characters or no characters, and ending with an integer from `0` through `9`.  
   
-```  
+```sql  
 CREATE RULE pattern_rule   
 AS  
 @value LIKE '__-%[0-9]'  

@@ -1,4 +1,5 @@
 ---
+description: "sp_enumdsn (Transact-SQL)"
 title: "sp_enumdsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_enumdsn"
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_enumdsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of all defined ODBC and OLE DB data source names for a server running under a specific [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user account. This stored procedure is executed at the Publisher on any database.  
   

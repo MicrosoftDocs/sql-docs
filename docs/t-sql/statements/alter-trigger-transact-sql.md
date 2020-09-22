@@ -1,4 +1,5 @@
 ---
+description: "ALTER TRIGGER (Transact-SQL)"
 title: "ALTER TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/08/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "ALTER TRIGGER statement"
   - "DML triggers, modifying"
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifies the definition of a DML, DDL, or logon trigger that was previously created by the CREATE TRIGGER statement. Triggers are created by using CREATE TRIGGER. They can be created directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or from methods of assemblies that are created in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) and uploaded to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information about the parameters that are used in the ALTER TRIGGER statement, see [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -129,7 +130,9 @@ AS { sql_statement
     [ <EXECUTE AS Clause> ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which a DML trigger belongs. DML triggers are scoped to the schema of the table or view on which they are created. *schema**_name* is optional only if the DML trigger and its corresponding table or view belong to the default schema. *schema_name* cannot be specified for DDL or logon triggers.  
   
@@ -241,7 +244,7 @@ AS { sql_statement
 ## Examples  
  The following example creates a DML trigger in the AdventureWorks 2012 database, that prints a user-defined message to the client when a user tries to add or change data in the `SalesPersonQuotaHistory` table. The trigger is then modified by using `ALTER TRIGGER` to apply the trigger only on `INSERT` activities. This trigger is helpful because it reminds the user that updates or inserts rows into this table to also notify the `Compensation` department.  
   
-```  
+```sql  
 CREATE TRIGGER Sales.bonus_reminder  
 ON Sales.SalesPersonQuotaHistory  
 WITH ENCRYPTION  

@@ -1,8 +1,9 @@
 ---
-title: "NumericScale and Precision Properties Example (VB) | Microsoft Docs"
+description: "ADOX Code Example: NumericScale and Precision Properties Example (VB)"
+title: "NumericScale and Precision properties ADOX code example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ADOX Code Example: NumericScale and Precision Properties Example (VB)
-This example demonstrates the [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) and [Precision](../../../ado/reference/adox-api/precision-property-adox.md) properties of the [Column](../../../ado/reference/adox-api/column-object-adox.md) object. This code displays their value for the **Order Details** table of the *Northwind* database.  
+This example demonstrates the [NumericScale](./numericscale-property-adox.md) and [Precision](./precision-property-adox.md) properties of the [Column](./column-object-adox.md) object. This code displays their value for the **Order Details** table of the *Northwind* database.  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -70,6 +71,6 @@ End Sub
 ```  
   
 ## See Also  
- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [NumericScale Property (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
- [Precision Property (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)
+ [Column Object (ADOX)](./column-object-adox.md)   
+ [NumericScale Property (ADOX)](./numericscale-property-adox.md)   
+ [Precision Property (ADOX)](./precision-property-adox.md)

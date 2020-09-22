@@ -1,4 +1,5 @@
 ---
+description: "Version Property (ClientNetLibInfo Class)"
 title: "Version Property (ClientNetLibInfo)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Version property"
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Version Property (ClientNetLibInfo Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the version of the client network library file.  
   
 ## Syntax  

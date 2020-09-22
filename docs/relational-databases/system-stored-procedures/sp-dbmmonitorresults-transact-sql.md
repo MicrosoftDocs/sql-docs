@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitorresults (Transact-SQL)"
 title: "sp_dbmmonitorresults (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_dbmmonitorresults"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns status rows for a monitored database from the status table in which database mirroring monitoring history is stored and allows you to choose whether the procedure obtains the latest status beforehand.  
   

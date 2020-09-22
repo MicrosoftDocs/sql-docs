@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_cryptographic_provider_keys (Transact-SQL)"
 title: "sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_keys dynamic management function"
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_cryptographic_provider_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the keys provided by a Extensible Key Management (EKM) provider.  
 

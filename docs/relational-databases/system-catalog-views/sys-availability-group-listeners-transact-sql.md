@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_group_listeners (Transact-SQL)"
 title: "sys.availability_group_listeners (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "sys.availability_group_listeners catalog view"
   - "Availability Groups [SQL Server], listeners"
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.availability_group_listeners (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   For each Always On availability group, returns either zero rows indicating that no network name is associated with the availability group, or returns a row for each availability-group listener configuration in the Windows Server Failover Clustering (WSFC) cluster. This view displays the real-time configuration gathered from cluster.  
   

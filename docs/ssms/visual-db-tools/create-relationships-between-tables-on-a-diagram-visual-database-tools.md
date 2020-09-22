@@ -1,4 +1,5 @@
 ---
+description: "Create Relationships Between Tables on a Diagram (Visual Database Tools)"
 title: Create Relationships Between Tables on a Diagram
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can create relationships between columns in different tables in the Diagram Designer by dragging columns between tables.  
   
 ### To create a relationship graphically  

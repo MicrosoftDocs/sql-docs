@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Queries"
 title: "Integration Services (SSIS) Queries | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Queries
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Execute SQL task, the OLE DB source, the OLE DB destination, and the Lookup transformation can use SQL queries. In the Execute SQL task, the SQL statements can create, update, and delete database objects and data; run stored procedures; and perform SELECT statements. In the OLE DB source and the Lookup transformation, the SQL statements are typically SELECT statements or EXEC statements. The latter most frequently run stored procedures that return result sets.  

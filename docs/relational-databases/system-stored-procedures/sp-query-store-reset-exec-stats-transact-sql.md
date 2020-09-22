@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_reset_exec_stats (Transact-SQL)"
 title: "sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -18,12 +19,13 @@ helpviewer_keywords:
   - "sp_query_store_reset_exec_stats"
   - "sys.sp_query_store_reset_exec_stats"
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_reset_exec_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Clears the runtime stats for a specific query plan from the query store.  
   

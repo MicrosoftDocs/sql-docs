@@ -1,7 +1,7 @@
 ---
 title: Adding additional functionality through extensibility
 description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
@@ -43,9 +43,9 @@ This section covers the various contribution points that are defined in the pack
 
 The IntelliSense is supported inside azuredatastudio.
 
-## Contributes dashboard
+### Dashboard contribution points
 
-Contribute tab, container, insight widget to the dashboard.
+Contribute a tab, container, and/or insight widget to the dashboard.
 
 ![Dashboard](media/extensibility/dashboard-page.png)
 
@@ -106,7 +106,7 @@ To refer to registered container, specify the id of the container
 
 `dashboard.insights`
 
-You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15)
 
 ```json
 "dashboard.insights": {
@@ -271,4 +271,4 @@ In dashboard, we provide the following context variables:
 |`serverName`|A string of the server name of the current connection. Ex. `serverName == 'localhost'`.|
 |`databaseName` | A string of the database name of the current connection. Ex. `databaseName == 'master'`.|
 |`connection` | The full connection profile object for the current connection (IConnectionProfile)|
-|`dashboardContext` | A string of the context of the page of the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|
+|`dashboardContext` | A string of the context of the page the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|

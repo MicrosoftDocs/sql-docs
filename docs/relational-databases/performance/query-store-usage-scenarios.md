@@ -1,5 +1,6 @@
 ---
 title: "Query Store Usage Scenarios | Microsoft Docs"
+description: Learn how Query Store can be used to track and ensure predictable workload performance. Consider several examples in SQL Server.
 ms.custom: ""
 ms.date: "11/29/2018"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store Usage Scenarios
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Query Store can be used in wide set of scenarios when tracking and ensuring predictable workload performance is critical. Here are some examples you can consider:  
   
@@ -70,7 +71,7 @@ When you identify a query with suboptimal performance, your action depends on th
   
 -   Creating missing indexes on tables referenced by expensive queries.  
   
--   Applying filtering policy for row-level security. For more information, see [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
+-   Applying filtering policy for row-level security. For more information, see [Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
   
 -   Adding temporal system-versioning to tables that are frequently modified by your OLTP applications.  
   

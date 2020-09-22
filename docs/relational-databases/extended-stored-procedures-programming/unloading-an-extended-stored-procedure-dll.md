@@ -1,4 +1,5 @@
 ---
+description: "Unloading an Extended Stored Procedure DLL"
 title: "Unloading an Extended Stored Procedure DLL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Unloading an Extended Stored Procedure DLL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  

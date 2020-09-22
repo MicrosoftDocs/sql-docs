@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_broker_forwarded_messages (Transact-SQL)"
 title: "sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_broker_forwarded_messages dynamic management view"
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_broker_forwarded_messages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each Service Broker message that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in the process of forwarding.  
   

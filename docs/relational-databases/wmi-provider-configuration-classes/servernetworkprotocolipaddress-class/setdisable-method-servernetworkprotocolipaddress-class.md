@@ -1,4 +1,5 @@
 ---
+description: "SetDisable Method (ServerNetworkProtocolIPAddress Class)"
 title: "SetDisable Method (ServerNetworkProtocolIPAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDisable method"
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetDisable Method (ServerNetworkProtocolIPAddress Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Disables the IP address.  
   
 ## Syntax  

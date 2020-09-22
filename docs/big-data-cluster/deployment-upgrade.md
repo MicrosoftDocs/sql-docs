@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 The upgrade path depends on the current version of SQL Server Big Data Cluster (BDC). To upgrade from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE) update, you can upgrade in place. In-place upgrade from a customer technology preview (CTP) or release candidate version of BDC is not supported. You need to remove and recreate the cluster. The following sections describe the steps for each scenario:
 
@@ -31,8 +31,16 @@ Before you proceed, check the [upgrade release notes for known issues](release-n
 
 This section explains how to upgrade a SQL Server BDC from a supported release (starting with SQL Server 2019 GDR1) to a newer supported release.
 
+1. Verify no active Livy sessions.
+
+   Make sure no active Livy sessions or batch jobs are running in Azure Data Studio. An easy way to confirm this is either through `curl` command or a browser to request these URLs:
+
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
+
 1. Back up SQL Server master instance.
-2. Back up HDFS.
+
+1. Back up HDFS.
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
@@ -44,7 +52,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. Update `azdata`.
+1. Update `azdata`.
 
    Follow the instructions for installing `azdata`. 
    - [Windows installer](deploy-install-azdata-installer.md)
@@ -61,10 +69,10 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   For example, the following script uses `2019-CU4-ubuntu-16.04` image tag:
+   For example, the following script uses `2019-CU6-ubuntu-16.04` image tag:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU6-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -91,7 +99,7 @@ A timeout can occur if certain components are not upgraded in the allocated time
 To increase the timeouts for an upgrade, use **--controller-timeout** and **--component-timeout** parameters to specify higher values when you issue the upgrade. This option is only available starting with SQL Server 2019 CU2 release. For example:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU6-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** designates the number of minutes to wait for the controller or controller db to finish upgrading.
 **--component-timeout** designates the amount of time that each subsequent phase of the upgrade has to complete.
@@ -118,7 +126,7 @@ In-place upgrade from a CTP or release candidate build of SQL Server Big Data Cl
 
 ### Backup and delete the old cluster
 
-There is no in place upgrade for big data clusters deployed before SQL Server 2019 GDR1 release. The only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if a newer container image is downloaded on cluster deployed with different older version, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQl Server release version. To upgrade to the latest release, use the following steps:
+There is no in place upgrade for big data clusters deployed before SQL Server 2019 GDR1 release. The only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if a newer container image is downloaded on cluster deployed with different older version, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQL Server release version. To upgrade to the latest release, use the following steps:
 
 1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy out the data with `curl`](data-ingestion-curl.md).
 

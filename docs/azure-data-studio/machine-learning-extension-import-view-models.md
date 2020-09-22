@@ -1,22 +1,22 @@
 ---
 title: Import or view models with Machine Learning extension
-titleSuffix: Azure Data Studio
 description: Learn how to use Machine Learning extension for Azure Data Studio to import an ONNX model or view already imported models in your database.
-ms.date: "05/19/2020"
-ms.reviewer: "sstein"
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+ms.reviewer: sstein
+ms.custom: 
+ms.date: 06/09/2020
 ---
-# Import or view models with Machine Learning extension (preview) for Azure Data Studio
+
+# Import or view models with Machine Learning extension for Azure Data Studio (Preview)
 
 Learn how to use the [Machine Learning extension for Azure Data Studio](machine-learning-extension.md) to import an ONNX model or view already imported models in your database.
 
 > [!IMPORTANT]
-> Import and view in a database with the Machine Learning extension currently only supports [Azure SQL Edge with ONNX](/azure/azure-sql-edge/onnx-overview).
+> Import and view in a database with the Machine Learning extension currently only supports [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) and [Azure SQL Edge with ONNX](/azure/azure-sql-edge/onnx-overview).
 
 ## Prerequisites
 
@@ -64,6 +64,6 @@ Follow the steps below to import an ONNX model in your database.
 - [Machine Learning extension in Azure Data Studio](machine-learning-extension.md)
 - [Manage packages in database](machine-learning-extension-manage-packages.md)
 - [Make predictions](machine-learning-extension-predictions.md)
-- [Import and view models](machine-learning-extension-import-view-models.md)
 - [SQL machine learning documentation](../machine-learning/index.yml)
+- [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [Machine learning and AI with ONNX in SQL Edge (Preview)](/azure/azure-sql-edge/onnx-overview)

@@ -12,7 +12,7 @@ ms.technology: linux
 
 # Failover Cluster Instances - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains the concepts related to SQL Server failover cluster instances (FCI) on Linux. 
 

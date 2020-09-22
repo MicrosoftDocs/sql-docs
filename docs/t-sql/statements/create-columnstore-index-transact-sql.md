@@ -1,4 +1,5 @@
 ---
+description: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"
@@ -26,12 +27,12 @@ helpviewer_keywords:
   - "CREATE COLUMNSTORE INDEX statement"
   - "CREATE INDEX statement"
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Convert a rowstore table to a clustered columnstore index or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload or to improve data compression and query performance for data warehousing workloads.  
   
@@ -105,7 +106,9 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 [;]  
 
 ```
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 Some of the options are not available in all database engine versions. The following table shows the versions when the options are introduced in CLUSTERED COLUMNSTORE and NONCLUSTERED COLUMNSTORE indexes:
 
@@ -417,10 +420,10 @@ These limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)
   
 ```sql  
 CREATE TABLE SimpleTable(  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;  
 GO  
@@ -431,10 +434,10 @@ GO
   
 ```sql  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
@@ -453,10 +456,10 @@ GO
 ```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
   
 --Create two nonclustered indexes for use with this example  
@@ -485,10 +488,10 @@ GO
     ```sql  
     --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
-        ProductKey [int] NOT NULL,  
-        OrderDateKey [int] NOT NULL,  
-         DueDateKey [int] NOT NULL,  
-         ShipDateKey [int] NOT NULL )  
+        ProductKey [INT] NOT NULL,  
+        OrderDateKey [INT] NOT NULL,  
+         DueDateKey [INT] NOT NULL,  
+         ShipDateKey [INT] NOT NULL )  
     )  
     WITH (  
         CLUSTERED INDEX ( ProductKey )  
@@ -602,10 +605,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```sql  
 CREATE TABLE SimpleTable  
-(ProductKey [int] NOT NULL,   
-OrderDateKey [int] NOT NULL,   
-DueDateKey [int] NOT NULL,   
-ShipDateKey [int] NOT NULL);  
+(ProductKey [INT] NOT NULL,   
+OrderDateKey [INT] NOT NULL,   
+DueDateKey [INT] NOT NULL,   
+ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  

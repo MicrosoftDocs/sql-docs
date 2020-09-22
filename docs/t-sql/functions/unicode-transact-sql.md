@@ -1,4 +1,5 @@
 ---
+description: "UNICODE (Transact-SQL)"
 title: "UNICODE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UNICODE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the integer value, as defined by the Unicode standard, for the first character of the input expression.  
   
@@ -34,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 UNICODE ( 'ncharacter_expression' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **'** *ncharacter_expression* **'**  
 Is an **nchar** or **nvarchar** expression.  
   
@@ -83,12 +86,12 @@ SET @nstring = N'Åkergatan 24';
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
 WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
-   BEGIN;  
-   SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1));  
-   SELECT @position = @position + 1;  
-   END;  
+BEGIN;  
+   SELECT @position AS [position],   
+      SUBSTRING(@nstring, @position, 1) AS [character],  
+      UNICODE(SUBSTRING(@nstring, @position, 1)) AS [code_point];  
+   SET @position = @position + 1;  
+END; 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

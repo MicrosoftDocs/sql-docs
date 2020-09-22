@@ -1,5 +1,6 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs"
+description: Returns statistics about the In-Memory OLTP checkpoint operations in the current database. Learn how this view differs for versions of SQL Server.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_checkpoint_stats dynamic management view"
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns statistics about the In-Memory OLTP checkpoint operations in the current database. If the database has no In-Memory OLTP objects, returns an empty result set.  
   

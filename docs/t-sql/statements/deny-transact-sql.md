@@ -1,5 +1,6 @@
 ---
-title: "DENY (Transact-SQL) | Microsoft Docs"
+description: "DENY (Transact-SQL)"
+title: DENY (Transact-SQL)
 ms.custom: ""
 ms.date: "05/15/2017"
 ms.prod: sql
@@ -28,8 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships. DENY takes precedence over all permissions, except that DENY does not apply to object owners or members of the sysadmin fixed server role.
   **Security Note** Members of the sysadmin fixed server role and object owners cannot be denied permissions."
@@ -57,7 +60,7 @@ DENY   { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DENY   
     <permission> [ ,...n ]  
@@ -80,7 +83,9 @@ DENY
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  ALL  
  This option does not deny all possible permissions. Denying ALL is equivalent to denying the following permissions.  
   
@@ -147,11 +152,12 @@ The use of AS in this statement does not imply the ability to impersonate anothe
   
  Grantees of CONTROL SERVER permission, such as members of the sysadmin fixed server role, can deny any permission on any securable in the server. Grantees of CONTROL permission on the database, such as members of the db_owner fixed database role, can deny any permission on any securable in the database. Grantees of CONTROL permission on a schema can deny any permission on any object in the schema. If the AS clause is used, the specified principal must own the securable on which permissions are being denied.  
   
-## Examples  
+## Examples
+
  The following table lists the securables and the topics that describe the securable-specific syntax.  
   
-|||  
-|-|-|  
+|Securables|Syntax|
+|----------|------|
 |Application Role|[DENY Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Assembly|[DENY Assembly Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |Asymmetric Key|[DENY Asymmetric Key Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  

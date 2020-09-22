@@ -1,4 +1,5 @@
 ---
+description: "MSreplication_monitordata (Transact-SQL)"
 title: "MSreplication_monitordata (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_monitordata system table"
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSreplication_monitordata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSreplication_monitordata** table contains cached data used by Replication Monitor, with one row for each monitored subscription. This table is stored in the distribution database.  
   

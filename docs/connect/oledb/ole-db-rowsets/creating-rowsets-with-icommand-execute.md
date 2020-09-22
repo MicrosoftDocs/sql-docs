@@ -1,6 +1,6 @@
 ---
-title: "Creating Rowsets with ICommand::Execute | Microsoft Docs"
-description: "Creating rowsets with ICommand::Execute"
+title: "Create rowset with ICommand::Execute (OLE DB driver) | Microsoft Docs"
+description: Learn about creating rowsets with ICommand::Execute in OLE DB Driver for SQL Server. The properties that you want in the rowset can constrain the command text.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, rowsets"
   - "OLE DB rowsets, creating"
   - "Execute method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Creating Rowsets with ICommand::Execute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

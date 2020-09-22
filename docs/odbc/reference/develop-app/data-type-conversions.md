@@ -1,4 +1,5 @@
 ---
+description: "Data Type Conversions"
 title: "Data Type Conversions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

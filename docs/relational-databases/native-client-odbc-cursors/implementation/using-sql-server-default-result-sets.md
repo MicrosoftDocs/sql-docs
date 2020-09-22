@@ -1,4 +1,5 @@
 ---
+description: "Using SQL Server Default Result Sets"
 title: "Using SQL Server Default Result Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using SQL Server Default Result Sets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The default ODBC cursor attributes are:  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xtp_gc_stats (Transact-SQL)"
 title: "sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_gc_stats dynamic management view"
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Provides information (the overall statistics) about the current behavior of the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] garbage-collection process.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Audit Database Principal Impersonation Event Class"
 title: "Audit Database Principal Impersonation Event Class"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # Audit Database Principal Impersonation Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Database Principal Impersonation** event class occurs when an impersonation occurs within the database scope, such as EXECUTE AS \<*user*> or SETUSER.  
   
 ## Audit Database Principal Impersonation Event Class Data Columns  

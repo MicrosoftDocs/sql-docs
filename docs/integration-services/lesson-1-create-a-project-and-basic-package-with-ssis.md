@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Create a project and basic package with SSIS"
 title: "Lesson 1: Create a project and basic package with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1: Create a project and basic package with SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -44,7 +45,8 @@ For this tutorial, the source data is a set of historical currency data in a fla
   
 Here is an example of the source data in the SampleCurrencyData.txt file:  
   
-<pre>1.00070049USD9/3/05 0:001.001201442  
+```
+1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
 1.00020004USD9/5/05 0:001.001201442  
 1.00020004USD9/6/05 0:001  
@@ -53,7 +55,8 @@ Here is an example of the source data in the SampleCurrencyData.txt file:
 1.00070049USD9/9/05 0:001.001502253  
 1.00070049USD9/10/05 0:000.99990001  
 1.00020004USD9/11/05 0:001.001101211  
-1.00020004USD9/12/05 0:000.99970009</pre>  
+1.00020004USD9/12/05 0:000.99970009
+```
   
 When working with flat file source data, it's important to understand how the Flat File connection manager interprets the flat file data. If the flat file source is Unicode, the Flat File connection manager defines all columns as [DT_WSTR] with a default column width of 50. If the flat file source is ANSI-encoded, the columns are defined as [DT_STR] with a default column width of 50. You probably have to change these defaults to make the string column types more applicable for your data. You need to look at the data type of the destination, and then choose that type within the Flat File connection manager.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Create data connection strings - Report Builder & SSRS | Microsoft Docs"
+description: Learn how to create data connection strings and learn important information related to data source credentials.
 ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -29,7 +30,7 @@ ms.author: maggies
 |---------------------|-----------------|---------------------|  
 |SQL Server database on the local server|`data source="(local)";initial catalog=AdventureWorks`|Set data source type to **Microsoft SQL Server**. For more information, see [SQL Server Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
 |SQL Server Instance<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Set data source type to **Microsoft SQL Server**.|  
-|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to **Microsoft Azure SQL Database**. For more information, see [SQL Azure Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to **Microsoft Azure SQL Database**. For more information, see [Azure SQL Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Set data source type to **Microsoft SQL Server Parallel Data Warehouse**. For more information, see [SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Analysis Services database on the local server|`data source=localhost;initial catalog=Adventure Works DW`|Set data source type to **Microsoft SQL Server Analysis Services**. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) or [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Set data source type to **Microsoft SQL Server Analysis Services**. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  

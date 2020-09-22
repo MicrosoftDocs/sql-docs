@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergefilter (Transact-SQL)"
 title: "sp_addmergefilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergefilter"
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds a new merge filter to create a partition based on a join with another table. This stored procedure is executed at the Publisher on the publication database.  
   

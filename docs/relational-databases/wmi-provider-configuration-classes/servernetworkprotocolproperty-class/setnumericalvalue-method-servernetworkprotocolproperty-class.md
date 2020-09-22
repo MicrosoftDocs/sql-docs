@@ -1,4 +1,5 @@
 ---
+description: "SetNumericalValue Method (ServerNetworkProtocolProperty Class)"
 title: "SetNumericalValue Method (ServerNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetNumericalValue method"
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetNumericalValue Method (ServerNetworkProtocolProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets the numeric value of the referenced property.  
   
 ## Syntax  

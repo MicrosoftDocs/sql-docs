@@ -1,12 +1,12 @@
 ---
 title: Compare and Synchronize Data in Tables with Data in a Reference Database
+description: Learn how to compare data from two different databases. See how to synchronize the data and how to view the script that is used for the synchronization process.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/27/2020

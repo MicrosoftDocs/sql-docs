@@ -1,4 +1,5 @@
 ---
+description: "Schema.ini File (Text File Driver)"
 title: "Schema.ini File (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -84,7 +85,7 @@ Col2=CustomerName Text Width 30
   
 ```  
   
-n=ColumnNametype [#]  
+n=ColumnName type [Width] [#]  
 ```  
   
 ## Remarks  

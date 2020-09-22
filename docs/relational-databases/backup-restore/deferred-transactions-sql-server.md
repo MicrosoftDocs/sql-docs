@@ -18,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Deferred Transactions (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, a corrupted transaction can become deferred if data required by rollback (undo) is offline during database startup. A *deferred transaction* is a transaction that is uncommitted when the roll forward phase finishes and that has encountered an error that prevents it from being rolled back. Because the transaction cannot be rolled back, it is deferred.  
   
 > [!NOTE]  
@@ -42,6 +42,14 @@ ms.author: mikeray
 |Redo on database mirroring|Deferred transaction|  
 |Filegroup is offline|Deferred transaction|  
   
+### Requirements and Limitations
+
+ - The database must use the FULL or BULK-LOGGED recovery model.
+ - At least one database and log backup must have been completed for the database
+ - Deffered transactions do not apply to errors encountered during a rollback of a transaction after the database is online. (e.g. a runtime error)
+ - Transactions cannot be deferred for recovery failures during a database attach
+ - Some transactions such as system transactions (Ex. page allocation) cannot be deferred
+
 ## Moving a Transaction Out of the DEFERRED State  
   
 > [!IMPORTANT]  

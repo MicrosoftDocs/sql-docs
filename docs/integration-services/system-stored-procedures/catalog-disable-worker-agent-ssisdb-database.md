@@ -1,4 +1,5 @@
 ---
+description: "catalog.disable_worker_agent (SSISDB Database)"
 title: "catalog.disable_worker_agent (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
@@ -13,17 +14,14 @@ ms.author: chugu
 ---
 # catalog.disable_worker_agent (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Disable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.
 
 ## Syntax
 
 ```sql
-catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
+catalog.disable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## Arguments
 [@WorkerAgentId =] *WorkerAgentId*

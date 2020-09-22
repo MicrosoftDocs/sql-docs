@@ -1,4 +1,5 @@
 ---
+description: "ROUTINE_COLUMNS (Transact-SQL)"
 title: "ROUTINE_COLUMNS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "ROUTINE_COLUMNS view"
   - "INFORMATION_SCHEMA.ROUTINE_COLUMNS view"
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUTINE_COLUMNS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one row for each column returned by the table-valued functions that can be accessed by the current user in the current database.  
   

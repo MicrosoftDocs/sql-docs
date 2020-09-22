@@ -1,4 +1,5 @@
 ---
+description: "sys.system_sql_modules (Transact-SQL)"
 title: "sys.system_sql_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.system_sql_modules catalog view"
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns one row per system object that contains an SQL language-defined module. System objects of type FN, IF, P, PC, TF, V have an associated SQL module. To identify the containing object, you can join this view to [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
   

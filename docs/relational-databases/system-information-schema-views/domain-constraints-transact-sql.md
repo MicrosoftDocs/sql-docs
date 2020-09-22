@@ -1,4 +1,5 @@
 ---
+description: "DOMAIN_CONSTRAINTS (Transact-SQL)"
 title: "DOMAIN_CONSTRAINTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.DOMAIN_CONSTRAINTS view"
   - "DOMAIN_CONSTRAINTS view"
 ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DOMAIN_CONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one row for each alias data type in the current database that has a rule bound to it and that can be accessed by current user.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Common Criteria Compliance Enabled Configuration | Microsoft Docs"
+description: Learn which criteria the common criteria compliance option enables in SQL Server, and see how to comply with Common Criteria Evaluation Assurance Level 4+.
 ms.custom: ""
 ms.date: "08/21/2018"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # Common Criteria Compliance Enabled Server Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The common criteria compliance option enables the following elements that are required for the [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/).  
   

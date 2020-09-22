@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Audit Records | Microsoft Docs"
+description: SQL Server audits consist of audit action items, which are recorded to an audit target. Check this summary for the records that can be sent to a target.
 ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SQL Server Audit Records
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Audits consist of zero or more audit action items, which are recorded to an audit *target*. The audit target can be a binary file, the Windows Application event log, or the Windows Security event log. The records sent to the target can contain the elements described in the following table:  

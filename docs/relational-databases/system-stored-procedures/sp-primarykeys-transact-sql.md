@@ -1,4 +1,5 @@
 ---
+description: "sp_primarykeys (Transact-SQL)"
 title: "sp_primarykeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_primarykeys"
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_primarykeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the primary key columns, one row per key column, for the specified remote table.  
   

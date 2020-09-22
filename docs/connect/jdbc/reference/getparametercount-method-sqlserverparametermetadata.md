@@ -1,4 +1,5 @@
 ---
+description: "getParameterCount Method (SQLServerParameterMetaData)"
 title: "getParameterCount Method (SQLServerParameterMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

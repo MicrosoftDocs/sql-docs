@@ -1,4 +1,5 @@
 ---
+description: "CREATE MESSAGE TYPE (Transact-SQL)"
 title: "CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -26,11 +27,11 @@ helpviewer_keywords:
   - "binary [SQL Server], message types"
   - "CREATE MESSAGE TYPE statement"
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new message type. A message type defines the name of a message and the validation that [!INCLUDE[ssSB](../../includes/sssb-md.md)] performs on messages that have that name. Both sides of a conversation must define the same message types.  
   
@@ -49,7 +50,9 @@ CREATE MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *message_type_name*  
  Is the name of the message type to create. A new message type is created in the current database and owned by the principal specified in the AUTHORIZATION clause. Server, database, and schema names cannot be specified. The *message_type_name* can be up to 128 characters.  
   
@@ -90,7 +93,7 @@ CREATE MESSAGE TYPE message_type_name
 ### A. Creating a message type containing well-formed XML  
  The following example creates a new message type that contains well-formed XML.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
   [//Adventure-Works.com/Expenses/SubmitExpense]  
   VALIDATION = WELL_FORMED_XML ;     
@@ -99,7 +102,7 @@ CREATE MESSAGE TYPE
 ### B. Creating a message type containing typed XML  
  The following example creates a message type for an expense report encoded in XML. The example creates an XML schema collection that holds the schema for a simple expense report. The example then creates a new message type that validates messages against the schema.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -138,7 +141,7 @@ N'<?xml version="1.0" encoding="UTF-16" ?>
 ### C. Creating a message type for an empty message  
  The following example creates a new message type with empty encoding.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = EMPTY ;  
@@ -147,7 +150,7 @@ CREATE MESSAGE TYPE
 ### D. Creating a message type containing binary data  
  The following example creates a new message type to hold binary data. Because the message will contain data that is not XML, the message type specifies a validation type of `NONE`. Notice that, in this case, the application that receives a message of this type must verify that the message contains data, and that the data is of the type expected.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/ReceiptImage]  
     VALIDATION = NONE ;  

@@ -1,4 +1,5 @@
 ---
+description: "sp_register_custom_scripting (Transact-SQL)"
 title: "sp_register_custom_scripting (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_register_custom_scripting"
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_register_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Replication allows user-defined custom stored procedures to replace one or more of the default procedures used in transactional replication. When a schema change is made to a replicated table, these stored procedures are re-created. **sp_register_custom_scripting** registers a stored procedure or [!INCLUDE[tsql](../../includes/tsql-md.md)] script file that is executed when a schema change occurs to script out the definition for a new user-defined custom stored procedure. This new user-defined custom stored procedure should reflect the new schema for the table. **sp_register_custom_scripting** is executed at the Publisher on the publication database, and the registered script file or stored procedure is executed at the Subscriber when a schema change occurs.  
   

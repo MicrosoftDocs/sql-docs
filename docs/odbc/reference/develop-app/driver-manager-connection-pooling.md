@@ -1,4 +1,5 @@
 ---
+description: "Driver Manager Connection Pooling"
 title: "Driver Manager Connection Pooling | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

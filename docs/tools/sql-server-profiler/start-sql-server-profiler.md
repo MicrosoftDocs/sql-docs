@@ -16,7 +16,7 @@ ms.date: 07/07/2017
 
 # Run SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 You can run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in several different ways, to support gathering trace output in a variety of scenarios. You can start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] from the Windows 10 **Start** menu, from the **Tools** menu in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor, and from several locations in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -50,4 +50,4 @@ When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md
 
 ## Next steps  
  [SQL Server Profiler overview](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md?view=sql-server-ver15)

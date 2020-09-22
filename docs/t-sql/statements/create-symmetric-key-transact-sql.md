@@ -1,4 +1,5 @@
 ---
+description: "CREATE SYMMETRIC KEY (Transact-SQL)"
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/11/2019"
@@ -24,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Generates a symmetric key and specifies its properties in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -62,7 +63,9 @@ CREATE SYMMETRIC KEY key_name
     | ASYMMETRIC KEY asym_key_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_name*  
  Specifies the unique name by which the symmetric key is known in the database. Temporary keys are designated when the _key_name_ begins with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider.  
   
@@ -152,7 +155,7 @@ Specify the encrypting algorithm.
 ### A. Creating a symmetric key  
  The following example creates a symmetric key called `JanainaKey09` by using the `AES 256` algorithm, and then encrypts the new key with certificate `Shipping04`.  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey09   
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY CERTIFICATE Shipping04;  
@@ -162,8 +165,7 @@ GO
 ### B. Creating a temporary symmetric key  
  The following example creates a temporary symmetric key called `#MarketingXXV` from the pass phrase: `The square of the hypotenuse is equal to the sum of the squares of the sides`. The key is provisioned with a GUID that is generated from the string `Pythagoras` and encrypted with certificate `Marketing25`.  
   
-```  
-  
+```sql 
 CREATE SYMMETRIC KEY #MarketingXXV   
 WITH ALGORITHM = AES_128,  
 KEY_SOURCE   
@@ -176,7 +178,7 @@ GO
 ### C. Creating a symmetric key using an Extensible Key Management (EKM) device  
  The following example creates a symmetric key called `MySymKey` by using a provider called `MyEKMProvider` and a key name of `KeyForSensitiveData`. It assigns authorization to `User1` and assumes that the system administrator has already registered the provider called `MyEKMProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY MySymKey  
 AUTHORIZATION User1  
 FROM PROVIDER EKMProvider  

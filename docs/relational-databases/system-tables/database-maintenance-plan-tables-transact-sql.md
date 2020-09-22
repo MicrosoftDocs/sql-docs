@@ -1,4 +1,5 @@
 ---
+description: "Database Maintenance Plan Tables (Transact-SQL)"
 title: "Database Maintenance Plan Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], system tables"
   - "system tables [SQL Server], database maintenance plans"
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Maintenance Plan Tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section describe the system tables that store information used by database maintenance plans. These tables preserve information for instances that are upgraded from an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

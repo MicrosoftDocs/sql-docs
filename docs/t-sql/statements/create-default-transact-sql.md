@@ -1,4 +1,5 @@
 ---
+description: "CREATE DEFAULT (Transact-SQL)"
 title: "CREATE DEFAULT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "objects [SQL Server], creating"
   - "DEFAULT definition"
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates an object called a default. When bound to a column or an alias data type, a default specifies a value to be inserted into the column to which the object is bound (or into all columns, if of an alias data type), when no value is explicitly supplied during an insert.  
   
@@ -40,7 +41,9 @@ CREATE DEFAULT [ schema_name . ] default_name
 AS constant_expression [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *schema_name*  
  The name of the schema to which the default belongs.  
   

@@ -1,4 +1,5 @@
 ---
+description: "ERROR_SEVERITY (Transact-SQL)"
 title: "ERROR_SEVERITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "CATCH block"
   - "ERROR_SEVERITY function"
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_SEVERITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the severity value of the error where an error occurs, if that error caused the CATCH block of a TRY...CATCH construct to execute.  
 
@@ -32,11 +33,13 @@ This function returns the severity value of the error where an error occurs, if 
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_SEVERITY ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **int**  
   
 ## Return Value  
@@ -55,6 +58,7 @@ When called in a CATCH block where an error occurs, `ERROR_SEVERITY` returns the
   
 ### A. Using ERROR_SEVERITY in a CATCH block  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_SEVERITY` returns the severity value of that error.  
+
 ```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  

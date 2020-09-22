@@ -1,5 +1,6 @@
 ---
-title: "SQLServerDataSource Class | Microsoft Docs"
+title: "SQLServerDataSource Class"
+description: "Learn the public API details for the SQLServerDataSource class in the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

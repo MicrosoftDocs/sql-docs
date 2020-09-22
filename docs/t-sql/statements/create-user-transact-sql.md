@@ -1,5 +1,6 @@
 ---
-title: "CREATE USER (Transact-SQL) | Microsoft Docs"
+description: "CREATE USER (Transact-SQL)"
+title: CREATE USER (Transact-SQL)
 ms.custom: ""
 ms.date: "11/06/2019"
 ms.prod: sql
@@ -30,8 +31,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CREATE USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Adds a user to the current database. The 12 types of users are listed below with a sample of the most basic syntax:  
   
@@ -67,7 +70,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -120,7 +123,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
+-- Syntax for users based on Azure AD logins for Azure SQL Managed Instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -134,10 +137,10 @@ CREATE USER user_name
 ```
 
 > [!NOTE]
-> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> The Azure AD admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -165,7 +168,9 @@ CREATE USER user_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *user_name*  
  Specifies the name by which the user is identified inside this database. *user_name* is a **sysname**. It can be up to 128 characters long. When creating a user based on a Windows principal, the Windows principal name becomes the user name unless another user name is specified.  
   
@@ -216,7 +221,7 @@ ASYMMETRIC KEY *asym_key_name*
   
  Specifies the asymmetric key for which the database user is being created.  
   
-DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later,   [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user will be the default language of the database. If the default language for the user is not specified and the default language of the database is later changed, the default language of the user will change to the new default language for the database.  
@@ -263,11 +268,11 @@ GO
   
  Information about database users is visible in the [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) catalog view.
 
-A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in SQL Database managed instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
+A new syntax extension, **FROM EXTERNAL PROVIDER** is available for creating server-level Azure AD logins in SQL Managed Instance. Azure AD logins allow database-level Azure AD principals to be mapped to server-level Azure AD logins. To create an Azure AD user from an Azure AD login use the following syntax:
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-When creating the user in the SQL Database managed instance database, the login_name must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
+When creating the user in the SQL Managed Instance database, the login_name must correspond to an existing Azure AD login, or else using the **FROM EXTERNAL PROVIDER** clause will only create an Azure AD user without a login in the master database. For example, this command will create a contained user:
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -334,7 +339,7 @@ When creating the user in the SQL Database managed instance database, the login_
   
  When using contained database users on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure access using a database-level firewall rule, instead of a server-level firewall rule. For more information, see [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] contained database users, SSMS can support Multi-Factor Authentication. For more information, see [SSMS support for Azure AD MFA with SQL Database and [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### Permissions  
  Requires ALTER ANY USER permission on the database.  
@@ -344,13 +349,13 @@ For [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../
 ### A. Creating a database user based on a SQL Server login  
  The following example first creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login named `AbolrousHazem`, and then creates a corresponding database user `AbolrousHazem` in `AdventureWorks2012`.  
   
-```  
+```sql  
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
 Change to a user database. For example, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the `USE AdventureWorks2012` statement. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], you must make a new connection to the user database.
 
-```   
+```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
 GO   
 ```  
@@ -358,7 +363,7 @@ GO
 ### B. Creating a database user with a default schema  
  The following example first creates a server login named `WanidaBenshoof` with a password, and then creates a corresponding database user `Wanida`, with the default schema `Marketing`.  
   
-```  
+```sql  
 CREATE LOGIN WanidaBenshoof   
     WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
 USE AdventureWorks2012;  
@@ -372,7 +377,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE CERTIFICATE CarnationProduction50  
     WITH SUBJECT = 'Carnation Production Facility Supervisors',  
@@ -385,7 +390,7 @@ GO
 ###  <a name="withoutLogin"></a> D. Creating and using a user without a login  
  The following example creates a database user `CustomApp` that does not map to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The example then grants a user `adventure-works\tengiz0` permission to impersonate the `CustomApp` user.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 CREATE USER CustomApp WITHOUT LOGIN ;  
 GRANT IMPERSONATE ON USER::CustomApp TO [adventure-works\tengiz0] ;  
@@ -394,14 +399,14 @@ GO
   
  To use the `CustomApp` credentials, the user `adventure-works\tengiz0` executes the following statement.  
   
-```  
+```sql  
 EXECUTE AS USER = 'CustomApp' ;  
 GO  
 ```  
   
  To revert back to the `adventure-works\tengiz0` credentials, the user executes the following statement.  
   
-```  
+```sql  
 REVERT ;  
 GO  
 ```  
@@ -411,7 +416,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. This example works in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] if DEFAULT_LANGUAGE is removed.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER Carlo  
@@ -426,7 +431,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER [Contoso\Fritz] ;  
@@ -438,12 +443,11 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'  
-, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;  
-  
+, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;
 ```  
   
 ### H. Creating a user to copy encrypted data  
@@ -451,14 +455,14 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 CREATE USER [Chin]   
 WITH   
       DEFAULT_SCHEMA = dbo  
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### I. Create an Azure AD user from an Azure AD login in SQL Database managed instance
+### I. Create an Azure AD user from an Azure AD login in SQL Managed Instance
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
@@ -488,7 +492,7 @@ GO
 
 ### J. Create an Azure AD user without an AAD login for the database
 
-The following syntax is used to create an Azure AD user bob@contoso.com, in the SQL Database managed instance database (contained user):
+The following syntax is used to create an Azure AD user bob@contoso.com, in the SQL Managed Instance database (contained user):
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

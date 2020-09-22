@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_cursors (Transact-SQL)"
 title: "sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_cursors dynamic management function"
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_exec_cursors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the cursors that are open in various databases.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Standard Data Stream Protocol"
 title: "Standard Data Stream Protocol | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/14/2018

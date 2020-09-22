@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_set_warehouse_instance_name (Transact-SQL)"
 title: "sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_set_warehouse_instance_name"
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_set_warehouse_instance_name (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies the instance name for the connection string used to connect to the management data warehouse.  
   

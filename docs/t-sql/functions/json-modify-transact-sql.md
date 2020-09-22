@@ -1,4 +1,5 @@
 ---
+description: "JSON_MODIFY (Transact-SQL)"
 title: "JSON_MODIFY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020
@@ -13,7 +14,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 ---
 # JSON_MODIFY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Updates the value of a property in a JSON string and returns the updated JSON string.  
   
@@ -301,12 +302,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
 ```  
   
 ## See Also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

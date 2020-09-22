@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT INDEX (Transact-SQL)"
 title: "ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/27/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "search property lists [SQL Server], associating with full-text indexes"
   - "ALTER FULLTEXT INDEX statement"
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the properties of a full-text index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +33,6 @@ ms.author: carlrab
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
    | DISABLE  
@@ -59,7 +59,9 @@ ALTER FULLTEXT INDEX ON table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name*  
  Is the name of the table or indexed view that contains the column or columns included in the full-text index. Specifying database and table owner names is optional.  
   
@@ -230,7 +232,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  A full-text index is created on `table_1` with a search property list `spl_1`:  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1,   
        CHANGE_TRACKING OFF, NO POPULATION;   
@@ -238,13 +240,13 @@ ALTER FULLTEXT INDEX ON table_name
   
 2.  A full population is run on the full-text index:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 START FULL POPULATION;  
     ```  
   
 3.  The full-text index is later associated a different search property list, `spl_2`, using the following statement:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
@@ -254,14 +256,14 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  A full-text index is created on `table_1` with a search property list `spl_1`, followed by an automatic full population (the default behavior):  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
 2.  The search property list is turned off, as follows:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1   
        SET SEARCH PROPERTY LIST OFF WITH NO POPULATION;   
     ```  
@@ -270,7 +272,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      For example the following statement re-associates the full-text index with the original search property list, `spl_1`:  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
     ```  
   
@@ -292,7 +294,7 @@ ALTER FULLTEXT INDEX ON table_name
 ### A. Setting manual change tracking  
  The following example sets manual change tracking on the full-text index on the `JobCandidate` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate  
@@ -309,7 +311,7 @@ GO
 > [!NOTE]  
 >  For an example that creates the `DocumentPropertyList` property list, see [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -323,7 +325,7 @@ GO
   
  The following example removes the `DocumentPropertyList` property list from the full-text index on the `Production.Document`. In this example, there is no hurry for removing the properties from the index, so the WITH NO POPULATION option is specified. However, property-level searching is longer allowed against this full-text index.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -334,7 +336,7 @@ GO
 ### D. Starting a full population  
  The following example starts a full population on the full-text index on the `JobCandidate` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   

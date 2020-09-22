@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE index_option (Transact-SQL)"
 title: " | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "index_option"
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies a set of options that can be applied to an index that is part of a constraint definition that is created by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -60,7 +61,9 @@ ms.author: carlrab
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  PAD_INDEX **=** { ON | **OFF** }  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   

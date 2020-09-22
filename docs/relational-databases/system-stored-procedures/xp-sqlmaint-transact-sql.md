@@ -1,4 +1,5 @@
 ---
+description: "xp_sqlmaint (Transact-SQL)"
 title: "xp_sqlmaint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # xp_sqlmaint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Calls the **sqlmaint** utility with a string that contains **sqlmaint**switches. The **sqlmaint** utility performs a set of maintenance operations on one or more databases.  
   

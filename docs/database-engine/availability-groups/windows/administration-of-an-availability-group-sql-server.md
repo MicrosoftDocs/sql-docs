@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Administration of an availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
  Managing an existing Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] involves one or more of the following tasks:  
   
 -   Altering the properties of an existing availability replica, for example to change client connection access (for configuring readable secondary replicas), changing its failover mode, availability mode, or session timeout setting.    
@@ -100,7 +100,7 @@ ms.author: mathoma
 -   **Blogs:**  
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)    
-     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+[CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Videos:**  
   

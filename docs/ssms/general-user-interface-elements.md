@@ -1,4 +1,5 @@
 ---
+description: "General User Interface Elements"
 title: "General User Interface Elements"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # General User Interface Elements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Editor**, the **Properties** window, and the **Toolbox** are some of the basic elements of [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## In This Section  

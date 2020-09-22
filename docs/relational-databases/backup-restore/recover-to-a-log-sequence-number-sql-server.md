@@ -24,7 +24,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Recover to a Log Sequence Number (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic is relevant only for databases that are using the full or bulk-logged recovery models.  
   
  You can use a log sequence number (LSN) to define the recovery point for a restore operation. However, this is a specialized feature that is intended for tools vendors and is unlikely to be generally useful.  

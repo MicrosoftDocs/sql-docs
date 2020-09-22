@@ -1,8 +1,9 @@
 ---
+description: "Calling a Stored Procedure as a Method on a Connection object"
 title: "Calling a Stored Procedure as a Method on a Connection object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -55,7 +56,9 @@ Set objComm.ActiveConnection = objConn
 ' the active connection object...  
 '    "ALFKI" is the required input parameter,  
 '    objRs is the resultant output variable.  
-  
+objComm(1) = "ALFKI"
+Set objRs = objComm.Execute
+
 ' Display the result.  
 Debug.Print "Results returned from sp_CustOrdersOrders for ALFKI: "  
 Do While Not objRs.EOF  
@@ -73,4 +76,4 @@ Set objComm = Nothing
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](../../reference/ado-api/connection-object-ado.md)

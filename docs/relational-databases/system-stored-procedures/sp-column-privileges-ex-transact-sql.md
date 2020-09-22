@@ -1,4 +1,5 @@
 ---
+description: "sp_column_privileges_ex (Transact-SQL)"
 title: "sp_column_privileges_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_column_privileges_ex"
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_column_privileges_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns column privileges for the specified table on the specified linked server.  
   

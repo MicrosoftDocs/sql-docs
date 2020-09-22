@@ -1,4 +1,5 @@
 ---
+description: "Visual Database Tools"
 title: Visual Database Tools
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -7,7 +8,6 @@ ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,7 +15,7 @@ ms.date: 01/19/2017
 
 # Visual Database Tools
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes visual designers for building [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, tables, and diagramming databases.  
   
 ## Related Tasks

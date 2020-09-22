@@ -1,6 +1,6 @@
 ---
 title: Using templates in SQL Server Management Studio
-description: "A tutorial for using templates in SSMS." 
+description: "Learn about the prebuilt Transact-SQL (T-SQL) templates that are available in SQL Server Management Studio (SSMS)." 
 keywords: SQL Server, SSMS, SQL Server Management Studio, Templates
 author: MashaMSFT
 ms.author: mathoma

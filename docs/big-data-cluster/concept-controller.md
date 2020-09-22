@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # What is the controller on a SQL Server big data cluster?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 The controller hosts the core logic for deploying and managing a big data cluster. It takes care of all interactions with Kubernetes, SQL Server instances that are part of the cluster and other components like HDFS and Spark.
 
@@ -52,7 +52,7 @@ All communication to the controller service is conducted via a REST API over HTT
 Authentication to the controller service endpoint is either using an Active Directory identity or based on username and password. These credentials are provisioned at cluster bootstrap time using the input for environment variables `AZDATA_USERNAME` and `AZDATA_PASSWORD`.
 
 > [!NOTE]
-> You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> You must provide a password that is in compliance with [SQL Server password complexity requirements](../relational-databases/security/password-policy.md?view=sql-server-2017).
 
 ## Next steps
 

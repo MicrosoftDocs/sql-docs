@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitorchangemonitoring (Transact-SQL)"
 title: "sp_dbmmonitorchangemonitoring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_dbmmonitorchangemonitoring"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitorchangemonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the value of a database mirroring monitoring parameter.  
   

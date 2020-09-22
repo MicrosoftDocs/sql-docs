@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP Transactions | Microsoft Docs"
+description: Learn about the SQL Server XTP Transactions performance object, which contains counters related to transactions involving In-Memory OLTP in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server XTP Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQL Server XTP Transactions performance object contains counters related to transactions involving In-Memory OLTP in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

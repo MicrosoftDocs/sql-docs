@@ -1,4 +1,5 @@
 ---
+description: "IHpublications (Transact-SQL)"
 title: "IHpublications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublications system table"
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublications** system table contains one row for each non-SQL Server publication using the current Distributor. This table is stored in the distribution database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "IssuedBy Property (SecurityCertificate Class)"
 title: "IssuedBy Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "IssuedBy property"
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # IssuedBy Property (SecurityCertificate Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the object that issued the security certificate.  
   
 ## Syntax  

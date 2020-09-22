@@ -1,4 +1,5 @@
 ---
+description: "sp_databases (Transact-SQL)"
 title: "sp_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_databases"
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists databases that either reside in an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or are accessible through a database gateway.  
   

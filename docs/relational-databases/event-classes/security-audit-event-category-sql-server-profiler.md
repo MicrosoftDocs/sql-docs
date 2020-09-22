@@ -1,4 +1,5 @@
 ---
+description: "Security Audit Event Category (SQL Server Profiler)"
 title: "Security Audit Event Category - Profiler"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -16,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # Security Audit Event Category (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Security Audit** event category contains security audit events.  
   
 ## In This Section  

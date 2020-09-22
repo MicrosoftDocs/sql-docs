@@ -1,4 +1,5 @@
 ---
+description: "sys.event_notifications (Transact-SQL)"
 title: "sys.event_notifications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.event_notifications catalog view"
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.event_notifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a row for each object that is an event notification, with **sys.objects.type** = EN.  
   

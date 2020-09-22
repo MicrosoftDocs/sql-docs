@@ -1,4 +1,5 @@
 ---
+description: "KEY_COLUMN_USAGE (Transact-SQL)"
 title: "KEY_COLUMN_USAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.KEY_COLUMN_USAGE view"
   - "KEY_COLUMN_USAGE view"
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # KEY_COLUMN_USAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one row for each column that is constrained as a key in the current database. This information schema view returns information about the objects to which the current user has permissions.  
   

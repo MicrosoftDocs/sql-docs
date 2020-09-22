@@ -1,8 +1,9 @@
 ---
 title: "SQL Server PowerShell Provider | Microsoft Docs"
+description: Learn about the SQL Server provider for Windows PowerShell, which provides access to SQL Server objects by means of paths similar to file system paths.
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PowerShell [SQL Server], provider"
@@ -20,7 +21,7 @@ ms.date: "07/31/2019"
 
 # SQL Server PowerShell Provider
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell exposes the hierarchy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects in paths similar to file system paths. You can use the paths to locate an object, and then use methods from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models to perform actions on the objects.  
   
@@ -45,7 +46,7 @@ Products whose data or object models can be represented in a hierarchy use Windo
 |`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Policy-based management objects, such as policies and facets.|  
 |`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Registered server objects, such as server groups and registered servers.|  
 |`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|Utility objects, such as managed instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|Data-tier application objects such as DAC packages, and operations such as deploying a DAC.|  
+|`SQLSERVER:\DAC`|[Microsoft.SqlServer.Management.Dac](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ee212127(v=sql.110))|Data-tier application objects such as DAC packages, and operations such as deploying a DAC.|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Data collector objects, such as collection sets and configuration stores.|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects such as projects, packages, and environments.|  
 |`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|SQL Server Extended Events|

@@ -1,4 +1,5 @@
 ---
+description: "MOVE CONVERSATION (Transact-SQL)"
 title: "MOVE CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "conversations [Service Broker], groups"
   - "conversations [Service Broker], moving"
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MOVE CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Moves a conversation to a different conversation group.  
   
@@ -40,7 +41,9 @@ MOVE CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is a variable or constant containing the conversation handle of the conversation to be moved. *conversation_handle* must be of type **uniqueidentifier**.  
   

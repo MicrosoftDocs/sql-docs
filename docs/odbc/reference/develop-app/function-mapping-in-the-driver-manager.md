@@ -1,4 +1,5 @@
 ---
+description: "Function Mapping in the Driver Manager"
 title: "Function Mapping in the Driver Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

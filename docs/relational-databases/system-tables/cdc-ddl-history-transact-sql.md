@@ -1,4 +1,5 @@
 ---
+description: "cdc.ddl_history (Transact-SQL)"
 title: "cdc.ddl_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.ddl_history"
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # cdc.ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for each data definition language (DDL) change made to tables that are enabled for change data capture. You can use this table to determine when a DDL change occurred on a source table and what the change was. Source tables that have not had DDL changes will not have entries in this table.  
   

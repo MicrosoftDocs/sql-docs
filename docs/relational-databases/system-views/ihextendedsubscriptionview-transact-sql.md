@@ -1,4 +1,5 @@
 ---
+description: "IHextendedSubscriptionView (Transact-SQL)"
 title: "IHextendedSubscriptionView (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # IHextendedSubscriptionView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHextendedSubscriptionView** view exposes information on subscription to a non-SQL Server publication. This view is stored in the **distribution** database.  
   

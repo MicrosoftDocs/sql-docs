@@ -1,10 +1,10 @@
 ---
 title: "Identify issues with IntelliSense (SSMS)"
-description: Learn how to troubleshoot and identify issues with Intellisense with SQL Server Management Studio (SSMS).
+description: Learn about the cases where Intellisense in SQL Server Management Studio (SSMS) does not work as you might expect.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -18,7 +18,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identify issues with IntelliSense - SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   There are certain cases when the IntelliSense options might not work as you expect.  
   
 ## Conditions That Affect IntelliSense  

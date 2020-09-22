@@ -1,4 +1,5 @@
 ---
+description: "ALTER RESOURCE POOL (Transact-SQL)"
 title: "ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER RESOURCE POOL"
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes an existing Resource Governor resource pool configuration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,7 +53,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 {NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  { *pool_name* | **"default"** }  
  Is the name of an existing user-defined resource pool or the default resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
@@ -84,7 +88,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
   
  When you use AFFINITY NAMANODE = (NUMA_node_range_spec), the resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schedulers that map to the physical CPUs that correspond to the given NUMA node or range of nodes. You can use the following Transact-SQL query to discover the mapping between the physical NUMA configuration and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scheduler IDs.  
   
-```  
+```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
 FROM sys.dm_os_nodes AS osn  
 INNER JOIN sys.dm_os_schedulers AS sc 
@@ -134,7 +138,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ## Examples  
  The following example keeps all the default resource pool settings on the `default` pool except for `MAX_CPU_PERCENT`, which is changed to `25`.  
   
-```  
+```sql  
 ALTER RESOURCE POOL "default"  
 WITH  
      ( MAX_CPU_PERCENT = 25);  
@@ -147,7 +151,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
-```  
+```sql  
 ALTER RESOURCE POOL Pool25  
 WITH(   
      MIN_CPU_PERCENT = 5,  
@@ -161,7 +165,6 @@ WITH(
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
-  
 ```  
   
 ## See Also  

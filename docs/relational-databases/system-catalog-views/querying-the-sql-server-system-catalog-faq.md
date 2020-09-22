@@ -1,4 +1,5 @@
 ---
+description: "Querying the SQL Server System Catalog FAQ"
 title: "Querying the SQL Server System Catalog FAQ | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "system catalogs [SQL Server], example queries"
   - "catalog views [SQL Server], frequently asked questions"
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Querying the SQL Server System Catalog FAQ
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains a list of frequently asked questions. The answers to these questions are queries that are based on catalog views.  
   

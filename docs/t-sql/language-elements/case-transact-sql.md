@@ -1,5 +1,5 @@
 ---
-title: "CASE (Transact-SQL) | Microsoft Docs"
+title: CASE (Transact-SQL)
 description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
 ms.date: "06/28/2017"
 ms.prod: sql
@@ -22,8 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Evaluates a list of conditions and returns one of multiple possible result expressions.  
   
@@ -62,9 +64,11 @@ END
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
-END  
-```  
-  
+END
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments  
  *input_expression*  
  Is the expression evaluated when the simple CASE format is used. *input_expression* is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -81,7 +85,9 @@ END
  WHEN *Boolean_expression*  
  Is the Boolean expression evaluated when using the searched CASE format. *Boolean_expression* is any valid Boolean expression.  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns the highest precedence type from the set of types in *result_expressions* and the optional *else_result_expression*. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### Return Values  
@@ -134,7 +140,7 @@ FROM Data ;
 ### A. Using a SELECT statement with a simple CASE expression  
  Within a `SELECT` statement, a simple `CASE` expression allows for only an equality check; no other comparisons are made. The following example uses the `CASE` expression to change the display of product line categories to make them more understandable.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Category =  
@@ -149,13 +155,12 @@ SELECT   ProductNumber, Category =
 FROM Production.Product  
 ORDER BY ProductNumber;  
 GO  
-  
 ```  
   
 ### B. Using a SELECT statement with a searched CASE expression  
  Within a `SELECT` statement, the searched `CASE` expression allows for values to be replaced in the result set based on comparison values. The following example displays the list price as a text comment based on the price range for a product.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Name, "Price Range" =   
@@ -169,34 +174,31 @@ SELECT   ProductNumber, Name, "Price Range" =
 FROM Production.Product  
 ORDER BY ProductNumber ;  
 GO  
-  
 ```  
   
 ### C. Using CASE in an ORDER BY clause  
  The following examples uses the CASE expression in an ORDER BY clause to determine the sort order of the rows based on a given column value. In the first example, the value in the `SalariedFlag` column of the `HumanResources.Employee` table is evaluated. Employees that have the `SalariedFlag` set to 1 are returned in order by the `BusinessEntityID` in descending order. Employees that have the `SalariedFlag` set to 0 are returned in order by the `BusinessEntityID` in ascending order. In the second example, the result set is ordered by the column `TerritoryName` when the column `CountryRegionName` is equal to 'United States' and by `CountryRegionName` for all other rows.  
   
-```  
+```sql  
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
         ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
-GO  
-  
+GO    
 ```  
   
-```  
+```sql  
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END;  
-  
+         ELSE CountryRegionName END; 
 ```  
   
 ### D. Using CASE in an UPDATE statement  
  The following example uses the CASE expression in an UPDATE statement to determine the value that is set for the column `VacationHours` for employees with `SalariedFlag` set to 0. When subtracting 10 hours from `VacationHours` results in a negative value, `VacationHours` is increased by 40 hours; otherwise, `VacationHours` is increased by 20 hours. The OUTPUT clause is used to display the before and after vacation values.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee  
@@ -209,32 +211,30 @@ SET VacationHours =
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ### E. Using CASE in a SET statement  
  The following example uses the CASE expression in a SET statement in the table-valued function `dbo.GetContactInfo`. In the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, all data related to people is stored in the `Person.Person` table. For example, the person may be an employee, vendor representative, or a customer. The function returns the first and last name of a given `BusinessEntityID` and the contact type for that person.The CASE expression in the SET statement determines the value to display for the column `ContactType` based on the existence of the `BusinessEntityID` column in the `Employee`, `Vendor`, or `Customer` tables.  
   
-```  
-  
+```sql   
 USE AdventureWorks2012;  
 GO  
-CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID int)  
+CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
     RETURNS @retContactInformation TABLE   
 (  
-BusinessEntityID int NOT NULL,  
-FirstName nvarchar(50) NULL,  
-LastName nvarchar(50) NULL,  
-ContactType nvarchar(50) NULL,  
+BusinessEntityID INT NOT NULL,  
+FirstName NVARCHAR(50) NULL,  
+LastName NVARCHAR(50) NULL,  
+ContactType NVARCHAR(50) NULL,  
     PRIMARY KEY CLUSTERED (BusinessEntityID ASC)  
 )   
 AS   
 -- Returns the first name, last name and contact type for the specified contact.  
 BEGIN  
     DECLARE   
-        @FirstName nvarchar(50),   
-        @LastName nvarchar(50),   
-        @ContactType nvarchar(50);  
+        @FirstName NVARCHAR(50),   
+        @LastName NVARCHAR(50),   
+        @ContactType NVARCHAR(50);  
   
     -- Get common contact information  
     SELECT   
@@ -282,14 +282,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);  
-  
+FROM dbo.GetContactInformation(5);
 ```  
   
 ### F. Using CASE in a HAVING clause  
  The following example uses the CASE expression in a HAVING clause to restrict the rows returned by the SELECT statement. The statement returns the maximum hourly rate for each job title in the `HumanResources.Employee` table. The HAVING clause restricts the titles to those that are held by men with a maximum pay rate greater than 40 dollars or women with a maximum pay rate greater than 42 dollars.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -302,8 +301,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC;  
-  
+ORDER BY MaximumRate DESC; 
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -311,7 +309,7 @@ ORDER BY MaximumRate DESC;
 ### G. Using a SELECT statement with a CASE expression  
  Within a SELECT statement, the CASE expression allows for values to be replaced in the result set based on comparison values. The following example uses the CASE expression to change the display of product line categories to make them more understandable. When a value does not exist, the text "Not for sale' is displayed.  
   
-```  
+```sql 
 -- Uses AdventureWorks  
   
 SELECT   ProductAlternateKey, Category =  
@@ -330,7 +328,7 @@ ORDER BY ProductKey;
 ### H. Using CASE in an UPDATE statement  
  The following example uses the CASE expression in an UPDATE statement to determine the value that is set for the column `VacationHours` for employees with `SalariedFlag` set to 0. When subtracting 10 hours from `VacationHours` results in a negative value, `VacationHours` is increased by 40 hours; otherwise, `VacationHours` is increased by 20 hours.  
   
-```  
+```sql  
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  
@@ -341,7 +339,6 @@ SET VacationHours =
        END  
     )   
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ## See Also  

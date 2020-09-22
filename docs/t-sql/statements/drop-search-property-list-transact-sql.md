@@ -1,4 +1,5 @@
 ---
+description: "DROP SEARCH PROPERTY LIST (Transact-SQL)"
 title: "DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "search property lists [SQL Server], dropping"
   - "search property lists [SQL Server], deleting"
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a property list from the current database if the search property list is currently not associated with any full-text index in the database.  
   
@@ -34,7 +35,9 @@ DROP SEARCH PROPERTY LIST property_list_name
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *property_list_name*  
  Is the name of the search property list to be dropped. *property_list_name* is an identifier.  
   

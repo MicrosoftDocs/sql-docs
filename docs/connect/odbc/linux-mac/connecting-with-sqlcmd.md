@@ -2,7 +2,7 @@
 title: "Connecting with sqlcmd"
 description: "Learn how to use the sqlcmd utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,7 +21,7 @@ The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is availabl
   
 The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -165,22 +165,30 @@ In the current release, the following options are not available:
   
 You can use the following alternative method: Put the parameters inside one file, which you can then append to another file. This will help you use a parameter file to replace the values. For example, create a file called `a.sql` (the parameter file) with the following content:
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 Then create a file called `b.sql`, with the parameters for replacement:  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 At the command line, combine `a.sql` and `b.sql` into `c.sql` using the following commands:  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 Run `sqlcmd` and use `c.sql` as input file:  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z *password* Change password.  
   
@@ -198,24 +206,12 @@ In the current release, the following commands are not available:
   
 ## DSN Support in sqlcmd and bcp
 
-You can specify a data source name (DSN) instead of a server name in the **sqlcmd** or **bcp** `-S` option (or **sqlcmd** :Connect command) if you specify -D. -D causes **sqlcmd** or **bcp** to connect to the server specified in the DSN by the -S option.  
+You can specify a data source name (DSN) instead of a server name in the **sqlcmd** or **bcp** `-S` option (or **sqlcmd** :Connect command) if you specify `-D`. `-D` causes **sqlcmd** or **bcp** to connect to the server specified in the DSN by the `-S` option.  
   
 System DSNs are stored in the `odbc.ini` file in the ODBC SysConfigDir directory (`/etc/odbc.ini` on standard installations). User DSNs are stored in `.odbc.ini` in a user's home directory (`~/.odbc.ini`).
-  
-The following entries are supported in a DSN on Linux or macOS:
 
--   **ApplicationIntent=ReadOnly**  
+See [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for the list of entries which the driver supports.
 
--   **Database=**_database\_name_  
-  
--   **Driver=ODBC Driver 11 for SQL Server** or **Driver=ODBC Driver 13 for SQL Server**
-  
--   **MultiSubnetFailover=Yes**  
-  
--   **Server=**_server\_name\_or\_IP\_address_  
-  
--   **Trusted_Connection=yes**|**no**  
-  
 In a DSN, only the DRIVER entry is required, but to connect to a server, `sqlcmd` or `bcp` needs the value in the SERVER entry.  
 
 If the same option is specified in both the DSN and the `sqlcmd` or `bcp` command line, the command line option overrides the value used in the DSN. For example, if the DSN has a DATABASE entry and the `sqlcmd` command line includes **-d**, the value passed to **-d** is used. If **Trusted_Connection=yes** is specified in the DSN, Kerberos authentication is used and user name (**-U**) and password (**-P**), if provided, are ignored.
@@ -224,4 +220,4 @@ Existing scripts that invoke `isql` can be modified to use `sqlcmd` by defining 
 
 ## See Also  
 [Connecting with **bcp**](connecting-with-bcp.md)  
- 
+[Release Notes](release-notes-tools.md)

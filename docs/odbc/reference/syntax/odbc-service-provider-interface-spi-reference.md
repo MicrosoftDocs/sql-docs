@@ -1,4 +1,5 @@
 ---
+description: "ODBC Service Provider Interface (SPI) Reference"
 title: "ODBC Service Provider Interface (SPI) Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

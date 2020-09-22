@@ -1,19 +1,19 @@
 ---
-title: Notebooks with KQL (Kusto Query Language) magic in Azure Data Studio
+title: Notebooks with Kqlmagic (Kusto Query Language) in Azure Data Studio
 description: This tutorial shows how you can create and run Kqlmagic in Azure Data Studio.
+ms.topic: how-to
+ms.prod: azure-data-studio
+ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
-ms.topic: tutorial
-ms.prod: sql
-ms.technology: azure-data-studio
 ms.custom: ""
 ms.date: 04/27/2020
 ---
 
-# Kqlmagic extension in Azure Data Studio
+# Kqlmagic in Azure Data Studio
 
-**Kqlmagic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](notebooks-guidance.md)**. You can combine Python and **[Kusto query language (KQL)](https://docs.microsoft.com/azure/data-explorer/kusto/query)** to query and visualize data using rich Plot.ly library integrated with `render` commands. Kqlmagic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with Kqlmagic include **[Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)**, **[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-logs)**.
+**Kqlmagic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](notebooks-guidance.md)**. You can combine Python and **[Kusto query language (KQL)](/azure/data-explorer/kusto/query)** to query and visualize data using rich Plot.ly library integrated with `render` commands. Kqlmagic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with Kqlmagic include **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)**, **[Application Insights](/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](/azure/azure-monitor/platform/data-platform-logs)**.
 
 This article shows you how to create and run a notebook in Azure Data Studio using the Kqlmagic extension for an Azure Data Explorer cluster, an Application Insights log, and Azure Monitor logs.
 
@@ -28,11 +28,11 @@ The steps in this section all run within an Azure Data Studio notebook.
 
 1. Create a new notebook and change the **Kernel** to *Python 3*.
 
-   ![New Notebook](media/notebooks-kql-magic/install-new-notebook.png)
+   ![New Notebook](media/notebooks-kqlmagic/install-new-notebook.png)
 
 2. When asked, select **Yes** to upgrade the Python packages.
 
-   ![Yes](media/notebooks-kql-magic/install-python-yes.png)
+   ![Yes](media/notebooks-kqlmagic/install-python-yes.png)
 
 3. Install Kqlmagic:
 
@@ -46,7 +46,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    !pip list
    ```
 
-   ![List](media/notebooks-kql-magic/install-list.png)
+   ![List](media/notebooks-kqlmagic/install-list.png)
 
 4. Load Kqlmagic:
 
@@ -57,7 +57,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    > [!Note]
    > If this step fails, then close the file and reopen it.
 
-   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kqlmagic/install-load-kql-magic-ext.png)
 
 5. You can test if Kqlmagic is loaded properly by browsing the help documentation or by checking for the version.
 
@@ -68,7 +68,7 @@ The steps in this section all run within an Azure Data Studio notebook.
    > [!Note]
    > If `Samples@help` is asking for a password, then you can leave it blank and press **Enter**.
 
-   ![Help](media/notebooks-kql-magic/install-help.png)
+   ![Help](media/notebooks-kqlmagic/install-help.png)
 
    To see which version of Kqlmagic is installed, run the command below.
 
@@ -87,7 +87,7 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Kernel change](media/notebooks-kqlmagic/change-kernel.png)
 
 2. Load Kqlmagic:
 
@@ -95,7 +95,7 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
    %reload_ext Kqlmagic
    ```
 
-   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kqlmagic/install-load-kql-magic-ext.png)
 
 3. Connect to the cluster and authenticate:
 
@@ -105,11 +105,11 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
 
    You use Device Login to authenticate. Copy the code from the output and select **authenticate** which opens a browser where you need to paste the code. Once you authenticate successfully, you can come back to Azure Data Studio to continue with the rest of the script.
 
-   ![Azure Data Explorer authentication](media/notebooks-kql-magic/ade-auth.png)
+   ![Azure Data Explorer authentication](media/notebooks-kqlmagic/ade-auth.png)
 
 ### Query and visualize for Azure Data Explorer
 
-Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
+Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. Analyze top 10 storm events by state and frequency:
 
@@ -119,7 +119,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
    If you're familiar with the Kusto Query Language (KQL), you can type the query after `%kql`.
 
-   ![Analyze storm events](media/notebooks-kql-magic/ade-analyze-storm-events.png)
+   ![Analyze storm events](media/notebooks-kqlmagic/ade-analyze-storm-events.png)
 
 2. Visualize a timeline chart:
 
@@ -129,7 +129,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render timechart title= 'Daily Storm Events'
    ```
 
-   ![visualize timechart](media/notebooks-kql-magic/ade-visualize-timechart.png)
+   ![visualize timechart](media/notebooks-kqlmagic/ade-visualize-timechart.png)
 
 3. Multiline Query sample using `%%kql`.
 
@@ -142,7 +142,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render columnchart title='Top 10 States by Storm Event count'
    ```
 
-   ![Multiline Query sample](media/notebooks-kql-magic/ade-multiline-query-sample.png)
+   ![Multiline Query sample](media/notebooks-kqlmagic/ade-multiline-query-sample.png)
 
 ## Kqlmagic with Application Insights
 
@@ -150,7 +150,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Kernel](media/notebooks-kqlmagic/change-kernel.png)
 
 2. Load Kqlmagic:
 
@@ -158,12 +158,14 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %reload_ext Kqlmagic
    ```
 
-   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kqlmagic/install-load-kql-magic-ext.png)
 
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the Kqlmagic extension.
 
-3. Connect and authenticate
+3. Connect and authenticate.
+
+   First, you must generate an API key for your Application Insights resource. Then, use the Application ID and API key to connect to Application Insights from the notebook:
 
    ```python
    %kql appinsights://appid='DEMO_APP';appkey='DEMO_KEY'
@@ -171,7 +173,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 ### Query and visualize for Application Insights
 
-Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
+Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. Show Page Views:
 
@@ -181,7 +183,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | limit 10
    ```
 
-   ![Page Views](media/notebooks-kql-magic/appin-page-views.png)
+   ![Page Views](media/notebooks-kqlmagic/appin-page-views.png)
 
    > [!Note]
    > Use your mouse to drag on an area of the chart to zoom in to the specific date(s).
@@ -195,7 +197,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render timechart title= 'Daily Page Views'
    ```
 
-   ![Timeline Chart](media/notebooks-kql-magic/appin-timechart.png)
+   ![Timeline Chart](media/notebooks-kqlmagic/appin-timechart.png)
 
 ## Kqlmagic with Azure Monitor logs
 
@@ -203,7 +205,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Change](media/notebooks-kqlmagic/change-kernel.png)
 
 2. Load Kqlmagic:
 
@@ -211,7 +213,7 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %reload_ext Kqlmagic
    ```
 
-   ![Load the Kqlmagic extension](media/notebooks-kql-magic/install-load-kql-magic-ext.png)
+   ![Load the Kqlmagic extension](media/notebooks-kqlmagic/install-load-kql-magic-ext.png)
 
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the Kqlmagic extension.
@@ -222,11 +224,11 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    %kql loganalytics://workspace='DEMO_WORKSPACE';appkey='DEMO_KEY';alias='myworkspace'
    ```
 
-   ![Log Analytics auth](media/notebooks-kql-magic/aml-auth.png)
+   ![Log Analytics auth](media/notebooks-kqlmagic/aml-auth.png)
 
 ### Query and visualize for Azure Monitor Logs
 
-Query data using the [render operator](https://docs.microsoft.com/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
+Query data using the [render operator](/azure/data-explorer/kusto/query/renderoperator) and visualize data using the ploy.ly library. This query and visualization supplies an integrated experience that uses native KQL.
 
 1. View a timeline chart:
 
@@ -237,15 +239,14 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    | render timechart title= 'Daily Kubernetes Nodes'
    ```
 
-   ![Log Analytics Daily Kubernetes Nodes timechart](media/notebooks-kql-magic/aml-timechart-daily-kubernetes-nodes.png)
+   ![Log Analytics Daily Kubernetes Nodes timechart](media/notebooks-kqlmagic/aml-timechart-daily-kubernetes-nodes.png)
 
 ## Next steps
 
 Learn more about notebooks and Kqlmagic:
 
-- [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/Kqlmagic)
+- [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
 - [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
-- [How to use notebooks](notebooks-guidance.md)
-- [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md)
+- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)

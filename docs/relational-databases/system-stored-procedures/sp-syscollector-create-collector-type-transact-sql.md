@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_create_collector_type (Transact-SQL)"
 title: "sp_syscollector_create_collector_type (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "sp_syscollector_create_collector_type"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_create_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a collector type for the data collector. A collector type is a logical wrapper around the [!INCLUDE[ssIS](../../includes/ssis-md.md)] packages that provide the actual mechanism for collecting data and uploading it to the management data warehouse.  
   

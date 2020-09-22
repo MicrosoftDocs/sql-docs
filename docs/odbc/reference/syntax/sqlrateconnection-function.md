@@ -1,4 +1,5 @@
 ---
+description: "SQLRateConnection Function"
 title: "SQLRateConnection Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

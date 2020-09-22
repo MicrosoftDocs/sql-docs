@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)"
 title: "@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "connections [SQL Server], simultaneous"
   - "number of simultaneous user connections"
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the maximum number of simultaneous user connections allowed on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The number returned is not necessarily the number currently configured.  
   
@@ -35,7 +36,9 @@ ms.author: jrasnick
 @@MAX_CONNECTIONS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

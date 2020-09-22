@@ -10,11 +10,13 @@ ms.author: v-daenge
 ---
 # Download Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The OLE DB Driver for SQL Server is a stand-alone data access application programming interface (API), used for OLE DB. OLE DB Driver for SQL Server is available on Windows and delivers the SQL OLE DB driver in one dynamic-link library (DLL).
 
 ## Download
+
+The redistributable installer for Microsoft OLE DB Driver for SQL Server installs the client components required during run time to take advantage of newer SQL Server features. Starting with version 18.3, the installer also includes and installs the Microsoft Active Directory Authentication Library (ADAL.dll).
 
 Microsoft OLE DB Driver 18.4 for SQL Server is the latest general availability (GA) version. If you have a previous version of Microsoft OLE DB Driver 18 for SQL Server installed, installing 18.4 upgrades it to 18.4.
 

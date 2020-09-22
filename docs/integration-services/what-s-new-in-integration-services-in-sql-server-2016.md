@@ -1,4 +1,5 @@
 ---
+description: "What&#39;s New in Integration Services in SQL Server 2016"
 title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -356,7 +357,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
  The Dimension Processing Destination does not work for Tabular models with the SQL 2016 compatibility level.  The Analysis Services Processing Task and the Partition Processing Destination are all you need for tabular processing. 
 
 ####  <a name="builtinR"></a> Support for Built-in R Services  
- SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
+ SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296). 
 
 ####  <a name="ValidateXML"></a> Rich XML validation output in the XML Task  
  Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task. Before the **ValidationDetails** property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set **ValidationDetails** to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents. For more info, see [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  

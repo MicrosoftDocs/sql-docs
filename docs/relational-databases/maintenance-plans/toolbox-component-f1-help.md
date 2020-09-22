@@ -1,4 +1,5 @@
 ---
+description: "Toolbox Component F1 Help"
 title: "Toolbox Component F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Toolbox Component F1 Help
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects. You can open the **Toolbox** from the **View** menu, and dock this window as you wish. While docked, the **Toolbox** can either be pinned open or set to **Auto Hide** when not in use.  
   
  **Toolbox** items can be dragged and dropped or copied and pasted into code editors or onto design view surfaces within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

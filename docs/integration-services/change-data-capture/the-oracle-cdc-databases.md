@@ -1,4 +1,5 @@
 ---
+description: "The Oracle CDC Databases"
 title: "The Oracle CDC Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # The Oracle CDC Databases
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   An Oracle CDC Instance is associated with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by the same name on the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. This database is called the Oracle CDC database (or the CDC database).  

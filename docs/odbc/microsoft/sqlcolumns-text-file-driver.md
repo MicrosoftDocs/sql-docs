@@ -1,4 +1,5 @@
 ---
+description: "SQLColumns (Text File Driver)"
 title: "SQLColumns (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

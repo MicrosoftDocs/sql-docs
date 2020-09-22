@@ -1,4 +1,5 @@
 ---
+description: "DENY Object Permissions (Transact-SQL)"
 title: "DENY Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,7 +18,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a member of the OBJECT class of securables. These are the members of the OBJECT class: tables, views, table-valued functions, stored procedures, extended stored procedures, scalar functions, aggregate functions, service queues, and synonyms.  
 
@@ -47,7 +48,9 @@ DENY <permission> [ ,...n ] ON
     | Database_user_with_no_login  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a schema-contained object. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -136,7 +139,7 @@ The following examples use the AdventureWorks database.
 ### A. Denying SELECT permission on a table  
  The following example denies `SELECT` permission to the user `RosaQdM` on the table `Person.Address`.  
   
-```  
+```sql  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -144,7 +147,7 @@ GO
 ### B. Denying EXECUTE permission on a stored procedure  
  The following example denies `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role called `Recruiting11`.  
   
-```  
+```sql  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -153,7 +156,7 @@ GO
 ### C. Denying REFERENCES permission on a view with CASCADE  
  The following example denies `REFERENCES` permission on the column `BusinessEntityID` in the view `HumanResources.vEmployee` to the user `Wanida` with `CASCADE`.  
   
-```  
+```sql  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

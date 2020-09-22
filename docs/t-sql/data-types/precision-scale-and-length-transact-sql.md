@@ -1,4 +1,5 @@
 ---
+description: "Precision, scale, and length (Transact-SQL)"
 title: "Precision, scale, and length (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -23,7 +24,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Precision, scale, and Length (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Precision is the number of digits in a number. Scale is the number of digits to the right of the decimal point in a number. For example, the number 123.45 has a precision of 5 and a scale of 2.
   

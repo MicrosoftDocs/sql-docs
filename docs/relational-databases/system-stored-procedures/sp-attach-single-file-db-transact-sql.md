@@ -1,4 +1,5 @@
 ---
+description: "sp_attach_single_file_db (Transact-SQL)"
 title: "sp_attach_single_file_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_single_file_db"
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_attach_single_file_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Attaches a database that has only one data file to the current server. **sp_attach_single_file_db** cannot be used with multiple data files.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_schedulers (Transact-SQL)"
 title: "sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_schedulers dynamic management view"
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_schedulers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns one row per scheduler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where each scheduler is mapped to an individual processor. Use this view to monitor the condition of a scheduler or to identify runaway tasks. For more information about schedulers, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).  
   

@@ -1,8 +1,9 @@
 ---
+description: "Dimensions Collection (ADO MD)"
 title: "Dimensions Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,22 +19,22 @@ author: rothja
 ms.author: jroth
 ---
 # Dimensions Collection (ADO MD)
-Contains the [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) objects that make up a cube.  
+Contains the [Dimension](./dimension-object-ado-md.md) objects that make up a cube.  
   
 ## Remarks  
  **Dimensions** is a standard ADO collection. With the properties and methods of a collection, you can do the following:  
   
--   Obtain the number of objects in the collection with the [Count](../../../ado/reference/ado-api/count-property-ado.md) property.  
+-   Obtain the number of objects in the collection with the [Count](../ado-api/count-property-ado.md) property.  
   
--   Return an object from the collection with the default [Item](../../../ado/reference/ado-api/item-property-ado.md) property.  
+-   Return an object from the collection with the default [Item](../ado-api/item-property-ado.md) property.  
   
--   Update the objects in the collection from the provider with the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method.  
+-   Update the objects in the collection from the provider with the [Refresh](../ado-api/refresh-method-ado.md) method.  
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/dimensions-collection-properties-methods-and-events.md)  
+-   [Properties, Methods, and Events](./dimensions-collection-properties-methods-and-events.md)  
   
 ## See Also  
- [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
+ [Catalog Example (VB)](./catalog-example-vb.md)   
+ [CubeDef Object (ADO MD)](./cubedef-object-ado-md.md)   
+ [Dimension Object (ADO MD)](./dimension-object-ado-md.md)

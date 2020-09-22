@@ -1,4 +1,5 @@
 ---
+description: "sp_getapplock (Transact-SQL)"
 title: "sp_getapplock (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "application locks"
   - "sp_getapplock"
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_getapplock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Places a lock on an application resource.  
   

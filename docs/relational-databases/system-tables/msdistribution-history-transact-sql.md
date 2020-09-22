@@ -1,4 +1,5 @@
 ---
+description: "MSdistribution_history (Transact-SQL)"
 title: "MSdistribution_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistribution_history system table"
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSdistribution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSdistribution_history** table contains history rows for the Distribution Agents associated with the local Distributor. This table is stored in the distribution database.  
   

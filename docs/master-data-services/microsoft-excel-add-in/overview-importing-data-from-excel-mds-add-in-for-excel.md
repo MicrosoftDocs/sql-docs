@@ -1,4 +1,5 @@
 ---
+description: "Overview: Importing Data from Excel (MDS Add-in for Excel)"
 title: Importing Data from Excel
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Overview: Importing Data from Excel (MDS Add-in for Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publish data to the MDS repository when you want to share it with other users. As soon as data is published, it is available for other users of the Add-in to download.  
   

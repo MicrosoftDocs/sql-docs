@@ -1,5 +1,6 @@
 ---
 title: "Extended Stored Procedures (Transact-SQL)"
+description: Learn about extended stored procedures that you can use when you work with Stretch-enabled databases. See how to reconcile columns and perform other tasks.
 titleSuffix: SQL Server Stretch Database
 ms.custom: seo-dt-2019
 ms.date: "06/10/2016"
@@ -12,11 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Stretch Database, stored procedures"
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Stretch Database Extended Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
  This section describes the extended stored procedures that are related to Stretch Database.  
   

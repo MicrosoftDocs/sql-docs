@@ -1,4 +1,5 @@
 ---
+description: "XML Source"
 title: "XML Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ ms.author: chugu
 ---
 # XML Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The XML source reads an XML data file and populates the columns in the source output with the data.  

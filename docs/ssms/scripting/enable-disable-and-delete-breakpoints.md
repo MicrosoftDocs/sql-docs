@@ -1,9 +1,10 @@
 ---
 title: Enable, Disable, and Delete Breakpoints
+description: Learn how to use the Breakpoints window to view, delete, disable, and enable breakpoints.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: markingmyname
@@ -16,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Enable, Disable, and Delete Breakpoints
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 To view and manage all the open breakpoints, you can use the **Breakpoints** window. Use the window to view breakpoint information and to take actions such as deleting, disabling, or enabling breakpoints.
 
@@ -90,7 +91,7 @@ To view and manage all the open breakpoints, you can use the **Breakpoints** win
   
  You can delete all breakpoints in one of the following ways:  
   
--   On the **Debug** menu, cllick **Delete All Breakpoints**.  
+-   On the **Debug** menu, click **Delete All Breakpoints**.  
   
 -   On the toolbar of the **Breakpoints** window, click the **Delete All Breakpoints** button.  
   

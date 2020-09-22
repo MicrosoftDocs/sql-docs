@@ -1,4 +1,5 @@
 ---
+description: "Database Mail"
 title: "Database Mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ author: stevestein
 ms.author: sstein
 ---
 # Database Mail
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Database Mail is an enterprise solution for sending e-mail messages from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Using Database Mail, your database applications can send e-mail messages to users. The messages can contain query results, and can also include files from any resource on your network.  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  Database Mail is an enterprise solution for sending e-mail messages from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Using Database Mail, your database applications can send e-mail messages to users. The messages can contain query results, and can also include files from any resource on your network.  
   
 > [!NOTE] 
-> Database mail is available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), but not in Azure SQL database Singleton and Elastic pools. 
+> Database mail is available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), but not in Azure SQL database Singleton and Elastic pools. 
 
 ##  <a name="Benefits"></a> Benefits of using Database Mail  
  Database Mail is designed for reliability, scalability, security, and supportability.  

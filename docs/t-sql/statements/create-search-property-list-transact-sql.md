@@ -1,4 +1,5 @@
 ---
+description: "CREATE SEARCH PROPERTY LIST (Transact-SQL)"
 title: "CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -21,11 +22,11 @@ helpviewer_keywords:
   - "search property lists [SQL Server], creating"
   - "CREATE SEARCH PROPERTY LIST statement"
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a new search property list. A search property list is used to specify one or more search properties that you want to include in a full-text index.  
   
@@ -33,14 +34,16 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql  
 CREATE SEARCH PROPERTY LIST new_list_name  
    [ FROM [ database_name. ] source_list_name ]  
    [ AUTHORIZATION owner_name ]  
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *new_list_name*  
  Is the name of the new search property list. *new_list_name* is an identifier with a maximum of 128 characters. *new_list_name* must be unique among all property lists in the current database, and conform to the rules for identifiers. *new_list_name* will be used when the full-text index is created.  
   
@@ -95,7 +98,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  For an example that adds several predefined, well-known search properties to this search property list, see [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md). After adding search properties to the list, the database administrator would need to use another ALTER FULLTEXT INDEX statement with the START FULL POPULATION clause.  
   
-```  
+```sql 
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
 GO  
 USE AdventureWorks2012;  
@@ -108,14 +111,13 @@ GO
 ### B. Creating a property list from an existing one  
  The following example creates a new the search property list,  `JobCandidateProperties`, from the list created by Example A, `DocumentPropertyList`, which is associated with a full-text index in the `AdventureWorks2012` database. The example then uses an ALTER FULLTEXT INDEX statement to associate the new property list with the full-text index of the `HumanResources.JobCandidate` table in the `AdventureWorks2012` database. This ALTER FULLTEXT INDEX statement starts a full population, which is the default behavior of the SET SEARCH PROPERTY LIST clause.  
   
-```  
+```sql  
 CREATE SEARCH PROPERTY LIST JobCandidateProperties 
 FROM AdventureWorks2012.DocumentPropertyList;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
    SET SEARCH PROPERTY LIST JobCandidateProperties;  
-GO  
-  
+GO
 ```  
   
 ## See Also  

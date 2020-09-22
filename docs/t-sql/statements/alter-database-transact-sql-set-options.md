@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 05/27/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -22,13 +22,14 @@ helpviewer_keywords:
   - "snapshot isolation framework option"
   - "checksums [SQL Server]"
   - "Automatic tuning"
+  - " Data Retention Policy"
   - "query plan regression correction"
   - "auto_create_statistics"
   - "auto_update_statistics"
   - "Query Store options"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE SET options (Transact-SQL)
@@ -45,9 +46,20 @@ In the following row, select whichever product name you're interested in. Doing 
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -98,6 +110,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -177,11 +190,13 @@ SET
   | TRANSFORM_NOISE_WORDS = { OFF | ON }
   | TWO_DIGIT_YEAR_CUTOFF = { 1753, ..., 2049, ..., 9999 }
 }
+
 <FILESTREAM_option> ::=
 {
     NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL
   | DIRECTORY_NAME = <directory_name>
 }
+
 <HADR_options> ::=
     ALTER DATABASE SET HADR
 
@@ -195,7 +210,7 @@ SET
 {
     QUERY_STORE
     {
- = OFF
+          = OFF [ FORCED ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -218,7 +233,7 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+      STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
     | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
     | TOTAL_EXECUTION_CPU_TIME_MS = number
@@ -236,11 +251,12 @@ SET
     REMOTE_DATA_ARCHIVE =
     {
         ON ( SERVER = <server_name> ,
-{CREDENTIAL = <db_scoped_credential_name>
-   | FEDERATED_SERVICE_ACCOUNT = ON | OFF
-}
-      )
-      | OFF
+             { 
+                  CREDENTIAL = <db_scoped_credential_name>
+                  | FEDERATED_SERVICE_ACCOUNT = ON | OFF
+             }
+        )
+        | OFF
     }
 }
 
@@ -256,8 +272,8 @@ SET
 <snapshot_option> ::=
 {
     ALLOW_SNAPSHOT_ISOLATION { ON | OFF }
-  | READ_COMMITTED_SNAPSHOT {ON | OFF }
-  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = {ON | OFF }
+  | READ_COMMITTED_SNAPSHOT { ON | OFF }
+  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = { ON | OFF }
 }
 <sql_option> ::=
 {
@@ -282,7 +298,13 @@ SET
   | ROLLBACK IMMEDIATE
   | NO_WAIT
 }
-<temporal_history_retention>::=TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<temporal_history_retention> ::=
+    TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## Arguments
@@ -320,9 +342,9 @@ The AUTO_CLOSE option is useful for desktop databases because it allows for data
 >
 > When AUTO_CLOSE is set to ON, some columns in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view and the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function will return NULL because the database is unavailable to retrieve the data. To resolve this issue, run a USE statement to open the database.
 >
-> Database mirroring requires AUTO_CLOSE OFF.
+> Database mirroring requires AUTO_CLOSE set to OFF.
 
-When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, for each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
+When the database is set to `AUTOCLOSE = ON`, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, for each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     
@@ -483,6 +505,17 @@ The cursor is implicitly deallocated only at disconnect. For more information, s
 
 You can determine this option's status by examining the `is_local_cursor_default` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsLocalCursorsDefault` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
+**\<data_retention_policy> ::=**
+
+**Applies to**: Azure SQL Edge *Only*
+
+DATA_RETENTION { ON | OFF }   
+ON    
+Enables Data Retention policy based cleanup on a database.
+
+OFF   
+Disables Data Retention policy based cleanup on a database.
+
 **\<database_mirroring>**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -507,7 +540,7 @@ The current setting of this option can be determined by examining the `is_date_c
 **\<db_encryption_option> ::=**     
 Controls the database encryption state.
 
-ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
+ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
 ON     
 Sets the database to be encrypted.
 
@@ -724,17 +757,20 @@ The current setting of this option can be determined by examining the `is_parame
 <a name="query-store"></a> **\<query_store_options> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Enables the Query Store.
 
-OFF     
-Disables the Query Store. OFF is the default value.
+OFF      
+Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 and later builds.
+
+> [!NOTE]  
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Remove the contents of the Query Store.
+Removes query-related data from the Query Store. ALL is optional. ALL removes query-related data and metadata from the Query Store.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Describes the operation mode of the Query Store.
@@ -777,7 +813,7 @@ Size-based cleanup won't be automatically activated.
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode. Each mode defines specific query capture policies.
 
 > [!NOTE]
@@ -904,7 +940,7 @@ The current setting of this option can be determined by examining the `page_veri
 
 Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ON     
 Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
@@ -1221,13 +1257,39 @@ Not all database options use the WITH \<termination> clause or can be specified 
 
 The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options:
 
-|||
-|-|-|
-|OFFLINE|READ_WRITE|
-|ONLINE|MODIFY FILEGROUP DEFAULT|
-|MODIFY_NAME|MODIFY FILEGROUP READ_WRITE|
-|COLLATE|MODIFY FILEGROUP READ_ONLY|
-|READ_ONLY||
+:::row:::
+    :::column:::
+        OFFLINE
+    :::column-end:::
+    :::column:::
+        ONLINE
+    :::column-end:::
+    :::column:::
+        MODIFY_NAME
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        COLLATE
+    :::column-end:::
+    :::column:::
+        READ_ONLY
+    :::column-end:::
+    :::column:::
+        READ_WRITE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        MODIFY FILEGROUP DEFAULT
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_WRITE
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_ONLY
+    :::column-end:::
+:::row-end:::
 
 The plan cache is also flushed in the following scenarios.
 
@@ -1415,13 +1477,24 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -1775,7 +1848,7 @@ To change this state, you must have exclusive access to the database. For more i
 Controls user access to the database.
 
 RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Database managed instance.
+Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
 
 MULTI_USER     
 All users that have the appropriate permissions to connect to the database are allowed.
@@ -1812,10 +1885,13 @@ ON | OFF | CLEAR [ ALL ]
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
 
 ON     
-Enables the Query Store.
+Enables the Query Store. ON is the default value.
 
 OFF     
-Disables the Query Store. This is the default value.
+Disables the Query Store. 
+
+> [!NOTE]  
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Remove the contents of the Query Store.
@@ -1858,7 +1934,7 @@ Size-based cleanup will be automatically activated when size on disk reaches 90%
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode. Each mode defines specific query capture policies.   
 
 > [!NOTE]
@@ -2037,7 +2113,7 @@ A warning message is displayed when one of these errors occurs. The query, batch
 
 You can determine this option's status by examining the `is_arithabort_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsArithmeticAbortEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2296,13 +2372,24 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />managed instance \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -2594,7 +2681,7 @@ To change this state, you must have exclusive access to the database.
 Controls user access to the database.
 
 RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Database managed instance.
+Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
 
 MULTI_USER     
 All users that have the appropriate permissions to connect to the database are allowed.
@@ -2674,7 +2761,7 @@ Size-based cleanup will be automatically activated when size on disk reaches 90%
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode.
 
 ALL     
@@ -2848,7 +2935,7 @@ A warning message is displayed when one of these errors occurs. The query, batch
 
   You can determine this option's status by examining the `is_arithabort_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsArithmeticAbortEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -3080,9 +3167,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -3246,7 +3344,7 @@ Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
 ### Remarks
 
-This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABSE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABASE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 

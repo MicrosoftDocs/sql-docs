@@ -1,4 +1,5 @@
 ---
+description: "Why Was ODBC Created?"
 title: "Why Was ODBC Created? | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

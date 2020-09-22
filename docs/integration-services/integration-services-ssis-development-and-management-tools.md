@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Development and Management Tools"
 title: "Development and Management Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Development and Management Tools
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes two studios for working with packages:  

@@ -1,4 +1,5 @@
 ---
+description: "BEGIN...END (Transact-SQL)"
 title: "BEGIN...END (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -26,7 +27,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BEGIN...END (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Encloses a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements so that a group of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can be executed. BEGIN and END are control-of-flow language keywords.  
   
@@ -40,7 +41,9 @@ BEGIN
 END  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  { *sql_statement* | *statement_block* }  
  Is any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statement grouping as defined by using a statement block.  
   

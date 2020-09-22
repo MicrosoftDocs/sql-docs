@@ -1,8 +1,9 @@
 ---
+description: "Key Object (ADOX)"
 title: "Key Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -28,21 +29,21 @@ Dim obj As New Key
   
  With the properties and collections of a **Key** object, you can:  
   
--   Identify the key with the [Name](../../../ado/reference/adox-api/name-property-adox.md) property.  
+-   Identify the key with the [Name](./name-property-adox.md) property.  
   
--   Determine whether the key is primary, foreign, or unique with the [Type](../../../ado/reference/adox-api/type-property-key-adox.md) property.  
+-   Determine whether the key is primary, foreign, or unique with the [Type](./type-property-key-adox.md) property.  
   
--   Access the database columns of the key with the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection.  
+-   Access the database columns of the key with the [Columns](./columns-collection-adox.md) collection.  
   
--   Specify the name of the related table with the [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md) property.  
+-   Specify the name of the related table with the [RelatedTable](./relatedtable-property-adox.md) property.  
   
--   Determine the action performed on deletion or update of a primary key with the [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) and [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) properties.  
+-   Determine the action performed on deletion or update of a primary key with the [DeleteRule](./deleterule-property-adox.md) and [UpdateRule](./updaterule-property-adox.md) properties.  
   
  This section contains the following topic.  
   
--   [Key Object Properties, Methods, and Events](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
+-   [Key Object Properties, Methods, and Events](./key-object-properties-methods-and-events.md)  
   
 ## See Also  
- [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
+ [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Columns Collection (ADOX)](./columns-collection-adox.md)   
+ [Keys Collection (ADOX)](./keys-collection-adox.md)

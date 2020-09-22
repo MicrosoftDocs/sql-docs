@@ -1,4 +1,5 @@
 ---
+description: "sp_pkeys (Transact-SQL)"
 title: "sp_pkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,12 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_pkeys"
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_pkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns primary key information for a single table in the current environment.  
   
@@ -27,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_pkeys [ @table_name = ] 'name'       
@@ -72,7 +73,7 @@ sp_pkeys [ @table_name = ] 'name'
 ## Examples  
  The following example retrieves the primary key for the `HumanResources.Department` table in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_pkeys @table_name = N'Department'  
@@ -82,10 +83,10 @@ EXEC sp_pkeys @table_name = N'Department'
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example retrieves the primary key for the `DimAccount` table in the `AdventureWorksPDW2012` database. It returns zero rows indicating that the table does not have a primary key.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-EXEC sp_pkeys @table_name = N'DimAccount;  
+EXEC sp_pkeys @table_name = N'DimAccount';  
 ```  
   
 ## See Also  

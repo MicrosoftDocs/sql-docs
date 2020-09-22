@@ -1,5 +1,6 @@
 ---
-title: "CREATE VIEW (Transact-SQL) | Microsoft Docs"
+description: "CREATE VIEW (Transact-SQL)"
+title: CREATE VIEW (Transact-SQL)
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
@@ -34,12 +35,14 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Creates a virtual table whose contents (columns and rows) are defined by a query. Use this statement to create a view of the data in one or more tables in the database. For example, a view can be used for the following purposes:  
   
@@ -56,22 +59,22 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
-[ WITH <view_attribute> [ ,...n ] ]   
-AS select_statement   
-[ WITH CHECK OPTION ]   
+CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]
+[ WITH <view_attribute> [ ,...n ] ]
+AS select_statement
+[ WITH CHECK OPTION ]
 [ ; ]  
   
-<view_attribute> ::=   
+<view_attribute> ::=
 {  
     [ ENCRYPTION ]  
     [ SCHEMABINDING ]  
-    [ VIEW_METADATA ]       
-}   
+    [ VIEW_METADATA ]
+}
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
@@ -82,7 +85,10 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
+
 OR ALTER  
  **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
   
@@ -132,8 +138,8 @@ OR ALTER
  CHECK OPTION  
  Forces all data modification statements executed against the view to follow the criteria set within *select_statement*. When a row is modified through a view, the WITH CHECK OPTION makes sure the data remains visible through the view after the modification is committed.  
   
-> [!NOTE]  
->  Any updates performed directly to a view's underlying tables are not verified against the view, even if CHECK OPTION is specified.  
+> [!NOTE]
+>  The CHECK OPTION only applies to updates made through the view. It has no applicability to any updates performed directly to a view's underlying tables.  
   
  ENCRYPTION  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

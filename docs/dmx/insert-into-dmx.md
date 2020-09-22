@@ -1,4 +1,5 @@
 ---
+description: "INSERT INTO (DMX)"
 title: "INSERT INTO (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # INSERT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Processes the specified data mining object. For more information about processing mining models and mining structures, see [Processing Requirements and Considerations &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   

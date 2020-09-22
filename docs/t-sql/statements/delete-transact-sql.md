@@ -1,4 +1,5 @@
 ---
+description: "DELETE (Transact-SQL)"
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/19/2020"
@@ -22,13 +23,13 @@ helpviewer_keywords:
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -74,7 +75,7 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+-- Syntax for Azure Synapse Analytics
 
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  
@@ -103,7 +104,9 @@ DELETE
 [; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set, also known as common table expression, defined within the scope of the DELETE statement. The result set is derived from a SELECT statement.  
   

@@ -16,7 +16,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Create, Alter, and Drop FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to create a new FileTable, or alter or drop an existing FileTable.  
   
 ##  <a name="BasicsCreate"></a> Creating a FileTable  
@@ -154,9 +154,8 @@ GO
  **Indexes that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined indexes are also created:  
   
-|||  
+|Columns|Index type|  
 |-|-|  
-|**Columns**|**Index type**|  
 |[path_locator] ASC|Primary Key, nonclustered|  
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
 |[stream_id] ASC|Unique, nonclustered|  

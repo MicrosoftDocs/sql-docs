@@ -34,7 +34,7 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 ## Installing the Extension
 
 You can install the official release of the PowerShell extension by following the steps
-in the [Azure Data Studio documentation](./extensions.md).
+in the [Azure Data Studio documentation](./add-extensions.md).
 In the Extensions pane, search for "PowerShell" extension and install it there.  You will
 get notified automatically about any future extension updates!
 

@@ -39,4 +39,4 @@ If you don't already have Azure Data Studio installed, see its [install instruct
 
 ## Next steps
 
-Learn how to connect and query [Postgres from Azure Data Studio](quickstart-postgres.md).
+Learn how to connect and query [Postgres from Azure Data Studio](../quickstart-postgres.md).

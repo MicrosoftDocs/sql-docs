@@ -147,12 +147,12 @@ Use the **noatime** attribute with any file system that is used to store SQL Ser
 Most Linux installations should have this option on by default. We recommend for the most consistent performance experience to leave this configuration option enabled. However, in case of high memory paging activity in SQL Server deployments with multiple instances for example or SQL Server execution with other memory demanding applications on the server, we suggest testing your applications performance after executing the following command 
 
 ```bash
-echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 or modifying the mssql tuned profile with the line
 
 ```bash
-vm.transparent_hugepages=madvice
+vm.transparent_hugepages=madvise
 ```
 and make the mssql profile active after the modification
 ```bash

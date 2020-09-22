@@ -85,17 +85,16 @@ The credential used, must be created using `SHARED ACCESS SIGNATURE` as the iden
 ## Examples  
  The following example alters the location and resource manager location of an existing data source.
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
      LOCATION = 'hdfs://10.10.10.10:8020',
      RESOURCE_MANAGER_LOCATION = '10.10.10.10:8032'
     ;
-  
 ```
 
  The following example alters the credential to connect to an existing data source.
 
-```  
+```sql 
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
@@ -103,7 +102,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
 
  The following example alters the credential to a new LOCATION. This example is an external data source created for Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
    LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
    CREDENTIAL = AzureStorageCredential

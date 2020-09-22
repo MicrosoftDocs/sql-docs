@@ -31,8 +31,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
 ## Syntax
 
-```syntaxsql
-  
+```syntaxsql 
 CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
     WITH (   
         LOCATION = 'hdfs_folder',  
@@ -203,9 +202,8 @@ To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must fir
 
  The resulting Hadoop location and file name will be `hdfs:// xxx.xxx.xxx.xxx:5000/files/Customer/ QueryID_YearMonthDay_HourMinutesSeconds_FileIndex.txt.`.
 
-```  
-  
-      -- Example is based on AdventureWorks   
+```sql  
+-- Example is based on AdventureWorks   
 CREATE EXTERNAL TABLE hdfsCustomer  
 WITH (  
         LOCATION='/pdwdata/customer.tbl',  
@@ -221,9 +219,8 @@ WITH (
 > [!NOTE]
 >  This example specifies for 5000. If the port isn't specified, the database uses 8020 as the default port.
 
-```  
-  
-      -- Example is based on AdventureWorks  
+```sql  
+-- Example is based on AdventureWorks  
 CREATE EXTERNAL TABLE dbo.FactInternetSalesNew  
 WITH   
     (   

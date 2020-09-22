@@ -118,7 +118,7 @@ FOR CONVERSATION
 ### A. Changing only the priority level of an existing conversation priority.  
  Changes the priority level, but does not change the contract, local service, or remote service properties.  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (PRIORITY_LEVEL = 3);  
@@ -127,7 +127,7 @@ ALTER BROKER PRIORITY SimpleContractDefaultPriority
 ### B. Changing all of the properties of an existing conversation priority.  
  Changes the priority level, contract, local service, and remote service properties.  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContractB,  

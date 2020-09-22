@@ -41,7 +41,7 @@ Uploads R or Python package files to a database from the specified byte stream o
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2019
 
-```text
+```syntaxsql
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
@@ -83,7 +83,7 @@ WITH ( LANGUAGE = <language> )
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2017
 
-```text
+```syntaxsql
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
@@ -112,7 +112,7 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 ## Syntax for Azure SQL Managed Instance
 
-```text
+```syntaxsql
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  

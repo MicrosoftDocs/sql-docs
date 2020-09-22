@@ -35,7 +35,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER DATABASE database_name  
    SET HADR   
    {  
@@ -131,7 +130,7 @@ ALTER DATABASE database_name
 ## Examples  
  The following example joins the secondary database, `AccountsDb1`, to the local secondary replica of the `AccountsAG` availability group.  
   
-```  
+```sql  
 ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;  
 ```  
   

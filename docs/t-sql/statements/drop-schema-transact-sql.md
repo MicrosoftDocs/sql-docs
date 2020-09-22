@@ -39,9 +39,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 DROP SCHEMA  [ IF EXISTS ] schema_name  
 ```  
   
+
 ```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
 DROP SCHEMA schema_name  
 ```  
   

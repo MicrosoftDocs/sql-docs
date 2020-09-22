@@ -11,6 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, thread and task architecture"
   - "thread and task architecture guide"
+  - "task scheduling"
+  - "working threads"
+  - "Large Deficit First scheduling"
+  - "LDF scheduling"
+  - "scheduling, SQL Server"
+  - "tasks, SQL Server"
+  - "threads, SQL Server"
+  - "quantum, SQL Server"
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: "pmasl"
 ms.author: "jroth"
@@ -53,6 +61,14 @@ The number of worker threads spawned for each task depends on:
 A **scheduler**, also known as SOS scheduler, manages worker threads that require processing time to carry out work on behalf of tasks. Each scheduler is mapped to an individual processor (CPU). The time a worker can remain active in a scheduler is called the OS quantum, with a maximum of 4 ms. After its quantum time expires, a worker yields its time to other workers that need to access CPU resources, and changes its state. This cooperation between workers to maximize access to CPU resources is called **cooperative scheduling**, also known as non-preemptive scheduling. In turn, the change in worker state is propagated to the task associated with that worker, and to the request associated with the task. For more information about worker states, see [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). For more information about schedulers, see [sys.dm_os_schedulers ](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 In summary, a **request** may spawn one or more **tasks** to carry out units of work. Each task is assigned to a **worker thread** who is responsible for completing the task. Each worker thread must be scheduled (placed on a **scheduler**) for active execution of the task. 
+
+> [!NOTE]
+> Consider the following scenario:   
+> -  Worker 1 is a long-running read query using read-ahead over in-memory based tables. Worker 1 finds its required data pages are already in Buffer Pool, doesn't have to yield to wait for I/O operations, and can consume its full quantum before yielding.   
+> -  Worker 2 is doing shorter sub-millisecond activities that require it to yield before its quantum is exhausted.  
+> In this scenario, Worker 1 is allowed to basically monopolize the scheduler.    
+>     
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], cooperative scheduling includes Large Deficit First (LDF) scheduling. With LDF scheduling, quantum usage patterns are monitored and one worker thread doesn't monopolize a scheduler. In the same scenario, Worker 2 is allowed to consume repeated quantum’s and prevent Worker 1 from monopolizing the scheduler in an unfriendly pattern.
 
 ### Scheduling parallel tasks
 Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde_md](../includes/ssde_md.md)]:

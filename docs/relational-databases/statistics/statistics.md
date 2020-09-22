@@ -56,7 +56,6 @@ In more detail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] create
 
 The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.
   
-![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.png "Histogram") 
 ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.svg "Histogram") 
   
 For each histogram step above:

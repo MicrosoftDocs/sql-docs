@@ -72,7 +72,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
- ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.svg "Histogram")  
   
  For each histogram step:  
   

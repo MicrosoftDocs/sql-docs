@@ -24,19 +24,19 @@ The Schema Compare extension provides an easy-to-use experience to compare two d
 * Apply changes to target or generate a script with the same effect
 * Save the comparison
 
-![Schema Compare: Example Comparison](media/extensions/schema-compare-extension/schema-compare.png)
+![Schema Compare: Example Comparison](media/schema-compare-extension/schema-compare.png)
 
 ## Why Would I Use the Schema Compare Extension?
 
 It can be tedious to manually manage and synchronize different database versions. The Schema Compare extension simplifies the process of comparing databases and gives you full control when synchronizing them &mdash; you can selectively filter specific differences and categories of differences before applying the changes. The Schema Compare extension is a reliable tool that saves you time and code.
 
-![Schema Compare: Options Dialog](media/extensions/schema-compare-extension/schema-compare-options.png)
+![Schema Compare: Options Dialog](media/schema-compare-extension/schema-compare-options.png)
 
 ## Install the Extension
 
 1. Select the Extensions Icon to view the available extensions.
 
-    ![extension manager icon](media/extensions/extension-manager-icon.png)
+    ![extension manager icon](media/add-extensions/extension-manager-icon.png)
 
 2. Search for the **Schema Compare** extension and select it to view its details. Select **Install** to add the extension.
 
@@ -46,11 +46,11 @@ It can be tedious to manually manage and synchronize different database versions
 
 1. To open the Schema Compare dialog, **right-click** a database in the Object Explorer and Select **Schema Compare**. The database you select is set as the Source database in the comparison.
 
-    ![schema compare launch menu](media/extensions/schema-compare-extension/schema-compare-launch.png)
+    ![schema compare launch menu](media/schema-compare-extension/schema-compare-launch.png)
 
 2. Select one of the ellipses (...) to change the Source and Target of your Schema Compare and Select OK.
 
-    ![schema compare select source/target](media/extensions/schema-compare-extension/schema-compare-select-source-target.png)
+    ![schema compare select source/target](media/schema-compare-extension/schema-compare-select-source-target.png)
 
 3. To customize your comparison, Select the **Options** button in the toolbar.
 
@@ -58,5 +58,5 @@ It can be tedious to manually manage and synchronize different database versions
 
 ## Next steps
 
-To learn more about Schema Compare, [check our documentation.](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)
+To learn more about Schema Compare, visit [Use Schema Compare to Compare Different Database Definitions](../../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).
 Report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)

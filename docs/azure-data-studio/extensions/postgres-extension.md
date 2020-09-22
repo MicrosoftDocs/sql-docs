@@ -20,18 +20,18 @@ The Azure Data Studio functionality available for PostgreSQL includes:
 - Connection manager & query editor
 - Customizable dashboards & insight widgets
 - Code snippets
-- [Integrated terminal](integrated-terminal.md)
-- [Keyboard shortcuts](keyboard-shortcuts.md)
-- [Source control integration](source-control.md)
-- [Workspace & user settings](settings.md)
+- [Integrated terminal](../integrated-terminal.md)
+- [Keyboard shortcuts](../keyboard-shortcuts.md)
+- [Source control integration](../source-control.md)
+- [Workspace & user settings](../settings.md)
 
 ## Install the PostgreSQL extension (preview)
 
-If you don't already have Azure Data Studio installed, see its [install instructions](./download-azure-data-studio.md).
+If you don't already have Azure Data Studio installed, see its [install instructions](../download-azure-data-studio.md).
 
 1. Select the extensions icon from the sidebar in Azure Data Studio.
 
-    ![Extensions icon](media/extensions/postgresql-extension/extensions-icon.png)
+    :::image type="content" source="media/postgresql-extension/extensions-icon.png" alt-text="Extensions icon":::
 
 2. Type 'postgresql' into the search bar. Select the PostgreSQL extension.
 
@@ -39,4 +39,4 @@ If you don't already have Azure Data Studio installed, see its [install instruct
 
 ## Next steps
 
-Learn [how to connect and query Postgres from Azure Data Studio](quickstart-postgres.md).
+Learn how to connect and query [Postgres from Azure Data Studio](quickstart-postgres.md).

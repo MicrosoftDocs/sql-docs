@@ -69,11 +69,16 @@ landingContent:
       - linkListType: concept
         links:
           - text: Extend the functionality of Azure Data Studio
-            url: extensions.md
+            url: extensions/extensions.md
           - text: Extend the functionality by creating Azure Data Studio extensions
             url: extensions/extension-authoring.md
           - text: PostgreSQL extension
-            url: postgres-extension.md
+            url: extensions/postgres-extension.md
           - text: PowerShell Editor Support
-            url: powershell-extension.md
-
+            url: extensions/powershell-extension.md
+          - text: Azure Data Explorer
+            url: extensions/kusto-extension.md
+          - text: Notebook extension
+            url: extensions/notebook-extension.md
+          - text: Jupyter Book extension
+            url: extensions/jupyter-book-extension.md

@@ -58916,8 +58916,39 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/azure-data-studio/dashboard-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/dashboard-extension",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/azure-data-studio/data-virtualization-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/data-virtualization-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/extension-authoring.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/extension-authoring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/add-extensions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/postgres-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/postgres-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/powershell-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/powershell-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/schema-compare-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/schema-compare-extension",
+      "redirect_document_id": true
     }
   ]
 }

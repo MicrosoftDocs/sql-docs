@@ -1,7 +1,7 @@
 ---
 title: "Linux and macOS Installation for the Drivers for PHP"
 description: "In these instructions, learn how to install the Microsoft Drivers for PHP for SQL Server on Linux or macOS."
-ms.date: "04/15/2020"
+ms.date: "09/22/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -18,6 +18,8 @@ The following instructions assume a clean environment and show how to install PH
 These instructions install PHP 7.4 by default using `pecl install`. You may need to run `pecl channel-update pecl.php.net` first. Note that some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server -- please see the notes at the beginning of each section to install PHP 7.2 or 7.3 instead.
 
 Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if using the nginx web server instead of Apache.
+
+While these instructions contain commands to install both SQLSRV and PDO_SQLSRV drivers, the drivers can be installed and function independently. Users comfortable with customizing their configuration can adjust these instructions to be specific to SQLSRV or PDO_SQLSRV. Both drivers have the same prerequisites.
 
 ## Contents of this page
 

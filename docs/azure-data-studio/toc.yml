@@ -91,7 +91,7 @@
     - name: Extensibility overview
       href: extensibility.md
     - name: Extension authoring
-      href: extension-authoring.md
+      href: extensions/extension-authoring.md
     - name: Extensibility APIs
       href: extensibility-apis.md
     - name: Keymap extension

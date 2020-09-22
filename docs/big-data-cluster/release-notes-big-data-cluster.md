@@ -68,6 +68,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
 <sup>1</sup> There are no SQL Server 2019 Big Data Clusters updates for CU7.
+
 <sup>2</sup> `azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
 ## How to install updates

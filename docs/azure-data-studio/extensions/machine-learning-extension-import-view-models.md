@@ -30,7 +30,7 @@ Follow the steps below to view ONNX models that are stored in your database.
 
 1. Select **Import or view models**.
 
-1. If you're asked to install **onnxruntime**, **mlflow**, and **mlflow-dbstore**, the select **Yes**.
+1. If you're asked to install **onnxruntime**, **mlflow**, and **mlflow-dbstore**, select **Yes**.
 
 1. Select the **Models database** and **Models table** where your models are stored in.
 
@@ -42,7 +42,7 @@ Follow the steps below to import an ONNX model in your database.
 
 1. Select **Import or view models**.
 
-1. If you're asked to install **onnxruntime**, **mlflow**, and **mlflow-dbstore**, then select **Yes**.
+1. If you're asked to install **onnxruntime**, **mlflow**, and **mlflow-dbstore**, select **Yes**.
 
 1. Select **Import models**.
 

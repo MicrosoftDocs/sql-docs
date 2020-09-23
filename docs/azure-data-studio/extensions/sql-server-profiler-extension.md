@@ -45,4 +45,4 @@ The SQL Server Profiler extension (preview) provides a simple SQL Server tracing
 
 ## Next steps
 
-To learn more about Profiler and extended events, see [Extended Events](../relational-databases/extended-events/extended-events.md).
+To learn more about Profiler and extended events, see [Extended Events](../../relational-databases/extended-events/extended-events.md).

@@ -44,7 +44,7 @@ Deploying the database project is achieved in the SQL Database Projects extensio
 
 ## Schema compare
 
-The SQL Database Projects extension interacts with the [Schema Compare extension](extensions/schema-compare-extension.md), if installed, to compare the contents of a project to a dacpac or existing database.  The resulting schema comparison can be used to view and apply the differences from source to target.
+The SQL Database Projects extension interacts with the [Schema Compare extension](schema-compare-extension.md), if installed, to compare the contents of a project to a dacpac or existing database.  The resulting schema comparison can be used to view and apply the differences from source to target.
 
 ## Next steps
 

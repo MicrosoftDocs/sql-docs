@@ -184,11 +184,11 @@ ms.author: "sstein"
   
 10. Backup the **msdb** database.  
 
-##  <a name="RebuildTempdb"></a> Rebuild the Tempdb Database  
+##  <a name="RebuildTempdb"></a> Rebuild the tempdb Database  
 
 If the **tempdb** database is damaged and the database engine fails to start, you can rebuild  **tempdb** without the need to rebuild all system databases.
   
-1. Rename the current Tempdb.mdf and Templog.ldf files, if not missing. 
+1. Rename the current tempdb.mdf and templog.ldf files, if not missing. 
 1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a Command Prompt by using the following command. 
 
    ```sql
@@ -203,7 +203,7 @@ If the **tempdb** database is damaged and the database engine fails to start, yo
 1. Connect to the server by using **sqlcmd**, and then use the following stored procedure to reset the status of the tempdb database.
 
    ```sql
-   exec master..sp_resetstatus Tempdb
+   exec master..sp_resetstatus tempdb
    ```
 
 1. Shut down the server by pressing CTRL+C in the command prompt window

@@ -31,4 +31,4 @@ This experience is currently in its initial preview. Report issues and feature r
 
 ## Next steps
 
-To learn more conceptually about Central Management Servers, [you can read more here.](../ssms/register-servers/create-a-central-management-server-and-server-group.md)
+To learn more conceptually about Central Management Servers, [you can read more here.](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)

@@ -77,7 +77,7 @@
     - name: SQL Server Agent
       href: extensions/sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
-      href: extensions/sql-server--cms-extension.md
+      href: extensions/sql-server-cms-extension.md
     - name: SQL Server dacpac extension
       href: extensions/sql-server-dacpac-extension.md
     - name: SQL Server Import

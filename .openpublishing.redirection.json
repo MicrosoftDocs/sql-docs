@@ -58976,11 +58976,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/azure-data-studio/sql-server-agent-extension.md",
-      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-agent-extension",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "docs/azure-data-studio/sql-server-cms-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/sql-server-cms-extension",
       "redirect_document_id": true

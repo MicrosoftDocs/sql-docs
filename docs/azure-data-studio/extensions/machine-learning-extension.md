@@ -13,13 +13,13 @@ ms.date: 05/19/2020
 
 # Machine Learning extension for Azure Data Studio (Preview)
 
-The Machine Learning extension for [Azure Data Studio](what-is.md) enables you to manage packages, import machine learning models, make predictions, and create notebooks to run experiments for your SQL databases. This extension is currently in preview.
+The Machine Learning extension for [Azure Data Studio](../what-is.md) enables you to manage packages, import machine learning models, make predictions, and create notebooks to run experiments for your SQL databases. This extension is currently in preview.
 
 ## Prerequisites
 
 The following prerequisites need to be installed on the computer you run Azure Data Studio.
 
-- [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
+- [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](../notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
 - [Microsoft ODBC driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) for Windows, macOS, or Linux.
 
@@ -82,7 +82,7 @@ To use the Machine Learning extension as well as the Python package management i
 
 1. Ensure that **Machine Learning: Enable Python** is enabled. This setting is enabled by default.
 
-1. Provide the path to your pre-existing Python installation under **Machine Learning: Python Path**. This can either be the full path to the Python executable or the folder the executable is in. If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
+1. Provide the path to your pre-existing Python installation under **Machine Learning: Python Path**. This can either be the full path to the Python executable or the folder the executable is in. If you have used a [Python kernel notebook](../notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
 ### Enable R
 
@@ -109,6 +109,6 @@ Follow the links under **Next steps** to see how you can use the Machine Learnin
 - [Manage packages in database](machine-learning-extension-manage-packages.md)
 - [Make predictions](machine-learning-extension-predictions.md)
 - [Import or view models](machine-learning-extension-import-view-models.md)
-- [Notebooks in Azure Data Studio](notebooks-guidance.md)
+- [Notebooks in Azure Data Studio](../notebooks-guidance.md)
 - [SQL machine learning documentation](../../machine-learning/index.yml)
 - [Machine learning and AI with ONNX in SQL Edge (preview)](/azure/azure-sql-edge/onnx-overview)

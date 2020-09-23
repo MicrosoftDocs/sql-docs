@@ -2,7 +2,7 @@
 title: "tempdb database | Microsoft Docs"
 description: This topic provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 04/17/2020
+ms.date: 09/16/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -109,6 +109,8 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ### tempdb sizes for DTU-based service tiers
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|
 |Basic|13.9|1|13.9|
@@ -127,10 +129,16 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 |P6|13.9|12|166.7|
 |P11|13.9|12|166.7|
 |P15|13.9|12|166.7|
-|Premium elastic database pools (all DTU configurations)|13.9|12|166.7|
-|Standard elastic database pools (S0-S2)|13.9|12|166.7|
-|Standard elastic database pools (S3 and above) |32|12|384|
-|Basic elastic database pools (all DTU configurations)|13.9|12|166.7|
+|Basic Elastic Pools (all DTU configurations)|13.9|12|166.7|
+|Standard Elastic Pools (50 eDTU)|13.9|12|166.7|
+|Standard Elastic Pools (100 eDTU)|32|1|32|
+|Standard Elastic Pools (200 eDTU)|32|2|64|
+|Standard Elastic Pools (300 eDTU)|32|3|96|
+|Standard Elastic Pools (400 eDTU)|32|3|96|
+|Standard Elastic Pools (800 eDTU)|32|6|192|
+|Standard Elastic Pools (1200 eDTU)|32|10|320|
+|Standard Elastic Pools (1600-3000 eDTU)|32|12|384|
+|Premium Elastic Pools (all DTU configurations)|13.9|12|166.7|
 ||||
 
 ### tempdb sizes for vCore-based service tiers

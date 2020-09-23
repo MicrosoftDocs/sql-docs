@@ -97,7 +97,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -295,7 +295,7 @@ The term default, in this context, is not a keyword. It is an identifier for the
 ##  <a name="GenRemarks"></a> General Remarks  
 A  columnstore index can be created on a temporary table. When the table is dropped or the session ends, the index is also dropped.  
 
-An ordered clustered columnstore index can be created on columns of any data types supported in Azure SQL Data Warehouse except for string columns.  
+An ordered clustered columnstore index can be created on columns of any data types supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] except for string columns.  
  
 ## Filtered Indexes  
 A filtered index is an optimized nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.  

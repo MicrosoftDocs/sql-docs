@@ -142,7 +142,7 @@ Groups the SELECT statement results according to the values in a list of one or 
 For example, this query creates a Sales table with columns for Country, Region, and Sales. It inserts four rows and two of the rows have matching values for Country and Region.  
 
 ```sql
-CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
+CREATE TABLE Sales ( Country VARCHAR(50), Region VARCHAR(50), Sales INT );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
 INSERT INTO sales VALUES (N'Canada', N'British Columbia', 200);

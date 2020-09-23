@@ -11,6 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, memory management architecture"
   - "memory management architecture guide"
+  - "PMO"
+  - "Partitioned Memory Objects"
+  - "cmemthread"
+  - "AWE"
+  - "SPA, Single Page Allocator"
+  - "MPA, Multi Page Allocator"
+  - "memory allocation, SQL Server"
+  - "memory pressure, SQL Server"
+  - "stack size, SQL Server"
+  - "buffer manager, SQL Server"
+  - "buffer pool, SQL Server"
+  - "resource monitor, SQL Server"
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: "rothja"
 ms.author: "jroth"
@@ -56,7 +68,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 |Lock pages in memory operating system (OS) privilege (allows locking physical memory, preventing OS paging of the locked memory.) <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise, and Developer editions: Required for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process to use AWE mechanism. Memory allocated through AWE mechanism cannot be paged out. <br> Granting this privilege without enabling AWE has no effect on the server. | Only used when necessary, namely if there are signs that sqlservr process is being paged out. In this case, error 17890 will be reported in the Errorlog, resembling the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32-bit versions are not available starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb is an operating system boot parameter. For more information, visit the MSDN Library.  
+<sup>2</sup> /3gb is an operating system boot parameter.  
 <sup>3</sup> WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] runs on a 64-bit operating system.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the operating system maximum.  
 <sup>5</sup> Note that the sp_configure awe enabled option was present on 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is ignored.    
@@ -70,7 +82,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
--  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
+-  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The Buffer Pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
 -  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
 -  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
 -  Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
@@ -208,7 +220,7 @@ A spill that occurs during a hash operation is known as a [Hash Warning](../rela
 -  Hash recursion occurs when the build input does not fit into available memory, resulting in the split of input into multiple partitions that are processed separately. If any of these partitions still do not fit into available memory, it is split into sub-partitions, which are also processed separately. This splitting process continues until each partition fits into available memory or until the maximum recursion level is reached.
 -  Hash bailout occurs when a hashing operation reaches its maximum recursion level and shifts to an alternate plan to process the remaining partitioned data. These events can cause reduced performance in your server.
 
-For **batch mode execution**, the initial memory grant can dynamically increase up to a certain internal threshold by default. This dynamic memory grant mechanism is designed to allow memory resident execution of **hash** or **sort** operations running in batch mode. If these operations still do not fit into memory, then these will spill to disk.
+For **batch mode execution**, the initial memory grant can dynamically increase up to a certain internal threshold by default. This dynamic memory grant mechanism is designed to allow memory-resident execution of **hash** or **sort** operations running in batch mode. If these operations still do not fit into memory, then these will spill to disk.
 
 For more information on execution modes, see the [Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
@@ -283,7 +295,7 @@ Internal causes include:
 - Memory settings were manually lowered by reducing the *max server memory* configuration. 
 - Changes in memory distribution of internal components between the several caches.
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implements a framework dedicated to detecting and handling memory pressure, as part of its dynamic memory management. This framework includes the backgroud task called **Resource Monitor**. The Resource Monitor task monitors the state of external and internal memory indicators. Once one of these indicators changes status, it calculates the corresponding notification and it broadcasts it. These notifications are internal messages from each of the engine components, and stored in ring buffers. 
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implements a framework dedicated to detecting and handling memory pressure, as part of its dynamic memory management. This framework includes the background task called **Resource Monitor**. The Resource Monitor task monitors the state of external and internal memory indicators. Once one of these indicators changes status, it calculates the corresponding notification and it broadcasts it. These notifications are internal messages from each of the engine components, and stored in ring buffers. 
 
 Two ring buffers hold information relevant to dynamic memory management: 
 - The Resource Monitor ring buffer, which tracks Resource Monitor activity like was memory pressure signaled or not. This ring buffer has status information depending on the current condition of *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY*, or *RESOURCE_MEMVIRTUAL_LOW*.
@@ -306,14 +318,28 @@ The kind of page protection used is an attribute of the database containing the 
 Torn page protection, introduced in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, is primarily a way of detecting page corruptions due to power failures. For example, an unexpected power failure may leave only part of a page written to disk. When torn page protection is used, a specific 2-bit signature pattern for each 512-byte sector in the 8-kilobyte (KB) database page and stored in the database page header when the page is written to disk. When the page is read from disk, the torn bits stored in the page header are compared to the actual page sector information. The signature pattern alternates between binary 01 and 10 with every write, so it is always possible to tell when only a portion of the sectors made it to disk: if a bit is in the wrong state when the page is later read, the page was written incorrectly and a torn page is detected. Torn page detection uses minimal resources; however, it does not detect all errors caused by disk hardware failures. For information on setting torn page detection, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 #### Checksum Protection  
-Checksum protection, introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], provides stronger data integrity checking. A checksum is calculated for the data in each page that is written, and stored in the page header. Whenever a page with a stored checksum is read from disk, the database engine recalculates the checksum for the data in the page and raises error 824 if the new checksum is different from the stored checksum. Checksum protection can catch more errors than torn page protection because it is affected by every byte of the page, however, it is moderately resource intensive. When checksum is enabled, errors caused by power failures and flawed hardware or firmware can be detected any time the buffer manager reads a page from disk. For information on setting checksum, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
+Checksum protection, introduced in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], provides stronger data integrity checking. A checksum is calculated for the data in each page that is written, and stored in the page header. Whenever a page with a stored checksum is read from disk, the database engine recalculates the checksum for the data in the page and raises error 824 if the new checksum is different from the stored checksum. Checksum protection can catch more errors than torn page protection because it is affected by every byte of the page, however, it is moderately resource-intensive. When checksum is enabled, errors caused by power failures and flawed hardware or firmware can be detected any time the buffer manager reads a page from disk. For information on setting checksum, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 > [!IMPORTANT]
-> When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or a later version, the [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) value (NONE or TORN_PAGE_DETECTION) is retained. We recommend that you use CHECKSUM.
+> When a user or system database is upgraded to [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] or a later version, the [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) value (NONE or TORN_PAGE_DETECTION) is retained. We highly recommend that you use CHECKSUM.
 > TORN_PAGE_DETECTION may use fewer resources but provides a minimal subset of the CHECKSUM protection.
 
 ## Understanding Non-uniform Memory Access
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is non-uniform memory access (NUMA) aware, and performs well on NUMA hardware without special configuration. As clock speed and the number of processors increase, it becomes increasingly difficult to reduce the memory latency required to use this additional processing power. To circumvent this, hardware vendors provide large L3 caches, but this is only a limited solution. NUMA architecture provides a scalable solution to this problem. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has been designed to take advantage of NUMA-based computers without requiring any application changes. For more information, see [How to: Configure SQL Server to Use Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+
+## Dynamic partition of memory objects
+Heap allocators, called memory objects in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], allow the [!INCLUDE[ssde_md](../includes/ssde_md.md)] to allocate memory from the heap. These can be tracked using the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV. 
+CMemThread is a thread-safe memory object type that allows concurrent memory allocations from multiple threads. For correct tracking, CMemThread objects rely on synchronization constructs (a mutex) to ensure only a single thread is updating critical pieces of information at a time. 
+
+> [!NOTE]
+> The CMemThread object type is utilized throughout the [!INCLUDE[ssde_md](../includes/ssde_md.md)] code base for many different allocations, and can be partitioned globally, by node or by CPU.   
+
+However, the use of mutexes can lead to contention if many threads are allocating from the same memory object in a highly concurrent fashion. Therefore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has the concept of partitioned memory objects (PMO) and each partition is represented by a single CMemThread object. The partitioning of a memory object is statically defined and cannot be changed after creation. As memory allocation patterns vary widely based on aspects like hardware and memory usage, it is impossible to come up with the perfect partitioning pattern upfront. In the vast majority of cases, using a single partition will suffice, but in some scenarios this may lead to contention which can be prevented only with a highly partitioned memory object. It is not desirable to partition each memory object as more partitions may result in other inefficiencies and increase memory fragmentation.
+
+> [!NOTE]
+> Before [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], trace flag 8048 could be used to force a node-based PMO to become a CPU-based PMO. Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], this behavior is dynamic and controlled by the engine.
+
+Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the [!INCLUDE[ssde_md](../includes/ssde_md.md)] can dynamically detect contention on a specific CMemThread object and promote the object to a per-node or a per-CPU based implementation. Once promoted, the PMO remains promoted until the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process is restarted. CMemThread contention can be detected by the presence of high CMEMTHREAD waits in the [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) DMV, and by observing the [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) DMV columns *contention_factor*, *partition_type*, *exclusive_allocations_count*, and *waiting_tasks_count*.
 
 ## See Also
 [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

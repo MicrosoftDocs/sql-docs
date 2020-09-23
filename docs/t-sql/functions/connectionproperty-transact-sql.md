@@ -28,7 +28,7 @@ For a request that comes in to the server, this function returns information abo
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CONNECTIONPROPERTY ( property )  
 ```  
 

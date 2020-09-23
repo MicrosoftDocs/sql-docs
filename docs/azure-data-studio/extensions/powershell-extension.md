@@ -1,15 +1,14 @@
 ---
 title: PowerShell extension
 description: Learn how to install and use the Azure Data Studio PowerShell extension, which provides rich PowerShell editor support for writing and debugging scripts.
-ms.custom: "seodec18"
-ms.date: "04/19/2019"
-ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"
-manager: matthend
+ms.reviewer: "alayu, maghan, sstein"
+ms.custom: "seodec18"
+ms.date: "04/19/2019"
 ---
 
 # PowerShell Editor Support for Azure Data Studio
@@ -35,7 +34,7 @@ Now you can write and debug PowerShell scripts using the excellent IDE-like inte
 ## Installing the Extension
 
 You can install the official release of the PowerShell extension by following the steps
-in the [Azure Data Studio documentation](./extensions.md).
+in the [Azure Data Studio documentation](./add-extensions.md).
 In the Extensions pane, search for "PowerShell" extension and install it there.  You will
 get notified automatically about any future extension updates!
 
@@ -60,8 +59,8 @@ If you are running Azure Data Studio on macOS or Linux, you may also need to ins
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
 For more information on installing PowerShell Core on macOS or Linux platforms, see the following articles:
 
-- [Installing PowerShell Core on Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Installing PowerShell Core on macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux)
+- [Installing PowerShell Core on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos)
 
 ## Example Scripts
 
@@ -120,6 +119,7 @@ The default is `true` for accessibility purposes.
 Be aware this setting will prevent the focus from changing to the console, even when you use a command that explicitly calls for input, like `Get-Credential`.
 
 ## SQL PowerShell Examples
+
 In order to use these examples (below), you need to install the SqlServer module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
 
 ```powershell
@@ -137,12 +137,13 @@ Get-SqlInstance -ServerInstance ServerA, ServerB
 
 Here is a sample of what that output will look like:
 
-```
+```console
 Instance Name             Version    ProductLevel UpdateLevel  HostPlatform HostDistribution
 -------------             -------    ------------ -----------  ------------ ----------------
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
+
 The `SqlServer` module contains a Provider called `SQLRegistration` which allows you to programatically access the following types of saved SQL Server connections:
 
 + Database Engine Server (Registered Servers)
@@ -154,7 +155,7 @@ The `SqlServer` module contains a Provider called `SQLRegistration` which allows
  In the following example, we will do a `dir` (alias for `Get-ChildItem`) to get the list of all SQL Server instances listed in your Registered Servers file.
 
 ```powershell
-dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
+dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse
 ```
 
 Here is a sample of what that output could look like:
@@ -173,7 +174,7 @@ For many operations that involve a database, or objects within a database, the `
 
 Here is a sample of what that output will look like:
 
-```
+```console
 Name                 Status           Size     Space  Recovery Compat. Owner
                                             Available  Model     Level
 ----                 ------           ---- ---------- -------- ------- -----
@@ -218,19 +219,19 @@ FOREACH {
 
 Here is a sample of what that output will look like:
 
-```
-Name                 Status           Size     Space  Recovery Compat. Owner
-                                            Available  Model     Level      
+```console
+Name                 Status           Size  Space     Recovery Compat. Owner
+                                            Available Model    Level
 ----                 ------           ---- ---------- -------- ------- -----
-AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa   
-master               Normal        6.00 MB  368.00 KB Simple       140 sa   
-model                Normal       16.00 MB    5.53 MB Full         140 sa   
-msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa   
-PBIRS                Normal      144.00 MB   55.95 MB Full         140 sa   
-PBIRSTempDB          Normal       16.00 MB    4.20 MB Simple       140 sa   
-SSISDB               Normal      325.06 MB   26.21 MB Full         140 sa   
-tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa   
-WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa   
+AdventureWorks2017   Normal      336.00 MB   57.01 MB Simple       140 sa
+master               Normal        6.00 MB  368.00 KB Simple       140 sa
+model                Normal       16.00 MB    5.53 MB Full         140 sa
+msdb                 Normal       48.44 MB    1.70 MB Simple       140 sa
+PBIRS                Normal      144.00 MB   55.95 MB Full         140 sa
+PBIRSTempDB          Normal       16.00 MB    4.20 MB Simple       140 sa
+SSISDB               Normal      325.06 MB   26.21 MB Full         140 sa
+tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa
+WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 ```
 
 ## Reporting Problems
@@ -239,7 +240,7 @@ If you experience any problems with the PowerShell Extension, see
 [the troubleshooting docs](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md) for information
 on diagnosing and reporting issues.
 
-#### Security Note
+### Security Note
 
 For any security issues, see [here](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
 

@@ -68,7 +68,7 @@ Output:
 
 Create a table
 ```sql
-CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+CREATE TABLE t1 (c1 INT NOT NULL, c2 INT NOT NULL, c3 INT NOT NULL)
 ```
 Insert five rows to t1
 ```sql
@@ -80,11 +80,11 @@ INSERT INTO t1 VALUES (5, 5, 5)
 ```
 Create materialized views MV1
 ```sql
-CREATE materialized view MV1 
+CREATE MATERIALIZED VIEW MV1 
 WITH (DISTRIBUTION = HASH(c1))  
 AS
-SELECT c1, count(*) total_number 
-FROM dbo.t1 where c1 < 3
+SELECT c1, COUNT(*) total_number 
+FROM dbo.t1 WHERE c1 < 3
 GROUP BY c1  
 ```
 Selecting from the materialized view returns two rows.
@@ -106,7 +106,7 @@ Output:
 
 Update the base table.  This query updates the same column in the same row 100 times to the same value.  The materialized view content does not change.
 ```sql
-DECLARE @p int
+DECLARE @p INT
 SELECT @p = 1
 WHILE (@p < 101)
 BEGIN
@@ -132,7 +132,7 @@ After rebuilding the materialized view, all tracking rows for incremental data c
 
 ```sql
 ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
-go
+GO
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
 Output

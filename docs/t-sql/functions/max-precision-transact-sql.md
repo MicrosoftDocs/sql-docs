@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@MAX_PRECISION  
 ```  
   
@@ -47,7 +46,7 @@ ms.author: maghan
   
 ## Examples  
   
-```  
+```sql  
 SELECT @@MAX_PRECISION AS 'Max Precision'  
 ```  
   

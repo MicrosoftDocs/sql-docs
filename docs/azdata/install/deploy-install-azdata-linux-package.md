@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata` with apt
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 For Linux distributions with `apt` there is a package for the `azdata-cli`. The CLI package has been tested on Linux versions which use `apt`:
 
@@ -44,12 +44,14 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
 3. Create local repository information.
 
    For Ubuntu 16.04 client run:
-
-   ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
-   ```
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+    ```
 
    For Ubuntu 18.04 client run:
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
+    ```
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
@@ -106,3 +108,5 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

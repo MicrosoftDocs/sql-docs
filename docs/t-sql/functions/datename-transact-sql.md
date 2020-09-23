@@ -38,7 +38,7 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATENAME ( datepart , date )  
 ```  
   

@@ -28,12 +28,12 @@ Returns an integer that represents the depth of the node *this* in the tree.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 node.GetLevel ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlInt16 GetLevel ( )   
 ```  

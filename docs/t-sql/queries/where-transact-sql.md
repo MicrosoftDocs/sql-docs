@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ### A. Finding a row by using a simple equality  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -58,7 +58,7 @@ WHERE LastName = 'Smith' ;
   
 ### B. Finding rows that contain a value as part of a string  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -68,7 +68,7 @@ WHERE LastName LIKE ('%Smi%');
   
 ### C. Finding rows by using a comparison operator  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -78,7 +78,7 @@ WHERE EmployeeKey  <= 500;
   
 ### D. Finding rows that meet any of three conditions  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -88,7 +88,7 @@ WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;
   
 ### E. Finding rows that must meet several conditions  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -98,7 +98,7 @@ WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
   
 ### F. Finding rows that are in a list of values  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -108,7 +108,7 @@ WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');
   
 ### G. Finding rows that have a value between two values  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  

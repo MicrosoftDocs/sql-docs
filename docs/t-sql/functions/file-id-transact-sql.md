@@ -36,7 +36,7 @@ For the given logical name for a component file of the current database, this fu
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_ID ( file_name )  
 ```  
   

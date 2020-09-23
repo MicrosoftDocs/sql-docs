@@ -34,7 +34,7 @@ ms.author: umajay
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DBCC CHECKCATALOG   
 [   
     (   

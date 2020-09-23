@@ -6,7 +6,7 @@ ms.date: "08/24/2016"
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], preinstallation checklist"
   - "installing failover clusters"

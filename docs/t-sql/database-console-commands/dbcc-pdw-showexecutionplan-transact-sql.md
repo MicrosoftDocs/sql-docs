@@ -84,7 +84,7 @@ SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start
 FROM sys.dm_pdw_dms_workers   
 WHERE [status] <> 'StepComplete' and [status] <> 'StepError'  
 AND pdw_node_id = 201001   
-order by request_id, [dms_step_index], [distribution_id];  
+ORDER BY request_id, [dms_step_index], [distribution_id];  
 ```  
   
 Based on the results of the preceding query, use the sql_spid and pdw_node_id as parameters to DBCC PDW_SHOWEXECUTIONPLAN. For example, the following command shows the execution plan for pdw_node_id 201001 and sql_spid 375.

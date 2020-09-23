@@ -6,7 +6,7 @@ ms.date: "10/21/2015"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "troublshooting, failover clustering"
   - "failover clustering, troubleshooting"

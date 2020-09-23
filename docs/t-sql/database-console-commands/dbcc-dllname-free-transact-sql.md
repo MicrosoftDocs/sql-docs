@@ -35,7 +35,7 @@ Unloads the specified extended stored procedure DLL from memory.
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-```sql
+```syntaxsql
 DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]  
 ```  
   

@@ -32,7 +32,7 @@ This function returns information as to whether or not a lock can be granted on 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owner' )  
 ```  
   
@@ -73,7 +73,7 @@ Two users (**User A** and **User B**), with separate sessions, run the following
 USE AdventureWorks2012;  
 GO  
 BEGIN TRAN;  
-DECLARE @result int;  
+DECLARE @result INT;  
 EXEC @result=sp_getapplock  
     @DbPrincipal='public',  
     @Resource='Form1',  

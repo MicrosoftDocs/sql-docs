@@ -58,7 +58,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
   
 -------------------------------   
 The ATAN of -45.01 is: -1.54858                         

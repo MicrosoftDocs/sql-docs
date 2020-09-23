@@ -30,8 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 Key_GUID( 'Key_Name' )  
 ```  
   
@@ -55,7 +54,7 @@ Key_GUID( 'Key_Name' )
 ## Examples  
  The following example returns the GUID of a symmetric key called `ABerglundKey1`.  
   
-```  
+```sql  
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   

@@ -1,22 +1,23 @@
 ---
 title: Build and Publish a Project
 description: Build and Publish with SQL Server Database Projects extension
-ms.custom: "seodec18"
-ms.date: "06/25/2020"
-ms.reviewer: "drskwier, maghan, sstein"
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "dzsquared"
-ms.author: "drskwier"
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan, sstein
+ms.custom: 
+ms.date: 06/25/2020
 ---
+
 # Build and Publish a project
 
 The build process in the SQL Database Projects extension for Azure Data Studio allows for *dacpac* creation in Windows, macOS, and Linux environments. The project can be deployed to a local or cloud environment with the publish process.
 
 ## Prerequisites
-- Install and configure [SQL Database Projects extension for Azure Data Studio](sql-database-project-extension.md).
 
+- Install and configure [SQL Database Projects extension for Azure Data Studio](sql-database-project-extension.md).
 
 ## Build a Database Project
 

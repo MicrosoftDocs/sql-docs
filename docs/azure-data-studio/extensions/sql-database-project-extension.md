@@ -1,13 +1,13 @@
 ---
 title: SQL Database Projects extension
 description: Install and use the SQL Database Projects extension for Azure Data Studio.
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seodec18
+ms.custom: 
 ms.date: 09/22/2020
 ---
 
@@ -56,5 +56,6 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 8. WSL environment support is limited.
 
 ## Next steps
+
 - [Getting Started with the SQL Database Projects extension](sql-database-project-extension-getting-started.md)
 - [Build and Publish a project with SQL Database Projects extension for Azure Data Studio](sql-database-project-extension-build.md)

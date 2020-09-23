@@ -55,10 +55,6 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```
 
-   ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
-   ```
-
 4. Install `azdata-cli`.
 
    ```bash

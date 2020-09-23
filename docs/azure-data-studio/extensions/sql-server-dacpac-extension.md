@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ms.reviewer: "maghan, sstein"
-ms.custom: "seodec18"
+ms.custom: 
 ms.date: 11/04/2019
 ---
 
@@ -26,25 +26,25 @@ ms.date: 11/04/2019
 
 ## Why would I use the Data-tier Application Wizard?
 
-The wizard makes it easier to manage dacpac and bacpac files, which simplifies the development and deployment of data-tier elements that support your application. To learn more about using Data-tier applications, [check out our documentation.](../relational-databases/data-tier-applications/data-tier-applications.md)
+The wizard makes it easier to manage dacpac and bacpac files, which simplifies the development and deployment of data-tier elements that support your application. To learn more about using Data-tier applications, [check out our documentation.](../../relational-databases/data-tier-applications/data-tier-applications.md)
 
 ## Install the extension
 
 1. Select the Extensions Icon to view the available extensions.
 
-    ![extension manager icon](extensions/media/add-extensions/extension-manager-icon.png)
+    ![extension manager icon](media/add-extensions/extension-manager-icon.png)
 
-2. Search for the **SQL Server dacpac** extension and select it to view its details. Click **Install** to add the extension.
+2. Search for the **SQL Server dacpac** extension and select it to view its details. select **Install** to add the extension.
 
 3. Once installed, **Reload** to enable the extension in Azure Data Studio (only required when installing an extension for the first time).
 
 ## Launch the Data-tier Application Wizard
 
-To launch the wizard, right-click the Databases folder or right-click a specific database in the Object Explorer. Then, click **Data-tier Application Wizard**.
+To launch the wizard, right-click the Databases folder or right-click a specific database in the Object Explorer. Then, select **Data-tier Application Wizard**.
 
 ![dacpac extension launch menu](media/sql-server-dacpac-extension/dacpac-extension-launch.png)
 
 ## Next steps
 
-To learn more about dacpacs, [check out our documentation.](../relational-databases/data-tier-applications/data-tier-applications.md)
+To learn more about dacpacs, [check out our documentation.](../../relational-databases/data-tier-applications/data-tier-applications.md)
 Please report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)

@@ -156,13 +156,15 @@ RETURNS TABLE
 -   Specify the WITH SCHEMABINDING clause when you are creating the function. This ensures that the objects referenced in the function definition cannot be modified unless the function is also modified.  
   
 ## Interoperability  
- The following statements are valid in a function:  
+ The following statements are valid in a scalar-valued function:  
   
 -   Assignment statements.  
   
 -   Control-of-Flow statements except TRY...CATCH statements.  
   
 -   DECLARE statements defining local data variables.  
+
+In an inline table-valued function (preview), only a single select statement is allowed.
   
 ## Limitations and Restrictions  
  User-defined functions cannot be used to perform actions that modify the database state.  
@@ -237,6 +239,16 @@ GO
 The function can then be called to return all view (**V**) objects with:
 ```sql
 select * from dbo.ModulesByType('V');
+```
+
+### B. Combining results of an inline table-valued function (preview)
+ This simple example uses the previously created inline TVF to demonstrate how its results can be combined with other tables using cross apply. Here, we select all columns from both sys.objects and the results of `ModulesByType` for all rows matching on the *type* column. See [Using APPLY](../../t-sql/queries/from-transact-sql.md#using-apply) for more details.
+
+```sql
+select * 
+from sys.objects o
+cross apply dbo.ModulesByType(o.type);
+GO
 ```
   
 ## See Also  

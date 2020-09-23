@@ -1,12 +1,12 @@
 ---
 title: Notebooks with Python Kernel in Azure Data Studio
 description: This tutorial shows how you can create and run a Python notebook.
-author: garyericson
-ms.author: garye
-ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+author: garyericson
+ms.author: garye
+ms.reviewer: mikeray, alayu, maghan
 ms.custom: ""
 ms.date: 07/01/2020
 ---

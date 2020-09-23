@@ -7,7 +7,7 @@ ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
-ms.custom: ""
+ms.custom: 
 ms.date: 04/27/2020
 ---
 

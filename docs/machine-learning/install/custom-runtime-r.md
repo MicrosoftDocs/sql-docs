@@ -29,7 +29,7 @@ This article describes how to install a custom runtime for running R scripts wit
 
 ## Pre-install checklist
 
-Before installing a R custom runtime, install the following:
+Before installing an R custom runtime, install the following:
 
 + [SQL Server 2019 for Windows (Cumulative Update 3 or later)](../../database-engine/install-windows/install-sql-server.md).
 
@@ -189,7 +189,7 @@ You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterp
 
 ## Pre-install checklist
 
-Before installing a R custom runtime, install the following:
+Before installing an R custom runtime, install the following:
 
 + [SQL Server 2019 for Linux (Cumulative Update 3 or later)](../../linux/sql-server-linux-setup.md).
 Before you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md).

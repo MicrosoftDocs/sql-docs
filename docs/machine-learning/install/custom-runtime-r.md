@@ -284,7 +284,7 @@ install.packages("Rcpp", lib = "${R_HOME}/library");
 
     + Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of R_HOME to the custom R installation path.
 
-    ```vi
+    ```text
     [Service]
     Environment="R_HOME=/path/to/installation/of/R"
     ```

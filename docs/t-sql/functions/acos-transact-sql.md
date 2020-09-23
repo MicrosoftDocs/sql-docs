@@ -49,14 +49,14 @@ This example returns the `ACOS` value of the specified number.
   
 ```sql
 SET NOCOUNT OFF;  
-DECLARE @cos float;  
+DECLARE @cos FLOAT;  
 SET @cos = -1.0;  
-SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
+SELECT 'The ACOS of the number is: ' + CONVERT(VARCHAR, ACOS(@cos));  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---------------------------------   
 The ACOS of the number is: 3.14159   
   

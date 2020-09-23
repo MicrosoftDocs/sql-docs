@@ -72,7 +72,7 @@ This example prints the ASCII value and character for each character in the stri
 SET TEXTSIZE 0;  
 -- Create variables for the character string and for the current   
 -- position in the string.  
-DECLARE @position int, @string char(8);  
+DECLARE @position INT, @string CHAR(8);  
 -- Initialize the current position and the string variables.  
 SET @position = 1;  
 SET @string = 'New Moon';  

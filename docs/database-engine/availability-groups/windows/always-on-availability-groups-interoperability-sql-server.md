@@ -6,7 +6,7 @@ ms.date: "04/20/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], about"
   - "Availability Groups [SQL Server], interoperability"

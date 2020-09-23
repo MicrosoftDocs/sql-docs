@@ -53,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:
+Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Stored procedures are similar to procedures in other programming languages in that they can:
 
 - Accept input parameters and return multiple values in the form of output parameters to the calling procedure or batch.
 - Contain programming statements that perform operations in the database, including calling other procedures.
@@ -127,7 +127,7 @@ sql_statement [;] [ ... n ]
 ```
 
 ```syntaxsql
--- Transact-SQL Syntax for Stored Procedures in Azure SQL Data Warehouse
+-- Transact-SQL Syntax for Stored Procedures in Azure Synapse Analytics
 -- and Parallel Data Warehouse
 
 -- Create a stored procedure

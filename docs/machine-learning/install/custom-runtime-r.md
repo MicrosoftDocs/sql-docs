@@ -158,7 +158,7 @@ As an alternative, right-click the SQL Server Launchpad service in the **Service
 
 ## Download R language extension
 
-Download the zip file containing the R language extension (**R-lang-extension.zip**) from [here](**GitHub link goes here**).
+Download the zip file containing the R language extension [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143953).
 
 ## Register external language
 
@@ -337,7 +337,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## Download R language extension
 
-Download the zip file containing the R language extension (**R-lang-extension.zip**) from [here](**GitHub link goes here**).
+Download the zip file containing the R language extension [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143954).
 
 ## Register external language
 

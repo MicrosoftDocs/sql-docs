@@ -128,7 +128,7 @@ Alternatively, right-click the SQL Server Launchpad service in the **Services** 
 
 ## Download Python language extension
 
-Download the zip file containing the Python language extension (python-lang-extension.zip) from [here](**GitHub link goes here**).
+Download the zip file containing the Python language extension, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952).
 
 ## Register external language
 
@@ -274,7 +274,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-linux"></a> Download Python language extension
 
-Download the zip file containing the Python language extension (**python-lang-extension.zip**) from [here](**GitHub link goes here**).
+Download the zip file containing the Python language extension, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793).
 
 ## Register external language
 

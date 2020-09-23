@@ -40,7 +40,7 @@ DROP SCHEMA  [ IF EXISTS ] schema_name
 ```  
   
 
-```  
+```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP SCHEMA schema_name  

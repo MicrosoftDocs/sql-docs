@@ -242,12 +242,12 @@ select * from dbo.ModulesByType('V');
 ```
 
 ### B. Combining results of an inline table-valued function (preview)
- This simple example uses the previously created inline TVF to demonstrate how its results can be combined with other tables using cross apply. Here, we select all columns from both sys.objects and the results of `ModulesByType` for all rows matching on the *type* column. See [Using APPLY](../../t-sql/queries/from-transact-sql.md#using-apply) for more details.
+ This simple example uses the previously created inline TVF to demonstrate how its results can be combined with other tables using cross apply. Here, we select all columns from both sys.objects and the results of `ModulesByType` for all rows matching on the *type* column. For more details on using apply, see [FROM clause plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
 
 ```sql
-select * 
-from sys.objects o
-cross apply dbo.ModulesByType(o.type);
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
 GO
 ```
   

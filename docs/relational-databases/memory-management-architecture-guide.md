@@ -11,6 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, memory management architecture"
   - "memory management architecture guide"
+  - "PMO"
+  - "Partitioned Memory Objects"
+  - "cmemthread"
+  - "AWE"
+  - "SPA, Single Page Allocator"
+  - "MPA, Multi Page Allocator"
+  - "memory allocation, SQL Server"
+  - "memory pressure, SQL Server"
+  - "stack size, SQL Server"
+  - "buffer manager, SQL Server"
+  - "buffer pool, SQL Server"
+  - "resource monitor, SQL Server"
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: "rothja"
 ms.author: "jroth"

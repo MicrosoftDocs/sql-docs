@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
-ms.custom: seodec18
+ms.custom: 
 ms.date: 06/06/2019
 ---
 
@@ -23,10 +23,12 @@ This experience is currently in its initial preview. Report issues and feature r
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
 2. Select an available extension to view its details.
-1. Select the extension you want (SQL Server Central Management Servers) and **Install** it.
+3. Select the extension you want (SQL Server Central Management Servers) and **Install** it.
 
 ### How do I start Central Management Servers?
+
  Central Management Servers can be viewed by clicking on the Connections icon (Ctrl/Cmd + G). The first time you download the extension, the CMS view will be minimized, and you can open it by click on **Central Management Servers**
 
 ## Next steps
-To learn more conceptually about Central Management Servers, [you can read more here.](../ssms/register-servers/create-a-central-management-server-and-server-group.md)
+
+To learn more conceptually about Central Management Servers, [you can read more here.](../../ssms/register-servers/create-a-central-management-server-and-server-group.md)

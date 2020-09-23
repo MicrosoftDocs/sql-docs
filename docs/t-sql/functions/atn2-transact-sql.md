@@ -48,14 +48,14 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of da
 The following example calculates the `ATN2` for the specified `x` and `y` components.
   
 ```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar, ATN2(@y, @x));  
+DECLARE @x FLOAT = 35.175643, @y FLOAT = 129.44;  
+SELECT 'The ATN2 of the angle is: ' + CONVERT(VARCHAR, ATN2(@y, @x));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The ATN2 of the angle is: 1.30545                         
 (1 row(s) affected)  
 ```  

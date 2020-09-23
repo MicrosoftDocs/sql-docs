@@ -1,15 +1,16 @@
 ---
 title: User and Workspace Settings
 description: Learn how to use settings to customize Azure Data Studio's editor, user interface, and functional behavior to suit your preferences.
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
+ms.reviewer: "maghan, sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
+
 # Modify User and Workspace Settings
 
 It is easy to configure Azure Data Studio to your liking through settings. Nearly every part of Azure Data Studio's editor, user interface, and functional behavior has options you can modify.
@@ -49,7 +50,6 @@ The workspace setting file is located under the `.Azure Data Studio` folder in y
 Azure Data Studio remembers unsaved changes to files when you exit by default. This is the same as the hot exit feature in Visual Studio Code.
 
 By default, hot exit is off. Enable hot exit by editing the `files.hotExit` setting. For details, see [Hot Exit (in the Visual Studio Code documentation)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
-
 
 ## Tab color
 

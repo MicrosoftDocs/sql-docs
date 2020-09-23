@@ -28,7 +28,7 @@ This function returns the properties of an asymmetric key.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')  
 ```  
   

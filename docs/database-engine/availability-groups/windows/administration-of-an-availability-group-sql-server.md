@@ -6,7 +6,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], managing"
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480

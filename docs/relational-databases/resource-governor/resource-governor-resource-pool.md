@@ -1,5 +1,5 @@
 ---
-title: "Resource Governor Resource Pool | Microsoft Docs"
+title: "Resource Governor Resource Pool"
 description: SQL Server Resource Governor specifies limits on the amount of CPU, physical IO, and memory that incoming application requests can use within the resource pool.
 ms.custom: ""
 ms.date: "10/20/2017"
@@ -25,23 +25,25 @@ ms.author: jrasnick
   
 -   **MIN_CPU_PERCENT and MAX_CPU_PERCENT**  
   
-     These settings are the minimum and maximum guaranteed average CPU bandwidth for all requests in the resource pool when there is CPU contention. You can use these settings to establish predictable CPU resource usage for multiple workloads that is based on the needs of each workload. For example, assume the Sales and Marketing departments in a company share the same database. The Sales department has a CPU-intensive workload with high-priority queries. The Marketing department also has a CPU-intensive workload, but has lower-priority queries. By creating a separate resource pool for each department, you can assign a *minimum* CPU percentage of 70 for the Sales resource pool and a *maximum* CPU percentage of 30 for the Marketing resource pool. This ensures that the Sales workload receives the CPU resources it requires and the Marketing workload is isolated from the CPU demands of the Sales workload. Note that the maximum CPU percentage is an opportunistic maximum. If there is available CPU capacity, the workload uses it up to 100 percent. The maximum value only applies when there is contention for CPU resources. In this example, if the Sales workload is switched off, the Marketing workload can use 100 percent of the CPU if needed.  
+     These settings are the minimum and maximum guaranteed average CPU bandwidth for all requests in the resource pool when there is CPU contention. You can use these settings to establish predictable CPU resource usage for multiple workloads that is based on the needs of each workload. For example, assume the Sales and Marketing departments in a company share the same database. The Sales department has a CPU-intensive workload with high-priority queries. The Marketing department also has a CPU-intensive workload, but has lower-priority queries. By creating a separate resource pool for each department, you can assign a *minimum* CPU percentage of 70 for the Sales resource pool and a *maximum* CPU percentage of 30 for the Marketing resource pool. This ensures that the Sales workload receives the CPU resources it requires and the Marketing workload is isolated from the CPU demands of the Sales workload. Note that maximum CPU percentage is an opportunistic maximum. If there is available CPU capacity, the workload uses it up to 100 percent. The maximum value only applies when there is contention for CPU resources. In this example, if the Sales workload is switched off, the Marketing workload can use 100 percent of the CPU if needed.  
   
 -   **CAP_CPU_PERCENT**  
   
-     This settings is a hard cap limit on the CPU bandwidth for all requests in the resource pool. Workloads associated with the pool can use CPU capacity above the value of MAX_CPU_PERCENT if it is available, but not above the value of CAP_CPU_PERCENT. Using the example above, lets assume that the Marketing department is being charged for their resource usage. They want predictable billing and do not want to pay for more than 30 percent of the CPU. This can be accomplished by setting the CAP_CPU_PERCENT to 30 for the Marketing resource pool.  
+     The CAP_CPU_PERCENT setting is a hard cap limit on the CPU bandwidth for all requests in the resource pool. Workloads associated with the pool can use CPU capacity above the value of MAX_CPU_PERCENT if it is available, but not above the value of CAP_CPU_PERCENT. Using the example above, lets assume that the Marketing department is being charged for their resource usage. They want predictable billing and do not want to pay for more than 30 percent of the CPU. This can be accomplished by setting the CAP_CPU_PERCENT to 30 for the Marketing resource pool.  
   
 -   **MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT**  
   
-     These settings are the minimum and maximum amount of memory reserved for the resource pool that can not be shared with other resource pools. The memory referenced here is query execution grant memory, not buffer pool memory (for example, data and index pages). Setting a minimum memory value for a pool means that you are ensuring that the percentage of memory specified will be available for any requests that might run in this resource pool. This is an important differentiator compared to MIN_CPU_PERCENT, because in this case memory may remain in the given resource pool even when the pool does not have any requests in the workload groups belonging to this pool. Therefore it is crucial that you be very careful when using this setting, because this memory will be unavailable for use by any other pool, even when there are no active requests. Setting a maximum memory value for a pool means that when requests are running in this pool, they will never get more than this percentage of overall memory.  
+     These settings are the minimum and maximum amount of memory reserved for the resource pool that cannot be shared with other resource pools. For databases without memory-optimized tables, the memory referenced here is query execution grant memory, not buffer pool memory (for example, data and index pages). Setting a minimum memory value for a pool means that you are ensuring that the percentage of memory specified will be available for any requests that might run in this resource pool. This is an important differentiator compared to MIN_CPU_PERCENT, because in this case memory may remain in the given resource pool even when the pool does not have any requests in the workload groups belonging to this pool. Therefore it is crucial to be careful when using this setting, because this memory will be unavailable for use by any other pool, even when there are no active requests. Setting a maximum memory value for a pool means that when requests are running in this pool, they will never get more than this percentage of overall memory.
+
+     In order to govern memory for memory-optimized tables with Resource Governor, you should bind the database to a separate resource pool. For more information, see [Bind a Database with Memory-Optimized Tables to a Resource Pool](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).
   
 -   **AFFINITY**  
   
-     This setting lets you affinitize a resource pool to one or more schedulers or NUMA nodes for greater isolation of CPU resources. Using the Sales and Marketing scenario above, lets assume that the Sales department needs a more isolated environment and wants 100 percent of a CPU core at all times. By using the AFFINITY option the Sales and Marketing workloads can be scheduled on different CPUs. Assuming the CAP_CPU_PERCENT on the Marketing pool is still in place, the Marketing workload continues to use a maximum of 30 percent of one core, while the Sales workload uses 100 percent of the other core. As far as the Sales and Marketing workloads are concerned, they are running on two isolated machines.  
+     This setting lets you affinitize a resource pool to one or more schedulers or NUMA nodes for greater isolation of CPU resources. Using the Sales and Marketing scenario above, lets assume that the Sales department needs a more isolated environment and wants 100 percent of a CPU core at all times. By using the AFFINITY option the Sales and Marketing, workloads can be scheduled on different CPUs. Assuming the CAP_CPU_PERCENT on the Marketing pool is still in place, the Marketing workload continues to use a maximum of 30 percent of one core, while the Sales workload uses 100 percent of the other core. As far as the Sales and Marketing workloads are concerned, they are running on two isolated machines.  
   
 -   **MIN_IOPS_PER_VOLUME and MAX_IOPS_PER_VOLUME**  
   
-     These settings are the minimum and maximum physical IO operations per second (IOPS) per disk volume for a resource pool. You can use these settings to control the physical IOs issued for user threads for a given resource pool. For example, the Sales department generates several end-of-month reports in large batches. The queries in these batches can generate IOs that can saturate the disk volume and impact the performance of other higher priority workloads in the database. To isolate this workload, the MIN_IOPS_PER_VOLUME is set to 20 and the MAX_IOPS_PER_VOLUME is set to 100 for the Sales department resource pool, which controls the level of IOs that can issued for the workload.  
+     These settings are the minimum and maximum physical IO operations per second (IOPS) per disk volume for a resource pool. You can use these settings to control the physical IOs issued for user threads for a given resource pool. For example, the Sales department generates several end-of-month reports in large batches. The queries in these batches can generate IOs that can saturate the disk volume and impact the performance of other higher priority workloads in the database. To isolate this workload, the MIN_IOPS_PER_VOLUME is set to 20 and the MAX_IOPS_PER_VOLUME is set to 100 for the Sales department resource pool, which controls the level of IOs that can be issued for the workload.  
   
 When configuring CPU or Memory, the sum of MIN values across all pools cannot exceed 100 percent of the server resources. In addition, when configuring CPU or Memory, MAX and CAP values can be set anywhere in the range between MIN and 100 percent inclusive.  
   
@@ -82,7 +84,7 @@ Using the preceding table as an example, we can further illustrate the adjustmen
   
  Some extreme cases of pool configuration are:  
   
--   All pools define minimums that in total represent 100 percent of the server resources. In this case the effective maximums are equal to minimums. This is equivalent to dividing the server resources into non-overlapping pieces regardless of resources are consumed inside any given pool.  
+-   All pools define minimums that in total represent 100 percent of the server resources. In this case, the effective maximums are equal to minimums. This is equivalent to dividing the server resources into non-overlapping pieces regardless of resources are consumed inside any given pool.  
   
 -   All pools have zero minimums. All the pools compete for available resources and their final sizes are based on resource consumption in each pool. Other factors such as policies play a role in shaping the final pool size.  
   
@@ -104,7 +106,7 @@ The default pool is the first predefined user pool. Prior to any configuration t
   
 **External Pool**  
   
-Users can define an external pool to define resources for the external processes. For R Services, this specifically governs `rterm.exe`, `BxlServer.exe` and other processes spawned by them.  
+Users can define an external pool to define resources for the external processes. For R Services, this specifically governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.  
   
 **User-Defined Resource Pools**  
   
@@ -112,7 +114,7 @@ User-defined resource pools are those that you create for specific workloads in 
   
 ## Resource Pool Tasks  
   
-|Task Description|Topic|  
+|Task Description|Article|  
 |----------------------|-----------|  
 |Describes how to create a resource pool.|[Create a Resource Pool](../../relational-databases/resource-governor/create-a-resource-pool.md)|  
 |Describes how to change resource pool settings.|[Change Resource Pool Settings](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  

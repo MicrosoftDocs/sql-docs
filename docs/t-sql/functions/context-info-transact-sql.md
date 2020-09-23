@@ -32,7 +32,7 @@ This function returns the **context_info** value either set for the current sess
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CONTEXT_INFO()  
 ```  
 

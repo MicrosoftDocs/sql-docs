@@ -29,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 VALUES ( <row value expression list> ) [ ,...n ]   
   
 <row value expression list> ::=  
@@ -69,7 +68,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE dbo.MyProducts (Name varchar(50), ListPrice money);  
+CREATE TABLE dbo.MyProducts (Name VARCHAR(50), ListPrice MONEY);  
 GO  
 -- This statement fails because the third values list contains multiple columns in the subquery.  
 INSERT INTO dbo.MyProducts (Name, ListPrice)  
@@ -94,7 +93,7 @@ GO
  The values specified in a multi-row INSERT statement follow the data type conversion properties of the UNION ALL syntax. This results in the implicit conversion of unmatched types to the type of higher [precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md). If the conversion is not a supported implicit conversion, an error is returned. For example, the following statement inserts an integer value and a character value into a column of type **char**.  
   
 ```sql
-CREATE TABLE dbo.t (a int, b char);  
+CREATE TABLE dbo.t (a INT, b CHAR);  
 GO  
 INSERT INTO dbo.t VALUES (1,'a'), (2, 1);  
 GO  
@@ -179,7 +178,7 @@ GROUP BY Change;
   The following example demonstrates using the table value constructor as a derived table. This allows for inserting more than 1000 rows from a single table value constructor.
   
 ```sql
-CREATE TABLE dbo.Test ([Value] int);  
+CREATE TABLE dbo.Test ([Value] INT);  
   
 INSERT INTO dbo.Test ([Value])  
   SELECT drvd.[NewVal]

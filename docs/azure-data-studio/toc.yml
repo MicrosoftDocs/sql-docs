@@ -75,15 +75,15 @@
       - name: Build a Project from the Command Line
         href: extensions/sql-database-project-extension-build-from-command-line.md
     - name: SQL Server Agent
-      href: sql-server-agent-extension.md
+      href: extensions/sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
-      href: sql-server-cms-extension.md
+      href: extensions/sql-server--cms-extension.md
     - name: SQL Server dacpac extension
-      href: sql-server-dacpac-extension.md
+      href: extensions/sql-server-dacpac-extension.md
     - name: SQL Server Import
-      href: sql-server-import-extension.md
+      href: extensions/sql-server-import-extension.md
     - name: SQL Server Profiler
-      href: sql-server-profiler-extension.md
+      href: extensions/sql-server-profiler-extension.md
   - name: Extension Authoring
     items:
     - name: Extensibility overview

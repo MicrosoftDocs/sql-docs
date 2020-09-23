@@ -58969,6 +58969,36 @@
       "source_path": "docs/azure-data-studio/sql-database-project-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-agent-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-agent-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-agent-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-agent-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-cms-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-cms-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-dacpac-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-dacpac-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-import-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-import-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-profiler-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-profiler-extension",
+      "redirect_document_id": true
     }
   ]
 }

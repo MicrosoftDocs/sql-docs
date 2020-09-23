@@ -32,8 +32,6 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 2. Select under the **Connections** in the **Servers** window. Then select **New Notebook**.
 
-   ![Open notebook](media/notebooks-sql-kernel/azure-data-studio-open-notebook.png)
-
 3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **SQL**, and set **Attach to** for your SQL Server (in this example it's *localhost*).
 
    ![Set Kernel and Attach to](media/notebooks-sql-kernel/set-kernel-and-attach-to.png)
@@ -51,8 +49,6 @@ To change the SQL connection for a notebook:
    ![Select the Attach to menu in the notebook toolbar](./media/notebooks-sql-kernel/select-attach-to-1.png)
 
 2. Now you can either select a recent connection server or enter new connection details to connect.
-
-   ![Select a server from the Attach to menu](./media/notebooks-sql-kernel/select-attach-to-2.png)
 
 ## Run a code cell
 

@@ -17,37 +17,38 @@ This article describes how to install a custom runtime for running Python script
 
 + An installation of SQL Server with extensibility framework.
 
-+ An installation of SQL Machine Learning Services for SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
++ An installation of Machine Learning Services with SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
 > [!NOTE]
-> This article describes how to install a custom runtime for Python on Windows. To install on Linux, see the [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true)
+> This article describes how to install a custom runtime for Python on Windows. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
 ## Pre-install checklist
 
-+ [SQL Server 2019 for Windows CU3 or later.](../../database-engine/install-windows/install-sql-server.md)
+Before installing a Python custom runtime, install the following:
+
++ [SQL Server 2019 for Windows CU3 or later](../../database-engine/install-windows/install-sql-server.md).
 
   > [!NOTE]
   > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
-+ [SQL Server Language Extensions on Windows with the extensibility framework.](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)
++ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
 
-+ [Python 3.7]( https://www.python.org/downloads/release/python-379/)
++ [Python 3.7]( https://www.python.org/downloads/release/python-379/).
 
 ## Add SQL Server Language Extensions for Windows
 
 > [!NOTE]
-> For Machine Learning Services using SQL Server 2019, the extensibility framework for language extensions is already installed and you can skip this step.
+> If you have Machine Learning Services installed on SQL Server 2019, the extensibility framework is already installed and you can skip this step.
 
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
-Complete the setup for SQL Server 2019.
-
-1. Start the setup wizard for SQL Server 2019. 
+1. Start the setup wizard for SQL Server 2019.
   
 1. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
     
-    ![SQL Server 2019 CU3 or later installation](../install/media/2019setup-installation-page-mlsvcs.png) 
+    ![SQL Server 2019 installation CU3 or later](../install/media/2019setup-installation-page-mlsvcs.png) 
 
 1. On the **Feature Selection** page, select these options:
   
@@ -57,7 +58,7 @@ Complete the setup for SQL Server 2019.
   
     - **Machine Learning Services and Language Extensions**
    
-       Select **Machine Learning Services and Language Extensions** There's no need to select Python.
+       Select **Machine Learning Services and Language Extensions**. There's no need to select Python.
 
     ![SQL Server 2019 CU3 or later installation features](../install/media/sql-feature-selection.png) 
 
@@ -71,7 +72,7 @@ Complete the setup for SQL Server 2019.
 
 ## Install Python 3.7 
 
-[Install Python 3.7 and add it to the PATH.]( https://www.python.org/downloads/release/python-379/)
+Install [Python 3.7]( https://www.python.org/downloads/release/python-379/) and add it to the PATH.
 
 ![Add Python 3.7 to path.](../install/media/python-379.png) **update image - note**
 
@@ -88,13 +89,10 @@ python.exe -m pip install pandas
 
 Add or modify PYTHONHOME as a system environment variable.
 
-+ In **Search** type **environment.** Select **Edit system environment variables.**
-+ In the section System Variables.
-Select **Advanced** tab.
-Select **Environment Variables.**
-
-+ Select **New** to create PYTHONHOME.
-To modify select **Edit** to change PYTHONHOME. Modify PYTHONHOME to point to the Python 3.7 installation location.
++ In the Windows search box, type "environment" and select **Edit the system environment variables**.
++ In the **Advanced** tab, select **Environment Variables**.
++ Under **System variables**, select **New** to create PYTHONHOME to point to the Python 3.7 installation location.
+If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 installation location.
 + Select **OK** to close remaining windows.
 
 ![Create PYTHONHOME system variable.](../install/media/sys-pythonhome.png)
@@ -105,21 +103,21 @@ Run the following **icacls** commands from a new *elevated* command prompt to gr
 
 Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
 
-1. Give permissions to **SQL Server Launchpad Service user name**
+1. Give permissions to **SQL Server Launchpad Service user name**.
 
     ```cmd
     icacls "%PYTHONHOME%" /grant "NT Service\MSSQLLAUNCHPAD$MSSQLSERVER":(OI)(CI)RX /T
 
-2. Give permissions to **SID S-1-15-2-1**
+2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
     
 >[!NOTE]
->The above command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
+>The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
 ## Restart SQL Server Launchpad service
 
-Find the name of the SQL Server Launchpad Service. It is of the form MSSQLLAUNCHPAD$INSTANCENAME where INSTANCENAME is the instance name of your SQL Server. From an *elevated* command prompt, run the following commands (in this example, INSTANCENAME is the default instance `MSSQLSERVER`).
+From an *elevated* command prompt, run the following commands. Replace "MSSQLSERVER" with the name of your SQL Server instance.
 
 ```CMD
 net stop MSSQLLAUNCHPAD$MSSQLSERVER
@@ -130,15 +128,14 @@ Alternatively, right-click the SQL Server Launchpad service in the **Services** 
 
 ## Download Python language extension
 
-Download the zip file containing the Python language extension (python-lang-extension.zip) from [here.](**GitHub link goes here**)
+Download the zip file containing the Python language extension, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952).
 
 ## Register external language
 
-For each database you want to use this Python language extension, you need to register it with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
-Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip) from above.
+Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL command. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
 
 > [!NOTE]
->Python is a reserved word. Use a different name for the external language, e.g. myPython.
+> Python is a reserved word. Use a different name for the external language, for example, "myPython".
 
 ```sql
 CREATE EXTERNAL LANGUAGE [myPython]
@@ -149,6 +146,7 @@ GO
 ::: moniker-end
 
 ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
 > [!NOTE]
@@ -156,22 +154,26 @@ You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterp
 
 ## Pre-install checklist
 
-+ [SQL Server 2019 for Linux (Cumulative Update 3 onwards).](../../linux/sql-server-linux-setup.md)
+Before installing a Python custom runtime, install the following:
+
++ [SQL Server 2019 for Linux (Cumulative Update 3 or later)](../../linux/sql-server-linux-setup.md).
 When you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md)
 
   > [!NOTE]
   > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
-+ [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
++ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions.md).
 
-+ [Python 3.7](https://www.python.org/downloads/release/python-379/)
++ [Python 3.7](https://www.python.org/downloads/release/python-379/).
 
 ## Add SQL Server Language Extensions for Linux
 
 > [!NOTE]
-> For Machine Learning Services using SQL Server 2019, the **mssql-server-extensibility** package for language extensions is already installed and you can skip this step.
+> If you have Machine Learning Services installed on SQL Server 2019, the **mssql-server-extensibility** package for language extensions is already installed and you can skip this step.
 
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
+
+Use the following commands to install Language Extensions, depending on your version of Linux.
 
 ### Ubuntu
 > [!TIP]
@@ -198,7 +200,7 @@ sudo zypper install mssql-server-extensibility
 
 Install Python 3.7, the libpython3.7 library, and the pandas package. 
 
-Example instructions for Ubuntu:
+The following are example commands for Ubuntu:
 
 ```bash
 # Install python3.7 and the corresponding library:
@@ -215,22 +217,22 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 > [!NOTE]
 > If you have installed Python in the default location of `/usr/lib/python3.7`, you can skip to [the next section](#download-python-linux).
 
-If you built your own version of Python 3.7, follow the following steps so that SQL Server can find and load your custom installation.
+If you built your own version of Python 3.7, use the following commands so that SQL Server can find and load your custom installation.
 
-#### Update the environment variables
+### Update the environment variables
 
 1. Edit the mssql-launchpadd service to add the PYTHONHOME environment variable to the file `/etc/systemd/system/mssql-launchpadd.service.d/override.conf`
 
-    ```bash
-    sudo systemctl edit mssql-launchpadd
-    ```
+      ```bash
+      sudo systemctl edit mssql-launchpadd
+      ```
 
     + Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of PYTHONHOME to the custom Python installation path.
 
-    ```vi
-    [Service]
-    Environment="PYTHONHOME=/path/to/installation/of/python3.7"
-    ```
+      ```vi
+      [Service]
+      Environment="PYTHONHOME=/path/to/installation/of/python3.7"
+      ```
 
     + Save and close.
 
@@ -238,26 +240,26 @@ If you built your own version of Python 3.7, follow the following steps so that 
 
     + Create a custom-python.conf file in `/etc/ld.so.conf.d`.
 
-    ```bash
-    sudo vi /etc/ld.so.conf.d/custom-python.conf
-    ```
+      ```bash
+      sudo vi /etc/ld.so.conf.d/custom-python.conf
+      ```
 
-    + In the file that opens, add path to `libpython3.7m.so.1.0` from the custom Python installation.
+    + In the file that opens, add the path to **libpython3.7m.so.1.0** from the custom Python installation.
 
-    ```vi
-    /path/to/installation/of/python3.7/lib
-    ```
+      ```vi
+      /path/to/installation/of/python3.7/lib
+      ```
 
     + Save and close the new file.
 
     + Run `ldconfig` and verify `libpython3.7m.so.1.0` can be loaded by running the following commands and checking that all the dependent libraries can be found.
 
-    ```bash
-    sudo ldconfig
-    ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
-    ```
+      ```bash
+      sudo ldconfig
+      ldd /path/to/installation/of/python3.7/lib/libpython3.7m.so.1.0
+      ```
 
-#### Grant access to the custom Python folder
+### Grant access to the custom Python folder
 
 Set the `datadirectories` option in the extensibility section of /var/opt/mssql/mssql.conf file to the custom python installation.
 
@@ -265,24 +267,22 @@ Set the `datadirectories` option in the extensibility section of /var/opt/mssql/
 sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/installation/of/python3.7
 ```
 
-#### Restart the mssql-launchpadd service
+### Restart the mssql-launchpadd service
 
 ```bash
 sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-linux"></a> Download Python language extension
 
-Download the zip file containing the Python language extension (**python-lang-extension.zip**) from [here.](**GitHub link goes here**)
+Download the zip file containing the Python language extension, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793).
 
 ## Register external language
 
-For each database you want to use this python language extension, you need to register it with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
-Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL. 
-
-Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip) from above.
+Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL command. 
+Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
 
 > [!NOTE]
->Python is a reserved word. Use a different name for the external language e.g. myPython.
+>Python is a reserved word. Use a different name for the external language, for example, "myPython".
 
 ```sql
 CREATE EXTERNAL LANGUAGE myPython 
@@ -294,7 +294,9 @@ GO
 
 ## Enable external script execution in SQL Server
 
-An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run against SQL Server. Execute the following script using [Azure Data Studio.](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
+An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run against SQL Server. 
+
+To enable external scripts, execute the following SQL commands using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), connected to SQL Server.
 
 ```sql
 sp_configure 'external scripts enabled', 1;
@@ -302,9 +304,8 @@ RECONFIGURE WITH OVERRIDE;
 ```
 
 ## Verify language extension installation
-Use SQL Azure Data Studio to connect to SQL Server.
 
-This script tests the functionality of the installed language extension.
+This SQL script tests the functionality of the installed language extension.
 
 ```sql
 EXEC sp_execute_external_script

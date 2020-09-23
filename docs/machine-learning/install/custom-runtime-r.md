@@ -197,7 +197,7 @@ Before you install SQL Server on Linux, you must configure a Microsoft repositor
 > [!NOTE]
 >For Machine Learning Services using SQL Server 2019, the **mssql-server-extensibility** package for language extensions is already installed and you can skip this step.
 
-Language extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
+Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
 ### Ubuntu
 > [!Tip]

@@ -69,8 +69,8 @@ The following example creates a table using the **decimal** and **numeric** data
 ```sql
 CREATE TABLE dbo.MyTable  
 (  
-  MyDecimalColumn decimal(5,2)  
-,MyNumericColumn numeric(10,5)
+  MyDecimalColumn DECIMAL(5,2)  
+,MyNumericColumn NUMERIC(10,5)
   
 );  
   

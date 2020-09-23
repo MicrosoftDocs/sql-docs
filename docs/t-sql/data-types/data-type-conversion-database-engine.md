@@ -58,7 +58,7 @@ While the above chart illustrates all the explicit and implicit conversions that
 As an example, the following script defines a variable of type `varchar`, assigns an `int` type value to the variable, then selects a concatenation of the variable with a string.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -68,7 +68,7 @@ The `int` value of `1` is converted to a `varchar`, so the `SELECT` statement re
 The following example, shows a similar script with an `int` variable instead:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -81,7 +81,7 @@ In this case, the `SELECT` statement throws the following error:
 In order to evaluate the expression `@notastring + ' is not a string.'`, SQL Server follows the rules of data type precedence to complete the implicit conversion before the result of the expression can be calculated. Because `int` has a higher precedence than `varchar`, SQL Server attempts to convert the string to an integer and fails because this string cannot be converted to an integer. If the expression provides a string that can be converted, the statement succeeds, as in the following example:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

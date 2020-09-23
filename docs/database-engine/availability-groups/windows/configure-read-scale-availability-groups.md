@@ -6,7 +6,7 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: ""
 ms.date: 05/24/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: high-availability
 ---

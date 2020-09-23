@@ -37,7 +37,7 @@ This function returns the name of the stored procedure or trigger where an error
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_PROCEDURE ( )  
 ```  
   
@@ -63,7 +63,7 @@ When called in a CATCH block, `ERROR_PROCEDURE` returns the name of the stored p
 ### A. Using ERROR_PROCEDURE in a CATCH block  
 This example shows a stored procedure that generates a divide-by-zero error. `ERROR_PROCEDURE` returns the name of the stored procedure where the error occurred.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -84,7 +84,10 @@ BEGIN CATCH
     SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
 END CATCH;  
 GO  
+```  
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```  
 -----------
 
 (0 row(s) affected)
@@ -94,14 +97,13 @@ ErrorProcedure
 usp_ExampleProc
 
 (1 row(s) affected)
-
 ```  
+
   
 ### B. Using ERROR_PROCEDURE in a CATCH block with other error-handling tools  
 This example shows a stored procedure that generates a divide-by-zero error. Along with the name of the stored procedure where the error occurred, the stored procedure returns information about the error.  
   
-```  
-  
+```sql
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -127,8 +129,11 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage,  
         ERROR_LINE() AS ErrorLine;  
         END CATCH;  
-GO  
+GO
+``` 
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+``` 
 -----------
 
 (0 row(s) affected)
@@ -138,8 +143,8 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
 8134        16            1           usp_ExampleProc  Divide by zero error encountered.  6
 
 (1 row(s) affected)
-
-```  
+``` 
+ 
   
 ## See Also  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   

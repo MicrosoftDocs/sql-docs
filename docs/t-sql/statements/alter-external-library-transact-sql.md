@@ -2,7 +2,7 @@
 description: "ALTER EXTERNAL LIBRARY (Transact-SQL)"
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
@@ -37,7 +37,7 @@ Modifies the content of an existing external package library.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2019
 
-```text
+```syntaxsql
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -80,7 +80,7 @@ WITH ( LANGUAGE = <language> )
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2017
 
-```text
+```syntaxsql
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -111,7 +111,7 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 ## Syntax for Azure SQL Managed Instance
 
-```text
+```syntaxsql
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
@@ -141,7 +141,7 @@ WITH ( LANGUAGE = <language> )
 
 **library_name**
 
-Specifies the name of an existing package library. Libraries are scoped to the user. Library names are must be unique within the context of a specific user or owner.
+Specifies the name of an existing package library. Libraries are scoped to the user. Library names must be unique within the context of a specific user or owner.
 
 The library name cannot be arbitrarily assigned. That is, you must use the name that the calling runtime expects when it loads the package.
 
@@ -214,6 +214,8 @@ For the Python language, the package in a .whl or .zip file must be prepared in 
 ::: moniker-end
 
 The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is installed when a user runs code in  [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) that calls the library.
+
+A number of packages, referred to as *system packages*, are pre-installed in a SQL instance. System packages cannot be added, updated, or removed by the user.
 
 ## Permissions
 

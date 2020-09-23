@@ -31,9 +31,8 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
-MIN_ACTIVE_ROWVERSION  
+```syntaxsql  
+MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -51,7 +50,7 @@ MIN_ACTIVE_ROWVERSION
 ## Examples  
  The following example returns **rowversion** values by using `MIN_ACTIVE_ROWVERSION` and `@@DBTS`. Notice that the values differ when there are no active transactions in the database.  
   
-```  
+```sql  
 -- Create a table that has a ROWVERSION column in it.  
 CREATE TABLE RowVersionTestTable (rv ROWVERSION)  
 GO  

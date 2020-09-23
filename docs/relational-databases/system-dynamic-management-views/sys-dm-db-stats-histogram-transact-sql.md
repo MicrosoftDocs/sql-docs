@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_stats_histogram dynamic management function"
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -72,7 +72,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
- ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "Histogram")  
   
  For each histogram step:  
   

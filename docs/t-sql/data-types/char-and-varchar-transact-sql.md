@@ -96,8 +96,8 @@ When an empty string get converted to an **int**, its value becomes ```0```. Whe
 The following example shows the default value of *n* is 1 for the `char` and `varchar` data types when they are used in variable declaration.
 
 ```sql
-DECLARE @myVariable AS varchar = 'abc';
-DECLARE @myNextVariable AS char = 'abc';
+DECLARE @myVariable AS VARCHAR = 'abc';
+DECLARE @myNextVariable AS CHAR = 'abc';
 --The following returns 1
 SELECT DATALENGTH(@myVariable), DATALENGTH(@myNextVariable);
 GO
@@ -108,12 +108,12 @@ GO
 The following example shows that the default value of *n* is 30 when the `char` or `varchar` data types are used with the `CAST` and `CONVERT` functions.
 
 ```sql
-DECLARE @myVariable AS varchar(40);
+DECLARE @myVariable AS VARCHAR(40);
 SET @myVariable = 'This string is longer than thirty characters';
-SELECT CAST(@myVariable AS varchar);
-SELECT DATALENGTH(CAST(@myVariable AS varchar)) AS 'VarcharDefaultLength';
-SELECT CONVERT(char, @myVariable);
-SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
+SELECT CAST(@myVariable AS VARCHAR);
+SELECT DATALENGTH(CAST(@myVariable AS VARCHAR)) AS 'VarcharDefaultLength';
+SELECT CONVERT(CHAR, @myVariable);
+SELECT DATALENGTH(CONVERT(CHAR, @myVariable)) AS 'VarcharDefaultLength';
 ```
 
 ### C. Converting Data for Display Purposes
@@ -125,11 +125,11 @@ USE AdventureWorks2012;
 GO
 SELECT BusinessEntityID,
    SalesYTD,
-   CONVERT (varchar(12),SalesYTD,1) AS MoneyDisplayStyle1,
+   CONVERT (VARCHAR(12),SalesYTD,1) AS MoneyDisplayStyle1,
    GETDATE() AS CurrentDate,
-   CONVERT(varchar(12), GETDATE(), 3) AS DateDisplayStyle3
+   CONVERT(VARCHAR(12), GETDATE(), 3) AS DateDisplayStyle3
 FROM Sales.SalesPerson
-WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
+WHERE CAST(SalesYTD AS VARCHAR(20) ) LIKE '1%';
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -152,13 +152,13 @@ The following example converts a `uniqueidentifier` value to a `char` data type.
 
 ```sql
 DECLARE @myid uniqueidentifier = NEWID();
-SELECT CONVERT(char(255), @myid) AS 'char';
+SELECT CONVERT(CHAR(255), @myid) AS 'char';
 ```
 
 The following example demonstrates the truncation of data when the value is too long for the data type being converted to. Because the **uniqueidentifier** type is limited to 36 characters, the characters that exceed that length are truncated.
 
 ```sql
-DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';
+DECLARE @ID NVARCHAR(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';
 SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
 ```
 
@@ -175,10 +175,17 @@ String                                       TruncatedValue
 ## See also
 
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+
 [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)
+
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
+
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+
 [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)
+
 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+
 [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

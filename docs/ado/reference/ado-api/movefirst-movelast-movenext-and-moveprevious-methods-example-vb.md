@@ -3,7 +3,7 @@ description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (V
 title: "Move Record Pointer of Recordset Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

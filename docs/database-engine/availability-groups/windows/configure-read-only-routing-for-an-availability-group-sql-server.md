@@ -6,7 +6,7 @@ ms.date: "02/25/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "read-only routing"
   - "Availability Groups [SQL Server], readable secondary replicas"
@@ -246,7 +246,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--    [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+-    [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 **White papers:**  
   

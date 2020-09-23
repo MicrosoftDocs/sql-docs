@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syspolicy_conditions view"
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -83,6 +83,12 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
+   To ensure that the Microsoft package signing key is installed on your system, please import it using the command below: 
+   
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+   ```
+   
 3. Run the following commands to install SQL Server:
 
    ```bash
@@ -133,6 +139,12 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
+   To ensure that the Microsoft package signing key is installed on your system, use the following command to import the key: 
+   
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
    
 3. Run the following commands to install SQL Server:

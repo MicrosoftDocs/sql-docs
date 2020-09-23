@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sp_syscollector_create_collection_item"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_defect"
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

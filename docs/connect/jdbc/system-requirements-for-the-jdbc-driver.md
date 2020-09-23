@@ -2,7 +2,7 @@
 description: "System requirements for the JDBC driver"
 title: "System requirements for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: "08/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -44,7 +44,7 @@ ms.author: v-daenge
 
 **Microsoft JDBC Driver 8.4 for SQL Server:**  
 
-  The JDBC Driver 8.4 includes three JAR class libraries in each installation package: **mssql-jdbc-8.4.0.jre8.jar**, **mssql-jdbc-8.4.0.jre11.jar**, and **mssql-jdbc-8.4.0.jre14.jar**.
+  The JDBC Driver 8.4 includes three JAR class libraries in each installation package: **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar**, and **mssql-jdbc-8.4.1.jre14.jar**.
 
   The JDBC Driver 8.4 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 14.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 14.0.
   
@@ -52,9 +52,9 @@ ms.author: v-daenge
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-8.4.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 8.4 include: JDK 14 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
-|mssql-jdbc-8.4.0.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 8.4 include: JDK 14 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
-|mssql-jdbc-8.4.0.jre13.jar|4.3|14|Requires a Java Runtime Environment (JRE) 14.0. Using JRE 13.0 or lower throws an exception.<br /><br /> New Features in 8.4 include: JDK 14 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
+|mssql-jdbc-8.4.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 1.8. Using JRE 1.7 or lower throws an exception.<br /><br /> New Features in 8.4 include: JDK 14 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
+|mssql-jdbc-8.4.1.jre11.jar|4.3|11|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 8.4 include: JDK 14 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
+|mssql-jdbc-8.4.1.jre13.jar|4.3|14|Requires a Java Runtime Environment (JRE) 14.0. Using JRE 13.0 or lower throws an exception.<br /><br /> New Features in 8.4 include: JDK 14 support, support for authentication to Azure Key Vault using Managed Identity, extended support for bulk copy for Azure Data Warehouse, Azure SQL DNS caching, support for backwards compatibility for streaming LOB objects, and client certificate authentication for loopback scenarios. |
 
 
   The JDBC Driver 8.4 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
@@ -63,7 +63,7 @@ ms.author: v-daenge
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.0.jre11</version>
+    <version>8.4.1.jre11</version>
 </dependency>
 ```
 

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DROP FULLTEXT INDEX statement"
   - "dropping full-text indexes"
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

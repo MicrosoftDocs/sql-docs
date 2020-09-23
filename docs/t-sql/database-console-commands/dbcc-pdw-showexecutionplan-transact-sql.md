@@ -26,22 +26,23 @@ Once query performance problems are understood for SMP [!INCLUDE[ssNoVersion](..
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-Syntax for Azure SQL Data Warehouse:
+Syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]:
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
-[;]  
+[ ; ]  
 ```  
-Syntax Azure Parallel Data Warehouse:
+
+Syntax for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
-[;]  
+[ ; ]  
 ```  
 
 ## Arguments  
  *distribution_id*  
- Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Used when targeting [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Value must be between 1 and 60. Used when targeting [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
  *pdw_node_id*  
  Identifier for the node that is running the query plan. This is an integer and cannot be NULL. Used when targeting an Appliance.  
@@ -83,7 +84,7 @@ SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start
 FROM sys.dm_pdw_dms_workers   
 WHERE [status] <> 'StepComplete' and [status] <> 'StepError'  
 AND pdw_node_id = 201001   
-order by request_id, [dms_step_index], [distribution_id];  
+ORDER BY request_id, [dms_step_index], [distribution_id];  
 ```  
   
 Based on the results of the preceding query, use the sql_spid and pdw_node_id as parameters to DBCC PDW_SHOWEXECUTIONPLAN. For example, the following command shows the execution plan for pdw_node_id 201001 and sql_spid 375.

@@ -1,47 +1,38 @@
 ---
-title: Upgrade Python and R components
-description: Upgrade Python and R in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
+title: Upgrade Python and R runtimes (binding)
+description: Upgrade Python and R runtimes in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
-# Upgrade machine learning (Python and R) components in SQL Server instances
+# Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-Python and R integration in SQL Server includes open-source and Microsoft-proprietary packages.
-                                                                               
-Standard SQL Server servicing:
-                                                                               
-- Packages are updated according to the SQL Server release cycle.
-- Bug fixes are applied to existing packages at the current version.
-- No major version upgrades.
+This article describes how to use am installation process called **binding** to upgrade the R or Python runtimes in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md). You can get [newer versions of Python and R](#version-map) by *binding* to [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
-You can get [newer versions of Python and R](#version-map) by *binding* to **Microsoft Machine Learning Server**. The version applies to both SQL Server Machine Learning Services (In-Database) and SQL Server R Services (In-Database).
-
-The ability to obtain newer packages is preferred if you work in a data-related filed, like a data scientist.
+> [!IMPORTANT]
+> This article describes an old method for upgrading the R and Python runtimes, called *binding*. If you have installed **Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2** or **Cumulative Update (CU) 22 or later for SQL Server 2017**, see how to [change the default R or Python language runtime to a later version](change-default-language-runtime-version.md) instead.
 
 ## What is binding?
 
-Binding is an installation process that swaps out the contents of your R_SERVICES and PYTHON_SERVICES folders with newer executables, libraries, and tools from [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+Binding is an installation process that replaces the contents of your **R_SERVICES** and **PYTHON_SERVICES** folders with newer executables, libraries, and tools from [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
-The uploaded components included with the servicing model has changed.
-
-The service updates match the [support Timeline for Microsoft R Server & Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) on the [Modern Lifecycle](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+The uploaded components included with the servicing model has changed. The service updates match the [support Timeline for Microsoft R Server & Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) on the [Modern Lifecycle](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Except for component versions and service updates, binding doesn't change the basics of your installation:
 
 - Python and R integration is still part of a database engine instance.
 - Licensing is unchanged (no additional costs associated with binding).
-- SQL Server support policies still hold for the database engine. 
+- SQL Server support policies still hold for the database engine.
 
 The rest of this article explains the binding mechanism and how it works for each version of SQL Server.
 
 > [!NOTE]
-> Binding applies to (in-database) instances only that are bound to SQL Server instances. In this case binding is not necessary for a (Standalone) installation.
+> Binding applies to in-database instances only that are bound to SQL Server instances. In this case binding is not necessary for a Standalone installation.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **SQL Server 2016 binding considerations**

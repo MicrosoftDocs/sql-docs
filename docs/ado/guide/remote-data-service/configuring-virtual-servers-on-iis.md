@@ -3,7 +3,7 @@ description: "Configuring Virtual Servers on IIS"
 title: "Configuring Virtual Servers on IIS | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

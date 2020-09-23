@@ -3,7 +3,7 @@ description: "BeginTransComplete, CommitTransComplete, and RollbackTransComplete
 title: "BeginTrans, CommitTrans, RollbackTrans Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

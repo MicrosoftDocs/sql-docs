@@ -4,7 +4,7 @@ description: Use the Alias tab of the Properties dialog box to configure an alia
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: markingmyname

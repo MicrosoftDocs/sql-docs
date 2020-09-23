@@ -1,14 +1,14 @@
 ---
-title: "Tutorial: Build a custom insight widget"
+title: Build a custom insight widget
 description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: "tutorial"
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: "alayu, maghan, sstein"
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu
 ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.date: 08/26/2020
 ---
 
 # Tutorial: Build a custom insight widget
@@ -99,7 +99,7 @@ In this step, run a sql script to query the current active sessions.
 
 7. Save the *User Settings* file and open the *TutorialDB* database dashboard to see the active sessions widget:
 
-   ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![activesession insight dashboard](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## Add details to custom insight
 
@@ -154,7 +154,7 @@ In this step, run a sql script to query the current active sessions.
 
 7. Save the *User Settings* file and open the *TutorialDB* database dashboard. Click the ellipsis (...) button next to *My-Widget* to show the details:
 
-    ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![activesession insight detail](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## Next steps
 In this tutorial, you learned how to:

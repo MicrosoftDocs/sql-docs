@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_schedule"
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

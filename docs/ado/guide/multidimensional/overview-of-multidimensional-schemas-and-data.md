@@ -3,7 +3,7 @@ description: "Overview of Multidimensional Schemas and Data"
 title: "Overview of Multidimensional Schemas and Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""

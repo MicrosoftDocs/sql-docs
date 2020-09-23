@@ -1,11 +1,11 @@
 ---
 title: azdata bdc debug reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc debug commands. 
+description: Reference article for azdata bdc debug commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,19 +13,20 @@ ms.technology: big-data-cluster
 
 # azdata bdc debug
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to `azdata`
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copy logs.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Trigger memory dump.
 ## azdata bdc debug copy-logs
 Copy the debug logs from the Big Data Cluster - Kubernetes configuration is required on your system.
 ```bash
-azdata bdc debug copy-logs --namespace -n 
+azdata bdc debug copy-logs --namespace -ns 
                            [--container -c]  
                            
 [--target-folder -d]  
@@ -39,7 +40,7 @@ azdata bdc debug copy-logs --namespace -n
 [--exclude-dumps -ed]
 ```
 ### Required Parameters
-#### `--namespace -n`
+#### `--namespace -ns`
 Big data cluster name, used for kubernetes namespace.
 ### Optional Parameters
 #### `--container -c`
@@ -68,13 +69,13 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc debug dump
 Trigger memory dump and copy it out from container - Kubernetes configuration is required on your system.
 ```bash
-azdata bdc debug dump --namespace -n 
+azdata bdc debug dump --namespace -ns 
                       [--container -c]  
                       
 [--target-folder -d]
 ```
 ### Required Parameters
-#### `--namespace -n`
+#### `--namespace -ns`
 Big data cluster name, used for kubernetes namespace.
 ### Optional Parameters
 #### `--container -c`
@@ -97,4 +98,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

@@ -38,7 +38,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
 <select_list>   
@@ -117,13 +116,13 @@ SELECT [ ALL | DISTINCT ]
   
  The following example selects the values for the `Location` column, defined as type `point`, from the `Cities` table, by invoking a method of the type called `Distance`:  
   
-```  
+```sql
 CREATE TABLE dbo.Cities (  
-     Name varchar(20),  
-     State varchar(20),  
-     Location point );  
+     Name VARCHAR(20),  
+     State VARCHAR(20),  
+     Location POINT);  
 GO  
-DECLARE @p point (32, 23), @distance float;  
+DECLARE @p POINT (32, 23), @distance FLOAT;  
 GO  
 SELECT Location.Distance (@p)  
 FROM Cities;  

@@ -37,20 +37,22 @@ In this task, you add and configure an OLE DB destination to use the OLE DB conn
 6.  In the **OLE DB Destination Editor** dialog, ensure that **localhost.AdventureWorksDW2012** is selected in the **OLE DB Connection manager** box.  
   
 7.  In the **Name of the table or the view** box, enter or select **[dbo].[FactCurrencyRate]**.  
+ 
+8.  If a table named **NewFactCurrencyRate** currently exists, delete it now. You will create the table in the next step.
+ 
+9.  Select the **New** button to create a new table.  Change the name of the table in the script from **Sample OLE DB Destination** to **NewFactCurrencyRate**.  Select **OK**.  
+ 
+10. Upon selecting **OK**, the dialog closes and the **Name of the table or the view** automatically changes to **NewFactCurrencyRate**.  
   
-8.  Select the **New** button to create a new table.  Change the name of the table in the script from **Sample OLE DB Destination** to **NewFactCurrencyRate**.  Select **OK**.  
+11. Select **Mappings**.  
   
-9. Upon selecting **OK**, the dialog closes and the **Name of the table or the view** automatically changes to **NewFactCurrencyRate**.  
+12. Verify that the **AverageRate**, **CurrencyKey**, **EndOfDayRate**, and **DateKey** input columns are mapped correctly to the destination columns. If same-named columns are mapped, the mapping is correct.  
   
-10. Select **Mappings**.  
+13. Select **OK**.  
   
-11. Verify that the **AverageRate**, **CurrencyKey**, **EndOfDayRate**, and **DateKey** input columns are mapped correctly to the destination columns. If same-named columns are mapped, the mapping is correct.  
+14. Right-click the **Sample OLE DB Destination** destination and select **Properties**.  
   
-12. Select **OK**.  
-  
-13. Right-click the **Sample OLE DB Destination** destination and select **Properties**.  
-  
-14. In the **Properties** window, verify that the **LocaleID** property is set to **English (United States)** and the **DefaultCodePage** property is set to **1252**.  
+15. In the **Properties** window, verify that the **LocaleID** property is set to **English (United States)** and the **DefaultCodePage** property is set to **1252**.  
   
 ## Go to next task
 [Step 8: Annotate and format the Lesson 1 package](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

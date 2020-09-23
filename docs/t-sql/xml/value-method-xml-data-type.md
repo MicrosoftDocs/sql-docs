@@ -25,8 +25,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 value (XQuery, SQLType)  
 ```  
   
@@ -49,9 +48,9 @@ value (XQuery, SQLType)
 ### A. Using the value() method against an xml type variable  
  In the following example, an XML instance is stored in a variable of `xml` type. The `value()` method retrieves the `ProductID` attribute value from the XML. The value is then assigned to an `int` variable.  
   
-```  
-DECLARE @myDoc xml  
-DECLARE @ProdID int  
+```sql
+DECLARE @myDoc XML  
+DECLARE @ProdID INT  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -72,13 +71,13 @@ SELECT @ProdID
 ### B. Using the value() method to retrieve a value from an xml type column  
  The following query is specified against an **xml** type column (`CatalogDescription`) in the `AdventureWorks` database. The query retrieves `ProductModelID` attribute values from each XML instance stored in the column.  
   
-```  
+```sql
 SELECT CatalogDescription.value('             
     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
-ORDER BY Result desc             
+ORDER BY Result DESC             
 ```  
   
  Note the following from the previous query:  
@@ -101,10 +100,10 @@ ORDER BY Result desc
   
  The query retrieves product model IDs from XML instances that include warranty information (the <`Warranty`> element) as one of the features. The condition in the `WHERE` clause uses the `exist()` method to retrieve only the rows satisfying this condition.  
   
-```  
+```sql
 SELECT CatalogDescription.value('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
+           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') AS Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -134,8 +133,8 @@ Result
 ### D. Using the exist() method instead of the value() method  
  For performance reasons, instead of using the `value()` method in a predicate to compare with a relational value, use `exist()` with `sql:column()`. For example:  
   
-```  
-CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
+```sql
+CREATE TABLE T (c1 INT, c2 VARCHAR(10), c3 XML)  
 GO  
   
 SELECT c1, c2, c3   
@@ -146,7 +145,7 @@ GO
   
  This can be written in the following way:  
   
-```  
+```sql
 SELECT c1, c2, c3   
 FROM T  
 WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1  

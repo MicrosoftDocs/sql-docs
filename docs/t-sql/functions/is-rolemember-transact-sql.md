@@ -32,7 +32,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-  
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
@@ -82,7 +81,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## Examples  
  The following example indicates whether the current user is a member of the `db_datareader` fixed database role.  
   
-```  
+```sql  
 IF IS_ROLEMEMBER ('db_datareader') = 1  
    print 'Current user is a member of the db_datareader role'  
 ELSE IF IS_ROLEMEMBER ('db_datareader') = 0  

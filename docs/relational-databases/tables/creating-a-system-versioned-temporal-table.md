@@ -168,7 +168,7 @@ ALTER TABLE InsurancePolicy
 
 ### Migrate existing tables to built-in support
 
-This example shows how to migrate an existing solution based on triggers to build-in temporal support. For this example, we assume that the current custom solution splits the current and historical data in two separate user tables (**ProjectTaskCurrent** and **ProjectTaskHistory**). If your existing solution uses single table to store actual and historical rows, then you should split the data into two tables prior to the migration steps shown in this example:
+This example shows how to migrate an existing solution based on triggers to built-in temporal support. For this example, we assume that the current custom solution splits the current and historical data in two separate user tables (**ProjectTaskCurrent** and **ProjectTaskHistory**). If your existing solution uses single table to store actual and historical rows, then you should split the data into two tables prior to the migration steps shown in this example:
 
 ```sql
 /*Drop trigger on future temporal table*/

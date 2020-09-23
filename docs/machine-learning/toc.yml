@@ -45,7 +45,7 @@
       href: ../machine-learning/install/custom-runtime-r.md
   - name: Change default Python and R runtime
     href: ../machine-learning/install/change-default-language-runtime-version.md
-  - name: Upgrade Python and R
+  - name: Upgrade Python and R runtime with binding
     href: ../machine-learning/install/upgrade-r-and-python.md
   - name: Azure Data Studio notebooks
     href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md

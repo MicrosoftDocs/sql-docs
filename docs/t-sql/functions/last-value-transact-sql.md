@@ -2,7 +2,7 @@
 description: "LAST_VALUE (Transact-SQL)"
 title: "LAST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2015"
+ms.date: "09/22/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.reviewer: ""
@@ -30,9 +30,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```syntaxsql
-  
-LAST_VALUE ( [ scalar_expression ] )   
+
+```syntaxsql 
+LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   
@@ -41,6 +41,14 @@ LAST_VALUE ( [ scalar_expression ] )
 ## Arguments
  *scalar_expression*  
  Is the value to be returned. *scalar_expression* can be a column, subquery, or other expression that results in a single value. Other analytic functions are not permitted.  
+  
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **Applies to**: Azure SQL Edge
+
+ IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.     
+ RESPECT NULLS - Respect null values in the dataset when computing last value over a partition.     
+ 
+  For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group.  
@@ -58,7 +66,7 @@ LAST_VALUE ( [ scalar_expression ] )
 ### A. Using LAST_VALUE over partitions  
  The following example returns the hire date of the last employee in each department for the given salary (Rate). The PARTITION BY clause partitions the employees by department and the LAST_VALUE function is applied to each partition independently. The ORDER BY clause specified in the OVER clause determines the logical order in which the LAST_VALUE function is applied to the rows in each partition.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate, HireDate,   
@@ -68,8 +76,7 @@ INNER JOIN HumanResources.EmployeePayHistory AS eph
     ON eph.BusinessEntityID = edh.BusinessEntityID  
 INNER JOIN HumanResources.Employee AS e  
     ON e.BusinessEntityID = edh.BusinessEntityID  
-WHERE Department IN (N'Information Services',N'Document Control');  
-  
+WHERE Department IN (N'Information Services',N'Document Control');   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -101,7 +108,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
  The clause "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" is required in this example for the non-zero values to be returned in the DifferenceFromLastQuarter column, as shown below. The default range is "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". In this example, using that default range (or not including a range, resulting in the default being used) would result in zeroes being returned in the DifferenceFromLastQuarter column. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 SELECT BusinessEntityID, DATEPART(QUARTER,QuotaDate)AS Quarter, YEAR(QuotaDate) AS SalesYear,   
     SalesQuota AS QuotaThisQuarter,   
@@ -148,4 +155,6 @@ BusinessEntityID Quarter     SalesYear   QuotaThisQuarter      DifferenceFromFir
   
 ```  
   
-  
+## See Also  
+
+ [First_Value &#40;Transact-SQL&#41;](first-value-transact-sql.md)  

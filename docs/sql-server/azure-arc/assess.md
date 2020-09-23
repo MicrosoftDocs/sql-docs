@@ -50,7 +50,7 @@ You can enable SQL assessment for your SQL Server instances by following these s
       & '.\AddSqlAssessment.ps1' -ManagedServiceAccountName <MSA account name>
       ```
 
-   > [!NOTE]
+   > [!NOTE]cd sdl    
    > The script will schedule a task named *SQLAssessment* to run within an hour of running the previous script and then every 7 days. The task can be modified to run on a different date and time or even forced to run immediately from the task scheduler library > Microsoft > Operations Management Suite > AOI*** > Assessments > SQLAssessment. This task triggers data collection.
 
 ## View the assessment results

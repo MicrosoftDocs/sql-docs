@@ -102,7 +102,7 @@ SELECT PI() AS PI;
 GO
 ```
 
-![Save the result](media/notebook-sql/run-notebook-cell-2.png)
+![Save the result](media/notebooks-sql-kernel/run-notebook-cell-2.png)
 
 ## Next steps
 

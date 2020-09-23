@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu 
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 08/26/2020
 ---
@@ -15,15 +15,15 @@ ms.date: 08/26/2020
 
 Extensions in Azure Data Studio provide an easy way to add more functionality to the base Azure Data Studio installation.
 
-Extensions are provided by the Azure Data Studio team (Microsoft), as well as the 3rd party community (you!).
+Extensions are provided by the Azure Data Studio team (Microsoft), as well as the third-party community (you!).
 
 ## Author an extension
 
 If you're interested in extending Azure Data Studio, you can create your own extension and publish it to the extension gallery.
 
-**Writing an Extension**
+### Writing an Extension
 
-***Prerequisites***
+#### Prerequisites
 
 To develop an extension, you need [Node.js](https://nodejs.org/) installed and available in your `$PATH`. Node.js includes npm, the Node.js Package Manager, which will be used to install the extension generator.
 
@@ -34,11 +34,11 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-For an in-depth guide on how to get started with your extension template, see [Creating an Extension](./tutorial-create-extension.md?view=sql-server-ver15), which walks you through the creation of a keymap extension.
+For an in-depth guide on how to get started with your extension template, see [keymap extension](keymap-extension.md), which walks you through the creation of an extension.
 
-**Extensibility References**
+### Extensibility References
 
-To learn about Azure Data Studio Extensibility see [Extensibility overview](extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/main/samples).
+To learn about Azure Data Studio Extensibility see [Extensibility overview](../extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/main/samples).
 
 ## Debug an extension
 
@@ -48,12 +48,12 @@ Steps:
 
 1. Open your extension with [Visual Studio Code](https://code.visualstudio.com/).
 2. Install the Azure Data Studio Debug extension.
-3. Press **F5** or click the Debug icon and click **Start**.
+3. Press **F5** or select the Debug icon and then select **Start**.
 4. A new instance of Azure Data Studio starts in a special mode (Extension Development Host) and this new instance is now aware of your extension.
 
 ## Create an extension package
 
-After writing your extension, you need to create a VSIX package to be able to install it in Azure Data Studio. You can use [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) to create the VSIX package.
+After writing your extension, you need to create a VSIX package that installs in Azure Data Studio. You can use [vscode-vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) to create the VSIX package.
 
 ```console
 npm install -g vsce
@@ -69,22 +69,22 @@ With a VSIX package, you can share your extension locally and privately by shari
 To publish your new extension to Azure Data Studio:
 
 1. Add your extension to https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
-2. We currently don't have support to host third party extensions, so instead of downloading the extension, Azure Data Studio has the option to browse to a download page. To set a download page for your extension, set the value of asset "Microsoft.AzureDataStudio.DownloadPage".
+2. We currently don't have support to host third-party extensions, so instead of downloading the extension, Azure Data Studio has the option to browse to a download page. To set a download page for your extension, set the value of asset "Microsoft.AzureDataStudio.DownloadPage".
 3. Create a PR against release/extensions branch.
 4. Send a review request to the team.
 
 Your extension will be reviewed and added to the extension gallery.
 
-**Publishing extension updates**
+### Publishing extension updates
 
-The process to publish updates is similar to publishing the extension. Please make sure the version is updated in package.json.
+The process to publish updates is similar to publishing the extension. Make sure the version is updated in package.json.
 
 ## Next Steps
 
 Refer to one of the following extension authoring tutorials for step-by-step instructions on how to get started:
 
-- [Keymap Extension Tutorial](extensions/keymap-extension.md)
-- [Dashboard Extension Tutorial](extensions/dashboard-extension.md)
-- [Notebook Extension Tutorial](extensions/notebook-extension.md)
-- [Jupyter Book Extension Tutorial](extensions/jupyter-book-extension.md)
-- [Wizard Extension Tutorial](extensions/wizard-extension.md)
+- [Keymap Extension Tutorial](keymap-extension.md)
+- [Dashboard Extension Tutorial](dashboard-extension.md)
+- [Notebook Extension Tutorial](notebook-extension.md)
+- [Jupyter Book Extension Tutorial](jupyter-book-extension.md)
+- [Wizard Extension Tutorial](wizard-extension.md)

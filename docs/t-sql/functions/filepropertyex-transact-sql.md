@@ -30,7 +30,7 @@ ms.author: sstein
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILEPROPERTYEX ( name , property )  
 ```  
   

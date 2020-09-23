@@ -30,7 +30,7 @@ This function returns column or parameter information.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COLUMNPROPERTY ( id , column , property )   
 ```  
   

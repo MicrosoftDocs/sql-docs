@@ -34,7 +34,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
@@ -104,7 +103,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
 ```  
   
@@ -112,20 +111,20 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
 ```  
   
 ### C. Do I have any permissions in the current database?  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
 ### D. Does database principal Pd have any permission in the current database?  
  Assume caller has IMPERSONATE permission on principal `Pd`.  
   
-```  
+```sql  
 EXECUTE AS user = 'Pd'  
 GO  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
@@ -137,7 +136,7 @@ GO
 ### E. Can I create procedures and tables in schema S?  
  The following example requires `ALTER` permission in `S` and `CREATE PROCEDURE` permission in the database, and similarly for tables.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')  
     & HAS_PERMS_BY_NAME('S', 'SCHEMA', 'ALTER') AS _can_create_procs,  
     HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE TABLE') &  
@@ -146,7 +145,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')
   
 ### F. Which tables do I have SELECT permission on?  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME  
 (QUOTENAME(SCHEMA_NAME(schema_id)) + '.' + QUOTENAME(name),   
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
@@ -155,20 +154,20 @@ SELECT HAS_PERMS_BY_NAME
 ### G. Do I have INSERT permission on the SalesPerson table in AdventureWorks2012?  
  The following example assumes `AdventureWorks2012` is my current database context, and uses a two-part name.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
 ```  
   
  The following example makes no assumptions about my current database context, and uses a three-part name.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   
 ### H. Which columns of table T do I have SELECT permission on?  
   
-```  
+```sql  
 SELECT name AS column_name,   
     HAS_PERMS_BY_NAME('T', 'OBJECT', 'SELECT', name, 'COLUMN')   
     AS can_select   

@@ -38,7 +38,7 @@ This function returns the name of the time zone observed by a server or an insta
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE ( )  
 ```
   

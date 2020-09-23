@@ -176,7 +176,7 @@ CONTAINS (
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -188,7 +188,7 @@ WHERE CONTAINS(Description, @SearchWord);
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -251,7 +251,7 @@ Specifies a match for an exact word or a phrase. Examples of valid simple terms 
   
  By default, the custom proximity term returns any rows that contain the specified terms regardless of the intervening distance and regardless of their order. For example, to match the following query, a document would simply need to contain `term1` and "`term3 term4`" anywhere, in any order:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR(term1,"term3 term4")')  
 ```  
   
@@ -265,13 +265,13 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  For example, the following query searches for `AA` and `BB`, in either order, within a maximum distance of five.  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
  The string `AA one two three four five BB` would be a match. In the following example, the query specifies for three search terms, `AA`, `BB`, and `CC` within a maximum distance of five:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
 ```  
   
@@ -299,7 +299,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  For example, the following proximity term searches the words "`Monday`", "`Tuesday`", and "`Wednesday`" in the specified order with regardless of the distance between them:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   
@@ -463,7 +463,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'Performance'  
 SELECT Description   
 FROM Production.ProductDescription   

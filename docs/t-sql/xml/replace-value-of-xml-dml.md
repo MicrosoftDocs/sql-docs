@@ -26,7 +26,7 @@ Updates the value of a node in the document.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 replace value of Expression1   
 with Expression2  
 ```  
@@ -47,7 +47,7 @@ The following examples of the **replace value of** XML DML statement illustrates
 In the following example, a document instance is first assigned to a variable of **xml** type. Then, **replace value of** XML DML statements update values in the document.  
   
 ```sql
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours="1.1"  
@@ -61,13 +61,13 @@ SELECT @myDoc;
 -- update text in the first manufacturing step  
 SET @myDoc.modify('  
   replace value of (/Root/Location/step[1]/text())[1]  
-  with     "new text describing the manu step"  
+  with "new text describing the manu step"  
 ');  
 SELECT @myDoc;  
 -- update attribute value  
 SET @myDoc.modify('  
   replace value of (/Root/Location/@LaborHours)[1]  
-  with     "100.0"  
+  with "100.0"  
 ');  
 SELECT @myDoc;  
 ```  
@@ -78,7 +78,7 @@ The target being updated must be, at most, one node that is explicitly specified
 You can specify the **if** expression in Expression2 of the **replace value of XML DML** statement, as shown in the following example. Expression1 identifies   the LaborHours attribute from the first work center is to be updated. Expression2 uses an **if** expression to determine the new value of the LaborHours attribute.  
   
 ```sql
-DECLARE @myDoc xml  
+DECLARE @myDoc XML  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours=".1"  
@@ -105,10 +105,10 @@ SELECT @myDoc
 The following example updates XML stored in a column:  
   
 ```sql
-drop table T  
-go  
-CREATE TABLE T (i int, x xml)  
-go  
+DROP TABLE T  
+GO  
+CREATE TABLE T (i INT, x XML)  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -137,52 +137,53 @@ This example replaces values in a manufacturing instructions document stored in 
 In the example, you first create a table (T) with a typed XML column in the AdventureWorks database. You then copy a manufacturing instructions XML instance from the Instructions column in the ProductModel table into table T. Insertions are then applied to XML in table T.  
   
 ```sql
-use AdventureWorks  
-go  
-drop table T  
-go  
-create table T(ProductModelID int primary key,   
-Instructions xml (Production.ManuInstructionsSchemaCollection))  
-go  
-insert  T   
-select ProductModelID, Instructions  
-from Production.ProductModel  
-where ProductModelID=7  
-go  
+USE AdventureWorks  
+GO  
+DROP TABLE T  
+GO  
+CREATE TABLE T(
+  ProductModelID INT PRIMARY KEY,   
+  Instructions XML (Production.ManuInstructionsSchemaCollection))  
+GO  
+INSERT T   
+SELECT ProductModelID, Instructions  
+FROM Production.ProductModel  
+WHERE ProductModelID=7  
+GO
 --insert a new location - <Location 1000/>.   
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
            <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
          </MI:Location>  
   as first  
-  into   (/MI:root)[1]  
+  into (/MI:root)[1]  
 ')  
-go  
-select Instructions  
-from T  
-go  
+GO  
+SELECT Instructions  
+FROM T  
+GO  
 -- Now replace manu. tool in location 1000  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
-  with   "screwdriver"  
+  with "screwdriver"  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- Now replace value of lot size  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/@LotSize)[1]   
-  with   500 cast as xs:decimal ?  
+  with 500 cast as xs:decimal ?  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 ```  
   
 Note the use of **cast** when replacing LotSize value. It's required when the value must be of a specific type. In this example, if 500 were the value, explicit casting wouldn't be necessary.  

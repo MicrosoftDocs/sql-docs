@@ -30,10 +30,9 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this function cal
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CUME_DIST( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
-  
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -69,8 +68,7 @@ ORDER BY Department, Rate DESC;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
-  
+```
 Department             LastName               Rate                  CumeDist               PctRank  
 ---------------------- ---------------------- --------------------- ---------------------- ----------------------  
 Document Control       Arifin                 17.7885               1                      1  

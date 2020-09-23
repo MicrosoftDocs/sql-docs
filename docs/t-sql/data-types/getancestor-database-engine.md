@@ -26,7 +26,7 @@ Returns a **hierarchyid** representing the *n*th ancestor of *this*.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 child.GetAncestor ( n )   
 ```  

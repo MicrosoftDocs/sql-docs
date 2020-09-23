@@ -31,7 +31,7 @@ Converts an *inputdate* to the corresponding *datetimeoffset* value in the targe
 
 ## Syntax
 
-```sql
+```syntaxsql
 inputdate AT TIME ZONE timezone  
 ```
 
@@ -66,7 +66,7 @@ The **datetimeoffset** value in the target time zone.
     */  
 
     --Time before DST change has standard time offset (+01:00)
-    SELECT CONVERT(datetime2(0), '2015-03-29T01:01:00', 126)     
+    SELECT CONVERT(DATETIME2(0), '2015-03-29T01:01:00', 126)     
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 01:01:00 +01:00   
   
@@ -75,12 +75,12 @@ The **datetimeoffset** value in the target time zone.
       is moved 1 hour ahead and presented with the summer time offset
       (after the DST change) 
     */
-    SELECT CONVERT(datetime2(0), '2015-03-29T02:01:00', 126)   
+    SELECT CONVERT(DATETIME2(0), '2015-03-29T02:01:00', 126)   
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 03:01:00 +02:00
 
     --Time after 03:00 is presented with the summer time offset (+02:00)
-    SELECT CONVERT(datetime2(0), '2015-03-29T03:01:00', 126)   
+    SELECT CONVERT(DATETIME2(0), '2015-03-29T03:01:00', 126)   
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 03:01:00 +02:00  
   
@@ -98,7 +98,7 @@ The **datetimeoffset** value in the target time zone.
     */  
 
     --Time before the change has DST offset (+02:00)
-    SELECT CONVERT(datetime2(0), '2015-10-25T01:01:00', 126)
+    SELECT CONVERT(DATETIME2(0), '2015-10-25T01:01:00', 126)
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-10-25 01:01:00 +02:00  
 
@@ -106,13 +106,13 @@ The **datetimeoffset** value in the target time zone.
       Time from the "overlapped interval" is presented with standard time 
       offset (before the change)
     */
-    SELECT CONVERT(datetime2(0), '2015-10-25T02:00:00', 126)
+    SELECT CONVERT(DATETIME2(0), '2015-10-25T02:00:00', 126)
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-10-25 02:00:00 +02:00  
 
 
     --Time after 03:00 is regularly presented with the standard time offset (+01:00)
-    SELECT CONVERT(datetime2(0), '2015-10-25T03:01:00', 126)
+    SELECT CONVERT(DATETIME2(0), '2015-10-25T03:01:00', 126)
     AT TIME ZONE 'Central European Standard Time';
     --Result: 2015-10-25 03:01:00 +01:00
   

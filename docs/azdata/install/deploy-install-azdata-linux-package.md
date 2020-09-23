@@ -44,11 +44,13 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
 3. Create local repository information.
 
    For Ubuntu 16.04 client run:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
     ```
 
    For Ubuntu 18.04 client run:
+
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
     ```

@@ -37,7 +37,7 @@ This article describes how to install a custom runtime for running R scripts wit
 > [!NOTE]
 >For Machine Learning Services using SQL Server 2019, the extensibility framework for language extensions with the Launchpad service is already installed and you can skip this step.
 
-Language extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
+Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
 Complete the setup for SQL Server 2019.
 

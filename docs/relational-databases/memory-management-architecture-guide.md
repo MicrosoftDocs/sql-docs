@@ -56,7 +56,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 |Lock pages in memory operating system (OS) privilege (allows locking physical memory, preventing OS paging of the locked memory.) <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise, and Developer editions: Required for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process to use AWE mechanism. Memory allocated through AWE mechanism cannot be paged out. <br> Granting this privilege without enabling AWE has no effect on the server. | Only used when necessary, namely if there are signs that sqlservr process is being paged out. In this case, error 17890 will be reported in the Errorlog, resembling the following example: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32-bit versions are not available starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb is an operating system boot parameter. For more information, visit the MSDN Library.  
+<sup>2</sup> /3gb is an operating system boot parameter.  
 <sup>3</sup> WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] runs on a 64-bit operating system.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition supports the operating system maximum.  
 <sup>5</sup> Note that the sp_configure awe enabled option was present on 64-bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but it is ignored.    
@@ -70,7 +70,7 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
--  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
+-  **Single-Page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. The Buffer Pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
 -  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
 -  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
 -  Memory allocations for **[thread stacks](../relational-databases/memory-management-architecture-guide.md#stacksizes)** in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process.
@@ -283,7 +283,7 @@ Internal causes include:
 - Memory settings were manually lowered by reducing the *max server memory* configuration. 
 - Changes in memory distribution of internal components between the several caches.
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implements a framework dedicated to detecting and handling memory pressure, as part of its dynamic memory management. This framework includes the backgroud task called **Resource Monitor**. The Resource Monitor task monitors the state of external and internal memory indicators. Once one of these indicators changes status, it calculates the corresponding notification and it broadcasts it. These notifications are internal messages from each of the engine components, and stored in ring buffers. 
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implements a framework dedicated to detecting and handling memory pressure, as part of its dynamic memory management. This framework includes the background task called **Resource Monitor**. The Resource Monitor task monitors the state of external and internal memory indicators. Once one of these indicators changes status, it calculates the corresponding notification and it broadcasts it. These notifications are internal messages from each of the engine components, and stored in ring buffers. 
 
 Two ring buffers hold information relevant to dynamic memory management: 
 - The Resource Monitor ring buffer, which tracks Resource Monitor activity like was memory pressure signaled or not. This ring buffer has status information depending on the current condition of *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY*, or *RESOURCE_MEMVIRTUAL_LOW*.

@@ -1,13 +1,13 @@
 ---
 title: SQL Database Projects extension
 description: Install and use the SQL Database Projects extension for Azure Data Studio.
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seodec18
+ms.custom: 
 ms.date: 09/22/2020
 ---
 
@@ -19,7 +19,7 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 
 1. Create project from a connected database.
 2. Create a new blank project.
-3. Open a Project previously created in [Azure Data Studio](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../ssdt/sql-server-data-tools.md).
+3. Open a Project previously created in [Azure Data Studio](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
 4. Edit project by adding or removing Table, View, Stored Procedure, or custom scripts in the project.
 5. Organize files/scripts in folders.
 6. Add references to system databases or user dacpac.
@@ -42,7 +42,7 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
    > The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if it cannot be detected by the extension.  The .NET Core SDK (v3.1 or higher) can be downloaded and installed from [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
    > [!NOTE]
-   > It is recommended to install the [Schema Compare extension](extensions/schema-compare-extension.md) alongside the SQL Database Projects extension for full functionality.
+   > It is recommended to install the [Schema Compare extension](schema-compare-extension.md) alongside the SQL Database Projects extension for full functionality.
 
 ## Known limitations
 
@@ -56,5 +56,6 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 8. WSL environment support is limited.
 
 ## Next steps
+
 - [Getting Started with the SQL Database Projects extension](sql-database-project-extension-getting-started.md)
 - [Build and Publish a project with SQL Database Projects extension for Azure Data Studio](sql-database-project-extension-build.md)

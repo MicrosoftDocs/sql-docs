@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"
 ms.reviewer: "alayu, maghan, sstein"
-ms.custom: "seodec18"
+ms.custom: 
 ms.date: "04/19/2019"
 ---
 

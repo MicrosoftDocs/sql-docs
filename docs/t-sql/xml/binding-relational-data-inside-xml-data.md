@@ -40,8 +40,8 @@ ms.author: genemi
 ## Example: Cross-domain Query Using sql:variable()  
  This example shows how **sql:variable()** can enable an application to parameterize a query. The ISBN is passed in by using a SQL variable @isbn. By replacing the constant with **sql:variable()**, the query can be used to search for any ISBN and not just the one whose ISBN is 0-7356-1588-2.  
   
-```  
-DECLARE @isbn varchar(20)  
+```sql
+DECLARE @isbn VARCHAR(20)  
 SET     @isbn = '0-7356-1588-2'  
 SELECT  xCol  
 FROM    T  

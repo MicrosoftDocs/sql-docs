@@ -43,8 +43,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 LOGINPROPERTY ( 'login_name' , 'property_name' )  
 ```  
   
@@ -119,7 +118,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ### A. Checking whether a login must change its password  
  The following example checks whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `John3` must change its password the next time it connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
 GO  
 ```  
@@ -127,7 +126,7 @@ GO
 ### B. Checking whether a login is locked out  
  The following example checks whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `John3` is locked.  
   
-```  
+```sql  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  
 GO  
 ```  

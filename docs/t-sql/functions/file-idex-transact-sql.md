@@ -33,7 +33,7 @@ This function returns the file identification (ID) number for the specified logi
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_IDEX ( file_name )  
 ```  
   

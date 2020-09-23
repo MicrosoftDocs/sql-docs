@@ -77,10 +77,10 @@ The following example creates a table using the **bigint**, **int**, **smallint*
 ```sql
 CREATE TABLE dbo.MyTable  
 (  
-  MyBigIntColumn bigint  
-,MyIntColumn  int
-,MySmallIntColumn smallint
-,MyTinyIntColumn tinyint
+  MyBigIntColumn BIGINT  
+,MyIntColumn  INT
+,MySmallIntColumn SMALLINT
+,MyTinyIntColumn TINYINT
 );  
   
 GO  
@@ -93,7 +93,7 @@ FROM dbo.MyTable;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn  
 -------------------- ----------- ---------------- ---------------  
 9223372036854775807  2147483647  32767            255  

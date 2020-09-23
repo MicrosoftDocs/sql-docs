@@ -31,8 +31,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 OBJECT_DEFINITION ( object_id )  
 ```  
   
@@ -83,7 +82,7 @@ OBJECT_DEFINITION ( object_id )
 ### A. Returning the source text of a user-defined object  
  The following example returns the definition of a user-defined trigger, `uAddress`, in the `Person` schema. The built-in function `OBJECT_ID` is used to return the object ID of the trigger to the `OBJECT_DEFINITION` statement.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.uAddress')) AS [Trigger Definition];   
@@ -93,7 +92,7 @@ GO
 ### B. Returning the source text of a system object  
  The following example returns the definition of the system stored procedure `sys.sp_columns`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];  

@@ -37,7 +37,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> To use this stored procedure in Azure Synapse Analytics (Formerly SQL DW), the compatibility level of a database needs to greater than 10. 
+> To use this stored procedure in Azure Synapse Analytics (Formerly SQL DW), set the database compatibility level to 20 or higher.   To opt out, change the database compatibility level to 10.
 
 ## Arguments  
 `[ \@tsql = ] 'Transact-SQL\_batch'`

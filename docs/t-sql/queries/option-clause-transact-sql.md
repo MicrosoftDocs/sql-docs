@@ -68,7 +68,7 @@ OPTION ( <query_option> [ ,...n ] )
 ### A. Using an OPTION clause with a GROUP BY clause  
  The following example shows how the `OPTION` clause is used with a `GROUP BY` clause.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
@@ -85,7 +85,7 @@ GO
 ### B. SELECT statement with a label in the OPTION clause  
  The following example shows a simple [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT statement with a label in the OPTION clause.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT * FROM FactResellerSales  
@@ -95,7 +95,7 @@ SELECT * FROM FactResellerSales
 ### C. SELECT statement with a query hint in the OPTION clause  
  The following example shows a SELECT statement that uses a HASH JOIN query hint in the OPTION clause.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -107,7 +107,7 @@ OPTION (HASH JOIN);
 ### D. SELECT statement with a label and multiple query hints in the OPTION clause  
  The following example is a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT statement that contains a label and multiple query hints. When the query is run on the Compute nodes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will apply a hash join or merge join, according to the strategy that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] decides is the most optimal.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -119,7 +119,7 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
 ### E. Using a query hint when querying a view  
  The following example creates a view named CustomerView and then uses a HASH JOIN query hint in a query that references a view and a table.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView  
@@ -131,14 +131,13 @@ INNER JOIN dbo.FactInternetSales b
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
   
-DROP VIEW CustomerView;  
-  
+DROP VIEW CustomerView;
 ```  
   
 ### F. Query with a subselect and a query hint  
  The following example shows a query that contains both a subselect and a query hint. The query hint is applied globally. Query hints are not allowed to be appended to the subselect statement.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView AS  
@@ -154,7 +153,7 @@ OPTION (HASH JOIN);
 ### G. Force the join order to match the order in the query  
  The following example uses the FORCE ORDER hint to force the query plan to use the join order specified by the query. This will improve performance on some queries; not all queries.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- Obtain partition numbers, boundary values, boundary value types, and rows per boundary  
@@ -175,7 +174,7 @@ OPTION ( FORCE ORDER )
 ### H. Using EXTERNALPUSHDOWN  
  The following example forces the pushdown of the WHERE clause to the MapReduce job on the external Hadoop table.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 1000000  
 OPTION (FORCE EXTERNALPUSHDOWN);  
@@ -183,7 +182,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);
   
  The following example prevents the pushdown of the WHERE clause to the MapReduce job on the external Hadoop table. All rows are returned to PDW where the WHERE clause is applied.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 10  
 OPTION (DISABLE EXTERNALPUSHDOWN);  

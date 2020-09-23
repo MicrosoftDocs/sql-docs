@@ -36,7 +36,7 @@ This function returns the logical file name for a given file identification (ID)
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_NAME ( file_id )   
 ```  
   

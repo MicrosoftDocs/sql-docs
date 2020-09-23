@@ -1,7 +1,7 @@
 ---
 title: Install azdata with zypper
-titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing Big Data Clusters with zypper.
+titleSuffix: 
+description: Learn how to install the azdata tool with zypper.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -39,7 +39,7 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
 1. Create local repository information
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
 1. Install
@@ -75,3 +75,5 @@ Remove the package from your system
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)

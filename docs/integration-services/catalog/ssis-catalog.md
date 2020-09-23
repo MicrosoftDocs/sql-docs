@@ -2,7 +2,7 @@
 description: "SSIS Catalog"
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
-ms.date: 11/12/2018
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -445,21 +445,19 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
     ```  
   
 2.  If you are restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, create the asymmetric key and the login from the asymmetric key, and grant UNSAFE permission to the login.  
-  
+
     ```  
-    Create Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey  
-           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
-  
+    Create Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey  
+           FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
+
+    You can find the value for `YourSQLServerDefaultCompatibilityLevel` from a [list of SQL Server default compatibility levels](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments).
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR stored procedures require UNSAFE permissions to be granted to the login because the login requires additional access to restricted resources, such as the Microsoft Win32 API. For more information about the UNSAFE code permission, see [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
-  
+    [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR stored procedures require UNSAFE permissions to be granted to the login because the login requires additional access to restricted resources, such as the Microsoft Win32 API. For more information about the UNSAFE code permission, see [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+
     ```  
-    Create Login MS_SQLEnableSystemAssemblyLoadingUser  
-           FROM Asymmetric key MS_SQLEnableSystemAssemblyLoadingKey   
-  
-           Grant unsafe Assembly to MS_SQLEnableSystemAssemblyLoadingUser  
-  
+    Create Login ##MS_SQLEnableSystemAssemblyLoadingUser## FROM Asymmetric Key MS_SQLEnableSystemAssemblyLoadingKey   
+    Grant Unsafe Assembly to ##MS_SQLEnableSystemAssemblyLoadingUser##    
     ```  
   
 3.  Restore the SSISDB database from the backup by using the **Restore Database** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see the following topics:  

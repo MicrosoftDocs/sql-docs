@@ -26,7 +26,7 @@ Write writes out a binary representation of **SqlHierarchyId** to the passed-in 
   
 ## Syntax  
   
-```syntaxsql
+```csharp
 void Write( BinaryWriter w )
 ```  
 
@@ -44,12 +44,11 @@ Write is used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
   
 ## Examples  
   
-```sql
+```csharp
 MemoryStream stream = new MemoryStream();  
 BinaryWriter bw = new BinaryWriter(stream);  
 hid.Write(bw);  
 byte[] encoding = stream.ToArray();  
-  
 ```  
   
 ## See also

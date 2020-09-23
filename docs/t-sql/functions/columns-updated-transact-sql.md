@@ -33,7 +33,7 @@ This function returns a **varbinary** bit pattern indicating the inserted or upd
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COLUMNS_UPDATED ( )   
 ```  
 
@@ -89,24 +89,24 @@ IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
    DROP TABLE auditEmployeeData;  
 GO  
 CREATE TABLE dbo.employeeData (  
-   emp_id int NOT NULL PRIMARY KEY,  
-   emp_bankAccountNumber char (10) NOT NULL,  
-   emp_salary int NOT NULL,  
-   emp_SSN char (11) NOT NULL,  
-   emp_lname nchar (32) NOT NULL,  
-   emp_fname nchar (32) NOT NULL,  
-   emp_manager int NOT NULL  
+   emp_id INT NOT NULL PRIMARY KEY,  
+   emp_bankAccountNumber CHAR (10) NOT NULL,  
+   emp_salary INT NOT NULL,  
+   emp_SSN CHAR (11) NOT NULL,  
+   emp_lname NCHAR (32) NOT NULL,  
+   emp_fname NCHAR (32) NOT NULL,  
+   emp_manager INT NOT NULL  
    );  
 GO  
 CREATE TABLE dbo.auditEmployeeData (  
    audit_log_id uniqueidentifier DEFAULT NEWID() PRIMARY KEY,  
-   audit_log_type char (3) NOT NULL,  
-   audit_emp_id int NOT NULL,  
-   audit_emp_bankAccountNumber char (10) NULL,  
-   audit_emp_salary int NULL,  
-   audit_emp_SSN char (11) NULL,  
+   audit_log_type CHAR (3) NOT NULL,  
+   audit_emp_id INT NOT NULL,  
+   audit_emp_bankAccountNumber CHAR (10) NULL,  
+   audit_emp_salary INT NULL,  
+   audit_emp_SSN CHAR (11) NULL,  
    audit_user sysname DEFAULT SUSER_SNAME(),  
-   audit_changed datetime DEFAULT GETDATE()  
+   audit_changed DATETIME DEFAULT GETDATE()  
    );  
 GO  
 CREATE TRIGGER dbo.updEmployeeData   

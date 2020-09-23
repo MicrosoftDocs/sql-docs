@@ -52,7 +52,7 @@ An alphanumeric [expression](../../t-sql/language-elements/expressions-transact-
 ## Examples  
 The first part of this example compares the `SOUNDEX` values of two very similar strings. For a Latin1_General collation, `DIFFERENCE` returns a value of `4`. The second part of the example compares the `SOUNDEX` values for two very different strings, and for a Latin1_General collation, `DIFFERENCE` returns a value of `0`.  
   
-```  
+```sql  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
 SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
 GO  

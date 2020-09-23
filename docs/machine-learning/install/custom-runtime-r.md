@@ -126,7 +126,7 @@ setx /m PATH "path\to\installation\of\R\bin\x64;%PATH%"
 
 Run the **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to the **SQL Server Launchpad Service user name** and SID **S-1-15-2-1** (**ALL APPLICATION PACKAGES**). The launchpad service user name is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME` where `INSTANCENAME` is the instance name of your SQL Server.
 
- The commands will recursively grant access to all files and folders under the given directory path.
+The commands will recursively grant access to all files and folders under the given directory path.
 
 Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, `INSTANCENAME` is the default instance `MSSQLSERVER`.
 

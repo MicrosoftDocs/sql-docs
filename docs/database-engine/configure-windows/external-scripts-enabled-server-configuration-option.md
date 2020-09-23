@@ -37,7 +37,7 @@ You must enable the external script enabled option before you can execute an ext
 
     Install the **Machine Learning Services** feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of external scripts. Be sure to select at least one language during initial setup: either R or Python, or both.
     
-+ For [!INCLUDEsssql19-md](../../includes/sssqlv15-md.md)] and later[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] has support for all R, Python, Java and other third party languages.
++ For [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] and later[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] has support for all R, Python, Java and other third party languages.
 
 Install the Machine Learning Services and Language Extensions feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of external scripts for any supported language.
 

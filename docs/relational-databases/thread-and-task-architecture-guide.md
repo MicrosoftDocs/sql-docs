@@ -66,7 +66,7 @@ In summary, a **request** may spawn one or more **tasks** to carry out units of 
 > Consider the following scenario:   
 > -  Worker 1 is a long-running read query using read-ahead over in-memory based tables. Worker 1 finds its required data pages are already in Buffer Pool, doesn't have to yield to wait for I/O operations, and can consume its full quantum before yielding.   
 > -  Worker 2 is doing shorter sub-millisecond tasks and is required to yield before its full quantum is exhausted.  
-> In this scenario and up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], Worker 1 is allowed to basically monopolize the scheduler by having more overall quantum time.   
+> In this scenario and up to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], Worker 1 is allowed to basically monopolize the scheduler by having more overall quantum time.   
 > Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], cooperative scheduling includes Large Deficit First (LDF) scheduling. With LDF scheduling, quantum usage patterns are monitored and one worker thread doesn't monopolize a scheduler. In the same scenario, Worker 2 is allowed to consume repeated quantum’s before Worker 1 is allowed more quantum, therefore preventing Worker 1 from monopolizing the scheduler in an unfriendly pattern.
 
 ### Scheduling parallel tasks

@@ -198,7 +198,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 259         PoolIMOLTP 0                  100                3845          1356           2307  
 ```  
   
- For more information see [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ For more information, see [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  If you do not bind your database to a named resource pool, it is bound to the 'default' pool. Since default resource pool is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for most other allocations, you will not be able to monitor memory consumed by memory-optimized tables using the DMV sys.dm_resource_governor_resource_pools accurately for the database of interest.  
   

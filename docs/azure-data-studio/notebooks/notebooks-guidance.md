@@ -1,23 +1,23 @@
 ---
 title: Use Jupyter Notebooks in Azure Data Studio
 description: Learn how to get started using Jupyter Notebooks in Azure Data Studio.
-author: yualan
-ms.author: alayu
-ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+author: yualan
+ms.author: alayu
+ms.reviewer: achatter, maghan, mikeray
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
 ---
 
 # Use Jupyter Notebooks in Azure Data Studio
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Jupyter Notebook is an open-source web application that allows you to create and share documents containing live code, equations, visualizations, and narrative text. Usage includes data cleaning and transformation, numerical simulation, statistical modeling, data visualization, and machine learning.
 
-This article describes how to create a new notebook in the latest release of [**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15) and how to start authoring your own notebooks using different kernels.
+This article describes how to create a new notebook in the latest release of [**Azure Data Studio**](../download-azure-data-studio.md) and how to start authoring your own notebooks using different kernels.
 
 Watch this short 5-minute video for an introduction to notebooks in Azure Data Studio:
 
@@ -29,15 +29,15 @@ There are multiple ways to create a new notebook. In each case, a new file named
 
 - Go to the **File Menu** in Azure Data Studio and select **New Notebook**.
 
-  ![New notebook](media/notebooks-guidance/file-new-notebook.png)
+  ![New file notebook](media/notebooks-guidance/file-new-notebook.png)
 
 - Right-click a **SQL Server** connection and select **New Notebook**.
 
-  ![New notebook](media/notebooks-guidance/server-new-notebook.png)
+  ![New server notebook](media/notebooks-guidance/server-new-notebook.png)
 
 - Open the command palette (**Ctrl+Shift+P**), type "new notebook", and select the **New Notebook** command.
 
-  ![New notebook](media/notebooks-guidance/command-palette-new-notebook.png)
+  ![New command palette notebook](media/notebooks-guidance/command-palette-new-notebook.png)
 
 ## Connect to a kernel
 
@@ -46,7 +46,7 @@ Azure Data Studio notebooks support a number of different kernels, including SQL
 **Attach to** provides the context for the kernel. For example, if you're using SQL Kernel, then you can attach to any of your SQL Server instances.
 If you're using Python3 Kernel you attach to **localhost** and you can use this kernel for your local Python development.
 
-SQL Kernel can also be used to connect to PostgreSQL server instances. If you're a PostgreSQL developer and want to connect the notebooks to your PostgreSQL Server, then download the [**PostgreSQL extension**](./postgres-extension.md) in the Azure Data Studio extension Marketplace and connect to the PostgreSQL server.
+SQL Kernel can also be used to connect to PostgreSQL server instances. If you're a PostgreSQL developer and want to connect the notebooks to your PostgreSQL Server, then download the [**PostgreSQL extension**](../extensions/postgres-extension.md) in the Azure Data Studio extension Marketplace and connect to the PostgreSQL server.
 
 If you're connected to SQL Server 2019 big data cluster, the default **Attach to** is the end point of the cluster. You can submit Python, Scala, and R code using the Spark compute of the cluster.
 
@@ -59,9 +59,9 @@ If you're connected to SQL Server 2019 big data cluster, the default **Attach to
 
 For more information on specific kernels, see:
 
-- [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)
-- [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
-- [Kqlmagic extension in Azure Data Studio](notebooks-kqlmagic.md) - this extends the capabilities of the Python kernel
+- [Create and run a SQL Server notebook](./notebooks-sql-kernel.md)
+- [Create and run a Python notebook](./notebooks-python-kernel.md)
+- [Kqlmagic extension in Azure Data Studio](./notebooks-kqlmagic.md) - this extends the capabilities of the Python kernel
 
 ## Add a code cell
 
@@ -137,9 +137,9 @@ The following examples demonstrate using different kernels to run a simple "Hell
 
 ## Next steps
 
-- [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md).
-- [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
-- [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../machine-learning/install/sql-machine-learning-azure-data-studio.md).
-- [Deploy SQL Server big data cluster with Azure Data Studio notebook](../big-data-cluster/notebooks-deploy.md).
-- [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](../big-data-cluster/notebooks-manage-bdc.md).
-- [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md).
+- [Create and run a SQL Server notebook](./notebooks-sql-kernel.md).
+- [Create and run a Python notebook](./notebooks-python-kernel.md)
+- [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-azure-data-studio.md).
+- [Deploy SQL Server big data cluster with Azure Data Studio notebook](../../big-data-cluster/notebooks-deploy.md).
+- [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](../../big-data-cluster/notebooks-manage-bdc.md).
+- [Run a sample notebook using Spark](../../big-data-cluster/notebooks-tutorial-spark.md).

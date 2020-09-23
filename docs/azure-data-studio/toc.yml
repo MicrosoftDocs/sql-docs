@@ -47,13 +47,13 @@
     - name: Machine Learning extension
       items:
       - name: Machine Learning extension overview
-        href: machine-learning-extension.md
+        href: extensions/machine-learning-extension.md
       - name: Manage packages in database
-        href: machine-learning-extension-manage-packages.md
+        href: extensions/machine-learning-extension-manage-packages.md
       - name: Make predictions
-        href: machine-learning-extension-predictions.md
+        href: extensions/machine-learning-extension-predictions.md
       - name: Import and view models
-        href: machine-learning-extension-import-view-models.md
+        href: extensions/machine-learning-extension-import-view-models.md
     - name: Managed Instance extension
       href: extensions/azure-sql-managed-instance-extension.md
     - name: PostgreSQL extension
@@ -115,15 +115,15 @@
   - name: Notebooks
     items:
     - name: Notebooks overview
-      href: notebooks-guidance.md
+      href: notebooks/notebooks-guidance.md
     - name: Use SQL Kernel
-      href: notebooks-tutorial-sql-kernel.md
+      href: notebooks/notebooks-sql-kernel.md
     - name: Use Python Kernel
-      href: notebooks-tutorial-python-kernel.md
+      href: notebooks/notebooks-python-kernel.md
     - name: Use Kusto Kernel
       href: notebooks/notebooks-kusto-kernel.md
-    - name: Kqlmagic extension
-      href: notebooks-kqlmagic.md
+    - name: Use Kqlmagic
+      href: notebooks/notebooks-kqlmagic.md
   - name: Deployment
     items:
     - name: Deploy Azure SQL Edge

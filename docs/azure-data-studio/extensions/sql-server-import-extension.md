@@ -1,13 +1,13 @@
 ---
 title: SQL Server Import Extension
 description: Learn how to install and use the SQL Server Import extension for Azure Data Studio, a wizard that converts .txt and .csv files into a SQL table.
-ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "yualan"
-ms.author: "alayu"
-ms.custom: "seodec18"
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
+ms.custom: 
 ms.date: 09/22/2020
 ---
 
@@ -15,7 +15,7 @@ ms.date: 09/22/2020
 
 The SQL Server Import extension converts .txt and .csv files into a SQL table. This wizard utilizes a Microsoft Research framework known as [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) to intelligently parse the file with minimal user input. it's a powerful framework for data wrangling, and it's the same technology that powers Flash Fill-in Microsoft Excel
 
-To learn more about the SSMS version of this feature, you can read [this article](../relational-databases/import-export/import-flat-file-wizard.md).
+To learn more about the SSMS version of this feature, you can read [this article](../../relational-databases/import-export/import-flat-file-wizard.md).
 
 ## Install the SQL Server Import extension
 
@@ -53,7 +53,7 @@ To learn more about the SSMS version of this feature, you can read [this article
 
     ![Modify columns](media/sql-server-import-extension/import-wizard-modify-columns.png)
 
-4. This page gives a summary of the actions chosen. You can also see whether your table inserted successfully or not. 
+4. This page gives a summary of the actions chosen. You can also see whether your table inserted successfully or not.
 
     You can either select **Done, Previous** if you need to make changes, or **Import new file** to quickly import another file.
 

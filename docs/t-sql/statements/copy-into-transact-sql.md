@@ -1,7 +1,7 @@
 ---
 title: COPY INTO (Transact-SQL) (preview) 
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
 ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
@@ -19,11 +19,11 @@ author: kevinvngo
 ms.author: kevin
 monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
 ---
-# COPY (Transact-SQL) (preview)
+# COPY (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-This article explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse. Use COPY for the following capabilities:
+This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
 - Execute a single T-SQL statement without having to create any additional database objects
@@ -34,9 +34,6 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 - Specify a custom row terminator for CSV files
 - Leverage SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
-
-> [!NOTE]  
-> The COPY statement is currently in public preview.
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
@@ -268,7 +265,7 @@ The user executing the Copy Command must have the following permissions:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Warehouse, INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
 ## Examples  
 
@@ -392,7 +389,7 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Share your performance results with our team during preview! sqldwcopypreview@service.microsoft.com
+The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV.
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
@@ -440,4 +437,4 @@ Please send any feedback or issues to the following distribution list: sqldwcopy
 
 ## See also  
 
- [Loading overview with SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Loading overview with [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

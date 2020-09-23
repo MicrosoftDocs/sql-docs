@@ -35,7 +35,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  
      { NULL | delete_length }  
@@ -104,12 +103,12 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  To run this example, you must install the pubs database.  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
    FROM pub_info pr, publishers p  
       WHERE p.pub_id = pr.pub_id   

@@ -36,7 +36,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  
   
@@ -61,7 +60,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## Remarks  
  Because this function creates a column in a table, a name for the column must be specified in the select list in one of the following ways:  
   
-```  
+```sql  
 --(1)  
 SELECT IDENTITY(int, 1,1) AS ID_Num  
 INTO NewTable  
@@ -71,13 +70,12 @@ FROM OldTable;
 SELECT ID_Num = IDENTITY(int, 1, 1)  
 INTO NewTable  
 FROM OldTable;  
-  
 ```  
   
 ## Examples  
  The following example inserts all rows from the `Contact` table from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database into a new table called `NewContact`. The IDENTITY function is used to start identification numbers at 100 instead of 1 in the `NewContact` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'Person.NewContact', N'U') IS NOT NULL  
@@ -95,7 +93,6 @@ ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;
 GO  
 SELECT ContactNum, First, Last FROM Person.NewContact;  
 GO  
-  
 ```  
   
 ## See Also  

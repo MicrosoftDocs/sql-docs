@@ -1,14 +1,14 @@
 ---
 title: Azure Arc extension (preview)
 description: Learn how to install and use the Azure Arc extension to try out Azure Arc data services.
-ms.custom: "seodec18"
-ms.date: "09/22/2020"
-ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "yualan"
-ms.author: "alayu"
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
+ms.custom: 
+ms.date: 09/22/2020
 ---
 
 # Azure Arc extension for Azure Data Studio (Preview)

@@ -1,13 +1,13 @@
 ---
 title: Getting started with the SQL Database Projects extension
 description: Getting started using the SQL Database Projects extension for Azure Data Studio
-ms.prod: sql
+ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seodec18
+ms.custom: 
 ms.date: 07/30/2020
 ---
 
@@ -19,7 +19,7 @@ This article describes three ways to get started with the SQL Database Projects 
 2. Existing database projects can be opened via **Open Database Project** in the command palette.
 3. Start from an existing database by using **Import New Database Project** from the command palette.
 
-    ![New viewlet](media/extensions/sql-database-projects-extension/projects-viewlet.png)
+    ![New viewlet](media/sql-database-projects-extension/projects-viewlet.png)
 
 ## Create an empty database project
 
@@ -28,7 +28,7 @@ The empty project is opened and visible in the **Projects** viewlet for editing.
 
 ## Open an existing project
 
-In the **Projects** viewlet, select the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio or [Visual Studio SQL Server Data Tools](../ssdt/sql-server-data-tools.md).
+In the **Projects** viewlet, select the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio or [Visual Studio SQL Server Data Tools](../../ssdt/sql-server-data-tools.md).
 
 The existing project is opened and its contents are visible in the **Projects** viewlet for editing.
 
@@ -40,7 +40,7 @@ Finally, select a target structure of the extraction.  The new project is opened
 
 ## Build and publish
 
-Deploying the database project is achieved in the SQL Database Projects extension for Azure Data Studio by building the project into a [data-tier application file](../relational-databases/data-tier-applications/data-tier-applications.md) (DACPAC) and publishing to a supported platform. For more on this process, see [Build and Publish a Project](sql-database-project-extension-build.md).
+Deploying the database project is achieved in the SQL Database Projects extension for Azure Data Studio by building the project into a [data-tier application file](../../relational-databases/data-tier-applications/data-tier-applications.md) (DACPAC) and publishing to a supported platform. For more on this process, see [Build and Publish a Project](sql-database-project-extension-build.md).
 
 ## Schema compare
 

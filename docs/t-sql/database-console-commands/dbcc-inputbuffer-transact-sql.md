@@ -100,14 +100,14 @@ On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium and Business Critical t
 The following example runs `DBCC INPUTBUFFER` on a second connection while a long transaction is running on a previous connection.
   
 ```sql
-CREATE TABLE dbo.T1 (Col1 int, Col2 char(3));  
+CREATE TABLE dbo.T1 (Col1 INT, Col2 CHAR(3));  
 GO  
-DECLARE @i int = 0;  
+DECLARE @i INT = 0;  
 BEGIN TRAN  
 SET @i = 0;  
 WHILE (@i < 100000)  
 BEGIN  
-INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS char(3)));  
+INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS CHAR(3)));  
 SET @i += 1;  
 END;  
 COMMIT TRAN;  

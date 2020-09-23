@@ -5,26 +5,32 @@ description: Reference article for azdata commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
-ms.date: 06/22/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata Reference
+# azdata
 
-| Command| Description|
+Applies to `azdata`
+
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
+
+## Commands
+
+|Command|Description|
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
-|[azdata app](reference-azdata-app.md) | Create, delete, run, and manage applications. |
+|[azdata notebook](reference-azdata-notebook.md) | Commands for viewing, running, and managing notebooks from a terminal. |
+|[azdata extension](reference-azdata-extension.md) | Manage and update CLI extensions. |
 |[azdata arc](reference-azdata-arc.md) | Commands for using Azure Arc for Azure data services. |
+|[azdata app](reference-azdata-app.md) | Create, delete, run, and manage applications. |
+|[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
+|[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 [azdata login](#azdata-login) | Log in to the cluster's controller endpoint and set its namespace as your active context. To use a password on login, you must set the AZDATA_PASSWORD environment variable.
 [azdata logout](#azdata-logout) | Log out of cluster.
 |[azdata context](reference-azdata-context.md) | Context management commands. |
-|[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
-|[azdata notebook](reference-azdata-notebook.md) | Commands for viewing, running, and managing notebooks from a terminal. |
-|[azdata extension](reference-azdata-extension.md) | Manage and update CLI extensions. |
-
+|[azdata postgres](reference-azdata-postgres.md) | Postgres query runner and interactive shell. |
 ## azdata login
 When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config.  When you login, this cluster's namespace will be set to your active context.
 ```bash
@@ -115,3 +121,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
 For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

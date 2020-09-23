@@ -32,7 +32,7 @@ This function returns the number of attempted connections - both successful and 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 @@CONNECTIONS  
 ```  
 
@@ -58,8 +58,7 @@ SELECT GETDATE() AS 'Today''s Date and Time',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
-  
+``` 
 Today's Date and Time  Login Attempts  
 ---------------------- --------------  
 12/5/2006 10:32:45 AM  211023         

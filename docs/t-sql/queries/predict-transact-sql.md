@@ -168,7 +168,7 @@ This example references the `PREDICT` function in the `FROM` clause of a `SELECT
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -176,11 +176,11 @@ FROM PREDICT(MODEL = @model,
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -201,7 +201,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -211,11 +211,11 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 A common use case for prediction is to generate a score for input data, and then insert the predicted values into a table. The following example assumes the calling application uses a stored procedure to insert a row containing the predicted value into a table:
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
 INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
-FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
 
 - The results of `PREDICT` are stored in a table called PredictionResults. 

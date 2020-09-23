@@ -32,7 +32,7 @@ This article describes how to install a custom runtime for running R scripts wit
 
 + [R Version 3.3 or higher](https://cran.r-project.org/)
 
-## Add SQL Server language extensions for Windows
+## Add SQL Server Language Extensions for Windows
 
 > [!NOTE]
 >For Machine Learning Services using SQL Server 2019, the extensibility framework for language extensions with the Launchpad service is already installed and you can skip this step.

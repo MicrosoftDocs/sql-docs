@@ -84,7 +84,6 @@ Install the [pandas](https://pandas.pydata.org/) package for Python from an *ele
 python.exe -m pip install pandas
 ```
 
-
 ## Update the system environment variables
 
 Add or modify PYTHONHOME as a system environment variable.
@@ -100,12 +99,11 @@ To modify select **Edit** to change PYTHONHOME. Modify PYTHONHOME to point to th
 
 ![Create PYTHONHOME system variable.](../install/media/sys-pythonhome.png)
 
-
 ## Grant access to the custom Python installation folder
 
-Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is of the form *NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
+Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
 
-Append the instance name to MSSQLLAUNCHPAD (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
+Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
 
 1. Give permissions to **SQL Server Launchpad Service user name**
 
@@ -176,7 +174,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
 Language Extensions use the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution.
 
 ### Ubuntu
-> [!Tip]
+> [!TIP]
 > If possible, `update` to refresh packages on the system prior to installation. Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
 
 ```bash
@@ -215,21 +213,19 @@ sudo python3.7 -m pip install pandas -t /usr/lib/python3.7/dist-packages
 ## Using a custom installation of Python 3.7
 
 > [!NOTE]
-> If you have installed Python in the default location of **/usr/lib/python3.7**, you can skip to [the next section](#download-python-linux).
+> If you have installed Python in the default location of `/usr/lib/python3.7`, you can skip to [the next section](#download-python-linux).
 
 If you built your own version of Python 3.7, follow the following steps so that SQL Server can find and load your custom installation.
 
 #### Update the environment variables
 
-1. Add the PYTHONHOME environment variable to the mssql-launchpadd service config.
-
-    + Edit **mssql-launchpadd** service.
+1. Edit the mssql-launchpadd service to add the PYTHONHOME environment variable to the file `/etc/systemd/system/mssql-launchpadd.service.d/override.conf`
 
     ```bash
     sudo systemctl edit mssql-launchpadd
     ```
 
-    + Insert the following text in the **/etc/systemd/system/mssql-launchpadd.service.d/override.conf** file that opens. Set value of PYTHONHOME to the custom Python installation path.
+    + Insert the following text in the `/etc/systemd/system/mssql-launchpadd.service.d/override.conf` file that opens. Set value of PYTHONHOME to the custom Python installation path.
 
     ```vi
     [Service]
@@ -238,15 +234,15 @@ If you built your own version of Python 3.7, follow the following steps so that 
 
     + Save and close.
 
-2. Make sure **libpython3.7m.so.1.0** can be loaded.
+2. Make sure `libpython3.7m.so.1.0` can be loaded.
 
-    + Create a custom-python.conf file in **/etc/ld.so.conf.d**.
+    + Create a custom-python.conf file in `/etc/ld.so.conf.d`.
 
     ```bash
     sudo vi /etc/ld.so.conf.d/custom-python.conf
     ```
 
-    + In the file that opens, add path to **libpython3.7m.so.1.0** from the custom Python installation.
+    + In the file that opens, add path to `libpython3.7m.so.1.0` from the custom Python installation.
 
     ```vi
     /path/to/installation/of/python3.7/lib
@@ -254,7 +250,7 @@ If you built your own version of Python 3.7, follow the following steps so that 
 
     + Save and close the new file.
 
-    + Run `ldconfig` and verify **libpython3.7m.so.1.0** can be loaded by running the following commands and checking that all the dependent libraries can be found.
+    + Run `ldconfig` and verify `libpython3.7m.so.1.0` can be loaded by running the following commands and checking that all the dependent libraries can be found.
 
     ```bash
     sudo ldconfig
@@ -274,9 +270,6 @@ sudo /opt/mssql/bin/mssql-conf set extensibility.datadirectories /path/to/instal
 ```bash
 sudo systemctl restart mssql-launchpadd
 ```
-
-
-
 ## <a name="download-python-linux"></a> Download Python language extension
 
 Download the zip file containing the Python language extension (**python-lang-extension.zip**) from [here.](**GitHub link goes here**)
@@ -298,7 +291,6 @@ GO
 ```
 
 ::: moniker-end
-
 
 ## Enable external script execution in SQL Server
 

@@ -68,7 +68,7 @@ In summary, a **request** may spawn one or more **tasks** to carry out units of 
 > -  Worker 2 is doing shorter sub-millisecond activities that require it to yield before its quantum is exhausted.  
 > In this scenario, Worker 1 is allowed to basically monopolize the scheduler.    
 >     
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], cooperative scheduling includes Large Deficit First (LDF) scheduling. With LDF scheduling, quantum usage patterns are monitored and one worker thread doesn't monopolize a scheduler. In the same scenario, Worker 2 is allowed to consume repeated quantum’s and prevent Worker 1 from monopolizing the scheduler in an unfriendly pattern.
+> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], cooperative scheduling includes Large Deficit First (LDF) scheduling. With LDF scheduling, quantum usage patterns are monitored and one worker thread doesn't monopolize a scheduler. In the same scenario, Worker 2 is allowed to consume repeated quantum’s and prevent Worker 1 from monopolizing the scheduler in an unfriendly pattern.
 
 ### Scheduling parallel tasks
 Imagine a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configured with MaxDOP 8, and CPU Affinity is configured for 24 CPUs (schedulers) across NUMA nodes 0 and 1. Schedulers 0 through 11 belong to NUMA node 0, schedulers 12 through 23 belong to NUMA node 1. An application sends the following query (request) to the [!INCLUDE[ssde_md](../includes/ssde_md.md)]:

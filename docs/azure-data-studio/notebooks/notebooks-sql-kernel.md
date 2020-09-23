@@ -13,7 +13,7 @@ ms.date: 07/01/2020
 
 # Create and run a SQL Server notebook
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial demonstrates how to create and run a notebook in Azure Data Studio using SQL Server.
 
@@ -21,8 +21,8 @@ This tutorial demonstrates how to create and run a notebook in Azure Data Studio
 
 - [Azure Data Studio installed](download-azure-data-studio.md)
 - SQL Server installed
-  - [Windows](../database-engine/install-windows/install-sql-server.md)
-  - [Linux](../linux/sql-server-linux-setup.md)
+  - [Windows](../../database-engine/install-windows/install-sql-server.md)
+  - [Linux](../../linux/sql-server-linux-setup.md)
 
 ## Create a  notebook
 
@@ -108,6 +108,6 @@ GO
 
 Learn more about notebooks:
 
-- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)
-- [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
-- [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)
+- [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
+- [Create and run a Python notebook](./notebooks-tutorial-python-kernel.md)
+- [Run a sample notebook using Spark](../../big-data-cluster/notebooks-tutorial-spark.md)

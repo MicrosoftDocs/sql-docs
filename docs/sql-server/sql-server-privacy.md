@@ -1,7 +1,7 @@
 ---
 description: "SQL Server privacy supplement"
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 01/19/2019
+ms.date: 08/26/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: "mikeray"
@@ -16,10 +16,12 @@ ms.author: jaszymas
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine on the Microsoft Azure service, environment information may be sent to Microsoft so that Microsoft can register your SQL Server virtual machine resource with the resource provider within your Azure subscription, as further described [here](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). As part of registering the SQL Server virtual machine resource, the SQL Server IaaS Agent Extension may be installed on your virtual machine as further described [here](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
+This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product.
+
+This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
 - Azure SQL Database
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Database Migration Assistant
@@ -109,13 +111,27 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal use with no third-party access. |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |
 |Power View and SQL Reporting Services Map Item(s) may send data for use of Bing Maps. |Limit to session data |- |
 
+## Organization identifiable information (OII)
+
+Data received from an organization, or generated from their use of the product.
+-   Linkable to an organization.
+-   Does not contain content.
+
+### Examples of organization identifiable information
+-   Organization Name (example: Microsoft Corp.)
+
+### Permitted usage scenarios
+|Scenario  |Access Restrictions  |Retention Requirements|
+|---------|---------|---------|
+| Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. </br></br>Microsoft will not use this data for licensing audits without customer's advance consent. | Min 90 days - Max 3 years |
+
 ## System metadata
 
 Data generated in the course of running the server.  The data does not contain customer content.
 
 ### Examples of system metadata
 
-The following are considered system metadata when they do not inlcude customer content, object metadata, customer access control data, or EUII:
+The following are considered system metadata when they do not include customer content, object metadata, customer access control data, or EUII:
 
 - Database GUID
 - Hash of machine name
@@ -128,7 +144,7 @@ The following are considered system metadata when they do not inlcude customer c
 - Event names and error codes
 - Hardware settings and identification such as OEM Manufacturer
 
-Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or 3rd party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
+Microsoft does examine application name values set by other programs that use SQL Server (example: Sharepoint or third-party packaged programs and includes this information in System Metadata sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in System Metadata fields or create applications designed to store personal data in these fields. 
 
 ### Permitted usage scenarios
 

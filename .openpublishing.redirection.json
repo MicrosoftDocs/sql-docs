@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs/sql-server-privacy-ver15.md",
+      "redirect_url": "/sql/sql-server/sql-server-privacy",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/case-study-building-an-enterprise-ecosystem.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/case-study-building-an-enterprise-ecosystem",
       "redirect_document_id": false

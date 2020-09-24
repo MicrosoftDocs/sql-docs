@@ -43,7 +43,7 @@ WHILE Boolean_expression
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Azure Synapse Analytics and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
      { sql_statement | statement_block | BREAK }  

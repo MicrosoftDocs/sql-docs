@@ -55,7 +55,7 @@ SET
     }  
 }   
 ```  
-Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:  
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse:  
 ```syntaxsql
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  

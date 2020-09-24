@@ -59014,6 +59014,26 @@
       "source_path": "docs/azure-data-studio/machine-learning-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-guidance.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-kqlmagic.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-kqlmagic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-python-kernel.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-python-kernel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-sql-kernel.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-sql-kernel",
+      "redirect_document_id": true
     }
   ]
 }

@@ -70,3 +70,5 @@ The Microsoft Monitoring Agent scans the working folder every 15 minutes looking
 ## Next steps
 
 See the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) for more information.
+
+To obtain comprehensive support of the On-demand SQL Assessment, a Premier or Unified support subscription is required. See [Azure Premier Support](https://azure.microsoft.com/support/plans/premier) for details.

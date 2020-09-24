@@ -45,7 +45,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## Remarks  
  Use this function to conveniently determine whether the local instance is hosting the primary replica of the specified availability database. Sample code could be similar to the following.  
   
-```tsql
+```sql
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
 BEGIN  
 -- If this is not the primary replica, exit (probably without error).  
@@ -58,7 +58,7 @@ END
 ### A. Using sys.fn_hadr_is_primary_replica  
  The following example returns 1 if the specified database on the local instance is the primary replica.  
   
-```tsql
+```sql
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
 ```    

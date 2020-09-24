@@ -121,6 +121,12 @@ The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sandd
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
+## Limitations and considerations
+
+- You must choose a database for your Azure Data Explorer cluster before running a Kusto query.
+- If you leave your Azure Data Explorer cluster idle for too long, it can disconnect.
+    - Workaround: Disconnect from the cluster and reconnect.
+
 ## Next steps
 
 - [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)

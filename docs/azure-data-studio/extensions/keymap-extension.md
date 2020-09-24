@@ -36,7 +36,7 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 
 ## Install the extension generator
 
-To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the following from the command prompt:
+To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the code in the command prompt below:
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -80,7 +80,7 @@ It's easy to find and replace these key bindings. Run *Open Keyboard Shortcuts
 
 **Step 2: Add shortcuts to the extension**
 
-To add shortcuts to the extension, open the *package.json* file (in the extension) and replace the `contributes` section with the following:
+To add shortcuts to the extension, open the *package.json* file (in the extension) and replace the `contributes` section with the code below:
 
 ```json
 "contributes": {
@@ -129,7 +129,7 @@ Key maps are one of the quickest extensions to create, so your new extension sho
 
 ## Package your extension
 
-To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
+To share with others, you need to package the extension into a single file. This can be published to the Azure Data Studio extension Marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
 ```console
 `npm install -g vsce`
@@ -151,9 +151,9 @@ Once this was done, my ssmskeymap-0.1.0.vsix file was created and ready to insta
 
 :::image type="content" source="media/keymap-extension/extensions.png" alt-text="Install":::
 
-## Publish your extension to the marketplace
+## Publish your extension to the Marketplace
 
-The Azure Data Studio extension marketplace is not totally implemented yet, but the current process is to host the extension VSIX somewhere (for example, a GitHub Release page) then submit a PR updating [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension info.
+The Azure Data Studio extension Marketplace is under construction, but the current process is to host the extension VSIX somewhere (for example, a GitHub Release page) then submit a PR updating [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension info.
 
 ## Next steps
 
@@ -169,7 +169,7 @@ In this tutorial, you learned how to:
 
 We hope after reading this you'll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
 
-If you have an idea but are not sure how to get started, please open an issue or tweet at the team: [azuredatastudio](https://twitter.com/azuredatastudio).
+If you have an idea but are not sure how to get started, open an issue or tweet at the team: [azuredatastudio](https://twitter.com/azuredatastudio).
 
 You can always refer to the [Visual Studio Code extension guide](https://code.visualstudio.com/docs/extensions/overview) because it covers all the existing APIs and patterns.
 

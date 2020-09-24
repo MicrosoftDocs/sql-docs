@@ -29,7 +29,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|The name of the CMK.|  
+|**name**|**sysname**|The name of the CEK.|  
 |**column_encryption_key_id**|**int**|ID of the CEK.|  
 |**create_date**|**datetime**|Date the CEK was created.|  
 |**modify_date**|**datetime**|Date the CEK was last modified.|  

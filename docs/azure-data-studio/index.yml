@@ -56,15 +56,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Notebooks in Azure Data Studio
-            url:  notebooks-guidance.md
+            url:  notebooks/notebooks-guidance.md
           - text: SQL Kernel
-            url:  notebooks-tutorial-sql-kernel.md
+            url:  notebooks/notebooks-sql-kernel.md
           - text: Python Kernel
-            url:  notebooks-tutorial-python-kernel.md
+            url:  notebooks/notebooks-python-kernel.md
           - text: Kusto Kernel
-            url:  notebooks-kusto-kernel.md
+            url:  notebooks/notebooks-kusto-kernel.md
           - text: Kqlmagic in Azure Data Studio
-            url:  notebooks-kqlmagic.md
+            url:  notebooks/notebooks-kqlmagic.md
 
   - title: Extensions
     linkLists:

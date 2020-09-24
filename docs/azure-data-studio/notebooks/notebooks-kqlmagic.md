@@ -103,6 +103,10 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
 
+    > [!Note]
+    > If you are using your own ADX cluster, you must include the region in the connection string as follows:   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
+
    You use Device Login to authenticate. Copy the code from the output and select **authenticate** which opens a browser where you need to paste the code. Once you authenticate successfully, you can come back to Azure Data Studio to continue with the rest of the script.
 
    ![Azure Data Explorer authentication](media/notebooks-kqlmagic/ade-auth.png)

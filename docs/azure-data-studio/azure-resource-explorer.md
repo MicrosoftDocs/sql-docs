@@ -1,13 +1,13 @@
 ---
 title: Explore Azure SQL resources with Azure Resource Explorer
 description: Learn how to explore and manage Azure SQL Server, Azure SQL Database, and Azure SQL Managed Instance through Azure Resource Explorer.
-ms.custom: seodec18
-author: yanancai
-ms.author: yanacai
-ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+author: yanancai
+ms.author: yanacai
+ms.reviewer: alayu, maghan, sstein
+ms.custom: seodec18
 ms.date: 09/24/2018
 ---
 

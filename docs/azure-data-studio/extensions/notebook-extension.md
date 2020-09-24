@@ -3,7 +3,7 @@ title: Create a Jupyter Notebook extension
 description: Learn about how to package notebooks into an extension using the extension generator
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan
@@ -15,7 +15,7 @@ ms.date: 08/28/2020
 
 This tutorial demonstrates how to create a new Notebooks Azure Data Studio extension. The extension ships a sample Jupyter Notebook that can be opened and run in Azure Data Studio.
 
-During this tutorial you learn how to:
+In this article you learn how to:
 > [!div class="checklist"]
 > - Create an extension project
 > - Install the extension generator

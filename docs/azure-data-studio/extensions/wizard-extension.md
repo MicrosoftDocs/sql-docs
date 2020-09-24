@@ -15,7 +15,7 @@ ms.date: 08/28/2020
 
 This tutorial demonstrates how to create a new **Azure Data Studio Wizard extension**. The extension contributes a wizard to interact with users in Azure Data Studio.
 
-During this tutorial you learn how to:
+In this article you learn how to:
 > [!div class="checklist"]
 > - Install the extension generator
 > - Create your extension

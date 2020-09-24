@@ -56,29 +56,33 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Notebooks in Azure Data Studio
-            url: notebooks-guidance.md
-          - text: How to use the SQL Kernel
-            url: notebooks-tutorial-sql-kernel.md
-          - text: How to use the Python Kernel
-            url: notebooks-tutorial-python-kernel.md
-          - text: Kqlmagic extension in Azure Data Studio
-            url: notebooks-kqlmagic.md
+            url:  notebooks-guidance.md
+          - text: SQL Kernel
+            url:  notebooks-tutorial-sql-kernel.md
+          - text: Python Kernel
+            url:  notebooks-tutorial-python-kernel.md
+          - text: Kusto Kernel
+            url:  notebooks-kusto-kernel.md
+          - text: Kqlmagic in Azure Data Studio
+            url:  notebooks-kqlmagic.md
 
   - title: Extensions
     linkLists:
       - linkListType: concept
         links:
           - text: Extend the functionality of Azure Data Studio
-            url: extensions/add-extensions.md
+            url:  extensions/add-extensions.md
           - text: Extend the functionality by creating Azure Data Studio extensions
-            url: extensions/extension-authoring.md
-          - text: PostgreSQL extension
-            url: extensions/postgres-extension.md
-          - text: PowerShell Editor Support
-            url: extensions/powershell-extension.md
-          - text: Azure Data Explorer
-            url: extensions/kusto-extension.md
-          - text: Notebook extension
-            url: extensions/notebook-extension.md
+            url:  extensions/extension-authoring.md
           - text: Jupyter Book extension
-            url: extensions/jupyter-book-extension.md
+            url:  extensions/jupyter-book-extension.md
+          - text: Kusto (KQL)
+            url:  extensions/kusto-extension.md
+          - text: Notebook extension
+            url:  extensions/notebook-extension.md
+          - text: PostgreSQL extension
+            url:  extensions/postgres-extension.md
+          - text: PowerShell Editor Support
+            url:  extensions/powershell-extension.md
+          - text: Wizard extension
+            url:  extensions/wizard-extension.md

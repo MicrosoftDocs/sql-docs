@@ -3,7 +3,7 @@ title: Create dashboard extension
 description: This tutorial demonstrates how to create a dashboard extension to add custom functionality to Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan
@@ -15,7 +15,7 @@ ms.date: 08/28/2020
 
 This tutorial demonstrates how to create a new **Azure Data Studio Dashboard extension**. The extension contributes to the Azure Data Studio connection dashboard, so you can extend the functionality of Azure Data Studio in a manner easily visible to users.
 
-During this tutorial you learn how to:
+In this article you learn how to:
 > [!div class="checklist"]
 > - Install the extension generator
 > - Create your extension

@@ -1,25 +1,25 @@
 ---
 title: Notebooks with Python Kernel in Azure Data Studio
 description: This tutorial shows how you can create and run a Python notebook.
-author: garyericson
-ms.author: garye
-ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+author: garyericson
+ms.author: garye
+ms.reviewer: mikeray, alayu, maghan
 ms.custom: ""
 ms.date: 07/01/2020
 ---
 
 # Create and run a Python notebook
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial demonstrates how to create and run a notebook in Azure Data Studio using the Python kernel.
 
 ## Prerequisites
 
-- [Azure Data Studio installed](download-azure-data-studio.md)
+- [Azure Data Studio installed](../download-azure-data-studio.md)
 
 ## Create a notebook
 
@@ -31,9 +31,9 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 1. Select **Python 3** for the **Kernel**. **Attach to** is set to "localhost".
 
-   :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Set Kernel":::
+   :::image type="content" source="media/notebooks-python-kernel/set-kernel-and-attach-to-python.png" alt-text="Set Kernel":::
 
-You can save the notebook using the **Save** or **Save as...** command from the **File** menu. 
+You can save the notebook using the **Save** or **Save as...** command from the **File** menu.
 
 To open a notebook, you can use the **Open file...** command in the **File** menu, select **Open file** on the **Welcome** page, or use the **File: Open** command from the command palette.
 
@@ -70,7 +70,7 @@ For example:
 
 1. Add a new Python code cell by selecting the **+Code** command in the toolbar.
 
-   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Notebook toolbar":::
+   :::image type="content" source="media/notebooks-python-kernel/notebook-toolbar-python.png" alt-text="Notebook toolbar":::
 
 1. Copy and paste the following example into the cell and click **Run cell**. This example does simple math and the result appears below.
 
@@ -81,12 +81,12 @@ For example:
    print(c)
    ```
 
-   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Run notebook cell":::
+   :::image type="content" source="media/notebooks-python-kernel/run-notebook-cell-python.png" alt-text="Run notebook cell":::
 
 ## Next steps
 
 Learn more about notebooks:
 
-- [Extend Python with Kqlmagic](notebooks-kqlmagic.md)
-- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)
-- [Create and run a SQL Server notebook](notebooks-tutorial-sql-kernel.md)
+- [Extend Python with Kqlmagic](./notebooks-kqlmagic.md)
+- [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
+- [Create and run a SQL Server notebook](./notebooks-sql-kernel.md)

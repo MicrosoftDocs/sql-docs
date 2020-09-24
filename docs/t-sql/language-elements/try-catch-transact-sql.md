@@ -314,7 +314,7 @@ BEGIN CATCH
     END;  
   
     -- Test whether the transaction is committable.
-    -- It maybe required to commit statements in a catch block. For ex: all previous (and further) inserts/updates/deletes in a batch of similar individually similar but unrelated statements.
+    -- You may want to commit a transaction in a catch block if you want to commit changes to statements that ran prior to the error.
     IF (XACT_STATE()) = 1  
     BEGIN  
         PRINT  

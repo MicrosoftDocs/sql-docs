@@ -56,7 +56,7 @@ REVOKE [ GRANT OPTION FOR ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 REVOKE   
     <permission> [ ,...n ]  

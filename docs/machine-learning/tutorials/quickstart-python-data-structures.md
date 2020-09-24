@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In this quickstart, learn how to work with data structures and data objects in Python using SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020  
+ms.date: 09/24/2020  
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
@@ -15,15 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 # Quickstart: Data structures and objects using Python with SQL machine learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In this quickstart, you'll learn how to use data structures and data types when using Python in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn about moving data between Python and SQL Server, and the common issues that might occur.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this quickstart, you'll learn how to use data structures and data types when using Python in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn about moving data between Python and SQL Server, and the common issues that might occur.
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this quickstart, you'll learn how to use data structures and data types when using Python in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). You'll learn about moving data between Python and Azure SQL Managed Instance, and the common issues that might occur.
-::: moniker-end
+In this quickstart, you'll learn how to use data structures and data types when using Python in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview), or on [SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn about moving data between Python and SQL Server, and the common issues that might occur.
 
 SQL machine learning relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to your database and expect it to *just work*. In this quickstart, you'll review some basic data structure definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and the database.
 
@@ -42,15 +34,10 @@ How would you expose the single result of a calculation as a data frame, if a da
 
 You need the following prerequisites to run this quickstart.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+- A SQL database on one of these platforms:
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - SQL Server Big Data Clusters. See how to [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+  - Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 - A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
 

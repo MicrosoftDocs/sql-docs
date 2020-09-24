@@ -111,7 +111,7 @@ Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In
 2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    
+
 >[!NOTE]
 >The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
@@ -128,7 +128,7 @@ Alternatively, right-click the SQL Server Launchpad service in the **Services** 
 
 ## Download Python language extension
 
-Download the zip file containing the Python language extension, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952).
+Download the zip file containing the Python language extension, [python-lang-extension.zip](https://github.com/microsoft/sql-server-language-extensions/releases).
 
 ## Register external language
 
@@ -274,7 +274,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-linux"></a> Download Python language extension
 
-Download the zip file containing the Python language extension, [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793).
+Download the zip file containing the Python language extension, [python-lang-extension.zip](https://github.com/microsoft/sql-server-language-extensions/releases).
 
 ## Register external language
 

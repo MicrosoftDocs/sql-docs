@@ -8,6 +8,7 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: references_regions
 ---
 
 # Azure Arc enabled SQL Server (preview)

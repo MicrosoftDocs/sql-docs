@@ -115,15 +115,15 @@
   - name: Notebooks
     items:
     - name: Notebooks overview
-      href: notebooks-guidance.md
+      href: notebooks/notebooks-guidance.md
     - name: Use SQL Kernel
-      href: notebooks-tutorial-sql-kernel.md
+      href: notebooks/notebooks-sql-kernel.md
     - name: Use Python Kernel
-      href: notebooks-tutorial-python-kernel.md
+      href: notebooks/notebooks-python-kernel.md
     - name: Use Kusto Kernel
       href: notebooks/notebooks-kusto-kernel.md
-    - name: Kqlmagic extension
-      href: notebooks-kqlmagic.md
+    - name: Use Kqlmagic
+      href: notebooks/notebooks-kqlmagic.md
   - name: Deployment
     items:
     - name: Deploy Azure SQL Edge

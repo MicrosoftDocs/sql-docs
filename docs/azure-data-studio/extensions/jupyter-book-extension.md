@@ -173,7 +173,7 @@ Congratulations! You built and can now ship your first Jupyter Book extension. F
 
 ## Publish your extension to the marketplace
 
-The Azure Data Studio extension marketplace isn't fully implemented yet. To publish, host the extension VSIX somewhere, for example, on a GitHub release page. Then submit a pull request that updates [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension information.
+The Azure Data Studio extension marketplace isn't fully implemented yet. To publish, host the extension VSIX somewhere, for example, on a GitHub release page. Submit a pull request that updates [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension information.
 
 ## Next steps
 

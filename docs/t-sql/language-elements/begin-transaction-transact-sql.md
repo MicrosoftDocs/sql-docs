@@ -52,7 +52,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
+--Applies to Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
@@ -142,7 +142,7 @@ COMMIT TRAN T1;
 ## Examples  
   
 ### A. Using an explicit transaction
-**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 This example uses AdventureWorks. 
 
@@ -154,7 +154,7 @@ COMMIT;
 ```
 
 ### B. Rolling back a transaction
-**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 The following example shows the effect of rolling back a transaction. In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.
 

@@ -6,7 +6,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords: 
   - "sql13.swb.availabilitygroup.joindbs.f1"
 helpviewer_keywords: 

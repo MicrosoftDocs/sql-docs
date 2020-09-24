@@ -7099,8 +7099,8 @@
         href: https://dba.stackexchange.com/questions/tagged/sql-server
       - name: Stack Overflow >>
         href: https://stackoverflow.com/questions/tagged/sql-server
-      - name: MSDN Forums >>
-        href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+      - name: Microsoft Q & A >>
+        href: https://https://docs.microsoft.com/answers/products/sql-server
       - name: Submit feedback >>
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit >>
@@ -8626,7 +8626,7 @@
           - name: Objects Supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Query & Text Editors
-          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+          href: https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15
           items:
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
@@ -9050,7 +9050,7 @@
         href: ssms/scripting/database-engine-scripting.md
         items:
         - name: Query & Text Editors
-          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+          href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
         - name: Database Engine Query Editor
           href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor
@@ -9963,10 +9963,16 @@
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers
       items:
-      - name: Configure Docker containers
-        href: linux/sql-server-linux-configure-docker.md
+      - name: Deploy and connect to containers
+        href: linux/sql-server-linux-docker-container-deployment.md
+      - name: Configure and customize containers
+        href: linux/sql-server-linux-docker-container-configure.md
+      - name: Container security
+        href: linux/sql-server-linux-docker-container-security.md
       - name: Configure Docker for MSDTC
         href: linux/sql-server-linux-configure-msdtc-docker.md
+      - name: Troubleshoot Docker containers
+        href: linux/sql-server-linux-docker-container-troubleshooting.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:
@@ -10109,8 +10115,8 @@
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
       href: https://stackoverflow.com/questions/tagged/sql-server  # Note: this S.O. https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
-    - name: MSDN Forums >>
-      href: https://social.msdn.microsoft.com/Forums/home
+    - name: Microsoft Q & A >>
+      href: https://docs.microsoft.com/answers/products/sql-server
     - name: Submit feedback >>
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit >>
@@ -10123,6 +10129,18 @@
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: Azure Arc enabled SQL Server (preview)
+  items:
+    - name: Overview
+      href: sql-server/azure-arc/overview.md
+    - name: Connect
+      href: sql-server/azure-arc/connect.md
+    - name: Connect at scale
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: Assess
+      href: sql-server/azure-arc/assess.md
+    - name: Configure advanced data Security
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: Resources
   items:
   - name: Offline SQL Server documentation
@@ -10139,16 +10157,16 @@
     items:
     - name: Get help
       href: sql-server/sql-server-get-help.md
-    - name: Versioning of SQL docs
-      href: sql-server/versioning-system-monikers-ui-sql-server.md
+    - name: Microsoft Q & A >>
+      href: https://docs.microsoft.com/answers/products/sql-server
     - name: DBA Stack Exchange >>
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
       href: https://stackoverflow.com/questions/tagged/sql-server
-    - name: MSDN Forums >>
-      href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit >>
       href: https://www.reddit.com/r/SQLServer
+    - name: Docs navigation tips
+      href: sql-server/sql-docs-navigation-guide.md
   - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
     items:
     - name: SQL Server >>

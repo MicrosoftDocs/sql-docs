@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   

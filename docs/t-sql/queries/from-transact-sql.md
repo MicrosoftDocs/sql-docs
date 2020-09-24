@@ -132,7 +132,7 @@ This article also discusses the following keywords that can be used on the FROM 
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
   
@@ -145,7 +145,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
  
 <joined_table> ::=   
 {  
@@ -264,12 +264,12 @@ FROM { <table_source> [ ,...n ] }
  Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
 ### Tablesample clause
-**Applies to:** SQL Data Warehouse
+**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
  Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT or UPDATE statement. TABLESAMPLE cannot be specified with views. 
 
  PERCENT  
- Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, SQL Data Warehouse returns an approximate of the percent specified. When PERCENT is specified, the *sample_number* expression must evaluate to a value from 0 to 100.  
+ Specifies that a *sample_number* percent of the rows of the table should be retrieved from the table. When PERCENT is specified, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] returns an approximate of the percent specified. When PERCENT is specified, the *sample_number* expression must evaluate to a value from 0 to 100.  
 
 
 ### Joined table 

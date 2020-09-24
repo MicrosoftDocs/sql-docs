@@ -64,6 +64,6 @@ manager: erikre
     |Message|Message body of the trace|  
   
 ## External Resources  
- Blog post, [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377), on msdn.com.  
+ Blog post, [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214), on msdn.com.  
   
   

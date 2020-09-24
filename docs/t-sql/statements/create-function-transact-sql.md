@@ -39,8 +39,8 @@ helpviewer_keywords:
   - "TVF"
   - "functions [SQL Server], invoking"
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE FUNCTION (Transact-SQL)
 
@@ -67,7 +67,7 @@ Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnover
 > [!NOTE]
 >
 > - The integration of .NET Framework CLR into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is discussed in this topic. CLR integration does not apply to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-> - For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
+> - For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], see [CREATE FUNCTION ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-function-sql-data-warehouse.md).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

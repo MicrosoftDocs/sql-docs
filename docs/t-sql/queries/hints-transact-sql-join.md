@@ -45,7 +45,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  
 ```  
@@ -73,7 +72,7 @@ ms.author: vanto
 ### A. Using HASH  
  The following example specifies that the `JOIN` operation in the query is performed by a `HASH` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT p.Name, pr.ProductReviewID  
 FROM Production.Product AS p  
 LEFT OUTER HASH JOIN Production.ProductReview AS pr  
@@ -84,7 +83,7 @@ ORDER BY ProductReviewID DESC;
 ### B. Using LOOP  
  The following example specifies that the `JOIN` operation in the query is performed by a `LOOP` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory   
 FROM Sales.SalesPersonQuotaHistory AS spqh  
     INNER LOOP JOIN Sales.SalesPerson AS sp  
@@ -96,7 +95,7 @@ GO
 ### C. Using MERGE  
  The following example specifies that the `JOIN` operation in the query is performed by a `MERGE` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT poh.PurchaseOrderID, poh.OrderDate, pod.ProductID, pod.DueDate, poh.VendorID   
 FROM Purchasing.PurchaseOrderHeader AS poh  
 INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod   

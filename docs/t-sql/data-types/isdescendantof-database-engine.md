@@ -26,12 +26,12 @@ Returns true if *this* is a descendant of parent.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 child. IsDescendantOf ( parent )  
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )  
 ```  

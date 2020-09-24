@@ -26,9 +26,9 @@ Customers without a support plan can ask the community for help, or submit a bug
 
 If you're interested in engaging the vibrant SQL Server community for assistance, there are multiple options available.
 
-### Microsoft Q&A 
+### Microsoft Q & A
 
-- [SQL Server Q&A](https://docs.microsoft.com/answers/products/sql-server)
+You can also get help by searching and posting questions on [Microsoft Q & A](https://docs.microsoft.com/answers/products/sql-server).
 
 ### Communities
 

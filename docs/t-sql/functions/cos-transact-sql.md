@@ -47,15 +47,15 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of ty
 This example returns the `COS` value of the specified angle:
   
 ```sql
-DECLARE @angle float;  
+  DECLARE @angle FLOAT;  
 SET @angle = 14.78;  
-SELECT 'The COS of the angle is: ' + CONVERT(varchar,COS(@angle));  
+SELECT 'The COS of the angle is: ' + CONVERT(VARCHAR,COS(@angle));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COS of the angle is: -0.599465                        
   
 (1 row(s) affected)  

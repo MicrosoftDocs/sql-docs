@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_upgrade_log_shipping"
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

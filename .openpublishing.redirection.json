@@ -58897,13 +58897,143 @@
     },
     {
       "source_path": "docs/ssms/scripting/query-and-text-editors-sql-server-management-studio.md",
-      "redirect_url": "/sql/ssms/database-engine-query-editor-sql-server-management-studio",
+      "redirect_url": "/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio",
       "redirect_document_id": false
     },
     {
     "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
     "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
     "redirect_document_id": false
+    },
+    {
+    "source_path": "docs/linux/sql-server-linux-configure-docker.md",
+    "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
+    "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/azure-sql-managed-instance-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/azure-sql-managed-instance-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/dashboard-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/dashboard-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/data-virtualization-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/data-virtualization-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/extension-authoring.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/extension-authoring",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/extensions.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/add-extensions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/postgres-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/postgres-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/powershell-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/powershell-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/schema-compare-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/schema-compare-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension-build-from-command-line.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension-build-from-command-line",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension-build.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension-build",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension-getting-started.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension-getting-started",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-database-project-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-database-project-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-agent-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-agent-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-cms-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-cms-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-dacpac-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-dacpac-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-import-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-import-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/sql-server-profiler-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sql-server-profiler-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension-import-view-models.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension-import-view-models",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension-manage-packages.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension-manage-packages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension-predictions.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension-predictions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/machine-learning-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-guidance.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-kqlmagic.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-kqlmagic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-python-kernel.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-python-kernel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-sql-kernel.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-sql-kernel",
+      "redirect_document_id": true
     }
   ]
 }

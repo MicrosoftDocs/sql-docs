@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "schemas [SQL Server], modifying"
   - "modifying schemas"
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SCHEMA (Transact-SQL)
@@ -47,7 +47,7 @@ ALTER SCHEMA schema_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
    TRANSFER [ OBJECT :: ] securable_name   

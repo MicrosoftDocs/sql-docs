@@ -58,7 +58,7 @@ REPLICATE ( string_expression , integer_expression )
 ### A. Using REPLICATE  
  The following example replicates a `0` character four times in front of a production line code in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT [Name]  
 , REPLICATE('0', 4) + [ProductLine] AS 'Line Code'  
 FROM [Production].[Product]  
@@ -84,7 +84,7 @@ HL Touring Frame - Yellow, 50                      0000T
 ### B. Using REPLICATE and DATALENGTH  
  The following example left pads numbers to a specified length as they are converted from a numeric data type to character or Unicode.  
   
-```  
+```sql
 IF EXISTS(SELECT name FROM sys.tables  
       WHERE name = 't1')  
    DROP TABLE t1;  
@@ -122,7 +122,7 @@ Varchar Column        Char Column
 ### C: Using REPLICATE  
  The following example replicates a `0` character four times in front of an `ItemCode` value.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName AS Name,  

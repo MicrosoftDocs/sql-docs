@@ -30,8 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SESSIONPROPERTY (option)  
 ```  
   
@@ -61,7 +60,7 @@ SESSIONPROPERTY (option)
 ## Examples  
  The following example returns the setting for the `CONCAT_NULL_YIELDS_NULL` option.  
   
-```  
+```sql  
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   

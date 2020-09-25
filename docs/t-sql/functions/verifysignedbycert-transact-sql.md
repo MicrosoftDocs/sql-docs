@@ -34,8 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -67,7 +66,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### A. Verifying that signed data has not been tampered with  
  The following example tests whether the information in `Signed_Data` has been changed since it was signed with the certificate called `Shipping04`. The signature is stored in `DataSignature`. The certificate, `Shipping04`, is passed to `Cert_ID`, which returns the ID of the certificate in the database. If `VerifySignedByCert` returns 1, the signature is correct. If `VerifySignedByCert` returns 0, the data in `Signed_Data` is not the data that was used to generate `DataSignature`. In this case, either `Signed_Data` has been changed since it was signed or `Signed_Data` was signed with a different certificate.  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -78,7 +77,7 @@ GO
 ### B. Returning only records that have a valid signature  
  This query returns only records that have not been changed since they were signed using certificate `Shipping04`.  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   

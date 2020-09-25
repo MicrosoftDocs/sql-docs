@@ -28,8 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@SERVERNAME  
 ```  
   
@@ -57,7 +56,7 @@ ms.author: vanto
 ## Examples  
  The following example shows using `@@SERVERNAME`.  
   
-```  
+```sql  
 SELECT @@SERVERNAME AS 'Server Name'  
 ```  
   

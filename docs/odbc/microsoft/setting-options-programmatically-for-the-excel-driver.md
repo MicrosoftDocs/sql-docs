@@ -1,4 +1,5 @@
 ---
+description: "Setting Options Programmatically for the Excel Driver"
 title: "Setting Options Programmatically for the Excel Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

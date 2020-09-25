@@ -1,4 +1,5 @@
 ---
+description: "Setting Project Options (DB2ToSQL)"
 title: "Setting Project Options (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

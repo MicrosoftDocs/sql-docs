@@ -1,4 +1,5 @@
 ---
+description: "Creating Variable Value Files (DB2ToSQL)"
 title: "Creating Variable Value Files (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

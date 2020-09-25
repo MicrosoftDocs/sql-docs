@@ -1,4 +1,5 @@
 ---
+description: "Filter (geometry Data Type)"
 title: "Filter (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

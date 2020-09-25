@@ -1,4 +1,5 @@
 ---
+description: "Audit Database Principal Impersonation Event Class"
 title: "Audit Database Principal Impersonation Event Class"
 ms.date: 06/03/2020
 ms.prod: sql

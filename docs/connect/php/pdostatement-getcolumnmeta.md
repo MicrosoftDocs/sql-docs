@@ -1,7 +1,8 @@
 ---
-title: "PDOStatement::getColumnMeta | Microsoft Docs"
+title: "PDOStatement::getColumnMeta"
+description: "API reference for the PDOStatement::getColumnMeta function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "01/31/2020"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

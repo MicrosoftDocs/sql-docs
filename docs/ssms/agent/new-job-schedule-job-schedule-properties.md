@@ -1,4 +1,5 @@
 ---
+description: "New Job Schedule - Job Schedule Properties"
 title: "New Job Schedule - Job Schedule Properties"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

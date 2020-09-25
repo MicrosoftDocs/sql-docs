@@ -1,4 +1,5 @@
 ---
+description: "Cursor Behaviors"
 title: "Cursor Behaviors | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"

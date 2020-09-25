@@ -1,4 +1,5 @@
 ---
+description: "Full-Text Search and Semantic Search Functions (Transact-SQL)"
 title: "Full-Text Search and Semantic Search Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DENY Full-Text Permissions (Transact-SQL)"
 title: "DENY Full-Text Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Move an Existing Index to a Different Filegroup"
 title: "Move an Existing Index to a Different Filegroup | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

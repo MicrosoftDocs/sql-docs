@@ -1,4 +1,5 @@
 ---
+description: "Data Migration Settings (OracleToSQL)"
 title: "Data Migration Settings (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

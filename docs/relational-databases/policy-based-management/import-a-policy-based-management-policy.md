@@ -1,4 +1,5 @@
 ---
+description: "Import a Policy-Based Management Policy"
 title: "Import a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: 08/06/2020

@@ -1,4 +1,5 @@
 ---
+description: "position Method (java.sql.NClob, long)"
 title: "position Method (java.sql.NClob, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

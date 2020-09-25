@@ -1,4 +1,5 @@
 ---
+description: "sp_droprolemember (Transact-SQL)"
 title: "sp_droprolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

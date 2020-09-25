@@ -1,4 +1,5 @@
 ---
+description: "sp_addextendedproperty (Transact-SQL)"
 title: "sp_addextendedproperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addextendedproperty"
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addextendedproperty (Transact-SQL)

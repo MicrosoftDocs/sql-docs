@@ -1,4 +1,5 @@
 ---
+description: "Changing SQL Server Native Client Passwords Programmatically"
 title: "Changing Passwords Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

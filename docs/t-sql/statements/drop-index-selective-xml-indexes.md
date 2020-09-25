@@ -1,4 +1,5 @@
 ---
+description: "DROP INDEX (Selective XML Indexes)"
 title: "DROP INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

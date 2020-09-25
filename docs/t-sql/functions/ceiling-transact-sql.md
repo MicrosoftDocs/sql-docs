@@ -1,4 +1,5 @@
 ---
+description: "CEILING (Transact-SQL)"
 title: "CEILING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -53,7 +54,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 --------- --------- -------------------------   
 124.00    -123.00    0.00                       
   

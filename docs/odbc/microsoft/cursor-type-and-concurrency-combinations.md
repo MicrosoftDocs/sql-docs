@@ -1,4 +1,5 @@
 ---
+description: "Cursor Type and Concurrency Combinations"
 title: "Cursor Type and Concurrency Combinations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

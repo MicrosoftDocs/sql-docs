@@ -1,4 +1,5 @@
 ---
+description: "Setting Properties for Master Data Services Add-in for Excel"
 title: Setting Properties
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"

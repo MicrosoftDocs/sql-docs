@@ -1,4 +1,5 @@
 ---
+description: "Subscription Type"
 title: "Subscription Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

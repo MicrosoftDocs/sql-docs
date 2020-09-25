@@ -1,4 +1,5 @@
 ---
+description: "GRANT Symmetric Key Permissions (Transact-SQL)"
 title: "GRANT Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

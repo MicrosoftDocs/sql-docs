@@ -1,4 +1,5 @@
 ---
+description: "TM: Save Tran Completed Event Class"
 title: "TM: Save Tran Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

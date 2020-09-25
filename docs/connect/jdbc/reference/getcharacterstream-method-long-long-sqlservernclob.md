@@ -1,4 +1,5 @@
 ---
+description: "getCharacterStream Method (long, long) (SQLServerNClob)"
 title: "getCharacterStream Method (long, long) (SQLServerNClob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

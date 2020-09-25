@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_identity_range (Transact-SQL)"
 title: "MSmerge_identity_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_identity_range system table"
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

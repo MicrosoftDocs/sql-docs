@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Tester) (OracleToSQL)"
 title: "Global Settings (Tester) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Use Microsoft Distributed Transaction Coordinator (ODBC)"
 title: "Distributed Transaction Coordinator (ODBC)"
 ms.custom: ""
 ms.date: "03/06/2017"

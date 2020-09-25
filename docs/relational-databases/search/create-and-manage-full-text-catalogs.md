@@ -1,4 +1,5 @@
 ---
+description: "Create and Manage Full-Text Catalogs"
 title: "Create and Manage Full-Text Catalogs | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

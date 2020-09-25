@@ -1,4 +1,5 @@
 ---
+description: "Transferring Data in Its Binary Form"
 title: "Transferring Data in Its Binary Form | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

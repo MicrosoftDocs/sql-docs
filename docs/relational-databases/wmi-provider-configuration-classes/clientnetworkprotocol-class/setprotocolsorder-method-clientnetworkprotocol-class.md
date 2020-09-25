@@ -1,4 +1,5 @@
 ---
+description: "SetProtocolsOrder Method (ClientNetworkProtocol Class)"
 title: "SetProtocolsOrder Method (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetProtocolsOrder method"
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

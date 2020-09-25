@@ -1,4 +1,5 @@
 ---
+description: "Allocating and Freeing Buffers"
 title: "Allocating and Freeing Buffers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

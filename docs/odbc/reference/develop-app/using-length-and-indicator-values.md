@@ -1,4 +1,5 @@
 ---
+description: "Using Length and Indicator Values"
 title: "Using Length and Indicator Values | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

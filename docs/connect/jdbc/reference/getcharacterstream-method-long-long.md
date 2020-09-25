@@ -1,4 +1,5 @@
 ---
+description: "getCharacterStream Method (long, long)"
 title: "getCharacterStream Method (long, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

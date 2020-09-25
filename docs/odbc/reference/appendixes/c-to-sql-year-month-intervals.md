@@ -1,4 +1,5 @@
 ---
+description: "C to SQL: Year-Month Intervals"
 title: "C to SQL: Year-Month Intervals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

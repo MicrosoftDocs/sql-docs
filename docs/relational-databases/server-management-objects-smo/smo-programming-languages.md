@@ -1,4 +1,5 @@
 ---
+description: "SMO Programming Languages"
 title: "Programming Languages | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

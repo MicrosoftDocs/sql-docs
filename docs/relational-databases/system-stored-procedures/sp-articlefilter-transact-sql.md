@@ -1,4 +1,5 @@
 ---
+description: "sp_articlefilter (Transact-SQL)"
 title: "sp_articlefilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_articlefilter"
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_articlefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

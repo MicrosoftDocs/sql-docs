@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Data Warehouse"
 title: "Columnstore indexes - Data Warehouse | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"

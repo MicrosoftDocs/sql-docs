@@ -1,4 +1,5 @@
 ---
+description: "SQL to C: GUID"
 title: "SQL to C: GUID | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

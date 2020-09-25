@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling and Notifications in DQS (15a0)"
 title: Data Profiling and Notifications in DQS (15a0)
 ms.date: 08/12/2020
 ms.prod: sql

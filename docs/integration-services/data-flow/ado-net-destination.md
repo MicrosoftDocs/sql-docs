@@ -1,4 +1,5 @@
 ---
+description: "ADO NET Destination"
 title: "ADO NET Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

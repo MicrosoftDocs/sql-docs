@@ -1,4 +1,5 @@
 ---
+description: "CDC Source Custom Properties"
 title: "CDC Source Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

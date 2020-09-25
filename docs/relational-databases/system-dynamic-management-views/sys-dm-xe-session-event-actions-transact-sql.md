@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_session_event_actions (Transact-SQL)"
 title: "sys.dm_xe_session_event_actions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], views"
   - "sys.dm_xe_session_event_actions dynamic management view"
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

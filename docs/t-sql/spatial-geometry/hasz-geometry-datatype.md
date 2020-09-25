@@ -1,4 +1,5 @@
 ---
+description: "HasZ (geometry DataType)"
 title: "HasZ (geometry DataType) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"

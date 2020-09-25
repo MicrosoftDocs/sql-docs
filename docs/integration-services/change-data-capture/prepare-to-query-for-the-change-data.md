@@ -1,4 +1,5 @@
 ---
+description: "Prepare to Query for the Change Data"
 title: "Prepare to Query for the Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

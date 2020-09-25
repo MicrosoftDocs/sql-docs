@@ -1,4 +1,5 @@
 ---
+description: "Delete an Explicit Hierarchy (Master Data Services)"
 title: Delete an Explicit Hierarchy
 ms.custom: ""
 ms.date: "03/01/2017"

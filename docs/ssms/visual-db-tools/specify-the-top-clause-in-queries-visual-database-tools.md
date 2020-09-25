@@ -1,4 +1,5 @@
 ---
+description: "Specify the TOP Clause in Queries (Visual Database Tools)"
 title: Specify the TOP Clause in Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Selecting and Configuring Objects to Test (SybaseToSQL)"
 title: "Selecting and Configuring Objects to Test (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

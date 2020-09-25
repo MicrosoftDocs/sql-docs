@@ -1,4 +1,5 @@
 ---
+description: "New GUI features in SSMA for Oracle (OracleToSQL)"
 title: "New GUI features in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

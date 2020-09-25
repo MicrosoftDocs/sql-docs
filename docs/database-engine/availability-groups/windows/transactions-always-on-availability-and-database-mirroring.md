@@ -1,4 +1,5 @@
 ---
+description: "Transactions - availability groups and database mirroring"
 title: "Transactions: availability groups & database mirroring"
 descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring. 
 ms.custom: seo-lt-2019

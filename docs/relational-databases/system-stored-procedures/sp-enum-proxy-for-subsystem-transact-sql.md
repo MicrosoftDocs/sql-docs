@@ -1,4 +1,5 @@
 ---
+description: "sp_enum_proxy_for_subsystem (Transact-SQL)"
 title: "sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

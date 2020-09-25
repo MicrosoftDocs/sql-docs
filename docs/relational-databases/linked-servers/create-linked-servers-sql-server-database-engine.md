@@ -1,10 +1,10 @@
 ---
+description: "Create Linked Servers (SQL Server Database Engine)"
 title: "Create Linked Servers"
 ms.date: "01/24/2020"
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
-ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.linkedserver.properties.general.f1"

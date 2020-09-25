@@ -1,4 +1,5 @@
 ---
+description: "DROP FUNCTION (Transact-SQL)"
 title: "DROP FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/11/2020"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "dropping user-defined functions"
   - "deleting user-defined functions"
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP FUNCTION (Transact-SQL)
@@ -42,7 +43,7 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```
 
 ```syntaxsql
- -- Azure SQL Data Warehouse, Parallel Data Warehouse 
+ -- Azure Synapse Analytics, Parallel Data Warehouse 
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 

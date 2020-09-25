@@ -1,4 +1,5 @@
 ---
+description: "Connecting Tasks Programmatically"
 title: "Connecting Tasks Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

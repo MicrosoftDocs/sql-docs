@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;Version - Transact SQL Configuration Functions"
 title: "@@VERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"

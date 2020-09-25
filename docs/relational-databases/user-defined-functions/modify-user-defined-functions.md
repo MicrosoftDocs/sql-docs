@@ -1,4 +1,5 @@
 ---
+description: "Modify User-defined Functions"
 title: "Modify User-defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

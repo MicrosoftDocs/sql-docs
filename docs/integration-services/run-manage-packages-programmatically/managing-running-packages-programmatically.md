@@ -1,4 +1,5 @@
 ---
+description: "Managing Running Packages Programmatically"
 title: "Managing Running Packages Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

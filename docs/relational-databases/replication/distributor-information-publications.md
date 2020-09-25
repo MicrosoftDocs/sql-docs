@@ -1,4 +1,5 @@
 ---
+description: "Distributor Information, Publications"
 title: "Distributor Information, Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"

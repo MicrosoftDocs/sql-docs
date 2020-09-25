@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "prepared statements [OLE DB Driver for SQL Server]"
   - "commands [OLE DB]"
   - "command preparation [OLE DB Driver for SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Preparing Commands
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

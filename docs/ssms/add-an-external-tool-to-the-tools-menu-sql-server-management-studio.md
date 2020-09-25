@@ -1,4 +1,5 @@
 ---
+description: "Add an External Tool to the Tools Menu (SQL Server Management Studio)"
 title: "Add an External Tool to the Tools Menu"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Understanding transactions"
 title: "Understanding transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

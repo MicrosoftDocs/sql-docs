@@ -1,4 +1,5 @@
 ---
+description: "Create a WMI Event Alert"
 title: "Create a WMI Event Alert"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

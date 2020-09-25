@@ -1,4 +1,5 @@
 ---
+description: "getNString Method (SQLServerCallableStatement)"
 title: "getNString Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

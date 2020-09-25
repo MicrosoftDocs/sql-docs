@@ -1,4 +1,5 @@
 ---
+description: "DROP LOGIN (Transact-SQL)"
 title: "DROP LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"

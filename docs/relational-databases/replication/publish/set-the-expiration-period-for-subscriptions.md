@@ -1,4 +1,5 @@
 ---
+description: "Set the Expiration Period for Subscriptions"
 title: "Set the Expiration Period for Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

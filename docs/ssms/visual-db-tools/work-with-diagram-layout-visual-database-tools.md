@@ -1,4 +1,5 @@
 ---
+description: "Work with Diagram Layout (Visual Database Tools)"
 title: Work with Diagram Layout
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

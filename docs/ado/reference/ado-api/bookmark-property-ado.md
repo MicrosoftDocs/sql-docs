@@ -1,8 +1,9 @@
 ---
+description: "Bookmark Property (ADO)"
 title: "Bookmark Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Bookmark Property (ADO)
-Indicates a bookmark that uniquely identifies the current record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object or sets the current record in a **Recordset** object to the record identified by a valid bookmark.  
+Indicates a bookmark that uniquely identifies the current record in a [Recordset](./recordset-object-ado.md) object or sets the current record in a **Recordset** object to the record identified by a valid bookmark.  
   
 ## Settings and Return Values  
  Sets or returns a **Variant** expression that evaluates to a valid bookmark.  
@@ -29,15 +30,15 @@ Indicates a bookmark that uniquely identifies the current record in a [Recordset
   
  The user may not be able to view the value of the bookmark. Also, users should not expect bookmarks to be directly comparable, because two bookmarks that refer to the same record may have different values.  
   
- If you use the [Clone](../../../ado/reference/ado-api/clone-method-ado.md) method to create a copy of a **Recordset** object, the **Bookmark** property settings for the original and the duplicate **Recordset** objects are identical and you can use them interchangeably. However, you cannot use bookmarks from different **Recordset** objects interchangeably, even if they were created from the same source or command.  
+ If you use the [Clone](./clone-method-ado.md) method to create a copy of a **Recordset** object, the **Bookmark** property settings for the original and the duplicate **Recordset** objects are identical and you can use them interchangeably. However, you cannot use bookmarks from different **Recordset** objects interchangeably, even if they were created from the same source or command.  
   
 > [!NOTE]
 >  **Remote Data Service Usage** When used on a client-side **Recordset** object, the **Bookmark** property is always available.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [BOF, EOF, and Bookmark Properties Example (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF, EOF, and Bookmark Properties Example (VC++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Supports Method](../../../ado/reference/ado-api/supports-method.md)
+ [BOF, EOF, and Bookmark Properties Example (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF, EOF, and Bookmark Properties Example (VC++)](./bof-eof-and-bookmark-properties-example-vc.md)   
+ [Supports Method](./supports-method.md)

@@ -1,4 +1,5 @@
 ---
+description: "Bulk Copy a SELECT Result Set (ODBC)"
 title: "Bulk Copy a SELECT Result Set (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

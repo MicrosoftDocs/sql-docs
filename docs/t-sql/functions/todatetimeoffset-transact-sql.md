@@ -1,4 +1,5 @@
 ---
+description: "TODATETIMEOFFSET (Transact-SQL)"
 title: "TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"

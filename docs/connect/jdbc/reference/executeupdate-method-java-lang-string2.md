@@ -1,4 +1,5 @@
 ---
+description: "executeUpdate Method (java.lang.String)"
 title: "executeUpdate Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/07/2017"

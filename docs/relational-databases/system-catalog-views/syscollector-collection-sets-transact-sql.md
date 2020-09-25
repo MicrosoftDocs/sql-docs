@@ -1,4 +1,5 @@
 ---
+description: "syscollector_collection_sets (Transact-SQL)"
 title: "syscollector_collection_sets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_collection_sets view"
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

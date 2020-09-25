@@ -1,4 +1,5 @@
 ---
+description: "Create and Manage Full-Text Indexes"
 title: "Create and Manage Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/31/2020"

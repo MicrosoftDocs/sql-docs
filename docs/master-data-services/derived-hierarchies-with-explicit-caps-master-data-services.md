@@ -1,4 +1,5 @@
 ---
+description: "Derived Hierarchies with Explicit Caps (Master Data Services)"
 title: Derived Hierarchies with Explicit Caps
 ms.custom: ""
 ms.date: "03/01/2017"

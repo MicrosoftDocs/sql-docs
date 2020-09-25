@@ -1,4 +1,5 @@
 ---
+description: "Heterogeneous Database Replication"
 title: "Heterogeneous Database Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/28/2017"

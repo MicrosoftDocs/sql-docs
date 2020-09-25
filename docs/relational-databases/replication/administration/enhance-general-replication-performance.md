@@ -1,4 +1,5 @@
 ---
+description: "Enhance General Replication Performance"
 title: "Enhance General Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

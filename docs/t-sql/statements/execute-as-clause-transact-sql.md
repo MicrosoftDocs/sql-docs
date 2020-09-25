@@ -1,4 +1,5 @@
 ---
+description: "EXECUTE AS Clause (Transact-SQL)"
 title: "EXECUTE AS Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

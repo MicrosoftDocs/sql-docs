@@ -1,4 +1,5 @@
 ---
+description: "ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 11/04/2019
@@ -19,7 +20,7 @@ Modifies the content in an existing external language extension in the database.
 
 ## Syntax
 
-```text
+```syntaxsql
 ALTER EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]
 {

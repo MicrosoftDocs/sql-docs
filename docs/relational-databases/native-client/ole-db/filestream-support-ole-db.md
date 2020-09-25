@@ -1,4 +1,5 @@
 ---
+description: "FILESTREAM Support (OLE DB)"
 title: "FILESTREAM Support (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

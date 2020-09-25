@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_get_audit_file (Transact-SQL)"
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2020"

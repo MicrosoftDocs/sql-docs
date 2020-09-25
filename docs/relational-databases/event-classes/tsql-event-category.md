@@ -1,4 +1,5 @@
 ---
+description: "TSQL Event Category"
 title: "TSQL Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER"
 title: "LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

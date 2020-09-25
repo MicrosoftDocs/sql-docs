@@ -1,4 +1,5 @@
 ---
+description: "Create, Modify, and Drop Spatial Indexes"
 title: "Create, Modify, and Drop Spatial Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

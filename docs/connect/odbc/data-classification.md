@@ -1,4 +1,5 @@
 ---
+description: "Using Data Classification with Microsoft ODBC Driver for SQL Server"
 title: "Using Data Classification with Microsoft ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2018"

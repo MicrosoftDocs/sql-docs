@@ -1,4 +1,5 @@
 ---
+description: "Using Dimension, Hierarchy, and Level Functions"
 title: "Using Dimension, Hierarchy, and Level Functions | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

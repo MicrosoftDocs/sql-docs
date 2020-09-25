@@ -1,4 +1,5 @@
 ---
+description: "General User Interface Elements"
 title: "General User Interface Elements"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Unary Operators (DMX)"
 title: "Unary Operators (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

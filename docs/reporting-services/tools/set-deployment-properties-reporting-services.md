@@ -60,7 +60,7 @@ ms.date: 05/15/2019
   
 10. In the **TargetServerURL** text box, type the URL of the target report server. Before you publish a report, you must set this property to a valid report server URL. When publishing to a report server running in native mode, use the URL of the virtual directory of the report server (for example, http:*//server/reportserver* or https:*//server/reportserver)*. This is the virtual directory of the report server, not the web portal.  
   
-     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used, (for example, <https://*servername*>, <https://*servername*/*site*>, or <https://*servername*/*site*/*subsite*>).  
+     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used, (for example, `https://*servername*`, `https://*servername*/*site*`, or `https://*servername*/*site*/*subsite*`).  
   
 ## To set Configuration Manager properties  
   

@@ -1,4 +1,5 @@
 ---
+description: "Developing a Custom Source Component"
 title: "Developing a Custom Source Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

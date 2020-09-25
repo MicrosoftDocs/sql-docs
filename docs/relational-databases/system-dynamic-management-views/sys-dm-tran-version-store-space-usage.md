@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
 title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2018"

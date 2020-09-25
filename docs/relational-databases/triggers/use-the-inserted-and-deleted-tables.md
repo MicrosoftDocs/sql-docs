@@ -1,4 +1,5 @@
 ---
+description: "Use the inserted and deleted Tables"
 title: "Use the inserted and deleted Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Supported ODBC API Functions"
 title: "Supported ODBC API Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

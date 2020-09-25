@@ -1,4 +1,5 @@
 ---
+description: "Connect to SQL Server (AccessToSQL)"
 title: "Connect to SQL Server (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

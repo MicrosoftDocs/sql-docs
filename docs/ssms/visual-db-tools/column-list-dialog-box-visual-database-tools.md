@@ -1,4 +1,5 @@
 ---
+description: "Column List Dialog Box (Visual Database Tools)"
 title: Column List Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

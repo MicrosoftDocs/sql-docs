@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (OracleToSQL)"
 title: "Managing Passwords (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

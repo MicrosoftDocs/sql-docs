@@ -1,4 +1,5 @@
 ---
+description: "sp_enum_login_for_proxy (Transact-SQL)"
 title: "sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

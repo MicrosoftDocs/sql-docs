@@ -1,4 +1,5 @@
 ---
+description: "SQLSetDescField and SQLSetDescRec (Cursor Library)"
 title: "SQLSetDescField and SQLSetDescRec (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

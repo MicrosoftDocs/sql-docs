@@ -1,4 +1,5 @@
 ---
+description: "Revert word breakers used by Search to previous version (SQL Server Search)"
 title: "Revert word breakers used by Search to previous version"
 ms.date: "03/14/2017"
 ms.prod: sql

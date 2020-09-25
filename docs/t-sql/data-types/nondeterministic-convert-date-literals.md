@@ -1,4 +1,5 @@
 ---
+description: "Nondeterministic conversion of literal date strings into DATE values"
 title: "Nondeterministic conversion of date literals | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"

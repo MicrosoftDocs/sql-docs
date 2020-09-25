@@ -1,4 +1,5 @@
 ---
+description: "DROP ROLE (Transact-SQL)"
 title: "DROP ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -40,7 +41,7 @@ DROP ROLE [ IF EXISTS ] role_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP ROLE role_name  
 ```  

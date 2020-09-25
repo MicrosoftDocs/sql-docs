@@ -1,4 +1,5 @@
 ---
+description: "Send Data to a FILESTREAM Column Using IRowsetFastUpload SQL Server Native Client (OLE DB)"
 title: "Data FILESTREAM, IRowsetFastUpload (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"

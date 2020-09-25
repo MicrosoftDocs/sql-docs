@@ -1,4 +1,5 @@
 ---
+description: "Removing SSMA  for Oracle Components (OracleToSQL)"
 title: "Removing SSMA  for Oracle Components (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

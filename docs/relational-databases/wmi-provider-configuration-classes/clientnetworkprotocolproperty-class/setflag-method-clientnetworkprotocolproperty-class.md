@@ -1,4 +1,5 @@
 ---
+description: "SetFlag Method (ClientNetworkProtocolProperty Class)"
 title: "SetFlag Method (ClientNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetFlag method"
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetFlag Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

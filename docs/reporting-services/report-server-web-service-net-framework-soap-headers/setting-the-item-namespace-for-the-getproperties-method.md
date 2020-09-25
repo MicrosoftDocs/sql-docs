@@ -1,4 +1,5 @@
 ---
+description: "Setting the Item Namespace for the GetProperties Method"
 title: "Setting the Item Namespace for the GetProperties Method | Microsoft Docs"
 Description: Learn how to retrieve properties based on either the path or the ID of an item by using the GetProperties method and the ItemNamespaceHeader SOAP header.
 ms.date: 03/06/2017

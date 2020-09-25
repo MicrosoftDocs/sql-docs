@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_3168"
 title: "MSSQLSERVER_3168 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -45,5 +46,5 @@ Some scenarios in which this problem may occur include the following:
 The restore process in this situation is fairly involved, and used only as a last resort. For more information, see"[You cannot restore system database backups to a different build of SQL Server](https://support.microsoft.com/kb/264474)".  
   
 ## See Also  
-[Back Up and Restore of System Databases &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
+[Limitations on Restoring System Databases &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)  
   

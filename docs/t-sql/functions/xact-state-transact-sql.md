@@ -1,4 +1,5 @@
 ---
+description: "XACT_STATE (Transact-SQL)"
 title: "XACT_STATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

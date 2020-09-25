@@ -1,4 +1,5 @@
 ---
+description: "Improve Access to Trace Data"
 title: "Improve Access to Trace Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Using User-Defined Types in SQL Server Native Client"
 title: "Using User-Defined Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Assessment Report (MySQLToSQL)"
 title: "Assessment Report (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Refresh from Database (OracleToSQL)"
 title: "Refresh from Database (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

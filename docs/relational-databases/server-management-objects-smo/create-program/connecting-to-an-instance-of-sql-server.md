@@ -1,4 +1,5 @@
 ---
+description: "Connecting to an Instance of SQL Server"
 title: "Connecting to an Instance of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

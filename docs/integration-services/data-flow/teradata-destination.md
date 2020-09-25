@@ -1,4 +1,5 @@
 ---
+description: "Teradata destination"
 title: "Teradata destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"

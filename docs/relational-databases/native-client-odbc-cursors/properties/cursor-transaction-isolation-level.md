@@ -1,4 +1,5 @@
 ---
+description: "Cursor Transaction Isolation Level"
 title: "Cursor Transaction Isolation Level | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

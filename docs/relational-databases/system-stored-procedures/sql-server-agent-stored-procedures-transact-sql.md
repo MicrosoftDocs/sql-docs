@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Agent Stored Procedures (Transact-SQL)"
 title: "SQL Server Agent Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], SQL Server Agent"
   - "SQL Server Agent, stored procedures"
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Agent Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Autosize Selected Tables in Diagrams (Visual Database Tools)"
 title: Autosize Selected Tables in Diagrams
 ms.prod: sql
 ms.prod_service: sql-tools

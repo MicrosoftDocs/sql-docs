@@ -1,4 +1,5 @@
 ---
+description: "SETUSER (Transact-SQL)"
 title: "SETUSER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

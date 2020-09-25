@@ -1,4 +1,5 @@
 ---
+description: "Supporting Distributed Transactions in SQL Server Native Client"
 title: Supporting distributed transactions (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

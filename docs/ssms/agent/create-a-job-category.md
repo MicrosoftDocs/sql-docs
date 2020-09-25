@@ -1,4 +1,5 @@
 ---
+description: "Create a Job Category"
 title: "Create a Job Category"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

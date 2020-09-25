@@ -1,4 +1,5 @@
 ---
+description: "GET_TRANSMISSION_STATUS (Transact-SQL)"
 title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -23,8 +24,8 @@ helpviewer_keywords:
   - "status information [SQL Server], conversations"
   - "GET_TRANSMISSION_STATUS statement"
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Add Columns to a Table (Database Engine)"
 title: "Add Columns to a Table (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2016"

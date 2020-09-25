@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CURSOR_ROWS (Transact-SQL)"
 title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -30,7 +31,7 @@ This returns the number of qualifying rows currently in the last cursor opened o
   
 ## Syntax  
   
-```
+```syntaxsql
 @@CURSOR_ROWS  
 ```  
 

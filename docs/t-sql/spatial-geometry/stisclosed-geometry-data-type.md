@@ -1,4 +1,5 @@
 ---
+description: "STIsClosed (geometry Data Type)"
 title: "STIsClosed (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

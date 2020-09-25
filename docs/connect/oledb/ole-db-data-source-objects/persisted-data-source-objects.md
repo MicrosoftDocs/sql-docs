@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data source objects [OLE DB]"
   - "OLE DB Driver for SQL Server, persisted data source objects"
   - "persisted data source objects"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Persisted Data Source Objects
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

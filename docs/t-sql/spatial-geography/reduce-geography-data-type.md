@@ -1,4 +1,5 @@
 ---
+description: "Reduce (geography Data Type )"
 title: Reduce (geography Data Type )
 ms.custom: ""
 ms.date: "03/14/2017"

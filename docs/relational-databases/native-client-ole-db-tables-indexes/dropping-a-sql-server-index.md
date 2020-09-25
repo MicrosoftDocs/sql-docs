@@ -1,4 +1,5 @@
 ---
+description: "Drop SQL Server index (Native Client OLE DB provider)"
 title: "Drop SQL Server index (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

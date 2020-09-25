@@ -1,4 +1,5 @@
 ---
+description: "DROP FULLTEXT INDEX (Transact-SQL)"
 title: "DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "DROP FULLTEXT INDEX statement"
   - "dropping full-text indexes"
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

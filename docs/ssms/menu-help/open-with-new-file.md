@@ -1,4 +1,5 @@
 ---
+description: "Open With (New File)"
 title: "Open With (New File)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "User-Configurable Event Class"
 title: "User-Configurable Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Data Type Mapping in the SQL Server Import and Export Wizard"
 title: "Data Type Mapping in the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"

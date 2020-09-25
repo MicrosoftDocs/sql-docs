@@ -1,4 +1,5 @@
 ---
+description: "C to SQL: Bit"
 title: "C to SQL: Bit | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

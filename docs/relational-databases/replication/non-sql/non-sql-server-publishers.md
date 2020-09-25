@@ -1,4 +1,5 @@
 ---
+description: "Non-SQL Server Publishers"
 title: "Non-SQL Server Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"

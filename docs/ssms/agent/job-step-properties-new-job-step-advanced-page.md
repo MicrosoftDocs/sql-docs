@@ -1,4 +1,5 @@
 ---
+description: "Job Step Properties - New Job Step (Advanced Page)"
 title: New Job Step Properties (Advanced Page)
 ms.prod: sql
 ms.prod_service: sql-tools

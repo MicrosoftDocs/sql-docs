@@ -1,4 +1,5 @@
 ---
+description: "Delete an Entity (Master Data Services)"
 title: Delete an Entity
 ms.custom: ""
 ms.date: "03/01/2017"

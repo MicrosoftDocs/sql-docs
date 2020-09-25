@@ -1,4 +1,5 @@
 ---
+description: "Disconnect from a Registered Server (SQL Server Management Studio)"
 title: Disconnect from a Registered Server
 ms.prod: sql
 ms.prod_service: sql-tools

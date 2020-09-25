@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Services"
 title: "Data Quality Services"
 ms.date: "10/12/2013"
 ms.prod: sql

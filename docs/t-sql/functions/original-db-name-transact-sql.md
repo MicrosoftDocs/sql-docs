@@ -1,4 +1,5 @@
 ---
+description: "ORIGINAL_DB_NAME (Transact-SQL)"
 title: "ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

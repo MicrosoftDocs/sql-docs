@@ -1,4 +1,5 @@
 ---
+description: "Edit Type Mapping (DB2ToSQL)"
 title: "Edit Type Mapping (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

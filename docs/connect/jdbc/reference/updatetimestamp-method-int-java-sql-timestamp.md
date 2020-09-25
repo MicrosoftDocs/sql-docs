@@ -1,4 +1,5 @@
 ---
+description: "updateTimestamp Method (int, java.sql.Timestamp)"
 title: "updateTimestamp Method (int, java.sql.Timestamp) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

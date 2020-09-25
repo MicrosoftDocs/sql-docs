@@ -1,4 +1,5 @@
 ---
+description: "Specifying a Cursor Type and Selecting Rows"
 title: "Specifying a Cursor Type and Selecting Rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

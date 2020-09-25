@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKIDENT (Transact-SQL)"
 title: DBCC CHECKIDENT (Transact-SQL)
 ms.custom: ""
 ms.date: "03/07/2019"
@@ -42,7 +43,6 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 ## Syntax  
   
 ```syntaxsql
-
 -- Syntax for SQL Server and Azure SQL Database  
 
 DBCC CHECKIDENT
@@ -53,16 +53,16 @@ DBCC CHECKIDENT
 [ WITH NO_INFOMSGS ]  
 ```  
 
-```console
--- Syntax for Azure SQL Data Warehouse
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
 DBCC CHECKIDENT   
  (   
     table_name  
         [RESEED, new_reseed_value ]   
 )  
 [ WITH NO_INFOMSGS ]  
-
 ```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -127,7 +127,7 @@ DBCC CHECKIDENT
 
  Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-Azure SQL Data Warehouse requires **db_owner** permissions.
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] requires **db_owner** permissions.
   
 ## Examples  
   

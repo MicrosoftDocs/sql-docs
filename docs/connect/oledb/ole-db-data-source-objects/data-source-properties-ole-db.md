@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "data source properties [OLE DB]"
   - "OLE DB data source properties [OLE DB Driver for SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Source Properties (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Managing Packages and Folders Programmatically"
 title: "Managing Packages and Folders Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

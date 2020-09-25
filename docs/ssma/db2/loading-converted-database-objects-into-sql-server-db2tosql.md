@@ -1,4 +1,5 @@
 ---
+description: "Loading Converted Database Objects into SQL Server (DB2ToSQL)"
 title: "Loading Converted Database Objects into SQL Server (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -2,7 +2,7 @@
 title: "Frequently asked questions (FAQ) for JDBC driver"
 description: "This page provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: "08/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -34,9 +34,9 @@ The Microsoft JDBC Driver 8.4 supports the JDBC 4.2, and 4.3 (partially) specifi
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.4.0.jre14.jar | JDBC 4.3 (partially), and 4.2 | JDK 14.0    |
-| mssql-jdbc-8.4.0.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
-| mssql-jdbc-8.4.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.4.1.jre14.jar | JDBC 4.3 (partially), and 4.2 | JDK 14.0    |
+| mssql-jdbc-8.4.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-8.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 The Microsoft JDBC Driver 8.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:

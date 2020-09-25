@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)"
 title: "sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "07/03/2019"

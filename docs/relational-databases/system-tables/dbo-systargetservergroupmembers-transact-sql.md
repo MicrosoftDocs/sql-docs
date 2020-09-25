@@ -1,4 +1,5 @@
 ---
+description: "dbo.systargetservergroupmembers (Transact-SQL)"
 title: "dbo.systargetservergroupmembers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systargetservergroupmembers system table"
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.systargetservergroupmembers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

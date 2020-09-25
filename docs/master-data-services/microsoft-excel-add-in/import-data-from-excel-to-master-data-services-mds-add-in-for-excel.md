@@ -1,4 +1,5 @@
 ---
+description: "Import Data from Excel to Master Data Services (MDS Add-in for Excel)"
 title: Import Data from Excel
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"

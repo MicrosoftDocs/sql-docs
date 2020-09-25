@@ -1,8 +1,9 @@
 ---
+description: "UniqueName Property (ADO MD)"
 title: "UniqueName Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -30,14 +31,14 @@ Indicates an unambiguous name for the current object.
   
 :::row:::
     :::column:::
-        [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
-        [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+        [Dimension Object (ADO MD)](./dimension-object-ado-md.md)  
+        [Hierarchy Object (ADO MD)](./hierarchy-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
-        [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Level Object (ADO MD)](./level-object-ado-md.md)  
+        [Member Object (ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [Name Property (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)
+ [Name Property (ADO MD)](./name-property-ado-md.md)

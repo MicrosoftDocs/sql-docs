@@ -1,4 +1,5 @@
 ---
+description: "rollback Method (java.sql.Savepoint)"
 title: "rollback Method (java.sql.Savepoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

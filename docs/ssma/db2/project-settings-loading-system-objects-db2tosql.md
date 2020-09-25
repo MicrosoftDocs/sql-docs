@@ -1,4 +1,5 @@
 ---
+description: "Project Settings(Loading System objects) (DB2ToSQL)"
 title: "Project Settings(Loading System objects) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

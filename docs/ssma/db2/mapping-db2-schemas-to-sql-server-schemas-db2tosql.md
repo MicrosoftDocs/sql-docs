@@ -1,4 +1,5 @@
 ---
+description: "Mapping DB2 Schemas to SQL Server Schemas (DB2ToSQL)"
 title: "Mapping DB2 Schemas to SQL Server Schemas (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

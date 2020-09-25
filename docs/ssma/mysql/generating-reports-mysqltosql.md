@@ -1,4 +1,5 @@
 ---
+description: "Generating Reports (MySQLToSQL)"
 title: "Generating Reports (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

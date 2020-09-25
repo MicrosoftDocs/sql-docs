@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture Functions (Transact-SQL)"
 title: "Change Data Capture Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

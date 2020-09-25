@@ -1,4 +1,5 @@
 ---
+description: "Move a Registered Server or Registered Server Group"
 title: Move a Registered Server or Server Group
 ms.prod: sql
 ms.prod_service: sql-tools

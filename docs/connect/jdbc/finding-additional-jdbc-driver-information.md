@@ -1,4 +1,5 @@
 ---
+description: "Finding additional JDBC driver information"
 title: "Finding additional JDBC driver information | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

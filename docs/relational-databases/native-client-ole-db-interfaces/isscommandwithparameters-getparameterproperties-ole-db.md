@@ -1,4 +1,5 @@
 ---
+description: "ISSCommandWithParameters::GetParameterProperties in SQL Server Native Client (OLE DB)"
 title: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
 ms.custom: ""
 ms.date: "03/04/2017"

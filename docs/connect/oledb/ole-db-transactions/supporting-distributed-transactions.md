@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, transactions"
   - "ITransactionJoin interface"
   - "MS DTC, about distributed transaction support"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Supporting Distributed Transactions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

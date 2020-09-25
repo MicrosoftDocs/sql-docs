@@ -1,4 +1,5 @@
 ---
+description: "DENY Assembly Permissions (Transact-SQL)"
 title: "DENY Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

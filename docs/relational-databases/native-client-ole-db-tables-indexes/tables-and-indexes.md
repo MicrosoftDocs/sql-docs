@@ -1,4 +1,5 @@
 ---
+description: "Tables and Indexes in SQL Server Native Client"
 title: Tables and indexes (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

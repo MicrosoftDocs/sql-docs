@@ -1,4 +1,5 @@
 ---
+description: "Data Type Identifiers and Descriptors"
 title: "Data Type Identifiers and Descriptors | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/02/2019"

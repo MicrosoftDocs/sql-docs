@@ -1,4 +1,5 @@
 ---
+description: "Use the Copy Database Wizard"
 title: "Use the Copy Database Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2016"

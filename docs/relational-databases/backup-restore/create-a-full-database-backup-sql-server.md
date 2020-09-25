@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: carlrab
 ---
 # Create a Full Database Backup
 
@@ -393,7 +392,7 @@ $credential = Get-Credential
 $container = 'https://<myStorageAccount>blob.core.windows.net/<myContainer>'
 $fileName = '<myDatabase>.bak'
 $server = '<myServer>'
-$database = '<myDatabase>
+$database = '<myDatabase>'
 $backupFile = $container + '/' + $fileName
 
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential

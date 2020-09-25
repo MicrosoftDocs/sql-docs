@@ -1,4 +1,5 @@
 ---
+description: "Microsoft ODBC Driver for SQL Server on Windows"
 title: "Microsoft ODBC Driver for SQL Server on Windows | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2020"

@@ -1,4 +1,5 @@
 ---
+description: "TRIM (Transact-SQL)"
 title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2019"
@@ -33,7 +34,7 @@ TRIM ( [ characters FROM ] string )
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```
 

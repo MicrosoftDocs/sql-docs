@@ -1,4 +1,5 @@
 ---
+description: "updateAsciiStream Method (int, java.io.InputStream)"
 title: updateAsciiStream method (int, java.io.InputStream)
 ms.custom: ""
 ms.date: "01/19/2017"

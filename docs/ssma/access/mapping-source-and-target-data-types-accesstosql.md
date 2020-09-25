@@ -1,4 +1,5 @@
 ---
+description: "Mapping Source and Target Data Types (AccessToSQL)"
 title: "Mapping Source and Target Data Types (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

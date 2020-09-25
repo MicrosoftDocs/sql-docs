@@ -1,4 +1,5 @@
 ---
+description: "catalog.delete_customized_logging_level"
 title: "catalog.delete_customized_logging_level | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

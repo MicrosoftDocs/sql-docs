@@ -1,4 +1,5 @@
 ---
+description: "sp_pdw_remove_network_credentials (SQL Data Warehouse)"
 title: "sp_pdw_remove_network_credentials"
 titleSuffix: Azure SQL Data Warehouse
 ms.date: "03/14/2017"

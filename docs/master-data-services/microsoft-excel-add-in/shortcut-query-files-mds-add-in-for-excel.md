@@ -1,4 +1,5 @@
 ---
+description: "Shortcut Query Files (MDS Add-in for Excel)"
 title: Shortcut Query Files
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER PARTITION SCHEME (Transact-SQL)"
 title: "ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "adding filegroups"
   - "NEXT USED filegroups"
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -36,7 +37,6 @@ ms.author: carlrab
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER PARTITION SCHEME partition_scheme_name   
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
@@ -72,7 +72,7 @@ NEXT USED [ filegroup_name ] [ ; ]
 ## Examples  
  The following example assumes the partition scheme `MyRangePS1` and the filegroup `test5fg` exist in the current database.  
   
-```  
+```sql  
 ALTER PARTITION SCHEME MyRangePS1  
 NEXT USED test5fg;  
 ```  

@@ -1,4 +1,5 @@
 ---
+description: "UPDATE - Trigger Functions (Transact-SQL)"
 title: "UPDATE() (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

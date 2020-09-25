@@ -1,4 +1,5 @@
 ---
+description: "REVERT (Transact-SQL)"
 title: "REVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

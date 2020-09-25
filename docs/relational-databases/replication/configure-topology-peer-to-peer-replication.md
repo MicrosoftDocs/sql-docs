@@ -1,4 +1,5 @@
 ---
+description: "Configure Topology (Peer-to-Peer Replication)"
 title: "Configure Topology (Peer-to-Peer Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

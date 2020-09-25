@@ -1,4 +1,5 @@
 ---
+description: "Working with the Sample Console Script Files (SybaseToSQL)"
 title: "Working with the Sample Console Script Files (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

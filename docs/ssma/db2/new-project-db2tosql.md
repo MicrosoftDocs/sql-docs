@@ -1,4 +1,5 @@
 ---
+description: "New Project (DB2ToSQL)"
 title: "New Project (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

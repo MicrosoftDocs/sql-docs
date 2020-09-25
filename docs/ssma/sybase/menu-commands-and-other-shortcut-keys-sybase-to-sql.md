@@ -1,4 +1,5 @@
 ---
+description: "Menu commands and other shortcut keys (Sybase To SQL)"
 title: "Menu commands and other shortcut keys (Sybase To SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

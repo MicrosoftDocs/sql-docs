@@ -1,4 +1,5 @@
 ---
+description: "Export and import databases using Always Encrypted"
 title: "Export and import databases using Always Encrypted  | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019

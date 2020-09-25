@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_targetservergroup (Transact-SQL)"
 title: "sp_delete_targetservergroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_targetservergroup"
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

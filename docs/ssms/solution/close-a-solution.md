@@ -1,4 +1,5 @@
 ---
+description: "Close a Solution"
 title: "Close a Solution"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

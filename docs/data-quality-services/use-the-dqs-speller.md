@@ -1,4 +1,5 @@
 ---
+description: "Use the DQS Speller"
 title: "Use the DQS Speller"
 ms.date: "11/08/2011"
 ms.prod: sql

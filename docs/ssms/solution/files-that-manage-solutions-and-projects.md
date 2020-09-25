@@ -1,4 +1,5 @@
 ---
+description: "Files That Manage Solutions and Projects"
 title: "Files That Manage Solutions and Projects"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

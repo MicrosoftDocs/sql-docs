@@ -1,4 +1,5 @@
 ---
+description: "DROP APPLICATION ROLE (Transact-SQL)"
 title: "DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

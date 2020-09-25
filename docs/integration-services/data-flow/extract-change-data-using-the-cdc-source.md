@@ -1,4 +1,5 @@
 ---
+description: "Extract Change Data Using the CDC Source"
 title: "Extract Change Data Using the CDC Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

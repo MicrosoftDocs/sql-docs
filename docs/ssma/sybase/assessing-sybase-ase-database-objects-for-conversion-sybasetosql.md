@@ -1,4 +1,5 @@
 ---
+description: "Assessing SAP ASE Database Objects for Conversion (SybaseToSQL)"
 title: "Assessing SAP ASE Database Objects for Conversion (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"

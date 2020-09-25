@@ -1,4 +1,5 @@
 ---
+description: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
 ms.date: 03/25/2019
 ms.reviewer: ""

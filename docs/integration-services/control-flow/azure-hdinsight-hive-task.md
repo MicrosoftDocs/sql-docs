@@ -1,4 +1,5 @@
 ---
+description: "Azure HDInsight Hive Task"
 title: "Azure HDInsight Hive Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"

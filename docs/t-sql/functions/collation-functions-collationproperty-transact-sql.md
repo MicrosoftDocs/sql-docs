@@ -1,4 +1,5 @@
 ---
+description: "Collation Functions - COLLATIONPROPERTY (Transact-SQL)"
 title: "COLLATIONPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
@@ -29,7 +30,7 @@ This function returns the requested property of a specified collation.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   
@@ -60,7 +61,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 1252   
 ```  
   
@@ -72,7 +73,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 1252   
 ```  
   

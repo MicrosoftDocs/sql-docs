@@ -1,4 +1,5 @@
 ---
+description: "Improve the Performance of Full-Text Indexes"
 title: "Improve the Performance of Full-Text Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

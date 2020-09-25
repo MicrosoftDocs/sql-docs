@@ -1,4 +1,5 @@
 ---
+description: "Assessment Report (DB2ToSQL)"
 title: "Assessment Report (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

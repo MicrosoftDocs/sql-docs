@@ -1,4 +1,5 @@
 ---
+description: "DROP USER (Transact-SQL)"
 title: "DROP USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -40,7 +41,7 @@ DROP USER [ IF EXISTS ] user_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP USER user_name  
 ```  

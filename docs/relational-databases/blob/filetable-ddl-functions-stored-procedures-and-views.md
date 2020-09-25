@@ -1,4 +1,5 @@
 ---
+description: "FileTable DDL, functions, stored procedures, and views"
 title: "FileTable functions, stored procedures, views | Microsoft Docs"
 descriptions: Learn which Transact-SQL statements and which SQL Server functions, stored procedures, and views have been added or changed to support the FileTable feature.
 ms.custom: "seo-lt-2019"

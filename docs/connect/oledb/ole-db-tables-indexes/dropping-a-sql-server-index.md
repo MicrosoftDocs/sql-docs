@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "dropping indexes"
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Dropping a SQL Server Index
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

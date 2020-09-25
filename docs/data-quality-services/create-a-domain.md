@@ -1,4 +1,5 @@
 ---
+description: "Create a Domain"
 title: "Create a Domain"
 ms.date: "11/08/2011"
 ms.prod: sql

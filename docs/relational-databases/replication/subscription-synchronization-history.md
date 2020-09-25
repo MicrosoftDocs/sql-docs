@@ -1,4 +1,5 @@
 ---
+description: "Subscription, Synchronization History"
 title: "Subscription, Synchronization History | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

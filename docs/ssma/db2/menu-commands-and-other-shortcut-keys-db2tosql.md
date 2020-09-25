@@ -1,4 +1,5 @@
 ---
+description: "Menu commands and other shortcut keys (DB2ToSQL)"
 title: "Menu commands and other shortcut keys (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

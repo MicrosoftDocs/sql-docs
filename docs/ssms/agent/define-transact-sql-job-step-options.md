@@ -1,4 +1,5 @@
 ---
+description: "Define Transact-SQL Job Step Options"
 title: "Define Transact-SQL Job Step Options"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Numeric Functions (Visual FoxPro ODBC Driver)"
 title: "Numeric Functions (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - FILELISTONLY (Transact-SQL)"
 title: "RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"

@@ -1,4 +1,5 @@
 ---
+description: "Change the Word Breaker Used for US English and UK English"
 title: "Change the Word Breaker Used for US English and UK English | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

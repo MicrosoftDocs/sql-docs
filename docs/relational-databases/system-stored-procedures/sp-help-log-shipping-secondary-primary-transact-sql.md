@@ -1,4 +1,5 @@
 ---
+description: "sp_help_log_shipping_secondary_primary (Transact-SQL)"
 title: "sp_help_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

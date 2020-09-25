@@ -1,4 +1,5 @@
 ---
+description: "DROP XML SCHEMA COLLECTION (Transact-SQL)"
 title: "DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"

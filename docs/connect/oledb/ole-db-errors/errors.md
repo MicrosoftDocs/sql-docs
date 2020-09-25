@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "errors [OLE DB]"
   - "OLE DB error handling, about error handling"
   - "OLE DB error handling"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Errors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "supportsSchemasInTableDefinitions Method (SQLServerDatabaseMetaData)"
 title: "supportsSchemasInTableDefinitions Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

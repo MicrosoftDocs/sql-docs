@@ -1,8 +1,9 @@
 ---
+description: "Hierarchy Object Properties, Methods, and Events"
 title: "Hierarchy Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -15,15 +16,15 @@ ms.author: jroth
 ---
 # Hierarchy Object Properties, Methods, and Events
 ## Properties/Collections  
- [Description Property](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description Property](./description-property-ado-md.md)  
   
- [Levels Collection](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+ [Levels Collection](./levels-collection-ado-md.md)  
   
- [Name Property](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name Property](./name-property-ado-md.md)  
   
- [Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties Collection](../ado-api/properties-collection-ado.md)  
   
- [UniqueName Property](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName Property](./uniquename-property-ado-md.md)  
   
 ## Methods  
  None.  
@@ -32,4 +33,4 @@ ms.author: jroth
  None.  
   
 ## See Also  
- [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)
+ [Hierarchy Object (ADO MD)](./hierarchy-object-ado-md.md)

@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Conversions (OLE DB)"
 title: "Bindings and Conversions (OLE DB)"
 ms.date: "03/14/2017"
 ms.prod: sql

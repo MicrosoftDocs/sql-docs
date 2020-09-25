@@ -1,4 +1,5 @@
 ---
+description: "STATS_DATE (Transact-SQL)"
 title: "STATS_DATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"

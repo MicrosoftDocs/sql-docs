@@ -1,4 +1,5 @@
 ---
+description: "Metadata - Date and Time and Schema Rowsets in SQL Server Native Client"
 title: "Date and Time and Schema Rowsets"
 ms.date: "03/14/2017"
 ms.prod: sql

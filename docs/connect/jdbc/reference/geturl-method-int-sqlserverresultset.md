@@ -1,4 +1,5 @@
 ---
+description: "getURL Method (int) (SQLServerResultSet)"
 title: "getURL Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

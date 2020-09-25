@@ -1,4 +1,5 @@
 ---
+description: "sys.external_library_files (Transact-SQL)"
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2020"

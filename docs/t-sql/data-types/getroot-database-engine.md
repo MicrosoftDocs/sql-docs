@@ -1,4 +1,5 @@
 ---
+description: "GetRoot (Database Engine)"
 title: "GetRoot (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -27,12 +28,12 @@ Returns the root of the hierarchy tree. GetRoot() is a static method.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::GetRoot ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  

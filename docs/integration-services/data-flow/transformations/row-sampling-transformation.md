@@ -1,4 +1,5 @@
 ---
+description: "Row Sampling Transformation"
 title: "Row Sampling Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

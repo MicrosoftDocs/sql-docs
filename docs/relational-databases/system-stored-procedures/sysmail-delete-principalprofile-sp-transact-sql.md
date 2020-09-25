@@ -1,4 +1,5 @@
 ---
+description: "sysmail_delete_principalprofile_sp (Transact-SQL)"
 title: "sysmail_delete_principalprofile_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_principalprofile_sp"
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

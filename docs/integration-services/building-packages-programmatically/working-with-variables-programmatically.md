@@ -1,4 +1,5 @@
 ---
+description: "Working with Variables Programmatically"
 title: "Working with Variables Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

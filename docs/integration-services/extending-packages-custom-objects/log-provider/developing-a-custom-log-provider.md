@@ -1,4 +1,5 @@
 ---
+description: "Developing a Custom Log Provider"
 title: "Developing a Custom Log Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

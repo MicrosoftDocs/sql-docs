@@ -1,4 +1,5 @@
 ---
+description: "Job Properties - New Job (Notifications Page)"
 title: Job Properties - New Job (Notifications Page)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

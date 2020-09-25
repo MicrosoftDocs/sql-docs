@@ -1,4 +1,5 @@
 ---
+description: "getMaxCharLiteralLength Method (SQLServerDatabaseMetaData)"
 title: "getMaxCharLiteralLength Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

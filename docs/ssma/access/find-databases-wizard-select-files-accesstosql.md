@@ -1,4 +1,5 @@
 ---
+description: "Find Databases Wizard (Select Files) (AccessToSQL)"
 title: "Find Databases Wizard (Select Files) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Install Data Quality Services"
 title: "Install Data Quality Services"
 ms.date: "09/11/2017"
 ms.prod: sql

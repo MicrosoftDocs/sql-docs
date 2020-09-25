@@ -1,4 +1,5 @@
 ---
+description: "sp_change_users_login (Transact-SQL)"
 title: "sp_change_users_login (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/13/2016"

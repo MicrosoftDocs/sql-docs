@@ -1,4 +1,5 @@
 ---
+description: "View a Job"
 title: "View a Job"
 ms.prod: sql
 ms.prod_service: sql-tools

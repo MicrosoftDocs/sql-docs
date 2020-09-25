@@ -1,4 +1,5 @@
 ---
+description: "Excel Connection Manager"
 title: "Excel Connection Manager | Microsoft Docs"
 ms.date: "04/02/2018"
 ms.prod: sql

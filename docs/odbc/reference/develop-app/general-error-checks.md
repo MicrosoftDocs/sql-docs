@@ -1,4 +1,5 @@
 ---
+description: "General Error Checks"
 title: "General Error Checks | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

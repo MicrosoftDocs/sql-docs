@@ -1,4 +1,5 @@
 ---
+description: "AdvancedProperties Property (SqlService Class)"
 title: "AdvancedProperties Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -14,8 +15,8 @@ apilocation:
 helpviewer_keywords: 
   - "AdvancedProperties property"
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # AdvancedProperties Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

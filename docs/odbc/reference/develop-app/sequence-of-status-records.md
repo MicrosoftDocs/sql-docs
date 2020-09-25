@@ -1,4 +1,5 @@
 ---
+description: "Sequence of Status Records"
 title: "Sequence of Status Records | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

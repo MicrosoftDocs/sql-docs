@@ -1,4 +1,5 @@
 ---
+description: "TYPEPROPERTY (Transact-SQL)"
 title: "TYPEPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

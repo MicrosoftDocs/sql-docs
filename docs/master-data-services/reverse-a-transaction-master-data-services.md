@@ -1,4 +1,5 @@
 ---
+description: "Reverse a Transaction (Master Data Services)"
 title: Reverse a Transaction
 ms.custom: ""
 ms.date: "03/01/2017"

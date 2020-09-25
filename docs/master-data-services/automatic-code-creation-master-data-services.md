@@ -1,4 +1,5 @@
 ---
+description: "Automatic Code Creation (Master Data Services)"
 title: Automatic Code Creation
 ms.custom: ""
 ms.date: "03/01/2017"

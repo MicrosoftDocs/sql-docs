@@ -1,4 +1,5 @@
 ---
+description: "Using Always Encrypted with the PHP Drivers for SQL Server"
 title: "Using Always Encrypted with the PHP Drivers for SQL Server | Microsoft Docs"
 ms.date: 12/12/2019
 ms.prod: sql

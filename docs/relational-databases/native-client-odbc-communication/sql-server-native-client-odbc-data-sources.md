@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client ODBC Data Sources"
 title: "ODBC Data Sources"
 ms.custom: ""
 ms.date: "03/14/2017"

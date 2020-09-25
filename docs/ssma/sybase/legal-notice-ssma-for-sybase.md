@@ -1,4 +1,5 @@
 ---
+description: "Legal Notice (SSMA for Sybase)"
 title: "Legal Notice (SSMA for Sybase) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "XQuery Static Type Event Class"
 title: "XQuery Static Type Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

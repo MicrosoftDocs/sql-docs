@@ -1,4 +1,5 @@
 ---
+description: "Disable Check Constraints with INSERT and UPDATE Statements"
 title: "Disable Check Constraints with INSERT and UPDATE Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

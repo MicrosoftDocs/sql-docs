@@ -1,4 +1,5 @@
 ---
+description: "ODBC API Support for Enhanced Date and Time Features"
 title: "ODBC API for Date Time"
 ms.custom: ""
 ms.date: 12/18/2019

@@ -1,4 +1,5 @@
 ---
+description: "HasM (geometry DataType)"
 title: "HasM (geometry DataType) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"

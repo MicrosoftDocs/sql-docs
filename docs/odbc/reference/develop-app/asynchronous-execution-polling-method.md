@@ -1,4 +1,5 @@
 ---
+description: "Asynchronous Execution (Polling Method)"
 title: "Asynchronous Execution (Polling Method) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

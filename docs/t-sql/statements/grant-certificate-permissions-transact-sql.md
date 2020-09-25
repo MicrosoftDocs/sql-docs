@@ -1,4 +1,5 @@
 ---
+description: "GRANT Certificate Permissions (Transact-SQL)"
 title: "GRANT Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"

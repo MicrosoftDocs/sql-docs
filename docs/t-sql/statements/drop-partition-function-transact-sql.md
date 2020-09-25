@@ -1,4 +1,5 @@
 ---
+description: "DROP PARTITION FUNCTION (Transact-SQL)"
 title: "DROP PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "dropping partition functions"
   - "removing partition functions"
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

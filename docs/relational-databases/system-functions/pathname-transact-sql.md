@@ -1,4 +1,5 @@
 ---
+description: "PathName (Transact-SQL)"
 title: "PathName (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"

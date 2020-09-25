@@ -1,4 +1,5 @@
 ---
+description: "Create a Domain-Based Attribute (Master Data Services)"
 title: Create a Domain-Based Attribute
 ms.custom: ""
 ms.date: "07/25/2017"

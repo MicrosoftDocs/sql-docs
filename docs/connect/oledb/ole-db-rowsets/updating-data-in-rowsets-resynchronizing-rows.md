@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "IRowsetResynch interface"
   - "resynchronizing rows"
   - "data updates [SQL Server], OLE DB"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Updating Data in Rowsets - Resynchronizing Rows
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

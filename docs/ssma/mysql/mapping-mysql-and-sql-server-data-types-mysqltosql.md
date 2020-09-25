@@ -1,4 +1,5 @@
 ---
+description: "Mapping MySQL and SQL Server Data Types (MySQLToSQL)"
 title: "Mapping MySQL and SQL Server Data Types (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

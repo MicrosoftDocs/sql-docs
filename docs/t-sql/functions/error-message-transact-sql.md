@@ -1,4 +1,5 @@
 ---
+description: "ERROR_MESSAGE (Transact-SQL)"
 title: ERROR_MESSAGE (Transact-SQL)
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -32,7 +33,7 @@ This function returns the message text of the error that caused the CATCH block 
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_MESSAGE ( )   
 ```  
 

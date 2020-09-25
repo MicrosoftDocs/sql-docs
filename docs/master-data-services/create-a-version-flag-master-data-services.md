@@ -1,4 +1,5 @@
 ---
+description: "Create a Version Flag (Master Data Services)"
 title: Create a Version Flag
 ms.custom: ""
 ms.date: "03/01/2017"

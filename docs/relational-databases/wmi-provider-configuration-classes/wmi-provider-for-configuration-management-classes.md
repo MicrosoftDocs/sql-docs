@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, classes"
   - "classes [WMI]"
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # WMI Provider for Configuration Management Classes
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

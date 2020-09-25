@@ -1,4 +1,5 @@
 ---
+description: "SIGN (Transact-SQL)"
 title: "SIGN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

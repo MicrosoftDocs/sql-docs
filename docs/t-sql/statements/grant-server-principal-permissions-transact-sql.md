@@ -1,4 +1,5 @@
 ---
+description: "GRANT Server Principal Permissions (Transact-SQL)"
 title: "GRANT Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

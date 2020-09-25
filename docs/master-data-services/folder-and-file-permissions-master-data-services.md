@@ -1,4 +1,5 @@
 ---
+description: "Folder and File Permissions (Master Data Services)"
 title: Folder and File Permissions
 ms.custom: ""
 ms.date: "03/14/2017"

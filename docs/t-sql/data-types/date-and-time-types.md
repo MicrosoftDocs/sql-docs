@@ -1,4 +1,5 @@
 ---
+description: "Date and time types"
 title: "Date and time types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"

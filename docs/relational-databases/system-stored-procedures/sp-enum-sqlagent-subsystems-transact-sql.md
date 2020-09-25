@@ -1,4 +1,5 @@
 ---
+description: "sp_enum_sqlagent_subsystems (Transact-SQL)"
 title: "sp_enum_sqlagent_subsystems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_enum_sqlagent_subsystems"
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

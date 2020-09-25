@@ -56,7 +56,7 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
 
-[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlightcloud?tab=Overview
 [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->

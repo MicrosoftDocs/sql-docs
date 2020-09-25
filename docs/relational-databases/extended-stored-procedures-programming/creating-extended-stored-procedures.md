@@ -1,4 +1,5 @@
 ---
+description: "Creating Extended Stored Procedures"
 title: "Creating Extended Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

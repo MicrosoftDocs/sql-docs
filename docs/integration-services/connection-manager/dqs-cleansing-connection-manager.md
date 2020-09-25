@@ -1,4 +1,5 @@
 ---
+description: "DQS Cleansing Connection Manager"
 title: "DQS Cleansing Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

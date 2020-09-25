@@ -1,4 +1,5 @@
 ---
+description: "Create Self-Joins Automatically (Visual Database Tools)"
 title: Create Self-Joins Automatically
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

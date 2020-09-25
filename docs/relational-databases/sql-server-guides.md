@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Guides"
 title: "SQL Server Guides | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/03/2017"

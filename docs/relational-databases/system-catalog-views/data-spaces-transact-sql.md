@@ -1,4 +1,5 @@
 ---
+description: "Data Spaces (Transact-SQL)"
 title: "Data Spaces (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "data space catalog views [SQL Server]"
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Data Spaces (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

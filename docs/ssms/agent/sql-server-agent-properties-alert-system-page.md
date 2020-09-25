@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Agent Properties (Alert System Page)"
 title: "SQL Server Agent Properties (Alert System Page)"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

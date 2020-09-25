@@ -1,4 +1,5 @@
 ---
+description: "DROP MASTER KEY (Transact-SQL)"
 title: "DROP MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "getBytes Method (SQLServerBlob)"
 title: "getBytes Method (SQLServerBlob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

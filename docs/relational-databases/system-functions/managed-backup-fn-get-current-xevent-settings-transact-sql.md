@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.fn_get_current_xevent_settings (Transact-SQL)"
 title: "managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

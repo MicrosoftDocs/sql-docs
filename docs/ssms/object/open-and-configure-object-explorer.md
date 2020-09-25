@@ -1,4 +1,5 @@
 ---
+description: "Open and Configure Object Explorer"
 title: "Open and Configure Object Explorer"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

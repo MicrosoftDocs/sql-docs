@@ -1,4 +1,5 @@
 ---
+description: "Initialize a Subscription with a Snapshot (441e)"
 title: Initialize a Subscription with a Snapshot (441e) | Microsoft Docs
 ms.date: 08/12/2020
 ms.prod: sql

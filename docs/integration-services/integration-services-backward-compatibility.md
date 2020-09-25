@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Backward Compatibility"
 title: "Integration Services Backward Compatibility | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2016"

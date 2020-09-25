@@ -1,4 +1,5 @@
 ---
+description: "Testing Migrated Database Objects (SybaseToSQL)"
 title: "Testing Migrated Database Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

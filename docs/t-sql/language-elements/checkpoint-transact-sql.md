@@ -1,4 +1,5 @@
 ---
+description: "CHECKPOINT (Transact-SQL)"
 title: "CHECKPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"

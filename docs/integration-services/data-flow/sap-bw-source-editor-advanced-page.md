@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Source Editor (Advanced Page)"
 title: "SAP BW Source Editor (Advanced Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Azure Data Lake Store Connection Manager"
 title: "Azure Data Lake Store Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"

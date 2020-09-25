@@ -1,4 +1,5 @@
 ---
+description: "Query Processing Architecture Guide"
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2020"

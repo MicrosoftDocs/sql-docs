@@ -1,4 +1,5 @@
 ---
+description: "Working with Snapshot Isolation in SQL Server Native Client"
 title: "Working with Snapshot Isolation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

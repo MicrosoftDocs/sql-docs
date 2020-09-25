@@ -1,4 +1,5 @@
 ---
+description: "Copy Tables from One Database Diagrams to Another (Visual Database Tools)"
 title: Copy Tables from One Database Diagrams to Another
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

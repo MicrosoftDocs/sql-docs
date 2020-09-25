@@ -1,4 +1,5 @@
 ---
+description: "Edit Type Mapping (SybaseToSQL)"
 title: "Edit Type Mapping (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

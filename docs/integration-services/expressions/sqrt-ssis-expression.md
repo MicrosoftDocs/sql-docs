@@ -1,4 +1,5 @@
 ---
+description: "SQRT (SSIS Expression)"
 title: "SQRT (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

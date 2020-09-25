@@ -1,4 +1,5 @@
 ---
+description: "APPROX_COUNT_DISTINCT (Transact-SQL)"
 title: "APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/12/2019"
@@ -25,9 +26,7 @@ This function returns the approximate number of unique non-null values in a grou
   
 ## Syntax  
   
-```sql
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse  
-
+```syntaxsql
 APPROX_COUNT_DISTINCT ( expression )   
 ```  
   

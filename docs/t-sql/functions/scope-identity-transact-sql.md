@@ -1,4 +1,5 @@
 ---
+description: "SCOPE_IDENTITY (Transact-SQL)"
 title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"

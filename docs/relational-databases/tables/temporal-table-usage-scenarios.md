@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Usage Scenarios"
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Temporal table usage scenarios
 

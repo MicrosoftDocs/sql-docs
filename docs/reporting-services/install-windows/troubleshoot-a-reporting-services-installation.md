@@ -1,4 +1,5 @@
 ---
+description: "Troubleshoot a Reporting Services installation"
 title: "Troubleshoot a Reporting Services installation | Microsoft Docs"
 ms.date: 01/17/2018
 ms.prod: reporting-services
@@ -269,7 +270,7 @@ ms.author: maggies
   
 -   TechNet Wiki: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Forum: SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Microsoft Q & A: SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
   
 -   Got feedback or more questions? Visit [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   

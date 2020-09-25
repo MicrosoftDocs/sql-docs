@@ -1,4 +1,5 @@
 ---
+description: "URLs in Configuration Files  (SSRS Configuration Manager)"
 title: "URLs in Configuration Files  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/18/2016
 ms.prod: reporting-services

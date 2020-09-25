@@ -1,4 +1,5 @@
 ---
+description: "Schema Rowsets - Distributed Query Support in SQL Server Native Client"
 title: "Distributed Query Support in Schema Rowsets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

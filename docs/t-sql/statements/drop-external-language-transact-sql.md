@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 08/08/2019

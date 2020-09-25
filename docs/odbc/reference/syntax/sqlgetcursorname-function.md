@@ -1,4 +1,5 @@
 ---
+description: "SQLGetCursorName Function"
 title: "SQLGetCursorName Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2020"

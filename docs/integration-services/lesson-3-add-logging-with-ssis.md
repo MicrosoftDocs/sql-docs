@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3: Add Logging with SSIS"
 title: "Lesson 3: Add Logging with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"

@@ -1,4 +1,5 @@
 ---
+description: "BINARY_CHECKSUM  (Transact-SQL)"
 title: "BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -80,7 +81,7 @@ This example uses `BINARY_CHECKSUM` to detect changes in a table row.
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE myTable (column1 int, column2 varchar(256));  
+CREATE TABLE myTable (column1 INT, column2 VARCHAR(256));  
 GO  
 INSERT INTO myTable VALUES (1, 'test');  
 GO  

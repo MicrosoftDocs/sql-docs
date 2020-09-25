@@ -1,4 +1,5 @@
 ---
+description: "SQL Server 2019 privacy supplement"
 title: "SQL Server 2019 privacy supplement | Microsoft Docs"
 ms.date: 09/20/2019
 ms.prod: sql

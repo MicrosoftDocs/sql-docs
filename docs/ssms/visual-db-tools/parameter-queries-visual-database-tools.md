@@ -1,4 +1,5 @@
 ---
+description: "Parameter Queries (Visual Database Tools)"
 title: Parameter Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

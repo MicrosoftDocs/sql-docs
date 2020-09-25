@@ -1,4 +1,5 @@
 ---
+description: "PARSE (Transact-SQL)"
 title: "PARSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"

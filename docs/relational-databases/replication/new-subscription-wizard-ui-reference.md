@@ -1,4 +1,5 @@
 ---
+description: "New Subscription Wizard (UI Reference)"
 title: "New Subscription Wizard (UI Reference) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

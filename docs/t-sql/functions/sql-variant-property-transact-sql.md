@@ -1,4 +1,5 @@
 ---
+description: "SQL_VARIANT_PROPERTY (Transact-SQL)"
 title: "SQL_VARIANT_PROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2020"

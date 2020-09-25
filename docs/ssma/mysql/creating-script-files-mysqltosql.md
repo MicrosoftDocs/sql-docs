@@ -1,4 +1,5 @@
 ---
+description: "Creating Script Files (MySQLToSQL)"
 title: "Creating Script Files (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

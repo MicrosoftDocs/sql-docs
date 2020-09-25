@@ -1,4 +1,5 @@
 ---
+description: "Creating Variable Value Files (OracleToSQL)"
 title: "Creating Variable Value Files (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

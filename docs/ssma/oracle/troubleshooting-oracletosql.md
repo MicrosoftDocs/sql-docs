@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting (OracleToSQL)"
 title: "Troubleshooting (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

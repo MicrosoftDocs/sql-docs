@@ -1,4 +1,5 @@
 ---
+description: "Change the Scheduling Details for a SQL Server Agent Master Job"
 title: Change the Scheduling Details for a Master Job
 ms.prod: sql
 ms.prod_service: sql-tools

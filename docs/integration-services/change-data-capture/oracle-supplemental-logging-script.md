@@ -1,4 +1,5 @@
 ---
+description: "Oracle Supplemental Logging Script"
 title: "Oracle Supplemental Logging Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

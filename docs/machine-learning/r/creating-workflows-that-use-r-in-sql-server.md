@@ -4,7 +4,7 @@ description: Integration scenarios combining SQL Server Machine Learning Service
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 03/17/2019  
+ms.date: 08/28/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -187,19 +187,6 @@ In SSIS Designer, press F5 to execute the package. You should see an outcome sim
 Although R can create charts and interesting visualizations, it is not well-integrated with external data sources, meaning that each chart or graph has to be individually produced. Sharing also can be difficult.
 
 By using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], you can run complex operations in R via [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, which can easily be consumed by a variety of enterprise reporting tools, including [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and Power BI.
-
-### SSRS example
-
-[R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/)
-
-This CodePlex project provides the code to help you create a custom report item that renders the graphics output of R as an image that can be used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports.  By using the custom report item, you can:
-
-+ Publish charts and plots created using the R Graphics Device to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dashboards
-
-+ Pass [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] parameters to R plots
-
-> [!NOTE]
-> For this sample, the code that supports the R Graphics Device for Reporting Services must be installed on the Reporting Services server, as well as in Visual Studio. Manual compilation and configuration is also required.
 
 ## Next steps
 

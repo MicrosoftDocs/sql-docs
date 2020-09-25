@@ -1,4 +1,5 @@
 ---
+description: "Create a Leaf Member (Master Data Services)"
 title: Create a Leaf Member
 ms.custom: ""
 ms.date: "03/17/2017"

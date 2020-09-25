@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)"
 title: "CREATE SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -28,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE SERVER AUDIT SPECIFICATION audit_specification_name  
 FOR SERVER AUDIT audit_name  
 {  
@@ -65,7 +65,7 @@ FOR SERVER AUDIT audit_name
 ## Examples  
  The following example creates a server audit specification called `HIPAA_Audit_Specification` that audits failed logins, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP)  

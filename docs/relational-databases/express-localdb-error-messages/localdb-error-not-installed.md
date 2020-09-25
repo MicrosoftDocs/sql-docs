@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_NOT_INSTALLED"
 title: "LOCALDB_ERROR_NOT_INSTALLED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

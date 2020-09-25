@@ -1,4 +1,5 @@
 ---
+description: "Fetch and Update Rowsets (ODBC)"
 title: "Fetch and Update Rowsets (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

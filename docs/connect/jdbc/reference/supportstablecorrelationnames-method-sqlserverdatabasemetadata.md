@@ -1,4 +1,5 @@
 ---
+description: "supportsTableCorrelationNames Method (SQLServerDatabaseMetaData)"
 title: "supportsTableCorrelationNames Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

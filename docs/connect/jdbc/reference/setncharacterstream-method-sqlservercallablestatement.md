@@ -1,4 +1,5 @@
 ---
+description: "setNCharacterStream Method (SQLServerCallableStatement)"
 title: "setNCharacterStream Method to Reader object| Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

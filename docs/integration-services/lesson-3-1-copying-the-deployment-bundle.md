@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-1 - Copying the Deployment Bundle"
 title: "Step 1: Copying the Deployment Bundle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Database Mail Views (Transact-SQL)"
 title: "Database Mail Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], Database Mail"
   - "status information [SQL Server], Database Mail"
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Mail Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

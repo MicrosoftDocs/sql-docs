@@ -1,4 +1,5 @@
 ---
+description: "STRING_AGG (Transact-SQL)"
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2017"

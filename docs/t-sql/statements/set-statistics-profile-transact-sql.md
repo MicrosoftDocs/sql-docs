@@ -1,4 +1,5 @@
 ---
+description: "SET STATISTICS PROFILE (Transact-SQL)"
 title: "SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,8 +22,8 @@ helpviewer_keywords:
   - "STATISTICS PROFILE option"
   - "statistical information [SQL Server], profiles"
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

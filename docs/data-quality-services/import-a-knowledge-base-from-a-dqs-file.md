@@ -1,4 +1,5 @@
 ---
+description: "Import a Knowledge Base from a .dqs File"
 title: "Import a Knowledge Base from a .dqs File"
 ms.date: "03/01/2017"
 ms.prod: sql

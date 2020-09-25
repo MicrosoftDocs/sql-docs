@@ -18,7 +18,7 @@ T-SQL language elements for Analytic Platform System (APS) SQL Server Parallel D
 * [syntax conventions](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [object naming rules](../relational-databases/databases/database-identifiers.md)
 * [reserved keywords](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [collations](../t-sql/statements/collations.md?view=sql-server-ver15)
 * [comments](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [data types](../t-sql/data-types/data-types-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: "Reuse of Package Objects"
 title: "Reuse of Package Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Configuration Components"
 title: "Configuration Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

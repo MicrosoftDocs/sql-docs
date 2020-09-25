@@ -1,4 +1,5 @@
 ---
+description: "SQLGetData and Block Cursors"
 title: "SQLGetData and Block Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

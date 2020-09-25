@@ -1,4 +1,5 @@
 ---
+description: "Parsing Non-Standard Text File Formats with the Script Component"
 title: "Parsing Non-Standard Text File Formats with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

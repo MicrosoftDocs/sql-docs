@@ -226,7 +226,7 @@ If you need to save and run SQL scripts later, for administration or a larger de
 
 ## Next steps
 
-If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements) and the [Transact-SQL Reference (Database Engine)](https://docs.microsoft.com/sql/t-sql/language-reference).
+If you're new to T-SQL, see [Tutorial: Write Transact-SQL statements](../../t-sql/tutorial-writing-transact-sql-statements.md) and the [Transact-SQL Reference (Database Engine)](../../t-sql/language-reference.md).
 
 For more information on using or contributing to the mssql extension, see the [mssql extension project wiki](https://github.com/Microsoft/vscode-mssql/wiki).
 

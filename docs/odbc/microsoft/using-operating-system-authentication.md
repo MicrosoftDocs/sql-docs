@@ -1,4 +1,5 @@
 ---
+description: "Using Operating System Authentication"
 title: "Using Operating System Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DENY Symmetric Key Permissions (Transact-SQL)"
 title: "DENY Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
@@ -107,7 +108,7 @@ DENY permission [ ,...n ]
 ## Examples  
  The following example denies `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  

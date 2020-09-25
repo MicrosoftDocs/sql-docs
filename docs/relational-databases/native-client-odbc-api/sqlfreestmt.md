@@ -1,4 +1,5 @@
 ---
+description: "SQLFreeStmt"
 title: "SQLFreeStmt | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/23/2015"

@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting (DB2ToSQL)"
 title: "Troubleshooting (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

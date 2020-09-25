@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Connection Required Permissions for the CDC Service"
 title: "SQL Server Connection Required Permissions for the CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

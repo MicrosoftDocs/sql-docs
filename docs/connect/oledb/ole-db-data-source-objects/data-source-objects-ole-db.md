@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB data source objects [OLE DB Driver for SQL Server]"
   - "data source objects [OLE DB]"
   - "CLSID"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Source Objects (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Environment Transitions"
 title: "Environment Transitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

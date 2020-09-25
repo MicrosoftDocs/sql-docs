@@ -1,4 +1,5 @@
 ---
+description: "TIMEFROMPARTS (Transact-SQL)"
 title: "TIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

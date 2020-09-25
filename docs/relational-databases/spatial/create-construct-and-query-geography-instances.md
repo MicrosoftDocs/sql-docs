@@ -1,4 +1,5 @@
 ---
+description: "Create, Construct, and Query geography Instances"
 title: "Create, Construct, and Query geography Instances | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

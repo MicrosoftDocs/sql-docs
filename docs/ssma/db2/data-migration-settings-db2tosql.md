@@ -1,4 +1,5 @@
 ---
+description: "Data Migration Settings (DB2ToSQL)"
 title: "Data Migration Settings (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

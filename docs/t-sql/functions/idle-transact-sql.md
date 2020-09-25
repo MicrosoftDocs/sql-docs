@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;IDLE (Transact-SQL)"
 title: "@@IDLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -34,7 +35,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@IDLE  
 ```  
 
@@ -49,7 +50,7 @@ ms.author: maghan
 ## Examples  
  The following example shows returning the number of milliseconds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was idle between the start time and the current time. To avoid arithmetic overflow when converting the value to microseconds, the example converts one of the values to the `float` data type.  
   
-```  
+```sql  
 SELECT @@IDLE * CAST(@@TIMETICKS AS float) AS 'Idle microseconds',  
    GETDATE() AS 'as of';  
 ```  

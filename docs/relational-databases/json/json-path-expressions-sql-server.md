@@ -1,4 +1,5 @@
 ---
+description: "JSON Path Expressions (SQL Server)"
 title: "JSON Path Expressions"
 ms.date: 06/03/2020
 ms.prod: sql

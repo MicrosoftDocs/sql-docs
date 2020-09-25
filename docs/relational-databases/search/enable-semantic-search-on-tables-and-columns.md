@@ -1,4 +1,5 @@
 ---
+description: "Enable Semantic Search on Tables and Columns"
 title: "Enable Semantic Search on Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

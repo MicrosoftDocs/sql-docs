@@ -1,4 +1,5 @@
 ---
+description: "catalog.check_schema_version"
 title: "catalog.check_schema_version | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

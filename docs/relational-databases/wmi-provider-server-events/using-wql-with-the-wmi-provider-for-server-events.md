@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "WQL [WMI]"
   - "WMI Provider for Server Events, WQL"
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Using WQL with the WMI Provider for Server Events
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

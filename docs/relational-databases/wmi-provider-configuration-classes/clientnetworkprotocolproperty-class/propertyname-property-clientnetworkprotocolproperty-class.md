@@ -1,4 +1,5 @@
 ---
+description: "PropertyName Property (ClientNetworkProtocolProperty Class)"
 title: "PropertyName Property (ClientNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyName property"
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyName Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

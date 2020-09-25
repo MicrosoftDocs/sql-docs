@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;LANGID (Transact-SQL)"
 title: "@@LANGID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,7 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LANGID  
 ```  
   
@@ -46,7 +47,7 @@ ms.author: maghan
 ## Examples  
  The following example sets the language for the current session to `Italian`, and then uses `@@LANGID` to return the ID for Italian.  
   
-```  
+```sql  
 SET LANGUAGE 'Italian'  
 SELECT @@LANGID AS 'Language ID'  
 ```  

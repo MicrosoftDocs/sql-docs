@@ -1,4 +1,5 @@
 ---
+description: "Create Queries using Something Besides a Table (Visual Database Tools)"
 title: Create Queries using Something Besides a Table
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

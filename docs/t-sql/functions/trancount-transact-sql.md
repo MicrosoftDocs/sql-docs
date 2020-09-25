@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TRANCOUNT (Transact-SQL)"
 title: "@@TRANCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"

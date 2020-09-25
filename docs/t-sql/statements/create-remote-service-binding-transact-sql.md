@@ -1,4 +1,5 @@
 ---
+description: "CREATE REMOTE SERVICE BINDING (Transact-SQL)"
 title: "CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -48,7 +49,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE REMOTE SERVICE BINDING binding_name   
    [ AUTHORIZATION owner_name ]   
    TO SERVICE 'service_name'   
@@ -95,7 +95,7 @@ CREATE REMOTE SERVICE BINDING binding_name
 ### A. Creating a remote service binding  
  The following example creates a binding for the service `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses the certificate owned by the `APUser` database principal to authenticate to the remote service and to exchange the session encryption key with the remote service.  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser ;  
@@ -104,7 +104,7 @@ CREATE REMOTE SERVICE BINDING APBinding
 ### B. Creating a remote service binding using anonymous authentication  
  The following example creates a binding for the service `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses the certificate owned by the `APUser` database principal to exchange the session encryption key with the remote service. The broker does not authenticate to the remote service. In the database that hosts the remote service, messages are delivered as the **guest** user.  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser, ANONYMOUS=ON ;  

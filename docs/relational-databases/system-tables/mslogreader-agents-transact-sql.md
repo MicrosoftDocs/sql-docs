@@ -1,4 +1,5 @@
 ---
+description: "MSlogreader_agents (Transact-SQL)"
 title: "MSlogreader_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSlogreader_agents system table"
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSlogreader_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

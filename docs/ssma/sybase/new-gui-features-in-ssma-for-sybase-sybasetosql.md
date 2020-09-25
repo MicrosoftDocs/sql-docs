@@ -1,4 +1,5 @@
 ---
+description: "New GUI Features in SSMA For Sybase (SybaseToSQL)"
 title: "New GUI Features in SSMA For Sybase (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

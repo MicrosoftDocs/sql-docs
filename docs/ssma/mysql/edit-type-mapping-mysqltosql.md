@@ -1,4 +1,5 @@
 ---
+description: "Edit Type Mapping (MySQLToSQL)"
 title: "Edit Type Mapping (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "VERIFYSIGNEDBYCERT (Transact-SQL)"
 title: "VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

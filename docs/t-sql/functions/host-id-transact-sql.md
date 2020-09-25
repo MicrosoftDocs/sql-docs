@@ -1,4 +1,5 @@
 ---
+description: "HOST_ID (Transact-SQL)"
 title: "HOST_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,8 +31,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 HOST_ID ()  
 ```  
   
@@ -48,14 +48,14 @@ HOST_ID ()
 ## Examples  
  The following example creates a table that uses `HOST_ID()` in a `DEFAULT` definition to record the terminal ID of computers that insert rows into a table recording orders.  
   
-```  
+```sql  
 CREATE TABLE Orders  
-   (OrderID     int       PRIMARY KEY,  
-    CustomerID  nchar(5)  REFERENCES Customers(CustomerID),  
-    TerminalID  char(8)   NOT NULL DEFAULT HOST_ID(),  
-    OrderDate   datetime  NOT NULL,  
-    ShipDate    datetime  NULL,  
-    ShipperID   int       NULL REFERENCES Shippers(ShipperID));  
+   (OrderID     INT       PRIMARY KEY,  
+    CustomerID  NCHAR(5)  REFERENCES Customers(CustomerID),  
+    TerminalID  CHAR(8)   NOT NULL DEFAULT HOST_ID(),  
+    OrderDate   DATETIME  NOT NULL,  
+    ShipDate    DATETIME  NULL,  
+    ShipperID   INT       NULL REFERENCES Shippers(ShipperID));  
 GO  
 ```  
   

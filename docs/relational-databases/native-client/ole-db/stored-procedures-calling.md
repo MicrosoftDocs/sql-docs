@@ -1,4 +1,5 @@
 ---
+description: "Stored Procedures - Calling in SQL Server Native Client"
 title: "Calling a Stored Procedure (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

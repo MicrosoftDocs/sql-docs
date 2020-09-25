@@ -1,4 +1,5 @@
 ---
+description: "catalog.start_execution (SSISDB Database)"
 title: "catalog.start_execution (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

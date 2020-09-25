@@ -1,4 +1,5 @@
 ---
+description: "Edit and Delete an Index (Master Data Services)"
 title: Edit and Delete an Index
 ms.custom: ""
 ms.date: "03/01/2017"

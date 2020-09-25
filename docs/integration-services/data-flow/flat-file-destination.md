@@ -1,4 +1,5 @@
 ---
+description: "Flat File Destination"
 title: "Flat File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

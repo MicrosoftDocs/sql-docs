@@ -1,4 +1,5 @@
 ---
+description: "Server-wide Configuration Catalog Views (Transact-SQL)"
 title: "Server-wide Configuration Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2015"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "catalog views [SQL Server], server-wide configuration"
   - "server-wide configuration catalog views [SQL Server]"
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Server-wide Configuration Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

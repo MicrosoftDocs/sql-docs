@@ -1,4 +1,5 @@
 ---
+description: "What the Driver Does"
 title: "What the Driver Does | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_map_lsn_to_time (Transact-SQL)"
 title: "sys.fn_cdc_map_lsn_to_time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

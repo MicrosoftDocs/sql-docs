@@ -1,4 +1,5 @@
 ---
+description: "Return Codes ODBC"
 title: "Return Codes ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

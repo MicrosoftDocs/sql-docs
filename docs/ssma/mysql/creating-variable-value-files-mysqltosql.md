@@ -1,4 +1,5 @@
 ---
+description: "Creating Variable Value Files (MySQLToSQL)"
 title: "Creating Variable Value Files (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

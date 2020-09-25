@@ -1,4 +1,5 @@
 ---
+description: "Semantic Search (SQL Server)"
 title: "Semantic Search (SQL Server) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

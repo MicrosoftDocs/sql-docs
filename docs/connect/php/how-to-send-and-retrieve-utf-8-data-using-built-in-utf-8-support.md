@@ -120,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-For information about storing Unicode data, see [Working with Unicode Data](https://msdn.microsoft.com/library/ms175180.aspx).  
+For information about storing Unicode data, see [Working with Unicode Data](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105)).  
   
 ## Example  
 The following example is similar to the first sample but instead of specifying the UTF-8 character set on the connection, this sample shows how to specify the UTF-8 character set on the column.  
@@ -225,4 +225,3 @@ sqlsrv_close( $conn);
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

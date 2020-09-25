@@ -133,7 +133,7 @@ The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sandd
 | [Connect to a cluster should bring up cluster dashboard instead of database](https://github.com/microsoft/azuredatastudio/issues/12549) | N/A |
 | For each table in your Azure Data cluster database, there's only an option to **SELECT TOP 1000** instead of **TAKE 10**. | N/A |
 
-You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.
+You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
 You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
 
 ## Next steps

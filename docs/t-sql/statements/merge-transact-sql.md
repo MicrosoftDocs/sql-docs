@@ -478,6 +478,9 @@ GO
 
 In this example, you create node tables `Person` and `City` and an edge table `livesIn`. You use the MERGE statement on the `livesIn` edge and insert a new row if the edge doesn't already exist between a `Person` and `City`. If the edge already exists, then you just update the StreetAddress attribute on the `livesIn` edge.
 
+> [!NOTE]
+> The following example applies to SQL Server starting with 2019.
+
 ```sql
 -- CREATE node and edge tables
 CREATE TABLE Person

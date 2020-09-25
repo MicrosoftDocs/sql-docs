@@ -17,10 +17,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Set or Change the Database Collation
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
+  This topic describes how set and change the database collation by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
   
 > [!IMPORTANT]
-> Altering database collation is not explicitly forbidden in Azure SQL Database. However, altering database collation reqiures exclusive lock on database and other user or background processes (for example background that is taking the backups) might hold the database locks and prevent collation change. `ALTER DATABASE COLLATE` statement on Azure SQL Database is not supported.
+> `ALTER DATABASE COLLATE` statement on Azure SQL Database is not supported.
 
  **In This Topic**  
   

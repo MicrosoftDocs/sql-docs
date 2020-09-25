@@ -133,11 +133,11 @@ Multiple file locations can only be specified from the same storage account and 
 |                          |                CSV                |                      Parquet                       |                        ORC                         |
 | :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
 |  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob[^1])/MSI (dfs[^2])/SERVICE PRINCIPAL/KEY/AAD | SAS (blob[^1])/MSI (dfs[^2])/SERVICE PRINCIPAL/KEY/AAD |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-[^1]: You must use the blob endpoint (**.blob**.core.windows.net) in your external location path.
+1: You must use the blob endpoint (**.blob**.core.windows.net) in your external location path.
 
-[^2]: You must use the dfs endpoint (**.dfs**.core.windows.net) in your external location path.
+2: You must use the dfs endpoint (**.dfs**.core.windows.net) in your external location path.
 
 > [!NOTE]  
 >

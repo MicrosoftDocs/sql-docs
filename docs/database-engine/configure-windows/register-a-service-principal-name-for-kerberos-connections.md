@@ -63,7 +63,7 @@ When the Database Engine service starts, it attempts to register the Service Pri
 > [!NOTE]  
 >  When the Windows domain is configured to run at less than the Windows Server 2008 R2 Windows Server 2008 R2 functional level, then the Managed Service Account will not have the necessary permissions to register the SPNs for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. If Kerberos authentication is required, the Domain Administrator should manually register the SQL Server SPNs on the Managed Service Account.
 
-Additional information is available at [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)  
+Additional information is available at [How to Implement Kerberos Constrained Delegation with SQL Server 2008](/previous-versions/sql/sql-server-2008/ee191523(v=sql.100))  
 
 ##  <a name="Formats"></a> SPN Formats
 
@@ -185,4 +185,4 @@ If SPN de-registration fails during shutdown, this failure is recorded in the SQ
 - [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)
 - [Service Principal Names &#40;SPNs&#41; in Client Connections &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)
 - [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)
-- [Manage Kerberos Authentication Issues in a Reporting Services Environment](https://technet.microsoft.com/library/ff679930.aspx)
+- [Manage Kerberos Authentication Issues in a Reporting Services Environment](/previous-versions/sql/sql-server-2008/ff679930(v=sql.100))

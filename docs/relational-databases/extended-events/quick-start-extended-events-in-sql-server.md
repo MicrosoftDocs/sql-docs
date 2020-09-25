@@ -106,6 +106,9 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
 10. In the **Targets** area, click **Click here to add a target**.
     - In the **Type** drop-down list, choose **event_file**.
     - This means the event data will be stored in a file that we can view.
+    
+> [!NOTE]
+> SQL Server on premise does not support Azure blob storage as data storage target. 
 
     ![New Session > Data Storage > Targets > Type > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 

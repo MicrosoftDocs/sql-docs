@@ -103,7 +103,7 @@ If you run a script that returns a result, you can save that result in different
 
 | Details | Workaround |
 |---------|------------|
-| [Kusto notebook doen't return any rows](https://github.com/microsoft/azuredatastudio/issues/12565). | N/A |
+| [Query result only shows column headers](https://github.com/microsoft/azuredatastudio/issues/12565). | N/A |
 
 ## Next steps
 

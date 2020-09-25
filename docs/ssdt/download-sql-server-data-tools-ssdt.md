@@ -36,7 +36,15 @@ With Visual Studio 2019, the required functionality to enable Analysis Services,
 
 If [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
 
-* For SQL Database projects, select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
+To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
+
+1. Launch the Visual Studio Installer. In the Windows Start menu, you can search for "installer".
+
+   ![Visual Studio Installer in the Windows Start search](../ssdt/media/visual-studio-installer.png)
+
+2. In the installer, select for the edition of Visual Studio that you want to add SSDT to, and then choose **Modify**.
+
+3. Select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
 
    ![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -60,9 +68,17 @@ Now to create Analysis Services, Integration Services, or Reporting Services pro
 
 To install SSDT during [Visual Studio installation](https://docs.microsoft.com/visualstudio/install/install-visual-studio), select the **Data storage and processing** workload, and then select **SQL Server Data Tools**.
 
-If Visual Studio is already installed, you can [edit the list of workloads](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) to include SSDT.
+If Visual Studio is already installed, use the Visual Studio Installer to modify the installed workloads to include SSDT.
 
-![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
+1. Launch the Visual Studio Installer. In the Windows Start menu, you can search for "installer".
+
+   ![Visual Studio Installer in the Windows Start search](../ssdt/media/visual-studio-installer.png)
+
+2. In the installer, select for the edition of Visual Studio that you want to add SSDT to, and then choose **Modify**.
+
+3. Select **SQL Server Data Tools** under **Data storage and processing** in the list of workloads.
+
+   ![Data storage and processing workload](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
 
 ### Install Analysis Services, Integration Services, and Reporting Services tools
 

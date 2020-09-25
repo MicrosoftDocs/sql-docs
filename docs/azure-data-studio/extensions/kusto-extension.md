@@ -125,11 +125,11 @@ The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sandd
 
 | Details | Workaround |
 |---------|------------|
-| SELECT TOP 1000 instead of TAKE 10. | N/A |
 | [Kusto connection Viewlet after reload does not work](https://github.com/microsoft/azuredatastudio/issues/12475). | N/A |
 | [Unable to reconnect automatically](https://github.com/microsoft/azuredatastudio/issues/11830). | Disconnect and reconnect to the Azure Data Explorer cluster. |
-| [Unable to reconnect automatically](https://github.com/microsoft/azuredatastudio/issues/11824). | Disconnect and reconnect to the Azure Data Explorer cluster. |
+| [Refresh Kusto cluster doesn't seem to reconnect properly](https://github.com/microsoft/azuredatastudio/issues/11824). | Disconnect and reconnect to the Azure Data Explorer cluster. |
 | [Connect to a cluster should bring up cluster dashboard instead of database](https://github.com/microsoft/azuredatastudio/issues/12549) | N/A |
+| For each table in your Azure Data cluster database, there is only an option to **SELECT TOP 1000** instead of **TAKE 10**. | N/A |
 
 ## Next steps
 

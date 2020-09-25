@@ -1,8 +1,8 @@
 ---
-title: COPY INTO (Transact-SQL) 
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 08/05/2020
+title: COPY INTO (Transact-SQL) (preview) 
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -23,7 +23,7 @@ monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-This article explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse. Use COPY for the following capabilities:
+This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
 - Execute a single T-SQL statement without having to create any additional database objects
@@ -130,13 +130,19 @@ Multiple file locations can only be specified from the same storage account and 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods are:
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
+1: You must use the blob endpoint (**.blob**.core.windows.net) in your external location path.
 
-When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+2: You must use the dfs endpoint (**.dfs**.core.windows.net) in your external location path.
+
+> [!NOTE]  
+>
+> - When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+>  - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
 
 - Authenticating with Shared Access Signatures (SAS)
   
@@ -265,7 +271,7 @@ The user executing the Copy Command must have the following permissions:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Warehouse, INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
 ## Examples  
 
@@ -437,4 +443,4 @@ Please send any feedback or issues to the following distribution list: sqldwcopy
 
 ## See also  
 
- [Loading overview with SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Loading overview with [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

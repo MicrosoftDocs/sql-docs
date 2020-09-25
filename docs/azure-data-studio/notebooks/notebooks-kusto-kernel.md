@@ -13,7 +13,7 @@ ms.date: 09/22/2020
 
 # Create and run a Kusto (KQL) notebook (Preview)
 
-This article shows you how to create and run an [Azure Data Studio notebook](../notebooks-guidance.md) using the [Kusto (KQL) extension](../extensions/kusto-extension.md), connecting to an Azure Data Explorer cluster.
+This article shows you how to create and run an [Azure Data Studio notebook](./notebooks-guidance.md) using the [Kusto (KQL) extension](../extensions/kusto-extension.md), connecting to an Azure Data Explorer cluster.
 
 With the Kusto (KQL) extension, you can change the kernel option to **Kusto**.
 
@@ -33,7 +33,7 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 1. In Azure Data Studio, connect to your Azure Data Explorer cluster.
 
-2. Navigate to the **Connections** pane and under the **Servers** window, right-click the Kusto database and select *New Notebook*.
+2. Navigate to the **Connections** pane and under the **Servers** window, right-click the Kusto database and select *New Notebook*. You can also go to **File** > **New Notebook**.
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Open notebook":::
 
@@ -73,7 +73,7 @@ For example:
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto kernel code block":::
 
-2. Copy and paste the following example into the cell and select **Run cell**. This example queries the StormEvents data for a speciific event type.
+2. Copy and paste the following example into the cell and select **Run cell**. This example queries the StormEvents data for a specific event type.
 
    ```kusto
     StormEvents
@@ -98,6 +98,15 @@ If you run a script that returns a result, you can save that result in different
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Save result":::
+
+## Known issues
+
+| Details | Workaround |
+|---------|------------|
+| [Query result only shows column headers](https://github.com/microsoft/azuredatastudio/issues/12565). | N/A |
+
+You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
+You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
 
 ## Next steps
 

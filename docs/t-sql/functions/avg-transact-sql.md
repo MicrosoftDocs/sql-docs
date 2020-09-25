@@ -33,7 +33,7 @@ This function returns the average of the values in a group. It ignores null valu
   
 ## Syntax  
   
-```sql
+```syntaxsql
 AVG ( [ ALL | DISTINCT ] expression )  
    [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
@@ -107,7 +107,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 TerritoryID Average Bonus         YTD Sales  
 ----------- --------------------- ---------------------  
 NULL        0.00                  1252127.9471  
@@ -165,11 +165,11 @@ The following example uses the AVG function with the OVER clause, to provide a m
 ```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -179,7 +179,7 @@ ORDER BY TerritoryID,SalesYear;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg            CumulativeTotal  
 ---------------- ----------- ----------- -------------------- -------------------- --------------------  
 274              NULL        2005        559,697.56           559,697.56           559,697.56  
@@ -202,10 +202,10 @@ In this example, the OVER clause does not include PARTITION BY. This means that 
 ```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -214,7 +214,7 @@ ORDER BY SalesYear;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg            CumulativeTotal  
 ---------------- ----------- ----------- -------------------- -------------------- --------------------  
 274              NULL        2005        559,697.56           2,449,684.05         17,147,788.35  

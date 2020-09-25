@@ -29,7 +29,7 @@ Returns syntax information for the specified DBCC command.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )  
 [ WITH NO_INFOMSGS ]  
 ```  

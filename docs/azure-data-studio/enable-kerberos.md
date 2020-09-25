@@ -28,7 +28,8 @@ To get started, you need:
 ## Check if SQL Server has a Kerberos setup
 
 Sign in to the host machine of SQL Server. From the Windows command prompt, use `setspn -L %COMPUTERNAME%` to list all the SPNs for the host. You should see entries that begin with MSSQLSvc/HostName.Domain.com, which means that SQL Server has registered an SPN and is ready to accept Kerberos authentication.
-- If you don't have access to the host of the SQL Server instance, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>`, where *<SQLSERVER_NETBIOS>* is the computer name of the host of the SQL Server instance.
+
+If you don't have access to the host of the SQL Server instance, then from any other Windows OS joined to the same Active Directory, you could use the command `setspn -L <SQLSERVER_NETBIOS>`, where *<SQLSERVER_NETBIOS>* is the computer name of the host of the SQL Server instance.
 
 
 ## Get the Kerberos Key Distribution Center

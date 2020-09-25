@@ -358,7 +358,7 @@ WITH (
 
 ```sql
 COPY INTO test_parquet
-FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/\*.parquet'
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1\/*.parquet'
 WITH (
     FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
@@ -370,7 +370,7 @@ WITH (
 ```sql
 COPY INTO t1
 FROM 
-'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/\*.txt', 
+'https://myaccount.blob.core.windows.net/myblobcontainer/folder0\/*.txt', 
 	'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
 	FILE_TYPE = 'CSV',
@@ -383,7 +383,7 @@ WITH (
 
 ```sql
 COPY INTO dbo.myCOPYDemoTable
-FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/\*.txt'
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0\/*.txt'
 WITH (
     FILE_TYPE = 'CSV',
     CREDENTIAL = (IDENTITY = 'Managed Identity'),

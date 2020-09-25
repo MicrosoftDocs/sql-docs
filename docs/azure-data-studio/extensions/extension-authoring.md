@@ -38,7 +38,7 @@ For an in-depth guide on how to get started with your extension template, see [k
 
 ### Extensibility references
 
-To learn about Azure Data Studio extensibility see [Extensibility overview](../extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/main/samples).
+To learn about Azure Data Studio extensibility, see [Extensibility overview](../extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/main/samples).
 
 ## Debug an extension
 

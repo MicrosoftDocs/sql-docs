@@ -121,16 +121,20 @@ The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sandd
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
-## Limitations and considerations
+## Known issues
 
-- You must choose a database for your Azure Data Explorer cluster before running a Kusto query.
-- If you leave your Azure Data Explorer cluster idle for too long, it can disconnect.
-    - Workaround: Disconnect from the cluster and reconnect.
+| Details | Workaround |
+|---------|------------|
+| [Kusto connection Viewlet after reload does not work](https://github.com/microsoft/azuredatastudio/issues/12475). | N/A |
+| [Unable to reconnect automatically](https://github.com/microsoft/azuredatastudio/issues/11830). | Disconnect and reconnect to the Azure Data Explorer cluster. |
+| [Refresh Kusto cluster doesn't seem to reconnect properly](https://github.com/microsoft/azuredatastudio/issues/11824). | Disconnect and reconnect to the Azure Data Explorer cluster. |
+| [Connect to a cluster should bring up cluster dashboard instead of database](https://github.com/microsoft/azuredatastudio/issues/12549) | N/A |
+| For each table in your Azure Data cluster database, there is only an option to **SELECT TOP 1000** instead of **TAKE 10**. | N/A |
 
 ## Next steps
 
 - [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)
-- [Kqlmagic notebook in Azure Data Studio](../notebooks-kqlmagic.md)
+- [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
 - [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [Using SandDance visualizations](https://sanddance.js.org/)

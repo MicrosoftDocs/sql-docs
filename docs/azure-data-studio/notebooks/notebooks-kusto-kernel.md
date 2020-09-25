@@ -99,11 +99,11 @@ If you run a script that returns a result, you can save that result in different
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Save result":::
 
-## Limitations and considerations
+## Known issues
 
-- You must choose a database for your Azure Data Explorer cluster before running a Kusto query.
-- If you leave your Azure Data Explorer cluster idle for too long, it can disconnect.
-    - Workaround: Disconnect from the cluster and reconnect.
+| Details | Workaround |
+|---------|------------|
+| [Query result only shows column headers](https://github.com/microsoft/azuredatastudio/issues/12565). | N/A |
 
 ## Next steps
 

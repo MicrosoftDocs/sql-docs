@@ -171,9 +171,9 @@ Open the command palette again and find the command that we registered, **Launch
 
 Congratulations! You built and can now ship your first Jupyter Book extension. For more information on Jupyter Books, see [Books with Jupyter](https://jupyterbook.org/intro.html).
 
-## Publish your extension to the Marketplace
+## Publish your extension to the marketplace
 
-The Azure Data Studio extension Marketplace is not fully implemented yet. To publish, host the extension VSIX somewhere (for example, a GitHub Release page) and submit a PR updating [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension info.
+The Azure Data Studio extension marketplace is not fully implemented yet. To publish, host the extension VSIX somewhere (for example, a GitHub Release page) and submit a PR updating [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension info.
 
 ## Next steps
 

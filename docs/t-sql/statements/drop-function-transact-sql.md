@@ -43,7 +43,7 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```
 
 ```syntaxsql
- -- Azure SQL Data Warehouse, Parallel Data Warehouse 
+ -- Azure Synapse Analytics, Parallel Data Warehouse 
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 

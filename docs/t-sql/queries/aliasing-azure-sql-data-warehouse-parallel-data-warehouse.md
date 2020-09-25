@@ -1,7 +1,7 @@
 ---
 title: "Aliasing"
-description: "Aliasing in Azure SQL Data Warehouse and Parallel Data Warehouse."
-titleSuffix: Azure SQL Data Warehouse
+description: "Aliasing in Azure Synapse Analytics and Parallel Data Warehouse."
+titleSuffix: Azure Synapse Analytics
 ms.custom: "seo-lt-2019"
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -14,7 +14,7 @@ ms.author: shkale
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
-# Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
+# Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 

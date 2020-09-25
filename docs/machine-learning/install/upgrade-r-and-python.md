@@ -3,7 +3,7 @@ title: Upgrade Python and R runtimes (binding)
 description: Upgrade Python and R runtimes in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
@@ -12,16 +12,14 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 # Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-This article describes how to use am installation process called **binding** to upgrade the R or Python runtimes in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
+This article describes how to use am installation process called **binding** to upgrade the R or Python runtimes in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md). You can get [newer versions of Python and R](#version-map) by *binding* to [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 > [!IMPORTANT]
 > This article describes an old method for upgrading the R and Python runtimes, called *binding*. If you have installed **Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2** or **Cumulative Update (CU) 22 or later for SQL Server 2017**, see how to [change the default R or Python language runtime to a later version](change-default-language-runtime-version.md) instead.
 
-You can get [newer versions of Python and R](#version-map) by *binding* to Microsoft Machine Learning Server. The version applies to both SQL Server Machine Learning Services (In-Database) and SQL Server R Services (In-Database).
-
 ## What is binding?
 
-Binding is an installation process that swaps out the contents of your **R_SERVICES** and **PYTHON_SERVICES** folders with newer executables, libraries, and tools from [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+Binding is an installation process that replaces the contents of your **R_SERVICES** and **PYTHON_SERVICES** folders with newer executables, libraries, and tools from [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 The uploaded components included with the servicing model has changed. The service updates match the [support Timeline for Microsoft R Server & Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) on the [Modern Lifecycle](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 

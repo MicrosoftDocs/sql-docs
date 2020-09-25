@@ -67,7 +67,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -206,8 +206,8 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### Determining the Last Statistics Update  
  To determine when statistics were last updated, use the [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function.  
   
-### PDW / SQL Data Warehouse  
- The following syntax is not supported by PDW / SQL Data Warehouse  
+### PDW / Azure Synapse Analytics  
+ The following syntax is not supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
 ```syntaxsql
 UPDATE STATISTICS t1 (a,b);   

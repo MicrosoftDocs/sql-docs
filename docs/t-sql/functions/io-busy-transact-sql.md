@@ -36,7 +36,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@IO_BUSY  
 ```  
 
@@ -51,7 +51,7 @@ ms.author: maghan
 ## Examples  
  The following example shows returning the number of milliseconds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has spent performing input/output operations between the start time and the current time. To avoid arithmetic overflow when converting the value to microseconds, the example converts one of the values to the **float** data type.  
   
-```  
+```sql  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   
    GETDATE() AS 'as of';  
 ```  

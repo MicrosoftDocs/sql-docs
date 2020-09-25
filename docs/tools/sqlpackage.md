@@ -64,6 +64,13 @@ Create a SQL script that generates the differences of two .dacpac files:
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
 
+Displays the sqlpackage version:
+
+```
+sqlpackage.exe /Version
+ ```
+
+
 ## Extract Parameters and Properties
 A SqlPackage.exe Extract action creates a schema of a live database from SQL Server or Azure SQL Database to a DACPAC package (.dacpac file). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](#export-parameters-and-properties). 
 

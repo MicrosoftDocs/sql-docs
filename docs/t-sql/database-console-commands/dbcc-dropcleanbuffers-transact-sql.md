@@ -44,7 +44,7 @@ DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]
 ```  
 Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
-```sql  
+```syntaxsql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
 ```
 
@@ -67,7 +67,7 @@ To drop clean buffers from the buffer pool and columnstore objects from the colu
 ## Result Sets  
 DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

@@ -13,19 +13,20 @@ ms.date: 05/19/2020
 
 # Machine Learning extension for Azure Data Studio (Preview)
 
-The Machine Learning extension for [Azure Data Studio](what-is.md) enables you to manage packages, import machine learning models, make predictions, and create notebooks to run experiments for your SQL databases. This extension is currently in preview.
+The Machine Learning extension for [Azure Data Studio](../what-is.md) enables you to manage packages, import machine learning models, make predictions, and create notebooks to run experiments for your SQL databases. This extension is currently in preview.
 
 ## Prerequisites
 
 The following prerequisites need to be installed on the computer you run Azure Data Studio.
 
-- [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
+- [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](../notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
-- [Microsoft ODBC driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) for Windows, macOS, or Linux.
+- [Microsoft ODBC driver 17 for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) for Windows, macOS, or Linux.
 
 - [R 3.5](https://www.r-project.org/) (optional). Other version than 3.5 is currently not supported. Once you have installed R 3.5, you need to enable R and specify the local path to an R installation under [Extension Settings](#settings). This is only required if you want to manage R packages in your database.
 
 ### Trouble installing Python 3 from within ADS?
+
 If you attempt to install Python 3 but get an error about TLS/SSL, add these two, optional components:
 
 _sample error:_
@@ -50,9 +51,9 @@ To install the Machine Learning extension in Azure Data Studio, follow the steps
 
 1. Select the **Machine Learning** extension and view its details.
 
-1. Click **Install**.
+1. Select **Install**.
 
-1. Click **Reload** to enable the extension. This is only required the first time you install an extension).
+1. Select **Reload** to enable the extension. This is only required the first time you install an extension).
 
 <a name="settings"></a>
 
@@ -64,9 +65,9 @@ To change the settings for the Machine Learning extension, follow the steps belo
 
 1. Find the **Machine Learning** extension under **enabled** extensions.
 
-1. Click on the **Manage** icon.
+1. Select on the **Manage** icon.
 
-1. Click on the **Extension Settings** icon.
+1. Select on the **Extension Settings** icon.
 
 The extensions settings look like this:
 
@@ -81,7 +82,7 @@ To use the Machine Learning extension as well as the Python package management i
 
 1. Ensure that **Machine Learning: Enable Python** is enabled. This setting is enabled by default.
 
-1. Provide the path to your pre-existing Python installation under **Machine Learning: Python Path**. This can either be the full path to the Python executable or the folder the executable is in. If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
+1. Provide the path to your pre-existing Python installation under **Machine Learning: Python Path**. This can either be the full path to the Python executable or the folder the executable is in. If you have used a [Python kernel notebook](../notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
 ### Enable R
 
@@ -97,9 +98,9 @@ To use the Machine Learning extension in Azure Data Studio, follow the steps bel
 
 1. Open the **Connections** viewlet in Azure Data Studio.
 
-1. Right click on your server and select **Manage**.
+1. Right Select on your server and select **Manage**.
 
-1. Click **Machine Learning** in the left side menu under **General**.
+1. Select **Machine Learning** in the left side menu under **General**.
 
 Follow the links under **Next steps** to see how you can use the Machine Learning extension for manage packages, make predictions, and import models in your database.
 
@@ -108,6 +109,6 @@ Follow the links under **Next steps** to see how you can use the Machine Learnin
 - [Manage packages in database](machine-learning-extension-manage-packages.md)
 - [Make predictions](machine-learning-extension-predictions.md)
 - [Import or view models](machine-learning-extension-import-view-models.md)
-- [Notebooks in Azure Data Studio](notebooks-guidance.md)
-- [SQL machine learning documentation](../machine-learning/index.yml)
+- [Notebooks in Azure Data Studio](../notebooks-guidance.md)
+- [SQL machine learning documentation](../../machine-learning/index.yml)
 - [Machine learning and AI with ONNX in SQL Edge (preview)](/azure/azure-sql-edge/onnx-overview)

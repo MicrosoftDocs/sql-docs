@@ -8,6 +8,7 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
+ms.custom: references_regions
 ---
 
 # Azure Arc enabled SQL Server (preview)
@@ -20,7 +21,7 @@ The SQL Server can be installed in a virtual or physical machine running Windows
 
 The public preview of Azure Arc enabled SQL Server supports a set of solutions that require the Microsoft Monitoring Agent (MMA) server extension to be installed and connected to a Azure Log analytics workspace for data collection and reporting. These solutions include Advanced data security using Azure Security Center and Azure Sentinel, and SQL Environment health checks using On-demand SQL Assessment feature.
 
-The following diagram illustrates the architecture of Azure Arc enable SQL Server using the virtualized environment.
+The following diagram illustrates the architecture of Azure Arc enable SQL Server.
 
 ![Public preview architecture](media/overview/pubic-preview-architecture.png)
 

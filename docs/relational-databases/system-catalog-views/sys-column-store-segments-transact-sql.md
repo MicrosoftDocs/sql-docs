@@ -46,7 +46,7 @@ Returns one row for each column segment in a columnstore index. There is one col
 |**on_disk_size**|**bigint**|Size of segment in bytes.|  
   
 ## Remarks  
-Segment encoding type is selected by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] with the goal of achieving the lowest storage cost, by analyzing the segment data. If data is mostly distinct use value-based encoding. If data is mostly not distinct, use hash-based encoding. The choice between string-based and value-based encoding is related to the type of data being stored, whether string data or binary data. All encodings take advantage of bit-packing and run-length encoding when possible.
+The columnstore segment encoding type is selected by the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] with the goal of achieving the lowest storage cost, by analyzing the segment data. If data is mostly distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses value-based encoding. If data is mostly not distinct, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] uses hash-based encoding. The choice between string-based and value-based encoding is related to the type of data being stored, whether string data or binary data. All encodings take advantage of bit-packing and run-length encoding when possible.
  
 ## Permissions  
  All columns require at least `VIEW DEFINITION` permission on the table. The following columns return null unless the user also has `SELECT` permission: `has_nulls`, `base_id`, `magnitude`, `min_data_id`, `max_data_id`, and `null_value`.  

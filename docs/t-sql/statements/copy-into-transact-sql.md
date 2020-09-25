@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -130,13 +130,19 @@ Multiple file locations can only be specified from the same storage account and 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods are:
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob[^1])/MSI (dfs[^2])/SERVICE PRINCIPAL/KEY/AAD | SAS (blob[^1])/MSI (dfs[^2])/SERVICE PRINCIPAL/KEY/AAD |
 
+[^1]: You must use the blob endpoint (**.blob**.core.windows.net) in your external location path.
 
-When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+[^2]: You must use the dfs endpoint (**.dfs**.core.windows.net) in your external location path.
+
+> [!NOTE]  
+>
+> - When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+>  - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
 
 - Authenticating with Shared Access Signatures (SAS)
   
@@ -352,7 +358,7 @@ WITH (
 
 ```sql
 COPY INTO test_parquet
-FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/\*.parquet'
 WITH (
     FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
@@ -364,7 +370,7 @@ WITH (
 ```sql
 COPY INTO t1
 FROM 
-'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
+'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/\*.txt', 
 	'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
 	FILE_TYPE = 'CSV',
@@ -377,7 +383,7 @@ WITH (
 
 ```sql
 COPY INTO dbo.myCOPYDemoTable
-FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt'
+FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/\*.txt'
 WITH (
     FILE_TYPE = 'CSV',
     CREDENTIAL = (IDENTITY = 'Managed Identity'),

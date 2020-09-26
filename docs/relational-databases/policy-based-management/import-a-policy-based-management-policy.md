@@ -40,4 +40,4 @@ ms.author: vanto
 
 
 ## Example policies
- Example policies are not included with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], but previously distributed example policies can be accessed by installing [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases).  Once SQL Server Management Studio v17 is installed, example policies can be found in `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. These policies can be imported and used as a basis for your own policy-based management policies.
+ Example policies are available in the [SQL Server Samples code repository](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies). These policies can be imported and used as a basis for your own policy-based management policies.

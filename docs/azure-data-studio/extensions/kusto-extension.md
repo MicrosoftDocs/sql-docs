@@ -15,7 +15,9 @@ ms.date: 09/22/2020
 
 The Kusto (KQL) extension for [Azure Data Studio](../what-is.md) enables you to connect and query to [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) clusters.
 
-Users can now connect and browse their Azure Data Explorer clusters, write and run KQL queries, and author notebooks with the Kusto kernel complete with IntelliSense. By enabling the native Kusto (KQL) experience in Azure Data Studio, data engineers, data scientists, and data analysts can quickly observe trends and anomalies against massive amounts of data stored in Azure Data Explorer.
+Users can write and run KQL queries and author notebooks with the [Kusto kernel](../notebooks/notebooks-kusto-kernel.md) complete with IntelliSense.
+
+By enabling the native Kusto (KQL) experience in Azure Data Studio, data engineers, data scientists, and data analysts can quickly observe trends and anomalies against massive amounts of data stored in Azure Data Explorer.
 
 This extension is currently in preview.
 
@@ -121,16 +123,23 @@ The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sandd
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
-## Limitations and considerations
+## Known issues
 
-- You must choose a database for your Azure Data Explorer cluster before running a Kusto query.
-- If you leave your Azure Data Explorer cluster idle for too long, it can disconnect.
-    - Workaround: Disconnect from the cluster and reconnect.
+| Details | Workaround |
+|---------|------------|
+| [Kusto connection Viewlet after reload doesn't work](https://github.com/microsoft/azuredatastudio/issues/12475). | N/A |
+| [Unable to reconnect automatically](https://github.com/microsoft/azuredatastudio/issues/11830). | Disconnect and reconnect to the Azure Data Explorer cluster. |
+| [Refresh Kusto cluster doesn't seem to reconnect properly](https://github.com/microsoft/azuredatastudio/issues/11824). | Disconnect and reconnect to the Azure Data Explorer cluster. |
+| [Connect to a cluster should bring up cluster dashboard instead of database](https://github.com/microsoft/azuredatastudio/issues/12549) | N/A |
+| For each table in your Azure Data cluster database, there's only an option to **SELECT TOP 1000** instead of **TAKE 10**. | N/A |
+
+You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
+You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
 
 ## Next steps
 
 - [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)
-- [Kqlmagic notebook in Azure Data Studio](../notebooks-kqlmagic.md)
+- [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
 - [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [Using SandDance visualizations](https://sanddance.js.org/)

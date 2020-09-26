@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SCHEMA_ID ( [ schema_name ] )   
 ```  
   
@@ -57,13 +57,13 @@ SCHEMA_ID ( [ schema_name ] )
   
 ### A. Returning the default schema ID of a caller  
   
-```  
+```sql  
 SELECT SCHEMA_ID();  
 ```  
   
 ### B. Returning the schema ID of a named schema  
   
-```  
+```sql  
 SELECT SCHEMA_ID('dbo');  
 ```  
   

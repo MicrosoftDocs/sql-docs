@@ -32,8 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP ENDPOINT endPointName  
 ```  
   
@@ -52,7 +51,7 @@ DROP ENDPOINT endPointName
 ## Examples  
  The following example removes a previously created endpoint called `sql_endpoint`.  
   
-```  
+```sql  
 DROP ENDPOINT sql_endpoint;  
 ```  
   

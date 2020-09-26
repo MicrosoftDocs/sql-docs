@@ -29,7 +29,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```    
+```syntaxsql    
 DROP EVENT SESSION event_session_name  
 ON SERVER  
 ```  

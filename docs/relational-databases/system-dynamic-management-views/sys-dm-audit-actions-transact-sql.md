@@ -37,7 +37,7 @@ ms.author: maghan
 |**containing_group_name**|**nvarchar(120)**|The name of the audit group that contains the specified action. Is NULL if the value in name is a group.|  
   
 ## Permissions  
- Principals must have **SELECT** permission. By default, this is granted to Public.  
+This view is visible to the public.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

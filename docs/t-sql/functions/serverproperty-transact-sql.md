@@ -35,7 +35,7 @@ Returns property information about the server instance.
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SERVERPROPERTY ( 'propertyname' )  
 ```  
 

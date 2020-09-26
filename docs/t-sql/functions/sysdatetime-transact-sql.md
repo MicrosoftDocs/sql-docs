@@ -69,7 +69,7 @@ SYSDATETIME ( )
   
 ### A. Getting the current system date and time  
   
-```  
+```sql
 SELECT SYSDATETIME()  
     ,SYSDATETIMEOFFSET()  
     ,SYSUTCDATETIME()  
@@ -88,7 +88,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
   
 ### B. Getting the current system date  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -101,7 +101,7 @@ SELECT CONVERT (date, SYSDATETIME())
   
 ### C. Getting the current system time  
   
-```  
+```sql
 SELECT CONVERT (time, SYSDATETIME())  
     ,CONVERT (time, SYSDATETIMEOFFSET())  
     ,CONVERT (time, SYSUTCDATETIME())  
@@ -123,7 +123,7 @@ GETUTCDATE()       20:18:45.3470000
   
 ### D: Getting the current system date and time  
   
-```  
+```sql
 SELECT SYSDATETIME();  
 ```  
   

@@ -1213,6 +1213,10 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
 
 For more information, see [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).
 
+> [!IMPORTANT]
+> By default, the database copy is created with the same backup storage redundancy as that of the source database. Changing the backup storage redundancy while creating a database copy is not supported via T-SQL. 
+
+
 ## Permissions
 
 To create a database, a login must be one of the following:
@@ -1301,6 +1305,15 @@ The following example sets the catalog collation to DATABASE_DEFAULT during data
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### Create database using zone-redundancy for backups
+
+The following example sets zone-redundancy for database backups. Both point-in-time restore backups and long-term retention backups (if configured) will use the same backup storage redundancy.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## See also

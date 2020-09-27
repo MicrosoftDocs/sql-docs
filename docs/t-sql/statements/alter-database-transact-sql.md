@@ -440,7 +440,7 @@ ALTER DATABASE current
 > EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
 
 MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) 
-Changes the storage redundancy of point-in-time restore backups and long-term retention backups of the database.
+Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting. 
 
 MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed.
@@ -744,6 +744,14 @@ Updates a single database to the Standard edition (service tier) with a compute 
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
+### H. Update the backup storage redundancy of a database
+
+Updates the backup storage redundancy of a database to zone-redundant. All future backups of this database will use the new setting. This includes point-in-time restore backups and long-term retention backups (if configured). 
+
+```sql
+ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 ```
 
 ## See also

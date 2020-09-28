@@ -334,7 +334,7 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
 > - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
 > - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, refer to [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **Starting with version 1.0.7.0, the SQL Server Connector supports filtering messages and network request retry logic.**
+> - **Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.**
   
   ![Screenshot of the SQL Server Connector installation wizard](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

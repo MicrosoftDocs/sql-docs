@@ -21,6 +21,7 @@ This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in e
 In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for Oracle contains the following changes:
 
 * Stores full source/target server version in the project metadata (requires project upgrade)
+* Use DBA data dictionaries for objects discovery when possible
 * Fix multiple parsers issues (`PIVOT`/`UNPIVOT`, `MERGE`, alternative quoting)
 * Fix conversion of `INSERTING`/`DELETING`/`UPDATING` special functions in triggers
 

@@ -92,46 +92,45 @@ ms.author: jaszymas
 
 Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Versions 1.0.1.0 and newer are supported in production environments. Use the following instructions to upgrade to the latest version available on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344).
 
-If you are currently using Version 1.0.1.0 or newer, follow these steps to update to the latest version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. These instructions avoid the need to restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance.
- 
-1. Install the newest version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344). In the installer wizard, save the new DLL file under a file path different from your original [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector DLL's file path. For example, the new file path could be: `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
- 
-1. In the instance of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], run the following Transact-SQL command to point your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to your new version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector:
+### Upgrade
 
-    ```sql
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll'
-    GO  
-    ```
+1. Stop SQL Server service using SQL Server Configuration Manager
+1. Uninstall the old version using Control Panel\Programs\Programs and Features
+    1. Application name: SQL Server Connector for Microsoft Azure Key Vault
+    1. Version: 15.0.300.96 (or older)
+    1. DLL file date: 01/30/2018 3:00 PM (or older)
+1. Install (upgrade) new SQL Server Connector for Microsoft Azure Key Vault
+    1. Version: 15.0.2000.367
+    1. DLL file date: 09/11/2020 ‏‎5:17 AM
+1. Start SQL Server service
+1. Test encrypted DB(s) is/are accessible
 
-If you are currently using Version 1.0.0.440 or older, follow these steps to update to the latest version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector.
-  
-1. Stop the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Stop the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector service.  
-  
-1. Uninstall the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector using the Windows Programs and Features feature.  
-  
-     (Alternatively, you can rename the folder that the DLL file is in. The default name of the folder is  "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for Microsoft Azure Key Vault".  
-  
-1. Install the newest version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector from the Microsoft Download Center.  
-  
-1. Restart the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Run the following statement to alter the EKM Provider to start using the newest version of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. Make sure that the file path is pointing to where you downloaded the newest version. (This step can be skipped if the new version is being installed in the same location as the original version.)
-  
-    ```sql  
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
-    GO  
-    ```  
-  
+### Rollback
+
+1. Stop SQL Server service using SQL Server Configuration Manager
+
+1. Uninstall the new version using Control Panel\Programs\Programs and Features
+    1. Application name: SQL Server Connector for Microsoft Azure Key Vault
+    1. Version: 15.0.2000.367
+    1. DLL file date: 09/11/2020 ‏‎5:17 AM
+
+1. Install old version of SQL Server Connector for Microsoft Azure Key Vault
+    1. Version: 15.0.300.96
+    1. DLL file date: 01/30/2018 3:00 PM
+1. Start SQL Server service
+
 1. Check that the databases using TDE are accessible.  
   
-1. After validating that the update works, you may delete the old [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector folder (if you chose to rename it instead of uninstalling in Step 3.)  
+1. After validating that the update works, you may delete the old [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector folder (if you chose to rename it instead of uninstalling in Step 3.)
+
+### Older versions of the SQL Server Connector
   
+Deep links to older versions of the SQL Server Connector
+
+- Current: [1.0.5.0 (version 15.0.2000.367) – File date September 11, 2020](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.5.0 (version 15.0.300.96) – File date January 30, 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.4.0: (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+
 ### Rolling the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Principal
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses Service Principals created in Azure Active Directory as credentials to access the Key Vault.  Service Principal has a Client ID and Authentication Key.  A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential is set up with the **VaultName**, **Client ID**, and **Authentication Key**.  The **Authentication Key** is valid for a certain period of time (one or two years).   Before the time period expires a new key must be generated in Azure AD for the Service Principal.  Then the credential has to be changed in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] maintains a cache for the credential in the current session, so when a credential is changed, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] should be restarted.  

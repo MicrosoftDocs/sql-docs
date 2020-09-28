@@ -184,10 +184,10 @@ The following partners can provide alternative methods for migration as well:
 :::row-end:::
 :::row:::
    :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/ispirer_logo.png" alt-text="Ispirer":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
+     [:::image type="content" source="media/db2-to-sql-server/ispirer-logo.png" alt-text="Ispirer":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
    :::column-end:::
    :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/querysurge_logo.png" alt-text="Querysurge":::](https://www.querysurge.com/company/partners/microsoft)
+      [:::image type="content" source="media/db2-to-sql-server/querysurge-logo.png" alt-text="Querysurge":::](https://www.querysurge.com/company/partners/microsoft)
    :::column-end:::
    :::column span="":::
      [:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo.png" alt-text="Scalability Experts":::](http://www.scalabilityexperts.com/products/index.html)

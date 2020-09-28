@@ -34,7 +34,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@REMSERVER  
 ```  
 
@@ -49,7 +49,7 @@ ms.author: jrasnick
 ## Examples  
  The following example creates the procedure `usp_CheckServer` that returns the name of the remote server.  
   
-```  
+```sql  
 CREATE PROCEDURE usp_CheckServer  
 AS  
 SELECT @@REMSERVER;  
@@ -57,7 +57,7 @@ SELECT @@REMSERVER;
   
  The following stored procedure is created on the local server `SEATTLE1`. The user logs on to a remote server, `LONDON2`, and runs `usp_CheckServer`.  
   
-```  
+```sql  
 EXEC SEATTLE1...usp_CheckServer;  
 ```  
   

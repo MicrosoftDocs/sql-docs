@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SIN ( float_expression )  
 ```  
   
@@ -47,10 +47,10 @@ SIN ( float_expression )
 ## Examples  
  The following example calculates the SIN for a specified angle.  
   
-```  
-DECLARE @angle float;  
+```sql  
+DECLARE @angle FLOAT;  
 SET @angle = 45.175643;  
-SELECT 'The SIN of the angle is: ' + CONVERT(varchar,SIN(@angle));  
+SELECT 'The SIN of the angle is: ' + CONVERT(VARCHAR, SIN(@angle));  
 GO  
 ```  
   
@@ -65,7 +65,7 @@ The SIN of the angle is: 0.929607
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example calculates the sine for a specified angle.  
   
-```  
+```sql  
 SELECT SIN(45.175643);  
 ```  
   

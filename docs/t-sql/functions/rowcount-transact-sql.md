@@ -32,7 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@ROWCOUNT  
 ```  
   
@@ -67,7 +67,7 @@ ms.author: jrasnick
 ## Examples  
  The following example executes an `UPDATE` statement and uses `@@ROWCOUNT` to detect if any rows were changed.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee   

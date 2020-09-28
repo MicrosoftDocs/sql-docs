@@ -139,18 +139,18 @@ The registry entries described in this article are found under this key:
 
 Optionally, you can use command-line to generate the key:
 
-```dos
+```cmd
 --Create the logging parameter using (Administrator) Command Line:
-REG ADD "HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault" /v Level /t REG_DWORD /d 1 
+REG ADD "HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\Log" /v Level /t REG_DWORD /d 1 
 
 --Validate the new registry entry
-REG QUERY "HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault" /v Level
+REG QUERY "HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\Log" /v Level
 ```
 
 Application event log entries that are missing messages can be fixed using a registry entry as well. If the event log has text like:  
 **The description for Event ID 0 from source SQL Server Connector for Microsoft Azure Key Vault cannot be found...**.  
 
-```dos
+```cmd
 --Create the registry entry to enable missing messages (this works with any version)
 REG ADD "HKLM\SYSTEM\ControlSet001\Services\EventLog\Application\SQL Server Connector for Microsoft Azure Key Vault" /v EventMessageFile /t REG_EXPAND_SZ /d "C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll"
 

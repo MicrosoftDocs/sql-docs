@@ -34,7 +34,7 @@ The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitors the q
 
 ## Why automatic tuning?
 
-Three of the main tasks in classic database administration are monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries, and identifying indexes that should be added to improve performance, or indexes which are rarely used and could be removed to improve performance. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring a database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
+Three of the main tasks in classic database administration are monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries, and identifying indexes that should be added to improve performance, or indexes that are rarely used and could be removed to improve performance. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring a database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
 
 ### How does automatic tuning work?
 
@@ -42,7 +42,7 @@ Automatic tuning is a continuous monitoring and analysis process that constantly
 
 ![Automatic tuning process](./media/tuning-process.png)
 
-This process enables the database to dynamically adapt to your workload by finding what indexes and plans might improve the performance of your workloads and what indexes affect your workloads. Based on these findings, automatic tuning applies tuning actions that improve the performance of your workload. In addition, automatic tuning continuously monitors the performance of the database after implementing any changes to ensure that it improves performance of your workload. Any action that didn't improve performance is automatically reverted. This verification process is a key feature which ensures that any change made by automatic tuning do not decrease the overall performance of your workload.
+This process enables the database to dynamically adapt to your workload by finding what indexes and plans might improve the performance of your workloads and what indexes affect your workloads. Based on these findings, automatic tuning applies tuning actions that improve the performance of your workload. In addition, automatic tuning continuously monitors the performance of the database after implementing any changes to ensure that it improves performance of your workload. Any action that didn't improve performance is automatically reverted. This verification process is a key feature that ensures any change made by automatic tuning does not decrease the overall performance of your workload.
 
 ## Automatic plan correction
 
@@ -93,7 +93,7 @@ Without automatic tuning, users must periodically monitor the system and look fo
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides all necessary views and procedures required to monitor performance and fix problems in Query Store.
 
-In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can find plan choice regressions using Query Store system views. Strating with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV. The DMV shows information about the problem, the importance of the issue, and details such as the identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] statement that can be executed to fix the problem.
+In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can find plan choice regressions using Query Store system views. Starting with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV. The DMV shows information about the problem, the importance of the issue, and details such as the identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] statement that can be executed to fix the problem.
 
 | type | description | datetime | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
@@ -156,7 +156,7 @@ Indexes speed up some of your queries that read data from the tables, however th
 
 Finding the optimal set of indexes that improve performance of the queries that read data from your tables and have minimal impact on updates might require continuous and complex analysis.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] uses built-in intelligence and advanced rules that analyze your queries, identify indexes that would be optimal for your current workloads, and identify the indexes which might need to be removed. Azure SQL Database ensures that you have a minimal necessary set of indexes that optimize the queries that read data, with minimized impact on the other queries.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] uses built-in intelligence and advanced rules that analyze your queries, identify indexes that would be optimal for your current workloads, and identify the indexes that might need to be removed. Azure SQL Database ensures that you have a minimal necessary set of indexes that optimize the queries that read data, with minimized impact on the other queries.
 
 ### Automatic index management
 

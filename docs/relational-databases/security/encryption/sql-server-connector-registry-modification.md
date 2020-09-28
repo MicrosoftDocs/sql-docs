@@ -94,35 +94,35 @@ Modify registry entries to enable SQL Server Connector logging error and informa
 1. There are two ways to open Registry Editor in Windows 10:
     - In the search box on the taskbar, type regedit. Then, select the top result for Registry Editor (Desktop app).
 
-    ![ekm-regedit-open.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-open.png "ekm-regedit-open.png")
+    ![ekm regedit open](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-open.png "ekm regedit open")
     - Press and hold or right-click the Start  button, then select Run. Enter regedit in the Open: box and select OK.
 
-   ![ekm-regedit-start](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-start.png "ekm-regedit-start.png")
+   ![ekm-regedit-start](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-start.png "ekm regedit start")
 
 1. Navigate to this registry key:
 
     **HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\**
 
-    ![ekm-regedit-akv.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv.png "ekm-regedit-akv.png")  
+    ![ekm regedit akv](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv.png "ekm regedit akv")  
 
 1. Add a new Key under **Azure Key Vault** named `Log`:
 
     **HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\Log\\**
 
-    ![ekm-regedit-akv-log.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log.png "ekm-regedit-akv-log.png")  
+    ![ekm regedit akv log](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log.png "ekm regedit akv log.png")  
 
 1. Below the **Log** key, add a DWORD (32-bit) Value named `Level`:
 
     **HKLM\SOFTWARE\Microsoft\SQL Server Cryptographic Provider\Azure Key Vault\\Log\\**
 
-    ![ekm-regedit-akv-log-dword.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-dword.png "ekm-regedit-akv-log-dword.png")  
+    ![ekm regedit akv log dword](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-dword.png "ekm regedit akv log dword")  
 
 1. Set the value of the DWORD as an appropriate Log Level (0,1,2):
    1. 0 (Info) - **Default**
    1. 1 (Error)
    1. 2 (No Log)
 
-   ![ekm-regedit-akv-log-level.png](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-level.png "ekm-regedit-akv-log-level.png")  
+   ![ekm regedit akv log level](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-akv-log-level.png "ekm regedit akv log level")  
 
 The registry entries described in this article are found under this key:
 
@@ -163,5 +163,3 @@ REG QUERY "HKLM\SYSTEM\ControlSet001\Services\EventLog\Application\SQL Server Co
 - For additional sample scripts, see the blog at [SQL Server Transparent Data Encryption and Extensible Key Management with Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549)
 - [Extensible Key Management (EKM)](extensible-key-management-ekm.md)  
 - [Extensible Key Management using Azure Key Vault](extensible-key-management-using-azure-key-vault-sql-server.md)
-
-

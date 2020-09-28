@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In this quickstart, learn how to work with data structures and data objects in Python using SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2020  
+ms.date: 09/28/2020  
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam

@@ -146,7 +146,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
 >  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 >  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 
-11. On the **Report Server Status** page of the Reporting Services Configuration Manager, Click **Stop** and then click **Start** to restart the report server.  
+11. On the **Report Server Status** page of the Report Server Configuration Manager, Click **Stop** and then click **Start** to restart the report server.  
   
 ## See also
 

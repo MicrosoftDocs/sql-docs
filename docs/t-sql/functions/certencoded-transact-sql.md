@@ -26,7 +26,7 @@ This function returns the public portion of a certificate in binary format. This
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CERTENCODED ( cert_id )  
 ```  
   

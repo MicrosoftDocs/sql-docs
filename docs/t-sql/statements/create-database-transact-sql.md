@@ -1,8 +1,8 @@
 ---
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
-ms.custom: ""
-ms.date: 07/21/2020
+ms.custom: "references_regions"
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -78,7 +78,7 @@ In SQL Server, this statement creates a new database and the files used and thei
 
 ## Syntax
 
-Create a database.
+Create a database
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -127,14 +127,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 Attach a database
@@ -151,6 +143,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -206,7 +205,7 @@ For more information about the Windows and SQL collation names, see [COLLATE](~/
 > Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.
 
 WITH \<option>
-**\<filestream_options>**
+**\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
@@ -923,8 +922,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -999,6 +1004,12 @@ CATALOG_COLLATION
 Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the default collation for the database. This is the behavior found in SQL Server.
 
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation. This is the default setting on Azure SQL Database if unspecified.
+
+BACKUP_STORAGE_REDUNDANCY
+Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with 'GEO' backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage. 
+
+> [!IMPORTANT]
+> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Southeast Asia Azure region only.  
 
 EDITION
 Specifies the service tier of the database.
@@ -1204,6 +1215,10 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
 
 For more information, see [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).
 
+> [!IMPORTANT]
+> By default, the database copy is created with the same backup storage redundancy as that of the source database. Changing the backup storage redundancy while creating a database copy is not supported via T-SQL. 
+
+
 ## Permissions
 
 To create a database, a login must be one of the following:
@@ -1292,6 +1307,15 @@ The following example sets the catalog collation to DATABASE_DEFAULT during data
 ```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
+```
+
+### Create database using zone-redundancy for backups
+
+The following example sets zone-redundancy for database backups. Both point-in-time restore backups and long-term retention backups (if configured) will use the same backup storage redundancy.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
 ```
 
 ## See also

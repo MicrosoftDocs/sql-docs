@@ -6,7 +6,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.addreplicawizard.enterpasswords.f1"
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1

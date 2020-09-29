@@ -43,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 expression IS [ NOT ] NULL  
 ```  
   
@@ -70,7 +70,7 @@ expression IS [ NOT ] NULL
 ## Examples  
  The following example returns the name and the weight for all products for which either the weight is less than `10` pounds or the color is unknown, or `NULL`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight, Color  
@@ -83,7 +83,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the full names of all employees with middle initials.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, MiddleName  

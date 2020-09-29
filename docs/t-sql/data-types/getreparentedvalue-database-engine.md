@@ -26,12 +26,12 @@ Returns a node whose path from the root is the path to _newRoot_, followed by th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 node. GetReparentedValue ( oldRoot, newRoot )  
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  

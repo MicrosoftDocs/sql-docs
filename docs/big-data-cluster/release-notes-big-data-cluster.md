@@ -57,7 +57,7 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release <sup>1</sup> | BDC Version  | `azdata` Version <sup>2</sup> | Release date |
+| Release | BDC Version  | `azdata` Version <sup>1</sup> | Release date |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -67,9 +67,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> There are no SQL Server 2019 Big Data Clusters updates for CU7.
-
-<sup>2</sup> `azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
+<sup>1</sup> `azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
 ## How to install updates
 

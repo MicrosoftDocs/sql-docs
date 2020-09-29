@@ -40,13 +40,13 @@ Removes all elements from the plan cache, removes a specific plan from the plan 
 ## Syntax  
 Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
-```sql
+```syntaxsql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
 Syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
   
-```sql
+```syntaxsql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 
      [ WITH NO_INFOMSGS ]   
 [;]  

@@ -319,8 +319,7 @@ Notes about the table:
 #### ENCODING
    `Encoding = {'UTF8' | 'UTF16'}`
    
- In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and PDW (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
-
+ In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
 ## Permissions  
  Requires ALTER ANY EXTERNAL FILE FORMAT permission.

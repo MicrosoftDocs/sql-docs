@@ -49,7 +49,7 @@ WITH IDENTITY = 'identity_name'
 Specifies the name of the database scoped credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.
 
 IDENTITY **='**_identity\_name_**'**
-Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into SQL DW, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into SQL DW, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY arguement. It should just be the account name.
 
 > [!NOTE]
 > WITH IDENTITY is not required if the container in Azure Blob storage is enabled for anonymous access. For an example querying Azure Blob storage, see [Importing into a table from a file stored on Azure Blob storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).

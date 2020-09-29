@@ -29,8 +29,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-20
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TRY_CAST ( expression AS data_type [ ( length ) ] )  
 ```  
   
@@ -115,7 +114,7 @@ Explicit conversion from data type int to xml is not allowed.
 ### C. TRY_CAST succeeds  
  This example demonstrates that the expression must be in the expected format.  
   
-```  
+```sql
 SET DATEFORMAT mdy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  

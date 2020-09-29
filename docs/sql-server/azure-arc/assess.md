@@ -31,7 +31,7 @@ You can enable SQL assessment for your SQL Server instances by following these s
 
    ![SQL Assessment selection](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. Specify a working directory on the data collection machine. During collection and analysis, data is temporarily stored under that folder. If the folder doesn't exist, it is created automatically.
+1. Specify a working directory on the data collection machine. By default, `C:\sql_assessment\work_dir` will be used. During collection and analysis, data is temporarily stored under that folder. If the folder doesn't exist, it is created automatically.
 
 1. Click on __Download configuration script__ and copy the downloaded script to the target machine.
 
@@ -70,3 +70,5 @@ The Microsoft Monitoring Agent scans the working folder every 15 minutes looking
 ## Next steps
 
 See the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) for more information.
+
+To obtain comprehensive support of the On-demand SQL Assessment, a Premier or Unified support subscription is required. See [Azure Premier Support](https://azure.microsoft.com/support/plans/premier) for details.

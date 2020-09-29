@@ -49,7 +49,7 @@ See [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TIMESTAMP  
 ```  
   

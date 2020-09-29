@@ -28,13 +28,16 @@ In this step you generate a script that discovers all SQL Server instances insta
 
 ![Start creation](media/join/start-creation-of-sql-server-azure-arc-resource.png)
     
-1. Review the pre-requisites and go to the **Server details** tab.  
+2. Review the pre-requisites and go to the **Server details** tab.  
 
-1. Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
+3. Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
+
+> [!IMPORTANT]
+> If the machine hosting the SQL Server instance is already [connected to Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding __Machine - Azure Arc__ resource.
 
 ![Server details](media/join/server-details-sql-server-azure-arc.png)
 
-1. Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
+4. Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
 
 ![Download script](media/join/download-script-sql-server-azure-arc.png)
 
@@ -71,7 +74,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ## Register SQL Server instances on multiple machines
 
-You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same script you generated for a single machine. Follow the inststructions how [connect SQL Server instances to Azure Arc at scale](connect-at-scale.md).
+You can connect multiple SQL Server instances installed on multiple Windows or Linux machines to Azure Arc using the same script you generated for a single machine. Follow the instructions how [connect SQL Server instances to Azure Arc at scale](connect-at-scale.md).
 
 ## Validate the SQL Server - Azure Arc resources
 
@@ -87,5 +90,6 @@ To remove an existing __SQL Server - Azure Arc__ resource, go to the resource gr
 
 ## Next steps
 
-[Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
-[Configure on-demand SQL assessment for your SQL Server instance](assess.md)
+* [Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
+
+* [Configure on-demand SQL assessment for your SQL Server instance](assess.md)

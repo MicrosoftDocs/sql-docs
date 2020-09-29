@@ -35,7 +35,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 MOVE CONVERSATION conversation_handle  
    TO conversation_group_id  
 [ ; ]  
@@ -66,7 +65,7 @@ MOVE CONVERSATION conversation_handle
 ## Examples  
  The following example moves a conversation to a different conversation group.  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER,  
         @conversation_group_id UNIQUEIDENTIFIER ;  
   

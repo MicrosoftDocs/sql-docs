@@ -325,7 +325,7 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 - `TRIPLE_DES_3KEY`
 - `NO_ENCRYPTION`
 
-If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
+If you choose to encrypt, you will also have to specify the encryptor using the encryptor options:
 
 - `SERVER CERTIFICATE` = Encryptor_Name
 - `SERVER ASYMMETRIC KEY` = Encryptor_Name
@@ -1286,7 +1286,7 @@ For example:
 
 Requires the **BACKUP DATABASE** permission or membership in the **db_backupoperator** fixed database role. The master database cannot be backed up but by a regular user that was added to the **db_backupoperator** fixed database role. The master database can only be backed up by **sa**, the fabric administrator, or members of the **sysadmin** fixed server role.
 
-Requires a Windows account that has permission to access, create, and write to the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. To add these network credentials to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the [sp_pdw_add_network_credentials - Azure Synapse Analytics](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure.
+Requires a Windows account that has permission to access, create, and write to the backup directory. You must also store the Windows account name and password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. To add these network credentials to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure.
 
 For more information about managing credentials in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], see the [Security](#Security) section.
 

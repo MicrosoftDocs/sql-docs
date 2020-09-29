@@ -44,7 +44,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  
 ```  
@@ -70,11 +69,10 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
   
-```sql  
-  
+```sql
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -85,10 +83,9 @@ WHERE FREETEXT(Description, @SearchWord);
  Because "parameter sniffing" does not work across conversion, use **nvarchar** for better performance. In the example, declare `@SearchWord` as `nvarchar(30)`.  
   
 ```sql  
-  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -145,7 +142,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30);  
+DECLARE @SearchWord NVARCHAR(30);  
 SET @SearchWord = N'high-performance';  
 SELECT Description   
 FROM Production.ProductDescription   

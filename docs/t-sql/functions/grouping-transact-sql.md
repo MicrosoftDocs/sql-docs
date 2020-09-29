@@ -33,8 +33,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GROUPING ( <column_expression> )  
 ```  
   
@@ -53,7 +52,7 @@ GROUPING ( <column_expression> )
 ## Examples  
  The following example groups `SalesQuota` and aggregates `SaleYTD` amounts in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The `GROUPING` function is applied to the `SalesQuota` column.  
   
-```  
+```sql 
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
 FROM Sales.SalesPerson  
 GROUP BY SalesQuota WITH ROLLUP;  

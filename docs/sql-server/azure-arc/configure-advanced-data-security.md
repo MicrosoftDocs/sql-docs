@@ -56,6 +56,9 @@ Next, you need to enable advanced data security for SQL Server instance.
 
    ![Upgrade workspace](media/configure-advanced-data-security/upgrade-log-analytics-workspace.png)
 
+ > [!NOTE]
+   > The first scan to generate the vulnerability assessment will happen within 24 hours after enabling advanced data security. After that, auto scans will be performed every week on Sunday.
+
 ## Explore
 
 Explore security anomalies and threats in Azure Security Center.

@@ -24,6 +24,7 @@ helpviewer_keywords:
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
+ms.custom: references_regions
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
@@ -441,6 +442,9 @@ ALTER DATABASE current
 
 MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) 
 Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting. 
+
+> [!IMPORTANT]
+> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Southeast Asia Azure region only.  
 
 MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed.

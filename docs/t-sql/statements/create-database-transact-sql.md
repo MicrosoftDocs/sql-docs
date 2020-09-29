@@ -1,7 +1,7 @@
 ---
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
-ms.custom: ""
+ms.custom: "references_regions"
 ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -1008,6 +1008,9 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 
 BACKUP_STORAGE_REDUNDANCY
 Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with 'GEO' backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage. 
+
+> [!IMPORTANT]
+> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Southeast Asia Azure region only.  
 
 EDITION
 Specifies the service tier of the database.

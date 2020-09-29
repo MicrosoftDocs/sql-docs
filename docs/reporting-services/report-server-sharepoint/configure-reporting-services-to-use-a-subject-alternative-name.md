@@ -139,7 +139,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
     ```  
 > [!TIP]  
 >  * For SSRS 2017 and later, the `user` value is `NT SERVICE\SQLServerReportingServices` and the `sddl` value is `D:(A;;GX;;;S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301)`.
->  * For PBIRS, the `user` value is `NT SERVICE\PowerBIReportServer` and the `sddl` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
+>  * For Power BI Report Server, the `user` value is `NT SERVICE\PowerBIReportServer` and the `sddl` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
 
 > [!NOTE]  
 > For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by typing the following:

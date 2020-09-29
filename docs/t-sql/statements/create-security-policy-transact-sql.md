@@ -117,7 +117,7 @@ ON [dbo].[Customer];
 ### B. Creating a policy that affects multiple tables  
  The following syntax creates a security policy with three filter predicates on three different tables, and enables the security policy.  
   
-```  
+```sql  
 CREATE SECURITY POLICY [FederatedSecurityPolicy]   
 ADD FILTER PREDICATE [rls].[fn_securitypredicate1]([CustomerId])   
     ON [dbo].[Customer],  
@@ -131,7 +131,7 @@ WITH (STATE = ON);
 ### C. Creating a policy with multiple types of security predicates  
  Adding both a filter predicate and a block predicate to the Sales table.  
   
-```  
+```sql  
 CREATE SECURITY POLICY rls.SecPol  
     ADD FILTER PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales,  
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  

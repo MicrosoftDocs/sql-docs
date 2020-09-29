@@ -6,7 +6,7 @@ ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
@@ -16,7 +16,7 @@ ms.author: mathoma
 # Create a domain-independent availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On Availability Groups (AGs) require an underlying Windows Server failover cluster (WSFC). Deploying a WSFC through Windows Server 2012 R2 has always required that the servers participating in a WSFC, also known as nodes, are joined to the same domain. For more information on Active Directory Domain Services (AD DS), see [here](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+Always On availability groups (AGs) require an underlying Windows Server failover cluster (WSFC). Deploying a WSFC through Windows Server 2012 R2 has always required that the servers participating in a WSFC, also known as nodes, are joined to the same domain. For more information on Active Directory Domain Services (AD DS), see [here](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 
 The AD DS and WSFC dependency is more complex than what has been previously deployed with a Database Mirroring (DBM) configuration, since DBM can be deployed across multiple data centers using certificates, without any such dependencies.  A traditional availability group spanning more than one data center requires that all servers must be joined to the same Active Directory domain -- different domains, even trusted domains, do not work. All the servers must be nodes of the same WSFC. The following figure shows this configuration. SQL Server 2016 also has distributed availability groups which can also achieve this goal in a different way.
 

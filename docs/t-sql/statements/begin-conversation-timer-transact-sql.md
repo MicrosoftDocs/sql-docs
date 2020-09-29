@@ -44,7 +44,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   
 [ ; ]  
@@ -74,7 +73,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ## Examples  
  The following example sets a two-minute time-out on the dialog identified by `@dialog_handle`.  
   
-```  
+```sql 
 -- @dialog_handle is of type uniqueidentifier and  
 -- contains a valid conversation handle.  
   

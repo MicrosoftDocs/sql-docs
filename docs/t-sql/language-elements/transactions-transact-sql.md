@@ -43,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Applicable only to multiple active result sets (MARS), a [!INCLUDE[tsql](../../includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that is not committed or rolled back when a batch completes is automatically rolled back by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE] 
-> For special considerations related to Data Warehouse products, see [Transactions (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+> For special considerations related to Data Warehouse products, see [Transactions (Azure Synapse Analytics)](transactions-sql-data-warehouse.md).   
 
 ## In This Section  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following transaction statements:  

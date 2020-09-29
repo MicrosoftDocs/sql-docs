@@ -75,7 +75,7 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+-- Syntax for Azure Synapse Analytics
 
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  

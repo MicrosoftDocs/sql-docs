@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )  
 ```  
   
@@ -65,7 +65,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
 ### A. Simple example without fractions of a second  
   
-```  
+```sql
 SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
 ```  
   

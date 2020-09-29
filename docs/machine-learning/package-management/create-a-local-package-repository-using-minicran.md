@@ -1,9 +1,9 @@
 ---
 title: Create a repository with miniCRAN
+titleSuffix: SQL machine learning
 description: Learn how to install R packages offline by using the miniCRAN package to create a local repository of packages and dependencies.
 ms.prod: sql
 ms.technology: machine-learning
-
 ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson

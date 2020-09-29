@@ -49,7 +49,7 @@ WITH IDENTITY = 'identity_name'
 Specifies the name of the database scoped credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.
 
 IDENTITY **='**_identity\_name_**'**
-Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into SQL DW, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into SQL DW, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY arguement. It should just be the account name.
 
 > [!NOTE]
 > WITH IDENTITY is not required if the container in Azure Blob storage is enabled for anonymous access. For an example querying Azure Blob storage, see [Importing into a table from a file stored on Azure Blob storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
@@ -118,7 +118,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### C. Creating a database scoped credential for PolyBase Connectivity to Azure Data Lake Store
 
-The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can be used by PolyBase in Azure SQL Data Warehouse.
+The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can be used by PolyBase in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 Azure Data Lake Store uses an Azure Active Directory Application for Service to Service Authentication.
 Please [create an AAD application](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.

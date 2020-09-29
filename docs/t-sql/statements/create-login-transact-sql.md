@@ -325,7 +325,7 @@ CREATE LOGIN login_name
 ## Arguments
 
 *login_name*
-Specifies the name of the login that is created. Single and pooled databases in Azure SQL Database and databases in Azure Synapse Analytics (formerly Azure SQL Data Warehouse) supports only SQL logins. To create accounts for Azure Active Directory users or to create user accounts not associated with a login, use the [CREATE USER](create-user-transact-sql.md) statement. For more information, see [Manage Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Specifies the name of the login that is created. Single and pooled databases in Azure SQL Database and databases in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] supports only SQL logins. To create accounts for Azure Active Directory users or to create user accounts not associated with a login, use the [CREATE USER](create-user-transact-sql.md) statement. For more information, see [Manage Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='**password**'*
 Specifies the password for the SQL login that is being created. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.

@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/31/2020"
+ms.date: "9/28/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,23 @@ ms.author: alexiva
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for Oracle contains the following changes:
+
+* Stores full source/target server version in the project metadata (requires project upgrade)
+* Use DBA data dictionaries for objects discovery when possible
+* Fix multiple parsers issues (`PIVOT`/`UNPIVOT`, `MERGE`, alternative quoting)
+* Fix conversion of `INSERTING`/`DELETING`/`UPDATING` special functions in triggers
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for Oracle contains the following changes:
+
+* Fix conversion of `SQLCODE` and `SQLERRM` special functions in local procedures
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
 
 ## SSMA v8.12
 

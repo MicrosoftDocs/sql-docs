@@ -6,7 +6,7 @@ ms.date: 06/30/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "failover modes [SQL Server]"
   - "Availability Groups [SQL Server], deploying"

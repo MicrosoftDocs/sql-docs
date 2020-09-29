@@ -6,7 +6,7 @@ ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth

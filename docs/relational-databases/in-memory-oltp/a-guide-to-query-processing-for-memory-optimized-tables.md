@@ -267,35 +267,31 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Note that the Hash Match operator is not supported for aggregation. Therefore, all aggregation in natively compiled stored procedures uses the Stream Aggregate operator, even if the plan for the same query in interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] uses the Hash Match operator.|  
   
 ## Column Statistics and Joins  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains statistics on values in index key columns to help estimate the cost of certain operations, such as index scan and index seeks. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also creates statistics on non-index key columns if you explicitly create them or if the query optimizer creates them in response to a query with a predicate.) The main metric in cost estimation is the number of rows processed by a single operator. Note that for disk-based tables, the number of pages accessed by a particular operator is significant in cost estimation. However, as page count is not important for memory-optimized tables (it is always zero), this discussion focuses on row count. The estimation starts with the index seek and scan operators in the plan, and is then extended to include the other operators, like the join operator. The estimated number of rows to be processed by a join operator is based on the estimation for the underlying index, seek, and scan operators. For interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables, you can observe the actual execution plan to see the difference between the estimated and actual row counts for the operators in the plan.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains statistics on values in index key columns to help estimate the cost of certain operations, such as index scan and index seeks. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also creates statistics on non-index key columns if you explicitly create them or if the query optimizer creates them in response to a query with a predicate.) The main metric in cost estimation is the number of rows processed by a single operator. Note that for disk-based tables, the number of pages accessed by a particular operator is significant in cost estimation. However, as page count is not important for memory-optimized tables (it is always zero), this discussion focuses on row count. The estimation starts with the index seek and scan operators in the plan, and is then extended to include the other operators, like the join operator. The estimated number of rows to be processed by a join operator is based on the estimation for the underlying index, seek, and scan operators. For interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables, you can observe the actual execution plan to see the difference between the estimated and actual row counts for the operators in the plan.  
   
- For the example in figure 1,  
+For the example in figure 1,  
   
--   The clustered index scan on Customer has estimated 91; actual 91.  
+- The clustered index scan on Customer has estimated 91; actual 91.  
+- The nonclustered index scan on CustomerID has estimated 830; actual 830.  
+- The Merge Join operator has estimated 815; actual 830.  
   
--   The nonclustered index scan on CustomerID has estimated 830; actual 830.  
+The estimates for the index scans are accurate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains the row count for disk-based tables. Estimates for full table and index scans are always accurate. The estimate for the join is fairly accurate, too.  
   
--   The Merge Join operator has estimated 815; actual 830.  
+If these estimates change, the cost considerations for different plan alternatives change as well. For example, if one of the sides of the join has an estimated row count of 1 or just a few rows, using a nested loops joins is less expensive. Consider the following query:  
   
- The estimates for the index scans are accurate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains the row count for disk-based tables. Estimates for full table and index scans are always accurate. The estimate for the join is fairly accurate, too.  
-  
- If these estimates change, the cost considerations for different plan alternatives change as well. For example, if one of the sides of the join has an estimated row count of 1 or just a few rows, using a nested loops joins is less expensive.  
-  
- The following is the plan for the query:  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- After deleting all rows but one in the table Customer:  
+After deleting all rows but one in the `Customer` table, the following query plan is generated:  
   
- ![Column statistics and joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Column statistics and joins.")  
+![Column statistics and joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Column statistics and joins.")  
   
- Regarding this query plan:  
+Regarding this query plan:  
   
--   The Hash Match has been replaced with a Nested Loops physical join operator.  
-  
--   The full index scan on IX_CustomerID has been replaced with an index seek. This resulted in scanning 5 rows, instead of the 830 rows required for the full index scan.  
+- The Hash Match has been replaced with a Nested Loops physical join operator.  
+- The full index scan on IX_CustomerID has been replaced with an index seek. This resulted in scanning 5 rows, instead of the 830 rows required for the full index scan.  
   
 ## See Also  
  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

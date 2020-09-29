@@ -75,7 +75,7 @@ ORDER BY end_time DESC;
 ## See Also
 
  [Tame explosive growth with elastic databases](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [Create and manage a SQL Database elastic database pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
  [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

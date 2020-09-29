@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```sql  
+```syntaxsql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   

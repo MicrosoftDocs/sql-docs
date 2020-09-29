@@ -29,7 +29,7 @@ This function returns a **date** value that maps to the specified year, month, a
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATEFROMPARTS ( year, month, day )  
 ```  
   
@@ -62,7 +62,7 @@ SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ----------------------------------  
 2010-12-31  

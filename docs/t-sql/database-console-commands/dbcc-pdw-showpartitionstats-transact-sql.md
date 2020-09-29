@@ -25,7 +25,7 @@ Displays the size and number of rows for each partition of a table in a [!INCLUD
 ## Syntax  
   
 ```syntaxsql
-Show the partition stats for a table  
+--Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  

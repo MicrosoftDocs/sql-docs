@@ -5,7 +5,7 @@ ms.date: "11/05/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], flexible failover policy"
   - "Availability Groups [SQL Server], failover"

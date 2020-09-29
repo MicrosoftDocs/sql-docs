@@ -30,7 +30,7 @@ This function returns the requested property of a specified collation.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   
@@ -61,7 +61,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 1252   
 ```  
   
@@ -73,7 +73,7 @@ SELECT COLLATIONPROPERTY('Traditional_Spanish_CS_AS_KS_WS', 'CodePage')
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 1252   
 ```  
   

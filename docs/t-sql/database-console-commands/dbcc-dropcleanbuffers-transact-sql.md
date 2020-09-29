@@ -42,9 +42,9 @@ Syntax for SQL Server and SQL on-demand (preview):
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Syntax for Azure SQL Warehouse and Parallel Data Warehouse:
+Syntax for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
-```sql  
+```syntaxsql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
 ```
 
@@ -67,19 +67,13 @@ To drop clean buffers from the buffer pool and columnstore objects from the colu
 ## Result Sets  
 DBCC DROPCLEANBUFFERS on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 ## Permissions  
-
-Applies to: SQL Server, Parallel Data Warehouse 
-
-- Requires membership in the **sysadmin** fixed server role.  
-
-Applies to: Azure SQL Data Warehouse
-
-- Requires membership in the DB_OWNER fixed server role.  
+Requires membership in the `sysadmin` fixed server role for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+Requires membership in the `DB_OWNER` fixed server role for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## See Also  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

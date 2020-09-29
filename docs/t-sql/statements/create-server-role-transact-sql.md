@@ -35,7 +35,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
@@ -75,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ### A. Creating a server role that is owned by a login  
  The following example creates the server role `buyers` that is owned by login `BenMiller`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;  
 GO  
@@ -84,7 +84,7 @@ GO
 ### B. Creating a server role that is owned by a fixed server role  
  The following example creates the server role `auditors` that is owned the `securityadmin` fixed server role.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;  
 GO  

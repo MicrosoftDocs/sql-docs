@@ -121,7 +121,7 @@ This can be the default non-root user, or any other non-root user you’d like t
 ```bash
 chown -R 10001:0 <database file dir>
 ```
-## Encrypting Connections to SQL Server Linux Containers
+## Encrypting connections to SQL Server Linux Containers
 
 To encrypt connections to SQL Server Linux containers, you will need a certificate the requirements of which are documented [here].
 

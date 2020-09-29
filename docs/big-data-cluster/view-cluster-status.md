@@ -1,7 +1,7 @@
 ---
-title: View cluster status
+title: Monitoring Big Data Clusters (BDC) Overview
 titleSuffix: SQL Server big data clusters
-description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and azdata commands.
+description: This article explains how to monitor BDC with available options.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
@@ -15,11 +15,12 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to access the service endpoints and view the status of a SQL Server big data cluster  components. You can use both Azure Data Studio and **azdata**, and this article covers both techniques.
+This article describes how to monitor Big data Cluster in the following ways : 
 
-
-
-
+- Monitor BDC Cluster with Azure Data Studio
+- Monitor BDC Cluster with Azdata utility 
+- Monitor BDC Cluster with Grafana Dashboard
+- Monitor BDC Cluster with Juypter notebooks and Azure Data Studio (ADS)
 
 
 

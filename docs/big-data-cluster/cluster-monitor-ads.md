@@ -14,6 +14,8 @@ ms.technology: big-data-cluster
 
 # Monitor cluster status with Azure Data Studio
 
+This article explains how to view the status of a big data cluster using Azure Data Studio.
+
 ## <a id="datastudio"></a> Use Azure Data Studio
 
 After downloading the latest **insiders build** of [Azure Data Studio](https://aka.ms/getazuredatastudio), you can view service endpoints and the status of a big data cluster with the SQL Server big data cluster dashboard. Some of the features below are only first available in the insiders build of Azure Data Studio.

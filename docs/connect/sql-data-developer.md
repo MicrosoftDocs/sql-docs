@@ -16,7 +16,7 @@ ms.author: v-daenge
 Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud.  
 
 ## SQL Data storage
-* [SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md): Use the  SQL Server Database Engine to create relational databases for online transaction processing or online analytical processing data. 
+* [SQL Server Database Engine](../database-engine/install-windows/install-sql-server-database-engine.md): Use the  SQL Server Database Engine to create relational databases for online transaction processing or online analytical processing data. 
 * [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Use Azure SQL to move your database to the cloud 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): Use SQL Server Compact to build standalone and occasionally connected applications for mobile devices, desktops, and Web clients.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Use LocalDB during development to write and test Transact-SQL code without having to manage a full server instance of SQL Server.

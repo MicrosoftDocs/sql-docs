@@ -24,7 +24,7 @@ ms.author: drskwier
 manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/28/2020
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -77,6 +77,9 @@ There are a few [known issues](release-notes-ssms.md#known-issues-186) with this
 ## Previous versions
 
 This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
+
+> [!NOTE]
+> In December 2021, releases of SSMS prior to 18.6 will no longer authenticate through Azure Active Directory with MFA. To continue utilizing Azure Active Directory authentication with MFA please install or update to SSMS 18.6 or newer.
 
 ## Unattended install
 
@@ -140,12 +143,12 @@ Supported Operating Systems:
 
 Supported hardware:
 
-- 1.8 GHz or faster processor. Dual-core or better recommended
+- 1.8 GHz or faster x86 (Intel, AMD) processor. Dual-core or better recommended
 - 2 GB of RAM; 4 GB of RAM recommended (2.5 GB minimum if running on a virtual machine)
 - Hard disk space: Minimum of 2 GB up to 10 GB of available space
 
 > [!NOTE]
-> SSMS runs on Windows (AMD or Intel) only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS runs on Windows only. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Azure Data Studio is a cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

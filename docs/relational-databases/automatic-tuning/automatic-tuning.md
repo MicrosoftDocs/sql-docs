@@ -2,7 +2,7 @@
 title: "Automatic tuning | Microsoft Docs"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: "fasttrack-edit"
-ms.date: "08/16/2017"
+ms.date: "09/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,6 +10,10 @@ ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance tuning [SQL Server]"
+  - "automatic tuning"
+  - "aprc"
+  - "automatic plan regression correction"
+  - "last known good plan"
 ms.assetid: 
 author: "jovanpop-msft"
 ms.author: "jovanpop"
@@ -20,16 +24,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 
 Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
 
-Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] notifies you whenever a potential performance issue is detected, and lets you apply corrective actions, or lets the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically fix performance problems. Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enables you to identify and fix performance issues caused by **query execution plan choice regressions**. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] also creates necessary indexes and drops unused indexes. For more information on query execution plans, see [Execution Plans](../../relational-databases/performance/execution-plans.md).
+Automatic tuning, introduced in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], notifies you whenever a potential performance issue is detected and lets you apply corrective actions, or lets the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically fix performance problems. Automatic tuning [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enables you to identify and fix performance issues caused by **query execution plan choice regressions**. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] also creates necessary indexes and drops unused indexes. For more information on query execution plans, see [Execution Plans](../../relational-databases/performance/execution-plans.md).
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitors the queries that are executed on the database and automatically improves performance of the workload. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] has a built-in intelligence mechanism that can automatically tune and improve performance of your queries by dynamically adapting the database to your workload. There are two automatic tuning features that are available:
 
- -	**Automatic plan correction** identifies problematic query execution plans and fixes query execution plan performance problems. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
- -	**Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+-	**Automatic plan correction** identifies problematic query execution plans, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) issues, and fixes query execution plan-related performance problems by forcing the last known good plan before the regression occurred. **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+-	**Automatic index management** identifies indexes that should be added in your database, and indexes that should be removed. **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## Why automatic tuning?
 
-Three of the main tasks in classic database administration are monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries, and identifying indexes that should be added to improve performance, or indexes which are rarely used and could be removed to improve performance. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring a database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
+Three of the main tasks in classic database administration are monitoring the workload, identifying critical [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries, and identifying indexes that should be added to improve performance, or indexes that are rarely used and could be removed to improve performance. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides detailed insight into the queries and indexes that you need to monitor. However, constantly monitoring a database is a hard and tedious task, especially when dealing with many databases. Managing a huge number of databases might be impossible to do efficiently. Instead of monitoring and tuning your database manually, you might consider delegating some of the monitoring and tuning actions to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] using automatic tuning feature.
 
 ### How does automatic tuning work?
 
@@ -37,19 +42,25 @@ Automatic tuning is a continuous monitoring and analysis process that constantly
 
 ![Automatic tuning process](./media/tuning-process.png)
 
-This process enables the database to dynamically adapt to your workload by finding what indexes and plans might improve the performance of your workloads and what indexes affect your workloads. Based on these findings, automatic tuning applies tuning actions that improve the performance of your workload. In addition, automatic tuning continuously monitors the performance of the database after implementing any changes to ensure that it improves performance of your workload. Any action that didn't improve performance is automatically reverted. This verification process is a key feature which ensures that any change made by automatic tuning do not decrease the overall performance of your workload.
+This process enables the database to dynamically adapt to your workload by finding what indexes and plans might improve the performance of your workloads and what indexes affect your workloads. Based on these findings, automatic tuning applies tuning actions that improve the performance of your workload. In addition, automatic tuning continuously monitors the performance of the database after implementing any changes to ensure that it improves performance of your workload. Any action that didn't improve performance is automatically reverted. This verification process is a key feature that ensures any change made by automatic tuning does not decrease the overall performance of your workload.
 
 ## Automatic plan correction
 
-Automatic plan correction is an automatic tuning feature that identifies **execution plan choice regression** and automatically fixes the issue by forcing the last known good plan. For more information about query execution plans and the query optimizer, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md).
+Automatic plan correction is an automatic tuning feature that identifies **execution plan choice regression** and automatically fixes the issue by forcing the last known good plan. For more information about query execution plans and the Query Optimizer, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md).
+
+> [!IMPORTANT]
+> Automatic plan correction depends on Query Store being enabled in the database for workload tracking. 
 
 ### What is execution plan choice regression?
 
-The [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different execution plans to execute the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries. Query plans depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query might change over time depending on changes in these factors. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression.
+The [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different execution plans to execute the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] queries. Query plans depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] query might change over time depending on changes in these factors. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression, such as a [parameter sensitivity or parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) related issue. 
 
  ![Query execution plan choice regression](media/plan-choice-regression.png "Query execution plan choice regression") 
 
 Whenever you notice a plan choice regression has occurred, you should find a previous good plan and force it to be used instead of the current one. This can be done by using the `sp_query_store_force_plan` procedure. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] provides information about regressed plans and recommended corrective actions. Additionally, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enables you to fully automate this process and let [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fix any problem found related to the plan change.
+
+> [!IMPORTANT]
+> Automatic plan correction should be used in the scope of a database compatibility level upgrade, after a baseline has been captured, to automatically mitigate workload upgrade risks. For more information about this use case, see [Keep performance stability during the upgrade to newer SQL Server](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
 
 ### Automatic plan choice correction
 
@@ -57,10 +68,10 @@ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can automatically switch to t
 
 ![Query execution plan choice correction](media/force-last-good-plan.png "Query execution plan choice correction") 
 
-The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically detects any potential plan choice regression, including the plan that should be used instead of the wrong plan. When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies the last known good plan, it automatically monitors the performance of the forced plan. If the forced plan is not better than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan. If the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifies that the forced plan is better than the regressed plan, the forced plan will be retained. It will be retained until a recompile occurs (for example, on the next statistics update or schema change).
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically detects any potential plan choice regression, including the plan that should be used instead of the wrong plan. When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies the last known good plan before the regression occurred, it automatically monitors the performance of the forced plan. If the forced plan is not better than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan. If the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifies that the forced plan is better than the regressed plan, the forced plan will be retained. It will be retained until a recompile occurs (for example, on the next statistics update or schema change). For more information about plan forcing and types of plans that can be forced, see [Plan forcing limitations](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md#plan-forcing-limitations).
 
 > [!NOTE]
-> If the SQL Server instance is restarted before a plan forcing action is verified, that plan will be automatically unforced. Otherwise, plan forcing is persisted on SQL Server restarts.
+> If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is restarted before a plan forcing action is verified, that plan will be automatically unforced. Otherwise, plan forcing is persisted on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restarts.
 
 ### Enabling automatic plan choice correction
 
@@ -82,7 +93,7 @@ Without automatic tuning, users must periodically monitor the system and look fo
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides all necessary views and procedures required to monitor performance and fix problems in Query Store.
 
-In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can find plan choice regressions using Query Store system views. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. The view shows information about the problem, the importance of the issue, and details such as the identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] statement that can be executed to fix the problem.
+In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can find plan choice regressions using Query Store system views. Starting with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV. The DMV shows information about the problem, the importance of the issue, and details such as the identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql-md.md)] statement that can be executed to fix the problem.
 
 | type | description | datetime | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
@@ -90,11 +101,11 @@ In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can find plan choic
 | `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37 ms to 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 
 Some columns from this view are described in the following list:
- - Type of the recommended action - `FORCE_LAST_GOOD_PLAN`
- - Description that contains information why the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this plan change is a potential performance regression
- - Datetime when the potential regression is detected
- - Score of this recommendation
- - Details about the issues such as ID of the detected plan, ID of the regressed plan, ID of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md)
+ - Type of the recommended action `FORCE_LAST_GOOD_PLAN`.
+ - Description that contains information why the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this plan change is a potential performance regression.
+ - Datetime when the potential regression is detected.
+ - Score of this recommendation.
+ - Details about the issues such as ID of the detected plan, ID of the regressed plan, ID of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md).
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
 
@@ -130,7 +141,7 @@ The column `estimated_gain` represents the estimated number of seconds that woul
 Although the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] provides all the information required to identify plan choice regressions, continuous monitoring and fixing performance issues might become a tedious process. Automatic tuning makes this process much easier.
 
 > [!NOTE]
-> Data in the sys.dm_db_tuning_recommendations DMV is not persisted between restarts of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
+> Data in the `sys.dm_db_tuning_recommendations` DMV is not persisted between restarts of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
 ## Automatic index management
 
@@ -145,7 +156,7 @@ Indexes speed up some of your queries that read data from the tables, however th
 
 Finding the optimal set of indexes that improve performance of the queries that read data from your tables and have minimal impact on updates might require continuous and complex analysis.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] uses built-in intelligence and advanced rules that analyze your queries, identify indexes that would be optimal for your current workloads, and identify the indexes which might need to be removed. Azure SQL Database ensures that you have a minimal necessary set of indexes that optimize the queries that read data, with minimized impact on the other queries.
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] uses built-in intelligence and advanced rules that analyze your queries, identify indexes that would be optimal for your current workloads, and identify the indexes that might need to be removed. Azure SQL Database ensures that you have a minimal necessary set of indexes that optimize the queries that read data, with minimized impact on the other queries.
 
 ### Automatic index management
 

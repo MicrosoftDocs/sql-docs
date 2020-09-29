@@ -2,7 +2,7 @@
 title: "Understanding XA transactions"
 description: "The Microsoft JDBC Driver for SQL Server provides support for Java Platform, Enterprise Edition/JDBC 2.0 optional distributed transactions."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "09/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -57,7 +57,7 @@ The following steps are required if you want to use XA data sources together wit
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files. If you have different versions of the JDBC driver on different clients, it is recommended to use the newest sqljdbc_xa.dll on the server.  
 
 > [!NOTE]  
-> Starting with SQL Server 2019 public preview CTP 2.0, the JDBC XA distributed transaction components are included in the SQL Server engine, and can be enabled or disabled with a system stored procedure.
+> The JDBC XA distributed transaction components are included in the SQL Server engine in SQL Server 2017 starting with cumulative update 16 and in SQL Server 2019, and can be enabled or disabled with a system stored procedure.
 > To enable the required components to perform XA distributed transactions using the JDBC driver, execute the following stored procedure.
 >
 > EXEC sp_sqljdbc_xa_install

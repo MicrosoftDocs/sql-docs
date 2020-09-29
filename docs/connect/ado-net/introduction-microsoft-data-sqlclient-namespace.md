@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Microsoft.Data.SqlClient namespace"
-description: "Introduction page for the Microsoft.Data.SqlClient namespace."
-ms.date: "06/23/2019"
+description: "Learn about the Microsoft.Data.SqlClient namespace and how it is the preferred way to connect to SQL for .NET applications."
+ms.date: "09/29/2020"
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -200,7 +200,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### UTF-8 support
 
-UTF-8 support does not require any application code changes. These SqlClient changes optimize client-server communication when the server supports UTF-8 and the underlying column collation is UTF-8. See the UTF-8 section under [What's new in SQL Server 2019 preview](../../sql-server/what-s-new-in-sql-server-ver15.md).
+UTF-8 support does not require any application code changes. These SqlClient changes optimize client-server communication when the server supports UTF-8 and the underlying column collation is UTF-8. See the UTF-8 section under [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### Always encrypted with enclaves
 

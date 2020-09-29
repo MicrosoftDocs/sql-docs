@@ -98,7 +98,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ### A. Granting VIEW DEFINITION permission on an availability group  
  The following example grants `VIEW DEFINITION` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -107,7 +107,7 @@ GO
 ### B. Granting TAKE OWNERSHIP permission with the GRANT OPTION  
  The following example grants `TAKE OWNERSHIP` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski` with the `GRANT OPTION`.  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  
@@ -117,7 +117,7 @@ GO
 ### C. Granting CONTROL permission on an availability group  
  The following example grants `CONTROL` permission on availability group `MyAg` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski`. CONTROL allows the login complete control of the availability group, even though they are not the owner of the availability group. To change the ownership, see [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski;  
 GO  

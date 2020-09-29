@@ -209,7 +209,7 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### PDW / Azure Synapse Analytics  
  The following syntax is not supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
-```syntaxsql
+```sql
 UPDATE STATISTICS t1 (a,b);   
 ```  
   

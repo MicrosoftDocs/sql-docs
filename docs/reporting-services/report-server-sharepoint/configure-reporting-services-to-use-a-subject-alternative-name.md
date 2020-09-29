@@ -51,7 +51,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
     \Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer  
     ```  
     
-     For PBIRS, the file is located by default in the following folder:  
+     For Power BI Report Server, the file is located by default in the following folder:  
   
     ```  
     \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer  

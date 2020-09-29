@@ -88,7 +88,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
   
   > [!TIP]  
 >  * For SSRS 2017 and later, the `AccountSid` value is `S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301` and the `AccountName` value is `NT SERVICE\SQLServerReportingServices`.
->  * For PBIRS, the `AccountSid` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663` and the `AccountName` value is `NT SERVICE\PowerBIReportServer`.
+>  * For Power BI Report Server, the `AccountSid` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663` and the `AccountName` value is `NT SERVICE\PowerBIReportServer`.
   
 5.  Save the rsreportserver.config file.  
   

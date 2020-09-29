@@ -37,9 +37,6 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-> [!NOTE]
-> In December 2021, releases of SSMS prior to 18.6 will no longer authenticate through Azure Active Directory with MFA. To continue utilizing Azure Active Directory authentication with MFA please install or update to SSMS 18.6 or newer.
-
 ## Current SSMS release
 
 ### 18.6
@@ -103,10 +100,11 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/A|
 | Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. Workaround: Identify the Integration services related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect | N/A|
 
-
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ## Previous SSMS releases
+
+[!INCLUDE[ssms-186-connect-aad](../../includes/ssms-connect-aad.md)]
 
 Download previous SSMS versions by selecting the download link in the related section.
 
@@ -149,7 +147,6 @@ Download previous SSMS versions by selecting the download link in the related se
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
-
 
 ### 18.5
 

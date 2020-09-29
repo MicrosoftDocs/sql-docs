@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/28/2020
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -36,6 +36,9 @@ But today the new file name is 'release-notes-ssms.md' (still in 'docs/ssms/').
 Thank you.
 GeneMi. 2019/04/02.
 -->
+
+> [!NOTE]
+> In December 2021, releases of SSMS prior to 18.6 will no longer authenticate through Azure Active Directory with MFA. To continue utilizing Azure Active Directory authentication with MFA please install or update to SSMS 18.6 or newer.
 
 ## Current SSMS release
 

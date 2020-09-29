@@ -1,7 +1,7 @@
 ---
-title: Monitor cluster with Jupyter notebooks and Azure Data Studio
+title: Gathering and analysing logs with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Monitoring cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
+description: Logging cluster with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -12,26 +12,26 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Monitoring cluster with notebooks
+# Gathering and analysing logs in the cluster with notebooks
 
-This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in monitoring Big Data Clusters.
+This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in logging Big Data Clusters.
 
 Each notebook is designed to check for its own dependencies. A 'run all cells' will either complete successfully or will raise an exception with a hyperlinked 'HINT' to another notebook to resolve the missing dependency. Follow the 'HINT' hyperlink to the subsequent notebook, press 'run all cells', and upon success return back to the original notebook, and 'run all cells'.
 
 Once all dependencies are installed, but 'run all cells' fails, each notebook will analyze results and where possible, produce a hyperlinked 'HINT' to another notebook to further aid in resolving the issue.
 
 
-## Monitoring Kubernetes
+## Gathering logs from Big Data Cluster (BDC)
 
-This section contains a set of notebooks useful for getting information and status about a SQL Server big data cluster using the `azdata` command line interface (CLI).
+This section contains a set of notebooks useful for getting logs from a SQL Server Big Data Cluster (BDC).
 
-<monitor-k8s> notebook table
+<log-files> notebook table
 
+## Analyse logs from Big Data Clusters (BDC)
 
-## Monitor Big Data Cluster (BDC)
+A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster.  The analysis process will SUGGEST follow on TSGs to run for known issue found in the logs
+<log-analyzers> notebook table
 
-This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server Big Data Cluster (BDC).
-<monitor-bdc> notebook table
 
 
 ## Next steps

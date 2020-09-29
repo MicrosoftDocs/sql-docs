@@ -1,7 +1,7 @@
 ---
 description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
-ms.custom: ""
+ms.custom: "references_regions"
 ms.date: 09/29/2020
 ms.prod: sql
 ms.reviewer: ""
@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-ms.custom: references_regions
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"

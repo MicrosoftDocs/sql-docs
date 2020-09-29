@@ -123,9 +123,9 @@ By default, the typical ports used by SQL Server and associated database engine 
   
 ##### To add a program exception to the firewall using Windows Defender Firewall with Advanced Security
   
-1. From the start menu, type *wf.msc*. Press Enter or Select the search result wf.msc. This will open **Windows Defender Firewall with Advanced Security**.
+1. From the start menu, type *wf.msc*. Press Enter or select the search result wf.msc to open **Windows Defender Firewall with Advanced Security**.
 1. In the left pane, select **Inbound rules**.
-1. In the right pane, under **Actions** select **New rule...**. **New Inbound Rule Wizard** opens.
+1. In the right pane, under **Actions**, select **New rule...**. **New Inbound Rule Wizard** opens.
 1. On **Rule type**, select **Program**. Select **Next**.
 1. On **Program**, select **This program path**. Select **Browse** to locate your instance of SQL Server. The program is called sqlservr.exe. It is normally located at:
 
@@ -133,8 +133,8 @@ By default, the typical ports used by SQL Server and associated database engine 
 
    Select **Next**.
 
-1. On **Action**, click **Allow the connection**. Select Next.
-1. On Profile, include all three profiles. Select **Next**.
+1. On **Action**, select **Allow the connection**. Select **Next**.
+1. On **Profile**, include all three profiles. Select **Next**.
 1. On **Name**, type a name for the rule. Select **Finish**.
 
 For more information about endpoints, see [Configure the Database Engine to Listen on Multiple TCP Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) and [Endpoints Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 

@@ -15,7 +15,7 @@ ms.author: maggies
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-This topic explains how to configure Reporting Services (SSRS) and Power BI Report Server (PBIRS) to use a Subject Alternative Name (SAN) by modifying the rsreportserver.config file and using the Netsh.exe tool.
+This topic explains how to configure Reporting Services (SSRS) and Power BI Report Server to use a Subject Alternative Name (SAN), by modifying the rsreportserver.config file and using the Netsh.exe tool.
 
 The instructions apply to the Web Service URL as well as the Web Portal URL in the Report Server Configuration Manager tool.
 

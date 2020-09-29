@@ -34,6 +34,7 @@ helpviewer_keywords:
   - "moving databases"
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
+ms.custom: references_regions
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1008,6 +1009,9 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 
 BACKUP_STORAGE_REDUNDANCY
 Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with 'GEO' backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage. 
+
+> [!IMPORTANT]
+> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Southeast Asia Azure region only.  
 
 EDITION
 Specifies the service tier of the database.

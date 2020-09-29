@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "pensivebrian"
 ms.author: "broneill"
 ms.reviewer: "drswkier; sstein"
-ms.date: 07/06/2020
+ms.date: 09/29/2020
 ---
 
 # SqlPackage.exe
@@ -131,7 +131,7 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |---|---|---|---|
 |**/Action:**|**/a**|Publish|Specifies the action to be performed. |
 |**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault if a publish operation includes modifications to an encrypted table/column. |
 |**/ClientId:**|**/cid**|{string}|Specifies the Client ID to be used in authenticating against Azure KeyVault, when necessary |
 |**/DeployScriptPath:**|**/dsp**|{string}|Specifies an optional file path to output the deployment script. For Azure deployments, if there are TSQL commands to create or modify the master database, a script will be written to the same path but with "Filename_Master.sql" as the output file name. |
 |**/DeployReportPath:**|**/drp**|{string}|Specifies an optional file path to output the deployment report xml file. |

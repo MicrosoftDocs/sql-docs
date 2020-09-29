@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "pensivebrian"
 ms.author: "broneill"
 ms.reviewer: "drswkier; sstein"
-ms.date: 09/28/2020
+ms.date: 09/29/2020
 ---
 
 # SqlPackage.exe

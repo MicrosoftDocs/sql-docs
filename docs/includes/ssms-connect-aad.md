@@ -1,6 +1,6 @@
 ---
-title: Use  AAD with SSMS 18.6 and later
-description: message to explai starting December 2021, you can only use AAD with SSMS 18.6 amd later
+title: Connect to SQL using AAD with SSMS 18.6 and later
+description: message to explain starting December 2021, you can only use AAD with SSMS 18.6 amd later
 author: markingmyname
 ms.author: maghan
 ---

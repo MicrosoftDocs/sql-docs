@@ -1,7 +1,7 @@
 ---
 title: What is SQL Server Language Extensions?
 titleSuffix: 
-description: Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019, Java is supported. The relational data can be used in the external code using the extensibility framework.
+description: Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019, R, Python and Java are supported. The relational data can be used in the external code using the extensibility framework.
 author: dphansen
 ms.author: davidph 
 ms.date: 08/19/2020
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md).
 
-In SQL Server 2019, Java is supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
+In SQL Server 2019, R, Python and Java are supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
 
 > [!NOTE]
 > For executing Python or R in SQL Server, see the [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) documentation.
@@ -32,7 +32,13 @@ Language Extensions provides multiple advantages:
 + Speed. Databases are optimized for set-based operations. Recent innovations in databases such as in-memory tables make summaries and aggregations lightning, and are a perfect complement to data science.
 + Ease of deployment and integration. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is the central point of operations for many other data management tasks and applications. By using data that resides in the database, you ensure that the data used by Java is consistent and up-to-date.
 
-## How to get started
+## How to get started 
+
+## For R please refer to instructions at https://docs.microsoft.com/en-us/sql/machine-learning/install/custom-runtime-r?view=sql-server-ver15
+## For Python please refer to instructions at https://docs.microsoft.com/en-us/sql/machine-learning/install/custom-runtime-python?view=sql-server-ver15
+## The open source extension links are found at https://github.com/microsoft/sql-server-language-extensions/releases
+
+## For Java please follow these steps below.
 
 ### Step 1: Install the software
 

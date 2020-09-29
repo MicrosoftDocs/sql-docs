@@ -134,7 +134,8 @@ Below is an example of how the connection can be encrypted to SQL Server Linux C
   ```
  Where sql1 is the hostname of the SQL container, so when connecting to this container the name used in the connection string is going to be \'sql1.contoso.com,port\'.
 
-> [!NOTE]: Please ensure that the folder path /container/sql1/ already exists before running the above command.
+> [!NOTE]
+> Please ensure that the folder path /container/sql1/ already exists before running the above command.
 
 2.  Ensure you set the right permissions on the mssql.key and mssql.pem files, so you avoid errors when you mount the files to SQL container:
 
@@ -153,7 +154,8 @@ tlsprotocols = 1.2
 forceencryption = 1
 ```
 
-> [!NOTE]: For some Linux distributions the path for storing the certificate and key could also be : /etc/pki/tls/certs/ and /etc/pki/tls/private/ respectively. Please verify the path before updating the mssql.conf for SQL containers. The location you set in the mssql.conf will be the location where SQL Server in the container is going to search for the certificate and its key. In this case, that location is /etc/ssl/certs/ and /etc/ssl/private/.
+> [!NOTE]
+> For some Linux distributions the path for storing the certificate and key could also be : /etc/pki/tls/certs/ and /etc/pki/tls/private/ respectively. Please verify the path before updating the mssql.conf for SQL containers. The location you set in the mssql.conf will be the location where SQL Server in the container is going to search for the certificate and its key. In this case, that location is /etc/ssl/certs/ and /etc/ssl/private/.
 
 The mssql.conf file is also created under the same folder location /container/sql1/. After running the above steps, you should have three files: mssql.conf, mssql.key and mssql.pem in the sql1 folder.
 
@@ -165,13 +167,14 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=P@ssw0rd" -p 5434:1433 --name sql1
 
 In the command above, we have mounted the mssql.conf,mssql.pem and mssql.key files to the container and mapped the 1433 (SQL Server default port) port in the container to 5434 port of the host. 
 
-> [!NOTE]: If you are using RHEL 8 and above you can also use the \'podman run\' command instead of \'docker run\'. 
+> [!NOTE]
+> If you are using RHEL 8 and above you can also use the \'podman run\' command instead of \'docker run\'. 
 
 Please follow the \"Register the certificate on your client machine (Windows, Linux, or macOS)\" and \"Example connection strings\" sections documented [here][1] to start encrypting connections to SQL Server on Linux containers.
 
-  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15
-  [here]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15#requirements-for-certificates
-  [1]: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15#client-initiated-encryption
+  [Encrypting connection to SQL Server Linux]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true
+  [here]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#requirements-for-certificates
+  [1]: https://docs.microsoft.com/sql/linux/sql-server-linux-encrypted-connections?view=sql-server-ver15&preserve-view=true#client-initiated-encryption
 
 ## Next steps
 

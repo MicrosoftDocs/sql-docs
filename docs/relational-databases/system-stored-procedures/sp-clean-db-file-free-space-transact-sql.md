@@ -1,4 +1,5 @@
 ---
+description: "sp_clean_db_file_free_space (Transact-SQL)"
 title: "sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "ghost records"
   - "sp_clean_db_file_free_space"
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

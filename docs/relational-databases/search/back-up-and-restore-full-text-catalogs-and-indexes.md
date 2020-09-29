@@ -1,4 +1,5 @@
 ---
+description: "Back Up and Restore Full-Text Catalogs and Indexes"
 title: "Back up & restore Full-Text catalogs & indexes"
 ms.date: "03/14/2017"
 ms.prod: sql

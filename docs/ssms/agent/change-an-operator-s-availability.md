@@ -1,4 +1,5 @@
 ---
+description: "Change an Operator&#39;s Availability"
 title: "Change an Operator&#39;s Availability"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

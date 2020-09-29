@@ -1,4 +1,5 @@
 ---
+description: "Comparison Operators (DMX)"
 title: "Comparison Operators (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

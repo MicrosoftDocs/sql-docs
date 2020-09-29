@@ -1,4 +1,5 @@
 ---
+description: "Full-Text and Semantic Search Dynamic Management Views - Functions"
 title: "Full-Text and Semantic Search Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

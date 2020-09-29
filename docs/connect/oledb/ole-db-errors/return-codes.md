@@ -1,6 +1,6 @@
 ---
 title: Return codes (OLE DB driver)
-description: "Return codes"
+description: Learn about return codes for OLE DB Driver for SQL Server member functions and how to get more information about results besides success.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "S_OK"
   - "FAILED macro"
   - "errors [OLE DB], return codes"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Return Codes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

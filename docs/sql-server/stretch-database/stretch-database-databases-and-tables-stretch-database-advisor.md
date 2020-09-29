@@ -1,4 +1,5 @@
 ---
+description: "Identify databases and tables for Stretch Database with Data Migration Assistant"
 title: "Identify databases and tables"
 ms.date: "10/30/2017"
 ms.service: sql-server-stretch-database

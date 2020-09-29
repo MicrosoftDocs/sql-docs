@@ -1,4 +1,5 @@
 ---
+description: "Raising Events in the Script Component"
 title: "Raising Events in the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

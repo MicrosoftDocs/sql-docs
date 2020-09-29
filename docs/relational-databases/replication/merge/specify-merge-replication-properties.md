@@ -1,4 +1,5 @@
 ---
+description: "Specify Merge Replication properties"
 title: "Specify Merge Replication properties| Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"

@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;ROWCOUNT (Transact-SQL)"
 title: "@@ROWCOUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -31,7 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@ROWCOUNT  
 ```  
   
@@ -66,7 +67,7 @@ ms.author: jrasnick
 ## Examples  
  The following example executes an `UPDATE` statement and uses `@@ROWCOUNT` to detect if any rows were changed.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee   

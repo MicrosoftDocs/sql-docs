@@ -1,4 +1,5 @@
 ---
+description: "Resolve Column Reference Editor"
 title: "Resolve Column Reference Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

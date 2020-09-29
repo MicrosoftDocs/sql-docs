@@ -1,4 +1,5 @@
 ---
+description: "Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM in (Native Client OLE DB)"
 title: "BLOB Data to SQL, IROWSETFASTLOAD, ISEQUENTIALSTREAM"
 ms.custom: ""
 ms.date: "03/14/2017"

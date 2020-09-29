@@ -1,4 +1,5 @@
 ---
+description: "Configure SQL Server Agent"
 title: Configure SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools

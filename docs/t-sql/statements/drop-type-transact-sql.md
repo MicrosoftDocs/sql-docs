@@ -1,4 +1,5 @@
 ---
+description: "DROP TYPE (Transact-SQL)"
 title: "DROP TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "alias data types [SQL Server], removing"
   - "DROP TYPE statement"
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## Examples  
  The following example assumes a type named `ssn` is already created in the current database.  
   
-```  
+```sql  
 DROP TYPE ssn ;  
 ```  
   

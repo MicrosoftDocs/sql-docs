@@ -1,4 +1,5 @@
 ---
+description: "updateBlob Method (int, java.sql.Blob)"
 title: "updateBlob Method (int, java.sql.Blob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

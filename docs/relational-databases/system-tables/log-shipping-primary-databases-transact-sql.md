@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_primary_databases (Transact-SQL)"
 title: "log_shipping_primary_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_primary_databases system table"
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

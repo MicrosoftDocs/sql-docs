@@ -1,4 +1,5 @@
 ---
+description: "Import Registered Server Information (SQL Server Management Studio)"
 title: Import Registered Server Information
 ms.prod: sql
 ms.prod_service: sql-tools

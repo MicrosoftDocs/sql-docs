@@ -1,4 +1,5 @@
 ---
+description: "Change Publication and Article Properties"
 title: "Change Publication and Article Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Create the SQL Server Change Database"
 title: "Create the SQL Server Change Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

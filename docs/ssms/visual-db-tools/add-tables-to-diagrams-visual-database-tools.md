@@ -1,4 +1,5 @@
 ---
+description: "Add Tables to Diagrams (Visual Database Tools)"
 title: Add Tables to Diagrams
 ms.prod: sql
 ms.prod_service: sql-tools

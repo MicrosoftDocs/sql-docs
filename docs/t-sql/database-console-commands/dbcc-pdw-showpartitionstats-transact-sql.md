@@ -1,4 +1,5 @@
 ---
+description: "DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)"
 title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -24,7 +25,7 @@ Displays the size and number of rows for each partition of a table in a [!INCLUD
 ## Syntax  
   
 ```syntaxsql
-Show the partition stats for a table  
+--Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  

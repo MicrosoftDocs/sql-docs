@@ -95,6 +95,7 @@ To upgrade the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] to the latest vers
 >
 > - The new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (target) runs on hardware that is comparable to the hardware where the previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (source) was running.
 > - The same [supported database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> - The **same** database and workload is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 >
 > Any query plan shape regression (as compared to the source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) that occurs in the above conditions will be addressed. Please contact Microsoft Customer Support if this is the case.
   

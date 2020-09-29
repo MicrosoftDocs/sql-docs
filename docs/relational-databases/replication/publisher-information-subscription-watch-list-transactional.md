@@ -1,4 +1,5 @@
 ---
+description: "Publisher Information, Subscription Watch List (Transactional)"
 title: "Publisher Information, Subscription Watch List (Transactional) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Stop a Query (Visual Database Tools)"
 title: Stop a Query
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

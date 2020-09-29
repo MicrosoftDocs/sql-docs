@@ -1,4 +1,5 @@
 ---
+description: "SCHEMATA (Transact-SQL)"
 title: "SCHEMATA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.SCHEMATA view"
   - "SCHEMATA view"
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SCHEMATA (Transact-SQL)

@@ -1,4 +1,5 @@
 ---
+description: "sp_OADestroy (Transact-SQL)"
 title: "sp_OADestroy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OADestroy"
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OADestroy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

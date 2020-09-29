@@ -1,4 +1,5 @@
 ---
+description: "Database Mail Log and Audits"
 title: "Database Mail Log and Audits | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

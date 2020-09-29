@@ -1,4 +1,5 @@
 ---
+description: "sp_add_schedule (Transact-SQL)"
 title: "sp_add_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_schedule"
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

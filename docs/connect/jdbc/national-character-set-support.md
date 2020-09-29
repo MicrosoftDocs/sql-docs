@@ -1,4 +1,5 @@
 ---
+description: "National character set support"
 title: "National character set support | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

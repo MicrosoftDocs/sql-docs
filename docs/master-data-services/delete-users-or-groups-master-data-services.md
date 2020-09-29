@@ -1,4 +1,5 @@
 ---
+description: "Delete Users or Groups (Master Data Services)"
 title: Delete Users or Groups
 ms.custom: ""
 ms.date: "03/01/2017"

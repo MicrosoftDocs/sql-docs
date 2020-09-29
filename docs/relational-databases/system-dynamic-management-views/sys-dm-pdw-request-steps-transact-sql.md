@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_request_steps (Transact-SQL)"
 title: "sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/19/2020"

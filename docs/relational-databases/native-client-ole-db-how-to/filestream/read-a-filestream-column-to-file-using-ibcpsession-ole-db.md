@@ -1,4 +1,5 @@
 ---
+description: "Read a FILESTREAM Column to File Using IBCPSession in SQL Server Native Client (OLE DB)"
 title: "FILESTREAM to File, IBCPSession (OLE DB)"
 ms.custom: ""
 ms.date: "03/07/2017"

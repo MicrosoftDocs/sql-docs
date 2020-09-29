@@ -1,4 +1,5 @@
 ---
+description: "sp_refreshsqlmodule (Transact-SQL)"
 title: "sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2018"
@@ -23,8 +24,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], refreshing metadata"
   - "user-defined functions [SQL Server], refreshing metadata"
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refreshsqlmodule (Transact-SQL)

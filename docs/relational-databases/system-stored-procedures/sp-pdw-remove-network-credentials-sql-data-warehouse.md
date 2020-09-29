@@ -1,4 +1,5 @@
 ---
+description: "sp_pdw_remove_network_credentials (SQL Data Warehouse)"
 title: "sp_pdw_remove_network_credentials"
 titleSuffix: Azure SQL Data Warehouse
 ms.date: "03/14/2017"
@@ -24,7 +25,7 @@ ms.custom: seo-dt-2019
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
@@ -58,7 +59,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ### A. Remove credentials for performing a database backup  
  The following example removes user name and password credentials for accessing the target server which has an IP address of 10.192.147.63.  
   
-```  
+```sql  
 EXEC sp_pdw_remove_network_credentials '10.192.147.63';  
 ```  
   

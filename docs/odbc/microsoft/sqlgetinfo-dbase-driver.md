@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo (dBASE Driver)"
 title: "SQLGetInfo (dBASE Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

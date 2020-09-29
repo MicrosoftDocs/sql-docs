@@ -1,4 +1,5 @@
 ---
+description: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard"
 title: "Migrate data to or from columns using Always Encrypted with SQL Server Import and Export Wizard  | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/31/2019

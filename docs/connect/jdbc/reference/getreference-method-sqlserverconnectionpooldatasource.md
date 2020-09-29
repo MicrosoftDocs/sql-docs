@@ -1,4 +1,5 @@
 ---
+description: "getReference Method (SQLServerConnectionPoolDataSource)"
 title: "getReference Method (SQLServerConnectionPoolDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Projects (SQL Server Management Studio)"
 title: "Projects (SQL Server Management Studio)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -53,5 +54,5 @@ To modify information about a connection, use the properties window in [!INCLUDE
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Solution Explorer Source Control](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Solution Explorer Source Control](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

@@ -1,4 +1,5 @@
 ---
+description: "Using IMultipleResults to Process Multiple Result Sets in SQL Server Native Client"
 title: "IMultipleResults, multiple result sets"
 ms.custom: ""
 ms.date: "03/14/2017"

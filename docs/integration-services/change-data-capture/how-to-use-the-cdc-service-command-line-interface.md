@@ -1,4 +1,5 @@
 ---
+description: "How to Use the CDC Service Command-Line Interface"
 title: "How to Use the CDC Service Command-Line Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

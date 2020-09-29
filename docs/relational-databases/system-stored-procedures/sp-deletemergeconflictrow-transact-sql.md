@@ -1,4 +1,5 @@
 ---
+description: "sp_deletemergeconflictrow (Transact-SQL)"
 title: "sp_deletemergeconflictrow (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_deletemergeconflictrow"
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

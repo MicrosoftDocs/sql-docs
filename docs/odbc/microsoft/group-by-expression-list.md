@@ -1,4 +1,5 @@
 ---
+description: "GROUP BY expression-list"
 title: "GROUP BY expression-list | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

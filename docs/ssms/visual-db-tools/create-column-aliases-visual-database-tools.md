@@ -1,4 +1,5 @@
 ---
+description: "Create Column Aliases (Visual Database Tools)"
 title: Create Column Aliases
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

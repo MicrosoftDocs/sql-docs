@@ -1,4 +1,5 @@
 ---
+description: "Implementing External Metadata"
 title: "Implementing External Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

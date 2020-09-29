@@ -1,4 +1,5 @@
 ---
+description: "fn_syscollector_get_execution_stats (Transact-SQL)"
 title: "fn_syscollector_get_execution_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

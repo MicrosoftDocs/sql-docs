@@ -1,4 +1,5 @@
 ---
+description: "NEWSEQUENTIALID (Transact-SQL)"
 title: "NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
@@ -36,24 +37,26 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 NEWSEQUENTIALID ( )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## Return Type  
  **uniqueidentifier**  
   
 ## Remarks  
  NEWSEQUENTIALID() can only be used with DEFAULT constraints on table columns of type **uniqueidentifier**. For example:  
   
-```  
+```sql  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
 ```  
   
  When NEWSEQUENTIALID() is used in DEFAULT expressions, it cannot be combined with other scalar operators. For example, you cannot execute the following:  
   
-```  
+```sql 
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENTIALID()));  
 ```  
   

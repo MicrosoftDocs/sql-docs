@@ -1,4 +1,5 @@
 ---
+description: "Change the Entity Transaction Log Type (Master Data Services)"
 title: Change the Entity Transaction Log Type
 ms.custom: ""
 ms.date: "03/14/2017"

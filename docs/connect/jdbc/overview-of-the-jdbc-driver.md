@@ -2,7 +2,7 @@
 title: "Overview of the JDBC driver | Microsoft Docs"
 description: "The Microsoft JDBC Driver for SQL Server is a Type 4 Java Database Connectivity (JDBC) 4.2 compliant driver that provides data access to SQL databases."
 ms.custom: ""
-ms.date: 08/05/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -16,13 +16,13 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The Microsoft JDBC Driver for SQL Server is a Type 4 Java Database Connectivity (JDBC) 4.2 compliant driver that provides robust data access to SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, and Azure SQL Database.  
+The Microsoft JDBC Driver for SQL Server is a Type 4 Java Database Connectivity (JDBC) 4.2 compliant driver that provides robust data access to SQL Server and Azure SQL databases.  
 
 ## Redistribution
 
 The JDBC Driver versions 6.0 and up are redistributable. Review the _Distributable Code_ clause in the license agreements.
 
-The JDBC Driver versions 4.x are old and obsolete. Support for 4.x expired before 2018.
+The JDBC Driver versions 4.x are obsolete. Support for 4.x expired before 2018.
 
 ## In this section  
 

@@ -162,14 +162,14 @@ Managed service accounts, group managed service accounts, and virtual accounts a
 
 - <a name="GMSA"></a> **Group Managed Service Accounts**
 
-  A Group Managed Service Account is an MSA for multiple servers. Windows manages a service account for services running on a group of servers. Active Directory automatically updates the group managed service account password without restarting services. You can configure SQL Server services to use a group managed service account principal. Beginning with SQL Server 2014, SQL Server supports group managed service accounts for standalone instances, and SQL Server 2016 and later for failover cluster instances, and availability groups.
+  A Group Managed Service Account (gMSA) is an MSA for multiple servers. Windows manages a service account for services running on a group of servers. Active Directory automatically updates the group managed service account password without restarting services. You can configure SQL Server services to use a group managed service account principal. Beginning with SQL Server 2014, SQL Server supports group managed service accounts for standalone instances, and SQL Server 2016 and later for failover cluster instances, and availability groups.
 
-  To use a group managed service account for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](https://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.
+  To use a gMSA for SQL Server 2014 or later, the operating system must be Windows Server 2012 R2 or later. Servers with Windows Server 2012 R2 require [KB 2998082](https://support.microsoft.com/kb/2998082) applied so that the services can log in without disruption immediately after a password change.
 
   For more information, see [Group Managed Service Accounts](https://technet.microsoft.com/library/hh831782.aspx)
 
   > [!NOTE]
-  > The group managed service account must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.
+  > The gMSA must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 
@@ -189,7 +189,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
 
 For more information on Managed Service Accounts and Virtual Accounts, see the **Managed service account and virtual account concepts** section of [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) and [Managed Service Accounts Frequently Asked Questions (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).
 
-**Security Note:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use a [MSA](#MSA) or [virtual account](#VA_Desc) when possible. When MSA and virtual accounts are not possible, use a specific low-privilege user account or domain account instead of a shared account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Use separate accounts for different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Do not grant additional permissions to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or the service groups. Permissions will be granted through group membership or granted directly to a service SID, where a service SID is supported.
+**Security Note:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Use a [MSA](#MSA), [gMSA](#GMSA) or [virtual account](#VA_Desc) when possible. When MSA, gMSA and virtual accounts are not possible, use a specific low-privilege user account or domain account instead of a shared account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Use separate accounts for different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Do not grant additional permissions to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account or the service groups. Permissions will be granted through group membership or granted directly to a service SID, where a service SID is supported.
 
 ### <a name="Auto_Start"></a> Automatic startup
 
@@ -243,7 +243,7 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 
 ### <a name="Serv_SID"></a> Service Configuration and Access Control
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enables per-service SID for each of its services to provide service isolation and defense in depth. The per-service SID is derived from the service name and is unique to that service. For example, a service SID name for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service might be **NT Service\MSSQL$**_\<InstanceName>_. Service isolation enables access to specific objects without the need to run a high-privilege account or weaken the security protection of the object. By using an access control entry that contains a service SID, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service can restrict access to its resources.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enables per-service SID for each of its services to provide service isolation and defense in depth. The per-service SID is derived from the service name and is unique to that service. For example, a service SID name for a named instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] service might be **NT Service\MSSQL$**_\<InstanceName>_. Service isolation enables access to specific objects without the need to run a high-privilege account or weaken the security protection of the object. By using an access control entry that contains a service SID, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service can restrict access to its resources.
 
 > [!NOTE]
 > On Windows 7 and [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (and later) the per-service SID can be the virtual account used by the service.
@@ -258,7 +258,7 @@ Depending on the service configuration, the service account for a service or ser
 
 ### <a name="Windows"></a> Windows Privileges and Rights
 
-The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this. First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/download/details.aspx?id=7887).
+The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this. First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 
 The following table shows permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup requests for the per-service SIDs or local Windows groups used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.
 
@@ -420,7 +420,7 @@ The following table shows the permissions that are required for [!INCLUDE[ssNoVe
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor|Tunes databases for optimal query performance.|On first use, a user who has system administrative credentials must initialize the application. After initialization, dbo users can use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor to tune only those tables that they own. For more information, see "Initializing [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor on First Use" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.|
 
 > [!IMPORTANT]
-> Before you upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable Windows Authentication for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and verify the required default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin group.
+> Before you upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enable SQL Server Agent and verify the required default configuration: that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account is a member of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** fixed server role.
 
 ### <a name="Registry"></a> Registry Permissions
 
@@ -440,7 +440,7 @@ The registry also maintains a mapping of instance ID to instance name. Instance 
 
 Windows Management Instrumentation (WMI) must be able to connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To support this, the per-service SID of the Windows WMI provider (**NT SERVICE\winmgmt**) is provisioned in the [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-The SQL WMI provider requires the following permissions:
+The SQL WMI provider requires the following minimal permissions:
 
 - Membership in the **db_ddladmin** or **db_owner** fixed database roles in the msdb database.
 - **CREATE DDL EVENT NOTIFICATION** permission in the server.
@@ -479,11 +479,11 @@ During setup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup re
 
 #### <a name="sa"></a> sa Account
 
-The **sa** account is always present as a [!INCLUDE[ssDE](../../includes/ssde-md.md)] login and is a member of the **sysadmin** fixed server role. When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is installed using only Windows Authentication (that is when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is not enabled), the **sa** login is still present but is disabled. For information about enabling the **sa** account, see [Change Server Authentication Mode](../../database-engine/configure-windows/change-server-authentication-mode.md).
+The **sa** account is always present as a [!INCLUDE[ssDE](../../includes/ssde-md.md)] login and is a member of the **sysadmin** fixed server role. When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is installed using only Windows Authentication (that is when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is not enabled), the **sa** login is still present but is disabled and the password is complex and random. For information about enabling the **sa** account, see [Change Server Authentication Mode](../../database-engine/configure-windows/change-server-authentication-mode.md).
 
 #### <a name="Logins"></a> SQL Server Per-service SID Login and Privileges
 
-The per-service SID of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is provisioned as a [!INCLUDE[ssDE](../../includes/ssde-md.md)] login. The per-service SID login is a member of the **sysadmin** fixed server role.
+The per-service SID (somethimes also called service security principal (SID)) of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is provisioned as a [!INCLUDE[ssDE](../../includes/ssde-md.md)] login. The per-service SID login is a member of the **sysadmin** fixed server role. For information about per-service SID, see [Using Service SIDs to grant permissions to services in SQL Server](../../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md).
 
 #### <a name="Agent"></a> SQL Server Agent Login and Privileges
 
@@ -545,18 +545,18 @@ This section contains additional information about [!INCLUDE[ssNoVersion](../../
 
 ### <a name="Serv_Accts"></a> Description of Service Accounts
 
-The service account is the account used to start a Windows service, such as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+The service account is the account used to start a Windows service, such as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. For running SQL Server, it is not required to add the Service Account as a Login to SQL Server in addition to the Service SID, which is always present and a member of the **sysamin** fixed server role.
 
 #### <a name="Any_OS"></a> Accounts Available With Any Operating System
 
-In addition to the new [MSA](#MSA) and [virtual accounts](#VA_Desc) described earlier, the following accounts can be used.
+In addition to the new [MSA](#MSA), [gMSA](#GMSA) and [virtual accounts](#VA_Desc) described earlier, the following accounts can be used.
 
 <a name="Domain_User"></a> **Domain User Account**
 
 If the service must interact with network services, access domain resources like file shares or if it uses linked server connections to other computers running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might use a minimally-privileged domain account. Many server-to-server activities can be performed only with a domain user account. This account should be pre-created by domain administration in your environment.
 
 > [!NOTE]
-> If you configure the application to use a domain account, you can isolate the privileges for the application, but must manually manage passwords or create a custom solution for managing these passwords. Many server applications use this strategy to enhance security, but this strategy requires additional administration and complexity. In these deployments, service administrators spend a considerable amount of time on maintenance tasks such as managing service passwords and service principal names (SPNs), which are required for Kerberos authentication. In addition, these maintenance tasks can disrupt service.
+> If you configure the SQL Server to use a domain account, you can isolate the privileges for the Service, but must manually manage passwords or create a custom solution for managing these passwords. Many server applications use this strategy to enhance security, but this strategy requires additional administration and complexity. In these deployments, service administrators spend a considerable amount of time on maintenance tasks such as managing service passwords and service principal names (SPNs), which are required for Kerberos authentication. In addition, these maintenance tasks can disrupt service.
 
 <a name="Local_User"></a> **Local User Accounts**
 
@@ -564,7 +564,10 @@ If the computer is not part of a domain, a local user account without Windows ad
 
 <a name="Local_Service"></a> **Local Service Account**
 
-The Local Service account is a built-in account that has the same level of access to resources and objects as members of the Users group. This limited access helps safeguard the system if individual services or processes are compromised. Services that run as the Local Service account access network resources as a null session without credentials. Be aware that the Local Service account is not supported for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent services. Local Service is not supported as the account running those services because it is a shared service and any other services running under local service would have system administrator access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The actual name of the account is **NT AUTHORITY\LOCAL SERVICE**.
+The Local Service account is a built-in account that has the same level of access to resources and objects as members of the Users group. This limited access helps safeguard the system if individual services or processes are compromised. Services that run as the Local Service account access network resources as a null session without credentials. 
+> [!NOTE]
+> The Local Service account is not supported for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent services. Local Service is not supported as the account running those services because it is a shared service and any other services running under local service would have system administrator access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The actual name of the account is **NT AUTHORITY\LOCAL SERVICE**.
 
 <a name="Network_Service"></a> **Network Service Account**
 

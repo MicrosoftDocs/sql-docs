@@ -1,4 +1,5 @@
 ---
+description: "getDate Method (java.lang.String) parameter"
 title: "getDate Method (java.lang.String) parameter | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

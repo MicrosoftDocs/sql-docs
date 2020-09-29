@@ -1,4 +1,5 @@
 ---
+description: "Migrate a Reporting Services Installation (SharePoint Mode)"
 title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft Docs"
 ms.date: 08/17/2017
 ms.prod: reporting-services

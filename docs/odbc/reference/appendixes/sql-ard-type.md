@@ -1,4 +1,5 @@
 ---
+description: "SQL_ARD_TYPE"
 title: "SQL_ARD_TYPE | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

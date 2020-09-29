@@ -1,4 +1,5 @@
 ---
+description: "Parameter Data Types"
 title: "Parameter Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2017

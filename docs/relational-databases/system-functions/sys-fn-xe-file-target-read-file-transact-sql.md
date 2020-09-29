@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_xe_file_target_read_file (Transact-SQL)"
 title: "sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2017"

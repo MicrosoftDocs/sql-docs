@@ -1,4 +1,5 @@
 ---
+description: "Transaction Support in DBMSs"
 title: "Transaction Support in DBMSs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

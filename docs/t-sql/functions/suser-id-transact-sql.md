@@ -1,4 +1,5 @@
 ---
+description: "SUSER_ID (Transact-SQL)"
 title: "SUSER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -36,8 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SUSER_ID ( [ 'login' ] )   
 ```  
   
@@ -60,7 +60,7 @@ SUSER_ID ( [ 'login' ] )
 ## Examples  
  The following example returns the login identification number for the `sa` login.  
   
-```  
+```sql
 SELECT SUSER_ID('sa');  
 ```  
   

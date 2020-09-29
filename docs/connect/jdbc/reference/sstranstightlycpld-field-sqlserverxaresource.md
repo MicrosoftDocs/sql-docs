@@ -1,4 +1,5 @@
 ---
+description: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
 title: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

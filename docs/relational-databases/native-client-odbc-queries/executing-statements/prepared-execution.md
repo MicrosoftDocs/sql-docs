@@ -1,4 +1,5 @@
 ---
+description: "Prepared Execution"
 title: "Prepared Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

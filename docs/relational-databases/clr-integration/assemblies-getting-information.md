@@ -1,4 +1,5 @@
 ---
+description: "Getting Information About Assemblies"
 title: "Getting Information About Assemblies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

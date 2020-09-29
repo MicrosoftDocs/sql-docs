@@ -1,4 +1,5 @@
 ---
+description: "Change Tracking (Master Data Services)"
 title: Change Tracking
 ms.custom: ""
 ms.date: "03/15/2017"

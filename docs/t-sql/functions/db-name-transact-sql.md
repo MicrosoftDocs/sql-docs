@@ -1,4 +1,5 @@
 ---
+description: "DB_NAME (Transact-SQL)"
 title: "DB_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -32,7 +33,7 @@ This function returns the name of a specified database.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DB_NAME ( [ database_id ] )  
 ```  
   
@@ -69,7 +70,7 @@ This example returns the database name for database ID `3`.
 ```sql
 USE master;  
 GO  
-SELECT DB_NAME(3)AS [Database Name];  
+SELECT DB_NAME(3) AS [Database Name];  
 GO  
 ```  
   

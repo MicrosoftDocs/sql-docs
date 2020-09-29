@@ -1,4 +1,5 @@
 ---
+description: "SET ANSI_DEFAULTS (Transact-SQL)"
 title: "SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "ANSI_DEFAULTS option"
   - "SET ANSI_DEFAULTS statement"
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_DEFAULTS (Transact-SQL)
@@ -43,7 +44,9 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
 ANSI_DEFAULTS is a server-side setting which can enable the behavior for all client connections. The client typically requests the setting on connection or session initialization. Users should not modify the server setting.   
 To change client the behavior, users should use the client specific methods like `SQL_COPT_SS_PRESERVE_CURSORS`. For more information, see  [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).
   

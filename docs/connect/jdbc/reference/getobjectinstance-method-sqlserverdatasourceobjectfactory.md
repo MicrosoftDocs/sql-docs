@@ -1,4 +1,5 @@
 ---
+description: "getObjectInstance Method (SQLServerDataSourceObjectFactory)"
 title: "getObjectInstance Method (SQLServerDataSourceObjectFactory) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

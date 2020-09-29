@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-3 - Testing the Deployed Packages"
 title: "Step 3: Testing the Deployed Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

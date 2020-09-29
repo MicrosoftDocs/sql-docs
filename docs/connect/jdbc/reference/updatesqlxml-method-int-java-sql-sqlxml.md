@@ -1,4 +1,5 @@
 ---
+description: "updateSQLXML Method (int, java.sql.SQLXML)"
 title: "updateSQLXML Method (int, java.sql.SQLXML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

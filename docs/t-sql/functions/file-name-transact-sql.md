@@ -1,4 +1,5 @@
 ---
+description: "FILE_NAME (Transact-SQL)"
 title: "FILE_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -35,7 +36,7 @@ This function returns the logical file name for a given file identification (ID)
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_NAME ( file_id )   
 ```  
   

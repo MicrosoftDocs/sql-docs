@@ -1,4 +1,5 @@
 ---
+description: "Business Rule Conditions (Master Data Services)"
 title: Business Rule Conditions
 ms.custom: ""
 ms.date: "03/01/2017"

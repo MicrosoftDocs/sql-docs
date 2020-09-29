@@ -1,4 +1,5 @@
 ---
+description: "SQLServerConnectionPoolDataSource Methods"
 title: "SQLServerConnectionPoolDataSource Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

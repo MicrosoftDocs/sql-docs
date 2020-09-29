@@ -1,4 +1,5 @@
 ---
+description: "Move User Databases"
 title: "Move User Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

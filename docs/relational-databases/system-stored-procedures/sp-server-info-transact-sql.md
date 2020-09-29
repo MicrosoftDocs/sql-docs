@@ -1,4 +1,5 @@
 ---
+description: "sp_server_info (Transact-SQL)"
 title: "sp_server_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_info"
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_server_info (Transact-SQL)
 

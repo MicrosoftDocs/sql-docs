@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves"
 title: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/15/2019

@@ -1,4 +1,5 @@
 ---
+description: "Connecting to an Azure SQL Database Using SQL Server Native Client"
 title: "Connect to Azure SQL Database"
 ms.custom: ""
 ms.date: "03/14/2017"

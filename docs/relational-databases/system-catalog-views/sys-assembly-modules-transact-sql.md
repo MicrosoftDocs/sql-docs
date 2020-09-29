@@ -1,4 +1,5 @@
 ---
+description: "sys.assembly_modules (Transact-SQL)"
 title: "sys.assembly_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.assembly_modules catalog view"
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.assembly_modules (Transact-SQL)

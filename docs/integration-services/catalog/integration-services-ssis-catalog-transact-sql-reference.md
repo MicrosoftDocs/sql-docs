@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Catalog Transact-SQL Reference"
 title: "Integration Services Catalog Transact-SQL Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

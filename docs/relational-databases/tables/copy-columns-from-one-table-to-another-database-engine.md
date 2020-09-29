@@ -1,4 +1,5 @@
 ---
+description: "Copy Columns from One Table to Another (Database Engine)"
 title: "Copy Columns from One Table to Another (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2016"

@@ -1,4 +1,5 @@
 ---
+description: "LOG10 (Transact-SQL)"
 title: "LOG10 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

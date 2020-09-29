@@ -1,4 +1,5 @@
 ---
+description: "USER (Transact-SQL)"
 title: "USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 USER  
 ```  
   
@@ -56,8 +57,8 @@ USER
 ### A. Using USER to return the database user name  
  The following example declares a variable as `char`, assigns the current value of USER to it, and then prints the variable with a text description.  
   
-```  
-DECLARE @usr char(30)  
+```sql
+DECLARE @usr CHAR(30)  
 SET @usr = user  
 SELECT 'The current user''s database username is: '+ @usr  
 GO  
@@ -75,14 +76,14 @@ The current user's database username is: dbo
 ### B. Using USER with DEFAULT constraints  
  The following example creates a table by using `USER` as a `DEFAULT` constraint for the salesperson of a sales row.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE inventory22  
 (  
- part_id int IDENTITY(100, 1) NOT NULL,  
- description varchar(30) NOT NULL,  
- entry_person varchar(30) NOT NULL DEFAULT USER   
+ part_id INT IDENTITY(100, 1) NOT NULL,  
+ description VARCHAR(30) NOT NULL,  
+ entry_person VARCHAR(30) NOT NULL DEFAULT USER   
 )  
 GO  
 INSERT inventory22 (description)  
@@ -100,7 +101,7 @@ GO
   
  This is the query to select all information from the `inventory22` table:  
   
-```  
+```sql
 SELECT * FROM inventory22 ORDER BY part_id;  
 GO  
 ```  
@@ -122,7 +123,7 @@ part_id     description                    entry_person
 ### C. Using USER in combination with EXECUTE AS  
  The following example illustrates the behavior of `USER` when called inside an impersonated session.  
   
-```  
+```sql
 SELECT USER;  
 GO  
 EXECUTE AS USER = 'Mario';  

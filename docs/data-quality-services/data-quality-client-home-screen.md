@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Client Home Screen"
 title: "Data Quality Client Home Screen"
 ms.date: "02/29/2012"
 ms.prod: sql

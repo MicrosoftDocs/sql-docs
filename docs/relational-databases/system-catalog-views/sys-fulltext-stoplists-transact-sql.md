@@ -1,4 +1,5 @@
 ---
+description: "sys.fulltext_stoplists (Transact-SQL)"
 title: "sys.fulltext_stoplists (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

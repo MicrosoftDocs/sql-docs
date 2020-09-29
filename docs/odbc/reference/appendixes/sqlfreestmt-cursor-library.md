@@ -1,4 +1,5 @@
 ---
+description: "SQLFreeStmt (Cursor Library)"
 title: "SQLFreeStmt (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

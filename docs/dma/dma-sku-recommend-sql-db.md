@@ -24,7 +24,7 @@ This article focuses on DMA's Azure SQL Database SKU recommendations feature. Az
 
 - Single database
 - Elastic pools
-- Managed instance
+- Managed Instance
 
 The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases.
 

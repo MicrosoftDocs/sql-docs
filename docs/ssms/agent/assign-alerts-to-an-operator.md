@@ -1,4 +1,5 @@
 ---
+description: "Assign Alerts to an Operator"
 title: "Assign Alerts to an Operator"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

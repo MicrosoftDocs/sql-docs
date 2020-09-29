@@ -1,4 +1,5 @@
 ---
+description: "SQLTransact Function"
 title: "SQLTransact Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

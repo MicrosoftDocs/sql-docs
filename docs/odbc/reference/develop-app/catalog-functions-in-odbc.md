@@ -1,4 +1,5 @@
 ---
+description: "Catalog Functions in ODBC"
 title: "Catalog Functions in ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

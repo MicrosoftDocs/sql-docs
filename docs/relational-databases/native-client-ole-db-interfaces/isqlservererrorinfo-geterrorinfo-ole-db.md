@@ -1,4 +1,5 @@
 ---
+description: "ISQLServerErrorInfo::GetErrorInfo (Native Client OLE DB provider)"
 title: "ISQLServerErrorInfo::GetErrorInfo (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -83,7 +84,7 @@ SSERRORINFO;
  Pointers in the structure reference addresses in the string returned in the *ppErrorStrings* argument.  
   
 ## See Also  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.check_constraints (Transact-SQL)"
 title: "sys.check_constraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"

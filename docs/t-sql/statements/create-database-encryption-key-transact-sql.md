@@ -1,4 +1,5 @@
 ---
+description: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL)"
 title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 ms.custom: ""
 ms.date: "08/24/2016"
@@ -101,7 +102,7 @@ For additional examples using TDE, see [Transparent Data Encryption &#40;TDE&#41
   
 The following example creates a database encryption key by using the `AES_256` algorithm, and protects the private key with a certificate named `MyServerCert`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DATABASE ENCRYPTION KEY  

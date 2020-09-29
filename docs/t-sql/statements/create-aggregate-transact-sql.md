@@ -1,4 +1,5 @@
 ---
+description: "CREATE AGGREGATE (Transact-SQL)"
 title: "CREATE AGGREGATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

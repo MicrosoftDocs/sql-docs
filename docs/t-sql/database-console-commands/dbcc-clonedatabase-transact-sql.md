@@ -1,4 +1,5 @@
 ---
+description: "DBCC CLONEDATABASE (Transact-SQL)"
 title: "DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/23/2019

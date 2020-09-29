@@ -1,4 +1,5 @@
 ---
+description: "Map Columns to Composite Domains"
 title: "Map Columns to Composite Domains | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

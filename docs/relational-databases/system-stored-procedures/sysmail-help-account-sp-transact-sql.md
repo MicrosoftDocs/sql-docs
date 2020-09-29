@@ -1,4 +1,5 @@
 ---
+description: "sysmail_help_account_sp (Transact-SQL)"
 title: "sysmail_help_account_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_account_sp"
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

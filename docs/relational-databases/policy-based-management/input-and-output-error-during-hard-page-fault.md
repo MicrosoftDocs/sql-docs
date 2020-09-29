@@ -1,4 +1,5 @@
 ---
+description: "Input and Output Error During Hard Page Fault"
 title: "Input and Output Error During Hard Page Fault | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

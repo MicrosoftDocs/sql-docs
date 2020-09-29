@@ -7,8 +7,8 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.date: 07/24/2020
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+ms.date: 08/12/2020
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # Previous versions of SQL Server documentation

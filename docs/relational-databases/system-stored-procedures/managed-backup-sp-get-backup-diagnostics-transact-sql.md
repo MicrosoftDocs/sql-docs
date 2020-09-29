@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_get_backup_diagnostics (Transact-SQL)"
 title: "managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sp_get_backup_diagnostics"
   - "smart_admin.sp_get_backup_diagnostics"
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

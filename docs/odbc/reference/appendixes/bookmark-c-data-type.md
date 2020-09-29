@@ -1,4 +1,5 @@
 ---
+description: "Bookmark C Data Type"
 title: "Bookmark C Data Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

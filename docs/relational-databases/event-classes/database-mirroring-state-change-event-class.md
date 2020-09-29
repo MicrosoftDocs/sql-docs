@@ -1,4 +1,5 @@
 ---
+description: "Database Mirroring State Change Event Class"
 title: "Database Mirroring State Change Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

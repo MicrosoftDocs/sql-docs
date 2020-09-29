@@ -1,4 +1,5 @@
 ---
+description: "Delete Hierarchy Member Permissions (Master Data Services)"
 title: Delete Hierarchy Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

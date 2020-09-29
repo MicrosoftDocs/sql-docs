@@ -1,4 +1,5 @@
 ---
+description: "STPointN (geography Data Type)"
 title: "STPointN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

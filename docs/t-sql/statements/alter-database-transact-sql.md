@@ -1,7 +1,8 @@
 ---
+description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
-ms.custom: ""
-ms.date: 07/21/2020
+ms.custom: "references_regions"
+ms.date: 09/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -23,8 +24,8 @@ helpviewer_keywords:
   - "collations [SQL Server], modifying"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # ALTER DATABASE (Transact-SQL)
@@ -44,7 +45,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -127,6 +128,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <sql_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
   | <compatibility_level>
       { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 }
@@ -296,7 +298,7 @@ GO
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />single database/elastic pool \*_** &nbsp;
+        **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -311,9 +313,9 @@ GO
 
 &nbsp;
 
-## Overview: Azure SQL Database single database/elastic pool
+## Overview: SQL Database
 
-In Azure SQL Database, use this statement to modify a database on a single database/elastic pool. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
+In Azure SQL Database, use this statement to modify a database. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
@@ -334,6 +336,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
     MODIFY NAME = new_database_name
   | MODIFY ( <edition_options> [, ... n] )
+  | MODIFY BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
   | SET { <option_spec> [ ,... n ] WITH <termination>}
   | ADD SECONDARY ON SERVER <partner_server_name>
     [WITH ( <add-secondary-option>::=[, ... n] ) ]
@@ -435,6 +438,12 @@ ALTER DATABASE current
 
 > [!IMPORTANT]
 > EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
+
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) 
+Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting. 
+
+> [!IMPORTANT]
+> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Southeast Asia Azure region only.  
 
 MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed.
@@ -608,6 +617,9 @@ Creates a geo-replication secondary database with the same name on a partner ser
 > [!IMPORTANT]
 > The Hyperscale service tier does not currently support geo-replication.
 
+> [!IMPORTANT]
+> By default, the secondary database is created with the same backup storage redundancy as that of the primary or source database. Changing the backup storage redundancy while creating the secondary is not supported via T-SQL. 
+
 WITH ALLOW_CONNECTIONS { **ALL** | NO }
 When ALLOW_CONNECTIONS is not specified, it is set to ALL by default. If it is set ALL, it is a read-only database that allows all logins with the appropriate permissions to connect.
 
@@ -619,7 +631,7 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
 When ELASTIC_POOL is not specified, the secondary database is not created in an elastic pool. When ELASTIC_POOL is specified, the secondary database is created in the specified pool.
 
 > [!IMPORTANT]
-> The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.
+> The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server. The client IP address must be added to the allowed list under firewall rules for both the primary and secondary servers. In case of different client IP addresses, the exact same client IP address that has been added on the primary server must also be added to the secondary. This is a required step to be done before running the ADD SECONDARY command to initiate geo-replication.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name>
 Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.
@@ -737,6 +749,14 @@ Updates a single database to the Standard edition (service tier) with a compute 
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
 ```
 
+### H. Update the backup storage redundancy of a database
+
+Updates the backup storage redundancy of a database to zone-redundant. All future backups of this database will use the new setting. This includes point-in-time restore backups and long-term retention backups (if configured). 
+
+```sql
+ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
+```
+
 ## See also
 
 - [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-currentls)
@@ -762,7 +782,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />Managed Instance \*_** &nbsp;
@@ -779,9 +799,9 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 &nbsp;
 
-## Overview: Azure SQL Database Managed Instance
+## Overview: Azure SQL Managed Instance
 
-In Azure SQL Database Managed Instance, use this statement to set database options.
+In Azure SQL Managed Instance, use this statement to set database options.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
@@ -904,7 +924,7 @@ ALTER DATABASE WideWorldImporters
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -1046,7 +1066,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)

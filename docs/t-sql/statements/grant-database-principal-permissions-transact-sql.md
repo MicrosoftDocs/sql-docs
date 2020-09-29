@@ -168,7 +168,7 @@ GRANT permission [ ,...n ]
 ### A. Granting CONTROL permission on a user to another user  
  The following example grants `CONTROL` permission on `AdventureWorks2012` user `Wanida` to user `RolandX`.  
   
-```  
+```sql  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -176,7 +176,7 @@ GO
 ### B. Granting VIEW DEFINITION permission on a role to a user with GRANT OPTION  
  The following example grants `VIEW DEFINITION` permission on `AdventureWorks2012` role `SammamishParking` together with `GRANT OPTION` to database user `JinghaoLiu`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu WITH GRANT OPTION;  
 GO  
@@ -187,7 +187,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

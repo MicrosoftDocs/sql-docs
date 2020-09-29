@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Getting started, SQL Server or SQL Azure metadata explorer"
   - "Getting started,Installing and licensing"
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Getting Started with SSMA for MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL lets you quickly convert MySQL database schemas to SQL Server or Azure SQL Database schemas, upload the resulting schemas into SQL Server or Azure SQL Database, and migrate data from MySQL to SQL Server or Azure SQL Database.  

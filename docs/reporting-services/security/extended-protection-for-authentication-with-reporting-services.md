@@ -1,4 +1,5 @@
 ---
+description: "Extended Protection for Authentication with Reporting Services"
 title: "Extended Protection for Authentication with Reporting Services | Microsoft Docs"
 ms.date: 06/22/2020
 ms.prod: reporting-services

@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package from the command prompt with DTExec.exe"
 title: "Run an SSIS package from the command prompt | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

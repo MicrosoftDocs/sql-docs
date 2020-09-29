@@ -1,4 +1,5 @@
 ---
+description: "Behavioral Changes and ODBC 3.x Drivers"
 title: "Behavioral Changes and ODBC 3.x Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

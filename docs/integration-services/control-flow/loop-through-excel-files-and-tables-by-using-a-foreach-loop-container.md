@@ -1,4 +1,5 @@
 ---
+description: "Loop through Excel Files and Tables with a Foreach Loop Container"
 title: "Loop through Excel Files and Tables with a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2018"

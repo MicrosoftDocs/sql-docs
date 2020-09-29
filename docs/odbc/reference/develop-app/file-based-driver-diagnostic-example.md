@@ -1,4 +1,5 @@
 ---
+description: "File-Based Driver Diagnostic Example"
 title: "File-Based Driver Diagnostic Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

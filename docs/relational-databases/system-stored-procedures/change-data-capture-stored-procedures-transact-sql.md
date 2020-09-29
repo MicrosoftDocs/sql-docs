@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture Stored Procedures (Transact-SQL)"
 title: "Change Data Capture Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], change data capture"
   - "change data capture [SQL Server], stored procedures"
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Change Data Capture Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

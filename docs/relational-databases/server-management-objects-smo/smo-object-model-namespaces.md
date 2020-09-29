@@ -1,4 +1,5 @@
 ---
+description: "SMO Object Model Namespaces"
 title: "SMO Namespaces | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"

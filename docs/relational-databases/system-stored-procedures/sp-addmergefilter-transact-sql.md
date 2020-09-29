@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergefilter (Transact-SQL)"
 title: "sp_addmergefilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergefilter"
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

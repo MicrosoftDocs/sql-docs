@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER"
 title: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

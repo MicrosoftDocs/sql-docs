@@ -1,4 +1,5 @@
 ---
+description: "Members (String) (MDX)"
 title: "Members (String) (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

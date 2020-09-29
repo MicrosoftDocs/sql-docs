@@ -1,4 +1,5 @@
 ---
+description: "SELECT FROM &lt;structure&gt;.CASES"
 title: "SELECT FROM &lt;structure&gt;.CASES | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

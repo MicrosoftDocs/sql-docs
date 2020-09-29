@@ -1,4 +1,5 @@
 ---
+description: "CONTAINSTABLE (Transact-SQL)"
 title: "CONTAINSTABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2015"

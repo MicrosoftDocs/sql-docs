@@ -1,4 +1,5 @@
 ---
+description: "Subscriber Properties"
 title: "Subscriber Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

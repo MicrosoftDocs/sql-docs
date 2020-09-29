@@ -1,4 +1,5 @@
 ---
+description: "TAN (Transact-SQL)"
 title: "TAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TAN ( float_expression )  
 ```  
   
@@ -45,7 +46,7 @@ TAN ( float_expression )
 ## Examples  
  The following example returns the tangent of `PI()/2`.  
   
-```  
+```sql
 SELECT TAN(PI()/2);  
 ```  
   
@@ -59,7 +60,7 @@ SELECT TAN(PI()/2);
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the tangent of .45.  
   
-```  
+```sql
 SELECT TAN(.45);  
 ```  
   

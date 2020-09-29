@@ -1,4 +1,5 @@
 ---
+description: "ODBC Escape Sequences"
 title: "ODBC Escape Sequences | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

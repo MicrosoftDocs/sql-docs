@@ -1,4 +1,5 @@
 ---
+description: "getLabel Method (SQLServerSavepoint)"
 title: "getLabel Method (SQLServerSavepoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "getColumnCount Method (SQLServerResultSetMetaData)"
 title: "getColumnCount Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Connect to the Teradata source"
 title: "Connect to the Teradata source | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Signing Stored Procedures with a Certificate"
 title: "Tutorial: Signing Stored Procedures with a Certificate"
 ms.custom: seo-dt-2019
 ms.date: "08/23/2018"

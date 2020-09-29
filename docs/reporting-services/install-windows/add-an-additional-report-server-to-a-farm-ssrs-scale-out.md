@@ -1,4 +1,5 @@
 ---
+description: "Add an Additional Report Server to a Farm (SSRS Scale-out)"
 title: "Add an Additional Report Server to a Farm (SSRS Scale-out) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services

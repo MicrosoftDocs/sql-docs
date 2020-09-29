@@ -1,4 +1,5 @@
 ---
+description: "bcp_bind"
 title: "bcp_bind | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

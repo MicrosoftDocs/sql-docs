@@ -48,7 +48,7 @@ This error usually means that the client can't find the SQL Server instance. Thi
 
 - This topic does not include information about SSPI errors. For SSPI errors, see [How to troubleshoot the "Cannot generate SSPI context" error message](https://support.microsoft.com/kb/811889).
 - This topic does not include information about Kerberos errors. For help, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
-- This topic does not include information about SQL Azure Connectivity. For help, see [Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
+- This topic does not include information about Azure SQL Database connectivity. For help, see [Troubleshooting connectivity issues with Microsoft Azure SQL Database](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
 
 ## Get instance name from Configuration Manger
 

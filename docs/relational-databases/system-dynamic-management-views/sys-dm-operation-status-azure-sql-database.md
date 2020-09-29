@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_operation_status"
 title: "sys.dm_operation_status | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "dm_operation_status dynamic management view"
   - "sys.dm_operation_status dynamic management view"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_operation_status

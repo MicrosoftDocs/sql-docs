@@ -1,4 +1,5 @@
 ---
+description: "Jet: Outer Joins"
 title: "Jet: Outer Joins | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

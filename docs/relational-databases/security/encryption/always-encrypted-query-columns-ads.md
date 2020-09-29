@@ -1,4 +1,5 @@
 ---
+description: "Query columns using Always Encrypted with Azure Data Studio"
 title: "Query columns using Always Encrypted with Azure Data Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: 5/19/2020

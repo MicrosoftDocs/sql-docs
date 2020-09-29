@@ -28,9 +28,9 @@ The following table lists common big data cluster tools and how to install them:
 | `kubectl`<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kubernetes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Yes | Cross-platform graphical tool for querying SQL Server. | [Install](https://aka.ms/getazuredatastudio) |
 | **Data Virtualization extension** | Yes | Extension for Azure Data Studio that provides a Data Virtualization wizard. | [Install](../azure-data-studio/data-virtualization-extension.md) |
-| **Azure CLI**<sup>2</sup> | For AKS | Modern command-line interface for managing Azure services. Used with AKS big data cluster deployments ([More info](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Install](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure CLI**<sup>2</sup> | For AKS | Modern command-line interface for managing Azure services. Used with AKS big data cluster deployments ([More info](/cli/azure/?view=azure-cli-latest)). | [Install](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Optional | Modern command-line interface for querying SQL Server ([More info](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | For some scripts | Legacy command-line tool for querying SQL Server ([More info](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). You might need to install the Microsoft ODBC Driver 11 for SQL Server before installing the SQLCMD package. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | For some scripts | Legacy command-line tool for querying SQL Server ([More info](../tools/sqlcmd-utility.md?view=sql-server-ver15)). You might need to install the Microsoft ODBC Driver 11 for SQL Server before installing the SQLCMD package. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | For some scripts | Command-line tool for transferring data with URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: install curl package |
 | `oc` | Required for Red Hat OpenShift and Azure Redhat OpenShift deployments. |`oc` is the Open Shift command line interface (CLI). | [Installing the CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
@@ -82,7 +82,7 @@ Azure Data Studio provides capabilities and features specifically for SQL Server
 
 [Get the latest Azure Data Studio](https://aka.ms/getazuredatastudio).
 
-For details about the latest release, see the [release notes](../big-data-cluster/release-notes-big-data-cluster.md).
+For details about the latest release, see the [release notes](./release-notes-big-data-cluster.md).
 
 ## Next steps
 

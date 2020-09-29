@@ -1,4 +1,5 @@
 ---
+description: "BinaryPath Property (SqlService Class )"
 title: "BinaryPath Property (SqlService Class )"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -14,8 +15,8 @@ apilocation:
 helpviewer_keywords: 
   - "BinaryPath property"
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # BinaryPath Property (SqlService Class )
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

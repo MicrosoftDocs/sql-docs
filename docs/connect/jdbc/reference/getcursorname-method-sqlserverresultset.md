@@ -1,4 +1,5 @@
 ---
+description: "getCursorName Method (SQLServerResultSet)"
 title: "getCursorName Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Step 2: Initialize the Application"
 title: "Step 2: Initialize the Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

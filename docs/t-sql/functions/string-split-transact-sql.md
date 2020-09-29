@@ -35,7 +35,7 @@ To change the compatibility level of a database, refer to [View or Change the Co
   
 ## Syntax  
 
-```
+```syntaxsql
 STRING_SPLIT ( string , separator )  
 ```
 

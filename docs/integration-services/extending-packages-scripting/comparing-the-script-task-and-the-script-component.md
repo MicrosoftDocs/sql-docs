@@ -1,4 +1,5 @@
 ---
+description: "Comparing the Script Task and the Script Component"
 title: "Comparing the Script Task and the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -1,6 +1,6 @@
 ---
 title: "OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery"
-description: "Learn about OLE DB Driver for SQL Server support for high availability and disaster recovery scenarios when connecting to databases with those features configured."
+description: "Learn about OLE DB Driver for SQL Server support for high availability and disaster recovery when connecting to databases with those features configured."
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

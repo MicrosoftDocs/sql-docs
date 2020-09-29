@@ -1,4 +1,5 @@
 ---
+description: "FILEGROUPPROPERTY (Transact-SQL)"
 title: "FILEGROUPPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -30,7 +31,7 @@ This function returns the filegroup property value for a specified name  and fil
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
@@ -58,12 +59,12 @@ An expression of type **varchar(128)** that returns the name of the filegroup pr
 ## Examples  
 This example returns the `IsDefault` property setting for the primary filegroup in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]   
 ```  
 Default Filegroup   
 ---------------------   

@@ -1,4 +1,5 @@
 ---
+description: "truncate Method (SQLServerBlob)"
 title: "truncate Method (SQLServerBlob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DROP AGGREGATE (Transact-SQL)"
 title: "DROP AGGREGATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "deleting user-defined functions"
   - "DROP AGGREGATE statement"
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name  
 ```  
   
@@ -59,7 +60,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ## Examples  
  The following example drops the aggregate `Concatenate`.  
   
-```  
+```sql  
 DROP AGGREGATE dbo.Concatenate;  
 ```  
   

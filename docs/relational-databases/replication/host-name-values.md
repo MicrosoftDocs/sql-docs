@@ -1,4 +1,5 @@
 ---
+description: "HOST_NAME Values"
 title: "HOST_NAME Values | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Shrink Database Task"
 title: "Shrink Database Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_special_columns_100 (SQL Data Warehouse)"
 title: "sp_special_columns_100 (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -23,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
@@ -85,7 +86,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns information about the column that uniquely identifies rows in the `FactFinance` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  

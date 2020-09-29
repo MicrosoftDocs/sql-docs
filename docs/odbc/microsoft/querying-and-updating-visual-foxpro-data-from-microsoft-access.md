@@ -1,4 +1,5 @@
 ---
+description: "Querying and Updating Visual FoxPro Data from Microsoft Access"
 title: "Querying and Updating Visual FoxPro Data from Microsoft Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

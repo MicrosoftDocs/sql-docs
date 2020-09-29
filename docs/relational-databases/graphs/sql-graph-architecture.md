@@ -1,4 +1,5 @@
 ---
+description: "SQL Graph Architecture"
 title: "SQL Graph Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"

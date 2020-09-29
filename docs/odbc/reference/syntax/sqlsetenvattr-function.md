@@ -1,4 +1,5 @@
 ---
+description: "SQLSetEnvAttr Function"
 title: "SQLSetEnvAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"

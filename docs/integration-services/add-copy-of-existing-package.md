@@ -1,4 +1,5 @@
 ---
+description: "Add Copy of Existing Package"
 title: "Add Copy of Existing Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

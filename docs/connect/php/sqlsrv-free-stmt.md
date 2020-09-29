@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_free_stmt"
 title: "sqlsrv_free_stmt | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

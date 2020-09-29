@@ -4,7 +4,7 @@ description: Learn how to search and replace text in all files contained in a pr
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

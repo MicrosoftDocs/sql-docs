@@ -1,4 +1,5 @@
 ---
+description: "_ (Wildcard - Match One Character) (Transact-SQL)"
 title: "_ (Wildcard - Match One Character) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"

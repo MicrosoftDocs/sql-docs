@@ -1,4 +1,5 @@
 ---
+description: "Reorder Output Columns (Visual Database Tools)"
 title: Reorder Output Columns
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

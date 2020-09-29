@@ -1,4 +1,5 @@
 ---
+description: "Index Properties F1 Help"
 title: "Index Properties F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

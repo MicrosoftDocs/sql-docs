@@ -1,4 +1,5 @@
 ---
+description: "SQLSetDescRec"
 title: "SQLSetDescRec | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

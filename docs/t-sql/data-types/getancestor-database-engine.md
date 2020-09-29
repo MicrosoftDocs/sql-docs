@@ -1,4 +1,5 @@
 ---
+description: "GetAncestor (Database Engine)"
 title: "GetAncestor (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -25,16 +26,16 @@ Returns a **hierarchyid** representing the *n*th ancestor of *this*.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 child.GetAncestor ( n )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetAncestor ( int n )  
-```  
-  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

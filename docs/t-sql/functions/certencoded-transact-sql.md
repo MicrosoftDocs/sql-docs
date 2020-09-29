@@ -1,4 +1,5 @@
 ---
+description: "CERTENCODED (Transact-SQL)"
 title: "CERTENCODED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -25,7 +26,7 @@ This function returns the public portion of a certificate in binary format. This
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CERTENCODED ( cert_id )  
 ```  
   

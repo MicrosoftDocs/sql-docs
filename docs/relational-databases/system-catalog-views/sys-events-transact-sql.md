@@ -1,4 +1,5 @@
 ---
+description: "sys.events (Transact-SQL)"
 title: "sys.events (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.events catalog view"
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.events (Transact-SQL)

@@ -1,4 +1,5 @@
 ---
+description: "Connecting with SQLBrowseConnect"
 title: "Connecting with SQLBrowseConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

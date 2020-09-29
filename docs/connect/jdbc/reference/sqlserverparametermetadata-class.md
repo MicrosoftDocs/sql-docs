@@ -1,4 +1,5 @@
 ---
+description: "SQLServerParameterMetaData Class"
 title: "SQLServerParameterMetaData Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

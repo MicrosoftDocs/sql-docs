@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting (OracleToSQL)"
 title: "Troubleshooting (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Troubleshooting (OracleToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

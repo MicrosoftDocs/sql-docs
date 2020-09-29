@@ -1,4 +1,5 @@
 ---
+description: "SQLBulkOperations and the Cursor Library"
 title: "SQLBulkOperations and the Cursor Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

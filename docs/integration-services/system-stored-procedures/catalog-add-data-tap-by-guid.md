@@ -1,4 +1,5 @@
 ---
+description: "catalog.add_data_tap_by_guid"
 title: "catalog.add_data_tap_by_guid | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

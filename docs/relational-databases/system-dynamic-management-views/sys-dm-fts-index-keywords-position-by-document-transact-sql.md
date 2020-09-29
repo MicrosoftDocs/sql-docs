@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_index_keywords_position_by_document (Transact-SQL)"
 title: "sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

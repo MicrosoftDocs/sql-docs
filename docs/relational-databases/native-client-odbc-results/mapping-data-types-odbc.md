@@ -1,4 +1,5 @@
 ---
+description: "Mapping Data Types (ODBC)"
 title: "Mapping Data Types (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

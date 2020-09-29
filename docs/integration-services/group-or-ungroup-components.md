@@ -1,4 +1,5 @@
 ---
+description: "Group or Ungroup Components"
 title: "Group or Ungroup Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

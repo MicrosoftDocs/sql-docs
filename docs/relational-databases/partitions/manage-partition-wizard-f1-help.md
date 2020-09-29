@@ -1,4 +1,5 @@
 ---
+description: "Manage Partition Wizard"
 title: "Manage Partition Wizard"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Developing a User Interface for a Custom ForEach Enumerator"
 title: "Developing a User Interface for a Custom ForEach Enumerator | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

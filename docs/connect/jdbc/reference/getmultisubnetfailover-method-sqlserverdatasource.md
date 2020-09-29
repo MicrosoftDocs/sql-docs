@@ -1,4 +1,5 @@
 ---
+description: "getMultiSubnetFailover Method (SQLServerDataSource)"
 title: "getMultiSubnetFailover Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

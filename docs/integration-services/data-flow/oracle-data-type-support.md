@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Connector for Oracle data type support"
 title: "Microsoft Connector for Oracle data type support | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"

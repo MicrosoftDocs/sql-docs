@@ -1,4 +1,5 @@
 ---
+description: "snapshots.fn_trace_getdata (Transact-SQL)"
 title: "snapshots.fn_trace_getdata (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

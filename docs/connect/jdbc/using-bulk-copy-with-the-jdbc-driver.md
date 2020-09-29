@@ -2,7 +2,7 @@
 title: "Using bulk copy with the JDBC driver"
 description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: "08/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -354,13 +354,13 @@ public class BulkCopyMultiple {
 
 ## Extended Bulk Copy for Azure Data Warehouse
 
-Driver version v8.4.0 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is `true` by default.
+Driver version v8.4.1 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is `true` by default.
 
 This connection property, when set to `false`, will send **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME**, and **TIME** datatypes as their respective types instead of sending them as String.
 
-Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure DW, which was not possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it is not the same with Azure DW.
+Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure Synapse Analytics (SQL DW), which was not possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it is not the same with Azure Synapse Analytics (SQL DW).
 
-Additionally, even without setting this connection string to 'false', from **v8.4.0** and onward, **MONEY** and **SMALLMONEY** datatypes will be sent as **MONEY** / **SMALLMONEY** datatypes instead of **DECIMAL**, which also allows those datatypes to be bulk copied into Azure DW.
+Additionally, even without setting this connection string to 'false', from **v8.4.1** and onward, **MONEY** and **SMALLMONEY** datatypes will be sent as **MONEY** / **SMALLMONEY** datatypes instead of **DECIMAL**, which also allows those datatypes to be bulk copied into Azure Synapse Analytics (SQL DW).
 
 ### Extended Bulk Copy for Azure Data Warehouse limitations
 
@@ -675,7 +675,7 @@ public class BulkCopyCSV {
 
 ### Bulk copy with delimiters as data in CSV file
 
-Driver version 8.4.0 adds a new API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. When set to true, the following rules will apply:
+Driver version 8.4.1 adds a new API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. When set to true, the following rules will apply:
 
 - Each field may or may not be enclosed in double quotes.
 - If fields are not enclosed with double quotes, then double quotes may not appear inside the fields.

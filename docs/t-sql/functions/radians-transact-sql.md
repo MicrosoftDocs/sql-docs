@@ -1,4 +1,5 @@
 ---
+description: "RADIANS (Transact-SQL)"
 title: "RADIANS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -46,7 +47,7 @@ RADIANS ( numeric_expression )
 ### A. Using RADIANS to show 0.0  
  The following example returns a result of `0.0` because the numeric expression to convert to radians is too small for the `RADIANS` function.  
   
-```  
+```sql  
 SELECT RADIANS(1e-307)  
 GO  
 ```  
@@ -62,7 +63,7 @@ GO
 ### B. Using RADIANS to return the equivalent angle of a float expression.  
  The following example takes a `float` expression and returns the `RADIANS` of the specified angle.  
   
-```  
+```sql  
 -- First value is -45.01.  
 DECLARE @angle FLOAT  
 SET @angle = -45.01  

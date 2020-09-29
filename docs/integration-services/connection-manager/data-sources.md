@@ -1,4 +1,5 @@
 ---
+description: "Data Sources for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages"
 title: "Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2016"

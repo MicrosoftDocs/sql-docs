@@ -1,4 +1,5 @@
 ---
+description: "Executing a command (Native Client OLE DB provider)"
 title: "Executing a command (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

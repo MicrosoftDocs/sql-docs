@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Login Password Strength"
 title: "SQL Server Login Password Strength | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

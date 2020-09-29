@@ -1,4 +1,5 @@
 ---
+description: "Flat File Custom Properties"
 title: "Flat File Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Uses of ODBC Table-Valued Parameters"
 title: "Uses of ODBC Table-Valued Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

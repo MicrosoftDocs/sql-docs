@@ -1,6 +1,6 @@
 ---
 title: Host a database on a managed instance
-description: This article describes how to configure a Master Data Service (MDS) database on a managed instance.
+description: Learn how to create and configure a Master Data Services (MDS) database and host it on an Azure SQL Managed Instance.
 ms.custom: ""
 ms.date: "07/01/2019"
 ms.prod: sql

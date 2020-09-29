@@ -48,7 +48,6 @@ ms.author: "jroth"
  [Impersonation and CLR Integration Security](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Discusses how managed code accesses external resources using impersonation.  
   
- [Allowing Partially Trusted Callers](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Discusses issues that arise when a managed method invokes a method in a class contained in another assembly.  
   
  [Application Domains and CLR Integration Security](/previous-versions/sql/2014/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  

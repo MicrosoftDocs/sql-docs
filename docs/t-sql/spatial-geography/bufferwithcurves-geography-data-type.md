@@ -1,4 +1,5 @@
 ---
+description: "BufferWithCurves (geography Data Type)"
 title: "BufferWithCurves (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/11/2017"

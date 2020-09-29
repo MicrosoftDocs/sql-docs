@@ -1,4 +1,5 @@
 ---
+description: "ODBC Programmer&#39;s Reference"
 title: "ODBC Programmer&#39;s Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

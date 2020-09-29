@@ -1,4 +1,5 @@
 ---
+description: "DBCC DROPRESULTSETCACHE  (Transact-SQL)"
 title: DBCC DROPRESULTSETCACHE (Transact-SQL)
 ms.custom: ""
 ms.date: "07/03/2019"

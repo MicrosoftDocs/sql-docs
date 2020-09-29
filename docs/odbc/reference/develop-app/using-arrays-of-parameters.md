@@ -1,4 +1,5 @@
 ---
+description: "Using Arrays of Parameters"
 title: "Using Arrays of Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

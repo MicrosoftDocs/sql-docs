@@ -1,4 +1,5 @@
 ---
+description: "Allocating the Environment Handle"
 title: "Allocating the Environment Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

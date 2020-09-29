@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB"
   - "OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server, OLE DB"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # OLE DB Driver for SQL Server Programming
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

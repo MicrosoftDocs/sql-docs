@@ -1,4 +1,5 @@
 ---
+description: "sp_OACreate (Transact-SQL)"
 title: "sp_OACreate (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OACreate"
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

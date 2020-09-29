@@ -1,4 +1,5 @@
 ---
+description: "updateClob Method (int, java.io.Reader, long)"
 title: "updateClob Method (int, java.io.Reader, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

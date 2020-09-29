@@ -1,4 +1,5 @@
 ---
+description: "SQL-92 CAST Function"
 title: "SQL-92 CAST Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -2,7 +2,7 @@
 title: Connect and query an Azure SQL database
 description: Do a quickstart in which you use Azure Data Studio to connect to an Azure SQL Database server, and then create and query a database. 
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
@@ -18,13 +18,13 @@ In this quickstart, you'll  use Azure Data Studio to connect to an Azure SQL Dat
 
 To complete this quickstart, you need Azure Data Studio, and an Azure SQL Database server.
 
-- [Install Azure Data Studio](download.md)
+- [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 
 If you don't have an Azure SQL server, complete one of the following Azure SQL Database quickstarts. Remember the fully qualified server name and sign in credentials for later steps:
 
-- [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Create DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [Create DB - Portal](/azure/sql-database/sql-database-get-started-portal)
+- [Create DB - CLI](/azure/sql-database/sql-database-get-started-cli)
+- [Create DB - PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## Connect to your Azure SQL Database server
@@ -51,7 +51,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
 
 3. Select **Connect**.
 
-4. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](/azure/sql-database/sql-database-firewall-configure).
 
    ![New firewall rule](media/quickstart-sql-database/firewall.png)  
 
@@ -144,7 +144,7 @@ The query results display:
 
 ## Clean up resources
 
-Later quickstart articles build upon the resources created here. If you plan to work through these articles, be sure not to delete these resources. Otherwise, in the Azure portal, delete the resources you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Later quickstart articles build upon the resources created here. If you plan to work through these articles, be sure not to delete these resources. Otherwise, in the Azure portal, delete the resources you no longer need. For details, see [Clean up resources](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
 

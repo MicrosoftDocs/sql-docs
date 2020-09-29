@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Database Diagrams from Previous Editions (Visual Database Tools)"
 title: Upgrade Database Diagrams from Previous Editions
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

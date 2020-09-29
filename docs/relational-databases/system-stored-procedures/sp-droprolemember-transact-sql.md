@@ -1,4 +1,5 @@
 ---
+description: "sp_droprolemember (Transact-SQL)"
 title: "sp_droprolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -34,14 +35,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ### Syntax for both SQL Server and Azure SQL Database
 
-```  
+```syntaxsql  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
 
 ### Syntax for both Azure SQL Data Warehouse and Parallel Data Warehouse
 
-```  
+```syntaxsql  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  

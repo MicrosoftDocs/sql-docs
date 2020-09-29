@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (AccessToSQL)"
 title: "Managing Passwords (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Managing Passwords (AccessToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

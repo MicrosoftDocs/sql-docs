@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_component_health_active_alerts (Transact-SQL)"
 title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL"
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
@@ -7,8 +8,8 @@ ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_component_health_active_alerts (Transact-SQL)

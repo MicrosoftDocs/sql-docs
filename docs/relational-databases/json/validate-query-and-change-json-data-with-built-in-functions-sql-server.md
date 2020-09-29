@@ -1,4 +1,5 @@
 ---
+description: "Validate, Query, and Change JSON Data with Built-in Functions (SQL Server)"
 title: "Validate, Query, and Change JSON Data with Built-in Functions"
 ms.date: 06/03/2020
 ms.prod: sql

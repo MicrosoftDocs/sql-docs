@@ -1,4 +1,5 @@
 ---
+description: "Basic ODBC Application Steps"
 title: "Basic ODBC Application Steps | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

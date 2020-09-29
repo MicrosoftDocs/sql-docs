@@ -1,4 +1,5 @@
 ---
+description: "Index JSON data"
 title: "Index JSON data | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020

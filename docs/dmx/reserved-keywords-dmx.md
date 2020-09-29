@@ -1,4 +1,5 @@
 ---
+description: "Reserved Keywords (DMX)"
 title: "Reserved Keywords (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

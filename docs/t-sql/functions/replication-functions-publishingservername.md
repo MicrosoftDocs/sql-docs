@@ -1,4 +1,5 @@
 ---
+description: "Replication Functions - PUBLISHINGSERVERNAME"
 title: "PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -28,8 +29,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PUBLISHINGSERVERNAME()  
 ```  
   

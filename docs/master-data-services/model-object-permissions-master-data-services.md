@@ -1,4 +1,5 @@
 ---
+description: "Model Object Permissions (Master Data Services)"
 title: Model Object Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -34,7 +35,7 @@ ms.author: lle
  In general, you should assign **ALL** permission to the model object, and then explicitly assign permission to objects underneath.  
   
 ## External Resources  
- Blog post, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
+ Blog post, [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
   
 ## See Also  
  [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

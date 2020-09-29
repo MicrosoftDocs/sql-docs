@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_rename_policy (Transact-SQL)"
 title: "sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2: Creating and Managing Data in a Hierarchical Table"
 title: "Lesson 2: Creating and Managing Data in a Hierarchical Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

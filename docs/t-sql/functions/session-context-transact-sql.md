@@ -1,4 +1,5 @@
 ---
+description: "SESSION_CONTEXT (Transact-SQL)"
 title: "SESSION_CONTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2019"
@@ -27,12 +28,10 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SESSION_CONTEXT(N'key')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  'key'  
  The key (type sysname) of the value being retrieved.  
@@ -52,7 +51,7 @@ SESSION_CONTEXT(N'key')
 ## Examples  
  The following simple example sets the session context value for key `user_id` to 4, and then uses the **SESSION_CONTEXT** function to retrieve the value.  
   
-```  
+```sql  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  

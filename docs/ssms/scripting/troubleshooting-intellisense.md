@@ -4,7 +4,7 @@ description: Learn about the cases where Intellisense in SQL Server Management S
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

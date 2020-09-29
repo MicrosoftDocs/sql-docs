@@ -1,4 +1,5 @@
 ---
+description: "ALTER EVENT SESSION (Transact-SQL)"
 title: "ALTER EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"

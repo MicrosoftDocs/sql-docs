@@ -1,4 +1,5 @@
 ---
+description: "DisplayName Property (SqlService Class)"
 title: "DisplayName Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "DisplayName property"
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # DisplayName Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

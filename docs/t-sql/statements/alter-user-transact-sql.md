@@ -1,4 +1,5 @@
 ---
+description: "ALTER USER (Transact-SQL)"
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/10/2020
@@ -41,7 +42,7 @@ Renames a database user or changes its default schema.
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -224,7 +225,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />single database/elastic pool \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -239,7 +240,7 @@ GO
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## Syntax
 
@@ -416,7 +417,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />Managed Instance \*_**
@@ -692,7 +693,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
@@ -821,7 +822,7 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)

@@ -1,4 +1,5 @@
 ---
+description: "COL_NAME (Transact-SQL)"
 title: "COL_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -31,7 +32,7 @@ This function returns the name of a table column, based on the table identificat
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COL_NAME ( table_id , column_id )  
 ```  
   
@@ -69,7 +70,7 @@ COL_NAME(OBJECT_ID('dbo.FactResellerSales'), 2) AS SecondColumnName;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ColumnName          
 ------------   
 BusinessEntityID  

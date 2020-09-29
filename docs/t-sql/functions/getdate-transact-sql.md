@@ -39,6 +39,8 @@ Returns the current database system timestamp as a **datetime** value without th
 > [!NOTE]
 >  SYSDATETIME and SYSUTCDATETIME have more fractional seconds precision than GETDATE and GETUTCDATE. SYSDATETIMEOFFSET includes the system time zone offset. SYSDATETIME, SYSUTCDATETIME, and SYSDATETIMEOFFSET can be assigned to a variable of any of the date and time types.
 
+Azure SQL Database (with the exception of Azure SQL Managed Instance) and Azure Synapse Analytics follow UTC. Use [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) in Azure SQL Database or Azure Synapse Analytics if you need to interpret date and time information in a non-UTC time zone.
+
  For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: "SP:CacheHit Event Class"
 title: "SP:CacheHit Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

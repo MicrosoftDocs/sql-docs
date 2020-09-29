@@ -1,4 +1,5 @@
 ---
+description: "Initialize a Subscription Manually"
 title: "Initialize a Subscription Manually | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"

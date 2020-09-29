@@ -1,4 +1,5 @@
 ---
+description: "DROP APPLICATION ROLE (Transact-SQL)"
 title: "DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -31,8 +32,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP APPLICATION ROLE rolename  
 ```  
   
@@ -54,7 +54,7 @@ DROP APPLICATION ROLE rolename
 ## Examples  
  Drop application role "weekly_ledger" from the database.  
   
-```  
+```sql  
 DROP APPLICATION ROLE weekly_ledger;  
 GO  
 ```  

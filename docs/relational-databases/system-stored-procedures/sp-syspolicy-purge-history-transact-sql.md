@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_purge_history (Transact-SQL)"
 title: "sp_syspolicy_purge_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

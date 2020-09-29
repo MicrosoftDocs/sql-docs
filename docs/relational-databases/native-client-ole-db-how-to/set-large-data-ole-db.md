@@ -1,4 +1,5 @@
 ---
+description: "Set Large Data (Native Client OLE DB provider)"
 title: Set large data (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

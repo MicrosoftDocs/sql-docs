@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Connection Required Permissions for the CDC Designer"
 title: "SQL Server Connection Required Permissions for the CDC Designer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

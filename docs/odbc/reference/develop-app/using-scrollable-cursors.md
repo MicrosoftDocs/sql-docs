@@ -1,4 +1,5 @@
 ---
+description: "Using Scrollable Cursors"
 title: "Using Scrollable Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

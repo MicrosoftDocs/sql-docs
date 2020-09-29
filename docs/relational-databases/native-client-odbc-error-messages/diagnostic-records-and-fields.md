@@ -1,4 +1,5 @@
 ---
+description: "Diagnostic Records and Fields"
 title: "Diagnostic Records and Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -6,7 +6,7 @@ ms.date: "05/10/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
@@ -67,6 +67,6 @@ ms.author: jroth
 
 ## Next steps  
  [SQL Server Always On Team Blog](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+ [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

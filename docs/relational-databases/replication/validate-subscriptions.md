@@ -1,4 +1,5 @@
 ---
+description: "Validate Subscriptions"
 title: "Validate Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

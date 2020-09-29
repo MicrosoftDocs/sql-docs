@@ -1,5 +1,6 @@
 ---
-title: "ERROR_MESSAGE (Transact-SQL) | Microsoft Docs"
+description: "ERROR_MESSAGE (Transact-SQL)"
+title: ERROR_MESSAGE (Transact-SQL)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -32,10 +33,10 @@ This function returns the message text of the error that caused the CATCH block 
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_MESSAGE ( )   
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Return Types

@@ -1,4 +1,5 @@
 ---
+description: "Row Status Array"
 title: "Row Status Array | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SQLSetPos Function"
 title: "SQLSetPos Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"

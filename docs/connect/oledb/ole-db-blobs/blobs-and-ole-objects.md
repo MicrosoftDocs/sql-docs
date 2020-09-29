@@ -1,6 +1,6 @@
 ---
 title: "BLOBs and OLE Objects (OLE DB driver) | Microsoft Docs"
-description: "BLOBs and OLE Objects"
+description: Learn how the ISequentialStream interface supports consumer access to SQL Server data types as binary large objects in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "05/25/2020"
 ms.prod: sql
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "storage object [OLE DB]"
   - "OLE DB Driver for SQL Server, BLOBs"
   - "large data, OLE objects"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # BLOBs and OLE Objects
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Role definitions - predefined roles"
 title: "Role definitions - predefined roles | Microsoft Docs"
 ms.date: 06/10/2020
 ms.prod: reporting-services

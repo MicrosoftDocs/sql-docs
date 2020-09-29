@@ -1,4 +1,5 @@
 ---
+description: "Step 5: Commit the Transaction"
 title: "Step 5: Commit the Transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "xml Data Type Methods"
 title: xml Data Type Methods
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -34,9 +35,9 @@ ms.author: genemi
   
  You call these methods by using the user-defined type method invocation syntax. For example:  
   
-```  
+```sql
 SELECT XmlCol.query(' ... ')  
-FROM   Table  
+FROM Table  
 ```  
   
 > [!NOTE]  

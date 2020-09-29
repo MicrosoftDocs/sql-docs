@@ -1,4 +1,5 @@
 ---
+description: "SecurityCertificate Class"
 title: "SecurityCertificate Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SecurityCertificate class"
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SecurityCertificate Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

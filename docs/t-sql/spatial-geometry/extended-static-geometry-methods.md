@@ -1,4 +1,5 @@
 ---
+description: "Extended Static Geometry Methods"
 title: "Extended Static Geometry Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

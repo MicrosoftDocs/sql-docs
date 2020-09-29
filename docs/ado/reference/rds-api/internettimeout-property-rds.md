@@ -1,8 +1,9 @@
 ---
+description: "InternetTimeout Property (RDS)"
 title: "InternetTimeout Property (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -32,15 +33,13 @@ Indicates the number of milliseconds to wait before a request times out.
 
 :::row:::
     :::column:::
-        [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [DataControl Object (RDS)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+        [DataSpace Object (RDS)](./dataspace-object-rds.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [InternetTimeout Property Example (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
- [InternetTimeout Property Example (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
- 
-
+ [InternetTimeout Property Example (VB)](./internettimeout-property-example-vb.md)   
+ [InternetTimeout Property Example (VC++)](./internettimeout-property-example-vc.md)   

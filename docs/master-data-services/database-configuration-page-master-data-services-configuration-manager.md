@@ -1,4 +1,5 @@
 ---
+description: "Database Configuration Page (Master Data Services Configuration Manager)"
 title: Database Configuration Page
 ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"

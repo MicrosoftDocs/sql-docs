@@ -1,4 +1,5 @@
 ---
+description: "-- (Comment) (DMX) Summary"
 title: "-- (Comment) (DMX) Summary | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

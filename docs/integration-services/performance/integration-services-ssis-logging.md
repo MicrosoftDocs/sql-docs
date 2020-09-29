@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Logging"
 title: "Integration Services (SSIS) Logging | Microsoft Docs"
 ms.custom: supportability
 ms.date: "03/14/2017"

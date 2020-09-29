@@ -1,4 +1,5 @@
 ---
+description: "Duplicate Tables"
 title: "Duplicate Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

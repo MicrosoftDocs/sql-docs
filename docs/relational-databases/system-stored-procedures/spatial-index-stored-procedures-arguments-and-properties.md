@@ -1,4 +1,5 @@
 ---
+description: "Arguments and Properties of Spatial Index Stored Procedures"
 title: "Arguments and Properties of Spatial Index Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "spatial indexes [SQL Server], stored procedures"
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Spatial Index Stored Procedures - Arguments and Properties
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

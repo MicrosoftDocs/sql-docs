@@ -1,4 +1,5 @@
 ---
+description: "SELECT DISTINCT Limitations"
 title: "SELECT DISTINCT Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

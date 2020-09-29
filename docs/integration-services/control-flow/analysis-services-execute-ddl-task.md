@@ -1,4 +1,5 @@
 ---
+description: "Analysis Services Execute DDL Task"
 title: "Analysis Services Execute DDL Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

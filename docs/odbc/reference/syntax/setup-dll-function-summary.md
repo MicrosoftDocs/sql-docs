@@ -1,4 +1,5 @@
 ---
+description: "Setup DLL Function Summary"
 title: "Setup DLL Function Summary | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

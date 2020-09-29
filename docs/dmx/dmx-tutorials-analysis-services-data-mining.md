@@ -1,4 +1,5 @@
 ---
+description: "DMX Tutorials (Analysis Services - Data Mining)"
 title: "DMX Tutorials (Analysis Services - Data Mining) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

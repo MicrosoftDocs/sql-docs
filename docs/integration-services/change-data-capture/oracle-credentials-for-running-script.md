@@ -1,4 +1,5 @@
 ---
+description: "Oracle Credentials for Running Script"
 title: "Oracle Credentials for Running Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

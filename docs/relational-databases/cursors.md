@@ -1,4 +1,5 @@
 ---
+description: "Cursors (SQL Server)"
 title: "Cursors (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/11/2020

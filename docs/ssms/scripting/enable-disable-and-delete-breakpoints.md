@@ -4,7 +4,7 @@ description: Learn how to use the Breakpoints window to view, delete, disable, a
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: markingmyname

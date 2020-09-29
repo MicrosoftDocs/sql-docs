@@ -1,4 +1,5 @@
 ---
+description: "Aggregate Function Limitations"
 title: "Aggregate Function Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "RESTORE SERVICE MASTER KEY (Transact-SQL)"
 title: "RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -33,8 +34,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password' [FORCE]  
 ```  
@@ -67,7 +67,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ## Examples  
  The following example restores the service master key from a backup file.  
   
-```  
+```sql  
 RESTORE SERVICE MASTER KEY   
     FROM FILE = 'c:\temp_backups\keys\service_master_key'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  

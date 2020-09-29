@@ -1,4 +1,5 @@
 ---
+description: "getNClob Method (SQLServerResultSet)"
 title: "getNClob Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE SELECTIVE XML INDEX (Transact-SQL)"
 title: "CREATE SELECTIVE XML INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -133,7 +134,7 @@ identifier
 ## Examples  
  The following example shows the syntax for creating a selective XML index. It also shows several variations of the syntax for describing the paths to be indexed, with optional optimization hints.  
   
-```  
+```sql  
 CREATE TABLE Tbl ( id INT PRIMARY KEY, xmlcol XML );  
 GO  
 CREATE SELECTIVE XML INDEX sxi_index  
@@ -148,7 +149,7 @@ FOR(
   
  The following example includes a WITH XMLNAMESPACES clause.  
   
-```  
+```sql  
 CREATE SELECTIVE XML INDEX on T1(C1)  
 WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)  
 FOR ( path1 = '/myns:book/myns:author/text()' );  

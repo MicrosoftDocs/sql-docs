@@ -1,4 +1,5 @@
 ---
+description: "GRANT Schema Permissions (Transact-SQL)"
 title: "GRANT Schema Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"
@@ -128,13 +129,13 @@ AS *granting_principal*
   
 ### A. Granting INSERT permission on schema HumanResources to guest  
   
-```  
+```sql  
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
 ### B. Granting SELECT permission on schema Person to database user WilJo  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   

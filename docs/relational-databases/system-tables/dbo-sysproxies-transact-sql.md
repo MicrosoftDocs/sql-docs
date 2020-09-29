@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysproxies (Transact-SQL)"
 title: "dbo.sysproxies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxies system table"
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

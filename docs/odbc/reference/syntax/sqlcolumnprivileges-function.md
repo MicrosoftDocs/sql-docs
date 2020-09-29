@@ -1,4 +1,5 @@
 ---
+description: "SQLColumnPrivileges Function"
 title: "SQLColumnPrivileges Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

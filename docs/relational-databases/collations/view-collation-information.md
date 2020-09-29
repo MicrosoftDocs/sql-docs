@@ -1,4 +1,5 @@
 ---
+description: "View Collation Information"
 title: "View Collation Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

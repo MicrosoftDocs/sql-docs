@@ -1,4 +1,5 @@
 ---
+description: "ALTER ROLE (Transact-SQL)"
 title: "ALTER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2018"
@@ -49,7 +50,7 @@ ALTER ROLE  role_name
   
  
 ```syntaxsql
--- Syntax for SQL Server 2008, Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for SQL Server 2008, Azure Synapse Analytics and Parallel Data Warehouse
   
 -- Change the name of a user-defined database role  
 ALTER ROLE role_name   
@@ -57,7 +58,9 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *role_name*  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   

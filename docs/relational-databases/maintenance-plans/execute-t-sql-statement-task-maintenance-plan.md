@@ -1,4 +1,5 @@
 ---
+description: "Execute T-SQL Statement Task (Maintenance Plan)"
 title: "Execute T-SQL Statement Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

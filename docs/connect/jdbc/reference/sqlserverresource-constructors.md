@@ -1,4 +1,5 @@
 ---
+description: "SQLServerResource Constructors"
 title: "SQLServerResource Constructors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

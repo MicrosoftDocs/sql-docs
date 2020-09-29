@@ -1,4 +1,5 @@
 ---
+description: "BETWEEN (Transact-SQL)"
 title: "BETWEEN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/28/2017"

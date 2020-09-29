@@ -1,4 +1,5 @@
 ---
+description: "FILEPROPERTYEX (Transact-SQL)"
 title: "FILEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.date: "07/23/2019"
 ms.prod: sql
@@ -29,7 +30,7 @@ ms.author: sstein
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILEPROPERTYEX ( name , property )  
 ```  
   

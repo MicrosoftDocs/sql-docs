@@ -1,4 +1,5 @@
 ---
+description: "Host a Report Server Database in a SQL Server Failover Cluster"
 title: "Host a Report Server Database in a SQL Server Failover Cluster | Microsoft Docs"
 ms.date: 03/30/2016
 ms.prod: reporting-services

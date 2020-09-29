@@ -1,4 +1,5 @@
 ---
+description: "CONTEXT_INFO  (Transact-SQL)"
 title: "CONTEXT_INFO  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -31,7 +32,7 @@ This function returns the **context_info** value either set for the current sess
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CONTEXT_INFO()  
 ```  
 

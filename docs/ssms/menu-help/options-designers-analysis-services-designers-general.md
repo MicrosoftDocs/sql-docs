@@ -1,4 +1,5 @@
 ---
+description: "Options (Designers - Analysis Services Designers - General)"
 title: "Options (Designers - Analysis Services Designers - General)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

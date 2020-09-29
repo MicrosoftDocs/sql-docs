@@ -1,4 +1,5 @@
 ---
+description: "Include or Exclude Rows (Visual Database Tools)"
 title: Include or Exclude Rows
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

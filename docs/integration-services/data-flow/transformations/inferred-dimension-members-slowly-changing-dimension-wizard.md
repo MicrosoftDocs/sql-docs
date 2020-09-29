@@ -1,4 +1,5 @@
 ---
+description: "Inferred Dimension Members (Slowly Changing Dimension Wizard)"
 title: "Inferred Dimension Members (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

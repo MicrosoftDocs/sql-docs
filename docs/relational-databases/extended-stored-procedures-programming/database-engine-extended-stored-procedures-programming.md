@@ -1,4 +1,5 @@
 ---
+description: "Database Engine Extended Stored Procedures - Programming"
 title: "Programming Extended Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

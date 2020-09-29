@@ -1,4 +1,5 @@
 ---
+description: "Reuse Control Flow across Packages by Using Control Flow Package Parts"
 title: "Reuse Control Flow across Packages by Using Control Flow Package Parts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

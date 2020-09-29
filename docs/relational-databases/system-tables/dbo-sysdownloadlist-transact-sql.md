@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysdownloadlist (Transact-SQL)"
 title: "dbo.sysdownloadlist (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdownloadlist system table"
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "CPU Threshold Exceeded Event Class"
 title: "CPU Threshold Exceeded Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

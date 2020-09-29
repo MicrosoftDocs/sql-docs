@@ -1,4 +1,5 @@
 ---
+description: "sp_dropextendedproperty (Transact-SQL)"
 title: "sp_dropextendedproperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropextendedproperty"
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

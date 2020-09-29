@@ -1,4 +1,5 @@
 ---
+description: "sp_copysubscription (Transact-SQL)"
 title: "sp_copysubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_copysubscription"
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

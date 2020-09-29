@@ -1,4 +1,5 @@
 ---
+description: "Understanding the Script Component Object Model"
 title: "Understanding the Script Component Object Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

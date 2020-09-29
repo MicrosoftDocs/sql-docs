@@ -1,4 +1,5 @@
 ---
+description: "Backing Up and Restoring Databases and Transaction Logs"
 title: "Backing Up and Restoring Databases and Transaction Logs"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"

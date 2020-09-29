@@ -1,4 +1,5 @@
 ---
+description: "Not Equal To (Transact SQL) - traditional"
 title: "&lt;&gt; (Not Equal To) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

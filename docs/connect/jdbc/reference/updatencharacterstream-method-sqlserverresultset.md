@@ -1,4 +1,5 @@
 ---
+description: "updateNCharacterStream Method (SQLServerResultSet)"
 title: "updateNCharacterStream Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

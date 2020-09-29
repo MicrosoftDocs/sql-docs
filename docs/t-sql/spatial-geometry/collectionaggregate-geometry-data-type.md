@@ -1,4 +1,5 @@
 ---
+description: "CollectionAggregate (geometry Data Type)"
 title: "CollectionAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

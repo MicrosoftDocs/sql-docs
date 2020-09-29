@@ -1,4 +1,5 @@
 ---
+description: "Logon Triggers"
 title: "Logon Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/19/2018"

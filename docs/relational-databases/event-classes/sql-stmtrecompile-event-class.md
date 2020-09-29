@@ -1,4 +1,5 @@
 ---
+description: "SQL:StmtRecompile Event Class"
 title: "SQL:StmtRecompile Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

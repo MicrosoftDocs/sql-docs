@@ -1,4 +1,5 @@
 ---
+description: "SQLServerResultSet Class"
 title: "SQLServerResultSet Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

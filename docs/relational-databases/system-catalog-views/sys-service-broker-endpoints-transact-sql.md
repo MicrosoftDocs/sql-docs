@@ -1,4 +1,5 @@
 ---
+description: "sys.service_broker_endpoints (Transact-SQL)"
 title: "sys.service_broker_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_broker_endpoints catalog view"
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

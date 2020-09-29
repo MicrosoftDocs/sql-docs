@@ -1,4 +1,5 @@
 ---
+description: "Thread Support (Visual FoxPro ODBC Driver)"
 title: "Thread Support (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

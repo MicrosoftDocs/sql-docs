@@ -1,4 +1,5 @@
 ---
+description: "JSON_QUERY (Transact-SQL)"
 title: "JSON_QUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020
@@ -34,8 +35,6 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
  *expression*  

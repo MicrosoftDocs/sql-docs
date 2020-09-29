@@ -1,6 +1,6 @@
 ---
 title: "Insert data into table-valued parameters (OLE DB driver) | Microsoft Docs"
-description: "Using OLE DB Driver for SQL Server to insert Data into Table-Valued Parameters"
+description: The OLE DB Driver for SQL Server supports a push model and a pull model for consumers to specify data for table-valued parameter rows.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -10,8 +10,8 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, inserting data into"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Inserting Data into Table-Valued Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

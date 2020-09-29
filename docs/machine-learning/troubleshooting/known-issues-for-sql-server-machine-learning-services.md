@@ -11,13 +11,13 @@ ms.custom: contperfq4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Known issues in SQL Server Machine Learning Services
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
 ## Setup and configuration issues
 
-For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
+For a description of processes related to initial setup and configuration, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
 ### 1. Inconsistent results in MKL computations due to missing environment variable
 

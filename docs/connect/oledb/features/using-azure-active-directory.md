@@ -26,7 +26,7 @@ Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE 
 
 Version 18.3 adds support for the following authentication methods:
 - Azure Active Directory interactive authentication
-- Azure Active Directory MSI authentication
+- Azure Active Directory Managed Identity authentication
 
 > [!NOTE]
 > Using the following authentication modes with `DataTypeCompatibility` (or its corresponding property) set to `80` is **not** supported:
@@ -34,7 +34,7 @@ Version 18.3 adds support for the following authentication methods:
 > - Azure Active Directory authentication using access token
 > - Azure Active Directory integrated authentication
 > - Azure Active Directory interactive authentication
-> - Azure Active Directory MSI authentication
+> - Azure Active Directory Managed Identity authentication
 
 ## Connection string keywords and properties
 The following connection string keywords have been introduced to support Azure Active Directory authentication:
@@ -124,7 +124,7 @@ This section shows examples of new and existing connection string keywords to be
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=yes
 
-### Azure Active Directory MSI authentication
+### Azure Active Directory Managed Identity authentication
 
 - Using `IDataInitialize::GetDataSource`:
     - User-assigned managed identity:

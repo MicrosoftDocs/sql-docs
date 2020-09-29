@@ -1,4 +1,5 @@
 ---
+description: "Functional Area Permissions (Master Data Services)"
 title: Functional Area Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

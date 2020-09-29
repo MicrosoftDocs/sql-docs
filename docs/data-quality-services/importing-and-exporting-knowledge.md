@@ -1,4 +1,5 @@
 ---
+description: "Importing and Exporting Knowledge"
 title: "Importing and Exporting Knowledge"
 ms.date: "07/31/2012"
 ms.prod: sql

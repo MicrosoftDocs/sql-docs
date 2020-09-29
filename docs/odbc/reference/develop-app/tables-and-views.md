@@ -1,4 +1,5 @@
 ---
+description: "Tables and Views"
 title: "Tables and Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

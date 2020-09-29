@@ -1,4 +1,5 @@
 ---
+description: "sp_replmonitorhelppublisher (Transact-SQL)"
 title: "sp_replmonitorhelppublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorhelppublisher"
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

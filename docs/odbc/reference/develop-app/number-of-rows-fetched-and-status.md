@@ -1,4 +1,5 @@
 ---
+description: "Number of Rows Fetched and Status"
 title: "Number of Rows Fetched and Status | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

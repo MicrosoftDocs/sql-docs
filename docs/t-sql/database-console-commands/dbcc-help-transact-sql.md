@@ -1,4 +1,5 @@
 ---
+description: "DBCC HELP (Transact-SQL)"
 title: "DBCC HELP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -28,7 +29,7 @@ Returns syntax information for the specified DBCC command.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )  
 [ WITH NO_INFOMSGS ]  
 ```  

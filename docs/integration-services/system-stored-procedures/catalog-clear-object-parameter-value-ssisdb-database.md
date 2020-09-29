@@ -1,4 +1,5 @@
 ---
+description: "catalog.clear_object_parameter_value (SSISDB Database)"
 title: "catalog.clear_object_parameter_value (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

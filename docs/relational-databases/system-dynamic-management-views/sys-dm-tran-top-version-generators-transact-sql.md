@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_top_version_generators (Transact-SQL)"
 title: "sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_top_version_generators dynamic management view"
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_top_version_generators (Transact-SQL)

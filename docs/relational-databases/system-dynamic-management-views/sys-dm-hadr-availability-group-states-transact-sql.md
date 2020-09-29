@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_availability_group_states (Transact-SQL)"
 title: "sys.dm_hadr_availability_group_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_availability_group_states dynamic management view"
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

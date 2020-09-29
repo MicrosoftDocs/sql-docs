@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)"
 title: "sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"

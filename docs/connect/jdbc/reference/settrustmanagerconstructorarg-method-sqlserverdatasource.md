@@ -1,4 +1,5 @@
 ---
+description: "setTrustManagerConstructorArg Method (SQLServerDataSource)"
 title: "setTrustManagerConstructorArg Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"

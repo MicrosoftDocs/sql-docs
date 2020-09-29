@@ -1,4 +1,5 @@
 ---
+description: "Solution Explorer"
 title: "Solution Explorer"
 ms.prod: sql
 ms.prod_service: "sql-tools"

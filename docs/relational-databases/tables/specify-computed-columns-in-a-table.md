@@ -1,4 +1,5 @@
 ---
+description: "Specify Computed Columns in a Table"
 title: "Specify Computed Columns in a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "updateBigDecimal Method (int, java.math.BigDecimal)"
 title: "updateBigDecimal Method (int, java.math.BigDecimal) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

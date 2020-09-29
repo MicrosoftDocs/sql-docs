@@ -1,4 +1,5 @@
 ---
+description: "JSON Functions (Transact-SQL)"
 title: "JSON Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020

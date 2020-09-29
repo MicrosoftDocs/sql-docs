@@ -1,4 +1,5 @@
 ---
+description: "Deploy a Model Deployment Package by Using the Wizard"
 title: Deploy a Model Deployment Package (Wizard)
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Spatial Reference Identifiers (SRIDs)"
 title: "Spatial Reference Identifiers (SRIDs) | Microsoft Docs"
 ms.date: "03/29/2019"
 ms.prod: sql

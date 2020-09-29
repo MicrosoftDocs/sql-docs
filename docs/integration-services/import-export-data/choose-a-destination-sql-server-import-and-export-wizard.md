@@ -1,4 +1,5 @@
 ---
+description: "Choose a Destination (SQL Server Import and Export Wizard)"
 title: "Choose a Destination (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

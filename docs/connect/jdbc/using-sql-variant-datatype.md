@@ -1,4 +1,5 @@
 ---
+description: "Using Sql_variant data type"
 title: "Using Sql_variant data type | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

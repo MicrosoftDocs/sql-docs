@@ -1,4 +1,5 @@
 ---
+description: "Writing ODBC 3.x Applications"
 title: "Writing ODBC 3.x Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

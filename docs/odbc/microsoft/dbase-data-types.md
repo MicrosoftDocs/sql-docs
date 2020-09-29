@@ -1,4 +1,5 @@
 ---
+description: "dBASE Data Types"
 title: "dBASE Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

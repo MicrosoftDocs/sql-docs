@@ -1,4 +1,5 @@
 ---
+description: "Delete Model Object Permissions (Master Data Services)"
 title: Delete Model Object Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

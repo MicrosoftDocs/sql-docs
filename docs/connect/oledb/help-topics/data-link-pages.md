@@ -1,6 +1,6 @@
 ---
 title: "Universal Data Link (UDL) Configuration | Microsoft Docs"
-description: "Universal Data Link (UDL) Configuration using Microsoft OLE DB Driver for SQL Server"
+description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "10/11/2019"
 ms.prod: sql

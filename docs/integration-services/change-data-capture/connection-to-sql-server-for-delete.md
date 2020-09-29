@@ -1,4 +1,5 @@
 ---
+description: "Connection to SQL Server for Delete"
 title: "Connection to SQL Server for Delete | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "getDate Method (java.lang.String) (SQLServerResultSet)"
 title: "getDate Method (java.lang.String) column | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DROP MINING MODEL (DMX)"
 title: "DROP MINING MODEL (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

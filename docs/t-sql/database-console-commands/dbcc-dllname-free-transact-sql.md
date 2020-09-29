@@ -1,4 +1,5 @@
 ---
+description: "DBCC dllname (FREE) (Transact-SQL)"
 title: "DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -34,7 +35,7 @@ Unloads the specified extended stored procedure DLL from memory.
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-```sql
+```syntaxsql
 DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]  
 ```  
   

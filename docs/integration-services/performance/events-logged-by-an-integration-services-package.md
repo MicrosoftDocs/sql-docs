@@ -1,4 +1,5 @@
 ---
+description: "Events Logged by an Integration Services Package"
 title: "Events Logged by an Integration Services Package | Microsoft Docs"
 ms.custom: supportability
 ms.date: "03/14/2017"

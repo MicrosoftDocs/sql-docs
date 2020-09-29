@@ -1,4 +1,5 @@
 ---
+description: "Adding Support for Debugging in a Custom Task"
 title: "Adding Support for Debugging in a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SQLGetData (Desktop Database Drivers)"
 title: "SQLGetData (Desktop Database Drivers) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 # Collect data to troubleshoot SQL machine learning
 
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes how to collect the data you need when you're attempting to resolve problems in SQL machine learning. This data can be useful whether you're resolving problems on your own or with the help of Microsoft customer support.
 

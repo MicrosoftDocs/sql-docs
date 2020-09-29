@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_workload_management_workload_groups_stats (Transact-SQL)"
 title: "sys.dm_workload_management_workload_groups_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/02/2019"

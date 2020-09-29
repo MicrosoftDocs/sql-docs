@@ -1,4 +1,5 @@
 ---
+description: "position Method (java.lang.String, long)"
 title: "position Method (java.lang.String, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

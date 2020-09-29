@@ -1,4 +1,5 @@
 ---
+description: "sp_addpublication_snapshot (Transact-SQL)"
 title: "sp_addpublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2018"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addpublication_snapshot"
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

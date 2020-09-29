@@ -1,4 +1,5 @@
 ---
+description: "PropertyStrVal Property (ServerNetworkProtocolProperty Class)"
 title: "PropertyStrVal Property (ServerNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyStrVal property"
 ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyStrVal Property (ServerNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

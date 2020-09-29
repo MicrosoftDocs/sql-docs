@@ -1,4 +1,5 @@
 ---
+description: "sp_helprole (Transact-SQL)"
 title: "sp_helprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helprole"
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helprole (Transact-SQL)

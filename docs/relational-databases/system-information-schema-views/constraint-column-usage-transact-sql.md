@@ -1,4 +1,5 @@
 ---
+description: "CONSTRAINT_COLUMN_USAGE (Transact-SQL)"
 title: "CONSTRAINT_COLUMN_USAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE view"
   - "CONSTRAINT_COLUMN_USAGE view"
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONSTRAINT_COLUMN_USAGE (Transact-SQL)

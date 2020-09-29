@@ -1,4 +1,5 @@
 ---
+description: "ODBC SQL Grammar"
 title: "ODBC SQL Grammar | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

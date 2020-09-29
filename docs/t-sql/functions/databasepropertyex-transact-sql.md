@@ -1,4 +1,5 @@
 ---
+description: "DATABASEPROPERTYEX (Transact-SQL)"
 title: "DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/23/2018"
@@ -30,7 +31,7 @@ For a specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATABASEPROPERTYEX ( database , property )  
 ```  
   
@@ -120,7 +121,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)] This indicates that AUTO_SHRINK is off.
   
-```sql
+```
 ------------------  
 0  
 ```  
@@ -138,7 +139,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Collation                     Edition        ServiceObjective  MaxSizeInBytes  
 ----------------------------  -------------  ----------------  --------------  
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  

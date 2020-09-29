@@ -1,4 +1,5 @@
 ---
+description: "Always On Availability Groups Catalog Views (Transact-SQL)"
 title: "Always On Availability Groups Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
   - "YY"
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Always On Availability Groups Catalog Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,4 +1,5 @@
 ---
+description: "SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX)"
 title: "SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

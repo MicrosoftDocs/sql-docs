@@ -1,4 +1,5 @@
 ---
+description: "Simulating an Error Output for the Script Component"
 title: "Simulating an Error Output for the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

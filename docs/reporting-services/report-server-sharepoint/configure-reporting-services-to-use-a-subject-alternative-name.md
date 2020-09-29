@@ -142,7 +142,7 @@ For more information about TLS settings for Reporting Services, see [Configure T
 >  * For PBIRS, the `user` value is `NT SERVICE\PowerBIReportServer` and the `sddl` value is `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`
 
 > [!NOTE]  
-> For PBIRS, you need to create two additional entries for the Subject Alternative Name by typing the following:
+> For Power BI Report Server, you need to create two additional entries for the Subject Alternative Name by typing the following:
 >  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 >  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
 

@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports an application design pattern that lavishes performance resources on relatively current data. This pattern can apply when current data is read or updated far more frequently than older data is. In this case, we say the current data is *active* or *hot*, and the older data is *cold*.
 
-The main idea is to store *hot* data in a memory-optimized table. On a perhaps weekly or monthly basis, older data that has become *cold* is moved to a partitioned table. The partitioned table has its data stored on a disk or other hard drive, not in memory.
+The main idea is to store *hot* data in a memory-optimized table. On a weekly or monthly basis, older data that has become *cold* is moved to a partitioned table. The partitioned table has its data stored on a disk or other hard drive, not in memory.
 
 Typically, this design uses a **datetime** key to enable the move process to efficiently distinguish between hot versus cold data.
 

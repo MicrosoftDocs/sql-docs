@@ -1,7 +1,7 @@
 ---
 description: "SQL Server privacy supplement"
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 08/26/2020
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: "mikeray"

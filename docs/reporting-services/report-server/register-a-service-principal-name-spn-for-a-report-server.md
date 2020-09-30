@@ -1,7 +1,7 @@
 ---
 title: "Register a Service Principal Name (SPN) for a Report Server | Microsoft Docs"
 description: Learn how to create an SPN for the Report Server service if it runs as a domain user, if your network uses Kerberos for authentication.
-ms.date: 02/12/2020
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -28,10 +28,10 @@ ms.author: maggies
   
 ## Syntax  
 
-When you manipulate SPNs with the setspn, the SPN must be entered in the correct format. The format of an SPN is `<serviceclass>/host:<por>`. The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
+When you manipulate SPNs with the setspn, the SPN must be entered in the correct format. The format of an HTTP SPN is `http/host`. The command syntax for using SetSPN utility to create an SPN for the report server resembles the following:  
   
 ```  
-Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  **SetSPN** is available with Windows Server. The **-s** argument adds a SPN after validating no duplicate exists. **NOTE:-s** is available in Windows Server starting with Windows Server 2008.  
@@ -53,10 +53,10 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 4.  Copy the following command, replacing placeholder values with actual values that are valid for your network:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-    For example: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+    For example: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Run the command.  
   

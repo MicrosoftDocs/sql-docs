@@ -1,7 +1,7 @@
 {
   "redirections": [
     {
-      "source_path": "docs/sql-server-privacy-ver15.md",
+      "source_path": "docs/sql-server/sql-server-privacy-ver15.md",
       "redirect_url": "/sql/sql-server/sql-server-privacy",
       "redirect_document_id": false
     },

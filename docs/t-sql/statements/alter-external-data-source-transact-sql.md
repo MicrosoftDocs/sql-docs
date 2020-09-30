@@ -99,7 +99,6 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
 ```
-
  The following example alters the credential to a new LOCATION. This example is an external data source created for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
 ```sql  

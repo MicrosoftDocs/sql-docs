@@ -69,6 +69,8 @@ In [part five](r-taxi-classification-deploy-model.md), you'll learn how to opera
 
 + [Grant permissions to execute Python scripts](../security/user-permission.md)
 
++ [Grant permissions for scripts to access local files](../install/sql-server-machine-learning-services-2019.md#file-permissions)
+
 + Restore the [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
 All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in Azure Data Studio or [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].

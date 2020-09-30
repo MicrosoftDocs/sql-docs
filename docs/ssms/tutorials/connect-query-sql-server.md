@@ -39,7 +39,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 ## Connect to a SQL Server instance
 
-[!INCLUDE[ssms-186-connect-aad](../../includes/ssms-connect-aad.md)]
+[!INCLUDE[ssms-connect-aad](../../includes/ssms-connect-aad.md)]
 
 1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 

@@ -78,7 +78,7 @@ There are a few [known issues](release-notes-ssms.md#known-issues-186) with this
 
 This article is for the latest version of SSMS only. To download previous versions of SSMS, visit [Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
-[!INCLUDE[ssms-186-connect-aad](../../includes/ssms-connect-aad.md)]
+[!INCLUDE[ssms-connect-aad](../includes/ssms-connect-aad.md)]
 
 ## Unattended install
 

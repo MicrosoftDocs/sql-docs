@@ -1,7 +1,8 @@
 ---
-title: Connect to SQL using AAD with SSMS 18.6 and later
-description: message to explain starting December 2021, you can only use AAD with SSMS 18.6 amd later
+title: Connect to SQL using Azure Active Directory (AAD) with SSMS 18.6 and later
+description: Message to explain starting December 2021, you can only use Azure Active Directory (AAD) with SSMS 18.6 and later
 author: markingmyname
+ms.topic: include
 ms.author: maghan
 ---
 

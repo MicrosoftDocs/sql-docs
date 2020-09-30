@@ -210,7 +210,6 @@ The new owner principal must be one of the following:
 -   A federated user (not a group) present in Azure AD.  
 -   A managed user (not a group) or an application present in Azure AD.    
 
-> [!NOTE]  
 > If the new owner is an Azure Active Directory user, it cannot exist as a user in the database where the new owner will become the new DBO. Such Azure AD user must be first removed from the database before executing the ALTER AUTHORIZATION statement changing the database ownership to the new user. For more information about configuring an Azure Active Directory users with SQL Database, see [Connecting to SQL Database or [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 **Requirements for the person executing the ALTER AUTHORIZATION statement:**  

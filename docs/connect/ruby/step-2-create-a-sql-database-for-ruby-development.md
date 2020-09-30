@@ -1,6 +1,6 @@
 ---
-description: "Step 2: Create a SQL database for Ruby development"
-title: "Step 2: Create a SQL database for Ruby development | Microsoft Docs"
+title: "Step 2: Create a SQL database for Ruby development"
+description: "Step 2 of this getting started guide involves creating a database in SQL Server or Azure SQL Database for this Ruby sample."
 ms.custom: ""
 ms.date: "08/08/2017"
 ms.prod: sql

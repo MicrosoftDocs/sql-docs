@@ -33,8 +33,7 @@ Deletes the whole XML schema collection and all of its components.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -58,7 +57,7 @@ You can't drop an XML schema collection when it's in use. So, the collection bei
   
 -   Referenced in a schema-bound function or stored procedure. For example, the following function locks the XML schema collection `MyCollection` because the function specifies `WITH SCHEMABINDING`. If you remove it, there's no lock on the XML SCHEMA COLLECTION.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -76,7 +75,7 @@ To drop an XML SCHEMA COLLECTION requires DROP permission on the collection.
 ## Examples  
 The following example shows removing an XML schema collection.  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

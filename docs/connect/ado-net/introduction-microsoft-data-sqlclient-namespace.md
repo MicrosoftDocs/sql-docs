@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Microsoft.Data.SqlClient namespace"
-description: "Introduction page for the Microsoft.Data.SqlClient namespace."
-ms.date: "06/23/2019"
+description: "Learn about the Microsoft.Data.SqlClient namespace and how it's the preferred way to connect to SQL for .NET applications."
+ms.date: "09/29/2020"
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -53,7 +53,7 @@ For more information, see how to [Enable event tracing in SqlClient](enable-even
 
 #### Enabling managed networking on Windows
 
-A new AppContext switch **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"** enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch will toggle the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library.
+A new AppContext switch, **"Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows"**, enables the use of a managed SNI implementation on Windows for testing and debugging purposes. This switch will toggle the driver's behavior to use a managed SNI in .NET Core 2.1+ and .NET Standard 2.0+ projects on Windows, eliminating all dependencies on native libraries for the Microsoft.Data.SqlClient library.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
@@ -200,11 +200,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### UTF-8 support
 
-UTF-8 support does not require any application code changes. These SqlClient changes optimize client-server communication when the server supports UTF-8 and the underlying column collation is UTF-8. See the UTF-8 section under [What's new in SQL Server 2019 preview](../../sql-server/what-s-new-in-sql-server-ver15.md).
+UTF-8 support doesn't require any application code changes. These SqlClient changes optimize client-server communication when the server supports UTF-8 and the underlying column collation is UTF-8. See the UTF-8 section under [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### Always encrypted with enclaves
 
-In general, existing documentation which uses System.Data.SqlClient on .NET Framework **and built-in column master key store providers** should now work with .NET Core, too.
+In general, existing documentation that uses System.Data.SqlClient on .NET Framework **and built-in column master key store providers** should now work with .NET Core, too.
 
  [Develop using Always Encrypted with .NET Framework Data Provider](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 

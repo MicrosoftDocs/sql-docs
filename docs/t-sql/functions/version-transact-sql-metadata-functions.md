@@ -24,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
@@ -37,7 +37,7 @@ A table name must be specified in a [FROM](../../t-sql/queries/from-transact-sql
 ## Examples  
 The following example returns the version number.  
   
-```  
+```sql
 SELECT VERSION();  
 ```  
   

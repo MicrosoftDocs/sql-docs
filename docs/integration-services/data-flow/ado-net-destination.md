@@ -90,7 +90,7 @@ ms.author: chugu
   
  Only ADO.NET providers that return a <xref:System.Data.SqlClient.SqlConnection> object support the use of the <xref:System.Data.SqlClient.SqlBulkCopy> interface. The .NET Data Provider for SQL Server (SqlClient) returns a <xref:System.Data.SqlClient.SqlConnection> object, and a custom provider may return a <xref:System.Data.SqlClient.SqlConnection> object.  
   
- You can use the .NET Data Provider for SQL Server (SqlClient) to connect to [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+ You can use the .NET Data Provider for SQL Server (SqlClient) to connect to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  If you select **Use bulk insert when available**, and set the **Error** option to **Redirect the row**, the batch of data that the destination redirects to the error output may include good rows.For more information about handling errors in bulk operations, see [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md). For more information about the **Error** option, see [ADO NET Destination Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   

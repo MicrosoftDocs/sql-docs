@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DROP LOGIN login_name  
 ```  
   
@@ -58,7 +58,7 @@ DROP LOGIN login_name
 ### A. Dropping a login  
  The following example drops the login `WilliJo`.  
   
-```  
+```sql  
 DROP LOGIN WilliJo;  
 GO 
 ```  

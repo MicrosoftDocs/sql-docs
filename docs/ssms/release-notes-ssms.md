@@ -104,7 +104,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 ## Previous SSMS releases
 
-[!INCLUDE[ssms-connect-aad](../includes/ssms-connect-aad.md)]
+[!INCLUDE[ssms-connect-aad](../includes/ssms-connect-aad.md)] 
 
 Download previous SSMS versions by selecting the download link in the related section.
 

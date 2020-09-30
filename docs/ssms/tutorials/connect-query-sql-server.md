@@ -39,6 +39,8 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 ## Connect to a SQL Server instance
 
+[!INCLUDE[ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
+
 1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
     ![The Connect link in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
@@ -58,19 +60,16 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 ### Examples of successful connections
 
-To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects are different depending on the type of server you choose to connect. 
+To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects are different depending on the type of server you choose to connect.
 
-* Connecting to an on-premises SQL server - in this case NODE5\SQL2016ST: 
+* Connecting to an on-premises SQL server - in this case NODE5\SQL2016ST:
   ![Connecting to an on-premises server](media/connect-query-sql-server/connect-on-prem.png)
 
 * Connecting to SQL Azure DB - in this case msftestserver.database.windows.net:
   ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
-  >[!NOTE]
-  > In this tutorial, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management). 
-
 > [!NOTE]
-> In December 2021, releases of SSMS prior to 18.6 will no longer authenticate through Azure Active Directory with MFA. To continue utilizing Azure Active Directory authentication with MFA please [install or update to SSMS](../download-sql-server-management-studio-ssms.md) 18.6 or newer. 
+> In this article, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management).
 
 ## Create a database
 

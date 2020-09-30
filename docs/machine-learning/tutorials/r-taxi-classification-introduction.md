@@ -69,7 +69,9 @@ In [part five](r-taxi-classification-deploy-model.md), you'll learn how to opera
 
 + [Grant permissions to execute Python scripts](../security/user-permission.md)
 
-+ [Grant permissions for scripts to access local files](../install/sql-server-machine-learning-services-2019.md#file-permissions)
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ Starting in SQL Server 2019, the isolation mechanism requires you to give appropriate permissions to the directory where the plot file is stored. For more information on how to set these permissions, see the [File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
 
 + Restore the [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 

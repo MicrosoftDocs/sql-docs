@@ -184,7 +184,7 @@ Download previous SSMS versions by selecting the download link in the related se
 |----------|---------|
 | Accessibility | SSIS ADF / New Schedule: fixed an issue where the focus order is not logical in the  scan mode of narrator under *New Schedule* wizard. |
 | Accessibility | Stretch database wizard: fixed an issue where the screen reader does not inform about the name of the query table when providing information about the table. |
-| Analysis Services | Fix cached connection when scripting in AS with AAD connection. |
+| Analysis Services | Fix cached connection when scripting in AS with Azure AD connection. |
 | Always On | Fixed an issue where the first database added to Always On AG does not join correctly.
 | Always On | Fixed an issue where an error was displayed when trying to display the dashboard when connected to a Big Data Cluster endpoint. |
 | Auditing | Fixed an issue where the Audit logs merges window crashes when there's a folder with an empty name in the root folder of the storage account. |
@@ -547,7 +547,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure Data Studio integration|When right-clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
 |Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Database.|
 |Azure SQL support| Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
-|Azure SQL Managed Instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
+|Azure SQL Managed Instance|Added new "Azure AD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
 |Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. See the updated documentation at [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
 |Always Encrypted with secure enclaves| Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019:  A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).  The new checkbox in the New Column Master Key dialog to control whether a new column master key allows enclave computations.  Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
@@ -632,7 +632,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure SQL Managed Instance support|Create database wizard not scripting correctly CREATE DATABASE statement.|
 |Azure SQL Managed Instance support|Special handling of SSIS packages within SSMS when connected to managed instances.|
 |Azure SQL Managed Instance support|Fixed an issue where an error was displayed while trying to use "Activity Monitor" when connected to managed instances.|
-|Azure SQL Managed Instance support|Improved support for AAD Logins (in SSMS Explorer).|
+|Azure SQL Managed Instance support|Improved support for Azure AD Logins (in SSMS Explorer).|
 |Azure SQL Managed Instance support|Improved scripting of SMO Filegroups objects.|
 |Azure SQL Managed Instance support|Improved UI for credentials.|
 |Azure SQL Managed Instance support|Added support for Logical Replication.|
@@ -648,7 +648,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Copy Database Wizard|Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.|""
 |Copy Database Wizard|Generate scripts/Transfer/Copy Database Wizard script table creation before creation of associated external data source.|
 |Connection dialog|Enabled the removal of usernames from previous username list by pressing the DEL key. For details, see [Allow deletion of users from SSMS login window](https://feedback.azure.com/forums/908035/suggestions/32897632).|
-|DAC Import Wizard|Fixed an issue DAC Import Wizard wasn't working when connected using Azure Active Directory (AAD).|
+|DAC Import Wizard|Fixed an issue DAC Import Wizard wasn't working when connected using Azure Active Directory (Azure AD).|
 |Data Classification|Fixed an issue when saving classifications in the data classification pane while there are another data classification panes open on other databases.|
 |Data-tier Application Wizard|Fixed an issue where the user wasn't able to import a Data-tier Application (.dacpac) due to limited access to the server (for example, no access to all the databases on the same server).|
 |Data-tier Application Wizard|Fixed an issue, which was causing the import to be extremely slow when many databases happened to be hosted on the same Azure SQL server.|
@@ -691,7 +691,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Object Scripting|When scripting objects, DB Scoped configuration, which has default values are omitted.|
 |Object Scripting|Don't generate dynamic T-SQL when scripting. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391). |
 |Object Scripting|Omit the graph syntax "as edge" and "as node" when scripting a table on SQL Server 2016 and earlier.|
-|Object Scripting|Fixed an issue where scripting of database objects was failing when connecting to an Azure SQL Database using AAD with MFA.|
+|Object Scripting|Fixed an issue where scripting of database objects was failing when connecting to an Azure SQL Database using Azure AD with MFA.|
 |Object Scripting|Fixed an issue where trying to script a spatial index with GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID on an Azure SQL Database was throwing an error.|
 |Object Scripting|Fixed an issue, which was causing the database scripting (of an Azure SQL Database) to always target an on-prem SQL, even if the "Object Explorer" scripting settings were set to match the source.|
 |Object Scripting|Fixed an issue where trying to script a table in a SQL DW database involving clustered and nonclustered indexes was generating incorrect T-SQL statements.|
@@ -717,7 +717,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |SMO|Fixed an issue, which was causing a StringBuilder.FormatError when trying to restore a database, which had curly braces in its name.|
 |SMO|Fixed an issue where Azure databases in SMO were defaulting to Case-Insensitive collation for all string comparisons instead of using the specified collation for the database.|
 |SSMS Editor|Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it hard to read on a white background. For details, see [Restoring wrong default color for SQL System Table](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906). The issue still persists on non-English versions of SSMS.|
-|SSMS Editor|Fixed issue where intellisense wasn't working when connected to Azure SQLDW using Azure Active Directory (AAD) authentication.|
+|SSMS Editor|Fixed issue where intellisense wasn't working when connected to Azure SQLDW using Azure Active Directory (Azure AD) authentication.|
 |SSMS Editor|Fixed intellisense in Azure when user lacks access to **master** database.|
 |SSMS Editor|Fixed code snippets to create "temporal tables", which were broken when the collation of the target database was case-sensitive.|
 |SSMS Editor|New TRANSLATE function now recognized by intellisense. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430). |

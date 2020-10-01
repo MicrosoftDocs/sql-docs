@@ -36,11 +36,11 @@ ms.author: mikeray
 ###  <a name="Security"></a> Security  
  The authentication and encryption methods of the server instance are established by the system administrator.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
   
 ####  <a name="Permissions"></a> Permissions  
- Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Requires `CREATE ENDPOINT` permission, or membership in the `sysadmin` fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -52,15 +52,16 @@ ms.author: mikeray
   
 3.  Determine if a database mirroring endpoint already exists by using the following statement:  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  If a database mirroring endpoint already exists for the server instance, use that endpoint for any other sessions you establish on the server instance.  
   
-4.  To use Transact-SQL to create an endpoint to use with Windows Authentication, use a CREATE ENDPOINT statement. The statement takes the following general form:  
+4.  To use Transact-SQL to create an endpoint to use with Windows Authentication, use a `CREATE ENDPOINT` statement. The statement takes the following general form:  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
@@ -84,8 +85,9 @@ ms.author: mikeray
      [**,**] ROLE = *\<role>*  
   
      )  
-  
-     where  
+     ```
+     
+     Where:  
   
     -   *\<endpointName>* is a unique name for the database mirroring endpoint of the server instance.  
   
@@ -95,7 +97,7 @@ ms.author: mikeray
   
          A port number can be used only once per computer system. A database mirroring endpoint can use any port that is available on the local system when the endpoint is created. To identify the ports currently being used by TCP endpoints on the system, use the following Transact-SQL statement:  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -118,12 +120,12 @@ ms.author: mikeray
   
          AES RC4 specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the AES algorithm. RC4 AES specifies that this endpoint will negotiate for the encryption algorithm, giving preference to the RC4 algorithm. If both endpoints specify both algorithms but in different orders, the endpoint accepting the connection wins. Provide the same algorithm explicitly to avoid connection errors between different servers.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
   
     -   *\<role>* defines the role or roles that the server can perform. Specifying ROLE is required. However, the role of the endpoint is relevant only for database mirroring. For [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the role of the endpoint is ignored.  
   
-         To allow a server instance to serve as one role for one database mirroring session and different role for another session, specify ROLE=ALL. To restrict a server instance to being either a partner or a witness, specify ROLE=PARTNER or ROLE=WITNESS, respectively.  
+         To allow a server instance to serve as one role for one database mirroring session and different role for another session, specify ROLE=ALL. To restrict a server instance to being either a partner or a witness, specify `ROLE = PARTNER` or `ROLE = WITNESS`, respectively.  
   
         > [!NOTE]  
         >  For more information about Database Mirroring options for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -149,7 +151,7 @@ ms.author: mikeray
 > [!IMPORTANT]  
 >  Each server instance can have only one endpoint. Therefore, if you want a server instance to be a partner in some sessions and the witness in others, specify ROLE=ALL.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

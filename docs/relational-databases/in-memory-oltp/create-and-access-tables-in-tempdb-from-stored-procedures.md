@@ -1,6 +1,6 @@
 ---
 title: "Create & access tempdb tables from stored procedures"
-description: TempDB does not support creating and accessing tables from natively compiled stored procedures. Use memory-optimized tables, or table types and table variables.
+description: TempDB doesn't support creating and accessing tables from natively compiled stored procedures. Use memory-optimized tables, or table types and table variables.
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -16,11 +16,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Create and Access Tables in TempDB from Stored Procedures
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Creating and accessing tables in TempDB from natively compiled stored procedures is not supported. Instead, use either memory-optimized tables with DURABILITY=SCHEMA_ONLY or use table types and table variables. 
+  Creating and accessing tables in TempDB from natively compiled stored procedures isn't supported. Instead, use either memory-optimized tables with DURABILITY=SCHEMA_ONLY or use table types and table variables. 
 
-For more details about memory-optimization of temp table and table variable scenarios see: [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
+For more information about memory-optimization of temp table and table variable scenarios, see: [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
-  The following example shows how the use of a temp table with three columns (id, ProductID, Quantity) can be replaced using a table variable **\@OrderQuantityByProduct** of type **dbo.OrderQuantityByProduct**:  
+  The following example shows how the use of a temp table with three columns (ID, ProductID, Quantity) can be replaced using a table variable **\@OrderQuantityByProduct** of type **dbo.OrderQuantityByProduct**:  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

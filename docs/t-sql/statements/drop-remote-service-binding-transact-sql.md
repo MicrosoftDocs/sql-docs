@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP REMOTE SERVICE BINDING binding_name  
 [ ; ]  
 ```  
@@ -50,7 +49,7 @@ DROP REMOTE SERVICE BINDING binding_name
 ## Examples  
  The following example deletes the remote service binding `APBinding` from the database.  
   
-```  
+```sql 
 DROP REMOTE SERVICE BINDING APBinding ;  
 ```  
   

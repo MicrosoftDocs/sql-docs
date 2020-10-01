@@ -10,7 +10,7 @@ ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
 ms.custom: seo-lt-2019
-ms.date: 03/13/2018
+ms.date: 09/28/2020
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
@@ -34,10 +34,12 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 
-* **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+* **Windows**: [Download SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* **macOS**: [Download SQL Server 2019 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## Connect to a SQL Server instance
+
+[!INCLUDE[ssms-connect-azure-ad](../../includes/ssms-connect-azure-ad.md)]
 
 1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
@@ -58,16 +60,16 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 ### Examples of successful connections
 
-To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects are different depending on the type of server you choose to connect. 
+To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects are different depending on the type of server you choose to connect.
 
-* Connecting to an on-premises SQL server - in this case NODE5\SQL2016ST: 
+* Connecting to an on-premises SQL server - in this case NODE5\SQL2016ST:
   ![Connecting to an on-premises server](media/connect-query-sql-server/connect-on-prem.png)
 
 * Connecting to SQL Azure DB - in this case msftestserver.database.windows.net:
   ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
-  >[!NOTE]
-  > In this tutorial, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management). 
+> [!NOTE]
+> In this article, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management).
 
 ## Create a database
 

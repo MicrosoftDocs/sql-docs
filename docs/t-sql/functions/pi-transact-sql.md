@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 PI ( )  
 ```  
   
@@ -42,7 +42,7 @@ PI ( )
 ## Examples  
  The following example returns the value of `PI`.  
   
-```  
+```sql  
 SELECT PI();  
 GO  
 ```  

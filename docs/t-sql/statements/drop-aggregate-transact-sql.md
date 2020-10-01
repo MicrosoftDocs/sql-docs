@@ -33,7 +33,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name  
 ```  
   
@@ -60,7 +60,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ## Examples  
  The following example drops the aggregate `Concatenate`.  
   
-```  
+```sql  
 DROP AGGREGATE dbo.Concatenate;  
 ```  
   

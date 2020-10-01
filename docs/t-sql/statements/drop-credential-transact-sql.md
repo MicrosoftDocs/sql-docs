@@ -33,8 +33,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP CREDENTIAL credential_name  
 ```  
   
@@ -58,7 +57,7 @@ DROP CREDENTIAL credential_name
 ## Examples  
  The following example removes the credential called `Saddles`.  
   
-```  
+```sql  
 DROP CREDENTIAL Saddles;  
 GO  
 ```  

@@ -8,12 +8,22 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/22/2020
+ms.date: 09/30/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## September 2020 (hotfix)
+
+September 30, 2020 &nbsp; / &nbsp; version: 1.22.1
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/untagged-ca77e3ca71bd29150699). |
 
 ## September 2020
 

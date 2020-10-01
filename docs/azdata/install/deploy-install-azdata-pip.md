@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata` with `pip`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 This article describes how to install the `azdata` tool on Windows, Linux or macOS/OS X using `pip`.
 

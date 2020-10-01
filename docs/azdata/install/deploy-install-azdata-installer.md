@@ -13,9 +13,9 @@ ms.technology: big-data-cluster
 
 # Install `azdata` to manage [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] with Windows Installer
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
-This article describes how to install `azdata` on Windows. Before the Microsoft Windows Installer for `azdata` was available, the installation of`azdata` required `pip`.
+This article describes how to install `azdata` on Windows with an installer.
 
 ## Install `azdata` with the Microsoft Windows Installer
 
@@ -27,14 +27,6 @@ To install `azdata` on with the Microsoft Windows Installer,
 ### Uninstall if previous installation done with `pip`
 
 If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
-
-   For example, to remove the release candidate version of `azdata`, run the following command:
-
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-   ```
-
-Once removed, [install `azdata` on Windows](#install-azdata-windows).
 
 >[!NOTE]
 >If your previous installation was done using the MSI, you will not need to uninstall any current versions before using the MSI installer.

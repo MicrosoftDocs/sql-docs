@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata` with apt
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 For Linux distributions with `apt` there is a package for the `azdata-cli`. The CLI package has been tested on Linux versions which use `apt`:
 
@@ -52,6 +52,12 @@ For Linux distributions with `apt` there is a package for the `azdata-cli`. The 
 
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/prod.list)"
+    ```
+
+   For Ubuntu 20.04 client run:
+
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/prod.list)
     ```
 
 4. Install `azdata-cli`.

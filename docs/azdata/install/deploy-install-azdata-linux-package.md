@@ -1,7 +1,6 @@
 ---
 title: Install azdata with apt
-titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing SQL Server Big Data Clusters with apt. 
+description: Learn how to install the azdata tool with apt. 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab

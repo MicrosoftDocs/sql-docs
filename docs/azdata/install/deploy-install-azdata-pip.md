@@ -22,14 +22,11 @@ This article describes how to install the `azdata` tool on Windows, Linux or mac
 
 ## <a id="prerequisites"></a> Prerequisites
 
-`azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage SQL Server 2019 Big Data Clusters (BDC) via REST APIs. The minimum Python version required is v3.5. `pip` is required to download and install the `azdata` tool. The instructions below provide examples for Windows, Linux (Ubuntu) and macOS/OS X. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download). In addition, install and update the latest version of `requests` Python package:
+`azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage data resources via REST APIs. The minimum Python version required is v3.5. `pip` is required to download and install the `azdata` tool. The instructions below provide examples for Windows, Linux (Ubuntu) and macOS/OS X. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download). In addition, install and update the latest version of `requests` Python package:
 
 ```bash
 pip3 install -U requests
 ```
-
-> [!IMPORTANT]
-> If your current version of Big Data Cluster is customer technology preview (CTP) or release candidate version (RC) and you are installing a newer version of Big Data Clusters, back up your data and delete the old cluster, upgrade `azdata` and install the new release. Upgrading from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE), can be performed in place and therefore deletion of the cluster is not required. For more information, see [Upgrading to a new release](../../big-data-cluster/deployment-upgrade.md).
 
 ## <a id="windows"></a> Windows `azdata` installation
 

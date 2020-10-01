@@ -48,7 +48,7 @@ This section describes the various window components that are available in the w
 
 * **Properties** (F4): You can see the Properties view when the Query Window is open. The view displays basic properties of the query. For example, it shows the time that a query started, the number of rows returned, and connection details.  
 
-    ![Properties](media/ssms-configuration/properties.png)
+    ![Config Properties](media/ssms-configuration/properties.png)
 
 * **Template Browser** (Ctrl+Alt+T): Template Browser has various pre-built T-SQL templates. You can use these templates to perform various functions, such as creating or backing up a database. 
 

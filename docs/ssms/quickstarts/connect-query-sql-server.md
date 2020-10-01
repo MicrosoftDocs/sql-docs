@@ -1,21 +1,21 @@
 ---
 title: Connect to and query a SQL Server instance
-description: A tutorial for connecting to a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
-keywords: SQL Server, SSMS, SQL Server Management Studio
-author: markingmyname
-ms.author: maghan
-ms.reviewer: sstein; maghan
-ms.topic: tutorial
-ms.prod_service: sql-tools
+description: Connect a SQL Server instance by using SQL Server Management Studio and running basic T-SQL queries.
 ms.prod: sql
 ms.technology: ssms
+ms.topic: quickstart
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
 ---
 
-# Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
+# Quickstart: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
 
-This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to follow the below steps:
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+
+This quickstart teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to follow the below steps:
 
 > [!div class="checklist"]
 > * Connect to a SQL Server instance
@@ -28,7 +28,7 @@ This tutorial teaches you how to use SQL Server Management Studio (SSMS) to conn
 
 ## Prerequisites
 
-To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
+To complete this article, you need SQL Server Management Studio and access to a SQL Server instance.
 
 * Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -48,8 +48,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 2. In the **Connect to Server** window, follow the list below:
 
     * For **Server type**, select **Database Engine** (usually the default option).
-    * For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](ssms-tricks.md#determine-sql-server-name).
-
+    * For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name).
     * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you're prompted for a username and password. For more information about authentication types, see [Connect to the server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
     !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection2.png)
@@ -202,8 +201,8 @@ You can also connect and query [SQL Server](../../azure-data-studio/quickstart-s
 
 The best way to get acquainted with SSMS is through hands-on practice. These articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-* [Scripting](scripting-ssms.md)
+* [Scripting](../tutorials/scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
-* [SSMS Configuration](ssms-configuration.md)
-* [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
-* [Azure Data Studio](../../azure-data-studio/download.md)
+* [SSMS Configuration](../tutorials/ssms-configuration.md)
+* [Additional Tips and Tricks for using SSMS](../tutorials/ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)

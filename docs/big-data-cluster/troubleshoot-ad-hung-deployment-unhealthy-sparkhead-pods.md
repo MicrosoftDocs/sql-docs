@@ -1,7 +1,7 @@
 ---
-title: AD mode deployment hangs - unhealthy sparkhead pods
+title: AD mode deployment hangs - unhealthy `sparkhead` pods
 titleSuffix: SQL Server Big Data Cluster
-description: Troubleshooting hung deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy sparkhead pods.
+description: Troubleshooting hung deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy `sparkhead` pods.
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# AD mode deployment hangs - unhealthy sparkhead pods
+# AD mode deployment hangs - unhealthy `sparkhead` pods
 
 Deployment in Active Directory (AD) mode freezes. Check symptoms to see if the cause is a missing reverse lookup zone entry for the domain controller on the different networks of the cluster nodes.
 
@@ -83,13 +83,13 @@ zookeeper-1       2/2     Running   0          3d13h 
 zookeeper-2       2/2     Running   0          3d13h 
 ```
 
-Inspect the health of the HDFS and Spark services. Look for sparkhead pods errors.
+Inspect the health of the HDFS and Spark services. Look for `sparkhead` pods errors.
 
 ## Check the HDFS and Spark services 
 
-From Azure Data Studio (ADS), connect to the controller and view the Big Data Cluster Dashboard. Confirm if both the HDFS and Spark services have unhealthy sparkhead pods.
+From Azure Data Studio (ADS), connect to the controller and view the Big Data Cluster Dashboard. Confirm if both the HDFS and Spark services have unhealthy `sparkhead` pods.
 
-![HDFS Spark services unhealthy sparkhead pods](./media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/hdfs_spark_unhealthy_sparkhead_pods.png)
+![HDFS Spark services unhealthy `sparkhead` pods](./media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/hdfs_spark_unhealthy_sparkhead_pods.png)
 
 Extract the logs and locate.
 
@@ -135,7 +135,7 @@ StatefulSet sparkhead is not healthy: 
 {Property: hivemetastorehttp.readiness, Details: 'Health module returned error state. error: Post https://sparkhead-1.corpnet.contoso.com:9084/api/hms: dial tcp 10.244.1.24:9084: connect: connection refused'}}}}} 
 ```
 
-Inspect the sparkhead pods, paying attention to the container logs. THis example looks at sparkhead-0.
+Inspect the `sparkhead` pods, paying attention to the container logs. THis example looks at `sparkhead-0`.
 
 ```output
 sparkhead-0\hadoop-hivemetastore\supervisor\log\hivemetastorehttp-stderr---supervisor-pZ1gdb 
@@ -201,7 +201,7 @@ at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2876) 
 
 ## Cause
 
-The reverse lookup zone entry for the domain controller in the DC’s DNS server for the Kubernetes network is missing. For this example, the missing entry was `cni0 10.244`. The sparkhead pod containers were trying to use the IP address 10.244.1.30:9000 to reach nnnode-0-1, but the DNS was not able to resolve it.
+The reverse lookup zone entry for the domain controller in the DC’s DNS server for the Kubernetes network is missing. For this example, the missing entry was `cni0 10.244`. The `sparkhead` pod containers were trying to use the IP address 10.244.1.30:9000 to reach nnnode-0-1, but the DNS was not able to resolve it.
 
 :::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller.png" alt-text="Missing reverse lookup zone entry for the domain controller":::
 

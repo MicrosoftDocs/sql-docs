@@ -20,7 +20,7 @@ This article provides in-depth information on how to identify and resolve issues
 
 ## Background
 
-Historically, commodity Windows Server computers have utilized only one or two microprocessor/CPU chips, and CPUs have been designed with only a single processor or "core". Increases in computer processing capacity have been achieved through the use of faster CPUs, made possible largely through advancements in transistor density. Following "Moore's Law", transistor density or the number of transistors which can be placed on an integrated circuit have consistently doubled every 2 years since the development of the first general purpose single chip CPU in 1971. In recent years, the traditional approach of increasing computer processing capacity with faster CPUs has been augmented by building computers with multiple CPUs. As of this writing, the Intel Nehalem CPU architecture accommodates up to 8 cores per CPU, which when used in an 8 socket system can then be doubled to 128 logical processors through the use of hyper-threading technology. As the number of logical processors on x86 compatible computers increases so too does the possibility that concurrency related issues may occur when logical processors compete for resources. This guide describes how to identify and resolve particular resource contention issues observed when running SQL Server applications on high concurrency systems with some workloads.
+Historically, commodity Windows Server computers have utilized only one or two microprocessor/CPU chips, and CPUs have been designed with only a single processor or "core". Increases in computer processing capacity have been achieved through the use of faster CPUs, made possible largely through advancements in transistor density. Following "Moore's Law", transistor density or the number of transistors which can be placed on an integrated circuit have consistently doubled every 2 years since the development of the first general purpose single chip CPU in 1971. In recent years, the traditional approach of increasing computer processing capacity with faster CPUs has been augmented by building computers with multiple CPUs. As of this writing, the Intel Nehalem CPU architecture accommodates up to 8 cores per CPU, which when used in an 8 socket system can then be doubled to 128 logical processors through the use of hyper-threading technology. As the number of logical processors on x86 compatible computers increases, the possibility also increases for concurrency-related issues when logical processors compete for resources. This guide describes how to identify and resolve particular resource contention issues observed when running SQL Server applications on high concurrency systems with some workloads.
 
 In this section we will analyze the lessons learned by the SQLCAT team from diagnosing and resolving spinlock contention issues, which are one class of concurrency issues observed in real customer workloads on high scale systems.
 
@@ -85,7 +85,7 @@ A combination of several of the following symptoms may indicate spinlock content
    > [!IMPORTANT]
    > Even if each of the preceding conditions is true it is still possible that the root cause of high CPU consumption lies elsewhere. In fact, in the vast majority of the cases increased CPU will be due to reasons other than spinlock contention. Some of the more common causes for increased CPU consumption include:
 
-* Queries which become more expensive over time due to growth of the underlying data resulting in the need to perform additional logical reads of memory resident data.
+* Queries which become more expensive over time due to growth of the underlying data resulting in the need to perform additional logical reads of memory-resident data.
 
 * Changes in query plans resulting in suboptimal execution.
 
@@ -105,13 +105,13 @@ When measuring the number of spins at 3 minute intervals we can see a more expon
 
 ![Chart of spins over 3 minute intervals](./media/diagnose-resolve-spinlock-contention/image8.png)
 
-As stated previously spinlocks are most common on high concurrency systems which are under heavy load.
+As stated previously spinlocks are most common on high concurrency systems that are under heavy load.
 
 Some of the scenarios that are prone to this issue include:
 
-* Name resolution problems caused by a failure to fully qualify names of objects. For more information, see [Description of SQL Server blocking caused by compile locks](http://support.microsoft.com/kb/263889). This specific issue is described in more detail within this article.
+* Name resolution problems caused by a failure to fully qualify names of objects. For more information, see [Description of SQL Server blocking caused by compile locks](https://support.microsoft.com/help/263889/how-to-troubleshoot-blocking-caused-by-compile-locks). This specific issue is described in more detail within this article.
 
-* Contention for lock hash buckets in the lock manager for workloads which frequently access the same lock (such as a shared lock on a frequently read row). This type of contention surfaces as a LOCK_HASH type spinlock. In one particular case we found that this problem surfaced as a result of incorrectly modeled access patterns in a test environment. In this environment, more than the expected numbers of threads were constantly accessing the exact same row due to incorrectly configured test parameters.
+* Contention for lock hash buckets in the lock manager for workloads that frequently access the same lock (such as a shared lock on a frequently read row). This type of contention surfaces as a LOCK_HASH type spinlock. In one particular case we found that this problem surfaced as a result of incorrectly modeled access patterns in a test environment. In this environment, more than the expected numbers of threads were constantly accessing the exact same row due to incorrectly configured test parameters.
 
 * High rate of DTC transactions when there is high degree of latency between the MSDTC transaction coordinators. This specific problem is documented in detail in the SQLCAT blog entry [Resolving DTC Related Waits and Tuning Scalability of DTC](https://techcommunity.microsoft.com/t5/datacat/resolving-dtc-related-waits-and-tuning-scalability-of-dtc/ba-p/305054).
 
@@ -123,12 +123,12 @@ This section provides information for diagnosing SQL Server spinlock contention.
 |---|---|
 | **Performance Monitor** | Look for high CPU conditions or divergence between throughput and CPU consumption. |
 | **sys.dm_os_spinlock stats DMV** | Look for a high number of spins and backoff events over periods of time. |
-| **SQL Server extended events** | Used to track call stacks for spinlocks which are experiencing a high number of spins. |
+| **SQL Server extended events** | Used to track call stacks for spinlocks that are experiencing a high number of spins. |
 | **Memory dumps** | In some cases, memory dumps of the SQL Server process and the Windows Debugging tools. In general, this level of analysis is done when the Microsoft SQL Server support teams are engaged. |
 
 The general technical process for diagnosing SQL Server Spinlock contention is:
 
-1. **Step 1 --** Determine that there is contention which may be spinlock related (see section above).
+1. **Step 1 --** Determine that there is contention that may be spinlock related (see section above).
 
 2. **Step 2 --** Capture statistics from *sys.dm\_ os_spinlock_stats* to find the spinlock type experiencing the most contention.
 
@@ -144,7 +144,7 @@ The following is a walkthrough of how to use the tools and techniques above to d
 
 ### Symptoms
 
-Periodic spikes in CPU were observed which pushed the CPU utilization to nearly 100%. A divergence between throughput and CPU consumption was observed leading up to the problem. By the time that the large CPU spike occurred, a pattern of a very large number of spins occurring during times of heavy CPU usage at particular intervals was established.
+Periodic spikes in CPU were observed, which pushed the CPU utilization to nearly 100%. A divergence between throughput and CPU consumption was observed leading up to the problem. By the time that the large CPU spike occurred, a pattern of a very large number of spins occurring during times of heavy CPU usage at particular intervals was established.
 
 This was an extreme case in which the contention was such that it created a spinlock convoy condition. A convoy occurs when threads can no longer make progress servicing the workload but instead spend all processing resources attempting to gain access to the lock. The performance monitor log illustrates this divergence between transaction log throughput and CPU consumption, and ultimately the very large spike in CPU utilization.
 
@@ -229,7 +229,7 @@ alter event session spin_lock_backoff on server state=stop
 drop event session spin_lock_backoff on server
 ```
 
-By analyzing the output we can see the call stacks for the most common code paths for the SOS_CACHESTORE spins. The script was run a couple of different times during the time when CPU utilization was high to check for consistency in the call stacks returned. Notice that the call stacks with the highest slot bucket count are common between the two outputs (35,668 and 8,506). These have a "slot count" which is two orders of magnitude greater than the next highest entry. This indicates a code path of interest.
+By analyzing the output we can see the call stacks for the most common code paths for the SOS_CACHESTORE spins. The script was run a couple of different times during the time when CPU utilization was high to check for consistency in the call stacks returned. Notice that the call stacks with the highest slot bucket count are common between the two outputs (35,668 and 8,506). These have a "slot count" that is two orders of magnitude greater than the next highest entry. This indicates a code path of interest.
 
 > [!NOTE]
 > It is not uncommon to see call stacks returned by the script above. When the script is run for 1 minute we have observed that stacks with a slot count \>1000 are likely to be problematic and stacks with a slot count \>10,000 are very likely to be problematic.
@@ -317,17 +317,17 @@ By analyzing the output we can see the call stacks for the most common code path
  </Slot>
 ```
 
-In the above example the stacks of most interest are those with the highest Slot Counts (35,668 and 8,506) which in fact have a slot count \> 1000.
+In the above example the stacks of most interest are those with the highest Slot Counts (35,668 and 8,506), which, in fact, have a slot count \> 1000.
 
 Now the question may be, "what do I do with this information"? In general, deep knowledge of the SQL Server engine is required to make use of the callstack information and so at this point the troubleshooting process moves into a gray area. In this particular case, by looking at the call stacks, we can see that the code path where the issue occurs is related to security and metadata lookups (As evident by the following stack frames **CMEDCatalogOwner::GetProxyOwnerBySID & CMEDProxyDatabase::GetOwnerBySID)**.
 
 In isolation it is difficult to use this information to resolve the problem but it does give us some ideas where to focus additional troubleshooting to isolate the issue further.
 
-Because this issue looked to be related to code paths which perform security related checks we decided to run a test in which the application user connecting to the database was granted sysadmin privileges. While this is never recommended in a production environment, in our test environment it proved to be a useful troubleshooting step. When the sessions were run using elevated privileges (sysadmin), the CPU spikes related to contention disappeared.
+Because this issue looked to be related to code paths that perform security-related checks we decided to run a test in which the application user connecting to the database was granted sysadmin privileges. While this is never recommended in a production environment, in our test environment it proved to be a useful troubleshooting step. When the sessions were run using elevated privileges (sysadmin), the CPU spikes related to contention disappeared.
 
 ## Options and workarounds
 
-Clearly, troubleshooting spinlock contention can be a non-trivial task. There is no "one common best option" to approaching this. The first step in troubleshooting and resolving any performance problem is to identify root cause. Using the techniques and tools described in this article are is the first step in performing the analysis needed to understand the spinlock related contention points.
+Clearly, troubleshooting spinlock contention can be a non-trivial task. There is no "one common best option" to approaching this. The first step in troubleshooting and resolving any performance problem is to identify root cause. Using the techniques and tools described in this article is the first step in performing the analysis needed to understand the spinlock-related contention points.
 
 As new versions of SQL Server are developed the engine continues to improve scalability by implementing code that is better optimized for high concurrency systems. SQL Server has introduced many optimizations for high concurrency systems, one of which being exponential backoff for the most common contention points. There are specific enhancements in the next release of SQL Server (code named "Denali") which specifically improve this particular area by leveraging exponential backoff algorithms for all spinlocks within the engine.
 
@@ -335,19 +335,19 @@ When designing high end applications which need extreme performance and scale on
 
 Taking a couple best practices from earlier in this article as examples:
 
-1. **Fully Qualified Names:** Fully qualifying names of all objects will result in removing the need for SQL Server to execute code paths that are required to resolve names. We have observed contention points also on the SOS_CACHESTORE spinlock type encountered when not utilizing fully qualified names in calls to stored procedures. Failure to fully qualify these the names results in the need for SQL Server to lookup the default schema for the user which results in a longer code path required to execute the SQL.
+1. **Fully Qualified Names:** Fully qualifying names of all objects will result in removing the need for SQL Server to execute code paths that are required to resolve names. We have observed contention points also on the SOS_CACHESTORE spinlock type encountered when not utilizing fully qualified names in calls to stored procedures. Failure to fully qualify these names results in the need for SQL Server to look up the default schema for the user which results in a longer code path required to execute the SQL.
 
 2. **Parameterized Queries:** Another example is utilizing parameterized queries and stored procedure calls to reduce the work needed to generate execution plans. This again results in a shorter code path for execution.
 
 3. **LOCK_HASH Contention:** Contention on certain lock structure or hash bucket collisions is unavoidable in some cases. Even though the SQL Server engine partitions the majority of lock structures, there are still times when acquiring a lock results in access the same hash bucket. For example, an application the accesses the same row by many threads concurrently (i.e. reference data). This type of problems can be approached by techniques which either scale out this reference data within the database schema or leverage NOLOCK hints when possible.
 
-The first line of defensive in tuning SQL Server workloads is always the standard tuning practices (e.g. indexing, query optimization, I/O optimization, etc...). However, in addition to the standard tuning one would perform, following practices that reduce the amount of code needed to perform operations is an important approach. Even when best practices are followed, there is still a chance that spinlock contention may occur on very busy high concurrency systems. Use of the tools and techniques in this article can help to isolate or rule out these types of problems and determine when it is necessary to engage the right Microsoft resources to help.
+The first line of defensive in tuning SQL Server workloads is always the standard tuning practices (e.g. indexing, query optimization, I/O optimization, etc.). However, in addition to the standard tuning one would perform, following practices that reduce the amount of code needed to perform operations is an important approach. Even when best practices are followed, there is still a chance that spinlock contention may occur on very busy high concurrency systems. Use of the tools and techniques in this article can help to isolate or rule out these types of problems and determine when it is necessary to engage the right Microsoft resources to help.
 
 Hopefully these techniques will provide both a useful methodology for this type of troubleshooting and insight into some of the more advanced performance profiling techniques available with SQL Server.
 
 ## Appendix: Automate memory dump capture
 
-The following extended events script has proven to be useful to automate the collection of memory dumps when spinlock contention becomes significant. In some cases memory dumps will be required to perform a complete diagnosis of the problem or will be requested by Microsoft support teams to perform in depth analysis. In SQL Server 2008 there is a limit of 16 frames in callstacks captured by the bucketizer, which may not be deep enough to determine exactly where in the engine the callstack is being entered from. This is improved in the next version of SQL Server codename 'Denali' by increasing the number of frames in callstacks captured by the bucketizer to 32.
+The following extended events script has proven to be useful to automate the collection of memory dumps when spinlock contention becomes significant. In some cases memory dumps will be required to perform a complete diagnosis of the problem or will be requested by Microsoft support teams to perform in-depth analysis. In SQL Server 2008 there is a limit of 16 frames in callstacks captured by the bucketizer, which may not be deep enough to determine exactly where in the engine the callstack is being entered from. This was improved in the SQL Server 2012 by increasing the number of frames in callstacks captured by the bucketizer to 32.
 
 The following SQL script can be used to automate the process of capturing memory dumps to help analyze spinlock contention:
 

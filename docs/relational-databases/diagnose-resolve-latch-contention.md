@@ -22,7 +22,7 @@ As the number of CPU cores on servers continues to increase, the associated incr
 
 ## What is SQL Server latch contention?
 
-Latches are lightweight synchronization primitives that are used by the SQL Server engine to guarantee consistency of in-memory structures including; index, data pages and internal structures such as non-leaf pages in a B-Tree. SQL Server uses buffer latches to protect pages in the buffer pool and I/O latches to protect pages not yet loaded into the buffer pool. Whenever data is written to or read from a page in the SQL Server buffer pool a worker thread must first acquire a buffer latch for the page. There are various buffer latch types available for accessing pages in the buffer pool including exclusive latch (PAGELATCH_EX) and shared latch (PAGELATCH_SH). When SQL Server attempts to access a page that is not already present in the buffer pool, an asynchronous I/O is posted to load the page into the buffer pool. If SQL Server needs to wait for the I/O subsystem to respond it will wait on an exclusive (PAGEIOLATCH_EX) or shared (PAGEIOLATCH_SH) I/O latch depending on the type of request; this is done to prevent another worker thread from loading the same page into the buffer pool with an incompatible latch. Latches are also used to protect access to internal memory structures other than buffer pool pages; these are known as Non-Buffer latches.
+Latches are lightweight synchronization primitives that are used by the SQL Server engine to guarantee consistency of in-memory structures including; index, data pages, and internal structures, such as non-leaf pages in a B-Tree. SQL Server uses buffer latches to protect pages in the buffer pool and I/O latches to protect pages not yet loaded into the buffer pool. Whenever data is written to or read from a page in the SQL Server buffer pool a worker thread must first acquire a buffer latch for the page. There are various buffer latch types available for accessing pages in the buffer pool including exclusive latch (PAGELATCH_EX) and shared latch (PAGELATCH_SH). When SQL Server attempts to access a page that is not already present in the buffer pool, an asynchronous I/O is posted to load the page into the buffer pool. If SQL Server needs to wait for the I/O subsystem to respond it will wait on an exclusive (PAGEIOLATCH_EX) or shared (PAGEIOLATCH_SH) I/O latch depending on the type of request; this is done to prevent another worker thread from loading the same page into the buffer pool with an incompatible latch. Latches are also used to protect access to internal memory structures other than buffer pool pages; these are known as Non-Buffer latches.
 
 Contention on page latches is the most common scenario encountered on multi-CPU systems and so most of this article will focus on these.
 
@@ -91,7 +91,7 @@ Cumulative wait information is tracked by SQL Server and can be accessed using t
 3. **IO latch:** a subset of buffer latches that guarantee consistency of the same structures protected by buffer latches when these structures require loading into the buffer pool with an I/O operation. IO latches prevent another thread loading the same page into the buffer pool with an incompatible latch. Associated with a *wait_type* of **PAGEIOLATCH\_\***.
 
    > [!NOTE]
-   > If you see significant PAGEIOLATCH waits it means that SQL Server is waiting on the I/O subsystem. While a certain amount of PAGEIOLATCH waits is expected and normal behavior, if the average PAGEIOLATCH wait times are consistently above 10 milliseconds (ms) you should investigate why the I/O subsystem is under pressure.
+   > If you see significant PAGEIOLATCH waits, it means that SQL Server is waiting on the I/O subsystem. While a certain amount of PAGEIOLATCH waits is expected and normal behavior, if the average PAGEIOLATCH wait times are consistently above 10 milliseconds (ms) you should investigate why the I/O subsystem is under pressure.
 
 If when examining the *sys.dm_os_wait_stats* DMV you encounter non-buffer latches, *sys.dm_os_latch_waits* must be examined to obtain a detailed breakdown of cumulative wait information for non-buffer latches. All buffer latch waits are classified under the BUFFER latch class, the remaining are used to classify non-buffer latches.
 
@@ -158,7 +158,7 @@ As stated previously, latch contention is only problematic when the contention a
 
 3. Determine the proportion of those that are related to latches.
 
-Cumulative wait information is available from the *sys.dm_os_wait_stats* DMV. The most common type of latch contention is buffer latch contention, observed as an increase in wait times for latches with a *wait_type* of **PAGELATCH\_\***. Non-buffer latches are grouped under the **LATCH\*** wait type. As the diagram below illustrates you should first take a cumulative look at system waits using the *sys.dm_os_wait_stats* DMV to determine the percentage of the overall wait time caused by buffer or non-buffer latches. If you encounter non-buffer latches the *sys.dm_os_latch_stats* DMV must also be examined.
+Cumulative wait information is available from the *sys.dm_os_wait_stats* DMV. The most common type of latch contention is buffer latch contention, observed as an increase in wait times for latches with a *wait_type* of **PAGELATCH\_\***. Non-buffer latches are grouped under the **LATCH\*** wait type. As the diagram below illustrates you should first take a cumulative look at system waits using the *sys.dm_os_wait_stats* DMV to determine the percentage of the overall wait time caused by buffer or non-buffer latches. If you encounter non-buffer latches, the *sys.dm_os_latch_stats* DMV must also be examined.
 
 The following diagram describes the relationship between the information returned by the *sys.dm_os_wait_stats* and *sys.dm_os_latch_stats* DMVs.
 
@@ -361,7 +361,7 @@ PFS stands for Page Free Space, SQL Server allocates one PFS page for every 8088
 > [!WARNING]
 > Increasing the number of files per filegroup may adversely affect performance of certain loads, such as loads with many large sort operations which spill memory to disk.
 
-If many PAGELATCH_UP waits are observed for PFS or SGAM pages in tempdb complete these steps to eliminate this bottleneck:
+If many PAGELATCH_UP waits are observed for PFS or SGAM pages in tempdb, complete these steps to eliminate this bottleneck:
 
 1. Add data files to tempdb so that the number of tempdb data files is equal to the number of processor cores in your server.
 
@@ -461,7 +461,7 @@ go
 
 #### Option 2 -- Use a GUID as the leading key column of the index
 
-If there is no natural separator then a GUID column can be used as a leading key column of the index to ensure uniform distribution of inserts. While using the GUID as the leading column in the index key approach enables use of partitioning for other features, this technique can also introduce potential downsides of more page-splits, poor physical organization and low page densities.
+If there is no natural separator, then a GUID column can be used as a leading key column of the index to ensure uniform distribution of inserts. While using the GUID as the leading column in the index key approach enables use of partitioning for other features, this technique can also introduce potential downsides of more page-splits, poor physical organization and low page densities.
 
 > [!NOTE]
 > The use of GUIDs as leading key columns of indexes is a highly debated subject. An in-depth discussion of the pros and cons of this method falls outside the scope of this article.
@@ -472,7 +472,7 @@ Table partitioning within SQL Server can be used to mitigate excessive latch con
 
 1. Create a new filegroup or use an existing filegroup to hold the partitions.
 
-2. If using a new filegroup, equally balance individual files over the LUN, taking care to use an optimal layout. If the access pattern involves a high rate of inserts make sure to create the same number of files as there are physical CPU cores on the SQL Server computer.
+2. If using a new filegroup, equally balance individual files over the LUN, taking care to use an optimal layout. If the access pattern involves a high rate of inserts, make sure to create the same number of files as there are physical CPU cores on the SQL Server computer.
 
 3. Use the **CREATE PARTITION FUNCTION** command to partition the tables into *X* partitions, where *X* is the number of physical CPU cores on the SQL Server computer. (at least up to 32 partitions)
 
@@ -690,7 +690,7 @@ ALTER TABLE mytable ADD Padding CHAR(5000) NOT NULL DEFAULT ('X')
 This technique is explained for completeness; in practice SQLCAT has only used this on a small table with 10,000 rows in a single performance engagement. This technique has very limited application due to the fact that it increases memory pressure on SQL Server for large tables and can result in non-buffer latch contention on non-leaf pages. The additional memory pressure can be a very significant limiting factor for application of this technique. With the amount of memory available in a modern server a large proportion of the working set for OLTP workloads is typically held in memory. When the data set increases to a size that it no longer fits in memory a significant drop-off in performance will occur. Therefore, this technique is something that is only applicable to small tables. This technique is not used by SQLCAT for scenarios such as last page/trailing page insert contention for large tables.
 
 > [!IMPORTANT]
-> Employing this strategy can cause a large number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type because this strategy can lead to a large number of page splits occurring in the non-leaf levels of the B-tree. If this occurs SQL Server must acquire shared (SH) latches at all levels followed by exclusive (EX) latches on pages in the B-tree where a page split is possible. Check the *sys.dm_os_latch_stats* DMV for a high number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type after padding rows.
+> Employing this strategy can cause a large number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type because this strategy can lead to a large number of page splits occurring in the non-leaf levels of the B-tree. If this occurs, SQL Server must acquire shared (SH) latches at all levels followed by exclusive (EX) latches on pages in the B-tree where a page split is possible. Check the *sys.dm_os_latch_stats* DMV for a high number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type after padding rows.
 
 ## Appendix: SQL Server latch contention scripts
 

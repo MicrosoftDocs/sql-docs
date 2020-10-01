@@ -93,7 +93,7 @@ Is where the files containing the data is staged. Currently Azure Data Lake Stor
 - *External location* for ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> The blob endpoint is available for ADLS Gen2 for backward compatibility. Use the **blob** endpoint for best performance.
+> The blob endpoint is available for ADLS Gen2 and currently yields the best performance.
 
 - *Account* - The storage account name
 

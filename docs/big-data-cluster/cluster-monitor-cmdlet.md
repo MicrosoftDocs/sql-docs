@@ -164,7 +164,7 @@ To see the status of all components that are running a specific service you must
 - azdata bdc hdfs status show --all
 - azdata bdc spark status show --all
 
-Here is an sample output:
+Here is a sample output:
 
 ```output
   Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy

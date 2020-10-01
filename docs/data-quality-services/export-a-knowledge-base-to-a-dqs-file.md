@@ -1,4 +1,5 @@
 ---
+description: "Export a Knowledge Base to a .dqs File"
 title: "Export a Knowledge Base to a .dqs File"
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "sys.database_credentials (Transact-SQL)"
 title: "sys.database_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"

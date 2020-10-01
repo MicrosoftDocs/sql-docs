@@ -1,4 +1,5 @@
 ---
+description: "Notify Operator Task (Maintenance Plan)"
 title: "Notify Operator Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

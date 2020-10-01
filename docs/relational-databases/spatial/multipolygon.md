@@ -1,4 +1,5 @@
 ---
+description: "MultiPolygon"
 title: "MultiPolygon | Microsoft Docs"
 ms.date: "03/03/2017"
 ms.prod: sql

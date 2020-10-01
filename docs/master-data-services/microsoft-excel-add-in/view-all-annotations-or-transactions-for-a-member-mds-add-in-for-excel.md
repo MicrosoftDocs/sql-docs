@@ -1,4 +1,5 @@
 ---
+description: "View All Annotations or Transactions for a Member (MDS Add-in for Excel)"
 title: View Annotations or Transactions
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"

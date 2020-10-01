@@ -1,4 +1,5 @@
 ---
+description: "sp_notify_operator (Transact-SQL)"
 title: "sp_notify_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_notify_operator"
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

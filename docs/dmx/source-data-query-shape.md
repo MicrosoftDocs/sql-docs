@@ -1,4 +1,5 @@
 ---
+description: "&lt;source data query&gt; - SHAPE"
 title: "SHAPE (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Model Training Destination"
 title: "Data Mining Model Training Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

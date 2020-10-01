@@ -1,4 +1,5 @@
 ---
+description: "Walkthrough: Publish an SSIS Package as a SQL View"
 title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

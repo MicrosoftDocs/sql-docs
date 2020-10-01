@@ -1,4 +1,5 @@
 ---
+description: "TM: Promote Tran Completed Event Class"
 title: "TM: Promote Tran Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

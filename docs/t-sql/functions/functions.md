@@ -1,4 +1,5 @@
 ---
+description: "What are the Microsoft SQL database functions?"
 title: "What are the Microsoft SQL database functions? | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"

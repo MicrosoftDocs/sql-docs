@@ -1,4 +1,5 @@
 ---
+description: "DEGREES (Transact-SQL)"
 title: "DEGREES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -45,7 +46,7 @@ Returns a value whose data type matches the data type of *numeric_expression*.
 ## Examples  
 This example returns the number of degrees in an angle of PI/2 radians.  
   
-```  
+```sql  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
 CONVERT(VARCHAR, DEGREES((PI()/2)));  
 GO  

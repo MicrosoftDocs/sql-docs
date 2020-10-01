@@ -1,4 +1,5 @@
 ---
+description: "sp_setapprole (Transact-SQL)"
 title: "sp_setapprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2018"

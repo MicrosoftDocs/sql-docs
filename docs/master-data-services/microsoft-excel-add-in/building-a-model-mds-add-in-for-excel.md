@@ -1,4 +1,5 @@
 ---
+description: "Building a Model (MDS Add-in for Excel)"
 title: Building a Model
 ms.custom: microsoft-excel-add-in
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Use SQL Server Profiler to Create a SQL Trace Collection Set"
 title: "Create SQL Trace collection set with Profiler"
 ms.date: 06/03/2020
 ms.prod: sql

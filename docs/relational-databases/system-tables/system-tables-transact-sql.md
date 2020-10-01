@@ -1,4 +1,5 @@
 ---
+description: "System Tables (Transact-SQL)"
 title: "System Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "system tables [SQL Server], retrieving information from"
   - "retrieving system table information"
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # System Tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

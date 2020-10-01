@@ -1,4 +1,5 @@
 ---
+description: "SMO Syntax Conventions"
 title: "SMO Syntax Conventions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

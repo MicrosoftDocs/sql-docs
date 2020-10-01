@@ -1,4 +1,5 @@
 ---
+description: "Administer and Monitor Change Data Capture (SQL Server)"
 title: "Administer and Monitor Change Data Capture"
 ms.date: "01/02/2019"
 ms.prod: sql

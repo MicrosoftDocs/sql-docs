@@ -1,4 +1,5 @@
 ---
+description: "sp_adddistributiondb (Transact-SQL)"
 title: "sp_adddistributiondb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/30/2018"

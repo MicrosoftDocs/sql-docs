@@ -1,4 +1,5 @@
 ---
+description: "sys.database_mirroring (Transact-SQL)"
 title: "sys.database_mirroring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_mirroring catalog view"
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.database_mirroring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

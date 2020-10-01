@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)"
 title: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     [ FOR SERVER AUDIT audit_name ]  
@@ -46,7 +46,6 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
       <action_specification>[ ,...n ] ON [ class :: ] securable   
      BY principal [ ,...n ]   
 }  
-  
 ```  
   
 
@@ -91,7 +90,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## Examples  
  The following example alters a database audit specification called `HIPAA_Audit_DB_Specification` that audits the `SELECT` statements by the `dbo` user, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  

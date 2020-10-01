@@ -1,4 +1,5 @@
 ---
+description: "Add persisted log buffer to a database"
 title: "Add persisted log buffer to a database"
 ms.custom: ""
 ms.date: "10/30/2019"

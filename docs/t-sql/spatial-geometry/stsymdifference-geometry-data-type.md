@@ -1,4 +1,5 @@
 ---
+description: "STSymDifference (geometry Data Type)"
 title: "STSymDifference (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/06/2020"

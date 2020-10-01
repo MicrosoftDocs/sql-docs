@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;DATEFIRST (Transact-SQL)"
 title: "@@DATEFIRST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -44,7 +45,7 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
   
 ## Syntax  
   
-```
+```syntaxsql
 @@DATEFIRST  
 ```  
 
@@ -90,7 +91,7 @@ SELECT @@DATEFIRST AS 'First Day'
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 First Day         Today  
 ----------------  --------------  
 5                 2  

@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_current_partition_mappings"
 title: "MSmerge_current_partition_mappings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_current_partition_mappings system table"
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_current_partition_mappings
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_groups_cluster (Transact-SQL)"
 title: "sys.availability_groups_cluster (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "sys.availability_groups_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.availability_groups_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

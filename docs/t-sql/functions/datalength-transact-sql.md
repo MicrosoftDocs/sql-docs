@@ -1,4 +1,5 @@
 ---
+description: "DATALENGTH (Transact-SQL)"
 title: "DATALENGTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2019"
@@ -35,7 +36,7 @@ This function returns the number of bytes used to represent any expression.
   
 ## Syntax  
   
-```
+```syntaxsql
 DATALENGTH ( expression )   
 ```  
 

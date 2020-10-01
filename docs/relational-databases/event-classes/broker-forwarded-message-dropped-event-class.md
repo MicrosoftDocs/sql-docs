@@ -1,4 +1,5 @@
 ---
+description: "Broker:Forwarded Message Dropped Event Class"
 title: "Broker:Forwarded Message Dropped Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"

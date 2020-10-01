@@ -1,4 +1,5 @@
 ---
+description: "Replication Queue Reader Agent"
 title: "Replication Queue Reader Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/29/2016"

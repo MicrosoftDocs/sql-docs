@@ -1,4 +1,5 @@
 ---
+description: "Delete a Member or Collection (Master Data Services)"
 title: Delete a Member or Collection
 ms.custom: ""
 ms.date: "03/01/2017"

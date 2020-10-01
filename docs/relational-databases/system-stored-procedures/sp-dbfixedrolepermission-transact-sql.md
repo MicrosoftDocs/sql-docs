@@ -1,4 +1,5 @@
 ---
+description: "sp_dbfixedrolepermission (Transact-SQL)"
 title: "sp_dbfixedrolepermission (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbfixedrolepermission"
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

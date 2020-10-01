@@ -1,4 +1,5 @@
 ---
+description: "OPEN SYMMETRIC KEY (Transact-SQL)"
 title: "OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -29,7 +30,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   
 <decryption_mechanism> ::=  
@@ -88,7 +88,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ### A. Opening a symmetric key by using a certificate  
  The following example opens the symmetric key `SymKeyMarketing3` and decrypts it by using the private key of certificate `MarketingCert9`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN SYMMETRIC KEY SymKeyMarketing3   
     DECRYPTION BY CERTIFICATE MarketingCert9;  
@@ -98,7 +98,7 @@ GO
 ### B. Opening a symmetric key by using another symmetric key  
  The following example opens the symmetric key `MarketingKey11` and decrypts it by using symmetric key `HarnpadoungsatayaSE3`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- First open the symmetric key that you want for decryption.  
 OPEN SYMMETRIC KEY HarnpadoungsatayaSE3   

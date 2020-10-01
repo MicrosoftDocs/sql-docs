@@ -1,4 +1,5 @@
 ---
+description: "OData Source Properties"
 title: "OData Source Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

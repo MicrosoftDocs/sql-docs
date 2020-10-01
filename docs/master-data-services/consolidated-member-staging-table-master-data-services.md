@@ -1,4 +1,5 @@
 ---
+description: "Consolidated Member Staging Table (Master Data Services)"
 title: Consolidated Member Staging Table
 ms.custom: ""
 ms.date: "04/01/2016"

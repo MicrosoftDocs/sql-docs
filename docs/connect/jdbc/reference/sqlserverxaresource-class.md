@@ -1,4 +1,5 @@
 ---
+description: "SQLServerXAResource Class"
 title: "SQLServerXAResource Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

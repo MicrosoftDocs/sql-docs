@@ -1,4 +1,5 @@
 ---
+description: "SInstance Class"
 title: "SInstance Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SInstance class"
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SInstance Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

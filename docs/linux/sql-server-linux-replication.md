@@ -1,6 +1,6 @@
 ---
 title: SQL Server Replication on Linux
-description: This article describes SQL Server replication on Linux.
+description: Learn how SQL Server 2017 (14.x) (CU18) and later support SQL Server Replication for instances of SQL Server on Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto

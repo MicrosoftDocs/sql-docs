@@ -1,4 +1,5 @@
 ---
+description: "setCharacterStream Method (java.lang.String, java.io.Reader, int)"
 title: "setCharacterStream Method (java.lang.String, java.io.Reader, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

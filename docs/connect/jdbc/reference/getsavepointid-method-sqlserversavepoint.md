@@ -1,4 +1,5 @@
 ---
+description: "getSavepointId Method (SQLServerSavepoint)"
 title: "getSavepointId Method (SQLServerSavepoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

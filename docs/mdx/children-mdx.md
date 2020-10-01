@@ -1,4 +1,5 @@
 ---
+description: "Children (MDX)"
 title: "Children (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

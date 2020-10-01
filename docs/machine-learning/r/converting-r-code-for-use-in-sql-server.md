@@ -4,7 +4,7 @@ description: Migrate R code to a SQL Server stored procedure for solution deploy
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 04/15/2018  
+ms.date: 08/28/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Convert R code for execution in SQL Server (In-Database) instances
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article provides high-level guidance on how to modify R code to work in SQL Server. 
 
@@ -116,7 +116,6 @@ How much you change your code depends on whether you intend to submit the R code
 
 + Consult with a database developer to determine ways to improve performance by using SQL Server features such as [memory-optimized tables](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), or, if you have Enterprise Edition, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
 
-    For more information, see [SQL Server Optimization Tips and Tricks for Analytics Services](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
 ### Step 3. Prepare for deployment
 

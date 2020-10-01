@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-8: Annotate and format the Lesson 1 package"
 title: "Step 8: Annotate and format the Lesson 1 package | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020

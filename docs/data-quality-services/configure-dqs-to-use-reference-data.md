@@ -1,4 +1,5 @@
 ---
+description: "Configure DQS to Use Reference Data"
 title: "Configure DQS to Use Reference Data"
 ms.date: "03/01/2017"
 ms.prod: sql

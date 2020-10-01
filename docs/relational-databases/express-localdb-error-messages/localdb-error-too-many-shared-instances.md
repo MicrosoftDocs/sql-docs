@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES"
 title: "LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

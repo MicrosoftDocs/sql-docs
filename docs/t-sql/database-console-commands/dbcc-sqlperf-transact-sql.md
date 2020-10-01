@@ -1,4 +1,5 @@
 ---
+description: "DBCC SQLPERF (Transact-SQL)"
 title: "DBCC SQLPERF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2018"
@@ -34,7 +35,7 @@ Provides transaction log space usage statistics for all databases. In [!INCLUDE[
   
 ## Syntax  
   
-```
+```syntaxsql
 DBCC SQLPERF   
 (  
      [ LOGSPACE ]  

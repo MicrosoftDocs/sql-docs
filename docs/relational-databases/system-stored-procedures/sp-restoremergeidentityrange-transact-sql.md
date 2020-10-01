@@ -1,4 +1,5 @@
 ---
+description: "sp_restoremergeidentityrange (Transact-SQL)"
 title: "sp_restoremergeidentityrange (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_restoremergeidentityrange"
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Using Service SIDs to grant permissions to services in SQL Server"
 title: Using Service SIDs to grant permissions to services
 ms.custom: seo-dt-2019
 author: randomnote1

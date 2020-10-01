@@ -1,4 +1,5 @@
 ---
+description: "sp_ivindexhasnullcols (Transact-SQL)"
 title: "sp_ivindexhasnullcols (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_ivindexhasnullcols"
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

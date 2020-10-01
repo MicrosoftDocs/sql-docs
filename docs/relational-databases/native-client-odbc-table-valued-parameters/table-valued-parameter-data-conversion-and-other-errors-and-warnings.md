@@ -1,4 +1,5 @@
 ---
+description: "Table-Valued Parameter Data Conversion and Other Errors and Warnings"
 title: "Table-Valued Parameter data conversion"
 ms.custom: ""
 ms.date: "03/14/2017"

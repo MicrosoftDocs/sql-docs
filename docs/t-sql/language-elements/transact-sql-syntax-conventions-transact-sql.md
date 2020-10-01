@@ -1,4 +1,5 @@
 ---
+description: "Transact-SQL Syntax Conventions (Transact-SQL)"
 title: "Transact-SQL Syntax Conventions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2018"

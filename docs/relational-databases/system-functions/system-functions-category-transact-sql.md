@@ -1,4 +1,5 @@
 ---
+description: "System Functions by category for Transact-SQL"
 title: "System Functions by category"
 ms.date: "11/02/2016"
 ms.prod: sql

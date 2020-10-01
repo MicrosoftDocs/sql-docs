@@ -1,4 +1,5 @@
 ---
+description: "&lt; (Less Than) (Transact-SQL)"
 title: "&lt; (Less Than) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

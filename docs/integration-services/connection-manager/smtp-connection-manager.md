@@ -1,4 +1,5 @@
 ---
+description: "SMTP Connection Manager"
 title: "SMTP Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Operator Precedence (Transact-SQL)"
 title: "Operator Precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

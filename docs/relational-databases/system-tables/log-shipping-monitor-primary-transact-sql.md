@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_monitor_primary (Transact-SQL)"
 title: "log_shipping_monitor_primary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_primary system table"
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

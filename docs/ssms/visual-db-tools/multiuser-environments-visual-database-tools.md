@@ -1,4 +1,5 @@
 ---
+description: "Multiuser Environments (Visual Database Tools)"
 title: Multiuser Environments
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

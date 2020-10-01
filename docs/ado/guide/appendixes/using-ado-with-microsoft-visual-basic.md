@@ -1,8 +1,9 @@
 ---
+description: "Using ADO with Microsoft Visual Basic and Visual Basic for Applications"
 title: "Using ADO with Microsoft Visual Basic | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -103,12 +104,12 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  Instantiating objects by using the **CreateObject** method is typically slower than using the **Dim** statement.
 
 ## Handling Events
- In order to handle ADO events in Microsoft Visual Basic, you must declare a module-level variable using the **WithEvents** keyword. The variable can be declared only as part of a class module and must be declared at the module level. For a more thorough discussion of handling ADO events, see [Handling ADO Events](../../../ado/guide/data/handling-ado-events.md).
+ In order to handle ADO events in Microsoft Visual Basic, you must declare a module-level variable using the **WithEvents** keyword. The variable can be declared only as part of a class module and must be declared at the module level. For a more thorough discussion of handling ADO events, see [Handling ADO Events](../data/handling-ado-events.md).
 
 ## Visual Basic Examples
- Many Visual Basic examples are included with the ADO documentation. For more information, see [ADO Code Examples in Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
+ Many Visual Basic examples are included with the ADO documentation. For more information, see [ADO Code Examples in Microsoft Visual Basic](../../reference/ado-api/ado-code-examples-in-visual-basic.md).
 
 ## See Also
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
- [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
- [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)
+ [Using ADO with Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md)
+ [Using ADO with Scripting Languages](./using-ado-with-scripting-languages.md)

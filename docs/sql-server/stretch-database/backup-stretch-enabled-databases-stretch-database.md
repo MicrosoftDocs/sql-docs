@@ -1,4 +1,5 @@
 ---
+description: "Backup Stretch-enabled databases (Stretch Database)"
 title: "Backup Stretch-enabled databases"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database

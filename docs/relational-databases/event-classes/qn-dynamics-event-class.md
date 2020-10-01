@@ -1,4 +1,5 @@
 ---
+description: "QN:Dynamics Event Class"
 title: "QN:Dynamics Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

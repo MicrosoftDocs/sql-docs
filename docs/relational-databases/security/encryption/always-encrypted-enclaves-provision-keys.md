@@ -1,4 +1,5 @@
 ---
+description: "Provision enclave-enabled keys"
 title: "Provision enclave-enabled keys | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/01/2019

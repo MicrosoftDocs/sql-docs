@@ -1,4 +1,5 @@
 ---
+description: "Variables Window"
 title: "Variables Window | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

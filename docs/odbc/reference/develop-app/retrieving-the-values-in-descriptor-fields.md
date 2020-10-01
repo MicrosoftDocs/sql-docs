@@ -1,4 +1,5 @@
 ---
+description: "Retrieving the Values in Descriptor Fields"
 title: "Retrieving the Values in Descriptor Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

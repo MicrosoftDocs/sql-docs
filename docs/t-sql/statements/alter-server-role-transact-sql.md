@@ -1,4 +1,5 @@
 ---
+description: "ALTER SERVER ROLE (Transact-SQL)"
 title: "ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/16/2020"

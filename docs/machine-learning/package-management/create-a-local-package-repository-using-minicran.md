@@ -1,9 +1,9 @@
 ---
 title: Create a repository with miniCRAN
+titleSuffix: SQL machine learning
 description: Learn how to install R packages offline by using the miniCRAN package to create a local repository of packages and dependencies.
 ms.prod: sql
 ms.technology: machine-learning
-
 ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
@@ -13,7 +13,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Create a local R package repository using miniCRAN
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 This article describes how to install R packages offline by using [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) to create a local repository of packages and dependencies. **miniCRAN** identifies and downloads packages and dependencies into a single folder that you copy to other computers for offline R package installation.
 

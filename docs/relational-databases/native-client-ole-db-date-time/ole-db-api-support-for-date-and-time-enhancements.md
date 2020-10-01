@@ -1,4 +1,5 @@
 ---
+description: "OLE DB API Support for Date and Time Enhancements (Native Client OLE DB provider)"
 title: API support for date and time enhancements (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/06/2017"

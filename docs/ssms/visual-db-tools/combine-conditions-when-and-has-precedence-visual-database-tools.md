@@ -1,4 +1,5 @@
 ---
+description: "Combine Conditions When AND Has Precedence (Visual Database Tools)"
 title: Combine Conditions When AND Has Precedence
 ms.prod: sql
 ms.prod_service: sql-tools

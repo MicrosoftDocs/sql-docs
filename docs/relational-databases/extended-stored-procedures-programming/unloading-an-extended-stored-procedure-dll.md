@@ -1,4 +1,5 @@
 ---
+description: "Unloading an Extended Stored Procedure DLL"
 title: "Unloading an Extended Stored Procedure DLL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

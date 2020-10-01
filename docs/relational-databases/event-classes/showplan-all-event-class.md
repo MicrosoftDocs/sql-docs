@@ -1,4 +1,5 @@
 ---
+description: "Showplan All Event Class"
 title: "Showplan All Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

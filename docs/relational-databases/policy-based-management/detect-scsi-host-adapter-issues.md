@@ -1,4 +1,5 @@
 ---
+description: "Detect SCSI Host Adapter Issues"
 title: "Detect SCSI Host Adapter Issues | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

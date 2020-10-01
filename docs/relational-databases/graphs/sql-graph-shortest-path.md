@@ -1,4 +1,5 @@
 ---
+description: "SHORTEST_PATH (Transact-SQL)"
 title: "SHORTEST PATH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/01/2020

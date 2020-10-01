@@ -1,4 +1,5 @@
 ---
+description: "CREATE COLUMN ENCRYPTION KEY (Transact-SQL)"
 title: "CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"
@@ -30,7 +31,8 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Creates a column encryption key metadata object for [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). A column encryption key metadata object contains one or two encrypted values of a column encryption key that is used to encrypt data in a column. Each value is encrypted using a column master key. 
   
@@ -69,8 +71,8 @@ The encrypted column encryption key value BLOB.
   
 > [!WARNING]  
 >  Never pass plaintext column encryption key values in this statement. Doing so will comprise the benefit of this feature.  
-  
-## Remarks  
+
+## Remarks
 The `CREATE COLUMN ENCRYPTION KEY` statement must include at least one or two values. You can use the [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) to add a second value later. You can also use the `ALTER COLUMN ENCRYPTION KEY` statement to remove a value.  
   
 Typically, a column encryption key is created with just one encrypted value. At times, you need to rotate a column master key to replace the current column master key with the new column master key. When you need to rotate the key, add a new value of the column encryption key, encrypted with the new column master key. This rotation allows you to ensure client applications can access data encrypted with the column encryption key, while the new column master key is made available to client applications. An Always Encrypted enabled driver in a client application that doesn't have access to the new master key, will use the column encryption key value encrypted with the old column master key to access sensitive data.  

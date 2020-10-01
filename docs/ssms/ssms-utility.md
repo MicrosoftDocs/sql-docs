@@ -1,4 +1,5 @@
 ---
+description: "SSMS Utility"
 title: SSMS Utility
 ms.prod: sql
 ms.prod_service: sql-tools

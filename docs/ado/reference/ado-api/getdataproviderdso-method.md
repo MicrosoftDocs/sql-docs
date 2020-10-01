@@ -1,8 +1,9 @@
 ---
+description: "GetDataProviderDSO Method"
 title: "GetDataProviderDSO Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -33,4 +34,4 @@ HRESULT GetDataProviderDSO(
  This method does not addref the interface pointer. If the caller plans to hold the pointer, the caller must do the required addref and release.  
   
 ## Applies to  
- [IDSOShapeExtensions Interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)
+ [IDSOShapeExtensions Interface](./idsoshapeextensions-interface.md)

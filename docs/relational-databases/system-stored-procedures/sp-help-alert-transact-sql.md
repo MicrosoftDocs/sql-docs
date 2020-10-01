@@ -1,4 +1,5 @@
 ---
+description: "sp_help_alert (Transact-SQL)"
 title: "sp_help_alert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_alert"
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

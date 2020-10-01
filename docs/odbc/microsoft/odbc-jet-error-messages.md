@@ -1,4 +1,5 @@
 ---
+description: "ODBC Jet Error Messages"
 title: "ODBC Jet Error Messages | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

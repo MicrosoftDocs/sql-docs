@@ -1,4 +1,5 @@
 ---
+description: "RAND (Transact-SQL)"
 title: "RAND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -30,8 +31,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RAND ( [ seed ] )  
 ```  
   

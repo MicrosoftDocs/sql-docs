@@ -1,4 +1,5 @@
 ---
+description: "Detect Failed Input and Output Requests"
 title: "Detect Failed Input and Output Requests | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

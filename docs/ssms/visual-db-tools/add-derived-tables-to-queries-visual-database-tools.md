@@ -1,4 +1,5 @@
 ---
+description: "Add Derived Tables to Queries (Visual Database Tools)"
 title: Add Derived Tables to Queries
 ms.prod: sql
 ms.prod_service: sql-tools

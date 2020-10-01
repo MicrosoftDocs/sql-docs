@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Error MSSQLSERVER_50000"
 title: "MSSQLSERVER_50000 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

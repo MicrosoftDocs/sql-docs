@@ -1,4 +1,5 @@
 ---
+description: "Database Mail Configuration Objects"
 title: "Database Mail Configuration Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

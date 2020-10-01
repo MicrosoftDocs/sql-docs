@@ -1,4 +1,5 @@
 ---
+description: "Pause and resume data migration (Stretch Database)"
 title: "Pause and resume data migration"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database

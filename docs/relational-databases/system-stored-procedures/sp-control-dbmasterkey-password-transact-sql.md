@@ -1,4 +1,5 @@
 ---
+description: "sp_control_dbmasterkey_password (Transact-SQL)"
 title: "sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/09/2020"

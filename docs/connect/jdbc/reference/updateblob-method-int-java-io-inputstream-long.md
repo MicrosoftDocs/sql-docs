@@ -1,4 +1,5 @@
 ---
+description: "updateBlob Method (int, java.io.InputStream, long)"
 title: "updateBlob Method (int, java.io.InputStream, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

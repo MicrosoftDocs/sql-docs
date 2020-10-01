@@ -1,4 +1,5 @@
 ---
+description: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)"
 title: "BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"

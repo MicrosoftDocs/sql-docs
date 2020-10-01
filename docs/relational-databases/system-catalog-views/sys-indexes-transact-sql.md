@@ -1,4 +1,5 @@
 ---
+description: "sys.indexes (Transact-SQL)"
 title: "sys.indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 02/12/2020
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.indexes catalog view"
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.indexes (Transact-SQL)

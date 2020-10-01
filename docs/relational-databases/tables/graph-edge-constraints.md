@@ -1,4 +1,5 @@
 ---
+description: "Graph edge constraints"
 title: "Graph edge constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/09/2019

@@ -1,4 +1,5 @@
 ---
+description: "Mathematical Functions (Transact-SQL)"
 title: "Mathematical Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"

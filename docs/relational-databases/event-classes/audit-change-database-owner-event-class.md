@@ -1,4 +1,5 @@
 ---
+description: "Audit Change Database Owner Event Class"
 title: "Audit Change Database Owner Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

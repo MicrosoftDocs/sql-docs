@@ -1,4 +1,5 @@
 ---
+description: "Subscription Expiration and Deactivation"
 title: "Subscription Expiration and Deactivation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

@@ -1,4 +1,5 @@
 ---
+description: "TABLE_PRIVILEGES (Transact-SQL)"
 title: "TABLE_PRIVILEGES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

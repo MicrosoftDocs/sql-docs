@@ -1,6 +1,6 @@
 ---
 title: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream | Microsoft Docs"
-description: "Fetch columns using IRow::GetColumns (or IRow::Open) and ISequentialStream"
+description: Learn how large data can be bound or retrieved using the ISequentialStream interface in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Open method"
   - "ISequentialStream interface, samples"
   - "GetColumns method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Fetch Columns by Using IRow::GetColumns (or IRow::Open) and ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

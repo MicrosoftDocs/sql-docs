@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL)"
 title: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_merge_checkpoint_files"
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager"
 title: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

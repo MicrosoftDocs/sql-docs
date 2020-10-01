@@ -1,4 +1,5 @@
 ---
+description: "CREATE MINING MODEL (DMX)"
 title: "CREATE MINING MODEL (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

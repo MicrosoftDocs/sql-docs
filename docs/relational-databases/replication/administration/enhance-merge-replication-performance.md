@@ -1,4 +1,5 @@
 ---
+description: "Enhance Merge Replication Performance"
 title: "Enhance Merge Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

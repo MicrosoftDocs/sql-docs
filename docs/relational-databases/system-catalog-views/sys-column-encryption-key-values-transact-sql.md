@@ -1,4 +1,5 @@
 ---
+description: "sys.column_encryption_key_values (Transact-SQL)"
 title: "sys.column_encryption_key_values (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"

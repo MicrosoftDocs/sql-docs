@@ -1,4 +1,5 @@
 ---
+description: "Server Configuration (MDS Configuration Manager)"
 title: Server Configuration
 ms.custom: ""
 ms.date: "01/26/2017"

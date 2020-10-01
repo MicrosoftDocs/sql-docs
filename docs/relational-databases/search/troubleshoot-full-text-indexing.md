@@ -1,4 +1,5 @@
 ---
+description: "Troubleshoot Full-Text Indexing"
 title: "Troubleshoot Full-Text Indexing | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "SELECT - FOR Clause (Transact-SQL)"
 title: "FOR Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"

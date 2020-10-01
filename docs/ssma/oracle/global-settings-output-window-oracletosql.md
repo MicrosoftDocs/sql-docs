@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Output Window)  (OracleToSQL)"
 title: "Global Settings (Output Window)  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Global Settings (Output Window)  (OracleToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

@@ -1,4 +1,5 @@
 ---
+description: "Commit Mode"
 title: "Commit Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

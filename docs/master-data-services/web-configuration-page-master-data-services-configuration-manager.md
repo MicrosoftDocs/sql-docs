@@ -1,4 +1,5 @@
 ---
+description: "Web Configuration Page (Master Data Services Configuration Manager)"
 title: Web Configuration Page
 ms.custom: ""
 ms.date: "03/20/2017"

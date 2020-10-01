@@ -1,4 +1,5 @@
 ---
+description: "position Method (SQLServerBlob)"
 title: "position Method (SQLServerBlob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

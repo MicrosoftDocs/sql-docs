@@ -1,4 +1,5 @@
 ---
+description: "Azure Key Vault sample version 6.2.2"
 title: "Azure Key Vault sample version 6.2.2 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

@@ -1,4 +1,5 @@
 ---
+description: "sp_prepexec (Transact-SQL)"
 title: "sp_prepexec (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_prepexec"
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_prepexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

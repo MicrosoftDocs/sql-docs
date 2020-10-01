@@ -1,4 +1,5 @@
 ---
+description: "C Data Types"
 title: "C Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"

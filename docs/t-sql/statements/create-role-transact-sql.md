@@ -1,4 +1,5 @@
 ---
+description: "CREATE ROLE (Transact-SQL)"
 title: "CREATE ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -37,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```sql  
+```syntaxsql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   

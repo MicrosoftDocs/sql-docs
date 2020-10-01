@@ -1,4 +1,5 @@
 ---
+description: "sp_expired_subscription_cleanup (Transact-SQL)"
 title: "sp_expired_subscription_cleanup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_expired_subscription_cleanup"
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

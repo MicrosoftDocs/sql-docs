@@ -1,4 +1,5 @@
 ---
+description: "Job Activity Monitor Refresh"
 title: "Job Activity Monitor Refresh | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

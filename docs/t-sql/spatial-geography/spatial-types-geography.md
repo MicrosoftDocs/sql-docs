@@ -1,4 +1,5 @@
 ---
+description: "Spatial Types - geography"
 title: "geography (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

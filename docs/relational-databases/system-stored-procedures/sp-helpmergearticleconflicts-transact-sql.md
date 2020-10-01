@@ -1,4 +1,5 @@
 ---
+description: "sp_helpmergearticleconflicts (Transact-SQL)"
 title: "sp_helpmergearticleconflicts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpmergearticleconflicts"
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

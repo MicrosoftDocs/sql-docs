@@ -1,4 +1,5 @@
 ---
+description: "Updatable Subscriptions - Queued Updating Conflict Resolution"
 title: "Queued Updating Conflict Detection and Resolution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

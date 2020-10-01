@@ -1,4 +1,5 @@
 ---
+description: "Using Variables in the Script Component"
 title: "Using Variables in the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

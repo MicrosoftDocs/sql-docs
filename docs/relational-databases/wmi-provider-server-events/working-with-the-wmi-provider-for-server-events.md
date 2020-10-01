@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "notifications [WMI]"
   - "WMI Provider for Server Events, security"
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Working with the WMI Provider for Server Events
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

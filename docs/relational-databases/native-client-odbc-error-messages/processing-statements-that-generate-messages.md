@@ -1,4 +1,5 @@
 ---
+description: "Processing Statements That Generate Messages"
 title: "Processing Statements That Generate Messages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

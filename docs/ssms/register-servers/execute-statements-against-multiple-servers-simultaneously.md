@@ -1,4 +1,5 @@
 ---
+description: "Execute Statements Against Multiple Servers Simultaneously"
 title: Execute Statements Against Multiple Servers Simultaneously
 ms.prod: sql
 ms.prod_service: sql-tools

@@ -1,4 +1,5 @@
 ---
+description: "ProtocolDLL Property (ClientNetworkProtocol Class)"
 title: "ProtocolDLL Property (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolDLL property"
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ProtocolDLL Property (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

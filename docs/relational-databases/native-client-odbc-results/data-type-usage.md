@@ -1,4 +1,5 @@
 ---
+description: "Data Type Usage"
 title: "Data Type Usage | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

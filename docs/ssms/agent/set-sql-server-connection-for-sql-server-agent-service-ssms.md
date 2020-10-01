@@ -1,4 +1,5 @@
 ---
+description: "Set the SQL Server Connection for the SQL Server Agent Service"
 title: Set the SQL Server Connection for the SQL Server Agent Service
 ms.prod: sql
 ms.prod_service: sql-tools

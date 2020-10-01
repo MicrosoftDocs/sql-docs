@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Conversions Performed from Server to Client"
 title: "Conversions Performed from Server to Client"
 ms.date: "03/14/2017"
 ms.prod: sql

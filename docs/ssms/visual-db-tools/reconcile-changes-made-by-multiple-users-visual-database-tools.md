@@ -1,4 +1,5 @@
 ---
+description: "Reconcile Changes Made by Multiple Users (Visual Database Tools)"
 title: Reconcile Changes Made by Multiple Users
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

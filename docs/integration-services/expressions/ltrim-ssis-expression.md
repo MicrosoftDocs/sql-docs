@@ -1,4 +1,5 @@
 ---
+description: "LTRIM (SSIS Expression)"
 title: "LTRIM (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

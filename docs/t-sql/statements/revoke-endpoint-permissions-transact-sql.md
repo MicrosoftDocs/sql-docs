@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Endpoint Permissions (Transact-SQL)"
 title: "REVOKE Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -27,7 +28,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  
     { FROM | TO } <server_principal> [ ,...n ]  
@@ -103,7 +103,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### A. Revoking VIEW DEFINITION permission on an endpoint  
  The following example revokes `VIEW DEFINITION` permission on the endpoint `Mirror7` from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;  
 GO  
@@ -112,7 +112,7 @@ GO
 ### B. Revoking TAKE OWNERSHIP permission with the CASCADE option  
  The following example revokes `TAKE OWNERSHIP` permission on the endpoint `Shipping83` from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski` and from all principals to which `PKomosinski` granted `TAKE OWNERSHIP` on `Shipping83`.  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski   
     CASCADE;  

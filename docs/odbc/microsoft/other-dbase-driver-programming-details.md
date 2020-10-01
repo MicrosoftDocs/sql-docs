@@ -1,4 +1,5 @@
 ---
+description: "Other dBASE Driver Programming Details"
 title: "Other dBASE Driver Programming Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

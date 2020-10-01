@@ -1,4 +1,5 @@
 ---
+description: "READTEXT (Transact-SQL)"
 title: "READTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
@@ -33,7 +34,6 @@ Reads **text**, **ntext**, or **image** values from a **text**, **ntext**, or **
 ## Syntax  
   
 ```syntaxsql
-  
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
@@ -71,10 +71,10 @@ The following example reads the second through 26th characters of the `pr_info` 
 > [!NOTE]  
 >  To run this example, you must install the [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) sample database.  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
    FROM pub_info pr INNER JOIN publishers p  
       ON pr.pub_id = p.pub_id   

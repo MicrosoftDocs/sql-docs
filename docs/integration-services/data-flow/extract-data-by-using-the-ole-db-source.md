@@ -1,4 +1,5 @@
 ---
+description: "Extract Data by Using the OLE DB Source"
 title: "Extract Data by Using the OLE DB Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

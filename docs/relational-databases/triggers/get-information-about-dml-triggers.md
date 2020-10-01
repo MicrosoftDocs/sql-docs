@@ -1,4 +1,5 @@
 ---
+description: "Get Information About DML Triggers"
 title: "Get Information About DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

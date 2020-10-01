@@ -1,4 +1,5 @@
 ---
+description: "Access Data for the DQS Operations"
 title: "Access Data for the DQS Operations"
 ms.date: "03/01/2017"
 ms.prod: sql

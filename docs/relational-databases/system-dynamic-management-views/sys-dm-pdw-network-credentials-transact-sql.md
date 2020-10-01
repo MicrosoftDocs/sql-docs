@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_network_credentials (Transact-SQL)"
 title: "sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -9,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_network_credentials (Transact-SQL)

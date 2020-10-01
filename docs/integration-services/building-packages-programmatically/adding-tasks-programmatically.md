@@ -1,4 +1,5 @@
 ---
+description: "Adding Tasks Programmatically"
 title: "Adding Tasks Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -408,7 +409,7 @@ End Module
 ```  
   
 ## External Resources  
- Blog entry, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
+ Blog entry, [EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042), on blogs.msdn.com.  
 
 ## See Also  
  [Connecting Tasks Programmatically](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

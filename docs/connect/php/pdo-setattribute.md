@@ -1,7 +1,8 @@
 ---
-title: "PDO::setAttribute | Microsoft Docs"
+title: "PDO::setAttribute"
+description: "API reference for the PDO::setAttribute function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "04/22/2019"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

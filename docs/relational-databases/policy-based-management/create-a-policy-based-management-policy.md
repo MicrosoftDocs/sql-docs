@@ -1,4 +1,5 @@
 ---
+description: "Create a Policy-Based Management Policy"
 title: "Create a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

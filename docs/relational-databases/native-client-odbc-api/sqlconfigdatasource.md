@@ -1,4 +1,5 @@
 ---
+description: "SQLConfigDataSource"
 title: "SQLConfigDataSource | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

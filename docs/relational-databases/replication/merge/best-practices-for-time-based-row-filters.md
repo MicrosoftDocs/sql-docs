@@ -1,4 +1,5 @@
 ---
+description: "Best Practices for Time-Based Row Filters"
 title: "Best Practices for Time-Based Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Send a test email with database mail"
 title: "Send a test email with database mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"

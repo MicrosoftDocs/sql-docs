@@ -1,4 +1,5 @@
 ---
+description: "Banner Element (ssbdiagnose)"
 title: Banner Element
 diagnose: In SQL Server, the Banner element identifies which utility generated the ssbdiagnose output XML file.
 ms.prod: sql

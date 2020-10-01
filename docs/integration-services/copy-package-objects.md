@@ -1,4 +1,5 @@
 ---
+description: "Copy Package Objects"
 title: "Copy Package Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

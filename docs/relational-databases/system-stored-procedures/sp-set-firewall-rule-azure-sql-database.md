@@ -1,4 +1,5 @@
 ---
+description: "sp_set_firewall_rule (Azure SQL Database)"
 title: "sp_set_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2016"

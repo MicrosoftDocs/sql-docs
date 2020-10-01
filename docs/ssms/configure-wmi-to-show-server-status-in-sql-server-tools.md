@@ -1,4 +1,5 @@
 ---
+description: "Configure WMI to Show Server Status in SQL Server Tools"
 title: "Configure WMI to Show Server Status in SQL Server Tools"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-1: Create a new Integration Services project"
 title: "Step 1: Create a new Integration Services project | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

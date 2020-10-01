@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_semantic_similarity_population (Transact-SQL)"
 title: "sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

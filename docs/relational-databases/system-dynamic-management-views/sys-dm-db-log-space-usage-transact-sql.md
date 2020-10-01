@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_log_space_usage (Transact-SQL)"
 title: "sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_space_usage dynamic management view"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_space_usage (Transact-SQL)

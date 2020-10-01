@@ -1,4 +1,5 @@
 ---
+description: "cdc.index_columns (Transact-SQL)"
 title: "cdc.index_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.index_columns"
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # cdc.index_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

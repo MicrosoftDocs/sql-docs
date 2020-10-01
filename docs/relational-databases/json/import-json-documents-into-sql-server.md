@@ -1,4 +1,5 @@
 ---
+description: "Import JSON documents into SQL Server"
 title: "Import JSON documents"
 ms.date: 06/03/2020
 ms.prod: sql

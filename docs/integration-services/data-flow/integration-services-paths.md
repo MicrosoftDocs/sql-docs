@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Paths"
 title: "Integration Services Paths | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

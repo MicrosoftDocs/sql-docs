@@ -1,4 +1,5 @@
 ---
+description: "Dynamic SQL"
 title: "Dynamic SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2020"

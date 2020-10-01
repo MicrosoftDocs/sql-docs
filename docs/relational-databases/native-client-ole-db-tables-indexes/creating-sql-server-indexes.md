@@ -1,4 +1,5 @@
 ---
+description: "Create SQL Server indexes (Native Client OLE DB provider)"
 title: "Create SQL Server indexes (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

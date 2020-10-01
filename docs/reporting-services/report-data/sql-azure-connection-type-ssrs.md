@@ -1,6 +1,6 @@
 ---
-title: "SQL Azure Connection Type | Microsoft Docs"
-description: The SQL Azure Connection data extension supports multivalued parameters, server aggregates, and credentials managed separately from the connection string.
+title: "Azure SQL Connection Type | Microsoft Docs"
+description: The Azure SQL Connection data extension supports multivalued parameters, server aggregates, and credentials managed separately from the connection string.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -11,7 +11,7 @@ ms.date: 02/15/2019
 monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
-# SQL Azure Connection Type (SSRS)
+# Azure SQL Connection Type (SSRS)
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] is a cloud-based, hosted relational database built on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies. To include data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. This built-in data source type is based on the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

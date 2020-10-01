@@ -1,4 +1,5 @@
 ---
+description: "Modify Join Operators (Visual Database Tools)"
 title: Modify Join Operators
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

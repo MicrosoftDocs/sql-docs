@@ -1,4 +1,5 @@
 ---
+description: "OGC Methods on Geography Instances"
 title: "OGC Methods on Geography Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2019"

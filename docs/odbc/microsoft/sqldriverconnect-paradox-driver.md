@@ -1,4 +1,5 @@
 ---
+description: "SQLDriverConnect (Paradox Driver)"
 title: "SQLDriverConnect (Paradox Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

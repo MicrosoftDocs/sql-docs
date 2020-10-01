@@ -1,4 +1,5 @@
 ---
+description: "Advanced Connection Properties"
 title: "Advanced Connection Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

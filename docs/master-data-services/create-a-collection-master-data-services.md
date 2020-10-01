@@ -1,4 +1,5 @@
 ---
+description: "Create a Collection (Master Data Services)"
 title: Create a Collection
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Enabling New Data Types by Setting ExtendedAnsiSQL"
 title: "Enabling New Data Types by Setting ExtendedAnsiSQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "INSERT INTO (DMX)"
 title: "INSERT INTO (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

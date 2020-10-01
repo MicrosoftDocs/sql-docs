@@ -1,4 +1,5 @@
 ---
+description: "VARCHAR Column Size (ODBC Driver for Oracle)"
 title: "VARCHAR Column Size (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

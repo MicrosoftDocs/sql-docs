@@ -1,4 +1,5 @@
 ---
+description: "sp_helpreplicationoption (Transact-SQL)"
 title: "sp_helpreplicationoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpreplicationoption"
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: "STATS_DATE (Transact-SQL)"
 title: "STATS_DATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
@@ -34,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 STATS_DATE ( object_id , stats_id )  
 ```  
   

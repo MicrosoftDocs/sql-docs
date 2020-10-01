@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_groups (Transact-SQL)"
 title: "sys.availability_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.availability_groups catalog view"
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

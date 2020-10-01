@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitordropalert (Transact-SQL)"
 title: "sp_dbmmonitordropalert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], monitoring"
   - "sp_dbmmonitordropalert"
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Loading and Running a Local Package Programmatically"
 title: "Loading and Running a Local Package Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

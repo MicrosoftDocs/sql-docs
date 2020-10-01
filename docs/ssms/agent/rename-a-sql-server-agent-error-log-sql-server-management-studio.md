@@ -1,4 +1,5 @@
 ---
+description: "Rename a SQL Server Agent Error Log"
 title: Rename a SQL Server Agent Error Log
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

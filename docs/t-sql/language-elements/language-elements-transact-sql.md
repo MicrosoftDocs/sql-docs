@@ -1,4 +1,5 @@
 ---
+description: "Language Elements (Transact-SQL)"
 title: "Language Elements (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [NULL and UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
-[Transactions (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
+[Transactions (Azure Synapse Analytics)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   

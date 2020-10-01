@@ -1,4 +1,5 @@
 ---
+description: "Oracle Destination"
 title: "Oracle Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"

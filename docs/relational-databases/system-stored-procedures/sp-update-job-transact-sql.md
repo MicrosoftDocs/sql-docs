@@ -1,4 +1,5 @@
 ---
+description: "sp_update_job (Transact-SQL)"
 title: "sp_update_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_job"
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

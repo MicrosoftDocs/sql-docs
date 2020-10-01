@@ -1,4 +1,5 @@
 ---
+description: "Delete a Model (Master Data Services)"
 title: Delete a Model
 ms.custom: ""
 ms.date: "03/01/2017"

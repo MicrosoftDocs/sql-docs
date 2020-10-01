@@ -1,4 +1,5 @@
 ---
+description: "Hadoop File System Task"
 title: "Hadoop File System Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

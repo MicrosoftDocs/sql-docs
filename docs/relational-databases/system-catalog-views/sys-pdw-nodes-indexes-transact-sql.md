@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_indexes (Transact-SQL)"
 title: "sys.pdw_nodes_indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Sort Warnings Event Class"
 title: "Sort Warnings Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

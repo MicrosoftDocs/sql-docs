@@ -1,4 +1,5 @@
 ---
+description: "sp_scriptdynamicupdproc (Transact-SQL)"
 title: "sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_scriptdynamicupdproc"
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

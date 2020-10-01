@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Connecting to Sybase"
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 
 # Connecting to SAP ASE (SybaseToSQL)

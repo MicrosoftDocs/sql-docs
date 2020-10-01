@@ -1,4 +1,5 @@
 ---
+description: "sp_detach_schedule (Transact-SQL)"
 title: "sp_detach_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_detach_schedule"
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "SQL:BatchCompleted Event Class"
 title: "SQL:BatchCompleted Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

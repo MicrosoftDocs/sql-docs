@@ -1,4 +1,5 @@
 ---
+description: "Manage Changesets (Master Data Services)"
 title: Manage Changesets
 ms.custom: ""
 ms.date: "03/01/2017"

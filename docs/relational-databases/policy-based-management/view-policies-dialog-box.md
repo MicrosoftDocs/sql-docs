@@ -1,4 +1,5 @@
 ---
+description: "View Policies Dialog Box"
 title: "View Policies Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

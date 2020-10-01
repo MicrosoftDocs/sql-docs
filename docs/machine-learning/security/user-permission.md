@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019, contperfq4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Grant users permission to execute Python and R scripts with SQL Server Machine Learning Services
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Learn how you can give users permission to run external Python and R scripts in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and give read, write, or data definition language (DDL) permissions to databases.
 

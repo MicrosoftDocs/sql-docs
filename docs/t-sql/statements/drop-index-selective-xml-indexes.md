@@ -1,4 +1,5 @@
 ---
+description: "DROP INDEX (Selective XML Indexes)"
 title: "DROP INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -64,7 +65,7 @@ DROP INDEX index_name ON <object>
 ## Example  
  The following example shows a DROP INDEX statement.  
   
-```  
+```sql  
 DROP INDEX sxi_index ON tbl;  
 ```  
   

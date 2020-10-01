@@ -1,4 +1,5 @@
 ---
+description: "sys.syslanguages (Transact-SQL)"
 title: "sys.syslanguages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

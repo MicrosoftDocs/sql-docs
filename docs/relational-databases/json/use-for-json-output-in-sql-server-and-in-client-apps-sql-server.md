@@ -1,4 +1,5 @@
 ---
+description: "Use FOR JSON output in SQL Server and in client apps (SQL Server)"
 title: "Use FOR JSON output in SQL Server and in client apps"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -78,7 +79,7 @@ SET Details =
      (SELECT TOP 1 UnitPrice, OrderQty  
        FROM Sales.SalesOrderDetail D  
        WHERE D.SalesOrderId = SalesOrder.SalesOrderId  
-      FOR JSON AUTO 
+      FOR JSON AUTO) 
 ```  
   
 ## Use FOR JSON output in a C# client app  

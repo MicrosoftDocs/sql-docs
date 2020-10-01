@@ -1,4 +1,5 @@
 ---
+description: "setApplicationName Method (SQLServerDataSource)"
 title: "setApplicationName Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

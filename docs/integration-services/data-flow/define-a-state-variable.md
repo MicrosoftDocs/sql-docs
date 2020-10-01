@@ -1,4 +1,5 @@
 ---
+description: "Define a State Variable"
 title: "Define a State Variable | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

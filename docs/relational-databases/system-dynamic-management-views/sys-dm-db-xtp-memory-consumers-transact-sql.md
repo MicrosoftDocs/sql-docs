@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_memory_consumers (Transact-SQL)"
 title: "sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_memory_consumers dynamic management view"
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_memory_consumers (Transact-SQL)

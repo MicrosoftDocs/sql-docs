@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Display Column and Catalog Metadata for Sparse Columns (OLE DB)"
 title: "Metadata for Sparse Columns (OLE DB)"
 ms.custom: ""
 ms.date: "03/16/2017"

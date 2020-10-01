@@ -1,4 +1,5 @@
 ---
+description: "catalog.event_messages"
 title: "catalog.event_messages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Change a Version Name (Master Data Services)"
 title: Change a Version Name
 ms.custom: ""
 ms.date: "03/01/2017"

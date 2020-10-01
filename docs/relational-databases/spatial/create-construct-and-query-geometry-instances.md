@@ -1,4 +1,5 @@
 ---
+description: "Create, Construct, and Query geometry Instances"
 title: "Create, Construct, and Query geometry Instances | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

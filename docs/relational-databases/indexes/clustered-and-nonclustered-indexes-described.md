@@ -1,4 +1,5 @@
 ---
+description: "Clustered and Nonclustered Indexes Described"
 title: "Clustered and Nonclustered Indexes Described | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/11/2019"

@@ -1,4 +1,5 @@
 ---
+description: "catalog.update_master_address (SSISDB Database)"
 title: "catalog.update_master_address (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"

@@ -1,4 +1,5 @@
 ---
+description: "View Facets Dialog Box"
 title: "View Facets Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

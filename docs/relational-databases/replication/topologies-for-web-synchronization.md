@@ -1,4 +1,5 @@
 ---
+description: "Topologies for Web Synchronization"
 title: "Topologies for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

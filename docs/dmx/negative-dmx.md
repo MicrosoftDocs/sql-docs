@@ -1,4 +1,5 @@
 ---
+description: "- (Negative) (DMX)"
 title: "- (Negative) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

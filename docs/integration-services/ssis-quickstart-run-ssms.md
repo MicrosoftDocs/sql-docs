@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package with SQL Server Management Studio (SSMS)"
 title: "Run an SSIS package with SSMS | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

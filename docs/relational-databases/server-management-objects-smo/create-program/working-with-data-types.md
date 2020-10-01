@@ -1,4 +1,5 @@
 ---
+description: "Working with Data Types"
 title: "Working with Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

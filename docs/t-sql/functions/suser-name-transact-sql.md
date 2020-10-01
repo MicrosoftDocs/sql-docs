@@ -1,4 +1,5 @@
 ---
+description: "SUSER_NAME (Transact-SQL)"
 title: "SUSER_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,8 +35,7 @@ Returns the login identification name of the user.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
@@ -61,7 +61,7 @@ SUSER_NAME can be used in a select list, in a WHERE clause, and anywhere an expr
 ## Examples  
 The following example returns the login identification name of the user with a login identification number of `1`.  
   
-```  
+```sql
 SELECT SUSER_NAME(1);  
 ```  
   

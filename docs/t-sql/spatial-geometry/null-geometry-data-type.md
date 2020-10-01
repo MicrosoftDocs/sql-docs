@@ -1,4 +1,5 @@
 ---
+description: "Null (geometry Data Type)"
 title: "Null (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

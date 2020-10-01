@@ -1,4 +1,5 @@
 ---
+description: "Restore a SQL Server Database to a Point in Time (Full Recovery Model)"
 title: "Restore a SQL Server Database to a Point in Time (Full Recovery Model) | Microsoft Docs"
 decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ""

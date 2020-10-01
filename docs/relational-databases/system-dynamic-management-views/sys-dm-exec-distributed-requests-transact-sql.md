@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_distributed_requests (Transact-SQL)"
 title: "sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "PolyBase"
   - "dm_exec_distributed_sql_requests management view"
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Holds information about all requests currently or recently active in PolyBase queries. It lists one row per request/query.  
   

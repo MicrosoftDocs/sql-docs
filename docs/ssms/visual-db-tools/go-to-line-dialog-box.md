@@ -1,4 +1,5 @@
 ---
+description: "Go To Line Dialog Box"
 title: Go To Line Dialog Box
 ms.prod: sql
 ms.prod_service: sql-tools

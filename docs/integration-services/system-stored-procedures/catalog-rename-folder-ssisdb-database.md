@@ -1,4 +1,5 @@
 ---
+description: "catalog.rename_folder (SSISDB Database)"
 title: "catalog.rename_folder (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

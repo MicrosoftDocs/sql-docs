@@ -1,4 +1,5 @@
 ---
+description: "setTransactionTimeout Method (SQLServerXAResource)"
 title: "setTransactionTimeout Method (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

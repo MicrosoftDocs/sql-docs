@@ -1,8 +1,9 @@
 ---
+description: "Customization File Connect Section"
 title: "Customization File Connect Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -57,13 +58,10 @@ connectionString
  If you want to allow any connection (in effect, disabling the default handler behavior), set the access entry in the **connect default** section to `Access=ReadWrite`, and delete or comment out any other **connect** _identifier_ section.  
   
 ## See Also  
- [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Required Client Settings](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Understanding the Customization File](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Writing Your Own Customized Handler](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+ [Customization File Logs Section](./customization-file-logs-section.md)   
+ [Customization File SQL Section](./customization-file-sql-section.md)   
+ [Customization File UserList Section](./customization-file-userlist-section.md)   
+ [DataFactory Customization](./datafactory-customization.md)   
+ [Required Client Settings](./required-client-settings.md)   
+ [Understanding the Customization File](./understanding-the-customization-file.md)   
+ [Writing Your Own Customized Handler](./writing-your-own-customized-handler.md)

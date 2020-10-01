@@ -1,4 +1,5 @@
 ---
+description: "Azure HDInsight Pig Task"
 title: "Azure HDInsight Pig Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"

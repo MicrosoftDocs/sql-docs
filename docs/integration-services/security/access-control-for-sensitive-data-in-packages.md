@@ -1,4 +1,5 @@
 ---
+description: "Access Control for Sensitive Data in Packages"
 title: "Access Control for Sensitive Data in Packages | Microsoft Docs"
 ms.custom: security
 ms.date: "03/14/2017"

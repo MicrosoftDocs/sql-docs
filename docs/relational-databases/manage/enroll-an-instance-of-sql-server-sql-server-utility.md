@@ -36,7 +36,7 @@ ms.author: mikeray
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on the UCP and all managed instances of SQL Server must have read permission to Users in Active Directory.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to enroll cannot be SQL Azure.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to enroll cannot be Azure SQL Database.  
   
  In this release, the UCP must satisfy the following requirements:  
   

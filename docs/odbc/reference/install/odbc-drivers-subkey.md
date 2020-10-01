@@ -1,4 +1,5 @@
 ---
+description: "ODBC Drivers Subkey"
 title: "ODBC Drivers Subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

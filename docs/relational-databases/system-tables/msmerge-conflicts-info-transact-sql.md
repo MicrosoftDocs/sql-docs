@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_conflicts_info (Transact-SQL)"
 title: "MSmerge_conflicts_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_conflicts_info system table"
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

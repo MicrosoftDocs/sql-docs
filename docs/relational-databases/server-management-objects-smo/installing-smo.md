@@ -1,4 +1,5 @@
 ---
+description: "Installing SMO"
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

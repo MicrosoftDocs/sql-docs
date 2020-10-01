@@ -1,4 +1,5 @@
 ---
+description: "Move a database using detach and attach (Transact-SQL)"
 title: "Move Database using detach & attach (Transact-SQL)"
 ms.date: 06/03/2020
 ms.prod: sql

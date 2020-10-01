@@ -1,4 +1,5 @@
 ---
+description: "Secure the Snapshot Folder"
 title: "Secure the Snapshot Folder | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

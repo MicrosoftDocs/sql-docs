@@ -1,4 +1,5 @@
 ---
+description: "Web Service Task"
 title: "Web Service Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"

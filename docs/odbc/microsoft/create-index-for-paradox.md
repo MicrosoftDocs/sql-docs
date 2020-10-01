@@ -1,4 +1,5 @@
 ---
+description: "CREATE INDEX for Paradox"
 title: "CREATE INDEX for Paradox | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

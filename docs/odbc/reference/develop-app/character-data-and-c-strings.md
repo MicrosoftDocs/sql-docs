@@ -1,4 +1,5 @@
 ---
+description: "Character Data and C Strings"
 title: "Character Data and C Strings | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Connection Manager"
 title: "SAP BW Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

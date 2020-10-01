@@ -1,6 +1,6 @@
 ---
 title: "Running Stored Procedures (OLE DB) | Microsoft Docs"
-description: "Running Stored Procedures (OLE DB)"
+description: Learn about the advantages of calling a stored procedure on the data source and the mechanisms that OLE DB Driver for SQL Server offers to return data.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], executing"
   - "OLE DB, stored procedures"
   - "OLE DB Driver for SQL Server, stored procedures"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Stored Procedures - Running
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

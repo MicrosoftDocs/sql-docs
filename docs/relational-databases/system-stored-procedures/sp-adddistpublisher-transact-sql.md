@@ -1,4 +1,5 @@
 ---
+description: "sp_adddistpublisher (Transact-SQL)"
 title: "sp_adddistpublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2020"

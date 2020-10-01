@@ -1,4 +1,5 @@
 ---
+description: "TODATETIMEOFFSET (Transact-SQL)"
 title: "TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"
@@ -34,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TODATETIMEOFFSET ( expression , time_zone )  
 ```  
   
@@ -62,7 +63,7 @@ TODATETIMEOFFSET ( expression , time_zone )
  The following example changes the zone offset of the current date and time to time zone `-07:00`.  
   
 ```sql  
-DECLARE @todaysDateTime datetime2;  
+DECLARE @todaysDateTime DATETIME2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
 -- RETURNS 2019-04-22 16:23:51.7666667 -07:00  

@@ -1,4 +1,5 @@
 ---
+description: "Profiling ODBC Driver Performance Data - Log Long-Running Queries"
 title: "Log Long-Running Queries (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

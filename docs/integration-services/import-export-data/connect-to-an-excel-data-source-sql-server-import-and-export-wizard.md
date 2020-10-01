@@ -1,4 +1,5 @@
 ---
+description: "Connect to an Excel Data Source (SQL Server Import and Export Wizard)"
 title: "Connect to an Excel Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"

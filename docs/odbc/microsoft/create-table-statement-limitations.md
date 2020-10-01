@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE Statement Limitations"
 title: "CREATE TABLE Statement Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

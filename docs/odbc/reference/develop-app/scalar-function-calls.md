@@ -1,4 +1,5 @@
 ---
+description: "Scalar Function Calls"
 title: "Scalar Function Calls | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

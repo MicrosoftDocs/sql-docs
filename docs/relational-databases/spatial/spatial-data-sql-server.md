@@ -1,4 +1,5 @@
 ---
+description: "Spatial Data (SQL Server)"
 title: "Spatial Data (SQL Server) | Microsoft Docs"
 ms.date: "10/11/2019"
 ms.prod: sql

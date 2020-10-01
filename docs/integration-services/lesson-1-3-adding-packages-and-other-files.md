@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-3 - Adding Packages and Other Files"
 title: "Step 3: Adding Packages and Other Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "finalize Method (SQLServerResultSet)"
 title: "finalize Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

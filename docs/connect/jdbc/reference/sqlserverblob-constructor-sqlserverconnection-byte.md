@@ -1,4 +1,5 @@
 ---
+description: "SQLServerBlob Constructor (SQLServerConnection, byte)"
 title: "SQLServerBlob Constructor (SQLServerConnection, byte) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

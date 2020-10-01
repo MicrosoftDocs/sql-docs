@@ -1,4 +1,5 @@
 ---
+description: "HasZ (geography Data Type)"
 title: "HasZ (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"

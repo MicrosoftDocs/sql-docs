@@ -1,4 +1,5 @@
 ---
+description: "sp_datatype_info_90 (SQL Data Warehouse)"
 title: "sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -21,7 +22,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
@@ -72,7 +73,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example retrieves information for the **sysname** and **nvarchar** data types by specifying the *data_type* value of `-9`.  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_datatype_info_90 -9;  

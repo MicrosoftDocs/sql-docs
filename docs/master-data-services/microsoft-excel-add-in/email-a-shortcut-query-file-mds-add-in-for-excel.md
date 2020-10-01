@@ -1,4 +1,5 @@
 ---
+description: "Email a Shortcut Query File (MDS Add-in for Excel)"
 title: Email a Shortcut Query File
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

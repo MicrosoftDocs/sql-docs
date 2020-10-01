@@ -1,4 +1,5 @@
 ---
+description: "Lookup Transformation Full Cache Mode - Cache Connection Manager"
 title: "Lookup Transformation Full Cache Mode - Cache Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

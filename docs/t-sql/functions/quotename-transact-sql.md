@@ -1,4 +1,5 @@
 ---
+description: "QUOTENAME (Transact-SQL)"
 title: "QUOTENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -32,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```sql
+```syntaxsql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   

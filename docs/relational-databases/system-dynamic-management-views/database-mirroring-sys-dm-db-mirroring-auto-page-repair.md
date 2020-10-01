@@ -1,4 +1,5 @@
 ---
+description: "Database Mirroring - sys.dm_db_mirroring_auto_page_repair"
 title: "sys.dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], automatic page repair"
   - "sys.dm_db_mirroring_auto_page_repair dynamic management view"
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Database Mirroring - sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

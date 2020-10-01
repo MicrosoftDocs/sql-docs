@@ -1,4 +1,5 @@
 ---
+description: "Accessing a Visual FoxPro Data Source from Microsoft Excel"
 title: "Accessing a Visual FoxPro Data Source from Microsoft Excel | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

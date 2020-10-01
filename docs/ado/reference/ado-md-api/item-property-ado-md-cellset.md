@@ -1,8 +1,9 @@
 ---
+description: "Item Property (ADO MD Cellset)"
 title: "Item Property (ADO MD Cellset) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # Item Property (ADO MD Cellset)
-Retrieves a cell from a [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) using its coordinates.  
+Retrieves a cell from a [cellset](./cellset-object-ado-md.md) using its coordinates.  
   
 ## Syntax  
   
@@ -39,7 +40,7 @@ Cell = Cellset.Item ( Positions)
 -   The ordinal position  
   
 ## Remarks  
- Use the **Item** property to return a [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) object within a [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) object. If the **Item** property cannot find the cell corresponding to the *Positions* argument, an error occurs.  
+ Use the **Item** property to return a [Cell](./cell-object-ado-md.md) object within a [Cellset](./cellset-object-ado-md.md) object. If the **Item** property cannot find the cell corresponding to the *Positions* argument, an error occurs.  
   
  The **Item** property is the default property for the **Cellset** object. The following syntax forms are interchangeable:  
   
@@ -48,7 +49,6 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## Remarks  
  The *Positions* argument specifies which cell to return. You can specify the cell by ordinal position or by the position along each axis. When specifying the cell by position along each axis, you can specify the numeric value of the position or the names of the members for each position.  
   
  The ordinal position is a number that uniquely identifies one cell within the **Cellset**. Conceptually, cells are numbered in a **Cellset** as if the **Cellset** were a *p*-dimensional array, where *p* is the number of axes. Cells are addressed in row-major order. Below is the formula for calculating the ordinal number of a cell:  
@@ -59,8 +59,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  Retrieving cells by member name may not be supported by your data provider. See the documentation for your provider for more information.  
   
 ## Applies To  
- [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset Object (ADO MD)](./cellset-object-ado-md.md)  
   
 ## See Also  
- [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Cell Object (ADO MD)](./cell-object-ado-md.md)   
+ [Cellset Object (ADO MD)](./cellset-object-ado-md.md)

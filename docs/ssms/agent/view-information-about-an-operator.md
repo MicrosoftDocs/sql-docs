@@ -1,4 +1,5 @@
 ---
+description: "View Information About an Operator"
 title: "View Information About an Operator"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

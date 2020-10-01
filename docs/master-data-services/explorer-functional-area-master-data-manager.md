@@ -1,4 +1,5 @@
 ---
+description: "Explorer Functional Area (Master Data Manager)"
 title: Explorer Functional Area
 ms.custom: ""
 ms.date: "03/15/2017"

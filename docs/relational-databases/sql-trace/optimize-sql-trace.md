@@ -1,4 +1,5 @@
 ---
+description: "Optimize SQL Trace"
 title: "Optimize SQL Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

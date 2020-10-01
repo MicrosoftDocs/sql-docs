@@ -1,4 +1,5 @@
 ---
+description: "Approval Required (Master Data Services)"
 title: Approval Required
 ms.custom: ""
 ms.date: "03/01/2017"

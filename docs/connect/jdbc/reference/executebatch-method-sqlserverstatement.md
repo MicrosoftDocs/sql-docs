@@ -1,4 +1,5 @@
 ---
+description: "executeBatch Method (SQLServerStatement)"
 title: "executeBatch Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

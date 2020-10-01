@@ -1,4 +1,5 @@
 ---
+description: "SP:CacheMiss Event Class"
 title: "SP:CacheMiss Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

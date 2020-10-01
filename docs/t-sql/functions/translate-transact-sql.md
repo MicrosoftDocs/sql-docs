@@ -1,4 +1,5 @@
 ---
+description: "TRANSLATE (Transact-SQL)"
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020

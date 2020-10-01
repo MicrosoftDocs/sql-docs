@@ -1,6 +1,6 @@
 ---
 title: Retrieve rows using bookmarks (OLE DB driver)
-description: "Retrieve rows using bookmarks (OLE DB)"
+description: Learn how consumers can retrieve rows by using bookmarks in OLE DB Driver for SQL Server with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "bookmarks [OLE DB]"
   - "rows [OLE DB]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

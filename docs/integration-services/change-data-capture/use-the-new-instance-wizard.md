@@ -1,4 +1,5 @@
 ---
+description: "Use the New Instance Wizard"
 title: "Use the New Instance Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

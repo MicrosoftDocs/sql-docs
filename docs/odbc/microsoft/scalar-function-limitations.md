@@ -1,4 +1,5 @@
 ---
+description: "Scalar Function Limitations"
 title: "Scalar Function Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

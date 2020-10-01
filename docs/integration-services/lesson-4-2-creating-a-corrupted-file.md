@@ -1,4 +1,5 @@
 ---
+description: "Lesson 4-2: Create a corrupted file"
 title: "Step 2: Create a corrupted file | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"

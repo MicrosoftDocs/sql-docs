@@ -1,4 +1,5 @@
 ---
+description: "setCharacterStream Method (SQLServerClob)"
 title: "setCharacterStream Method (SQLServerClob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

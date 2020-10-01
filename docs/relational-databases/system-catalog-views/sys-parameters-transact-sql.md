@@ -1,4 +1,5 @@
 ---
+description: "sys.parameters (Transact-SQL)"
 title: "sys.parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sys.parameters catalog view"
   - "table-valued parameters,sys.parameters"
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.parameters (Transact-SQL)

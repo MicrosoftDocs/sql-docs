@@ -1,4 +1,5 @@
 ---
+description: "IS_MEMBER (Transact-SQL)"
 title: "IS_MEMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -38,7 +39,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-  
 IS_MEMBER ( { 'group' | 'role' } )  
 ```  
   
@@ -79,7 +79,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## Examples  
  The following example checks whether the current user is a member of a database role or a Windows domain group.  
   
-```  
+```sql  
 -- Test membership in db_owner and print appropriate message.  
 IF IS_MEMBER ('db_owner') = 1  
    PRINT 'Current user is a member of the db_owner role'  

@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Agent Properties (General Page)"
 title: "SQL Server Agent Properties (General Page)"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,6 +1,7 @@
 ---
-title: Data Profiling and Notifications in DQS
-ms.date: 02/29/2020
+description: "Data Profiling and Notifications in Data Quality Services (DQS) (673f)"
+title: Data Profiling and Notifications in DQS (673f)
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: data-quality-services
 ms.topic: conceptual
@@ -11,7 +12,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.localizationpriority: "null"
 localization_priority: "None"
 ---
-# Data Profiling and Notifications in Data Quality Services (DQS)
+# Data Profiling and Notifications in Data Quality Services (DQS) (673f)
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 

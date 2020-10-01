@@ -1,4 +1,5 @@
 ---
+description: "sp_reinitsubscription (Transact-SQL)"
 title: "sp_reinitsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_reinitsubscription"
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_reinitsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

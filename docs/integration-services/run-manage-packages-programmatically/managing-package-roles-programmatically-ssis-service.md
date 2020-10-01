@@ -1,4 +1,5 @@
 ---
+description: "Managing Package Roles Programmatically (SSIS Service)"
 title: "Managing Package Roles Programmatically (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Save Trace Results to a File"
 title: "Save Trace Results to a File | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "end Method (SQLServerXAResource)"
 title: "end Method (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

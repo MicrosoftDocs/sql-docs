@@ -1,4 +1,5 @@
 ---
+description: "Raising Events in the Script Task"
 title: "Raising Events in the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

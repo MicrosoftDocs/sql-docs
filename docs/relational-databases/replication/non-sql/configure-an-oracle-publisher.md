@@ -1,4 +1,5 @@
 ---
+description: "Configure an Oracle Publisher"
 title: "Configure an Oracle Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"

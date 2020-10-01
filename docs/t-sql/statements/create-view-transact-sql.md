@@ -1,4 +1,5 @@
 ---
+description: "CREATE VIEW (Transact-SQL)"
 title: CREATE VIEW (Transact-SQL)
 ms.custom: ""
 ms.date: 04/16/2020
@@ -34,8 +35,8 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -73,7 +74,7 @@ AS select_statement
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
@@ -137,8 +138,8 @@ OR ALTER
  CHECK OPTION  
  Forces all data modification statements executed against the view to follow the criteria set within *select_statement*. When a row is modified through a view, the WITH CHECK OPTION makes sure the data remains visible through the view after the modification is committed.  
   
-> [!NOTE]  
->  Any updates performed directly to a view's underlying tables are not verified against the view, even if CHECK OPTION is specified.  
+> [!NOTE]
+>  The CHECK OPTION only applies to updates made through the view. It has no applicability to any updates performed directly to a view's underlying tables.  
   
  ENCRYPTION  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

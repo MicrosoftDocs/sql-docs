@@ -1,4 +1,5 @@
 ---
+description: "Create Queries with Unnamed Parameters (Visual Database Tools)"
 title: Create Queries with Unnamed Parameters
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

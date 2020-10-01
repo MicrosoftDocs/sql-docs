@@ -1,4 +1,5 @@
 ---
+description: "Install Extensions in SQL Server Management Studio (SSMS)"
 title: Install Extensions in SQL Server Management Studio (SSMS)
 ms.prod: sql
 ms.prod_service: sql-tools

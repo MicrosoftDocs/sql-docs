@@ -1,4 +1,5 @@
 ---
+description: "Enhancing an Error Output with the Script Component"
 title: "Enhancing an Error Output with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"

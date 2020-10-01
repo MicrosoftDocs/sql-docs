@@ -1,4 +1,5 @@
 ---
+description: "FILEPROPERTY (Transact-SQL)"
 title: "FILEPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -32,8 +33,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 FILEPROPERTY ( file_name , property )  
 ```  
   
@@ -62,8 +62,7 @@ FILEPROPERTY ( file_name , property )
 ## Examples  
  The following example returns the setting for the `IsPrimaryFile` property for the `AdventureWorks_Data` file name in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] the database.  
   
-```  
-  
+```sql
 SELECT FILEPROPERTY('AdventureWorks2012_Data', 'IsPrimaryFile')AS [Primary File];  
 GO  
 ```  

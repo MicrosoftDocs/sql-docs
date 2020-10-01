@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
-author: "Jtoland"
-ms.author: "Jtoland"
-manager: murato
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # SQL Server Migration Assistant for MySQL (MySQLToSQL)
 

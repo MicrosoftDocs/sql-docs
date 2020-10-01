@@ -1,4 +1,5 @@
 ---
+description: "DBCC PDW_SHOWSPACEUSED (Transact-SQL)"
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -45,7 +46,7 @@ Requires VIEW SERVER STATE permission.
   
 ## Result Sets
 
-This is the result set for all tables.
+This is the result set for all tables.  Before a cache is created for a replicated Synapse table, the DBCC result reflects the total size of the underlying round robin table from each distribution.  After the cache is created, the result reflects the total size of the round robin tables and the cache.   
   
 |Column|Data Type|Description|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ This is the result set for one table.
 |index_space|bigint|Space used for indexes, in KB.||  
 |unused_space|bigint|Space that is part of the reserved space and not used, in KB.||  
 |pdw_node_id|int|Compute node that is used for reporting the space usage.||  
-|distribution_id|int|Distribution that is used for reporting the space usage.|Value is -1 for replicated tables.|  
+|distribution_id|int|Distribution that is used for reporting the space usage.|For Parallel Data Warehouse, its value is -1 for replicated tables.|  
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### A. DBCC PDW_SHOWSPACEUSED Basic Syntax  

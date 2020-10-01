@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2-2 - Verifying the Deployment Bundle"
 title: "Step 2: Verifying the Deployment Bundle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

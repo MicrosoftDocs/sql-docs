@@ -1,4 +1,5 @@
 ---
+description: "Fetching a Row of Data"
 title: "Fetching a Row of Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

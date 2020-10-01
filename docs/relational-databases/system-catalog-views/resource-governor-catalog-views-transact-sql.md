@@ -1,4 +1,5 @@
 ---
+description: "Resource Governor Catalog Views (Transact-SQL)"
 title: "Resource Governor Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2016"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "Resource Governor, catalog views"
   - "catalog views [SQL Server]"
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Resource Governor Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

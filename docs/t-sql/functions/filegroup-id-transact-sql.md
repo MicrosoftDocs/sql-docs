@@ -1,4 +1,5 @@
 ---
+description: "FILEGROUP_ID (Transact-SQL)"
 title: "FILEGROUP_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -31,7 +32,7 @@ This function returns the filegroup identification (ID) number for a specified f
   
 ## Syntax  
   
-```  
+```syntaxsql 
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
@@ -50,7 +51,7 @@ An expression of type **sysname**, representing the filegroup name whose filegro
 ## Examples  
 This example returns the filegroup ID for the filegroup named `PRIMARY` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  
 GO  
 ```  

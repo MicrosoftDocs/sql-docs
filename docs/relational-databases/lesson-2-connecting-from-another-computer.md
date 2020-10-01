@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2: Connecting from Another Computer"
 title: "Lesson 2: Connecting from Another Computer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"

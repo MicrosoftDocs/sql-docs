@@ -1,8 +1,9 @@
 ---
+description: "Provider Support for ADOX (ADO)"
 title: "Provider Support for ADOX (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: rothja
 ms.author: jroth
 ---
 # Provider Support for ADOX (ADO)
-Certain features of ADOX are unsupported, depending on your OLE DB data provider. ADOX is fully supported with the [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). The unsupported features with the [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), the [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), or the [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) are listed in the following tables. ADOX is not supported by any other Microsoft OLE DB providers.  
+Certain features of ADOX are unsupported, depending on your OLE DB data provider. ADOX is fully supported with the [OLE DB Provider for Microsoft Jet](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). The unsupported features with the [Microsoft OLE DB Provider for SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md), the [Microsoft OLE DB Provider for ODBC](../appendixes/microsoft-ole-db-provider-for-odbc.md), or the [Microsoft OLE DB Provider for Oracle](../appendixes/microsoft-ole-db-provider-for-oracle.md) are listed in the following tables. ADOX is not supported by any other Microsoft OLE DB providers.  
   
 ## Microsoft OLE DB Provider for SQL Server  
   

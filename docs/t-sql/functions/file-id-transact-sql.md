@@ -1,4 +1,5 @@
 ---
+description: "FILE_ID (Transact-SQL)"
 title: "FILE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -35,7 +36,7 @@ For the given logical name for a component file of the current database, this fu
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_ID ( file_name )  
 ```  
   

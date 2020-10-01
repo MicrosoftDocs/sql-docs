@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo (Text File Driver)"
 title: "SQLGetInfo (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_resource_waits (Transact-SQL)"
 title: "sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/26/2019"

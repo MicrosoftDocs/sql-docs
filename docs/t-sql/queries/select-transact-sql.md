@@ -1,4 +1,5 @@
 ---
+description: "SELECT (Transact-SQL)"
 title: "SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"
@@ -75,7 +76,7 @@ SELECT [ ALL | DISTINCT ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
 SELECT <select_criteria>  
@@ -93,7 +94,9 @@ SELECT <select_criteria>
     [ OPTION ( <query_option> [ ,...n ] ) ]  
   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
  Because of the complexity of the SELECT statement, detailed syntax elements and arguments are shown by clause:  
 
@@ -182,7 +185,7 @@ SELECT <select_criteria>
 > For example, suppose you have a clustered index on a view, and the view excludes some table rows, and the view's SELECT column list uses a CONVERT that changes a data type from *varchar* to *integer*. In this situation, the CONVERT may execute before the WHERE clause executes. Uncommon indeed. Often there is a way to modify your view to avoid the different sequence, if it matters in your case. 
 
 ## Permissions  
- Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using **SELECTINTO** also requires both the **CREATETABLE** permission, and the **ALTERSCHEMA** permission on the schema that owns the new table.  
+ Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using **SELECT INTO** also requires both the **CREATE TABLE** permission, and the **ALTER SCHEMA** permission on the schema that owns the new table.  
   
 ## Examples:   
 The following examples use the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.

@@ -1,4 +1,5 @@
 ---
+description: "sp_add_jobstep (Transact-SQL)"
 title: sp_add_jobstep (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine"

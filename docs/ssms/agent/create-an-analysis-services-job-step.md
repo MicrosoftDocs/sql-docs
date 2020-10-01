@@ -1,4 +1,5 @@
 ---
+description: "Create an Analysis Services Job Step"
 title: "Create an Analysis Services Job Step"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

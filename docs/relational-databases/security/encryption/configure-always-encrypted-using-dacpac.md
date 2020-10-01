@@ -1,4 +1,5 @@
 ---
+description: "Configure column encryption using Always Encrypted with a DAC package"
 title: "Configure column encryption using Always Encrypted with a DAC package   | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019

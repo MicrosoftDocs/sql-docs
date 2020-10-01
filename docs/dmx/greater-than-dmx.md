@@ -1,4 +1,5 @@
 ---
+description: "&gt; (Greater Than) (DMX)"
 title: "&gt; (Greater Than) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

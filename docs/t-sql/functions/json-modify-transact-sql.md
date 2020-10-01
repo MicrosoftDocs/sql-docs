@@ -1,4 +1,5 @@
 ---
+description: "JSON_MODIFY (Transact-SQL)"
 title: "JSON_MODIFY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020
@@ -25,8 +26,6 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
  *expression*  

@@ -2,7 +2,7 @@
 title: "Using Azure Active Directory with the ODBC Driver"
 description: "The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to an instance of Azure SQL Database using Azure Active Directory."
 ms.custom: ""
-ms.date: "08/06/2020"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -51,29 +51,29 @@ The DSN setup and connection UIs of the driver have been enhanced with the addit
 
 It is possible to use the new Azure AD authentication options when creating or editing an existing DSN using the driver's setup UI:
 
-`Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to SQL Azure
+`Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to Azure SQL Database
 
-![create-dsn-ad-integrated.png](windows/create-dsn-ad-integrated.png)
+![The DSN creation and editing screen with Azure Active Directory Integrated authentication selected.](windows/create-dsn-ad-integrated.png)
 
-`Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to SQL Azure
+`Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to Azure SQL Database
 
-![create-dsn-ad-password.png](windows/create-dsn-ad-password.png)
+![The DSN creation and editing screen with Azure Active Directory Password authentication selected.](windows/create-dsn-ad-password.png)
 
-`Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to SQL Azure
+`Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to Azure SQL Database
 
-![create-dsn-ad-interactive.png](windows/create-dsn-ad-interactive.png)
+![The DSN creation and editing screen with Azure Active Directory Interactive authentication selected.](windows/create-dsn-ad-interactive.png)
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
 
-![create-dsn-ad-sql-server.png](windows/create-dsn-ad-sql-server.png)
+![The DSN creation and editing screen with SQL Server authentication selected.](windows/create-dsn-ad-sql-server.png)
 
 `Trusted_Connection=Yes` for Windows legacy SSPI integrated authentication
 
-![create-dsn-win-sspi.png](windows/create-dsn-win-sspi.png)
+![The DSN creation and editing screen with Integrated Windows authentication selected.](windows/create-dsn-win-sspi.png)
 
 `Authentication=ActiveDirectoryMsi` for Azure Active Directory Managed Identity authentication
 
-![create-dsn-ad-msi.png](windows/create-dsn-ad-msi.png)
+![The DSN creation and editing screen with Managed Service Identity authentication selected.](windows/create-dsn-ad-msi.png)
 
 The six options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryInteractive`, and `ActiveDirectoryMsi` respectively.
 
@@ -81,7 +81,7 @@ The six options correspond to `Trusted_Connection=Yes` (existing legacy Windows 
 
 The prompt dialog displayed by SQLDriverConnect when it requests information required to complete the connection contains four new options for Azure AD authentication:
 
-![server-login.png](windows/server-login.png)
+![The SQL Server Login dialog displayed by SQLDriverConnect.](windows/server-login.png)
 
 These options correspond to the same six available in the DSN setup UI above.
 
@@ -101,7 +101,7 @@ These options correspond to the same six available in the DSN setup UI above.
 7. (_Windows driver only_.) Azure AD Interactive Authentication uses Azure Multi-factor Authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection. The username is passed in the connection string.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
-![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
+![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
 
 8. Azure Active Directory Managed Identity Authentication uses system-assigned or user-assigned identity for authentication to set up connection. For user-assigned identity, UID is set to the object ID of the user identity.<br>
 For system-assigned identity,<br>
@@ -112,7 +112,7 @@ For user-assigned identity with object ID equals to myObjectId,<br>
 > [!NOTE]
 >- When using the Active Directory options with the Windows ODBC driver ***prior to*** version 17.4.2, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. When using the Linux and macOS drivers, ensure that `libcurl` has been installed. For driver version 17.2 and later, this is not an explicit dependency since it is not required for the other authentication methods or ODBC operations.
 >- When Azure Active Directory configuration includes Conditional Access policies, and the client is Windows 10 or Server 2016 or later, authentication via Integrated or username/password may fail. Conditional Access policies require the use of Windows Account Manager (WAM), which is supported in driver version 17.6 or later for Windows. To use WAM, create a new string or DWORD value named `ADALuseWAM` in `HKLM\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`, `HKCU\Software\ODBC\ODBC.INI\<your-user-DSN-name>`, or `HKLM\Software\ODBC\ODBC.INI\<your-system-DSN-name>` for global, user DSN, or system DSN-scoped configuration respectively, and set it to a value of 1. Note that authentication with WAM does not support running the application as a different user with `runas`. Scenarios which require Condtitional Access policies are not supported for Linux or macOS.
->- To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for SQL Azure since this option enables more secure connection defaults.
+>- To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for Azure SQL since this option enables more secure connection defaults.
 >- To connect using an Azure Active Directory account username and password, specify `Authentication=ActiveDirectoryPassword` in the connection string and the `UID` and `PWD` keywords with the username and password, respectively.
 >- To connect using Windows Integrated or Active Directory Integrated (Windows, and Linux/macOS 17.6+, driver only) authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. `UID` and `PWD` must not be specified.
 >- To connect using Active Directory Interactive (Windows driver only) authentication, `UID` must be specified.
@@ -139,14 +139,14 @@ The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_
 The following sample shows the code required to connect to SQL Server using Azure Active Directory with connection keywords. Note that there is no need to change the application code itself; the connection string, or DSN if one is used, is the only modification needed to use Azure AD for authentication:
 ~~~
     ...
-    SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
+    SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
     SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);    
     ...
 ~~~
 The following sample shows the code required to connect to SQL Server using Azure Active Directory with access token authentication. In this case, it is necessary to modify application code to process the access token and set the associated connection attribute.
 ~~~
-    SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server}"
+    SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server}"
     SQLCHAR accessToken[] = "eyJ0eXAiOi..."; // In the format extracted from an OAuth JSON response
     ...
     DWORD dataSize = 2 * strlen(accessToken);

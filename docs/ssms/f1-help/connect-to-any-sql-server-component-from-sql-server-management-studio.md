@@ -1,4 +1,5 @@
 ---
+description: "Connect to Any SQL Server Component from SQL Server Management Studio"
 title: Connect to Any SQL Server Component
 ms.prod: sql
 ms.prod_service: sql-tools

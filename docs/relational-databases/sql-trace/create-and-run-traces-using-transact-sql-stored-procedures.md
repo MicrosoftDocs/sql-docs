@@ -1,4 +1,5 @@
 ---
+description: "Create and Run Traces Using Transact-SQL Stored Procedures"
 title: "Create and Run Traces Using Transact-SQL Stored Procedures"
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "RemoveCertificate Method (ServerSettings Class)"
 title: "RemoveCertificate Method (ServerSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "RemoveCertificate method"
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # RemoveCertificate Method (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

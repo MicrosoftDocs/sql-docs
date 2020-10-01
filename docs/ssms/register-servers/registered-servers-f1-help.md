@@ -1,4 +1,5 @@
 ---
+description: "Registered Servers F1 Help"
 title: "Registered Servers F1 Help"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

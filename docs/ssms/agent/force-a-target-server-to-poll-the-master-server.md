@@ -1,4 +1,5 @@
 ---
+description: "Force a Target Server to Poll the Master Server"
 title: "Force a Target Server to Poll the Master Server"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

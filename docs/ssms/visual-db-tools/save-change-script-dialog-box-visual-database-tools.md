@@ -1,4 +1,5 @@
 ---
+description: "Save Change Script Dialog Box (Visual Database Tools)"
 title: Save Change Script Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

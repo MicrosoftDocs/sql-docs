@@ -1,4 +1,5 @@
 ---
+description: "Work with Tables in Database Diagram (Visual Database Tools)"
 title: Work with Tables in Database Diagram
 ms.prod: sql
 ms.prod_service: sql-tools

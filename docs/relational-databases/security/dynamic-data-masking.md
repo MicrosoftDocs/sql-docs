@@ -1,7 +1,7 @@
 ---
 title: "Dynamic Data Masking | Microsoft Docs"
 description: Learn about dynamic data masking, which limits sensitive data exposure by masking it to non-privileged users. It can greatly simplify security in SQL Server.
-ms.date: "05/02/2019"
+ms.date: "10/02/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
@@ -151,7 +151,7 @@ REVERT;
   
 ### Adding or Editing a Mask on an Existing Column  
  Use the **ALTER TABLE** statement to add a mask to an existing column in the table, or to edit the mask on that column.  
-The following example adds a masking function to th `LastName` column:  
+The following example adds a masking function to the `LastName` column:  
   
 ```sql  
 ALTER TABLE Membership  

@@ -318,7 +318,7 @@ Remove temporary folders after installation is complete.
 
 ## See also
 
-+ [Change the default R or Python language runtime version](https://docs.microsoft.com/en-us/sql/machine-learning/install/change-default-language-runtime-version)
++ [Change the default R or Python language runtime version](https://docs.microsoft.com/sql/machine-learning/install/change-default-language-runtime-version)
 + [Install Machine Learning Server for Windows (Internet connected)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Install Machine Learning Server for Windows (offline)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)
 + [Known issues in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues)

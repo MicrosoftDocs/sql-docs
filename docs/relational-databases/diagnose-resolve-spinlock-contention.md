@@ -20,21 +20,21 @@ This article provides in-depth information on how to identify and resolve issues
 
 ## Background
 
-Historically, commodity Windows Server computers have utilized only one or two microprocessor/CPU chips, and CPUs have been designed with only a single processor or "core". Increases in computer processing capacity have been achieved through the use of faster CPUs, made possible largely through advancements in transistor density. Following "Moore's Law", transistor density or the number of transistors that can be placed on an integrated circuit have consistently doubled every 2 years since the development of the first general purpose single chip CPU in 1971. In recent years, the traditional approach of increasing computer processing capacity with faster CPUs has been augmented by building computers with multiple CPUs. As of this writing, the Intel Nehalem CPU architecture accommodates up to 8 cores per CPU, which when used in an 8 socket system can then be doubled to 128 logical processors through the use of hyper-threading technology. As the number of logical processors on x86 compatible computers increases, the possibility also increases for concurrency-related issues when logical processors compete for resources. This guide describes how to identify and resolve particular resource contention issues observed when running SQL Server applications on high concurrency systems with some workloads.
+In the past, commodity Windows Server computers have utilized only one or two microprocessor/CPU chips, and CPUs have been designed with only a single processor or "core". Increases in computer processing capacity have been achieved through the use of faster CPUs, made possible largely through advancements in transistor density. Following "Moore's Law", transistor density or the number of transistors that can be placed on an integrated circuit have consistently doubled every two years since the development of the first general purpose single chip CPU in 1971. In recent years, the traditional approach of increasing computer processing capacity with faster CPUs has been augmented by building computers with multiple CPUs. As of this writing, the Intel Nehalem CPU architecture accommodates up to eight cores per CPU, which when used in an eight socket system can then be doubled to 128 logical processors through the use of hyper-threading technology. As the number of logical processors on x86 compatible computers increases, concurrency-related issues increase as logical processors compete for resources. This guide describes how to identify and resolve particular resource contention issues observed when running SQL Server applications on high concurrency systems with some workloads.
 
-In this section we will analyze the lessons learned by the SQLCAT team from diagnosing and resolving spinlock contention issues, which are one class of concurrency issues observed in real customer workloads on high scale systems.
+In this section, we will analyze the lessons learned by the SQLCAT team from diagnosing and resolving spinlock contention issues, which are one class of concurrency issues observed in real customer workloads on high scale systems.
 
 ## Symptoms and causes of spinlock contention
 
-This section describes how to diagnose issues with "spinlock contention", which can be detrimental to the performance of an OLTP application running on SQL Server. Spinlock diagnosis and troubleshooting should be considered an advanced topic, which requires knowledge of debugging tools and Windows internals.
+This section describes how to diagnose issues with "spinlock contention", which can be detrimental to the performance of an OLTP application running on SQL Server. Spinlock diagnosis and troubleshooting should be considered an advanced subject, which requires knowledge of debugging tools and Windows internals.
 
-Spinlocks are lightweight synchronization primitives that are used to protect access to data structures. Spinlocks are not unique to SQL Server. They are generally used when it is expected that access to a given data structure will need to be held for a short period of time. When a thread attempting to acquire a spinlock is unable to obtain access it executes in a loop periodically checking to determine if the resource is available instead of immediately yielding. After some period of time a thread waiting on a spinlock will yield before it is able to acquire the resource in order to allow other threads running on the same CPU to execute. This is known as a backoff and will be discussed in more depth later in this article.
+Spinlocks are lightweight synchronization primitives that are used to protect access to data structures. Spinlocks are not unique to SQL Server. The operating system uses them when access to a given data structure is only needed for a short time. When a thread attempting to acquire a spinlock is unable to obtain access, it executes in a loop periodically checking to determine if the resource is available instead of immediately yielding. After some period of time, a thread waiting on a spinlock will yield before it is able to acquire the resource in order to allow other threads running on the same CPU to execute. This is known as a backoff and will be discussed in more depth later in this article.
 
-SQL Server utilizes spinlocks to protect access to some of its internal data structures. These are used within the engine to serialize access to certain data structures in a similar fashion to latches. The main difference between a latch and a spinlock is the fact that spinlocks will spin (execute a loop) for a period of time checking for availability of a data structure while a thread attempting to acquire access to a structure protected by a latch will immediately yield if the resource is not available. Yielding requires context switching of a thread off the CPU so that another thread can execute. This is a relatively expensive operation and for resources that are held for a very short duration it is more efficient overall to allow a thread to execute in a loop periodically checking for availability of the resource.
+SQL Server utilizes spinlocks to protect access to some of its internal data structures. These are used within the engine to serialize access to certain data structures in a similar fashion to latches. The main difference between a latch and a spinlock is the fact that spinlocks will spin (execute a loop) for a period of time checking for availability of a data structure while a thread attempting to acquire access to a structure protected by a latch will immediately yield if the resource is not available. Yielding requires context switching of a thread off the CPU so that another thread can execute. This is a relatively expensive operation and for resources that are held for a short duration it is more efficient overall to allow a thread to execute in a loop periodically checking for availability of the resource.
 
 ## Symptoms
 
-On any busy high concurrency system it is normal to see active contention on frequently accessed structures that are protected by spinlocks. This is only considered problematic when the contention is such that it introduces significant CPU overhead. Spinlock statistics are exposed by the *sys.dm_os_spinlock_stats* Dynamic Management View (DMV) within SQL Server. For example, this query yields the following output:
+On any busy high concurrency system, it is normal to see active contention on frequently accessed structures that are protected by spinlocks. This is only considered problematic when the contention is such that it introduces significant CPU overhead. Spinlock statistics are exposed by the *sys.dm_os_spinlock_stats* Dynamic Management View (DMV) within SQL Server. For example, this query yields the following output:
 
 > [!NOTE]
 > More details about interpreting the information returned by this DMV will be discussed later in this article.
@@ -56,9 +56,9 @@ The statistics exposed by this query are described as follows:
 | **Sleep time** | Related to back-off events; not relevant to techniques described in this article however. |
 | **Backoffs** | Occurs when a "spinning" thread that is attempting to access a held resource has determined that it needs to allow other threads on the same CPU to execute. |
 
-For purposes of this discussion, statistics of particular interest are the number of collisions, spins, and backoff events that occur within a specific period when the system is under heavy load. When a thread attempts to access a resource protected by a spinlock a collision occurs. When a collision occurs the collision count is incremented and the thread will begin to spin in a loop and periodically check if the resource is available. Each time the thread spins (loops) the spin count is incremented.
+For purposes of this discussion, statistics of particular interest are the number of collisions, spins, and backoff events that occur within a specific period when the system is under heavy load. When a thread attempts to access a resource protected by a spinlock, a collision occurs. When a collision occurs, the collision count is incremented and the thread will begin to spin in a loop and periodically check if the resource is available. Each time the thread spins (loops) the spin count is incremented.
 
-Spins per collision is a measure of the amount of spins occurring while a spinlock is being held by a thread and will tell you how many spins are occurring while threads are holding the spinlock. For example, small spins per collision and high collision count means there is a small amount of spins occurring under the spinlock and there are many threads contending for it. A large amount of spins means the time spent spinning in the spinlock code relatively long lived (i.e. the code is going over a large number of entries in a hash bucket). As contention increases (thus increasing collision count), the number of spins also increases.
+Spins per collision is a measure of the amount of spins occurring while a spinlock is being held by a thread and will tell you how many spins are occurring while threads are holding the spinlock. For example, small spins per collision and high collision count means there is a small amount of spins occurring under the spinlock and there are many threads contending for it. A large amount of spins means the time spent spinning in the spinlock code relatively long lived (that is, the code is going over a large number of entries in a hash bucket). As contention increases (thus increasing collision count), the number of spins also increases.
 
 Backoffs may be thought of in a similar fashion to spins. By design, to avoid excessive CPU waste, spinlocks will not continue spinning indefinitely until they can access a held resource. To ensure a spinlock does not excessively use CPU resource, spinlocks will backoff, or stop spinning and "sleep", regardless of if they ever obtain ownership the held resource. This is done to allow other threads to be scheduled on the CPU in the hope that this.may allow more productive work to happen. Default behavior for the engine is to spin for a constant time interval first before performing a backoff. Attempting to obtain a spinlock requires that a state of cache concurrency is maintained, which is a CPU intensive operation relative to the CPU cost of spinning. Therefore, attempts to obtain a spinlock are performed sparingly and not performed each time a thread spins. In SQL Server certain spinlock types (for example: LOCK_HASH) were improved by utilizing an exponentially increasing interval between attempts to acquire the spinlock (up to a certain limit), which often reduces the impact on CPU performance.
 
@@ -68,9 +68,9 @@ The diagram below provides a conceptual view of the spinlock algorithm:
 
 ## Typical scenarios
 
-Spinlock contention can occur for any number of reasons that may be completely unrelated to database design decisions. Because spinlocks are used to manage access to internal data structures, spinlock contention is not manifested in a manner similar to buffer latch contention, for example, which is directly affected by schema design choices and data access patterns.
+Spinlock contention can occur for any number of reasons that may be unrelated to database design decisions. Because spinlocks are used to manage access to internal data structures, spinlock contention is not manifested in a manner similar to buffer latch contention, for example, which is directly affected by schema design choices and data access patterns.
 
-The symptom primarily associated with spinlock contention is high CPU consumption as a result of the large number of spins and many threads attempting to acquire the same spinlock. In general, this has been observed on systems with \>= 24 and most commonly on \>= 32 CPU core systems. As stated before some level of contention on spinlocks is normal for high concurrency OLTP systems with significant load and there is often a very large number of spins (billions/trillions) reported from the *sys.dm_os_spinlock_stats* DMV on systems that have been running for a long time. Again, observing a high number of spins for any given spinlock type is not enough information to determine that there is negative impact to workload performance.
+The symptom primarily associated with spinlock contention is high CPU consumption as a result of the large number of spins and many threads attempting to acquire the same spinlock. In general, this has been observed on systems with \>= 24 and most commonly on \>= 32 CPU core systems. As stated before some level of contention on spinlocks is normal for high concurrency OLTP systems with significant load and there is often a large number of spins (billions/trillions) reported from the *sys.dm_os_spinlock_stats* DMV on systems that have been running for a long time. Again, observing a high number of spins for any given spinlock type is not enough information to determine that there is negative impact to workload performance.
 
 A combination of several of the following symptoms may indicate spinlock contention:
 
@@ -85,23 +85,23 @@ A combination of several of the following symptoms may indicate spinlock content
    > [!IMPORTANT]
    > Even if each of the preceding conditions is true it is still possible that the root cause of high CPU consumption lies elsewhere. In fact, in the vast majority of the cases increased CPU will be due to reasons other than spinlock contention. Some of the more common causes for increased CPU consumption include:
 
-* Queries which become more expensive over time due to growth of the underlying data resulting in the need to perform additional logical reads of memory-resident data.
+* Queries that become more expensive over time due to growth of the underlying data resulting in the need to perform additional logical reads of memory-resident data.
 
 * Changes in query plans resulting in suboptimal execution.
 
-If each of the conditions listed above is true, you should perform further investigation into possible spinlock contention issues.
+If all of these conditions are true, you should perform further investigation into possible spinlock contention issues.
 
-One common phenomenon easily diagnosed is a significant divergence in throughput and CPU usage. Many OLTP workloads have a relationship between (throughput / number of users on the system) and CPU consumption. High spins observed in conjunction with a significant divergence of CPU consumption and throughput can be an indication of spinlock contention introducing CPU overhead. An important thing to note here is that it is also common to see this type of divergence on systems when certain queries become more expensive over time. For example, queries that are issued against datasets which perform more logical reads over time may result in similar symptoms.
+One common phenomenon easily diagnosed is a significant divergence in throughput and CPU usage. Many OLTP workloads have a relationship between (throughput / number of users on the system) and CPU consumption. High spins observed in conjunction with a significant divergence of CPU consumption and throughput can be an indication of spinlock contention introducing CPU overhead. An important thing to note here is that it is also common to see this type of divergence on systems when certain queries become more expensive over time. For example, queries that are issued against datasets that perform more logical reads over time may result in similar symptoms.
 
 It is critical to rule out other more common causes of high CPU when troubleshooting these types of problems.
 
 ## Example
 
-In the example below there is a nearly linear relationship between CPU consumption and throughput as measured by transactions per second. It is normal to see some divergence here because overhead is incurred as any workload ramps up. As illustrated below however, this divergence becomes quite significant. There is also a precipitous drop in throughput once CPU consumption reaches 100%.
+In the following example, there is a nearly linear relationship between CPU consumption and throughput as measured by transactions per second. It is normal to see some divergence here because overhead is incurred as any workload ramps up. As illustrated here, this divergence becomes significant. There is also a precipitous drop in throughput once CPU consumption reaches 100%.
 
 ![CPU drops in performance monitor](./media/diagnose-resolve-spinlock-contention/image7.png)
 
-When measuring the number of spins at 3 minute intervals we can see a more exponential than linear increase in spins, which indicates that spinlock contention may be problematic.
+When measuring the number of spins at 3-minute intervals we can see a more exponential than linear increase in spins, which indicates that spinlock contention may be problematic.
 
 ![Chart of spins over 3 minute intervals](./media/diagnose-resolve-spinlock-contention/image8.png)
 
@@ -111,7 +111,7 @@ Some of the scenarios that are prone to this issue include:
 
 * Name resolution problems caused by a failure to fully qualify names of objects. For more information, see [Description of SQL Server blocking caused by compile locks](https://support.microsoft.com/help/263889/how-to-troubleshoot-blocking-caused-by-compile-locks). This specific issue is described in more detail within this article.
 
-* Contention for lock hash buckets in the lock manager for workloads that frequently access the same lock (such as a shared lock on a frequently read row). This type of contention surfaces as a LOCK_HASH type spinlock. In one particular case we found that this problem surfaced as a result of incorrectly modeled access patterns in a test environment. In this environment, more than the expected numbers of threads were constantly accessing the exact same row due to incorrectly configured test parameters.
+* Contention for lock hash buckets in the lock manager for workloads that frequently access the same lock (such as a shared lock on a frequently read row). This type of contention surfaces as a LOCK_HASH type spinlock. In one particular case, we found that this problem surfaced as a result of incorrectly modeled access patterns in a test environment. In this environment, more than the expected numbers of threads were constantly accessing the exact same row due to incorrectly configured test parameters.
 
 * High rate of DTC transactions when there is high degree of latency between the MSDTC transaction coordinators. This specific problem is documented in detail in the SQLCAT blog entry [Resolving DTC Related Waits and Tuning Scalability of DTC](https://techcommunity.microsoft.com/t5/datacat/resolving-dtc-related-waits-and-tuning-scalability-of-dtc/ba-p/305054).
 
@@ -128,19 +128,19 @@ This section provides information for diagnosing SQL Server spinlock contention.
 
 The general technical process for diagnosing SQL Server Spinlock contention is:
 
-1. **Step 1 --** Determine that there is contention that may be spinlock related (see section above).
+1. **Step 1**: Determine that there is contention that may be spinlock related.
 
-2. **Step 2 --** Capture statistics from *sys.dm\_ os_spinlock_stats* to find the spinlock type experiencing the most contention.
+2. **Step 2**: Capture statistics from *sys.dm\_ os_spinlock_stats* to find the spinlock type experiencing the most contention.
 
-3. **Step 3 --** Obtain debug symbols for sqlservr.exe (sqlservr.pdb) and place the symbols in the same directory as the SQL Server service .exe file (sqlservr.exe) for the instance of SQL Server.\ In order to see the call stacks for the back off events, you must have symbols for the particular version of SQL Server that you are running. Symbols for SQL Server are available on the Microsoft Symbol Server. For more information about how to download symbols from the Microsoft Symbol Server, see [Debugging with symbols](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols).
+3. **Step 3**: Obtain debug symbols for sqlservr.exe (sqlservr.pdb) and place the symbols in the same directory as the SQL Server service .exe file (sqlservr.exe) for the instance of SQL Server.\ In order to see the call stacks for the back off events, you must have symbols for the particular version of SQL Server that you are running. Symbols for SQL Server are available on the Microsoft Symbol Server. For more information about how to download symbols from the Microsoft Symbol Server, see [Debugging with symbols](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols).
 
-4. **Step 4 --** Use SQL Server Extended Events to trace the back off events for the spinlock types of interest.
+4. **Step 4**: Use SQL Server Extended Events to trace the back off events for the spinlock types of interest.
 
-Extended Events provide the ability to track the \"backoff\" event and capture the call stack for those operation(s) most prevalently trying to obtain the spinlock. By analyzing the call stack it is possible to determine what type of operation is contributing to contention for any particular spinlock.
+Extended Events provide the ability to track the \"backoff\" event and capture the call stack for those operation(s) most prevalently trying to obtain the spinlock. By analyzing the call stack, it is possible to determine what type of operation is contributing to contention for any particular spinlock.
 
 ## Diagnostic walkthrough
 
-The following is a walkthrough of how to use the tools and techniques above to diagnose a spinlock contention problem in a real world scenario. This is from a customer engagement running a benchmark test to simulate approximately 6,500 concurrent users on an 8 socket, 64 physical core server with 1 TB of memory.
+The following walkthrough shows how to use the tools and techniques to diagnose a spinlock contention problem in a real world scenario. This is from a customer engagement running a benchmark test to simulate approximately 6,500 concurrent users on an 8 socket, 64 physical core server with 1 TB of memory.
 
 ### Symptoms
 
@@ -229,10 +229,10 @@ alter event session spin_lock_backoff on server state=stop
 drop event session spin_lock_backoff on server
 ```
 
-By analyzing the output we can see the call stacks for the most common code paths for the SOS_CACHESTORE spins. The script was run a couple of different times during the time when CPU utilization was high to check for consistency in the call stacks returned. Notice that the call stacks with the highest slot bucket count are common between the two outputs (35,668 and 8,506). These have a "slot count" that is two orders of magnitude greater than the next highest entry. This indicates a code path of interest.
+By analyzing the output, we can see the call stacks for the most common code paths for the SOS_CACHESTORE spins. The script was run a couple of different times during the time when CPU utilization was high to check for consistency in the call stacks returned. Notice that the call stacks with the highest slot bucket count are common between the two outputs (35,668 and 8,506). These call stacks have a "slot count" that is two orders of magnitude greater than the next highest entry. This condition indicates a code path of interest.
 
 > [!NOTE]
-> It is not uncommon to see call stacks returned by the script above. When the script is run for 1 minute we have observed that stacks with a slot count \>1000 are likely to be problematic and stacks with a slot count \>10,000 are likely to be problematic.
+> It is not uncommon to see call stacks returned by the previous script. When the script is run for 1 minute we have observed that stacks with a slot count \>1000 are likely to be problematic and stacks with a slot count \>10,000 are likely to be problematic.
 
 > [!NOTE]
 > The formatting of the following output has been cleaned up for readability purposes.
@@ -321,17 +321,17 @@ In the above example the stacks of most interest are those with the highest Slot
 
 Now the question may be, "what do I do with this information"? In general, deep knowledge of the SQL Server engine is required to make use of the callstack information and so at this point the troubleshooting process moves into a gray area. In this particular case, by looking at the call stacks, we can see that the code path where the issue occurs is related to security and metadata lookups (As evident by the following stack frames **CMEDCatalogOwner::GetProxyOwnerBySID & CMEDProxyDatabase::GetOwnerBySID)**.
 
-In isolation it is difficult to use this information to resolve the problem but it does give us some ideas where to focus additional troubleshooting to isolate the issue further.
+In isolation, it is difficult to use this information to resolve the problem but it does give us some ideas where to focus additional troubleshooting to isolate the issue further.
 
-Because this issue looked to be related to code paths that perform security-related checks we decided to run a test in which the application user connecting to the database was granted sysadmin privileges. While this is never recommended in a production environment, in our test environment it proved to be a useful troubleshooting step. When the sessions were run using elevated privileges (sysadmin), the CPU spikes related to contention disappeared.
+Because this issue looked to be related to code paths that perform security-related checks, we decided to run a test in which the application user connecting to the database was granted sysadmin privileges. While this technique is never recommended in a production environment, in our test environment it proved to be a useful troubleshooting step. When the sessions were run using elevated privileges (sysadmin), the CPU spikes related to contention disappeared.
 
 ## Options and workarounds
 
 Clearly, troubleshooting spinlock contention can be a non-trivial task. There is no "one common best option" to approaching this. The first step in troubleshooting and resolving any performance problem is to identify root cause. Using the techniques and tools described in this article is the first step in performing the analysis needed to understand the spinlock-related contention points.
 
-As new versions of SQL Server are developed the engine continues to improve scalability by implementing code that is better optimized for high concurrency systems. SQL Server has introduced many optimizations for high concurrency systems, one of which being exponential backoff for the most common contention points. There are specific enhancements starting in SQL Server 2012 that specifically improve this particular area by leveraging exponential backoff algorithms for all spinlocks within the engine.
+As new versions of SQL Server are developed, the engine continues to improve scalability by implementing code that is better optimized for high concurrency systems. SQL Server has introduced many optimizations for high concurrency systems, one of which being exponential backoff for the most common contention points. There are specific enhancements starting in SQL Server 2012 that specifically improve this particular area by leveraging exponential backoff algorithms for all spinlocks within the engine.
 
-When designing high end applications that need extreme performance and scale one thing to always keep in in the back of your mind is how to keep the code path needed within SQL Server as short as possible. Just as one would do this in application development, the same technique can be leveraged by following SQL Server best practices. A shorter code path means less work is performed by the database engine and will naturally avoid contention points. Many best practices have a side effect of reducing the amount of work required of the engine, and hence, result optimizing workload performance.
+When designing high end applications that need extreme performance and scale, consider how to keep the code path needed within SQL Server as short as possible. A shorter code path means less work is performed by the database engine and will naturally avoid contention points. Many best practices have a side effect of reducing the amount of work required of the engine, and hence, result optimizing workload performance.
 
 Taking a couple best practices from earlier in this article as examples:
 
@@ -339,15 +339,15 @@ Taking a couple best practices from earlier in this article as examples:
 
 2. **Parameterized Queries:** Another example is utilizing parameterized queries and stored procedure calls to reduce the work needed to generate execution plans. This again results in a shorter code path for execution.
 
-3. **LOCK_HASH Contention:** Contention on certain lock structure or hash bucket collisions is unavoidable in some cases. Even though the SQL Server engine partitions the majority of lock structures, there are still times when acquiring a lock results in access the same hash bucket. For example, an application the accesses the same row by many threads concurrently (i.e. reference data). These type of problems can be approached by techniques that either scale out this reference data within the database schema or leverage NOLOCK hints when possible.
+3. **LOCK_HASH Contention:** Contention on certain lock structure or hash bucket collisions is unavoidable in some cases. Even though the SQL Server engine partitions the majority of lock structures, there are still times when acquiring a lock results in access the same hash bucket. For example, an application the accesses the same row by many threads concurrently (that is, reference data). These types of problems can be approached by techniques that either scale out this reference data within the database schema or leverage NOLOCK hints when possible.
 
-The first line of defensive in tuning SQL Server workloads is always the standard tuning practices (e.g. indexing, query optimization, I/O optimization, etc.). However, in addition to the standard tuning one would perform, following practices that reduce the amount of code needed to perform operations is an important approach. Even when best practices are followed, there is still a chance that spinlock contention may occur on busy high concurrency systems. Use of the tools and techniques in this article can help to isolate or rule out these types of problems and determine when it is necessary to engage the right Microsoft resources to help.
+The first line of defensive in tuning SQL Server workloads is always the standard tuning practices (for example, indexing, query optimization, I/O optimization, etc.). However, in addition to the standard tuning one would perform, following practices that reduce the amount of code needed to perform operations is an important approach. Even when best practices are followed, there is still a chance that spinlock contention may occur on busy high concurrency systems. Use of the tools and techniques in this article can help to isolate or rule out these types of problems and determine when it is necessary to engage the right Microsoft resources to help.
 
 Hopefully these techniques will provide both a useful methodology for this type of troubleshooting and insight into some of the more advanced performance profiling techniques available with SQL Server.
 
 ## Appendix: Automate memory dump capture
 
-The following extended events script has proven to be useful to automate the collection of memory dumps when spinlock contention becomes significant. In some cases memory dumps will be required to perform a complete diagnosis of the problem or will be requested by Microsoft support teams to perform in-depth analysis. In SQL Server 2008 there is a limit of 16 frames in callstacks captured by the bucketizer, which may not be deep enough to determine exactly where in the engine the callstack is being entered from. This was improved in the SQL Server 2012 by increasing the number of frames in callstacks captured by the bucketizer to 32.
+The following extended events script has proven to be useful to automate the collection of memory dumps when spinlock contention becomes significant. In some cases memory dumps will be required to perform a complete diagnosis of the problem or will be requested by Microsoft support teams to perform in-depth analysis. In SQL Server 2008, there is a limit of 16 frames in callstacks captured by the bucketizer, which may not be deep enough to determine exactly where in the engine the callstack is being entered from. SQL Server 2012 introduced improvements by increasing the number of frames in callstacks captured by the bucketizer to 32.
 
 The following SQL script can be used to automate the process of capturing memory dumps to help analyze spinlock contention:
 

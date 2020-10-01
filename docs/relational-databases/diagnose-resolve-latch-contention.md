@@ -36,13 +36,13 @@ We will discuss some common scenarios and how best to handle them to alleviate c
 
 ## How does SQL Server use latches?
 
-A page in SQL Server is eight KB and can store multiple rows. To increase concurrency and performance, buffer latches are held only for the duration of the physical operation on the page, unlike locks which are held for the duration of the logical transaction.
+A page in SQL Server is 8 KB and can store multiple rows. To increase concurrency and performance, buffer latches are held only for the duration of the physical operation on the page, unlike locks, which are held for the duration of the logical transaction.
 
 Latches are internal to the SQL engine and are used to provide memory consistency, whereas locks are used by SQL Server to provide logical transactional consistency. The following table compares latches to locks:
 
 | Structure | Purpose     | Controlled by  | Performance cost | Exposed by  |
 |---|---|---|---|---|
-| **Latch** | Guarantee consistency of in-memory structures. | SQL Server engine only.  | Performance cost is low. To allow for maximum concurrency and provide maximum performance, latches are held only for the duration of the physical operation on the in-memory structure, unlike locks, which are held for the duration of the logical transaction. | [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) - Provides information on PAGELATCH, PAGEIOLATCH and LATCH wait types (LATCH_EX, LATCH_SH is used to group all non-buffer latch waits).<br/>[sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) – Provides detailed information about non-buffer latch waits.<br/>[sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) - This DMV provides aggregated waits for each index, which is very useful for troubleshooting latch-related performance issues. |
+| **Latch** | Guarantee consistency of in-memory structures. | SQL Server engine only.  | Performance cost is low. To allow for maximum concurrency and provide maximum performance, latches are held only for the duration of the physical operation on the in-memory structure, unlike locks, which are held for the duration of the logical transaction. | [sys.dm_os_wait_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) - Provides information on PAGELATCH, PAGEIOLATCH, and LATCH wait types (LATCH_EX, LATCH_SH is used to group all non-buffer latch waits).<br/>[sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) – Provides detailed information about non-buffer latch waits.<br/>[sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) - This DMV provides aggregated waits for each index, which is useful for troubleshooting latch-related performance issues. |
 | **Lock**  | Guarantee consistency of transactions.  | Can be controlled by user. | Performance cost is high relative to latches as locks must be held for the duration of the transaction. | [sys.dm_tran_locks (Transact-SQL)](./system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).<br/>[sys.dm_exec_sessions (Transact-SQL)](./system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).|
 
 ## SQL Server latch modes and compatibility
@@ -51,16 +51,16 @@ Some latch contention is to be expected as a normal part of the operation of the
 
 Latches are acquired in one of five different modes, which relate to level of access. SQL Server latch modes can be summarized as follows:
 
-* **KP** -- Keep latch, ensures that the referenced structure cannot be destroyed. Used when a thread wants to look at a buffer structure. Because the KP latch is compatible with all latches except for the destroy (DT) latch, the KP latch is considered to be "lightweight", meaning that the impact on performance when using it is minimal. Since the KP latch is incompatible with the DT latch, it will prevent any other thread from destroying the referenced structure, for example a KP latch will prevent the structure it references from being destroyed by the lazywriter process. For more information about how the lazywriter process is used with SQL Server buffer page management, see [Writing Pages](./writing-pages.md).
+* **KP** -- Keep latch, ensures that the referenced structure cannot be destroyed. Used when a thread wants to look at a buffer structure. Because the KP latch is compatible with all latches except for the destroy (DT) latch, the KP latch is considered to be "lightweight", meaning that the impact on performance when using it is minimal. Since the KP latch is incompatible with the DT latch, it will prevent any other thread from destroying the referenced structure. For example, a KP latch will prevent the structure it references from being destroyed by the lazywriter process. For more information about how the lazywriter process is used with SQL Server buffer page management, see [Writing Pages](./writing-pages.md).
 
 * **SH** -- Shared latch, required to read a page structure. 
 * **UP** -- Update latch, is compatible with SH (Shared latch) and KP, but no others and therefore will not allow an EX latch to write to the referenced structure. 
 * **EX** -- Exclusive latch, blocks other threads from writing to or reading from the referenced structure. One example of use would be to modify contents of a page for torn page protection. 
-* **DT** -- Destroy latch, must be acquired before destroying contents of referenced structure. For example a DT latch must be acquired by the lazywriter process to free up a clean page before adding it to the list of free buffers available for use by other threads.
+* **DT** -- Destroy latch, must be acquired before destroying contents of referenced structure. For example, a DT latch must be acquired by the lazywriter process to free up a clean page before adding it to the list of free buffers available for use by other threads.
 
 Latch modes have different levels of compatibility, for example, a shared latch (SH) is compatible with an update (UP) or keep (KP) latch but incompatible with a destroy latch (DT). Multiple latches can be concurrently acquired on the same structure as long as the latches are compatible. When a thread attempts to acquire a latch held in a mode that is not compatible, it is placed into a queue to wait for a signal indicating the resource is available. A spinlock of type SOS_Task is used to protect the wait queue by enforcing serialized access to the queue. This spinlock must be acquired to add items to the queue. The SOS_Task spinlock also signals threads in the queue when incompatible latches are released, allowing the waiting threads to acquire a compatible latch and continue working. The wait queue is processed on a first in, first out (FIFO) basis as latch requests are released. Latches follow this FIFO system to ensure fairness and to prevent thread starvation.
 
-Latch mode compatibility is listed in the table below where **Y** indicates compatibility and **N** indicates incompatibility:
+Latch mode compatibility is listed in the following table (**Y** indicates compatibility and **N** indicates incompatibility):
 
 |Latch mode |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
@@ -72,9 +72,9 @@ Latch mode compatibility is listed in the table below where **Y** indicates comp
 
 ## SQL Server superLatches and sublatches
 
-With the increasing presence of NUMA based multiple socket / multi-core systems, SQL Server 2005 introduced SuperLatches, also known as sublatches, which are effective only on systems with 32 or more logical processors. Superlatches improve efficiency of the SQL engine for certain usage patterns in highly concurrent OLTP workloads; for example when certain pages have a pattern of heavy read-only shared (SH) access, but are written to rarely. An example of a page with such an access pattern is a B-tree (i.e. index) root page; the SQL engine requires that a shared latch is held on the root page when a page-split occurs at any level in the B-tree. In an insert heavy high concurrency OLTP workload the number of page splits will increase broadly in line with throughput, which can degrade performance. SuperLatches can enable increased performance for accessing shared pages where multiple concurrently running worker threads require SH latches. To accomplish this, the SQL Server Engine will dynamically promote a latch on such a page to a SuperLatch. A SuperLatch partitions a single latch into an array of sublatch structures, one sublatch per partition per CPU core, whereby the main latch becomes a proxy redirector and global state synchronization is not required for read-only latches. In doing so, the worker, which is always assigned to a specific CPU, only needs to acquire the shared (SH) sublatch assigned to the local scheduler.
+With the increasing presence of NUMA based multiple socket / multi-core systems, SQL Server 2005 introduced SuperLatches, also known as sublatches, which are effective only on systems with 32 or more logical processors. Superlatches improve efficiency of the SQL engine for certain usage patterns in highly concurrent OLTP workloads; for example, when certain pages have a pattern of heavy read-only shared (SH) access, but are written to rarely. An example of a page with such an access pattern is a B-tree (i.e. index) root page; the SQL engine requires that a shared latch is held on the root page when a page-split occurs at any level in the B-tree. In an insert-heavy and high-concurrency OLTP workload, the number of page splits will increase broadly in line with throughput, which can degrade performance. SuperLatches can enable increased performance for accessing shared pages where multiple concurrently running worker threads require SH latches. To accomplish this, the SQL Server Engine will dynamically promote a latch on such a page to a SuperLatch. A SuperLatch partitions a single latch into an array of sublatch structures, one sublatch per partition per CPU core, whereby the main latch becomes a proxy redirector and global state synchronization is not required for read-only latches. In doing so, the worker, which is always assigned to a specific CPU, only needs to acquire the shared (SH) sublatch assigned to the local scheduler.
 
-Acquisition of compatible latches, such as a shared Superlatch uses fewer resources and scales access to hot pages better than a non-partitioned shared latch because removing the global state synchronization requirement significantly improves performance by only accessing local NUMA memory. Conversely, acquiring an exclusive (EX) SuperLatch is more expensive than acquiring an EX regular latch as SQL must signal across all sublatches. When a SuperLatch is observed to use a pattern of heavy EX access, the SQL Engine can demote it after the page is discarded from the buffer pool. The diagram below depicts a normal latch and a partitioned SuperLatch:
+Acquisition of compatible latches, such as a shared Superlatch uses fewer resources and scales access to hot pages better than a non-partitioned shared latch because removing the global state synchronization requirement significantly improves performance by only accessing local NUMA memory. Conversely, acquiring an exclusive (EX) SuperLatch is more expensive than acquiring an EX regular latch as SQL must signal across all sublatches. When a SuperLatch is observed to use a pattern of heavy EX access, the SQL Engine can demote it after the page is discarded from the buffer pool. The following diagram depicts a normal latch and a partitioned SuperLatch:
 
 ![SQL Server Superlatch](./media/diagnose-resolve-latch-contention/image4.png)
 
@@ -84,7 +84,7 @@ Use the **SQL Server:Latches** object and associated counters in Performance Mon
 
 Cumulative wait information is tracked by SQL Server and can be accessed using the Dynamic Management View (DMW) *sys.dm_os_wait_stats*. SQL Server employs three latch wait types as defined by the corresponding "wait_type" in the *sys.dm_os_wait_stats* DMV:
 
-1. **Buffer (BUF) latch:** used to guarantee consistency of index and data pages for user objects. They are also used to protect access to data pages that SQL Server uses for system objects. For example pages that manage allocations are protected by buffer latches. These include the Page Free Space (PFS), Global Allocation Map (GAM), Shared Global Allocation Map (SGAM) and Index Allocation Map (IAM) pages. Buffer latches are reported in *sys.dm_os_wait_stats* with a *wait_type* of **PAGELATCH\_\***.
+1. **Buffer (BUF) latch:** used to guarantee consistency of index and data pages for user objects. They are also used to protect access to data pages that SQL Server uses for system objects. For example, pages that manage allocations are protected by buffer latches. These include the Page Free Space (PFS), Global Allocation Map (GAM), Shared Global Allocation Map (SGAM) and Index Allocation Map (IAM) pages. Buffer latches are reported in *sys.dm_os_wait_stats* with a *wait_type* of **PAGELATCH\_\***.
 
 2. **Non-buffer (Non-BUF) latch:** used to guarantee consistency of any in-memory structures other than buffer pool pages. Any waits for non-buffer latches will be reported as a *wait_type* of **LATCH\_\***.
 
@@ -101,7 +101,7 @@ On a busy high-concurrency system, it is normal to see active contention on stru
 
 ### Example of latch contention
 
-In the diagram below the blue line represents the throughput in SQL Server, as measured by Transactions per second; the black line represents average page latch wait time. In this case, each transaction performs an INSERT into a clustered index with a sequentially increasing leading value, such as when populating an IDENTITY column of data type bigint. As the number of CPUs increase to 32 it is evident that the overall throughput has decreased and the page latch wait time has increased to approximately 48 milliseconds as evidenced by the black line. This inverse relationship between throughput and page latch wait time is a common scenario that is easily diagnosed.
+In the following diagram, the blue line represents the throughput in SQL Server, as measured by Transactions per second; the black line represents average page latch wait time. In this case, each transaction performs an INSERT into a clustered index with a sequentially increasing leading value, such as when populating an IDENTITY column of data type bigint. As the number of CPUs increase to 32 it is evident that the overall throughput has decreased and the page latch wait time has increased to approximately 48 milliseconds as evidenced by the black line. This inverse relationship between throughput and page latch wait time is a common scenario that is easily diagnosed.
 
 ![Throughput Decreases as Concurrency Increases](./media/diagnose-resolve-latch-contention/image5.png)
 
@@ -113,7 +113,7 @@ As the following diagram illustrates, SQL Server is no longer bottle-necked on p
 
 ## Factors affecting latch contention
 
-Latch contention that hinders performance in OLTP environments is usually caused by high concurrency related to one or more of the following factors:
+Latch contention that hinders performance in OLTP environments is typically caused by high concurrency related to one or more of the following factors:
 
 | Factor | Details |
 |---|---|
@@ -158,7 +158,7 @@ As stated previously, latch contention is only problematic when the contention a
 
 3. Determine the proportion of those that are related to latches.
 
-Cumulative wait information is available from the *sys.dm_os_wait_stats* DMV. The most common type of latch contention is buffer latch contention, observed as an increase in wait times for latches with a *wait_type* of **PAGELATCH\_\***. Non-buffer latches are grouped under the **LATCH\*** wait type. As the diagram below illustrates you should first take a cumulative look at system waits using the *sys.dm_os_wait_stats* DMV to determine the percentage of the overall wait time caused by buffer or non-buffer latches. If you encounter non-buffer latches, the *sys.dm_os_latch_stats* DMV must also be examined.
+Cumulative wait information is available from the *sys.dm_os_wait_stats* DMV. The most common type of latch contention is buffer latch contention, observed as an increase in wait times for latches with a *wait_type* of **PAGELATCH\_\***. Non-buffer latches are grouped under the **LATCH\*** wait type. As the following diagram illustrates, you should first take a cumulative look at system waits using the *sys.dm_os_wait_stats* DMV to determine the percentage of the overall wait time caused by buffer or non-buffer latches. If you encounter non-buffer latches, the *sys.dm_os_latch_stats* DMV must also be examined.
 
 The following diagram describes the relationship between the information returned by the *sys.dm_os_wait_stats* and *sys.dm_os_latch_stats* DMVs.
 
@@ -170,7 +170,7 @@ For more information about the *sys.dm_os_latch_stats* DMV, see [sys.dm_os_latch
 
 The following measures of latch wait time are indicators that excessive latch contention is affecting application performance:
 
-1. **Average page latch wait time consistently increases with throughput**: If average page latch wait times consistently increase with throughput and if average buffer latch wait times also increase above expected disk response times, you should examine current waiting tasks using the *sys.dm_os_waiting_tasks* DMV. Averages can be misleading if analyzed in isolation so it is important to look at the system live when possible to understand workload characteristics. In particular check whether there are high waits on PAGELATCH_EX and/or PAGELATCH_SH requests on any pages. Follow these steps to diagnose increasing average page latch wait times with throughput:
+1. **Average page latch wait time consistently increases with throughput**: If average page latch wait times consistently increase with throughput and if average buffer latch wait times also increase above expected disk response times, you should examine current waiting tasks using the *sys.dm_os_waiting_tasks* DMV. Averages can be misleading if analyzed in isolation so it is important to look at the system live when possible to understand workload characteristics. In particular, check whether there are high waits on PAGELATCH_EX and/or PAGELATCH_SH requests on any pages. Follow these steps to diagnose increasing average page latch wait times with throughput:
 
    * Use the sample scripts [Query sys.dm_os_waiting_tasks Ordered by Session ID](#waiting-tasks-script1) or [Calculate Waits Over a Time Period](#calculate-waits-over-a-time-period) to look at current waiting tasks and measure average latch wait time. 
    * Use the sample script [Query Buffer Descriptors to Determine Objects Causing Latch Contention](#query-buffer-descriptors) to determine the index and underlying table on which the contention is occurring. 
@@ -181,7 +181,7 @@ The following measures of latch wait time are indicators that excessive latch co
 
 2. **Percentage of total wait time spent on latch wait types during peak load**: If the average latch wait time as a percentage of overall wait time increases in line with application load, then latch contention may be affecting performance and should be investigated.
 
-   Measure page latch waits and non-page latch waits with the [SQLServer:Wait Statistics Object](./performance-monitor/sql-server-wait-statistics-object.md) performance counters. Then compare the values for these performance counters to performance counters associated with CPU, I/O, memory and network throughput, for example transactions/sec and batch requests/sec are two good measures of resource utilization.
+   Measure page latch waits and non-page latch waits with the [SQLServer:Wait Statistics Object](./performance-monitor/sql-server-wait-statistics-object.md) performance counters. Then compare the values for these performance counters to performance counters associated with CPU, I/O, memory, and network throughput. For example, transactions/sec and batch requests/sec are two good measures of resource utilization.
    
    > [!NOTE]
    > Relative wait time for each wait type is not included in the *sys.dm_os_wait_stats* DMV because this DMW measures wait times since the last time that the instance of SQL Server was started or the cumulative wait statistics were reset using DBCC SQLPERF. To calculate the relative wait time for each wait type take a snapshot of *sys.dm_os_wait_stats* before peak load, after peak load, and then calculate the difference. The sample script [Calculate Waits Over a Time Period](#calculate-waits-over-a-time-period) can be used for this purpose.
@@ -197,7 +197,7 @@ The following measures of latch wait time are indicators that excessive latch co
    dbcc SQLPERF ('sys.dm_os_latch_stats', 'CLEAR')
    ```
 
-3. **Throughput does not increase, and in some case decreases, as application load increases and the number of CPU's available to SQL Server increases**: This was illustrated in [Example of Latch Contention](#example-of-latch-contention).
+3. **Throughput does not increase, and in some case decreases, as application load increases and the number of CPUs available to SQL Server increases**: This was illustrated in [Example of Latch Contention](#example-of-latch-contention).
 
 4. **CPU Utilization does not increase as application workload increases**: If the CPU utilization on the system does not increase as concurrency driven by application throughput increases, this is an indicator that SQL Server is waiting on something and symptomatic of latch contention.
 
@@ -264,9 +264,9 @@ The following scenarios have been observed to cause excessive latch contention.
 
 ### Last page/trailing page insert contention
 
-A common OLTP practice is to create a clustered index on an identity or date column. This helps maintain good physical organization of the index, which can greatly benefit performance of both reads and writes to the index. This schema design can inadvertently lead to latch contention however. This issue is most commonly seen with a large table, with small rows; and inserts into an index containing a sequentially increasing leading key column such as ascending integer or datetime key. In this scenario the application rarely if ever performs updates or deletes, the exception being for archiving operations.
+A common OLTP practice is to create a clustered index on an identity or date column. This helps maintain good physical organization of the index, which can greatly benefit performance of both reads and writes to the index. This schema design can inadvertently lead to latch contention however. This issue is most commonly seen with a large table, with small rows; and inserts into an index containing a sequentially increasing leading key column such as ascending integer or datetime key. In this scenario, the application rarely if ever performs updates or deletes, the exception being for archiving operations.
 
-In the following example, thread one and thread two both want to perform an insert of a record which will be stored on page 299. From a logical locking perspective there is no problem as row level locks will be used and exclusive locks on both records on the same page can be held at the same time. However to ensure integrity of physical memory only one thread at a time can acquire an exclusive latch so access to the page is serialized to prevent lost updates in memory. In the case below thread one acquires the exclusive latch; and thread two waits, which registers a PAGELATCH_EX wait for this resource in the wait statistics. This is displayed through the *wait_type* value in the *sys.dm_os_waiting_tasks* DMV.
+In the following example, thread one and thread two both want to perform an insert of a record that will be stored on page 299. From a logical locking perspective, there is no problem as row level locks will be used and exclusive locks on both records on the same page can be held at the same time. However to ensure integrity of physical memory only one thread at a time can acquire an exclusive latch so access to the page is serialized to prevent lost updates in memory. In this case, thread 1 acquires the exclusive latch; and thread 2 waits, which registers a PAGELATCH_EX wait for this resource in the wait statistics. This is displayed through the *wait_type* value in the *sys.dm_os_waiting_tasks* DMV.
 
 ![Exclusive Page Latch On Last Row](./media/diagnose-resolve-latch-contention/image10.png)
 
@@ -289,20 +289,20 @@ This type of latch contention can be explained as follows. When a new row is ins
 
 5. Unlatch all pages.
 
-If the table index is based upon a sequentially increasing key, each new insert will go to the same page at the end of the B-tree, until that page is full. Under high-concurrency scenarios, this may cause contention on the rightmost edge of the B-tree and can occur on clustered and non-clustered indexes. Tables that are affected by this type of contention generally primarily accept INSERTs, and pages for the problematic indexes are normally relatively dense, for example a row size \~165 bytes (including row overhead) equals \~49 rows per page. In this insert-heavy example, it is expected that PAGELATCH_EX/PAGELATCH_SH waits will occur, and this is the typical observation. To examine Page Latch waits vs. Tree Page Latch waits use the *sys.dm_db_index_operational_stats* DMV.
+If the table index is based upon a sequentially increasing key, each new insert will go to the same page at the end of the B-tree, until that page is full. Under high-concurrency scenarios, this may cause contention on the rightmost edge of the B-tree and can occur on clustered and non-clustered indexes. Tables that are affected by this type of contention primarily accept INSERTs, and pages for the problematic indexes are normally relatively dense (for example, a row size \~165 bytes (including row overhead) equals \~49 rows per page). In this insert-heavy example, it is expected that PAGELATCH_EX/PAGELATCH_SH waits will occur, and this is the typical observation. To examine Page Latch waits vs. Tree Page Latch waits, use the *sys.dm_db_index_operational_stats* DMV.
 
 The following table summarizes the major factors observed with this type of latch contention:
 
 | Factor | Typical Observations |
 |---|---|
-| **Logical CPU's in use by SQL Server** | This type of latch contention occurs mainly on 16+ CPU core systems and most commonly on 32+ CPU core systems. |
+| **Logical CPUs in use by SQL Server** | This type of latch contention occurs mainly on 16+ CPU core systems and most commonly on 32+ CPU core systems. |
 | **Schema design and access patterns** | Uses a sequentially increasing identity value as a leading column in an index on a table for transactional data.<br/><br/>The index has an increasing primary key with a high rate of inserts.<br/><br/>The index has at least one sequentially increasing column value.<br/><br/>Typically small row size with many rows per page. |
 | **Wait type observed** | Many threads contending for same resource with exclusive (EX) or shared (SH) latch waits associated with the same resource_description in the sys.dm_os_waiting_tasks DMV as returned by the Query sys.dm_os_waiting_tasks Ordered by Wait Duration query. |
 | **Design factors to consider** | Consider changing the order of the index columns as described in the Non-sequential index mitigation strategy if you can guarantee that inserts will be distributed across the B-tree uniformly all of the time.<br/><br/>If the Hash partition mitigation strategy is used it removes the ability to use partitioning for any other purposes such as sliding window archiving.<br/><br/>Use of the Hash partition mitigation strategy can lead to partition elimination problems for SELECT queries used by the application. |
 
 ### Latch contention on small tables with a non-clustered index and random inserts (queue table)
 
-This scenario is typically seen when an SQL table is used as a temporary queue, for example in an asynchronous messaging system.
+This scenario is typically seen when an SQL table is used as a temporary queue (for example, in an asynchronous messaging system).
 
 In this scenario exclusive (EX) and shared (SH) latch contention can occur under the following conditions:
 
@@ -317,7 +317,7 @@ In this scenario exclusive (EX) and shared (SH) latch contention can occur under
 
 Latch contention can occur even if access is random across the B-tree such as when a non-sequential column is the leading key in a clustered index. The following screenshot is from a system experiencing this type of latch contention. In this example, contention is due to the density of the pages caused by small row size and a relatively shallow B-tree. As concurrency increases, latch contention on pages occurs even though inserts are random across the B-tree since a GUID was the leading column in the index.
 
-In the screenshot below the waits occur on both buffer data pages and pages free space (PFS) pages. For more information about PFS page latch contention, see the following third-party blog post on SQLSkills: [Benchmarking: Multiple data files on SSDs](https://www.sqlskills.com/blogs/paul/benchmarking-multiple-data-files-on-ssds-plus-the-latest-fusion-io-driver/). Even when the number of data files was increased, latch contention was prevalent on buffer data pages.
+In the following screenshot, the waits occur on both buffer data pages and pages free space (PFS) pages. For more information about PFS page latch contention, see the following third-party blog post on SQLSkills: [Benchmarking: Multiple data files on SSDs](https://www.sqlskills.com/blogs/paul/benchmarking-multiple-data-files-on-ssds-plus-the-latest-fusion-io-driver/). Even when the number of data files was increased, latch contention was prevalent on buffer data pages.
 
 ![Wait types](./media/diagnose-resolve-latch-contention/image12.png)
 
@@ -330,7 +330,7 @@ The following table summarizes the major factors observed with this type of latc
 | **Level of concurrency** | Latch contention will occur only under high levels of concurrent requests from the application tier.
 | **Wait type observed** | Observe waits on buffer (PAGELATCH_EX and PAGELATCH_SH) and non-buffer latch ACCESS_METHODS_HOBT_VIRTUAL_ROOT due to root splits. Also PAGELATCH_UP waits on PFS pages. For more information about non-buffer latch waits, see [sys.dm_os_latch_stats (Transact-SQL)](./system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md) in SQL Server help.
 
-The combination of a shallow B-Tree and random inserts across the index is prone to causing page splits in the B-tree. In order to perform a page split, SQL Server must acquire shared (SH) latches at all levels, and then acquire exclusive (EX) latches on pages in the B-tree that are involved in the page splits. Also when concurrency is high and data is continually inserted and deleted, B-tree root splits may occur. In this case other inserts may have to wait for any non-buffer latches acquired on the B-tree. This will be manifested as a large number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type observed in the *sys.dm_os_latch_stats* DMV.
+The combination of a shallow B-Tree and random inserts across the index is prone to causing page splits in the B-tree. In order to perform a page split, SQL Server must acquire shared (SH) latches at all levels, and then acquire exclusive (EX) latches on pages in the B-tree that are involved in the page splits. Also when concurrency is high and data is continually inserted and deleted, B-tree root splits may occur. In this case, other inserts may have to wait for any non-buffer latches acquired on the B-tree. This will be manifested as a large number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type observed in the *sys.dm_os_latch_stats* DMV.
 
 The following script can be modified to determine the depth of the B-tree for the indexes on the affected table.
 
@@ -385,7 +385,7 @@ Typically this is done by having a leading column in the index that will distrib
 
 #### Option: Use a column within the table to distribute values across the index key range
 
-Evaluate your workload for a natural value that can be used to distribute inserts across the key range, for example in an ATM banking scenario ATM_ID may be a good candidate to distribute inserts into a transaction table for withdrawals since one customer can only use one ATM at a time. Similarly in a point of sales system, perhaps Checkout_ID or a Store ID would be a natural value that could be used to distribute inserts across a key range. This technique requires creating a composite index key with the leading key column being either the value of the column identified or some hash of that value combined with one or more additional columns to provide uniqueness. In most cases, a hash of the value will work best because too many distinct values will result in poor physical organization. For example, in a point of sales system, a hash can be created from the Store ID that is some modulo, which aligns with the number of CPU cores. This technique would result in a relatively small number of ranges within the table however it would be enough to distribute inserts in such a way to avoid latch contention. The image below illustrates this technique.
+Evaluate your workload for a natural value that can be used to distribute inserts across the key range. For example, consider an ATM banking scenario where ATM_ID may be a good candidate to distribute inserts into a transaction table for withdrawals since one customer can only use one ATM at a time. Similarly in a point of sales system, perhaps Checkout_ID or a Store ID would be a natural value that could be used to distribute inserts across a key range. This technique requires creating a composite index key with the leading key column being either the value of the column identified or some hash of that value combined with one or more additional columns to provide uniqueness. In most cases, a hash of the value will work best because too many distinct values will result in poor physical organization. For example, in a point of sales system, a hash can be created from the Store ID that is some modulo, which aligns with the number of CPU cores. This technique would result in a relatively small number of ranges within the table however it would be enough to distribute inserts in such a way to avoid latch contention. The following image illustrates this technique.
 
 ![Inserts after applying non-sequential index](./media/diagnose-resolve-latch-contention/image14.png)
 
@@ -396,7 +396,7 @@ This pattern was implemented during a performance lab engagement and resolved la
 
 **Original table definition**
 
-When using the original table definition listed below, excessive latch contention was observed to occur on the clustered index pk_table1:
+When using the original table definition, excessive latch contention was observed to occur on the clustered index pk_table1:
 
 ```sql
 create table table1
@@ -416,9 +416,9 @@ go
 > [!NOTE]
 > The object names in the table definition have been changed from their original values.
 
-**Re-ordered index definition**
+**Reordered index definition**
 
-Re-ordering the index with UserID as the leading column in the primary key provided an almost completely random distribution of inserts across the pages. The resulting distribution was not 100% random since not all users are online at the same time, but the distribution was random enough to alleviate excessive latch contention. One caveat of reordering the index definition is that any select queries against this table must be modified to use both UserID and TransactionID as equality predicates.
+Re-ordering the index with UserID as the leading column in the primary key provided an almost random distribution of inserts across the pages. The resulting distribution was not 100% random since not all users are online at the same time, but the distribution was random enough to alleviate excessive latch contention. One caveat of reordering the index definition is that any select queries against this table must be modified to use both UserID and TransactionID as equality predicates.
 
 > [!IMPORTANT]
 > Ensure that you thoroughly test any changes in a test environment before running in a production environment.
@@ -440,7 +440,7 @@ go
 
 **Using a hash value as the leading column in primary key**
 
-The following table definition can be used to generate a modulo which aligns to the number of CPUs, HashValue is generated using the sequentially increasing value TransactionID to ensure a uniform distribution across the B-Tree:
+The following table definition can be used to generate a modulo that aligns to the number of CPUs, HashValue is generated using the sequentially increasing value TransactionID to ensure a uniform distribution across the B-Tree:
 
 ```sql
 create table table1
@@ -468,7 +468,7 @@ If there is no natural separator, then a GUID column can be used as a leading ke
 
 ### Use hash partitioning with a computed column
 
-Table partitioning within SQL Server can be used to mitigate excessive latch contention. Creating a hash partitioning scheme with a computed column on a partitioned table is a common approach which can be accomplished with these steps:
+Table partitioning within SQL Server can be used to mitigate excessive latch contention. Creating a hash partitioning scheme with a computed column on a partitioned table is a common approach that can be accomplished with these steps:
 
 1. Create a new filegroup or use an existing filegroup to hold the partitions.
 
@@ -483,7 +483,7 @@ Table partitioning within SQL Server can be used to mitigate excessive latch con
 
    * Bind the partition function to the filegroups. 
    * Add a hash column of type tinyint or smallint to the table. 
-   * Calculate a good hash distribution, for example use hashbytes with modulo or binary_checksum.
+   * Calculate a good hash distribution. For example, use hashbytes with modulo or binary_checksum.
 
 The following sample script can be customized for purposes of your implementation:
 
@@ -506,11 +506,11 @@ ON [dbo].[latch_contention_table]([T_ID] ASC, [HashValue])
 ON ps_hash16(HashValue)
 ```
 
-This script can be used to hash partition a table which is experiencing problems caused by [Last page/trailing page insert contention](#last-pagetrailing-page-insert-contention). This technique moves contention from the last page by partitioning the table and distributing inserts across table partitions with a hash value modulus operation.
+This script can be used to hash partition a table that is experiencing problems caused by [Last page/trailing page insert contention](#last-pagetrailing-page-insert-contention). This technique moves contention from the last page by partitioning the table and distributing inserts across table partitions with a hash value modulus operation.
 
 #### What hash partitioning with a computed column does
 
-As the following diagram illustrates, this technique moves the contention from the last page by rebuilding the index on the hash function and creating the same number of partitions as there are physical CPU cores on the SQL Server computer. The inserts are still going into the end of the logical range (a sequentially increasing value) but the hash value modulus operation ensures that the inserts are split across the different B-trees, which alleviates the bottleneck. This is illustrated in the diagrams below:
+As the following diagram illustrates, this technique moves the contention from the last page by rebuilding the index on the hash function and creating the same number of partitions as there are physical CPU cores on the SQL Server computer. The inserts are still going into the end of the logical range (a sequentially increasing value) but the hash value modulus operation ensures that the inserts are split across the different B-trees, which alleviates the bottleneck. This is illustrated in the following diagrams:
 
 ![Page latch contention from last page insert](./media/diagnose-resolve-latch-contention/image16.png)
 
@@ -520,7 +520,7 @@ As the following diagram illustrates, this technique moves the contention from t
 
 While hash partitioning can eliminate contention on inserts, there are several trade-offs to consider when deciding whether or not to use this technique:
 
-* Select queries will in most cases need to be modified to include the hash partition in the predicate and lead to a query plan that provides no partition elimination when these queries are issued. The screenshot below shows a bad plan with no partition elimination after hash partitioning has been implemented.
+* Select queries will in most cases need to be modified to include the hash partition in the predicate and lead to a query plan that provides no partition elimination when these queries are issued. The following screenshot shows a bad plan with no partition elimination after hash partitioning has been implemented.
 
    ![Query plan without partition elimination](./media/diagnose-resolve-latch-contention/image18.png)
 
@@ -562,7 +562,7 @@ The following two sections provide a summary of the techniques that can be used 
 
 ## Walkthrough: Diagnosing a SQL Server latch contention scenario
 
-The following is a walkthrough of how to use the tools and techniques described in [Diagnosing SQL Server Latch Contention](#diagnosing-sql-server-latch-contention) and [Handling Latch Contention for Different Table Patterns](#handling-latch-contention-for-different-table-patterns) to resolve a problem in a real world scenario. This scenario describes a customer engagement to perform load testing of a point of sales system which simulated approximately 8,000 stores performing transactions against a SQL Server application which was running on an eight socket, 32 physical core system with 256 GB of memory.
+The following walkthrough demonstrates the tools and techniques described in [Diagnosing SQL Server Latch Contention](#diagnosing-sql-server-latch-contention) and [Handling Latch Contention for Different Table Patterns](#handling-latch-contention-for-different-table-patterns) to resolve a problem in a real world scenario. This scenario describes a customer engagement to perform load testing of a point of sales system which simulated approximately 8,000 stores performing transactions against a SQL Server application which was running on an 8 socket, 32 physical core system with 256 GB of memory.
 
 The following diagram details the hardware used to test the point of sales system:
 
@@ -570,7 +570,7 @@ The following diagram details the hardware used to test the point of sales syste
 
 ### Symptom: Hot latches
 
-In this case we observed high waits for PAGELATCH_EX where we typically define high as an average of more than 1 ms. In this case we consistently observed waits exceeding 20 ms.
+In this case, we observed high waits for PAGELATCH_EX where we typically define high as an average of more than 1 ms. In this case, we consistently observed waits exceeding 20 ms.
 
 ![Hot latches](./media/diagnose-resolve-latch-contention/image20.png)
 
@@ -578,7 +578,7 @@ Once we determined that latch contention was problematic, we then set out to det
 
 ### Isolating the object causing latch contention
 
-The script below uses the resource_description column to isolate which index was causing the PAGELATCH_EX contention:
+The following script uses the resource_description column to isolate which index was causing the PAGELATCH_EX contention:
 
 > [!NOTE]
 > The resource_description column returned by this script provides the resource description in the format \<DatabaseID,FileID,PageID\> where the name of the database associated with DatabaseID can be determined by passing the value of DatabaseID to the DB_NAME () function.
@@ -609,21 +609,21 @@ JOIN sys.schemas s ON o.schema_id = s.schema_id
 order by wt.wait_duration_ms desc
 ```
 
-As shown below, we can see that the contention is on the table LATCHTEST and index name CIX_LATCHTEST. Note names have been changed to anonymize the workload.
+As shown here, the contention is on the table LATCHTEST and index name CIX_LATCHTEST. Note names have been changed to anonymize the workload.
 
 ![LATCHTEST contention](./media/diagnose-resolve-latch-contention/image21.png)
 
-For a more advanced script which polls repeatedly and uses a temporary table to determine the total waiting time over a configurable period see [Query Buffer Descriptors to Determine Objects Causing Latch Contention](#query-buffer-descriptors) in the Appendix.
+For a more advanced script that polls repeatedly and uses a temporary table to determine the total waiting time over a configurable period see [Query Buffer Descriptors to Determine Objects Causing Latch Contention](#query-buffer-descriptors) in the Appendix.
 
 ### Alternative technique to isolate the object causing latch contention
 
-Sometimes it can be impractical to query *sys.dm_os_buffer_descriptors*. As the memory in the system, and available to the buffer pool increases so does the time required to run this DMV. On a 256 GB system it may take up to 10 minutes or more for this DMV to run. An alternative technique is available and is broadly outlined as follows and is illustrated with a different workload which we ran in the lab:
+Sometimes it can be impractical to query *sys.dm_os_buffer_descriptors*. As the memory in the system, and available to the buffer pool increases so does the time required to run this DMV. On a 256 GB system, it may take up to 10 minutes or more for this DMV to run. An alternative technique is available and is broadly outlined as follows and is illustrated with a different workload, which we ran in the lab:
 
 1. Query current waiting tasks, using the Appendix script [Query sys.dm_os_waiting_tasks Ordered by Wait Duration](#waiting-tasks-script2).
 
-2. Identify the key page where a convoy is observed, which happens when multiple threads are contending on the same page. In this example the threads performing the insert are contending on the trailing page in the B-tree and will wait until they can acquire an EX latch. This is indicated by the resource_description in the first query, in our case 8:1:111305.
+2. Identify the key page where a convoy is observed, which happens when multiple threads are contending on the same page. In this example, the threads performing the insert are contending on the trailing page in the B-tree and will wait until they can acquire an EX latch. This is indicated by the resource_description in the first query, in our case 8:1:111305.
 
-3. Enable trace flag 3604 which exposes further information about the page via DBCC PAGE with the following syntax, substitute the value you obtained via the resource_description for the value in parentheses:
+3. Enable trace flag 3604, which exposes further information about the page via DBCC PAGE with the following syntax, substitute the value you obtained via the resource_description for the value in parentheses:
 
    ```sql
    --enable trace flag 3604 to enable console output
@@ -653,7 +653,7 @@ Sometimes it can be impractical to query *sys.dm_os_buffer_descriptors*. As the 
 
 Using the technique above we were able to confirm that the contention was occurring on a clustered index with a sequentially increasing key value on the table which by far received the highest number of inserts. This type of contention is not uncommon for indexes with a sequentially increasing key value such as datetime, identity or an application-generated transactionID.
 
-To resolve this we used [hash partitioning with a computed column](#use-hash-partitioning-with-a-computed-column) and observed a 690% performance improvement. The following table summarizes the performance of the application before and after implementing hash partitioning with a computed column. The CPU utilization increases broadly in line with throughput as expected after the latch contention bottleneck was removed:
+To resolve this issue, we used [hash partitioning with a computed column](#use-hash-partitioning-with-a-computed-column) and observed a 690% performance improvement. The following table summarizes the performance of the application before and after implementing hash partitioning with a computed column. The CPU utilization increases broadly in line with throughput as expected after the latch contention bottleneck was removed:
 
 | Measurement | Before Hash Partitioning | After Hash Partitioning |
 |---|---|---|
@@ -672,7 +672,7 @@ One possible strategy for avoiding excessive page latch contention is to pad row
 * Small row size 
 * Shallow B-tree 
 * Access pattern with a high rate of random insert, select, update, and delete operations 
-* Very small tables, such as temporary queue tables 
+* Small tables, such as temporary queue tables 
 
 By padding rows to occupy a full page you require SQL to allocate additional pages, making more pages available for inserts and reducing EX page latch contention.
 
@@ -687,7 +687,7 @@ ALTER TABLE mytable ADD Padding CHAR(5000) NOT NULL DEFAULT ('X')
 > [!NOTE]
 > Use the smallest char possible that forces one row per page to reduce the extra CPU requirements for the padding value and the extra space required to log the row. Every byte counts in a high performance system.
 
-This technique is explained for completeness; in practice SQLCAT has only used this on a small table with 10,000 rows in a single performance engagement. This technique has a limited application due to the fact that it increases memory pressure on SQL Server for large tables and can result in non-buffer latch contention on non-leaf pages. The additional memory pressure can be a significant limiting factor for application of this technique. With the amount of memory available in a modern server a large proportion of the working set for OLTP workloads is typically held in memory. When the data set increases to a size that it no longer fits in memory a significant drop-off in performance will occur. Therefore, this technique is something that is only applicable to small tables. This technique is not used by SQLCAT for scenarios such as last page/trailing page insert contention for large tables.
+This technique is explained for completeness; in practice SQLCAT has only used this on a small table with 10,000 rows in a single performance engagement. This technique has a limited application due to the fact that it increases memory pressure on SQL Server for large tables and can result in non-buffer latch contention on non-leaf pages. The additional memory pressure can be a significant limiting factor for application of this technique. With the amount of memory available in a modern server, a large proportion of the working set for OLTP workloads is typically held in memory. When the data set increases to a size that it no longer fits in memory a significant drop-off in performance will occur. Therefore, this technique is something that is only applicable to small tables. This technique is not used by SQLCAT for scenarios such as last page/trailing page insert contention for large tables.
 
 > [!IMPORTANT]
 > Employing this strategy can cause a large number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type because this strategy can lead to a large number of page splits occurring in the non-leaf levels of the B-tree. If this occurs, SQL Server must acquire shared (SH) latches at all levels followed by exclusive (EX) latches on pages in the B-tree where a page split is possible. Check the *sys.dm_os_latch_stats* DMV for a high number of waits on the ACCESS_METHODS_HBOT_VIRTUAL_ROOT latch type after padding rows.

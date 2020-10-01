@@ -375,6 +375,8 @@
         href: big-data-cluster/troubleshoot-pyspark-notebook.md
       - name: Active Directory
         items:
+        - name: Active directory deployment stops
+          href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
         - name: AD domain group scope
           href: big-data-cluster/troubleshoot-active-directory.md
         - name: AD DNS

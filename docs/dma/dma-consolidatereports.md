@@ -31,7 +31,7 @@ The following step-by-step instructions help you use the Data Migration Assistan
   - [Power BI desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Azure PowerShell Modules](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Download and extract:
-  - The [DMA Reports Power BI template](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - The [DMA Reports Power BI template](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - The [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## Loading the PowerShell modules

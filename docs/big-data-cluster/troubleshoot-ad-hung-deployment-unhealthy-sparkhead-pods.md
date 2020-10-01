@@ -89,7 +89,7 @@ Inspect the health of the HDFS and Spark services. Look for sparkhead pods err
 
 From Azure Data Studio (ADS), connect to the controller and view the Big Data Cluster Dashboard. Confirm if both the HDFS and Spark services have unhealthy sparkhead pods.
 
-![HDFS Spark services unhealthy sparkhead pods](./media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/hdfs_spark_services_unhealthy_sparkhead_pods.png)
+![HDFS Spark services unhealthy sparkhead pods](./media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/hdfs_spark_unhealthy_sparkhead_pods.png)
 
 Extract the logs and locate.
 
@@ -203,13 +203,13 @@ at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2876) 
 
 The reverse lookup zone entry for the domain controller in the DC’s DNS server for the Kubernetes network is missing. For this example, the missing entry was `cni0 10.244`. The sparkhead pod containers were trying to use the IP address 10.244.1.30:9000 to reach nnnode-0-1, but the DNS was not able to resolve it.
 
-:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_the domain_controller.png" alt-text="Missing reverse lookup zone entry for the domain controller":::
+:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller.png" alt-text="Missing reverse lookup zone entry for the domain controller":::
 
 ## Resolution
 
 Add the missing reverse DNS entry (PTR record) for the zone referred in the logs. For this example, we added 244.10.
 
-:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_the domain_controller_add.png" alt-text="Add missing reverse lookup zone entry for the domain controller":::
+:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/missing_reverse_lookup_zone_entry_for_domain_controller_add.png" alt-text="Add missing reverse lookup zone entry for the domain controller":::
 
 > [!NOTE]
 > Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server for all different networks of your cluster nodes.

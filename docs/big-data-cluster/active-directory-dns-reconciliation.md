@@ -1,10 +1,10 @@
 ---
 title: Active Directory and Kubernetes DNS Reconciliation in Big Data Clusters deployments
 description: Manage access to the big data cluster
-author: mihaelablendea
-ms.author: mihaelab
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -27,10 +27,10 @@ A classical HDFS setup consists of a set of commodity-hardware computers with st
 
 The storage pool consists of storage nodes that are members of a HDFS cluster. It runs one or more Kubernetes pods with each pod hosting the following containers:
 
-- A Hadoop container linked to a Persistent Volume (storage). All containers of this type together form the Hadoop cluster. Within the Hadoop container is a YARN node manager process that can create on-demand Apache Spark worker processes. The Spark head node hosts the hivemetastore, sparkhistory, and YARN job history containers.
+- A Hadoop container linked to a Persistent Volume (storage). All containers of this type together form the Hadoop cluster. Within the Hadoop container is a YARN node manager process that can create on-demand Apache Spark worker processes. The Spark head node hosts the hive metastore, spark history, and YARN job history containers.
 - A SQL Server instance to read data from HDFS using OpenRowSet technology.
-- collectd for collecting of metrics data.
-- fluentbit for collecting of log data.
+- `collectd` for collecting of metrics data.
+- `fluentbit` for collecting of log data.
 
 ![storage pool architecture](media/concept-storage-pool/scale-big-data-on-demand.png)
 

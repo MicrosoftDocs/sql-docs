@@ -81,6 +81,9 @@ Backup of a large database to blob storage is subject to the limitations listed 
   
 -   SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
   
+    > [!IMPORTANT]  
+    >  When using block blobs the MAXTRANSFERSIZE is not a guarantee. There are situations where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will write a block smaller than the MAXTRANSFERSIZE which can cause the 50,000 block limit to be reached before the approximately 200 GB size necessitating striping backups less than 200 GB. This can be especially true when using differential and/or uncompressed backups.
+
 -   You can issue backup or restore statements by using TSQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.   
   
 -   Creating a logical device name is not supported. So adding URL as a backup device using sp_dumpdevice or through SQL Server Management Studio is not supported.  

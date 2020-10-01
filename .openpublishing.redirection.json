@@ -41217,7 +41217,7 @@
     },
     {
       "source_path": "docs/big-data-cluster/deploy-active-directory.md",
-      "redirect-url": "/sql/big-data-cluster/active-directory-prerequisites.md",
+      "redirect-url": "/sql/big-data-cluster/active-directory-prerequisites",
       "redirect_document_id": false
     },
     {

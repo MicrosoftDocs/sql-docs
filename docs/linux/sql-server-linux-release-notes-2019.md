@@ -56,7 +56,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 
 ## <a id="cu8"></a> CU8
 
-Cumulative Update 8 (CU8) for SQL Server 2019 (15.6) has not yet released.
+Cumulative Update 8 (CU8) for SQL Server 2019 (15.x) has not yet released.
 
 ## <a id="cu6"></a> CU6 (July 2020)
 

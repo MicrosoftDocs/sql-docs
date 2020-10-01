@@ -224,9 +224,9 @@ The path for your SQL Server errog log can vary depending on your configuration 
 
     There are several errorlog.* files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
 
-6. Open the errorlog.log file in Notepad. 
+6. Open the errorlog.log file in Notepad.
 
-## <a name="determine-sql-server-name"></a>Find SQL Server instance name
+## Find SQL Server instance name
 
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 

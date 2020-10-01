@@ -33,12 +33,12 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Query that this DMS worker is part of.request_id, step_index, and dms_step_index form the key for this view.||  
+|execution_id|`nvarchar(32)`|Query that this DMS worker is part of. <br /><br /> execution_id, step_index, and dms_step_index form the key for this view.||  
 |step_index|`int`|Query step this DMS worker is part of.|See step index in [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
 |dms_step_index|`int`|Step in the DMS plan that this worker is running.|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|Node that the worker is running on.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|type|`nvarcha(32)`|||  
+|type|`nvarchar(32)`|Type of DMS worker thread this entry represents.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |status|`nvarchar(32)`|Status of this step|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  

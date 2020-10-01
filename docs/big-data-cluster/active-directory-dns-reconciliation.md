@@ -48,7 +48,7 @@ As result of this design principle, BDC will not have to create and manage A and
 
 ### No duplication of records
 
-Internal DNS records in multiple places. The only storage for these records is Kubernetes CoreDNS. THe BDC internal CoreDNS will do a computational rewriting and forwarding of DNS queries to Kubernetes CoreDNS.
+Internal DNS records in multiple places. The only storage for these records is Kubernetes CoreDNS. The BDC internal CoreDNS will do a computational rewriting and forwarding of DNS queries to Kubernetes CoreDNS.
 
 ### Computational rewriting
 

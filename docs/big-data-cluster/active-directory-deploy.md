@@ -54,26 +54,26 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (e.g. `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group will have the *bdcAdmin* cluster role which will give them administrator permissions in the cluster. This means that they have [`sysadmin` permissions in SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [`superuser` permissions in HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User), and admin permissions when connected to the controller endpoint.
+- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group will have the `bdcAdmin` cluster role which will give them administrator permissions in the cluster. This means that they have [`sysadmin` permissions in SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [`superuser` permissions in HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User), and admin permissions when connected to the controller endpoint.
 
   >[!IMPORTANT]
   >Create this group in AD before deployment begins. If the scope for this AD group is domain local deployment fails.
 
 - `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 
-AD groups in this list are mapped to the *bdcUser* big data cluster role and they need to be granted access to SQL Server (see [SQL Server permissions](../relational-databases/security/permissions-hierarchy-database-engine.md)) or HDFS (see [HDFS permissions Guide](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). When connected to the controller endpoint, these users can only list the endpoints available in the cluster using *azdata bdc endpoint list* command.
+AD groups in this list are mapped to the `bdcUser` big data cluster role and they need to be granted access to SQL Server (see [SQL Server permissions](../relational-databases/security/permissions-hierarchy-database-engine.md)) or HDFS (see [HDFS permissions Guide](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). When connected to the controller endpoint, these users can only list the endpoints available in the cluster using `azdata bdc endpoint list` command.
 
 For details on how to update the AD groups for this settings see [Manage Big Data Cluster access in Active Directory
 mode](manage-user-access.md).
 
   >[!TIP]
-  >To enable the HDFS browsing experience when connected to SQL Server master in Azure Data Studio, an user with bdcUser role must be granted VIEW SERVER STATE permissions since Azure Data studio is using the *sys.dm_cluster_endpoints* DMV to get the required Knox gateway endpoint to connect to HDFS.
+  >To enable the HDFS browsing experience when connected to SQL Server master in Azure Data Studio, an user with bdcUser role must be granted VIEW SERVER STATE permissions since Azure Data studio is using the `sys.dm_cluster_endpoints` DMV to get the required Knox gateway endpoint to connect to HDFS.
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 
   >[!IMPORTANT]
-  >If your domain users have a large number of group memberships, you should adjust the values for the gateway setting *httpserver.requestHeaderBuffer* (default value is *8192*) and HDFS setting *hadoop.security.group.mapping.ldap.search.group.hierarchy.levels* (default value is *10*), using the custom *bdc.json* deployment configuration file. This is a best practice to avoid connection timeouts to gateway and/or HTTP responses with a 431 (*Request Header Fields Too Large*) status code. Here is a section of the configuration file showing how to define the values of these settings and what are the recommended values for higher number of group memerships: 
+  >If your domain users have a large number of group memberships, you should adjust the values for the gateway setting `httpserver.requestHeaderBuffer` (default value is `8192`) and HDFS setting `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (default value is `10`), using the custom *bdc.json* deployment configuration file. This is a best practice to avoid connection timeouts to gateway and/or HTTP responses with a 431 (*Request Header Fields Too Large*) status code. Here is a section of the configuration file showing how to define the values of these settings and what are the recommended values for higher number of group memberships:
 
 ```json
 {
@@ -150,7 +150,7 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 To set the above parameters in the `control.json` file, use the following `azdata` commands. The commands replace the config and provide your own values before deployment.
 
 > [!IMPORTANT]
-> In the SQL Server 2019 CU2 release, the structure of the security configuration section in the deployment profile changed sightly and all the Active Directory related settings are in the new *activeDirectory* in the json tree under *security* in the *control.json* file.
+> In the SQL Server 2019 CU2 release, the structure of the security configuration section in the deployment profile changed sightly and all the Active Directory related settings are in the new `activeDirectory` in the json tree under `security` in the `control.json` file.
 
 >[!NOTE]
 > In addition to providing different values for the subdomain as described in this section, you must also use different port numbers for BDC endpoints when deploying multiple BDCs in the same Kubernetes cluster. These port numbers are configurable at deployment time through the [deployment configuration](deployment-custom-configuration.md) profiles.
@@ -186,7 +186,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clu
 #Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
-In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql` and considering the subdomain will use the default value of the cluster name in *control.json*, you will either use `mastersql.contoso.local,31433` or `mastersql.mssql-cluster.contoso.local,31433`  (depending on the values you provided in the deployment configuration files for the endpoint DNS names) to connect to the master instance from the tools. 
+In addition to the above information, you also need to provide DNS names for the different cluster endpoints. The DNS entries using your provided DNS names will automatically be created in your DNS Server upon deployment. You will use these names when connecting to the different cluster endpoints. For example, if the DNS name for SQL master instance is `mastersql` and considering the subdomain will use the default value of the cluster name in `control.json`, you will either use `mastersql.contoso.local,31433` or `mastersql.mssql-cluster.contoso.local,31433`  (depending on the values you provided in the deployment configuration files for the endpoint DNS names) to connect to the master instance from the tools. 
 
 ```bash
 # DNS names for BDC services

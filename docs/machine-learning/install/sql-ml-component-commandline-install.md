@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Install SQL Server Machine Learning Services with R and Python from the command line
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article provides instructions for installing SQL Server [Machine Learning Services](../sql-server-machine-learning-services.md) from a command line:
+This article provides instructions for installing [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) from a command line:
 
 + [New In-Database instance](#indb)
 + [Add to an existing database engine instance](#add-existing)

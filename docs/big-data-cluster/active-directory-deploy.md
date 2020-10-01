@@ -139,7 +139,7 @@ Below table show the authorization model for application management:
   >[!NOTE]
   >Active Directory requires the account names to be limited to 20 characters. BDC cluster needs to use 8 of the characters for distinguishing pods and StatefulSets. This leaves us 12 characters as a limit for the account prefix
 
-[Check AD group scope](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), to determine if it is DomainLocal.
+[Check AD group scope](/powershell/module/addsadministration/get-adgroup), to determine if it is DomainLocal.
 
 If you have not already initialized the deployment configuration file, you can run this command to get a copy of the configuration. Examples below use the `kubeadm-prod` profile, same applies to `openshift-prod`.
 

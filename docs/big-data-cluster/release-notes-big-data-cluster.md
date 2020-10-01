@@ -84,7 +84,7 @@ Cumulative Update 6 (CU6) release for SQL Server 2019.
 This release includes minor fixes and enhancements. The following articles include information related to these updates:
 
 - [Manage big data cluster access in Active Directory mode](manage-user-access.md)
-- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
 - [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
 - [Configure a SQL Server Big Data Cluster](configure-cluster.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)

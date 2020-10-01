@@ -64,7 +64,7 @@ The big data cluster requires an account with specific permissions. Before you p
 
 To create a new user in AD, you can right-click the domain or the OU and select **New** > **User**:
 
-![image12](./media/deploy-active-directory/image12.png)
+![Active Directory users dialog](./media/deploy-active-directory/image12.png)
 
 This user will be referred to as the *BDC domain service account* in this article.
 
@@ -78,9 +78,9 @@ New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the direct
 
 The examples in this article use `bdc` for the OU name.
 
-![image13](./media/deploy-active-directory/image13.png)
+![Active Directory organizational unit](./media/deploy-active-directory/image13.png)
 
-![image14](./media/deploy-active-directory/image14.png)
+![New object - organizational unit](./media/deploy-active-directory/image14.png)
 
 ### Set permissions for an AD account
 
@@ -96,19 +96,19 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
 1. Go to the Security tab (Make sure that you have selected **Advanced Features** by right-clicking on the OU, and selecting **View**)
 
-    ![image15](./media/deploy-active-directory/image15.png)
+    ![BDC object properties](./media/deploy-active-directory/image15.png)
 
 1. Click **Add...** and add the **bdcDSA** user
 
-    ![image16](./media/deploy-active-directory/image16.png)
+    ![Add BDC object properties](./media/deploy-active-directory/image16.png)
 
-    ![image17](./media/deploy-active-directory/image17.png)
+    ![Select object](./media/deploy-active-directory/image17.png)
 
 1. Select the **bdcDSA** user and clear all permissions, then click **Advanced**
 
 1. Click **Add**
 
-    ![image18](./media/deploy-active-directory/image18.png)
+    ![Click add](./media/deploy-active-directory/image18.png)
 
     - Click **Select a Principal**, insert **bdcDSA**, and click Ok
 
@@ -116,7 +116,7 @@ The BDC domain service account (DSA) needs to be able to create users, groups, a
 
     - Set **Applies To** to **This Object and all descendant objects**
 
-        ![image19](./media/deploy-active-directory/image19.png)
+        ![Set allow for properties](./media/deploy-active-directory/image19.png)
 
     - Scroll down to the bottom, and click **Clear all**
 

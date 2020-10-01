@@ -135,7 +135,7 @@
       - name: Prerequisites
         href: big-data-cluster/active-directory-prerequisites.md
       - name: Deploy
-      ] href: big-data-cluster/active-directory-deploy.md
+        href: big-data-cluster/active-directory-deploy.md
       - name: Connect
         href: big-data-cluster/active-directory-connect.md
       - name: Multiple BDCs in the same AD domain

@@ -108,7 +108,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 1. Customize the configuration files control.json and bdc.json. Here are some additional resources that guide you through the customizations supported for various use cases:
 
    - [Storage](concept-data-persistence.md)
-   - [AD related settings](deploy-active-directory.md)
+   - [AD related settings](active-directory-deploy.md)
    - [Other customizations](deployment-custom-configuration.md)
 
    > [!NOTE]

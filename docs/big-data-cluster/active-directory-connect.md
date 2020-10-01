@@ -42,11 +42,11 @@ From a domain joined client, you can open SSMS or Azure Data Studio and connect 
 
 From SSMS:
 
-![image23](./media/deploy-active-directory/image23.png)
+![Connect to SQL Server dialog in SSMS](./media/deploy-active-directory/image23.png)
 
 From Azure Data Studio:
 
-![image24](./media/deploy-active-directory/image24.png)}
+![Connect to SQL Server in Azure Data Studio dialog](./media/deploy-active-directory/image24.png)}
 
 ## Log in to controller with AD authentication
 
@@ -90,7 +90,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Before SQL Server 2019 CU5 release, only one BDC per domain (Active Directory) is allowed. Enabling multiple BDCs per domain is available starting with CU5 release.
 
-- None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](/powershell/module/addsadministration/get-adgroup).
 
 - AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC. Enabling logins from other trusted domain is not supported.
 

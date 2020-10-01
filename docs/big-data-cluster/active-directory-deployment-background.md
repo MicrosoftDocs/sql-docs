@@ -1,7 +1,7 @@
 ---
 title: Deploy multiple in Active Directory domain
 titleSuffix: SQL Server Big Data Cluster
-description: Learn about SQL Server Big Data Cluster deployment in Active Directory Domain.
+description: Learn how to deploy multiple SQL Server Big Data Clusters in a single Active Directory domain.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray

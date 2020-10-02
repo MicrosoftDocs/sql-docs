@@ -51,7 +51,7 @@ If you don't have access to a SQL Server instance, select your platform from the
     * For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name).
     * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you're prompted for a username and password. For more information about authentication types, see [Connect to the server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
-    !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection2.png)
+    !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection-2.png)
 
     You can also modify additional connection options by selecting **Options**. Examples of connection options are the database you're connecting to, the connection timeout value, and the network protocol. This article uses the default values for all the options.
 

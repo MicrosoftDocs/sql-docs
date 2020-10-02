@@ -145,14 +145,10 @@ ms.author: "sstein"
   
 3.  In the **SQL Server (**_instance_name_**) Properties** dialog box, click the **Startup Parameters** tab.  
   
-4.  In the **Existing parameters** box, select the -d parameter to move the master data file. Click **Update** to save the change.  
+4.  In the **Existing parameters** box, select the -d parameter. In the **Specify a startup parameter** box, change the parameter to the new path of the master *data* file. Click **Update** to save the change.
   
-     In the **Specify a startup parameter** box, change the parameter to the new path of the master database.  
-  
-5.  In the **Existing parameters** box, select the -l parameter to move the master log file. Click **Update** to save the change.  
-  
-     In the **Specify a startup parameter** box, change the parameter to the new path of the master database.  
-  
+5.  In the **Existing parameters** box, select the -l parameter. In the **Specify a startup parameter** box, change the parameter to the new path of the master *log* file. Click **Update** to save the change.
+
      The parameter value for the data file must follow the `-d` parameter and the value for the log file must follow the `-l` parameter. The following example shows the parameter values for the default location of the master data file.  
   
      `-dC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\master.mdf`  
@@ -164,14 +160,16 @@ ms.author: "sstein"
      `-dE:\SQLData\master.mdf`  
   
      `-lE:\SQLData\mastlog.ldf`  
+
+6.  Click **OK** to save the changes permanently and close the **SQL Server (**_instance_name_**) Properties** dialog box.
+
+7.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by right-clicking the instance name and choosing **Stop**.  
   
-6.  Stop the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by right-clicking the instance name and choosing **Stop**.  
+8.  Move the master.mdf and mastlog.ldf files to the new location.  
   
-7.  Move the master.mdf and mastlog.ldf files to the new location.  
+9.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-8.  Restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-9. Verify the file change for the master database by running the following query.  
+10. Verify the file change for the master database by running the following query.  
   
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
@@ -180,7 +178,7 @@ ms.author: "sstein"
     GO  
     ```  
 
-10. At this point SQL Server should run normally. However Microsoft recommends also adjusting the registry entry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, where *instance_ID* is like `MSSQL13.MSSQLSERVER`. In that hive, change the `SQLDataRoot` value to the new path. Failure to update the registry can cause patching and upgrading to fail.
+11. At this point SQL Server should run normally. However Microsoft recommends also adjusting the registry entry at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, where *instance_ID* is like `MSSQL13.MSSQLSERVER`. In that hive, change the `SQLDataRoot` value to the new path. Failure to update the registry can cause patching and upgrading to fail.
 
   
 ##  <a name="Resource"></a> Moving the Resource Database  

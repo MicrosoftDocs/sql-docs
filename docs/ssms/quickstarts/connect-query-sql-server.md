@@ -43,7 +43,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
 1. Start SQL Server Management Studio. The first time you run SSMS, the **Connect to Server** window opens. If it doesn't open, you can open it manually by selecting **Object Explorer** > **Connect** > **Database Engine**.
 
-    ![The Connect link in Object Explorer](media/connect-query-sql-server/connectobjexp.png)
+    ![The Connect link in Object Explorer](media/connect-query-sql-server/connect-object-explorer.png)
 
 2. In the **Connect to Server** window, follow the list below:
 
@@ -76,9 +76,9 @@ Create a database named TutorialDB by following the below steps:
 
 1. Right-click your server instance in Object Explorer, and then select **New Query**:
 
-   ![The New Query link](media/connect-query-sql-server/newquery.png)
+   ![The New Query link](media/connect-query-sql-server/new-query.png)
 
-2. Into the query window, paste the following T-SQL code snippet: 
+2. Into the query window, paste the following T-SQL code snippet:
 
    ```sql
    USE master
@@ -102,9 +102,9 @@ Create a database named TutorialDB by following the below steps:
 
 In this section, you create a table in the newly created TutorialDB database. Because the query editor is still in the context of the *master* database, switch the connection context to the *TutorialDB* database by doing the following steps:
 
-1. In the database drop-down list, select the database that you want, as shown here: 
+1. In the database drop-down list, select the database that you want, as shown here:
 
-   ![Change database](media/connect-query-sql-server/changedb.png)
+   ![Change database](media/connect-query-sql-server/change-db.png)
 
 2. Paste the following T-SQL code snippet into the query window, select it, and then select **Execute** (or select F5 on your keyboard).  
    You can either replace the existing text in the query window or append it to the end. To execute everything in the query window, select **Execute**. If you've appended the text, you want to execute just the portion of the text, so highlight that portion, and then select **Execute**.  
@@ -158,13 +158,13 @@ The results of a query are visible below the query text window. To query the Cus
 
     The results of the query are displayed under the area where the text was entered: 
 
-   ![The Results list](media/connect-query-sql-server/queryresults.png)
+   ![The Results list](media/connect-query-sql-server/query-results.png)
 
 2. Modify the way results are presented by selecting one of the following options:
 
      ![Three options for displaying query results](media/connect-query-sql-server/results.png)
 
-    * The middle button displays the results in **Grid View**, which is the default option. 
+    * The middle button displays the results in **Grid View**, which is the default option.
     * The first button displays the results in **Text View**, as shown in the image in the next section.
     * The third button lets you save the results to a file whose extension is .rpt by default.
 
@@ -175,7 +175,7 @@ You can find information about the connection properties under the results of yo
 * You can determine which server and database you're connected to, and the username that you use.
 * You can also view the query duration and the number of rows that are returned by the previously executed query.
 
-    ![Connection properties](media/connect-query-sql-server/connectionproperties.png)
+    ![Connection properties](media/connect-query-sql-server/connection-properties.png)
 
     > [!Note]
     > In the image, the results are displayed in **Text View**.
@@ -188,7 +188,7 @@ You can change the server that your current query window is connected to by foll
 
 2. Change the server that your query uses.
 
-   ![The Change Connection command](media/connect-query-sql-server/changeconnection.png)
+   ![The Change Connection command](media/connect-query-sql-server/change-connection.png)
 
     > [!NOTE]
     > This action changes only the server that the query window is connected to, not the server that Object Explorer uses.

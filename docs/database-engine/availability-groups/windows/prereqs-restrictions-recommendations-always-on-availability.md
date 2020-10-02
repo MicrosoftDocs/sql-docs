@@ -61,7 +61,7 @@ ms.author: mathoma
 ###  <a name="PermissionsWindows"></a> Permissions (Windows System)  
  To administer a WSFC, the user must be a system administrator on every cluster node.  
   
- For more information about the account for administering the cluster, see [Appendix A: Failover Cluster Requirements](https://technet.microsoft.com/library/dd197454.aspx).  
+ For more information about the account for administering the cluster, see [Appendix A: Failover Cluster Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197454(v=ws.10)).  
   
 ###  <a name="RelatedTasksWindows"></a> Related Tasks (Windows System)  
   
@@ -97,7 +97,7 @@ ms.author: mathoma
   
 -   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Cluster resource commands and equivalent Windows PowerShell cmdlets](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Cluster resource commands and equivalent Windows PowerShell cmdlets](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> Related Content (Windows System)  
   
@@ -125,10 +125,10 @@ ms.author: mathoma
   
 |Prerequisite|Links|  
 |------------------|-----------|  
-|The host computer must be a WSFC node. The instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas for a given availability group reside on separate nodes of the cluster. An availability group can temporarily straddle two clusters while being migrated to different cluster. SQL Server 2016 introduces distributed availability groups. In a distributed availability group two availability groups reside on different clusters.|[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Distributed Availability Groups (Always On Availability Groups)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|The host computer must be a WSFC node. The instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas for a given availability group reside on separate nodes of the cluster. An availability group can temporarily straddle two clusters while being migrated to different cluster. SQL Server 2016 introduces distributed availability groups. In a distributed availability group two availability groups reside on different clusters.|[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Distributed Availability Groups (Always On Availability Groups)](./distributed-availability-groups.md)|  
 |If you want an availability group to work with Kerberos:<br /><br /> All server instances that host an availability replica for the availability group must use the same SQL Server service account.<br /><br /> The domain administrator needs to manually register a Service Principal Name (SPN) with Active Directory on the SQL Server service account for the virtual network name (VNN) of the availability group listener. If the SPN is registered on an account other than the SQL Server service account, authentication will fail.<br /><br /> <br /><br /> <b>\*\* Important \*\*</b> If you change the SQL Server service account, the domain administrator will need to manually re-register the SPN.|[Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Brief explanation:**<br /><br /> Kerberos and SPNs enforce mutual authentication. The SPN maps to the Windows account that starts the SQL Server services. If the SPN is not registered correctly or if it fails, the Windows security layer cannot determine the account associated with the SPN, and Kerberos authentication cannot be used.<br /><br /> <br /><br /> Note: NTLM does not have this requirement.|  
 |If you plan to use a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance (FCI) to host an availability replica, ensure that you understand the FCI restrictions and that the FCI requirements are met.|[Prerequisites and Requirements on Using a SQL Server Failover Cluster Instance (FCI) to Host an Availability Replica](#FciArLimitations) (later in this article)|  
-|Each server instance must be running the same version of SQL Server to participate in an Always On Availability Group.|Editions and supported features for [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
+|Each server instance must be running the same version of SQL Server to participate in an Always On Availability Group.|Editions and supported features for [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016), [SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017).|  
 |All the server instances that host availability replicas for an availability group must use the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] collation.|[Set or Change the Server Collation](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |Enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that will host an availability replica for any availability group. On a given computer, you can enable as many server instances for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] as your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation supports.|[Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Important \*\*</b> If you destroy and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original cluster.|  
 |Each server instance requires a database mirroring endpoint. Note that this endpoint is shared by all the availability replicas and database mirroring partners and witnesses on the server instance.<br /><br /> If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the [New Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (or [Add Replica to Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the wizard.<br /><br /> <br /><br /> <b>\*\* Security Note \*\*</b> Transport security for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is the same as for database mirroring.|[The Database Mirroring Endpoint &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -160,7 +160,7 @@ ms.author: mathoma
 
 -  SQL Server 2019 introduced parallel redo for memory optimized availability group databases. In SQL Server 2016 and 2017, disk-based tables do not use parallel redo if a database in an availability group is also memory optimized. 
   
- For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
+ For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
   
 ###  <a name="PermissionsSI"></a> Permissions (Server Instance)  
   
@@ -179,7 +179,7 @@ ms.author: mathoma
   
 ###  <a name="RelatedContentSI"></a> Related Content (Server Instance)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ##  <a name="NetworkConnect"></a> Network Connectivity Recommendations  
  We strongly recommend that you use the same network links for communications between WSFC nodes and communications between availability replicas.  Using separate network links can cause unexpected behaviors if some of links fail (even intermittently).  
@@ -203,14 +203,14 @@ ms.author: mathoma
 ###  <a name="RestrictionsFCI"></a> Restrictions (FCIs)  
   
 > [!NOTE]  
-> Failover Cluster Instances supports Clustered Shared Volumes (CSV). For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](https://technet.microsoft.com/library/dd759255.aspx).  
+> Failover Cluster Instances supports Clustered Shared Volumes (CSV). For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)).  
   
 -   **The cluster nodes of an FCI can host only one replica for a given availability group:**  If you add an availability replica on an FCI, the WSFC nodes that are possible FCI owners cannot host another replica for the same availability group.  To avoid possible conflicts, it is recommended to configure possible owners for the failover cluster instance. This will prevent potentially causing a single WSFC from attempting to host two availability replicas for the same availability group.
   
      Furthermore, every other replica must be hosted by an instance of SQL Server 2016 that resides on a different cluster node in the same Windows Server failover cluster. The only exception is that while being migrated to another cluster, an availability group can temporarily straddle two clusters. 
 
   >[!WARNING]
-  > Using the Failover Cluster Manager to move a *failover cluster instance* hosting an availability group to a node that is *already* hosting a replica of the same availability group may result in the loss of the availability group replica, preventing it from being brought online on the target node. A single node of a failover cluster cannot host more than one replica for the same availability group. For more information on  how this occurs, and how to recover, see the blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/). 
+  > Using the Failover Cluster Manager to move a *failover cluster instance* hosting an availability group to a node that is *already* hosting a replica of the same availability group may result in the loss of the availability group replica, preventing it from being brought online on the target node. A single node of a failover cluster cannot host more than one replica for the same availability group. For more information on  how this occurs, and how to recover, see the blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group). 
 
   
 -   **FCIs do not support automatic failover by availability groups:**  FCIs do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can be configured for manual failover only.  
@@ -228,14 +228,14 @@ ms.author: mathoma
 |Task|Article|  
 |----------|-----------|  
 |Installing a SQL Server Failover Cluster|[Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|In-place upgrade of your existing SQL Server Failover Cluster|[Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|In-place upgrade of your existing SQL Server Failover Cluster|[Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Maintaining your existing SQL Server Failover Cluster|[Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
 ###  <a name="RelatedContentFCIs"></a> Related Content (FCIs)  
   
 -   [Failover Clustering and Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On Architecture Guide: Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
 ##  <a name="PrerequisitesForAGs"></a> Availability Group Prerequisites and Restrictions  
  **In This Section:**  
@@ -375,11 +375,11 @@ ms.author: mathoma
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -388,5 +388,4 @@ ms.author: mathoma
   
     
   
---------------------------------------------------  
-
+--------------------------------------------------

@@ -22,7 +22,7 @@ With many organizations trying to migrate to Azure, it is critical to assess exi
 
 [Data Migration Assistant (DMA)](dma-overview.md) helps assess a SQL Server instance for a specific Azure SQL target, and gauges the readiness of SQL Server databases migrating to Azure SQL. Upload DMA assessment results to Azure Migrate hub for a centralized readiness view of the entire data estate. 
 
-This article teaches you to perform assessments at scale using the DMA command-line interface (DMACMD). Alternatively, you can use the [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) to perform the assessment instead. 
+This article teaches you to perform assessments at scale and upload the results to Azure Migrate hub using the DMA command-line interface (DMACMD). Alternatively, you can use the [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) to perform the assessment instead. 
 
 ## Prerequisites 
 

@@ -14,10 +14,12 @@ ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
 ---
-# Restore Database (General Page)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Use the **General** page to specify information about the target and source databases for a database-restore operation.  
+# Restore Database (General Page)
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Use the **General** page to specify information about the target and source databases for a database-restore operation.  
     
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
@@ -29,19 +31,21 @@ ms.author: mikeray
 ## Permissions  
 To RESTORE a database that doesn't exist the user must have CREATE DATABASE permissions. The RESTORE permissions default to members of the **sysadmin** and **dbcreator** fixed server roles and the owner (**dbo**) for existing databases of the database.  
 
-The membership information for the roles that have RESTORE permissions is always available on the server.
+The membership information for the roles that have RESTORE permissions is always available on the instance.
+
 In a database that is accessible, and undamaged a fixed database role membership can be checked. Members of the **db_owner** fixed database role don't have RESTORE permissions.  
- 
+
 A fixed database role membership can be checked only when the database is accessible and undamaged. Which isn't always the case when RESTORE is executed, members of the **db_owner** fixed database role don't have RESTORE permissions.  
- 
- RESTORE permissions are given to roles in which membership information is always readily available to the server. Fixed database role membership can be checked only when the database is accessible and undamaged. Periodically, when RESTORE is executed, members of the **db_owner** fixed database role don't have RESTORE permissions.  
-  
- Restoring from an encrypted backup requires **VIEW DEFINITION** permissions to the certificate or asymmetric key used to encrypt during backup.  
+
+RESTORE permissions are given to roles in which membership information is always readily available to the server. Fixed database role membership can be checked only when the database is accessible and undamaged. Periodically, when RESTORE is executed, members of the **db_owner** fixed database role don't have RESTORE permissions.  
+
+Restoring from an encrypted backup requires **VIEW DEFINITION** permissions to the certificate or asymmetric key used to encrypt during backup.  
   
 ## Options  
   
 ### Source  
- The options of the **Restore from panel identify the location of the backup sets for the database and which backup sets you want to restore.  
+
+These options identify the location of the backup sets for the database and which backup sets you want to restore.  
   
 |Term|Definition|  
 |----------|----------------|  

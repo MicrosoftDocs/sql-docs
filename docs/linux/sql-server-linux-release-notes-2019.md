@@ -30,7 +30,11 @@ The following table lists the release history for SQL Server 2019 releases.
 
 | Release                   | Version       | Release date |
 |---------------------------|---------------|--------------|
+<<<<<<< HEAD
 | [CU8](#cu8)               | 15.0.4073.23  | 2020-10-01   |
+=======
+| [CU8](#cu8)               |               |              |
+>>>>>>> 4ced4e5a5f8e2919f433bb872c0531ac600bdf53
 | [CU7 (Removed)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |

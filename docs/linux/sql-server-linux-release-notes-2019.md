@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2019 on Linux
 description: This article contains the release notes and supported features for SQL Server 2019 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -30,6 +30,8 @@ The following table lists the release history for SQL Server 2019 releases.
 
 | Release                   | Version       | Release date |
 |---------------------------|---------------|--------------|
+| [CU8](#cu8)               |               |              |
+| [CU7 (Removed)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 2020-03-31   |
@@ -52,9 +54,13 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
+## <a id="cu8"></a> CU8
+
+Cumulative Update 8 (CU8) for SQL Server 2019 (15.x) has not yet released.
+
 ## <a id="cu6"></a> CU6 (July 2020)
 
-This is the Cumulative Update 6 (CU6) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4053.23. For information about the fixes and improvements, see <https://support.microsoft.com/help/4563110>
+This is the Cumulative Update 6 (CU6) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4053.23. For information about the fixes and improvements, see <https://support.microsoft.com/help/4563110>.
 
 ### Package details
 
@@ -73,7 +79,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="cu5"></a> CU5 (June 2020)
 
-This is the Cumulative Update 5 (CU5) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4043.16. For information about the fixes and improvements, see <https://support.microsoft.com/help/4552255>
+This is the Cumulative Update 5 (CU5) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4043.16. For information about the fixes and improvements, see <https://support.microsoft.com/help/4552255>.
 
 ### Package details
 
@@ -92,7 +98,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="cu4"></a> CU4 (April 2020)
 
-This is the Cumulative Update 4 (CU4) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4033.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/4548597>
+This is the Cumulative Update 4 (CU4) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4033.1. For information about the fixes and improvements, see <https://support.microsoft.com/help/4548597>.
 
 ### Package details
 
@@ -111,7 +117,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="cu3"></a> CU3 (March 2020)
 
-This is the Cumulative Update 3 (CU3) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4023.6. For information about the fixes and improvements, see <https://support.microsoft.com/help/4538853>
+This is the Cumulative Update 3 (CU3) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4023.6. For information about the fixes and improvements, see <https://support.microsoft.com/help/4538853>.
 
 ### Package details
 
@@ -130,7 +136,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="cu2"></a> CU2 (February 2020)
 
-This is the Cumulative Update 2 (CU2) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4013.40. For information about the fixes and improvements, see <https://support.microsoft.com/help/4536075>
+This is the Cumulative Update 2 (CU2) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4013.40. For information about the fixes and improvements, see <https://support.microsoft.com/help/4536075>.
 
 ### Package details
 
@@ -147,7 +153,7 @@ For manual or offline package installations, you can download the RPM and Debian
 
 ## <a id="cu1"></a> CU1 (January 2020)
 
-This is the Cumulative Update 1 (CU1) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4003.23. For information about the fixes and improvements in this release, see <https://support.microsoft.com/en-us/help/4527376>
+This is the Cumulative Update 1 (CU1) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4003.23. For information about the fixes and improvements in this release, see <https://support.microsoft.com/en-us/help/4527376>.
 
 ### Package details
 

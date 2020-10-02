@@ -158,9 +158,9 @@ In databases that have many objects, you can use filtering to search for specifi
 
 ## Access your SQL Server error log
 
-The error log is a file that contains details about things that occur in your SQL Server instance. You can browse and query the error log in SSMS. The error log is a .log file that's located on your disk.
+The error log is a file that contains details about things that occur in your SQL Server instance. You can browse and query the error login SSMS. The error log is a .log file that's located on your disk.
 
-### Open the error log in SSMS
+### Open the error login SSMS
 
 1. Connect to your SQL server.  
 
@@ -170,7 +170,7 @@ The error log is a file that contains details about things that occur in your SQ
 
     ![View the error log in SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
-### Query the error log in SSMS
+### Query the error login SSMS
 
 1. Connect to your SQL server.
 
@@ -206,7 +206,7 @@ The error log is a file that contains details about things that occur in your SQ
 
 ### Find the error log location if you can't connect to SQL Server
 
-The path for your SQL Server errog log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your SQL Server error log. *Your path may vary from the path indicated below*.
+The path for your SQL Server error log can vary depending on your configuration settings. The path for the error log location can be found in the startup parameters within the SQL Server Configuration Manager. Follow the steps below to locate the relevant startup parameter identifying the location of your SQL Server error log. *Your path may vary from the path indicated below*.
 
 1. Open SQL Server Configuration Manager.
 
@@ -222,11 +222,11 @@ The path for your SQL Server errog log can vary depending on your configuration 
 
     ![Error log](media/ssms-tricks/errorlog.png)
 
-    There are several errorlog.* files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
+    There are several error log files in this location. The file name that ends with *.log is the current error log file. File names that end with numbers are previous log files. A new log is created every time the SQL server restarts.
 
-6. Open the errorlog.log file in Notepad. 
+6. Open the errorlog.log file in Notepad.
 
-## <a name="determine-sql-server-name"></a>Find SQL Server instance name
+## Find SQL Server instance name
 
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 

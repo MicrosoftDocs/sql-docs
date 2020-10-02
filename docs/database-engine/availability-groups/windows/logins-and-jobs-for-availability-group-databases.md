@@ -48,7 +48,7 @@ ms.author: mathoma
 > [!NOTE]  
 >  This problem affects Windows local accounts on different computers. However, this problem does not occur for domain accounts because the SID is the same on each of the computers.  
   
- For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (a Database Engine blog).  
+ For more information, see [Orphaned Users with Database Mirroring and Log Shipping](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (a Database Engine blog).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -64,5 +64,4 @@ ms.author: mathoma
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Contained Databases](../../../relational-databases/databases/contained-databases.md)   
  [Create Jobs](../../../ssms/agent/create-jobs.md)  
-  
   

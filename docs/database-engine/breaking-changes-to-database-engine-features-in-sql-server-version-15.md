@@ -25,4 +25,4 @@ SQL Server 2019 does not introduce breaking changes.
 
 - [Deprecated database engine features in SQL Server 2019](../database-engine/deprecated-database-engine-features-in-sql-server-version-15.md)   
 - [Discontinued database engine functionality in SQL Server](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)   
-- [SQL Server database engine backward compatibility](../database-engine/sql-server-database-engine-backward-compatibility.md)
+- [SQL Server database engine backward compatibility](./discontinued-database-engine-functionality-in-sql-server.md)

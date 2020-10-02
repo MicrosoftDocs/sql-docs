@@ -68,7 +68,7 @@ Enabling TLS encryption increases the security of data transmitted across networ
 > To use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named ***test1.\*\<your company>\*.com*** and ***test2.\*\<your company>\*.com***, and you have a virtual server named ***virtsql***, you need to install a certificate for ***virtsql.\*\<your company>\*.com*** on both nodes. You can set the value of the **ForceEncryption** option on the **Protocols for virtsql** property box of **SQL Server Network Configuration** to **Yes**.
 
 > [!NOTE]
-> When creating encrypted connections for an Azure Search indexer to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an Azure VM, see [Configure a connection from an Azure Search indexer to SQL Server on an Azure VM](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
+> When creating encrypted connections for an Azure Search indexer to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an Azure VM, see [Configure a connection from an Azure Search indexer to SQL Server on an Azure VM](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
 
 ## Certificate requirements
 
@@ -120,7 +120,7 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
 
 > [!IMPORTANT]
 > For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority.    
-> For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) or [certreq command](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
+> For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1).
   
 ## Install across multiple servers
 
@@ -181,4 +181,4 @@ To encrypt a connection from [!INCLUDE[ssManStudioFull](../../includes/ssmanstud
 
 + [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

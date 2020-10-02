@@ -25,7 +25,7 @@ ms.author: mathoma
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
--   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   You must have a hybrid-IT environment where your on-premise subnet has a site-to-site VPN with Azure. For more information, see [Configure a Site-to-Site VPN in the Management Portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal).  
   
 -   Your availability group must contain on-premise availability replicas.  
   
@@ -51,7 +51,7 @@ ms.author: mathoma
   
 1.  First, download a management certificate for your Azure subscription. Click **Download** to open the sign-in page.  
   
-2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](https://technet.microsoft.com/jj592903) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
+2.  Sign in to Microsoft Azure with your Microsoft account or your organizational account. Your Microsoft or organizational account is in the format of an email address, such as  HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. For more information about Azure credentials, see [Microsoft Account for Organizations FAQ](/previous-versions/jj592903(v=msdn.10)) and [Troubleshooting sign-in problems with your organizational account](https://support.microsoft.com/kb/2756852).  
   
 3.  Next, connect to your subscription by clicking **Connect**. Once you are connected, the drop-down lists are populated with your Azure parameters, such as **Virtual Network** and **Virtual Network Subnet**.  
   
@@ -101,5 +101,4 @@ ms.author: mathoma
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
-  
   

@@ -39,7 +39,9 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
 `[ @table_name = ] 'table_name'`
  Specifies the table used to return catalog information. *table_name* is **sysname**, with no default. Wildcard pattern matching is not supported.  

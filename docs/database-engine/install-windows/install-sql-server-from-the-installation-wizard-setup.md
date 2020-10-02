@@ -26,8 +26,8 @@ This article provides a step-by-step procedure for installing a new instance of 
 
 For other ways to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see:  
 
-* [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [Install SQL Server by using a configuration file](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [Install SQL Server from the command prompt](./install-sql-server-from-the-command-prompt.md)  
+* [Install SQL Server by using a configuration file](./install-sql-server-using-a-configuration-file.md)  
 * [Install SQL Server by using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [Create a new SQL Server failover cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [Upgrade SQL Server by using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -64,7 +64,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms** check box, and then select **Next**.  
     
    > [!NOTE]
-   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
   
@@ -232,7 +232,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
    > If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or click **Back** and enter a License Key that supports the operating system maximum number of processors.
 
    > [!NOTE]
-   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
   
@@ -320,14 +320,14 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!NOTE]  
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    For more information, see the [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+    For more information, see the [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
 
      Use the **Database Engine Configuration - Memory** page to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option.
      
     > [!NOTE]  
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    For more information, see the [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+    For more information, see the [Database Engine Configuration - Memory page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -405,4 +405,4 @@ To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../
 * [Repair a failed SQL Server installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [Upgrade to SQL Server by using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [Install SQL Server from the command prompt](./install-sql-server-from-the-command-prompt.md)

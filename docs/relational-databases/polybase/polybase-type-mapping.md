@@ -58,7 +58,8 @@ For external tables that reference files in external data sources, the column an
 | Oracle data type | SQL Server type | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |Nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 

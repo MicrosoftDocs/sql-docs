@@ -26,10 +26,11 @@ This article teaches you to perform assessments at scale using the DMA command-l
 
 ## Prerequisites 
 
-To use DMACMD to perform an assessment, you need the following: 
+To use DMACMD to perform an assessment and upload the results to Azure Migrate hub, you need the following: 
 
 - The [latest version of Data Migration Assistant (DMA)](https://www.microsoft.com/en-us/download/details.aspx?id=53595).
 - An [Azure Migrate project](dma-assess-sql-data-estate-to-sqldb.md#create-a-project-and-add-a-tool). 
+- Contributor role access to the Azure Migrate project resource.
 
 ## Use DMACMD
 

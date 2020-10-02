@@ -1,7 +1,7 @@
 ---
-title: "DMACMD: Assess SQL Server readiness to migrate to Azure SQL Database"
+title: "DMACMD: Assess SQL Server readiness to migrate to Azure SQL"
 titleSuffix: Data Migration Assistant
-description: "Learn how to use Data Migration Assistant commandline tool (DMACMD) to migrate a SQL Server data estate for migration to Azure SQL Database"
+description: "Learn how to use Data Migration Assistant command line tool (DMACMD) to assess a SQL Server data estate for migration to Azure SQL"
 ms.date: "10/02/2020"
 ms.prod: sql
 ms.prod_service: "dma"

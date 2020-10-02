@@ -11,33 +11,18 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install `azdata` to manage [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] with Windows Installer
+# Install `azdata` with Windows Installer
 
 [!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
-This article describes how to install `azdata` on Windows with an installer.
+This article describes how to install `azdata` on Windows with an installer. Use `azdata` to manage SQL Server Big Data Clusters or Azure Arc enabled data services.
 
-## Install `azdata` with the Microsoft Windows Installer
+## Steps to Install `azdata` with the Microsoft Windows Installer
 
 To install `azdata` on with the Microsoft Windows Installer,
 
 1. Remove `azdata` if it was installed using `pip`. If `azdata` was installed using Windows Installer, proceed to the next step.
 1. Install `azdata` using the Windows Installer.
-
-### Uninstall if previous installation done with `pip`
-
-If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
-
->[!NOTE]
->If your previous installation was done using the MSI, you will not need to uninstall any current versions before using the MSI installer.
-
-### <a id="install-azdata-windows"></a>Install with Windows Installer
-
-Use the Windows Installer to install or update `azdata` on Windows.
-
-[Download the `azdata` Windows Installer](https://aka.ms/azdata-msi).
-
-When the installer asks if it can make changes to your computer, click `Yes`.
 
 ### Uninstall `azdata` with Windows Installer
 

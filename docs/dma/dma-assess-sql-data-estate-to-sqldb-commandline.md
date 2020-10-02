@@ -22,7 +22,7 @@ With many organizations trying to migrate to Azure, it is critical to assess exi
 
 [Data Migration Assistant (DMA)](dma-overview.md) helps assess a SQL Server instance for a specific Azure SQL target, and gauges the readiness of SQL Server databases migrating to Azure SQL. Upload DMA assessment results to Azure Migrate hub for a centralized readiness view of the entire data estate. 
 
-This article teaches you to perform assessments at scale using the DMA command line interface (DMACMD). Alternatively, you can use the [DMA GUI](dma-assess-sql-data-estate-to-sql-db.md) to perform the assessment instead. 
+This article teaches you to perform assessments at scale using the DMA command-line interface (DMACMD). Alternatively, you can use the [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) to perform the assessment instead. 
 
 ## Prerequisites 
 
@@ -33,7 +33,7 @@ To use DMACMD to perform an assessment, you need the following:
 
 ## Use DMACMD
 
-Use an XML file as input to run assessments at scale using the command line interface (DMACMD.exe). 
+Use an XML file as input to run assessments at scale using the command-line interface (DMACMD.exe). 
 
 Use the following sample command to pass an XML file to DMACMD and start the assessment:
 
@@ -86,17 +86,16 @@ The XML elements that are passed to DMACMD are defined in the following table:
 |`AssessmentTargetPlatform`|Target SQL Server platform.  </br> `AzureSqlDatabase` is for an Azure SQL Database target. </br> `ManagedSqlServer` is for an Azure SQL Managed Instance target. </br></br>The sample **Assess-for-AzureSQLMI** assess a SQL Managed Instance target.|
 |`AssessmentDatabases`|If you need to assess all the databases in an instance, then specify just the instance name else list specific databases in each line. </br></br>The sample **Assess-for-AzureSQLMI** assess all databases in instance `Servername\SQL2017` and several databases in instance `Servername\SQL2016`.  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | Specifies the format of the result file. `.DMA`, `.JSON`, and `.CSV` respectively. Double-click `.DMA` to open in the DMA UI. |
-|`AssessmentOverwriteResult`| Indicates whether to overwrite any existing assessment result file with the same path as 
- `AssessmentResultJson`, `AssessmentResultDma` or `AssessmentResultCsv`.|
-|`AssessmentEvaluateCompatibilityIssues` </br> `AssessmentEvaluateFeatureParity` |Perform assessment to evaluate compatibility issues and feature parity issues respectively|
-|`AzureCloudEnvironment`|Azure cloud environment to connect to, default is Azure Public Cloud. </br></br> Supported values: </br>**Azure (default)**, **AzureChina**, **AzureGermany**, **AzureUSGovernment**|
-|`SubscriptionId`|Azure subscription id|
-|`AzureMigrateProjectName`|Azure Migrate project name to upload assessment results to|
-|`ResourceGroupName`|Azure Migrate resource group name|
-|`AzureAuthenticationInteractiveAuthentication`|Set to true to pop up the authentication window|
+|`AssessmentOverwriteResult`| Indicates whether to overwrite any existing assessment result file with the same path as `AssessmentResultJson`, `AssessmentResultDma` or `AssessmentResultCsv`.|
+|`AssessmentEvaluateCompatibilityIssues` </br> `AssessmentEvaluateFeatureParity` |Perform assessment to evaluate compatibility issues and feature parity issues respectively.|
+|`AzureCloudEnvironment`|Azure cloud environment to connect to, default is Azure Public Cloud. </br></br> Supported values: </br>`Azure (default)`, `AzureChina`, `AzureGermany`, `AzureUSGovernment`.|
+|`SubscriptionId`|Azure subscription ID.|
+|`AzureMigrateProjectName`|Azure Migrate project name to upload assessment results to.|
+|`ResourceGroupName`|Azure Migrate resource group name.|
+|`AzureAuthenticationInteractiveAuthentication`|Set to true to pop up the authentication window.|
 |`AzureAuthenticationTenantId`|Azure Active Directory tenant ID. </br></br>Obtain this from the **Overview** blade of Azure Active Directory in the [Azure portal](https://portal.azure.com). |
-|`EnableAssessmentUploadToAzureMigrate`| Enables uploading and publishing assessment results to Azure Migrate|
-|---|---|
+|`EnableAssessmentUploadToAzureMigrate`| Enables uploading and publishing assessment results to Azure Migrate.|
+|   |   |
 
 
 ## Results 

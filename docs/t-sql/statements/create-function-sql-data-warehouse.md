@@ -57,7 +57,9 @@ RETURNS return_data_type
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
   
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  *schema_name*  

@@ -59039,6 +59039,11 @@
       "source_path": "docs/azure-data-studio/notebooks-tutorial-sql-kernel.md",
       "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-sql-kernel",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
+      "redirect_url": "/sql/ssms/quickstarts/connect-query-sql-server",
+      "redirect_document_id": false
     }
   ]
 }

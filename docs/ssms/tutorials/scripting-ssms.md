@@ -152,7 +152,7 @@ The following section teaches you to script out the database by using the **Scri
 
 9. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016b*.
 
-    ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
+    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
 10. Select **Execute** to execute the query and create your new AdventureWorks2016b database.
 

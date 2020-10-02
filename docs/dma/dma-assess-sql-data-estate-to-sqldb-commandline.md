@@ -90,9 +90,9 @@ The XML elements that are passed to DMACMD are defined in the following table:
 |`SubscriptionId`|Azure subscription ID.|
 |`AzureMigrateProjectName`|Azure Migrate project name to upload assessment results to.|
 |`ResourceGroupName`|Azure Migrate resource group name.|
-|`AzureAuthenticationInteractiveAuthentication`|Set to true to pop up the authentication window.|
+|`AzureAuthenticationInteractiveAuthentication`|Set to `true` to pop up the authentication window.|
 |`AzureAuthenticationTenantId`|Azure Active Directory tenant ID. </br></br>Obtain this from the **Overview** blade of Azure Active Directory in the [Azure portal](https://portal.azure.com). |
-|`EnableAssessmentUploadToAzureMigrate`| Enables uploading and publishing assessment results to Azure Migrate.|
+|`EnableAssessmentUploadToAzureMigrate`| Set to `true` to upload and publish assessment results to Azure Migrate hub.|
 |   |   |
 
 
@@ -116,14 +116,14 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 --------------------------------------------------------------------------------
 ```
 
-View uploaded results in [Azure Migrate](dma-assess-sql-data-estate-to-sqldb.md#view-target-readiness-assessment-results) for a centralized view of the entire dat estate. . 
+View uploaded results in [Azure Migrate](dma-assess-sql-data-estate-to-sqldb.md#view-target-readiness-assessment-results) for a centralized view of the entire data estate. . 
 
 ## Best practices 
 
 Consider the following best practices when using DMACMD: 
 
-- Target databases that are logically grouped together based on the application, rather than all databases in the entire SQL Server data estate. 
-- Create a separate Azure Migrate project for each project to avoid overwriting results. 
+- Logically group together target SQL Server instances and databases based on the application, rather than assessing all SQL Server instances in the entire data estate. 
+- Create a separate Azure Migrate project for each Azure SQL target to avoid overwriting results. 
 - The time to run an assessment depends on the number of database objects. If possible, avoid running assessments on production system and offload to a virtual machine or staging server instead, especially for databases with a large number of objects. 
 
 

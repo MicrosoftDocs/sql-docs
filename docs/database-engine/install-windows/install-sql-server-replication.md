@@ -37,11 +37,10 @@ After replication components are installed, you must configure the server before
 ## Installing Replication from the Command Prompt  
  **To install replication when installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- See [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+- See [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
 ## See also  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)   
- [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
  [Features Supported by the Editions of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-  
   

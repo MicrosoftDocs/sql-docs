@@ -67,7 +67,9 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 <select_statement> ::=
     SELECT select_criteria
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments
 

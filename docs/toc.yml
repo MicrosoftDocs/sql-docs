@@ -6063,7 +6063,7 @@
         href: dma/dma-assesssqlonprem.md
       - name: Use DMA GUI
         href: dma/dma-assess-sql-data-estate-to-sqldb.md
-      - name: Use DMA commandline 
+      - name: Use DMA command-line 
         href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
   - name: SQL Server Migration Assistant (SSMA)
     href: ssma/toc.yml

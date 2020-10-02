@@ -74,8 +74,6 @@ The contents of sample `Assess-for-AzureSQLMI.xml` define the elements to assess
 
 ## XML Elements 
 
-Use Microsoft Excel to open the .CSV file to inspect XML elements. 
-
 The XML elements that are passed to DMACMD are defined in the following table: 
 
 

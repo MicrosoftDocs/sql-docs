@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -57,7 +57,7 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release | BDC Version  | `azdata` Version <sup>1</sup> | Release date |
+| Release<sup>1</sup> | BDC Version  | `azdata` Version <sup>2</sup> | Release date |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -67,7 +67,11 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> `azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
+<sup>1</sup>The following releases are not available for BDC:
+- CU7: Removed
+- CU8: Pending release
+
+<sup>2</sup>`azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
 ## How to install updates
 

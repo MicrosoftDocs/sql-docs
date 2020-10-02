@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: "pensivebrian"
 ms.author: "broneill"
 ms.reviewer: "drskwier; sstein"
-ms.date: 10/01/2020
+ms.date: 10/02/2020
 ---
 
 # Download and install sqlpackage
@@ -20,15 +20,24 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 
 |Platform|Download|Release date|Version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2143544)|September 18, 2020| 18.6 | 15.0.4897.1 |
-|macOS .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|September 18, 2020| 18.6| 15.0.4897.1 |
-|Linux .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|September 18, 2020| 18.6| 15.0.4897.1 |
-|Windows .NET Core |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|September 18, 2020| 18.6| 15.0.4897.1 |
-
-sqlpackage is also available as a [nuget package](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx/150.4897.1).  For more information, see the [nuget Package](#nuget-package) section.
+|[Windows](#get-sqlpackage-for-windows)|[MSI Installer](https://go.microsoft.com/fwlink/?linkid=2143544)|September 18, 2020| 18.6 | 15.0.4897.1 |
+|[macOS .NET Core](#get-sqlpackage-net-core-for-macos) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143659)|September 18, 2020| 18.6| 15.0.4897.1 |
+|[Linux .NET Core](#get-sqlpackage-net-core-for-linux) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143497)|September 18, 2020| 18.6| 15.0.4897.1 |
+|[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[.zip file](https://go.microsoft.com/fwlink/?linkid=2143496)|September 18, 2020| 18.6| 15.0.4897.1 |
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md). To download additional languages, see the [Available Languages](#available-languages) section.
 
+## DacFx
+DacServices ([Microsoft.SqlServer.Dac](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.dac.dacservices)) is a related mechanism for integrating database deployment into your application pipeline.  The DacServices API is available in a package through nuget, [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx).  The current DacFx version is 150.4897.1.
+
+Installing the nuget package via the .NET CLI is accomplished with this command:
+
+```cmd
+> dotnet add package Microsoft.SqlServer.DACFx
+```
+
+>[!NOTE]
+> Additional nuget packages were published under the DacFx name, "Microsoft.SqlServer.DacFx.x64" and "Microsoft.SqlServer.DacFx.x86". Support for both platforms is covered under the "Microsoft.SqlServer.DACFx" package. New references should be made to this package, not the x64 or x86 variants.
 
 ## Get sqlpackage for Windows
 
@@ -165,18 +174,6 @@ sqlpackage .NET Core macOS:
 sqlpackage .NET Core Linux:  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2143497&clcid=0x40a)
 
-## nuget Package
-
-sqlpackage is available in a nuget package, [Microsoft.SqlServer.DACFx](https://www.nuget.org/packages/Microsoft.SqlServer.DACFx). 
-
-Installing the nuget package via the .NET CLI is accomplished with this command:
-
-```cmd
-> dotnet add package Microsoft.SqlServer.DACFx
-```
-
->[!NOTE]
-> Additional nuget packages were published under the DacFx name, "Microsoft.SqlServer.DacFx.x64" and "Microsoft.SqlServer.DacFx.x86". Support for both platforms is covered under the "Microsoft.SqlServer.DACFx" package. New references should be made to this package, not the x64 or x86 variants.
 
 ## Next Steps
 

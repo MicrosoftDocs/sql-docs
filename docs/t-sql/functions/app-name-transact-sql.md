@@ -35,8 +35,7 @@ This function returns the application name for the current session, if the appli
   
 ## Syntax  
   
-```sql
-  
+```syntaxsql
 APP_NAME  ( )  
 ```  
   
@@ -57,9 +56,9 @@ This example checks whether the client application that initiated this process i
 USE AdventureWorks2012;  
 GO  
 IF APP_NAME() = 'Microsoft SQL Server Management Studio - Query'  
-PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( varchar(100) , GETDATE(), 101) + '.';  
+PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 101) + '.';  
 ELSE   
-PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( varchar(100) , GETDATE(), 102) + '.';  
+PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 102) + '.';  
 GO  
 ```  
   

@@ -4383,11 +4383,7 @@
     - name: Usage and diagnostic data collection
       items:
       - name: SQL Server privacy supplement
-        items:
-        - name: SQL Server 2017 and prior
-          href: sql-server/sql-server-privacy.md
-        - name: SQL Server 2019
-          href: sql-server/sql-server-privacy-ver15.md
+        href: sql-server/sql-server-privacy.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data
@@ -4824,6 +4820,10 @@
   - name: Azure Migration Services >
     displayName: DMS, Data Migration Service, Azure Data Migration Service
     href: /azure/dms/dms-overview
+  - name: Migration guides
+    items:
+    - name: From DB2
+      href: sql-server/migrate/guides/db2-to-sql-server.md
   - name: Data Quality Services (DQS)
     items:
     - name: Overview
@@ -8462,10 +8462,18 @@
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ssms/sql-server-management-studio-ssms.md
-    - name: Tutorials
+    - name: Quickstarts
       items:
       - name: Connect & query SQL Server
-        href: ssms/tutorials/connect-query-sql-server.md
+        href: ssms/quickstarts/connect-query-sql-server.md
+    - name: Tutorials
+      items:
+      - name: SSMS Configuration
+        href: ssms/tutorials/ssms-configuration.md
+      - name: Use other tips & tricks
+        href: ssms/tutorials/ssms-tricks.md
+      - name: Script objects
+        href: ssms/tutorials/scripting-ssms.md
       - name: Import Flat File
         href: relational-databases/import-export/import-flat-file-wizard.md
     - name: Concepts
@@ -8752,12 +8760,6 @@
         href: ssms/install-other-languages.md
       - name: Use templates in SSMS
         href: ssms/template/templates-ssms.md
-      - name: Script objects
-        href: ssms/tutorials/scripting-ssms.md
-      - name: SSMS Configuration
-        href: ssms/tutorials/ssms-configuration.md
-      - name: Use other tips & tricks
-        href: ssms/tutorials/ssms-tricks.md
       - name: Customize Menus & Shortcut Keys
         href: ssms/customize-menus-and-shortcut-keys.md
       - name: Configure WMI to Show Server Status in SQL Server Tools
@@ -10129,6 +10131,18 @@
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: Azure Arc enabled SQL Server (preview)
+  items:
+    - name: Overview
+      href: sql-server/azure-arc/overview.md
+    - name: Connect
+      href: sql-server/azure-arc/connect.md
+    - name: Connect at scale
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: Assess
+      href: sql-server/azure-arc/assess.md
+    - name: Configure advanced data Security
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: Resources
   items:
   - name: Offline SQL Server documentation

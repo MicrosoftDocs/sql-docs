@@ -29,8 +29,7 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-201
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TRY_PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
@@ -127,7 +126,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ### A. Simple example of TRY_PARSE  
   
-```  
+```sql
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
 ```  
   
@@ -143,7 +142,7 @@ NULL
   
 ### B. Detecting nulls with TRY_PARSE  
   
-```  
+```sql
 SELECT  
     CASE WHEN TRY_PARSE('Aragorn' AS decimal USING 'sr-Latn-CS') IS NULL  
         THEN 'True'  
@@ -164,10 +163,9 @@ True
   
 ### C. Using IIF with TRY_PARSE and implicit culture setting  
   
-```  
+```sql
 SET LANGUAGE English;  
-SELECT IIF(TRY_PARSE('01/01/2011' AS datetime2) IS NULL, 'True', 'False') AS Result;  
-  
+SELECT IIF(TRY_PARSE('01/01/2011' AS datetime2) IS NULL, 'True', 'False') AS Result;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

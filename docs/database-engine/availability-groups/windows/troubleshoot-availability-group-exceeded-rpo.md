@@ -64,7 +64,7 @@ To remedy this issue, try upgrading your network bandwidth or removing or reduci
  Data loss is prevented as soon as the log block is hardened on the log file. Therefore, it is critical to isolate the log file from the data file. If the log file and the data file are both mapped to the same hard disk, reporting workload with intensive reads on the data file will consume the same I/O resources needed by the log hardening operation. Slow log hardening can translate to slow acknowledgment to the primary replica, which can cause excessive activation of the flow control and long flow control wait times.  
   
 ### Diagnosis and resolution  
- If you have verified that the network is not suffering from high latency or low throughput, then you should investigate the secondary replica for I/O contentions. Queries from [SQL Server: Minimize Disk I/O](https://technet.microsoft.com/magazine/jj643251.aspx) are useful in identifying contentions. Examples from that article are derived below for your convenience.  
+ If you have verified that the network is not suffering from high latency or low throughput, then you should investigate the secondary replica for I/O contentions. Queries from [SQL Server: Minimize Disk I/O](/previous-versions/technet-magazine/jj643251(v=msdn.10)) are useful in identifying contentions. Examples from that article are derived below for your convenience.  
   
  The following script lets you see the number of reads and writes on each data and log file for every availability database running on an instance of SQL Server. It's sorted by average I/O stall time, in milliseconds. Note that the numbers are cumulative from the last time the server instance was started. Therefore, you should take the difference between two measurements after some time has elapsed.  
   
@@ -121,6 +121,5 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  If you identify an I/O bottleneck and you have placed the log file and the data file on the same hard disk, the first thing you should do is to place the data file and the log file on separate disks. This best practice prevents reporting workload from interfering with the log transfer path from the primary replica to the log buffer and its ability to harden the transaction on the secondary replica.  
   
 ## Next steps  
- [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [Troubleshooting performance problems in SQL Server (applies to SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

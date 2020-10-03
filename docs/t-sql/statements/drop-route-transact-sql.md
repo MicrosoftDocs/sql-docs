@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP ROUTE route_name  
 [ ; ]  
 ```  
@@ -55,7 +54,7 @@ DROP ROUTE route_name
 ## Examples  
  The following example deletes the `ExpenseRoute` route.  
   
-```  
+```sql  
 DROP ROUTE ExpenseRoute ;  
 ```  
   

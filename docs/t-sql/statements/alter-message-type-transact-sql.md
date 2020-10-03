@@ -30,8 +30,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
     {  NONE   
@@ -76,7 +75,7 @@ ALTER MESSAGE TYPE message_type_name
 ## Examples  
  The following example changes the message type `//Adventure-Works.com/Expenses/SubmitExpense` to require that the message body contain a well-formed XML document.  
   
-```  
+```sql  
 ALTER MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = WELL_FORMED_XML ;  

@@ -129,7 +129,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 Starting with JDBC Driver **8.4.1**, the driver added support to authenticate to Azure Key Vaults using Managed Identities.
 
-If the application is hosted in Azure, the user can use [Managed Identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) to authenticate to the Azure Key Vault, thus eliminating the need to provide and expose any credentials in the code. 
+If the application is hosted in Azure, the user can use [Managed Identities](/azure/active-directory/managed-identities-azure-resources/overview) to authenticate to the Azure Key Vault, thus eliminating the need to provide and expose any credentials in the code. 
 
 #### Connection properties for Key Vault authentication with Managed Identities
 
@@ -159,7 +159,7 @@ Users are encouraged to use these connection properties to specify the type of a
 
 Note that previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described above.
 
-For information on how to configure Managed Identities, see [Configure managed identities for Azure resources on a VM using the Azure portal](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
+For information on how to configure Managed Identities, see [Configure managed identities for Azure resources on a VM using the Azure portal](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 
 ### Using Windows Certificate Store provider
 The SQLServerColumnEncryptionCertificateStoreProvider can be used to store column master keys in the Windows Certificate Store. Use the SQL Server Management Studio (SSMS) Always Encrypted wizard or other supported tools to create the column master key and column encryption key definitions in the database. The same wizard can be used to generate a self-signed certificate in the Windows Certificate Store that can be used as a column master key for the Always Encrypted data. For more information on column master key and column encryption key T-SQL syntax, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) and [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectively.

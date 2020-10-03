@@ -6,7 +6,7 @@ ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "clusters [SQL Server], removing failover cluster instance"
   - "failover clustering [SQL Server], removing failover cluster instance"

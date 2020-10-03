@@ -5,7 +5,7 @@ ms.date: "06/15/2020"
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "upgrading failover clusters"
   - "clusters [SQL Server], upgrading"

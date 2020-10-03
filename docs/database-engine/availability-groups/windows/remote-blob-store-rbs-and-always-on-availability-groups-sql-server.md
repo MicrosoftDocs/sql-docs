@@ -37,12 +37,11 @@ ms.author: mathoma
   
 -   [Maintaining Remote BLOB Store](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Books Online)  
   
--   [Running RBS Maintainer](https://docs.microsoft.com/archive/blogs/sqlrbs/running-rbs-maintainer) (blog)  
+-   [Running RBS Maintainer](/archive/blogs/sqlrbs/running-rbs-maintainer) (blog)  
   
--   [Configure Remote BLOB Storage (RBS) with the FILESTREAM provider (SharePoint 2010)](https://docs.microsoft.com/archive/blogs/mvpawardprogram/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010) (blog)  
+-   [Configure Remote BLOB Storage (RBS) with the FILESTREAM provider (SharePoint 2010)](/archive/blogs/mvpawardprogram/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010) (blog)  
   
 ## See Also  
  [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [Remote Blob Store &#40;RBS&#41; &#40;SQL Server&#41;](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
-  
   

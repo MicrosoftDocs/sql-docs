@@ -21,9 +21,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Frequently executed.  
   
--   Expected to be very fast.  
+-   Expected to be fast.  
   
- The performance benefit of using a natively compiled stored procedure increases with the number of rows and the amount of logic that is processed by the procedure. For example, a natively compiled stored procedure will exhibit better performance if it uses one or more of the following:  
+ The performance benefit of using a natively compiled stored procedure increases with the number of rows and the amount of logic that is processed by the procedure. For example, a natively compiled stored procedure will exhibit better performance if it uses one or more of the following components:  
   
 -   Aggregation.  
   
@@ -37,11 +37,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  If you need to process only a single row, using a natively compiled stored procedure may not provide a performance benefit.  
   
- To avoid the server having to map parameter names and convert types:  
+ To avoid the server having to map parameter names and convert types, make sure that you:  
   
 -   Match the types of the parameters passed to the procedure with the types in the procedure definition.  
   
--   Use ordinal (nameless) parameters when calling natively compiled stored procedures. For the most efficient execution, do not use named parameters.  
+-   Use ordinal (nameless) parameters when calling natively compiled stored procedures. For the most efficient execution, don't use named parameters.  
   
  Inefficiencies in parameters with natively compiled stored procedures can be detected through the XEvent **natively_compiled_proc_slow_parameter_passing**:
  - Mismatched types: **reason=parameter_conversion**

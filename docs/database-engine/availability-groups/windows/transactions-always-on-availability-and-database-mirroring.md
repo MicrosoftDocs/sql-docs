@@ -36,9 +36,9 @@ To configure an availability group for distributed transactions, see [Configure 
 
 See more information at:
 
-- [DTC Administration Guide](https://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC Developers Guide](https://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC Programmers Reference](https://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC Administration Guide](/previous-versions/windows/desktop/ms681291(v=vs.85))
+- [DTC Developers Guide](/previous-versions/windows/desktop/ms679938(v=vs.85))
+- [DTC Programmers Reference](/previous-versions/windows/desktop/ms686108(v=vs.85))
 
 ## SQL Server 2016 SP1 and before: Support for cross-database transactions within the same SQL Server instance  
 
@@ -87,5 +87,4 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
   
 ## Next steps  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

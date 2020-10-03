@@ -31,7 +31,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 PWDCOMPARE ( 'clear_text_password'  
    , password_hash   
    [ , version ] )  
@@ -72,7 +71,7 @@ PWDCOMPARE ( 'clear_text_password'
 ### A. Identifying logins that have no passwords  
  The following example identifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins that have no passwords.  
   
-```  
+```sql  
 SELECT name FROM sys.sql_logins   
 WHERE PWDCOMPARE('', password_hash) = 1 ;  
 ```  
@@ -80,7 +79,7 @@ WHERE PWDCOMPARE('', password_hash) = 1 ;
 ### B. Searching for common passwords  
  To search for common passwords that you want to identify and change, specify the password as the first parameter. For example, execute the following statement to search for a password specified as `password`.  
   
-```  
+```sql  
 SELECT name FROM sys.sql_logins   
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  

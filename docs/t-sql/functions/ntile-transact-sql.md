@@ -61,7 +61,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ### A. Dividing rows into groups  
  The following example divides rows into four groups of employees based on their year-to-date sales. Because the total number of rows is not divisible by the number of groups, the first two groups have four rows and the remaining groups have three rows each.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT p.FirstName, p.LastName  
@@ -105,10 +105,10 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ### B. Dividing the result set by using PARTITION BY  
  The following example adds the `PARTITION BY` argument to the code in example A. The rows are first partitioned by `PostalCode` and then divided into four groups within each `PostalCode`. The example also declares a variable `@NTILE_Var` and uses that variable to specify the value for the *integer_expression* parameter.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NTILE_Var int = 4;  
+DECLARE @NTILE_Var INT = 4;  
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
@@ -152,7 +152,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 ### C. Dividing rows into groups  
  The following example uses the NTILE function to divide a set of salespersons into four groups based on their assigned sales quota for the year 2003. Because the total number of rows is not divisible by the number of groups, the first group has five rows and the remaining groups have four rows each.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
@@ -192,7 +192,7 @@ Tsoflias          4          867,000.00
 ### D. Dividing the result set by using PARTITION BY  
  The following example adds the PARTITION BY argument to the code in example A. The rows are first partitioned by `SalesTerritoryCountry` and then divided into two groups within each `SalesTerritoryCountry`. Notice that the ORDER BY in the OVER clause orders the NTILE and the ORDER BY of the SELECT statement orders the result set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  

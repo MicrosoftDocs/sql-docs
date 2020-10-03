@@ -146,7 +146,7 @@ GRANT permission [ ,...n ]
 ### A. Granting a permission to a login  
  The following example grants `CONTROL SERVER` permission to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `TerryEminhizer`.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -155,7 +155,7 @@ GO
 ### B. Granting a permission that has GRANT permission  
  The following example grants `ALTER ANY EVENT NOTIFICATION` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `JanethEsteves` with the right to grant that permission to another login.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -164,7 +164,7 @@ GO
 ### C. Granting a permission to a server role  
  The following example creates two server roles named `ITDevAdmin` and `ITDevelopers`. It grants the `ALTER ANY DATABASE` permission to the `ITDevAdmin` user-defined server role including the `WITH GRANT` option so that the `ITDevAdmin` server role can reassign the `ALTER ANY DATABASE` permission. Then, the example grants the `ITDevelopers` the permission to use the `ALTER ANY DATABASE` permission of the `ITDevAdmin` server role.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

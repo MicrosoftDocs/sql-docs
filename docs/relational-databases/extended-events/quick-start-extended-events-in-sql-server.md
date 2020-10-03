@@ -1,17 +1,23 @@
 ---
 title: "Quickstart: Extended events in SQL Server"
 description: This quickstart helps you use Extended Events, a lightweight performance monitoring system, to collect data to monitor and troubleshoot problems in SQL Server.
-ms.date: "04/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xevents
 ms.topic: quickstart
+f1_keywords:
+- sql11.ssms.XeNewEventSession.General.f1
+- sql11.ssms.XeNewEventSession.Events.f1
+- sql11.ssms.XeNewEventSession.Targets.f1
+- sql11.ssms.XeNewEventSession.Advanced.f1
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
+ms.reviewer: maghan
+ms.date: "04/16/2020"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Quickstart: Extended events in SQL Server
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

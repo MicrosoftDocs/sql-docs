@@ -136,7 +136,7 @@ A non-partitioned graph node/edge table cannot be altered into a partitioned gra
 ### A. Create a `NODE` table
  The following example shows how to create a `NODE` table
 
-```
+```sql
  CREATE TABLE Person (
         ID INTEGER PRIMARY KEY, 
         name VARCHAR(100), 
@@ -147,18 +147,16 @@ A non-partitioned graph node/edge table cannot be altered into a partitioned gra
 ### B. Create an `EDGE` table
 The following examples show how to create `EDGE` tables
 
-```
+```sql
  CREATE TABLE friends (
-    id integer PRIMARY KEY,
-    start_date date
+    id INTEGER PRIMARY KEY,
+    start_date DATe
  ) AS EDGE;
-
 ```
 
-```
+```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
-
 ```
 
 

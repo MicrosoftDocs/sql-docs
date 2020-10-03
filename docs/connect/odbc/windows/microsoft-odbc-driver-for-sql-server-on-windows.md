@@ -47,6 +47,6 @@ This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../.
   
 ## See Also  
 - [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
-- [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
+- [SQL Server Native Client FAQ](/previous-versions/aa937707(v=msdn.10))   
 - [ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)

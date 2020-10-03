@@ -75,7 +75,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- [Data Virtualization extension](../azure-data-studio/data-virtualization-extension.md) for Azure Data Studio
+- [Data Virtualization extension](../azure-data-studio/extensions/data-virtualization-extension.md) for Azure Data Studio
 
 
 ## <a id="deploy"></a> Deployment overview
@@ -250,7 +250,7 @@ After the deployment script has completed successfully, you can obtain the addre
    > [!TIP]
    > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. `mssql-cluster` is the default name for the big data cluster.
 
-1. Log in to the big data cluster with [azdata login](reference-azdata.md). Set the `--endpoint` parameter to the external IP address of the controller endpoint.
+1. Log in to the big data cluster with [azdata login](../azdata/reference/reference-azdata.md). Set the `--endpoint` parameter to the external IP address of the controller endpoint.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -261,7 +261,7 @@ After the deployment script has completed successfully, you can obtain the addre
    > [!TIP]
    > If you are the Kubernetes cluster administrator and have access to the cluster configuration file (kube config file), you can configure the current context to point to the targeted Kubernetes cluster. In this case, you can login with `azdata login -n <namespaceName>`, where `namespace` is the big data cluster name. You would be prompted for credentials if not specified within the login command.
    
-1. Run [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -293,7 +293,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a id="status"></a> Verify the cluster status
 
-After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command.
+After deployment, you can check the status of the cluster with the [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) command.
 
 ```bash
 azdata bdc status show
@@ -376,7 +376,7 @@ Bdc: ready                                                                      
 
 You can also get more detailed status with the following commands:
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) returns health status for all components associated with the control management service
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) returns health status for all components associated with the control management service
 ```
 azdata bdc control status show
 ```

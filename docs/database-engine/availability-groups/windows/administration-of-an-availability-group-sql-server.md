@@ -99,8 +99,8 @@ ms.author: mathoma
   
 -   **Blogs:**  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)    
-[CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)    
+[CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
   
 -   **Videos:**  
   
@@ -126,4 +126,3 @@ ms.author: mathoma
  [Overview of Transact-SQL Statements for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Overview of PowerShell Cmdlets for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
-   

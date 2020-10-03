@@ -83,7 +83,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
 ## Deploy big data cluster
 
-1. Install latest [azdata](deploy-install-azdata.md).
+1. Install latest [azdata](../azdata/install/deploy-install-azdata.md).
 
 1. Clone one of the built-in configuration files for OpenShift, depending on your target environment (OpenShift on premises or ARO) and deployment scenario. See the *OpenShift specific settings in the deployment configuration files* section below for settings that are specific to OpenShift in the built-in configuration files. For more details on available configuration files see [deployment guidance](deployment-guidance.md).
 

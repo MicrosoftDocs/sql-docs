@@ -18,7 +18,7 @@ ms.author: v-daenge
 
 This article provides information on how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 
-You can use Azure Active Directory (Azure AD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+You can use Azure Active Directory (Azure AD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). 
 
 Connection properties to support Azure Active Directory authentication in the Microsoft JDBC Driver for SQL Server are:
 *	**authentication**:  Use this property to indicate which SQL authentication method to use for the connection. 
@@ -284,7 +284,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	
 	![JDBC_AAD_Token](media/jdbc_aad_token.png)  
 2. Sign in to your Azure SQL Server's user database as an Azure Active Directory admin and using a T-SQL command
-provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
+provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
  for more details on how to create an Azure Active Directory admin and a contained database user.
 
 	```
@@ -349,4 +349,4 @@ If the connection is successful, you should see the following message as output:
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>	
-``` 
+```

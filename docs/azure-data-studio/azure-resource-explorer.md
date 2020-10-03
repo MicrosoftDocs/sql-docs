@@ -16,7 +16,7 @@ ms.date: 09/24/2018
 In this document, you learn how you can explore and manage Azure SQL Server, Azure SQL database, and Azure SQL Managed Instance resources through Azure Resource Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->The Azure Resource Explorer is supported in SQL Server 2019. After that, you can install the extension through [extension manager](extensions.md) or through **File** > **Install Package from VSIX Package**.
+>The Azure Resource Explorer is supported in SQL Server 2019. After that, you can install the extension through [extension manager](./extensions/add-extensions.md) or through **File** > **Install Package from VSIX Package**.
 
 ## Connect to Azure
 

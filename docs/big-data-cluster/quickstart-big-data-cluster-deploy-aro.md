@@ -32,7 +32,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python minimum version 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
-- [`azdata` CLI](deploy-install-azdata.md)
+- [`azdata` CLI](../azdata/install/deploy-install-azdata.md)
 - **Azure Data Studio**
 
 ## Log in to your Azure account

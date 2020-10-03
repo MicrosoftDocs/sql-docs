@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata` with zypper
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
 For Linux distributions with `zypper` there is a package for the `azdata-cli`. The CLI package has been tested on Linux versions which use `zypper`:
 

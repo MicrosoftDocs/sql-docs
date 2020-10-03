@@ -39,17 +39,14 @@ pip3 install -U requests
 
 1. Starting with SQL Server 2019 CU5 release, azdata has an independent semantic version from the server. If you have any previous releases of `azdata` installed prior to this, it is important to first uninstall them before installing the latest version.
 
-   For example, for CTP 3.2 or RC1, run the following command:
+   For example, for 2019-cu4, run the following command:
 
    ```powershell
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu4/requirements.txt
    ```
 
-   or
-
-   ```powershell
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-   ```
+  > [!NOTE]
+  > In the preceding examples, replace `2019-cu6` with the version and CU of your installation of `azdata`. 
 
 1. Install `azdata`.
 
@@ -80,17 +77,14 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 
 1. Starting with SQL Server 2019 CU5 release, azdata has an independent semantic version from the server. If you have any previous releases of `azdata` installed prior to this, it is important to first uninstall them before installing the latest version.
 
-   For example, for CTP 3.2 or RC1, run the following command:
+   For example, for `2019-cu6`, run the following command:
 
    ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-cu6/requirements.txt
    ```
 
-   or
-
-   ```bash
-   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
-   ```
+  > [!NOTE]
+  > In the preceding examples, replace `2019-cu6` with the version and CU of your installation of `azdata`.
 
 1. Install `azdata`.
 

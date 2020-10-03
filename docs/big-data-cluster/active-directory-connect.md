@@ -80,20 +80,6 @@ You can also issue HDFS commands using curl through the Knox gateway endpoint. T
 curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/webhdfs/v1/products?op=MKDIRS -X PUT
 ```
 
-## Known issues and limitations
-
-**Limitations to be aware of in SQL Server 2019 CU5**
-
-- Currently, the Log Search Dashboard and Metrics Dashboard do not support AD authentication. Basic username and password set upon deployment can be used for authentication to these dashboards. All other cluster endpoint support AD authentication.
-
-- The secure AD mode will only work on `kubeadm` and `openshift` deployment environments and not on AKS or ARO right now. The `kubeadm-prod` and `openshift-prod` deployment profiles includes the security sections by default.
-
-- Before SQL Server 2019 CU5 release, only one BDC per domain (Active Directory) is allowed. Enabling multiple BDCs per domain is available starting with CU5 release.
-
-- None of the AD groups specified in security configurations can be DomainLocal scoped. You can check the scope of an AD group by following [these instructions](/powershell/module/addsadministration/get-adgroup).
-
-- AD account that can be used to login into BDC are allowed from the same domain that was configured for BDC. Enabling logins from other trusted domain is not supported.
-
 ## Next steps
 
 [Troubleshoot SQL Server Big Data Cluster Active Directory integration](troubleshoot-active-directory.md)

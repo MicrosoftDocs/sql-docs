@@ -36,8 +36,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
@@ -61,7 +60,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## Examples  
  The following example reports the transmission status for the conversation with the conversation handle `58ef1d2d-c405-42eb-a762-23ff320bddf0`.  
   
-```  
+```sql  
 SELECT Status =  
     GET_TRANSMISSION_STATUS('58ef1d2d-c405-42eb-a762-23ff320bddf0') ;  
 ```  

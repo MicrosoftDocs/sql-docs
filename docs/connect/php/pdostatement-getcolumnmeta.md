@@ -66,7 +66,7 @@ print $metadata['name'];
   
 ## Sensitivity Data Classification Metadata
 
-Beginning with version 5.8.0, a new statement attribute `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` is available for users to access the [sensitivity data classification metadata](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) in Microsoft SQL Server 2019 using `PDOStatement::getColumnMeta`, which requires Microsoft ODBC Driver 17.4.2 or above.
+Beginning with version 5.8.0, a new statement attribute `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` is available for users to access the [sensitivity data classification metadata](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4) in Microsoft SQL Server 2019 using `PDOStatement::getColumnMeta`, which requires Microsoft ODBC Driver 17.4.2 or above.
 
 Note the attribute `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` is `false` by default, but when set to `true`, the aforementioned array field, `flags`, will be populated with the sensitivity data classification metadata, if it exists. 
 
@@ -130,4 +130,3 @@ If we modify the above snippet by setting `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

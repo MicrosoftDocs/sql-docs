@@ -149,7 +149,7 @@ In the following diagram, the primary replica has been manually failed over to C
 
 ## SQL Server instance offline
 
-If the instance of SQL Server specified in the connection string is not available (has an outage), the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+If the instance of SQL Server specified in the connection string is not available (has an outage), the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
 
 ## See Also
 
@@ -157,4 +157,4 @@ If the instance of SQL Server specified in the connection string is not availabl
  
 [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

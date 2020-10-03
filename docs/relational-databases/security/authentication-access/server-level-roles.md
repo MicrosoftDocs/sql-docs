@@ -53,6 +53,9 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**dbcreator**|Members of the **dbcreator** fixed server role can create, alter, drop, and restore any database.|  
 |**public**|Every [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login belongs to the **public** server role. When a server principal has not been granted or denied specific permissions on a securable object, the user inherits the permissions granted to public on that object. Only assign public permissions on any object when you want the object to be available to all users. You cannot change membership in public.<br /><br /> **Note:** **public** is implemented differently than other roles, and permissions can be granted, denied, or revoked from the public fixed server roles.|  
   
+> [!IMPORTANT] 
+> Most of the permissions provided by the following server roles are not applicable to Synapse SQL - **processadmin**, **serveradmin**, **setupadmin**, and **diskadmin**.
+  
 ## Permissions of Fixed Server Roles  
  Each fixed server role has certain permissions assigned to it. The following graphic shows the permissions assigned to the server roles.   
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   

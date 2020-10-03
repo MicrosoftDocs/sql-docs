@@ -53,7 +53,7 @@ ms.author: mathoma
   
  **For more information:**  
   
- [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (a SQL Server blog)  
+ [Converting a log shipping configuration to Availability Group](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group) (a SQL Server blog)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Log shipping**  
@@ -80,17 +80,17 @@ ms.author: mathoma
   
 -   **Blogs:**  
   
-     [Converting a logshipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)  
+     [Converting a logshipping configuration to Availability Group](/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
+     [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
   
 -   **Whitepapers:**  
   
-     [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](https://msdn.microsoft.com/library/jj635217)  
+     [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))  
   
      [Microsoft White Papers for SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
@@ -100,5 +100,4 @@ ms.author: mathoma
  [About Log Shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

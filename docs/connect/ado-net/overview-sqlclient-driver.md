@@ -33,4 +33,4 @@ ms.reviewer: v-kaywon
 
 ## Next steps
  [SqlClient Driver GitHub Repository](https://github.com/dotnet/SqlClient)  
- [.NET API Browser](https://docs.microsoft.com/dotnet/api/)
+ [.NET API Browser](/dotnet/api/)

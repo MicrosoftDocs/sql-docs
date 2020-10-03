@@ -16,7 +16,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Spatial datatypes (Geometry and Geography) are supported starting JDBC Driver preview release 6.5.0. Spatial datatypes are currently not supported with stored procedures, Table Valued Parameters (TVP), BulkCopy, and Always Encrypted. This page shows various use cases of Geometry and Geography data types with the JDBC Driver. For an overview on spatial datatypes, check [Spatial Data Types Overview](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) page.
+Spatial datatypes (Geometry and Geography) are supported starting JDBC Driver preview release 6.5.0. Spatial datatypes are currently not supported with stored procedures, Table Valued Parameters (TVP), BulkCopy, and Always Encrypted. This page shows various use cases of Geometry and Geography data types with the JDBC Driver. For an overview on spatial datatypes, check [Spatial Data Types Overview](../../relational-databases/spatial/spatial-data-types-overview.md) page.
 
 ## Creating a geometry / geography object
 

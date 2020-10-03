@@ -13,7 +13,7 @@ ms.date: 09/22/2020
 
 # Deploy Azure SQL Edge with Azure Data Studio (Preview)
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) is a relational database engine optimized for IoT and Azure IoT Edge deployments. It provides capabilities to create a high-performance data storage and processing layer for IoT applications and solutions. This article shows you how to deploy an Azure SQL Edge instance with Azure Data Studio and the deployment scenarios that are supported with the deployment wizard.  
+[Azure SQL Edge](/azure/azure-sql-edge/overview) is a relational database engine optimized for IoT and Azure IoT Edge deployments. It provides capabilities to create a high-performance data storage and processing layer for IoT applications and solutions. This article shows you how to deploy an Azure SQL Edge instance with Azure Data Studio and the deployment scenarios that are supported with the deployment wizard.  
 
 The following scenarios are supported by the deployment wizard in Azure Data Studio:
 
@@ -71,11 +71,11 @@ Optionally, a dacpac file can be zipped in a folder and deployed to the new Azur
 
 ## Multiple Devices of an Azure IoT Hub
 
-If you have an existing IoT hub and connected devices, Azure SQL Edge can be deployed to the device based on the resource group, IoT hub name, and a [target condition](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition) to select device(s).
+If you have an existing IoT hub and connected devices, Azure SQL Edge can be deployed to the device based on the resource group, IoT hub name, and a [target condition](/azure/iot-edge/module-deployment-monitoring#target-condition) to select device(s).
 The IP address provided during the deployment wizard is utilized to generate a quick connect link at the bottom of the notebook.
 
 Optionally, a dacpac file can be zipped in a folder and deployed to the new Azure SQL Edge instance as a part of the process.  If a dacpac file is provided, an Azure Blob Storage account is created in the same resource group.
 
 ## Next steps
 
-- [Learn more about Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [Learn more about Azure SQL Edge](/azure/azure-sql-edge/)

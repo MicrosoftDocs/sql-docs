@@ -101,6 +101,5 @@ ms.author: mathoma
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
+ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   

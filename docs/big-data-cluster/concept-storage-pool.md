@@ -42,7 +42,7 @@ Storage nodes are responsible for:
 - Data storage in HDFS (Parquet and delimited text format). HDFS also provides data persistency, as HDFS data is spread across all the storage nodes in the SQL BDC.
 - Data access through HDFS and SQL Server endpoints.
 
-## Accessing Data
+## Accessing data
 
 The main methods for accessing the data in the storage pool are:
 

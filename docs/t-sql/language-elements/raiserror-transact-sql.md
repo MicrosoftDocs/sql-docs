@@ -136,7 +136,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  You can specify -1 to return the severity value associated with the error as shown in the following example.  
   
-```  
+```sql  
 RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');  
 ```  
   
@@ -181,7 +181,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  Typically, successive arguments replace successive conversion specifications; the first argument replaces the first conversion specification, the second argument replaces the second conversion specification, and so on. For example, in the following `RAISERROR` statement, the first argument of `N'number'` replaces the first conversion specification of `%s`; and the second argument of `5` replaces the second conversion specification of `%d.`  
   
-```  
+```sql  
 RAISERROR (N'This is message %s %d.', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -195,7 +195,7 @@ GO
   
  For example, both of the following `RAISERROR` statements return the same string. One specifies the width and precision values in the argument list; the other specifies them in the conversion specification.  
   
-```  
+```sql  
 RAISERROR (N'<\<%*.*s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
@@ -220,7 +220,7 @@ GO
 > [!NOTE]  
 >  RAISERROR only generates errors with state from 1 through 127. Because the [!INCLUDE[ssDE](../../includes/ssde-md.md)] may raise errors with state 0, we recommend that you check the error state returned by ERROR_STATE before passing it as a value to the state parameter of RAISERROR.  
   
-```  
+```sql  
 BEGIN TRY  
     -- RAISERROR with severity 11-19 will cause execution to   
     -- jump to the CATCH block.  
@@ -252,7 +252,7 @@ END CATCH;
 ### B. Creating an ad hoc message in sys.messages  
  The following example shows how to raise a message stored in the sys.messages catalog view. The message was added to the sys.messages catalog view by using the `sp_addmessage` system stored procedure as message number `50005`.  
   
-```  
+```sql  
 sp_addmessage @msgnum = 50005,  
               @severity = 10,  
               @msgtext = N'<\<%7.3s>>';  
@@ -270,7 +270,7 @@ GO
 ### C. Using a local variable to supply the message text  
  The following code example shows how to use a local variable to supply the message text for a `RAISERROR` statement.  
   
-```  
+```sql  
 DECLARE @StringVariable NVARCHAR(50);  
 SET @StringVariable = N'<\<%7.3s>>';  
   

@@ -22,13 +22,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  For more information on supported features with memory-optimized tables and natively compiled stored procedures, see:  
   
--   [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## Databases That Use In-Memory OLTP  
  The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] features that are not supported, and the keywords that can appear in the message text of an error involving an In-Memory OLTP database. The table also lists the resolution for the error.  
@@ -104,7 +104,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Feature|COMPUTE|The **COMPUTE** clause is not supported. Remove it from the query.|  
 |Feature|SELECT INTO|The **INTO** clause is not supported with the **SELECT** statement. Rewrite the query as **INSERT INTO** _Table_ **SELECT**.|  
 |Feature|incomplete insert column list|In general, in INSERT statements values must be specified for all columns in the table.<br /><br /> However, we do support DEFAULT constraints and IDENTITY(1,1) columns on memory optimized tables. These columns can be, and in the case of IDENTITY columns must be, omitted from the INSERT column list.|  
-|Feature|*Function*|Some built-in functions are not supported in natively compiled stored procedures. Remove the rejected function from the stored procedure. For more information about supported built-in functions, see<br />[Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md), or<br />[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Feature|*Function*|Some built-in functions are not supported in natively compiled stored procedures. Remove the rejected function from the stored procedure. For more information about supported built-in functions, see<br />[Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md), or<br />[Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Feature|CASE|**Applies to:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] and SQL Server starting [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>**CASE** expressions are not supported in queries inside natively compiled stored procedures. Create queries for each case. For more information, see [Implementing a CASE Expression in a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] and SQL Server starting [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] do support CASE expressions.|  
 |Feature|INSERT EXECUTE|Remove the reference.|  
 |Feature|EXECUTE|Supported only to execute natively compiled stored procedures and user-defined functions.|  
@@ -141,7 +141,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Operator|TSEQUAL|This operator is not supported. Remove **TSEQUAL** from the natively compiled stored procedure.|  
 |Operator|LIKE|This operator is not supported. Remove **LIKE** from the natively compiled stored procedure.|  
 |Operator|NEXT VALUE FOR|Sequences cannot be referenced inside natively compiled stored procedures. Obtain the value using interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)], and then pass it into the natively compiled stored procedure. For more information, see [Implementing IDENTITY in a Memory-Optimized Table](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
-|Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atonic blocks in [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Set option|*option*|SET options cannot be changed inside natively compiled stored procedures. Certain options can be set with the BEGIN ATOMIC statement. For more information, see the section on atonic blocks in [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Operand|TABLESAMPLE|This operator is not supported. Remove **TABLESAMPLE** from the natively compiled stored procedure.|  
 |Option|RECOMPILE|Natively compiled stored procedures are compiled at create time. Remove **RECOMPILE** from the procedure definition.<br /><br /> You can execute sp_recompile on a natively compiled stored procedure, which causes it to recompile on the next execution.|  
 |Option|ENCRYPTION|This option is not supported. Remove **ENCRYPTION** from the procedure definition.|  
@@ -181,6 +181,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Feature|DTC|Transactions that access memory-optimized tables cannot be distributed transactions.|  
   
 ## See Also  
- [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

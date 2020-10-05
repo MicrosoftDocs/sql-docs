@@ -90,7 +90,7 @@ In this step, you'll create a stored procedure that generates a model for predic
 
 In this step, you execute the procedure to run the embedded code, creating a trained and serialized model as an output. 
 
-Models that are stored for reuse in your database are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) function in scoring workloads.
+Models that are stored for reuse in your database are serialized as a byte stream and stored in a VARBINARY(MAX) column in a database table. Once the model is created, trained, serialized, and saved to a database, it can be called by other procedures or by the [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) function in scoring workloads.
 
 1. Run the following script to execute the procedure. The specific statement for executing a stored procedure is `EXECUTE` on the fourth line.
 

@@ -105,7 +105,7 @@ Some columns from this view are described in the following list:
  - Description that contains information why the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this plan change is a potential performance regression.
  - Datetime when the potential regression is detected.
  - Score of this recommendation.
- - Details about the issues such as ID of the detected plan, ID of the regressed plan, ID of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md).
+ - Details about the issues such as ID of the detected plan, ID of the regressed plan, ID of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script that might be applied to fix the issue, etc. Details are stored in [JSON format](../json/json-data-sql-server.md).
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
 
@@ -174,7 +174,7 @@ Actions required to create necessary indexes in [!INCLUDE[ssazure_md](../../incl
 
 Without automatic index management, a user or DBA would need to manually query the [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) view or use the Performance Dashboard report in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] to find indexes that might improve performance, create indexes using the details provided in this view, and manually monitor the performance of the query. In order to find the indexes that should be dropped, users should monitor operational usage statistics of the indexes to find rarely used indexes.
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifies this process. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] simplifies this process. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](/azure/sql-database/sql-database-advisor-portal).
 
 ## See Also  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
@@ -184,7 +184,7 @@ Without automatic index management, a user or DBA would need to manually query t
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [JSON functions](../../relational-databases/json/index.md)    
+ [JSON functions](../json/json-data-sql-server.md)    
  [Execution Plans](../../relational-databases/performance/execution-plans.md)    
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     

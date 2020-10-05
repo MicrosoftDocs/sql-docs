@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Query columns using Always Encrypted with Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is). With Azure Data Studio, you can:
+This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](../../../azure-data-studio/what-is.md). With Azure Data Studio, you can:
 - Retrieve ciphertext values stored in encrypted columns. 
 - Retrieve plaintext values stored in encrypted columns.  
 - Send plaintext values targeting encrypted columns (for example, in `INSERT` or `UPDATE` statements and as a lookup parameter of the `WHERE` clauses in `SELECT` statements). 
@@ -107,7 +107,7 @@ To enable (disable) Always Encrypted:
 
 ## Parameterization for Always Encrypted
 
-Parameterization for Always Encrypted is a feature in Azure Data Studio 18.1 and later that automatically converts Transact-SQL variables into query parameters (instances of [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)). This allows the underlying [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) to detect data targeting encrypted columns, and to encrypt such data before sending it to the database.
+Parameterization for Always Encrypted is a feature in Azure Data Studio 18.1 and later that automatically converts Transact-SQL variables into query parameters (instances of [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)). This allows the underlying [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) to detect data targeting encrypted columns, and to encrypt such data before sending it to the database.
   
 Without parameterization, the Microsoft .NET Data Provider for SQL Server passes each statement you author in the query window as a non-parameterized query. If the query contains literals or Transact-SQL variables that target encrypted columns, the .NET Framework Data Provider for SQL Server won't be able to detect and encrypt them before sending the query to the database. As a result, the query will fail due to type mismatch (between the plaintext literal Transact-SQL variable and the encrypted column). For example, the following query will fail without parameterization, assuming the `SSN` column is encrypted.   
 
@@ -174,7 +174,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio uses Intellisense to inform you which variables can be successfully parameterized and which parameterization attempts fail (and why).   
 
-A declaration of a variable that can be successfully parameterized is marked with an info message underline in the query window. If you hover on a declaration statement that got marked with an info message underline, you'll see the message containing the results of the parameterization process, including the values of the key properties of the resulting [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) object (the variable is mapped to: [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). You can also see the complete list of all variables that have been successfully parameterized in the **Problems** view. To open the **Problems** view, select **View** > **Problems**.    
+A declaration of a variable that can be successfully parameterized is marked with an info message underline in the query window. If you hover on a declaration statement that got marked with an info message underline, you'll see the message containing the results of the parameterization process, including the values of the key properties of the resulting [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) object (the variable is mapped to: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). You can also see the complete list of all variables that have been successfully parameterized in the **Problems** view. To open the **Problems** view, select **View** > **Problems**.    
 
 
 

@@ -63,7 +63,7 @@ Execute Java code from within T-SQL script:
 
 ## Next steps
 
-+ Install [R custom runtime for SQL Server](/install/custom-runtime-python.md)
-+ Install [R custom runtime for SQL Server](/install/custom-runtime-r.md)
++ Install [R custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md)
++ Install [R custom runtime for SQL Server](../machine-learning/install/custom-runtime-r.md)
 + Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions.md)
 + Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)

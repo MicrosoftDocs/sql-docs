@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
 ```  
-  
+
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 #### Parameters  

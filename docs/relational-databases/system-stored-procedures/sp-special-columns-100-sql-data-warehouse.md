@@ -35,7 +35,9 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
      [ , [ @nullable = ] 'nullable' ]   
      [ , [ @ODBCVer = ] 'ODBCVer' ]   
 [ ; ]  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  [ @table_name=] '*table_name*'  

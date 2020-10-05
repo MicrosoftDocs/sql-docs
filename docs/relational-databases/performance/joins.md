@@ -257,7 +257,7 @@ A few conditions make a logical join eligible for a batch mode Adaptive Join:
 - The database compatibility level is 140 or higher.
 - The query is a `SELECT` statement (data modification statements are currently ineligible).
 - The join is eligible to be executed both by an indexed Nested Loops join or a Hash join physical algorithm.
-- The hash join uses [Batch mode execution](../query-processing-architecture-guide.md#batch-mode-execution) - enabled through the presence of a Columnstore index in the query overall, a Columnstore indexed table being referenced directly by the join, or through the use of the [Batch mode on rowstore](intelligent-query-processing.md#batch-mode-on-rowstore).
+- The Hash join uses Batch mode, enabled through the presence of a Columnstore index in the query overall, a Columnstore indexed table being referenced directly by the join, or through the use of the [Batch mode on rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore).
 - The generated alternative solutions of the Nested Loops join and Hash join should have the same first child (outer reference).
 
 ### Adaptive threshold rows

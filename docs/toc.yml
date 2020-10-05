@@ -350,7 +350,7 @@
       - name: Notebooks for logging
         href: big-data-cluster/cluster-logging-notebooks.md
      - name: Performance
-      items:
+       items:
         - name: Tuning guide
           href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure

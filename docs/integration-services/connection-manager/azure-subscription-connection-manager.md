@@ -34,12 +34,11 @@ ms.author: chugu
   
 3.  Choose **Management certificate store location** and **Management certificate store name** from the drop-down lists.  
   
-4.  Enter **Management certificate thumbprint** or click the **Browse...** to choose a certificate from the selected store. The certificate must be uploaded as a management certificate for the subscription. To do so, click **Upload** on the following page of the Azure Portal (see this [MSDN post](https://msdn.microsoft.com/library/azure/gg551722.aspx) for more detail).  
+4.  Enter **Management certificate thumbprint** or click the **Browse...** to choose a certificate from the selected store. The certificate must be uploaded as a management certificate for the subscription. To do so, click **Upload** on the following page of the Azure Portal (see this [MSDN post](/previous-versions/azure/gg551722(v=azure.100)) for more detail).  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  Click **Test Connection** to test the connection.  
   
 6.  Click **OK** to close the dialog box.  
-  
   

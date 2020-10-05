@@ -373,9 +373,9 @@
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Troubleshoot pyspark notebook
         href: big-data-cluster/troubleshoot-pyspark-notebook.md
-      - name: Active Directory
+      - name: Troubleshoot Active Directory
         items:
-        - name: Active directory deployment stops
+        - name: AD deployment stops
           href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
         - name: AD domain group scope
           href: big-data-cluster/troubleshoot-active-directory.md
@@ -383,7 +383,7 @@
           href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
         - name: AD login fails
           href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-      - name: HDFS admin permissions
+      - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
     items:

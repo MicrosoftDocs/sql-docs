@@ -12,14 +12,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Gathering and analysing logs in the cluster with notebooks
+# Common notebooks for SQL Server Big Data Clusters
 
-This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in showing common scenario on Big Data Clusters.
+This article lists notebooks for SQL Server Big Data Clusters. The executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in showing common scenarios on Big Data Clusters.
 
-Each notebook is designed to check for its own dependencies. A 'run all cells' will either complete successfully or will raise an exception with a hyperlinked 'HINT' to another notebook to resolve the missing dependency. Follow the 'HINT' hyperlink to the subsequent notebook, press 'run all cells', and upon success return back to the original notebook, and 'run all cells'.
+Each notebook is designed to check for its own dependencies. A **Run all cells** option either completes successfully or raises an exception with a hyperlinked *hint* to another notebook to resolve the missing dependency. Follow the hint hyperlink to the subsequent notebook, press **Run all cells**, and upon success return back to the original notebook, and **Run all cells**.
 
-Once all dependencies are installed, but 'run all cells' fails, each notebook will analyze results and where possible, produce a hyperlinked 'HINT' to another notebook to further aid in resolving the issue.
-
+Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
 
 ## Gathering logs from Big Data Cluster (BDC)
 

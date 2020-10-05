@@ -349,10 +349,10 @@
         href: big-data-cluster/cluster-logging-kibana.md
       - name: Notebooks for logging
         href: big-data-cluster/cluster-logging-notebooks.md
-     - name: Performance
-       items:
-        - name: Tuning guide
-          href: big-data-cluster/performance-guidelines-tuned.md
+    - name: Performance
+      items:
+      - name: Tuning guide
+        href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC

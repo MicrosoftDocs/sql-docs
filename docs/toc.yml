@@ -323,18 +323,36 @@
       items:
       - name: Connect
         href: big-data-cluster/connect-to-big-data-cluster.md
-      - name: View cluster status
-        href: big-data-cluster/view-cluster-status.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
+      - name: Manage with notebooks
+        href: big-data-cluster/cluster-manage-notebooks.md
+    - name: Monitor
+      items:
+      - name: View cluster status
+        href: big-data-cluster/view-cluster-status.md
+      - name: Monitor with Azure Data Studio
+        href: big-data-cluster/cluster-monitor-ads.md
+      - name: Monitor with cmdlet
+        href: big-data-cluster/cluster-monitor-cmdlet.md
+      - name: Monitor with notebooks
+        href: big-data-cluster/cluster-common-notebooks.md
+      - name: Monitor - Grafana
+        href: big-data-cluster/cluster-monitor-grafana.md
+      - name: Monitoring notebooks
+        href: big-data-cluster/cluster-monitor-notebooks.md
+      - name: Logging - Kibana
+        href: big-data-cluster/cluster-logging-kibana.md
+      - name: Notebooks for logging
+        href: big-data-cluster/cluster-logging-notebooks.md
     - name: Performance
       items:
-        - name: Tuning guide
-          href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Tuning guide
+        href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
@@ -363,6 +381,8 @@
         href: big-data-cluster/spark-history-server.md
     - name: Troubleshoot
       items:
+      - name: Overview
+        href: big-data-cluster/cluster-troubleshoot-overview.md
       - name: Troubleshoot Kubernetes
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Troubleshoot pyspark notebook
@@ -375,6 +395,8 @@
         href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
       - name: HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+      - name: Cluster troubleshooting notebooks
+        href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
     - name: BDC partners

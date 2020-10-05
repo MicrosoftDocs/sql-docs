@@ -111,7 +111,7 @@ BEGIN TRANSACTION starts a local transaction for the connection issuing the stat
   
  BEGIN TRAN *new_name* WITH MARK can be nested within an already existing transaction that is not marked. Upon doing so, *new_name* becomes the mark name for the transaction, despite the name that the transaction may already have been given. In the following example, `M2` is the name of the mark.  
   
-```  
+```sql  
 BEGIN TRAN T1;  
 UPDATE table1 ...;  
 BEGIN TRAN M2 WITH MARK;  
@@ -146,7 +146,7 @@ COMMIT TRAN T1;
 
 This example uses AdventureWorks. 
 
-```
+```sql
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -158,9 +158,8 @@ COMMIT;
 
 The following example shows the effect of rolling back a transaction. In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.
 
-```
- 
-CREATE TABLE ValueTable (id int);  
+```sql
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -173,7 +172,7 @@ ROLLBACK;
 
 The following example shows how to name a transaction.  
   
-```  
+```sql
 DECLARE @TranName VARCHAR(20);  
 SELECT @TranName = 'MyTransaction';  
   
@@ -191,7 +190,7 @@ GO
 
 The following example shows how to mark a transaction. The transaction `CandidateDelete` is marked.  
   
-```  
+```sql  
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  

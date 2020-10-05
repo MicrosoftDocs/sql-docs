@@ -36,7 +36,7 @@ ms.author: jrasnick
 |**Redo Bytes Remaining**|The amount of log, in kilobytes, remaining to be redone to finish the reverting phase.|Secondary replica|  
 |**Redone Bytes/sec**|Amount of log records redone on the secondary database in the last second.|Secondary replica|  
 |**Total Log requiring undo**|Total kilobytes of log that must be undone.|Secondary replica|  
-|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgment for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. For more information, see [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)|Primary replica|  
+|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgment for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. For more information, see [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii)|Primary replica|  
   
 ## See Also
   
@@ -44,4 +44,3 @@ ms.author: jrasnick
  [SQL Server, Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

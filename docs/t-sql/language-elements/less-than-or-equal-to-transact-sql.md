@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression <= expression  
 ```  
   
@@ -54,14 +54,13 @@ expression <= expression
 ### A. Using <= in a simple query  
  The following example returns all rows in the `HumanResources.Department` table that have a value in `DepartmentID` that is less than or equal to the value 3.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE DepartmentID <= 3  
 ORDER BY DepartmentID;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

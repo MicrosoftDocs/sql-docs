@@ -1,7 +1,7 @@
 ---
 title: What is SQL Server Language Extensions?
 titleSuffix: 
-description: Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019, Java is supported. The relational data can be used in the external code using the extensibility framework.
+description: Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019, Java, R and Python are supported. The relational data can be used in the external code using the extensibility framework.
 author: dphansen
 ms.author: davidph 
 ms.date: 08/19/2020
@@ -63,5 +63,7 @@ Execute Java code from within T-SQL script:
 
 ## Next steps
 
++ Install [R custom runtime for SQL Server](/install/custom-runtime-python.md)
++ Install [R custom runtime for SQL Server](/install/custom-runtime-r.md)
 + Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions.md)
 + Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)

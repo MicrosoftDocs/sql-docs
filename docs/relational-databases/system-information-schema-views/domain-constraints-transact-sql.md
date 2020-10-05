@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.DOMAIN_CONSTRAINTS view"
   - "DOMAIN_CONSTRAINTS view"
 ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DOMAIN_CONSTRAINTS (Transact-SQL)

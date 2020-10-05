@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: Reference article for azdata extension commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,12 +13,13 @@ ms.technology: big-data-cluster
 
 # azdata extension
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to `azdata`
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata extension add](#azdata-extension-add) | Add an extension.
 [azdata extension remove](#azdata-extension-remove) | Remove an extension.
@@ -38,12 +39,10 @@ azdata extension add --source -s
 ### Examples
 Add extension from URL.
 ```bash
-azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
-```
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl```
 Add extension from local disk.
 ```bash
-azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
-```
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl```
 Add extension from local disk and use pip proxy for dependencies.
 ```bash
 azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
@@ -123,4 +122,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

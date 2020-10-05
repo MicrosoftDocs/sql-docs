@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbcmptlevel"
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

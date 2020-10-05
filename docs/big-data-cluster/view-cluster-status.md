@@ -22,8 +22,6 @@ This article describes how to monitor Big data Cluster in the following ways :
 - [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
 - [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio (ADS)](cluster-monitor-notebooks.md)
 
-
-
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

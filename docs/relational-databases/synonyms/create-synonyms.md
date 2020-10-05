@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "creating synonyms"
   - "synonyms [SQL Server], creating"
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Synonyms

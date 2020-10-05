@@ -20,12 +20,13 @@ helpviewer_keywords:
   - "PolyBase management views"
   - "dm_exec_compute_nodes management view"
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Holds information about nodes used with PolyBase data management. It lists one row per node.  
   

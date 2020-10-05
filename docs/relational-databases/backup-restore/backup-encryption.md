@@ -29,8 +29,14 @@ ms.author: mikeray
 > It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable.  
   
  **Restoring the encrypted backup:** SQL Server restore does not require any encryption parameters to be specified during restores. It does require that the certificate or the asymmetric key used to encrypt the backup file be available on the instance that you are restoring to. The user account performing the restore must have **VIEW DEFINITION** permissions on the certificate or key. If you are restoring the encrypted backup to a different instance, you must make sure that the certificate is available on that instance.  
-  
- If you are restoring a backup from a TDE encrypted database, the TDE certificate should be available on the instance you are restoring to.  
+The sequence to restore an encrypted database to a new location is to:
+
+1. [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md) in the old database
+1. [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) in the new location master database
+1. [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) from the backup certificate of the old database imported to a location on the new server
+1. [Restore a Database to a New Location (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ If you are restoring a backup from a TDE encrypted database, the TDE certificate should be available on the instance you are restoring to. For more information, see [Move a TDE Protected Database to Another SQL Server](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).
   
 ##  <a name="Benefits"></a> Benefits  
   

@@ -8,8 +8,8 @@ ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "language-reference"
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-lt-2019
 ---

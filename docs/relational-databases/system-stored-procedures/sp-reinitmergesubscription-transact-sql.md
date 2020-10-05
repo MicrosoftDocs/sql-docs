@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_reinitmergesubscription"
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

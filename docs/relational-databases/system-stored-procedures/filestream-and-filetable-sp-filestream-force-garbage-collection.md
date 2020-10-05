@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server]"
   - "sp_filestream_force_garbage_collection"
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

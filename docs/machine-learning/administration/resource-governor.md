@@ -36,9 +36,6 @@ Optionally, you can create custom **external resource pools**, with associated w
 
 2. Run [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) to create and configure the resource pool, followed by [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) to implement it.
 
-> [!NOTE]
-> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
-
 3. Create a workload group for granular allocations, for example between training and scoring.
 
 4. Create a classifier to intercept calls for external processing.

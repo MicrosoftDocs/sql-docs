@@ -31,11 +31,11 @@ To enable Active Directory (AD) authentication, the BDC automatically creates th
 ### Organizational Unit (OU)
 An organizational unit (OU) is a subdivision within an Active Directory into where place users, groups, and even other organizational units. Big picture Organizational units can be used to mirror an organization's functional or business structure. This article we'll create an OU called `bdc` as an example. 
 
->[!Note]
-The organizational unit (OU) represents administrative boundaries and enable customers to control the scope of authority of data administrators. 
->
+>[!NOTE]
+>The organizational unit (OU) represents administrative boundaries and enable customers to control the scope of authority of data administrators. 
 
-You can follow [OU Design Principles](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts.md) to decide on the best structure on working with OUs within your organization. 
+
+You can follow [OU Design Principles](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) to decide on the best structure on working with OUs within your organization. 
 
 ### AD account for BDC domain service account
 
@@ -201,6 +201,9 @@ AD integration requires the following parameters. Add these parameters to the `c
   > When multiple domain controllers are serving a domain, use the primary domain controller (PDC) as the first entry in the `domainControllerFullyQualifiedDns` list in the security config. To get the PDC name, type `netdom query fsmo`, at the command prompt, and then press **ENTER**.
 
 - `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`). The value of provided for this parameter should be fully-qualified.
+
+  > [!IMPORTANT]
+  > At this time, BDC does not support a configuration where the Active Directory domain name is different than the Active Directory domain's **NETBIOS** name.
 
 - `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (e.g. `contoso.local`).
 

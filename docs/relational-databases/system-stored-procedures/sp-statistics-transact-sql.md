@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_statistics"
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_statistics (Transact-SQL)
@@ -39,7 +39,9 @@ sp_statistics [ @table_name = ] 'table_name'
      [ , [ @is_unique = ] 'is_unique' ]  
      [ , [ @accuracy = ] 'accuracy' ]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
 `[ @table_name = ] 'table_name'`
  Specifies the table used to return catalog information. *table_name* is **sysname**, with no default. Wildcard pattern matching is not supported.  

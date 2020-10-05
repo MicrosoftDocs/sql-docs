@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "database compression [SQL Server]"
   - "table compression [SQL Server]"
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

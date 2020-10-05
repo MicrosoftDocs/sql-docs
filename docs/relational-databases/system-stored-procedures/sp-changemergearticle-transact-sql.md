@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changemergearticle"
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

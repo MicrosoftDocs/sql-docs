@@ -9,7 +9,7 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "pensivebrian"
 ms.author: "broneill"
 ms.reviewer: "drswkier; sstein"
-ms.date: 07/06/2020
+ms.date: 09/29/2020
 ---
 
 # SqlPackage.exe
@@ -63,6 +63,13 @@ Create a SQL script that generates the differences of two .dacpac files:
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
+
+Displays the sqlpackage version:
+
+```
+sqlpackage.exe /Version
+ ```
+
 
 ## Extract Parameters and Properties
 A SqlPackage.exe Extract action creates a schema of a live database from SQL Server or Azure SQL Database to a DACPAC package (.dacpac file). By default, data is not included in the .dacpac file. To include data, utilize the [Export action](#export-parameters-and-properties). 
@@ -124,7 +131,7 @@ A SqlPackage.exe publish operation incrementally updates the schema of a target 
 |---|---|---|---|
 |**/Action:**|**/a**|Publish|Specifies the action to be performed. |
 |**/AccessToken:**|**/at**|{string}| Specifies the token based authentication access token to use when connect to the target database. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Specifies what authentication method is used for accessing Azure KeyVault if a publish operation includes modifications to an encrypted table/column. |
 |**/ClientId:**|**/cid**|{string}|Specifies the Client ID to be used in authenticating against Azure KeyVault, when necessary |
 |**/DeployScriptPath:**|**/dsp**|{string}|Specifies an optional file path to output the deployment script. For Azure deployments, if there are TSQL commands to create or modify the master database, a script will be written to the same path but with "Filename_Master.sql" as the output file name. |
 |**/DeployReportPath:**|**/drp**|{string}|Specifies an optional file path to output the deployment report xml file. |
@@ -301,7 +308,7 @@ A SqlPackage.exe Export action exports a live database from SQL Server or Azure 
 |**/p:**|TableData=(STRING)|Indicates the table from which data will be extracted. Specify the table name with or without the brackets surrounding the name parts in the following format: schema_name.table_identifier. This option may be specified multiple times.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Specifies the temporary directory used to buffer table data before being written to the package file.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Specifies what the target engine version is expected to be. This affects whether to allow objects supported by Azure SQL Database servers with V12 capabilities, such as memory-optimized tables, in the generated bacpac.|
-|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Specifies whether the supported full-text document types for MicrosoftAzure SQL Database v12 should be verified.|
+|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Specifies whether the supported full-text document types for Microsoft Azure SQL Database v12 should be verified.|
   
 ## Import Parameters and Properties
 

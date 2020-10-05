@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.key_encryptions catalog view"
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.key_encryptions (Transact-SQL)

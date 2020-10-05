@@ -15,8 +15,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "DROP WORKLOAD GROUP statement"
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)

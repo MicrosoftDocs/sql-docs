@@ -1,12 +1,12 @@
 ---
-description: "Transactions (SQL Data Warehouse)"
-title: "Transactions (SQL Data Warehouse) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: Transactions (Azure Synapse Analytics)
+description: A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back.
+ms.custom:
+ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer:
 ms.technology: t-sql
-ms.topic: "language-reference"
+ms.topic: language-reference
 dev_langs: 
   - "TSQL"
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
@@ -14,7 +14,8 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# Transactions (SQL Data Warehouse)
+# Transactions (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   A transaction is a group of one or more database statements that are either wholly committed or wholly rolled back. Each transaction is atomic, consistent, isolated, and durable (ACID). If the transaction succeeds, all statements within it are committed. If the transaction fails, that is at least one of the statements in the group fails, then the entire group is rolled back.  
@@ -87,7 +88,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## Limitations and Restrictions  
  You cannot roll back a transaction after a COMMIT statement is issued because the data modifications have been made a permanent part of the database.  
   
- The [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) and [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) commands cannot be used inside an explicit transaction.  
+ The [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) and [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) commands cannot be used inside an explicit transaction.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] does not have a transaction sharing mechanism. This implies that at any given point in time, only one session can be doing work on any transaction in the system.  
   

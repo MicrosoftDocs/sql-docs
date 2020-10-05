@@ -37,7 +37,7 @@ Modifies the content of an existing external package library.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2019
 
-```text
+```syntaxsql
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -80,7 +80,7 @@ WITH ( LANGUAGE = <language> )
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2017
 
-```text
+```syntaxsql
 ALTER EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ]
 SET <file_spec>
@@ -111,7 +111,7 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 ## Syntax for Azure SQL Managed Instance
 
-```text
+```syntaxsql
 CREATE EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  

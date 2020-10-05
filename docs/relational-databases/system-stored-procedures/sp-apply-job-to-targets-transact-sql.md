@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_apply_job_to_targets"
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

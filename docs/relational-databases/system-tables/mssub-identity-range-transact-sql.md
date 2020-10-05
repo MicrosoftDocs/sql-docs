@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsub_identity_range system table"
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSsub_identity_range (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

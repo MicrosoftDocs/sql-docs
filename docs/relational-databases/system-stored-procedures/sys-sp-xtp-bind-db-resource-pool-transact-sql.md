@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sp_xtp_bind_db_resource_pool"
   - "sys.sp_xtp_bind_db_resource_pool"
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

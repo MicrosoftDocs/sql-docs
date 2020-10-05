@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_stored_procedures"
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_stored_procedures (Transact-SQL)
 

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sql_modules catalog view"
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_modules (Transact-SQL)

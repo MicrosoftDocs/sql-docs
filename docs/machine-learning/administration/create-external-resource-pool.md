@@ -100,9 +100,7 @@ The process includes multiple steps:
   
      Requests are assigned to the default group whenever the request can't be classified, or if there's any other classification failure.
 
-> [!NOTE]
-> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
-  
+ 
 For more information, see [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md) and [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 ## Create a classification function for machine learning

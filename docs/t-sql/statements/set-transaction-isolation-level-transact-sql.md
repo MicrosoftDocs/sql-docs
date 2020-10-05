@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "locking [SQL Server], isolation levels"
   - "transactions [SQL Server], isolation levels"
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
@@ -52,13 +52,13 @@ SET TRANSACTION ISOLATION LEVEL
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
 
 >[!NOTE]
-> SQL Data Warehouse implements ACID transactions. The isolation level of the transactional support is default to READ UNCOMMITTED.  You can change it to READ COMMITTED SNAPSHOT ISOLATION by turning ON the READ_COMMITTED_SNAPSHOT database option for a user database when connected to the master database.  Once enabled, all transactions in this database are executed under READ COMMITTED SNAPSHOT ISOLATION and the setting READ UNCOMMITTED on session level will not be honored. Check [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) for details.  
+> [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] implements ACID transactions. The isolation level of the transactional support is default to READ UNCOMMITTED.  You can change it to READ COMMITTED SNAPSHOT ISOLATION by turning ON the READ_COMMITTED_SNAPSHOT database option for a user database when connected to the master database.  Once enabled, all transactions in this database are executed under READ COMMITTED SNAPSHOT ISOLATION and the setting READ UNCOMMITTED on session level will not be honored. Check [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) for details.  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

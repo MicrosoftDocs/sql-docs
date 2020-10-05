@@ -7,8 +7,8 @@ ms.service: sql-database
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)

@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDisable method"
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetDisable Method (ServerNetworkProtocolIPAddress Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -90,6 +90,6 @@ Setting a custom status bar color for a server node in Object Explorer must be d
 -   Fill in the rest of the connection information, and then select the **Connect** button.  
   
 ## See Also  
- [Query and Text Editors &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [Query and Text Editors &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
   
   

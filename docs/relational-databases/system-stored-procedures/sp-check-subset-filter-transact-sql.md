@@ -19,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_subset_filter"
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_check_subset_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

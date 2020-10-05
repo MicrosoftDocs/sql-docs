@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.dm_exec_session_wait_stats"
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_exec_session_wait_stats (Transact-SQL)
 

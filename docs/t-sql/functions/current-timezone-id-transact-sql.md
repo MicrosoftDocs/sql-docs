@@ -38,7 +38,7 @@ This function returns the ID of the time zone observed by a server or an instanc
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE_ID ( )  
 ```
   

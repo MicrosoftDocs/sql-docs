@@ -17,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerNetworkProtocol class"
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServerNetworkProtocol Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

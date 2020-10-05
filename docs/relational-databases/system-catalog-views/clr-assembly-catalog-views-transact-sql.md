@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], catalog views"
   - "CLR assembly catalog views"
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CLR Assembly Catalog Views (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

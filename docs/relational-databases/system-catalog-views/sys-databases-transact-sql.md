@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.databases catalog view"
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.databases (Transact-SQL)
@@ -109,7 +109,7 @@ If a database is not `ONLINE`, or `AUTO_CLOSE` is set to `ON` and the database i
 |**is_federation_member**|**bit**|Indicates if the database is a member of a federation.<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|Indicates whether the database is stretched.<br /> 0 = The database is not Stretch-enabled.<br /> 1 = The database is Stretch-enabled.<br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /> For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |**is_mixed_page_allocation_on**|**bit**|Indicates whether tables and indexes in the database can allocate initial pages from mixed extents.<br /> 0 = Tables and indexes in the database always allocate  initial pages from uniform extents.<br /> 1 =  Tables and indexes in the database can allocate initial pages from mixed extents.<br /> For more information, see the `SET MIXED_PAGE_ALLOCATION` option of [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|  
-|**is_temporal_retention_enabled**|**bit**|Indicates whether temporal retention policy cleanup task is enabled.<br /><br />1 = temporal retention is enabled<br />0 = temporal retention is disabled<br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_temporal_history_retention_enabled**|**bit**|Indicates whether temporal retention policy cleanup task is enabled.<br /><br />1 = temporal retention is enabled<br />0 = temporal retention is disabled<br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|The catalog collation setting:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|The catalog collation setting:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**physical_database_name**|**nvarchar(128)**|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the physical name of the database. For [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a common id for the databases on a server. <br />**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|

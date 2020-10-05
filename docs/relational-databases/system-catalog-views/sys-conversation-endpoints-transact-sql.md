@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.conversation_endpoints catalog view"
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

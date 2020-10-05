@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_help_publication_access"
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

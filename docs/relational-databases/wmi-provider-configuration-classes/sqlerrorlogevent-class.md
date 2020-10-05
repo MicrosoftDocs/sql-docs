@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SqlErrorLogEvent class"
   - "SqlErrorLogFile class"
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlErrorLogEvent Class
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

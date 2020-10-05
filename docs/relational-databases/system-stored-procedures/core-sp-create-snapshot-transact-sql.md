@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "core.sp_create_snapshot stored procedure"
   - "sp_create_snapshot"
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

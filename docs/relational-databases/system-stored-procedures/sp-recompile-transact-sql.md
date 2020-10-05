@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_recompile"
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_recompile (Transact-SQL)

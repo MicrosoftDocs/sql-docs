@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addpushsubscription_agent"
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

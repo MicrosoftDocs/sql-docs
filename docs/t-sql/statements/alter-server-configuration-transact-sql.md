@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ALTER SERVER CONFIGURATION statement"
   - "setting process affinity"
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

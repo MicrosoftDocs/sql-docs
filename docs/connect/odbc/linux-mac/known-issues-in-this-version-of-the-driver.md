@@ -1,7 +1,7 @@
 ---
 title: Known issues for the ODBC driver on Linux and macOS
 description: "Learn about known issues with the Microsoft ODBC Driver for SQL Server on Linux and macOS and steps for troubleshooting connectivity issues."
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
@@ -53,7 +53,7 @@ If you get another connection failure and do not see a log file, there (possibly
         Entry:  
             Connection = 0x17c858e0  
             Window Hdl = (nil)  
-            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
+            Str In = [DRIVER={ODBC Driver 17 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
             Str Out = (nil)  
             Str Out Max = 0  
             Str Out Ptr = (nil)  
@@ -71,7 +71,7 @@ There is more than one Driver Manager installed and your application is using th
   
 For more information about resolving connection failures, see:  
 
-- [Steps to troubleshoot SQL connectivity issues](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+- [Steps to troubleshoot SQL connectivity issues](/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 - [SQL Server 2005 Connectivity Issue Troubleshoot - Part I](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2005-connectivity-issue-troubleshoot-part-i/ba-p/383034)  
   
@@ -86,4 +86,4 @@ For ODBC driver installation instructions, see the following articles:
 - [Installing the Microsoft ODBC Driver for SQL Server on Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [Installing the Microsoft ODBC Driver for SQL Server on macOS](install-microsoft-odbc-driver-sql-server-macos.md)
 
-For more information, see the [Programming guidelines](programming-guidelines.md) and the [Release notes](release-notes-odbc-sql-server-linux-mac.md).  
+For more information, see the [Programming guidelines](programming-guidelines.md) and the [Release notes](release-notes-odbc-sql-server-linux-mac.md).

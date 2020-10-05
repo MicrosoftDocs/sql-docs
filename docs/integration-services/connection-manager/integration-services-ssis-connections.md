@@ -336,7 +336,7 @@ All connection managers can be configured using the **Properties** window.
   
 -   Wiki articles, [SSIS Connectivity](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity), on social.technet.microsoft.com  
   
--   Blog entry, [Connecting to MySQL from SSIS](https://go.microsoft.com/fwlink/?LinkId=217669), on blogs.msdn.com.  
+-   Blog entry, [Connecting to MySQL from SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400), on blogs.msdn.com.  
   
 -   Technical article, [Extracting and Loading SharePoint Data in SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826), on msdn.microsoft.com.  
   

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_setstatus"
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_trace_setstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

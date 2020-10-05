@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergesubsetfilters system table"
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

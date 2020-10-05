@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_events (Azure SQL Database)

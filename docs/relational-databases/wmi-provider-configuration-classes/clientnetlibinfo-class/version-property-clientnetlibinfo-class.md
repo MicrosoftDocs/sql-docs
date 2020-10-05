@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Version property"
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Version Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

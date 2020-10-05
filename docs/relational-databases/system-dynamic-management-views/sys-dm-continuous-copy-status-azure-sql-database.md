@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dm_continuous_copy_status"
   - "sys.dm_continuous_copy_status"
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---

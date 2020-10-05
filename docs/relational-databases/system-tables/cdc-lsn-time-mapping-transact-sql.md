@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.lsn_time_mapping"
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

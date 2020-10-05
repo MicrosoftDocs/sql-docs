@@ -20,7 +20,7 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
 
 + A database engine instance is required. You can't install just Python or R features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
++ For business continuity, [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Machine Learning Services. Install Machine Learning Services, and configure packages, on each node.
 
 + Installing Machine Learning Services *isn't supported* on an [Always On Failover Cluster Instance (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) in SQL Server 2017. It's supported with SQL Server 2019 and later.
  
@@ -46,11 +46,11 @@ Learn how to install SQL Server Machine Learning Services on Windows. You can us
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017).
+For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15).
+For more information on which SQL Server editions support Python and R integration with Machine Learning Services, see [Editions and supported features of SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
 ## Run setup
@@ -141,7 +141,7 @@ The license agreement covers:
 
    Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-1. After setup is complete, if you are instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you have finished with setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. After setup is complete, if you are instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you have finished with setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
@@ -159,7 +159,7 @@ The license agreement covers:
 
    Note the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-4. After setup is complete, if you're instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you've finished with setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+4. After setup is complete, if you're instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you've finished with setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
@@ -183,7 +183,7 @@ This step requires a server restart. If you are about to enable script execution
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > You can also use [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
   
@@ -281,7 +281,7 @@ Disconnected servers require extra steps. For more information, see [Install on 
 
 1. Start with a baseline instance already installed: SQL Server 2017 initial release
 
-2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+2. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
 
@@ -305,7 +305,7 @@ At the instance level, additional configuration might include:
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Create a login for SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* [Manage disk quotas](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
+* [Manage disk quotas](/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 In SQL Server 2019 on Windows, the isolation mechanism has changed. This mechanism affects **SQLRUserGroup**, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).

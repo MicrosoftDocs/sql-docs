@@ -77,7 +77,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Shows whether the data type of the selected column can be determined with certainty.  
   
  **DTS-published**  
- Shows whether the column is DTS-published. ([Data Transformation Services Is Deprecated](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105)#Anchor_0)). 
+ Shows whether the column is DTS-published. ([Data Transformation Services Is Deprecated](/previous-versions/sql/sql-server-2008-r2/cc707786(v=sql.105))). 
   
  **Full-text Specification**  
  Displays information about a full-text index. The value of this property is the value of the **Is Full-text Indexed** child property and indicates whether this column is full-text indexed.  

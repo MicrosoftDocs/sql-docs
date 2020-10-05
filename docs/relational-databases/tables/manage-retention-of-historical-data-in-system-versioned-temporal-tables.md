@@ -92,7 +92,7 @@ See also:
 
 ### Using Transact-SQL to stretch the entire history table
 
-You can also use Transact-SQL to enable Stretch on the local server and [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). You can then [use Transact-SQL to enable Stretch Database on a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md#Anchor_1). With a database previously enabled for Stretch Database, execute the following Transact-SQL script to stretch an existing system-versioned temporal history table:
+You can also use Transact-SQL to enable Stretch on the local server and [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). You can then [use Transact-SQL to enable Stretch Database on a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). With a database previously enabled for Stretch Database, execute the following Transact-SQL script to stretch an existing system-versioned temporal history table:
 
 ```sql
 ALTER TABLE <history table name>

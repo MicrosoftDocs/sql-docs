@@ -12,8 +12,8 @@ ms.topic: "reference"
 apilocation: 
   - "sqluserinstance.dll"
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Command-Line Management Tool: SqlLocalDB.exe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

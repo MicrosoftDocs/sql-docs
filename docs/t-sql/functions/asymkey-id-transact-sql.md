@@ -33,7 +33,7 @@ Returns the ID of an asymmetric key.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASYMKEY_ID ( 'Asym_Key_Name' )  
 ```  
   

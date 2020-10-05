@@ -17,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlServerAlias class"
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlServerAlias Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

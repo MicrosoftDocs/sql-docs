@@ -36,7 +36,7 @@ This function returns the number of bytes used to represent any expression.
   
 ## Syntax  
   
-```
+```syntaxsql
 DATALENGTH ( expression )   
 ```  
 

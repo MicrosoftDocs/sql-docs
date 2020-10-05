@@ -1321,7 +1321,7 @@ SET quantity = quantity * 2
 WHERE date_id BETWEEN 20080802 AND 20080902;
 ```
 
-The following illustration shows the properties of the `Clustered Index Seek` operator in the compile-time execution plan for this query. To view the definition of the `fact_sales` table and the partition definition, see "Example" in this topic.  
+The following illustration shows the properties of the `Clustered Index Seek` operator in the runtime execution plan for this query. To view the definition of the `fact_sales` table and the partition definition, see "Example" in this topic.  
 
 ![clustered_index_seek](../relational-databases/media/clustered-index-seek.gif)
 

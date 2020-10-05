@@ -38,7 +38,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ## Syntax  
   
 ```syntaxsql
-  
 RESTORE HEADERONLY   
 FROM <backup_device>   
 [ WITH   
@@ -163,7 +162,7 @@ FROM <backup_device>
 ## Examples  
  The following example returns the information in the header for the disk file `C:\AdventureWorks-FullBackup.bak`.  
   
-```  
+```sql 
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  

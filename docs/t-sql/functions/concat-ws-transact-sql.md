@@ -86,7 +86,7 @@ SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS A
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-```sql
+```
 Address
 ------------   
 1 Microsoft Way,Redmond,WA,98052
@@ -103,7 +103,7 @@ FROM sys.databases
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-```sql
+```
 DatabaseInfo
 ------------   
 1,SIMPLE,NONE

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helprolemember"
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helprolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

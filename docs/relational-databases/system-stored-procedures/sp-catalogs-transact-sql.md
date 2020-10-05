@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_catalogs"
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

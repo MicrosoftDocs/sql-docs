@@ -25,7 +25,7 @@ ms.author: chugu
   
 > **NOTE:** You can add data sources only to projects that are configured to use the package deployment model. If a project is configured to use the project deployment model, you use connection managers created at the project level to share connections, in place of using data sources.  
 >   
->  For more information about the deployment models, see [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about converting a project to the project deployment model, see [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  For more information about the deployment models, see [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about converting a project to the project deployment model, see [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  The advantages of using data sources in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages include the following:  
   
@@ -41,5 +41,4 @@ ms.author: chugu
  A data source object represents a simple connection to a data source and provides access to the objects in the data store that it references. For example, a data source object that connects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks Sample Database includes all 60 tables from the database.  
   
  There is no dependency between a data source and the connection managers that reference it. If a data source is no longer part of the project, the packages continue to be valid, because information about the data source, such as its connection type and connection string, is included in the package definition.  
-  
   

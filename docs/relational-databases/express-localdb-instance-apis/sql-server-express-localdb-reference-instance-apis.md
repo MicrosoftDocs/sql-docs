@@ -10,8 +10,8 @@ ms.technology:
 
 ms.topic: "reference"
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Express LocalDB Reference - Instance APIs
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

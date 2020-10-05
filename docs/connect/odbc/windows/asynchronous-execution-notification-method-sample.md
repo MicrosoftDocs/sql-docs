@@ -2,7 +2,7 @@
 title: "Asynchronous Execution (Notification Method) Sample"
 description: "Example code demonstrating how to use asynchronous execution (using the notification method) in the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -312,7 +312,7 @@ int _tmain(int argc, _TCHAR* argv[])
     for(int i = 0; i < g_nConnection; i++)  
     {  
         SQLDriverConnect(g_hDbcs[i],NULL,
-            (SQLCHAR*)"DRIVER={ODBC Driver 13 for SQL Server};Server=your_server;database=your_database;uid=usr;pwd=your_password",
+            (SQLCHAR*)"DRIVER={ODBC Driver 17 for SQL Server};Server=your_server;database=your_database;uid=usr;pwd=your_password",
             SQL_NTS, (SQLCHAR*)g_connOut[i].szOutConnectionString, 500, &g_connOut[i].iLen, SQL_DRIVER_NOPROMPT);  
     }
 

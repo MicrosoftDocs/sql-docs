@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_alert"
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

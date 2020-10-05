@@ -233,7 +233,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|
 |Server audit|Yes|Yes|Yes|Yes|Yes|
 |Database audit|Yes|Yes|Yes|Yes|Yes|
-|Transparent database encryption|Yes|Yes|No|No|No|
+|Transparent database encryption|Yes|Yes|Yes|No|No|
 |Extensible key management|Yes|Yes|No|No|No|
 |User-defined roles|Yes|Yes|Yes|Yes|Yes|
 |Contained databases|Yes|Yes|Yes|Yes|Yes|

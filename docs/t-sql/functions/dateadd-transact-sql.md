@@ -165,7 +165,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 1 millisecond     2007-01-01 13:10:10.1121111  
 2 milliseconds    2007-01-01 13:10:10.1131111  
 1 microsecond     2007-01-01 13:10:10.1111121  
@@ -214,7 +214,7 @@ SELECT 'nanosecond',DATEADD(nanosecond,1,@datetime2);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Year         2008-01-01 13:10:10.1111111  
 quarter      2007-04-01 13:10:10.1111111  
 month        2007-02-01 13:10:10.1111111  
@@ -265,7 +265,7 @@ FROM Sales.SalesOrderHeader;
   
 A partial result set:
   
-```sql
+```
 SalesOrderID OrderDate               PromisedShipDate  
 ------------ ----------------------- -----------------------  
 43659        2005-07-01 00:00:00.000 2005-07-03 00:00:00.000  
@@ -290,14 +290,14 @@ SalesOrderID OrderDate               PromisedShipDate
 This example specifies user-defined variables as arguments for *number* and *date*:
   
 ```sql
-DECLARE @days int = 365,   
-        @datetime datetime = '2000-01-01 01:01:01.111'; /* 2000 was a leap year */;  
+DECLARE @days INT = 365,   
+        @datetime DATETIME = '2000-01-01 01:01:01.111'; /* 2000 was a leap year */;  
 SELECT DATEADD(day, @days, @datetime);  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------------------  
 2000-12-31 01:01:01.110  
   
@@ -314,7 +314,7 @@ SELECT DATEADD(month, 1, SYSDATETIME());
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---------------------------  
 2013-02-06 14:29:59.6727944  
   

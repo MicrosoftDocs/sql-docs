@@ -17,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlServiceAdvancedProperty class"
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlServiceAdvancedProperty Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

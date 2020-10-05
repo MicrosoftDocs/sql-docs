@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "overriding default nullability"
   - "SET ANSI_NULL_DFLT_OFF statement"
 ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)
@@ -42,7 +42,7 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET ANSI_NULL_DFLT_OFF OFF
 ```

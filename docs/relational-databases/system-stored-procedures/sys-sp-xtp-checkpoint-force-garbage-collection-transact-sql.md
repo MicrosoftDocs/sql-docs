@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_checkpoint_force_garbage_collection"
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

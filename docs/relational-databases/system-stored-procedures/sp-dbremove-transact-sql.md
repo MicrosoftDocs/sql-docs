@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbremove"
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbremove (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

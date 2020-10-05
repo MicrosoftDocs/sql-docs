@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "activating routes"
   - "CREATE ROUTE statement"
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE ROUTE (Transact-SQL)
@@ -39,7 +39,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ## Syntax  
   
 ```syntaxsql
-  
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
 WITH    
@@ -67,7 +66,7 @@ WITH
  BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
  Specifies the database that hosts the target service. The *broker_instance_identifier* parameter must be the broker instance identifier for the remote database, which can be obtained by running the following query in the selected database:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID()  
@@ -87,7 +86,7 @@ Specifies the network address for this route. The *next_hop_address* specifies a
   
  The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -108,7 +107,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  The specified *port_number* must match the port number for the [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] at the specified computer. This can be obtained by running the following query in the selected database:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -139,7 +138,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### A. Creating a TCP/IP route by using a DNS name  
  The following example creates a route to the service `//Adventure-Works.com/Expenses`. The route specifies that messages to this service travel over TCP to port `1234` on the host identified by the DNS name `www.Adventure-Works.com`. The target server delivers the messages upon arrival to the broker instance identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql 
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -150,7 +149,7 @@ CREATE ROUTE ExpenseRoute
 ### B. Creating a TCP/IP route by using a NetBIOS name  
  The following example creates a route to the service `//Adventure-Works.com/Expenses`. The route specifies that messages to this service travel over TCP to port `1234` on the host identified by the NetBIOS name `SERVER02`. Upon arrival, the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delivers the message to the database instance identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH   
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -161,7 +160,7 @@ CREATE ROUTE ExpenseRoute
 ### C. Creating a TCP/IP route by using an IP address  
  The following example creates a route to the service `//Adventure-Works.com/Expenses`. The route specifies that messages to this service travel over TCP to port `1234` on the host at the IP address `192.168.10.2`. Upon arrival, the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delivers the message to the broker instance identified by the unique identifier `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -172,7 +171,7 @@ CREATE ROUTE ExpenseRoute
 ### D. Creating a route to a forwarding broker  
  The following example creates a route to the forwarding broker on the server `dispatch.Adventure-Works.com`. Because both the service name and the broker instance identifier are not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses this route for services that have no other route defined.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
@@ -181,7 +180,7 @@ CREATE ROUTE ExpenseRoute
 ### E. Creating a route to a local service  
  The following example creates a route to the service `//Adventure-Works.com/LogRequests` in the same instance as the route.  
   
-```  
+```sql  
 CREATE ROUTE LogRequests  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/LogRequests',  
@@ -191,7 +190,7 @@ CREATE ROUTE LogRequests
 ### F. Creating a route with a specified lifetime  
  The following example creates a route to the service `//Adventure-Works.com/Expenses`. The lifetime for the route is `259200` seconds, which equates to 72 hours.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -202,7 +201,7 @@ CREATE ROUTE ExpenseRoute
 ### G. Creating a route to a mirrored database  
  The following example creates a route to the service `//Adventure-Works.com/Expenses`. The service is hosted in a database that is mirrored. One of the mirrored databases is located at the address `services.Adventure-Works.com:1234`, and the other database is located at the address `services-mirror.Adventure-Works.com:1234`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -214,7 +213,7 @@ CREATE ROUTE ExpenseRoute
 ### H. Creating a route that uses the service name for routing  
  The following example creates a route that uses the service name to determine the network address to send the message to. Notice that a route that specifies `'TRANSPORT'` as the network address has lower priority for matching than other routes.  
   
-```  
+```sql  
 CREATE ROUTE TransportRoute  
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  

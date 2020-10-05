@@ -56,7 +56,7 @@ The following SQL Server Database Engine features are deprecated in the next ver
 
 | Deprecated feature | Replacement | Feature name | Feature ID |
 |--------------------|-------------|--------------|------------|
-Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL Server version goes out of [support](https://aka.ms/sqllifecycle), the associated Database Compatibility Level are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
+Upgrade from version 100 (SQL Server 2008 and  SQL Server 2008 R2). | When a SQL Server version goes out of [support](/lifecycle/products/?products=sql-server), the associated Database Compatibility Level are marked deprecated. However, we continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Database compatibility level 100 | 108 |
 
 ### Database objects
 
@@ -364,6 +364,4 @@ The following SQL Server Database Engine features are supported in the next vers
 > The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## See Also  
- [Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)  

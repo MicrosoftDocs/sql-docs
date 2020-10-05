@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], creating"
   - "CREATE FULLTEXT CATALOG statement"
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

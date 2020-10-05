@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.VIEW_TABLE_USAGE view"
   - "VIEW_TABLE_USAGE view"
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # VIEW_TABLE_USAGE (Transact-SQL)

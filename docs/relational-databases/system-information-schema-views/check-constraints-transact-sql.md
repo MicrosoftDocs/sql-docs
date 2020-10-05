@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "CHECK_CONSTRAINTS view"
   - "INFORMATION_SCHEMA.CHECK_CONSTRAINTS view"
 ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHECK_CONSTRAINTS (Transact-SQL)

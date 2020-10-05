@@ -17,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ServerSettingsGeneralFlag class"
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ServerSettingsGeneralFlag Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

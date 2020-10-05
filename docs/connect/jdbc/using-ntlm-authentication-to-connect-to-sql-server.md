@@ -30,11 +30,11 @@ The following properties are also used for NTLM Authentication:
 
 Other than **domain**, the other properties are mandatory, the driver will throw an error if any are missing when the **NTLM** authenticationScheme property is used. 
 
-For more information on connection properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+For more information on connection properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](/windows/desktop/SecAuthN/microsoft-ntlm).
 
 ## Remarks
 
-See [Network security: LAN Manager authentication level](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication. 
+See [Network security: LAN Manager authentication level](/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings, which control the behavior of NTLM authentication. 
 
 ## Logging
 
@@ -74,7 +74,7 @@ For example, your SPN might look like: "MSSQLSvc/some-server.zzz.corp.contoso.co
 
 For more information about service principal names (SPNs), see:
 
-- [Service Principal Name (SPN) Support in Client Connections](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
+- [Service Principal Name (SPN) Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
 
 > [!NOTE]  
 > The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.

@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server Big Data Cluster with high availabil
 author: mihaelablendea
 ms.author: mihaelab 
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Because SQL Server Big Data Clusters is on Kubernetes as containerized applications, and uses features like stateful sets and persistent storage, this infrastructure has built-in health monitoring, failure detection, and failover mechanisms that cluster components leverage to maintain service health. For increased reliability, you can also configure SQL Server master instance or HDFS name node and Spark shared services to deploy with additional replicas in a high availability configuration. Monitoring, failure detection, and automatic failover are managed by a big data cluster management service, namely the control service. This service is provided without user intervention – all from availability group setup, configuring database mirroring endpoints, to adding databases to the availability group or failover and upgrade coordination. 
+Because SQL Server Big Data Clusters is on Kubernetes as containerized applications, and uses features like stateful sets and persistent storage, this infrastructure has built-in health monitoring, failure detection, and failover mechanisms that cluster components leverage to maintain service health. For increased reliability, you can also configure SQL Server master instance and/or HDFS name node and Spark shared services to deploy with additional replicas in a high availability configuration. Monitoring, failure detection, and automatic failover are managed by the big data cluster management service, namely the control service. This service is provided without user intervention – all from availability group setup, configuring database mirroring endpoints, to adding databases to the availability group or failover and upgrade coordination. 
 
 The following image represents how an availability group is deployed in a SQL Server Big Data Cluster:
 
@@ -27,7 +27,7 @@ Here are some of the capabilities that availability groups enable:
 - All databases are automatically added to the availability group, including all user and system databases like `master` and `msdb`. This capability provides a single-system view across the availability group replicas. Additional model databases - `model_replicatedmaster` and `model_msdb` - are used to seed the replicated portion of the system databases. In addition to these databases, you will see `containedag_master` and `containedag_msdb` databases if you connect directly to the instance. The `containedag` databases represent the `master` and `msdb` inside the availability group.
 
   > [!IMPORTANT]
-  > At the time of the SQL Server 2019 CU1 release, only databases created as result of a CREATE DATABASE statement are automatically added to the availability group. Databases created on the instance as result of other workflows like attach database are not yet added to the availability group and big data cluster admin would have to do this manually. See the [Connect to SQL Server instance](#instance-connect) section for instructions. Prior to SQL Server 2019 CU2 release, databases created as result of a restore statement had the same behavior and required manually adding the databases to the contained availability group.
+  > Databases created on the instance as result of workflows like attach database are not automatically added to the availability group and big data cluster admin would have to do this manually. See the [Connect to SQL Server instance](#instance-connect) section for instructions how to enable a temporary endpoint ot the SQL Server instance master database. Prior to SQL Server 2019 CU2 release, databases created as result of a restore statement had the same behavior and required manually adding the databases to the contained availability group.
   >
 - Polybase configuration databases are not included in the availability group because they include instance level metadata specific to each replica.
 - An external endpoint is automatically provisioned for connecting to databases within the availability group. This endpoint `master-svc-external` plays the role of the availability group listener.
@@ -196,13 +196,17 @@ Here is an example that shows how to expose this endpoint and then add the datab
 
 ## Known limitations
 
-The known issues and limitations with availability groups for SQL Server master in big data cluster:
+These are known issues and limitations with contained availability groups for SQL Server master in big data cluster:
 
-- Prior to SQL Server 2019 CU2, databases created as result of workflows other than `CREATE DATABASE` and `RESTORE DATABASE` like `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
+- The high availability configuration must be created when big data cluster is deployed. You cannot enable the high availability configuration with availability groups post deployment. At this time, only configuration enabled is for synchronous commit replicas.
+
+> [!WARNING]
+> Updating the synchronization mode to asynchronous commit for any of the replicas in the  quorum commit, will result in an invalid configuration for high availability. Running in this configuration involves a data loss risk since in case of failure events affecting the primary replica, there is not an automatic failover triggered and the user must accept the risk for data loss when issuing manual failover.
+
 - To successfully restore a TDE enabled database from a backup created on another server, you must ensure that that [required certificates](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) are restored on both SQL Server instance master as well as contained AG master. See [here](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) for an example on how to backup and restore the certificates.
 - Certain operations like running server configuration settings with `sp_configure` require a connection to the SQL Server instance `master` database, not the availability group `master`. You cannot use the corresponding primary endpoint. Follow [the instructions](#instance-connect) to expose an endpoint and connect to the SQL Server instance and run `sp_configure`. You can only use SQL authentication when manually exposing the endpoint to connect to the SQL Server instance `master` database.
-- The high availability configuration must be created when big data cluster is deployed. You cannot enable the high availability configuration with availability groups post deployment.
-- While contained msdb database is included in the availability group and the SQL Agent jobs are replicated across, the jobs are not triggered per schedule. The workaround is to [connect to each of the SQL Server instances](#instance-connect) and create the jobs in the instance msdb. As of SQL Server 2019 CU2, only jobs created in each of the replicas in the master instance are supported.
+- While contained msdb database is included in the availability group and the SQL Agent jobs are replicated across, the jobs are only running per schedule on the primary replica.
+- Prior to SQL Server 2019 CU2, databases created as result of workflows other than `CREATE DATABASE` and `RESTORE DATABASE` like `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
 
 ## Next steps
 

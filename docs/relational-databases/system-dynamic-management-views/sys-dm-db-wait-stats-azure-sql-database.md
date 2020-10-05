@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sys.dm_db_wait_stats dynamic management view"
   - "dm_db_wait_stats"
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_wait_stats (Azure SQL Database)

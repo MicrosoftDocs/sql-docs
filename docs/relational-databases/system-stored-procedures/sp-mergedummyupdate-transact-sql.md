@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_mergedummyupdate"
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1908,7 +1908,7 @@
 - name: Resources
   items:
   - name: SSIS forum >>
-    href: https://social.msdn.microsoft.com/Forums/en-US/home
+    href: https://docs.microsoft.com/answers/topics/sql-server-integration-services.html
   - name: Stack Overflow >>
     href: https://stackoverflow.com/questions/tagged/ssis
   - name: SSIS blog >>

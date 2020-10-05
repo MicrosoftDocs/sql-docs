@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # CInstance Class - InstanceName Property
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

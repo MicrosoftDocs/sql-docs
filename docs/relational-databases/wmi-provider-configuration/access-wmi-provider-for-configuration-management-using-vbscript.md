@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "modifying SQL Server Service properties"
   - "WMI Provider for Configuration Management, VBScript"
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Access WMI Provider for Configuration Management using VBScript
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

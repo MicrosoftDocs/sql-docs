@@ -21,7 +21,7 @@ manager: kenvh
 ## Overview
 For the purpose of managing sensitive data, SQL Server and Azure SQL Server introduced the ability to provide database columns with sensitivity metadata that allows the client application to handle different types of sensitive data (such as health, financial, etc.) in accordance with data protection policies.
 
-For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017).
 
 Microsoft ODBC Driver 17.2 allows the retrieval of this metadata via SQLGetDescField using the SQL_CA_SS_DATA_CLASSIFICATION field identifier.
 
@@ -259,4 +259,3 @@ The value of the currently supported version of Data Classification can be retri
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
-

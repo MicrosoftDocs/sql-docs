@@ -23,21 +23,23 @@ ms.author: "sstein"
   
  **In This Topic**  
   
--   **Before you begin:**  
+   - **Before you begin:**  
   
      [Limitations and Restrictions](#Restrictions)  
   
      [Prerequisites](#Prerequisites)  
   
--   **Procedures:**  
+   - **Procedures:**  
   
      [Rebuild System Databases](#RebuildProcedure)  
   
      [Rebuild the resource Database](#Resource)  
   
-     [Create a New msdb Database](#CreateMSDB)  
+     [Create a New msdb Database](#CreateMSDB) 
+
+     [Rebuild the tempdb Database](#RebuildTempdb)  
   
--   **Follow Up:**  
+   - **Follow Up:**  
   
      [Troubleshoot Rebuild Errors](#Troubleshoot)  
   
@@ -49,15 +51,15 @@ ms.author: "sstein"
 ###  <a name="Prerequisites"></a> Prerequisites  
  Perform the following tasks before you rebuild the system databases to ensure that you can restore the system databases to their current settings.  
   
-1.  Record all server-wide configuration values.  
+1. Record all server-wide configuration values.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  Record all hotfixes applied to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the current collation. You must reapply these hotfixes after rebuilding the system databases.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -68,7 +70,7 @@ ms.author: "sstein"
   
 3.  Record the current location of all data and log files for the system databases. Rebuilding the system databases installs all system databases to their original location. If you have moved system database data or log files to a different location, you must move the files again.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -152,6 +154,7 @@ ms.author: "sstein"
 6.  From the **Ready to Repair** page, click **Repair**. The Complete page indicates that the operation is finished.  
   
 ##  <a name="CreateMSDB"></a> Create a New msdb Database  
+
  If the **msdb** database is damaged and you do not have a backup of the **msdb** database, you can create a new **msdb** by using the **instmsdb** script.  
   
 > [!WARNING]  
@@ -180,6 +183,33 @@ ms.author: "sstein"
 9. Recreate the user content stored in the **msdb** database, such as jobs, alert, etc.  
   
 10. Backup the **msdb** database.  
+
+##  <a name="RebuildTempdb"></a> Rebuild the Tempdb Database  
+
+If the **tempdb** database is damaged and the database engine fails to start, you can rebuild  **tempdb** without the need to rebuild all system databases.
+  
+1. Rename the current Tempdb.mdf and Templog.ldf files, if not missing. 
+1. Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a Command Prompt by using the following command. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   For a default instance name use MSSQLSERVER, for named instance use MSSQL$<instance_name>. Trace flag 4022 disables execution of startup stored procedures. The -mSQLCMD allows only [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) to connect to the server (see [Other Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
+
+   > [!Note] 
+   > Make sure that the command prompt window remains open after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. Closing the command prompt window will terminate the process.
+
+1. Connect to the server by using **sqlcmd**, and then use the following stored procedure to reset the status of the tempdb database.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. Shut down the server by pressing CTRL+C in the command prompt window
+
+1. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. This creates a new set of tempdb database files, and recovers the tempdb database.
+
   
 ##  <a name="Troubleshoot"></a> Troubleshoot Rebuild Errors  
  Syntax and other run-time errors are displayed in the command prompt window. Examine the Setup statement for the following syntax errors:  

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_testlinkedserver"
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_testlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

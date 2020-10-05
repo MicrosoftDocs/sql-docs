@@ -6035,8 +6035,6 @@
     items:
     - name: What's new
       href: dma/dma-whatsnew.md
-    - name: Assess SQL Database
-      href: dma/dma-assesssqlonprem.md
     - name: Assess SQL Server Integration Services (SSIS)
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments
@@ -6049,8 +6047,6 @@
       href: dma/dma-migrateonpremsqltosqldb.md
     - name: Migrate SQL Server logins
       href: dma/dma-migrateserverlogins.md
-    - name: Assess a SQL Server data estate for Azure SQL Database readiness
-      href: dma/dma-assess-sql-data-estate-to-sqldb.md      
     - name: Best practices
       href: dma/dma-bestpractices.md
     - name: Consolidate assessment reports
@@ -6061,6 +6057,14 @@
       href: dma/dma-commandline.md
     - name: Configure settings
       href: dma/dma-configurationsettings.md
+    - name: Assess Azure SQL DB readiness
+      items: 
+      - name: Create assessment
+        href: dma/dma-assesssqlonprem.md
+      - name: Use DMA GUI
+        href: dma/dma-assess-sql-data-estate-to-sqldb.md
+      - name: Use DMA command-line 
+        href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
   - name: SQL Server Migration Assistant (SSMA)
     href: ssma/toc.yml
 - name: Manage, monitor, & tune

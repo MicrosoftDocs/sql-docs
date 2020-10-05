@@ -17,10 +17,10 @@ author: minewiskan
   
  Each algorithm supports specific content types. For example, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns. To use a continuous column in a [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes model, you must discretize the data in the column. Some algorithms require certain content types in order to function correctly. For example, the [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series algorithm requires a key time column to identify the time over which the data was collected.  
   
- For a complete description of the content types that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports, see [Content Types &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
+ For a complete description of the content types that [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports, see [Content Types &#40;Data Mining&#41;](/analysis-services/data-mining/content-types-data-mining).  
   
 ## See Also  
- [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Syntax Elements](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; Function Reference](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -30,5 +30,4 @@ author: minewiskan
  [General Prediction Functions &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Structure and Usage of DMX Prediction Queries](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

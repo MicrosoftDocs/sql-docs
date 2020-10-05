@@ -40,6 +40,8 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 [ ; ]  
 ```  
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
  *distribution_id*  
  Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Value must be between 1 and 60. Used when targeting [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  

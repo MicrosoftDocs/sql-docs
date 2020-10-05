@@ -20,7 +20,7 @@ ms.author: jroth
   
 1.  Use the `cluster /log /g` command at the command prompt. This command generates the cluster logs to the \windows\cluster\reports directory on each WSFC node. The advantage of this method is that you can specify the level of detail in the generated logs by using the `/level` option. The disadvantage is that you cannot specify the destination directory for the generated cluster logs. For more information, see [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
-2.  Use the [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet. The advantage of this method is that you can generate the cluster log from all nodes to one destination directory on the node that you run the cmdlet. The disadvantage is that you cannot specify the level of detail in the generated logs.  
+2.  Use the [Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10)) PowerShell cmdlet. The advantage of this method is that you can generate the cluster log from all nodes to one destination directory on the node that you run the cmdlet. The disadvantage is that you cannot specify the level of detail in the generated logs.  
   
  The following PowerShell commands generate the cluster logs from all cluster nodes from the last 15 minutes and place them in the current directory. Run the commands in a PowerShell window with Administrative privileges.  
   
@@ -49,7 +49,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 8.  Right-click the availability group resource again and click **Bring this resource online**.  
   
 ## Availability group resource events  
- The table below shows the different kinds of events you can see in CLUSTER.LOG that pertain to the availability group resource. For more information on the Resource Hosting Subsystem (RHS) and Resource Control Monitor (RCM) in WSFC, see [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
+ The table below shows the different kinds of events you can see in CLUSTER.LOG that pertain to the availability group resource. For more information on the Resource Hosting Subsystem (RHS) and Resource Control Monitor (RCM) in WSFC, see [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](/archive/blogs/askcore/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters).  
   
 |Identifier|Source|Example from CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
@@ -70,5 +70,4 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 3.  Change the **SeparateMonitor** value to **1**.  
   
 4.  Restart the clustered service for your availability group in the WSFC cluster.  
-  
   

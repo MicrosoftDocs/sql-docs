@@ -76,7 +76,7 @@ ms.author: chugu
   
     2.  In **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-12. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+12. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../data-flow/transformations/lookup-transformation.md).  
   
 13. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
@@ -84,5 +84,4 @@ ms.author: chugu
  [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implement a Lookup in No Cache or Partial Cache Mode](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

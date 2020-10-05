@@ -23,7 +23,7 @@ This feature is currently in preview.
 
 If you don't have an Azure subscription, create a [free Azure account](https://azure.microsoft.com/free/) before you begin.
 
-- [An Azure Data Explorer cluster with a database that you can connect to](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [An Azure Data Explorer cluster with a database that you can connect to](/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md).
 - [Kusto (KQL) extension for Azure Data Studio](../extensions/kusto-extension.md).
 
@@ -113,6 +113,6 @@ You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?ass
 Learn more about notebooks:
 
 - [Kusto (KQL) extension for Azure Data Studio](../extensions/kusto-extension.md)
-- [How to use notebooks in Azure Data Studio](../notebooks-guidance.md)
-- [Create and run a Python notebook](../notebooks-tutorial-python-kernel.md)
-- [Create and run a SQL Server notebook](../notebooks-tutorial-sql-kernel.md)
+- [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)
+- [Create and run a Python notebook](./notebooks-python-kernel.md)
+- [Create and run a SQL Server notebook](./notebooks-sql-kernel.md)

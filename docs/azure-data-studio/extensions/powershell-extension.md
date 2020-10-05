@@ -59,8 +59,8 @@ If you are running Azure Data Studio on macOS or Linux, you may also need to ins
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
 For more information on installing PowerShell Core on macOS or Linux platforms, see the following articles:
 
-- [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux)
-- [Installing PowerShell Core on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos)
+- [Installing PowerShell Core on Linux](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [Installing PowerShell Core on macOS](/powershell/scripting/install/installing-powershell-core-on-macos)
 
 ## Example Scripts
 

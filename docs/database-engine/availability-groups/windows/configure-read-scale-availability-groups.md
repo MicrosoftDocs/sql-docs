@@ -81,6 +81,6 @@ You can connect to read-only secondary replicas in either of two ways:
 
 ## Next steps
 
-* [Configure a distributed availability group](distributed-availability-groups-always-on-availability-groups.md)
+* [Configure a distributed availability group](./distributed-availability-groups.md)
 * [Learn more about availability groups](overview-of-always-on-availability-groups-sql-server.md)
 * [Perform a forced manual failover](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

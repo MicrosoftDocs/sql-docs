@@ -337,7 +337,7 @@ For more information about the **SHUTDOWN** statement, see [SHUTDOWN &#40;Transa
   
 ##  <a name="ServiceController"></a> Using Service Controller Class
 
-You can use ServiceController class to control SQL server service or any other Windows service. For an example on how to do this, see [ServiceController Class](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
+You can use ServiceController class to control SQL server service or any other Windows service. For an example on how to do this, see [ServiceController Class](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
 
 ## Manage the SQL Server service on Linux
 
@@ -361,7 +361,7 @@ You can stop, start, or restart the SQL Server service as needed using the follo
 
 ## Next steps
 
-- [Overview of SQL Server Setup Documentation](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)
+- [Overview of SQL Server Setup Documentation](../install-windows/install-sql-server.md)
 - [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)
 - [Start SQL Server with Minimal Configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)

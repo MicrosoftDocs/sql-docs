@@ -43,7 +43,7 @@ ms.author: mathoma
   
 -   Read-only workloads for disk-based tables use row versioning to remove blocking contention on the secondary databases. All queries that run against the secondary databases are automatically mapped to snapshot isolation transaction level, even when other transaction isolation levels are explicitly set. Also, all locking hints are ignored. This eliminates reader/writer contention.  
   
--   Read-only workloads for memory-optimized durable tables access the data in exactly the same way it is accessed on the primary database, using native stored procedures or SQL Interoperability with the same transaction isolation level limitations (See [Isolation Levels in the Database Engine](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). Reporting workload or read-only queries running on the primary replica can be run on the secondary replica without requiring any changes. Similarly, a reporting workload or read-only queries running on a secondary replica can be run on the primary replica without requiring any changes.  Similar to disk-based tables, all queries that run against the secondary databases are automatically mapped to snapshot isolation transaction level, even when other transaction isolation levels are explicitly set.  
+-   Read-only workloads for memory-optimized durable tables access the data in exactly the same way it is accessed on the primary database, using native stored procedures or SQL Interoperability with the same transaction isolation level limitations (See [Isolation Levels in the Database Engine](/previous-versions/sql/sql-server-2008-r2/ms189122(v=sql.105))). Reporting workload or read-only queries running on the primary replica can be run on the secondary replica without requiring any changes. Similarly, a reporting workload or read-only queries running on a secondary replica can be run on the primary replica without requiring any changes.  Similar to disk-based tables, all queries that run against the secondary databases are automatically mapped to snapshot isolation transaction level, even when other transaction isolation levels are explicitly set.  
   
 -   DML operations are allowed on table variables both for disk-based and memory-optimized table types on the secondary replica.  
   
@@ -234,12 +234,11 @@ GO
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Statistics](../../../relational-databases/statistics/statistics.md)  
-  
   

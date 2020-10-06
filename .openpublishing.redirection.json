@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs/sql-server/sql-server-privacy-ver15.md",
+      "redirect_url": "/sql/sql-server/sql-server-privacy",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/case-study-building-an-enterprise-ecosystem.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/case-study-building-an-enterprise-ecosystem",
       "redirect_document_id": false
@@ -46087,7 +46092,7 @@
     },
     {
       "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql.md",
-      "redirect_url": "/azure/sql-database//transparent-data-encryption-byok-azure-sql",
+      "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql",
       "redirect_document_id": false
     },
     {
@@ -51857,7 +51862,7 @@
     },
     {
       "source_path": "docs/2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md",
-      "redirect_url": "/en-us/sql/sql-server/install/install-sql-server-business-intelligence-features?view=sql-server-2014",
+      "redirect_url": "/sql/sql-server/install/install-sql-server-business-intelligence-features?view=sql-server-2014",
       "redirect_document_id": false
     },
     {
@@ -58787,7 +58792,7 @@
     },
     {
       "source_path": "docs/relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md",
-      "redirect_url": "https://docs.microsoft.com/azure/azure-subscription-service-limits",
+      "redirect_url": "/azure/azure-subscription-service-limits",
       "redirect_document_id": false
     },
     {
@@ -58867,12 +58872,12 @@
     },
     {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md",
-      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-connect-with-windows-auth",
+      "redirect_url": "/azure/data-factory/ssis-azure-connect-with-windows-auth",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-files-file-shares.md",
-      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-files-file-shares",
+      "redirect_url": "/azure/data-factory/ssis-azure-files-file-shares",
       "redirect_document_id": false
     },
     {
@@ -58882,7 +58887,7 @@
     },
     {
       "source_path": "docs/relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md",
-      "redirect_url": "https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)",
+      "redirect_url": "/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)",
       "redirect_document_id": false
     },
     {
@@ -59014,6 +59019,31 @@
       "source_path": "docs/azure-data-studio/machine-learning-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/machine-learning-extension",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-guidance.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-kqlmagic.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-kqlmagic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-python-kernel.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-python-kernel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/notebooks-tutorial-sql-kernel.md",
+      "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-sql-kernel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
+      "redirect_url": "/sql/ssms/quickstarts/connect-query-sql-server",
+      "redirect_document_id": false
     }
   ]
 }

@@ -89,7 +89,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | The type of auditable entity that the audit occurs on. Is not nullable. |  
 | client_ip | **nvarchar(128)** | **Applies to**: Azure SQL Database + SQL Server (starting with 2017)<br /><br /> 	Source IP of the client application |  
 | connection_id | GUID | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br /> ID of the connection in the server |
-| data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL Database only<br /><br /> Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL Database only<br /><br /> Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | The database context in which the action occurred. Is nullable. Returns NULL for audits occurring at the server level. |  
 | database_principal_id | **int** |ID of the database user context that the action is performed in. Is not nullable. Returns 0 if this does not apply. For example, a server operation.|
 | database_principal_name | **sysname** | Current user. Is nullable. Returns NULL if not available. |  
@@ -171,7 +171,7 @@ fn_get_audit_file ( file_pattern,
 
 For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
 
-For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/azure/sql-database/sql-database-auditing).
+For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](/azure/sql-database/sql-database-auditing).
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
@@ -194,5 +194,4 @@ For information on setting up Azure SQL Database auditing, see [Get Started with
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Create a Server Audit and Server Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

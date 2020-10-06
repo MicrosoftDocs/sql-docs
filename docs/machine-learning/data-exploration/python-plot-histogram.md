@@ -1,10 +1,11 @@
 ---
 title: Plot a histogram for data exploration with Python
+titleSuffix: SQL machine learning
 description: Learn how to create a histogram to visualize data using Python.
 author: cawrites
 ms.author: chadam
 ms.date: 07/14/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"

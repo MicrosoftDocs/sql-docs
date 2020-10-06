@@ -28,12 +28,12 @@ Removes the space character `char(32)` or other specified characters from the st
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string )
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```

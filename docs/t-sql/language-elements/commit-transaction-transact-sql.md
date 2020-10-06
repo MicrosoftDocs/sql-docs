@@ -48,7 +48,7 @@ COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ 
 ```  
  
 ```syntaxsql
--- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
+-- Applies to Azure Synapse Analytics and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 
 [ ; ]  
@@ -92,7 +92,7 @@ Is the name of a user-defined variable containing a valid transaction name. The 
 ## Examples  
   
 ### A. Committing a transaction  
-**APPLIES TO:** SQL Server, Azure SQL Database, Azure SQL Data Warehouse, and Parallel Data Warehouse   
+**APPLIES TO:** SQL Server, Azure SQL Database, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
 
 The following example deletes a job candidate. It uses AdventureWorks. 
   

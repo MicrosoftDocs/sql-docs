@@ -92,6 +92,10 @@ These database roles exist only in the virtual master database. Their permission
 
 > [!NOTE]
 > The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+
+Some database roles are not applicable to Azure SQL or Synapse SQL:
+- **db_backupoperator** is not applicable in Azure SQL database (not managed instance) and Synapse SQL serverless pool because backup and restore T-SQL comands are not available.
+- **db_datawriter** and **db_denydatawriter** are not applicable to Synapse SQL serverless because it just reads external data.
   
 ## msdb Roles  
  The msdb database contains the special-purpose roles that are shown in the following table.  

@@ -43,7 +43,7 @@ productDirectory:
       - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
         text: Azure SQL Managed Instance      
       - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
-        text: Azure SQL Edge (preview)         
+        text: Azure SQL Edge       
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
         text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server on Linux

@@ -24,7 +24,7 @@ The Azure SQL Managed Instance extension provides a dashboard for working with a
 ## Install
 
 You can install the official release of this extension. Follow the steps
-in the [Azure Data Studio documentation](../extensions.md).
+in the [Azure Data Studio documentation](./add-extensions.md).
 In the **Extensions** pane, search for "Managed Instance", and install it there. After it's installed, you'll get notified automatically about any future extension updates.
 
 With the extension installed, you'll see a **Managed Instance** tab in Azure Data Studio. Here you can find information specific for your managed instance.

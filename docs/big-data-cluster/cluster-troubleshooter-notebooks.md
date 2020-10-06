@@ -93,6 +93,5 @@ A set of notebooks for repairing known situations and states of a SQL Server Big
 
 ## Next steps
 
-You can check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

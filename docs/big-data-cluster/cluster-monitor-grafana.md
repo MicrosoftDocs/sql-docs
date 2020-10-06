@@ -50,6 +50,4 @@ The `nodeMetricsUrl` and `sqlMetricsUrl` values link to a Grafana dashboard for 
 
 ## Next steps
 
-You can check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
-
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

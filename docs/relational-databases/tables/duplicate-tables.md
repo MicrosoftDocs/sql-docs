@@ -1,8 +1,8 @@
 ---
-description: "Duplicate Table Structures"
-title: "Duplicate Table Structures | Microsoft Docs"
+description: "Create a duplicate copy of a table, without the row data."
+title: "Duplicate tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "10/05/2020"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Duplicate Table Structures
+# Duplicate tables
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
-  You can duplicate an existing table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] by creating a new table and then copying column information from an existing table.  
+You can duplicate an existing table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] by creating a new table and then copying column information from an existing table.  
   
 > [!IMPORTANT]  
 >  This operation duplicates only the structure of a table; it does not duplicate any table rows.  
@@ -79,5 +79,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 4.  Remove any columns that are not needed in the new table.  
   
 5.  Click **Execute**.  
-  
-  

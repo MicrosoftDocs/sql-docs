@@ -22,7 +22,7 @@ This article describes how to install `azdata` on Windows with an installer. Use
 To install `azdata` on with the Microsoft Windows Installer,
 
 1. Remove `azdata` if it was installed using `pip`. If `azdata` was installed using Windows Installer, proceed to the next step.
-1. Install `azdata` using the Windows Installer.
+1. Install `azdata` using the [Windows Installer](https://aka.ms/azdata-msi).
 
 ### Uninstall `azdata` with Windows Installer
 

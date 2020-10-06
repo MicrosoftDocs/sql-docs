@@ -42,7 +42,7 @@ In addition, you can improve performance by enabling lock escalation at the part
 The following terms are applicable to table and index partitioning.  
   
 ### Partition function  
-A database object that defines how the rows of a table or index are mapped to a set of partitions based on the values of certain column, called a partitioning column. That is, the partition function defines the number of partitions that the table will have and how the boundaries of the partitions are defined. For example, given a table that contains sales order data, you may want to partition the table into twelve (monthly) partitions based on a **datetime** column such as a sales date.  
+A database object that defines how the rows of a table or index are mapped to a set of partitions based on the values of a certain column, called a partitioning column. Each value in the partitioning column is an input to the partitioning function, which returns a partition value. The partition function defines the number of partitions and the partition boundaries that the table will have. For example, given a table that contains sales order data, you may want to partition the table into twelve (monthly) partitions based on a **datetime** column such as a sales date.  
   
 ### Partition scheme 
 A database object that maps the partitions of a partition function to a set of filegroups. The primary reason for placing your partitions on separate filegroups is to make sure that you can independently perform backup operations on partitions. This is because you can perform backups on individual filegroups.  

@@ -30,7 +30,7 @@ You can connect to a SQL Database using Ruby on Windows, Linux, or macOS.
   
 ## Support
 
-Ruby and tiny_tds are community supported software. This software doesn't come with Microsoft support. To get help visit the community resources:
+Ruby and tiny_tds are community supported software. This software doesn't come with Microsoft support. To get help, visit the community resources:
 
 ## Community  
 

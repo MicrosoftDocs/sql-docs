@@ -77,7 +77,13 @@ Use the following steps to run the deployment script in a Windows PowerShell or 
    | **Username** | Username for the controller user (default: **admin**). |
 
    > [!IMPORTANT]
-   > The default **Standard_D16s_v3** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_D16s_v3](/azure/virtual-machines/dsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.
+   > The default **Standard_D16s_v3** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims.
+   >
+   >Run the following command to identify the available VM types.
+   >
+   >```azurecli-interactive
+   >az vm list-skus --size standard_D16s -o table
+   >```
 
    > [!NOTE]
    > The SQL Server `sa` account is disabled during big data cluster deployment. A new sysadmin login is provisioned in SQL Server master instance the same name specified for **Username** input and the password corresponding to the **Password** input. Same **Username** and **Password** values are used for provisioning a controller admin user. On clusters deployed prior to SQL Server 2019 CU5, the only user supported for gateway (Knox) is **root** and the password is the same as above.

@@ -104,6 +104,8 @@
       href: extensions/wizard-extension.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
+  - name: Preview features
+    href: preview-features.md
   - name: Server groups
     href: server-groups.md
   - name: Source control

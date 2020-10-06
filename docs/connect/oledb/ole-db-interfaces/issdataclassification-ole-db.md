@@ -23,6 +23,9 @@ ms.author: v-beaziz
 
   The **ISSDataClassification** interface provides the functionality to retrieve sensitivity classification data for the active rowset as received from SQL Server.
   
+
+## Methods
+
 |Method|Description|  
 |------------|-----------------|  
 |[ISSDataClassification::GetSensitivityClassification](../../oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md)|Returns a pointer to a SENSITIVITYCLASSIFICATION structure that contains sensitivity classification information.|  

@@ -223,4 +223,7 @@ void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityC
 }
 ```
 
+## Next steps
+ [Interfaces &#40;OLE DB&#41;](../ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+ [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)  
 

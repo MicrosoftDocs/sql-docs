@@ -82,7 +82,7 @@ Use the following steps to run the deployment script in a Windows PowerShell or 
    >Run the following command to identify the available VM types.
    >
    >```azurecli-interactive
-   >az vm list-skus --size standard_D16s -o table
+   >az vm list-skus --size standard_D16s --location WestUS2 -o table
    >```
 
    > [!NOTE]

@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "driver"
+  - "OLE DB Driver for SQL Server, data classification"
 author: "bazizi"
 ms.author: v-beaziz
 manager: kenvh

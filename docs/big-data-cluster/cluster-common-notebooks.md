@@ -24,7 +24,7 @@ Once all dependencies are installed, but **Run all cells** fails, each notebook 
 
 The notebooks in this section are used as prerequisites for other notebooks, such as login and logout of a cluster.
 
-|Name<br /><sub>(notebooks)</sub> |Description |
+|Name |Description |
 |---|---|---|---|
 |SOP005 - az login|Use the az command line interface to login to Azure. |
 |SOP006 - az logout|Use the az command line interface to logout of Azure.|Use the az command line interface to login to Azure.|
@@ -38,7 +38,7 @@ The notebooks in this section are used as prerequisites for other notebooks, suc
 
 A set of example notebooks demonstrating SQL Server Big Data Cluster scenarios.
 
-|Name<br /><sub>(notebooks)</sub> |Description |
+|Name |Description |
 |---|---|---|---|
 |SAM001a - Query Storage Pool from SQL Server Master Pool (1 of 3) - Load sample data|In this 3 part tutorial, load data into the Storage Pool (HDFS) using azdata, convert it into Parquet (using Spark) and the in the 3rd part, query the data using the Master Pool (SQL Server). |
 |SAM001b - Query Storage Pool from SQL Server Master Pool (2 of 3) - Convert data to parquet|Use the az command line interface to logout of Azure.|n this 2nd part of a 3 part tutorial, use Spark to convert a .csv file into a parquet file.|

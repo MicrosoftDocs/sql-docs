@@ -24,28 +24,29 @@ Once all dependencies are installed, but **Run all cells** fails, each notebook 
 
 This section contains a set of notebooks useful for getting logs from a SQL Server Big Data Cluster (BDC).
 
-|Name<br /><sub>(notebooks)</sub> |Description |
-|---|---|---|---|
-|TSG001 - Run azdata copy-logs|Use the azdata command line interface to copy data in BDC clusters. |
-|TSG061 - Get tail of all container logs for pods in BDC namespace|Get all container logs for pods from BDC cluster in the namespace.|
-|TSG062 - Get tail of all previous container logs for pods in BDC namespace|Get all previous container logs for pods  from BDC cluster in the namespace.|
-|TSG083 - Run kubectl cluster-info dump|Use the kubetl command line interface to dump BDC cluster-related information. |
-|TSG084 - Internal Query Processor Error|Using DMV query to get more information on the internal query processor error|
-|TSG091 - Get the azdata CLI logs|Get the azdata logs from the local machine. |
+| Name | Description |
+|--|--|
+| TSG001 - Run azdata copy-logs | Use the azdata command line interface to copy data in BDC clusters. |
+| TSG061 - Get tail of all container logs for pods in BDC namespace | Get all container logs for pods from BDC cluster in the namespace. |
+| TSG062 - Get tail of all previous container logs for pods in BDC namespace | Get all previous container logs for pods  from BDC cluster in the namespace. |
+| TSG083 - Run kubectl cluster-info dump | Use the kubetl command line interface to dump BDC cluster-related information. |
+| TSG084 - Internal Query Processor Error | Using DMV query to get more information on the internal query processor error |
+| TSG091 - Get the azdata CLI logs | Get the azdata logs from the local machine. |
 
 
 
 ## Analyse logs from Big Data Clusters (BDC)
 
-A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster.  The analysis process will SUGGEST follow on TSGs to run for known issue found in the logs
-|Name<br /><sub>(notebooks)</sub> |Description |
-|---|---|---|---|
+A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster.  The analysis process will suggest follow-on notebooks to run for known issue found in the logs.
+
+|Name|Description |
+|---|---|
 |TSG030 - SQL Server errorlog files|Get SQL Server errorlog files and analyze log entries and suggest further relevant troubleshooting guides. |
 |TSG031 - SQL Server PolyBase logs|Get SQL Server PolyBase logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG034 - Livy logs|Get Livy logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG035 - Spark History logs|Get Spark History logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG036 - Controller logs|Get the last ‘n’ hours of controller logs and analyze log entries and suggest further relevant troubleshooting guides.|
-|TSG046 - Knox gateway logs|Knox gives a 500 error to the client, and removes details (the stack) pointing to the cause of the underlying issue. Therefore use this TSG to get the Knox logs from the cluster. Get Knox gateway logs and analyze log entries and suggest further relevant troubleshooting guides.|
+|TSG046 - Knox gateway logs|Knox gives a 500 error to the client, and removes details (the stack) pointing to the cause of the underlying issue. Therefore use this notebook to get the Knox logs from the cluster. Get Knox gateway logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG073 - InfluxDB logs|Get InfluxDB logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG076 - Elastic Search logs|Get Elastic Search logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG077 - Kibana logs|Get Kibana logs and analyze log entries and suggest further relevant troubleshooting guides.|
@@ -56,8 +57,6 @@ A set of notebooks to gather and analyze logs from a SQL Server Big Data Cluster
 |TSG094 - Grafana logs|Get Grafana logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG095 - Hadoop namenode logs|Get Hadoop namenode logs and analyze log entries and suggest further relevant troubleshooting guides.|
 |TSG096 - Zookeeper logs|Get Zookeeper logs and analyze log entries and suggest further relevant troubleshooting guides.|
-
-
 
 ## Next steps
 

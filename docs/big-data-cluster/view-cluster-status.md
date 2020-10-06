@@ -15,12 +15,21 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to monitor Big data Cluster in the following ways : 
+## Monitor with tools
+
+The following articles describe how to monitor Big data Cluster in the following ways: 
 
 - [Monitor BDC Cluster with Azure Data Studio](cluster-monitor-ads.md)
-- [Monitor BDC Cluster with Azdata utility](cluster-monitor-cmdlet.md) 
+- [Monitor BDC Cluster with Azdata utility](cluster-monitor-cmdlet.md)
 - [Monitor BDC Cluster with Grafana Dashboard](cluster-monitor-grafana.md)
-- [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio (ADS)](cluster-monitor-notebooks.md)
+- [Monitor BDC Cluster with Juypter notebooks and Azure Data Studio](cluster-monitor-notebooks.md)
+
+## Monitor and inspect logs with notebooks
+
+The following articles list many of the Jupyter notebooks that are available in Azure Data Studio.
+
+- [Monitoring cluster with notebooks](cluster-monitor-notebooks.md)
+- [Gathering and analyzing logs in the cluster with notebooks](cluster-logging-notebooks.md)
 
 ## Next steps
 

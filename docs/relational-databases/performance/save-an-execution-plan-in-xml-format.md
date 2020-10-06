@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 5.  In the **Save** \<Grid or Text> **Results** dialog box, in the **Save as type** box, click **All files (\*.\*)**.  
   
-6.  In the **File name** box provide a name, in the format \<name**>.sqlplan**, and then click **Save**.  
+6.  In the **File name** box provide a name, in the format \<name>**.sqlplan**, and then click **Save**.  
 
 ### To save an execution plan by using SQL Server Management Studio options  
   
@@ -78,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  In the **Save As** dialog box, make sure that the **Save as type** is set to **Execution Plan Files (\*.sqlplan)**.  
   
-4.  In the **File name** box provide a name, in the format \<name**>.sqlplan**, and then click **Save**.  
+4.  In the **File name** box provide a name, in the format \<name>**.sqlplan**, and then click **Save**.  
   
 ### To open a saved XML query plan in SQL Server Management Studio  
   

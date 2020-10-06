@@ -1,4 +1,5 @@
 ---
+description: "PI (Transact-SQL)"
 title: "PI (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 PI ( )  
 ```  
   
@@ -41,7 +42,7 @@ PI ( )
 ## Examples  
  The following example returns the value of `PI`.  
   
-```  
+```sql  
 SELECT PI();  
 GO  
 ```  

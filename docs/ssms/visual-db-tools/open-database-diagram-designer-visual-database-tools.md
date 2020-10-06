@@ -1,4 +1,5 @@
 ---
+description: "Open Database Diagram Designer (Visual Database Tools)"
 title: Open Database Diagram Designer
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

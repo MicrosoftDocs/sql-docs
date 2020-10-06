@@ -1,4 +1,5 @@
 ---
+description: "Connect to a MySQL Data Source (SQL Server Import and Export Wizard)"
 title: "Connect to a MySQL Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020

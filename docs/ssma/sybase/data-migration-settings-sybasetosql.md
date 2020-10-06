@@ -1,4 +1,5 @@
 ---
+description: "Data Migration Settings (SybaseToSQL)"
 title: "Data Migration Settings (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

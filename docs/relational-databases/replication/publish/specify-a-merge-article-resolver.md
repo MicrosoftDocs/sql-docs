@@ -1,4 +1,5 @@
 ---
+description: "Specify a Merge Article Resolver"
 title: "Specify a Merge Article Resolver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

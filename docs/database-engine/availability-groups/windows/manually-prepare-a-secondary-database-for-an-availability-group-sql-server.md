@@ -233,13 +233,13 @@ This topic describes how to prepare a database for an Always On availability gro
 4.  To restore the database and log backups of each primary database, use the **restore-SqlDatabase** cmdlet, specifying the **NoRecovery** restore parameter. If the file paths differ between the computers that host the primary replica and the target secondary replica, also use the **RelocateFile** restore parameter.  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  To complete configuration of the secondary database, you need to join it to the availability group. For more information, [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="ExamplePSscript"></a> Sample backup and restore script and command  
  The following PowerShell commands back up a full database backup and transaction log to a network share and restore those backups from that share. This example assumes that the file path to which the database is restored is the same as the file path on which the database was backed up.  
@@ -265,5 +265,4 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
  [RESTORE Arguments &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)   
  [Troubleshoot a Failed Add-File Operation &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
   

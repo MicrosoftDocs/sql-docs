@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Multiple Active Result Sets"
   - "OLE DB Driver for SQL Server, MARS"
   - "MARS [SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Multiple Active Result Sets (MARS)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Backward Compatibility in SMO"
 title: "Backward Compatibility in SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

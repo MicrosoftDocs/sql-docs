@@ -1,4 +1,5 @@
 ---
+description: "Overview of the Replication Monitor Interface"
 title: "Overview of the Replication Monitor Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

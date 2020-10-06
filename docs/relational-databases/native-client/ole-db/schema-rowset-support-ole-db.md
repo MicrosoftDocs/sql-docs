@@ -1,4 +1,5 @@
 ---
+description: "Schema Rowset Support in SQL Server Native Client (OLE DB)"
 title: "Schema Rowset Support (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

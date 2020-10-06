@@ -1,4 +1,5 @@
 ---
+description: "DBCC TRACEOFF (Transact-SQL)"
 title: "DBCC TRACEOFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"

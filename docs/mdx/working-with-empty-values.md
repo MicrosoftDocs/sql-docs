@@ -1,4 +1,5 @@
 ---
+description: "Working with Empty Values"
 title: "Working with Empty Values | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

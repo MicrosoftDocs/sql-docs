@@ -1,4 +1,5 @@
 ---
+description: "Modify the Target Servers for a Job"
 title: "Modify the Target Servers for a Job"
 ms.prod: sql
 ms.prod_service: sql-tools

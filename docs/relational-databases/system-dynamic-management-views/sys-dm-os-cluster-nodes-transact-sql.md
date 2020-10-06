@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_cluster_nodes (Transact-SQL)"
 title: "sys.dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_cluster_nodes dynamic management view"
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

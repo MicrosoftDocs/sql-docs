@@ -167,7 +167,7 @@ To customize your cluster deployment configuration files, you can use any JSON f
 
 ## Prerequisites
 
-- [Install azdata](deploy-install-azdata.md).
+- [Install azdata](../azdata/install/deploy-install-azdata.md).
 
 - Each of the examples in this section assume that you have created a copy of one of the standard configurations. For more information, see [Create a custom configuration](deployment-guidance.md#customconfig). For example, the following command creates a directory called `custom-bdc` that contains two JSON deployment configuration files, `bdc.json` and `control.json`, based on the default `aks-dev-test` configuration:
 
@@ -671,7 +671,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 > [!IMPORTANT]
 > We recommend as a best practice to manually update the `max_map_count` setting manually on each host in the Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 
-## Turn pods and nodes metrics colelction on/off
+## Turn pods and nodes metrics collection on/off
 
 SQL Server 2019 CU5 enabled two feature switches to control the collection of pods and nodes metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to *false* in *control.json* deployment configuration file. For OpenShift environments, these settings are set to *false* by default in the built-in deployment profiles, since collecting pod and node metrics requires privileged capabilities.
 Run this command to update the values of these settings in your custom configuration file using *azdata* CLI:

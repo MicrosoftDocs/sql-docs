@@ -1,4 +1,5 @@
 ---
+description: "ODBC API Implementation Details"
 title: "ODBC API Implementation Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

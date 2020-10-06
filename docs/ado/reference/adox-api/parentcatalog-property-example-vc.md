@@ -1,8 +1,9 @@
 ---
+description: "ParentCatalog Property Example (VC++)"
 title: "ParentCatalog Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # ParentCatalog Property Example (VC++)
-The following code demonstrates how to use the [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) property to access a provider-specific property prior to appending a table to a catalog. The property is **AutoIncrement**, which creates an AutoIncrement field in a Microsoft Jet database.  
+The following code demonstrates how to use the [ParentCatalog](./parentcatalog-property-adox.md) property to access a provider-specific property prior to appending a table to a catalog. The property is **AutoIncrement**, which creates an AutoIncrement field in a Microsoft Jet database.  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  

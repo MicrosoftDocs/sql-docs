@@ -1,8 +1,9 @@
 ---
+description: "ParameterDirectionEnum"
 title: "ParameterDirectionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ParameterDirectionEnum
-Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, both an input and an output parameter, or the return value from a stored procedure.  
+Specifies whether the [Parameter](./parameter-object.md) represents an input parameter, an output parameter, both an input and an output parameter, or the return value from a stored procedure.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -42,9 +43,9 @@ Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-objec
 
 :::row:::
     :::column:::
-        [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [CreateParameter Method (ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Direction Property](../../../ado/reference/ado-api/direction-property.md)  
+        [Direction Property](./direction-property.md)  
     :::column-end:::
 :::row-end:::

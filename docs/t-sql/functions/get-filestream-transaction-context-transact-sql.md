@@ -1,4 +1,5 @@
 ---
+description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
 title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 ms.custom: ""
 ms.date: "03/14/2017"

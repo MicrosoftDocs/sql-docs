@@ -1,4 +1,5 @@
 ---
+description: "Maintenance Plan (Reporting and Logging Page)"
 title: "Maintenance Plan (Reporting and Logging Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

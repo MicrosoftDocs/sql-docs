@@ -1,4 +1,5 @@
 ---
+description: "CREATE CERTIFICATE (Transact-SQL)"
 title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/06/2020"

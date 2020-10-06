@@ -1,4 +1,5 @@
 ---
+description: "xp_cmdshell (Transact-SQL)"
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2019"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_cmdshell"
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

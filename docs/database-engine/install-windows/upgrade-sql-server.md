@@ -19,7 +19,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  
  You can upgrade instances of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)], or [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] directly to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], you'll either need to do a side-by-side upgrade, or a migration, to move to SQL Server 2019 as there is no common overlap between a supported mainstream operating system. Before running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup to upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following articles about the upgrade process and the release notes.  
   
-   - For information about upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], see [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
+   - For information about upgrading from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], see [Are you upgrading from SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).  
    - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
    - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
   
@@ -28,7 +28,7 @@ This section contains the following articles:
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Prepare for upgrade by running Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
--   [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
+-   [Are you upgrading from SQL Server 2005?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
 -   [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
 -   [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
 -   [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)  
@@ -49,6 +49,5 @@ This section contains the following articles:
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)   
- [Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md)  
   

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, tables"
   - "removing tables"
   - "dropping tables"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Dropping a SQL Server Table
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

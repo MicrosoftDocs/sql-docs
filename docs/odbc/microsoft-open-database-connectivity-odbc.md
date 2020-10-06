@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Open Database Connectivity (ODBC)"
 title: "Microsoft Open Database Connectivity (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

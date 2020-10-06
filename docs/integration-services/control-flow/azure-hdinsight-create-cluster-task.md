@@ -1,4 +1,5 @@
 ---
+description: "Azure HDInsight Create Cluster Task"
 title: "Azure HDInsight Create Cluster Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"

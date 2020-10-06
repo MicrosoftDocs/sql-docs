@@ -1,4 +1,5 @@
 ---
+description: "Backslash (Line Continuation) (Transact-SQL)"
 title: "Backslash (Line Continuation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2019"

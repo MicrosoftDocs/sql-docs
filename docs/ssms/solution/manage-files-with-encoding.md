@@ -1,4 +1,5 @@
 ---
+description: "Manage Files with Encoding"
 title: "Manage Files with Encoding"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "TRANSACTION_SNAPSHOT Field (SQLServerConnection)"
 title: "TRANSACTION_SNAPSHOT Field (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (SybaseToSQL)"
 title: "Managing Passwords (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/07/2020

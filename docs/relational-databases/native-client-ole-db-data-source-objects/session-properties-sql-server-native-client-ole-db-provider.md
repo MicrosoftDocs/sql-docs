@@ -1,4 +1,5 @@
 ---
+description: "Session Properties - SQL Server Native Client OLE DB provider"
 title: "Session Properties OLE DB"
 ms.custom: ""
 ms.date: "03/14/2017"

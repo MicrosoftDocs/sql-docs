@@ -1,4 +1,5 @@
 ---
+description: "sp_defaultdb (Transact-SQL)"
 title: "sp_defaultdb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_defaultdb"
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

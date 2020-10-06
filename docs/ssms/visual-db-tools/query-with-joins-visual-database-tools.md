@@ -1,4 +1,5 @@
 ---
+description: "Query with Joins (Visual Database Tools)"
 title: Query with Joins
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

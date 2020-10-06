@@ -1,4 +1,5 @@
 ---
+description: "getMaxProcedureNameLength Method (SQLServerDatabaseMetaData)"
 title: "getMaxProcedureNameLength Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

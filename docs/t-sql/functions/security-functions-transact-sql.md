@@ -1,4 +1,5 @@
 ---
+description: "Security Functions (Transact-SQL)"
 title: "Security Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

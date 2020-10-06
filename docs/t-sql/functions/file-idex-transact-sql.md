@@ -1,4 +1,5 @@
 ---
+description: "FILE_IDEX (Transact-SQL)"
 title: "FILE_IDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -32,7 +33,7 @@ This function returns the file identification (ID) number for the specified logi
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_IDEX ( file_name )  
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: "Integration Management Functional Area (Master Data Manager)"
 title: Integration Management Functional Area
 ms.custom: ""
 ms.date: "04/01/2016"

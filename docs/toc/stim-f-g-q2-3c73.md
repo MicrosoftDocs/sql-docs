@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling and Notifications in DQS (3c73)"
 title: Data Profiling and Notifications in DQS (3c73)
 ms.date: 08/12/2020
 ms.prod: sql

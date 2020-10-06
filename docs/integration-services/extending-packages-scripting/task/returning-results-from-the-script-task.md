@@ -1,4 +1,5 @@
 ---
+description: "Returning Results from the Script Task"
 title: "Returning Results from the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_pdw_database_encryption (SQL Data Warehouse)"
 title: "sp_pdw_database_encryption (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -24,7 +25,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 #### Parameters  
 `[ @enabled = ] enabled`
  Determines whether transparent data encryption is enabled. *enabled* is **int**, and can be one of the following values:  

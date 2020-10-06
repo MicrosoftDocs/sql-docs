@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Matching in the MDS Add-in for Excel"
 title: Data Quality Matching
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/14/2017"

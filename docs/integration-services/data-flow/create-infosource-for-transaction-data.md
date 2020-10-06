@@ -1,4 +1,5 @@
 ---
+description: "Create InfoSource for Transaction Data"
 title: "Create InfoSource for Transaction Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

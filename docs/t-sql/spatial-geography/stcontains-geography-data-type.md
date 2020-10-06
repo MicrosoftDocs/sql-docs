@@ -1,4 +1,5 @@
 ---
+description: "STContains  (geography Data Type)"
 title: "STContains  (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

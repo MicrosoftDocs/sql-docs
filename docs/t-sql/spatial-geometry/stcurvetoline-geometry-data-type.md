@@ -1,4 +1,5 @@
 ---
+description: "STCurveToLine (geometry Data Type)"
 title: "STCurveToLine (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

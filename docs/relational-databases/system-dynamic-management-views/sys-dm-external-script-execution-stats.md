@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_external_script_execution_stats"
 title: "sys.dm_external_script_execution_stats | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2020"

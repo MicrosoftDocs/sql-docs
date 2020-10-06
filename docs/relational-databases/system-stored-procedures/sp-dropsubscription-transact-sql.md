@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropsubscription"
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

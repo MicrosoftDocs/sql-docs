@@ -1,4 +1,5 @@
 ---
+description: "How to Manage a CDC Service from the CDC Designer Console"
 title: "How to Manage a CDC Service from the CDC Designer Console | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

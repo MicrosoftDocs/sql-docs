@@ -1,4 +1,5 @@
 ---
+description: "Extended Methods on Geography Instances"
 title: "Extended Methods on Geography Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Manage keys for Always Encrypted with secure enclaves"
 title: "Manage keys for Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019

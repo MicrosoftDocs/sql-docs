@@ -1,4 +1,5 @@
 ---
+description: "PWDENCRYPT (Transact-SQL)"
 title: "PWDENCRYPT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,8 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PWDENCRYPT ( 'password' )  
 ```  
   

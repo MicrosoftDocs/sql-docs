@@ -1,4 +1,5 @@
 ---
+description: "sys.trace_event_bindings (Transact-SQL)"
 title: "sys.trace_event_bindings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_event_bindings catalog view"
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

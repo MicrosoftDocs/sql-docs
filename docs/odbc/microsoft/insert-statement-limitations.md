@@ -1,4 +1,5 @@
 ---
+description: "INSERT Statement Limitations"
 title: "INSERT Statement Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DROP SERVER AUDIT  (Transact-SQL)"
 title: "DROP SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -28,7 +29,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DROP SERVER AUDIT audit_name  
     [ ; ]  
 ```  
@@ -48,7 +48,7 @@ DROP SERVER AUDIT audit_name
 ## Examples  
  The following example drops an audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 ALTER SERVER AUDIT HIPAA_Audit  
 STATE = OFF;  
 GO  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, indexes"
   - "indexes [OLE DB]"
   - "adding indexes"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Creating SQL Server Indexes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

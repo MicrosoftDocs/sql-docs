@@ -1,4 +1,5 @@
 ---
+description: "Change Steps of a SQL Server Agent Master Job"
 title: "Change Steps of a SQL Server Agent Master Job"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

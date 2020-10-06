@@ -1,4 +1,5 @@
 ---
+description: "Log Shipping Monitor Settings"
 title: "Log Shipping Monitor Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

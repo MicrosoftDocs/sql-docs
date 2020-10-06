@@ -1,4 +1,5 @@
 ---
+description: "getDriverMinorVersion Method (SQLServerDatabaseMetaData)"
 title: "getDriverMinorVersion Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

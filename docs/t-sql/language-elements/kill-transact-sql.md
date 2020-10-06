@@ -1,4 +1,5 @@
 ---
+description: "KILL (Transact-SQL)"
 title: "KILL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"
@@ -53,7 +54,7 @@ KILL { session ID | UOW } [ WITH STATUSONLY ]
 ```  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 KILL 'session_id'  
 [;]   

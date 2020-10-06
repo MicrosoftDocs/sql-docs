@@ -1,4 +1,5 @@
 ---
+description: "Numeric, string, and Boolean literals"
 title: "Literals (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"

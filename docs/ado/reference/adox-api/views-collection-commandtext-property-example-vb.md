@@ -1,8 +1,9 @@
 ---
+description: "Views Collection, CommandText Property Example (VB)"
 title: "Views Collection, CommandText Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Views Collection, CommandText Property Example (VB)
-The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property to update the text of a view.  
+The following code demonstrates how to use the [Command](./command-property-adox.md) property to update the text of a view.  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -71,8 +72,8 @@ End Sub
 ```  
   
 ## See Also  
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command Property (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Command Property (ADOX)](./command-property-adox.md)   
+ [View Object (ADOX)](./view-object-adox.md)   
+ [Views Collection (ADOX)](./views-collection-adox.md)

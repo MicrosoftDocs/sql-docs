@@ -1,4 +1,5 @@
 ---
+description: "INDEXKEY_PROPERTY (Transact-SQL)"
 title: "INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -34,8 +35,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )  
 ```  
   

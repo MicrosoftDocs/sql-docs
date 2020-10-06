@@ -1,4 +1,5 @@
 ---
+description: "DROP COLUMN ENCRYPTION KEY (Transact-SQL)"
 title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"
@@ -22,7 +23,8 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Drops a column encryption key from a database.  
   
@@ -31,7 +33,6 @@ ms.author: jaszymas
 ## Syntax  
   
 ```syntaxsql
-  
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
 
@@ -50,7 +51,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ### A. Dropping a column encryption key  
  The following example drops a column encryption key called `MyCEK`.  
   
-```  
+```sql  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
 GO  
 ```  

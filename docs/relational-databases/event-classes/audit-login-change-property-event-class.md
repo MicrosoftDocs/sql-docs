@@ -1,4 +1,5 @@
 ---
+description: "Audit Login Change Property Event Class"
 title: "Audit Login Change Property Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE INDEX Statement Limitations"
 title: "CREATE INDEX Statement Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Installing SSMA Components on SQL Server (DB2ToSQL)"
 title: "Installing SSMA Components on SQL Server (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

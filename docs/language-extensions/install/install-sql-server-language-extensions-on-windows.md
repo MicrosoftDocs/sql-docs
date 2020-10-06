@@ -4,7 +4,7 @@ titleSuffix:
 description: Learn how to install the Language Extensions feature on SQL Server on Windows by running the SQL Server setup wizard.
 author: dphansen
 ms.author: davidph 
-ms.date: 11/06/2019
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -144,8 +144,11 @@ If you did not install the default Zulu Open JRE that was included with SQL Serv
 2. Give AppContainer permissions
 
     ```cmd
-    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+    
+    > [!NOTE]
+    > The above command grants permissions to the computer SID **S-1-15-2-1**, which is equivalent to **ALL APPLICATION PACKAGES** on an English version of Windows. Alternatively, you can use `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
     
 ## Enable script execution
 

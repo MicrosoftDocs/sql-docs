@@ -1,4 +1,5 @@
 ---
+description: "sys.user_token (Transact-SQL)"
 title: "sys.user_token (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2019"

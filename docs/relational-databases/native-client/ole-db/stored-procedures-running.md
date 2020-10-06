@@ -1,4 +1,5 @@
 ---
+description: "Stored Procedures - Running in SQL Server Native Client"
 title: "Running Stored Procedures (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

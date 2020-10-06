@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL)"
 ms.date: "03/03/2017"
 ms.prod: sql

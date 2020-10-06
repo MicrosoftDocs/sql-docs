@@ -1,4 +1,5 @@
 ---
+description: "Logged vs. Unlogged Modifications"
 title: "Logged vs. Unlogged Modifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

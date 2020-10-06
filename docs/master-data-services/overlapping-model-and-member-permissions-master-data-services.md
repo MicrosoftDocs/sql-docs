@@ -1,4 +1,5 @@
 ---
+description: "Overlapping Model and Member Permissions (Master Data Services)"
 title: Overlapping Model and Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

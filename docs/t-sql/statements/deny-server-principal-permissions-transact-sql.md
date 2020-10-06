@@ -1,4 +1,5 @@
 ---
+description: "DENY Server Principal Permissions (Transact-SQL)"
 title: "DENY Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
@@ -123,7 +124,7 @@ GO
 ### B. Denying VIEW DEFINITION permission with CASCADE  
  The following example denies `VIEW DEFINITION` permission on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `EricKurjan` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `RMeyyappan`. The `CASCADE` option indicates that `VIEW DEFINITION` permission on `EricKurjan` will also be denied to principals to which `RMeyyappan` granted this permission.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     CASCADE;  
@@ -133,7 +134,7 @@ GO
 ### C. Denying VIEW DEFINITION permission on a server role  
  The following example denies `VIEW DEFINITION` on the `Sales` server role to the `Auditors` server role.  
   
-```  
+```sql 
 USE master;  
 DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

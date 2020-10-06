@@ -1,4 +1,5 @@
 ---
+description: "sp_helppeerresponses (Transact-SQL)"
 title: "sp_helppeerresponses (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helppeerresponses"
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helppeerresponses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

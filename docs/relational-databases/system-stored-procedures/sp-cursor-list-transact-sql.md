@@ -1,4 +1,5 @@
 ---
+description: "sp_cursor_list (Transact-SQL)"
 title: "sp_cursor_list (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursor_list"
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

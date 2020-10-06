@@ -1,4 +1,5 @@
 ---
+description: "Disable Foreign Key Constraints for Replication"
 title: "Disable Foreign Key Constraints for Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

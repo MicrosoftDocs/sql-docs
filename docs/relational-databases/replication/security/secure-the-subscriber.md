@@ -1,4 +1,5 @@
 ---
+description: "Secure the Subscriber"
 title: "Secure the Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

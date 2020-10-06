@@ -1,4 +1,5 @@
 ---
+description: "getArray Method (SQLServerCallableStatement)"
 title: "getArray Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

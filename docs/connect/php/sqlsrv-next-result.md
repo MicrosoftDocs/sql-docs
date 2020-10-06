@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_next_result"
 title: "sqlsrv_next_result | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

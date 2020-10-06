@@ -1,4 +1,5 @@
 ---
+description: "SQLGetTypeInfo (Excel Driver)"
 title: "SQLGetTypeInfo (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

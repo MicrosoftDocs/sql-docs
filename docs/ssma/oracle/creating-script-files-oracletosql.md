@@ -1,4 +1,5 @@
 ---
+description: "Creating Script Files (OracleToSQL)"
 title: "Creating Script Files (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

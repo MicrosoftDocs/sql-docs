@@ -1,4 +1,5 @@
 ---
+description: "Advanced Object Selection  (AccessToSQL)"
 title: "Advanced Object Selection  (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

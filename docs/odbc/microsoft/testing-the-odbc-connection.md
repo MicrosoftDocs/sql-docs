@@ -1,4 +1,5 @@
 ---
+description: "Testing the ODBC Connection"
 title: "Testing the ODBC Connection | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

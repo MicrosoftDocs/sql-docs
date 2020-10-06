@@ -1,8 +1,9 @@
 ---
+description: "ADO Event Instantiation by Language"
 title: "ADO Event Instantiation by Language | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,12 +18,12 @@ ms.author: jroth
 # ADO Event Instantiation by Language
 Each programming language creates instances of ADO events differently. All of the following examples create a **ConnectComplete** event handler.  
   
--   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
+-   [Visual Basic](./ado-event-instantiation-visual-basic.md)  
   
--   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
+-   [Visual C++](./ado-event-instantiation-visual-c.md)  
   
--   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
+-   [VBScript](./ado-event-instantiation-vbscript.md)  
   
--   [JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  
+-   [JScript](./ado-event-instantiation-jscript.md)  
   
--   [ADO/WFC](../../../ado/guide/data/ado-event-instantiation-ado-and-wfc.md)
+-   [ADO/WFC](./ado-event-instantiation-ado-and-wfc.md)

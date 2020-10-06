@@ -1,4 +1,5 @@
 ---
+description: "sp_MShasdbaccess (Transact-SQL)"
 title: "sp_MShasdbaccess (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_MShasdbaccess"
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_MShasdbaccess (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

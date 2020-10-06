@@ -1,4 +1,5 @@
 ---
+description: "ISSCommandWithParameters (Native Client OLE DB provider)"
 title: ISSCommandWithParameters (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

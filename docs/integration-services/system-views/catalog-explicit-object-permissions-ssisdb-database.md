@@ -1,4 +1,5 @@
 ---
+description: "catalog.explicit_object_permissions (SSISDB Database)"
 title: "catalog.explicit_object_permissions (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

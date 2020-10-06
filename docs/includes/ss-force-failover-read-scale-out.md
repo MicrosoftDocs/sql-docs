@@ -38,7 +38,7 @@ To avoid potential data loss, before you issue the manual failover, ensure that 
 
 To manually fail over without data loss:
 
-1. Make the target secondary replica `SYNCHRONOUS_COMMIT`.
+1. Make the current primary and target secondary replica `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -85,7 +85,7 @@ To manually fail over without data loss:
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the primary replica:
+1. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the old primary replica:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -93,7 +93,7 @@ To manually fail over without data loss:
    ```
 
    > [!NOTE] 
-   > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.
+   > To delete an availability group, use [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.
 
 1. Resume data movement, run the following command for every database in the availability group on the SQL Server instance that hosts the primary replica: 
 
@@ -101,3 +101,5 @@ To manually fail over without data loss:
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. Re-create any listener you created for read-scale purposes and that isn't managed by a cluster manager. If the original listener points to the old primary, drop it and re-create it to point to the new primary.

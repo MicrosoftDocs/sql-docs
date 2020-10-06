@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_loader_run_stages (Transact-SQL)"
 title: "sys.pdw_loader_run_stages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

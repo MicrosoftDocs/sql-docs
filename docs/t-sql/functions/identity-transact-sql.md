@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;IDENTITY (Transact-SQL)"
 title: "@@IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -29,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@IDENTITY  
 ```  
   
@@ -59,7 +60,7 @@ ms.author: vanto
 ## Examples  
  The following example inserts a row into a table with an identity column (`LocationID`) and uses `@@IDENTITY` to display the identity value used in the new row.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the value of LocationID in the last row in the table.  

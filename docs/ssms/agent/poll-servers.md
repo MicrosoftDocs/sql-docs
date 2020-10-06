@@ -1,4 +1,5 @@
 ---
+description: "Poll Servers"
 title: "Poll Servers"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

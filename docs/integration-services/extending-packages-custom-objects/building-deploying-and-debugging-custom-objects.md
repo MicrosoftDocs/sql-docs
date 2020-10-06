@@ -1,4 +1,5 @@
 ---
+description: "Building, Deploying, and Debugging Custom Objects"
 title: "Building, Deploying, and Debugging Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

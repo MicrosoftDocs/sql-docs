@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_stop_collection_set (Transact-SQL)"
 title: "sp_syscollector_stop_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "sp_syscollector_stop_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

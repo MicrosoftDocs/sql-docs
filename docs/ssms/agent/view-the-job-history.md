@@ -1,4 +1,5 @@
 ---
+description: "View the Job History"
 title: "View the Job History"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Save Metadata  (OracleToSQL)"
 title: "Save Metadata  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

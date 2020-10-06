@@ -1,4 +1,5 @@
 ---
+description: "Connect to SQL Server (SybaseToSQL)"
 title: "Connect to SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

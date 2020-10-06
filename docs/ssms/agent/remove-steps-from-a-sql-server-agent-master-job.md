@@ -1,4 +1,5 @@
 ---
+description: "Remove Steps from a SQL Server Agent Master Job"
 title: "Remove Steps from a SQL Server Agent Master Job"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

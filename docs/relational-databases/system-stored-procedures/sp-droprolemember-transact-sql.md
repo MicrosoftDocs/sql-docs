@@ -1,4 +1,5 @@
 ---
+description: "sp_droprolemember (Transact-SQL)"
 title: "sp_droprolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -45,6 +46,8 @@ sp_droprolemember [ @rolename = ] 'role' ,
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 `[ @rolename = ] 'role'`

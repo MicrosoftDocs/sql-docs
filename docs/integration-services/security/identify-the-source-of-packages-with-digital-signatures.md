@@ -1,4 +1,5 @@
 ---
+description: "Identify the Source of Packages with Digital Signatures"
 title: "Identify the Source of Packages with Digital Signatures | Microsoft Docs"
 ms.custom: security
 ms.date: "08/24/2016"

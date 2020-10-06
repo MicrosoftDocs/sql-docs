@@ -1,4 +1,5 @@
 ---
+description: "Hadoop Pig Task"
 title: "Hadoop Pig Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

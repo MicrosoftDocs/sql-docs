@@ -1,4 +1,5 @@
 ---
+description: "Configuring the Script Component in the Script Component Editor"
 title: "Configuring the Script Component in the Script Component Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

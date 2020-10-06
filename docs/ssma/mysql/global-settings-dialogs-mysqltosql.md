@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Dialogs) (MySQLToSQL)"
 title: "Global Settings (Dialogs) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "ASYMKEYPROPERTY (Transact-SQL)"
 title: "ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -27,7 +28,7 @@ This function returns the properties of an asymmetric key.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')  
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: "getObject Method (int, java.util.Map)"
 title: "getObject Method (int, java.util.Map) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

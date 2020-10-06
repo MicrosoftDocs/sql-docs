@@ -1,4 +1,5 @@
 ---
+description: "catalog.deny_permission (SSISDB Database)"
 title: "catalog.deny_permission (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

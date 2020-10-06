@@ -1,4 +1,5 @@
 ---
+description: "Term Lookup Transformation"
 title: "Term Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

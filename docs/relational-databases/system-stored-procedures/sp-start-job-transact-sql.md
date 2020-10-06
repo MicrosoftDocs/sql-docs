@@ -1,4 +1,5 @@
 ---
+description: "sp_start_job (Transact-SQL)"
 title: "sp_start_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_start_job"
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "New GUI Features in SSMA for Access to SQL"
 title: "New GUI Features in SSMA for Access to SQL | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

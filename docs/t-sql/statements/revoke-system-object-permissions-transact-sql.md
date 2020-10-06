@@ -1,4 +1,5 @@
 ---
+description: "REVOKE System Object Permissions (Transact-SQL)"
 title: "REVOKE System Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -26,7 +27,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
   
@@ -62,7 +62,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ## Examples  
  The following example revokes `EXECUTE` permission on `sp_addlinkedserver` from `public`.  
   
-```  
+```sql  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
 GO  
 ```  

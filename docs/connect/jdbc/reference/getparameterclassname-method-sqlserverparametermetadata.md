@@ -1,4 +1,5 @@
 ---
+description: "getParameterClassName Method (SQLServerParameterMetaData)"
 title: "getParameterClassName Method (SQLServerParameterMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

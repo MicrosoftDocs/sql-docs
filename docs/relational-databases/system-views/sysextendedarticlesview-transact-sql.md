@@ -1,4 +1,5 @@
 ---
+description: "sysextendedarticlesview (Transact-SQL)"
 title: "sysextendedarticlesview (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

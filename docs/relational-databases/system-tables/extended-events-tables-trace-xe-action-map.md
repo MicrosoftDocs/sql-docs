@@ -1,4 +1,5 @@
 ---
+description: "Extended Events Tables - trace_xe_action_map"
 title: "trace_xe_action_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], tables"
   - "trace_xe_action_map"
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Extended Events Tables - trace_xe_action_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "DROP SCHEMA (Transact-SQL)"
 title: "DROP SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "dropping schemas"
   - "removing schemas"
 ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP SCHEMA (Transact-SQL)
@@ -38,8 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 DROP SCHEMA  [ IF EXISTS ] schema_name  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP SCHEMA schema_name  
 ```  

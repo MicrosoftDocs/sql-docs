@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "03/28/2018"

@@ -1,4 +1,5 @@
 ---
+description: "Derived Column Transformation"
 title: "Derived Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"

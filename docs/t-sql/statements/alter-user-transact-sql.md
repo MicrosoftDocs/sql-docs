@@ -1,4 +1,5 @@
 ---
+description: "ALTER USER (Transact-SQL)"
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/10/2020

@@ -1,4 +1,5 @@
 ---
+description: "CREATE SPATIAL INDEX (Transact-SQL)"
 title: "CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2019"
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "CREATE SPATIAL INDEX statement"
   - "CREATE INDEX statement"
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

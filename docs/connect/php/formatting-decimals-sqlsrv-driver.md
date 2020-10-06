@@ -1,21 +1,21 @@
 ---
-title: "Formatting Decimal Strings and Money Values (SQLSRV Driver) | Microsoft Docs"
+title: "Formatting decimal strings and money values (SQLSRV driver)"
+description: "Learn how to use FormatDecimals and DecimalPlaces options to format decimal or money values when using the Microsoft SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
   - "formatting, decimal types, money values"
-author: "yitam"
-ms.author: "v-yitam"
-manager: v-mabarw
+author: David-Engel
+ms.author: v-daenge
 ---
 # Formatting Decimal Strings and Money Values (SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-To preserve accuracy, [decimal or numeric types](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) are always fetched as strings with exact precisions and scales. If any value is less than 1, the leading zero is missing. It is the same with money and smallmoney fields as they are decimal fields with a fixed scale equal to 4.
+To preserve accuracy, [decimal or numeric types](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) are always fetched as strings with exact precisions and scales. If any value is less than 1, the leading zero is missing. It is the same with money and smallmoney fields as they are decimal fields with a fixed scale equal to 4.
 
 ## Add leading zeroes if missing
 Beginning with version 5.6.0, the option `FormatDecimals` is added to sqlsrv connection and statement levels, which allows the user to format decimal strings. This option expects a boolean value (true or false) and only affects the formatting of decimal or numeric values in the fetched results. In other words, the `FormatDecimals` option has no effect on other operations like insertion or update.

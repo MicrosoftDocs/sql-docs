@@ -1,4 +1,5 @@
 ---
+description: "NumberOfFlags Property (ServerSettings Class)"
 title: "NumberOfFlags Property (ServerSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "NumerOfFlags property"
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # NumberOfFlags Property (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

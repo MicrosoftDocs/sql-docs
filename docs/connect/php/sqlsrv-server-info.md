@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_server_info"
 title: "sqlsrv_server_info | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

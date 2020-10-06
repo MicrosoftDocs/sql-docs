@@ -1,4 +1,5 @@
 ---
+description: "Operator Properties - New Operator (General Page)"
 title: New Operator Properties (General Page)
 ms.prod: sql
 ms.prod_service: sql-tools

@@ -1,4 +1,5 @@
 ---
+description: "sp_publisherproperty (Transact-SQL)"
 title: "sp_publisherproperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_publisherproperty"
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_publisherproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

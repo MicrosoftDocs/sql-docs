@@ -1,4 +1,5 @@
 ---
+description: "setAsciiStream Method (java.lang.String, java.io.InputStream)"
 title: "setAsciiStream Method to input stream | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

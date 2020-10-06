@@ -1,4 +1,5 @@
 ---
+description: "Print Query Results (Visual Database Tools)"
 title: Print Query Results
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

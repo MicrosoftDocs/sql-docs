@@ -1,4 +1,5 @@
 ---
+description: "SELECT @local_variable (Transact-SQL)"
 title: SELECT @local_variable (Transact-SQL)
 ms.custom: ""
 ms.date: "09/06/2017"

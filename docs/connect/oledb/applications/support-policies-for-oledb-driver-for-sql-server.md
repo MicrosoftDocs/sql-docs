@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: "reference"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Support policies for OLE DB Driver for SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

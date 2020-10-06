@@ -1,4 +1,5 @@
 ---
+description: "Disable Check Constraints for Replication"
 title: "Disable Check Constraints for Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER MASTER KEY (Transact-SQL)"
 title: "ALTER MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: "fasttrack-edit"
 ms.date: "02/21/2019"
@@ -74,7 +75,7 @@ ALTER MASTER KEY <alter_option>
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER MASTER KEY <alter_option>
 

@@ -4,7 +4,7 @@ description: Learn how to start the sqlcmd utility, which lets you enter Transac
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb

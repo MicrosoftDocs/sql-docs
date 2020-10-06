@@ -1,4 +1,5 @@
 ---
+description: "Apply Business Rules (MDS Add-in for Excel)"
 title: Apply Business Rules
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

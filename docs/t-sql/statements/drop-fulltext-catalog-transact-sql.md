@@ -1,4 +1,5 @@
 ---
+description: "DROP FULLTEXT CATALOG (Transact-SQL)"
 title: "DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "deleting full-text catalogs"
   - "DROP FULLTEXT CATALOG statement"
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 DROP FULLTEXT CATALOG catalog_name  
 ```  
   

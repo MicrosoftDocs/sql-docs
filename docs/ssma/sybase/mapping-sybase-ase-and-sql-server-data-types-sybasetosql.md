@@ -1,4 +1,5 @@
 ---
+description: "Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL)"
 title: "Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

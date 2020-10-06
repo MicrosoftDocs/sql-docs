@@ -1,4 +1,5 @@
 ---
+description: "Lock a Version (Master Data Services)"
 title: Lock a Version
 ms.custom: ""
 ms.date: "03/01/2017"

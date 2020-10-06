@@ -1,4 +1,5 @@
 ---
+description: "STX (geometry Data Type)"
 title: "STX (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/23/2020"

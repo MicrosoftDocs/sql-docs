@@ -1,4 +1,5 @@
 ---
+description: "Azure HDInsight Connection Manager"
 title: "Azure HDInsight Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"

@@ -1,4 +1,5 @@
 ---
+description: "datetime Data Type Conversions from SQL to C"
 title: "Conversions from SQL to C | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

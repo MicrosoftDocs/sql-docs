@@ -1,4 +1,5 @@
 ---
+description: "sp_table_validation (Transact-SQL)"
 title: "sp_table_validation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_table_validation"
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

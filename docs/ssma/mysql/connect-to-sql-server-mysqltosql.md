@@ -1,4 +1,5 @@
 ---
+description: "Connect to SQL Server (MySQLToSQL)"
 title: "Connect to SQL Server (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

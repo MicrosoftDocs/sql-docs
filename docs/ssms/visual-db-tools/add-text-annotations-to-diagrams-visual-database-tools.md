@@ -1,4 +1,5 @@
 ---
+description: "Add Text Annotations to Diagrams (Visual Database Tools)"
 title: Add Text Annotations to Diagrams
 ms.prod: sql
 ms.prod_service: sql-tools

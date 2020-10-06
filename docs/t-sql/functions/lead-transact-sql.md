@@ -1,4 +1,5 @@
 ---
+description: "LEAD (Transact-SQL)"
 title: "LEAD (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 LEAD ( scalar_expression [ ,offset ] , [ default ] )   
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  

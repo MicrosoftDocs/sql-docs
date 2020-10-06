@@ -1,4 +1,5 @@
 ---
+description: "Modify or Rename DML Triggers"
 title: "Modify or Rename DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

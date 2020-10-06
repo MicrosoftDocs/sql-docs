@@ -1,4 +1,5 @@
 ---
+description: "catalog.move_environment (SSISDB Database)"
 title: "catalog.move_environment (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

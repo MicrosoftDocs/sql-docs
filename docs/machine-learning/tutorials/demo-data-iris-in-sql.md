@@ -1,4 +1,5 @@
 ---
+description: "Iris demo data for Python and R tutorials with SQL machine learning"
 title: Iris demo data set for tutorials
 titleSuffix: SQL machine learning
 Description: Create a database containing the Iris dataset and predictive models. This dataset is used in R and Python tutorials with SQL machine learning.

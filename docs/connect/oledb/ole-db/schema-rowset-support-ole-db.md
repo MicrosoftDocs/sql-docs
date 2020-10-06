@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, schema"
   - "OLE DB Driver for SQL Server, schema rowsets"
   - "rowsets [OLE DB], schema"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Schema Rowset Support (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

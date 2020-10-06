@@ -1,4 +1,5 @@
 ---
+description: "MSsnapshot_history (Transact-SQL)"
 title: "MSsnapshot_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshot_history system table"
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

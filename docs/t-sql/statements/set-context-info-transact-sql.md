@@ -1,4 +1,5 @@
 ---
+description: "SET CONTEXT_INFO (Transact-SQL)"
 title: "SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "CONTEXT_INFO option"
   - "SET CONTEXT_INFO statement"
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

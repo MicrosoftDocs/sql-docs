@@ -1,4 +1,5 @@
 ---
+description: "Data Profile Viewer"
 title: "Data Profile Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -62,7 +63,7 @@ ms.author: chugu
 >   
 >  If you drill down from an output file that was not created recently, the drilldown queries might return a different set of rows than those on which the original output was calculated.  
   
- For more information about the user interface of the Data Profile Viewer, see [Data Profile Viewer F1 Help](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
+ For more information about the user interface of the Data Profile Viewer, see [Data Profile Viewer F1 Help]().  
   
 ## Data Profile Viewer F1 Help
   Use the Data Profile Viewer to view the output of the Data Profiling task.  
@@ -239,4 +240,3 @@ ms.author: chugu
   
  **Count**  
  Displays the number of rows in which the specified column has the value shown in the first column.  
-  

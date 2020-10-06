@@ -1,4 +1,5 @@
 ---
+description: "SQLDisconnect Function"
 title: "SQLDisconnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"

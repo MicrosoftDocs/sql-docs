@@ -1,4 +1,5 @@
 ---
+description: "Transaction Isolation Levels (ODBC)"
 title: "Transaction Isolation Levels (ODBC) | Microsoft Docs"
 ms.custom: "seo-dt-2019"
 ms.date: "01/19/2017"

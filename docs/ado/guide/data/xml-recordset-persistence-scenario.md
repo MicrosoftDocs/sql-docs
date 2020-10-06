@@ -1,8 +1,9 @@
 ---
+description: "XML Recordset Persistence Scenario"
 title: "XML Recordset Persistence Scenario | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,7 +20,7 @@ In this scenario, you will create an Active Server Pages (ASP) application that 
 > [!NOTE]
 >  This scenario requires that your server have Internet Information Server 5.0 (IIS) or later installed.  
   
- The returned Recordset is displayed in Internet Explorer using a [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+ The returned Recordset is displayed in Internet Explorer using a [DataControl Object (RDS)](../../reference/rds-api/datacontrol-object-rds.md).  
   
  The following steps are necessary to create this scenario:  
   
@@ -78,12 +79,12 @@ In this scenario, you will create an Active Server Pages (ASP) application that 
 %>  
 ```  
   
- Notice that the ASP Response object is specified as the destination for the Recordset [Save Method](../../../ado/reference/ado-api/save-method.md). The destination of the Save method can be any object that supports the IStream interface, such as an ADO [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), or a file name that includes the complete path to which the Recordset is to be saved.  
+ Notice that the ASP Response object is specified as the destination for the Recordset [Save Method](../../reference/ado-api/save-method.md). The destination of the Save method can be any object that supports the IStream interface, such as an ADO [Stream Object (ADO)](../../reference/ado-api/stream-object-ado.md), or a file name that includes the complete path to which the Recordset is to be saved.  
   
  Save and close XMLResponse.asp before going to the next step. Also copy the adovbs.inc file from the default ADO library installation folder to the same folder where you saved the XMLResponse.asp file.  
   
 ## Step 4: Receive and Display the Data  
- In this step you will create an HTML file with an embedded [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) object that points at the XMLResponse.asp file to get the Recordset. Open default.htm with a text editor, such as Notepad, and add the following code. Replace "sqlserver" in the URL with the name of your server.  
+ In this step you will create an HTML file with an embedded [DataControl Object (RDS)](../../reference/rds-api/datacontrol-object-rds.md) object that points at the XMLResponse.asp file to get the Recordset. Open default.htm with a text editor, such as Notepad, and add the following code. Replace "sqlserver" in the URL with the name of your server.  
   
 ```  
 <HTML>  
@@ -107,5 +108,5 @@ In this scenario, you will create an Active Server Pages (ASP) application that 
  Close the default.htm file and save it to the same folder where you saved XMLResponse.asp. Using Internet Explorer 4.0 or later, open the URL https://*sqlserver*/XMLPersist/default.htm and observe the results. The data is displayed in a bound DHTML table. Now open the URL https:// *sqlserver* /XMLPersist/XMLResponse.asp and observe the results. The XML is displayed.  
   
 ## See Also  
- [Save Method](../../../ado/reference/ado-api/save-method.md)   
- [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Save Method](../../reference/ado-api/save-method.md)   
+ [Persisting Records in XML Format](./persisting-records-in-xml-format.md)

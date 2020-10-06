@@ -1,4 +1,5 @@
 ---
+description: "Create Partitioned Tables and Indexes"
 title: "Create Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

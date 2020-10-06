@@ -1,4 +1,5 @@
 ---
+description: "MDX Syntax Conventions (MDX)"
 title: "MDX Syntax Conventions (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

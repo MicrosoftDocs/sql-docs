@@ -1,4 +1,5 @@
 ---
+description: "Map Many-to-Many Relationships (Visual Database Tools)"
 title: Map Many-to-Many Relationships
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

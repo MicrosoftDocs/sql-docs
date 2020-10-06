@@ -1,4 +1,5 @@
 ---
+description: "Delete an Article"
 title: "Delete an Article | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "UPDATE STATISTICS (Transact-SQL)"
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2018"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "UPDATE STATISTICS statement"
   - "statistical information [SQL Server], updating"
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE STATISTICS (Transact-SQL)
@@ -66,7 +67,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -79,8 +80,10 @@ UPDATE STATISTICS [ schema_name . ] table_name
     ]  
 [;]  
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
  *table_or_indexed_view_name*  
@@ -205,10 +208,10 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### Determining the Last Statistics Update  
  To determine when statistics were last updated, use the [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function.  
   
-### PDW / SQL Data Warehouse  
- The following syntax is not supported by PDW / SQL Data Warehouse  
+### PDW / Azure Synapse Analytics  
+ The following syntax is not supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
-```syntaxsql
+```sql
 UPDATE STATISTICS t1 (a,b);   
 ```  
   

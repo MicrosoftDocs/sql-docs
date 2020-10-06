@@ -1,4 +1,5 @@
 ---
+description: "Select rows to migrate by using a filter function (Stretch Database)"
 title: "Select rows to migrate by using a filter function"
 ms.date: "06/27/2016"
 ms.service: sql-server-stretch-database

@@ -1,4 +1,5 @@
 ---
+description: "sp_pdw_log_user_data_masking (SQL Data Warehouse)"
 title: "sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 #### Parameters  
 `[ @masking_mode = ] masking_mode`

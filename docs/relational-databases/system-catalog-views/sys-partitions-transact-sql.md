@@ -1,4 +1,5 @@
 ---
+description: "sys.partitions (Transact-SQL)"
 title: "sys.partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.partitions catalog view"
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partitions (Transact-SQL)

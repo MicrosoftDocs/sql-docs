@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
@@ -46,7 +46,17 @@ To open this page, start SQL Server Management Studio, connect to a report serve
 
 (Power BI Report Server January 2020, Reporting Services 2019 and later only)
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default, there are no custom headers and value is blank. 
+Sets header values for all URLs matching the specified regex pattern. Users can update the CustomHeaders value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. By default in Reporting Services 2019, there are no custom headers and the value is blank. By default in Power BI Report Server January 2020 and later, the value is this:
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > Too many headers may impact performance. 

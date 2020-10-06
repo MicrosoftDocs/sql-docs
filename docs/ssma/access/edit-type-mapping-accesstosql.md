@@ -1,4 +1,5 @@
 ---
+description: "Edit Type Mapping (AccessToSQL)"
 title: "Edit Type Mapping (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

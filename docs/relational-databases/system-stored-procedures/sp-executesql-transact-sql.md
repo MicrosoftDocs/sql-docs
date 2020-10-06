@@ -1,4 +1,5 @@
 ---
+description: "sp_executesql (Transact-SQL)"
 title: "sp_executesql (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "sp_executesql"
   - "dynamic SQL"
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_executesql (Transact-SQL)

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_unsentitems (Transact-SQL)"
 title: "sysmail_unsentitems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_unsentitems database mail view"
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

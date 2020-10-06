@@ -1,4 +1,5 @@
 ---
+description: "INDEXPROPERTY (Transact-SQL)"
 title: "INDEXPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
@@ -30,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
 ```  
   
@@ -78,7 +79,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 ## Examples  
  The following example returns the values for the **IsClustered**, **IndexDepth**, and **IndexFillFactor** properties for the `PK_Employee_BusinessEntityID` index of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT   
     INDEXPROPERTY(OBJECT_ID('HumanResources.Employee'),  
         'PK_Employee_BusinessEntityID','IsClustered')AS [Is Clustered],  
@@ -102,7 +103,7 @@ Is Clustered Index Depth Fill Factor
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example examines the properties of one of the indexes on the `FactResellerSales` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT   

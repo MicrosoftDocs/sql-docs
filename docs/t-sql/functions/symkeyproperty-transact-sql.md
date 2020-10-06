@@ -1,4 +1,5 @@
 ---
+description: "SYMKEYPROPERTY (Transact-SQL)"
 title: "SYMKEYPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -27,8 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )  
 ```  
   
@@ -50,7 +50,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## Examples  
  The following example returns the algorithm of the symmetric key with Key_ID 256.  
   
-```  
+```sql  
 SELECT SYMKEYPROPERTY(256, 'algorithm_desc') AS Algorithm ;  
 GO  
 ```  

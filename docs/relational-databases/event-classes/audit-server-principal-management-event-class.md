@@ -1,4 +1,5 @@
 ---
+description: "Audit Server Principal Management Event Class"
 title: "Audit Server Principal Management Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

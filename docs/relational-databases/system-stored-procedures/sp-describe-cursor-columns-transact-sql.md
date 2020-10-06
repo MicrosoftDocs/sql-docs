@@ -1,4 +1,5 @@
 ---
+description: "sp_describe_cursor_columns (Transact-SQL)"
 title: "sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_cursor_columns"
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

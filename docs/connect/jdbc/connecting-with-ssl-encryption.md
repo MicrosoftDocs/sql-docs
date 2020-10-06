@@ -1,4 +1,5 @@
 ---
+description: "Connecting with encryption"
 title: "Connecting with encryption | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Revert a Database to a Database Snapshot"
 title: "Revert a Database to a Database Snapshot | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"

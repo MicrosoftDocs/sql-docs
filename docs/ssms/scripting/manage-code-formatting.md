@@ -1,11 +1,8 @@
 ---
 title: "Manage Code Formatting"
 description: Learn about the three styles of text indenting and how to use them, and learn how to create clickable URLs.
-ms.custom: seo-lt-2019
-ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indenting code [SQL Server]"
@@ -26,11 +23,17 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: "03/01/2017"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Manage Code Formatting
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  With the Editor you can format your code with indenting, hidden text, URLs, and so forth. You can also auto-format your code as you type by using Smart Indenting.  
+
+With the Editor you can format your code with indenting, hidden text, URLs, and so forth. You can also auto-format your code as you type by using Smart Indenting.  
   
 ## Indenting  
  You can choose three different styles of text indenting. You can also specify how many spaces compose a single indentation or tab, and whether the Editor uses tabs or space characters when indenting.  

@@ -1,4 +1,5 @@
 ---
+description: "Mapping Sybase ASE Schemas to SQL Server Schemas (SybaseToSQL)"
 title: "Mapping Sybase ASE Schemas to SQL Server Schemas (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

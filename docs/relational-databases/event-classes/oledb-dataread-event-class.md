@@ -1,4 +1,5 @@
 ---
+description: "OLEDB DataRead Event Class"
 title: "OLEDB DataRead Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

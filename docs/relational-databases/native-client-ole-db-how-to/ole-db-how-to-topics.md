@@ -1,4 +1,5 @@
 ---
+description: "OLE DB How-to Topics (Native Client OLE DB provider)"
 title: How-to topics (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

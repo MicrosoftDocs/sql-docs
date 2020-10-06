@@ -1,4 +1,5 @@
 ---
+description: "Removing a Column from a SQL Server Table (Native Client OLE DB provider)"
 title: Remove column from SQL Server table (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

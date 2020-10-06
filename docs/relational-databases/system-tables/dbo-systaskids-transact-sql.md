@@ -1,4 +1,5 @@
 ---
+description: "dbo.systaskids (Transact-SQL)"
 title: "dbo.systaskids (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "systaskids system table"
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.systaskids (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

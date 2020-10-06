@@ -1,4 +1,5 @@
 ---
+description: "ODBC Cursor Library"
 title: "ODBC Cursor Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

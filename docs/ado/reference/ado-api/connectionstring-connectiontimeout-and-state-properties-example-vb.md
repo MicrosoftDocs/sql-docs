@@ -1,8 +1,9 @@
 ---
+description: "ConnectionString, ConnectionTimeout, and State Properties Example (VB)"
 title: "Connection Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # ConnectionString, ConnectionTimeout, and State Properties Example (VB)
-This example demonstrates different ways of using the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to open a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. It also uses the [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) property to set a connection timeout period, and the [State](../../../ado/reference/ado-api/state-property-ado.md) property to check the state of the connections. The GetState function is required for this procedure to run.  
+This example demonstrates different ways of using the [ConnectionString](./connectionstring-property-ado.md) property to open a [Connection](./connection-object-ado.md) object. It also uses the [ConnectionTimeout](./connectiontimeout-property-ado.md) property to set a connection timeout period, and the [State](./state-property-ado.md) property to check the state of the connections. The GetState function is required for this procedure to run.  
   
 > [!NOTE]
 >  If you are connecting to a data source provider that supports Windows authentication, you should specify **Trusted_Connection=yes** or **Integrated Security = SSPI** instead of user ID and password information in the connection string.  
@@ -121,7 +122,7 @@ End Function
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout Property (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [ConnectionString Property (ADO)](./connectionstring-property-ado.md)   
+ [ConnectionTimeout Property (ADO)](./connectiontimeout-property-ado.md)   
+ [State Property (ADO)](./state-property-ado.md)

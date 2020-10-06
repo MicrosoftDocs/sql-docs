@@ -1,4 +1,5 @@
 ---
+description: "Manage Identity Columns"
 title: "Manage Identity Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

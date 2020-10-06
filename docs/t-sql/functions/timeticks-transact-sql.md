@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TIMETICKS (Transact-SQL)"
 title: "@@TIMETICKS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,8 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@TIMETICKS  
 ```  
   
@@ -46,7 +46,7 @@ ms.author: jrasnick
   
 ## Examples  
   
-```  
+```sql
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   

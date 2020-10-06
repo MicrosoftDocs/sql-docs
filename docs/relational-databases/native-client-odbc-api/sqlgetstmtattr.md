@@ -1,4 +1,5 @@
 ---
+description: "SQLGetStmtAttr"
 title: "SQLGetStmtAttr | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

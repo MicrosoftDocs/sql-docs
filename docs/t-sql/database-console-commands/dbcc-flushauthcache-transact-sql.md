@@ -1,4 +1,5 @@
 ---
+description: "DBCC FLUSHAUTHCACHE (Transact-SQL)"
 title: DBCC FLUSHAUTHCACHE (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"

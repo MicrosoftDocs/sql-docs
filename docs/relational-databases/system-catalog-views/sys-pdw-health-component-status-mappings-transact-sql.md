@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_health_component_status_mappings (Transact-SQL)"
 title: "sys.pdw_health_component_status_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DECOMPRESS (Transact-SQL)"
 title: "DECOMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2018"
@@ -25,7 +26,7 @@ This function will decompress an input expression value, using the GZIP algorith
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DECOMPRESS ( expression )  
 ```  
   
@@ -43,7 +44,7 @@ A value of data type **varbinary(max)**. `DECOMPRESS` will use the ZIP algorithm
 ### A. Decompress Data at Query Time  
 This example shows how to return compressed table data:  
   
-```  
+```sql  
 SELECT _id, name, surname, datemodified,  
              CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  
 FROM player;  
@@ -52,13 +53,13 @@ FROM player;
 ### B. Display Compressed Data Using Computed Column  
 This example shows how to create a table for decompressed data storage:  
   
-```  
+```sql  
 CREATE TABLE example_table (  
-    _id int primary key identity,  
-    name nvarchar(max),  
-    surname nvarchar(max),  
-    info varbinary(max),  
-    info_json as CAST(decompress(info) as nvarchar(max))  
+    _id INT PRIMARY KEY IDENTITY,  
+    name NVARCHAR(max),  
+    surname NVARCHAR(max),  
+    info VARBINARY(max),  
+    info_json as CAST(DECOMPRESS(info) as NVARCHAR(max))  
 );  
 ```  
   

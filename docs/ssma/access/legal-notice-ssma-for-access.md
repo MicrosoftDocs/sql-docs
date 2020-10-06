@@ -1,4 +1,5 @@
 ---
+description: "Legal Notice (SSMA for Access)"
 title: "Legal Notice (SSMA for Access) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "ODBC Static Cursors"
 title: "ODBC Static Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

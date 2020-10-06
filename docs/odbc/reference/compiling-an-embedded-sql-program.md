@@ -1,4 +1,5 @@
 ---
+description: "Compiling an Embedded SQL Program"
 title: "Compiling an Embedded SQL Program | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

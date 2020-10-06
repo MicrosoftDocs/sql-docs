@@ -210,7 +210,7 @@ On the database, you might need the following configuration updates:
 * [Add SQLRUserGroup as a database user](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional installation guidance can be found here: [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 ## Suggested optimizations
 

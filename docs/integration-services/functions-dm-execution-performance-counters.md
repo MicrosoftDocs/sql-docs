@@ -1,4 +1,5 @@
 ---
+description: "dm_execution_performance_counters (SSISDB Database)"
 title: "dm_execution_performance_counters (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

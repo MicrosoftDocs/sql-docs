@@ -6,7 +6,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: markingmyname

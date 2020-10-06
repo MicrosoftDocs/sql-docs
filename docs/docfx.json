@@ -189,6 +189,7 @@
 
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
+        "azdata/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15 || = sqlallproducts-allversions",
         "azure-data-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "big-data-cluster/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15 || = sqlallproducts-allversions",
         "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",

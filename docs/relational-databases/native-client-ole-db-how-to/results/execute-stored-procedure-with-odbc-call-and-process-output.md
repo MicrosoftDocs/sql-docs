@@ -1,4 +1,5 @@
 ---
+description: "Execute SQL Server Native Client Stored Procedure with ODBC CALL and Process Output"
 title: "Stored Procedure, ODBC CALL, Output"
 ms.custom: ""
 ms.date: "03/14/2017"

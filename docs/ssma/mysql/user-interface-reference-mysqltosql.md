@@ -1,4 +1,5 @@
 ---
+description: "User Interface Reference (MySQLToSQL)"
 title: "User Interface Reference (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

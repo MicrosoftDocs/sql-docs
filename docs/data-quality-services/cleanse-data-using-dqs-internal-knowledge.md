@@ -1,4 +1,5 @@
 ---
+description: "Cleanse Data Using DQS (Internal) Knowledge"
 title: "Cleanse Data Using DQS (Internal) Knowledge"
 ms.date: "03/01/2017"
 ms.prod: sql

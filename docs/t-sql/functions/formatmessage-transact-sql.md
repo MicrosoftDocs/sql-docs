@@ -1,4 +1,5 @@
 ---
+description: "FORMATMESSAGE (Transact-SQL)"
 title: "FORMATMESSAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"

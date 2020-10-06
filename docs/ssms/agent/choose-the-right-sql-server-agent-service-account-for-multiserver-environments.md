@@ -1,4 +1,5 @@
 ---
+description: "Choose the Right SQL Server Agent Service Account for Multiserver Environments"
 title: Choose the Agent Service Account for Multiserver Environments
 ms.prod: sql
 ms.prod_service: sql-tools

@@ -1,4 +1,5 @@
 ---
+description: "sp_cycle_agent_errorlog (Transact-SQL)"
 title: "sp_cycle_agent_errorlog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cycle_agent_errorlog"
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

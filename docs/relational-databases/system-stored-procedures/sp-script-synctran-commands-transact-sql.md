@@ -1,4 +1,5 @@
 ---
+description: "sp_script_synctran_commands (Transact-SQL)"
 title: "sp_script_synctran_commands (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_script_synctran_commands"
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

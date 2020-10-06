@@ -38,7 +38,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
   
-- You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you can add features by using the [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+- You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)], you can add features by using the [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 ## Upgrades from Earlier Versions to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]  
  
@@ -94,7 +94,7 @@ For information, see [Azure Database Migration Guide](https://datamigration.micr
 
 The following tips and tools can help you plan and implement your migration.
 
-- Migration tools: Migration is supported through [Data Migration Assistant (DMA)](https://aka.ms/dma).
+- Migration tools: Migration is supported through [Data Migration Assistant (DMA)](../../dma/dma-overview.md).
 - Backup and restore: A backup taken on SQL Server 2008 or SQL Server 2008 R2 can be restored to SQL Server 2019.
 - Log shipping: Log shipping is supported if primary is running SQL Server 2008 SP3 or later, or SQL Server 2008 R2 SP2 or later, and secondary is running SQL Server 2019. 
 
@@ -143,4 +143,4 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
 
  [Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
- [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)

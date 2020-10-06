@@ -1,7 +1,8 @@
 ---
-title: "Default SQL Server Data Types | Microsoft Docs"
+title: "Default SQL Server data types"
+description: "This topic lists all the default SQL Server Data types based on PHP Data Types when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -43,5 +44,4 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 
 [PHP Types](https://php.net/manual/language.types.php)
 
-[Data Types (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
-  
+[Data Types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

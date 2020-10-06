@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, properties"
   - "properties [OLE DB]"
   - "property values [OLE DB Driver for SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # About OLE DB Properties
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,6 +67,5 @@ PR 15068:  This HTML comment is being added by PR...
   
 ## See Also  
  [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
-  
+ [Properties (OLE DB)](/previous-versions/windows/desktop/ms722734(v=vs.85))  
   

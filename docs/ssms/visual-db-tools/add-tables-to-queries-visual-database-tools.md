@@ -1,4 +1,5 @@
 ---
+description: "Add Tables to Queries (Visual Database Tools)"
 title: Add Tables to Queries
 ms.prod: sql
 ms.prod_service: sql-tools

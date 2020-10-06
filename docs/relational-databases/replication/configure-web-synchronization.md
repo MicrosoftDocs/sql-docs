@@ -1,4 +1,5 @@
 ---
+description: "Configure Web Synchronization"
 title: "Configure Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"

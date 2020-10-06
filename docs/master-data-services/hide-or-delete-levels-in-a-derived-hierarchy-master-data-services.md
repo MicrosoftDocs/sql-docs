@@ -1,4 +1,5 @@
 ---
+description: "Hide or Delete Levels in a Derived Hierarchy (Master Data Services)"
 title: Hide or Delete Levels in a Derived Hierarchy
 ms.custom: ""
 ms.date: "03/01/2017"

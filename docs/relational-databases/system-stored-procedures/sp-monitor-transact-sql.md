@@ -1,4 +1,5 @@
 ---
+description: "sp_monitor (Transact-SQL)"
 title: "sp_monitor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_monitor"
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

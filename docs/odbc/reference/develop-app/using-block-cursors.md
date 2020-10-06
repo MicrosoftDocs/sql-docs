@@ -1,4 +1,5 @@
 ---
+description: "Using Block Cursors"
 title: "Using Block Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

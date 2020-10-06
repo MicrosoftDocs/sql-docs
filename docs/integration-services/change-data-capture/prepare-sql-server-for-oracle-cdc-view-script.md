@@ -1,4 +1,5 @@
 ---
+description: "Prepare SQL Server for Oracle CDC-View Script"
 title: "Prepare SQL Server for Oracle CDC-View Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

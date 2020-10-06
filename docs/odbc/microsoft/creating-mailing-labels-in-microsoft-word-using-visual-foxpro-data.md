@@ -1,4 +1,5 @@
 ---
+description: "Creating Mailing Labels in Microsoft Word Using Visual FoxPro Data"
 title: "Creating Mailing Labels in Microsoft Word Using Visual FoxPro Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DBCC DROPRESULTSETCACHE  (Transact-SQL)"
 title: DBCC DROPRESULTSETCACHE (Transact-SQL)
 ms.custom: ""
 ms.date: "07/03/2019"
@@ -28,6 +29,8 @@ Removes all result set cache entries from an Azure [!INCLUDE[ssSDW](../../includ
 DBCC DROPRESULTSETCACHE
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Permissions
 

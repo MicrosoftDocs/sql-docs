@@ -1,4 +1,5 @@
 ---
+description: "Configure and Manage Stopwords and Stoplists for Full-Text Search"
 title: "Configure & manage stopwords & stoplists for Full-Text Search"
 ms.date: "02/02/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "SHA Property (SecurityCertificate Class)"
 title: "SHA Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SHA property"
 ms.assetid: 73dfe0b7-0237-4d92-8161-9264a10a28a7
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SHA Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

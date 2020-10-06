@@ -1,4 +1,5 @@
 ---
+description: "Server public Permissions"
 title: "Server public Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

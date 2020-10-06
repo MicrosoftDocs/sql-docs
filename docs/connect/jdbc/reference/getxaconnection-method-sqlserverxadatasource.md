@@ -1,4 +1,5 @@
 ---
+description: "getXAConnection Method (SQLServerXADataSource)"
 title: "getXAConnection Method (SQLServerXADataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

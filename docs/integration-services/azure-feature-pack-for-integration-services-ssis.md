@@ -1,4 +1,5 @@
 ---
+description: "Azure Feature Pack for Integration Services (SSIS)"
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2019"
@@ -123,7 +124,7 @@ The following Java builds have been tested.
 
 ### Set Up Zulu's OpenJDK on Azure-SSIS Integration Runtime
 
-This should be done via [custom setup interface](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
+This should be done via [custom setup interface](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
 Suppose `zulu8.33.0.1-jdk8.0.192-win_x64.zip` is used.
 The blob container could be organized as follows.
 
@@ -225,4 +226,4 @@ This is a hotfix version released for SQL Server 2019 only.
 #### Bugfixes
 
 1. In certain cases, test connection malfunctions for Data Lake Storage Gen2 with the error message "Attempted to access an element as a type incompatible with the array"
-1. Bring back support for Azure storage emulator
+1. Bring back support for Azure Storage Emulator

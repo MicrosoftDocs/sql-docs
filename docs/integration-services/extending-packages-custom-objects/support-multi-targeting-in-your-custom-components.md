@@ -1,4 +1,5 @@
 ---
+description: "Support multi-targeting in your custom components"
 title: "Support multi-targeting in your custom components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

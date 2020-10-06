@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_TIMEZONE_ID (Transact-SQL)"
 title: "CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2020"
@@ -37,7 +38,7 @@ This function returns the ID of the time zone observed by a server or an instanc
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE_ID ( )  
 ```
   

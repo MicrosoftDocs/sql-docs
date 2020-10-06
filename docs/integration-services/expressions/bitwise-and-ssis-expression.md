@@ -1,4 +1,5 @@
 ---
+description: "&amp; (Bitwise AND) (SSIS Expression)"
 title: "&amp; (Bitwise AND) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

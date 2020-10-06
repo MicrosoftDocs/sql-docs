@@ -1,4 +1,5 @@
 ---
+description: "getSQLXML Method (int)"
 title: "getSQLXML Method (int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

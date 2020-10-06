@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SSPROP_ALLOWNATIVEVARIANT property"
   - "GetParameterInfo function"
   - "OLE DB, data types"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Type Mapping in Rowsets and Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

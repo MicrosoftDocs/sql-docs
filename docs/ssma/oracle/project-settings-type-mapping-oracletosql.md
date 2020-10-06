@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Type Mapping) (OracleToSQL)"
 title: "Project Settings (Type Mapping) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Extract a DAC From a Database"
 title: "Extract a DAC From a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"

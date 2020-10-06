@@ -1,4 +1,5 @@
 ---
+description: "registerOutParameter Method (java.lang.String, int, int)"
 title: "registerOutParameter Method to type and scale | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

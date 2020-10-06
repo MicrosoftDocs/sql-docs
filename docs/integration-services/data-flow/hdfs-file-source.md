@@ -1,4 +1,5 @@
 ---
+description: "HDFS File Source"
 title: "HDFS File Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

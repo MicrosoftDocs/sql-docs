@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Best Practices for Calling Natively Compiled Stored Procedures
@@ -21,9 +21,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Frequently executed.  
   
--   Expected to be very fast.  
+-   Expected to be fast.  
   
- The performance benefit of using a natively compiled stored procedure increases with the number of rows and the amount of logic that is processed by the procedure. For example, a natively compiled stored procedure will exhibit better performance if it uses one or more of the following:  
+ The performance benefit of using a natively compiled stored procedure increases with the number of rows and the amount of logic that is processed by the procedure. For example, a natively compiled stored procedure will exhibit better performance if it uses one or more of the following components:  
   
 -   Aggregation.  
   
@@ -37,11 +37,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  If you need to process only a single row, using a natively compiled stored procedure may not provide a performance benefit.  
   
- To avoid the server having to map parameter names and convert types:  
+ To avoid the server having to map parameter names and convert types, make sure that you:  
   
 -   Match the types of the parameters passed to the procedure with the types in the procedure definition.  
   
--   Use ordinal (nameless) parameters when calling natively compiled stored procedures. For the most efficient execution, do not use named parameters.  
+-   Use ordinal (nameless) parameters when calling natively compiled stored procedures. For the most efficient execution, don't use named parameters.  
   
  Inefficiencies in parameters with natively compiled stored procedures can be detected through the XEvent **natively_compiled_proc_slow_parameter_passing**:
  - Mismatched types: **reason=parameter_conversion**

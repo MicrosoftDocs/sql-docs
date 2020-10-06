@@ -1,4 +1,5 @@
 ---
+description: "MSreplication_options (Transact-SQL)"
 title: "MSreplication_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_options system table"
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSreplication_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Scrollable Cursors and Transaction Isolation"
 title: "Scrollable Cursors and Transaction Isolation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

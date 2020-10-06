@@ -1,4 +1,5 @@
 ---
+description: "Set a Session Language"
 title: "Set a Session Language | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

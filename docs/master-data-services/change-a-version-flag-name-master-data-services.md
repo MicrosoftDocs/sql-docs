@@ -1,4 +1,5 @@
 ---
+description: "Change a Version Flag Name (Master Data Services)"
 title: Change a Version Flag Name
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "MSReportServer_Instance Members"
 title: "MSReportServer_Instance Members | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services

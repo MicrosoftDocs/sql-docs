@@ -1,4 +1,5 @@
 ---
+description: "Distributed Queries Stored Procedures (Transact-SQL)"
 title: "Distributed Queries Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server], distributed queries"
   - "distributed queries [SQL Server], stored procedures"
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Distributed Queries Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

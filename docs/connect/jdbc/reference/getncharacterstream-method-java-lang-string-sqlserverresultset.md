@@ -1,4 +1,5 @@
 ---
+description: "getNCharacterStream Method (java.lang.String) (SQLServerResultSet)"
 title: "getNCharacterStream Method (java.lang.String) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -10,8 +10,8 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "OLE DB, how-to topics"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # OLE DB How-to Topics
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Database Console Commands"
 title: Database Console Commands
 ms.custom: ""
 ms.date: "07/16/2017"

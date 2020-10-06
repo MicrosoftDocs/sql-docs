@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package with C# code in a .NET app"
 title: "Run an SSIS project with .NET code (C#) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

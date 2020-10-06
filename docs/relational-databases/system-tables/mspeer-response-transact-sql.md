@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_response (Transact-SQL)"
 title: "MSpeer_response (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_response system table"
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

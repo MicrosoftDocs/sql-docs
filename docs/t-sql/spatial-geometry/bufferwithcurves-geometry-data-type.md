@@ -1,4 +1,5 @@
 ---
+description: "BufferWithCurves (geometry Data Type)"
 title: "BufferWithCurves (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

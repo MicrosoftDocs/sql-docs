@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (DB2ToSQL)"
 title: "Managing Passwords (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

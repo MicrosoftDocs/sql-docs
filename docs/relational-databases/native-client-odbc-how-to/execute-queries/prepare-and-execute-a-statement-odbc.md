@@ -1,4 +1,5 @@
 ---
+description: "Prepare and Execute a Statement (ODBC)"
 title: "Prepare and Execute a Statement (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

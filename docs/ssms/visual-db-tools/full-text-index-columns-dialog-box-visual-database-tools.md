@@ -1,4 +1,5 @@
 ---
+description: "Full-Text Index Columns Dialog Box (Visual Database Tools)"
 title: Full-Text Index Columns Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

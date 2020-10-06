@@ -1,4 +1,5 @@
 ---
+description: "sys.trace_subclass_values (Transact-SQL)"
 title: "sys.trace_subclass_values (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_subclass_values catalog view"
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sp_register_custom_scripting (Transact-SQL)"
 title: "sp_register_custom_scripting (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_register_custom_scripting"
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

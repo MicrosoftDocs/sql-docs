@@ -1,4 +1,5 @@
 ---
+description: "Job Step Properties - New Job Step (General Page)"
 title: New Job Step Properties (General Page)
 ms.prod: sql
 ms.prod_service: sql-tools

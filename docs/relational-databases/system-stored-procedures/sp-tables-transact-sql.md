@@ -1,4 +1,5 @@
 ---
+description: "sp_tables (Transact-SQL)"
 title: "sp_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_tables"
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_tables (Transact-SQL)

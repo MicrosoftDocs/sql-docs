@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_auto_page_repair (Transact-SQL)"
 title: "sys.dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/05/2019"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "automatic page repair"
   - "sys.dm_hadr_auto_page_repair dynamic management view"
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

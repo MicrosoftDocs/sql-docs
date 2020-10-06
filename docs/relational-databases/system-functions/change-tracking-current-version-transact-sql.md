@@ -1,4 +1,5 @@
 ---
+description: "CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)"
 title: "CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

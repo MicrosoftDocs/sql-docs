@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Migration) (DB2ToSQL)"
 title: "Project Settings (Migration) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

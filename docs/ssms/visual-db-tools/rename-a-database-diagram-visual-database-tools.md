@@ -1,4 +1,5 @@
 ---
+description: "Rename a Database Diagram (Visual Database Tools)"
 title: Rename a Database Diagram
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

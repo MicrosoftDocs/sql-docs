@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;SERVERNAME (Transact-SQL)"
 title: "@@SERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -27,8 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@SERVERNAME  
 ```  
   
@@ -56,7 +56,7 @@ ms.author: vanto
 ## Examples  
  The following example shows using `@@SERVERNAME`.  
   
-```  
+```sql  
 SELECT @@SERVERNAME AS 'Server Name'  
 ```  
   

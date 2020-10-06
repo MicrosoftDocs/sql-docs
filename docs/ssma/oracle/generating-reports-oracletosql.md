@@ -1,4 +1,5 @@
 ---
+description: "Generating Reports (OracleToSQL)"
 title: "Generating Reports (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

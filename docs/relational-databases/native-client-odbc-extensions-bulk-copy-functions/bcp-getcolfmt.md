@@ -1,4 +1,5 @@
 ---
+description: "bcp_getcolfmt"
 title: "bcp_getcolfmt | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

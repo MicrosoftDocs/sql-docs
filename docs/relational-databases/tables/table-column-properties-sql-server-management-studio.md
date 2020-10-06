@@ -1,4 +1,5 @@
 ---
+description: "Table Column Properties (SQL Server Management Studio)"
 title: "Table Column Properties (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

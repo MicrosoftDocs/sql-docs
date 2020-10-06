@@ -1,4 +1,5 @@
 ---
+description: "Replication Management Objects Concepts"
 title: "Replication Management Objects Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2017"

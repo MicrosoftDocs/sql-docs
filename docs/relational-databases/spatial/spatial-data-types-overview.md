@@ -1,4 +1,5 @@
 ---
+description: "Spatial Data Types Overview"
 title: "Spatial Data Types Overview | Microsoft Docs"
 ms.date: "07/21/2020"
 ms.prod: sql

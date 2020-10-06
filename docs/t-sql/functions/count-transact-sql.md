@@ -1,4 +1,5 @@
 ---
+description: "COUNT (Transact-SQL)"
 title: "COUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -151,7 +152,7 @@ ORDER BY Name;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Name                          MinSalary             MaxSalary             AvgSalary             EmployeesPerDept  
 ----------------------------- --------------------- --------------------- --------------------- ----------------  
 Document Control              10.25                 17.7885               14.3884               5  

@@ -1,4 +1,5 @@
 ---
+description: "Removing the SSMA for MySQL Components (MySQLToSql)"
 title: "Removing the SSMA for MySQL Components (MySQLToSql) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

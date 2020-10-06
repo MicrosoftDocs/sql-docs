@@ -1,4 +1,5 @@
 ---
+description: "Connect to SQL Server  (OracleToSQL)"
 title: "Connect to SQL Server  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

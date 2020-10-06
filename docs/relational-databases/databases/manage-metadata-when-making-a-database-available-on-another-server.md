@@ -1,4 +1,5 @@
 ---
+description: "Manage Metadata When Making a Database Available on Another Server"
 title: "Manage metadata when making a database available on another server"
 ms.date: 06/03/2020
 ms.prod: sql

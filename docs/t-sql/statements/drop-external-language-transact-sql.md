@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 08/08/2019
@@ -19,7 +20,7 @@ Deletes an existing external language.
 
 ## Syntax
 
-```text
+```syntaxsql
 DROP EXTERNAL LANGUAGE <language_name>
 ```
 

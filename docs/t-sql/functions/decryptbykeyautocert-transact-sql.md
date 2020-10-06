@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEYAUTOCERT (Transact-SQL)"
 title: "DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"
@@ -28,7 +29,6 @@ This function decrypts data with a symmetric key. That symmetric key automatical
 ## Syntax  
   
 ```syntaxsql
-  
 DecryptByKeyAutoCert ( cert_ID , cert_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
@@ -74,7 +74,7 @@ Requires `VIEW DEFINITION` permission on the symmetric key, and `CONTROL` permis
 ## Examples  
 This example shows how `DECRYPTBYKEYAUTOCERT` can simplify decryption code. This code should run on an [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database that does not already have a database master key.  
   
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdlk979438teag$$ds987yghn)(*&4fdg^';  

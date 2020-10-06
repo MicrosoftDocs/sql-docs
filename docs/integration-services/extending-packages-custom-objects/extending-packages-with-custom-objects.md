@@ -1,4 +1,5 @@
 ---
+description: "Extending Packages with Custom Objects"
 title: "Extending Packages with Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

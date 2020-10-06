@@ -1,4 +1,5 @@
 ---
+description: "Configure compatible SQL Server features with Stretch Database"
 title: "Configure compatible SQL Server features"
 ms.date: "03/14/2017"
 ms.service: sql-server-stretch-database

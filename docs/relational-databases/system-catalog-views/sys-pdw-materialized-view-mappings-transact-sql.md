@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_materialized_view_mappings (Transact-SQL)"
 title: "sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"

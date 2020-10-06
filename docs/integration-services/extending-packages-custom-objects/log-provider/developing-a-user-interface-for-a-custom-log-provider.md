@@ -1,4 +1,5 @@
 ---
+description: "Developing a User Interface for a Custom Log Provider"
 title: "Developing a User Interface for a Custom Log Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

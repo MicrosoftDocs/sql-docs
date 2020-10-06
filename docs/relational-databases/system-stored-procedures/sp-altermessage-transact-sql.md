@@ -1,4 +1,5 @@
 ---
+description: "sp_altermessage (Transact-SQL)"
 title: "sp_altermessage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_altermessage"
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_altermessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

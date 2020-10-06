@@ -1,4 +1,5 @@
 ---
+description: "User Interface Reference (AccessToSQL)"
 title: "User Interface Reference (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

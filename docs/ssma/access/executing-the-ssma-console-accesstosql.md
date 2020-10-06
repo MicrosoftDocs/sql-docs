@@ -1,4 +1,5 @@
 ---
+description: "Executing the SSMA Console (AccessToSQL)"
 title: "Executing the SSMA Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

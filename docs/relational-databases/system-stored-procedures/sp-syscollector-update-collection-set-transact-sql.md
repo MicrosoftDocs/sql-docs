@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_update_collection_set (Transact-SQL)"
 title: "sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "sp_syscollector_update_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

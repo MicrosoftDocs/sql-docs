@@ -1,4 +1,5 @@
 ---
+description: "Enable Always Encrypted with secure enclaves for existing encrypted columns"
 title: Enable Always Encrypted with secure enclaves for existing encrypted columns | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019

@@ -1,4 +1,5 @@
 ---
+description: "Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
 title: "Editions and supported features of SQL Server 2019 | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
@@ -232,7 +233,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|
 |Server audit|Yes|Yes|Yes|Yes|Yes|
 |Database audit|Yes|Yes|Yes|Yes|Yes|
-|Transparent database encryption|Yes|Yes|No|No|No|
+|Transparent database encryption|Yes|Yes|Yes|No|No|
 |Extensible key management|Yes|Yes|No|No|No|
 |User-defined roles|Yes|Yes|Yes|Yes|Yes|
 |Contained databases|Yes|Yes|Yes|Yes|Yes|

@@ -1,4 +1,5 @@
 ---
+description: "FULLTEXTSERVICEPROPERTY (Transact-SQL)"
 title: "FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,8 +31,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 FULLTEXTSERVICEPROPERTY ('property')  
 ```  
   
@@ -59,7 +59,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 ## Examples  
  The following example checks whether only signed binaries are loaded, and the return value indicates that this verification is not occurring.  
   
-```  
+```sql  
 SELECT fulltextserviceproperty('VerifySignature');  
 ```  
   
@@ -72,7 +72,7 @@ SELECT fulltextserviceproperty('VerifySignature');
   
  Note that to set signature verification back to its default value, 1, you can use the following `sp_fulltext_service` statement:  
   
-```  
+```sql  
 EXEC sp_fulltext_service @action='verify_signature', @value=1;  
 GO  
 ```  

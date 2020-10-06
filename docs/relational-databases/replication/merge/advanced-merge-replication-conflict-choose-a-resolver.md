@@ -1,4 +1,5 @@
 ---
+description: "Advanced Merge Replication Conflict - Choose a Resolver"
 title: "Choose a Resolver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_UNKNOWN_VERSION"
 title: "LOCALDB_ERROR_UNKNOWN_VERSION | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

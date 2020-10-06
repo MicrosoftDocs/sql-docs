@@ -1,4 +1,5 @@
 ---
+description: "Connect to Azure SQL Database (MySQLToSQL)"
 title: "Connect to Azure SQL Database (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

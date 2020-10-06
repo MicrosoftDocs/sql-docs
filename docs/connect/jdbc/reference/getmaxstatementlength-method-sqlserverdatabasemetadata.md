@@ -1,4 +1,5 @@
 ---
+description: "getMaxStatementLength Method (SQLServerDatabaseMetaData)"
 title: "getMaxStatementLength Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

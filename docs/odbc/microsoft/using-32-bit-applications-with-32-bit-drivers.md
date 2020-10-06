@@ -1,4 +1,5 @@
 ---
+description: "Using 32-Bit Applications with 32-Bit Drivers"
 title: "Using 32-Bit Applications with 32-Bit Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

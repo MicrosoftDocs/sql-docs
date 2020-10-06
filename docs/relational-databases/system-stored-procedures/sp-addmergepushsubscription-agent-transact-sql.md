@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergepushsubscription_agent (Transact-SQL)"
 title: "sp_addmergepushsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergepushsubscription_agent"
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

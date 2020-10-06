@@ -159,7 +159,7 @@ If a filter isn't set, all events of the selected event classes are returned in 
 |Describes how to replay to a cursor.|[Replay to a Cursor &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
 |Describes how to replay a [!INCLUDE[tsql](../../includes/tsql-md.md)] script.|[Replay a Transact-SQL Script &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |Describes how to create a trace template.|[Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
-|Describes how to modify a trace template.|[Modify a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
+|Describes how to modify a trace template.|[Modify a Trace Template &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)|  
 |Describes how to set global trace options.|[Set Global Trace Options &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |Describes how to find a value or data column while tracing.|[Find a Value or Data Column While Tracing &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |Describes how to derive a template from a running trace.|[Derive a Template from a Running Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
@@ -168,7 +168,7 @@ If a filter isn't set, all events of the selected event classes are returned in 
 |Describes how to export a trace template.|[Export a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |Describes how to import a trace template.|[Import a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |Describes how to extract a script from a trace.|[Extract a Script from a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Describes how to correlate a trace with Windows performance log data.|[Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Describes how to correlate a trace with Windows performance log data.|[Correlate a Trace with Windows Performance Log Data &#40;SQL Server Profiler&#41;](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)|  
 |Describes how to organize columns displayed in a trace.|[Organize Columns Displayed in a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |Describes how to start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |Describes how to save traces and trace templates.|[Save Traces and Trace Templates](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  

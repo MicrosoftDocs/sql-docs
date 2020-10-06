@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Azure SQL Database) (MySQLToSQL)"
 title: "Project Settings (Azure SQL Database) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

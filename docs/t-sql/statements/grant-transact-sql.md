@@ -1,4 +1,5 @@
 ---
+description: "GRANT (Transact-SQL)"
 title: GRANT (Transact-SQL)
 ms.custom: ""
 ms.date: "06/12/2017"
@@ -48,7 +49,7 @@ GRANT { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 GRANT
     <permission> [ ,...n ]  

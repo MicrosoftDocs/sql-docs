@@ -1,4 +1,5 @@
 ---
+description: "Installing and Configuring the ODBC Software"
 title: "Installing and Configuring the ODBC Software | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

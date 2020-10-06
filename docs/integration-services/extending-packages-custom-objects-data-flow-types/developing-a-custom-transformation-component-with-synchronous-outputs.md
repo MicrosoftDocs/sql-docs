@@ -1,4 +1,5 @@
 ---
+description: "Developing a Custom Transformation Component with Synchronous Outputs"
 title: "Developing a Custom Transformation Component with Synchronous Outputs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

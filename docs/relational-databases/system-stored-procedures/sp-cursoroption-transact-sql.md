@@ -1,4 +1,5 @@
 ---
+description: "sp_cursoroption (Transact-SQL)"
 title: "sp_cursoroption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursoroption"
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursoroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

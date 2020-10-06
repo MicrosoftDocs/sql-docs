@@ -1,4 +1,5 @@
 ---
+description: "Add Multiple Conditions to a Business Rule (Master Data Services)"
 title: Add Conditions to a Business Rule
 ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"

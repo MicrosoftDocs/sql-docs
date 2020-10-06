@@ -1,4 +1,5 @@
 ---
+description: "System Administration Functional Area (Master Data Manager)"
 title: System Administration Functional Area
 ms.custom: ""
 ms.date: "04/01/2016"

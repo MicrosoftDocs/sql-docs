@@ -1,4 +1,5 @@
 ---
+description: "sp_special_columns_100 (SQL Data Warehouse)"
 title: "sp_special_columns_100 (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,7 +35,9 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
      [ , [ @nullable = ] 'nullable' ]   
      [ , [ @ODBCVer = ] 'ODBCVer' ]   
 [ ; ]  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  [ @table_name=] '*table_name*'  

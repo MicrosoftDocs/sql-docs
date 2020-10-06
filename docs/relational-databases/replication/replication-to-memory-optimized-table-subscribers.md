@@ -1,4 +1,5 @@
 ---
+description: "Replication to Memory-Optimized Table Subscribers"
 title: "Replication to Memory-Optimized Table Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/21/2016"

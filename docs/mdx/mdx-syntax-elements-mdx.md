@@ -1,4 +1,5 @@
 ---
+description: "MDX Syntax Elements (MDX)"
 title: "MDX Syntax Elements (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

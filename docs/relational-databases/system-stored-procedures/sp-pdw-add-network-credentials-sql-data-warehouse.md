@@ -1,4 +1,5 @@
 ---
+description: "sp_pdw_add_network_credentials (SQL Data Warehouse)"
 title: "sp_pdw_add_network_credentials"
 titleSuffix: Azure SQL Data Warehouse
 ms.date: "03/14/2017"
@@ -27,7 +28,9 @@ ms.custom: seo-dt-2019
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
  '*target_server_name*'  
  Specifies the target server host name or IP address. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will access this server by using the username and password credentials passed to this stored procedure.  

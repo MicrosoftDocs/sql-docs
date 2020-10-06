@@ -1,4 +1,5 @@
 ---
+description: "EXP (Transact-SQL)"
 title: "EXP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -54,7 +55,7 @@ EXP ( float_expression )
 ### A. Finding the exponent of a number  
  The following example declares a variable and returns the exponential value of the specified variable (`10`) with a text description.  
   
-```  
+```sql  
 DECLARE @var FLOAT  
 SET @var = 10  
 SELECT 'The EXP of the variable is: ' + CONVERT(VARCHAR, EXP(@var))  
@@ -72,7 +73,7 @@ The EXP of the variable is: 22026.5
 ### B. Finding exponentials and natural logarithms  
  The following example returns the exponential value of the natural logarithm of `20` and the natural logarithm of the exponential of `20`. Because these functions are inverse functions of one another, the return value in both cases is `20`.  
   
-```  
+```sql  
 SELECT EXP(LOG(20)), LOG(EXP(20))  
 GO  
 ```  
@@ -91,7 +92,7 @@ GO
 ### C. Finding the exponent of a number  
  The following example returns the exponential value of the specified value (`10`).  
   
-```  
+```sql  
 SELECT EXP(10);  
 ```  
   
@@ -105,7 +106,7 @@ SELECT EXP(10);
 ### D. Finding exponential values and natural logarithms  
  The following example returns the exponential value of the natural logarithm of `20` and the natural logarithm of the exponential of `20`. Because these functions are inverse functions of one another, the return value in both cases is `20`.  
   
-```  
+```sql  
 SELECT EXP( LOG(20)), LOG( EXP(20));  
 ```  
   

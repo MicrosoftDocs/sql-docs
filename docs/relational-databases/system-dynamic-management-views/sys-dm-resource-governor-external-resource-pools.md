@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
 title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2020"
@@ -48,9 +49,6 @@ Returns information about the current external resource pool state, the current 
 ## Permissions
 
 Requires `VIEW SERVER STATE` permission.
-
-> [!NOTE]
-> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
 
 ## See Also  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

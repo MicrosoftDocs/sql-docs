@@ -1,4 +1,5 @@
 ---
+description: "Loading Converted Database Objects into SQL Server (SybaseToSQL)"
 title: "Loading Converted Database Objects into SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

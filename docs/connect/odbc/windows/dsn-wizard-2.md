@@ -1,4 +1,5 @@
 ---
+description: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server)"
 title: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2020"

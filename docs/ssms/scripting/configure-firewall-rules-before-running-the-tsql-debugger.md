@@ -4,7 +4,7 @@ description: Learn how to configure the Windows Firewall rules before running th
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
   - "vs.debug.error.sqlde_accessdenied"

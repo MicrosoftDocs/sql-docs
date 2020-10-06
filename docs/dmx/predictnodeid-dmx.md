@@ -1,4 +1,5 @@
 ---
+description: "PredictNodeId (DMX)"
 title: "PredictNodeId (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

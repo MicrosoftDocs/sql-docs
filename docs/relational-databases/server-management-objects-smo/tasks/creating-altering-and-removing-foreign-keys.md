@@ -1,4 +1,5 @@
 ---
+description: "Creating, Altering, and Removing Foreign Keys"
 title: "Creating, Altering, and Removing Foreign Keys"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"

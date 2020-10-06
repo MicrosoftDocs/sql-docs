@@ -1,4 +1,5 @@
 ---
+description: "Create CLR Triggers"
 title: "Create CLR Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

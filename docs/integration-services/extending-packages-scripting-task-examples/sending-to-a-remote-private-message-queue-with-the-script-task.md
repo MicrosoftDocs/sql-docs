@@ -1,4 +1,5 @@
 ---
+description: "Sending to a Remote Private Message Queue with the Script Task"
 title: "Sending to a Remote Private Message Queue with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SQL Modes (MySQLToSQL)"
 title: "SQL Modes (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

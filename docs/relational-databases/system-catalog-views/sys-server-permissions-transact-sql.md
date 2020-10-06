@@ -1,4 +1,5 @@
 ---
+description: "sys.server_permissions (Transact-SQL)"
 title: "sys.server_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2019"

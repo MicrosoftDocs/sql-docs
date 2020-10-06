@@ -1,8 +1,9 @@
 ---
+description: "Recordset (Visual C++ Syntax Index with #import)"
 title: "Recordset (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -198,4 +199,4 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)

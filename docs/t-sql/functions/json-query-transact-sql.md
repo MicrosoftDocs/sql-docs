@@ -1,4 +1,5 @@
 ---
+description: "JSON_QUERY (Transact-SQL)"
 title: "JSON_QUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020

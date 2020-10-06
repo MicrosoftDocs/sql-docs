@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Output Window)  (OracleToSQL)"
 title: "Global Settings (Output Window)  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

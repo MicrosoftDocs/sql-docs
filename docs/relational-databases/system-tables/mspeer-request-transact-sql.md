@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_request (Transact-SQL)"
 title: "MSpeer_request (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_request system table"
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSpeer_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

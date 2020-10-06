@@ -1,4 +1,5 @@
 ---
+description: "Command Line Options in SSMA Console (DB2ToSQL)"
 title: "Command Line Options in SSMA Console (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

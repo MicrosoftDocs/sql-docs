@@ -1,4 +1,5 @@
 ---
+description: "STIntersects (geography Data Type)"
 title: "STIntersects (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_commit"
 title: "sqlsrv_commit | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

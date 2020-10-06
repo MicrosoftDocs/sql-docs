@@ -1,4 +1,5 @@
 ---
+description: "Article Options for Merge Replication"
 title: "Article Options for Merge Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

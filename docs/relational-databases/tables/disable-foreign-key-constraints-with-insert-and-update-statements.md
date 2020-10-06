@@ -1,4 +1,5 @@
 ---
+description: "Disable Foreign Key Constraints with INSERT and UPDATE Statements"
 title: Disable Foreign Key Constraints in INSERT & UPDATE Statements
 ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"

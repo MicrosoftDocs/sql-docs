@@ -1,4 +1,5 @@
 ---
+description: "updateDouble Method (java.lang.String, double)"
 title: "updateDouble Method (java.lang.String, double) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

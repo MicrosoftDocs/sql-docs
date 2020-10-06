@@ -1,4 +1,5 @@
 ---
+description: "&lt;source data query&gt; - OPENROWSET"
 title: "OPENROWSET (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "sp_addrolemember (Transact-SQL)"
 title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/30/2019"
@@ -34,6 +35,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
 ```    
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  [ @rolename= ] '*role*'  

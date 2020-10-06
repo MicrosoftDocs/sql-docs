@@ -1,4 +1,5 @@
 ---
+description: "Evaluate a Policy-Based Management Policy on a Schedule"
 title: "Evaluate a Policy-Based Management Policy on a Schedule | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Overriding Default Leading and Seconds Precision for Interval Data Types"
 title: "Override Leading and Seconds Precision for Interval Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

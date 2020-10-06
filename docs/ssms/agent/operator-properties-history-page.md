@@ -1,4 +1,5 @@
 ---
+description: "Operator Properties (History Page)"
 title: Operator Properties (History Page)
 ms.prod: sql
 ms.prod_service: sql-tools

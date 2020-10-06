@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_USER (Transact-SQL)"
 title: "CURRENT_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -32,7 +33,7 @@ This function returns the name of the current user. This function is equivalent 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_USER  
 ```  
 

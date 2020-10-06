@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CPU_BUSY (Transact-SQL)"
 title: CPU_BUSY (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -55,7 +56,7 @@ To see a report containing several [!INCLUDE[ssNoVersion](../../includes/ssnover
 This example returns [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU activity, as of the current date and time. The example converts one of the values to the `float` data type. This avoids arithmetic overflow issues when calculating a value in microseconds.
   
 ```sql
-SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   
+SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS FLOAT) AS 'CPU microseconds',   
    GETDATE() AS 'As of' ;  
 ```  
   

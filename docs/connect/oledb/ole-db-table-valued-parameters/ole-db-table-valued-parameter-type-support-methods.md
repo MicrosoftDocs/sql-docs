@@ -10,8 +10,8 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (methods)"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

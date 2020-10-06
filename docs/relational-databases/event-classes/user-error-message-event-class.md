@@ -1,4 +1,5 @@
 ---
+description: "User Error Message Event Class"
 title: "User Error Message Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

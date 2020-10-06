@@ -1,4 +1,5 @@
 ---
+description: "Collapse Groups of Rows (Visual Database Tools)"
 title: Collapse Groups of Rows
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

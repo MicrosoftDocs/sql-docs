@@ -1,4 +1,5 @@
 ---
+description: "DROP ROLE (Transact-SQL)"
 title: "DROP ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -33,15 +34,16 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 DROP ROLE [ IF EXISTS ] role_name  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+
 DROP ROLE role_name  
 ```  
   
@@ -76,7 +78,7 @@ DROP ROLE role_name
 ## Examples  
  The following example drops the database role `purchasing` from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 DROP ROLE purchasing;  
 GO  
 ```  

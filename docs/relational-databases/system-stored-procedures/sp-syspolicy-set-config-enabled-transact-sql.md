@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_set_config_enabled (Transact-SQL)"
 title: "sp_syspolicy_set_config_enabled (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

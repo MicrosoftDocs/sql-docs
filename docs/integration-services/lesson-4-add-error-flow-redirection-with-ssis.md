@@ -1,4 +1,5 @@
 ---
+description: "Lesson 4: Add Error Flow Redirection with SSIS"
 title: "Lesson 4: Add Error Flow Redirection with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"

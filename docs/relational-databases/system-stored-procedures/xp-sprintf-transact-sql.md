@@ -1,4 +1,5 @@
 ---
+description: "xp_sprintf (Transact-SQL)"
 title: "xp_sprintf (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2020"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_sprintf"
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # xp_sprintf (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

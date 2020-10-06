@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Catalog Transact-SQL Reference"
 title: "Integration Services Catalog Transact-SQL Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -20,4 +21,4 @@ ms.author: chugu
   
  [Stored Procedures &#40;Integration Services Catalog&#41;](../../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
- [Functions &#40;Integration Services Catalog&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f) 
+ [Functions &#40;Integration Services Catalog&#41;](../functions-dm-execution-performance-counters.md)

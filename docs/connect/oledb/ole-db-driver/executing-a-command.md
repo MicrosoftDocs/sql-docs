@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "sessions [OLE DB Driver for SQL Server]"
   - "OLE DB extensions for XML"
   - "OLE DB Driver for SQL Server, command execution"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Executing a Command
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

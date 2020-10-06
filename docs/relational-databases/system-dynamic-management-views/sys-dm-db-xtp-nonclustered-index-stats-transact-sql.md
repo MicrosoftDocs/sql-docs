@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)"
 title: "sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_nonclustered_index_stats"
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)

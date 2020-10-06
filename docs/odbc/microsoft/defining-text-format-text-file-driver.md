@@ -1,4 +1,5 @@
 ---
+description: "Defining Text Format (Text File Driver)"
 title: "Defining Text Format (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

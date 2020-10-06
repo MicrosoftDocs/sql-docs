@@ -1,4 +1,5 @@
 ---
+description: "Set Up the Job History Log"
 title: "Set Up the Job History Log"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

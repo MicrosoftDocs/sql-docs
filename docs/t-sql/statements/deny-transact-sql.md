@@ -1,4 +1,5 @@
 ---
+description: "DENY (Transact-SQL)"
 title: DENY (Transact-SQL)
 ms.custom: ""
 ms.date: "05/15/2017"
@@ -59,7 +60,7 @@ DENY   { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DENY   
     <permission> [ ,...n ]  

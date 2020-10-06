@@ -1,4 +1,5 @@
 ---
+description: "GUID Escape Sequences"
 title: "GUID Escape Sequences | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

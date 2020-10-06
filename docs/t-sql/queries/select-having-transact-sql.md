@@ -1,4 +1,5 @@
 ---
+description: "SELECT - HAVING (Transact-SQL)"
 title: "HAVING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/21/2020"

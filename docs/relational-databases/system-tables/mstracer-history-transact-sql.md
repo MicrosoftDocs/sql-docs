@@ -1,4 +1,5 @@
 ---
+description: "MStracer_history (Transact-SQL)"
 title: "MStracer_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MStracer_history system table"
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

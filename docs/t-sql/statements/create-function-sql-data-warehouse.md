@@ -1,5 +1,6 @@
 ---
-title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
+description: "CREATE FUNCTION (Azure Synapse Analytics)"
+title: "CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# CREATE FUNCTION (SQL Data Warehouse)
+# CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value must be a scalar (single) value. Use this statement to create a reusable routine that can be used in these ways:  
@@ -56,7 +57,9 @@ RETURNS return_data_type
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
   
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  *schema_name*  

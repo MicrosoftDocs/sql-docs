@@ -1,4 +1,5 @@
 ---
+description: "sys.bandwidth_usage (Azure SQL Database)"
 title: "sys.bandwidth_usage (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"

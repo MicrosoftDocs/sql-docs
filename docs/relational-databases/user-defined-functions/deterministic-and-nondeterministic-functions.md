@@ -1,4 +1,5 @@
 ---
+description: "Deterministic and Nondeterministic Functions"
 title: "Deterministic and Nondeterministic Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2017"

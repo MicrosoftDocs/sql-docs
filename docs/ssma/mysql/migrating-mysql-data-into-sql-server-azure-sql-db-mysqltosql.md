@@ -1,4 +1,5 @@
 ---
+description: "Migrating MySQL Data into SQL Server - Azure SQL Database (MySQLToSQL)"
 title: "Migrating MySQL Data into SQL Server - Azure SQL Database (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

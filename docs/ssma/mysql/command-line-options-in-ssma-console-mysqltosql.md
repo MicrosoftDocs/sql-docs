@@ -1,4 +1,5 @@
 ---
+description: "Command Line Options in SSMA Console (MySQLToSQL)"
 title: "Command Line Options in SSMA Console (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

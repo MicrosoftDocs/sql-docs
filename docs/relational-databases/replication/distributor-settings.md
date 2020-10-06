@@ -1,4 +1,5 @@
 ---
+description: "Distributor Settings"
 title: "Distributor Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

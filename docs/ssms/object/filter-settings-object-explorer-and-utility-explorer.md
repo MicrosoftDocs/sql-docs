@@ -1,4 +1,5 @@
 ---
+description: "Filter Settings (Object Explorer and Utility Explorer)"
 title: "Filter Settings (Object Explorer and Utility Explorer)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

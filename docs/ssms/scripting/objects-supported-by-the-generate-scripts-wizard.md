@@ -4,7 +4,7 @@ description: See what object types that the Generate and Publish Scripts Wizard 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495

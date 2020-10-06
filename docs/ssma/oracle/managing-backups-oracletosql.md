@@ -1,4 +1,5 @@
 ---
+description: "Managing Backups (OracleToSQL)"
 title: "Managing Backups (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

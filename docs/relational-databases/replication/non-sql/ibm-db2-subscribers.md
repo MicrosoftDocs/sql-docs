@@ -1,4 +1,5 @@
 ---
+description: "IBM DB2 Subscribers"
 title: "IBM DB2 Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"

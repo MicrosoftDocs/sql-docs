@@ -1,4 +1,5 @@
 ---
+description: "Security-Related Dynamic Management Views and Functions (Transact-SQL)"
 title: "Security-Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -11,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "security dynamic management views"
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Security-Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Projects (DQS)"
 title: "Data Quality Projects (DQS)"
 ms.date: "10/01/2012"
 ms.prod: sql

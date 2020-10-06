@@ -1,4 +1,5 @@
 ---
+description: "Working with the Sample Console Script Files (DB2ToSQL)"
 title: "Working with the Sample Console Script Files (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

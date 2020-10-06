@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Output Window) (MySQLToSQL)"
 title: "Global Settings (Output Window) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

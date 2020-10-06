@@ -1,4 +1,5 @@
 ---
+description: "Check Database Integrity Task"
 title: "Check Database Integrity Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -38,6 +39,5 @@ ms.author: chugu
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

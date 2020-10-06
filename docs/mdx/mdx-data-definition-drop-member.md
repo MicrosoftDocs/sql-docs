@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - DROP MEMBER"
 title: "DROP MEMBER Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "SQL Comment Dialog Box (Visual Database Tools)"
 title: SQL Comment Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

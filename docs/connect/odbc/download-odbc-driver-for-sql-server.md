@@ -33,16 +33,16 @@ Version 17.6.1 is the latest general availability (GA) version. If you have a pr
 - Released: July 31, 2020
 
 > [!Note]
-> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](https://aka.ms/downloadmsodbcsqlenglish). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
+> If you are accessing this page from a non-English language version, and want to see the most up-to-date content, please visit the [US-English version of the site](). You can download different languages from the US-English version site by selecting [available languages](#available-languages).
 
 ## Available languages
 
 This release of Microsoft ODBC Driver for SQL Server can be installed in the following languages:
 
-Microsoft ODBC Driver 17.5.2 for SQL Server (x64):  
+Microsoft ODBC Driver 17.6.1 for SQL Server (x64):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)
 
-Microsoft ODBC Driver 17.5.2 for SQL Server (x86):  
+Microsoft ODBC Driver 17.6.1 for SQL Server (x86):  
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
 
 ### Release notes for Windows

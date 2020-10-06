@@ -1,4 +1,5 @@
 ---
+description: "SQL-92 Compliance"
 title: "SQL-92 Compliance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

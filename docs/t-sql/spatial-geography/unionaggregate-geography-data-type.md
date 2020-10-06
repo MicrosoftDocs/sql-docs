@@ -1,4 +1,5 @@
 ---
+description: "UnionAggregate (geography Data Type)"
 title: "UnionAggregate (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"

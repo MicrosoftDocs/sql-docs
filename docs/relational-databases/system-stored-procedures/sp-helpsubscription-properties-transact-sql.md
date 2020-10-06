@@ -1,4 +1,5 @@
 ---
+description: "sp_helpsubscription_properties (Transact-SQL)"
 title: "sp_helpsubscription_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpsubscription_properties"
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

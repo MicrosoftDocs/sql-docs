@@ -55,9 +55,12 @@ The following steps create an external table in the data pool named **web_clicks
    -- To create external tables in data pools
    GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
 
-   -- To create external table
+   -- To create external tables
    GRANT CREATE TABLE TO sample_user;
    GRANT ALTER ANY SCHEMA TO sample_user;
+
+   -- To view database state for Sales
+   GRANT VIEW DATABASE STATE ON DATABASE::Sales TO sample_user;
 
    ALTER ROLE [db_datareader] ADD MEMBER sample_user
    ALTER ROLE [db_datawriter] ADD MEMBER sample_user

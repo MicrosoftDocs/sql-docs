@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB, processing results"
   - "rowsets [SQL Server], results processing"
   - "results [OLE DB Driver for SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Processing Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

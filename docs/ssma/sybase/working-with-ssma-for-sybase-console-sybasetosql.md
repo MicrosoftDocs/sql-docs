@@ -1,4 +1,5 @@
 ---
+description: "Working with SSMA for Sybase Console (SybaseToSQL)"
 title: "Working with SSMA for Sybase Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

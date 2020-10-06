@@ -3,7 +3,7 @@ title: Watch Window
 description: Learn about Watch windows (as many as four at once), which display information about expressions you select. The information displays only in debug mode.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Watch Window [Transact-SQL]"

@@ -1,4 +1,5 @@
 ---
+description: "Generating Reports (DB2ToSQL)"
 title: "Generating Reports (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

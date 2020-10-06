@@ -1,4 +1,5 @@
 ---
+description: "logmarkhistory (Transact-SQL)"
 title: "logmarkhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "logmarkhistory system table"
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # logmarkhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

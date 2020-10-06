@@ -1,4 +1,5 @@
 ---
+description: "Dimension Processing Destination"
 title: "Dimension Processing Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

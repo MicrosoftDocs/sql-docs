@@ -1,4 +1,5 @@
 ---
+description: "Refresh from Database (DB2ToSQL)"
 title: "Refresh from Database (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

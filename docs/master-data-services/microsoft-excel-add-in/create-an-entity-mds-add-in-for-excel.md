@@ -1,4 +1,5 @@
 ---
+description: "Create an Entity (MDS Add-in for Excel)"
 title: Create an Entity
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

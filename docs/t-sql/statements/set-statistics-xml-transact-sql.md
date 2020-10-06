@@ -1,4 +1,5 @@
 ---
+description: "SET STATISTICS XML (Transact-SQL)"
 title: "SET STATISTICS XML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

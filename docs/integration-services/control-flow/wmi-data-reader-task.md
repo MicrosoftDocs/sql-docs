@@ -1,4 +1,5 @@
 ---
+description: "WMI Data Reader Task"
 title: "WMI Data Reader Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

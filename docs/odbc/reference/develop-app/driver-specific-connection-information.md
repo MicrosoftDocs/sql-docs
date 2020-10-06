@@ -1,4 +1,5 @@
 ---
+description: "Driver-Specific Connection Information"
 title: "Driver-Specific Connection Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

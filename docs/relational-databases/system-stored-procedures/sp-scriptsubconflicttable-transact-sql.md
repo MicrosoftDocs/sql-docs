@@ -1,4 +1,5 @@
 ---
+description: "sp_scriptsubconflicttable (Transact-SQL)"
 title: "sp_scriptsubconflicttable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_scriptsubconflicttable"
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

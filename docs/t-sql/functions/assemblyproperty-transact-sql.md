@@ -1,4 +1,5 @@
 ---
+description: "ASSEMBLYPROPERTY (Transact-SQL)"
 title: "ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -28,7 +29,7 @@ This function returns information about a property of an assembly.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASSEMBLYPROPERTY('assembly_name', 'property_name')  
 ```  
   

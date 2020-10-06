@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Data loading guidance"
 title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/03/2017"

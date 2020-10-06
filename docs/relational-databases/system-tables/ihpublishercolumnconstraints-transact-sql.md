@@ -1,4 +1,5 @@
 ---
+description: "IHpublishercolumnconstraints (Transact-SQL)"
 title: "IHpublishercolumnconstraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishercolumnconstraints system table"
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

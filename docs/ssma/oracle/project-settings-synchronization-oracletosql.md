@@ -1,4 +1,5 @@
 ---
+description: "Project Settings(Synchronization) (OracleToSQL)"
 title: "Project Settings(Synchronization) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "USER_ID (Transact-SQL)"
 title: "USER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -35,8 +36,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 USER_ID ( [ 'user' ] )  
 ```  
   
@@ -59,7 +59,7 @@ USER_ID ( [ 'user' ] )
 ## Examples  
  The following example returns the identification number for the `AdventureWorks2012` user `Harold`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 SELECT USER_ID('Harold');  
 GO  

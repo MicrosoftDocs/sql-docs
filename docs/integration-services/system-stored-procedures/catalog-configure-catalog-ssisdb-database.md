@@ -1,4 +1,5 @@
 ---
+description: "catalog.configure_catalog (SSISDB Database)"
 title: "catalog.configure_catalog (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

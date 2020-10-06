@@ -1,4 +1,5 @@
 ---
+description: "Events Logged by the Integration Services Service"
 title: "Events Logged by the Integration Services Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

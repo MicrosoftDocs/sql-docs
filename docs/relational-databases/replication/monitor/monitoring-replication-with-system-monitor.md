@@ -1,4 +1,5 @@
 ---
+description: "Monitoring Replication with System Monitor"
 title: "Monitoring Replication with System Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

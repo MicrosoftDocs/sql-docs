@@ -1,4 +1,5 @@
 ---
+description: "catalog.delete_environment_reference (SSISDB Database)"
 title: "catalog.delete_environment_reference (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

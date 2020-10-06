@@ -1,4 +1,5 @@
 ---
+description: "Revoking and Granting Rights When Using Stored Procedures"
 title: "Revoking and Granting Rights When Using Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

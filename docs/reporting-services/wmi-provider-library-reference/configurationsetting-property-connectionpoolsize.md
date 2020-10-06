@@ -1,4 +1,5 @@
 ---
+description: "ConnectionPoolSize Property (WMI MSReportServer_ConfigurationSetting)"
 title: "ConnectionPoolSize Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services

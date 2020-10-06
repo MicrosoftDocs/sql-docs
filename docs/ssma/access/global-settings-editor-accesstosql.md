@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Editor) (AccessToSQL)"
 title: "Global Settings (Editor) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

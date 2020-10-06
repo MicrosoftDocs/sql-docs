@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_wait_stats (Transact-SQL)"
 title: "sys.dm_pdw_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

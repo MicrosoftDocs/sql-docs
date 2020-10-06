@@ -1,4 +1,5 @@
 ---
+description: "SET LANGUAGE (Transact-SQL)"
 title: "SET LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "options [SQL Server], date"
   - "default languages"
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LANGUAGE (Transact-SQL)

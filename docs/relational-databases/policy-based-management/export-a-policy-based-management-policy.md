@@ -1,4 +1,5 @@
 ---
+description: "Export a Policy-Based Management Policy"
 title: "Export a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

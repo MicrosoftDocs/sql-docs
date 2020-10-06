@@ -1,4 +1,5 @@
 ---
+description: "Showplan XML for Query Compile Event Class"
 title: "Showplan XML for Query Compile Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

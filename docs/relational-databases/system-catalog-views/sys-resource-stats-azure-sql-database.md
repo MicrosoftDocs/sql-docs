@@ -1,4 +1,5 @@
 ---
+description: "sys.resource_stats (Azure SQL Database)"
 title: "sys.resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/13/2018"

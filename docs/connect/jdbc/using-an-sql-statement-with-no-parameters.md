@@ -1,4 +1,5 @@
 ---
+description: "Using an SQL statement with no parameters"
 title: "Using an SQL statement with no parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

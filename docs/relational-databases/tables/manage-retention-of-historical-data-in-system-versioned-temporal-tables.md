@@ -1,4 +1,5 @@
 ---
+description: "Manage retention of historical data in system-versioned temporal tables"
 title: Manage historical data in System-Versioned Temporal Tables
 ms.custom: "seo-lt-2019"
 ms.date: "05/18/2017"
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage retention of historical data in system-versioned temporal tables
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 With system-versioned temporal tables, the history table may increase database size more than regular tables, particularly under the following conditions:
 

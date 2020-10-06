@@ -1,4 +1,5 @@
 ---
+description: "ODBC Driver Behavior Change When Handling Character Conversions"
 title: "ODBC change handling char conversions"
 ms.custom: ""
 ms.date: "03/14/2017"

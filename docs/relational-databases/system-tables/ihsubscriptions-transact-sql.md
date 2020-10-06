@@ -1,4 +1,5 @@
 ---
+description: "IHsubscriptions (Transact-SQL)"
 title: "IHsubscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHsubscriptions system table"
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHsubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

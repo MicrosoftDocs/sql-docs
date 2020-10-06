@@ -1,4 +1,5 @@
 ---
+description: "Show Column Names in the Diagram Pane (Visual Database Tools)"
 title: Show Column Names in the Diagram Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

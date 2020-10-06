@@ -1,4 +1,5 @@
 ---
+description: "Driver-Aware Connection Pooling"
 title: "Driver-Aware Connection Pooling | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Show Query Properties (Visual Database Tools)"
 title: Show Query Properties
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

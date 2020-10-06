@@ -1,4 +1,5 @@
 ---
+description: "Sort with ORDER BY (Visual Database Tools)"
 title: Sort with ORDER BY
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

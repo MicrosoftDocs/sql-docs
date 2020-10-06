@@ -1,4 +1,5 @@
 ---
+description: "Writing ODBC 3.x Drivers"
 title: "Writing ODBC 3.x Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

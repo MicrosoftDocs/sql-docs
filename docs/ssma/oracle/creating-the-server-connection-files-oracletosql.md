@@ -1,4 +1,5 @@
 ---
+description: "Creating the Server Connection Files (OracleToSQL)"
 title: "Creating the Server Connection Files (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

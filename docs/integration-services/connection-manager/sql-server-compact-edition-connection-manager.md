@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Compact Edition Connection Manager"
 title: "SQL Server Compact Edition Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

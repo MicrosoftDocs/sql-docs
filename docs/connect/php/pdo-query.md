@@ -113,7 +113,7 @@ $stmt = null;
 ```
 
 ## Example
-This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
 ```
 <?php
@@ -164,4 +164,3 @@ Array
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

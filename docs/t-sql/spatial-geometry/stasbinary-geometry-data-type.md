@@ -1,4 +1,5 @@
 ---
+description: "STAsBinary (geometry Data Type)"
 title: "STAsBinary (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

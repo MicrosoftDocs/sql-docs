@@ -1,4 +1,5 @@
 ---
+description: "MAX (Transact-SQL)"
 title: "MAX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
@@ -30,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Aggregation Function Syntax  
 MAX( [ ALL | DISTINCT ] expression )  
   

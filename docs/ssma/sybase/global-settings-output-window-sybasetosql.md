@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Output Window)  (SybaseToSQL)"
 title: "Global Settings (Output Window)  (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

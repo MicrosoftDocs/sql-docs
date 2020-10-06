@@ -1,4 +1,5 @@
 ---
+description: "Removing SSMA for Sybase Components (SybaseToSQL)"
 title: "Removing SSMA for Sybase Components (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

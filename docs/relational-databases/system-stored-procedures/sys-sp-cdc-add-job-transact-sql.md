@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_add_job (Transact-SQL)"
 title: "sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_add_job"
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

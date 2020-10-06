@@ -1,4 +1,5 @@
 ---
+description: "Elements Used in SQL Statements"
 title: "Elements Used in SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

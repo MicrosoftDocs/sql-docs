@@ -1,4 +1,5 @@
 ---
+description: "Appendix G: Driver Guidelines for Backward Compatibility"
 title: "Appendix G: Driver Guidelines for Backward Compatibility | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

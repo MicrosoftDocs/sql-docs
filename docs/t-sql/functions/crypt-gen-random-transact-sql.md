@@ -1,4 +1,5 @@
 ---
+description: "CRYPT_GEN_RANDOM (Transact-SQL)"
 title: "CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

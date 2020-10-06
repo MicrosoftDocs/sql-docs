@@ -1,4 +1,5 @@
 ---
+description: "sys.database_permissions (Transact-SQL)"
 title: "sys.database_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/11/2017"

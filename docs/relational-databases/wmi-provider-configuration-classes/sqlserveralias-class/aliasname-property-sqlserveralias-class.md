@@ -1,4 +1,5 @@
 ---
+description: "AliasName Property (SqlServerAlias Class)"
 title: "AliasName Property (SqlServerAlias)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -14,8 +15,8 @@ apilocation:
 helpviewer_keywords: 
   - "AliasName property"
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # AliasName Property (SqlServerAlias Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

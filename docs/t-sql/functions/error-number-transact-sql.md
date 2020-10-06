@@ -1,4 +1,5 @@
 ---
+description: "ERROR_NUMBER (Transact-SQL)"
 title: "ERROR_NUMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -32,7 +33,7 @@ This function returns the error number of the error that caused the CATCH block 
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_NUMBER ( )  
 ```  
   

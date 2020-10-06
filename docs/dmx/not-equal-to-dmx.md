@@ -1,4 +1,5 @@
 ---
+description: "&lt;&gt; (Not Equal To) (DMX)"
 title: "&lt;&gt; (Not Equal To) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

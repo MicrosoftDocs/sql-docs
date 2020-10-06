@@ -1,4 +1,5 @@
 ---
+description: "Audit Object Derived Permission Event Class"
 title: "Audit Object Derived Permission Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

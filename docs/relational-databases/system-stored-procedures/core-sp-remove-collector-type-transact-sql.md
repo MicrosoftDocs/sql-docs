@@ -1,4 +1,5 @@
 ---
+description: "core.sp_remove_collector_type (Transact-SQL)"
 title: "core.sp_remove_collector_type (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sp_remove_collector_type"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

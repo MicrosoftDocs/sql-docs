@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-2: Add and configure logging"
 title: "Step 2: Add and configure logging | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"

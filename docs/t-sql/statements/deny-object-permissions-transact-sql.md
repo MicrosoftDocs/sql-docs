@@ -1,4 +1,5 @@
 ---
+description: "DENY Object Permissions (Transact-SQL)"
 title: "DENY Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -138,7 +139,7 @@ The following examples use the AdventureWorks database.
 ### A. Denying SELECT permission on a table  
  The following example denies `SELECT` permission to the user `RosaQdM` on the table `Person.Address`.  
   
-```  
+```sql  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -146,7 +147,7 @@ GO
 ### B. Denying EXECUTE permission on a stored procedure  
  The following example denies `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role called `Recruiting11`.  
   
-```  
+```sql  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -155,7 +156,7 @@ GO
 ### C. Denying REFERENCES permission on a view with CASCADE  
  The following example denies `REFERENCES` permission on the column `BusinessEntityID` in the view `HumanResources.vEmployee` to the user `Wanida` with `CASCADE`.  
   
-```  
+```sql  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

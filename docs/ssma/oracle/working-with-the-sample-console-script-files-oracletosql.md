@@ -1,4 +1,5 @@
 ---
+description: "Working with the Sample Console Script Files (OracleToSQL)"
 title: "Working with the Sample Console Script Files (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

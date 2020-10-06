@@ -1,4 +1,5 @@
 ---
+description: "sys.resource_governor_workload_groups (Transact-SQL)"
 title: "sys.resource_governor_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_workload_groups catalog view"
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

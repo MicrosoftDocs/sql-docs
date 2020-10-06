@@ -1,4 +1,5 @@
 ---
+description: "&lt;AgentProfileName&gt; Properties"
 title: "&lt;AgentProfileName&gt; Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

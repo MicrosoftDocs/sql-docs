@@ -1,4 +1,5 @@
 ---
+description: "Enumerated Constants in Property Expressions"
 title: "Enumerated Constants in Property Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -145,7 +145,7 @@ sqlcmd
 
 **Login-Related Options**
 
-**-A**
+**-A**  
 Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option isn't supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. DAC isn't available for an Azure Active Directory administrator.
 
 **-C**  

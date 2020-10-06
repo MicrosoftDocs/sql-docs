@@ -560,6 +560,9 @@ The following two sections provide a summary of the techniques that can be used 
 * Can cause partition elimination issues for queries including individual and range-based select/update, and queries that perform a join.
 * Adding a persisted computed column is an offline operation.
 
+> [!TIP]
+> For additional techniques, see the blog post [PAGELATCH_EX waits and heavy inserts](https://techcommunity.microsoft.com/t5/sql-server/pagelatch-ex-waits-and-heavy-inserts/ba-p/384289).
+
 ## Walkthrough: Diagnosing a SQL Server latch contention scenario
 
 The following walkthrough demonstrates the tools and techniques described in [Diagnosing SQL Server Latch Contention](#diagnosing-sql-server-latch-contention) and [Handling Latch Contention for Different Table Patterns](#handling-latch-contention-for-different-table-patterns) to resolve a problem in a real world scenario. This scenario describes a customer engagement to perform load testing of a point of sales system which simulated approximately 8,000 stores performing transactions against a SQL Server application which was running on an 8 socket, 32 physical core system with 256 GB of memory.

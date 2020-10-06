@@ -74,7 +74,7 @@ Language Extensions use the extensibility framework for executing external code.
 
 Install [Python 3.7]( https://www.python.org/downloads/release/python-379/) and add it to the PATH.
 
-![Add Python 3.7 to path.](../install/media/python-379.png) **update image - note**
+![Add Python 3.7 to path.](../install/media/python-379.png) 
 
 
 #### Install pandas

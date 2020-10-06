@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TYPE_ID ( [ schema_name ] type_name )   
 ```  
   
@@ -58,7 +58,7 @@ TYPE_ID ( [ schema_name ] type_name )
 ### A. Looking up the TYPE ID values for single- and two-part type names  
  The following example returns type ID for single- and two-part type names.  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TYPE NewType FROM int;  
@@ -75,7 +75,7 @@ GO
 ### B. Looking up the TYPE ID of a system data type  
  The following example returns the `TYPE ID` for the `datetime` system data type.  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS [TYPE_NAME]  
     ,TYPE_ID('datetime') AS [TYPE_ID];  
 GO  
@@ -86,7 +86,7 @@ GO
 ### C: Looking up the TYPE ID of a system data type  
  The following example returns the `TYPE ID` for the `datetime` system data type.  
   
-```  
+```sql
 SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,   
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  

@@ -58,7 +58,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
   
  To list all sequence objects in the database, execute the following statement.  
   
-```  
+```sql  
 SELECT sch.name + '.' + seq.name AS [Sequence schema and name]   
     FROM sys.sequences AS seq  
     JOIN sys.schemas AS sch  
@@ -77,7 +77,7 @@ GO
 ## Examples  
  The following example removes a sequence object named `CountBy1` from the current database.  
   
-```  
+```sql  
 DROP SEQUENCE CountBy1 ;  
 GO  
 ```  

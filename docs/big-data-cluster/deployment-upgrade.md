@@ -55,10 +55,10 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
 1. Update `azdata`.
 
    Follow the instructions for installing `azdata`. 
-   - [Windows installer](deploy-install-azdata-installer.md)
-   - [Linux with apt](deploy-install-azdata-linux-package.md)
-   - [Linux with yum](deploy-install-azdata-yum.md)
-   - [Linux with zypper](deploy-install-azdata-zypper.md)
+   - [Windows installer](../azdata/install/deploy-install-azdata-installer.md)
+   - [Linux with apt](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [Linux with yum](../azdata/install/deploy-install-azdata-yum.md)
+   - [Linux with zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >If `azdata` was installed with `pip` you need to manually remove it before installing with the Windows installer or the Linux package manager.

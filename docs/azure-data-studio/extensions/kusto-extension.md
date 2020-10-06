@@ -13,9 +13,11 @@ ms.date: 09/22/2020
 
 # Kusto (KQL) extension for Azure Data Studio (Preview)
 
-The Kusto (KQL) extension for [Azure Data Studio](../what-is.md) enables you to connect and query to [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) clusters.
+The Kusto (KQL) extension for [Azure Data Studio](../what-is.md) enables you to connect and query to [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) clusters.
 
-Users can now connect and browse their Azure Data Explorer clusters, write and run KQL queries, and author notebooks with the Kusto kernel complete with IntelliSense. By enabling the native Kusto (KQL) experience in Azure Data Studio, data engineers, data scientists, and data analysts can quickly observe trends and anomalies against massive amounts of data stored in Azure Data Explorer.
+Users can write and run KQL queries and author notebooks with the [Kusto kernel](../notebooks/notebooks-kusto-kernel.md) complete with IntelliSense.
+
+By enabling the native Kusto (KQL) experience in Azure Data Studio, data engineers, data scientists, and data analysts can quickly observe trends and anomalies against massive amounts of data stored in Azure Data Explorer.
 
 This extension is currently in preview.
 
@@ -26,7 +28,7 @@ If you don't have an Azure subscription, create a [free Azure account](https://a
 The following prerequisites are also required:
 
 - [Azure Data Studio installed](../download-azure-data-studio.md).
-- [An Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [An Azure Data Explorer cluster and database](/azure/data-explorer/create-cluster-database-portal).
 
 ## Install the Kusto (KQL) extension
 
@@ -97,7 +99,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-For more information about writing KQL queries, visit [Write queries for Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
+For more information about writing KQL queries, visit [Write queries for Azure Data Explorer](/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## View extension settings
 
@@ -117,20 +119,27 @@ The extensions settings look like this:
 
 ## SandDance visualization
 
-The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
+The [SandDance extension](../sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
-## Limitations and considerations
+## Known issues
 
-- You must choose a database for your Azure Data Explorer cluster before running a Kusto query.
-- If you leave your Azure Data Explorer cluster idle for too long, it can disconnect.
-    - Workaround: Disconnect from the cluster and reconnect.
+| Details | Workaround |
+|---------|------------|
+| [Kusto connection Viewlet after reload doesn't work](https://github.com/microsoft/azuredatastudio/issues/12475). | N/A |
+| [Unable to reconnect automatically](https://github.com/microsoft/azuredatastudio/issues/11830). | Disconnect and reconnect to the Azure Data Explorer cluster. |
+| [Refresh Kusto cluster doesn't seem to reconnect properly](https://github.com/microsoft/azuredatastudio/issues/11824). | Disconnect and reconnect to the Azure Data Explorer cluster. |
+| [Connect to a cluster should bring up cluster dashboard instead of database](https://github.com/microsoft/azuredatastudio/issues/12549) | N/A |
+| For each table in your Azure Data cluster database, there's only an option to **SELECT TOP 1000** instead of **TAKE 10**. | N/A |
+
+You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
+You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.
 
 ## Next steps
 
 - [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)
-- [Kqlmagic notebook in Azure Data Studio](../notebooks-kqlmagic.md)
-- [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [What is Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
+- [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
 - [Using SandDance visualizations](https://sanddance.js.org/)

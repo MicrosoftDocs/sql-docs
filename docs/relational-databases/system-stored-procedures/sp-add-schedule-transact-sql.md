@@ -66,7 +66,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Monthly|  
 |**32**|Monthly, relative to *freq_interval*|  
 |**64**|Run when SQL Agent service starts|  
-|**128**|Run when the computer is idle (not supported in [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Run when the computer is idle (not supported in [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval`
  The days that a job is executed. *freq_interval* is **int**, with a default of **1**, and depends on the value of *freq_type*.  
@@ -211,5 +211,4 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
-  
   

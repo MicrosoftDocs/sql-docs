@@ -28,7 +28,7 @@ ms.author: v-daenge
 
 ## Support
 
-PyODBC is community supported software. Microsoft contributes to the pyODBC open-source community and is an active participant in the repository at [https://github.com/mkleehammer/pyodbc/](https://github.com/mkleehammer/pyodbc/). However, this software does not come with Microsoft support.
+PyODBC is community supported software. Microsoft contributes to the pyODBC open-source community and is an active participant in the repository at [https://github.com/mkleehammer/pyodbc/](https://github.com/mkleehammer/pyodbc/). However, this software doesn't come with Microsoft support.
 
 To get help, file an [issue in the pyODBC GitHub repository](https://github.com/mkleehammer/pyodbc/issues) or visit other Python community resources:
 

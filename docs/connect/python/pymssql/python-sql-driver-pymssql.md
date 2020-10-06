@@ -28,7 +28,7 @@ ms.author: v-daenge
 
 ## Support
 
-Pymssql is community supported software. This software does not come with Microsoft support.
+Pymssql is community supported software. This software doesn't come with Microsoft support.
 
 To get help, file an [issue in the pymssql GitHub repository](https://github.com/pymssql/pymssql/issues) or visit other Python community resources:
 

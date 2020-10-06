@@ -25,7 +25,7 @@ Once all dependencies are installed, but **Run all cells** fails, each notebook 
 
 This section contains a set of notebooks useful for getting information and status about a SQL Server big data cluster using the `azdata` command line interface (CLI).
 
-|Name<br /><sub>(notebooks)</sub> |Description |
+|Name |Description |
 |---|---|---|---|
 |TSG006 - Get system pod status|View the status of all system pods. |
 |TSG007 - Get BDC pod status|View the big data cluster pods status.|
@@ -55,7 +55,7 @@ This section contains a set of notebooks useful for getting information and stat
 
 This section contains a set of notebooks useful for getting information and status about the Kubernetes cluster hosting a SQL Server Big Data Cluster (BDC).
 
-|Name<br /><sub>(notebooks)</sub> |Description |
+|Name |Description |
 |---|---|---|---|
 |TSG003 - Show BDC Spark sessions|View BDC Spark sessions. |
 |TSG004 - Show BDC Apps|View the apps up and running in BDC cluster.|

@@ -26,10 +26,11 @@ You can also use [azdata](deploy-install-azdata.md) commands to view both endpoi
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
    ```
 
-   Specify the username and password that you configured for the controller (AZDATA_USERNAME and AZDATA_PASSWORD) during deployment. 
+1. Specify the username and password that you configured for the controller (AZDATA_USERNAME and AZDATA_PASSWORD) during deployment.
+
    For AD authentication, the command is:
 
-  ```bash
+   ```bash
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 

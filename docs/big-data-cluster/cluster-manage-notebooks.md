@@ -21,14 +21,39 @@ Each notebook is designed to check for its own dependencies. A **Run all cells**
 Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
 
 
-## Installing and uninstalling utilities Big Data Cluster (BDC)
+## Installing and uninstalling utilities on Big Data Cluster (BDC)
 
 This section contains a set of notebooks useful for installing and uninstalling command line tools and packages needed to manage SQL Server Big Data Clusters.
 
-
-<install> notebook table + <install-kubeadm-with-lpvs>
-
-
+|Name |Description |
+|---|---|---|---|
+|SOP010 - Upgrade a big data cluster|Use this notebook to upgrade a Big Data Cluster using azdata. |
+|SOP012 - Install unixodbc for Mac|Use this notebook when getting errors while using brew install the odbc for SQL Server.|
+|SOP036 - Install kubectl command line interface|Use this notebook to install kubectl command line interface regardless your OS.|
+|SOP037 - Uninstall kubectl command line interface|Use this notebook to uninstall kubectl command line interface regardless your OS.|
+|SOP038 - Install azure command line interface|Use this notebook to install Azure CLI command line interface regardless your OS.|
+|SOP039 - Uninstall azure command line interface|Use this notebook to uninstall Azure CLI command line interface regardless your OS.|
+|SOP040 - Upgrade pip in ADS Python sandbox|Use this notebook to upgrade pip in ADS Python sandbox.|
+|SOP040 - Upgrade pip in ADS Python sandbox|Use this notebook to upgrade pip in ADS Python sandbox.|
+|SOP054 - Install azdata command line interface|Use this notebook to install azdata command line interface regardless your OS.|
+|SOP055 - Uninstall azdata command line interface|Use this notebook to uninstall azdata command line interface regardless your OS.|
+|SOP059 - Install Kubernetes Python module|Use this notebook to install Kubernetes modules with Python.|
+|SOP060 - Uninstall kubernetes module|Use this notebook to uninstall Kubernetes modules with Python.|
+|SOP061 - Delete a big data cluster|Use this notebook to delete a BDC cluster.|
+|SOP062 - Install ipython-sql and pyodbc modules|Use this notebook to install ipython-sql and pyodbc modules.|
+|SOP063 - Install azdata CLI (using package manager)|Use this notebook to install azdata CLI (using package manager).|
+|SOP064 - Uninstall azdata CLI (using package manager)|Use this notebook to uninstall azdata CLI (using package manager).|
+|SOP069 - Install ODBC for SQL Server|Use this notebook to install ODBC driver since some subcommands in azdata require the SQL Server ODBC driver.|
+|LPV000 - Annotate nodes for data and storage pool pods|Use this notebook to annotate nodes for data and storage pool pods.|
+|LPV001 - Create Kubernetes Storage Classes|Use this notebook to create Kubernetes Storage Classes.|
+|LPV003 - Initialize config files|Use this notebook to initialize config files.|
+|LPV004 - Patch configuration files with storage specs|Use this notebook to patch configuration files with storage specs.|
+|LPV005 - OPTIONAL - Adjust ports to enable multiple BDCs in one Kubernetes cluster.|Use this notebook to adjust ports to enable multiple BDCs in one Kubernetes cluster, and you might use it in combination with the notebook **LPV005b - OPTIONAL - Secure cluster configuration patch**, and for OpenShift workaround with the notebooks **LPV005c - OPTIONAL - Openshift workarounds** and **LPV005d - OPTIONAL - Openshift workarounds (SQL)** |
+|LPV006 - Create the Big Data Cluster|Use this notebook to create the BDC cluster.|
+|LPV007 - Delete local persistent storage volumes on nodes|Use this notebook to delete local persistent storage volumes on nodes.|
+|LPV008 - Delete Kubernetes Storage Classes|Use this notebook to delete Kubernetes Storage Classes.|
+|LPV101 - Deploy kubeadm-prod to Openshift|Use this notebook to deploy kubeadm-prod to Openshift.|
+|LPV102 - Delete kubeadm-prod to Openshift|Use this notebook to delete kubeadm-prod to Openshift.|
 
 
 ## Managing Certificates on Big Data Clusters (BDC)

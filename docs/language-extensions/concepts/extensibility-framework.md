@@ -53,7 +53,7 @@ The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a serv
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll for Java | Java extension | SQL Server 2019 |
 
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under **SQLRUserGroup** which uses [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) for execution isolation.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under **SQLRUserGroup** which uses [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) for execution isolation.
 
 A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server Machine Language Extensions. There is one Launchpad service for each database engine instance, so if you have multiple instances with external script support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling the Launchpad service created for the same instance.
 
@@ -81,7 +81,7 @@ Communication protocols among components and data platforms are described in thi
 
 + **Other protocols**
 
-  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
+  Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
 
 ## Next steps
 

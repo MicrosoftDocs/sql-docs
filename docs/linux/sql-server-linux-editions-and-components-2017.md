@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "installing SQL Server, editions"
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2017 on Linux

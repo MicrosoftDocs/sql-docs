@@ -343,11 +343,11 @@
         href: big-data-cluster/cluster-common-notebooks.md
       - name: Monitor - Grafana
         href: big-data-cluster/cluster-monitor-grafana.md
-      - name: Monitoring notebooks
-        href: big-data-cluster/cluster-monitor-notebooks.md
       - name: Logging - Kibana
         href: big-data-cluster/cluster-logging-kibana.md
-      - name: Notebooks for logging
+      - name: List monitoring notebooks
+        href: big-data-cluster/cluster-monitor-notebooks.md
+      - name: List logging notebooks
         href: big-data-cluster/cluster-logging-notebooks.md
     - name: Performance
       items:

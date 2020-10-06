@@ -25,8 +25,9 @@ Once all dependencies are installed, but **Run all cells** fails, each notebook 
 
 This section contains a set of notebooks useful for backup and restore operations for SQL Server Big Data Clusters.
 
-<backup-and-restore> notebook table
-
+| Name | Description |
+|--|--|
+| SOP008 - Backup HDFS files to Azure Data Lake Store Gen2 with distcp | This Standard Operating Procedure (SOP) backs up data from the source SQL Server 2019 BDC cluster’s HDFS filesystem to the Azure Data Lake Store Gen2 account you specify. Please ensure the Azure Data Lake Store Gen2 account is configured with “hierarchical namespace” enabled. |
 
 
 ## Next steps

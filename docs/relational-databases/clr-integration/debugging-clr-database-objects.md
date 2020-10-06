@@ -53,18 +53,18 @@ Use the following steps to debug a CLR database object in Microsoft Visual Studi
 
 2. Create a new SQL CLR type (C#):
 
-   - In **Solution Explorer**, right-click the project, and select **Add**, **New Item...**. 
-   - From the **Add New Item** window, select **SQL CLR C# Stored Procedure**, **SQL CLR C# User-Defined Function**, **SQL CLR C# User-Defined Type**, **SQL CLR C# Trigger**, **SQL CLR C# Aggregate**, or **Class**.
-   - Specify a name for the source file of the new type, and then select **Add**.
+   1. In **Solution Explorer**, right-click the project, and select **Add**, **New Item...**. 
+   1. From the **Add New Item** window, select **SQL CLR C# Stored Procedure**, **SQL CLR C# User-Defined Function**, **SQL CLR C# User-Defined Type**, **SQL CLR C# Trigger**, **SQL CLR C# Aggregate**, or **Class**.
+   1. Specify a name for the source file of the new type, and then select **Add**.
 
 3. Add code for the new type to the text editor. For sample code for an example stored procedure, see the following Example section in this article.
 
 4. Add a script that tests the type: 
 
-   - In **Solution Explorer**, right-click on the project node and select **Add**, **Script...**. 
-   - In the **Add New Item** window, select **Script (Not in build)**, and specify a name, such as `Test.sql`. Select the **Add** button.
-   - In **Solution Explorer**, double-click the `Test.sql` node to open the default test script source file.
-   - Add the test script (one that invokes the code to be debugged) to the text editor. See the example in the next section for a sample script.
+   1. In **Solution Explorer**, right-click on the project node and select **Add**, **Script...**. 
+   1. In the **Add New Item** window, select **Script (Not in build)**, and specify a name, such as `Test.sql`. Select the **Add** button.
+   1. In **Solution Explorer**, double-click the `Test.sql` node to open the default test script source file.
+   1. Add the test script (one that invokes the code to be debugged) to the text editor. See the example in the next section for a sample script.
 
 5. Place one or more breakpoints in the source code. Right-click on a line of code in the text editor on the function or routine that you want to debug. Select **Breakpoint**, **Insert Breakpoint**. The breakpoint is added, highlighting the line of code in red.
 
@@ -72,10 +72,10 @@ Use the following steps to debug a CLR database object in Microsoft Visual Studi
 
 7. When the yellow arrow (designating the instruction pointer) appears at the breakpoint, code execution pauses. You can then debug your managed database object:
 
-   - Use **Step Over** from the **Debug** menu to advance the instruction pointer to the next line of code.
-   - Use the **Locals** window to observe the state of the objects currently highlighted by the instruction pointer.
-   - Add variables to the **Watch** window. You can observe the state of watched variables throughout the debugging session, even when the variable is not at the line of code currently highlighted by the instruction pointer. 
-   - Select **Continue** from the **Debug** menu to advance the instruction pointer to the next breakpoint or to complete execution of the routine if there are no more breakpoints.
+   1. Use **Step Over** from the **Debug** menu to advance the instruction pointer to the next line of code.
+   1. Use the **Locals** window to observe the state of the objects currently highlighted by the instruction pointer.
+   1. Add variables to the **Watch** window. You can observe the state of watched variables throughout the debugging session, even when the variable is not at the line of code currently highlighted by the instruction pointer. 
+   1. Select **Continue** from the **Debug** menu to advance the instruction pointer to the next breakpoint or to complete execution of the routine if there are no more breakpoints.
   
 ## Example code
 

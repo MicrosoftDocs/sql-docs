@@ -171,13 +171,13 @@ For more information, see [Manage Access to Azure Storage Resources](https://doc
   
  **Database errors**  
   
-1.  *Errors when creating a database*   
+**Errors when creating a database**
     Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
-2.  *Errors when running the Alter statement*   
+**Errors when running the Alter statement** 
     Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
+**Error code - 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**   
 
     Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
@@ -189,7 +189,12 @@ For more information, see [Manage Access to Azure Storage Resources](https://doc
   
     3.  Then, copy database files from Azure Storage to the local folder in Server A. This ensures that ServerA still has a copy of the database locally.  
   
-    4.  Set the database online.  
+    4.  Set the database online.
+
+**Error code 833 - I/O requests taking longer than 15 seconds to complete** 
+   
+   This is an indication that there is latency introduced between SQL Server and the files hosted in Azure, either on the storage layer, or possibly through the networking layer. Monitor [sys.dm_io_virtual_file_stats](../system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) and choose appropriate storage tier and IOPS for your storage throughput. 
+
 
 ## Next steps  
   

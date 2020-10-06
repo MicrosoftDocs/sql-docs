@@ -2,7 +2,7 @@
 title: "ISSDataClassification | Microsoft Docs"
 description: "ISSDataClassification interface"
 ms.custom: ""
-ms.date: "08/28/2020"
+ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

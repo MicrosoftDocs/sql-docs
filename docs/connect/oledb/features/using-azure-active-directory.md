@@ -2,7 +2,7 @@
 title: "Using Azure Active Directory"
 description: "Learn about the Azure Active Directory authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases."
 ms.custom: ""
-ms.date: "08/28/2020"
+ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

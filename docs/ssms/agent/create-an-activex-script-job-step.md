@@ -16,18 +16,18 @@ ms.author: maghan
 ms.reviewer: ""
 monikerRange: "<= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Create an ActiveX Script Job Step
+# Create an ActiveX script job step
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-ActiveX Subssytem is discontinued beginning with SQL Server 2016. Convert any existing job steps that use ActiveX Script to a [PowerShell script job step](create-a-powershell-script-job-step.md). Use PowerShell for any future development.
+ActiveX subsystem is discontinued beginning with SQL Server 2016. Convert any existing job steps that use ActiveX Script to a [PowerShell script job step](create-a-powershell-script-job-step.md). Use PowerShell for any future development.
 
 > [!IMPORTANT]  
 > On [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 This topic describes how to create and define a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step in SQL Server 2014 and prior that executes an ActiveX script by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
 
-## Before You Begin  
+## Before you begin  
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
 
@@ -38,7 +38,7 @@ This topic describes how to create and define a [!INCLUDE[msCoName](../../includ
 
 For detailed information, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
-## <a name="SSMS"></a>Using SQL Server Management Studio  
+## <a name="SSMS"></a>Use SQL Server Management Studio  
   
 #### To create an ActiveX Script job step  
   
@@ -62,7 +62,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 ## <a name="TSQL"></a>Using Transact-SQL  
   
-#### To create an ActiveX Script job step  
+#### To create an ActiveX script job step  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   

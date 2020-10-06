@@ -13,9 +13,9 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Data type mappings between Python and SQL Server
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-For Python solutions that run on the Python integration feature in SQL Server Machine Learning Services, review the list of supported data types and data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
+This article lists the supported data types, and the data type conversions performed, when using the Python integration feature in SQL Server Machine Learning Services.
 
-Python supports a limited number of data types in comparison to SQL Server. As a result, whenever you use data from SQL Server in Python scripts, data might be implicitly converted to a compatible data type. However, often an exact conversion cannot be performed automatically and an error is returned.
+Python supports a limited number of data types in comparison to SQL Server. As a result, whenever you use data from SQL Server in Python scripts, SQL data might be implicitly converted to a compatible Python data type. However, often an exact conversion cannot be performed automatically and an error is returned.
 
 ## Python and SQL Data Types
 
@@ -42,3 +42,7 @@ This table lists the implicit conversions that are provided. Other data types ar
 | **varbinary(max)**   | `bytes`     |
 | **varchar(n)**       | `str`       |
 | **varchar(max)**     | `str`       |
+
+## See also
+
++ [Data type mappings between R and SQL Server](../r/r-libraries-and-data-types.md)

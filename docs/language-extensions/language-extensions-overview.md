@@ -24,7 +24,7 @@ In SQL Server 2019, Java is supported. The default Java runtime is Zulu Open JRE
 
 Language Extensions uses the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. They let you execute code where the data resides, eliminating the need to pull data across the network.
 
-External languages are defined with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). The system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is used as the interface for executing the code.
+External languages are defined with [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). The system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) is used as the interface for executing the code.
 
 Language Extensions provides multiple advantages:
 
@@ -47,9 +47,9 @@ Developers typically write code on their own laptop or development workstation. 
 
 + **Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)** to execute Java code on SQL Server
 
-+ **Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)** for executing external code on SQL Server
++ **Use [Azure Data Studio](../azure-data-studio/what-is.md) or [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)** for executing external code on SQL Server
 
-+ **Use the system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)** to execute your Java code on SQL Server.
++ **Use the system stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)** to execute your Java code on SQL Server.
 
 ### Step 3: Write your first code
 
@@ -63,7 +63,7 @@ Execute Java code from within T-SQL script:
 
 ## Next steps
 
-+ Install [R custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md)
++ Install [Python custom runtime for SQL Server](../machine-learning/install/custom-runtime-python.md)
 + Install [R custom runtime for SQL Server](../machine-learning/install/custom-runtime-r.md)
 + Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions.md)
 + Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)

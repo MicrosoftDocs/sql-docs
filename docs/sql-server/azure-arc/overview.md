@@ -5,7 +5,7 @@ description: Manage instances of SQL Server with Azure Arc enabled SQL Server
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
@@ -39,8 +39,7 @@ Azure Arc enabled SQL Server supports SQL Server 2012 or higher running on one o
 ### Required permissions
 
 To connect the SQL Server instances and the hosting to Azure Arc, you must have an account with privileges to perform the following actions:
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read

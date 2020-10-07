@@ -197,7 +197,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
 1. Determine whether the assemblies are supported or need recompilation:
 
-    * Custom security extensions must be rewritten using the [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) interface.
+    * Custom security extensions must be rewritten using the [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2) interface.
   
     * Custom rendering extensions for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] must be rewritten using the Rendering Object Model (ROM).  
   

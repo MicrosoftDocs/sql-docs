@@ -22,7 +22,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver interface complies with the three defined compliance levels for ODBC (ISO, Open Group, and ODBC level 2). **SQLGetFunctions** reports that all ODBC functions are supported for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver.  
   
 ## See Also  
- [SQLGetFunctions Function](https://go.microsoft.com/fwlink/?LinkId=59353)   
+ [SQLGetFunctions Function](../../odbc/reference/syntax/sqlgetfunctions-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

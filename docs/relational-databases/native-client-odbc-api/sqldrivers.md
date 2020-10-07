@@ -19,10 +19,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SQLDrivers
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  The ODBC Driver Manager returns all **SQLDrivers** attribute specification strings. For more information about attribute string and value definition, see the [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173), or you can view the [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
+  The ODBC Driver Manager returns all **SQLDrivers** attribute specification strings. For more information about attribute string and value definition, see the [Data Access and Storage Developer Center](../../connect/sql-data-developer.md), or you can view the [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md) online.  
   
 ## See Also  
- [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
+ [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

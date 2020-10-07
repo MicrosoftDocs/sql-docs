@@ -20,7 +20,7 @@ ms.author: mikeray
   
 ##  <a name="ddl"></a> Transact-SQL Data Definition Language (DDL) Statements  
   
--   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
+-   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
@@ -58,6 +58,5 @@ ms.author: mikeray
   
 -   [Access FILESTREAM Data with OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
--   [Managed API - SqlFileStream Class](https://go.microsoft.com/fwlink/?LinkId=220875)  
-  
+-   [Managed API - SqlFileStream Class](/dotnet/api/system.data.sqltypes.sqlfilestream)  
   

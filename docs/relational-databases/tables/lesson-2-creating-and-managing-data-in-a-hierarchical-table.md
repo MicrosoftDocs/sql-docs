@@ -21,11 +21,11 @@ In Lesson 1, you modified an existing table to use the **hierarchyid** data type
 ## Prerequisites  
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Download [AdventureWorks2017 sample databases](../../samples/adventureworks-install-configure.md).
 
-Instructions for restoring databases in SSMS are here: [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Instructions for restoring databases in SSMS are here: [Restore a database](../backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## Create a table using the hierarchyid data type
 The following example creates a table named EmployeeOrg, which includes employee data together with their reporting hierarchy. The example creates the table in the AdventureWorks2017 database, but that is optional. To keep the example simple, this table includes only five columns:  
@@ -386,4 +386,3 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
 The entire organizational tree that had reported to Jill (both Wanida and Kevin) now reports to Sariya.  
   
 For a stored procedure to reorganize a section of a hierarchy, see the "Moving Subtrees" section of [Moving Subtrees](../../relational-databases/hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
-  

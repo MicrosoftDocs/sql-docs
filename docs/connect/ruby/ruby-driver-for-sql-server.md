@@ -18,7 +18,7 @@ ms.author: v-daenge
 
 You can connect to a SQL Database using Ruby on Windows, Linux, or macOS.
   
-## Getting Started  
+## Get started  
 
 * [Step 1: Configure development environment for Ruby development](step-1-configure-development-environment-for-ruby-development.md)  
 * [Step 2: Create a SQL database for Ruby development](step-2-create-a-sql-database-for-ruby-development.md)  
@@ -30,11 +30,11 @@ You can connect to a SQL Database using Ruby on Windows, Linux, or macOS.
   
 ## Support
 
-Ruby and tiny_tds are community supported software. This software doesn't come with Microsoft support. To get help, visit the community resources:
+Ruby and tiny_tds are community-supported software. This software doesn't come with Microsoft support. To get help, visit the community resources.
 
-## Community  
+## Community resources
 
-[Azure Ruby Developer Center](https://azure.microsoft.com/develop/ruby/)  
+* [Azure Ruby Developer Center](https://azure.microsoft.com/develop/ruby/)
   
 ## Samples
 

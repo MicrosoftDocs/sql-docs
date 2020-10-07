@@ -23,7 +23,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ### 18.7
 
-- Download: [Download SSMS 18.7](download-sql-server-management-studio-ssms.md)
+- ![download](media/download-icon.png) [Download SSMS 18.7](download-sql-server-management-studio-ssms.md)
 
 - Release number: 18.7
 - Build number: 15.0.xxxx.0
@@ -39,7 +39,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 
 | New item | Details |
 |----------|---------|
-| [Azure Data Studio](../azure-data-studio/what-is.md) integration | Installation of SSMS also installs Azure Data Studio. |
+| Azure Data Studio installation integration | Installation of SSMS also installs Azure Data Studio. Visit [What is Azure Data Studio](../azure-data-studio/what-is.md) to learn more about Azure Data Studio. |
 | Always Encrypted | SSMS needs to be updated to recognize the new HSM endpoints. This is done by consuming the new AKV Provider NugetPackage. |
 | Import Flat File | Made an improvement to better predict data types by learning on 300 lines by default. |
 | Import Flat File | Prevent columns from being declared as TinyInt that should be SmallInt. |
@@ -106,7 +106,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.6
 
-- Download: [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
+- ![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Release number: 18.6
 - Build number: 15.0.18338.0
@@ -167,7 +167,7 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 
 ### 18.5.1
 
-- Download: [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
+- ![download](media/download-icon.png) [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
 
 - Release number: 18.5.1
 - Build number: 15.0.18333.0
@@ -196,6 +196,7 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 ### 18.5
 
 ![download](media/download-icon.png) [Download SSMS 18.5](https://go.microsoft.com/fwlink/?linkid=2125901)
+
 - Release number: 18.5
 - Build number: 15.0.18330.0
 - Release date: April 07, 2020

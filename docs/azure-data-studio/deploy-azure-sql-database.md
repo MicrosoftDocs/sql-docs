@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 10/14/2020
 ---
 
-# Create an Azure SQL Database (Azure Data Studio)
+# Create an Azure SQL Database using Azure Data Studio
 
 You can create an Azure SQL Database using Azure Data Studio through the deployment wizard and notebooks.
 

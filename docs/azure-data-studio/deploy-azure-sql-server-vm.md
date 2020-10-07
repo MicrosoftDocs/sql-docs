@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 10/14/2020
 ---
 
-# Create SQL Server on Azure Virtual Machines (Azure Data Studio)
+# Create SQL Server on Azure Virtual Machines using Azure Data Studio
 
 You can create an SQL virtual machine (VM) using Azure Data Studio through the deployment wizard and notebooks.
 

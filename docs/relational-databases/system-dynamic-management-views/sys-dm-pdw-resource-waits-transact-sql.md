@@ -35,7 +35,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |resource_class|**nvarchar(20)**|Internal |See the [Monitor resource waits](#monitor-resource-waits) below|  
   
 ## Monitor resource waits 
-With the introduction of [workload groups](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), concurrency slots are no longer applicable.  Use the below query and the `resources_requested` column to understand the resources needed to execute the request.
+With the introduction of [workload groups](/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), concurrency slots are no longer applicable.  Use the below query and the `resources_requested` column to understand the resources needed to execute the request.
 
 ```sql
 select rw.wait_id
@@ -56,5 +56,4 @@ select rw.wait_id
 
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-  
   

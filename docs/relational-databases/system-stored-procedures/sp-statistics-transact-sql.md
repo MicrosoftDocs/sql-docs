@@ -95,7 +95,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  The index type Hashed accepts exact match or range searches, but pattern matching searches do not use the index.  
   
- **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](https://go.microsoft.com/fwlink/?LinkId=68323).  
+ **sp_statistics** is equivalent to **SQLStatistics** in ODBC. The results returned are ordered by **NON_UNIQUE**, **TYPE**, **INDEX_QUALIFIER**, **INDEX_NAME**, and **SEQ_IN_INDEX**. For more information, see the [ODBC API Reference](../../odbc/reference/syntax/odbc-reference.md).  
   
 ## Permissions  
  Requires SELECT permission on the schema.  
@@ -113,5 +113,3 @@ EXEC sp_statistics DimEmployee;
  [Catalog Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
-  
-

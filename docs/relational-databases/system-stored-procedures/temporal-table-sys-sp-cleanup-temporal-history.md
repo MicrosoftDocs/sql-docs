@@ -60,4 +60,4 @@ select @rowcnt
 
 ## Next steps
 
-[Temporal tables retention policy](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[Temporal tables retention policy](/azure/sql-database/sql-database-temporal-tables-retention-policy)

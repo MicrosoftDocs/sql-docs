@@ -205,7 +205,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SQL_USER_NAME|The current username.|  
   
 ## See Also  
- [SQLGetInfo Function](https://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo Function](../../odbc/reference/syntax/sqlgetinfo-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

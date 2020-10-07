@@ -23,7 +23,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 ### 18.7
 
-- ![download](media/download-icon.png) [Download SSMS 18.7](download-sql-server-management-studio-ssms.md)
+![download](media/download-icon.png) [Download SSMS 18.7](download-sql-server-management-studio-ssms.md)
 
 - Release number: 18.7
 - Build number: 15.0.xxxx.0
@@ -106,7 +106,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.6
 
-- ![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
+![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Release number: 18.6
 - Build number: 15.0.18338.0
@@ -167,7 +167,7 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 
 ### 18.5.1
 
-- ![download](media/download-icon.png) [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
+![download](media/download-icon.png) [Download SSMS 18.5.1](https://go.microsoft.com/fwlink/?linkid=2132606)
 
 - Release number: 18.5.1
 - Build number: 15.0.18333.0

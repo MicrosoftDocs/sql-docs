@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 09/28/2020
+ms.date: 10/14/2020
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -39,7 +39,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 
 | New item | Details |
 |----------|---------|
-| [Azure Data Studio](../azure-data-studio/what-is.md) | Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux. |
+| [Azure Data Studio](../azure-data-studio/what-is.md) integration | Installation of SSMS also installs Azure Data Studio. |
 | Always Encrypted | SSMS needs to be updated to recognize the new HSM endpoints. This is done by consuming the new AKV Provider NugetPackage. |
 | Import Flat File | Made an improvement to better predict data types by learning on 300 lines by default. |
 | Import Flat File | Prevent columns from being declared as TinyInt that should be SmallInt. |
@@ -52,27 +52,25 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 
 | New Item | Details |
 |----------|---------|
-| Accessibility | Adjusted border colors for accessibility on the **Database general properties page** (the border around the grid and name box is darker to set the contrast to > 3:1). |
-| Accessibility | Added handling for query execution to update the narrator (requires NetFx4.8+ installed on the machine). |
-| Always Encrypted | Fixed issue where *New Column Encryption Key* dialog says the CEK is not enclave-enabled even if the CMK is enclave-enabled. |
-| Analysis Services | Fixed an issue viewing Analysis Services partitions that may have caused an unhandled exception. |
-| **Database Diagrams** | Fixed long outstanding issue with **Database Diagrams**, causing both the corruption of existing diagrams and SSMS to crash. If you created or saved a diagram using SSMS 18.0 through 18.5.1, and that diagram includes a *Text Annotation*, you won't be able to open that diagram in any version of SSMS. With this fix, SSMS 18.6 can open and save a diagram created by SSMS 17.9.1 and prior. SSMS 17.9.1 and previous releases can also open the diagram after being saved by SSMS 18.6. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37992649). |
-| Data Classification | Fixed an issue where the column name does not show in the recommendation panel of the data classification pane. |
-| General SSMS | Fixed an issue where database properties *Size* and *Space Available* have incorrect values for SQL Azure DB (Hyperscale service tier). |
-| General SSMS | Fixed an issue where database properties "Size" display the Max Size instead of the actual size of the database for SQL Azure DBs (note: for DW, it still shows the Max Size). |
-| General SSMS | Addressed three common sources of hangs in SSMS. |
-| General SSMS | Fixed a few issues related to SSMS Connection Dialog *forgetting* entries (server/user/passwords). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40256401) and [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40015519). |
-| General SSMS | Fixed an issue on the **Statistic Properties** dialog where selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics are not updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
-| General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455). | 
-| Import/Export Data-Tier Application | Fixed an issue where the SSMS was throwing an error when importing a bacpac file. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
-| Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
-| Integration Services | Fixed a bug where the **Use 32-bit runtime** option is missing in the **Execution options** tab to execute an SSIS package in a SQL agent job step for an on-premises SQL Server. |
-| Intellisense / Editor | Fixed an issue where an error dialog may pop up when doing File -> New -> Database Engine Query. |
-| Object Explorer | Fixed an issue where *Properties window* was not available for Azure SQL Database when right-clicking on a Table or Index node in Object Explorer. |
-| Object Explorer | Addressed an issue where SSMS can't expand databases node for master in Azure if there's a control plane outage affecting sys.database_service_objectives. |
-| Reports | Fixed several standard reports that were broken on Linux </br></br> Example: Memory Consumption report was failing with an error similar to "/var/opt/mssql/log/log_116.trc\log.trc' is invalid…"). |
-| SMO / Scripting | Updated the logic to create new databases in Azure SQL Database to use Gen5_2 as the default SLO. |
-| Xevent UI | Fixed long outstanding issue (introduced in SSMS 18.0) where "Save to XEL file…" was throwing an error. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37695592). |
+| Accessibility | Fixed tab ordering of buttons in the "The following settings are not supported by the database" window that pops up when querying against DW. |
+| Accessibility | Import and Export Wizard: the page layout is incorrect in high dpi mode |
+| Activity Monitor | Fixed an issue where Activity Monitor was pausing when opening the "Processes" tab. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/37050118). |
+| Always On Availability Group | Fixed an issue where Read Scale Availability Group Failover was not working. |
+| Backup/Restore | Fixed an issue where clicking on "View Connection Properties" yielded a SMO error on HostDistribution prop being missing (SQL 2016 and below). |
+| Database Designer | Fixed an issue which was causing SSMS to crash when handling decimal numbers |
+| Database Diagrams | Fixed an issue that could cause SSMS to crash or hang when using Database Diagrams where "Add Table" dialog was not properly displayed. |
+| Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
+| Import/Export Data-Tier Application | Fixed the default service tier to be Standard S0 when importing a bacpac (same as Azure Portal and SqlPackage.exe behavior). |
+| Linked Servers | Fixed an issue where a user with CONTROL SERVER permission (but not in sysadmin role) was not able to add a linked server. |
+| Log Viewer | Fixed an issue where a user with VIEW SERVER STATE permissions was not able to view the SQL Server Error Logs. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/32899204). |
+| Registered Servers | Fixed an issue where SSMS crashed when trying to register a Central Management Server. |
+| Registered Servers | Fixed the issue where menu items to launch Azure Data Studio from Registered Servers was missing. |
+| Reports | Fixed an issue where on the Performance Dashboard where trying to navigate to sublinks (e.g. "Expensive Queries") was not working. This issue was common on most non-English versions of SSMS. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/41454499). |
+| ShowPlan | Fixed and issue that was causing SSMS to crash when using Find Node to search for text. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40421650). |
+| ShowPlan | Add KB suffix on the Memory Grant tooltip row |
+| Vulnerability Assessment | Fixed an issue that was causing SSMS to throw an error when trying to set baselines in Vulnerability Assessment. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40578565). |
+| XEvent UI | Fixed the issue where hitting F1 was not landing on the correct page on DOCS. |
+| XEvent UI | Fixed log in XEvent Viewer where the tooltip was not  displaying correctly text containing text encoded using surrogate pairs. [@MatteoT - checking with v-asgusa on exact wording and/or UV. Changeset#1454896] |
 
 #### Known issues (18.7)
 
@@ -186,10 +184,10 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | Analysis Services | Fixed an issue preventing users from querying SSAS 2017 and earlier versions with cell data permissions. |
 | General SSMS | [Table Designer - Fixed beep when trying to TAB in a Table Designer grid](https://feedback.azure.com/forums/908035/suggestions/40318435) |
 
-### Known issues 18.5.1
+### Known issues (18.5.1)
 
 | New Item | Details | Workaround |
-|----------|---------||-----------|
+|----------|---------|------------|
 | General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
 | SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
@@ -282,6 +280,9 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | XEvent UI | Fixed an issue here items in the grid where being selected on hovering. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/38262124) and [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
 ### Known issues (18.5)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
 
 - Database Diagram created from SSMS running on machine A cannot be modified from machine B (SSMS crashes). See [SQL Server user feedback 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
@@ -642,8 +643,8 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 #### Bug fixes in 18.0
 
-| New item| Details|
-| :-------| :------|
+| New item | Details|
+|----------|--------|
 |Crashes and freezes|Fixed a source of common SSMS crashes related to GDI objects.|
 |Crashes and freezes|Fixed a common source of hangs and poor performance when selecting "Script as Create/Update/Drop" (removed unnecessary fetches of SMO objects).|
 |Crashes and freezes|Fixed an issue where system stops responding when connecting to an Azure SQL Database using MFA while ADAL traces are enabled.|
@@ -786,7 +787,8 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 #### Deprecated and removed features in 18.0
 
-Deprecated / Removed Features
+Here are the deprecated and removed Features from SSMS version 18.0.
+
 - T-SQL Debugger
 - Database Diagrams
 - The following tools are no longer installed with SSMS:
@@ -819,8 +821,8 @@ Deprecated / Removed Features
 
 ![download](media/download-icon.png) [Download SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
-- Release number: 17.9.1  
-- Build number: 14.0.17289.0  
+- Release number: 17.9.1
+- Build number: 14.0.17289.0
 - Release date: November 21, 2018
 
 #### Bug fixes in 17.9.1
@@ -870,29 +872,29 @@ If your SSMS installation is having problems, and a standard uninstall and reins
 
 #### Bug fixes in 16.5.3
 
-* Fixed an issue introduced in SSMS 16.5.2, which was causing the expansion of the 'Table' node when the table had more than one sparse column.
+- Fixed an issue introduced in SSMS 16.5.2, which was causing the expansion of the 'Table' node when the table had more than one sparse column.
 
-* Users can deploy SSIS packages containing OData Connection Manager, which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, For details, see [OData Connection Manager](../integration-services/connection-manager/odata-connection-manager.md).
+- Users can deploy SSIS packages containing OData Connection Manager, which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, For details, see [OData Connection Manager](../integration-services/connection-manager/odata-connection-manager.md).
 
-* Configuring Always Encrypted on an existing table fails with errors on unrelated objects. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+- Configuring Always Encrypted on an existing table fails with errors on unrelated objects. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
-* Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+- Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
 
-* The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+- The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
 
-* When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
+- When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
 
-* *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+- *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
-* SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+- SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
 
-* Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+- Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
-* Context menu for tables momentarily stops responding
+- Context menu for tables momentarily stops responding
 
-* SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+- SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
-* SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
+- SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
 
 ## Additional Downloads
 

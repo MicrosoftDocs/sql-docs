@@ -149,7 +149,6 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## See Also  
- [SQLGetDescField Function](https://go.microsoft.com/fwlink/?LinkId=59351)   
+ [SQLGetDescField Function](../../odbc/reference/syntax/sqlgetdescfield-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

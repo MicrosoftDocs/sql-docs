@@ -147,7 +147,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell
 
-Set up and use the [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md). Use the **Backup-SqlDatabase** cmdlet and specify **Log** for the value of the **-BackupAction** parameter.  
+Set up and use the [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md). Use the **Backup-SqlDatabase** cmdlet and specify **Log** for the value of the **-BackupAction** parameter.  
   
 The following example creates a log backup of the `<myDatabase>` database to the default backup location of the server instance `Computer\Instance`.  
   
@@ -168,4 +168,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
+ [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)

@@ -94,4 +94,4 @@ Msg 3859: Warning: The system catalog was updated directly in database ID 17, mo
 ### Executing the DBCC_CHECKDB command after a system table is manually updated
 Msg 3859: Warning: The system catalog was updated directly in database ID 17, most recently at date_time.
 
-If you perform manual updates to a system table and encounter a problem, you might be asked to restore from a backup or copy out the data from the affected database to a new database. Learn more about [user action error messages](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-8992-database-engine-error?view=sql-server-ver15#user-action).
+If you perform manual updates to a system table and encounter a problem, you might be asked to restore from a backup or copy out the data from the affected database to a new database. Learn more about [user action error messages](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action).

@@ -4,7 +4,9 @@ titleSuffix:
 description: Learn how to install SQL Server Java Language Extensions on Red Hat, Ubuntu, and SUSE Linux.
 author: dphansen
 ms.author: davidph
-ms.date: 10/07/2020
+ms.reviewer: vanto
+manager: cgronlun
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

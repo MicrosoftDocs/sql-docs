@@ -74,7 +74,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), a free download that runs on Linux.
++ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux&preserve-view=true), a free download that runs on Linux.
 
 ## Package list
 

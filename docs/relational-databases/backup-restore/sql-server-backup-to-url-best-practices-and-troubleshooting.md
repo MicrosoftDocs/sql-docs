@@ -61,7 +61,7 @@ ms.author: mikeray
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
 -   The credential exists but the login account that is used to run the backup command does not have permissions to access the credentials. Use a login account in the **db_backupoperator** role with ***Alter any credential*** permissions.  

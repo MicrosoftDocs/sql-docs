@@ -16,7 +16,7 @@ ms.author: v-daenge
 
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-## Getting Started
+## Get started
 
 * [Step 1: Configure development environment for pymssql Python development](step-1-configure-development-environment-for-pymssql-python-development.md)  
 * [Step 2: Create a SQL database for pymssql Python development](step-2-create-a-sql-database-for-pymssql-python-development.md)  
@@ -28,9 +28,11 @@ ms.author: v-daenge
 
 ## Support
 
-Pymssql is community supported software. This software doesn't come with Microsoft support.
+Pymssql is community-supported software. This software doesn't come with Microsoft support.
 
-To get help, file an [issue in the pymssql GitHub repository](https://github.com/pymssql/pymssql/issues) or visit other Python community resources:
+To get help, file an [issue in the pymssql GitHub repository](https://github.com/pymssql/pymssql/issues) or visit other Python community resources.
+
+## Community resources
 
 * [Azure Python Developer Center](https://azure.microsoft.com/develop/python/)  
 * [python.org Community](https://www.python.org/community/)  

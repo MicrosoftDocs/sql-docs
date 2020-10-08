@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a custom runtime for running R scripts with SQL Server. The custom runtime for R can be used in the following scenarios:
+This article describes how to install a custom runtime for running R scripts with SQL Server. The custom runtime uses language extension technology built on an extensibility framework for executing external code. The custom runtime for R can be used in the following scenarios:
 
 + An installation of SQL Server with extensibility framework.
 

@@ -42,16 +42,17 @@ For example:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
-## Authentication with AD
-For Deployments with Active Directory, the authentication parameter with `curl` will need to be used with negotiate . 
+## Authentication with Active Directory
 
-To use `curl` with Active Directory authentication the following steps can be followed:
+To deploy with Active Directory, use the authentication parameter with `curl` with Negotiate authentication. 
+
+To use `curl` with Active Directory authentication, run this command:
 
 ```
 kinit <username>
 ```
 
-This generates a kerberos token for `curl` to use. The commands below have the parameter `--anyauth` specified for curl. For URLs which require Negotiate Authentication, `curl` automatically detects, and uses the generated kerberos token instead of username and password to authenticate to the URLs.
+The command generates a Kerberos token for `curl` to use. The commands descibed in the next section specify the `--anyauth` parameter for `curl`. For URLs that require Negotiate authentication, `curl` automatically detects and uses the generated Kerberos token instead of username and password to authenticate to the URLs.
 
 ## List a file
 

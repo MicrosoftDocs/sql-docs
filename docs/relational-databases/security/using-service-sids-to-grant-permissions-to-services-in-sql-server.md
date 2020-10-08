@@ -104,6 +104,8 @@ GO
   > https://support.microsoft.com/en-us/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
   >
   > For a default instance of SQL Server, you can correct this situation by adding the service SID using the following Transact-SQL commands:
+  >
+  > ```sql
   > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
   > GO
   > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
@@ -121,7 +123,8 @@ GO
   > GO
   > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
   > GO
-  > Note In this example, SQL2019 is the instance name of the SQL Server.
+  > ```
+  > In this example, `SQL2019` is the instance name of the SQL Server.
 
 ## Next steps
 

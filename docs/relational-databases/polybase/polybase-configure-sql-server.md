@@ -44,6 +44,8 @@ The following Transact-SQL commands are used in this section:
     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
     WITH IDENTITY = 'username', SECRET = 'password';
     ```
+   >[!IMPORTANT]
+   >The SQL ODBC Connector for PolyBase only supports basic authentication, not Kerberos authentication.
 
 1. Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). The following example:
 

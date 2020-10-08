@@ -51,7 +51,7 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 Always Encrypted can also be enabled for individual queries. See the **Controlling performance impact of Always Encrypted** section below.
 Enabling Always Encrypted isn't sufficient for encryption or decryption to succeed. You also need to make sure:
-- The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions section in Always Encrypted (Database Engine)](./always-encrypted-database-engine.md#Anchor_7).
+- The application has the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* database permissions, required to access the metadata about Always Encrypted keys in the database. For details, see [Permissions section in Always Encrypted (Database Engine)](./always-encrypted-database-engine.md#database-permissions).
 - The application can access the column master key that protects the column encryption keys, encrypting the queried database columns.
 
 ## Enabling Always Encrypted with Secure Enclaves

@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # Install a Python custom runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a custom runtime for running Python scripts with SQL Server. The custom runtime for Python can be used in the following scenarios:
+This article describes how to install a custom runtime for running Python scripts with SQL Server. The custom runtime uses language extension technology built on an extensibility framework for executing external code. The custom runtime for Python can be used in the following scenarios:
 
 + An installation of SQL Server with extensibility framework.
 
@@ -23,6 +23,8 @@ This article describes how to install a custom runtime for running Python script
 
 > [!NOTE]
 > This article describes how to install a custom runtime for Python on Windows. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
+
 
 ## Pre-install checklist
 
@@ -74,7 +76,7 @@ Language Extensions use the extensibility framework for executing external code.
 
 Install [Python 3.7]( https://www.python.org/downloads/release/python-379/) and add it to the PATH.
 
-![Add Python 3.7 to path.](../install/media/python-379.png) **update image - note**
+![Add Python 3.7 to path.](../install/media/python-379.png) 
 
 
 #### Install pandas
@@ -99,7 +101,7 @@ If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 inst
 
 ## Grant access to the custom Python installation folder
 
-Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
+Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is: `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
 
 Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
 

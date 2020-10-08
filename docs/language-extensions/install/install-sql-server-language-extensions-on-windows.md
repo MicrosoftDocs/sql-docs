@@ -10,7 +10,7 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Language Extensions on Windows in Java
+# Install SQL Server Language Java Extensions on Window
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 

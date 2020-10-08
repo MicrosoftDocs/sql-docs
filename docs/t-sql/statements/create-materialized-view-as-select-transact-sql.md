@@ -161,8 +161,6 @@ while (@P < 30)
     select @p +=1;
 end
 
--- 
-
 -- A SELECT query with count_big(distinct()) took ~176 seconds and it reads data directly from the base table a. 
 select a, count_big(distinct b) from t group by a;
 

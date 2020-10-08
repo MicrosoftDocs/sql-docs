@@ -110,7 +110,7 @@ A materialized view in Azure data warehouse is similar to an indexed view in SQL
 >[!Note]
 >Although CREATE MATERIALIZED VIEW does not support COUNT, DISTINCT, COUNT(DISTINCT expression), or COUNT_BIG (DISTINCT expression), SELECT queries with these functions can still benefit from materialized views for faster performance as the Synapse SQL optimizer can automatically re-write those aggregations in the user query to match existing materialized views.  For details, check this article's example section. 
 
-APPROX_COUNT_DISTINCT is not supported by CREATE MATERIALIZED VIEW AS SELECT.
+APPROX_COUNT_DISTINCT is not supported in CREATE MATERIALIZED VIEW AS SELECT.
 
 Only CLUSTERED COLUMNSTORE INDEX is supported by materialized view. 
 

@@ -44,7 +44,7 @@ For example:
 
 ## Authentication with Active Directory
 
-To deploy with Active Directory, use the authentication parameter with `curl` with Negotiate authentication. 
+For deployments with Active Directory, use the authentication parameter with `curl` with Negotiate authentication. 
 
 To use `curl` with Active Directory authentication, run this command:
 
@@ -52,7 +52,7 @@ To use `curl` with Active Directory authentication, run this command:
 kinit <username>
 ```
 
-The command generates a Kerberos token for `curl` to use. The commands descibed in the next section specify the `--anyauth` parameter for `curl`. For URLs that require Negotiate authentication, `curl` automatically detects and uses the generated Kerberos token instead of username and password to authenticate to the URLs.
+The command generates a Kerberos token for `curl` to use. The commands demonstrated in the next sections specify the `--anyauth` parameter for `curl`. For URLs that require Negotiate authentication, `curl` automatically detects and uses the generated Kerberos token instead of username and password to authenticate to the URLs.
 
 ## List a file
 

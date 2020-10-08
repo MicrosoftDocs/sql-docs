@@ -45,6 +45,7 @@ You can import the connector into your project through the Maven coordinates: `c
 The Apache Spark Connector for SQL Server and Azure SQL supports the options defined here: [SQL DataSource JDBC](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
 
 In addition following options are supported
+
 | Option | Default | Description |
 | --------- | ------------------ | ------------------------------------------ |
 | reliabilityLevel | "BEST_EFFORT" | "BEST_EFFORT" or "NO_DUPLICATES". "NO_DUPLICATES" implements an reliable insert in executor restart scenarios |

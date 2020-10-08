@@ -77,7 +77,7 @@ Azure SQL Managed Instance behaves like SQL Server on-premises in the context of
 For example:
 
 > [!WARNING]
-> Make sure that no other connections are happening to your Managed Instance database, as the following script may cause disruption to existing processes running on the database.
+> Before you run the following script, be sure that no other connections are active on your Managed Instance database. The script might disrupt other processes that are running on the database.
 
 ```sql
 Use MASTER;

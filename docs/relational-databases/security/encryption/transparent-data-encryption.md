@@ -46,12 +46,12 @@ TDE protects data at rest, which is the data and log files. It lets you follow m
 >
 >**Related topics:**
 >
-> - [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)
-> - [Get started with Transparent Data Encryption (TDE) on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)
+> - [Transparent Data Encryption with Azure SQL Database](/azure/azure-sql/database/transparent-data-encryption-tde-overview)
+> - [Get started with Transparent Data Encryption (TDE) on SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)
 > - [Move a TDE Protected Database to Another SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)
 > - [Enable TDE on SQL Server Using EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)
 > - [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)
-> - [The SQL Server Security Blog on TDE with FAQ](https://blogs.msdn.microsoft.com/sqlsecurity/2016/10/05/feature-spotlight-transparent-data-encryption-tde/)
+> - [The SQL Server Security Blog on TDE with FAQ](/archive/blogs/sqlsecurity/feature-spotlight-transparent-data-encryption-tde)
 
 ## About TDE
 
@@ -59,7 +59,7 @@ Encryption of a database file is done at the page level. The pages in an encrypt
 
 ### Information applicable to [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]
 
-When you use TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] automatically creates for you the server-level certificate stored in the master database. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you don't have to decrypt the database for the move operation. For more information on using TDE with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+When you use TDE with [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12, [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] automatically creates for you the server-level certificate stored in the master database. To move a TDE database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], you don't have to decrypt the database for the move operation. For more information on using TDE with [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Transparent Data Encryption with Azure SQL Database](/azure/azure-sql/database/transparent-data-encryption-tde-overview).
 
 ### Information applicable to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -319,12 +319,12 @@ You can enable TDE on a database that has In-Memory OLTP objects. In [!INCLUDE[s
 
 ## Related content
 
-[Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
-[Get started with Transparent Data Encryption (TDE) on SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
+[Transparent Data Encryption with Azure SQL Database](/azure/azure-sql/database/transparent-data-encryption-tde-overview)  
+[Get started with Transparent Data Encryption (TDE) on SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-encryption-tde-tsql)  
 [SQL Server Encryption](../../../relational-databases/security/encryption/sql-server-encryption.md)  
 [SQL Server and Database Encryption Keys (Database Engine)](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
 ## See also
 
 [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)  
+[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)

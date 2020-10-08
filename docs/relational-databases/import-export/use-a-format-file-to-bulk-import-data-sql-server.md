@@ -28,9 +28,9 @@ This topic illustrates the use of a format file in bulk-import operations.  A fo
   * SQLNCHAR or SQLNVARCHAR (the data is sent as Unicode)
   * SQLBINARY or SQLVARYBIN (the data is sent without any conversion).
 * Azure SQL Database and Azure SQL Data Warehouse only support [bcp](../../tools/bcp-utility.md).  For additional information, see:
-  * [Load data into Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [Load data from SQL Server into Azure SQL Data Warehouse (flat files)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [Migrate Your Data](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * [Load data into Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Load data from SQL Server into Azure SQL Data Warehouse (flat files)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Migrate Your Data](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## Example test conditions
 The examples of format files in this topic are based on the table and data file defined below.
@@ -257,4 +257,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [Non-XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [XML Format Files &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [Format Files for Importing or Exporting Data (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

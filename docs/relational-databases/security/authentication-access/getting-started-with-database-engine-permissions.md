@@ -227,7 +227,7 @@ JOIN sys.database_principals AS dRole
 
 -   [Creating a Database &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Tutorial: SQL Server Management Studio](../../../ssms/quickstarts/connect-query-sql-server.md)  
   
 -   [Tutorial: Writing Transact-SQL Statements](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
@@ -238,5 +238,4 @@ JOIN sys.database_principals AS dRole
  [Security Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Determining Effective Database Engine Permissions](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
-  
   

@@ -107,6 +107,9 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
 
 A materialized view in Azure data warehouse is similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](/sql/relational-databases/views/create-indexed-views) for details) except that a materialized view supports aggregate functions.   
 
+>[!Note]
+>Although CREATE MATERIALIZED VIEW does not support COUNT(), DISTINCT(), COUNT(DISTINCT()), COUNT_BIG(DISTINCT()), or APPROX_COUNT_DISTINCT, SELECT queries with these functions can still benefit from materialized views for faster performance as the Synapse SQL optimizer can automatically re-write those aggregations in the user query to match existing materialized views.  For details, check this article's example section. 
+
 Only CLUSTERED COLUMNSTORE INDEX is supported by materialized view. 
 
 A materialized view cannot reference other views.  
@@ -140,6 +143,51 @@ To find out if a SQL statement can benefit from a new materialized view, run the
 ## Permissions
 
 Requires 1) REFERENCES and CREATE VIEW permission OR 2) CONTROL permission on the schema in which the view is being created. 
+
+## Example
+A. This example shows how Synapse SQL optimizer automatically uses materialized views to execute a query for better performance even when the query uses functions un-supported in CREATE MATERIALIZED VIEW, such as COUNT (DISTINCT()). The query execution time got reduced from 176 seconds to <1 second without any change in the user query.  
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- 
+
+-- A SELECT query with count_big(distinct()) took ~176 seconds and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT()).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SSMS.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now run this SELECT query.  This time it took <1 second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was change in no user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
 
   
 ## See also

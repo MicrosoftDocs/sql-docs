@@ -346,3 +346,5 @@ Upgrading using different repositories for current and target builds is not supp
 ## Next steps
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+
+Text about a `sparkhead` is fun. 

@@ -34,8 +34,6 @@ SQL Server Management Studio (SSMS) is an integrated environment for managing an
 
 Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer, or in the cloud.
 
-SSMS is free!
-
 ## Download SSMS
 
 :::image type="icon" source="media/download-icon.png" border="false":::**[Download SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**

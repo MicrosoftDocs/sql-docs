@@ -2,7 +2,7 @@
 title: "SQL Server Connector maintenance & troubleshooting"
 description: Learn about maintenance instructions and common troubleshooting steps for the SQL Server Connector. 
 ms.custom: seo-lt-2019
-ms.date: "07/25/2019"
+ms.date: "10/08/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -24,10 +24,10 @@ ms.author: jaszymas
 ### Key Rollover  
   
 > [!IMPORTANT]  
-> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.   
+> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector requires the key name to only use the characters "a-z", "A-Z", "0-9", and "-", with a 26-character limit.
 > Different key versions under the same key name in Azure Key Vault will not work with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector. To rotate an Azure Key Vault key that's being used by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a new key with a new key name must be created.  
   
- Typically  server asymmetric keys for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption  need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, the customer must create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+ Typically, server asymmetric keys for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption need to be versioned every 1-2 years. It's important to note that although the Key Vault allows keys to be versioned, customers should not use that feature to implement versioning. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector cannot deal with changes in Key Vault key version. To implement key versioning, create a new key in the Key Vault and then re-encrypt the data encryption key in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  For TDE, this is how this would be achieved:  
   
@@ -133,18 +133,18 @@ Deep links to older versions of the SQL Server Connector
 
 ### Rolling the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Principal
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses Service Principals created in Azure Active Directory as credentials to access the Key Vault.  Service Principal has a Client ID and Authentication Key.  A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential is set up with the **VaultName**, **Client ID**, and **Authentication Key**.  The **Authentication Key** is valid for a certain period of time (one or two years).   Before the time period expires a new key must be generated in Azure AD for the Service Principal.  Then the credential has to be changed in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] maintains a cache for the credential in the current session, so when a credential is changed, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] should be restarted.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses Service Principals created in Azure Active Directory as credentials to access the Key Vault. Service Principal has a Client ID and Authentication Key. A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] credential is set up with the **VaultName**, **Client ID**, and **Authentication Key**. The **Authentication Key** is valid for a certain period of time (one or two years). Before the time period expires a new key must be generated in Azure AD for the Service Principal. Then the credential has to be changed in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] maintains a cache for the credential in the current session, so when a credential is changed, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] should be restarted.  
   
 ### Key Backup and Recovery
 
 The Key vault should be regularly backed up. If an asymmetric key in the vault is lost, it can be restored from backup. The key must be restored using the same name as before, which the Restore PowerShell command will do (see below steps).  
-If the vault has been lost, you will need to recreate a vault and restore the asymmetric key to the vault using the same name as before. The vault name can be different (or the same as before). You must also set the access permissions on the new vault to grant to the SQL Server service principal the access that is needed for the SQL Server encryption scenarios and then adjust the SQL Server credential so that the new vault name is reflected.
+If the vault has been lost, you will need to recreate a vault and restore the asymmetric key to the vault using the same name as before. The vault name can be different (or the same as before). Set the access permissions on the new vault to grant to the SQL Server service principal the access that is needed for the SQL Server encryption scenarios, and then adjust the SQL Server credential so that the new vault name is reflected.
 
 In summary, here are the steps:  
   
 - Back up the vault key (using the Backup-AzureKeyVaultKey PowerShell cmdlet).  
-- In the case of vault failure, create a new vault in the same geographic region*. The user creating this should be in the same default directory as the service principal setup for SQL Server.  
-- Restore the key to the new vault (using the Restore-AzureKeyVaultKey PowerShell cmdlet - this restores the key using the same name as before). If there is already a key with the same name, the restore will fail.  
+- In the case of vault failure, create a new vault in the same geographic region. The user creating the vault should be in the same default directory as the service principal setup for SQL Server.  
+- Restore the key to the new vault using the Restore-AzureKeyVaultKey PowerShell cmdlet, which restores the key using the same name as before. If there's already a key with the same name, the restore will fail.  
 - Grant permissions to the SQL Server service principal to use this new vault.
 - Modify the SQL Server credential used by the Database Engine to reflect the new vault name (if needed).  
   
@@ -169,7 +169,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 - *.vault.azure.net/*:443
 
 **How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
-  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) or via the Registry, but it is important to note that they are not system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they will only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging onto the server interactively using the service account is not recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they are cached when the Connector first attempts to connect to a key vault.
+  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
 
 **What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
@@ -189,10 +189,10 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 ![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. Go to the Azure classic portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. On the left-hand menu, scroll down and select **Settings**.
+2. On the left-hand menu, select **Settings**.
 3. Select the Azure subscription you are currently using, and click **Edit Directory** from the commands at the bottom of the screen.
 4. In the pop-up window, use the **Directory** dropdown to select the Active Directory you'd like to use. This will make it the default Directory.
-5. Make sure you are the global admin of the newly selected Active Directory. If you are not the global admin, so might lose management permissions because you switched directories.
+5. Make sure you are the global admin of the newly selected Active Directory. If you aren't the global admin, so might lose management permissions because you switched directories.
 6. Once the pop-up window closes, if you don't see any of your subscriptions, you may need to update the **Filter by Directory** filter in the **Subscriptions** filter in the top-right hand menu of the screen to see subscriptions using your newly updated Active Directory.
 
     > [!NOTE] 
@@ -200,8 +200,9 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 To learn more about Active Directory, read [How Azure subscription are related to Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
   
-##  <a name="AppendixC"></a> C. Error Code Explanations for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector  
- **Provider Error Codes:**  
+##  <a name="AppendixC"></a> C. Error Code Explanations for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
+
+**Provider Error Codes:**  
   
 Error code  |Symbol  |Description
 ---------|---------|---------  
@@ -351,7 +352,7 @@ Error code  |Symbol  |Description
 
 If you don't see your error code in this table, here are some other reasons the error may be happening:
   
-- You may not have Internet access and cannot access your Azure Key Vault - please check your Internet connection.  
+- You may not have Internet access and cannot access your Azure Key Vault. Check your Internet connection.  
   
 - The Azure Key Vault service may be down. Try again at another time.  
   

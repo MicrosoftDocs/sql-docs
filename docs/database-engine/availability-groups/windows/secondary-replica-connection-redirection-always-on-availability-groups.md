@@ -83,7 +83,7 @@ In this example, an availability group has three replicas:
 
 The following picture represents the availability group.
 
-![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![Availability group with primary, secondary, and asynchronous secondary](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 The following transact-SQL script creates this AG. In this example, Each replica specifies the `READ_WRITE_ROUTING_URL`.
 ```sql
@@ -138,14 +138,13 @@ GO
 
 In the following diagram, a client application connects to COMPUTER02, with `ApplicationIntent=ReadWrite`. The connection is redirected to the primary replica. 
 
-![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![Connection to computer 2 is re-directed to the primary replica](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 The secondary replica redirects read/write calls to the primary replica. A read write connection to either replica will redirect to the primary replica. 
 
 In the following diagram, the primary replica has been manually failed over to COMPUTER02. A client application connects to COMPUTER01, with `ApplicationIntent=ReadWrite`. The connection is redirected to the primary replica. 
 
-![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
+![Connection redirected to new primary replica on computer2](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## See Also
 

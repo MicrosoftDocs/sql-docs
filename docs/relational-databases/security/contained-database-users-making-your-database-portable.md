@@ -100,7 +100,7 @@ CREATE USER Carlo
 WITH PASSWORD='Enterpwdhere*'  
 
 SELECT containment_desc FROM sys.databases
-WHERE name='test'
+WHERE name='Test'
 ```
 
   

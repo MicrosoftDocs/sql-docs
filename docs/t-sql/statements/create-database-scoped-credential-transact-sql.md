@@ -49,7 +49,7 @@ WITH IDENTITY = 'identity_name'
 Specifies the name of the database scoped credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.
 
 IDENTITY **='**_identity\_name_**'**
-Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into SQL DW, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY arguement. It should just be the account name.
+Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using a shared key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into SQL DW, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1). When using Kerberos (Windows Active Directory or MIT KDC) do not use the domain name in the IDENTITY arguement. It should just be the account name.
 
 > [!IMPORTANT]
 > The SQL, Oracle, Teradata, and MongoDB ODBC Connectors for PolyBase only support basic authentication, not Kerberos authentication.
@@ -82,7 +82,7 @@ Here are some applications of database scoped credentials:
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials to write extended event files to Azure blob storage.
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uses database scoped credentials for elastic pools. For more information, see [Tame explosive growth with elastic databases](/azure/azure-sql/database/elastic-pool-overview)
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) use database scoped credentials to access data from Azure blob storage. For more information, see [Examples of Bulk Access to Data in Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
 
@@ -124,7 +124,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can be used by PolyBase in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 Azure Data Lake Store uses an Azure Active Directory Application for Service to Service Authentication.
-Please [create an AAD application](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
+Please [create an AAD application](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -145,4 +145,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

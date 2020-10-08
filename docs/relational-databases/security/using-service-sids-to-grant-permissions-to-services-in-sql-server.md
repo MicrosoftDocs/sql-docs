@@ -97,6 +97,32 @@ GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
 
+  > [!NOTE]
+  > Removing the service SID logins or removing them from the sysadmin server role can cause problems for various components of SQL Server that connect to the SQL Server Database Engine. Some problems include the following:
+  > - SQL Server Agent cannot start or connect to a SQL Server service
+  > - SQL Server Setup programs encounter the problem that is mentioned in the following Microsoft Knowledge Base article:
+  > https://support.microsoft.com/en-us/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  >
+  > For a default instance of SQL Server, you can correct this situation by adding the service SID using the following Transact-SQL commands:
+  > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > GO
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
+  > GO
+  > CREATE LOGIN [NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > GO
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLSERVERAGENT]
+  > GO
+  > For a named instance of SQL Server, use the following Transact-SQL commands:
+  > CREATE LOGIN [NT SERVICE\MSSQL$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > GO
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQL$SQL2019]
+  > GO
+  > CREATE LOGIN [NT SERVICE\SQLAgent$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > GO
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
+  > GO
+  > Note In this example, SQL2019 is the instance name of the SQL Server.
+
 ## Next steps
 
 For more information about the service sid structure, read [SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
@@ -106,3 +132,5 @@ Read about additional options that are available when [creating a login](/sql/t-
 To use Role-Based Security with Service SIDs, read about [creating roles](/sql/t-sql/statements/create-role-transact-sql) in SQL Server.
 
 Read about different ways to [grant permissions](/sql/t-sql/statements/grant-transact-sql) to Service SIDs in SQL Server.
+
+

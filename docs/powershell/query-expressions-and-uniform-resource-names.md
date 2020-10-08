@@ -1,10 +1,7 @@
 ---
 title: "Query Expressions and Uniform Resource Names | Microsoft Docs"
 description: Learn about Query Expressions, which enumerate one or more objects in an object model hierarchy, and about Uniform Resource names (URNs), which uniquely identify a single object.
-ms.custom: ""
-ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: matteot, drskwier
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,7 +11,11 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot, drskwier
+ms.custom: ""
+ms.date: 10/14/2020
 ---
+
 # Query Expressions and Uniform Resource Names
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,10 +27,9 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SM
 > Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
 > To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
 
-  
 ## Syntax  
-  
-```  
+
+```powershell
   
 Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]  
   
@@ -44,48 +44,47 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | @DatePropertyName=datetime('DateString')  
  | is_null(@PropertyName)  
  | not(<PropertyExpression>)  
-  
 ```  
-  
+
 ## Arguments  
- *Object*  
- Specifies the type of object that is represented at that node of the expression string. Each object represents a collection class from these SMO object model namespaces:  
+*Object*  
+Specifies the type of object that is represented at that node of the expression string. Each object represents a collection class from these SMO object model namespaces:  
+
+<xref:Microsoft.SqlServer.Management.Smo>  
+
+<xref:Microsoft.SqlServer.Management.Smo.Agent>  
+ 
+<xref:Microsoft.SqlServer.Management.Smo.Broker>  
   
- <xref:Microsoft.SqlServer.Management.Smo>  
+<xref:Microsoft.SqlServer.Management.Smo.Mail>  
   
- <xref:Microsoft.SqlServer.Management.Smo.Agent>  
+<xref:Microsoft.SqlServer.Management.Dmf>  
   
- <xref:Microsoft.SqlServer.Management.Smo.Broker>  
+<xref:Microsoft.SqlServer.Management.Facets>  
   
- <xref:Microsoft.SqlServer.Management.Smo.Mail>  
+<xref:Microsoft.SqlServer.Management.RegisteredServers>  
   
- <xref:Microsoft.SqlServer.Management.Dmf>  
+<xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
   
- <xref:Microsoft.SqlServer.Management.Facets>  
+For example, specify Server for the **ServerCollection** class, Database for the **DatabaseCollection** class.  
   
- <xref:Microsoft.SqlServer.Management.RegisteredServers>  
+\@*PropertyName*  
+Specifies the name of one of the properties of the class that is associated with the object specified in *Object*. The name of the property must be prefixed with the \@ character. For example, specify \@IsAnsiNull for the **Database** class property **IsAnsiNull**.  
   
- <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
+\@*BooleanPropertyName*=true()  
+Enumerates all objects where the specified Boolean property is set to TRUE.  
   
- For example, specify Server for the **ServerCollection** class, Database for the **DatabaseCollection** class.  
+\@*BooleanPropertyName*=false()  
+Enumerates all objects where the specified Boolean property is set to FALSE.  
   
- \@*PropertyName*  
- Specifies the name of one of the properties of the class that is associated with the object specified in *Object*. The name of the property must be prefixed with the \@ character. For example, specify \@IsAnsiNull for the **Database** class property **IsAnsiNull**.  
+contains(\@*StringPropertyName*, '*PatternString*')  
+Enumerates all objects where the specified string property contains at least one occurrence of the set of characters that is specified in '*PatternString*'.  
   
- \@*BooleanPropertyName*=true()  
- Enumerates all objects where the specified Boolean property is set to TRUE.  
+\@*StringPropertyName*='*PatternString*'  
+Enumerates all objects where the value of the specified string property is exactly the same as the character pattern that is specified in '*PatternString*'.  
   
- \@*BooleanPropertyName*=false()  
- Enumerates all objects where the specified Boolean property is set to FALSE.  
-  
- contains(\@*StringPropertyName*, '*PatternString*')  
- Enumerates all objects where the specified string property contains at least one occurrence of the set of characters that is specified in '*PatternString*'.  
-  
- \@*StringPropertyName*='*PatternString*'  
- Enumerates all objects where the value of the specified string property is exactly the same as the character pattern that is specified in '*PatternString*'.  
-  
- \@*DatePropertyName*= datetime('*DateString*')  
- Enumerates all objects where the value of the specified date property matches the date that is specified in '*DateString*'. *DateString* must follow the format yyyy-mm-dd hh:mi:ss.mmm.  
+\@*DatePropertyName*= datetime('*DateString*')  
+Enumerates all objects where the value of the specified date property matches the date that is specified in '*DateString*'. *DateString* must follow the format yyyy-mm-dd hh:mi:ss.mmm.  
   
 |DateString component|Description|  
 |-|-|  
@@ -106,18 +105,20 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Negates the evaluation value of the *PropertyExpression*, enumerating all objects that do not match the condition specified in *PropertyExpression*. For example, not(contains(\@Name, 'xyz')) enumerates all objects that do not have the string xyz in their names.  
   
 ## Remarks  
- Query expressions are strings that enumerate the nodes in an SMO model hierarchy. Each node has a filter expression that specifies the criteria for determining which objects at that node are enumerated. Query expressions are modeled on the XPath expression language. Query expressions implement a small subset of the expressions that are supported by XPath, and also have some extensions that are not found in XPath. XPath expressions are strings that specify a set of criteria that are used to enumerate one or more of the tags in an XML document. For more information about XPath, see [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
-  
- Query expressions must start with an absolute reference to the Server object. Relative expressions with a leading / are not allowed. The sequence of objects that are specified in a query expression must follow the hierarchy of collection objects in the associated object model. For example, a query expression that references objects in the Microsoft.SqlServer.Management.Smo namespace must start with a Server node followed by a Database node, and so on.  
-  
- If a *\<FilterExpression>* is not specified for an object, all the objects at that node are enumerated.  
+
+Query expressions are strings that enumerate the nodes in an SMO model hierarchy. Each node has a filter expression that specifies the criteria for determining which objects at that node are enumerated. Query expressions are modeled on the XPath expression language. Query expressions implement a small subset of the expressions that are supported by XPath, and also have some extensions that are not found in XPath. XPath expressions are strings that specify a set of criteria that are used to enumerate one or more of the tags in an XML document. For more information about XPath, see [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
+
+Query expressions must start with an absolute reference to the Server object. Relative expressions with a leading / are not allowed. The sequence of objects that are specified in a query expression must follow the hierarchy of collection objects in the associated object model. For example, a query expression that references objects in the Microsoft.SqlServer.Management.Smo namespace must start with a Server node followed by a Database node, and so on.  
+
+If a *\<FilterExpression>* is not specified for an object, all the objects at that node are enumerated.  
   
 ## Uniform Resource Names (URN)  
- URNs are a subset of query expressions. Each URN forms a fully-qualified reference to a single object. A typical URN uses the Name property to identify a single object at each node. For example, this URN refers to a specific column:  
+
+URNs are a subset of query expressions. Each URN forms a fully-qualified reference to a single object. A typical URN uses the Name property to identify a single object at each node. For example, this URN refers to a specific column:  
   
-```  
+```powershell
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='SalesPerson' and @Schema='Sales']/Column[@Name='SalesPersonID']  
-```  
+```
   
 ## Examples  
   
@@ -163,8 +164,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## See Also  
- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
+## See Also
+
+- [Invoke-PolicyEvaluation cmdlet](invoke-policyevaluation-cmdlet.md)
+- [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)

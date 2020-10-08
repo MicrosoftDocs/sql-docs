@@ -1,6 +1,6 @@
 ---
 title: Load the SMO Assemblies in Windows PowerShell
-description: Learn how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that do not use the SQL Server PowerShell provider.
+description: Learn how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that don't use the SQL Server PowerShell provider.
 ms.prod: sql
 ms.technology: sql-server-powershell
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.date: 10/14/2020
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-This article describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that do not use the SQL Server PowerShell provider.  
+This article describes how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that don't use the SQL Server PowerShell provider.  
 
 > [!NOTE]
 > There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
@@ -29,7 +29,7 @@ There are two cases where you may need to load the SMO assemblies directly:
 
 - If your script references a SMO object before the first command that references the provider or cmdlets from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins.  
 
-- You want to port SMO code from another language, such as C# or Visual Basic, which does not use the provider or cmdlets.  
+- You want to port SMO code from another language, such as C# or Visual Basic, which doesn't use the provider or cmdlets.  
 
 ## Example: Loading the SQL Server Management Objects
 
@@ -38,7 +38,7 @@ The following code loads the SMO assemblies:
 ```powershell
 # Loads the SQL Server Management Objects (SMO)  
 
-$ErrorActionPreference = "Stop"  
+$ErrorActionPreference = "Stop"
   
 $sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   

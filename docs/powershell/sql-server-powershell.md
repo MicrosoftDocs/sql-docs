@@ -18,7 +18,7 @@ ms.date: 06/11/2020
 
 **[Install SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
+There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.
 
 Previous versions of the **SqlServer** module were included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS.
 
@@ -80,4 +80,6 @@ Import-Module -Name SqlServer
 
 ## Next steps
 
-[Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
+- [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
+- [SQL Server PowerShell cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
+- [Use PowerShell with Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

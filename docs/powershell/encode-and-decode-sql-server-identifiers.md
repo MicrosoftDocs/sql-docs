@@ -38,13 +38,14 @@ The **Encode-Sqlname** and **Decode-Sqlname** cmdlets only encode or decode the 
 
 ## Encoding an Identifier  
 
-**To encode a SQL Server identifier in a PowerShell path**
+### To encode a SQL Server identifier in a PowerShell path
 
 - Use one of two methods to encode a SQL Server identifier:
     - Specify the hexadecimal code for the unsupported character using the syntax %XX, where XX is the hexadecimal code.
     - Pass the identifier as a quoted string to the **Encode-Sqlname** cmdlet
 
 ### Examples (Encoding)
+
 This example specifies the encoded version of the ":" character (%3A):
 
 ```powershell
@@ -57,9 +58,9 @@ Alternatively, you can use **Encode-SqlName** to build a name supported by Windo
 Set-Location (Encode-SqlName "Table:Test")
 ```
 
-##  <a name="DecodeIdent"></a> Decoding an Identifier
+## Decoding an Identifier
 
-**To decode a SQL Server identifier from a PowerShell path**
+### To decode a SQL Server identifier from a PowerShell path
 
 Use the **Decode-Sqlname** cmdlet to replace the hexadecimal encodings with the characters represented by the encoding.
 

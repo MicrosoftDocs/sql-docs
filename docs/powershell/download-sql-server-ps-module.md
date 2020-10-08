@@ -158,7 +158,13 @@ Visit [Manage SQL Server on Linux with PowerShell Core](../linux/sql-server-linu
 
 - [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) - Module with DSC resources for deployment and configuration of Microsoft SQL Server.
 
+## Cmdlet reference
+
+- [SqlServer cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQLPS cmdlets](https://docs.microsoft.com/powershell/module/sqlps)
+
 ## Next steps
 
 - [SQL Server PowerShell](sql-server-powershell.md)
+- [SQL Server PowerShell cmdlets](https://docs.microsoft.com/powershell/module/sqlserver)
 - [Use PowerShell with Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

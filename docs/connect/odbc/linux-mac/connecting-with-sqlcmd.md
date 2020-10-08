@@ -214,7 +214,7 @@ On Windows systems, System and User DSNs are stored in the registry and managed 
 
 See [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for the list of entries which the driver supports.
 
-In a DSN, only the DRIVER entry is required, but to connect to a server, `sqlcmd` or `bcp` needs the value in the SERVER entry to match the value of the -S argument.
+In a DSN, only the DRIVER entry is required, but to connect to a remote server, `sqlcmd` or `bcp` needs a value in the SERVER element. If the SERVER element is empty or not present in the DSN, `sqlcmd` and `bcp` will attempt to connect to the default instance on the local system.
 
 When using bcp on Windows systems, [!INCLUDE[sql-server-2017](../includes/sssqlv14-md.md)] and earlier require the SQL Native Client 11 driver (sqlncli11.dll) while [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and higher require the Microsoft ODBC Driver 17 for SQL Server driver (msodbcsql17.dll).  
 

@@ -30,3 +30,4 @@ The following articles describe how to troubleshoot Big data Cluster deployed in
 ## Next steps
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).
+

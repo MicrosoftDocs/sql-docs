@@ -21,27 +21,71 @@ Each notebook is designed to check for its own dependencies. A **Run all cells**
 Once all dependencies are installed, but **Run all cells** fails, each notebook will analyze results and where possible, produce a hyperlinked hint to another notebook to further aid in resolving the issue.
 
 
-## Installing and uninstalling utilities Big Data Cluster (BDC)
+## Installing and uninstalling utilities on Big Data Cluster (BDC)
 
 This section contains a set of notebooks useful for installing and uninstalling command line tools and packages needed to manage SQL Server Big Data Clusters.
 
-
-<install> notebook table + <install-kubeadm-with-lpvs>
-
-
+|Name |Description |
+|---|---|---|---|
+|SOP010 - Upgrade a big data cluster|Use this notebook to upgrade a Big Data Cluster using azdata. |
+|SOP012 - Install unixodbc for Mac|Use this notebook when getting errors while using brew install the odbc for SQL Server.|
+|SOP036 - Install kubectl command line interface|Use this notebook to install kubectl command line interface regardless your OS.|
+|SOP037 - Uninstall kubectl command line interface|Use this notebook to uninstall kubectl command line interface regardless your OS.|
+|SOP038 - Install azure command line interface|Use this notebook to install Azure CLI command line interface regardless your OS.|
+|SOP039 - Uninstall azure command line interface|Use this notebook to uninstall Azure CLI command line interface regardless your OS.|
+|SOP040 - Upgrade pip in ADS Python sandbox|Use this notebook to upgrade pip in ADS Python sandbox.|
+|SOP040 - Upgrade pip in ADS Python sandbox|Use this notebook to upgrade pip in ADS Python sandbox.|
+|SOP054 - Install azdata command line interface|Use this notebook to install azdata command line interface regardless your OS.|
+|SOP055 - Uninstall azdata command line interface|Use this notebook to uninstall azdata command line interface regardless your OS.|
+|SOP059 - Install Kubernetes Python module|Use this notebook to install Kubernetes modules with Python.|
+|SOP060 - Uninstall kubernetes module|Use this notebook to uninstall Kubernetes modules with Python.|
+|SOP061 - Delete a big data cluster|Use this notebook to delete a BDC cluster.|
+|SOP062 - Install ipython-sql and pyodbc modules|Use this notebook to install ipython-sql and pyodbc modules.|
+|SOP063 - Install azdata CLI (using package manager)|Use this notebook to install azdata CLI (using package manager).|
+|SOP064 - Uninstall azdata CLI (using package manager)|Use this notebook to uninstall azdata CLI (using package manager).|
+|SOP069 - Install ODBC for SQL Server|Use this notebook to install ODBC driver since some subcommands in azdata require the SQL Server ODBC driver.|
+|LPV000 - Annotate nodes for data and storage pool pods|Use this notebook to annotate nodes for data and storage pool pods.|
+|LPV001 - Create Kubernetes Storage Classes|Use this notebook to create Kubernetes Storage Classes.|
+|LPV003 - Initialize config files|Use this notebook to initialize config files.|
+|LPV004 - Patch configuration files with storage specs|Use this notebook to patch configuration files with storage specs.|
+|LPV005 - OPTIONAL - Adjust ports to enable multiple BDCs in one Kubernetes cluster.|Use this notebook to adjust ports to enable multiple BDCs in one Kubernetes cluster, and you might use it in combination with the notebook **LPV005b - OPTIONAL - Secure cluster configuration patch**, and for OpenShift workaround with the notebooks **LPV005c - OPTIONAL - Openshift workarounds** and **LPV005d - OPTIONAL - Openshift workarounds (SQL)** |
+|LPV006 - Create the Big Data Cluster|Use this notebook to create the BDC cluster.|
+|LPV007 - Delete local persistent storage volumes on nodes|Use this notebook to delete local persistent storage volumes on nodes.|
+|LPV008 - Delete Kubernetes Storage Classes|Use this notebook to delete Kubernetes Storage Classes.|
+|LPV101 - Deploy kubeadm-prod to Openshift|Use this notebook to deploy kubeadm-prod to Openshift.|
+|LPV102 - Delete kubeadm-prod to Openshift|Use this notebook to delete kubeadm-prod to Openshift.|
 
 
 ## Managing Certificates on Big Data Clusters (BDC)
 
 A set of notebooks to run a notebook for managing Certificates on Big Data Clusters. 
 
-<cert-management> notebook table
-
-
+|Name |Description |
+|---|---|---|---|
+|CER001 - Generate a Root CA certificate|Generate a Root CA certificate.Consider using one Root CA certificate for all non-production clusters in each environment, as this reduces the number of Root CA certificates that need to be uploaded to clients connecting to these clusters. |
+|CER002 - Download existing Root CA certificate|Use this notebook to download a generated Root CA certificate from a cluster.|
+|CER003 - Upload existing Root CA certificate|CER003 - Upload existing Root CA certificate.|
+|CER004 - Download and Upload existing Root CA certificate|Download and Upload existing Root CA certificate. |
+|CER010 - Install generated Root CA locally|This notebook will copy locally (from a Big Data Cluster) the generated Root CA certificate that was installed using either **CER001 - Generate a Root CA certificate** or **CER003 - Upload existing Root CA certificate**, And then install the Root CA certificate into this machine’s local certificate store.|
+|CER020 - Create Management Proxy certificate|UThis notebook creates a certificate for the Management Proxy endpoint.|
+|CER021 - Create Knox certificate|This notebook creates a certificate for the Knox Gateway endpoint.|
+|CER022 - Create App Proxy certificate|This notebook creates a certificate for the App Deploy Proxy endpoint.|
+|CER023 - Create Master certificate|TThis notebook creates a certificate for the Master endpoint.|
+|CER024 - Create Controller certificate|This notebook creates a certificate for the Controller endpoint. It creates a controller-privatekey.pem as the private key and controller-signingrequest.csr as the signing request.The private key is a secret. The signing request (CSR) will be used by the CA to generate a signed certificate for the service.|
+|CER030 - Sign Management Proxy certificate with generated CA|This notebook signs the certificate created using **CER020 - Create Management Proxy certificate**with the generate Root CA Certificate, created using either **CER001 - Generate a Root CA certificate** or **CER003 - Upload existing Root CA certificate**|
+|CER031 - Sign Knox certificate with generated CA|This notebook signs the certificate created using **CER021 - Create Knox certificate** with the generate Root CA Certificate, created using either **CER001 - Generate a Root CA certificate** or **CER003 - Upload existing Root CA certificate**|
+|CER032 - Sign App-Proxy certificate with generated CA|This notebook signs the certificate created using **CER022 - Create App Proxy certificate** with the generate Root CA Certificate, created using either **CER001 - Generate a Root CA certificate** or **CER003 - Upload existing Root CA certificate**.|
+|CER033 - Sign Master certificate with generated CA|This notebook signs the certificate created using **CER023 - Create Master certificate** with the generate Root CA Certificate, created using either **CER001 - Generate a Root CA certificate** or **CER003 - Upload existing Root CA certificate**.|
+|CER034 - Sign Controller certificate with cluster Root CA|This notebook signs the certificate created using **CER024 - Create Controller certificate** with the generate Root CA Certificate, created using either **CER001 - Generate a Root CA certificate** or **CER003 - Upload existing Root CA certificate**.|
+|CER040 - Install signed Management Proxy certificate|This notebook installs into the Big Data Cluster the certificate signed using **CER030 - Sign Management Proxy certificate with generated CA**.|
+|CER041 - Install signed Knox certificate|This notebook installs into the Big Data Cluster the certificate signed using **CER031 - Sign Knox certificate with generated CA**.|
+|CER042 - Install signed App-Proxy certificate|This notebook installs into the Big Data Cluster the certificate signed using **CER032 - Sign App-Proxy certificate with generated CA**.|
+|CER044 - Install signed Controller certificate|This notebook installs into the Big Data Cluster the certificate signed using **CER034 - Sign Controller certificate with cluster Root CA** and please note that at the end of this notebook the Controller pod and all pods that use PolyBase (Master Pool and Compute Pool pods) will be restarted to load the new certificates.|
+|CER050 - Wait for BDC to be Healthy|This notebook will wait until the Big Data Cluster has returned to a healthy state, after the Controller pod and pods that use PolyBase have been restarted to load the new certificates.|
+|CER100 - Configure Cluster with Self Signed Certificates|This notebook will generate a new Root CA in the Big Data Cluster and create new certificates for each endpoint ( those endpoints are : Management, Gateway, App-Proxy and Controller). Sign each new certificate with the new generated Root CA, except the Controller cert (which is signed with the existing cluster Root CA), then install each certificate into the Big Data Cluster. Download the new generated Root CA into this machine’s Trusted Root Certification Authorities certificate store. All generated self-signed certificates will be stored in the controller pod at the test_cert_store_root location.|
+|CER101 - Configure Cluster with Self Signed Certificates using existing Root CA|This notebook will use an existing generated Root CA in the Big Data Cluster (uploaded with **CER003**) and create new certificates for each endpoint (Management, Gateway, App-Proxy and Controller), then sign each new certificate with the new generated Root CA, except the Controller cert (which is signed with the existing cluster Root CA), install each certificate into the Big Data Cluster. All generated self-signed certificates will be stored in the controller pod (at the test_cert_store_root location).Upon completion of this notebook, all https:// access to the Big Data Cluster from this machine (and any machine that installs the new Root CA) will show as being secure. The Notebook Runner chapter, will ensure CronJobs created (OPR003) to run App-Deploy will install the cluster Root CA to allow securely getting JWT tokens and the swagger.json.|
 
 
 ## Next steps
-
-You can check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

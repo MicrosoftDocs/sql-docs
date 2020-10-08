@@ -24,11 +24,11 @@ Granting a user access to a database involves three steps. First, you create a l
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio and access to a SQL Server instance. 
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+- **macOS**: [Download SQL Server 2017 on Docker](../linux/quickstart-install-connect-docker.md).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -105,4 +105,3 @@ The next article teaches you how to remove database objects you created in the o
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
 >[Next steps](lesson-3-deleting-database-objects.md)
-  

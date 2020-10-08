@@ -135,7 +135,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- The ERROR\_\* functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+ The ERROR\_\* functions also work in a `CATCH` block inside a [natively compiled stored procedure](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md).  
   
 ## Errors Unaffected by a TRY...CATCH Construct  
  TRY...CATCH constructs do not trap the following conditions:  
@@ -363,5 +363,3 @@ GO
  [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
  [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
-  
-

@@ -2,7 +2,7 @@
 description: "SQL Server Guides"
 title: "SQL Server Guides | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/07/2020
+ms.date: "10/07/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

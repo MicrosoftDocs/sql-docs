@@ -23,7 +23,7 @@ This article covers the In-Memory OLTP technology in both [!INCLUDE[ssNoVersion]
 
 ## In-Memory OLTP Overview
 
-In-Memory OLTP can provide great performance gains, for the right workloads. One customer, BWIN, managed to [achieve 1.2 Million requests per second](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) with a single machine running [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], leveraging In-Memory OLTP. Another customer, Quorum, managed to double their workload while [reducing their resource utilization by 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), by leveraging In-Memory OLTP in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
+In-Memory OLTP can provide great performance gains, for the right workloads. One customer, BWIN, managed to [achieve 1.2 Million requests per second](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale) with a single machine running [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], leveraging In-Memory OLTP. Another customer, Quorum, managed to double their workload while [reducing their resource utilization by 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), by leveraging In-Memory OLTP in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. While customers have seen up to 30X performance gain in some cases, how much gain you see depends on the workload.
 
 Now, where does this performance gain come from? In essence, In-Memory OLTP improves performance of transaction processing by making data access and transaction execution more efficient, and by removing lock and latch contention between concurrently executing transactions: it is not fast because it is in-memory; it is fast because it is optimized around the data being in-memory. Data storage, access, and processing algorithms were redesigned from the ground up to take advantage of the latest enhancements in in-memory and high concurrency computing.
 
@@ -116,11 +116,11 @@ Memory-optimized table variables and non-durable tables typically reduce CPU and
 
 #### Implementation considerations
 
-To get started see: [Improving temp table and table variable performance using memory optimization.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+To get started see: [Improving temp table and table variable performance using memory optimization.](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
 
 #### Customer Case Studies
 
-- One customer was able to improve performance by 40%, just by replacing traditional TVPs with memory-optimized TVPs: [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- One customer was able to improve performance by 40%, just by replacing traditional TVPs with memory-optimized TVPs: [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](/archive/blogs/sqlserverstorageengine/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure)
 - SentryOne significantly improved data ingestion capacity with almost zero latency in their monitoring solution by swapping tables in tempdb to In-Memory OLTP tables as part of their enterprise scalability improvements: [Solution provider breaks through performance ceiling with data monitoring innovation.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### ETL (Extract Transform Load)
@@ -216,12 +216,12 @@ GO
 
 ## Resources to learn more
 
-- [In-Memory OLTP Technologies for Faster T-SQL Performance](https://msdn.microsoft.com/library/mt694156.aspx)
+- [In-Memory OLTP Technologies for Faster T-SQL Performance](./survey-of-initial-areas-in-in-memory-oltp.md)
 - Perf demo using In-Memory OLTP can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [17-minute video explaining In-Memory OLTP and showing the demo](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
 - [Script to enable In-Memory OLTP and set recommended options](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 - [Main In-Memory OLTP documentation](in-memory-oltp-in-memory-optimization.md)
 - [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
-- [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
-- [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [Improving temp table and table variable performance using memory optimization](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+- [Optimize Performance using In-Memory Technologies in SQL Database](/azure/sql-database/sql-database-in-memory)
 - [System-Versioned Temporal Tables with Memory-Optimized Tables](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

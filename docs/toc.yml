@@ -7805,6 +7805,8 @@
           href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: SQL Server Connector troubleshooting
           href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+        - name: SQL Server Connector logging
+          href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
       - name: Back up service master key
         href: relational-databases/security/encryption/back-up-the-service-master-key.md
       - name: Restore service master key

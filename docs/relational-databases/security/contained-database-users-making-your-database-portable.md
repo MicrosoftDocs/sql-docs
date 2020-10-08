@@ -74,29 +74,24 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 Azure SQL Managed Instance behaves like SQL Server on-premises in the context of contained databases. Be sure to change the context of your database from the master database to the user database when creating your contained user. Additionally, there should be no active connections to the user database when setting the containment option. 
 
 
-For example: 
+For example:
+
+> [!WARNING]
+> Make sure that no other connections are happening to your Managed Instance database, as the following script may cause disruption to existing processes running on the database.
 
 ```sql
-
 Use MASTER;
 GO 
 
-select * from sysprocesses where spid > 50
-
-DECLARE @kill varchar(8000)
-Set @kill  = ''
-SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), spid) + ';'
-FROM master..sysprocesses
-WHERE dbid = db_id('test') and spid > 50 and spid <> @@spid
-EXEC(@kill);
-
-sp_configure 'contained database authentication', 1;  
-GO  
-RECONFIGURE;  
-GO 
+ALTER DATABASE Test
+SET RESTRICTED_USER
+WITH ROLLBACK IMMEDIATE;
 
 ALTER DATABASE Test
-SET containment=partial
+SET containment=partial;
+
+ALTER DATABASE Test
+SET MULTI_USER;
 
 USE Test;  
 GO 

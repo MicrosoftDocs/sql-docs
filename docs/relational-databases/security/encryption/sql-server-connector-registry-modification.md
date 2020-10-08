@@ -97,7 +97,7 @@ Modify registry entries to enable SQL Server Connector logging error and informa
     ![ekm regedit open](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-open.png "ekm regedit open")
     - Press and hold or right-click the Start button, then select Run. Enter **regedit** in the dialog box and select **OK**.
 
-   ![ekm-regedit-start](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-start.png "ekm regedit start")
+   ![ekm regedit start](../../../relational-databases/security/encryption/media/ekm-registry/ekm-regedit-start.png "ekm regedit start")
 
 1. Navigate to this registry key:
 

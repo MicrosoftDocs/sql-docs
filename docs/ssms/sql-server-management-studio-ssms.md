@@ -39,7 +39,7 @@ ms.date: 09/11/2019
 |How to use **Template Explorer** to build and manage files of boilerplate text that you use to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
 |How to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../ssms/solution/solution-explorer.md)|  
 |How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+|How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
 
 ## SQL Server Management Studio for Business Intelligence
 
@@ -54,7 +54,7 @@ To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../include
 
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides an [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script project in which you develop and save scripts written in Multidimensional Expressions (MDX), Data Mining Extensions (DMX), and XML for Analysis (XMLA). You use [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Scripts projects to perform management tasks or re-create objects, such as database and cubes, on [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] instances. For example, you can develop an XMLA script in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script project that creates new objects directly on an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] instance. The [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Scripts projects can be saved as part of a solution and integrated with source code control.
   
-For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Developing and Implementing Using SQL Server Management Studio](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
+For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Developing and Implementing Using SQL Server Management Studio](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
   
 ### Managing Integration Services Solutions Using SQL Server Management Studio
 
@@ -86,7 +86,7 @@ For more information about different locale with previous versions, reference [I
 
 - Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy). For more information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
-- For information on diagnostic data collection and feature usage, see the [SQL Server privacy supplement](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
+- For information on diagnostic data collection and feature usage, see the [SQL Server privacy supplement](../sql-server/sql-server-privacy.md).
 
 ## Cross-platform tool
 
@@ -97,8 +97,8 @@ For more information about different locale with previous versions, reference [I
 ## Next steps
 
 - [Install non-English language versions of SSMS](install-other-languages.md)
-- [Connect to and query a SQL Server instance](tutorials/connect-query-sql-server.md)
-- [Writing Transact-SQL Statements](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [Connect to and query a SQL Server instance](./quickstarts/connect-query-sql-server.md)
+- [Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

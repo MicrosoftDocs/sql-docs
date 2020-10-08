@@ -8,7 +8,7 @@ ms.date: 06/19/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # What is SQL Server Machine Learning Services (Python and R)?
 [!INCLUDE [SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
@@ -39,15 +39,23 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 ## Get started with Machine Learning Services
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md) and [Machine Learning Services in Azure SQL Managed Instance \(preview\)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also run T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
 
 1. Write your first Python or R script.
 
-    + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
-    + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
+   + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
+   + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
 ::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ Write your first Python or R script.
+
+   + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
+   + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
+::: moniker-end
+
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md).
 
@@ -55,8 +63,8 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 
 1. Write your first Python or R script.
 
-    + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
-    + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
+   + [Python tutorials for SQL machine learning](tutorials/python-tutorials.md)
+   + [R tutorials for SQL machine learning](tutorials/r-tutorials.md)
 ::: moniker-end
 
 <a name="versions"></a>

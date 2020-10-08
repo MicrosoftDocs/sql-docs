@@ -1270,7 +1270,7 @@ When possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pushes rel
 
 > [!NOTE]
 > Until [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], partitioned tables and indexes are supported only in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.   
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, partitioned tables and indexes are also supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition. 
+> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, partitioned tables and indexes are also supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard edition. 
 
 ### New Partition-Aware Seek Operation
 

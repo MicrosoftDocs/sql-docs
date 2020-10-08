@@ -394,7 +394,7 @@ To see this example in use, see the [BULK INSERT][bulk_insert_example] example.
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: ./bulk-insert-transact-sql.md
-[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-storage
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
 [openrowset]: ../functions/openrowset-transact-sql.md
 
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
@@ -621,7 +621,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: ./bulk-insert-transact-sql.md
-[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-storage
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
 [openrowset]: ../functions/openrowset-transact-sql.md
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
@@ -875,7 +875,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: ./bulk-insert-transact-sql.md
-[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-storage
+[bulk_insert_example]: ./bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage
 [openrowset]: ../functions/openrowset-transact-sql.md
 
 [create_dsc]: ./create-database-scoped-credential-transact-sql.md

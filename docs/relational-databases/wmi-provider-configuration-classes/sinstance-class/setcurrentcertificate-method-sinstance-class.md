@@ -1,4 +1,5 @@
 ---
+description: "SetCurrentCertificate Method (SInstance Class)"
 title: "SetCurrentCertificate Method (SInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetCurrentCertificate method"
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetCurrentCertificate Method (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

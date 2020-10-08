@@ -1,4 +1,5 @@
 ---
+description: "Filter (geometry Data Type)"
 title: "Filter (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -35,7 +36,9 @@ In cases where an index is not available, or is not used, the method will return
 .Filter ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which Filter() is invoked.  
   

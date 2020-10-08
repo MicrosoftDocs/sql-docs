@@ -1,4 +1,5 @@
 ---
+description: "Access Control for Sensitive Data in Packages"
 title: "Access Control for Sensitive Data in Packages | Microsoft Docs"
 ms.custom: security
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: chugu
 ---
 # Access Control for Sensitive Data in Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To protect the data in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can set a protection level that helps protect just sensitive data or all the data in the package. Furthermore, you can encrypt this data with a password or a user key, or rely on the database to encrypt the data. Also, the protection level that you use for a package is not necessarily static, but changes throughout the life cycle of the package. You often set one protection level during development and another as soon as you deploy the package.  

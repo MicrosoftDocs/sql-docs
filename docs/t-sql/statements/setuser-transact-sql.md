@@ -1,4 +1,5 @@
 ---
+description: "SETUSER (Transact-SQL)"
 title: "SETUSER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -38,7 +39,9 @@ ms.author: vanto
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *username* **'**  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows user in the current database that is impersonated. When *username* is not specified, the original identity of the system administrator or database owner impersonating the user is reset.  
   

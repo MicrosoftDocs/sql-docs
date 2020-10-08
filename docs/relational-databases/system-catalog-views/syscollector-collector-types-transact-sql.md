@@ -1,4 +1,5 @@
 ---
+description: "syscollector_collector_types (Transact-SQL)"
 title: "syscollector_collector_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_collector_types view"
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_collector_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "STPolyFromText (geography Data Type)"
 title: "STPolyFromText (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -30,7 +31,9 @@ Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-K
 STPolyFromText ( 'polygon_tagged_text' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *polygon_tagged_text*  
  Is the WKT representation of the **geographyPolygon** instance you wish to return. *polygon_tagged_text* is an **nvarchar(max)** expression.  
   

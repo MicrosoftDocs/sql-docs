@@ -1,4 +1,5 @@
 ---
+description: "UPDATETEXT (Transact-SQL)"
 title: "UPDATETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
@@ -34,7 +35,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  
      { NULL | delete_length }  
@@ -43,7 +43,9 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
     | { table_name.src_column_name src_text_ptr } ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  BULK  
  Enables upload tools to upload a binary data stream. The stream must be provided by the tool at the TDS protocol level. When the data stream is not present the query processor ignores the BULK option.  
   
@@ -101,12 +103,12 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  To run this example, you must install the pubs database.  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
    FROM pub_info pr, publishers p  
       WHERE p.pub_id = pr.pub_id   

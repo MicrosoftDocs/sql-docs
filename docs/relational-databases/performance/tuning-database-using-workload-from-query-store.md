@@ -1,5 +1,6 @@
 ---
 title: "Tuning Database Using Workload from Query Store | Microsoft Docs"
+description: The Database Engine Tuning Advisor supports the option to use the Query Store to automatically select an appropriate workload for tuning.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

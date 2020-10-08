@@ -1,4 +1,5 @@
 ---
+description: "DENY Database Permissions (Transact-SQL)"
 title: "DENY Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -47,6 +48,8 @@ DENY <permission> [ ,...n ]
   | Database_user_mapped_to_asymmetric_key
   | Database_user_with_no_login
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

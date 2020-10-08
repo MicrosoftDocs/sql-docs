@@ -1,4 +1,5 @@
 ---
+description: "ClientSettings Class - SetDefaults Method"
 title: "SetDefaults Method (ClientSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDefaults method"
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ClientSettings Class - SetDefaults Method
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

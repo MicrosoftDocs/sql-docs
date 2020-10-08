@@ -1,8 +1,9 @@
 ---
+description: "FieldStatusEnum"
 title: "FieldStatusEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,15 +18,15 @@ author: rothja
 ms.author: jroth
 ---
 # FieldStatusEnum
-Specifies the [status](../../../ado/reference/ado-api/status-property-ado-field.md) of a [Field Object](../../../ado/reference/ado-api/field-object.md).  
+Specifies the [status](./status-property-ado-field.md) of a [Field Object](./field-object.md).  
   
  The **adFieldPending\*** values indicate the operation that caused the status to be set, and may be combined with other status values.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indicates that the specified field already exists.|  
-|**adFieldBadStatus**|12|Indicates that an invalid status value was sent from ADO to the OLE DB provider. Possible causes include an OLE DB 1.0 or 1.1 provider, or an improper combination of [Value](../../../ado/reference/ado-api/value-property-ado.md) and [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  
-|**adFieldCannotComplete**|20|Indicates that the server of the URL specified by [Source](../../../ado/reference/ado-api/source-property-ado-record.md) could not complete the operation.|  
+|**adFieldBadStatus**|12|Indicates that an invalid status value was sent from ADO to the OLE DB provider. Possible causes include an OLE DB 1.0 or 1.1 provider, or an improper combination of [Value](./value-property-ado.md) and [Status](./status-property-ado-field.md).|  
+|**adFieldCannotComplete**|20|Indicates that the server of the URL specified by [Source](./source-property-ado-record.md) could not complete the operation.|  
 |**adFieldCannotDeleteSource**|23|Indicates that during a move operation, a tree or subtree was moved to a new location, but the source could not be deleted.|  
 |**adFieldCantConvertValue**|2|Indicates that the field cannot be retrieved or stored without loss of data.|  
 |**adFieldCantCreate**|7|Indicates that the field could not be added because the provider exceeded a limitation (such as the number of fields allowed).|  
@@ -38,7 +39,7 @@ Specifies the [status](../../../ado/reference/ado-api/status-property-ado-field.
 |**adFieldIsNull**|3|Indicates that the provider returned a VARIANT value of type VT_NULL and that the field is not empty.|  
 |**adFieldOK**|0|Default. Indicates that the field was successfully added or deleted.|  
 |**adFieldOutOfSpace**|22|Indicates that the provider is unable to obtain enough storage space to complete a move or copy operation.|  
-|**adFieldPendingChange**|0x40000|Indicates either that the field has been deleted and then re-added, perhaps with a different data type, or that the value of the field which previously had a status of **adFieldOK** has changed. The final form of the field will modify the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection after the [Update](../../../ado/reference/ado-api/update-method.md) method is called.|  
+|**adFieldPendingChange**|0x40000|Indicates either that the field has been deleted and then re-added, perhaps with a different data type, or that the value of the field which previously had a status of **adFieldOK** has changed. The final form of the field will modify the [Fields](./fields-collection-ado.md) collection after the [Update](./update-method.md) method is called.|  
 |**adFieldPendingDelete**|0x20000|Indicates that the **Delete** operation caused the status to be set. The field has been marked for deletion from the **Fields** collection after the **Update** method is called.|  
 |**adFieldPendingInsert**|0x10000|Indicates that the **Append** operation caused the status to be set. The **Field** has been marked to be added to the **Fields** collection after the **Update** method is called.|  
 |**adFieldPendingUnknown**|0x80000|Indicates that the provider cannot determine what operation caused field status to be set.|  
@@ -58,4 +59,4 @@ Specifies the [status](../../../ado/reference/ado-api/status-property-ado-field.
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [Status Property (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Status Property (ADO Field)](./status-property-ado-field.md)

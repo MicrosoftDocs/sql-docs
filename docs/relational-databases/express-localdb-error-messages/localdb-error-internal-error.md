@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INTERNAL_ERROR"
 title: "LOCALDB_ERROR_INTERNAL_ERROR | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|264|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

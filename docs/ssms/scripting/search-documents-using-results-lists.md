@@ -1,9 +1,10 @@
 ---
 title: "Search Documents Using Results Lists"
+description: Learn how to search and replace text in all files contained in a project, solution, or file system folder. Matches appear in the Find Results 1 window, and you can double-click a match to see the line that contains it.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -1,12 +1,12 @@
 ---
 title: "Availability replica is not joined to an availability group"
-description: "Identify possible reasons why a replica is not joined to an Always On availability group."
+description: "Learn how to identify possible reasons why a replica is not joined to an Always On availability group."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords: 
   - "sql13.swb.agdashboard.arp4joined.issues.f1"
 helpviewer_keywords: 

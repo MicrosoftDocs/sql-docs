@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Resource Pool Stats Object | Microsoft Docs"
+description: Learn about the SQLServer:Resource Pool Stats object, which contains performance counters that report about Resource Governor resource pool statistics.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

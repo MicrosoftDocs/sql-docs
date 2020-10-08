@@ -1,4 +1,5 @@
 ---
+description: "Stored Procedure Parameter Limitations"
 title: "Stored Procedure Parameter Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

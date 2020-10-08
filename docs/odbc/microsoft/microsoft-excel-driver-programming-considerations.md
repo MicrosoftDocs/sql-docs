@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Excel Driver Programming Considerations"
 title: "Microsoft Excel Driver Programming Considerations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SQLMoreResults"
 title: "SQLMoreResults | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -157,7 +158,6 @@ EXIT:
 ```  
   
 ## See Also  
- [SQLMoreResults Function](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults Function](../../odbc/reference/syntax/sqlmoreresults-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

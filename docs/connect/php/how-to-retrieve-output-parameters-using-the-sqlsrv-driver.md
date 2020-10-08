@@ -1,5 +1,6 @@
 ---
-title: "How to: Retrieve Output Parameters Using the SQLSRV Driver | Microsoft Docs"
+title: "How to: Retrieve Output Parameters Using the SQLSRV Driver"
+description: "Learn how to use and retrieve output parameters in a stored procedure with the Microsoft SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "04/11/2018"
 ms.prod: sql

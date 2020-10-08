@@ -1,4 +1,5 @@
 ---
+description: "Create and Deploy a Cache for the Lookup Transformation"
 title: "Create and Deploy a Cache for the Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # Create and Deploy a Cache for the Lookup Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can create and deploy a cache file (.caw) for the Lookup transformation. The reference dataset is stored in the cache file.  

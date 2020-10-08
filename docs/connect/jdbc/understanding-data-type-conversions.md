@@ -1,5 +1,6 @@
 ---
-title: "Understanding data type conversions | Microsoft Docs"
+title: "Understanding data type conversions"
+description: "Learn the specifics of how the JDBC Driver for SQL Server handles data type conversions between JDBC and database data types."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

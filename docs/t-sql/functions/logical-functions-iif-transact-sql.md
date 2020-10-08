@@ -1,4 +1,5 @@
 ---
+description: "Logical Functions - IIF (Transact-SQL)"
 title: "IIF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -28,11 +29,12 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 IIF ( boolean_expression, true_value, false_value )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *boolean_expression*  
  A valid Boolean expression.  
   
@@ -56,8 +58,8 @@ IIF ( boolean_expression, true_value, false_value )
   
 ### A. Simple IIF example  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a > @b, 'TRUE', 'FALSE' ) AS Result;  
 ```  
   
@@ -73,7 +75,7 @@ TRUE
   
 ### B. IIF with NULL constants  
   
-```  
+```sql 
 SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;  
 ```  
   
@@ -81,7 +83,7 @@ SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;
   
 ### C. IIF with NULL parameters  
   
-```  
+```sql  
 DECLARE @P INT = NULL, @S INT = NULL;  
 SELECT IIF ( 45 > 30, @p, @s ) AS Result;  
 ```  

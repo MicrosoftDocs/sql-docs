@@ -1,4 +1,5 @@
 ---
+description: "sp_addsynctriggers (Transact-SQL)"
 title: "sp_addsynctriggers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsynctriggers"
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addsynctriggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

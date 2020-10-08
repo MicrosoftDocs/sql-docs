@@ -1,5 +1,6 @@
 ---
-title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support | Microsoft Docs"
+title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support"
+description: "Learn how to send and retrieve UTF-8 encoded data using UTF-8 support built in to the drivers for PHP."
 ms.custom: ""
 ms.date: "03/23/2018"
 ms.prod: sql
@@ -119,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-For information about storing Unicode data, see [Working with Unicode Data](https://msdn.microsoft.com/library/ms175180.aspx).  
+For information about storing Unicode data, see [Working with Unicode Data](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105)).  
   
 ## Example  
 The following example is similar to the first sample but instead of specifying the UTF-8 character set on the connection, this sample shows how to specify the UTF-8 character set on the column.  
@@ -224,4 +225,3 @@ sqlsrv_close( $conn);
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

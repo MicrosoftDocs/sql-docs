@@ -1,4 +1,5 @@
 ---
+description: "getSchemaTerm Method (SQLServerDatabaseMetaData)"
 title: "getSchemaTerm Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

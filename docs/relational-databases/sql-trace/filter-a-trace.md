@@ -1,4 +1,5 @@
 ---
+description: "Filter a Trace"
 title: "Filter a Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Administer Servers with SQL Server Management Studio"
 title: "Administer Servers with SQL Server Management Studio"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

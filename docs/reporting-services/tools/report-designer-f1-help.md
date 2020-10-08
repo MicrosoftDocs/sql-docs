@@ -1,5 +1,6 @@
 ---
 title: "Report Designer F1 Help | Microsoft Docs"
+description: View information about F1 Help for the SQL Server Reporting Services Report Designer wizards, views, and dialog boxes in SQL Server Data Tools.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

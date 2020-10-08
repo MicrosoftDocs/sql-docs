@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Extensions (DMX) Syntax Conventions"
 title: "Data Mining Extensions (DMX) Syntax Conventions | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Data Mining Extensions (DMX) Syntax Conventions
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The Data Mining Extensions (DMX) reference documentation in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses the following conventions to describe the DMX language.  
   

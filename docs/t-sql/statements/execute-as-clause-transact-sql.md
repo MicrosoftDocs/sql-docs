@@ -1,4 +1,5 @@
 ---
+description: "EXECUTE AS Clause (Transact-SQL)"
 title: "EXECUTE AS Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -53,7 +54,6 @@ Queues
 ```  
   
 ```syntaxsql
-  
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
@@ -65,7 +65,9 @@ DDL Triggers with Database Scope
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **CALLER**  
  Specifies the statements inside the module are executed in the context of the caller of the module. The user executing the module must have appropriate permissions not only on the module itself, but also on any database objects that are referenced by the module.  
   
@@ -146,7 +148,7 @@ DDL Triggers with Database Scope
   
  When the following `CREATE PROCEDURE` statement is run, the `CompanyDomain\SqlUser1` is implicitly created as a database principal in the `Sales` database.  
   
-```  
+```sql  
 USE Sales;  
 GO  
 CREATE PROCEDURE dbo.usp_Demo  
@@ -161,7 +163,7 @@ GO
   
  Assume the following stored procedure is called by `SqlUser2`.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_Demo  
 WITH EXECUTE AS 'SqlUser1'  
 AS  
@@ -193,7 +195,7 @@ GO
 ## Examples  
  The following example creates a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and assigns the execution context to `OWNER`.  
   
-```  
+```sql  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
 @DeptValue int  
 WITH EXECUTE AS OWNER  
@@ -212,7 +214,6 @@ GO
 -- Execute the stored procedure by specifying department 5.  
 EXECUTE HumanResources.uspEmployeesInDepartment 5;  
 GO  
-  
 ```  
   
 ## See Also  

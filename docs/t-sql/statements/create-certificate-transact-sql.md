@@ -1,4 +1,5 @@
 ---
+description: "CREATE CERTIFICATE (Transact-SQL)"
 title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/06/2020"
@@ -106,7 +107,9 @@ CREATE CERTIFICATE certificate_name
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_name*  
  Is the name for the certificate in the database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Modify an Existing Trace (Transact-SQL)"
 title: "Modify an Existing Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ATAN (Transact-SQL)"
 title: "ATAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -34,7 +35,9 @@ A function that returns the angle, in radians, whose tangent is a specified **fl
 ATAN ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of either type **float** or of a type that implicitly convert to **float**.
   
@@ -55,7 +58,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
   
 -------------------------------   
 The ATAN of -45.01 is: -1.54858                         

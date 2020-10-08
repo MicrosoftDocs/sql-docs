@@ -1,4 +1,5 @@
 ---
+description: "DATENAME (Transact-SQL)"
 title: "DATENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -37,11 +38,13 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATENAME ( datepart , date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *datepart*  
 The specific part of the *date* argument that `DATENAME` will return. This table lists all valid *datepart* arguments.
 

@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Agent, JobSteps Object | Microsoft Docs"
+description: Learn about the SQL Server Agent JobSteps performance object, which contains performance counters that report information about SQL Server Agent job steps.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

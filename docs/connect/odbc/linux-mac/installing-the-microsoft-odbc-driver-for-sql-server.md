@@ -1,7 +1,7 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
 description: "Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity."
-ms.date: 04/24/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -168,9 +168,6 @@ curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sou
 
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Ubuntu 19.10
-curl https://packages.microsoft.com/config/ubuntu/19.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 #Ubuntu 20.04
 curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list

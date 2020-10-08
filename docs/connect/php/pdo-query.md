@@ -1,5 +1,6 @@
 ---
-title: "PDO::query | Microsoft Docs"
+title: "PDO::query"
+description: "API reference for the PDO::query function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "08/01/2018"
 ms.prod: sql
@@ -112,7 +113,7 @@ $stmt = null;
 ```
 
 ## Example
-This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
 ```
 <?php
@@ -163,4 +164,3 @@ Array
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

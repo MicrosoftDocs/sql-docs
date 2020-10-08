@@ -1,4 +1,5 @@
 ---
+description: "Join Tables Manually (Visual Database Tools)"
 title: Join Tables Manually
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

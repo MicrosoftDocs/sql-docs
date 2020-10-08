@@ -1,4 +1,5 @@
 ---
+description: "High Availability Support"
 title: "High Availability Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # High Availability Support
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The CDC Service for Oracle is designed for high availability. The following features provide part of the high availability support:  

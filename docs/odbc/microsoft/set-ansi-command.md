@@ -1,4 +1,5 @@
 ---
+description: "SET ANSI Command"
 title: "SET ANSI Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

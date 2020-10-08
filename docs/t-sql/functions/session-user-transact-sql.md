@@ -1,4 +1,5 @@
 ---
+description: "SESSION_USER (Transact-SQL)"
 title: "SESSION_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,11 +34,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SESSION_USER  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  
@@ -50,8 +53,8 @@ SESSION_USER
 ### A. Using SESSION_USER to return the user name of the current session  
  The following example declares a variable as `nchar`, assigns the current value of `SESSION_USER` to that variable, and then prints the variable with a text description.  
   
-```  
-DECLARE @session_usr nchar(30);  
+```sql  
+DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
 GO  
@@ -69,24 +72,24 @@ This session's current user is: Surya
 ### B. Using SESSION_USER with DEFAULT constraints  
  The following example creates a table that uses `SESSION_USER` as a `DEFAULT` constraint for the name of the person who records receipt of a shipment.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE deliveries3  
 (  
- order_id int IDENTITY(5000, 1) NOT NULL,  
- cust_id  int NOT NULL,  
- order_date smalldatetime NOT NULL DEFAULT GETDATE(),  
- delivery_date smalldatetime NOT NULL DEFAULT   
+ order_id INT IDENTITY(5000, 1) NOT NULL,  
+ cust_id  INT NOT NULL,  
+ order_date SMALLDATETIME NOT NULL DEFAULT GETDATE(),  
+ delivery_date SMALLDATETIME NOT NULL DEFAULT   
     DATEADD(dd, 10, GETDATE()),  
- received_shipment nchar(30) NOT NULL DEFAULT SESSION_USER  
+ received_shipment NCHAR(30) NOT NULL DEFAULT SESSION_USER  
 );  
 GO  
 ```  
   
  Records added to the table will be stamped with the user name of the current user. In this example, `Wanida`, `Sylvester`, and `Alejandro` verify receipt of shipments. This can be emulated by switching user context by using `EXECUTE AS`.  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida'  
 INSERT deliveries3 (cust_id)  
 VALUES (7510);  
@@ -108,7 +111,7 @@ GO
   
  The following query selects all information from the `deliveries3` table.  
   
-```  
+```sql
 SELECT order_id AS 'Order #', cust_id AS 'Customer #',   
    delivery_date AS 'When Delivered', received_shipment   
    AS 'Received By'  
@@ -136,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
 ### C: Using SESSION_USER to return the user name of the current session  
  The following example returns the session user for the current session.  
   
-```  
+```sql
 SELECT SESSION_USER;  
 ```  
   

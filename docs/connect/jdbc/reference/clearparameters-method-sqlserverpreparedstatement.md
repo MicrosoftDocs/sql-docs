@@ -1,4 +1,5 @@
 ---
+description: "clearParameters Method (SQLServerPreparedStatement)"
 title: "clearParameters Method (SQLServerPreparedStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

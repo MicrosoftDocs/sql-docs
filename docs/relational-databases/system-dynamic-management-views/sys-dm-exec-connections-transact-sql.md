@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_connections (Transact-SQL)"
 title: "sys.dm_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_connections dynamic management view"
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_connections (Transact-SQL)
@@ -65,8 +66,8 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
+| First element | Second element | Relationship |
+| --------------| -------------- | ------------ |  
 |dm_exec_sessions.session_id|dm_exec_connections.session_id|One-to-one|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|Many to one|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|One to one|  

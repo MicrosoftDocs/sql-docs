@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_exec_connections (Transact-SQL)"
 title: "sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -32,8 +33,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections.session_id|One-to-one|  
 |dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections.connection_id|Many to one|  
   

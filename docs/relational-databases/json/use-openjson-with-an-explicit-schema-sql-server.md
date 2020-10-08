@@ -1,4 +1,5 @@
 ---
+description: "Use OPENJSON with an Explicit Schema (SQL Server)"
 title: "Use OPENJSON with an Explicit Schema"
 ms.date: 06/03/2020
 ms.prod: sql

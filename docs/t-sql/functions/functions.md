@@ -1,4 +1,5 @@
 ---
+description: "What are the Microsoft SQL database functions?"
 title: "What are the Microsoft SQL database functions? | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
@@ -22,7 +23,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What are the SQL database functions?
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Learn about the categories of built-in functions you can use with SQL databases. You can use the built-in functions or create your own user-defined functions.
   

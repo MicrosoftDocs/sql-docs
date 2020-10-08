@@ -1,4 +1,5 @@
 ---
+description: "sysmail_faileditems (Transact-SQL)"
 title: "sysmail_faileditems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_faileditems database mail view"
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_faileditems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

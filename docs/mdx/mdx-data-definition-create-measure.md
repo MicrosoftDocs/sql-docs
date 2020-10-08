@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - CREATE MEASURE"
 title: "CREATE MEASURE statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -36,7 +37,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## Remarks  
  The *Measure_Name*  must be enclosed in square parenthesis.  
   
- The CREATE MEASURE statement can only be used inside of a MDX script definition; see [MdxScript Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl).  
+ The CREATE MEASURE statement can only be used inside of a MDX script definition; see [MdxScript Element &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
   
  You can also define a calculated member for use by a single query. To define a calculated member that is limited to a single query, you use the WITH clause in the SELECT statement. For more information, see [Building Measures in MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
   

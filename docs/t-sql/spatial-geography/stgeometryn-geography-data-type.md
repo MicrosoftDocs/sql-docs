@@ -1,4 +1,5 @@
 ---
+description: "STGeometryN (geography Data Type)"
 title: "STGeometryN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,7 +30,9 @@ ms.author: mlandzic
 .STGeometryN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of **geography** instances in the **GeometryCollection**.  
   

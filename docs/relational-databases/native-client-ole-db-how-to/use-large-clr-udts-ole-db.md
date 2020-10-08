@@ -1,5 +1,6 @@
 ---
-title: "Use Large CLR UDTs (OLE DB) | Microsoft Docs"
+description: "Use Large CLR UDTs  in SQL Server Native Client (OLE DB)"
+title: Use large CLR UDTs (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,19 +13,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Use Large CLR UDTs (OLE DB)
+# Use Large CLR UDTs  in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  
   
 ## Example  
- This sample contains two projects. One project creates an assembly (DLL) from C# source code. This assembly contains the CLR type. A table will be added to the database. A column in the table will be of a type defined in the assembly, By default, this sample will use the master database. The second project is a native C application that reads data from the table.  
+ This sample contains two projects. One project creates an assembly (DLL) from C# source code. This assembly contains the CLR type. A table will be added to the database. A column in the table will be of a type defined in the assembly. By default, this sample will use the master database. The second project is a native C application that reads data from the table.  
   
  Compile the first (C#) code listing to a DLL.  Then, copy the DLL to the root directory of the C drive.  
   
  Execute the second ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to add the assembly to the master database.  
   
- Compile with ole32.lib oleaut32.lib and execute the third (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
+ Compile with ole32.lib oleaut32.lib and execute the third (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name", where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
  Execute the fourth ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the assembly to the master database.  
   

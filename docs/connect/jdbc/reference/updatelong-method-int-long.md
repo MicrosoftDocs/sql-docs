@@ -1,4 +1,5 @@
 ---
+description: "updateLong Method (int, long)"
 title: "updateLong Method (int, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

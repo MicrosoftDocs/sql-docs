@@ -82,7 +82,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
      **Storage**  
      Displays the maximum storage size for the user-defined data type alias. Maximum storage sizes vary, based on precision.  
   
-    |||  
+    |Precision|Maximum storage size|  
     |-|-|  
     |1 - 9|5|  
     |10 - 19|9|  

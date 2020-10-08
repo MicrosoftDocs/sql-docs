@@ -1,4 +1,5 @@
 ---
+description: "MSpublicationthresholds (Transact-SQL)"
 title: "MSpublicationthresholds (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpublicationthresholds system table"
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSpublicationthresholds (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

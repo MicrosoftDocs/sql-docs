@@ -1,5 +1,6 @@
 ---
 title: "Working with paginated reports (web portal) | Microsoft Docs"
+description: Learn how to view and manage the properties of a paginated report within the web portal. Also, learn to use Report Builder to create or edit paginated reports.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -73,7 +74,7 @@ Specify a data processing extension that is used to process data from the data s
   
 Specify the connection string that the report server uses to connect to the data source. The connection type determines the syntax you should use. For example, a connection string for the XML data processing extension is a URL to an XML document. In most cases, a typical connection string specifies the database server and a data file. The following example illustrates a connection string used to connect to a SQL Server database that is named MyData:  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 A connection string can be configured as an expression so that you can specify the data source at run time. Data source expressions are defined in the report in Report Designer. Data source expressions cannot be defined, viewed, or modified in the web portal. However, you can replace a data source expression by clicking **Override Default** to type in a static connection string. If you want to switch back to the expression, click **Revert to Defaul**. The report server stores the original connection string in case you need to restore it. To use data source expressions, you must use the data source connection information that was originally published in the report. Shared data sources do not support the use of expressions in the connection string.  
   

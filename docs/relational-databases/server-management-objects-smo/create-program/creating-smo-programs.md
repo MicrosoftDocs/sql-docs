@@ -1,4 +1,5 @@
 ---
+description: "Creating SMO Programs"
 title: "Creating SMO Programs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

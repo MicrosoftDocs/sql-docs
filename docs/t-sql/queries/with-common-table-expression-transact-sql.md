@@ -46,7 +46,9 @@ Specifies a temporary named result set, known as a common table expression (CTE)
     ( CTE_query_definition )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression_name*  
 Is a valid identifier for the common table expression. *expression_name* must be different from the name of any other common table expression defined in the same WITH \<common_table_expression> clause, but *expression_name* can be the same as the name of a base table or view. Any reference to *expression_name* in the query uses the common table expression and not the base object.
   
@@ -261,12 +263,12 @@ SalesPersonID SalesYear   TotalSales    SalesQuotaYear SalesQuota  Amt_Above_or_
 -- Create an Employee table.  
 CREATE TABLE dbo.MyEmployees  
 (  
-EmployeeID smallint NOT NULL,  
-FirstName nvarchar(30)  NOT NULL,  
-LastName  nvarchar(40) NOT NULL,  
-Title nvarchar(50) NOT NULL,  
-DeptID smallint NOT NULL,  
-ManagerID int NULL,  
+EmployeeID SMALLINT NOT NULL,  
+FirstName NVARCHAR(30)  NOT NULL,  
+LastName  NVARCHAR(40) NOT NULL,  
+Title NVARCHAR(50) NOT NULL,  
+DeptID SMALLINT NOT NULL,  
+ManagerID INT NULL,  
  CONSTRAINT PK_EmployeeID PRIMARY KEY CLUSTERED (EmployeeID ASC)   
 );  
 -- Populate the table with values.  
@@ -324,20 +326,20 @@ WHERE EmployeeLevel <= 2 ;
   
 ```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
-AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
+AS (SELECT CONVERT(VARCHAR(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
         e.EmployeeID,  
         1,  
-        CONVERT(varchar(255), e.FirstName + ' ' + e.LastName)  
+        CONVERT(VARCHAR(255), e.FirstName + ' ' + e.LastName)  
     FROM dbo.MyEmployees AS e  
     WHERE e.ManagerID IS NULL  
     UNION ALL  
-    SELECT CONVERT(varchar(255), REPLICATE ('|    ' , EmployeeLevel) +  
+    SELECT CONVERT(VARCHAR(255), REPLICATE ('|    ' , EmployeeLevel) +  
         e.FirstName + ' ' + e.LastName),  
         e.Title,  
         e.EmployeeID,  
         EmployeeLevel + 1,  
-        CONVERT (varchar(255), RTRIM(Sort) + '|    ' + FirstName + ' ' +   
+        CONVERT (VARCHAR(255), RTRIM(Sort) + '|    ' + FirstName + ' ' +   
                  LastName)  
     FROM dbo.MyEmployees AS e  
     JOIN DirectReports AS d ON e.ManagerID = d.EmployeeID  
@@ -352,7 +354,7 @@ ORDER BY Sort;
   
 ```sql
 --Creates an infinite loop  
-WITH cte (EmployeeID, ManagerID, Title) as  
+WITH cte (EmployeeID, ManagerID, Title) AS  
 (  
     SELECT EmployeeID, ManagerID, Title  
     FROM dbo.MyEmployees  
@@ -451,7 +453,7 @@ WHERE d.ComponentLevel = 0;
 -- Genealogy table  
 IF OBJECT_ID('dbo.Person','U') IS NOT NULL DROP TABLE dbo.Person;  
 GO  
-CREATE TABLE dbo.Person(ID int, Name varchar(30), Mother int, Father int);  
+CREATE TABLE dbo.Person(ID int, Name VARCHAR(30), Mother INT, Father INT);  
 GO  
 INSERT dbo.Person   
 VALUES(1, 'Sue', NULL, NULL)  
@@ -495,10 +497,10 @@ GO
  The following example shows a pitfall that can occur when using an analytical or aggregate function in the recursive part of a CTE.  
   
 ```sql  
-DECLARE @t1 TABLE (itmID int, itmIDComp int);  
+DECLARE @t1 TABLE (itmID INT, itmIDComp INT);  
 INSERT @t1 VALUES (1,10), (2,10);   
   
-DECLARE @t2 TABLE (itmID int, itmIDComp int);   
+DECLARE @t2 TABLE (itmID INT, itmIDComp INT);   
 INSERT @t2 VALUES (3,10), (4,10);   
   
 WITH vw AS  
@@ -515,7 +517,7 @@ WITH vw AS
  (  
     SELECT t.itmID AS itmIDComp  
            , NULL AS itmID  
-           ,CAST(0 AS bigint) AS N  
+           ,CAST(0 AS BITING) AS N  
            ,1 AS Lvl  
     FROM (SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4) AS t (itmID)   
   

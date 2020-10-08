@@ -1,4 +1,5 @@
 ---
+description: "STR (Transact-SQL)"
 title: "STR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -35,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 STR ( float_expression [ , length [ , decimal ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an expression of approximate numeric (**float**) data type with a decimal point.  
   
@@ -57,7 +60,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## Examples  
  The following example converts an expression that is made up of five digits and a decimal point to a six-position character string. The fractional part of the number is rounded to one decimal place.  
   
-```  
+```sql
 SELECT STR(123.45, 6, 1);  
 GO  
 ```  
@@ -73,7 +76,7 @@ GO
   
  When the expression exceeds the specified length, the string returns `**` for the specified length.  
   
-```  
+```sql
 SELECT STR(123.45, 2, 2);  
 GO  
 ```  
@@ -89,7 +92,7 @@ GO
   
  Even when numeric data is nested within `STR`, the result is character data with the specified format.  
   
-```  
+```sql
 SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  

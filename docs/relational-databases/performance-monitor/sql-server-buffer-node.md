@@ -1,5 +1,6 @@
 ---
 title: "SQL Server:Buffer Node | Microsoft Docs"
+description: Learn about the Buffer Node object, which provides counters to monitor the SQL Server buffer pool page distribution for each NUMA node.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

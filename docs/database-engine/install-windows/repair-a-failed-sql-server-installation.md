@@ -1,4 +1,5 @@
 ---
+description: "Repair a Failed SQL Server Installation"
 title: "Repair a Failed SQL Server Installation | Microsoft Docs"
 deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ""
@@ -75,6 +76,5 @@ Repair operation can be used in the following scenarios:
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [Installation How-to articles](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [Installation How-to articles](/previous-versions/sql/)  
   

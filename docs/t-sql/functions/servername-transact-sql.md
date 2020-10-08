@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;SERVERNAME (Transact-SQL)"
 title: "@@SERVERNAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -27,12 +28,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@SERVERNAME  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar**  
   
 ## Remarks  
@@ -54,7 +56,7 @@ ms.author: vanto
 ## Examples  
  The following example shows using `@@SERVERNAME`.  
   
-```  
+```sql  
 SELECT @@SERVERNAME AS 'Server Name'  
 ```  
   

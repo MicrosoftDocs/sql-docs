@@ -1,4 +1,5 @@
 ---
+description: "STWithin (geometry Data Type)"
 title: "STWithin (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns 1 if a **geometry** instance is completely within another **geometry** i
 .STWithin ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STWithin()` is invoked.  
   

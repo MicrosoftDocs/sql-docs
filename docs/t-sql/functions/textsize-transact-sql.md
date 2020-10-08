@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TEXTSIZE (Transact-SQL)"
 title: "@@TEXTSIZE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,17 +32,19 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@TEXTSIZE  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Examples  
  The following example uses `SELECT` to display the `@@TEXTSIZE` value before and after it is changed with the `SET``TEXTSIZE` statement.  
   
-```  
+```sql
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
 SET TEXTSIZE 0  
 SELECT @@TEXTSIZE AS 'Text Size'  

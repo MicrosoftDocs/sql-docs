@@ -1,5 +1,6 @@
 ---
-title: "CREATE ENDPOINT (Transact-SQL) | Microsoft Docs"
+description: "CREATE ENDPOINT (Transact-SQL)"
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
@@ -29,10 +30,12 @@ helpviewer_keywords:
   - "SERVICE_BROKER option"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
+
 # CREATE ENDPOINT (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates endpoints and defines their properties, including the methods available to client applications. For related permissions information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
@@ -101,7 +104,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *endPointName*  
  Is the assigned name for the endpoint you are creating. Use when updating or deleting the endpoint.  
   
@@ -163,7 +168,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Specifies that the endpoint is to connect using Windows Authentication protocol to authenticate the endpoints. This is the default.  
   
  If you specify an authorization method (NTLM or KERBEROS), that method is always used as the authentication protocol. The default value, NEGOTIATE, causes the endpoint to use the Windows negotiation protocol to choose either NTLM or Kerberos.  
@@ -171,13 +176,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  Specifies that the endpoint is to authenticate the connection using the certificate specified by *certificate_name* to establish identity for authorization. The far endpoint must have a certificate with the public key matching the private key of the specified certificate.  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Specifies that endpoint is to try to connect by using Windows Authentication and, if that attempt fails, to then try using the specified certificate.  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Specifies that endpoint is to try to connect by using the specified certificate and, if that attempt fails, to then try using Windows Authentication.  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  Specifies whether encryption is used in the process. The default is REQUIRED.  
   
  DISABLED  

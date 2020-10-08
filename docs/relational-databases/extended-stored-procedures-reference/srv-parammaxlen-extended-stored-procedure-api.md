@@ -1,5 +1,6 @@
 ---
 title: "srv_parammaxlen (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_parammaxlen returns the maximum data length of a remote stored procedure call parameter.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

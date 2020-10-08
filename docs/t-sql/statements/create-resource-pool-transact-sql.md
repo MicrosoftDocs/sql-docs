@@ -1,4 +1,5 @@
 ---
+description: "CREATE RESOURCE POOL (Transact-SQL)"
 title: "CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE RESOURCE POOL"
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,9 @@ CREATE RESOURCE POOL pool_name
 { NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID }[,...n]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *pool_name*  
 Is the user-defined name for the resource pool. *pool_name* is alphanumeric, can be up to 128 characters, must be unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

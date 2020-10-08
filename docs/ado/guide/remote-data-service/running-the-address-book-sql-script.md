@@ -1,8 +1,9 @@
 ---
+description: "Running the Address Book SQL Script"
 title: "Running the Address Book SQL Script | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -16,7 +17,7 @@ ms.author: jroth
 ---
 # Running the Address Book SQL Script
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](/dotnet/framework/wcf/).  
   
  You must use either the ISQL/Query Analyzer command-line utility or the SQL Server Enterprise Manager to run the included SQL script (Sampleemp.sql) that:  
   
@@ -63,6 +64,4 @@ ms.author: jroth
 7.  After it executes, close the **Query**, **Query Analyzer**, and **Enterprise Manager** windows.  
   
 ## See Also  
- [Running the Address Book Sample Application](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [Running the Address Book Sample Application](./running-the-address-book-sample-application.md)

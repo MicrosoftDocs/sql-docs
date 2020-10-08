@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdynamicsnapshot_job (Transact-SQL)"
 title: "sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,8 +20,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpdynamicsnapshot_job"
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

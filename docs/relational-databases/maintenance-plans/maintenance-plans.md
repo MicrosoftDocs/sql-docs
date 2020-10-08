@@ -57,9 +57,8 @@ ms.author: mikeray
 ## Related Tasks  
  Use the following topics to get started with maintenance plans.  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Configure the **Agent XPs** server configuration option to enable the SQL Server Agent extended stored procedures.|[Agent XPs Server Configuration Option](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Describes how to create a maintenance plan by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Create a Maintenance Plan](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Describes how to create a maintenance plan by using the Maintenance Plan Design Surface.|[Create a Maintenance Plan &#40;Maintenance Plan Design Surface&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

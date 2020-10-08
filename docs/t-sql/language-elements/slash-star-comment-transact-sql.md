@@ -1,4 +1,5 @@
 ---
+description: "Slash Star (Block Comment) (Transact-SQL)"
 title: "Slash Star (Block Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
@@ -40,7 +41,9 @@ text_of_comment
 */  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *text_of_comment*  
  Is the text of the comment. This is one or more character strings.  
   

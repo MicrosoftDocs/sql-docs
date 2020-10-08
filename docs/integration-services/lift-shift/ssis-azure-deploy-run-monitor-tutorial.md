@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Tutorial: Deploy and run a SQL Server Integration Services (SSIS) package in Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This tutorial shows you how to deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog in Azure SQL Database, run a package in the Azure-SSIS Integration Runtime, and monitor the running package.
@@ -145,7 +145,7 @@ if ($folders.Count -gt 0)
 {
     foreach ($filefolder in $folders)
     {
-        Write-Host "Creating Folder " $filefolder.Name " ..."
+        Write-Host "Creating Folder " + $filefolder.Name + " ..."
 
         # Create a new folder
         $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
@@ -157,7 +157,7 @@ if ($folders.Count -gt 0)
             foreach($projectfile in $projects)
             {
                 $projectfilename = $projectfile.Name.Replace(".ispac", "")
-                Write-Host "Deploying " $projectfilename " project ..."
+                Write-Host "Deploying " + $projectfilename + " project ..."
 
                 # Read the project file, and deploy it to the folder
                 [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)

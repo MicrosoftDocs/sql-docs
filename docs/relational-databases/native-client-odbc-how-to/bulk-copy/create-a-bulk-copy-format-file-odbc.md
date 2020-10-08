@@ -1,4 +1,5 @@
 ---
+description: "Create a Bulk Copy Format File (ODBC)"
 title: "Create a Bulk Copy Format File (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

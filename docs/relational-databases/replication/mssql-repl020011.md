@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_REPL020011"
 title: "MSSQL_REPL020011 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|20011|  

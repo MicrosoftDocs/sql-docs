@@ -1,5 +1,6 @@
 ---
-title: "PDO::prepare | Microsoft Docs"
+title: "PDO::prepare"
+description: "API reference for the PDO::prepare function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "01/31/2020"
 ms.prod: sql

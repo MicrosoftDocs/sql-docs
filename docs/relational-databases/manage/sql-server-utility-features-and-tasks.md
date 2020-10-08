@@ -34,9 +34,8 @@ ms.author: mikeray
 ## Related Tasks  
  Use the following topics to get started with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utility.  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Describes considerations to configure a server to run utility and non-utility collection sets on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considerations for Running Utility and non-Utility Collection Sets on the Same Instance of SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Describes how to create a SQL Server utility control point.|[Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Describes how to connect to a SQL Server Utility.|[Connect to a SQL Server Utility](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  
@@ -52,8 +51,7 @@ ms.author: mikeray
 |Describes how to change the proxy account for the utility data collector on a managed instance of SQL Server.|[Change the Proxy Account for the Utility Collection Set on a Managed Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Describes how to move a UCP from one instance of SQL Server to another.|[Move a UCP from One Instance of SQL Server to Another &#40;SQL Server Utility&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Describes how to remove a UCP.|[Remove a Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|Describes how to troubleshoot the SQL server utility.|[Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|Describes how to troubleshoot the SQL server utility.|[Troubleshoot the SQL Server Utility](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))|  
 |Describes how to troubleshoot SQL Server resource health.|[Troubleshoot SQL Server Resource Health &#40;SQL Server Utility&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Links to UtilityExplorer F1 Help topics.|[Utility Explorer F1 Help](../../relational-databases/manage/utility-explorer-f1-help.md)|  
-  
   

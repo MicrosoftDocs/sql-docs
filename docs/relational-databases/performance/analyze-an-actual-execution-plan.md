@@ -1,5 +1,6 @@
 ---
 title: "Analyze an Actual Execution Plan | Microsoft Docs"
+description: Learn how to analyze actual graphical execution plans, which contain runtime information, by using SQL Server Management Studio Plan Analysis feature.
 ms.custom: ""
 ms.date: 10/11/2019
 ms.prod: sql

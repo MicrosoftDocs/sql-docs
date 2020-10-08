@@ -1,4 +1,5 @@
 ---
+description: "Web Synchronization for Merge Replication"
 title: "Web Synchronization for Merge Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ErrorControl Property (SqlService Class)"
 title: "ErrorControl Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ErrorControl property"
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ErrorControl Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

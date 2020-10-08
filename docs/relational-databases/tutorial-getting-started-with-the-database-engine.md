@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Getting Started with the Database Engine"
 title: "Tutorial: Getting Started with the Database Engine"
 ms.custom: seo-dt-2019
 ms.date: "06/21/2017"
@@ -42,8 +43,6 @@ Your system must have the following installed to use this tutorial:
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To install [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## See Also  
-[Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+[Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
   
   
-  
-

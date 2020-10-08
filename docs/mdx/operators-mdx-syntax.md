@@ -1,4 +1,5 @@
 ---
+description: "Operators (MDX Syntax)"
 title: "Operators (MDX Syntax) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

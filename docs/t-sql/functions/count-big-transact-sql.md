@@ -1,4 +1,5 @@
 ---
+description: "COUNT_BIG (Transact-SQL)"
 title: "COUNT_BIG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -41,7 +42,9 @@ COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )
 COUNT_BIG ( [ ALL ] { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 ALL  
 Applies the aggregate function to all values. ALL serves as the default.
   

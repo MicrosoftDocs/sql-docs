@@ -1,4 +1,5 @@
 ---
+description: "Metadata - Parameter and Result"
 title: "Parameter and Result Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

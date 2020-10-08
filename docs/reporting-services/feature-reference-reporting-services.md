@@ -1,5 +1,6 @@
 ---
 title: "Feature Reference (Reporting Services) | Microsoft Docs"
+description: Learn about SQL Server Reporting Services tools and applications that you can use to create, manage, and view reports.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -18,7 +18,7 @@ Describes how data backup and restore works for Parallel Data Warehouse (PDW). B
 
 A PDW *database backup* is a copy of an appliance database, stored in a format so that it can be used to restore the original database to an appliance.  
   
-A PDW database backup is created with the [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md) t-sql statement and formatted for use with the [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
+A PDW database backup is created with the [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) t-sql statement and formatted for use with the [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -98,7 +98,7 @@ When restoring data, the appliance detects the number of Compute nodes on the so
   
 1.  The database backup to be restored is available on a Windows file share on a non-appliance backup server. For best performance, this server is connected to the appliance InfiniBand network.  
   
-2.  User submits a [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md) tsql statement to the Control node.  
+2.  User submits a [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) tsql statement to the Control node.  
   
     -   The restore is either a full restore or a header restore. The full restore restores a full backup and then optionally restores a differential backup.  
   
@@ -127,8 +127,8 @@ After the redistribution, each Compute node will contain less actual data and mo
 |Backup and Restore Task|Description|  
 |---------------------------|---------------|  
 |Prepare a server as a backup server.|[Acquire and configure a backup server](acquire-and-configure-backup-server.md)|  
-|Backup a database.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restore a database.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Backup a database.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
+|Restore a database.|[RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
 
 <!-- MISSING LINKS
 

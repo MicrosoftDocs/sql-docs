@@ -1,5 +1,6 @@
 ---
 title: "Monitor Disk Usage | Microsoft Docs"
+description: Monitoring disk activity for SQL Server involves monitoring disk I/O and detecting excess paging, and isolating disk activity that SQL Server creates.
 ms.custom: ""
 ms.date: 03/14/2017
 ms.prod: sql

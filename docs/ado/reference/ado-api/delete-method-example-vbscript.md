@@ -1,8 +1,9 @@
 ---
+description: "Delete Method Example (VBScript)"
 title: "Delete Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

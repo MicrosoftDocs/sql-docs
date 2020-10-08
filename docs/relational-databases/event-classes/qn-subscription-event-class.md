@@ -1,4 +1,5 @@
 ---
+description: "QN:Subscription Event Class"
 title: "QN:Subscription Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

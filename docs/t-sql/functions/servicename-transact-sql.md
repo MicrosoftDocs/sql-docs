@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;SERVICENAME (Transact-SQL)"
 title: "@@SERVICENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -30,11 +31,13 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@SERVICENAME  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar**  
   
 ## Remarks  
@@ -43,7 +46,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ## Examples  
  The following example shows using `@@SERVICENAME`.  
   
-```  
+```sql  
 SELECT @@SERVICENAME AS 'Service Name';  
 ```  
   

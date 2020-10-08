@@ -6,7 +6,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "FileTables [SQL Server], Availability Groups"
   - "FILESTREAM [SQL Server], Availability Groups"
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Use FILESTREAM and FileTable with Always On availability groups
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   This topic contains information about the using the FILESTREAM and FileTable features with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

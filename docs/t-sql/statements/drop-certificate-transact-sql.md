@@ -1,4 +1,5 @@
 ---
+description: "DROP CERTIFICATE (Transact-SQL)"
 title: "DROP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/18/2018"
@@ -43,7 +44,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 DROP CERTIFICATE certificate_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_name*  
  Is the unique name by which the certificate is known in the database.  
   
@@ -56,7 +59,7 @@ DROP CERTIFICATE certificate_name
 ## Examples  
  The following example drops the certificate `Shipping04` from the `AdventureWorks` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP CERTIFICATE Shipping04;  
 ```  
@@ -64,7 +67,7 @@ DROP CERTIFICATE Shipping04;
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example drops the certificate `Shipping04`.  
   
-```
+```sql
 USE master;  
 DROP CERTIFICATE Shipping04;  
 ```  

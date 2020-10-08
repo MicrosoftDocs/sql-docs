@@ -1,4 +1,5 @@
 ---
+description: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2020"
@@ -40,9 +41,9 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
-This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in Azure SQL Data Warehouse for developing solutions. The article also provides code examples.
+This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for developing solutions. The article also provides code examples.
 
 A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables.   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan automatching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This capability allows data engineers to implement materialized views as a mechanism for improving query response time, without having to change queries.  
   
@@ -66,7 +67,9 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 <select_statement> ::=
     SELECT select_criteria
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments
 
@@ -104,6 +107,11 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
 
 A materialized view in Azure data warehouse is similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](/sql/relational-databases/views/create-indexed-views) for details) except that a materialized view supports aggregate functions.   
 
+>[!Note]
+>Although CREATE MATERIALIZED VIEW does not support COUNT, DISTINCT, COUNT(DISTINCT expression), or COUNT_BIG (DISTINCT expression), SELECT queries with these functions can still benefit from materialized views for faster performance as the Synapse SQL optimizer can automatically re-write those aggregations in the user query to match existing materialized views.  For details, check this article's example section. 
+
+APPROX_COUNT_DISTINCT is not supported in CREATE MATERIALIZED VIEW AS SELECT.
+
 Only CLUSTERED COLUMNSTORE INDEX is supported by materialized view. 
 
 A materialized view cannot reference other views.  
@@ -124,7 +132,7 @@ ALTER TABLE SWITCH is not supported on tables that are referenced in materialize
 |STDEV(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
 | | | |
 
-Once created, materialized views are visible within SQL Server Management Studio under the views folder of the Azure SQL Data Warehouse instance.
+Once created, materialized views are visible within SQL Server Management Studio under the views folder of the [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] instance.
 
 Users can run [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) and [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) to determine the space being consumed by a materialized view.  
 
@@ -136,7 +144,51 @@ To find out if a SQL statement can benefit from a new materialized view, run the
 
 ## Permissions
 
-Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created. 
+Requires 1) REFERENCES and CREATE VIEW permission OR 2) CONTROL permission on the schema in which the view is being created. 
+
+## Example
+A. This example shows how Synapse SQL optimizer automatically uses materialized views to execute a query for better performance even when the query uses functions un-supported in CREATE MATERIALIZED VIEW, such as COUNT(DISTINCT expression). A query used to take multiple seconds to complete now finishes in sub-second without any change in the user query.   
+
+``` sql 
+
+-- Create a table with ~536 million rows
+create table t(a int not null, b int not null, c int not null) with (distribution=hash(a), clustered columnstore index);
+
+insert into t values(1,1,1);
+
+declare @p int =1;
+while (@P < 30)
+    begin
+    insert into t select a+1,b+2,c+3 from t;  
+    select @p +=1;
+end
+
+-- A SELECT query with COUNT_BIG (DISTINCT expression) took multiple seconds to complete and it reads data directly from the base table a. 
+select a, count_big(distinct b) from t group by a;
+
+-- Create two materialized views, not using COUNT_BIG(DISTINCT expression).
+create materialized view V1 with(distribution=hash(a)) as select a, b from dbo.t group by a, b;
+
+-- Clear all cache.
+
+DBCC DROPCLEANBUFFERS;
+DBCC freeproccache;
+
+-- Check the estimated execution plan in SQL Server Management Studio.  It shows the SELECT query is first step (GET operator) is to read data from the materialized view V1, not from base table a.
+select a, count_big(distinct b) from t group by a;
+
+-- Now execute this SELECT query.  This time it took sub-second to complete because Synapse SQL engine automatically matches the query with materialized view V1 and uses it for faster query execution.  There was no change in the user query.
+
+DECLARE @timerstart datetime2, @timerend datetime2;
+SET @timerstart = sysdatetime();
+
+select a, count_big(distinct b) from t group by a;
+
+SET @timerend = sysdatetime()
+select DATEDIFF(ms,@timerstart,@timerend);
+
+```
+
   
 ## See also
 
@@ -148,6 +200,6 @@ Requires CREATE VIEW permission in the database and ALTER permission on the sche
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[System views supported in Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[T-SQL statements supported in Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

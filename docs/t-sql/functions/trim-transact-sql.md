@@ -1,4 +1,5 @@
 ---
+description: "TRIM (Transact-SQL)"
 title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2019"
@@ -27,15 +28,17 @@ Removes the space character `char(32)` or other specified characters from the st
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string )
 ```
 
-```
--- Syntax for Azure SQL Data Warehouse
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

@@ -1,4 +1,5 @@
 ---
+description: "Shortcut Keys (MySQLToSQL)"
 title: "Shortcut Keys (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 580d72a3-9be3-4f19-a9b3-5b41cc84b589
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Shortcut Keys (MySQLToSQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

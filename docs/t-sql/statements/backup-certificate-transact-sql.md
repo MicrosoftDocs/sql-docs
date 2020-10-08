@@ -1,4 +1,5 @@
 ---
+description: "BACKUP CERTIFICATE (Transact-SQL)"
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/16/2020"
@@ -65,7 +66,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
       )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certname*  
  Is the name of the certificate to backup.
 

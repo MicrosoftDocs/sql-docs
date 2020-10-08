@@ -1,4 +1,5 @@
 ---
+description: "Bulk Copy Data from Program Variables (ODBC)"
 title: "Bulk Copy Data from Program Variables (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

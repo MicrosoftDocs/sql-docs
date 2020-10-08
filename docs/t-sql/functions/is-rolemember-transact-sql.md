@@ -1,4 +1,5 @@
 ---
+description: "IS_ROLEMEMBER (Transact-SQL)"
 title: "IS_ROLEMEMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IS_ROLEMEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Indicates whether a specified database principle is a member of the specified database role.  
   
@@ -31,11 +32,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
-  
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *role* **'**  
  Is the name of the database role that is being checked. *role* is **sysname**.  
   
@@ -79,7 +81,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## Examples  
  The following example indicates whether the current user is a member of the `db_datareader` fixed database role.  
   
-```  
+```sql  
 IF IS_ROLEMEMBER ('db_datareader') = 1  
    print 'Current user is a member of the db_datareader role'  
 ELSE IF IS_ROLEMEMBER ('db_datareader') = 0  

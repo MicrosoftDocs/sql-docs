@@ -1,22 +1,26 @@
 ---
 title: R language extension
-description: Learn about R code execution and built-in R libraries in SQL Server R Services or SQL Server Machine Learning Services.
+description: Learn about the R extension for running external R scripts with SQL Server Machine Learning Services and SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 11/04/2019
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# R language extension in SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+# R language extension in SQL Server Machine Learning Services
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-The R extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds an R execution environment, base R distribution with standard libraries and tools, and the Microsoft R libraries: [RevoScaleR](../r/ref-r-revoscaler.md) for analytics at scale, [MicrosoftML](../r/ref-r-microsoftml.md) for machine learning algorithms, and other libraries for accessing data or R code in SQL Server.
+This article describes the R extension for running external Python scripts with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md). The extension adds:
 
-R integration is available in [SQL Server R Services](../r/sql-server-r-services.md) and [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+- An R execution environment
+- Base R distribution with standard libraries and tools
+- Microsoft R libraries:
+  - [RevoScaleR](../r/ref-r-revoscaler.md) for analytics at scale
+  - [MicrosoftML](../r/ref-r-microsoftml.md) for machine learning algorithms
+  - Other libraries for accessing data or R code in SQL Server
 
 ## R components
 

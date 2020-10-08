@@ -1,4 +1,5 @@
 ---
+description: "Using Always Encrypted with secure enclaves with the JDBC Driver"
 title: "Using Always Encrypted with secure enclaves with the JDBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2020"

@@ -5,7 +5,7 @@ description: This article describes features supported by the various editions o
 ms.custom: 
    - seo-lt-2019
    - sqlfreshmay19
-ms.date: "12/13/2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -47,7 +47,7 @@ For information about other versions, see:
 
 * [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md).  
-* [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
+* [SQL Server 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014).
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -223,7 +223,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
 |Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |Transactional replication to Azure|Yes|Yes|No|No|No|   
-|Transactional replication updateable subscription|Yes|No|No|No|No|  
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|  
   
 ##  <a name="SSMS"></a> Management Tools  
   

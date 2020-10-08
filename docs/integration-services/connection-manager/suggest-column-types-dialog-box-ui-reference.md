@@ -1,4 +1,5 @@
 ---
+description: "Suggest Column Types Dialog Box UI Reference"
 title: "Suggest Column Types Dialog Box UI Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Suggest Column Types Dialog Box UI Reference
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Suggest Column Types** dialog box to identify the data type and length of columns in a Flat File Connection Manager based on a sampling of the file content.  

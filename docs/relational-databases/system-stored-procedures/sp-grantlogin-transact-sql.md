@@ -1,4 +1,5 @@
 ---
+description: "sp_grantlogin (Transact-SQL)"
 title: "sp_grantlogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

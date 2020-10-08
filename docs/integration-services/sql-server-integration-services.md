@@ -23,11 +23,11 @@ ms.author: chugu
 ---
 # SQL Server Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
+SQL Server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can extract and transform data from a wide variety of sources such as XML data files, flat files, and relational data sources, and then load the data into one or more destinations.
 
@@ -40,7 +40,7 @@ You can use the graphical [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.
 For info about installing SQL Server Integration Services with SQL Server, and about additional downloads you may want or need, see [Install Integration Services](install-windows/install-integration-services.md).
 
 ##  ![info_tip](../sql-server/media/info-tip.png) Resources
--   [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [Get help in the SSIS forum](https://docs.microsoft.com/answers/topics/sql-server-integration-services.html)
 -   [Get help on Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
 -   [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)

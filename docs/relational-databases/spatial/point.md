@@ -1,4 +1,5 @@
 ---
+description: "Point"
 title: "Point | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

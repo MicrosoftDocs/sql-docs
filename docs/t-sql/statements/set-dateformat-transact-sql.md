@@ -1,4 +1,5 @@
 ---
+description: "SET DATEFORMAT (Transact-SQL)"
 title: "SET DATEFORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,8 +25,8 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEFORMAT"
   - "dateparts [SQL Server], dateformat"
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFORMAT (Transact-SQL)
@@ -43,7 +44,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SET DATEFORMAT { format | @format_var }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *format* | **@**_format_var_  
  Is the order of the date parts. Valid parameters are **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Can be either Unicode or double-byte character sets (DBCS) converted to Unicode. The U.S. English default is **mdy**. For the default DATEFORMAT of all support languages, see [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   

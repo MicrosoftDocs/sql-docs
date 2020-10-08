@@ -1,4 +1,5 @@
 ---
+description: "SCHEMA_NAME (Transact-SQL)"
 title: "SCHEMA_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -29,11 +30,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SCHEMA_NAME ( [ schema_id ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 |Term|Definition|  
 |----------|----------------|  
@@ -51,13 +54,13 @@ SCHEMA_NAME ( [ schema_id ] )
   
 ### A. Returning the name of the default schema of the caller  
   
-```  
+```sql
 SELECT SCHEMA_NAME();  
 ```  
   
 ### B. Returning the name of a schema by using an ID  
   
-```  
+```sql
 SELECT SCHEMA_NAME(1);  
 ```  
   

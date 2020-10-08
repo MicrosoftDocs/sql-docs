@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Reports: Map Reports (Report Builder) | Microsoft Docs"
 description: Explore troubleshooting ideas for situations that can result when you customize, add a layer, or publish a report with a map in Report Builder.
-ms.date: 01/17/2018
+ms.date: 07/22/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -203,6 +203,6 @@ ms.author: maggies
   
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Troubleshoot Report Builder](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [Troubleshoot Report Builder](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

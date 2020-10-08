@@ -1,4 +1,5 @@
 ---
+description: "Developing Custom Objects for Integration Services"
 title: "Developing Custom Objects for Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Developing Custom Objects for Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:  
@@ -106,7 +107,7 @@ ms.author: chugu
   
 ## External Resources  
   
--   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662), on blogs.msdn.com.  
+-   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://docs.microsoft.com/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references), on blogs.msdn.com.  
   
 ## See Also  
  [Persisting Custom Objects](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   

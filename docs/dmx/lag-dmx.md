@@ -1,4 +1,5 @@
 ---
+description: "Lag (DMX)"
 title: "Lag (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Lag (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the time slice between the date of the current case and the last date of the training set.  
   

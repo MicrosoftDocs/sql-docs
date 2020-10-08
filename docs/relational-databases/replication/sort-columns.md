@@ -1,4 +1,5 @@
 ---
+description: "Sort Columns"
 title: "Sort Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

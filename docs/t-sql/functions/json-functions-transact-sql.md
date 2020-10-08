@@ -1,4 +1,5 @@
 ---
+description: "JSON Functions (Transact-SQL)"
 title: "JSON Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020
@@ -15,7 +16,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 ---
 # JSON Functions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Use the functions described on the pages in this section to validate or change JSON text or to extract simple or complex values.  
   

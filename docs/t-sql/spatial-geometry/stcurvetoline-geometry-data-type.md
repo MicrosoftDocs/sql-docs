@@ -1,4 +1,5 @@
 ---
+description: "STCurveToLine (geometry Data Type)"
 title: "STCurveToLine (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -27,7 +28,9 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 .STCurveToLine ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  
   
  CLR return type: **SqlGeometry**  

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_index_keywords (Transact-SQL)"
 title: "sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

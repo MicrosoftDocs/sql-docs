@@ -1,4 +1,5 @@
 ---
+description: "SQL to C: Character"
 title: "SQL to C: Character | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2019"

@@ -77,6 +77,10 @@ landingContent:
             url: /azure/azure-sql/managed-instance/machine-learning-services-overview
           - text: Key differences between ML in Azure SQL Managed Instance and SQL Server
             url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy and make predictions with an ONNX model in Azure SQL Managed Instance
+            url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
 
   - title: Azure SQL Database Edge
     linkLists:
@@ -89,21 +93,20 @@ landingContent:
           - text: Deploy and make predictions with an ONNX model in SQL Database Edge
             url: /azure/sql-database-edge/deploy-onnx
 
-
   - title: Azure Data Studio ML extension
     linkLists:
       - linkListType: overview
         links:
           - text: What is the Machine Learning extension for Azure Data Studio?
-            url: ../azure-data-studio/machine-learning-extension.md
+            url: ../azure-data-studio/extensions/machine-learning-extension.md
       - linkListType: how-to-guide
         links:
           - text: Manage packages in database
-            url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+            url: ../azure-data-studio/extensions/machine-learning-extension-manage-packages.md
           - text: Make predictions
-            url: ../azure-data-studio/machine-learning-extension-predictions.md
+            url: ../azure-data-studio/extensions/machine-learning-extension-predictions.md
           - text: Import or view models
-            url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+            url: ../azure-data-studio/extensions/machine-learning-extension-import-view-models.md
 
   - title: SQL Server Big Data Clusters
     linkLists:

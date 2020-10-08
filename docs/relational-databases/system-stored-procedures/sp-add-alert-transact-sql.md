@@ -1,4 +1,5 @@
 ---
+description: "sp_add_alert (Transact-SQL)"
 title: "sp_add_alert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -56,7 +56,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], during service 
 
 Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use the following guidelines when you configure the **max degree of parallelism** server configuration value:
 
-||||
+|Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
 |Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
 |Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
@@ -69,7 +69,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use the followi
   
 From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the **max degree of parallelism** server configuration value:
 
-||||
+|Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
 |Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
 |Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|

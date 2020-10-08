@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_REQUEST_ID (Transact-SQL)"
 title: "CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -27,10 +28,12 @@ This function returns the ID of the current request within the current session.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_REQUEST_ID()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **smallint**
   

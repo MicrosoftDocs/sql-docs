@@ -1,4 +1,5 @@
 ---
+description: "updateObject Method (int, java.lang.Object, int)"
 title: "updateObject Method (int, java.lang.Object, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

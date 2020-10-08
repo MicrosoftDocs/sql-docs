@@ -1,4 +1,5 @@
 ---
+description: "sys.remote_service_bindings (Transact-SQL)"
 title: "sys.remote_service_bindings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

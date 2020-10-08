@@ -64,11 +64,11 @@ You can use the `Application.Configuration_PopulateLargeSaleTable` procedure to 
 
 #### Name
 
-    Application.Configuration_PopulateLargeSaleTable
+`Application.Configuration_PopulateLargeSaleTable`
 
 #### Parameters
 
-  `@EstimatedRowsFor2012` **bigint** (with a default of 12000000)
+`@EstimatedRowsFor2012` **bigint** (with a default of 12000000)
 
 #### Result
 

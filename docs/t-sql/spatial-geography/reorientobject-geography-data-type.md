@@ -1,4 +1,5 @@
 ---
+description: "ReorientObject (geography Data Type)"
 title: "ReorientObject (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -27,12 +28,13 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .ReorientObject (geography)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _geography_  
 Is another **geography** instance on which `ReorientObject()` is invoked.  
   

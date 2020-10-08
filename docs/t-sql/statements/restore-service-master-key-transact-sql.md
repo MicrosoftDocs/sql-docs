@@ -1,4 +1,5 @@
 ---
+description: "RESTORE SERVICE MASTER KEY (Transact-SQL)"
 title: "RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -33,13 +34,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password' [FORCE]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE **='**_path\_to\_file_**'**  
  Specifies the complete path, including file name, to the stored service master key. *path_to_file* can be a local path or a UNC path to a network location.  
   
@@ -65,7 +67,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ## Examples  
  The following example restores the service master key from a backup file.  
   
-```  
+```sql  
 RESTORE SERVICE MASTER KEY   
     FROM FILE = 'c:\temp_backups\keys\service_master_key'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  

@@ -1,6 +1,6 @@
 ---
 title: "Monitor availability groups using Transact-SQL (T-SQL)"
-description: "A description of how to monitor Always On availability groups using Transact-SQL (T-SQL)."
+description: "Use Transact-SQL SELECT statements to monitor Always On availability groups and their replicas and databases."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql

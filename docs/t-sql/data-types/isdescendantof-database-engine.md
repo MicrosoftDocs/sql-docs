@@ -1,4 +1,5 @@
 ---
+description: "IsDescendantOf (Database Engine)"
 title: "IsDescendantOf (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -25,17 +26,19 @@ Returns true if *this* is a descendant of parent.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 child. IsDescendantOf ( parent )  
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *parent*  
 The **hierarchyid** node for which the IsDescendantOf test should be performed.
   

@@ -1,4 +1,5 @@
 ---
+description: "MSReportServer_Instance Class"
 title: "MSReportServer_Instance Class | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services

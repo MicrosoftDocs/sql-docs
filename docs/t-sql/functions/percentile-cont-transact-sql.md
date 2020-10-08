@@ -1,4 +1,5 @@
 ---
+description: "PERCENTILE_CONT (Transact-SQL)"
 title: "PERCENTILE_CONT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
@@ -21,7 +22,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Calculates a percentile based on a continuous distribution of the column value in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The result is interpolated and might not be equal to any of the specific values in the column.  
   
@@ -35,7 +36,9 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_literal*  
  The percentile to compute. The value must range between 0.0 and 1.0.  
   
@@ -61,7 +64,7 @@ PERCENTILE_CONT ( numeric_literal )
 ### A. Basic syntax example  
  The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
   
 SELECT DISTINCT Name AS DepartmentName  
@@ -91,7 +94,7 @@ Human Resources        17.427850    16.5865
 ### B. Basic syntax example  
  The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT DepartmentName  
@@ -99,8 +102,7 @@ SELECT DISTINCT DepartmentName
     OVER (PARTITION BY DepartmentName) AS MedianCont  
 ,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY BaseRate)  
     OVER (PARTITION BY DepartmentName) AS MedianDisc  
-FROM dbo.DimEmployee;  
-  
+FROM dbo.DimEmployee; 
 ```  
   
  Here is a partial result set.  

@@ -1,4 +1,5 @@
 ---
+description: "setLong Method (SQLServerCallableStatement)"
 title: "setLong Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

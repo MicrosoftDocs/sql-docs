@@ -1,4 +1,5 @@
 ---
+description: "MSReportServer_ConfigurationSetting Members"
 title: "MSReportServer_ConfigurationSetting Members | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -24,7 +25,7 @@ ms.author: maggies
   
 ## Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|Returns the connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|Specifies the login account used by the report server to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
@@ -54,7 +55,7 @@ ms.author: maggies
   
 ## Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|Backs up the encryption key for the instance. The encryption key is stored encrypted with a password.|  
 |[CreateSSLCertificateBinding Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|Creates a TLS/SSL Certificate binding.|  

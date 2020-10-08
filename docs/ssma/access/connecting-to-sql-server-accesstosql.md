@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server, connecting to"
   - "SQL Server, reconnecting"
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Connecting to SQL Server (AccessToSQL)
 To migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must connect to the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When you connect, SSMA obtains metadata about the databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and displays database metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer. SSMA stores information about which instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you are connected to, but does not store passwords.  
@@ -89,9 +89,8 @@ It is allowed to connect/reconnect to higher versions of SQL Server.
   
 4.  Higher version compatibility is not valid for SQL Azure.  
   
-||||||||
+|PROJECT TYPE vs. TARGET SERVER VERSION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
 |-|-|-|-|-|-|-|
-|**PROJECT TYPE Vs TARGET SERVER VERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Yes|Yes|Yes|Yes||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Yes|Yes|Yes||

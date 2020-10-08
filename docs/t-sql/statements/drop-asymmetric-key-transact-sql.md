@@ -1,4 +1,5 @@
 ---
+description: "DROP ASYMMETRIC KEY (Transact-SQL)"
 title: "DROP ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,12 +34,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *key_name*  
  Is the name of the asymmetric key to be dropped from the database.  
   
@@ -58,7 +60,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
 ## Examples  
  The following example removes the asymmetric key `MirandaXAsymKey6` from the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  

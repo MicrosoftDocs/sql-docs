@@ -1,8 +1,9 @@
 ---
+description: "ADO MD Collections"
 title: "ADO MD Collections | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,21 +17,21 @@ ms.author: jroth
 ---
 # ADO MD Collections
 
-|||  
+|Collection|Description|  
 |-|-|  
-|[Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contains the **Axis** objects that define a cellset.|  
-|[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Contains the **CubeDef** objects that represent a cube from a multidimensional catalog.|  
-|[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Contains the **Dimension** objects that make up a cube.|  
-|[Hierarchies](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Contains the set **Hierarchy** objects from a dimension.|  
-|[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Contains the **Level** objects that make up a hierarchy.|  
-|[Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Contains the **Member** objects from a level or a position along an axis.|  
-|[Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Contains the **Position** objects that define a point on an axis.|  
+|[Axes](./axes-collection-ado-md.md)|Contains the **Axis** objects that define a cellset.|  
+|[CubeDefs](./cubedef-object-ado-md.md)|Contains the **CubeDef** objects that represent a cube from a multidimensional catalog.|  
+|[Dimensions](./dimension-object-ado-md.md)|Contains the **Dimension** objects that make up a cube.|  
+|[Hierarchies](./hierarchy-object-ado-md.md)|Contains the set **Hierarchy** objects from a dimension.|  
+|[Levels](./level-object-ado-md.md)|Contains the **Level** objects that make up a hierarchy.|  
+|[Members](./members-collection-ado-md.md)|Contains the **Member** objects from a level or a position along an axis.|  
+|[Positions](./positions-collection-ado-md.md)|Contains the **Position** objects that define a point on an axis.|  
   
 ## See Also  
- [ADO MD API Reference](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD Code Examples](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD Enumerated Constants](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD Methods](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [ADO MD Object Model](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO MD Objects](../../../ado/reference/ado-md-api/ado-md-objects.md)   
- [ADO MD Properties](../../../ado/reference/ado-md-api/ado-md-properties.md)
+ [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15)   
+ [ADO MD Code Examples](./ado-md-code-examples.md)   
+ [ADO MD Enumerated Constants](./ado-md-enumerated-constants.md)   
+ [ADO MD Methods](./ado-md-methods.md)   
+ [ADO MD Object Model](./ado-md-object-model.md)   
+ [ADO MD Objects](./ado-md-objects.md)   
+ [ADO MD Properties](./ado-md-properties.md)

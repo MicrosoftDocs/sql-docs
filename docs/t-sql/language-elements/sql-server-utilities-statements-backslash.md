@@ -1,4 +1,5 @@
 ---
+description: "Backslash (Line Continuation) (Transact-SQL)"
 title: "Backslash (Line Continuation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2019"
@@ -44,7 +45,9 @@ ms.author: jroth
 <continued section of string>  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<first section of string>  
  Is the start of a string.  
   

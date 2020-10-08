@@ -1,6 +1,6 @@
 ---
-title: "IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs"
-description: "IRowsetFastLoad::InsertRow (OLE DB)"
+title: "IRowsetFastLoad::InsertRow (OLE DB driver) | Microsoft Docs"
+description: Learn how the IRowsetFastLoad::InsertRow method adds a row to the bulk copy rowset in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,8 +13,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "InsertRow method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ HRESULT InsertRow(
  The handle of the accessor defining the row data for bulk copy. The accessor referenced is a row accessor, binding consumer-owned memory containing data values.  
   
  *pData*[in]  
- A pointer to the consumer-owned memory containing data values. For more information, see [DBBINDING Structures](https://go.microsoft.com/fwlink/?LinkId=65955).  
+ A pointer to the consumer-owned memory containing data values. For more information, see [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).  
   
 ## Return Code Values  
  S_OK  
@@ -70,5 +70,4 @@ HRESULT InsertRow(
   
 ## See Also  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
   

@@ -10,7 +10,7 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server development partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 For support developing SQL Server database solutions, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with development solutions for Microsoft SQL Server.
 
 ## Our development partners

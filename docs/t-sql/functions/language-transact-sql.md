@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;LANGUAGE (Transact-SQL)"
 title: "@@LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,11 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LANGUAGE  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar**  
   
 ## Remarks  
@@ -44,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
  The following example returns the language for the current session.  
   
-```  
+```sql  
 SELECT @@LANGUAGE AS 'Language Name';  
 ```  
   

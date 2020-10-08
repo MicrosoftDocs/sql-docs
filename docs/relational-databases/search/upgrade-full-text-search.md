@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Full-Text Search"
 title: "Upgrade Full-Text Search | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

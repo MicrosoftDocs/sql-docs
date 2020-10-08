@@ -1,4 +1,5 @@
 ---
+description: "SIGN (Transact-SQL)"
 title: "SIGN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -34,12 +35,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SIGN ( numeric_expression )  
 ```  
   
 
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   
@@ -56,8 +59,8 @@ SIGN ( numeric_expression )
 ## Examples  
  The following example returns the SIGN values of numbers from -1 to 1.  
   
-```  
-DECLARE @value real  
+```sql  
+DECLARE @value REAL  
 SET @value = -1  
 WHILE @value < 2  
    BEGIN  
@@ -94,7 +97,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the SIGN values of three numbers.  
   
-```  
+```sql  
 SELECT SIGN(-125), SIGN(0), SIGN(564);  
 ```  
   

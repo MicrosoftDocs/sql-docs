@@ -1,4 +1,5 @@
 ---
+description: "sp_procoption (Transact-SQL)"
 title: "sp_procoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_procoption"
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

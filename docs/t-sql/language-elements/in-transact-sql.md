@@ -1,4 +1,5 @@
 ---
+description: "IN (Transact-SQL)"
 title: "IN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
@@ -39,7 +40,9 @@ test_expression [ NOT ] IN
     )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *test_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   

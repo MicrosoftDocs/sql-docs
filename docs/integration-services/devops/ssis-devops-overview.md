@@ -89,7 +89,7 @@ Type of the destination. Currently SSIS Deploy task supports two types:
 
 #### Destination server
 
-Name of destination SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Database managed instance. This property is only visible when destination type is SSISDB.
+Name of destination SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
 
 #### Destination path
 
@@ -111,7 +111,7 @@ Authentication type to access the specified destination server. This property is
 
 But whether a specific authentication type is supported depends on destination server type and agent type. Detail support matrix is listed in below table.
 
-| |Microsoft-hosted agent|Self-hosted agent|
+|Destination server type|Microsoft-hosted agent|Self-hosted agent|
 |---------|---------|---------|
 |SQL server on-premises or VM |N/A|Windows Authentication|
 |Azure SQL|SQL Server Authentication <br> Active Directory - Password|SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|
@@ -137,7 +137,7 @@ Specify whether overwrite the existing projects or SSISDeploymentManifest files 
 
 #### Continue deployment when error occurs
 
-Specify whether tp continue deployment for remaining projects or files when an error occurs. If 'No', SSIS Deploy task will stop immediately when error occurs.
+Specify whether to continue deployment for remaining projects or files when an error occurs. If 'No', SSIS Deploy task will stop immediately when error occurs.
 
 ### Limitations and known issues
 
@@ -178,7 +178,7 @@ Whether to roll back the configuration made by this task when error occurs.
 
 #### Target server
 
-Name of target SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Database managed instance.
+Name of target SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance.
 
 #### Authentication type
 
@@ -191,7 +191,7 @@ Authentication type to access the specified target server. In general below auth
 
 But whether a specific authentication type is supported depends on destination server type and agent type. Detail support matrix is listed in below table.
 
-| |Microsoft-hosted agent|Self-hosted agent|
+|Destination server type|Microsoft-hosted agent|Self-hosted agent|
 |---------|---------|---------|
 |SQL server on-premises or VM |N/A|Windows Authentication|
 |Azure SQL|SQL Server Authentication <br> Active Directory - Password|SQL Server Authentication <br> Active Directory - Password <br> Active Directory - Integrated|

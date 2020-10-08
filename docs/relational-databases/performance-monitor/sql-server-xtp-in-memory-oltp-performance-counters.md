@@ -1,5 +1,6 @@
 ---
 title: "XTP (In-Memory OLTP) Performance Counters"
+description: SQL Server provides objects and counters that can be used by Performance Monitor to monitor In-Memory OLTP activity.
 ms.custom: seo-dt-2019
 ms.date: "04/06/2016"
 ms.prod: sql

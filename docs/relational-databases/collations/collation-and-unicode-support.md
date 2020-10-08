@@ -1,4 +1,5 @@
 ---
+description: "Collation and Unicode support"
 title: "Collation and Unicode support | Microsoft Docs"
 ms.custom: ""
 ms.date: 12/05/2019
@@ -366,9 +367,6 @@ The following table shows the default collation designations, as determined by t
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (South Africa)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> Unicode-only collations can't be selected during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, because they aren't supported as server-level collations.    
-    
 After you've assigned a collation to the server, you can change it only by exporting all database objects and data, rebuilding the *master* database, and importing all database objects and data. Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify the desired collation when you create a new database or database column.    
 
 To query the server collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the `SERVERPROPERTY` function:
@@ -644,7 +642,9 @@ For more information, see the following related content:
 * [UTF-8 Support in OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
 * [SQL Server Collation Name (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)  
 * [Windows Collation Name (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
-* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
+* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)      
+* [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)      
+* [Collation Precedence](../../t-sql/statements/collation-precedence-transact-sql.md)    
     
 ## See also    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     

@@ -1,4 +1,5 @@
 ---
+description: "Connect to a SQL Server or Azure SQL Database"
 title: "Connect to a SQL Server or Azure SQL Database"
 ms.custom: seo-lt-2019
 ms.date: "01/28/2019"

@@ -1,1 +1,1 @@
-Azure SQL Database Managed Instance
+Azure SQL Managed Instance

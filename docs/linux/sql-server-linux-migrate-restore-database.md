@@ -1,8 +1,8 @@
 ---
 title: Migrate SQL Server database from Windows to Linux
 description: This tutorial shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server.
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 08/16/2017
 ms.topic: conceptual
@@ -30,7 +30,7 @@ You can also create a SQL Server Always On Availability Group to migrate a SQL S
 The following prerequisites are required to complete this tutorial:
 
 * Windows machine with the following:
-  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) installed.
+  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installed.
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) installed.
   * Target database to migrate.
 

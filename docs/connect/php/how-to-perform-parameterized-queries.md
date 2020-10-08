@@ -1,5 +1,6 @@
 ---
-title: "How to: Perform Parameterized Queries | Microsoft Docs"
+title: "How to: Perform Parameterized Queries"
+description: "Learn how to use parameterized queries in just a few steps using the Drivers for PHP for SQL Server."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql

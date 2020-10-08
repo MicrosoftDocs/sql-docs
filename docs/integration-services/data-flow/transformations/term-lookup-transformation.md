@@ -1,4 +1,5 @@
 ---
+description: "Term Lookup Transformation"
 title: "Term Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: chugu
 ---
 # Term Lookup Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Term Lookup transformation matches terms extracted from text in a transformation input column with terms in a reference table. It then counts the number of times a term in the lookup table occurs in the input data set, and writes the count together with the term from the reference table to columns in the transformation output. This transformation is useful for creating a custom word list based on the input text, complete with word frequency statistics.  

@@ -1,4 +1,5 @@
 ---
+description: "ClientSettingsGeneralFlag Class"
 title: "ClientSettingsGeneralFlag Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apilocation:
 helpviewer_keywords: 
   - "ClientSettingsGeneralFlag class"
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ClientSettingsGeneralFlag Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

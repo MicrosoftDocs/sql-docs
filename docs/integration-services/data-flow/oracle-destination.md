@@ -1,4 +1,5 @@
 ---
+description: "Oracle Destination"
 title: "Oracle Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Oracle destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Oracle destination bulk loads data into Oracle Database.
 

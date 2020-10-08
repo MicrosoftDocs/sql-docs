@@ -1,4 +1,5 @@
 ---
+description: "SET TEXTSIZE (Transact-SQL)"
 title: "SET TEXTSIZE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/12/2016"
@@ -21,8 +22,8 @@ helpviewer_keywords:
   - "TEXTSIZE option"
   - "text size returned [SQL Server]"
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TEXTSIZE (Transact-SQL)
@@ -41,7 +42,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SET TEXTSIZE { number }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *number*  
  Is the length of **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, or **image** data, in bytes. *number* is an integer with a maximum value of 2147483647 (2 GB).  A value of -1 indicates unlimited size. A value of 0 resets the size to the default value of 4 KB.  
   

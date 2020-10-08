@@ -1,4 +1,5 @@
 ---
+description: "WHILE (Transact-SQL)"
 title: "WHILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -42,14 +43,16 @@ WHILE Boolean_expression
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Azure Synapse Analytics and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
      { sql_statement | statement_block | BREAK }  
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Boolean_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) that returns **TRUE** or **FALSE**. If the Boolean expression contains a SELECT statement, the SELECT statement must be enclosed in parentheses.  
   

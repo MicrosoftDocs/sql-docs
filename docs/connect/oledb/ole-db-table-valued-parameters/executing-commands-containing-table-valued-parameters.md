@@ -1,6 +1,6 @@
 ---
 title: "Executing Commands Containing Table-Valued Parameters | Microsoft Docs"
-description: "Executing commands containing Table-Valued Parameters"
+description: Learn about specifying parameter types and binding parameter data in executing a command with table-valued parameters in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -10,8 +10,8 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, executing commands containing"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Executing Commands Containing Table-Valued Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-8: Annotate and format the Lesson 1 package"
 title: "Step 8: Annotate and format the Lesson 1 package | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-8: Annotate and format the Lesson 1 package 
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

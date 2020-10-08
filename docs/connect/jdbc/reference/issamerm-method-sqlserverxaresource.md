@@ -1,4 +1,5 @@
 ---
+description: "isSameRM Method (SQLServerXAResource)"
 title: "isSameRM Method (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

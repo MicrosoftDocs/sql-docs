@@ -41,8 +41,8 @@ helpviewer_keywords:
   - "files [SQL Server], adding"
   - "databases [SQL Server], moving"
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
@@ -51,16 +51,18 @@ Modifies the files and filegroups associated with the database. Adds or removes 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product
-
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-|||
-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
-|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -110,7 +112,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## Arguments
@@ -648,15 +649,15 @@ GO
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN
@@ -708,17 +709,22 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_**<br />&nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
-Use this statement with a database in Azure SQL Database managed instance.
+Use this statement with a database in Azure SQL Managed Instance.
 
-## Syntax for databases in a managed instance
+## Syntax for Azure SQL Managed Instance
 
 ```syntaxsql
 ALTER DATABASE database_name
@@ -760,7 +766,6 @@ ALTER DATABASE database_name
     { READONLY | READWRITE }
     | { READ_ONLY | READ_WRITE }
 }
-
 ```
 
 ## Arguments
@@ -955,7 +960,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;
 GO
-
 ```
 
 ### C. Removing a file from a database
@@ -1050,15 +1054,15 @@ The following example generates the required `ALTER DATABASE` statements to modi
 SET NOCOUNT ON;
 
 DROP TABLE IF EXISTS #tmpdbs
-CREATE TABLE #tmpdbs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, isdone bit);
+CREATE TABLE #tmpdbs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, isdone BIT);
 
 DROP TABLE IF EXISTS #tmpfgs
-CREATE TABLE #tmpfgs (id int IDENTITY(1,1), [dbid] int, [dbname] sysname, fgname sysname, isdone bit);
+CREATE TABLE #tmpfgs (id INT IDENTITY(1,1), [dbid] INT, [dbname] sysname, fgname sysname, isdone BIT);
 
 INSERT INTO #tmpdbs ([dbid], [dbname], [isdone])
 SELECT database_id, name, 0 FROM master.sys.databases (NOLOCK) WHERE is_read_only = 0 AND state = 0;
 
-DECLARE @dbid int, @query VARCHAR(1000), @dbname sysname, @fgname sysname
+DECLARE @dbid INT, @query VARCHAR(1000), @dbname sysname, @fgname sysname
 
 WHILE (SELECT COUNT(id) FROM #tmpdbs WHERE isdone = 0) > 0
 BEGIN

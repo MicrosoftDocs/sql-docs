@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL TABLE (Transact-SQL)"
 title: "DROP EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -10,12 +11,12 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   Removes a PolyBase external table from a database, but doesn't delete the external data.  
   
@@ -44,7 +45,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ### A. Using basic syntax  
   
-```  
+```sql  
 DROP EXTERNAL TABLE SalesPerson;  
 DROP EXTERNAL TABLE dbo.SalesPerson;  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
@@ -53,14 +54,14 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ### B. Dropping an external table from the current database  
  The following example removes the `ProductVendor1` table, its data, indexes, and any dependent views from the current database.  
   
-```  
+```sql  
 DROP EXTERNAL TABLE ProductVendor1;  
 ```  
   
 ### C. Dropping a table from another database  
  The following example drops the `SalesPerson` table in the `EasternDivision` database.  
   
-```  
+```sql  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   

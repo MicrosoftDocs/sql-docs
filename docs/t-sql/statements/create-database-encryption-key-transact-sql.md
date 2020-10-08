@@ -1,5 +1,6 @@
 ---
-title: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
+description: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL)"
+title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
@@ -29,7 +30,9 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
+
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
  Creates an encryption key that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
@@ -62,13 +65,17 @@ CREATE DATABASE ENCRYPTION KEY
    ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
 [ ; ]  
 ```  
-  
-## Arguments  
-WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
-Specifies the encryption algorithm that is used for the encryption key.   
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
+WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  
+Specifies the encryption algorithm that is used for the encryption key.
+
 > [!NOTE]
->    Beginning with SQL Server 2016, all algorithms other than AES_128, AES_192, and AES_256 are deprecated. 
->   To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
+> Beginning with SQL Server 2016, all algorithms other than AES_128, AES_192, and AES_256 are deprecated. 
+> To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
 Specifies the name of the encryptor used to encrypt the database encryption key.  
@@ -95,7 +102,7 @@ For additional examples using TDE, see [Transparent Data Encryption &#40;TDE&#41
   
 The following example creates a database encryption key by using the `AES_256` algorithm, and protects the private key with a certificate named `MyServerCert`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DATABASE ENCRYPTION KEY  

@@ -1,4 +1,5 @@
 ---
+description: "getNClob Method (java.lang.String)"
 title: "getNClob Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

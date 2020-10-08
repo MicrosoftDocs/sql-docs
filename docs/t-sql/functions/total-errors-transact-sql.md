@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)"
 title: "@@TOTAL_ERRORS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -33,11 +34,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@TOTAL_ERRORS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -46,7 +49,7 @@ ms.author: jrasnick
 ## Examples  
  This example shows the number of errors encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as of the current date and time.  
   
-```  
+```sql
 SELECT @@TOTAL_ERRORS AS 'Errors', GETDATE() AS 'As of';  
 ```  
   

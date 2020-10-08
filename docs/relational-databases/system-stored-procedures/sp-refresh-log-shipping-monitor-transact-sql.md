@@ -1,4 +1,5 @@
 ---
+description: "sp_refresh_log_shipping_monitor (Transact-SQL)"
 title: "sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_refresh_log_shipping_monitor"
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

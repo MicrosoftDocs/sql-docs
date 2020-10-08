@@ -1,5 +1,6 @@
 ---
 title: "srv_getbindtoken (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_getbindtoken obtains a bind token of the transaction in the current client session that invokes the extended stored procedure.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

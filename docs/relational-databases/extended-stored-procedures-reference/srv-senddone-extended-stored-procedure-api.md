@@ -1,5 +1,6 @@
 ---
 title: "srv_senddone (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_senddone in the Extended Stored Procedure API sends a result completion message to the client.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Azure Data Lake Store File System Task"
 title: "Azure Data Lake Store File System Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"
@@ -14,7 +15,7 @@ ms.reviewer: maghan
 ---
 # Azure Data Lake Store File System Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

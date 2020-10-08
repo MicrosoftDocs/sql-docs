@@ -1,4 +1,5 @@
 ---
+description: "COLLATE (Transact-SQL)"
 title: "COLLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2019"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "collations [SQL Server], COLLATE clause"
   - "COLLATE clause"
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COLLATE (Transact-SQL)
@@ -35,6 +36,8 @@ COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

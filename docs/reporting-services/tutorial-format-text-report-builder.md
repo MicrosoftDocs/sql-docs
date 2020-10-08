@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Format Text (Report Builder) | Microsoft Docs"
+description: Learn how to format text in various ways in a Reporting Services paginated report. For example, you can experiment with different formats.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

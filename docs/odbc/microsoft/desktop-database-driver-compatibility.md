@@ -1,4 +1,5 @@
 ---
+description: "Desktop Database Driver Compatibility"
 title: "Desktop Database Driver Compatibility | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_helpcollations (Transact-SQL)"
 title: "sys.fn_helpcollations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_replicationdboption (Transact-SQL)"
 title: "sp_replicationdboption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

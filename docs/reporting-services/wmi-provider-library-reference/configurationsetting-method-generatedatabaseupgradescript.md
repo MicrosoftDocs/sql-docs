@@ -1,4 +1,5 @@
 ---
+description: "GenerateDatabaseUpgradeScript Method (WMI MSReportServer_ConfigurationSetting)"
 title: "GenerateDatabaseUpgradeScript Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services

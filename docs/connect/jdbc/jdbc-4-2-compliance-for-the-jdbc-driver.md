@@ -1,4 +1,5 @@
 ---
+description: "JDBC 4.2 compliance for the JDBC driver"
 title: "JDBC 4.2 compliance for the JDBC driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -53,14 +54,12 @@ ms.author: v-daenge
   
 ## SQLServerResultSet class
   
-||||  
-|-|-|-|  
 |New Methods|Description|Noteworthy Implementation|  
+|-|-|-|  
 ||Updates the designated column with an Object value. There are 4 new (overloaded) methods to support the new SQLType interface.|Implemented as described in the java.sql.ResultSet interface. For more details see [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html).|  
   
  The Java Database Connectivity API 4.2 specification is supported by the Microsoft JDBC Driver 4.2 for SQL Server, with the following Data Type Mappings.  
   
-|||  
-|-|-|  
 |New Data Type Mappings|Description|  
+|-|-|  
 |**New Java classes in Java 8:** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **New JDBC types:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR is not supported in SQL Server. Driver throws a SQLFeatureNotSupportedException exception if this type is used. The driver supports all other new Java and JDBC type mappings as specified in the JDBC 4.2 specification.|  

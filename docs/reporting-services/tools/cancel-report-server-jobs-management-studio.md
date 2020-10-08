@@ -1,5 +1,6 @@
 ---
 title: "Cancel Report Server Jobs (Management Studio) | Microsoft Docs"
+description: Learn how to use the options in the Cancel Report Server Jobs dialog box to view or cancel in-progress reports.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

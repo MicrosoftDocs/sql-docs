@@ -1,4 +1,5 @@
 ---
+description: "Transact-SQL Syntax Conventions (Transact-SQL)"
 title: "Transact-SQL Syntax Conventions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2018"
@@ -31,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # Transact-SQL Syntax Conventions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The following table lists and describes conventions that are used in the syntax diagrams in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference.  
   

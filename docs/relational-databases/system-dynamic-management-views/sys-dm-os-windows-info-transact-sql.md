@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_windows_info (Transact-SQL)"
 title: "sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_windows_info dynamic management view"
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,8 +31,8 @@ ms.author: carlrab
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|For Windows, returns the release number. For a list of values and descriptions, see [Operating System Version (Windows)](/windows/desktop/SysInfo/operating-system-version). Cannot be NULL.|  
 |**windows_service_pack_level**|**nvarchar(256)**| For Windows, returns the service pack number. Cannot be NULL. |  
-|**windows_sku**|**int**|For Windows, returns the Windows Stock Keeping Unit (SKU) ID. For a list of SKU IDs and descriptions, see [GetProductInfo Function](https://msdn.microsoft.com/library/ms724358.aspx). Is NULLable. |  
-|**os_language_version**|**int**| For Windows, returns the Windows locale identifier (LCID) of the operating system. For a list of LCID values and descriptions, see [Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Cannot be NULL.|  
+|**windows_sku**|**int**|For Windows, returns the Windows Stock Keeping Unit (SKU) ID. For a list of SKU IDs and descriptions, see [GetProductInfo Function](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo). Is NULLable. |  
+|**os_language_version**|**int**| For Windows, returns the Windows locale identifier (LCID) of the operating system. For a list of LCID values and descriptions, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Cannot be NULL.|  
   
   
 ## Permissions  
@@ -60,5 +61,3 @@ FROM sys.dm_os_windows_info;
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_host_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)  
   
-  
-

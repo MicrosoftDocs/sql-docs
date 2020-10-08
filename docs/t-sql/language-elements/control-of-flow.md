@@ -1,4 +1,5 @@
 ---
+description: "Control-of-Flow"
 title: "Control-of-Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -21,14 +22,47 @@ ms.author: jroth
 
   The [!INCLUDE[tsql](../../includes/tsql-md.md)] control-of-flow language keywords are:  
   
-|||  
-|-|-|  
-|[BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)|[RETURN](../../t-sql/language-elements/return-transact-sql.md)|  
-|[BREAK](../../t-sql/language-elements/break-transact-sql.md)|[THROW](../../t-sql/language-elements/throw-transact-sql.md)|  
-|[CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)|[TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)|  
-|[GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*|[WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)|  
-|[IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)|[WHILE](../../t-sql/language-elements/while-transact-sql.md)|  
-  
+:::row:::
+    :::column:::
+        [BEGIN...END](../../t-sql/language-elements/begin-end-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [RETURN](../../t-sql/language-elements/return-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [BREAK](../../t-sql/language-elements/break-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [THROW](../../t-sql/language-elements/throw-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [CONTINUE](../../t-sql/language-elements/continue-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [TRY...CATCH](../../t-sql/language-elements/try-catch-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [GOTO](../../t-sql/language-elements/goto-transact-sql.md) *label*
+    :::column-end:::
+    :::column:::
+        [WAITFOR](../../t-sql/language-elements/waitfor-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [IF...ELSE](../../t-sql/language-elements/if-else-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [WHILE](../../t-sql/language-elements/while-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+ 
 ## See Also  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)   

@@ -1,8 +1,9 @@
 ---
+description: "CubeDef Object (ADO MD)"
 title: "CubeDef Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -22,13 +23,13 @@ Represents a cube from a multidimensional schema, containing a set of related di
 ## Remarks  
  With the collections and properties of a **CubeDef** object, you can do the following:  
   
--   Identify a **CubeDef** with the [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) property.  
+-   Identify a **CubeDef** with the [Name](./name-property-ado-md.md) property.  
   
--   Return a string that describes the cube with the [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) property.  
+-   Return a string that describes the cube with the [Description](./description-property-ado-md.md) property.  
   
--   Return the dimensions that make up the cube with the [Dimensions](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) collection.  
+-   Return the dimensions that make up the cube with the [Dimensions](./dimensions-collection-ado-md.md) collection.  
   
--   Obtain additional information about the **CubeDef** with the standard ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Obtain additional information about the **CubeDef** with the standard ADO [Properties](../ado-api/properties-collection-ado.md) collection.  
   
  The **Properties** collection contains provider-supplied properties. The following table lists properties that might be available. The actual property list may differ depending upon the implementation of the provider. See the documentation for your provider for a more complete list of available properties.  
   
@@ -47,11 +48,11 @@ Represents a cube from a multidimensional schema, containing a set of related di
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
+-   [Properties, Methods, and Events](./cubedef-object-properties-methods-and-events.md)  
   
 ## See Also  
- [CubeDef Example (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [Dimensions Collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef Example (VBScript)](./cubedef-example-vbscript.md)   
+ [Catalog Object (ADO MD)](./catalog-object-ado-md.md)   
+ [CubeDefs Collection (ADO MD)](./cubedefs-collection-ado-md.md)   
+ [Dimensions Collection (ADO MD)](./dimensions-collection-ado-md.md)   
+ [Properties Collection (ADO)](../ado-api/properties-collection-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "Establishing a Connection"
 title: "Establishing a Connection | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

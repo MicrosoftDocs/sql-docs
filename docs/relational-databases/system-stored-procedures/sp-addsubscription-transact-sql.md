@@ -14,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsubscription"
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Adds a subscription to a publication and sets the Subscriber status. This stored procedure is executed at the Publisher on the publication database.  
   

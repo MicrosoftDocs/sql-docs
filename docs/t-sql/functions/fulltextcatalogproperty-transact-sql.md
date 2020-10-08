@@ -1,4 +1,5 @@
 ---
+description: "FULLTEXTCATALOGPROPERTY (Transact-SQL)"
 title: "FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,12 +30,13 @@ Returns information about full-text catalog properties in [!INCLUDE[ssCurrent](.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 > [!NOTE]  
 >  The following properties will be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** and **PopulateStatus**. Avoid using these properties in new development work, and plan to modify applications that currently use any of them.  
@@ -79,7 +81,7 @@ It's important that applications don't wait in a tight loop, checking for the **
 ## Examples  
 The following example returns the number of full-text indexed items in a full-text catalog named `Cat_Desc`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT fulltextcatalogproperty('Cat_Desc', 'ItemCount');  

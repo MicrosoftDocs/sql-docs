@@ -1,4 +1,5 @@
 ---
+description: "NOT (Transact-SQL)"
 title: "NOT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -35,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [ NOT ] boolean_expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *boolean_expression*  
  Is any valid Boolean [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   

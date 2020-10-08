@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE computed_column_definition (Transact-SQL)"
 title: "computed_column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER TABLE statement"
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ column_name AS computed_column_expression
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can be 1 through 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. If no *column_name* is specified for a **timestamp** data type column, the name **timestamp** is used.  
   

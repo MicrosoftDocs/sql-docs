@@ -1,4 +1,5 @@
 ---
+description: "EnvelopeAngle (geography Data Type)"
 title: "EnvelopeAngle (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -31,7 +32,9 @@ ms.author: mlandzic
   
 EnvelopeAngle( )  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **float**  
   

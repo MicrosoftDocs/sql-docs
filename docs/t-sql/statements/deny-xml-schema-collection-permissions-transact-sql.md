@@ -49,7 +49,9 @@ DENY permission  [ ,...n ] ON
     | Database_user_with_no_login  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an XML schema collection. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -109,7 +111,7 @@ DENY permission  [ ,...n ] ON
 ## Examples  
  The following example denies `EXECUTE` permission on the XML schema collection `Invoices4` to the user `Wanida`. The XML schema collection `Invoices4` is located inside the `Sales` schema of the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DENY EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
 GO  

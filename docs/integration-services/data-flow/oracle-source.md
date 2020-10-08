@@ -1,4 +1,5 @@
 ---
+description: "Oracle source"
 title: Oracle source
 ms.custom: ""
 ms.date: "08/14/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 
 # Oracle source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Oracle source extracts data from Oracle Database with below modes:
 

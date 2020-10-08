@@ -1,4 +1,5 @@
 ---
+description: "STPointN (geometry Data Type)"
 title: "STPointN (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns a specified point in a **geometry** instance.
 .STPointN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of points in the **geometry** instance.  
   

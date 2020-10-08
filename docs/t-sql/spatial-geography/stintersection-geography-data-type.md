@@ -1,4 +1,5 @@
 ---
+description: "STIntersection (geography Data Type)"
 title: "STIntersection (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STIntersection ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare with the instance on which STIntersection() is being invoked.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Solve common issues with JSON in SQL Server"
 title: "Solve common issues with JSON in SQL Server"
 ms.date: 06/03/2020
 ms.prod: sql

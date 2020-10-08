@@ -1,4 +1,5 @@
 ---
+description: "Was a Result Set Created?"
 title: "Was a Result Set Created? | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

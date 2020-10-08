@@ -1,4 +1,5 @@
 ---
+description: "COT (Transact-SQL)"
 title: "COT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -33,7 +34,9 @@ A mathematical function that returns the trigonometric cotangent of the specifie
 COT ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**, or of a type that can implicitly convert to **float**.
   
@@ -52,7 +55,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COT of the angle is: -0.040312                
   
 (1 row(s) affected)  

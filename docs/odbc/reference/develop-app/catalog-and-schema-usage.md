@@ -1,4 +1,5 @@
 ---
+description: "Catalog and Schema Usage"
 title: "Catalog and Schema Usage | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

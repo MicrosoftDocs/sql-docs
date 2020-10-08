@@ -1,4 +1,5 @@
 ---
+description: "sp_srvrolepermission (Transact-SQL)"
 title: "sp_srvrolepermission (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;PACKET_ERRORS (Transact-SQL)"
 title: "@@PACKET_ERRORS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,12 +32,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@PACKET_ERRORS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -45,7 +47,7 @@ ms.author: vanto
 ## Examples  
  The following example shows using `@@PACKET_ERRORS`.  
   
-```  
+```sql  
 SELECT @@PACKET_ERRORS AS 'Packet Errors';  
 ```  
   

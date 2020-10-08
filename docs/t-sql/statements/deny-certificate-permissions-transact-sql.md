@@ -1,4 +1,5 @@
 ---
+description: "DENY Certificate Permissions (Transact-SQL)"
 title: "DENY Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -37,7 +38,9 @@ DENY permission  [ ,...n ]
     [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a certificate. Listed below.  
   

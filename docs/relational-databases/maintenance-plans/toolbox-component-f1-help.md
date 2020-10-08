@@ -1,4 +1,5 @@
 ---
+description: "Toolbox Component F1 Help"
 title: "Toolbox Component F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

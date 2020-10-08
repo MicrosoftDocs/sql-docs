@@ -1,5 +1,6 @@
 ---
-title: "query() Method (xml Data Type) | Microsoft Docs"
+description: "query() Method (xml Data Type)"
+title: query() Method (xml Data Type)
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
@@ -23,11 +24,12 @@ Specifies an XQuery against an instance of the **xml** data type. The result is 
 ## Syntax  
   
 ```syntaxsql
-  
 query ('XQuery')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 XQuery  
 Is a string, an XQuery expression, that queries for XML nodes, such as elements and attributes, in an XML instance.  
   
@@ -40,8 +42,8 @@ The following example declares a variable **\@myDoc** of **xml** type and assign
 The query retrieves the <`Features`> child element of the <`ProductDescription`> element:  
   
 ```sql
-declare @myDoc xml  
-set @myDoc = '<Root>  
+DECLARE @myDoc XML  
+SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
   <Warranty>1 year parts and labor</Warranty>  
@@ -104,7 +106,6 @@ SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescripti
        AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
-
 ```  
   
 ## See Also  

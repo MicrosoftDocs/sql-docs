@@ -1,4 +1,5 @@
 ---
+description: "Recordset Destination"
 title: "Recordset Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Recordset Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Recordset destination creates and populates an in-memory ADO recordset. The shape of the recordset is defined by the input to the Recordset destination at design time.  

@@ -1,4 +1,5 @@
 ---
+description: "CHAR (Transact-SQL)"
 title: "CHAR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2018"
@@ -41,7 +42,9 @@ This function converts an **int** ASCII code to a character value.
 CHAR ( integer_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *integer_expression*  
 An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range, or when then integer expresses only the first byte of a double-byte character.
 
@@ -69,7 +72,7 @@ This example prints the ASCII value and character for each character in the stri
 SET TEXTSIZE 0;  
 -- Create variables for the character string and for the current   
 -- position in the string.  
-DECLARE @position int, @string char(8);  
+DECLARE @position INT, @string CHAR(8);  
 -- Initialize the current position and the string variables.  
 SET @position = 1;  
 SET @string = 'New Moon';  

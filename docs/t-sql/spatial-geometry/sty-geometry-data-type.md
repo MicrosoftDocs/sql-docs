@@ -1,4 +1,5 @@
 ---
+description: "STY (geometry Data Type)"
 title: "STY (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ The Y-coordinate property of a **Point** instance.
 .STY  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **float**  
   
  CLR type: **SqlDouble**  

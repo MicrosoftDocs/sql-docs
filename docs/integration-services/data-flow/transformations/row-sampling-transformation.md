@@ -1,4 +1,5 @@
 ---
+description: "Row Sampling Transformation"
 title: "Row Sampling Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -25,7 +26,7 @@ ms.author: chugu
 ---
 # Row Sampling Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Row Sampling transformation is used to obtain a randomly selected subset of an input dataset. You can specify the exact size of the output sample, and specify a seed for the random number generator.  

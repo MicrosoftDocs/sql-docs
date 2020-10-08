@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;REMSERVER (Transact-SQL)"
 title: "@@REMSERVER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -33,11 +34,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@REMSERVER  
 ```  
-  
-## Return Types  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  
@@ -46,7 +49,7 @@ ms.author: jrasnick
 ## Examples  
  The following example creates the procedure `usp_CheckServer` that returns the name of the remote server.  
   
-```  
+```sql  
 CREATE PROCEDURE usp_CheckServer  
 AS  
 SELECT @@REMSERVER;  
@@ -54,7 +57,7 @@ SELECT @@REMSERVER;
   
  The following stored procedure is created on the local server `SEATTLE1`. The user logs on to a remote server, `LONDON2`, and runs `usp_CheckServer`.  
   
-```  
+```sql  
 EXEC SEATTLE1...usp_CheckServer;  
 ```  
   

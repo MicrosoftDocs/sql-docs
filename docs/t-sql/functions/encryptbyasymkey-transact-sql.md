@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYASYMKEY (Transact-SQL)"
 title: "ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -33,7 +34,9 @@ This function encrypts data with an asymmetric key.
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *asym_key_ID*  
 The ID of an asymmetric key in the database. *asym_key_ID* has an **int** data type.  
   
@@ -84,7 +87,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], both certificates 
 ## Examples  
 This example encrypts the text stored in `@cleartext` with the asymmetric key `JanainaAsymKey02`. The statement inserts the encrypted data into the `ProtectedData04` table.  
   
-```  
+```sql  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
     VALUES( N'Data encrypted by asymmetric key ''JanainaAsymKey02''',  
     EncryptByAsymKey(AsymKey_ID('JanainaAsymKey02'), @cleartext) );  

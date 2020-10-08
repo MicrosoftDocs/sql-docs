@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
@@ -15,7 +15,7 @@ ms.author: maghan
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
-Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.  
+Use SQL Server Agent to run SQL Server PowerShell scripts at scheduled times.  
   
 **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   

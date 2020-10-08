@@ -1,4 +1,5 @@
 ---
+description: "sp_cursorunprepare (Transact-SQL)"
 title: "sp_cursorunprepare (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorunprepare"
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursorunprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

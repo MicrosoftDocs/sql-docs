@@ -11,6 +11,7 @@ ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Extensibility Framework API for SQL Server
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 
@@ -536,7 +537,7 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 
 ## InstallExternalLibrary
 
-Installs a library. The function is optional and doesn't require implementation. The default implementation is to copy the content of the library (see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)) to a file at the proper location. The file name is library name.
+Installs a library. The function is optional and doesn't require implementation. The default implementation is to copy the content of the library (see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)) to a file at the proper location. The file name is library name.
 
 ### Syntax
 
@@ -566,7 +567,7 @@ SQLRETURN InstallExternalLibrary(
 \[Input\] The length of the library name.
 
 *LibraryFile*  
-\[Input\] The path (as a string) to the library file containing the binary content specified by [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+\[Input\] The path (as a string) to the library file containing the binary content specified by [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 *LibraryFileLength*  
 \[Input\] The length of the LibraryFile string.
@@ -632,4 +633,4 @@ SQLRETURN UninstallExternalLibrary(
 
 ## Next steps
 
-- [Microsoft Extensibility SDK for Java for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) 
+- [Microsoft Extensibility SDK for Java for SQL Server](../how-to/extensibility-sdk-java-sql-server.md)

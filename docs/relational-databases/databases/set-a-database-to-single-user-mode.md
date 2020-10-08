@@ -1,4 +1,5 @@
 ---
+description: "Set a Database to Single-user Mode"
 title: "Set a Database to Single-user Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

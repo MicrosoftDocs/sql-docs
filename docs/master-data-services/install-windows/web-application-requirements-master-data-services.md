@@ -44,16 +44,45 @@ ms.author: lle
 > [!IMPORTANT]  
 >**Dynamic Content Compression** is enabled by default. This significantly reduces the size of the xml response and saves the network I/O, though CPU usage is increased.  For more information, see **[CTP 2.0] Improved Performance** in [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
-||  
-|-|  
-|Internet Information Services<br /><br /> Web Management Tools<br /><br /> IIS Management Console<br /><br /> World Wide Web Services<br /><br /> Application Development<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI Extensions<br /><br /> ISAPI Filters<br /><br /> Common HTTP Features<br /><br /> Default Document<br /><br /> Directory Browsing<br /><br /> HTTP Errors<br /><br /> Static Content<br /><br /> [Note: Do not install WebDAV Publishing]<br /><br /> Health and Diagnostics<br /><br /> HTTP Logging<br /><br /> Request Monitor<br /><br /> Performance<br /><br /> Static Content Compression<br /><br /> Security<br /><br /> Request Filtering<br /><br /> Windows Authentication|  
+- Internet Information Services
+- Web Management Tools
+- IIS Management Console
+- World Wide Web Services
+- Application Development
+- .NET Extensibility 3.5
+- .NET Extensibility 4.5
+- ASP.NET 3.5
+- ASP.NET 4.5
+- ISAPI Extensions
+- ISAPI Filters
+- Common HTTP Features
+- Default Document
+- Directory Browsing
+- HTTP Errors
+- Static Content [Note: Do not install WebDAV Publishing.]
+- Health and Diagnostics
+- HTTP Logging
+- Request Monitor
+- Performance
+- Static Content Compression
+- Security
+- Request Filtering
+- Windows Authentication
   
 ### Features 
  On Windows Server 2012 and Windows Server 2012 R2, you can use **Server Manager** to install the following required features.  
   
-||  
-|-|  
-|.NET Framework 3.5 (includes .NET 2.0 and 3.0)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP Activation [Note: This is required.]<br /><br /> TCP Port Sharing<br /><br /> Windows Process Activation Service<br /><br /> Process Model<br /><br /> .NET Environment<br /><br /> Configuration APIs<br/><br/>Dynamic Content Compression|  
+- .NET Framework 3.5 (includes .NET 2.0 and 3.0)
+- .NET Framework 4.5 Advanced Services
+- ASP.NET 4.5
+- WCF Services
+- HTTP Activation [Note: This is required.]
+- TCP Port Sharing
+- Windows Process Activation Service
+- Process Model
+- .NET Environment
+- Configuration APIs
+- Dynamic Content Compression
   
  Following is an example PowerShell script to add prerequisite server roles and features. The prerequisite server roles and features varies depending on the environment.  
   
@@ -77,5 +106,3 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
       
  [Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
-  
-  

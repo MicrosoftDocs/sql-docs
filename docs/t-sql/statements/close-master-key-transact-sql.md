@@ -1,4 +1,5 @@
 ---
+description: "CLOSE MASTER KEY (Transact-SQL)"
 title: "CLOSE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"
@@ -32,11 +33,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 CLOSE MASTER KEY  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  Takes no arguments.  
   
 ## Remarks  
@@ -47,7 +52,7 @@ CLOSE MASTER KEY
   
 ## Examples  
   
-```  
+```sql
 USE AdventureWorks2012;  
 CLOSE MASTER KEY;  
 GO  
@@ -55,7 +60,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-```  
+```sql
 USE master;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO   

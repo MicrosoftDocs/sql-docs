@@ -1,4 +1,5 @@
 ---
+description: "Subscription View Formats (Master Data Services)"
 title: Subscription View Formats
 ms.custom: ""
 ms.date: "03/01/2017"

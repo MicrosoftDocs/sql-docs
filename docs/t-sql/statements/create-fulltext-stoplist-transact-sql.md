@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT STOPLIST (Transact-SQL)"
 title: "CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -23,8 +24,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,8 +48,10 @@ CREATE FULLTEXT STOPLIST stoplist_name
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *stoplist_name*  
  Is the name of the stoplist. *stoplist_name* can be a maximum of 128 characters. *stoplist_name* must be unique among all stoplists in the current database, and conform to the rules for identifiers.  
   

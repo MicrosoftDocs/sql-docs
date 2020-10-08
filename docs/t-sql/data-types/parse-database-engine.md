@@ -1,4 +1,5 @@
 ---
+description: "Parse (Database Engine)"
 title: "Parse (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -33,12 +34,14 @@ hierarchyid::Parse ( input )
 CAST ( input AS hierarchyid )  
 ```  
   
-```sql
+```csharp
 -- CLR syntax  
 static SqlHierarchyId Parse ( SqlString input )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]: The character data type value that is being converted.
   
@@ -58,7 +61,7 @@ If Parse receives a value that is not a valid string representation of a **hiera
 The following code example uses `ToString` to convert a **hierarchyid** value to a string, and `Parse` to convert a string value to a **hierarchyid**.
   
 ```sql
-DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
+DECLARE @StringValue AS NVARCHAR(4000), @hierarchyidValue AS hierarchyid  
 SET @StringValue = '/1/1/3/'  
 SET @hierarchyidValue = 0x5ADE  
   
@@ -78,7 +81,7 @@ hierarchyidRepresentation    StringRepresentation
 ### B. CLR example  
 The following code snippet calls the Parse() method:
   
-```sql
+```csharp
 string input = "/1/2/";  
 SqlHierarchyId.Parse(input);  
 ```  

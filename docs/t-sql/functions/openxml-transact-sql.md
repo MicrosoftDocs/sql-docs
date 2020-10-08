@@ -1,4 +1,5 @@
 ---
+description: "OPENXML (Transact-SQL)"
 title: "OPENXML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"
@@ -29,13 +30,14 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )   
 [ WITH ( SchemaDeclaration | TableName ) ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *idoc*  
  Is the document handle of the internal representation of an XML document. The internal representation of an XML document is created by calling **sp_xml_preparedocument**.  
   
@@ -102,8 +104,8 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  The `OPENXML` rowset provider creates a two-column rowset (`CustomerID` and `ContactName`) from which the `SELECT` statement retrieves the necessary columns (in this case, all the columns).  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);  
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);  
 SET @doc ='  
 <ROOT>  
 <Customer CustomerID="VINET" ContactName="Paul Henriot">  
@@ -123,9 +125,8 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- Execute a SELECT statement that uses the OPENXML rowset provider.  
 SELECT    *  
 FROM       OPENXML (@idoc, '/ROOT/Customer',1)  
-            WITH (CustomerID  varchar(10),  
-                  ContactName varchar(20));  
-  
+            WITH (CustomerID  VARCHAR(10),  
+                  ContactName VARCHAR(20));  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -159,8 +160,8 @@ NULL       NULL
   
  Although the **element-centric** mapping is specified by the *flags* parameter, the mapping specified in *ColPattern* overwrites this mapping.  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);   
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);   
 SET @doc ='  
 <ROOT>  
 <Customer CustomerID="VINET" ContactName="Paul Henriot">  
@@ -209,8 +210,8 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
   
  Finally the `SELECT` statement retrieves all the columns in the **edge** table.  
   
-```  
-DECLARE @idoc int, @doc varchar(1000);   
+```sql  
+DECLARE @idoc INT, @doc VARCHAR(1000);   
 SET @doc ='  
 <ROOT>  
 <Customers CustomerID="VINET" ContactName="Paul Henriot">  
@@ -234,8 +235,7 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT statement that uses the OPENXML rowset provider.  
 SELECT    *  
 FROM       OPENXML (@idoc, '/ROOT/Customers')   
-EXEC sp_xml_removedocument @idoc;  
-  
+EXEC sp_xml_removedocument @idoc;   
 ```  
   
 ## See Also  

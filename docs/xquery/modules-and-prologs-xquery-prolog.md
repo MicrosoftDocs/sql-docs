@@ -20,7 +20,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Modules and Prologs - XQuery Prolog
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   An XQuery query is made up of a prolog and a body. The XQuery prolog is a series of declarations and definitions that together create the required environment for query processing. In SQL Server, the XQuery prolog can include namespace declarations. The XQuery body is made up of a sequence of expressions that specify the intended query result.  
   

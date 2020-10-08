@@ -1,4 +1,5 @@
 ---
+description: "Automatically Generate Code Attribute Values (Master Data Services)"
 title: Automatically Generate Code Attribute Values
 ms.custom: ""
 ms.date: "03/01/2017"

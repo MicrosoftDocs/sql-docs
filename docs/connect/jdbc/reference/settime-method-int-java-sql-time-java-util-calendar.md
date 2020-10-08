@@ -1,4 +1,5 @@
 ---
+description: "setTime Method (int, java.sql.Time, java.util.Calendar)"
 title: "setTime Method (int, java.sql.Time, java.util.Calendar) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

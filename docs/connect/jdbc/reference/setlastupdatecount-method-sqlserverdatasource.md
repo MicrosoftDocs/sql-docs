@@ -1,4 +1,5 @@
 ---
+description: "setLastUpdateCount Method (SQLServerDataSource)"
 title: "setLastUpdateCount Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

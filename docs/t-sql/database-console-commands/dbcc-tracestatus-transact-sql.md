@@ -1,4 +1,5 @@
 ---
+description: "DBCC TRACESTATUS (Transact-SQL)"
 title: "DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -39,7 +40,9 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *trace#*  
 Is the number of the trace flag for which the status is displayed. If *trace#*, and -1 are not specified, all trace flags that are enabled for the session are displayed.
   

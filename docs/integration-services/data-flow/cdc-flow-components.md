@@ -1,4 +1,5 @@
 ---
+description: "CDC Flow Components"
 title: "CDC Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # CDC Flow Components
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] help SSIS developers work with CDC and reduce the complexity of CDC packages.  
@@ -202,7 +203,7 @@ A message is displayed after you install the components. Click **Yes** when prom
   
 -   Blog entry, [CDC in SSIS for SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/), on mattmasson.com.  
   
--   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), on blogs.msdn.com.  
+-   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://sqlblog.iridule.net/index.php/2013/04/15/sql-server-2012-cdc-for-oracle-a-review-of-one-implementation/), on blogs.msdn.com.  
   
 -   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
   

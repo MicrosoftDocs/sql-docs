@@ -1,4 +1,5 @@
 ---
+description: "Rename a Database"
 title: "Rename a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/02/2018"

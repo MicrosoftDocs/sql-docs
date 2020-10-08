@@ -1,4 +1,5 @@
 ---
+description: "SPACE (Transact-SQL)"
 title: "SPACE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -34,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SPACE ( integer_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *integer_expression*  
  Is a positive integer that indicates the number of spaces. If *integer_expression* is negative, a null string is returned.  
   
@@ -49,7 +52,7 @@ SPACE ( integer_expression )
 ## Examples  
  The following example trims the last names and concatenates a comma, two spaces, and the first names of people listed in the `Person` table in `AdventureWorks2012`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  
@@ -61,7 +64,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example trims the last names and concatenates a comma, two spaces, and the first names of people listed in the `DimCustomer` table in `AdventureWorksPDW2012`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  

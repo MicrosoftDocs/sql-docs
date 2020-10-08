@@ -1,4 +1,5 @@
 ---
+description: "REVOKE (Transact-SQL)"
 title: "REVOKE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -55,7 +56,7 @@ REVOKE [ GRANT OPTION FOR ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 REVOKE   
     <permission> [ ,...n ]  
@@ -78,7 +79,9 @@ REVOKE
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked. This is required when you are using the CASCADE argument.  
   

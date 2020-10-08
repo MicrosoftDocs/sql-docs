@@ -1,4 +1,5 @@
 ---
+description: "sp_changepublication (Transact-SQL)"
 title: "sp_changepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changepublication"
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

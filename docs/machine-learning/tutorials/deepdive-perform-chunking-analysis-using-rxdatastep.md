@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Perform chunking analysis using rxDataStep (SQL Server and RevoScaleR tutorial)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This is tutorial 12 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
@@ -86,7 +86,7 @@ In this tutorial, you'll use the **rxDataStep** function to process data in chun
 
     **Partial results**
 
-    |      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+    | Row \# |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
     | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
     | 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
     | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |

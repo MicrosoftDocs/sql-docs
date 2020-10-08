@@ -1,5 +1,6 @@
 ---
-title: "Deprecated Database Engine Features | Microsoft Docs"
+description: "Deprecated database engine features in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]"
+title: "Deprecated database engine features in SQL Server 2019 | Microsoft Docs"
 titleSuffix: "SQL Server 2019"
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
@@ -18,7 +19,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-lin
 
 # Deprecated database engine features in [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[sqlserver2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server 2019 does not deprecate any features.
 
@@ -26,4 +27,4 @@ SQL Server 2019 does not deprecate any features.
 
 - [Breaking changes to database engine features in SQL Server 2019](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
 - [Discontinued database engine functionality in SQL Server](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)
-- [SQL Server database engine backward compatibility](../database-engine/sql-server-database-engine-backward-compatibility.md)
+- [SQL Server database engine backward compatibility](./discontinued-database-engine-functionality-in-sql-server.md)

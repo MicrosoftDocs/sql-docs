@@ -1,5 +1,6 @@
 ---
 title: "srv_paramsetoutput (Extended Stored Procedure API)"
+description: Learn how srv_paramsetoutput in the Extended Stored Procedure API sets the value of a return parameter.
 ms.custom: seo-dt-2019
 ms.date: "03/04/2017"
 ms.prod: sql

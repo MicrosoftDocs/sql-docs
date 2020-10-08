@@ -1,4 +1,5 @@
 ---
+description: "IsDescendant (DMX)"
 title: "IsDescendant (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # IsDescendant (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indicates whether the current node descends from the specified node.  
   

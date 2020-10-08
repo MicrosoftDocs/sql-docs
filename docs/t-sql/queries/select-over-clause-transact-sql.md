@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics  
   
 OVER (   
        [ <PARTITION BY clause> ]  
@@ -101,7 +101,9 @@ ORDER BY order_by_expression
 OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  PARTITION BY  
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
   

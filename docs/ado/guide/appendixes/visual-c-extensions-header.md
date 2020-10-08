@@ -1,8 +1,9 @@
 ---
+description: "Visual C++ Extensions Header"
 title: "Visual C++ Extensions Header | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -202,5 +203,5 @@ public:
 ```  
   
 ## See Also  
- [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Visual C++ Extensions Example](./visual-c-extensions-example.md)   
+ [Using Visual C++ Extensions](./using-visual-c-extensions.md)

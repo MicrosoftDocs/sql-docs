@@ -1,4 +1,5 @@
 ---
+description: "Change the Connection Associated with a Query"
 title: "Change the Connection Associated with a Query"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

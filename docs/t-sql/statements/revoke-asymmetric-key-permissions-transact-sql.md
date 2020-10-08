@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Asymmetric Key Permissions (Transact-SQL)"
 title: "REVOKE Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -35,7 +36,9 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
     [ AS revoking_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked.  
   

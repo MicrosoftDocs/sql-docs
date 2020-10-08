@@ -1,4 +1,5 @@
 ---
+description: "setBytes Method (SQLServerCallableStatement)"
 title: "setBytes Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

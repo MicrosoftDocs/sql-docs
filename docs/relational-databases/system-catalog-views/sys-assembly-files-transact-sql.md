@@ -1,4 +1,5 @@
 ---
+description: "sys.assembly_files (Transact-SQL)"
 title: "sys.assembly_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.assembly_files catalog view"
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.assembly_files (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

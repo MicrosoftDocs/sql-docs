@@ -1,4 +1,5 @@
 ---
+description: "Transact-SQL statements"
 title: "Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2020"
@@ -10,13 +11,13 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL statements
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A SQL statement is an atomic unit of work and either completely succeeds or completely fails. A SQL statement is a set of instruction that consists of identifiers, parameters, variables, names, data types, and SQL reserved words that compiles successfully. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creates an *implicit* transaction for a SQL statement if a `BeginTransaction` command does not specify the start of a transaction. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] always commits an implicit transaction if the statement succeeds, and rolls back an implicit transaction if the command fails.  
 

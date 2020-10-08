@@ -1,4 +1,5 @@
 ---
+description: "SQLBrowseConnect"
 title: "SQLBrowseConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -69,7 +70,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Documented SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
 ## See Also  
- [SQLBrowseConnect Function](https://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect Function](../../odbc/reference/syntax/sqlbrowseconnect-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

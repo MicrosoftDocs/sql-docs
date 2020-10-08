@@ -1,10 +1,11 @@
 ---
 title: "Find in Files"
+description: Learn how to search for a string or expression in a specified set of files, and how to specify the location of the search results. 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

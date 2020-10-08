@@ -1,4 +1,5 @@
 ---
+description: "PredictSequence (DMX)"
 title: "PredictSequence (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # PredictSequence (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Predicts future sequence values for a specified set of sequence data.  
   

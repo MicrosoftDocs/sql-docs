@@ -1,4 +1,5 @@
 ---
+description: "Read-Only Status (Text File Driver)"
 title: "Read-Only Status (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

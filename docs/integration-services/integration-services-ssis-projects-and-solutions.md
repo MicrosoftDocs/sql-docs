@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Projects and Solutions"
 title: "Integration Services (SSIS) Projects and Solutions | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/20/2019"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Projects and Solutions
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the development of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  
   

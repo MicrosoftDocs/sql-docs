@@ -44,11 +44,13 @@ See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-tra
   
 ## Syntax  
   
-```
+```syntaxsql
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 *datepart*  
 The units in which **DATEDIFF** reports the difference between the _startdate_ and _enddate_. Commonly used _datepart_ units include `month` or `second`.
@@ -163,8 +165,8 @@ SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'
 In this example, user-defined variables serve as arguments for *startdate* and *enddate*.
   
 ```sql
-DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
-DECLARE @enddate   datetime2 = '2007-05-04 12:10:09.3312722';   
+DECLARE @startdate DATETIME2 = '2007-05-05 12:10:09.3312722';  
+DECLARE @enddate   DATETIME2 = '2007-05-04 12:10:09.3312722';   
 SELECT DATEDIFF(day, @startdate, @enddate);  
 ```  
   

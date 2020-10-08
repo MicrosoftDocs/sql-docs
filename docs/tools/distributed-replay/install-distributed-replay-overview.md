@@ -1,5 +1,5 @@
 ---
-title: Install Distributed Replay
+title: Install Distributed Replay - Overview
 titleSuffix: SQL Server Distributed Replay
 description: This article provides links to information you need to install the Distributed Replay feature in SQL Server.
 ms.prod: sql

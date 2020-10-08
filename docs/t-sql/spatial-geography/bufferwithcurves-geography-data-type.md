@@ -1,4 +1,5 @@
 ---
+description: "BufferWithCurves (geography Data Type)"
 title: "BufferWithCurves (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/11/2017"
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .BufferWithCurves ( distance )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *distance*  
  Is a **float** indicating the maximum distance that points forming the buffer can be from the geography instance.  
   

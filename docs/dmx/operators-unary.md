@@ -1,4 +1,5 @@
 ---
+description: "Unary Operators (DMX)"
 title: "Unary Operators (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Operators - Unary
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Unary operators perform an operation on a single operand, such as returning the negative or positive value of a numeric expression.  
   

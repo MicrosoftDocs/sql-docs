@@ -1,4 +1,5 @@
 ---
+description: "catalog.event_messages"
 title: "catalog.event_messages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # catalog.event_messages 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

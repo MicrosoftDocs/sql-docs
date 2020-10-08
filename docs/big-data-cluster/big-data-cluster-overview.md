@@ -21,14 +21,14 @@ Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE
 
 Use SQL Server Big Data Clusters to:
 
-- [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
+- [Deploy scalable clusters](./deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
 - Read, write, and process big data from Transact-SQL or Spark.
 - Easily combine and analyze high-value relational data with high-volume big data.
 - Query external data sources.
 - Store big data in HDFS managed by SQL Server.
 - Query data from multiple external data sources through the cluster.
 - Use the data for AI, machine learning, and other analysis tasks.
-- [Deploy and run applications](../big-data-cluster/concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- [Deploy and run applications](./concept-application-deployment.md) in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
 - Virtualize data with [PolyBase](../relational-databases/polybase/polybase-guide.md). Query data from external SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources with external tables.
 - Provide high availability for the SQL Server master instance and all databases by using Always On availability group technology.
 
@@ -80,7 +80,7 @@ A SQL Server big data cluster is a cluster of Linux containers orchestrated by [
 
 Kubernetes is an open source container orchestrator, which can scale container deployments according to need. The following table defines some important Kubernetes terminology:
 
-|||
+|Term|Description|
 |:--|:--|
 | **Cluster** | A Kubernetes cluster is a set of machines, known as nodes. One node controls the cluster and is designated the master node; the remaining nodes are worker nodes. The Kubernetes master is responsible for distributing work between the workers, and for monitoring the health of the cluster. |
 | **Node** | A node runs containerized applications. It can be either a physical machine or a virtual machine. A Kubernetes cluster can contain a mixture of physical machine and virtual machine nodes. |

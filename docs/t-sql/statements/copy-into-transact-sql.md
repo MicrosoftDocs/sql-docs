@@ -1,8 +1,8 @@
 ---
 title: COPY INTO (Transact-SQL) (preview) 
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 06/19/2020
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -19,11 +19,11 @@ author: kevinvngo
 ms.author: kevin
 monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
 ---
-# COPY (Transact-SQL) (preview)
+# COPY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-This article explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse. Use COPY for the following capabilities:
+This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. Use COPY for the following capabilities:
 
 - Use lower privileged users to load without needing strict CONTROL permissions on the data warehouse
 - Execute a single T-SQL statement without having to create any additional database objects
@@ -34,9 +34,6 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 - Specify a custom row terminator for CSV files
 - Leverage SQL Server Date formats for CSV files
 - Specify wildcards and multiple files in the storage location path
-
-> [!NOTE]  
-> The COPY statement is currently in public preview.
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
@@ -96,7 +93,7 @@ Is where the files containing the data is staged. Currently Azure Data Lake Stor
 - *External location* for ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> The blob endpoint is available for ADLS Gen2 and is only for backward compatibility. Use the **dfs** endpoint for ADLS Gen2 for best performance.
+> The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
 
 - *Account* - The storage account name
 
@@ -133,12 +130,20 @@ Multiple file locations can only be specified from the same storage account and 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* specifies the authentication mechanism to access the external storage account. Authentication methods are:
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+1: The .blob endpoint (**.blob**.core.windows.net) in your external location path is required for this authentication method.
+
+2: The .dfs endpoint (**.dfs**.core.windows.net) in your external location path is required for this authentication method.
+
+
+> [!NOTE]  
+>
+> - When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
+> - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
 
 - Authenticating with Shared Access Signatures (SAS)
   
@@ -211,7 +216,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that cannot be imported by the COPY operation is ignored and counted as one error. If max_errors is not specified, the default is 0.
 
-*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*</br>
+*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
 *COMPRESSION* is optional and specifies the data compression method for the external data.
 
 - CSV supports GZIP
@@ -244,7 +249,7 @@ Extended ASCII and multi-byte characters and are not supported with UTF-8 for RO
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
 
-*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
+*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md?view=sql-server-ver15).
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
@@ -267,7 +272,7 @@ The user executing the Copy Command must have the following permissions:
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In Azure SQL Data Warehouse, INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
+Requires INSERT and ADMINISTER BULK OPERATIONS permissions. In [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], INSERT, and ADMINISTER DATABASE BULK OPERATIONS permissions are required.
 
 ## Examples  
 
@@ -391,7 +396,7 @@ WITH (
 ## FAQ
 
 ### What is the performance of the COPY command compared to PolyBase?
-The COPY command will have better performance depending on your workload. For best loading performance during public preview, consider splitting your input into multiple files when loading CSV. Share your performance results with our team during preview! sqldwcopypreview@service.microsoft.com
+The COPY command will have better performance depending on your workload. For best loading performance, consider splitting your input into multiple files when loading CSV.
 
 ### What is the file splitting guidance for the COPY command loading CSV files?
 Guidance on the number of files is outlined in the table below. Once the recommended number of files are reached, you will have better performance the larger the files. For a simple file splitting experience, refer to the following [documentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
@@ -419,15 +424,21 @@ Guidance on the number of files is outlined in the table below. Once the recomme
 ### What is the file splitting guidance for the COPY command loading Parquet or ORC files?
 There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
 
-### When will the COPY command be generally available?
-The COPY command will be generally available by the end of this calendar year (2020). 
+### Are there any limitations on the number or size of files?
+There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.
 
-### Are there any known issues with the COPY command?
+### Are there any limitations with COPY using Synapse workspaces (preview)?
 
-- LOB support such as (n)varchar(max) is not available in the COPY statement. This will be available early next year.
+Authenticating using Managed Identity (MSI) is not supported with the COPY statement or PolyBase (including when used in pipelines). You may run into a similiar error message:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*
+
+MSI authentication is required when the storage account is associated with a VNet. You must use BCP/Bulk insert to load data instead of COPY or PolyBase if your storage account is attached to a VNet.
+
+This limitation is only applicable to SQL pools belonging to a Synapse workspace (preview). We will enable MSI support in Synapse workspaces in an upcoming release. 
 
 Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 
 ## See also  
 
- [Loading overview with SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Loading overview with [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)

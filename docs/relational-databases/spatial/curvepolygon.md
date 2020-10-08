@@ -1,4 +1,5 @@
 ---
+description: "CurvePolygon"
 title: "CurvePolygon | Microsoft Docs"
 ms.date: "03/03/2017"
 ms.prod: sql

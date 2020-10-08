@@ -1,4 +1,5 @@
 ---
+description: "SQLBindCol"
 title: "SQLBindCol | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -37,7 +38,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  **SQLBindCol** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLBindCol Function](https://go.microsoft.com/fwlink/?LinkId=59327)   
+ [SQLBindCol Function](../../odbc/reference/syntax/sqlbindcol-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

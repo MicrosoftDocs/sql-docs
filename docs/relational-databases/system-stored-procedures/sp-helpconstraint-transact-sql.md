@@ -1,4 +1,5 @@
 ---
+description: "sp_helpconstraint (Transact-SQL)"
 title: "sp_helpconstraint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpconstraint"
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpconstraint (Transact-SQL)

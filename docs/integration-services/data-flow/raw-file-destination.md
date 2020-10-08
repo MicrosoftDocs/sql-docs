@@ -1,4 +1,5 @@
 ---
+description: "Raw File Destination"
 title: "Raw File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -23,7 +24,7 @@ ms.author: chugu
 ---
 # Raw File Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Raw File destination writes raw data to a file. Because the format of the data is native to the destination, the data requires no translation and little parsing. This means that the Raw File destination can write data more quickly than other destinations such as the Flat File and the OLE DB destinations.  

@@ -1,4 +1,5 @@
 ---
+description: "DAY (Transact-SQL)"
 title: "DAY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -35,11 +36,13 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DAY ( date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *date*  
 An expression that resolves to one of the following data types:
 

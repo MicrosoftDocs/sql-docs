@@ -1,4 +1,5 @@
 ---
+description: "Start the SQL Server Import and Export Wizard"
 title: Start the SQL Server Import and Export Wizard
 titleSuffix: Integration Services (SSIS)
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.date: 11/18/2019
 
 # Start the SQL Server Import and Export Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways that is described in this topic to import data from and export data to any supported data source.
 

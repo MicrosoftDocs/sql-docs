@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Agent, Jobs Object | Microsoft Docs"
+description: Learn about the SQL Server Agent Jobs performance object, which contains performance counters that report information about SQL Server Agent jobs.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

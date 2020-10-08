@@ -1,4 +1,5 @@
 ---
+description: "getUDTs Method (SQLServerDatabaseMetaData)"
 title: "getUDTs Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

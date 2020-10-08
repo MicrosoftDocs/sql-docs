@@ -1,4 +1,5 @@
 ---
+description: "Value for Extended Property Dialog Box"
 title: "Value for Extended Property Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

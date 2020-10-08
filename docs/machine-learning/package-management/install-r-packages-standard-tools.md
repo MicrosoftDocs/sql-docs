@@ -14,7 +14,7 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 
 # Install packages with R tools
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 This article describes how to use standard R tools to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services. You can install packages on a SQL Server that has an Internet connection, as well as one that is isolated from the Internet.
 

@@ -1,4 +1,5 @@
 ---
+description: "PERMISSIONS (Transact-SQL)"
 title: "PERMISSIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -37,11 +38,12 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *objectid*  
  Is the ID of a securable. If *objectid* is not specified, the bitmap value contains statement permissions for the current user; otherwise, the bitmap contains permissions on the securable for the current user. The securable specified must be in the current database. Use the [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) function to determine the *objectid* value.  
   
@@ -109,7 +111,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ### A. Using the PERMISSIONS function with statement permissions  
  The following example determines whether the current user can execute the `CREATE TABLE` statement.  
   
-```  
+```sql  
 IF PERMISSIONS()&2=2  
    CREATE TABLE test_table (col1 INT)  
 ELSE  
@@ -119,7 +121,7 @@ ELSE
 ### B. Using the PERMISSIONS function with object permissions  
  The following example determines whether the current user can insert a row of data into the `Address` table in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
@@ -129,7 +131,7 @@ ELSE
 ### C. Using the PERMISSIONS function with grantable permissions  
  The following example determines whether the current user can grant the INSERT permission on the `Address` table in the `AdventureWorks2012` database to another user.  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  

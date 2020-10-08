@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_query_stats_xe (Transact-SQL)"
 title: "sys.dm_pdw_query_stats_xe (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -9,12 +10,12 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_query_stats_xe (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   This DMV is deprecated and will be removed in a future release. In this release, it returns 0 rows.  
   

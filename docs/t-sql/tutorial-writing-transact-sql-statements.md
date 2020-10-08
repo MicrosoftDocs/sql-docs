@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Writing Transact-SQL Statements"
 title: "Tutorial: Writing Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"

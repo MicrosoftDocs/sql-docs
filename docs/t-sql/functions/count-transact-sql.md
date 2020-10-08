@@ -1,4 +1,5 @@
 ---
+description: "COUNT (Transact-SQL)"
 title: "COUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -42,7 +43,9 @@ COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )
 COUNT ( [ ALL ]  { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **ALL**  
 Applies the aggregate function to all values. ALL serves as the default.
   
@@ -149,7 +152,7 @@ ORDER BY Name;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Name                          MinSalary             MaxSalary             AvgSalary             EmployeesPerDept  
 ----------------------------- --------------------- --------------------- --------------------- ----------------  
 Document Control              10.25                 17.7885               14.3884               5  

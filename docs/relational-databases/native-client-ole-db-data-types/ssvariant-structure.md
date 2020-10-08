@@ -1,5 +1,6 @@
 ---
-title: "SSVARIANT Structure | Microsoft Docs"
+description: "SSVARIANT Structure in SQL Server Native Client"
+title: SSVARIANT structure (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# SSVARIANT Structure
+# SSVARIANT Structure in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The **SSVARIANT** structure, which is defined in sqlncli.h, corresponds to a DBTYPE_SQLVARIANT value in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB provider.  

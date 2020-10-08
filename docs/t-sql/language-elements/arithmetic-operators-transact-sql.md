@@ -1,4 +1,5 @@
 ---
+description: "Arithmetic Operators (Transact-SQL)"
 title: "Arithmetic Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"

@@ -1,6 +1,6 @@
 ---
 title: "sys.fn_PageResCracker (Transact-SQL) | Microsoft Docs"
-description: "Documentation for sys.fn_PageResCracker system function."
+description: Learn about the sys.fn_PageResCracker system function. See examples and view additional available resources.
 ms.custom: ""
 ms.date: "09/18/2018"
 ms.prod: sql

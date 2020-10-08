@@ -1,4 +1,5 @@
 ---
+description: "User Interface Reference (DB2ToSQL)"
 title: "User Interface Reference (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # User Interface Reference (DB2ToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2.  
@@ -16,9 +17,8 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 ## In This Section  
 The following table lists the SSMA dialog boxes:  
   
-|||  
-|-|-|  
 |Topic|Description|  
+|-|-|  
 |[Advanced Object Selection &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
 |[Assessment Report &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Use the Assessment Report to view the results of the conversion of DB2 objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and to estimate the time and complexity of a migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Connecting to DB2 Database &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Use the **Connect to DB2** dialog box to connect to the DB2 database that you want to migrate.|  

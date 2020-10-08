@@ -1,4 +1,5 @@
 ---
+description: "Change an Attribute Group Name (Master Data Services)"
 title: Change an Attribute Group Name
 ms.custom: ""
 ms.date: "03/15/2017"

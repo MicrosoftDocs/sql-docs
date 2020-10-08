@@ -1,4 +1,5 @@
 ---
+description: "STMPointFromWKB (geometry Data Type)"
 title: "STMPointFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns a **geometryMultiPoint** instance from an Open Geospatial Consortium (OG
 STMPointFromWKB ( 'WKB_multipoint' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_multipoint*  
  Is the WKB representation of the **geometryMultiPoint** instance you wish to return. *WKB_multipoint* is a **varbinary(max)** expression.  
   

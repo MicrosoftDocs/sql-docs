@@ -1,4 +1,5 @@
 ---
+description: "Initializing Test Cases (SybaseToSQL)"
 title: "Initializing Test Cases (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,InitializingTest Cases"
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Initializing Test Cases (SybaseToSQL)
 At this step you specify the initial information for the new test case.  

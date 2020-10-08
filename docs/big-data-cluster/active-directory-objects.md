@@ -64,7 +64,7 @@ The following section provides more details about each accounts. For information
 
 ### Controller service account
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`control`|
 |Pod name|`control-x`|
@@ -76,7 +76,7 @@ The following section provides more details about each accounts. For information
 
 ### Monitoring service proxy service account
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`mgmtproxy`|
 |Pod name|`mgmtproxy-x`|
@@ -90,7 +90,7 @@ The following section provides more details about each accounts. For information
 
 Used by grafana and hadoop services to look up users through LDAP.
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`metricsui`|
 |Pod name|`metricsui-x`|
@@ -104,7 +104,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Master pool SQL Server user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`master`|
 |Pod name|`master-x`|
@@ -116,7 +116,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Master pool Data Warehouse DMS user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`master`|
 |Pod name|`master-x`|
@@ -128,7 +128,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Master pool Data Warehouse Engine user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`master`|
 |Pod name|`master-x`|
@@ -142,7 +142,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Compute pool SQL Server user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`compute-0`|
 |Pod name|`compute-0-x`|
@@ -154,7 +154,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Compute pool Data Warehouse DMS user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`compute-0`|
 |Pod name|`compute-0-x`|
@@ -166,7 +166,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Compute pool Data Warehouse Engine user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`compute-0`|
 |Pod name|`compute-0-x`|
@@ -180,7 +180,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Data pool SQL Server user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`data-0`|
 |Pod name|`data-0-x`|
@@ -194,7 +194,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Storage pool SQL Server user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`storage-0`|
 |Pod name|`storage-0-x`|
@@ -206,7 +206,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Storage pool Yarn node manager service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`storage-0`|
 |Pod name|`storage-0-x`|
@@ -218,7 +218,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Storage pool HTTP service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`storage-0`|
 |Pod name|`storage-0-x`|
@@ -230,7 +230,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Storage pool HDFS datanode service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`storage-0`|
 |Pod name|`storage-0-x`|
@@ -244,7 +244,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### HDFS Name node service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`nmnode-0`|
 |Pod name|`nmnode-0-x`|
@@ -256,7 +256,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### HDFS Name node HTTP service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`nmnode-0`|
 |Pod name|`nmnode-0-x`|
@@ -270,7 +270,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Name node KMS service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`nmnode-0`|
 |Pod name|`nmnode-0-x`|
@@ -284,7 +284,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Zookeeper JournalNode service users
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`zookeeper`|
 |Pod name|`zookeeper-x`|
@@ -296,7 +296,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Zookeeper HTTP service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`zookeeper`|
 |Pod name|`zookeeper-x`|
@@ -310,7 +310,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Sparkhead Yarn resource manager service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`sparkhead`|
 |Pod name|`sparkhead-x`|
@@ -322,7 +322,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Sparkhead HTTP user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`sparkhead`|
 |Pod name|`sparkhead-x`|
@@ -334,7 +334,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Sparkhead Spark history service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`sparkhead`|
 |Pod name|`sparkhead-x`|
@@ -346,7 +346,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Sparkhead Livy service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`sparkhead`|
 |Pod name|`sparkhead-x`|
@@ -358,7 +358,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Sparkhead Hive service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`sparkhead`|
 |Pod name|`sparkhead-x`|
@@ -370,7 +370,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Spark pool Yarn node manager service user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`spark-0`|
 |Pod name|`spark-0-x`|
@@ -382,7 +382,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Spark pool Yarn node manager HTTP user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`spark-0`|
 |Pod name|`spark-0-x`|
@@ -396,7 +396,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Knox Gateway user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`gateway`|
 |Pod name|`gateway-x`|
@@ -408,7 +408,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### Knox Gateway HTTP user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`gateway`|
 |Pod name|`gateway-x`|
@@ -422,7 +422,7 @@ Used by grafana and hadoop services to look up users through LDAP.
 
 ### App setup user
 
-|Object ||
+|Object|Account name|
 |---|---|
 |Scale set name|`appproxy`|
 |Pod name|`appproxy-x`|
@@ -438,7 +438,7 @@ The following groups are created in the OU provided by the user. The members of 
 
 ### Data Warehouse DMS Service group
 
-|Object ||
+|Object|Group name|
 |---|---|
 |Scale set name|`master/compute-0`|
 |Pod name|`master-x/compute-0-x`|
@@ -450,7 +450,7 @@ The following groups are created in the OU provided by the user. The members of 
 
 ### Data Warehouse Engine Service group
 
-|Object ||
+|Object|Group name|
 |---|---|
 |Scale set name|`master/compute-0`|
 |Pod name|`master-x/compute-0-x`|

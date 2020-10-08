@@ -1,4 +1,5 @@
 ---
+description: "CREATE XML INDEX (Transact-SQL)"
 title: "CREATE XML INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -41,8 +42,7 @@ ms.author: genemi
 ## Syntax  
   
 ```syntaxsql
-  
-Create XML Index   
+--Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   
     ON <object> ( xml_column_name )  
     [ USING XML INDEX xml_index_name   
@@ -65,10 +65,11 @@ CREATE [ PRIMARY ] XML INDEX index_name
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
 }  
-  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [PRIMARY] XML  
  Creates an XML index on the specified **xml** column. When PRIMARY is specified, a clustered index is created with the clustered key formed from the clustering key of the user table and an XML node identifier. Each table can have up to 249 XML indexes. Note the following when you create an XML index:  
   

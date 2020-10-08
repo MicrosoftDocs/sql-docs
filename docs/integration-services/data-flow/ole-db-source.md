@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Source"
 title: "OLE DB Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # OLE DB Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The OLE DB source extracts data from a variety of OLE DB-compliant relational databases by using a database table, a view, or an SQL command. For example, the OLE DB source can extract data from tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  

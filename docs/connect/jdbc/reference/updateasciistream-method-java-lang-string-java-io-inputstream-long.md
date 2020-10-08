@@ -1,5 +1,6 @@
 ---
-title: "updateAsciiStream Method (java.io.InputStream, long) | Microsoft Docs"
+description: "updateAsciiStream Method (java.lang.String, java.io.InputStream, long)"
+title: updateAsciiStream method (java.lang.String, java.io.InputStream, long)
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

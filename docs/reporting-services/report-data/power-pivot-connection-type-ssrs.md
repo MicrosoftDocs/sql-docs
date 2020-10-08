@@ -1,5 +1,6 @@
 ---
 title: "Power Pivot Connection Type | Microsoft Docs"
+description: Use the information in this article about the Power Pivot connection type to learn how to build a data source.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

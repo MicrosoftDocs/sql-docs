@@ -1,7 +1,7 @@
 ---
 title: Deploy offline
 titleSuffix: SQL Server big data clusters
-description: Learn how to perform an offline deployment of a SQL Server big data cluster.
+description: Learn how to perform an offline deployment of a SQL Server 2019 Big Data Cluster and how to load container images into a private repository.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -75,7 +75,6 @@ The following big data cluster container images are required for an offline inst
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

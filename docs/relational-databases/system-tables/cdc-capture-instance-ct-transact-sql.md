@@ -1,4 +1,5 @@
 ---
+description: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL)"
 title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.<capture_instance>_CT"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.author: carlrab
   
 ## Remarks  
 
-The `__$command_id` column was column was introduced in a cumulative update in versions 2012 through 2016. For version and download information, see KB article 3030352 at [FIX: The change table is ordered incorrectly for updated rows after you enable change data capture for a Microsoft SQL Server database](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  For more information, see [CDC functionality may break after upgrading to the latest CU for SQL Server 2012, 2014 and 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+The `__$command_id` column was column was introduced in a cumulative update in versions 2012 through 2016. For version and download information, see KB article 3030352 at [FIX: The change table is ordered incorrectly for updated rows after you enable change data capture for a Microsoft SQL Server database](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  For more information, see [CDC functionality may break after upgrading to the latest CU for SQL Server 2012, 2014 and 2016](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016).
 
 ## Captured Column Data Types  
  Captured columns included in this table have the same data type and value as their corresponding source columns with the following exceptions:  
@@ -78,5 +79,4 @@ The `__$command_id` column was column was introduced in a cumulative update in v
 ## See Also  
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
-  
   

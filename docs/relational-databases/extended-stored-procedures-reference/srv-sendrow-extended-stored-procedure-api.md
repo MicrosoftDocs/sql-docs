@@ -1,5 +1,6 @@
 ---
 title: "srv_sendrow (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_sendrow in the Extended Stored Procedure API. srv_sendrow transmits a row of data to the client.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

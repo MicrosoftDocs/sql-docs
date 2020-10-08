@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT"
 title: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ ms.author: sstein
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|267|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

@@ -1,4 +1,5 @@
 ---
+description: "SQL_VARIANT_PROPERTY (Transact-SQL)"
 title: "SQL_VARIANT_PROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2020"
@@ -29,11 +30,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SQL_VARIANT_PROPERTY ( expression , property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an expression of type **sql_variant**.  
   

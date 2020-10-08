@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Extensions (DMX) Syntax Elements"
 title: "Data Mining Extensions (DMX) Syntax Elements | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Data Mining Extensions (DMX) Syntax Elements
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can use various syntax elements to define Data Mining Extensions (DMX) statements that you can use to build, manage, and work with data mining models. The following sections describe these syntax elements.  
   

@@ -1,4 +1,5 @@
 ---
+description: "System Security Functions"
 title: "System Security Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

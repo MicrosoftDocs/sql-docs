@@ -1,4 +1,5 @@
 ---
+description: "ISNUMERIC (Transact-SQL)"
 title: "ISNUMERIC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -33,11 +34,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-``` 
+```syntaxsql 
 ISNUMERIC ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is the [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be evaluated.  
   

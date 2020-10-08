@@ -1,5 +1,6 @@
 ---
-title: "modify() Method (xml Data Type) | Microsoft Docs"
+description: "modify() Method (xml Data Type)"
+title: modify() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -22,12 +23,13 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 modify (XML_DML)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  XML_DML  
  Is a string in XML Data Manipulation Language (DML). The XML document is updated according to this expression.  
   

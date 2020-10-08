@@ -120,12 +120,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  As shown in the following table, this is the same conversion that is applied for other XPath expressions (such as literals or compound expressions).  
   
-||||||  
-|-|-|-|-|-|  
-||X is unknown|X is **string**|X is **number**|X is **boolean**|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN(X) > 0|X != 0|-|  
+|   | X is unknown | X is string | X is number | X is boolean |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN(X) > 0|X != 0|-|  
   
 ## Examples  
   

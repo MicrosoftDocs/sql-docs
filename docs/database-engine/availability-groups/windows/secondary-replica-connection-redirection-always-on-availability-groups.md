@@ -56,7 +56,7 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTIN
 
 By default, read/write replica connection redirection is not set for a replica. The way a secondary replica handles connection requests depends on whether or not the secondary replica is set to allow connections and on the `ApplicationIntent` setting in the connection string. The following table shows how a secondary replica handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|<code>ApplicationIntent</code> value|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> Default|Connections fail|Connections fail|Connections succeed<br/>Reads succeed<br/>Writes fail|
 |`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
@@ -67,7 +67,7 @@ The preceding table shows the default behavior, which is the same as versions of
 
 After you set read/write connection redirection, the way the replica handles connection requests behaves differently. The connection behavior still depends on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent` setting. The following table shows how a secondary replica with `READ_WRITE_ROUTING` set handles connections based on `SECONDARY_ROLE (ALLOW CONNECTIONS = )` and `ApplicationIntent`.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|<code>ApplicationIntent</code> value|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>Default|Connections fail|Connections fail|Connections route to primary|
 |`ApplicationIntent=ReadOnly`|Connections fail|Connections succeed|Connections succeed
@@ -149,7 +149,7 @@ In the following diagram, the primary replica has been manually failed over to C
 
 ## SQL Server instance offline
 
-If the instance of SQL Server specified in the connection string is not available (has an outage), the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+If the instance of SQL Server specified in the connection string is not available (has an outage), the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
 
 ## See Also
 
@@ -157,4 +157,4 @@ If the instance of SQL Server specified in the connection string is not availabl
  
 [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
 title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"
@@ -28,14 +29,15 @@ This function decrypts encrypted data. To do this, it first decrypts a symmetric
 ## Syntax  
   
 ```syntaxsql
-  
 DecryptByKeyAutoAsymKey ( akey_ID , akey_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *akey_ID*  
 The ID of the asymmetric key used to encrypt the symmetric key. *akey_ID* has an **int** data type.  
   
@@ -81,7 +83,7 @@ Requires `VIEW DEFINITION` permission on the symmetric key, and `CONTROL` permis
 ## Examples
 This example shows how `DECRYPTBYKEYAUTOASYMKEY` can simplify decryption code. This code should run on an [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database that does not already have a database master key.  
 
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  

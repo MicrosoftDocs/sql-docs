@@ -1,4 +1,5 @@
 ---
+description: "STPointFromText (geography Data Type)"
 title: "STPointFromText (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -30,7 +31,9 @@ Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-K
 STPointFromText ( 'point_tagged_text' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *point_tagged_text*  
  Is the WKT representation of the **geographyPoint** instance you wish to return. *point_tagged_text* is an **nvarchar(max)** expression.  
   

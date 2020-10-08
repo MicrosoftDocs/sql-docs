@@ -1,4 +1,5 @@
 ---
+description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -30,12 +31,13 @@ ms.author: maghan
   
 ## Syntax  
   
+```syntaxsql  
+MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
-MIN_ACTIVE_ROWVERSION  
-```  
-  
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns a **binary(8)** value.  
   
 ## Remarks  
@@ -48,7 +50,7 @@ MIN_ACTIVE_ROWVERSION
 ## Examples  
  The following example returns **rowversion** values by using `MIN_ACTIVE_ROWVERSION` and `@@DBTS`. Notice that the values differ when there are no active transactions in the database.  
   
-```  
+```sql  
 -- Create a table that has a ROWVERSION column in it.  
 CREATE TABLE RowVersionTestTable (rv ROWVERSION)  
 GO  

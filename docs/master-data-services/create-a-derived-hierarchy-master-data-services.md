@@ -1,4 +1,5 @@
 ---
+description: "Create a Derived Hierarchy (Master Data Services)"
 title: Create a Derived Hierarchy
 ms.custom: ""
 ms.date: "03/01/2017"

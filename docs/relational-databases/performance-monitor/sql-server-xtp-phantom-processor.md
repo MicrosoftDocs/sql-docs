@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP Phantom Processor | Microsoft Docs"
+description: Learn about the SQL Server XTP Phantom Processor performance object, which contains counters for the In-Memory OLTP engine's phantom processing subsystem.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - REWINDONLY (Transact-SQL)"
 title: "RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -49,7 +50,9 @@ FROM <backup_device> [ ,...n ]
 }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **\<backup_device> ::=** 
   
  Specifies the logical or physical backup devices to use for the restore operation.  

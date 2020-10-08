@@ -1,4 +1,5 @@
 ---
+description: "Specify an Interval of Change Data"
 title: "Specify an Interval of Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Specify an Interval of Change Data
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are **datetime** values and will be stored in package variables for use later in the package.  
@@ -106,9 +107,8 @@ ms.author: chugu
  **Next topic:** [Determine Whether the Change Data Is Ready](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## See Also  
- [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Use Variables in Packages](../integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md)   
  [Script Task](../../integration-services/control-flow/script-task.md)  
-  
   

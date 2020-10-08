@@ -1,4 +1,5 @@
 ---
+description: "Steps in the SQL Server Import and Export Wizard"
 title: "Steps in the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Steps in the SQL Server Import and Export Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This topic describes the sequence of steps for importing and exporting data with the SQL Server Import and Export Wizard. It also contains links to the individual pages of documentation that describe each page or dialog box you see in the wizard.

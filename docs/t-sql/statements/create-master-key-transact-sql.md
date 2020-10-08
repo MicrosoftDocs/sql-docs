@@ -1,4 +1,5 @@
 ---
+description: "CREATE MASTER KEY (Transact-SQL)"
 title: "CREATE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2019"
@@ -39,6 +40,8 @@ Creates a database master key in the master database.
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

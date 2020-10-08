@@ -1,4 +1,5 @@
 ---
+description: "Backup and restore databases using Always Encrypted"
 title: "Backup and restore databases using Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019

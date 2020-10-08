@@ -1,4 +1,5 @@
 ---
+description: "IsNull (geography Data Type)"
 title: "IsNull (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,7 +30,9 @@ ms.author: mlandzic
 .IsNull  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **bit**  
   
  CLR type: **SqlBoolean**  

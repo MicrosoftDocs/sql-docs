@@ -1,4 +1,5 @@
 ---
+description: "Managing a Domain"
 title: "Managing a Domain"
 ms.date: "07/31/2012"
 ms.prod: sql
@@ -38,7 +39,7 @@ ms.author: sawinark
 ## In This Section  
  Using a domain enables you to do the following:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create a semantic representation for a data field with a specific data type, specify how the domain is populated, and format the output of the domain|[Create a Domain](../data-quality-services/create-a-domain.md)|  
 |Link a domain to another domain, enabling it to share the same settings and values|[Create a Linked Domain](../data-quality-services/create-a-linked-domain.md)|  
@@ -46,7 +47,7 @@ ms.author: sawinark
 |Change or augment the values in a knowledge base|[Change Domain Values](../data-quality-services/change-domain-values.md)|  
 |Use validation and standardization rules|[Create a Domain Rule](../data-quality-services/create-a-domain-rule.md)|  
 |Use relations to correct a term that is part of a value in a domain|[Create Term-Based Relations](../data-quality-services/create-term-based-relations.md)|  
-|Complete, close, or cancel the domain management activity|[End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Complete, close, or cancel the domain management activity|[End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))|  
   
 ## Related Tasks  
   
@@ -55,5 +56,4 @@ ms.author: sawinark
 |Building a knowledge base by running knowledge discovery and interactively managing knowledge|[Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
 |Importing knowledge into, or exporting it from, a knowledge base.|[Importing and Exporting Knowledge](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Creating a composite domain, and adding knowledge to the domain.|[Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md)|  
-  
   

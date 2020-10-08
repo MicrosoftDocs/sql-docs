@@ -1,4 +1,5 @@
 ---
+description: "TRY...CATCH (Transact-SQL)"
 title: "TRY...CATCH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -50,7 +51,9 @@ END CATCH
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *sql_statement*  
  Is any [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
@@ -310,7 +313,8 @@ BEGIN CATCH
         ROLLBACK TRANSACTION;  
     END;  
   
-    -- Test whether the transaction is committable.  
+    -- Test whether the transaction is committable.
+    -- You may want to commit a transaction in a catch block if you want to commit changes to statements that ran prior to the error.
     IF (XACT_STATE()) = 1  
     BEGIN  
         PRINT  

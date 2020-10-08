@@ -1,4 +1,5 @@
 ---
+description: "Syntax (SSIS)"
 title: "Syntax (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Syntax (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression syntax is similar to the syntax that the C and C# languages use. Expressions include elements such as identifiers (columns and variables), literals, operators, and functions. This topic summarizes the unique requirements of the expression evaluator syntax as they apply to different expression elements.  

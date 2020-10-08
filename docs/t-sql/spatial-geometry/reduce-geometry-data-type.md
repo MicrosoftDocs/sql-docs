@@ -1,4 +1,5 @@
 ---
+description: "Reduce (geometry Data Type)"
 title: "Reduce (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns an approximation of the given **geometry** instance. The approximation i
 .Reduce ( tolerance )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *tolerance*  
  Is a value of type **float**. *tolerance* is the tolerance to input for the approximation algorithm.  
   

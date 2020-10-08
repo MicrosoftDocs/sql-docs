@@ -1,4 +1,5 @@
 ---
+description: "GRANT Full-Text Permissions (Transact-SQL)"
 title: "GRANT Full-Text Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/17/2017"
@@ -43,7 +44,9 @@ GRANT permission [ ,...n ] ON
     [ AS granting_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
@@ -129,7 +132,7 @@ AS *granting_principal*
 ### A. Granting permissions to a full-text catalog  
  The following example grants `Ted` the `CONTROL` permission on the full-text catalog `ProductCatalog`.  
   
-```  
+```sql  
 GRANT CONTROL  
     ON FULLTEXT CATALOG :: ProductCatalog  
     TO Ted ;  
@@ -138,7 +141,7 @@ GRANT CONTROL
 ### B. Granting permissions to a stoplist  
  The following example grants `Mary` the `VIEW DEFINITION` permission on the full-text stoplist `ProductStoplist`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON FULLTEXT STOPLIST :: ProductStoplist  
     TO Mary ;  

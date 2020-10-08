@@ -1,4 +1,5 @@
 ---
+description: "STUFF (Transact-SQL)"
 title: "STUFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2017"
@@ -38,7 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 STUFF ( character_expression , start , length , replaceWith_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *character_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column of either character or binary data.  
   
@@ -65,7 +68,7 @@ An error is raised if the resulting value is larger than the maximum supported b
 ## Examples  
  The following example returns a character string created by deleting three characters from the first string, `abcdef`, starting at position `2`, at `b`, and inserting the second string at the deletion point.  
   
-```  
+```sql  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
 GO  
 ```  

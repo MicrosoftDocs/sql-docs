@@ -1,5 +1,6 @@
 ---
-title: "xml (Transact-SQL) | Microsoft Docs"
+description: "xml (Transact-SQL)"
+title: xml (Transact-SQL)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -26,12 +27,13 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  CONTENT  
  Restricts the **xml** instance to be a well-formed XML fragment. The XML data can contain multiple zero or more elements at the top level. Text nodes are also allowed at the top level.  
   
@@ -50,11 +52,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## Examples  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
-SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+DECLARE @DemographicData XML (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData = (SELECT TOP 1 Demographics FROM Person.Person);  
 SELECT @DemographicData;  
 GO  
 ```  

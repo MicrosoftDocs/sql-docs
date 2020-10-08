@@ -1,4 +1,5 @@
 ---
+description: "Delete an Attribute (Master Data Services)"
 title: Delete an Attribute
 ms.custom: ""
 ms.date: "03/15/2017"

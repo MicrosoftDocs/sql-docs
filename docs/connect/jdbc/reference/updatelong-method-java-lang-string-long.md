@@ -1,4 +1,5 @@
 ---
+description: "updateLong Method (java.lang.String, long)"
 title: "updateLong Method (java.lang.String, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

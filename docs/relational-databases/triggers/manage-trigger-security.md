@@ -1,4 +1,5 @@
 ---
+description: "Manage Trigger Security"
 title: "Manage Trigger Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2020"
@@ -54,7 +55,7 @@ What this trigger means is that as soon as a user that has permission to execute
     ```  
 
    > [!NOTE]
-   > Only **sys.triggers** is available for Azure SQL Database unless you are using Managed Instance.
+   > Only **sys.triggers** is available for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unless you are using [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 ::: moniker-end
 
@@ -118,5 +119,4 @@ What this trigger means is that as soon as a user that has permission to execute
  [DML Triggers](../../relational-databases/triggers/dml-triggers.md)   
  [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)  
  [Logon Triggers](../../relational-databases/triggers/logon-triggers.md)  
-  
   

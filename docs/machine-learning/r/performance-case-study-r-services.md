@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Performance for R Services: results and resources
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article is the fourth and final in a series that describes performance optimization for R Services. This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 
@@ -333,7 +333,7 @@ We recommend that you read this blog article and the accompanying tutorial for a
 
 Many users have noted that there is a small pause as the R (or Python) runtime is loaded for the first time. For this reason, as described in these tests, the time for the first run is often measured but later discarded. Subsequent caching might result in notable performance differences between the first and second runs. There is also some overhead when data is moved between SQL Server and the external runtime, particularly if data is passed over the network rather than being loaded directly from SQL Server.
 
-For all these reasons, there is no single solution for mitigating this initial loading time, as the performance impact varies significantly depending on the task. For example, caching is performed for single-row scoring in batches; hence, successive scoring operations are much faster and neither the model nor the R runtime is reloaded. You can also use [native scoring](../sql-native-scoring.md) to avoid loading the R runtime entirely.
+For all these reasons, there is no single solution for mitigating this initial loading time, as the performance impact varies significantly depending on the task. For example, caching is performed for single-row scoring in batches; hence, successive scoring operations are much faster and neither the model nor the R runtime is reloaded. You can also use [native scoring](../predictions/native-scoring-predict-transact-sql.md) to avoid loading the R runtime entirely.
 
 For training large models, or scoring in large batches, the overhead might be minimal in comparison to the gains from avoiding data movement or from streaming and parallel processing. See this blog post for additional performance guidance:
 

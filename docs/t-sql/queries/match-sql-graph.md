@@ -1,4 +1,5 @@
 ---
+description: "MATCH (Transact-SQL)"
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2019"
@@ -107,7 +108,9 @@ n -  positive integer only.
  
 ```
 
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *graph_search_pattern*  
 Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside parentheses. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
 
@@ -139,9 +142,9 @@ MATCH can be combined with other expressions using AND in the WHERE clause. Howe
 ### A.  Find a friend 
  The following example creates a Person node table and friends Edge table, inserts some data and then uses MATCH to find friends of Alice, a person in the graph.
 
- ```
+ ```sql
  -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+ CREATE TABLE dbo.Person (ID INTEGER PRIMARY KEY, name VARCHAR(50)) AS NODE;
  CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
  -- Insert into node table
@@ -164,24 +167,22 @@ SELECT Person2.name AS FriendName
 FROM Person Person1, friend, Person Person2
 WHERE MATCH(Person1-(friend)->Person2)
 AND Person1.name = 'Alice';
-
  ```
 
  ### B.  Find friend of a friend
  The following example tries to find friend of a friend of Alice. 
 
- ```
+ ```sql
 SELECT Person3.name AS FriendName 
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
 AND Person1.name = 'Alice';
-
  ```
 
 ### C.  More `MATCH` patterns
  Following are some more ways in which a pattern can be specified inside MATCH.
 
- ```
+ ```sql
  -- Find a friend
     SELECT Person2.name AS FriendName
     FROM Person Person1, friend, Person Person2

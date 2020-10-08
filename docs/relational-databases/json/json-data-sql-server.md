@@ -1,4 +1,5 @@
 ---
+description: "JSON data in SQL Server"
 title: "Work with JSON data"
 ms.date: 06/03/2020
 ms.prod: sql

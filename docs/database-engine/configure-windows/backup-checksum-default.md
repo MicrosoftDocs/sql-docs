@@ -19,9 +19,8 @@ ms.author: maghan
   
  The possible values are described in the following table:  
   
-|||  
+|Value|Meaning|  
 |-|-|  
-|**Value**|**Meaning**|  
 |0|Disabled. This is the default setting.|  
 |1|Enabled|  
   

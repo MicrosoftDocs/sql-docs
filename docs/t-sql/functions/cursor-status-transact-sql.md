@@ -1,4 +1,5 @@
 ---
+description: "CURSOR_STATUS (Transact-SQL)"
 title: "CURSOR_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -29,7 +30,7 @@ For a given parameter, `CURSOR_STATUS` shows whether or not a cursor declaration
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURSOR_STATUS   
      (  
           { 'local' , 'cursor_name' }   
@@ -38,7 +39,9 @@ CURSOR_STATUS
      )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 'local'  
 Specifies a constant indicating that the cursor source is a local cursor name.
   
@@ -73,7 +76,7 @@ This example uses the `CURSOR_STATUS` function to show the status of a cursor, a
 ```sql
 CREATE TABLE #TMP  
 (  
-   ii int  
+   ii INT  
 )  
 GO  
   

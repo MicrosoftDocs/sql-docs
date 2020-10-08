@@ -1,4 +1,5 @@
 ---
+description: "Showplan XML Statistics Profile Event Class"
 title: "Showplan XML Statistics Profile Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

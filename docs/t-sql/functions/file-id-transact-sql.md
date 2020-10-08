@@ -1,4 +1,5 @@
 ---
+description: "FILE_ID (Transact-SQL)"
 title: "FILE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -35,11 +36,13 @@ For the given logical name for a component file of the current database, this fu
   
 ## Syntax  
   
-```  
+```syntaxsql  
 FILE_ID ( file_name )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *file_name*  
 An expression of type **sysname**, representing the logical name of the file whose file ID value `FILE_ID` will return.  
   

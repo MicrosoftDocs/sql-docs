@@ -1,4 +1,5 @@
 ---
+description: "Candidate Key Profile Request Options (Data Profiling Task)"
 title: "Candidate Key Profile Request Options (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Candidate Key Profile Request Options (Data Profiling Task)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Candidate Key Profile Request** that is selected in the requests pane. A Candidate Key profile reports whether a column or set of columns is a key, or an approximate key, for the selected table. This profile can also help you identify problems in your data such as duplicate values in a potential key column.  

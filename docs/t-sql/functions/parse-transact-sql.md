@@ -1,4 +1,5 @@
 ---
+description: "PARSE (Transact-SQL)"
 title: "PARSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/05/2017"
@@ -27,12 +28,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_value*  
  **nvarchar**(4000) value representing the formatted value to parse into the specified data type.  
   
@@ -129,7 +131,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ### A. PARSE into datetime2  
   
-```  
+```sql  
 SELECT PARSE('Monday, 13 December 2010' AS datetime2 USING 'en-US') AS Result;  
 ```  
   
@@ -145,7 +147,7 @@ Result
   
 ### B. PARSE with currency symbol  
   
-```  
+```sql  
 SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  
 ```  
   
@@ -161,7 +163,7 @@ Result
   
 ### C. PARSE with implicit setting of language  
   
-```  
+```sql  
 -- The English language is mapped to en-US specific culture  
 SET LANGUAGE 'English';  
 SELECT PARSE('12/16/2010' AS datetime2) AS Result;  

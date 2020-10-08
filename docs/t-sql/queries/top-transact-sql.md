@@ -1,4 +1,5 @@
 ---
+description: "TOP (Transact-SQL)"
 title: "TOP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -33,23 +34,25 @@ Limits the rows returned in a query result set to a specified number of rows or 
  
  Following is the syntax for SQL Server and Azure SQL Database:
 
-```sql  
+```syntaxsql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
 ]  
 ```  
 
-Following is syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
+Following is syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
-```sql  
+```syntaxsql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 The numeric expression that specifies the number of rows to be returned. *expression* is implicitly converted to a **float** value if you specify PERCENT. Otherwise, *expression* is converted to **bigint**.  
   
@@ -83,7 +86,7 @@ When specified in the MERGE statement, the TOP clause applies *after* the entire
 Use caution when you're specifying the TOP clause in a query that contains a UNION, UNION ALL, EXCEPT, or INTERSECT operator. It's possible to write a query that returns unexpected results because the order in which the TOP and ORDER BY clauses are logically processed isn't always intuitive when these operators are used in a select operation. For example, given the following table and data, assume that you want to return the least expensive red car and the least expensive blue car. That is, the red sedan and the blue van.  
   
 ```sql  
-CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
+CREATE TABLE dbo.Cars(Model VARCHAR(15), Price MONEY, Color VARCHAR(10));  
 INSERT dbo.Cars VALUES  
     ('sedan', 10000, 'red'), ('convertible', 15000, 'blue'),   
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
@@ -181,7 +184,7 @@ The following example uses a variable to specify the number of employees that ar
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @p AS int = 10;  
+DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
 FROM HumanResources.Employee  
 ORDER BY VacationHours DESC;  
@@ -256,10 +259,10 @@ IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL
     DROP TABLE dbo.EmployeeSales;  
 GO  
 CREATE TABLE dbo.EmployeeSales  
-( EmployeeID   nvarchar(11) NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  YearlySales  money NOT NULL  
+( EmployeeID   NVARCHAR(11) NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  YearlySales  MONEY NOT NULL  
  );  
 GO  
 INSERT TOP(5)INTO dbo.EmployeeSales  

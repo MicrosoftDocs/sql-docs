@@ -1,4 +1,5 @@
 ---
+description: "SOME | ANY (Transact-SQL)"
 title: "SOME | ANY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -37,11 +38,13 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
      { SOME | ANY } ( subquery )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *scalar_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  Is any valid comparison operator.  
   
  SOME | ANY  

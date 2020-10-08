@@ -1,4 +1,5 @@
 ---
+description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 08/21/2019
@@ -44,10 +45,12 @@ helpviewer_keywords:
   - "index reorganize [SQL Server]"
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
-ms.author: carlrab
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # ALTER INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifies an existing table or view index (rowstore, columnstore, or XML) by disabling, rebuilding, or reorganizing the index; or by setting options on the index.  
@@ -141,7 +144,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -167,6 +170,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *index_name*  
@@ -654,7 +660,7 @@ When `ALL` is specified, relational indexes, both clustered and nonclustered, an
 For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
 
 > [!IMPORTANT]
-> For an Azure SQL Data Warehouse table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
+> For an [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a> Disabling Indexes  
 Disabling an index prevents user access to the index, and for clustered indexes, to the underlying table data. The index definition remains in the system catalog. Disabling a nonclustered index or clustered index on a view physically deletes the index data. Disabling a clustered index prevents access to the data, but the data remains unmaintained in the B-tree until the index is dropped or rebuilt. To view the status of an enabled or disabled index, query the **is_disabled** column in the **sys.indexes** catalog view.  
@@ -673,8 +679,8 @@ When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level loc
   
 If ALL is specified when the row or page lock options are set, the settings are applied to all indexes. When the underlying table is a heap, the settings are applied in the following ways:  
   
-|||  
-|-|-|  
+|Option|Details|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON or OFF|To the heap and any associated nonclustered indexes.|  
 |ALLOW_PAGE_LOCKS = ON|To the heap and any associated nonclustered indexes.|  
 |ALLOW_PAGE_LOCKS = OFF|Fully to the nonclustered indexes. This means that all page locks are not allowed on the nonclustered indexes. On the heap, only the shared (S), update (U) and exclusive (X) locks for the page are not allowed. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] can still acquire an intent page lock (IS, IU or IX) for internal purposes.|  

@@ -10,7 +10,7 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server high availability and disaster recovery partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To provide high availability and disaster recovery for your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with high availability and disaster recovery solutions supporting Microsoft SQL Server.
 
 ## High availability and disaster recovery partners

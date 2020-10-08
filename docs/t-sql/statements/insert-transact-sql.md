@@ -1,4 +1,5 @@
 ---
+description: "INSERT (Transact-SQL)"
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2020"
@@ -29,8 +30,8 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], INSERT statement"
   - "inserting data"
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (Transact-SQL)
@@ -114,7 +115,7 @@ INSERT
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
@@ -126,7 +127,9 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set, also known as common table expression, defined within the scope of the INSERT statement. The result set is derived from a SELECT statement. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   

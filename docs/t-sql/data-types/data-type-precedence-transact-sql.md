@@ -1,4 +1,5 @@
 ---
+description: "Data Type Precedence (Transact-SQL)"
 title: "Data Type Precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/23/2017

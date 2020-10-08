@@ -1,7 +1,8 @@
 ---
-title: "How to: Perform Transactions | Microsoft Docs"
+title: "How to: perform transactions"
+description: "This topic explains and demonstrates how to perform transactions when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -149,7 +150,6 @@ For the purpose of focusing on transaction behavior, some recommended error hand
 ## See Also  
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Transactions (Database Engine)](https://msdn.microsoft.com/library/ms190612.aspx)
+[Transactions (Database Engine)](/previous-versions/sql/sql-server-2008-r2/ms190612(v=sql.105))
 
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

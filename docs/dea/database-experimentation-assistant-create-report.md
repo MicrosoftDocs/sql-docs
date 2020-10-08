@@ -1,6 +1,6 @@
 ---
 title: Create analysis reports 
-description: Create Analysis Reports in Database Experimentation Assistant
+description: Generate an analysis report in Database Experimentation Assistant (DEA). Analysis reports provide insights about the performance implications of proposed changes.
 ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
@@ -8,8 +8,8 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: "seo-lt-2019"
 ---

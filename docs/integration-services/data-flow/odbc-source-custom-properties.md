@@ -1,4 +1,5 @@
 ---
+description: "ODBC Source Custom Properties"
 title: "ODBC Source Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # ODBC Source Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The following table describes the custom properties of the ODBC source. All properties can be set from SSIS property expressions.  

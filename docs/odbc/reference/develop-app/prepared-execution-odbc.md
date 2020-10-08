@@ -1,4 +1,5 @@
 ---
+description: "Prepared Execution ODBC"
 title: "Prepared Execution ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

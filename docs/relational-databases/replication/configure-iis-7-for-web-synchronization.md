@@ -1,4 +1,5 @@
 ---
+description: "Configure IIS 7 for Web Synchronization"
 title: "Configure IIS 7 for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"

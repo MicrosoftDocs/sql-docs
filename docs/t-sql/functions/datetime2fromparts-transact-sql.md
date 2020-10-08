@@ -1,4 +1,5 @@
 ---
+description: "DATETIME2FROMPARTS (Transact-SQL)"
 title: "DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -20,7 +21,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATETIME2FROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns a **datetime2** value for the specified date and time arguments. The returned value has a precision specified by the precision argument.
   
@@ -28,11 +29,13 @@ This function returns a **datetime2** value for the specified date and time argu
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *year*  
 An integer expression that specifies a year.
   
@@ -77,7 +80,7 @@ SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ---------------------------  
 2010-12-31 23:59:59.0000000  
@@ -103,7 +106,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------------------  
 2011-08-15 14:23:44.5  
   

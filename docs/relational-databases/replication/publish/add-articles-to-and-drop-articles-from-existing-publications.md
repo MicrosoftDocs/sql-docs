@@ -23,7 +23,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Add Articles to and Drop Articles from Existing Publications
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   After a publication is created, it is possible to add and drop articles. Articles can be added at any time, but the actions required for dropping articles depend on the type of replication and when the article is dropped.  
   
 ## Adding Articles  

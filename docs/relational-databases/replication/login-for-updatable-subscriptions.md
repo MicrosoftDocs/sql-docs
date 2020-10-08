@@ -1,4 +1,5 @@
 ---
+description: "Login for Updatable Subscriptions"
 title: "Login for Updatable Subscriptions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/25/2016"

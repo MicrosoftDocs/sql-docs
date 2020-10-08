@@ -45,8 +45,6 @@ For information about other versions, see:
 
 * [SQL Server 2019](editions-and-components-of-sql-server-version-15.md).  
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
-* [SQL Server 2014](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
-
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -161,7 +159,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
-|Read-scale availability group<sup>3,4</sup>|Yes|Yes|No|No|No|No|
+|Read-scale availability group<sup>3,4</sup>|Yes|No|No|No|No|No|
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -233,7 +231,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
 |Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |Transactional replication to Azure|Yes|Yes|No|No|No|   
-|Transactional replication updateable subscription|Yes|No|No|No|No|  
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|  
   
 ##  <a name="SSMS"></a> Management tools  
   

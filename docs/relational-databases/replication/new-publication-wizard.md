@@ -1,4 +1,5 @@
 ---
+description: "New Publication Wizard"
 title: "New Publication Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

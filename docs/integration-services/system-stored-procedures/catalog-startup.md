@@ -1,4 +1,5 @@
 ---
+description: "catalog.startup"
 title: "catalog.startup | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # catalog.startup 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,6 +1,6 @@
 ---
-title: "Updating Data in SQL Server Cursors | Microsoft Docs"
-description: "Updating data in SQL Server cursors"
+title: Update data in cursors (OLE DB driver)
+description: Learn how an OLE DB Driver for SQL Server consumer application works with requests in a modifiable rowset by using SQL Server cursors.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
   - "immediate update mode [OLE DB]"
   - "cursors [OLE DB]"
   - "data updates [SQL Server], OLE DB"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Updating Data in SQL Server Cursors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  When fetching and updating data through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors, a OLE DB Driver for SQL Server consumer application is bound by the same considerations and constraints that apply to any other client application.  
+  When fetching and updating data through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors, an OLE DB Driver for SQL Server consumer application is bound by the same considerations and constraints that apply to any other client application.  
   
  Only rows in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors participate in concurrent data-access control. When the consumer requests a modifiable rowset, the concurrency control is controlled by DBPROP_LOCKMODE. To modify the level of concurrent access control, the consumer sets the DBPROP_LOCKMODE property before opening the rowset.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.service_contracts (Transact-SQL)"
 title: "sys.service_contracts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contracts catalog view"
 ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.service_contracts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

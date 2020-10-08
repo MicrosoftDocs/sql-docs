@@ -1,4 +1,5 @@
 ---
+description: "Query Definitions Differ Dialog Box (Visual Database Tools)"
 title: Query Definitions Differ Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

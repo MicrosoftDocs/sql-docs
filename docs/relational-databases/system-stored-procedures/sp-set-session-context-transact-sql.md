@@ -1,4 +1,5 @@
 ---
+description: "sp_set_session_context (Transact-SQL)"
 title: "sp_set_session_context (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2019"
@@ -20,7 +21,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_set_session_context (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Sets a key-value pair in the session context.  
   

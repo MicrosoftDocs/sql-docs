@@ -1,4 +1,5 @@
 ---
+description: "STSymDifference (geometry Data Type)"
 title: "STSymDifference (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/06/2020"
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STSymDifference ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance in addition to the instance on which `STSymDifference()` is being invoked.  
   

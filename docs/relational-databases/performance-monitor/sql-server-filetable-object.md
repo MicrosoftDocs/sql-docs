@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, FileTable Object | Microsoft Docs"
+description: Learn about the SQLServer:FileTable performance object, which provides counters for statistics associated with FileTable and non-transacted access.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

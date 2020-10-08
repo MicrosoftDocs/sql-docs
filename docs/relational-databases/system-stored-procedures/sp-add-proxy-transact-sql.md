@@ -1,4 +1,5 @@
 ---
+description: "sp_add_proxy (Transact-SQL)"
 title: "sp_add_proxy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "CREATE PROXY statement"
   - "sp_add_proxy"
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_add_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "isNullable Method (SQLServerResultSetMetaData)"
 title: "isNullable Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

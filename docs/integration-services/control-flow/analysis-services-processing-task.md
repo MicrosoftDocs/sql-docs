@@ -1,4 +1,5 @@
 ---
+description: "Analysis Services Processing Task"
 title: "Analysis Services Processing Task | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Analysis Services Processing Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Processing task processes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects such as tabular models, cubes, dimensions, and mining models.  
@@ -68,7 +69,7 @@ ms.author: chugu
   
  For more information about setting these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Programmatic Configuration of the Analysis Services Processing Task  
  For more information about programmatically setting these properties, click the following topic:  
@@ -116,7 +117,7 @@ ms.author: chugu
 |--------------|-----------------|  
 |**Object Name**|Lists the specified object names.|  
 |**Type**|Lists the types of the specified objects.|  
-|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  
@@ -128,7 +129,7 @@ ms.author: chugu
  **Impact Analysis**  
  Perform impact analysis on the selected object.  
   
- **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **Batch Settings Summary**  
  
@@ -143,4 +144,4 @@ ms.author: chugu
  **Change Settings**  
  Change the processing options and the handling of errors in dimension keys.  
   
- **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

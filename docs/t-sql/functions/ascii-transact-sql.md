@@ -1,4 +1,5 @@
 ---
+description: "ASCII (Transact-SQL)"
 title: "ASCII (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2019"
@@ -35,7 +36,9 @@ Returns the ASCII code value of the leftmost character of a character expression
 ASCII ( character_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *character_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char** or **varchar**.
   

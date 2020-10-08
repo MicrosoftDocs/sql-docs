@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_threads (Transact-SQL)"
 title: "sys.dm_os_threads (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_threads dynamic management view"
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_threads (Transact-SQL)

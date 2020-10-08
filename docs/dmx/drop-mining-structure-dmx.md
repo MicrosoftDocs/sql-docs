@@ -1,4 +1,5 @@
 ---
+description: "DROP MINING STRUCTURE (DMX)"
 title: "DROP MINING STRUCTURE (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # DROP MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Drops the specified mining structure from the database. All the mining models that are associated with the structure are also dropped from the database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "DROP WORKLOAD Classifier (Transact-SQL)"
 title: "DROP WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
@@ -22,7 +23,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Drops an existing user-defined workload management classifier.  If requests are running or in the request queue in suspended state, they will keep their classification and the classifier can be dropped immediately. Dropping and recreating the classifier with different importance will not affect an already classified request.
   
@@ -30,9 +31,11 @@ Drops an existing user-defined workload management classifier.  If requests are 
   
 ## Syntax  
 
-```
+```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 
@@ -57,4 +60,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## See Also
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[SQL Data Warehouse Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

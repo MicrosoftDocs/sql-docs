@@ -1,4 +1,5 @@
 ---
+description: "nativeSQL Method (SQLServerConnection)"
 title: "nativeSQL Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

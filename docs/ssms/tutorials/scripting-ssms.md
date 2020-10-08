@@ -1,15 +1,15 @@
 ---
 title: SSMS Script objects
-description: "A tutorial for scripting out objects in SSMS"
-keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/13/2018
-ms.topic: tutorial
+description: "Generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS)."
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
+ms.date: 03/13/2018
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], tutorials"
   - "source controls [SQL Server Management Studio], tutorials"
@@ -152,7 +152,7 @@ The following section teaches you to script out the database by using the **Scri
 
 9. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016b*.
 
-    ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
+    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
 10. Select **Execute** to execute the query and create your new AdventureWorks2016b database.
 

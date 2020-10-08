@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;OPTIONS (Transact-SQL)"
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -29,11 +30,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@OPTIONS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -50,7 +53,7 @@ ms.author: jrasnick
 ### A. Demonstration of how changes affect behavior  
  The following example demonstrates the difference in concatenation behavior with two different setting of the **CONCAT_NULL_YIELDS_NULL** option.  
   
-```  
+```sql  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
 SET CONCAT_NULL_YIELDS_NULL OFF;  
 SELECT 'abc' + NULL AS ResultWhen_OFF, @@OPTIONS AS OptionsValueWhen_OFF;  
@@ -62,7 +65,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ### B. Testing a client NOCOUNT setting  
  The following example sets `NOCOUNT``ON` and then tests the value of `@@OPTIONS`. The `NOCOUNT``ON` option prevents the message about the number of rows affected from being sent back to the requesting client for every statement in a session. The value of `@@OPTIONS` is set to `512` (0x0200). This represents the NOCOUNT option. This example tests whether the NOCOUNT option is enabled on the client. For example, it can help track performance differences on a client.  
   
-```  
+```sql  
 SET NOCOUNT ON  
 IF @@OPTIONS & 512 > 0   
 RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)  

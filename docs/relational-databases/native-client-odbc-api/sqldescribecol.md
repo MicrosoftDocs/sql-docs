@@ -1,4 +1,5 @@
 ---
+description: "SQLDescribeCol"
 title: "SQLDescribeCol | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -31,8 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## SQLDescribeCol Support for Enhanced Date and Time Features  
  The values returned for date/time types are as follows:  
   
-||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
-|-|-------------------|---------------------|------------------------|  
+| Attribute | *DataTypePtr* | *ColumnSizePtr* | *DecimalDigitsPtr* |  
+| --------- | ------------- |---------------- | ------------------ |  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
@@ -46,7 +47,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  **SQLDescribeCol** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLDescribeCol Function](https://go.microsoft.com/fwlink/?LinkID=59338)   
+ [SQLDescribeCol Function](../../odbc/reference/syntax/sqldescribecol-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

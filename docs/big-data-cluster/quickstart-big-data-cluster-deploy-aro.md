@@ -20,6 +20,10 @@ In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[
 > [!TIP]
 > ARO is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
 
+
+> [!WARNING]
+> Persistent volumes created with the built-in storage class *managed-premium* have a reclaim policy of *Delete*. So, when you delete the SQL Server big data cluster, persistent volume claims are deleted as are the persistent volumes. You should create custom storage classes by using azure-disk provisioner with a *Retain* reclaim policy, as described in [Concepts storage](/azure/aks/concepts-storage/#storage-classes). The script below is using the *managed-premium* storage class. See [Data persistence](concept-data-persistence.md) topic for more details.
+
 The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the ARO default storage classes. The default configuration used in this tutorial is suitable for dev/test environments.
 
 ## Prerequisites
@@ -28,7 +32,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python minimum version 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
-- [`azdata` CLI](deploy-install-azdata.md)
+- [`azdata` CLI](../azdata/install/deploy-install-azdata.md)
 - **Azure Data Studio**
 
 ## Log in to your Azure account

@@ -1,4 +1,5 @@
 ---
+description: "ALTER SCHEMA (Transact-SQL)"
 title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2020"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "schemas [SQL Server], modifying"
   - "modifying schemas"
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER SCHEMA (Transact-SQL)
@@ -46,14 +47,17 @@ ALTER SCHEMA schema_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
    TRANSFER [ OBJECT :: ] securable_name   
 [;]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of a schema in the current database, into which the securable will be moved. Cannot be SYS or INFORMATION_SCHEMA.  
   
@@ -95,7 +99,7 @@ ALTER SCHEMA schema_name
 ### A. Transferring ownership of a table  
  The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -105,11 +109,11 @@ GO
 ### B. Transferring ownership of a type  
  The following example creates a type in the `Production` schema, and then transfers the type to the `Person` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
-CREATE TYPE Production.TestType FROM [varchar](10) NOT NULL ;  
+CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
 GO  
   
 -- Check the type owner.  
@@ -136,10 +140,10 @@ GO
 ### C. Transferring ownership of a table  
  The following example creates a table `Region` in the `dbo` schema, creates a `Sales` schema, and then moves the `Region` table from the `dbo` schema to the `Sales` schema.  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
-    (Region_id int NOT NULL,  
-    Region_Name char(5) NOT NULL)  
+    (Region_id INT NOT NULL,  
+    Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
   

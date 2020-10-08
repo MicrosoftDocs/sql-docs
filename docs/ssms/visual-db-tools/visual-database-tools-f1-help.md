@@ -1,4 +1,5 @@
 ---
+description: "Visual Database Tools F1 Help"
 title: Visual Database Tools F1 Help
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

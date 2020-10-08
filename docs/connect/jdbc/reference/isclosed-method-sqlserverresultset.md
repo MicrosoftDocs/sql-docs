@@ -1,4 +1,5 @@
 ---
+description: "isClosed Method (SQLServerResultSet)"
 title: "isClosed Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

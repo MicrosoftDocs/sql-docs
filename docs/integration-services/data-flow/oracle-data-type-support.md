@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Connector for Oracle data type support"
 title: "Microsoft Connector for Oracle data type support | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Microsoft Connector for Oracle data type support
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 SSIS components for Oracle do not support all Oracle data types. Columns with unsupported data types will have a warning when designing packages in SSDT and will be deleted from mapping columns. Data cannot be loaded to a column with an unsupported data type.
 

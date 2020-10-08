@@ -1,4 +1,5 @@
 ---
+description: "Add an Additional Report Server to a Farm (SSRS Scale-out)"
 title: "Add an Additional Report Server to a Farm (SSRS Scale-out) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -68,7 +69,9 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
  If you configure all report servers with \<IsWebServiceEnable> set to False, you will see an error message similar to the following when you try to use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features:  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 

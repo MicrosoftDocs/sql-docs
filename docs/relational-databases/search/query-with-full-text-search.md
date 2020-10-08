@@ -1,4 +1,5 @@
 ---
+description: "Query with Full-Text Search"
 title: "Query with Full-Text Search | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

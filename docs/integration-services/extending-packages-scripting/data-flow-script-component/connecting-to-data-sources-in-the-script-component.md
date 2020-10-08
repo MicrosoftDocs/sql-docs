@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Data Sources in the Script Component"
 title: "Connecting to Data Sources in the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Connecting to Data Sources in the Script Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A connection manager is a convenient unit that encapsulates and stores the information that is required to connect to a data source of a particular type. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  

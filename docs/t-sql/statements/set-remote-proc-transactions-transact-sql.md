@@ -1,4 +1,5 @@
 ---
+description: "SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)"
 title: "SET REMOTE_PROC_TRANSACTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -21,8 +22,8 @@ helpviewer_keywords:
   - "REMOTE_PROC_TRANSACTIONS option"
   - "active transactions"
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,9 @@ ms.author: carlrab
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  ON | OFF  
  When ON, a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction is started when a remote stored procedure is executed from a local transaction. When OFF, calling remote stored procedures from a local transaction does not start a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction.  
   

@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVICE (Transact-SQL)"
 title: "CREATE SERVICE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "CREATE SERVICE statement"
   - "contracts [Service Broker], service creation"
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +40,9 @@ CREATE SERVICE service_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *service_name*  
  Is the name of the service to create. A new service is created in the current database and owned by the principal specified in the AUTHORIZATION clause. Server, database, and schema names cannot be specified. The *service_name* must be a valid **sysname**.  
   

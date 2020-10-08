@@ -1,4 +1,5 @@
 ---
+description: "- (Negative) (DMX)"
 title: "- (Negative) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # - (Negative) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Performs a unary operation that returns the negative value of a numeric expression.  
   

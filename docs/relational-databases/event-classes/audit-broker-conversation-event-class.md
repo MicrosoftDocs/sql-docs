@@ -1,4 +1,5 @@
 ---
+description: "Audit Broker Conversation Event Class"
 title: "Audit Broker Conversation Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ELSE (IF...ELSE) (Transact-SQL)"
 title: "ELSE (IF...ELSE) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -37,7 +38,9 @@ IF Boolean_expression
      { sql_statement | statement_block } ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Boolean_expression*  
  Is an expression that returns TRUE or FALSE. If the *Boolean_expression* contains a SELECT statement, the SELECT statement must be enclosed in parentheses.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Connection String Format and Attributes"
 title: "Connection String Format and Attributes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

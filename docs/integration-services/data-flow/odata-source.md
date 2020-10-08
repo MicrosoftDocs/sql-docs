@@ -1,4 +1,5 @@
 ---
+description: "OData Source"
 title: "OData Source | Microsoft Docs"
 ms.date: "09/17/2018"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # OData Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service.
@@ -47,6 +48,13 @@ For the **Decimal** data type, the precision and scale are determined by the sou
 
 > [!IMPORTANT]
 > The OData Source component does not support complex types, such as multiple-choice items, in SharePoint lists.
+
+> [!Note]
+> If the source only allows TLS 1.2 connection, you need to enforce TLS 1.2 on your machine through registry settings. In an elevated command prompt run the following commands:
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## OData Format and Performance
  Most OData services can return results in multiple formats. You can specify the format of the result set by using the `$format` query option. Formats such as JSON and JSON Light are more efficient than ATOM or XML, and may give you better performance when transferring large amounts of data. The following table provides results from sample tests. As you can see, there was a 30-53% performance gain when switching from ATOM to JSON and a 67% performance gain when switching from ATOM to the new JSON light format (available in WCF Data Services 5.1).  

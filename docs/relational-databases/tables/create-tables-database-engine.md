@@ -1,4 +1,5 @@
 ---
+description: "Create Tables (Database Engine)"
 title: "Create Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/22/2016"
@@ -15,7 +16,7 @@ ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Tables (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   You can create a new table, name it, and add it to an existing database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

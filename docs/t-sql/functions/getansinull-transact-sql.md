@@ -1,4 +1,5 @@
 ---
+description: "GETANSINULL (Transact-SQL)"
 title: "GETANSINULL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -30,12 +31,13 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GETANSINULL ( [ 'database' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  '*database*'  
  Is the name of the database for which to return nullability information. *database is either **char** or **nchar**. If **char**, *database* is implicitly converted to **nchar**.  
   
@@ -56,7 +58,7 @@ GETANSINULL returns 1 if the database's nullability allows for null values. This
 ## Examples  
  The following example returns the default nullability for the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT GETANSINULL('AdventureWorks2012')  

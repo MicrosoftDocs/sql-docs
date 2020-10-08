@@ -45,7 +45,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publish Data and Database Objects
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  
   
 |Database object|Snapshot replication and transactional replication|Merge replication|  

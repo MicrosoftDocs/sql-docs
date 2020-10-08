@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_enumerate_fixed_drives (Transact-SQL)"
 title: "sys.dm_os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2019"
@@ -14,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_enumerate_fixed_drives dynamic management view"
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_os_enumerate_fixed_drives (Transact-SQL)
 

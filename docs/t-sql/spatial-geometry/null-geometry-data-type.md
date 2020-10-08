@@ -1,4 +1,5 @@
 ---
+description: "Null (geometry Data Type)"
 title: "Null (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -29,7 +30,9 @@ A read-only property providing a null instance of the **geometry** type.
 Null  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **geometry**  

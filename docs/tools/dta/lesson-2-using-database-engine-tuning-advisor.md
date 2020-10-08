@@ -1,5 +1,6 @@
 ---
 title: Using Database Engine Tuning Advisor
+description: Learn about how the SQL Server Database Engine Tuning Advisor GUI tunes databases, manages tuning sessions, and displays tuning recommendations.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: performance
@@ -24,12 +25,12 @@ Database Engine Tuning Advisor enables you to tune databases, manage tuning sess
 
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+- Install [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
 - Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample database.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
+- Download [AdventureWorks2017 sample database.](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
 
 
-Instructions for restoring databases in SSMS are here: [Restore a database.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > This tutorial is meant for a user familiar with using SQL Server Management Studio and basic database administration tasks. 
@@ -141,5 +142,4 @@ You have now explored the **Reports** tab of the Database Engine Tuning Advisor 
  ## Next Lesson  
 [Lesson 3: Using the DTA command prompt utility](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
    
-  
   

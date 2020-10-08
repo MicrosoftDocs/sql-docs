@@ -20,7 +20,7 @@ ms.author: "mathoma"
 ms.custom: "seo-lt-2019"
 ---
 # Administer multiple servers using Central Management Servers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   You can administer multiple servers by designating Central Management Servers and creating server groups.  
   
 ## What is a Central Management Server and server groups?  
@@ -33,9 +33,8 @@ ms.custom: "seo-lt-2019"
 ## Create Central Management Server and server groups 
  To create a Central Management Server and server groups, use the **Registered Servers** window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Note that the Central Management Server cannot be a member of a group that it maintains. 
  
- For how to create Central Management Servers and server groups, see [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
+ For how to create Central Management Servers and server groups, see [Create a Central Management Server and Server Group &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md).  
   
 ## See also  
  [Administer Servers by Using Policy-Based Management](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

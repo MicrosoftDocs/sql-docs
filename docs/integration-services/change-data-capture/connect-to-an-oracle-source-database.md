@@ -1,4 +1,5 @@
 ---
+description: "Connect to an Oracle Source Database"
 title: "Connect to an Oracle Source Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Connect to an Oracle Source Database
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Oracle Source page to provide the information necessary to connect to the Oracle source database. The CDC instance will read the redo logs of the Oracle database you are connected to.  

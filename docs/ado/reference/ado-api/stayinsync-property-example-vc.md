@@ -1,8 +1,9 @@
 ---
+description: "StayInSync Property Example (VC++)"
 title: "StayInSync Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,9 +17,9 @@ author: rothja
 ms.author: jroth
 ---
 # StayInSync Property Example (VC++)
-This example demonstrates how the [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) property facilitates accessing rows in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+This example demonstrates how the [StayInSync](./stayinsync-property.md) property facilitates accessing rows in a hierarchical [Recordset](./recordset-object-ado.md).  
   
- The outer loop displays each author's first and last name, state, and identification. The appended **Recordset** for each row is retrieved from the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection and automatically assigned to **rstTitleAuthor** by the **StayInSync** property whenever the parent **Recordset** moves to a new row. The inner loop displays four fields from each row in the appended recordset.  
+ The outer loop displays each author's first and last name, state, and identification. The appended **Recordset** for each row is retrieved from the [Fields](./fields-collection-ado.md) collection and automatically assigned to **rstTitleAuthor** by the **StayInSync** property whenever the parent **Recordset** moves to a new row. The inner loop displays four fields from each row in the appended recordset.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -138,6 +139,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [StayInSync Property](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Fields Collection (ADO)](./fields-collection-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [StayInSync Property](./stayinsync-property.md)

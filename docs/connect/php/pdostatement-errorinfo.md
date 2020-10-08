@@ -1,7 +1,8 @@
 ---
-title: "PDOStatement::errorInfo | Microsoft Docs"
+title: "PDOStatement::errorInfo"
+description: "API reference for the PDOStatement::errorInfo function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

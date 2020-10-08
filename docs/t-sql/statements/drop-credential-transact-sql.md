@@ -1,4 +1,5 @@
 ---
+description: "DROP CREDENTIAL (Transact-SQL)"
 title: "DROP CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2015"
@@ -32,12 +33,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP CREDENTIAL credential_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Is the name of the credential to remove from the server.  
   
@@ -55,7 +57,7 @@ DROP CREDENTIAL credential_name
 ## Examples  
  The following example removes the credential called `Saddles`.  
   
-```  
+```sql  
 DROP CREDENTIAL Saddles;  
 GO  
 ```  

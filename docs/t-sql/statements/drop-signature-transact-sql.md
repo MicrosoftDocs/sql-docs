@@ -1,4 +1,5 @@
 ---
+description: "DROP SIGNATURE (Transact-SQL)"
 title: "DROP SIGNATURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,7 +34,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DROP [ COUNTER ] SIGNATURE FROM module_name   
     BY <crypto_list> [ ,...n ]  
   
@@ -42,7 +42,9 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
     | ASYMMETRIC KEY Asym_key_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *module_name*  
  Is the name of a stored procedure, function, assembly, or trigger.  
   
@@ -61,7 +63,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ## Examples  
  The following example removes the signature of certificate `HumanResourcesDP` from the stored procedure `HumanResources.uspUpdateEmployeeLogin`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  

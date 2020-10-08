@@ -1,5 +1,6 @@
 ---
-title: "SQLServerConnection Class | Microsoft Docs"
+title: "SQLServerConnection Class"
+description: "Learn the public API details for the SQLServerConnection class in the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

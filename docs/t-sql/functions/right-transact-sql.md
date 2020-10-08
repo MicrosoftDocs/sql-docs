@@ -1,4 +1,5 @@
 ---
+description: "RIGHT (Transact-SQL)"
 title: "RIGHT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -34,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 RIGHT ( character_expression , integer_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *character_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character or binary data. *character_expression* can be a constant, variable, or column. *character_expression* can be of any data type, except **text** or **ntext**, that can be implicitly converted to **varchar** or **nvarchar**. Otherwise, use the [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) function to explicitly convert *character_expression*.  
    
@@ -57,7 +60,7 @@ RIGHT ( character_expression , integer_expression )
 ### A: Using RIGHT with a column  
  The following example returns the five rightmost characters of the first name for each person in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT RIGHT(FirstName, 5) AS 'First Name'  
 FROM Person.Person  
 WHERE BusinessEntityID < 5  
@@ -84,7 +87,7 @@ Rob
 ### B. Using RIGHT with a column  
  The following example returns the five rightmost characters of each last name in the `DimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RIGHT(LastName, 5) AS Name  
@@ -106,7 +109,7 @@ lters
 ### C. Using RIGHT with a character string  
  The following example uses `RIGHT` to return the two rightmost characters of the character string `abcdefg`.  
   
-```  
+```sql  
 SELECT RIGHT('abcdefg', 2); 
 ```  
   

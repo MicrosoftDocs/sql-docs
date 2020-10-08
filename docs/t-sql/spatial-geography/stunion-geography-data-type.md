@@ -1,4 +1,5 @@
 ---
+description: "STUnion (geography Data Type)"
 title: "STUnion (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STUnion ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to form a union with the instance on which STUnion() is being invoked.  
   

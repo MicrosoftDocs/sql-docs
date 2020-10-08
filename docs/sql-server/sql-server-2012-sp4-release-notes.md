@@ -4,13 +4,13 @@ description: This article contains the aggregated release notes of the four serv
 ms.prod: sql
 ms.technology: release-landing
 ms.custom: ""
-ms.date: 02/26/2018
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Service Pack release notes
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

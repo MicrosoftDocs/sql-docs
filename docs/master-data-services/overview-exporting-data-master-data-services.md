@@ -1,4 +1,5 @@
 ---
+description: "Overview: Exporting Data (Master Data Services)"
 title: Exporting Data
 ms.custom: ""
 ms.date: "03/14/2017"

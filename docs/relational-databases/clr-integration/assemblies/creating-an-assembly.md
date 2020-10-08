@@ -129,7 +129,4 @@ WITH PERMISSION_SET = UNSAFE;
  [Altering an Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Dropping an Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md)   
- [Allowing Partially Trusted Callers](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
-  
-  
+ [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md)

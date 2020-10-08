@@ -1,4 +1,5 @@
 ---
+description: "ORIGINAL_LOGIN (Transact-SQL)"
 title: "ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -31,12 +32,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ORIGINAL_LOGIN( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **sysname**  
   
 ## Remarks  
@@ -49,7 +51,7 @@ ORIGINAL_LOGIN( )
   >[!NOTE]
   > Although the ORIGINAL_LOGIN function is supported on Azure SQL Database, the following script will fail because *Execute as LOGIN* is not supported on Azure SQL Database. 
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Create a temporary login and user.  

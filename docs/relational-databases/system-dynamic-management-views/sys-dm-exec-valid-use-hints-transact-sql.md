@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_valid_use_hints (Transact-SQL)"
 title: "sys.dm_exec_valid_use_hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2016"

@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;ERROR (Transact-SQL)"
 title: "@@ERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -34,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 @@ERROR  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  integer  
   
 ## Remarks  

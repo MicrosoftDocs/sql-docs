@@ -34,7 +34,7 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 
 ### Supported combinations
 
-||Report server|Add-in|SharePoint version|
+|Number|Report server|Add-in|SharePoint version|
 |-|-------------------|-------------|------------------------|
 |1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|

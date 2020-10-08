@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
 title: "sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2020"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_resource_governor_workload_groups dynamic management view"
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_resource_governor_workload_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns workload group statistics and the current in-memory configuration of the workload group. This view can be joined with sys.dm_resource_governor_resource_pools to get the resource pool name.  
   

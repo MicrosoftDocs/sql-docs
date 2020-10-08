@@ -1,4 +1,5 @@
 ---
+description: "conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)"
 title: "conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2016"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "conflict_<schema>_<table>"
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

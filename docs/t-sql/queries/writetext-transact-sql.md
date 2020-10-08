@@ -1,4 +1,5 @@
 ---
+description: "WRITETEXT (Transact-SQL)"
 title: "WRITETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
@@ -37,13 +38,14 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 WRITETEXT [BULK]  
   { table.column text_ptr }  
   [ WITH LOG ] { data }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  BULK  
  Enables upload tools to upload a binary data stream. The stream must be provided by the tool at the TDS protocol level. When the data stream is not present the query processor ignores the BULK option.  
   
@@ -89,12 +91,12 @@ WRITETEXT [BULK]
 > [!NOTE]  
 >  To run this example, you must install the pubs sample database.  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   

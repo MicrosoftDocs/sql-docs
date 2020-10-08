@@ -326,8 +326,10 @@ SET @mesg = CONCAT(@LatestSalesOrderId,
 PRINT @mesg;  
 ```
       
-    -- Here is the actual PRINT output:  
-    -- 2 = Latest SalesOrderId, for CustomerId = 42  
+Here is the actual PRINT output:  
+```output
+-- 2 = Latest SalesOrderId, for CustomerId = 42  
+```
   
   
   

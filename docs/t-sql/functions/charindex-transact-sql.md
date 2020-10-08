@@ -31,11 +31,13 @@ This function searches for one character expression inside a second character ex
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expressionToFind*  
 A character [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the sequence to find. *expressionToFind* has an 8000 character limit.
   
@@ -70,7 +72,7 @@ When using SC collations, both *start_location* and the return value count surro
 This example searches for `bicycle` in the searched string value variable `@document`.
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
 SELECT CHARINDEX('bicycle', @document);  
@@ -79,7 +81,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 48            
 ```  
@@ -88,7 +90,7 @@ GO
 This example uses the optional *start_location* parameter to start the search for `vital` at the fifth character of the searched string value variable `@document`.
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -98,7 +100,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 16            
   
@@ -109,7 +111,7 @@ GO
 This example shows the result set when CHARINDEX does not find *expressionToFind* within *expressionToSearch*.
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -167,7 +169,6 @@ SELECT CHARINDEX ( 'Test',
 This example shows a case-insensitive search for the string `'TEST'` in `'This is a Test'`.
   
 ```sql
-  
 USE tempdb;  
 GO  
 SELECT CHARINDEX ( 'TEST',  

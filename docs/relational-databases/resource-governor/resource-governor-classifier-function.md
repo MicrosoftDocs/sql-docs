@@ -1,5 +1,6 @@
 ---
 title: "Resource Governor Classifier Function | Microsoft Docs"
+description: The SQL Server resource governor classification process assigns incoming sessions to a workload group based on the characteristics of the session. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

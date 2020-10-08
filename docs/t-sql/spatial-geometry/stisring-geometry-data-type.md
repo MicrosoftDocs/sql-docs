@@ -1,4 +1,5 @@
 ---
+description: "STIsRing (geometry Data Type)"
 title: "STIsRing (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -36,7 +37,9 @@ Returns 1 if a **geometry** instance fulfills the following requirements:
 .STIsRing ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  

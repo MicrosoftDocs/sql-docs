@@ -1,4 +1,5 @@
 ---
+description: "ROUND (Transact-SQL)"
 title: "ROUND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"
@@ -29,12 +30,13 @@ Returns a numeric value, rounded to the specified length or precision.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ROUND ( numeric_expression , length [ ,function ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
   
@@ -78,7 +80,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 ### A. Using ROUND and estimates  
  The following example shows two expressions that demonstrate by using `ROUND` the last digit is always an estimate.  
   
-```  
+```sql  
 SELECT ROUND(123.9994, 3), ROUND(123.9995, 3);  
 GO  
 ```  
@@ -107,7 +109,7 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ### C. Using ROUND to truncate  
  The following example uses two `SELECT` statements to demonstrate the difference between rounding and truncation. The first statement rounds the result. The second statement truncates the result.  
   
-```  
+```sql  
 SELECT ROUND(150.75, 0);  
 GO  
 SELECT ROUND(150.75, 0, 1);  

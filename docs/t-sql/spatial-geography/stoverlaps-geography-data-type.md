@@ -1,4 +1,5 @@
 ---
+description: "STOverlaps (geography Data Type)"
 title: "STOverlaps (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -27,7 +28,9 @@ ms.author: mlandzic
 .STOverlaps ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare against the instance on which `STOverlaps()` is invoked.  
   

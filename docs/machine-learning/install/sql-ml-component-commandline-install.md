@@ -1,20 +1,19 @@
 ---
 title: Install from a command prompt
-description: Run SQL Server command line setup to add R language and Python integration to a SQL Server database engine instance.
+description: Run SQL Server command line setup to add Machine Learning Services with R and Python to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 11/04/2019  
+ms.date: 09/30/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server machine learning R and Python components from the command line
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+# Install SQL Server Machine Learning Services with R and Python from the command line
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article provides instructions for installing SQL Server machine learning components from a command line:
+This article provides instructions for installing [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) from a command line:
 
 + [New In-Database instance](#indb)
 + [Add to an existing database engine instance](#add-existing)
@@ -211,4 +210,4 @@ Python developers can learn how to use Python with SQL Server by following these
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
 + [Quickstart: Run R in T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: In-database analytics for R developers](../tutorials/r-taxi-classification-introduction.md)

@@ -1,5 +1,6 @@
 ---
-title: "getObject Method (java.lang.String, java.util.Map) | Microsoft Docs"
+description: "getObject Method (java.lang.String, java.util.Map) (SQLServerResultSet)"
+title: "getObject Method (java.lang.String, java.util.Map) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

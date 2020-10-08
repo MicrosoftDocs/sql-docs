@@ -1,5 +1,6 @@
 ---
 title: "What's new in Reporting Services | Microsoft Docs"
+description: Learn about what's new in the different versions of SQL Server Reporting Services, including changes to the major feature areas.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -227,9 +228,8 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 **New Report Builder User Interface:** The core [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] user interface is now a modern look and feel with streamlined UI elements.  
 
-|||  
-|-|-|  
 |New|Previous|  
+|-|-|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **Custom Parameters Pane:** You can now customize the parameters pane. Using the design surface in Report Builder, you can drag a parameter to a specific column and row in the parameters pane. You can add and remove columns to change the layout of the pane. For more information, see [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  

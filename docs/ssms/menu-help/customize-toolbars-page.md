@@ -1,4 +1,5 @@
 ---
+description: "Customize (Toolbars Page)"
 title: "Customize (Toolbars Page)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

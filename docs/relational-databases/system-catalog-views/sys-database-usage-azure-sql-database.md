@@ -1,4 +1,5 @@
 ---
+description: "sys.database_usage (Azure SQL Database)"
 title: "sys.database_usage (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -44,6 +45,5 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
   
 ## See Also  
  [SQL Database Pricing Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Accounts and Billing in Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
-  
+ [Accounts and Billing in Azure SQL Database](/previous-versions/azure/ee621788(v=azure.100))  
   

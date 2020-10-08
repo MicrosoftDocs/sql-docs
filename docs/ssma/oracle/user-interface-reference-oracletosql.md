@@ -1,4 +1,5 @@
 ---
+description: "User Interface Reference (OracleToSQL)"
 title: "User Interface Reference (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # User Interface Reference (OracleToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle.  
@@ -17,9 +18,8 @@ This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssno
 ## In This Section  
 The following table lists the SSMA dialog boxes:  
   
-|||  
-|-|-|  
 |Topic|Description|  
+|-|-|  
 |[Advanced Object Selection  &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
 |[Assessment Report &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Use the Assessment Report to view the results of the conversion of Oracle objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and to estimate the time and complexity of a migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.|  

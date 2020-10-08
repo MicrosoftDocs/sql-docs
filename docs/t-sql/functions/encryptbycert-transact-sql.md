@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYCERT (Transact-SQL)"
 title: "ENCRYPTBYCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -30,11 +31,12 @@ Encrypts data with the public key of a certificate.
 ## Syntax  
   
 ```syntaxsql
-  
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _certificate\_ID_  
 The ID of a certificate in the database. **int**.  
   
@@ -60,7 +62,7 @@ This function encrypts data with the certificate's public key. The ciphertext ca
 ## Examples  
 This example encrypts the plaintext stored in `@cleartext` with the certificate called `JanainaCert02`. The encrypted data is inserted into table `ProtectedData04`.  
   
-```  
+```sql  
 INSERT INTO [AdventureWorks2012].[ProtectedData04]   
     VALUES ( N'Data encrypted by certificate ''Shipping04''',  
     EncryptByCert(Cert_ID('JanainaCert02'), @cleartext) );  

@@ -1,4 +1,5 @@
 ---
+description: "Initiate Actions Based on Attribute Value Changes (Master Data Services)"
 title: Initiate Actions Based on Attribute Value Changes
 ms.custom: ""
 ms.date: "03/01/2017"

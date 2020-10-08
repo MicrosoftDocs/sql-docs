@@ -1,4 +1,5 @@
 ---
+description: "sysmail_add_principalprofile_sp (Transact-SQL)"
 title: "sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_add_principalprofile_sp"
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

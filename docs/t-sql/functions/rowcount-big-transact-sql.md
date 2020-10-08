@@ -1,4 +1,5 @@
 ---
+description: "ROWCOUNT_BIG (Transact-SQL)"
 title: "ROWCOUNT_BIG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -31,12 +32,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ROWCOUNT_BIG ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **bigint**  
   
 ## Remarks  

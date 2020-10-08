@@ -1,4 +1,5 @@
 ---
+description: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)"
 title: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "estimate decimal compression"
   - "table compression [SQL Server]"
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

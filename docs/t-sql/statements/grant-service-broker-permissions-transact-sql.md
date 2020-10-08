@@ -1,4 +1,5 @@
 ---
+description: "GRANT Service Broker Permissions (Transact-SQL)"
 title: "GRANT Service Broker Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -45,7 +46,9 @@ GRANT permission  [ ,...n ] ON
         [ AS granting_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a Service Broker securable.  Listed below.  
   

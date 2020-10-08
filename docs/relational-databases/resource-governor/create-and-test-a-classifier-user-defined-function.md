@@ -1,6 +1,6 @@
 ---
 title: "Create & test classifier user-defined function - Resource Governor"
-description: This topic shows how to create and test a classifier user-defined function (UDF). 
+description: Learn how to create and test a classifier user-defined function which involves running Transact-SQL statements in the SQL Server Management Studio Query Editor.
 ms.custom: seo-dt-2019
 ms.date: "07/11/2017"
 ms.prod: sql

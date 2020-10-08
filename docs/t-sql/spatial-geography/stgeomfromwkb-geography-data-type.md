@@ -1,4 +1,5 @@
 ---
+description: "STGeomFromWKB (geography Data Type)"
 title: "STGeomFromWKB (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -32,7 +33,9 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 STGeomFromWKB ( 'WKB_geography' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_geography*  
  Is the WKB representation of the **geography** instance to return. *WKB_geography* is a **varbinary(max)** expression.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Hints (Transact-SQL) - Table"
 title: "Table Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2020"
@@ -65,10 +66,9 @@ ms.author: vanto
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -83,7 +83,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -114,7 +114,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
 With some exceptions, table hints are supported in the FROM clause only when the hints are specified with the WITH keyword. Table hints also must be specified with parentheses.  
   
@@ -136,15 +138,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 We recommend using commas between table hints.  
   
 > [!IMPORTANT]  
->  Separating hints by spaces rather than commas is a deprecated feature: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> Separating hints by spaces rather than commas is a deprecated feature: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 Specifies that any indexed views are not expanded to access underlying tables when the query optimizer processes the query. The query optimizer treats the view like a table with clustered index. NOEXPAND applies only to indexed views. For more information, see [Using NOEXPAND](#using-noexpand).  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
-The INDEX() syntax specifies the names or IDs of one  or more indexes to be used by the query optimizer when it processes the statement. The alternative INDEX = syntax specifies a single index value. Only one index hint per table can be specified.  
+INDEX  **(**_<index\_value>_ [**,**... _n_ ] ) | INDEX =  ( _<index\_value>_**)**  
+The INDEX() syntax specifies the names or IDs of one  or more indexes to be used by the query optimizer when it processes the statement. The alternative `INDEX =` syntax specifies a single index value. Only one index hint per table can be specified.  
   
-If a clustered index exists, INDEX(0) forces a clustered index scan and INDEX(1) forces a clustered index scan or seek. If no clustered index exists, INDEX(0) forces a table scan and INDEX(1) is interpreted as an error.  
+If a clustered index exists, `INDEX(0)` forces a clustered index scan and `INDEX(1)` forces a clustered index scan or seek. If no clustered index exists, `INDEX(0)` forces a table scan and `INDEX(1)` is interpreted as an error.  
   
  If multiple indexes are used in a single hint list, the duplicates are ignored and the rest of the listed indexes are used to retrieve the rows of the table. The order of the indexes in the index hint is significant. A multiple index hint also enforces index ANDing, and the query optimizer applies as many conditions as possible on each index accessed. If the collection of hinted indexes do not include all columns referenced by the query, a fetch is performed to retrieve the remaining columns after the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retrieves all the indexed columns.  
   
@@ -172,7 +174,7 @@ Specifies insertion of a table column's default value, if any, instead of NULL w
   
 For an example that uses this hint in an INSERT ... SELECT * FROM OPENROWSET(BULK...) statement, see [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(**_<index\_value>_**(**_<index\_column\_name>_ [ **,**... _n_ ] **))** ]  
 Specifies that the query optimizer use only an index seek operation as the access path to the data in the table or view. 
 
 > [!NOTE]
@@ -226,7 +228,7 @@ For partitioned tables and indexes, FORCESCAN is applied after partitions have b
 The FORCESCAN hint has the following restrictions:  
 -   The hint cannot be specified for a table that is the target of an INSERT, UPDATE, or DELETE statement.  
 -   The hint cannot be used with more than one index hint.  
--   The hint prevents the optimizer from considering any spatial or XML indexes on the table.  
+-   The hint prevents the Query Optimizer from considering any spatial or XML indexes on the table.  
 -   The hint cannot be specified for a remote data source.  
 -   The hint cannot be specified in combination with the FORCESEEK hint.  
   
@@ -300,13 +302,19 @@ You can minimize locking contention while protecting transactions from dirty rea
 For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
-> If you receive the error message 601 when READUNCOMMITTED is specified, resolve it as you would a deadlock error (1205), and retry your statement.  
+> If you receive the [error message 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) when READUNCOMMITTED is specified, resolve it as you would a deadlock error ([error message 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)), and retry your statement.  
   
 REPEATABLEREAD  
 Specifies that a scan is performed with the same locking semantics as a transaction running at REPEATABLE READ isolation level. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 ROWLOCK  
-Specifies that row locks are taken when page or table locks are ordinarily taken. When specified in transactions operating at the SNAPSHOT isolation level, row locks are not taken unless ROWLOCK is combined with other table hints that require locks, such as UPDLOCK and HOLDLOCK.  
+Specifies that row locks are taken when page or table locks are ordinarily taken. When specified in transactions operating at the SNAPSHOT isolation level, row locks are not taken unless ROWLOCK is combined with other table hints that require locks, such as UPDLOCK and HOLDLOCK. ROWLOCK cannot be used with a table that has a clustered columnstore index. The following example returns [error 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) to the application.  
+
+```sql 
+UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)
+SET UnitPrice = 50
+WHERE ProductKey = 150;
+```  
   
 SERIALIZABLE  
 Is equivalent to HOLDLOCK. Makes shared locks more restrictive by holding them until a transaction is completed, instead of releasing the shared lock as soon as the required table or data page is no longer needed, whether the transaction has been completed or not. The scan is performed with the same semantics as a transaction running at the SERIALIZABLE isolation level. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
@@ -314,18 +322,18 @@ Is equivalent to HOLDLOCK. Makes shared locks more restrictive by holding them u
 SNAPSHOT  
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later. 
   
-The memory-optimized table is accessed under SNAPSHOT isolation. SNAPSHOT can only be used with memory-optimized tables (not with disk-based tables). For more information, see [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+The memory-optimized table is accessed under SNAPSHOT isolation. SNAPSHOT can only be used with memory-optimized tables (not with disk-based tables), as seen in the following example. For more information, see [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 ```sql 
-SELECT * FROM dbo.Customers AS c   
-WITH (SNAPSHOT)   
+SELECT * 
+FROM dbo.Customers AS c WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *<integer\_value>*  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
-Specifies the maximum number of cells to use for tessellating a geometry or geography object. *number* is a value between 1 and 8192.  
+Specifies the maximum number of cells to use for tessellating a geometry or geography object. *<integer\_value>* is a value between 1 and 8192.  
   
 This option allows for fine-tuning of query execution time by adjusting the tradeoff between primary and secondary filter execution time. A larger number reduces secondary filter execution time, but increases primary execution filter time and a smaller number decreases primary filter execution time, but increase secondary filter execution. For denser spatial data, a higher number should produce a faster execution time by giving a better approximation with the primary filter and reducing secondary filter execution time. For sparser data, a lower number will decrease the primary filter execution time.  
   
@@ -382,33 +390,35 @@ SELECT StartDate, ComponentID FROM Production.BillOfMaterials
 GO  
 ```  
   
-The query optimizer will not consider an index hint if the SET options do not have the required values for filtered indexes. For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+The Query Optimizer will not consider an index hint if the SET options do not have the required values for filtered indexes. For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## Using NOEXPAND  
-NOEXPAND applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+NOEXPAND applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, automatic use of an indexed view by the Query Optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [Features Supported by the Editions of SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md), and [Features Supported by the Editions of SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
-However, for the optimizer to consider indexed views for matching, or use an indexed view that is referenced with the NOEXPAND hint, the following SET options must be set to ON.  
- 
-> [!NOTE]  
+However, for the Query Optimizer to consider indexed views for matching, or use an indexed view that is referenced with the NOEXPAND hint, the following SET options must be set to ON.  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supports automatic use of indexed views without specifying the NOEXPAND hint.
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ARITHABORT is implicitly set to ON when ANSI_WARNINGS is set to ON. Therefore, you do not have to manually adjust this setting.  
+
+Also, the NUMERIC_ROUNDABORT option must be set to OFF.  
   
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ARITHABORT is implicitly set to ON when ANSI_WARNINGS is set to ON. Therefore, you do not have to manually adjust this setting.  
-  
- Also, the NUMERIC_ROUNDABORT option must be set to OFF.  
-  
- To force the optimizer to use an index for an indexed view, specify the NOEXPAND option. This hint can be used only if the view is also named in the query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide a hint to force a particular indexed view to be used in a query that does not name the view directly in the FROM clause; however, the query optimizer considers using indexed views, even if they are not referenced directly in the query. SQL Server will only automatically create statistics on an indexed view when a NOEXPAND table hint is used. Omitting this hint can lead to execution plan warnings about missing statistics that cannot be resolved by creating statistics manually. 
-During query optimization [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use view statistics that were created automatically or manually when the query references the view directly and the NOEXPAND hint is used.    
+ To force the Query Optimizer to use an index for an indexed view, specify the NOEXPAND option. This hint can be used only if the view is also named in the query. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide a hint to force a particular indexed view to be used in a query that does not name the view directly in the FROM clause; however, the Query Optimizer considers using indexed views, even if they are not referenced directly in the query. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will only automatically create statistics on an indexed view when a NOEXPAND table hint is used. Omitting this hint can lead to execution plan warnings about missing statistics that cannot be resolved by creating statistics manually. 
+During query optimization, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will use view statistics that were created automatically or manually when the query references the view directly and the NOEXPAND hint is used.    
   
 ## Using a Table Hint as a Query Hint  
  *Table hints* can also be specified as a query hint by using the OPTION (TABLE HINT) clause. We recommend using a table hint as a query hint only in the context of a [plan guide](../../relational-databases/performance/plan-guides.md). For ad-hoc queries, specify these hints only as table hints. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Permissions  
- The KEEPIDENTITY, IGNORE_CONSTRAINTS, and IGNORE_TRIGGERS hints require ALTER permissions on the table.  
+ The KEEPIDENTITY, IGNORE_CONSTRAINTS, and IGNORE_TRIGGERS hints require `ALTER` permissions on the table.  
   
 ## Examples  
   

@@ -1,5 +1,6 @@
 ---
-title: "SQLSRV Driver API Reference | Microsoft Docs"
+title: "SQLSRV Driver API Reference"
+description: "The API reference for the SQLSRV driver for PHP describes available functions, their parameters, and return values."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql

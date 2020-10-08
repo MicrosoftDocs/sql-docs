@@ -1,4 +1,5 @@
 ---
+description: "OPENQUERY (Transact-SQL)"
 title: "OPENQUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -32,11 +33,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 OPENQUERY ( linked_server ,'query' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *linked_server*  
  Is an identifier representing the name of the linked server.  
   

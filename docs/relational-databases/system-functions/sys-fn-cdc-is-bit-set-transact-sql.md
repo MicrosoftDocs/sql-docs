@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_is_bit_set (Transact-SQL)"
 title: "sys.fn_cdc_is_bit_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

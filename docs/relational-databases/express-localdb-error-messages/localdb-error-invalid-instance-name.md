@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INVALID_INSTANCE_NAME"
 title: "LOCALDB_ERROR_INVALID_INSTANCE_NAME | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,8 +16,8 @@ ms.author: sstein
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|283|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

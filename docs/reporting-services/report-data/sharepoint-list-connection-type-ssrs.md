@@ -1,5 +1,6 @@
 ---
 title: "SharePoint List Connection Type | Microsoft Docs"
+description: Use the information in this article about the SharePoint List connection type to learn how to build a data source.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -35,7 +36,7 @@ Use the information in this topic to build a data source. For step-by-step instr
   
  **Table 1**  
   
-||Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
+|Retrieval Type|Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Local farm SharePoint List|Windows Authentication (integrated) or SharePoint User Token|Yes|Yes|  
 ||Stored, Prompt, None (with Windows credentials)<br /><br /> Stored and prompt credentials with non-Windows credentials is not supported.|Yes|No|  
@@ -46,7 +47,7 @@ Use the information in this topic to build a data source. For step-by-step instr
   
  **Table 2**  
   
-||Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
+|Retrieval Type|Supported Credentials|Classic Mode Windows Authentication|*Claims Authentication|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Local Farm SharePoint List|Windows Authentication (integrated) or SharePoint User Token|Yes|Yes|  
 ||Stored, Prompt, None (with Windows credentials)<br /><br /> Stored and prompt credentials with non-Windows credentials is not supported.|No|No|  

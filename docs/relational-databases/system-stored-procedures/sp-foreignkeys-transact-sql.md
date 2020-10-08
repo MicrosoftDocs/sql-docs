@@ -1,4 +1,5 @@
 ---
+description: "sp_foreignkeys (Transact-SQL)"
 title: "sp_foreignkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_foreignkeys"
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

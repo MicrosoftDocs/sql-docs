@@ -1,8 +1,8 @@
 ---
 title: Server groups
-description: Learn about server groups in Azure Data Studio
+description: Learn how to group servers and databases into server groups and assign colors to the groups. You can drag and drop servers into the proper groups.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio 
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"

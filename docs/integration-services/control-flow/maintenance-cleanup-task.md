@@ -1,4 +1,5 @@
 ---
+description: "Maintenance Cleanup Task"
 title: "Maintenance Cleanup Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Maintenance Cleanup Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Maintenance Cleanup task removes files related to maintenance plans, including database backup files and reports created by maintenance plans. For more information, see [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md) and [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

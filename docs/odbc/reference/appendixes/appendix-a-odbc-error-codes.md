@@ -1,4 +1,5 @@
 ---
+description: "Appendix A: ODBC Error Codes"
 title: "Appendix A: ODBC Error Codes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -19,23 +19,23 @@ See what's new in the latest Appliance Updates for Microsoft Analytics Platform 
 Release date - April 2020
 
 ### Rename Column
-After upgrading to CU7.6, customers will be able to rename a column of a user-created table. See [RENAME (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/rename-transact-sql) for syntax, examples, limitations and more information.
+After upgrading to CU7.6, customers will be able to rename a column of a user-created table. See [RENAME (Transact-SQL)](../t-sql/statements/rename-transact-sql.md) for syntax, examples, limitations and more information.
 
 ### Alter view
-Customers will now be able to alter views. See [ALTER VIEW (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-view-transact-sql) for more information.
+Customers will now be able to alter views. See [ALTER VIEW (Transact-SQL)](../t-sql/statements/alter-view-transact-sql.md) for more information.
 
 <a name="h2-aps-cu7.5"></a>
 ## APS CU7.5
 Release date - September 2019
 
 ### Alter External Data Source
-Customers will be able to alter external data source definition with the CU7.5 update. Customers with Hadoop name node high availability can now alter the data source to change the arguments when a failover happens. For APS, only the LOCATION, RESOURCE_MANAGER_LOCATION and CREDENTIAL can be changed. See [alter external data source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) for more information.
+Customers will be able to alter external data source definition with the CU7.5 update. Customers with Hadoop name node high availability can now alter the data source to change the arguments when a failover happens. For APS, only the LOCATION, RESOURCE_MANAGER_LOCATION and CREDENTIAL can be changed. See [alter external data source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) for more information.
 
 ### CDH 5.15 and 5.16 support with PolyBase
 PolyBase on APS with CU7.5 update now supports CDH 5.15 and 5.16 versions of Hadoop distribution from Cloudera. Use option 6 for CDH 5.x versions. 
 
 ### Try_Convert and Try_Cast support
-CU7.5 APS now supports [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) and [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) tsql functions. Both of these functions returns a value converted to the specified data type if the convert succeeds; otherwise, returns null.
+CU7.5 APS now supports [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) and [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) tsql functions. Both of these functions returns a value converted to the specified data type if the convert succeeds; otherwise, returns null.
 
 <a name="h2-aps-cu7.4"></a>
 ## APS CU7.4
@@ -45,10 +45,10 @@ Release date - May 2019
 Starting from APS CU7.4, customers will be able to use a new dwloader to load rows into tables that are larger than 32 KB (32,768 bytes). The new dwloader supports the -l switch that takes an integer value between 32768 and 33554432 (in bytes) to load rows larger than 32 KB. Only use this option when loading large rows (greater than 32 KB) as this switch will allocate more memory on the client and the server and may slow down loads. You can download the new dwloader from [download site](https://www.microsoft.com/download/details.aspx?id=57472).  
 
 ### HDP 3.0 and 3.1 support with PolyBase
-PolyBase on APS now supports HDP 3.0 and 3.1 with this update. Use option 7 for HDP 3.x versions. For more information, see [PolyBase connectivity](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) page.
+PolyBase on APS now supports HDP 3.0 and 3.1 with this update. Use option 7 for HDP 3.x versions. For more information, see [PolyBase connectivity](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) page.
 
 ### UTF16 file support with PolyBase
-PolyBase now support reading delimited text files that are in UTF16 (LE) encoding. See [create external file format](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) for setup details. 
+PolyBase now support reading delimited text files that are in UTF16 (LE) encoding. See [create external file format](../t-sql/statements/create-external-file-format-transact-sql.md) for setup details. 
 
 <a name="h2-aps-cu7.3"></a>
 ## APS CU7.3
@@ -59,6 +59,8 @@ APS CU7.3 improves query performance with common subexpression elimination in SQ
 
 ### APS Informatica connector for Informatica 10.2.0 published
 We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0 and 10.2.0 Hotfix 1. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+> [!NOTE]
+> APS Informatica connector for Informatica 10.2.0 or 10.2.0 Hotfix 1 does not work on strict TLS1.2 and requires TLS1.0 and 1.1 to be fully functional.
 
 #### Supported Versions
 
@@ -124,7 +126,7 @@ New APS SSIS destination adapter that supports SQL Server 2017 as deployment tar
 Release date - July 2018
 
 ### DBCC commands do not consume concurrency slots (behavior change)
-APS supports a subset of the T-SQL [DBCC commands](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) such as [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Previously, these commands would consume a [concurrency slot](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
+APS supports a subset of the T-SQL [DBCC commands](../t-sql/database-console-commands/dbcc-transact-sql.md) such as [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). Previously, these commands would consume a [concurrency slot](./workload-management.md?view=aps-pdw-2016-au7#concurrency-slots) reducing the number of user loads/queries that could be executed. The `DBCC` commands are now run in a local queue that do not consume a user concurrency slot improving overall query execution performance.
 
 ### Replaces some metadata calls with catalog objects
 Using catalog objects for metadata calls instead of using SMO has shown performance improvement in APS. Starting from CU7.1, some of these metadata calls now use catalog objects by default. This behavior can be turned off by [feature switch](appliance-feature-switch.md) if customers using metadata queries run into any issues.
@@ -148,9 +150,9 @@ APS 2016 is a prerequisite to upgrade to AU7. The following are new features in 
 APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) statement.
 
 ### T-SQL
-Select @var is now supported. For more information, see [select local variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Select @var is now supported. For more information, see [select local variable](../t-sql/language-elements/select-local-variable-transact-sql.md) 
 
-Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
+Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query](../t-sql/queries/hints-transact-sql-query.md)
 
 ### Feature Switch
 APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.
@@ -272,7 +274,4 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 
   
-
-  
-
 

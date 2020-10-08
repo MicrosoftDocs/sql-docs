@@ -1,4 +1,5 @@
 ---
+description: "DIFFERENCE (Transact-SQL)"
 title: "DIFFERENCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -34,7 +35,9 @@ This function returns an integer value measuring the difference between the [SOU
 DIFFERENCE ( character_expression , character_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *character_expression*  
 An alphanumeric [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column.  
   
@@ -49,7 +52,7 @@ An alphanumeric [expression](../../t-sql/language-elements/expressions-transact-
 ## Examples  
 The first part of this example compares the `SOUNDEX` values of two very similar strings. For a Latin1_General collation, `DIFFERENCE` returns a value of `4`. The second part of the example compares the `SOUNDEX` values for two very different strings, and for a Latin1_General collation, `DIFFERENCE` returns a value of `0`.  
   
-```  
+```sql  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
 SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
 GO  

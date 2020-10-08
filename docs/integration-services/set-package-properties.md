@@ -1,4 +1,5 @@
 ---
+description: "Set Package Properties"
 title: "Set Package Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -28,7 +29,7 @@ ms.author: chugu
 ---
 # Set Package Properties
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When you create a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by using the graphical interface that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, you set the properties of the package object in the Properties window.  

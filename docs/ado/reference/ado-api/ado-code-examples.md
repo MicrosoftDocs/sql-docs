@@ -1,8 +1,9 @@
 ---
+description: "ADO Code Examples"
 title: "ADO Code Examples | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +21,10 @@ Use the following code examples to learn how to use the ADO objects, methods, pr
 > [!NOTE]
 >  Paste the entire code example into your code editor. The example may not run correctly if partial examples are used or if paragraph formatting is lost.  
   
--   [ADO Code Examples in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)  
+-   [ADO Code Examples in Visual Basic](./ado-code-examples-in-visual-basic.md)  
   
--   [ADO Code Examples in VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)  
+-   [ADO Code Examples in VBScript](./ado-code-examples-vbscript.md)  
   
--   [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)  
+-   [ADO Code Examples in Visual C++](./ado-code-examples-in-visual-c.md)  
   
--   [ADO Code Examples in JScript](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)
+-   [ADO Code Examples in JScript](./ado-code-examples-in-microsoft-jscript.md)

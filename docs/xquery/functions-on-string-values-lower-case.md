@@ -31,9 +31,8 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 ## Arguments  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|
 |*$arg*|The string value to be converted to lower case.|  
   
 ## Remarks  

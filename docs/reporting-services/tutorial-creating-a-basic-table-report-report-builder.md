@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Creating a Basic Table Report (Report Builder) | Microsoft Docs"
+description: Learn how to use a wizard to create a basic table report based on sample sales data in the Report Builder.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

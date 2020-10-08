@@ -32,7 +32,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # SQLdiag Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   The **SQLdiag** utility is a general purpose diagnostics collection utility that can be run as a console application or as a service. You can use **SQLdiag** to collect logs and data files from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and other types of servers, and use it to monitor your servers over time or troubleshoot specific problems with your servers. **SQLdiag** is intended to expedite and simplify diagnostic information gathering for [!INCLUDE[msCoName](../includes/msconame-md.md)] Customer Support Services.  
   
 > [!NOTE]  

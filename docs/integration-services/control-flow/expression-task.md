@@ -1,4 +1,5 @@
 ---
+description: "Expression Task"
 title: "Expression Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Expression Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Expression Task creates and evaluates expressions that set variable values at runtime, using the Expression Builder. When you edit the task, the [Expression Builder](../../integration-services/expressions/expression-builder.md) is launched.  

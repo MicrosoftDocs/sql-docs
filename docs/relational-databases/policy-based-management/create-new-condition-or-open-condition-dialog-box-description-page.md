@@ -1,4 +1,5 @@
 ---
+description: "Create New Condition or Open Condition Dialog Box, Description Page"
 title: "Create New Condition or Open Condition Dialog Box, Description Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

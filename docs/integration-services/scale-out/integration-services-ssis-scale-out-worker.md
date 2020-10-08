@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Integration Services (SSIS) Scale Out Worker | Microsoft Docs"
-description: "This article describes the Scale Out Master component of SSIS Scale Out"
+description: "Learn details about the Scale Out Master component of SQL Server Integration Services (SSIS) Scale Out."
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Integration Services (SSIS) Scale Out Worker
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

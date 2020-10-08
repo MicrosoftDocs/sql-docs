@@ -1,6 +1,6 @@
 ---
-title: "IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs"
-description: "Using IBCPSession::BCPReadFmt for reading data from a format file (OLE DB)"
+title: "IBCPSession::BCPReadFmt (OLE DB driver) | Microsoft Docs"
+description: The BCPReadFmt method in the OLE DB Driver for SQL Server reads data from a format file that specifies the format of data in the data file.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,8 +13,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "BCPReadFmt method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ HRESULT BCPReadFmt(
  The method succeeded.  
   
  E_FAIL  
- A provider-specific error occurred, for detailed information use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider-specific error occurred, for detailed information use the [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15) interface.  
   
  E_OUTOFMEMORY  
  Out of memory error.  
@@ -60,5 +60,4 @@ HRESULT BCPReadFmt(
 ## See Also  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

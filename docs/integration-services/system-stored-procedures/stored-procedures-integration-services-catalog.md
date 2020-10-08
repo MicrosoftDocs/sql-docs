@@ -1,4 +1,5 @@
 ---
+description: "Stored Procedures (Integration Services Catalog)"
 title: "Stored Procedures (Integration Services Catalog) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Stored Procedures (Integration Services Catalog)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

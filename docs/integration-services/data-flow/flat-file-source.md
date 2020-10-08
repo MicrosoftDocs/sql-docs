@@ -1,4 +1,5 @@
 ---
+description: "Flat File Source"
 title: "Flat File Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -23,7 +24,7 @@ ms.author: chugu
 ---
 # Flat File Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Flat File source reads data from a text file. The text file can be in delimited, fixed width, or mixed format.  

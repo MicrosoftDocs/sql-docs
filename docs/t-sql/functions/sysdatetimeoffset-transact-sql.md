@@ -1,4 +1,5 @@
 ---
+description: "SYSDATETIMEOFFSET (Transact-SQL)"
 title: "SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -42,10 +43,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SYSDATETIMEOFFSET ( )  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Type  
  **datetimeoffset(7)**  
   
@@ -63,7 +66,7 @@ SYSDATETIMEOFFSET ( )
 ### A. Showing the formats that are returned by the date and time functions  
  The following example shows the different formats that are returned by the date and time functions.  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -86,7 +89,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### B. Converting date and time to date  
  The following example shows you how to convert date and time values to `date`.  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -109,7 +112,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### C. Converting date and time to times  
  The following example shows you how to convert date and time values to `time`.  
   
-```  
+```sql
 SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
     ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
     ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  

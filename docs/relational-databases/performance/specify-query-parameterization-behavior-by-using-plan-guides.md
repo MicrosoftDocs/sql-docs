@@ -1,5 +1,6 @@
 ---
 title: "Set query parameterization behavior using plan guides"
+description: Learn about options for parameterization, where parameters are substituted for literal values in a query in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

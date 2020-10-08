@@ -1,4 +1,5 @@
 ---
+description: "Install Reporting and Internet Information Services Side-by-Side"
 title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: reporting-services

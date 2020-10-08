@@ -1,4 +1,5 @@
 ---
+description: "Coding and Debugging the Script Task"
 title: "Coding and Debugging the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,7 +25,7 @@ ms.author: chugu
 ---
 # Coding and Debugging the Script Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  
@@ -241,7 +242,7 @@ To open Help, press F1.
   
 ## External Resources  
   
--   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), on blogs.msdn.com.  
+-   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://docs.microsoft.com/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations), on blogs.msdn.com.  
   
 ## See Also  
  [Referencing Other Assemblies in Scripting Solutions](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   

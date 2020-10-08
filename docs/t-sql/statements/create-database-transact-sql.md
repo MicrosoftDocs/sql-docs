@@ -1,8 +1,8 @@
 ---
 title: "CREATE DATABASE (Transact-SQL) | Microsoft Docs"
 description: Create database syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, and Analytics Platform System
-ms.custom: ""
-ms.date: 06/10/2020
+ms.custom: "references_regions"
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "moving databases"
   - "attaching databases [SQL Server], CREATE DATABASE...FOR ATTACH"
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # CREATE DATABASE
@@ -46,16 +46,27 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product!
-
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-|||||
-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
-|||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -67,7 +78,7 @@ In SQL Server, this statement creates a new database and the files used and thei
 
 ## Syntax
 
-Create a database.
+Create a database
 
 ```syntaxsql
 CREATE DATABASE database_name
@@ -116,14 +127,6 @@ CREATE DATABASE database_name
 FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]
     <filespec> [ ,...n ]
 }
-
-<service_broker_option> ::=
-{
-    ENABLE_BROKER
-  | NEW_BROKER
-  | ERROR_BROKER_CONVERSATIONS
-}
-
 ```
 
 Attach a database
@@ -140,6 +143,13 @@ CREATE DATABASE database_name
       <service_broker_option>
     | RESTRICTED_USER
     | FILESTREAM ( DIRECTORY_NAME = { 'directory_name' | NULL } )
+}
+
+<service_broker_option> ::=
+{
+    ENABLE_BROKER
+  | NEW_BROKER
+  | ERROR_BROKER_CONVERSATIONS
 }
 ```
 
@@ -195,7 +205,7 @@ For more information about the Windows and SQL collation names, see [COLLATE](~/
 > Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.
 
 WITH \<option>
-**\<filestream_options>**
+**\<filestream_option>**
 
 NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
@@ -526,11 +536,12 @@ GO
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files of each database. The following permissions are set whenever the following operations are applied to a database:
 
-|||
-|-|-|
-|Created|Modified to add a new file|
-|Attached|Backed up|
-|Detached|Restored|
+- Attached
+- Backed up
+- Created
+- Detached
+- Modified to add a new file
+- Restored
 
 The permissions prevent the files from being accidentally tampered with if they reside in a directory that has open permissions.
 
@@ -876,17 +887,31 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* SQL Database<br />single database/elastic pool \*_** | [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database \*_**
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## Overview
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database/elastic pool, this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
 
 ## Syntax
 
@@ -897,8 +922,14 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
   (<edition_options> [, ...n])
 }
-[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }]
+[ WITH <with_options> [,..n]]
 [;]
+
+<with_options> ::=
+{
+  CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }
+  | BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
+}
 
 <edition_options> ::=
 {
@@ -912,7 +943,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
-      | 'GP_Fsv2_72'
+      | 'GP_Fsv2_8' | 'GP_Fsv2_10' | 'GP_Fsv2_12' | 'GP_Fsv2_14' | 'GP_Fsv2_16' | 'GP_Fsv2_18'
+      | 'GP_Fsv2_20' | 'GP_Fsv2_24' | 'GP_Fsv2_32' | 'GP_Fsv2_36' | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
@@ -920,7 +952,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
-      | 'BC_M_128'
+      | 'BC_M_8' | 'BC_M_10' | 'BC_M_12' | 'BC_M_14' | 'BC_M_16' | 'BC_M_18'
+      | 'BC_M_20' | 'BC_M_24' | 'BC_M_32' | 'BC_M_64' | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
@@ -939,7 +972,8 @@ CREATE DATABASE database_name
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
-      | 'GP_Fsv2_72'
+      | 'GP_Fsv2_8' | 'GP_Fsv2_10' | 'GP_Fsv2_12' | 'GP_Fsv2_14' | 'GP_Fsv2_16' | 'GP_Fsv2_18'
+      | 'GP_Fsv2_20' | 'GP_Fsv2_24' | 'GP_Fsv2_32' | 'GP_Fsv2_36' | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
@@ -947,7 +981,8 @@ CREATE DATABASE database_name
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
-      | 'BC_M_128'
+      | 'BC_M_8' | 'BC_M_10' | 'BC_M_12' | 'BC_M_14' | 'BC_M_16' | 'BC_M_18'
+      | 'BC_M_20' | 'BC_M_24' | 'BC_M_32' | 'BC_M_64' | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
@@ -970,10 +1005,16 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 
 *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation. This is the default setting on Azure SQL Database if unspecified.
 
+BACKUP_STORAGE_REDUNDANCY
+Specifies how the point-in-time restore and long-term retention backups for a database are replicated. Geo restore or ability to recover from regional outage is only available when database is created with 'GEO' backup storage redundancy. Unless explicitly specified, databases created with T-SQL use geo-redundant backup storage. 
+
+> [!IMPORTANT]
+> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Southeast Asia Azure region only.  
+
 EDITION
 Specifies the service tier of the database.
 
-Single and pooled databases on a single database/elastic pool. The available values are: 'Basic', 'Standard', 'Premium', 'GeneralPurpose', 'BusinessCritical', and 'Hyperscale'.
+Single and pooled databases. The available values are: 'Basic', 'Standard', 'Premium', 'GeneralPurpose', 'BusinessCritical', and 'Hyperscale'.
 
 MAXSIZE
 Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.
@@ -984,7 +1025,7 @@ Specifies the maximum size of the database. MAXSIZE must be valid for the specif
 **DTU model for single and pooled databases on a SQL Database server**
 
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
-|-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
+|:---|:---|:---|:---|:---|:---|
 |100 MB|√|√|√|√|√|
 |250 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
@@ -1037,11 +1078,17 @@ The MAXSIZE value for the DTU model, if specified, has to be a valid value shown
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**General purpose - provisioned compute - Fsv2-series (preview)**
+**General purpose - provisioned compute - Fsv2-series (part 1)**
 
-|MAXSIZE|GP_Fsv2_72|
-|:----- | ------: |
-|Max data size (GB)|4096|
+|MAXSIZE|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14|GP_Fsv2_16|GP_Fsv2_18|
+|:----- | ------: | ------: | ------: | ------: | ------: | ------: |
+|Max data size (GB)|1024|1024|1024|1024|1536|1536|
+
+**General purpose - provisioned compute - Fsv2-series (part 2)**
+
+|MAXSIZE|GP_Fsv2_20|GP_Fsv2_24|GP_Fsv2_32|GP_Fsv2_36|GP_Fsv2_72|
+|:----- | ------: | ------: | ------: | ------: | ------: |
+|Max data size (GB)|1536|1536|3072|3072|4096|
 
 **General purpose - serverless compute - Gen5 (part 1)**
 
@@ -1085,11 +1132,17 @@ The MAXSIZE value for the DTU model, if specified, has to be a valid value shown
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Max data size (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business critical - provisioned compute - M-series (preview)**
+**Business critical - provisioned compute - M-series (part 1)**
 
-|MAXSIZE|BC_M_128|
-|:----- | -------: |
-|Max data size (GB)|4096|
+|MAXSIZE|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
+|:----- | -------: | -------: | -------: | -------: | -------: | -------: |
+|Max data size (GB)|512|640|768|896|1024|1152|
+
+**Business critical - provisioned compute - M-series (part 2)**
+
+|MAXSIZE|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
+|:----- | -------: | -------: | -------: | -------: | -------: |
+|Max data size (GB)|1280|1536|2048|4096|4096|
 
 If no `MAXSIZE` value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore model, see [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -1102,10 +1155,10 @@ SERVICE_OBJECTIVE
 
 - **For single and pooled databases**
 
-  - Specifies the compute size (service objective). Available values for service objective are: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128`.
+  - Specifies the compute size (service objective). Available values for service objective are: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, `GP_Fsv2_16`, `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, `GP_Fsv2_72`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, `BC_M_18`, `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, `BC_M_128`.
 
 - **For serverless databases**
-
+- 
   - Specifies the compute size (service objective). Available values for service objective are: `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`.
 
 - **For single databases in the Hyperscale service tier**
@@ -1161,6 +1214,10 @@ The following syntax and semantic rules apply to your use of the `AS COPY OF` ar
 - The source database may continue to be accessed while the database copy is in progress.
 
 For more information, see [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).
+
+> [!IMPORTANT]
+> By default, the database copy is created with the same backup storage redundancy as that of the source database. Changing the backup storage redundancy while creating a database copy is not supported via T-SQL. 
+
 
 ## Permissions
 
@@ -1252,6 +1309,15 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
 ```
 
+### Create database using zone-redundancy for backups
+
+The following example sets zone-redundancy for database backups. Both point-in-time restore backups and long-term retention backups (if configured) will use the same backup storage redundancy.
+
+```sql
+CREATE DATABASE test_zone_redundancy 
+  WITH BACKUP_STORAGE_REDUNDANCY = 'ZONE';
+```
+
 ## See also
 
 - [sys.dm_database_copies - Azure SQL Database](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
@@ -1260,17 +1326,31 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />managed instance \*_** | [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_**
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database Managed Instance
+## Azure SQL Managed Instance
 
 ## Overview
 
-In Azure SQL Database Managed Instance, this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
+In Azure SQL Managed Instance, this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
 
 ## Syntax
 
@@ -1332,9 +1412,23 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* Azure Synapse<br />Analytics \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_**
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1346,6 +1440,7 @@ In Azure Synapse, this statement can be used with an Azure SQL Database server t
 
 ## Syntax
 
+### [SQL pool](#tab/sqlpool)
 ```syntaxsql
 CREATE DATABASE database_name [ COLLATE collation_name ]
 (
@@ -1366,6 +1461,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 )
 [;]
 ```
+### [SQL on-demand (preview)](#tab/sqlod)
+```syntaxsql
+CREATE DATABASE database_name [ COLLATE collation_name ]
+[;] 
+```
+---
 
 ## Arguments
 
@@ -1448,9 +1549,23 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> |||||
-> |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
+:::row:::
+    :::column:::
+        [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics Platform<br />System (PDW) \*_**
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

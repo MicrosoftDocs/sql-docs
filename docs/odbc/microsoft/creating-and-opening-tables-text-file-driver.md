@@ -1,4 +1,5 @@
 ---
+description: "Creating and Opening Tables (Text File Driver)"
 title: "Creating and Opening Tables (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

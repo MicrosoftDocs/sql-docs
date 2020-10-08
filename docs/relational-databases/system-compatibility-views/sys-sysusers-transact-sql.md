@@ -1,4 +1,5 @@
 ---
+description: "sys.sysusers (Transact-SQL)"
 title: "sys.sysusers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -23,7 +24,7 @@ ms.author: "jroth"
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysusers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Contains one row for each [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user, Windows group, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] role in the database.  
   

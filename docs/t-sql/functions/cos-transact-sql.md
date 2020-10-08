@@ -1,4 +1,5 @@
 ---
+description: "COS (Transact-SQL)"
 title: "COS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -33,7 +34,9 @@ A mathematical function that returns the trigonometric cosine of the specified a
 COS ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float**.
   
@@ -44,15 +47,15 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of ty
 This example returns the `COS` value of the specified angle:
   
 ```sql
-DECLARE @angle float;  
+  DECLARE @angle FLOAT;  
 SET @angle = 14.78;  
-SELECT 'The COS of the angle is: ' + CONVERT(varchar,COS(@angle));  
+SELECT 'The COS of the angle is: ' + CONVERT(VARCHAR,COS(@angle));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COS of the angle is: -0.599465                        
   
 (1 row(s) affected)  

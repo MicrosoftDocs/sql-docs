@@ -1,4 +1,5 @@
 ---
+description: "IDENT_CURRENT (Transact-SQL)"
 title: "IDENT_CURRENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,11 +31,13 @@ Returns the last identity value generated for a specified table or view. The las
   
 ## Syntax  
   
-```  
+```syntaxsql  
 IDENT_CURRENT( 'table_or_view' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *table_or_view*  
 Is the name of the table or view whose identity value is returned. *table_or_view* is **varchar**, with no default.  
   
@@ -86,8 +89,8 @@ GO
 IF OBJECT_ID(N't7', N'U') IS NOT NULL   
     DROP TABLE t7;  
 GO  
-CREATE TABLE t6(id int IDENTITY);  
-CREATE TABLE t7(id int IDENTITY(100,1));  
+CREATE TABLE t6(id INT IDENTITY);  
+CREATE TABLE t7(id INT IDENTITY(100,1));  
 GO  
 CREATE TRIGGER t6ins ON t6 FOR INSERT   
 AS  

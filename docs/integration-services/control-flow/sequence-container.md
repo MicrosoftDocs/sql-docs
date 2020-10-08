@@ -1,4 +1,5 @@
 ---
+description: "Sequence Container"
 title: "Sequence Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Sequence Container
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Sequence container defines a control flow that is a subset of the package control flow. Sequence containers group the package into multiple separate control flows, each containing one or more tasks and containers that run within the overall package control flow.  

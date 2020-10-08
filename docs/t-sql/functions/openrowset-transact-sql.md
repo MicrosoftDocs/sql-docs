@@ -1,4 +1,5 @@
 ---
+description: "OPENROWSET (Transact-SQL)"
 title: "OPENROWSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2019"
@@ -55,7 +56,7 @@ OPENROWSET
    [ , DATASOURCE = 'data_source_name' ]
 
    [ , ERRORFILE = 'file_name' ]
-   [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ , MAXERRORS = maximum_errors ]
 
    [ , FIRSTROW = first_row ]
@@ -68,8 +69,10 @@ OPENROWSET
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
-   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -231,7 +234,7 @@ SELECT *
 #### BULK Input file format options
 
 ##### CODEPAGE
-`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' }
 Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.
 
 > [!IMPORTANT]
@@ -391,8 +394,8 @@ FROM Northwind.dbo.Customers AS c
  The following example creates a small table for demonstration purposes, and inserts file data from a file named `Text1.txt` located in the `C:` root directory into a `varbinary(max)` column.
 
 ```sql
-CREATE TABLE myTable(FileName nvarchar(60),
-  FileType nvarchar(60), Document varbinary(max));
+CREATE TABLE myTable(FileName NVARCHAR(60),
+  FileType NVARCHAR(60), Document VARBINARY(max));
 GO
 
 INSERT INTO myTable(FileName, FileType, Document)
@@ -411,7 +414,7 @@ GO
 
 The following example uses a format file to retrieve rows from a tab-delimited text file, `values.txt` that contains the following data:
 
-```sql
+```
 1     Data Item 1
 2     Data Item 2
 3     Data Item 3
@@ -419,7 +422,7 @@ The following example uses a format file to retrieve rows from a tab-delimited t
 
 The format file, `values.fmt`, describes the columns in `values.txt`:
 
-```sql
+```
 9.0
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                      SQL_Latin1_General_Cp437_BIN
@@ -470,8 +473,8 @@ SELECT * FROM OPENROWSET(
 ```
 
 ```sql
-select *
-from openrowset
+SELECT *
+FROM OPENROWSET
    (  'MSDASQL'
      ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
      ,'select * from E:\Tlog\TerritoryData.csv')

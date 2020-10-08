@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;SPID (Transact-SQL)"
 title: "@@SPID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -34,11 +35,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@SPID  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **smallint**  
   
 ## Remarks  
@@ -47,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
  This example returns the session ID, login name, and user name for the current user process.  
   
-```  
+```sql  
 SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
@@ -62,7 +65,7 @@ ID     Login Name                     User Name
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  This example returns the [!INCLUDE[ssDW](../../includes/ssdw-md.md)] session ID, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Control node session ID, login name, and user name for the current user process.  
   
-```  
+```sql  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   

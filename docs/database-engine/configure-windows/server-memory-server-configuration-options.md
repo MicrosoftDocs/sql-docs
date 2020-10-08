@@ -72,9 +72,14 @@ To set a fixed amount of memory:
   
 2.  Click the **Memory** node.  
   
-3.  Under **Server Memory Options**, enter the same amount that you want for **Minimum server memory** and **Maximum server memory**.  
+3.  Under **Server Memory Options**, enter the amount that you want for **Minimum server memory** and **Maximum server memory**.  
   
      Use the default settings to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to change its memory requirements dynamically based on available system resources. It is recommended to set a **max server memory** as [detailed above](#max_server_memory). 
+
+The following screenshot demonstrates all three steps: 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Configure memory in SSMS":::
+
   
 ## Lock Pages in Memory (LPIM) 
 This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock Pages in Memory** option is set to ON in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows *Lock Pages in Memory* (LPIM) user right.  

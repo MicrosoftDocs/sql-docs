@@ -1,4 +1,5 @@
 ---
+description: "ODBC Scalar Functions (Transact-SQL)"
 title: "ODBC Scalar Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -101,7 +102,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Using an ODBC function in a stored procedure  
  The following example uses an ODBC function in a stored procedure:  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -113,7 +114,7 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
 ### B. Using an ODBC Function in a user-defined function  
  The following example uses an ODBC function in a user-defined function:  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -134,8 +135,8 @@ SELECT dbo.ODBCudf('Returns the length.');
 ### C. Using an ODBC functions in SELECT statements  
  The following SELECT statements use ODBC functions:  
   
-```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+```sql 
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
@@ -176,7 +177,7 @@ SELECT {fn WEEK( @date_exp )};
 ### D. Using an ODBC function in a stored procedure  
  The following example uses an ODBC function in a stored procedure:  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.ODBCprocedure  
 (  
     @string_exp NVARCHAR(4000)  
@@ -188,7 +189,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 ### E. Using an ODBC Function in a user-defined function  
  The following example uses an ODBC function in a user-defined function:  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ODBCudf  
 (  
     @string_exp NVARCHAR(4000)  
@@ -203,13 +204,12 @@ END ;
   
 SELECT dbo.ODBCudf('Returns the length in bits.');  
 --Returns 432  
-  
 ```  
   
 ### F. Using an ODBC functions in SELECT statements  
  The following SELECT statements use ODBC functions:  
   
-```  
+```sql  
 DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  

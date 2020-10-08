@@ -1,4 +1,5 @@
 ---
+description: "sys.system_views (Transact-SQL)"
 title: "sys.system_views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.system_views catalog view"
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.system_views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

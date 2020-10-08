@@ -1,4 +1,5 @@
 ---
+description: "WHERE (Transact-SQL)"
 title: "WHERE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -36,7 +37,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [ WHERE <search_condition> ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \< *search_condition* >
  Defines the condition to be met for the rows to be returned. There is no limit to the number of predicates that can be included in a search condition. For more information about search conditions and predicates, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
@@ -45,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ### A. Finding a row by using a simple equality  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -55,7 +58,7 @@ WHERE LastName = 'Smith' ;
   
 ### B. Finding rows that contain a value as part of a string  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -65,7 +68,7 @@ WHERE LastName LIKE ('%Smi%');
   
 ### C. Finding rows by using a comparison operator  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -75,7 +78,7 @@ WHERE EmployeeKey  <= 500;
   
 ### D. Finding rows that meet any of three conditions  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -85,7 +88,7 @@ WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;
   
 ### E. Finding rows that must meet several conditions  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -95,7 +98,7 @@ WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
   
 ### F. Finding rows that are in a list of values  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -105,7 +108,7 @@ WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');
   
 ### G. Finding rows that have a value between two values  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  

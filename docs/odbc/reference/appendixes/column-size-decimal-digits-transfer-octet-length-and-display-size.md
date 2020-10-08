@@ -1,4 +1,5 @@
 ---
+description: "Column Size, Decimal Digits, Transfer Octet Length, and Display Size - ODBC"
 title: "Column Size, Decimal Digits, Transfer Octet Length, Display Size | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

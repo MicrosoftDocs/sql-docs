@@ -1,4 +1,5 @@
 ---
+description: "Creating a Custom Task"
 title: "Creating a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Creating a Custom Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The steps involved in creating a custom task are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  

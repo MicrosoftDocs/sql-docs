@@ -1,4 +1,5 @@
 ---
+description: "SQLFreeEnv Function"
 title: "SQLFreeEnv Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Ranking Functions (Transact-SQL)"
 title: "Ranking Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -25,16 +26,28 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Ranking functions return a ranking value for each row in a partition. Depending on the function that is used, some rows might receive the same value as other rows. Ranking functions are nondeterministic.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] provides the following ranking functions:  
-  
-|||  
-|-|-|  
-|[RANK](../../t-sql/functions/rank-transact-sql.md)|[NTILE](../../t-sql/functions/ntile-transact-sql.md)|  
-|[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
+
+:::row:::
+    :::column:::
+        [RANK](../../t-sql/functions/rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [NTILE](../../t-sql/functions/ntile-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## Examples  
  The following example shows the four ranking functions used in the same query. For function-specific examples, see each ranking function.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  

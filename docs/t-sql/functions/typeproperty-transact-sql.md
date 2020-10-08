@@ -1,4 +1,5 @@
 ---
+description: "TYPEPROPERTY (Transact-SQL)"
 title: "TYPEPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,11 +31,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TYPEPROPERTY (type , property)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *type*  
  Is the name of the data type.  
   
@@ -62,7 +65,7 @@ TYPEPROPERTY (type , property)
 ### A. Identifying the owner of a data type  
  The following example returns the owner of a data type.  
   
-```  
+```sql
 SELECT TYPEPROPERTY(SCHEMA_NAME(schema_id) + '.' + name, 'OwnerId') AS owner_id, name, system_type_id, user_type_id, schema_id  
 FROM sys.types;  
 ```  
@@ -70,7 +73,7 @@ FROM sys.types;
 ### B. Returning the precision of the tinyint data type  
  The following example returns the precision or number of digits for the `tinyint` data type.  
   
-```  
+```sql
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   

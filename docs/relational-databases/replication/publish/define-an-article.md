@@ -1,4 +1,5 @@
 ---
+description: "Define an Article"
 title: "Define an Article | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

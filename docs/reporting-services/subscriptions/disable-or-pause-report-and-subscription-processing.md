@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Disable or Pause Report and Subscription Processing  
-There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this article range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes. The following tables summaries the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  
+There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this article range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes. The following table summarizes the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  
   
 ##  <a name="bkmk_top"></a> In this article  
   
-||Supported server mode|  
+|Approach|Supported server mode|  
 |-|---------------------------|  
 |[Enable and disable subscriptions](#bkmk_disable_subscription)|Native mode|  
 |[Pause a shared schedule](#bkmk_pause_schedule)|Native and SharePoint mode|  

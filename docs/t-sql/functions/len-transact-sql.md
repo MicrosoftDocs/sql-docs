@@ -1,4 +1,5 @@
 ---
+description: "LEN (Transact-SQL)"
 title: "LEN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/03/2015"
@@ -37,7 +38,9 @@ Returns the number of characters of the specified string expression, excluding t
 LEN ( string_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_expression*  
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be evaluated. *string_expression* can be a constant, variable, or column of either character or binary data.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Grant Permissions on a Stored Procedure | Microsoft Docs"
+description: Learn how to grant permissions on a stored procedure in SQL Server 2019 (15.x) by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

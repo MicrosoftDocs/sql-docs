@@ -1,4 +1,5 @@
 ---
+description: "Broker:Conversation Group Event Class"
 title: "Broker:Conversation Group Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"

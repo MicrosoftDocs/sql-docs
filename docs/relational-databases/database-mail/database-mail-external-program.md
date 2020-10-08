@@ -1,4 +1,5 @@
 ---
+description: "Database Mail External Program"
 title: "Database Mail External Program | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

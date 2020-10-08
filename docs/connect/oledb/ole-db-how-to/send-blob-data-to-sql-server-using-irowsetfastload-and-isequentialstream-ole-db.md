@@ -1,6 +1,6 @@
 ---
 title: "Send BLOB Data to SQL Server Using IROWSETFASTLOAD and ISEQUENTIALSTREAM | Microsoft Docs"
-description: "Send BLOB data to SQL Server using IROWSETFASTLOAD and ISEQUENTIALSTREAM"
+description: Learn how to use IRowsetFastLoad to stream varying length BLOB data per row to SQL Server. This example also demonstrates ISequentialStream.
 ms.custom: ""
 ms.date: "05/25/2020"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.author: pelopes
  <b id="conversion_note">[1]:</b> While conversions are not possible, translations between UTF-8 and the database collation code page can still occur if the server doesn't support UTF-8. For more information, see [UTF-8 Support in OLE DB Driver for SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ## Example  
  Execute the first ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to create the table used by the application.  
@@ -479,5 +479,4 @@ void wmain() {
 use master  
 drop table fltest  
 ```  
-  
   

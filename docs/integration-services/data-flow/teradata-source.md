@@ -1,4 +1,5 @@
 ---
+description: "Connect to the Teradata source"
 title: "Connect to the Teradata source | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Connect to the Teradata source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Teradata source extracts data from Teradata databases by using:
 - A table or a view.

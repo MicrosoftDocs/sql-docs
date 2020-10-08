@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2-1 - Building the Deployment Utility"
 title: "Step 1: Building the Deployment Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 2-1 - Building the Deployment Utility
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will configure and build a deployment utility for the Deployment Tutorial project.  

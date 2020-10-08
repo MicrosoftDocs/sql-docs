@@ -1,4 +1,5 @@
 ---
+description: "Converting from DB-Library to ODBC Bulk Copy"
 title: "Converting from DB-Library to ODBC Bulk Copy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

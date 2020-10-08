@@ -1,4 +1,5 @@
 ---
+description: "GETUTCDATE (Transact-SQL)"
 title: "GETUTCDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2015"
@@ -50,11 +51,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 GETUTCDATE()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **datetime**  
   
 ## Remarks  
@@ -67,7 +70,7 @@ GETUTCDATE()
   
 ### A. Getting the current system date and time  
   
-```  
+```sql  
 SELECT 'SYSDATETIME()      ', SYSDATETIME();  
 SELECT 'SYSDATETIMEOFFSET()', SYSDATETIMEOFFSET();  
 SELECT 'SYSUTCDATETIME()   ', SYSUTCDATETIME();  
@@ -106,7 +109,7 @@ GETUTCDATE()             2007-05-04
   
 ### C. Getting the current system time  
   
-```  
+```sql  
 SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  
 SELECT 'SYSDATETIMEOFFSET()', CONVERT (time, SYSDATETIMEOFFSET());  
 SELECT 'SYSUTCDATETIME()   ', CONVERT (time, SYSUTCDATETIME());  

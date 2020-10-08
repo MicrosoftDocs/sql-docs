@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)"
 title: "@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,11 +32,13 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@MAX_CONNECTIONS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  
@@ -46,7 +49,7 @@ ms.author: maghan
 ## Examples  
  The following example shows returning the maximum number of user connections on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The example assumes that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has not been reconfigured for fewer user connections.  
   
-```  
+```sql 
 SELECT @@MAX_CONNECTIONS AS 'Max Connections';  
 ```  
   

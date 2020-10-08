@@ -1,4 +1,5 @@
 ---
+description: "Binding Result Set Columns"
 title: "Binding Result Set Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Create Update Queries (Visual Database Tools)"
 title: Create Update Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

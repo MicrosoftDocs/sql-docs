@@ -1,4 +1,5 @@
 ---
+description: "TopPercent (MDX)"
 title: "TopPercent (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -61,7 +62,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  The above expression produces the following results:  
   
-||Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3,508,904.84|  
 |London|$1,521,530.09|  
@@ -96,7 +97,7 @@ FROM [Adventure Works]
   
  The above query returns the following results; rows from the middle section were removed for readability.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Touring Bikes|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
 |Touring-2000 Blue, 46|$321,027.03|$333,021.50|($11,994.47)|  
@@ -116,7 +117,7 @@ FROM [Adventure Works]
   
  Please note that the query asks for one hundred percent (100%); that means all rows should be returned. However, because there are negative values in the *Numeric_Expression* , only one row is returned.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Touring Bikes|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   

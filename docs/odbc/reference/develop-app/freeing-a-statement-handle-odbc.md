@@ -1,4 +1,5 @@
 ---
+description: "Freeing a Statement Handle ODBC"
 title: "Freeing a Statement Handle ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

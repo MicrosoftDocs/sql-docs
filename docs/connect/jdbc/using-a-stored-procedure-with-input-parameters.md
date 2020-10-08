@@ -1,5 +1,6 @@
 ---
-title: "Using a stored procedure with input parameters | Microsoft Docs"
+title: "Using a stored procedure with input parameters"
+description: "Learn how to use input parameters with a stored procedure with the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

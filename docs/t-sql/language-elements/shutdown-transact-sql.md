@@ -1,4 +1,5 @@
 ---
+description: "SHUTDOWN (Transact-SQL)"
 title: "SHUTDOWN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -36,7 +37,9 @@ ms.author: jroth
 SHUTDOWN [ WITH NOWAIT ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH NOWAIT  
  Optional. Shuts down [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without performing checkpoints in every database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exits after attempting to terminate all user processes. When the server restarts, a rollback operation occurs for uncompleted transactions.  
   

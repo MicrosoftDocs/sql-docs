@@ -1,4 +1,5 @@
 ---
+description: "Creating a SQL Server Native Client OLE DB Provider Application"
 title: "Create an OLE DB App"
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -18,7 +18,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # View information and perform tasks using Replication Monitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 Replication monitor provides a number of tabs and options to view information and perform various tasks. This article describes the different things that can be viewed and accomplished when using Replication Monitor. 
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Plan Guides | Microsoft Docs"
+description: Learn about plan guides, which let you optimize the performance of queries without directly changing the text of the query in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

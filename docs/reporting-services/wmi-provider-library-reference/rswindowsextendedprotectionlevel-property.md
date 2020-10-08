@@ -1,4 +1,5 @@
 ---
+description: "RSWindowsExtendedProtectionLevel Property"
 title: "RSWindowsExtendedProtectionLevel Property | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services

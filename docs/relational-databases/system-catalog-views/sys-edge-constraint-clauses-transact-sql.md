@@ -1,4 +1,5 @@
 ---
+description: "sys.edge_constraint_clauses (Transact-SQL)"
 title: "sys.edge_constraint_clauses (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2018"
@@ -22,7 +23,7 @@ ms.author: shkale
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.edge_constraint_clauses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Contains one row per clause of an edge constraint.
   

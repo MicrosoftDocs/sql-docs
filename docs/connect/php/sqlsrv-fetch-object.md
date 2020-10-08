@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_fetch_object"
 title: "sqlsrv_fetch_object | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

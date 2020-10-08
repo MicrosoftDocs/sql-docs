@@ -1,4 +1,5 @@
 ---
+description: "TRIGGER_NESTLEVEL (Transact-SQL)"
 title: "TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -29,12 +30,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_category' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_id*  
  Is the object ID of a trigger. If *object_id* is specified, the number of times the specified trigger has been executed for the statement is returned. If *object_id* is not specified, the number of times all triggers have been executed for the statement is returned.  
   
@@ -57,14 +59,14 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ### A. Testing the nesting level of a specific DML trigger  
   
-```  
+```sql
 IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID('xyz') , 'AFTER' , 'DML' ) ) > 5 )  
    RAISERROR('Trigger xyz nested more than 5 levels.',16,-1)  
 ```  
   
 ### B. Testing the nesting level of a specific DDL trigger  
   
-```  
+```sql
 IF ( ( SELECT TRIGGER_NESTLEVEL ( ( SELECT object_id FROM sys.triggers  
 WHERE name = 'abc' ), 'AFTER' , 'DDL' ) ) > 5 )  
    RAISERROR ('Trigger abc nested more than 5 levels.',16,-1)  
@@ -72,7 +74,7 @@ WHERE name = 'abc' ), 'AFTER' , 'DDL' ) ) > 5 )
   
 ### C. Testing the nesting level of all triggers executed  
   
-```  
+```sql
 IF ( (SELECT trigger_nestlevel() ) > 5 )  
    RAISERROR  
       ('This statement nested over 5 levels of triggers.',16,-1)  

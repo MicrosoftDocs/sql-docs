@@ -1,4 +1,5 @@
 ---
+description: "STCurveN (geometry Data Type)"
 title: "STCurveN (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -27,7 +28,9 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
 .STCurveN ( curve_index )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *curve_index*  
  Is an **int** expression between 1 and the number of curves in the **geometry** instance.  
   

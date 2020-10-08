@@ -1,5 +1,6 @@
 ---
-title: "Using statements with the JDBC driver | Microsoft Docs"
+title: "Using statements with the JDBC driver"
+description: "Learn how the Microsoft JDBC Driver for SQL Server can be used to execute SQL statements and stored procedures to perform database operations."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

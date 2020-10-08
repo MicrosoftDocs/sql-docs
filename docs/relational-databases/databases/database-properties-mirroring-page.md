@@ -30,7 +30,7 @@ ms.author: "sstein"
   
  If the wizard completes successfully, the action taken depends on whether mirroring has already begun, as follows:  
   
-|||  
+|Mirroring state|Action taken|  
 |-|-|  
 |If mirroring has not begun.|The property page caches that connection information and, also, caches a value that indicates whether the mirror database has the partner property set.<br /><br /> At the end of the wizard, you are prompted to start database mirroring using the default server network addresses and operating mode. If you need to change the addresses or operating mode, click **Do Not Start Mirroring**.|  
 |If mirroring has begun.|If the witness server was changed in the wizard, it is set accordingly.|  

@@ -1,4 +1,5 @@
 ---
+description: "DENY System Object Permissions (Transact-SQL)"
 title: "DENY System Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -28,11 +29,12 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [ **sys.**]  
  The **sys** qualifier is required only when you are referring to catalog views and dynamic management views.  
   
@@ -58,7 +60,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  The following query returns information about permissions of system objects:  
   
-```  
+```sql
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -72,7 +74,7 @@ GO
 ## Examples  
  The following example denies `EXECUTE` permission on `xp_cmdshell` to `public`.  
   
-```  
+```sql
 DENY EXECUTE ON sys.xp_cmdshell TO public;  
 GO  
 ```  

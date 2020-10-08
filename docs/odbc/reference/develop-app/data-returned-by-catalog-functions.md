@@ -1,4 +1,5 @@
 ---
+description: "Data Returned by Catalog Functions"
 title: "Data Returned by Catalog Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

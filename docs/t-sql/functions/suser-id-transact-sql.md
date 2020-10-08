@@ -1,4 +1,5 @@
 ---
+description: "SUSER_ID (Transact-SQL)"
 title: "SUSER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"
@@ -36,12 +37,13 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SUSER_ID ( [ 'login' ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *login* **'**  
  Is the login name of the user. *login* is **nchar**. If *login* is specified as **char**, *login* is implicitly converted to **nchar**. *login* can be any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If *login* is not specified, the login identification number for the current user is returned. If the parameter contains the word NULL will return NULL.  
   
@@ -58,7 +60,7 @@ SUSER_ID ( [ 'login' ] )
 ## Examples  
  The following example returns the login identification number for the `sa` login.  
   
-```  
+```sql
 SELECT SUSER_ID('sa');  
 ```  
   

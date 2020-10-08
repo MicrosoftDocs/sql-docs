@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_TIMESTAMP (Transact-SQL)"
 title: "CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -48,11 +49,13 @@ See [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TIMESTAMP  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 This function takes no arguments.
   
 ## Return Type  

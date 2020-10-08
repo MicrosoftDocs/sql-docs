@@ -1,5 +1,6 @@
 ---
 title: "Attach Query Hints to a Plan Guide | Microsoft Docs"
+description: Any combination of valid query hints can be used in a plan guide. Learn about attaching hints to a plan guide in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

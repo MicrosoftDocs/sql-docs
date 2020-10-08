@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Driver Extensions - Bulk Copy Functions"
 title: "Bulk Copy Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

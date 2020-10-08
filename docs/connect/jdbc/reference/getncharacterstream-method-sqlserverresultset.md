@@ -1,4 +1,5 @@
 ---
+description: "getNCharacterStream Method (SQLServerResultSet)"
 title: "getNCharacterStream Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

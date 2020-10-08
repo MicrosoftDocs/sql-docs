@@ -1,4 +1,5 @@
 ---
+description: "System Information Schema Views (Transact-SQL)"
 title: "System Information Schema Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2019"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "views [SQL Server], information schema"
   - "system views [SQL Server], information schema"
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # System Information Schema Views (Transact-SQL)
 
@@ -39,18 +40,50 @@ An information schema view is one of several methods [!INCLUDE[ssNoVersion](../.
 
 This name-mapping convention applies to the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO-compatible views.
 
-|||
-|-|-|
-|[CHECK_CONSTRAINTS](../../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)|[REFERENTIAL_CONSTRAINTS](../../relational-databases/system-information-schema-views/referential-constraints-transact-sql.md)|
-|[COLUMN_DOMAIN_USAGE](../../relational-databases/system-information-schema-views/column-domain-usage-transact-sql.md)|[ROUTINES](../../relational-databases/system-information-schema-views/routines-transact-sql.md)|
-|[COLUMN_PRIVILEGES](../../relational-databases/system-information-schema-views/column-privileges-transact-sql.md)|[ROUTINE_COLUMNS](../../relational-databases/system-information-schema-views/routine-columns-transact-sql.md)|
-|[COLUMNS](../../relational-databases/system-information-schema-views/columns-transact-sql.md)|[SCHEMATA](../../relational-databases/system-information-schema-views/schemata-transact-sql.md)|
-|[CONSTRAINT_COLUMN_USAGE](../../relational-databases/system-information-schema-views/constraint-column-usage-transact-sql.md)|[TABLE_CONSTRAINTS](../../relational-databases/system-information-schema-views/table-constraints-transact-sql.md)|
-|[CONSTRAINT_TABLE_USAGE](../../relational-databases/system-information-schema-views/constraint-table-usage-transact-sql.md)|[TABLE_PRIVILEGES](../../relational-databases/system-information-schema-views/table-privileges-transact-sql.md)|
-|[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[TABLES](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|
-|[DOMAINS](../../relational-databases/system-information-schema-views/domains-transact-sql.md)|[VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)|
-|[KEY_COLUMN_USAGE](../../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md)|[VIEW_TABLE_USAGE](../../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)|
-|[PARAMETERS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
+:::row:::
+    :::column:::
+        [CHECK_CONSTRAINTS](../../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
+
+        [COLUMN_DOMAIN_USAGE](../../relational-databases/system-information-schema-views/column-domain-usage-transact-sql.md)
+
+        [COLUMN_PRIVILEGES](../../relational-databases/system-information-schema-views/column-privileges-transact-sql.md)
+
+        [COLUMNS](../../relational-databases/system-information-schema-views/columns-transact-sql.md)
+
+        [CONSTRAINT_COLUMN_USAGE](../../relational-databases/system-information-schema-views/constraint-column-usage-transact-sql.md)
+
+        [CONSTRAINT_TABLE_USAGE](../../relational-databases/system-information-schema-views/constraint-table-usage-transact-sql.md)
+
+        [DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)
+
+        [DOMAINS](../../relational-databases/system-information-schema-views/domains-transact-sql.md)
+
+        [KEY_COLUMN_USAGE](../../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md)
+
+        [PARAMETERS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [REFERENTIAL_CONSTRAINTS](../../relational-databases/system-information-schema-views/referential-constraints-transact-sql.md)
+
+        [ROUTINES](../../relational-databases/system-information-schema-views/routines-transact-sql.md)
+
+        [ROUTINE_COLUMNS](../../relational-databases/system-information-schema-views/routine-columns-transact-sql.md)
+
+        [SCHEMATA](../../relational-databases/system-information-schema-views/schemata-transact-sql.md)
+
+        [TABLE_CONSTRAINTS](../../relational-databases/system-information-schema-views/table-constraints-transact-sql.md)
+
+        [TABLE_PRIVILEGES](../../relational-databases/system-information-schema-views/table-privileges-transact-sql.md)
+
+        [TABLES](../../relational-databases/system-information-schema-views/tables-transact-sql.md)
+
+        [VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
+
+        [VIEW_TABLE_USAGE](../../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
+
+        [VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)
+    :::column-end:::
+:::row-end:::
 
 Also, some views contain references to different classes of data such as character data or binary data.
 

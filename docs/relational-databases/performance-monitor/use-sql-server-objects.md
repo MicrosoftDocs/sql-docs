@@ -1,5 +1,6 @@
 ---
 title: "Use SQL Server Objects | Microsoft Docs"
+description: Learn about the SQL Server objects and counters that System Monitor uses to monitor activity in computers running an instance of SQL Server.
 ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql

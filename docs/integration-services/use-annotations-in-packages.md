@@ -1,4 +1,5 @@
 ---
+description: "Use Annotations in Packages"
 title: "Use Annotations in Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # Use Annotations in Packages
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer provides annotations, which you can use to make packages self-documenting and easier to understand and maintain. You can add annotations to the control flow, data flow, and event handler design surfaces of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. The annotations can contain any type of text, and they are useful for adding labels, comments, and other descriptive information to a package. Annotations are a design-time feature only. For example, they are not written to logs.  

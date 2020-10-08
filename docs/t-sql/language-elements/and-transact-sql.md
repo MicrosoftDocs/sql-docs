@@ -1,4 +1,5 @@
 ---
+description: "AND (Transact-SQL)"
 title: "AND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -36,7 +37,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 boolean_expression AND boolean_expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *boolean_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) that returns a Boolean value: **TRUE**, **FALSE**, or **UNKNOWN**.  
   

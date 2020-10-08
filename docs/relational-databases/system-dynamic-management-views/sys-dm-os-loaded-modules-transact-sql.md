@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_loaded_modules (Transact-SQL)"
 title: "sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -16,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_loaded_modules dynamic management view"
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,5 +1,6 @@
 ---
 title: Using the dta Command Prompt Utility
+description: Learn about the functionality that the dta command-prompt utility offers in addition to that provided by the SQL Server Database Engine Tuning Advisor.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,19 +30,19 @@ Using the XML input functionality of Database Engine Tuning Advisor is beyond th
   
 This task guides you through starting the **dta** utility, viewing its Help, and then using it to tune a workload from the command prompt. It uses the workload, MyScript.sql, which you created for the Database Engine Tuning Advisor graphical user interface (GUI) practice [Tuning a Workload](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)  
   
-The tutorial uses the AdventureWorks2017 sample database. For security reasons, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+The tutorial uses the AdventureWorks2017 sample database. For security reasons, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](../../samples/adventureworks-install-configure.md).  
   
-The following tasks guide you through opening a command prompt, starting the **dta** command prompt utility, viewing its syntax Help, and tuning a simple workload, MyScript.sql, which you created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+The following tasks guide you through opening a command prompt, starting the **dta** command prompt utility, viewing its syntax Help, and tuning a simple workload, MyScript.sql, which you created in [Tuning a Workload](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
 
 ## Prerequisites 
 
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
 - Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample database.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
+- Download [AdventureWorks2017 sample database.](../../samples/adventureworks-install-configure.md)
 
 
-Instructions for restoring databases in SSMS are here: [Restore a database.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > This tutorial is meant for a user familiar with using SQL Server Management Studio and basic database administration tasks. 
@@ -77,7 +78,7 @@ Instructions for restoring databases in SSMS are here: [Restore a database.](htt
 
   ![using CMD with DTA](media/dta-tutorials/dta-cmd.png)
   
-3.  After Database Engine Tuning Advisor finishes tuning the workload, it displays a message indicating that your tuning session completed successfully. You can view the tuning results, by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to open the files MySession2OutputScript.sql and MySession2Output.xml. Alternatively, you can also open the MySession2 tuning session in the Database Engine Tuning Advisor GUI and view its recommendations and reports in the same way that you did in [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) and [Viewing Tuning Reports](../../tools/dta/lesson-1-3-viewing-tuning-reports.md).  
+3.  After Database Engine Tuning Advisor finishes tuning the workload, it displays a message indicating that your tuning session completed successfully. You can view the tuning results, by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to open the files MySession2OutputScript.sql and MySession2Output.xml. Alternatively, you can also open the MySession2 tuning session in the Database Engine Tuning Advisor GUI and view its recommendations and reports in the same way that you did in [Viewing Tuning Recommendations](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) and [Viewing Tuning Reports](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
   
  
 ## After You Finish This Tutorial  
@@ -90,4 +91,3 @@ To return to the start of the tutorial, see [Tutorial: Database Engine Tuning Ad
   
 ## See Also  
 [Database Engine Tutorials](../../relational-databases/database-engine-tutorials.md)  
-    

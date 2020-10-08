@@ -1,4 +1,5 @@
 ---
+description: "dataDefinitionIgnoredInTransactions Method (SQLServerDatabaseMetaData)"
 title: "Does Database Ignore Data Definition Statement Within Transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

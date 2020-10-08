@@ -1,4 +1,5 @@
 ---
+description: "Edit a Model Deployment Package"
 title: Edit a Model Deployment Package
 ms.custom: ""
 ms.date: "03/01/2017"

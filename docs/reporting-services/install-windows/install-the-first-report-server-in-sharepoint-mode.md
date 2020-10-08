@@ -1,4 +1,5 @@
 ---
+description: "Install the first Report Server in SharePoint mode"
 title: "Install the first Report Server in SharePoint mode | Microsoft Docs"
 ms.date: 10/05/2017
 ms.prod: reporting-services
@@ -87,13 +88,17 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
     > [!NOTE]
     > Make sure you specify the correct name of the SharePoint server.
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. You should see a response that a timer job was scheduled. You will need to wait for the job to execute.
 
 5. Use the following command to verify the server's assigned role.
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. The **Role** should list **Custom**.
  
@@ -204,7 +209,9 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
     > [!IMPORTANT]
     > If you see an error message similar to the following:  
     >   
+    ```powershell
     >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > Either you are in the Windows Powershell instead of the SharePoint Management Shell  or Reporting Services SharePoint mode is not installed. For more information on Reporting Services and PowerShell, see [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   

@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Query performance"
 title: "Columnstore indexes - Query performance | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/11/2019

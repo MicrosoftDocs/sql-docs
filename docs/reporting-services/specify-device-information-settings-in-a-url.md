@@ -1,5 +1,6 @@
 ---
 title: "Specify Device Information Settings in a URL | Microsoft Docs"
+description: Learn how to specify device information settings in a URL, specifically with the DeviceInfo XML element.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "BEGIN...END (Transact-SQL)"
 title: "BEGIN...END (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -40,7 +41,9 @@ BEGIN
 END  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  { *sql_statement* | *statement_block* }  
  Is any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statement grouping as defined by using a statement block.  
   

@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE Statement"
 title: "ALTER TABLE Statement | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

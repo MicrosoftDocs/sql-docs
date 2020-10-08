@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_index_operational_stats (Transact-SQL)"
 title: "sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_index_operational_stats dynamic management function"
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_operational_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns current lower-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
     
@@ -46,26 +47,86 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## Arguments    
- *database_id* | NULL | 0 | DEFAULT    
- ID of the database. *database_id* is **smallint**. Valid inputs are the ID number of a database, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
+
+:::row:::
+    :::column:::
+        *database_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
+  ID of the database. *database_id* is **smallint**. Valid inputs are the ID number of a database, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
     
  Specify NULL to return information for all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you specify NULL for *database_id*, you must also specify NULL for *object_id*, *index_id*, and *partition_number*.    
     
  The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.    
-    
- *object_id* | NULL | 0 | DEFAULT    
+
+:::row:::
+    :::column:::
+        *object_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  Object ID of the table or view the index is on. *object_id* is **int**.    
     
  Valid inputs are the ID number of a table and view, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
     
  Specify NULL to return cached information for all tables and views in the specified database. If you specify NULL for *object_id*, you must also specify NULL for *index_id* and *partition_number*.    
-    
- *index_id* | 0 | NULL | -1 | DEFAULT    
+
+:::row:::
+    :::column:::
+        *index_id*
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        -1
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  ID of the index. *index_id* is **int**. Valid inputs are the ID number of an index, 0 if *object_id* is a heap, NULL, -1, or DEFAULT. The default is -1, NULL, -1, and DEFAULT are equivalent values in this context.    
     
  Specify NULL to return cached information for all indexes for a base table or view. If you specify NULL for *index_id*, you must also specify NULL for *partition_number*.    
-    
- *partition_number* | NULL | 0 | DEFAULT    
+
+:::row:::
+    :::column:::
+        *partition_number*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  Partition number in the object. *partition_number* is **int**. Valid inputs are the *partion_number* of an index or heap, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
     
  Specify NULL to return cached information for all partitions of the index or heap.    
@@ -80,7 +141,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|ID of the table or view.|    
 |**index_id**|**int**|ID of the index or heap.<br /><br /> 0 = Heap| 
 |**partition_number**|**int**|1-based partition number within the index or heap.| 
-|**hobt_id**|**bigint**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID of the data heap or B-tree rowset that tracks internal data for a columnstore index.<br /><br /> NULL - this is not an internal columnstore rowset.<br /><br /> For more details, see [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Cumulative count of leaf-level inserts.|    
 |**leaf_delete_count**|**bigint**|Cumulative count of leaf-level deletes. leaf_delete_count is only incremented for deleted records that are not marked as ghost first. For deleted records that are ghosted first, **leaf_ghost_count** is incremented instead.|    
 |**leaf_update_count**|**bigint**|Cumulative count of leaf-level updates.|    
@@ -240,5 +301,3 @@ GO
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
-  
-

@@ -1,4 +1,5 @@
 ---
+description: "setUser Method (SQLServerDataSource)"
 title: "setUser Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

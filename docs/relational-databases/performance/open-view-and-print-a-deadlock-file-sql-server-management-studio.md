@@ -1,5 +1,6 @@
 ---
 title: "Open, view, print deadlock file (SSMS)"
+description: Learn how to capture deadlock information that SQL Server Profiler generates and view it in SQL Server Management Studio.
 ms.custom: seo-dt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

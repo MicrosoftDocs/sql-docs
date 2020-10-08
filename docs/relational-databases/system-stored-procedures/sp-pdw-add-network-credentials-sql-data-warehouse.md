@@ -1,4 +1,5 @@
 ---
+description: "sp_pdw_add_network_credentials (SQL Data Warehouse)"
 title: "sp_pdw_add_network_credentials"
 titleSuffix: Azure SQL Data Warehouse
 ms.date: "03/14/2017"
@@ -22,12 +23,14 @@ ms.custom: seo-dt-2019
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
  '*target_server_name*'  
  Specifies the target server host name or IP address. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will access this server by using the username and password credentials passed to this stored procedure.  
@@ -61,7 +64,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ### A. Add credentials for performing a database backup  
  The following example associates the user name and password credentials for the domain user seattle\david with a target server that has an IP address of 10.172.63.255. The user seattle\david has read/write permissions to the target server. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will store these credentials and use them to read and write to and from the target server, as necessary for backup and restore operations.  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   

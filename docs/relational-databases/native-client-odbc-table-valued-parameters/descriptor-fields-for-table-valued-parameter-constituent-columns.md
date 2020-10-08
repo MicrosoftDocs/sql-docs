@@ -1,4 +1,5 @@
 ---
+description: "Descriptor Fields for Table-Valued Parameter Constituent Columns"
 title: "Descriptor Field for Table-Valued Parameter"
 ms.custom: ""
 ms.date: "03/14/2017"

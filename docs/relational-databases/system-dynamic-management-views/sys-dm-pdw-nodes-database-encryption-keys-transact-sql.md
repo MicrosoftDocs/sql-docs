@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)"
 title: "sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"

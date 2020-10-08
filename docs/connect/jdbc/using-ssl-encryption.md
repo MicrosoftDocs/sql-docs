@@ -1,6 +1,7 @@
 ---
-title: "Using encryption | Microsoft Docs"
-ms.custom: ""
+description: "Using encryption"
+title: "Using encryption"
+ms.custom: "Learn how to establish secure communication channels using TLS encryption with your SQL database connections."
 ms.date: "09/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity

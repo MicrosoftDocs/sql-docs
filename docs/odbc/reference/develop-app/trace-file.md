@@ -1,4 +1,5 @@
 ---
+description: "Trace File"
 title: "Trace File | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

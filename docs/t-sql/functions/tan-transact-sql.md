@@ -1,4 +1,5 @@
 ---
+description: "TAN (Transact-SQL)"
 title: "TAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -29,11 +30,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 TAN ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to **float**, interpreted as number of radians.  
   
@@ -43,7 +46,7 @@ TAN ( float_expression )
 ## Examples  
  The following example returns the tangent of `PI()/2`.  
   
-```  
+```sql
 SELECT TAN(PI()/2);  
 ```  
   
@@ -57,7 +60,7 @@ SELECT TAN(PI()/2);
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the tangent of .45.  
   
-```  
+```sql
 SELECT TAN(.45);  
 ```  
   

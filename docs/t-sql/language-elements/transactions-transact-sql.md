@@ -1,4 +1,5 @@
 ---
+description: "Transactions (Transact-SQL)"
 title: "Transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
@@ -42,17 +43,42 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Applicable only to multiple active result sets (MARS), a [!INCLUDE[tsql](../../includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that is not committed or rolled back when a batch completes is automatically rolled back by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE] 
-> For special considerations related to Data Warehouse products, see [Transactions (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+> For special considerations related to Data Warehouse products, see [Transactions (Azure Synapse Analytics)](transactions-sql-data-warehouse.md).   
 
 ## In This Section  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following transaction statements:  
   
-|||  
-|-|-|  
-|[BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)|[ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)|  
-|[BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)|[ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)|  
-|[COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)|[SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)|  
-|[COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)||  
+:::row:::
+    :::column:::
+        [BEGIN DISTRIBUTED TRANSACTION](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROLLBACK TRANSACTION](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROLLBACK WORK](../../t-sql/language-elements/rollback-work-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [COMMIT TRANSACTION](../../t-sql/language-elements/commit-transaction-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [SAVE TRANSACTION](../../t-sql/language-elements/save-transaction-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [COMMIT WORK](../../t-sql/language-elements/commit-work-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
   
 ## See Also  
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   

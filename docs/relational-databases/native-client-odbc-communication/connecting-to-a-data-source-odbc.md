@@ -1,4 +1,5 @@
 ---
+description: "Connecting to a Data Source (ODBC)"
 title: "Connecting to a Data Source (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

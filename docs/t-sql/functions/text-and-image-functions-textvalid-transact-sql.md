@@ -1,4 +1,5 @@
 ---
+description: "Text and Image Functions - TEXTVALID (Transact-SQL)"
 title: "TEXTVALID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -35,12 +36,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 TEXTVALID ( 'table.column' ,text_ ptr )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table*  
  Is the name of the table that will be used.  
   
@@ -70,7 +72,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 > [!NOTE]  
 >  To run this example, you must install the **pubs** database.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, 'Valid (if 1) Text data'   

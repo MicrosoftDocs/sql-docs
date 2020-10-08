@@ -1,5 +1,6 @@
 ---
-title: "Tracing driver operation | Microsoft Docs"
+title: "Tracing driver operation"
+description: "Learn how to use tracing to log details and resolve issues and problems when using the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.author: v-daenge
   The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports the use of tracing (or logging) to help resolve issues and problems with the JDBC driver when it's used in your application. To enable the use of tracing, the JDBC driver uses the logging APIs in java.util.logging, which provides a set of classes for creating Logger and LogRecord objects.  
   
 > [!NOTE]  
->  For the native component (sqljdbc_xa.dll) that is included with the JDBC driver, tracing is enabled by the Built-In Diagnostics (BID) framework. For information about BID, see [Data Access Tracing in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
+>  For the native component (sqljdbc_xa.dll) that is included with the JDBC driver, tracing is enabled by the Built-In Diagnostics (BID) framework. For information about BID, see [Data Access Tracing in SQL Server](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).  
   
  When you develop your application, you can make calls to Logger objects, which in turn create LogRecord objects, which are then passed to Handler objects for processing. Logger and Handler objects both use logging levels, and optionally logging filters, to regulate which LogRecords are processed. When the logging operations are complete, the Handler objects can optionally use Formatter objects to publish the log information.  
   
@@ -154,5 +155,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## See also  
  [Diagnosing problems with the JDBC driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

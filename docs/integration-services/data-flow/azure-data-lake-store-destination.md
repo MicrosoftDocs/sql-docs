@@ -1,4 +1,5 @@
 ---
+description: "Azure Data Lake Store Destination"
 title: "Azure Data Lake Store Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/22/2019
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Azure Data Lake Store Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The **Azure Data Lake Store Destination** component enables an SSIS package to write data to an Azure Data Lake Store. The supported file formats are: Text, Avro, and ORC. 

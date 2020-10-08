@@ -1,4 +1,5 @@
 ---
+description: "Azure Feature Pack for Integration Services (SSIS)"
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2019"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Azure Feature Pack for Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
@@ -123,7 +124,7 @@ The following Java builds have been tested.
 
 ### Set Up Zulu's OpenJDK on Azure-SSIS Integration Runtime
 
-This should be done via [custom setup interface](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
+This should be done via [custom setup interface](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
 Suppose `zulu8.33.0.1-jdk8.0.192-win_x64.zip` is used.
 The blob container could be organized as follows.
 
@@ -188,6 +189,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ## Release Notes
 
+### Version 1.19.0
+
+#### Improvements
+
+1. Added support for shared access signature authentication to Azure Storage connection manager.
+
 ### Version 1.18.0
 
 #### Improvements
@@ -219,4 +226,4 @@ This is a hotfix version released for SQL Server 2019 only.
 #### Bugfixes
 
 1. In certain cases, test connection malfunctions for Data Lake Storage Gen2 with the error message "Attempted to access an element as a type incompatible with the array"
-1. Bring back support for Azure storage emulator
+1. Bring back support for Azure Storage Emulator

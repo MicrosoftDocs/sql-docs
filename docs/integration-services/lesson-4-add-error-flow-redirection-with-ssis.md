@@ -1,4 +1,5 @@
 ---
+description: "Lesson 4: Add Error Flow Redirection with SSIS"
 title: "Lesson 4: Add Error Flow Redirection with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 4: Add error flow redirection with SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

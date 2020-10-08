@@ -1,4 +1,5 @@
 ---
+description: "SqlServiceType Property (SqlService Class)"
 title: "SqlServiceType Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlServiceType property"
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlServiceType Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "DBCC OUTPUTBUFFER (Transact-SQL)"
 title: "DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -35,7 +36,9 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *session_id*  
  Is the session ID associated with each active primary connection.  
   
@@ -63,7 +66,7 @@ To show the statement executed that returned the results displayed by DBCC OUTPU
 ## Result Sets  
 DBCC OUTPUTBUFFER returns the following (values may vary):
   
-```sql
+```
 Output Buffer                                                              
 ------------------------------------------------------------------------   
 01fb8028:  04 00 01 5f 00 00 00 00 e3 1b 00 01 06 6d 00 61  ..._.........m.a  

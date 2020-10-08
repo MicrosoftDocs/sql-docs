@@ -1,4 +1,5 @@
 ---
+description: "getByte Method (int) (SQLServerResultSet)"
 title: "getByte Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE TYPE (Transact-SQL)"
 title: "CREATE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/05/2019"
@@ -24,8 +25,8 @@ helpviewer_keywords:
   - "alias data types [SQL Server], creating"
   - "data types [SQL Server], creating"
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -159,7 +160,9 @@ column_name <data_type>
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the alias data type or user-defined type belongs.  
   

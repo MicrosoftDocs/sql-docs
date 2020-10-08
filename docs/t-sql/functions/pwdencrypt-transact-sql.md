@@ -1,4 +1,5 @@
 ---
+description: "PWDENCRYPT (Transact-SQL)"
 title: "PWDENCRYPT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,12 +30,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PWDENCRYPT ( 'password' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *password*  
  Is the password to be encrypted. *password* is **sysname**.  
   

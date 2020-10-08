@@ -1,4 +1,5 @@
 ---
+description: "Generate SQL Script (Replication Objects)"
 title: "Generate SQL Script (Replication Objects) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project from SSMS with Transact-SQL"
 title: "Deploy an SSIS project with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

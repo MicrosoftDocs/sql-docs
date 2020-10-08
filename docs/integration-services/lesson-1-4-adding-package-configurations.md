@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-4 - Adding Package Configurations"
 title: "Step 4: Adding Package Configurations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-4 - Adding Package Configurations
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  

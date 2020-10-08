@@ -1,4 +1,5 @@
 ---
+description: "Choose Search Folders Dialog Box (Visual Studio)"
 title: "Choose Search Folders Dialog Box (Visual Studio)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

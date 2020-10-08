@@ -1,4 +1,5 @@
 ---
+description: "STGeometryType (geometry Data Type)"
 title: "STGeometryType (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns the Open Geospatial Consortium (OGC) type name represented by a **geomet
 .STGeometryType ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(4000)**  
   
  CLR return type: **SqlString**  

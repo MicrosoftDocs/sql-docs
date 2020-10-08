@@ -1,4 +1,5 @@
 ---
+description: "Installing and Configuring"
 title: "Installing and Configuring | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

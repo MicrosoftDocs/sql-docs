@@ -1,4 +1,5 @@
 ---
+description: "Package Management (SSIS Service)"
 title: "Package Management (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
@@ -30,7 +31,7 @@ ms.author: chugu
 ---
 # Package Management (SSIS Service)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Package management includes monitoring, managing, importing and exporting packages.  

@@ -1,4 +1,5 @@
 ---
+description: "Fuzzy Lookup Transformation"
 title: "Fuzzy Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -36,7 +37,7 @@ ms.author: chugu
 ---
 # Fuzzy Lookup Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Fuzzy Lookup transformation performs data cleaning tasks such as standardizing data, correcting data, and providing missing values.  

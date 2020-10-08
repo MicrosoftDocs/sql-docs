@@ -1,4 +1,5 @@
 ---
+description: "GetDescendant (Database Engine)"
 title: "GetDescendant (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -25,17 +26,19 @@ Returns a child node of the parent.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 parent.GetDescendant ( child1 , child2 )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )   
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *child1*  
 NULL or the **hierarchyid** of a child of the current node.
   

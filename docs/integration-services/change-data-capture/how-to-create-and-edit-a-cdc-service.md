@@ -1,4 +1,5 @@
 ---
+description: "How to Create and Edit a CDC Service"
 title: "How to Create and Edit a CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # How to Create and Edit a CDC Service
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   These procedures describe how to create and edit a new Oracle CDC Service from the CDC Service Configuration Console.  

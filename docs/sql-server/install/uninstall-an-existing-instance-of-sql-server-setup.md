@@ -40,11 +40,18 @@ ms.author: maghan
   
     The files that you must save include the following database files:  
 
-    |             |            |           |            |
-    | :---------- | :--------- |:--------- | :--------- |
-    | master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
-    | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
-    | Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
+    * master.mdf
+    * msdbdata.mdf
+    * Tempdb.mdf
+    * mastlog.ldf
+    * msdblog.ldf
+    * Templog.ldf
+    * model.mdf
+    * Mssqlsystemresource.mdf
+    * ReportServer[$InstanceName]
+    * modellog.ldf
+    * Mssqlsustemresource.ldf
+    * ReportServer[$InstanceName]TempDB
 
     > [!NOTE]
     > The ReportServer databases are included with SQL Server Reporting Services.   

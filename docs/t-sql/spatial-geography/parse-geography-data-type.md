@@ -1,4 +1,5 @@
 ---
+description: "Parse (geography Data Type)"
 title: "Parse (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -30,7 +31,9 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 Parse ( 'geography_tagged_text' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geography_tagged_text*  
  Is the WKT representation of the **geography** instance to return. *geography_tagged_text* is an **nvarchar** expression.  
   

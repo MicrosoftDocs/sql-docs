@@ -1,4 +1,5 @@
 ---
+description: "SCOPE_IDENTITY (Transact-SQL)"
 title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
@@ -30,11 +31,13 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SCOPE_IDENTITY()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **numeric(38,0)**  
   
 ## Remarks  
@@ -59,8 +62,8 @@ SCOPE_IDENTITY()
 USE tempdb;  
 GO  
 CREATE TABLE TZ (  
-   Z_id  int IDENTITY(1,1)PRIMARY KEY,  
-   Z_name varchar(20) NOT NULL);  
+   Z_id  INT IDENTITY(1,1)PRIMARY KEY,  
+   Z_name VARCHAR(20) NOT NULL);  
   
 INSERT TZ  
    VALUES ('Lisa'),('Mike'),('Carla');  
@@ -78,8 +81,8 @@ Z_id   Z_name
 ```  
 ```sql 
 CREATE TABLE TY (  
-   Y_id  int IDENTITY(100,5)PRIMARY KEY,  
-   Y_name varchar(20) NULL);  
+   Y_id  INT IDENTITY(100,5)PRIMARY KEY,  
+   Y_name VARCHAR(20) NULL);  
   
 INSERT TY (Y_name)  
    VALUES ('boathouse'), ('rocks'), ('elevator');  

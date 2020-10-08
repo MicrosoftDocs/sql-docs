@@ -18,7 +18,7 @@
   href: save-metadata-accesstosql.md
 - name: Connecting to SQL Server
   href: connecting-to-sql-server-accesstosql.md
-- name: Migrating Access Data into Azure SQL DB
+- name: Migrating Access Data into Azure SQL Database
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: Creating & Managing Project
   href: creating-and-managing-projects-accesstosql.md
@@ -38,7 +38,7 @@
   href: new-project-ssma-accesstosql.md
 - name: Command-Line Options in SSMA Console
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: Connect To Azure SQL DB
+- name: Connect To Azure SQL Database
   href: connect-to-azure-sql-db-accesstosql.md
 - name: Assessment Report
   href: assessment-report-accesstosql.md
@@ -60,7 +60,7 @@
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: Creating the Server Connection Files
   href: creating-the-server-connection-files-accesstosql.md
-- name: Linking Access Applications to Azure SQL DB
+- name: Linking Access Applications to Azure SQL Database
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: Creating Variable Value Files
   href: creating-variable-value-files-accesstosql.md
@@ -68,7 +68,7 @@
   href: edit-type-mapping-accesstosql.md
 - name: Exporting an Access Inventory
   href: exporting-an-access-inventory-accesstosql.md
-- name: Migrating Access Databases to Azure SQL DB
+- name: Migrating Access Databases to Azure SQL Database
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: Mapping Source & Target Databases
   href: mapping-source-and-target-databases-accesstosql.md
@@ -92,7 +92,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: Shortcut Keys
   href: shortcut-keys-accesstosql.md
-- name: Connecting to Azure SQL DB
+- name: Connecting to Azure SQL Database
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: Setting Conversion & Migration Options
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -112,7 +112,7 @@
     href: project-settings-gui-accesstosql.md
   - name: Conversion
     href: project-settings-conversion-accesstosql.md
-  - name: Azure SQL DB
+  - name: Azure SQL Database
     href: project-settings-azure-sql-db-accesstosql.md
   - name: Type-Mapping
     href: project-settings-type-mapping-accesstosql.md

@@ -1,4 +1,5 @@
 ---
+description: "IsValidDetailed (geometry DataType)"
 title: "IsValidDetailed (geometry DataType) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -27,7 +28,9 @@ Returns a message that can help to identify problems with a spatial object that 
 .IsValidDetailed()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
   
  CLR return type: **string**  

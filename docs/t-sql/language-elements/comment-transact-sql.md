@@ -1,4 +1,5 @@
 ---
+description: "-- (Comment) (Transact-SQL)"
 title: "-- (Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2019"
@@ -37,7 +38,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -- text_of_comment  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *text_of_comment*  
  Is the character string that contains the text of the comment.  
   

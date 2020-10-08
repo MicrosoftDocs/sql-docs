@@ -1,4 +1,5 @@
 ---
+description: "DROP TRIGGER (Transact-SQL)"
 title: "DROP TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -22,8 +23,8 @@ helpviewer_keywords:
   - "removing triggers"
   - "DML triggers, removing"
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,9 @@ ON ALL SERVER
 ```  
 
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
@@ -100,7 +103,7 @@ ON ALL SERVER
 ### A. Dropping a DML trigger  
  The following example drops the `employee_insupd` trigger in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. (Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you can use the DROP TRIGGER IF EXISTS syntax.)  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -111,7 +114,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  Because DDL triggers are not schema-scoped and, therefore do not appear in the **sys.objects** catalog view, the OBJECT_ID function cannot be used to query whether they exist in the database. Objects that are not schema-scoped must be queried by using the appropriate catalog view. For DDL triggers, use **sys.triggers**.  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  

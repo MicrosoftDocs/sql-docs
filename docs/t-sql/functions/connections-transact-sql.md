@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CONNECTIONS (Transact-SQL)"
 title: "@@CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,10 +32,12 @@ This function returns the number of attempted connections - both successful and 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 @@CONNECTIONS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **integer**
   
@@ -55,8 +58,7 @@ SELECT GETDATE() AS 'Today''s Date and Time',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
-  
+``` 
 Today's Date and Time  Login Attempts  
 ---------------------- --------------  
 12/5/2006 10:32:45 AM  211023         

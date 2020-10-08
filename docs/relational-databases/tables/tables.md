@@ -1,4 +1,5 @@
 ---
+description: "Tables"
 title: "Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/18/2019
@@ -16,7 +17,7 @@ ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tables
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 Tables are database objects that contain all the data in a database. In tables, data is logically organized in a row-and-column format similar to a spreadsheet. Each row represents a unique record, and each column represents a field in the record. For example, a table that contains employee data for a company might contain a row for each employee and columns representing employee information such as employee number, name, address, job title, and home telephone number. 
 
@@ -49,7 +50,7 @@ The end result is a reduction in extraneous recompilations and CPU-overhead.
 
 ### System Tables
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the data that defines the configuration of the server and all its tables in a special set of tables known as system tables. Users cannot directly query or update the system tables. The information in the system tables is made available through the system views. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the data that defines the configuration of the server and all its tables in a special set of tables known as system tables. Users cannot directly query or update the system tables. The information in the system tables is made available through the system views. For more information, see [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md). 
  
 ### Wide Tables
 
@@ -97,5 +98,3 @@ Wide tables have the following performance implications.
 ## See Also
  [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 
  [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
-
-

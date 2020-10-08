@@ -62,6 +62,7 @@ Each service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repres
 
 |SQL Server version|Path|
 |-|-|
+|SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|

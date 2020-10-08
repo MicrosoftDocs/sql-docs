@@ -60,7 +60,7 @@ The present article is written from the perspective of SQL Server. The article u
 
 For documentation about extended events that is specific to Azure SQL Database, see:
 
-- [Extended Events in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Extended Events in Azure SQL Database](/azure/azure-sql/database/xevent-db-diff-from-svr)
 
 
 

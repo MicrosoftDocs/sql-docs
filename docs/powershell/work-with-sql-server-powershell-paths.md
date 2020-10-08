@@ -4,7 +4,7 @@ description: Learn how to manipulate and retrieve information using either cmdle
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: matteot, drskwier
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262

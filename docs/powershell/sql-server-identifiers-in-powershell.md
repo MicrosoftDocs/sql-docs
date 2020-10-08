@@ -4,7 +4,7 @@ description: Learn about the paths that Windows PowerShell providers use to expo
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: matteot, drskwier
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 

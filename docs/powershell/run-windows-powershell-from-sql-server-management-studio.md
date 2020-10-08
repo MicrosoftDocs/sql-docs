@@ -4,7 +4,7 @@ description: Learn how to start a Windows PowerShell session from Object Explore
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: matteot, drskwier
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b

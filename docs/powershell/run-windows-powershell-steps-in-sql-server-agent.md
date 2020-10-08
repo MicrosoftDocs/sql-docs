@@ -4,7 +4,7 @@ description: Learn how to run Windows PowerShell steps in a SQL Server Agent job
 ms.custom: seo-lt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: matteot, drskwier
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3

@@ -88,10 +88,6 @@ ms.date: 08/06/2020
     Restart-Service -Name MSSQLSERVER -Force
     ```
 
-
-
-
-
 ## Next steps
 
 - [Install the SQL Server PowerShell module](download-sql-server-ps-module.md)

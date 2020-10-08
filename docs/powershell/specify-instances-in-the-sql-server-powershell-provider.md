@@ -4,7 +4,7 @@ description: Learn how to specify instances when using the SQL Server PowerShell
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: matteot, drskwier
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb

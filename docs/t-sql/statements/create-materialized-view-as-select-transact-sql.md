@@ -41,7 +41,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
+[!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] for developing solutions. The article also provides code examples.
 
@@ -147,7 +147,7 @@ To find out if a SQL statement can benefit from a new materialized view, run the
 Requires 1) REFERENCES and CREATE VIEW permission OR 2) CONTROL permission on the schema in which the view is being created. 
 
 ## Example
-A. This example shows how Synapse SQL optimizer automatically uses materialized views to execute a query for better performance even when the query uses functions un-supported in CREATE MATERIALIZED VIEW, such as COUNT(DISTINCT expression). A query used to take multiple seconds to compelte now finishes in sub-second without any change in the user query.   
+A. This example shows how Synapse SQL optimizer automatically uses materialized views to execute a query for better performance even when the query uses functions un-supported in CREATE MATERIALIZED VIEW, such as COUNT(DISTINCT expression). A query used to take multiple seconds to complete now finishes in sub-second without any change in the user query.   
 
 ``` sql 
 

@@ -64,9 +64,6 @@ Connect using Active Directory Authentication. The type of connection is determi
 [**-U** _username_]
 User name when connecting with 'SQL Authentication'
 
-[**-P** _password_]
-Password when connecting with 'SQL Authentication'
-
 [**-E**]
 Connect using Windows Authentication
 
@@ -84,6 +81,8 @@ Displays command-line help
 All of the switches are optional and separated by a space except files, which are separated by commas. If you do not specify any switches, **Ssms** opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] as specified in the **Options** settings on the **Tools** menu. For example, if the **Environment/General** page **At startup** option specifies **Open new query window**, **Ssms** opens with a blank Query Editor.
 
 The **-log** switch must appear at the end of the command line, after all, other switches. The filename argument is optional. If a filename is specified, and the file does not exist, the file is created. If the file cannot be created - for example, due to insufficient write access, the log is written to the nonlocalized APPDATA location instead (See below). If the filename argument is not specified, two files are written to the current user's nonlocalized application data folder. The nonlocalized application data folder for SQL Server can be found from the APPDATA environment variable. For example, for SQL Server 2012, the folder is \<system drive>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. The two files are, by default, named ActivityLog.xml and ActivityLog.xsl. The former contains the activity log data, and the latter is an XML style sheet, which provides a more convenient way to view the XML file. Use the following steps to view the log file in your default XML viewer, like Internet Explorer: Click Start, then click Run...", then type "\<system drive>:\Users\\<username\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml" into the field provided, and then press Enter.
+
+Providing a password for SQL Authentication is not supported due to the security concerns about using clear-text passwords on the command line.
 
 Files that contain queries prompt to be connected to a server if connection information is provided and the file type is associated with that type of server. For instance, .sql files open a SQL Query Editor window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], and .mdx files open an MDX Query Editor window in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. **SQL Server Solutions and Projects** open in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 

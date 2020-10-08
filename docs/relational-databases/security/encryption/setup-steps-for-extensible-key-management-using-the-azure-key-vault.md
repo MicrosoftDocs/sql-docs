@@ -79,7 +79,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
     f. On the **Certificates & secrets** pane, under **"Value"**, select the **Copy** button next to the value of the client secret to be used to create an asymmetric key in SQL Server.
 
-    ![Screenshot of the "Certificates & secrets" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+    ![Screenshot of the secret value](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
     g. In the left pane, select **Overview** and then, in the **Application (client) ID** box, copy the value to be used to create an asymmetric key in SQL Server.
 

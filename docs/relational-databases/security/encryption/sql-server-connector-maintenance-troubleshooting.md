@@ -186,7 +186,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 
 **How do I change my default Active Directory so my key vault is created in the same subscription and Active Directory as the service principal I created for the [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] Connector?**
 
-![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
+![aad change default directory helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. Go to the Azure classic portal: [https://manage.windowsazure.com](https://manage.windowsazure.com)  
 2. On the left-hand menu, select **Settings**.

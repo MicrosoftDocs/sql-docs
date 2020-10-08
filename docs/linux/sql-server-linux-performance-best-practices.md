@@ -108,7 +108,7 @@ vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
 # For multi-instance SQL deployments, use
-# vm.transparent_hugepages=madvice
+# vm.transparent_hugepages=madvise
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
 net.core.rmem_max = 4194304

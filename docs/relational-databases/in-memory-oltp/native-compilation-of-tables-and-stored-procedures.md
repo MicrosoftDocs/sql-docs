@@ -143,7 +143,7 @@ The table DLL understands the index structures and row format of the table. [!IN
 
 Stored procedures that are marked with NATIVE_COMPILATION are natively compiled. This means the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the procedure are all compiled to native code for efficient execution of performance-critical business logic.
 
-For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).
+For more information about natively compiled stored procedures, see [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 Consider the following sample stored procedure, which inserts rows in the table t1 from the previous example:
 
@@ -206,6 +206,6 @@ No user interaction is needed to manage these files. [!INCLUDE[ssNoVersion](../.
 
 ## See Also
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)
 
-[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)

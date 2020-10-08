@@ -23,7 +23,7 @@ This article describes how to install a custom runtime for running R scripts wit
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> This article describes how to install a custom runtime for R on Windows. To install on Linux, see the [Install an R custom runtime for SQL Server on Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
+> This article describes how to install a custom runtime for R on Windows. Language extensions is the technology used for custom runtime. It uses an extensibility framework for executing external code. To install on Linux, see the [Install an R custom runtime for SQL Server on Linux](custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true)
 
 ## Pre-install checklist
 
@@ -181,7 +181,7 @@ GO
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md#supportedplatforms).
 
 > [!NOTE]
-> This article describes how to install a custom runtime for R on Linux. To install on Windows, see the [Install an R custom for SQL Server on Windows](custom-runtime-r.md?view=sql-server-ver15&preserve-view=true)
+> This article describes how to install a custom runtime for R on Linux. Language extensions is the technology used for custom runtime. It uses an extensibility framework for executing external code. To install on Windows, see the [Install an R custom for SQL Server on Windows](custom-runtime-r.md?view=sql-server-ver15&preserve-view=true)
 
 ## Pre-install checklist
 

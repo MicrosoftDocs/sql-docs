@@ -22,7 +22,9 @@ This article describes how to install a custom runtime for running Python script
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> This article describes how to install a custom runtime for Python on Windows. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+> This article describes how to install a custom runtime for Python on Windows. Language extensions is the technology used for custom runtime. It uses an extensibility framework for executing external code. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
+
 
 ## Pre-install checklist
 
@@ -74,7 +76,7 @@ Language Extensions use the extensibility framework for executing external code.
 
 Install [Python 3.7]( https://www.python.org/downloads/release/python-379/) and add it to the PATH.
 
-![Add Python 3.7 to path.](../install/media/python-379.png) **update image - note**
+![Add Python 3.7 to path.](../install/media/python-379.png) 
 
 
 #### Install pandas
@@ -99,7 +101,7 @@ If PYTHONHOME already exists, select **Edit** to point it to the Python 3.7 inst
 
 ## Grant access to the custom Python installation folder
 
-Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is of the form `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
+Run the following **icacls** commands from a new *elevated* command prompt to grant READ & EXECUTE access to PYTHONHOME to **SQL Server Launchpad Service** and SID **S-1-15-2-1** (**ALL_APPLICATION_PACKAGES**). The launchpad service username is: `NT Service\MSSQLLAUNCHPAD$INSTANCENAME* where INSTANCENAME` is the instance name of your SQL Server. The commands will recursively grant access to all files and folders under the given directory path.
 
 Append the instance name to `MSSQLLAUNCHPAD` (`MSSQLLAUNCHPAD$INSTANCENAME`). In this example, INSTANCENAME is the default instance `MSSQLSERVER`.
 
@@ -150,7 +152,7 @@ GO
 You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
 > [!NOTE]
-> This article describes how to install a custom runtime for Python on Linux. To install on Windows, see the [Install a Python custom runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
+> This article describes how to install a custom runtime for Python on Linux. Language extensions is the technology used for custom runtime. It uses an extensibility framework for executing external code. To install on Windows, see the [Install a Python custom runtime for SQL Server on Windows](custom-runtime-python.md?view=sql-server-ver15&preserve-view=true)
 
 ## Pre-install checklist
 

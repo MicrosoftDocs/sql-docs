@@ -193,7 +193,7 @@ To resolve this issue, first determine if you need ServerA to access the databas
 
 **Error code 833 - I/O requests taking longer than 15 seconds to complete** 
    
-   This is an indication that there is latency introduced between SQL Server and the files hosted in Azure, either on the storage layer, or possibly through the networking layer. Monitor [sys.dm_io_virtual_file_stats](../system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) and choose appropriate storage tier and IOPS for your storage throughput. 
+   This error indicates the storage system is unable to meet the demands of the SQL Server workload. Either decrease IO activity from the application layer, or increase throughput capability on the storage layer. To learn more, see [Error 833](../errors-events/mssqlserver-833-database-engine-error.md). If performance problems persist, consider moving files to a different storage tier such as Premium or UltraSSD. For SQL Server on Azure VMs, see [optimizing storage performance](/azure/virtual-machines/premium-storage-performance).
 
 
 ## Next steps  

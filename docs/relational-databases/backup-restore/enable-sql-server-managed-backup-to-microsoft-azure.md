@@ -18,7 +18,7 @@ ms.author: mikeray
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
   
- This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](/powershell/azure/).  
   
 > [!IMPORTANT]  
 >  If you also want to enable advanced options or use a custom schedule, configure those settings first before enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. For more information, see [ Configure advanced options for SQL Server managed backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -27,7 +27,7 @@ ms.author: mikeray
 
 The process requires an Azure account. If you already have an account, go to the next step. Otherwise, you can get started with a [free trial](https://azure.microsoft.com/pricing/free-trial/) or explore [purchase options](https://azure.microsoft.com/pricing/purchase-options/).
 
-For more information about storage accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
+For more information about storage accounts, see [About Azure Storage Accounts](/azure/storage/common/storage-account-create). 
 
 #### [Azure CLI](#tab/azure-cli)
 
@@ -101,7 +101,7 @@ If the URL is included, separate it from the SAS token at the question mark (do 
 |**SAS token**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more information about SAS, see [Shared Access Signatures, Part 1: Understanding the SAS Model](/azure/storage/common/storage-sas-overview).  
   
 ## Enable managed backup to Azure
   
@@ -206,4 +206,4 @@ Record the container URL and SAS for use in creating a SQL CREDENTIAL. For more 
 The steps described in this section are specifically for configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedures and provide the new values.  
   
 ## See also  
- [SQL Server managed backup to Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server managed backup to Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

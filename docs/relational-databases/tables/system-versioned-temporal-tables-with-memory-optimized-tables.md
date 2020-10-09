@@ -19,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-System-versioned temporal tables for [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) are designed to provide cost-effective solution for scenarios where [data audit and point in time analysis](https://msdn.microsoft.com/library/mt631669.aspx) are required on top of data collected with In-Memory OLTP workloads. They provide high transactional throughput, lock-free concurrency and at the same time, ability to store large amount of history data that can be easily queried.
+System-versioned temporal tables for [Memory-Optimized Tables](../in-memory-oltp/sample-database-for-in-memory-oltp.md) are designed to provide cost-effective solution for scenarios where [data audit and point in time analysis](./temporal-table-usage-scenarios.md) are required on top of data collected with In-Memory OLTP workloads. They provide high transactional throughput, lock-free concurrency and at the same time, ability to store large amount of history data that can be easily queried.
 
 ## Overview
 
@@ -37,7 +37,7 @@ The following facts about system-versioned temporal tables with memory optimized
 
 - Only durable memory-optimized tables can be system-versioned (**DURABILITY = SCHEMA_AND_DATA**).
 - History table for memory-optimized system-versioned table must be disk-based, regardless if it was created by the end user or the system.
-- Queries that affect only the current table (in-memory) can be used in [natively compiled T-SQL modules](https://msdn.microsoft.com/library/dn133184.aspx). Temporal queries using the FOR SYSTEM TIME clause are not supported in natively compiled modules. Use of the FOR SYSTEM TIME clause with memory-optimized tables in ad hoc queries and non-native modules is supported.
+- Queries that affect only the current table (in-memory) can be used in [natively compiled T-SQL modules](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md). Temporal queries using the FOR SYSTEM TIME clause are not supported in natively compiled modules. Use of the FOR SYSTEM TIME clause with memory-optimized tables in ad hoc queries and non-native modules is supported.
 - When **SYSTEM_VERSIONING = ON**, an internal memory-optimized staging table is automatically created to accept the most recent system-versioned changes that are results of update and delete operations on memory-optimized current table.
 - Data from the internal memory-optimized staging table is regularly moved to the disk-based history table by the asynchronous data flush task. This data flush mechanism has a goal to keep the internal memory buffers at less than 10% of the memory consumption of their parent objects. You can track the total memory consumption of memory-optimized system-versioned temporal table by querying [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) and summarizing the data for the internal memory-optimized staging table and the current temporal table.
 - You can enforce a data flush by invoking [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).

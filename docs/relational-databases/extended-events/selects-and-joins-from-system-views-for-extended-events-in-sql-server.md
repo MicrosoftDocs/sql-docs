@@ -74,7 +74,7 @@ To SELECT from the system views, the following permission is necessary:
 
 This section matches and correlates three different technological perspectives on the same defined event session. The session has been defined and is visible in the **Object Explorer** of SQL Server Management Studio (SSMS.exe), but the session is not currently running.
 
-Every month it is wise to [install the latest update of SSMS](https://msdn.microsoft.com/library/mt238290.aspx), to avoid unexpected failures.
+Every month it is wise to [install the latest update of SSMS](../../ssms/download-sql-server-management-studio-ssms.md), to avoid unexpected failures.
 
 
 Reference documentation about the catalog views for extended events is at [Extended Events Catalog Views (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -885,5 +885,3 @@ Here is the contents of the first XML cell, from the preceding returned rowset.
   </action>
 </event>
 ```
-
-

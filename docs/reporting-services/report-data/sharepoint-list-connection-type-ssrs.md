@@ -64,7 +64,7 @@ Use the information in this topic to build a data source. For step-by-step instr
  For a SharePoint technology that is configured to work without a Report Server (local mode), this option is not supported. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
   
  **Credentials are not required (Do not use credentials):**  
- To use this option, the unattended execution account must be configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ To use this option, the unattended execution account must be configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  For information about Claims authentication support across the Microsoft BI stack, see [Using Claims Authentication across the Microsoft BI Stack](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   

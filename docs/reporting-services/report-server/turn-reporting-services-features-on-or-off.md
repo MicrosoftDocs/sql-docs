@@ -112,7 +112,7 @@ As of SQL Server 2016 Reporting Services Cumulative Update 2, the web portal wil
 4.  Select **OK**.  
   
 ## See also  
-[Reporting Services Configuration Manager (Native Mode)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+[Report Server Configuration Manager (Native Mode)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   

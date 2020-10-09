@@ -141,4 +141,4 @@ $DcControllerDnsPtr_Result
 
 ## Next steps
 
-[Verify reverse DNS entry (PTR record) for domain controller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
+[Verify reverse DNS entry (PTR record) for domain controller](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).

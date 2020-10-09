@@ -34,7 +34,7 @@ You can specify files that contain queries, projects, or solutions. Files that c
 
 ```syntaxsql
 Ssms
-[scriptfile] [projectfile] [solutionfile]
+[scriptfile] [projectfile] [solutionfile] 
 [-S servername] [-d databasename] [-G] [-U username] [-E] [-nosplash] [-log [filename]?] [-?] 
 ```
 
@@ -63,6 +63,9 @@ Connect using Active Directory Authentication. The type of connection is determi
 
 [**-U** _username_]
 User name when connecting with 'SQL Authentication'
+
+> [!Note]
+> **-P** was removed in 18.0. A workaround is to connect to the server once via the UI, save your password.
 
 [**-E**]
 Connect using Windows Authentication

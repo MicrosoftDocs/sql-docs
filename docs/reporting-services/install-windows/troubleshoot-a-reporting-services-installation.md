@@ -49,7 +49,7 @@ ms.author: maggies
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot problems with SharePoint mode installations  
   
--   [Reporting Services Configuration Manager Does not start](#bkmk_configmanager_notstart)  
+-   [Report Server Configuration Manager Does not start](#bkmk_configmanager_notstart)  
   
 -   [You do not see the SQL Server Reporting Services service in SharePoint Central Administration after installing SQL Server 2016 SSRS in SharePoint mode](#bkmk_no_ssrs_service)  
   
@@ -65,7 +65,7 @@ ms.author: maggies
   
 -   [You see an error message that RS_SHP is not supported with PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services Configuration Manager does not start
+### <a name="bkmk_configmanager_notstart"></a> Report Server Configuration Manager does not start
 
  **Description:** This issue is by design in SQL Server 2012 and later. Reporting Services is architected for the SharePoint service architecture. The Configuration Manager is no longer needed to configure and administer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
   

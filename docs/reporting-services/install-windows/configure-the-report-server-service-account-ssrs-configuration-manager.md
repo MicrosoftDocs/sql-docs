@@ -94,7 +94,7 @@ The following guidelines and links in this section can help you decide on an app
   
 ## Updating an Expired Password
 
- If the Report Server service runs under a domain account and the password expires before you can update it in the Reporting Services Configuration Manager, the service doesn't start until you specify a new password.  
+ If the Report Server service runs under a domain account and the password expires before you can update it in the Report Server Configuration Manager, the service doesn't start until you specify a new password.  
   
  If the service account password for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] expires, the **rsReportServerDatabaseUnavailable** error occurs when you try to connect to the report server. Resetting the password resolves this error.  
   
@@ -111,4 +111,4 @@ The following guidelines and links in this section can help you decide on an app
 ## Next Steps
 
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

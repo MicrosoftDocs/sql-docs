@@ -17,13 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Manage a Reporting Services Native Mode Report Server
-  This section contains procedures for configuring a native mode report server instance using the Reporting Services Configuration Manager.  
+  This section contains procedures for configuring a native mode report server instance using the Report Server Configuration Manager.  
   
 ## In This Section  
  The topics in this section are organized into categories so that you can more easily find the instructions you want. The first section contains topics for basic configuration tasks for a native mode report server. The second section contains advanced configuration topics. The third section contains topics for configuring a report server to run in SharePoint integrated mode.  
   
 ### Basic Configuration  
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Provides steps for starting the Reporting Services Configuration tool.  
   
  [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  

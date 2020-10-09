@@ -4,7 +4,6 @@ description: Learn about the paths that Windows PowerShell providers use to expo
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: matteot, drskwier
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -19,6 +18,7 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot, drskwier
 ---
 # SQL Server Identifiers in PowerShell
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

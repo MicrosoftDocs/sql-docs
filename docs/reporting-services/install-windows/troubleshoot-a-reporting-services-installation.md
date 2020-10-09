@@ -49,7 +49,7 @@ ms.author: maggies
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot problems with SharePoint mode installations  
   
--   [Reporting Services Configuration Manager Does not start](#bkmk_configmanager_notstart)  
+-   [Report Server Configuration Manager Does not start](#bkmk_configmanager_notstart)  
   
 -   [You do not see the SQL Server Reporting Services service in SharePoint Central Administration after installing SQL Server 2016 SSRS in SharePoint mode](#bkmk_no_ssrs_service)  
   
@@ -65,13 +65,13 @@ ms.author: maggies
   
 -   [You see an error message that RS_SHP is not supported with PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services Configuration Manager does not start
+### <a name="bkmk_configmanager_notstart"></a> Report Server Configuration Manager does not start
 
  **Description:** This issue is by design in SQL Server 2012 and later. Reporting Services is architected for the SharePoint service architecture. The Configuration Manager is no longer needed to configure and administer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
   
  **Workaround:** Use SharePoint Central Administration to configure a report server in SharePoint mode. For more information, see [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> You do not see the SQL Server Reporting Services service in SharePoint Central Administration after installing SQL Server 2016 SSRS in SharePoint mode  
  **Description:** If after successfully installing SQL Server 2016 Reporting Services in SharePoint mode and the SQL Server 2016 Reporting Services Add-in for SharePoint 2013/2016, you do not see "SQL Server Reporting Services" in the following two menus, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service has not been registered:  
@@ -100,7 +100,7 @@ ms.author: maggies
   
 2.  Verify the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service shows status as "**Started**" on the page: SharePoint 2013/2016 Central Administration -> "**Application Management**" -> "**Manage Services on Server**"  
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlets are not available and commands are not recognized  
  **Description:** When you try to run a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet, you see an error message similar to this one:  
@@ -121,7 +121,7 @@ ms.author: maggies
   
 -   [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> You see an error message indicating the URL is not configured  
  **Description:** You see an error message similar to this one:  
@@ -144,7 +144,7 @@ ms.author: maggies
   
 -   Manage a service application.  
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> Setup fails on a computer with SharePoint installed but it is not configured  
  **Description:** If you select to install Reporting Services SharePoint Mode on a computer that has SharePoint installed but SharePoint is not configured, you will see a message similar to the following and setup will stop:  
@@ -155,20 +155,20 @@ ms.author: maggies
   
  **More Information:** When installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into and existing SharePoint installation, setup attempts to install and start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint service. If SharePoint is not configured, the service installation fails, causing setup to fail.  
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> SharePoint Central Administration Page is blank  
  **Description:** You were able to successfully install SharePoint 2013/2016, with no installation errors. However when you browse to Central Administration, you only see a blank page:  
   
  **Workaround:** This issue is not specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] but is related to the configuration of permissions in your overall SharePoint installation. Here are some suggestions:  
   
--   Review the SharePoint article on development environments. [Set up a general development environment for SharePoint](https://msdn.microsoft.com/library/ee554869)  
+-   Review the SharePoint article on development environments. [Set up a general development environment for SharePoint](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)  
   
 -   Review the forum post: [Central Administration returns blank page after installation on Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   The Service account you are using for SharePoint services such as the SharePoint 2013/2016 Central Administration Service, should have administrative privileges in the local operating system.  
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> You see an error Message when you try to create a new Report Builder Report  
  **Description:** You see an error message similar to the following when you attempt to create a Report Builder report inside a document library:  
@@ -177,7 +177,7 @@ ms.author: maggies
   
  **Workaround:** Verify you have an [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and it is correctly configured. For more information, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> You see an error message that RS_SHP is not supported with PREPAREIMAGE  
  **Description:** When you try to run PREPAREIMAGE for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you see an error message similar to this one:  
@@ -186,7 +186,7 @@ ms.author: maggies
   
  **Workaround:** There is no work-around. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not support SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode does support SYSPREP.  
   
- ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
+ ![Arrow icon used with Back to Top link](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   
@@ -270,8 +270,7 @@ ms.author: maggies
   
 -   TechNet Wiki: [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint 2010 Integrated Mode](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Microsoft Q & A: SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
+-   [Microsoft Q & A: SQL Server Reporting Services](/answers/topics/sql-server-reporting-services.html)  
   
 -   Got feedback or more questions? Visit [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
-  
   

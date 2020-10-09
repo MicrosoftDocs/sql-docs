@@ -117,7 +117,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
 
  Before you install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], be sure to back up all of the files in your current installation.  
   
-1. Back up the encryption key for the report server database. This step is critical to migration success. Further on in the migration process, you must restore it for the report server to regain access to encrypted data. To back up the key, use the Reporting Services Configuration Manager.  
+1. Back up the encryption key for the report server database. This step is critical to migration success. Further on in the migration process, you must restore it for the report server to regain access to encrypted data. To back up the key, use the Report Server Configuration Manager.  
   
 2. Back up the report server database using any of the supported methods for backing up a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information, see the instructions on how to back up the report server database in [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
@@ -197,7 +197,7 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
 1. Determine whether the assemblies are supported or need recompilation:
 
-    * Custom security extensions must be rewritten using the [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) interface.
+    * Custom security extensions must be rewritten using the [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2) interface.
   
     * Custom rendering extensions for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] must be rewritten using the Rendering Object Model (ROM).  
   
@@ -238,7 +238,7 @@ The scale-out keys cannot be deleted by using the [!INCLUDE[ssRSnoversion](../..
 
 Prior to deleting the keys it is recommended you first back up the Symmetric Encryption key. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to back up the key. Open the Configuration Manager open, click the Encryption Keys tab, and then click the **Backup** button. You can also script WMI commands to back up the encryption key. For more information on WMI, see [BackupEncryptionKey Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Start the Reporting Services Configuration Manager and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance you installed. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Start the Report Server Configuration Manager and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance you installed. For more information, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2. Configure URLs for the report server and the web portal. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
@@ -295,6 +295,6 @@ Once you have successfully migrated your report server to a new instance, you mi
 * [Report Server Database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

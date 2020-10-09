@@ -44,7 +44,7 @@ The following are example names of the three SharePoint mode databases:
  ### Native mode
  You can create the native mode report server database in the following ways:  
   
-- **Automatic**. Use the SQL Server setup wizard if you choose the default configuration option for installation. In the SQL Server Installation Wizard, this option is **Install and configure** on the **Report Server Installation Options** page. If you choose the **Install only** option, you must use SQL Server Reporting Services Configuration Manager to create the database.  
+- **Automatic**. Use the SQL Server setup wizard if you choose the default configuration option for installation. In the SQL Server Installation Wizard, this option is **Install and configure** on the **Report Server Installation Options** page. If you choose the **Install only** option, you must use SQL Server Report Server Configuration Manager to create the database.  
   
 - **Manual**. Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Create the report server database manually if you use a remote [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to host the database. For more information, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
@@ -93,6 +93,6 @@ If you create the report server database on a remote computer, configure the con
 
 ## Next steps
 
-Read about [Reporting Services Configuration Manager](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
+Read about [Report Server Configuration Manager](reporting-services-configuration-manager-native-mode.md).  
 
 More questions? Ask the [Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231).

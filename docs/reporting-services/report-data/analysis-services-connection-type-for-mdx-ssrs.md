@@ -74,7 +74,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="Remarks"></a> Remarks  
- The Analysis Services data extension is based on the XMLA (XML for Analysis) protocol. Result sets from cubes are retrieved through the XMLA protocol as a flattened row set. Ragged hierarchies are not supported. For more information, see [Ragged Hierarchies](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
+ The Analysis Services data extension is based on the XMLA (XML for Analysis) protocol. Result sets from cubes are retrieved through the XMLA protocol as a flattened row set. Ragged hierarchies are not supported. For more information, see [Ragged Hierarchies](/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  You can also retrieve data from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube from the OLE DB data source type. For more information, see [OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -107,5 +107,4 @@ data source=<server name>;initial catalog=<database name>
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

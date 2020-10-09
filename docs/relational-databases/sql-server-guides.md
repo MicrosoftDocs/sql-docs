@@ -23,7 +23,7 @@ The following guides are available. They discuss general concepts and apply to a
 
 [Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))  
 [Diagnose and resolve latch contention on SQL Server](../relational-databases/diagnose-resolve-latch-contention.md)   
-[Diagnose and resolve spinlock contention on SQL Server](../relational-databases/diagnose-resolve-spinlock-contention.md)
+[Diagnose and resolve spinlock contention on SQL Server](../relational-databases/diagnose-resolve-spinlock-contention.md)   
 [Index Architecture and Design Guide](../relational-databases/sql-server-index-design-guide.md)  
 [Memory Management Architecture Guide](../relational-databases/memory-management-architecture-guide.md)  
 [Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)  

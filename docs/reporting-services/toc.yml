@@ -147,7 +147,7 @@
       href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
     - name: Host a Report Server Database in a SQL Server Failover Cluster
       href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-  - name: Reporting Services Configuration Manager (Native Mode)
+  - name: Report Server Configuration Manager (Native Mode)
     href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
     items:
     - name: Configure the Report Server Service Account (SSRS Configuration Manager)

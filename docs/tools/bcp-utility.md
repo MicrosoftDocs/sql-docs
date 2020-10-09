@@ -1,4 +1,4 @@
-﻿---
+---
 title: bcp Utility
 description: The bulk copy program (bcp) utility bulk copies data between an instance of SQL Server and a data file in a user-specified format.
 ms.prod: sql

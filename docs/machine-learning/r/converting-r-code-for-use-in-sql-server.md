@@ -165,6 +165,5 @@ To view examples of how an R solution can be deployed in SQL Server, see these s
 + [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-+ [End-to-End Data Science Solution](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-  Includes a comparison of feature engineering in R and T-SQL
++ [End-to-End Data Science Solution](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) - Includes a comparison of feature engineering in R and T-SQL
 ::: moniker-end

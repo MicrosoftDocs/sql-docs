@@ -85,6 +85,13 @@ A set of notebooks to run a notebook for managing Certificates on Big Data Clust
 |CER100 - Configure Cluster with Self Signed Certificates|This notebook will generate a new Root CA in the Big Data Cluster and create new certificates for each endpoint ( those endpoints are : Management, Gateway, App-Proxy and Controller). Sign each new certificate with the new generated Root CA, except the Controller cert (which is signed with the existing cluster Root CA), then install each certificate into the Big Data Cluster. Download the new generated Root CA into this machine’s Trusted Root Certification Authorities certificate store. All generated self-signed certificates will be stored in the controller pod at the test_cert_store_root location.|
 |CER101 - Configure Cluster with Self Signed Certificates using existing Root CA|This notebook will use an existing generated Root CA in the Big Data Cluster (uploaded with **CER003**) and create new certificates for each endpoint (Management, Gateway, App-Proxy and Controller), then sign each new certificate with the new generated Root CA, except the Controller cert (which is signed with the existing cluster Root CA), install each certificate into the Big Data Cluster. All generated self-signed certificates will be stored in the controller pod (at the test_cert_store_root location).Upon completion of this notebook, all https:// access to the Big Data Cluster from this machine (and any machine that installs the new Root CA) will show as being secure. The Notebook Runner chapter, will ensure CronJobs created (OPR003) to run App-Deploy will install the cluster Root CA to allow securely getting JWT tokens and the swagger.json.|
 
+## Backup and restore from Big Data Cluster (BDC)
+
+This section contains a set of notebooks useful for backup and restore operations for SQL Server Big Data Clusters.
+
+| Name | Description |
+|--|--|
+| SOP008 - Backup HDFS files to Azure Data Lake Store Gen2 with distcp | This Standard Operating Procedure (SOP) backs up data from the source SQL Server 2019 BDC cluster’s HDFS filesystem to the Azure Data Lake Store Gen2 account you specify. Please ensure the Azure Data Lake Store Gen2 account is configured with “hierarchical namespace” enabled. |
 
 ## Next steps
 

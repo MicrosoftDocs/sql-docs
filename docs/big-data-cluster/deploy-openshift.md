@@ -32,8 +32,8 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 > [!IMPORTANT]
 > Below pre-requisites must be performed by a OpenShift cluster admin (cluster-admin cluster role) that has sufficient permissions to create these cluster level objects. For more information on cluster roles in OpenShift see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Ensure the **pidsLimit** setting on the OpenShift is updated to accommodate SQL Server workloads. The default value in OpenShift is too low for production like workloads. We recommend a value of at least **4096**, but the optimal value will depend of the *max worker threads* setting in SQL Server and the number of CPU processors on the OpenShift host node. 
-    - To find out how to update **pidsLimit** for your OpenShift cluster use [these instructions]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Note that OpenShift versions before **4.3.5** had a defect causing the updated value to not take effect. Make sure you upgrade OpenShift to the latest version. 
+1. Ensure the `pidsLimit` setting on the OpenShift is updated to accommodate SQL Server workloads. The default value in OpenShift is too low for production like workloads. We recommend a value of at least `4096`, but the optimal value will depend of the `max worker threads` setting in SQL Server and the number of CPU processors on the OpenShift host node. 
+    - To find out how to update `pidsLimit` for your OpenShift cluster use [these instructions]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Note that OpenShift versions before `4.3.5` had a defect causing the updated value to not take effect. Make sure you upgrade OpenShift to the latest version. 
     - To help you compute the optimal value depending on your environment and planned SQL Server workloads, you can use the estimation and examples below:
 
     |Number of processors|Default max worker threads|Default workers per processor|Minimum pidsLimit value|
@@ -51,7 +51,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
     ```
 
     > [!NOTE]
-    > The custom SCC for BDC is based on the built-in *nonroot* SCC in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the *nonroot* SCC, download the whitepaper [here](https://aka.ms/sql-bdc-openshift-security).
+    > The custom SCC for BDC is based on the built-in `nonroot` SCC in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the `nonroot` SCC, download the whitepaper [here](https://aka.ms/sql-bdc-openshift-security).
 
 3. Create a namespace/project:
 
@@ -99,7 +99,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    azdata bdc config init --source openshift-dev-test --target custom-openshift
    ```
 
-   For a deployment on ARO, we recommend to start with one of the *aro-* profiles, that includes default values for *serviceType* and *storageClass* appropriate for this environment. For example:
+   For a deployment on ARO, we recommend to start with one of the `aro-` profiles, that includes default values for `serviceType` and `storageClass` appropriate for this environment. For example:
 
    ```console
    azdata bdc config init --source aro-dev-test --target custom-openshift
@@ -108,7 +108,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 1. Customize the configuration files control.json and bdc.json. Here are some additional resources that guide you through the customizations supported for various use cases:
 
    - [Storage](concept-data-persistence.md)
-   - [AD related settings](deploy-active-directory.md)
+   - [AD related settings](active-directory-deploy.md)
    - [Other customizations](deployment-custom-configuration.md)
 
    > [!NOTE]
@@ -131,7 +131,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
 ## OpenShift specific settings in the deployment configuration files
 
-SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. These parameters  are set to *false*  by default in the built-in profiles for OpenShift since the monitoring containers require [privileged security context](https://www.openshift.com/blog/managing-sccs-in-openshift), which will relax some of the security constraints for the namespace BDC is deployed on.
+SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. These parameters  are set to `false`  by default in the built-in profiles for OpenShift since the monitoring containers require [privileged security context](https://www.openshift.com/blog/managing-sccs-in-openshift), which will relax some of the security constraints for the namespace BDC is deployed on.
 
 ```json
     "security": {

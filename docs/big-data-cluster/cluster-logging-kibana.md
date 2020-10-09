@@ -46,8 +46,7 @@ The link to a Kibana dashboard:
 ![Kibana dashboard](./media/view-cluster-status/kibana-dashboard.png)
 
 > [!NOTE]
-> (Old) Microsoft Edge browser ios incompatible with Kibana, you must use the chromium based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser. See here for supported browsers for Kibana.
-
+> (Old) Microsoft Edge browser is incompatible with Kibana, you must use the chromium based browser for the dashboard to display correctly. You will see a blank page when loading the dashboards using an unsupported browser. See here for supported browsers for Kibana.
 
 ## Next steps
 

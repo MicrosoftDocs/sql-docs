@@ -78,7 +78,7 @@ The following lists the versions of Python and R that are included in Machine Le
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-For the R version in SQL Server 2016, see the [R version section in What is R Services?](r/sql-server-r-services.md?view=sql-server-2016#version)
+For the R version in SQL Server 2016, see the [R version section in What is R Services?](r/sql-server-r-services.md?view=sql-server-2016&preserve-view=true#version)
 
 <a name="packages"></a>
 

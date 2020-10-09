@@ -26,9 +26,6 @@ ms.author: maggies
  [Report Designer F1 Help](../reporting-services/tools/report-designer-f1-help.md)  
  Provides help for Report Designer and its related dialog boxes, Report Wizard, and Image Wizard.  
   
- [Reporting Services Configuration Manager Help Topics](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- Provides help for the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration tool used for deploying and managing report server instances.  
-  
  [Report Server in Management Studio F1 Help](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Provides help for dialog boxes used to manage reports and report servers in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   

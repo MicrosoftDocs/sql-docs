@@ -55,4 +55,4 @@ ms.author: maggies
  Explains how to add and remove encryption keys to control which report servers are part of a scale-out deployment.  
   
 ## See Also  
-[Reporting Services Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+[Report Server Configuration Manager (Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

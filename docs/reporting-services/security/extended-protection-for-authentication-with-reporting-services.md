@@ -151,7 +151,7 @@ SSRS supports and enforces extended protection that has been enabled in the oper
 |ComputerNamePhysicalDnsHostname|The DNS host name of the local computer. If the local computer is a node in a cluster, the DNS host name of the local computer is used, not the name of the cluster virtual server.|  
 |ComputerNamePhysicalNetBIOS|The NetBIOS name of the local computer. If the local computer is a node in a cluster, the NetBIOS name of the local computer, not the name of the cluster virtual server.|  
   
-For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) and [About URL Reservations and Registration  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## Next steps
 

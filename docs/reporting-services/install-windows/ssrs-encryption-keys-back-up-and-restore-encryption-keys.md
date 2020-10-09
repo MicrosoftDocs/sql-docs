@@ -27,7 +27,7 @@ ms.author: maggies
   
  It is necessary to restore the backup copy of the encryption key when any of the following events occur:  
   
--   Changing the Report Server Windows service account name or resetting the password. When you use the Reporting Services Configuration Manager, backing up the key is part of a service account name change operation.  
+-   Changing the Report Server Windows service account name or resetting the password. When you use the Report Server Configuration Manager, backing up the key is part of a service account name change operation.  
   
     > [!NOTE]
     > Resetting the password is not the same as changing the password. A password reset requires permission to overwrite account information on the domain controller. Password resets are performed by a system administrator when you forget or do not know a particular password. Only password resets require symmetric key restoration. Periodically changing an account password does not require you to reset the symmetric key.  
@@ -42,7 +42,7 @@ ms.author: maggies
 
  Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After the file is created, you must store it in a secure location **and remember the password** that is used to unlock the file. To backup the symmetric key, you can use the following tools:  
   
- **Native mode:** Either the Reporting Services Configuration Manager or the **rskeymgmt** utility.  
+ **Native mode:** Either the Report Server Configuration Manager or the **rskeymgmt** utility.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -53,7 +53,7 @@ ms.author: maggies
 
 ::: moniker-end
   
-##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Reporting Services Configuration Manager (Native Mode)  
+##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Report Server Configuration Manager (Native Mode)  
   
 1.  Start the Report Server Configuration Manager, and then connect to the report server instance you want to configure.  
   
@@ -86,9 +86,9 @@ ms.author: maggies
   
  To restore the encryption key, you must have a copy of the encryption key on file. You must also know the password that unlocks the stored copy. If you have the key and the password, you can run the Reporting Services Configuration tool or **rskeymgmt** utility to restore the key. The symmetric key must be the same one that locks and unlocks encrypted data currently stored in the report server database. If you restore a copy that is not valid, the report server cannot access the encrypted data currently stored in the report server database. If this occurs, you might need to delete all encrypted values if you cannot restore a valid key. If for some reason you cannot restore the encryption key (for example, if you do not have a backup copy), you must delete the existing key and encrypted content. For more information, see [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). For more information about creating symmetric keys, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys -Reporting Services Configuration Manager (Native Mode)  
+###  <a name="bkmk_restore_configuration_manager"></a> Restore encryption keys -Report Server Configuration Manager (Native Mode)  
   
-1.  Start the Reporting Services Configuration Manager, and then connect to the report server instance you want to configure.  
+1.  Start the Report Server Configuration Manager, and then connect to the report server instance you want to configure.  
   
 2.  On the Encryption Keys page, select **Restore**.  
   

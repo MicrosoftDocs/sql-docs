@@ -29,10 +29,10 @@ ms.author: maggies
 |Rskeymgmt Utility|rskeymgmt.exe|Native only|The [rskeymgmt utility](../../reporting-services/tools/rskeymgmt-utility-ssrs.md) is an encryption key management tool. You can use it to back up, apply, recreate, and delete symmetric keys. You can also use this tool to attach a report server instance to a shared report server database. Rskeymgmt can be used in database recovery operations. You can reuse an existing database in a new installation by applying a back up copy of the symmetric key. If the keys cannot be recovered, this tool provides a way to delete encrypted content that you no longer use. To learn more about key management and storage of sensitive data, see [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md) and [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
   
 > [!NOTE]  
->  If you prefer to use a tool that has a graphical user interface, you can use the Reporting Services Configuration manager instead of **rsconfig** and **rskeymgmt**.  
+>  If you prefer to use a tool that has a graphical user interface, you can use the Report Server Configuration Manager instead of **rsconfig** and **rskeymgmt**.  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
   

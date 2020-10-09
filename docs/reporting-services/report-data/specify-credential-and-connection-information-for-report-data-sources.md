@@ -138,7 +138,7 @@ ms.author: maggies
   
 -   The report is a subreport that uses the credentials of the parent report.  
   
- Under these conditions, the report server connects to a remote data source using the unattended execution account that you must define in advance. Because the report server does not connect to a remote server using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Under these conditions, the report server connects to a remote data source using the unattended execution account that you must define in advance. Because the report server does not connect to a remote server using its service credentials, you must specify an account that the report server can use to make the connection. For more information about creating this account, see [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## User Name and Password Login  
  When you select **Use this user name and password**, a user name and password must be supplied to access the data source. For a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the credentials might be for a database login. The credentials are passed to the data source for authentication.  

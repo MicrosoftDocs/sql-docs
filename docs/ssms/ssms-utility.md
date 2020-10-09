@@ -65,7 +65,9 @@ Connect using Active Directory Authentication. The type of connection is determi
 User name when connecting with 'SQL Authentication'
 
 > [!Note]
-> **-P** was removed in SSMS version 18.0. A workaround is to connect to the server once via the UI, save your password.
+> **-P** was removed in SSMS version 18.0.
+>
+> Workaround: Try to connect to the server once using the UI and save your password.
 
 [**-E**]
 Connect using Windows Authentication

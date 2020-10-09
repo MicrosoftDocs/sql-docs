@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 
  In the contained database user model, the login in the master database is not present. Instead, the authentication process occurs at the user database, and the database user in the user database does not have an associated login in the master database. The contained database user model supports both Windows authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, and can be used in both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. To connect as a contained database user, the connection string must always contain a parameter for the user database so that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] knows which database is responsible for managing the authentication process. The activity of the contained database user is limited to the authenticating database, so when connecting as a contained database user, the database user account must be independently created in each database that the user will need. To change databases, [!INCLUDE[ssSDS](../../includes/sssds-md.md)] users must create a new connection. Contained database users in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change databases if an identical user is present in another database.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supports contained database users using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] authentication, but [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] does not. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). When using Azure Active Directory authentication, connections from SSMS can be made using Active Directory Universal Authentication.  Administrators can configure Universal Authentication to require Multi-Factor Authentication, which verifies identity by using a phone call, text message, smart card with pin, or mobile app notification. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] supports contained database users using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] authentication, but [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] does not. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). When using Azure Active Directory authentication, connections from SSMS can be made using Active Directory Universal Authentication.  Administrators can configure Universal Authentication to require Multi-Factor Authentication, which verifies identity by using a phone call, text message, smart card with pin, or mobile app notification. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](/azure/azure-sql/database/authentication-mfa-ssms-overview).  
   
  For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], since the database name is always required in the connection string, no changes are required to the connection string when switching from the traditional model to the contained database user model. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections, the name of the database must be added to the connection string, if it is not already present.  
   
@@ -54,8 +54,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
   
  For more information about [!INCLUDE[ssSDS](../../includes/sssds-md.md)] firewall rules, see the following topics:  
   
-- [Azure SQL Database Firewall](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [How to: Configure Firewall Settings (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Azure SQL Database Firewall](/previous-versions/azure/ee621782(v=azure.100))  
+- [How to: Configure Firewall Settings (Azure SQL Database)](/previous-versions/azure/jj553530(v=azure.100))  
 - [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -73,24 +73,34 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 
 Azure SQL Managed Instance behaves like SQL Server on-premises in the context of contained databases. Be sure to change the context of your database from the master database to the user database when creating your contained user. Additionally, there should be no active connections to the user database when setting the containment option. 
 
-For example: 
+
+For example:
+
+> [!WARNING]
+> Before you run the following script, be sure that no other connections are active on your Managed Instance database. The script might disrupt other processes that are running on the database.
 
 ```sql
 Use MASTER;
 GO 
 
 ALTER DATABASE Test
-SET containment=partial
+SET RESTRICTED_USER
+WITH ROLLBACK IMMEDIATE;
 
+ALTER DATABASE Test
+SET containment=partial;
+
+ALTER DATABASE Test
+SET MULTI_USER;
 
 USE Test;  
-GO  
+GO 
+
 CREATE USER Carlo  
 WITH PASSWORD='Enterpwdhere*'  
 
-
 SELECT containment_desc FROM sys.databases
-WHERE name='test'
+WHERE name='Test'
 ```
 
   
@@ -109,5 +119,4 @@ WHERE name='test'
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
-  
+ [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview)  

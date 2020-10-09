@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019​, seo-mmd-2019
 ms.date: 01/04/2020
 ---
 
-# Configure a Report Server Database Connection (SSRS Configuration Manager)
+# Configure a Report Server Database Connection (Report Server Configuration Manager)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -47,7 +47,7 @@ To configure the connection, you must use the [!INCLUDE[ssRSnoversion](../../inc
 
 - Name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance hosting the report server database..  
 
-- Name of the report server database. When creating a connection for the first time, you can create a new report server database or select an existing database. For more information, see [Create a Report Server Database;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+- Name of the report server database. When creating a connection for the first time, you can create a new report server database or select an existing database. For more information, see [Create a Report Server Database;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
 
 - Credential type. You can use the service accounts, a Windows domain account, or a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database login.  
 

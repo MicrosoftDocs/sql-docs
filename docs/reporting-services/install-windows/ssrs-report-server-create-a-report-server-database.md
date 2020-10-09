@@ -10,7 +10,7 @@ ms.custom: seodec18
 ms.date: 9/2/2020
 ---
 
-# Create a report server database, SSRS Configuration Manager  
+# Create a report server database, Report Server Configuration Manager  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 

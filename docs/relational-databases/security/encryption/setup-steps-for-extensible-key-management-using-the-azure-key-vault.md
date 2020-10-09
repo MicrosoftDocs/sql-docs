@@ -28,7 +28,7 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
   
 - You must have an Azure subscription.
   
-- Install [Azure PowerShell version 5.2.0 or later](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+- Install [Azure PowerShell version 5.2.0 or later](/powershell/azure/).  
 
 - Create an Azure Active Directory (Azure AD) instance.
 
@@ -55,7 +55,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
       ![Screenshot of the "All Azure services" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
-1. Register an application with Azure Active Directory by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).)
+1. Register an application with Azure Active Directory by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](/archive/blogs/kv/azure-key-vault-step-by-step).)
 
     a. On the **Azure Active Directory Overview** pane, select **App registrations**.
 
@@ -154,7 +154,7 @@ The key vault and key that you create here are used by the SQL Server Database E
 > [!IMPORTANT]
 > The subscription where the key vault is created must be in the same default Azure AD instance where the Azure AD service principal was created. If you want to use an Azure AD instance other than your default instance for creating a service principal for the SQL Server Connector, you must change the default Azure AD instance in your Azure account before you create your key vault. To learn how to change the default Azure AD instance to the one you want to use, see the "Frequently asked questions" section of [SQL Server Connector maintenance & troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
-1. Install and sign in to [Azure PowerShell 5.2.0 or later](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) by using the following command:  
+1. Install and sign in to [Azure PowerShell 5.2.0 or later](/powershell/azure/) by using the following command:  
   
     ```powershell  
     Connect-AzAccount  
@@ -260,7 +260,7 @@ To ensure quick key recovery and be able to access your data outside of Azure, w
 
 - Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 key so that it's supported by SQL Server.
 - Import the encryption key to your Azure key vault. This process is described in the next sections.
-- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup. For more information, see the [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) command.
+- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup. For more information, see the [Backup-AzureKeyVaultKey]() command.
 - Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure key vault key backup.
 
   > [!NOTE]

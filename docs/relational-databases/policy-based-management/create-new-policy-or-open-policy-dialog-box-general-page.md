@@ -19,7 +19,7 @@ ms.author: vanto
 ---
 # Create New Policy or Open Policy Dialog Box, General Page
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use this dialog box to create a new Policy-Based Management policy or modify an existing policy. Use the **Against targets** and **Server restriction** areas as a filter to limit policies to a subset of all possible targets. For conditions to be used as target filters, they must be defined on a physical facet, must not contain functions, and must not contain the LIKE operator. When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes)  
+  Use this dialog box to create a new Policy-Based Management policy or modify an existing policy. Use the **Against targets** and **Server restriction** areas as a filter to limit policies to a subset of all possible targets. For conditions to be used as target filters, they must be defined on a physical facet, must not contain functions, and must not contain the LIKE operator. When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [https://docs.microsoft.com/archive/blogs/sqlpbm/policy-evaluation-modes](/archive/blogs/sqlpbm/policy-evaluation-modes)  
   
 ## Options  
  **Name**  
@@ -68,5 +68,4 @@ ms.author: vanto
   
 ## See Also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

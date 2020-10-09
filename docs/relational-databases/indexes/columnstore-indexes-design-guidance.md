@@ -60,7 +60,7 @@ Don't use a clustered columnstore index when:
 * The table requires varchar(max), nvarchar(max), or varbinary(max) data types. Or, design the columnstore index so that it doesn't include these columns.
 * The table data is not permanent. Consider using a heap or temporary table when you need to store and delete the data quickly.
 * The table has less than one million rows per partition. 
-* More than 10% of the operations on the table are updates and deletes. Large numbers of updates and deletes cause fragmentation. The fragmentation affects compression rates and query performance until you run an operation called reorganize that forces all data into the columnstore and removes fragmentation. For more information, see [Minimizing index fragmentation in columnstore index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/).
+* More than 10% of the operations on the table are updates and deletes. Large numbers of updates and deletes cause fragmentation. The fragmentation affects compression rates and query performance until you run an operation called reorganize that forces all data into the columnstore and removes fragmentation. For more information, see [Minimizing index fragmentation in columnstore index](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command).
 
 For more information, see [Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
@@ -94,7 +94,7 @@ To add additional processing resources, you can run the analytics on a readable 
 
 For more information, see [Get started with columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-For more information on choosing the best columnstore index, see Sunil Agarwal's blog [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload).
+For more information on choosing the best columnstore index, see Sunil Agarwal's blog [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload).
 
 ## Use table partitions for data management and query performance
 Columnstore indexes support partitioning which is a good way to manage and archive data. Partitioning also improves query performance by limiting operations to one or more partitions.
@@ -124,7 +124,7 @@ Example:
 * Load 1,000,000 rows into one partition or a non-partitioned table. You get one compressed rowgroup with 1,000,000 rows. This is great for high data compression and fast query performance.
 * Load 1,000,000 rows evenly into 10 partitions. Each partition gets 100,000 rows, which is less than the minimum threshold for columnstore compression. As a result the columnstore index could have 10 delta rowgroups with 100,000 rows in each. There are ways to force the delta rowgroups into the columnstore. However, if these are the only rows in the columnstore index, the compressed rowgroups will be too small for best compression and query performance.
 
-For more information about partitioning, see Sunil Agarwal's blog post, [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/).
+For more information about partitioning, see Sunil Agarwal's blog post, [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index).
 
 ## Choose the appropriate data compression method
 The columnstore index offers two choices for data compression: columnstore compression and archive compression. You can choose the compression option when you create the index, or change it later with [ALTER INDEX ... REBUILD](../../t-sql/statements/alter-index-transact-sql.md).
@@ -187,4 +187,3 @@ To create an empty columnstore index for:
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], refer to [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 For more information on how convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
-

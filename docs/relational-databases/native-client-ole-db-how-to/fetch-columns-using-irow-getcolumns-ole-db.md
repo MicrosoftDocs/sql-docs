@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   How to access a column twice. The first time the actual column width is obtained, and later the actual data is accessed. In the DBCOLUMNACCESS structure, if **pData** is NULL and **cbMaxLen** is 0, the call to **IRow**-**>GetColumns()** returns only the actual column length. In this case, **IRow->GetColumns()** can be called again on the same column to retrieve the actual data.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To fetch columns using IRow::GetColumns  
   
@@ -516,5 +516,4 @@ go
   
 ## See Also  
  [OLE DB How-to Topics](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

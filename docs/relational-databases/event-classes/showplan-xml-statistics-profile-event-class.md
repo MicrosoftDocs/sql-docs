@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  The Showplan XML Statistics Profile event class displays complete, compile-time data, and so traces that contain this event class may incur significant performance overhead. To minimize overhead incurred, limit use of this event class to traces that monitor specific problems for brief periods of time.  
   
- The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](https://go.microsoft.com/fwlink/?LinkId=41740), or as part of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](/previous-versions/aa720019(v=vs.71)), or as part of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
 ## Showplan XML Statistics Profile Event Class Data Columns  
   
@@ -58,5 +58,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

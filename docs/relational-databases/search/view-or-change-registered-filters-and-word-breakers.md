@@ -75,7 +75,7 @@ ms.custom: "seo-lt-2019"
   
      **To install and load Microsoft Filter Pack IFilters**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server]()  
   
 4.  Use **sp_fulltext_service** to load newly installed word breakers and filters in the server instance, as follows:  
   
@@ -99,5 +99,4 @@ ms.custom: "seo-lt-2019"
  [Set the Service Account for the Full-text Filter Daemon Launcher](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-  
   

@@ -212,6 +212,5 @@ select * from cold order by orderDate desc
 ```  
   
 ## See Also  
- [In-Memory OLTP Code Samples](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [In-Memory OLTP Code Samples](./sample-database-for-in-memory-oltp.md)  
   

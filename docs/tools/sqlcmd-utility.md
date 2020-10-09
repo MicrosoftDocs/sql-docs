@@ -98,6 +98,7 @@ sqlcmd
    -c batch_terminator
    -C (trust the server certificate)
    -d db_name
+   -D
    -e (echo input)
    -E (use trusted connection)
    -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
@@ -144,15 +145,20 @@ sqlcmd
 
 **Login-Related Options**
 
-**-A**
-
+**-A**  
 Signs in to SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This connection works only with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message, and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option isn't supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. DAC isn't available for an Azure Active Directory administrator.
 
-**-C**
+**-C**  
 This switch is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.  
 
 **-d** _db_name_  
 Issues a `USE` *db_name* statement when you start **sqlcmd**. This option sets the **sqlcmd** scripting variable SQLCMDDBNAME. This parameter specifies the initial database. The default is your login's default-database property. If the database does not exist, an error message is generated and **sqlcmd** exits.  
+
+**-D**  
+Interprets the server name provided to -S as a DSN instead of a hostname. For more information, see _DSN Support in sqlcmd and bcp_ in [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+
+> [!NOTE]
+> The -D option is only available on Linux and MacOS clients. On Windows clients, it previously referred to a now-obsolete option which has been removed and is ignored.
 
 **-l** _login_timeout_  
 Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to **sqlcmd** is eight seconds. When using the **-G** option to connect to SQL Database or SQL Data Warehouse and authenticate using Azure Active Directory, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message. A value of 0 specifies time-out to be infinite.

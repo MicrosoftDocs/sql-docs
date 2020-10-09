@@ -53,7 +53,7 @@ reportpath
   
 ### Syntax Description  
  *rswebserviceurl*  
- The Web service URL of the report server. For native mode, it is the Web service URL of the report server instance configured in Report Server Configuration Manager (see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). For example:  
+ The Web service URL of the report server. For native mode, it is the Web service URL of the report server instance configured in Reporting Services Configuration Manager (see [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). For example:  
   
 ```  
 https://myrshost/reportserver  

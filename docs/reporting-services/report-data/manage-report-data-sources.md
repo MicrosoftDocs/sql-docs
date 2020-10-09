@@ -68,7 +68,7 @@ ms.author: maggies
 |Use existing .odc connection information with a report.|SharePoint site|[Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
->  Managing data source connections to report data sources is not the same as managing the report server connection to the report server database. For more information about a report server connection to its internal data store, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+>  Managing data source connections to report data sources is not the same as managing the report server connection to the report server database. For more information about a report server connection to its internal data store, see [Configure a Report Server Database Connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## See Also  
  [Bind a Report or Model to a Shared Data Source &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   

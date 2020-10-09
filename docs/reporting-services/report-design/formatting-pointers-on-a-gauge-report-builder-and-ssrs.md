@@ -40,7 +40,7 @@ ms.author: maggies
  You can specify a needle cap that can be drawn on top or underneath the pointer on a radial gauge only. All needle cap styles are drawn by using built-in gradients that cannot be modified. The exception is the **RoundedDark** style, where you can specify a gradient color and gradient style.  
   
 ##  <a name="SettingSnappingInterval"></a> Setting a Snapping Interval  
- A snapping interval defines the multiple to which values are rounded. By default, the gauge will point to the exact value of the field you have specified in the data pane. However, you might want to round the exact value up or down so that the pointer will snap to a pre-set interval. For example, if the value on your gauge is 34.2 and you specify a snapping interval of 5, the gauge pointer will point to 35. If the value on your gauge is 31.2 and you specify a snapping interval of 5, the gauge pointer will point to 30. For more information, see [Set a Snapping Interval on a Gauge (Report Builder and SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs).  
+ A snapping interval defines the multiple to which values are rounded. By default, the gauge will point to the exact value of the field you have specified in the data pane. However, you might want to round the exact value up or down so that the pointer will snap to a pre-set interval. For example, if the value on your gauge is 34.2 and you specify a snapping interval of 5, the gauge pointer will point to 35. If the value on your gauge is 31.2 and you specify a snapping interval of 5, the gauge pointer will point to 30. For more information, see [Set a Snapping Interval on a Gauge (Report Builder and SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md).  
   
 ##  <a name="SpecifyingImage"></a> Specifying an Image as a Pointer on a Radial Gauge  
  In addition to the built-in list of pointer styles, you can specify an image as a pointer. This is most effective when you use an image to replace an existing needle pointer style. The image is superimposed over the pointer, but all pointer functionality is applicable. Color and gradient options are not applicable when an image is used for the pointer.  
@@ -51,5 +51,4 @@ ms.author: maggies
  [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Gauges &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
-  
   

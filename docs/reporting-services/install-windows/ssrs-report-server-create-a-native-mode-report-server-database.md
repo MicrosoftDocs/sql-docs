@@ -15,7 +15,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Create a Native Mode Report Server Database (SSRS Configuration Manager)
+# Create a Native Mode Report Server Database (Report Server Configuration Manager)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -32,7 +32,7 @@ To create a report server database or to change the connection string or credent
  Creating or configuring a report server database is a multi-step process. Before you create the report server database, consider how you want to specify the following items:  
   
  **Select a database server**  
- Review the supported versions of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and review the supported editions in the topic, [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+ Review the supported versions of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and review the supported editions in the topic, [Create a Report Server Database  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
  **Enable TCP/IP connections**  
  Enable TCP/IP connections for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Some editions of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] do not enable TCP/IP by default. Instructions are provided in this topic.  
@@ -43,7 +43,7 @@ To create a report server database or to change the connection string or credent
  **Decide on report server credentials**  
  Decide how the report server will connect to the report server databases. Credential types include domain user account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database user account, or the Report Server service account.  
   
- These credentials are encrypted and stored in the RSReportServer.config file. The report server uses these credentials for ongoing connections to the report server database. If you want to use a Windows user account or a database user account, be sure to specify one that already exists. Although the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager will create a login and set the necessary permissions, it will not create an account for you. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ These credentials are encrypted and stored in the RSReportServer.config file. The report server uses these credentials for ongoing connections to the report server database. If you want to use a Windows user account or a database user account, be sure to specify one that already exists. Although the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager will create a login and set the necessary permissions, it will not create an account for you. For more information, see [Configure a Report Server Database Connection  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Decide on a report server language**  
  Choose a language to specify for the report server. Predefined role names, descriptions, and the My Reports folders do not appear in different languages when users connect to the server using different language versions of a browser.  

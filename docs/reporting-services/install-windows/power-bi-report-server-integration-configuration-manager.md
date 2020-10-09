@@ -41,7 +41,7 @@ An administrator can review the  [!INCLUDE[ssRSnoversion](../../includes/ssrsnov
 
 ## <a name="bkmk_steps2integrate"></a> To Integrate and Register the Report Server
 
-Complete the following steps from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. For more information, see [Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+Complete the following steps from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. For more information, see [Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 1. Select the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration page.
 

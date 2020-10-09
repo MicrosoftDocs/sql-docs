@@ -4,12 +4,12 @@ description: Embed R language code in a SQL Server stored procedure to make it a
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 08/28/2020  
+ms.date: 10/06/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -23,7 +23,7 @@ Traditionally, integration of data science solutions has meant extensive recodin
 + [Create and run simple R scripts in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../machine-learning/tutorials/r-taxi-classification-introduction.md)
+A more comprehensive example of deploying R code into production by using stored procedures can be found at [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md).
 
 ## Guidelines for optimizing R code for SQL
 
@@ -42,10 +42,15 @@ Scoring is an important task that can easily be automated, or started from exter
 + Single-row scoring, for calling from an application
 + [Native scoring](../predictions/native-scoring-predict-transact-sql.md), for fast batch prediction from SQL Server without calling R
 
-This walkthrough provides an example of scoring using a stored procedure in both batch and single-row modes:
+The following tutorial provides an example of scoring using a stored procedure in both batch and single-row modes:
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [End to end data science walkthrough for R in SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+::: moniker-end
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ [R tutorial: Predict NYC taxi fares with binary classification](../tutorials/r-taxi-classification-introduction.md)
+::: moniker-end
 
 ## Boost performance and scale
 
@@ -53,8 +58,12 @@ Although the open-source R language has known limitations with regards to large 
 
 If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 ## Adapt R code for other platforms or compute contexts
 
 The same R code that you run against [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data can be used against other data sources, such as Spark over HDFS, when you use the [standalone server option](../install/sql-machine-learning-standalone-windows-install.md) in SQL Server setup or when you install the non-SQL branded product, Microsoft Machine Learning Server (formerly known as **Microsoft R Server**):
 
 + [Machine Learning Server Documentation](https://docs.microsoft.com/r-server/)
+
+::: moniker-end

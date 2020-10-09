@@ -36,7 +36,7 @@ ms.author: maggies
   
  To specify the account, you can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool or the **rsconfig** utility. The easiest way to configure the unattended execution account is to run the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and specify credentials in the Execution Account page.  
   
-1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure. For instructions, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server instance you want to configure. For instructions, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  On the Execution Account page, select **Specify an execution account**.  
   
@@ -101,6 +101,6 @@ ms.author: maggies
  The account information is removed from the RSReportServer.config file.  
   
 ## See Also  
- [Reporting Services Configuration Manager (SSRS Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Report Server Configuration Manager (SSRS Native Mode)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

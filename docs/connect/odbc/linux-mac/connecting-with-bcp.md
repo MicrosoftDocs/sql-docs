@@ -17,7 +17,7 @@ ms.author: v-daenge
 # Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
+The [bcp](../../../tools/bcp-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
   
 - The field terminator is a tab ("\t").  
   

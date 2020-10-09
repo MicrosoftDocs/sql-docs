@@ -2,7 +2,7 @@
 description: "Constants (Transact-SQL)"
 title: "Constants (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2017"
+ms.date: "09/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -40,15 +40,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 A constant, also known as a literal or a scalar value, is a symbol that represents a specific data value. The format of a constant depends on the data type of the value it represents.
   
 ## Character string constants
-Character string constants are enclosed in single quotation marks and include alphanumeric characters (a-z, A-Z, and 0-9) and special characters, such as exclamation point (!), at sign (@), and number sign (#). Character string constants are assigned the default collation of the current database, unless the COLLATE clause is used to specify a collation. Character strings typed by users are evaluated through the code page of the computer and are translated to the database default code page if it is required.
+Character string constants are enclosed in single quotation marks and include alphanumeric characters (a-z, A-Z, and 0-9) and special characters, such as exclamation point (!), at sign (@), and number sign (#). Character string constants are assigned the default collation of the current database. If the COLLATE clause is used, the conversion to the database default code page still happens before the conversion to the collation specified by the COLLATE clause. Character strings typed by users are evaluated through the code page of the computer and are translated to the database default code page if it is required.
+
+> [!NOTE]
+> When a [UTF8-enabled collation](../../relational-databases/collations/collation-and-unicode-support.md#utf8) is specified using the COLLATE clause, conversion to the database default code page still happens before the conversion to the collation specified by the COLLATE clause. Conversion is not done directly to the specified Unicode-enabled collation. For more information, see [Unicode string](#unicode-strings).
   
-If the QUOTED_IDENTIFIER option has been set OFF for a connection, character strings can also be enclosed in double quotation marks, but the Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider and ODBC driver automatically use SET QUOTED_IDENTIFIER ON. We recommend using single quotation marks.
+If the QUOTED_IDENTIFIER option has been set OFF for a connection, character strings can also be enclosed in double quotation marks, but the Microsoft [OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) automatically use `SET QUOTED_IDENTIFIER ON`. We recommend using single quotation marks.
   
 If a character string enclosed in single quotation marks contains an embedded quotation mark, represent the embedded single quotation mark with two single quotation marks. This is not required in strings embedded in double quotation marks.
   
 The following are examples of character strings:
   
-```sql
+```
 'Cincinnati'  
 'O''Brien'  
 'Process X is 50% complete.'  
@@ -58,25 +61,30 @@ The following are examples of character strings:
   
 Empty strings are represented as two single quotation marks with nothing in between. In 6.x compatibility mode, an empty string is treated as a single space.
   
-Character string constants support enhanced collations.
+Character string constants support enhanced [collations](../../relational-databases/collations/collation-and-unicode-support.md).
   
 > [!NOTE]  
->  Character constants greater than 8000 bytes are typed as **varchar(max)** data.  
+> Character constants greater than 8000 bytes are typed as **varchar(max)** data.  
   
 ## Unicode strings
-Unicode strings have a format similar to character strings but are preceded by an N identifier (N stands for National Language in the SQL-92 standard). The N prefix must be uppercase. For example, 'Michél' is a character constant while N'Michél' is a Unicode constant. Unicode constants are interpreted as Unicode data, and are not evaluated by using a code page. Unicode constants do have a collation. This collation primarily controls comparisons and case sensitivity. Unicode constants are assigned the default collation of the current database, unless the COLLATE clause is used to specify a collation. Unicode data is stored by using 2 bytes per character instead of 1 byte per character for character data. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+Unicode strings have a format similar to character strings but are preceded by an N identifier (N stands for National Language in the SQL-92 standard). 
+
+> [!IMPORTANT]  
+> The N prefix must be uppercase. 
+
+For example, `'Michél'` is a character constant while `N'Michél'` is a Unicode constant. Unicode constants are interpreted as Unicode data, and are not evaluated by using a code page. Unicode constants do have a collation. This collation primarily controls comparisons and case sensitivity. Unicode constants are assigned the default collation of the current database. If the COLLATE clause is used, the conversion to the database default collation still happens before the conversion to the collation specified by the COLLATE clause. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
   
 Unicode string constants support enhanced collations.
   
 > [!NOTE]  
->  Unicode constants greater than 8000 bytes are typed as **nvarchar(max)** data.  
+> Unicode constants greater than 8000 bytes are typed as **nvarchar(max)** data.  
   
 ## Binary constants
 Binary constants have the prefix `0x` and are a string of hexadecimal numbers. They are not enclosed in quotation marks.
   
 The following are examples of binary strings are:
   
-```sql
+```
 0xAE  
 0x12Ef  
 0x69048AEFDD010E  
@@ -94,7 +102,7 @@ The following are examples of binary strings are:
   
 The following are examples of **datetime** constants:
   
-```sql
+```
 'December 5, 1985'  
 '5 December, 1985'  
 '851205'  
@@ -103,7 +111,7 @@ The following are examples of **datetime** constants:
   
 Examples of datetime constants are:
   
-```sql
+```
 '14:30:24'  
 '04:24 PM'  
 ```  
@@ -113,7 +121,7 @@ Examples of datetime constants are:
   
 The following are examples of **integer** constants:
   
-```sql
+```
 1894  
 2  
 ```  
@@ -123,7 +131,7 @@ The following are examples of **integer** constants:
   
 The following are examples of **decimal** constants:
   
-```sql
+```
 1894.1204  
 2.0  
 ```  
@@ -133,7 +141,7 @@ The following are examples of **decimal** constants:
   
 The following are examples of **float** or **real** values:
   
-```sql
+```
 101.5E5  
 0.5E-2  
 ```  
@@ -148,7 +156,7 @@ The following are examples of **float** or **real** values:
   
 The following are examples of **money** constants:
   
-```sql
+```
 $12  
 $542023.14  
 ```  
@@ -158,7 +166,7 @@ $542023.14
   
 The following examples both specify the same GUID:
   
-```sql
+```
 '6F9619FF-8B86-D011-B42D-00C04FC964FF'  
 0xff19966f868b11d0b42d00c04fc964ff  
 ```  
@@ -168,37 +176,38 @@ To indicate whether a number is positive or negative, apply the **+** or **-** u
   
 Signed **integer** expressions:  
   
-```sql
+```
 +145345234
 -2147483648
 ```
 Signed **decimal** expressions:  
   
-```sql
+```
 +145345234.2234
 -2147483648.10
 ```
   
 Signed **float** expressions:  
   
-```sql
+```
 +123E-3
 -12E5
 ```
   
 Signed **money** expressions:  
   
-```sql
+```
 -$45.56
 +$423456.99
 ```
   
 ## Enhanced Collations  
-SQL Server supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) clause.
+The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] supports character and Unicode string constants that support enhanced collations. For more information, see the [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md) clause.
   
 ## See also
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+[Collation Precedence](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

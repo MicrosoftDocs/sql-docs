@@ -11,7 +11,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Troubleshoot Server & Database Connection Problems with Reporting Services
-Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Use this topic to troubleshoot problems that you experience when connecting to a report server. This topic also provides information about "Unexpected error" messages. For more information about data source configuration and configuring report server connection information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) and [Configure a Report Server Database Connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## Cannot create a connection to data source 'datasourcename'. (rsErrorOpeningConnection)  
 This is a generic error that occurs when the report server cannot open a connection to an external data source that provides data to a report. This error appears with a second error message that indicates the underlying cause. The following additional errors can appear with **rsErrorOpeningConnection**.  
@@ -63,7 +63,7 @@ An **rsReportServerDatabaseLogonFailed** error can occur if you are using a doma
   
 The full error text is: "The report server cannot open a connection to the report server database. The logon failed (**rsReportServerDatabaseLogonFailed**). Logon failure: unknown user name or bad password."  
   
-If you reset the password, you must update the connection. For more information, see [Configure a Report Server Database Connection (SSRS Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+If you reset the password, you must update the connection. For more information, see [Configure a Report Server Database Connection (Report Server Configuration Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## The report server cannot open a connection to the report server database. (rsReportServerDatabaseUnavailable).  
 Full Message: The report server cannot open a connection to the report server database. A connection to the database is required for all requests and processing. (rsReportServerDatabaseUnavailable)  

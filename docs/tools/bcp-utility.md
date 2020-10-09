@@ -27,7 +27,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 01/23/2020 
+ms.date: 09/11/2020 
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -48,16 +48,16 @@ The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an 
 
 ## Download the latest version of bcp Utility
 
-**[![Download bcp for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![Download bcp for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Download bcp for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Download bcp for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 The command-line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### Version Information
 
-Release number: 15.0 <br>
-Build number: 15.0.1300.359<br>
-Release date: March 13, 2019
+Release number: 15.0.2 <br>
+Build number: 15.0.2000.5<br>
+Release date: September 11, 2020
 
 The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, SQL Data Warehouse, and Always Encrypted features.
 The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and SQL Data Warehouse.
@@ -68,7 +68,7 @@ Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Serv
 
 This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
 
-To check the BCP version execute `bcp /v` command and confirm that 15.0.1300.359 or higher is in use.
+To check the BCP version execute `bcp /v` command and confirm that 15.0.2000.5 or higher is in use.
 
 <table><th>Syntax</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}

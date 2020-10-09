@@ -26,12 +26,12 @@ Returns a child node of the parent.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 parent.GetDescendant ( child1 , child2 )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )   
 ```  

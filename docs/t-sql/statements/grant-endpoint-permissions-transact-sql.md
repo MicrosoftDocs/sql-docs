@@ -95,7 +95,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### A. Granting VIEW DEFINITION permission on an endpoint  
  The following example grants `VIEW DEFINITION` permission on endpoint `Mirror7` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -104,7 +104,7 @@ GO
 ### B. Granting TAKE OWNERSHIP permission with the GRANT OPTION  
  The following example grants `TAKE OWNERSHIP` permission on endpoint `Shipping83` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user `PKomosinski` with the `GRANT OPTION`.  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     WITH GRANT OPTION;  

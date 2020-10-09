@@ -35,6 +35,8 @@ Drops an existing user-defined workload management classifier.  If requests are 
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments
 
 *classifier_name*  
@@ -58,4 +60,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## See Also
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[SQL Data Warehouse Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

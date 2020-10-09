@@ -121,9 +121,9 @@ The following example creates a `table` variable that stores the values specifie
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
     ModifiedDate datetime);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25   

@@ -64,7 +64,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## Examples  
  The following example assumes a type named `ssn` is already created in the current database.  
   
-```  
+```sql  
 DROP TYPE ssn ;  
 ```  
   

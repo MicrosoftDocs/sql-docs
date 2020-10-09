@@ -32,7 +32,7 @@ Returns the Showplan in text format for a [!INCLUDE[tsql](../../includes/tsql-md
 |**query_plan**|**nvarchar(max)**|Contains the compile-time Showplan representation of the query execution plan that is specified with *plan_handle*. The Showplan is in text format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls.<br /><br /> Column is nullable.|  
 
 ## Remarks  
-The same remarks in [sys.dm_exec_text_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql?view=sql-server-ver15) apply.  
+The same remarks in [sys.dm_exec_text_query_plan](./sys-dm-exec-text-query-plan-transact-sql.md?view=sql-server-ver15) apply.  
 
 ## Permissions  
  Require **sysadmin** server role or `VIEW SERVER STATE` permission on the server.  
@@ -41,4 +41,4 @@ The same remarks in [sys.dm_exec_text_query_plan](https://docs.microsoft.com/sql
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 
   ## Next steps
- For more development tips, see [SQL Data Warehouse development overview](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ For more development tips, see [SQL Data Warehouse development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

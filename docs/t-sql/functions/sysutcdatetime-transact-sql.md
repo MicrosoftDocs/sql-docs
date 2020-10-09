@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SYSUTCDATETIME ( )  
 ```  
 
@@ -63,7 +63,7 @@ SYSUTCDATETIME ( )
 ### A. Showing the formats that are returned by the date and time functions  
  The following example shows the different formats that are returned by the date and time functions.  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -86,7 +86,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### B. Converting date and time to date  
  The following example shows you how to convert date and time values to `date`.  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -109,7 +109,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### C. Converting date and time values to time  
  The following example shows you how to convert date and time values to `time`.  
   
- ```
+ ```sql
 DECLARE @DATETIME DATETIME = GetDate();
 DECLARE @TIME TIME
 SELECT @TIME = CONVERT(time, @DATETIME)

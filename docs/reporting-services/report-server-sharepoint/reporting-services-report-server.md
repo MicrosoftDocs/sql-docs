@@ -37,7 +37,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
  A Reporting Services report server supports two modes of deployment for report server instances:  
   
--   **Native mode**: including native mode with SharePoint web parts, where a report server runs as an application server that provides all processing and management capability exclusively through Reporting Services components. You configure a native mode report server with Reporting Services configuration manager and SQL Server Management Studio.  
+-   **Native mode**: including native mode with SharePoint web parts, where a report server runs as an application server that provides all processing and management capability exclusively through Reporting Services components. You configure a native mode report server with Report Server Configuration Manager and SQL Server Management Studio.  
   
 -   **SharePoint mode**: where a report server is installed as part of a SharePoint server farm.  Deploy and configure SharePoint mode by using PowerShell commands or SharePoint content management pages.  
   

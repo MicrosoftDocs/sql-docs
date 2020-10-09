@@ -174,7 +174,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## See Also
 
-[SQL Data Warehouse Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)</br>
 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)

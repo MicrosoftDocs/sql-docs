@@ -91,7 +91,7 @@ In case of a failover or other non-clean shut down, the databases may be left in
 
 -   **Undo Phase** rolls back incomplete transactions found in the ATT to make sure the integrity of the database is preserved. After rollback, the database goes online, and no more transaction log backups can be applied to the database.
 
-Information about the progress of each database recovery stage is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). The database recovery progress can also be tracked using Extended Events. For more information, see the blog post [New extended events for database recovery progress](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/).
+Information about the progress of each database recovery stage is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [error log](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). The database recovery progress can also be tracked using Extended Events. For more information, see the blog post [New extended events for database recovery progress](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress).
 
 > [!NOTE]
 > For a Piecemeal restore scenario, if a read-only filegroup has been read-only since before the file backup was created, applying log backups to the filegroup is unnecessary and is skipped by file restore. 
@@ -168,9 +168,9 @@ The Database Recovery Advisor facilitates constructing restore plans that implem
   
 For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
   
--   [Recovery Advisor: An Introduction](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [Recovery Advisor: An Introduction](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [Recovery Advisor: Using SSMS to create/restore split backups](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="adr"></a> Accelerated database recovery
 [Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) is available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Accelerated database recovery greatly improves database availability, especially in the presence of long-running transactions, by redesigning the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [recovery process](#TlogAndRecovery). A database for which accelerated database recovery was enabled completes the recovery process significantly faster after a failover or other non-clean shut down. When enabled, Accelerated database recovery also completes rollback of canceled long-running transactions significantly faster.
@@ -189,4 +189,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [SQL Server Transaction Log Architecture and Management Guide](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [Apply Transaction Log Backups (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Apply Transaction Log Backups (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

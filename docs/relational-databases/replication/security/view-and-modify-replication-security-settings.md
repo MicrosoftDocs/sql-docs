@@ -412,7 +412,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ##  <a name="RMOProcedure"></a> Using Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
->  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
+>  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### To change all instances of a password stored on a replication server  
   
@@ -429,7 +429,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
     -   *password* - the new password value.  
   
         > [!IMPORTANT]  
-        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.  
+        >  When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the Windows .NET Framework.  
   
         > [!NOTE]  
         >  Only a member of the **sysadmin** fixed server role can call this method.  
@@ -574,5 +574,4 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
-  
   

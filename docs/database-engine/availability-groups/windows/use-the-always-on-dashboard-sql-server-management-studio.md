@@ -326,7 +326,7 @@ The availability group latency report is a reporting tool built into the availab
 
 SQL Agent runs the data collection and must be enabled on both the primary replica, and at least one of the secondary replicas. View the report by right-clicking the availability group > Reports > Standard Reports in **Object Explorer** of SQL Server Management Studio.  
 
-For more information, please see [Always On Availability Group latency reports](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+For more information, please see [Always On Availability Group latency reports](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports).
 
 ## Related Tasks  
   
@@ -335,5 +335,4 @@ For more information, please see [Always On Availability Group latency reports](
 ## See Also  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

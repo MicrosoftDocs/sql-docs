@@ -21,7 +21,7 @@ ms.author: jroth
 -   Connectivity state of availability databases between primary and secondary replicas    
 -   Statuses of the availability group endpoints    
 -   Statuses of the availability group listeners    
--   Lease status between the SQL Server resource DLL (running in the WSFC cluster) and the SQL Server instance (for more information, see [How It Works: SQL Server Always On lease timeout](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout))    
+-   Lease status between the SQL Server resource DLL (running in the WSFC cluster) and the SQL Server instance (for more information, see [How It Works: SQL Server Always On lease timeout](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout))    
 -   Error events in the availability group  
 
 The following symptoms should lead to review of the SQL Server error log:  
@@ -32,5 +32,4 @@ The following symptoms should lead to review of the SQL Server error log:
 -   Availability group in an indeterminate state  
   
 For more information, see [View the SQL Server error log &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).  
-  
   

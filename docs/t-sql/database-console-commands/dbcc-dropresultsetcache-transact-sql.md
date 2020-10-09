@@ -30,6 +30,8 @@ DBCC DROPRESULTSETCACHE
 [;]  
 ```  
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Permissions
 
 Requires membership in the DB_OWNER fixed server role.

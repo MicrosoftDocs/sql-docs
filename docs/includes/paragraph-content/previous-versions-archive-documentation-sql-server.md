@@ -1,7 +1,6 @@
-
 We accumulate and retain documentation for very old versions of Microsoft SQL Server, in sets of archived webpages. The archived webpages are not processed by search engines, such as Bing.com and Google.com. Yet you can see these archives at our Docs _previous-versions/sql/_ address:
 
-- [https://docs.microsoft.com/previous-versions/sql/](https://docs.microsoft.com/previous-versions/sql/)
+- [https://docs.microsoft.com/previous-versions/sql/](/previous-versions/sql/)
 
 These archives include the documentation for at least the following older versions:
 
@@ -19,6 +18,6 @@ FYI: In the following link syntax to SQL 2014 content, the two 'view' related pa
 [SQL Server 2014 documentation](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) is still available on our main Docs address.
 -->
 
-[SQL Server 2019 documentation](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15&preserve-view=true) is available on our main Docs address. Then use the versioning dropdown near the top of the page, to select another version of interest.
+[SQL Server 2019 documentation](../../sql-server/index.yml?preserve-view=true&view=sql-server-ver15) is available on our main Docs address. Then use the versioning dropdown near the top of the page, to select another version of interest.
 
 For more information about the documentation for previous versions of SQL Server, see [Previous versions of SQL Server documentation](/previous-versions/sql/).

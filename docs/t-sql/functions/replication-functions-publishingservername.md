@@ -29,8 +29,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PUBLISHINGSERVERNAME()  
 ```  
   

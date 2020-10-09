@@ -13,21 +13,19 @@ ms.date: 10/14/2020
 
 # Preview features in Azure Data Studio
 
-In Azure Data Studio, new features and improvements are often first released as preview features before they're made generally available (GA). The amount of time a feature remains in preview can vary based on user feedback, quality checks, and long-term road maps. By enabling Preview features, you get full access to Azure Data Studio features and the chance to provide early feedback.
+In Azure Data Studio, new features and improvements are often first released as preview features before they're made generally available (GA). The amount of time a feature remains in preview can vary based on user feedback, quality checks, and long-term road maps. By enabling preview features, you get full access to Azure Data Studio features and the chance to provide early feedback.
 
-## How do I enable Preview features?
+## How do I enable preview features?
 
 ### On first launch
 
-The first time you launch Azure Data Studio, you'll be greeted with an **Initial Setup Wizard** that guides you through some simple onboarding tasks. The first step of the Wizard helps you configure your Preview settings.
+If you're a new user, you can opt into preview features when you launch Azure Data Studio for the first time. On startup, a toast notification will appear in the bottom-right corner of the screen that gives you the option to enable or disable preview features. Select **Yes (recommended)** to enable preview features.
 
-![Preview step in Initial Setup Wizard](./media/getting-started/initial-setup-preview-features.png)
-
-To enable preview features in the **Initial Setup Wizard**, make sure you've selected **opt-in (recommended)**. It should be selected by default. When you're finished with the Initial Setup Wizard, Preview features will be enabled.
+![Preview toast notification on first launch](./media/getting-started/preview-toast-notification.png)
 
 ### In Settings
 
-You can enable or disable Preview features anytime in your Settings.
+You can enable or disable preview features anytime in your Settings.
 
 1. Select the **Gear** icon in the bottom-left corner and then select **Settings** from the context menu. The Settings tab will open.
 
@@ -35,13 +33,13 @@ You can enable or disable Preview features anytime in your Settings.
 
 2. Type "enable preview features" in the search bar.
 
-3. To enable Preview features, check the checkbox for **Enable unreleased preview features** under **Workbench: Enable Preview Features**. To disable Preview features, clear the checkbox.
+3. To enable preview features, check the checkbox for **Enable unreleased preview features** under **Workbench: Enable Preview Features**. To disable preview features, clear the checkbox.
 
-   ![Enable Preview features setting in ADS](./media/settings/preview-features-settings.png)
+   ![Enable preview features setting in ADS](./media/settings/preview-features-settings.png)
 
-## List of Preview features in Azure Data Studio
+## List of preview features in Azure Data Studio
 
-### General features in Preview
+### General features in preview
 
 * Azure portal integration
 * Backup / Restore
@@ -54,7 +52,7 @@ You can enable or disable Preview features anytime in your Settings.
 * SQLCMD mode
 * New Welcome page
 
-### Notebook features in Preview
+### Notebook features in preview
 
 * Dotnet interactive support
 * Markdown toolbar
@@ -71,7 +69,7 @@ You can enable or disable Preview features anytime in your Settings.
 * Pinned Notebooks
 * Python dependencies wizard
 
-### First-party extensions in Preview
+### First-party extensions in preview
 
 * Admin Pack for SQL Server
 * Azure SQL Data Warehouse Insights

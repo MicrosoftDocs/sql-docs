@@ -18,10 +18,7 @@ ms.date: 10/14/2020
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins introduce three variables (**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**, and **$SqlServerIncludeSystemObjects**) to control Windows PowerShell tab completion. Tab completion reduces the amount of typing you must do by returning tables of items whose names start with the string you are typing.  
 
-> [!NOTE]
-> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
-> Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
-> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 With Windows PowerShell tab-completion, when you have typed part of a path or cmdlet name, you can hit the Tab key to get a list of the items whose names match what you have already typed. You can then select the item you want from the list without having to type the rest of the name.  
 

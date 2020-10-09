@@ -22,10 +22,7 @@ ms.date: 10/14/2020
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
 
-> [!NOTE]
-> There are two SQL Server PowerShell modules; **SqlServer** and **SQLPS**. The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **SqlServer** module. The **SqlServer** module contains updated versions of the cmdlets in **SQLPS**, and also includes new cmdlets to support the latest SQL features.  
-> Previous versions of the **SqlServer** module *were* included with SQL Server Management Studio (SSMS), but only with the 16.x versions of SSMS. To use PowerShell with SSMS 17.0 and later, the **SqlServer** module must be installed from the PowerShell Gallery.
-> To install the **SqlServer** module, see [Install SQL Server PowerShell](download-sql-server-ps-module.md).
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
 
 ## Syntax  
 
@@ -46,28 +43,29 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  | not(<PropertyExpression>)  
 ```  
 
-## Arguments  
+## Arguments
+
 *Object*  
 Specifies the type of object that is represented at that node of the expression string. Each object represents a collection class from these SMO object model namespaces:  
 
 <xref:Microsoft.SqlServer.Management.Smo>  
 
 <xref:Microsoft.SqlServer.Management.Smo.Agent>  
- 
+
 <xref:Microsoft.SqlServer.Management.Smo.Broker>  
-  
+
 <xref:Microsoft.SqlServer.Management.Smo.Mail>  
-  
+
 <xref:Microsoft.SqlServer.Management.Dmf>  
-  
+
 <xref:Microsoft.SqlServer.Management.Facets>  
-  
+
 <xref:Microsoft.SqlServer.Management.RegisteredServers>  
-  
+
 <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>  
-  
+
 For example, specify Server for the **ServerCollection** class, Database for the **DatabaseCollection** class.  
-  
+
 \@*PropertyName*  
 Specifies the name of one of the properties of the class that is associated with the object specified in *Object*. The name of the property must be prefixed with the \@ character. For example, specify \@IsAnsiNull for the **Database** class property **IsAnsiNull**.  
   

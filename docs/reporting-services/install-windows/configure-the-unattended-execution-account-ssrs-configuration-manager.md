@@ -19,7 +19,7 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Configure the Unattended Execution Account (SSRS Configuration Manager)
+# Configure the Unattended Execution Account (Report Server Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
   
 -   Send connection requests over the network for reports that use database authentication, or connect to external report data sources that do not require or use authentication. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).

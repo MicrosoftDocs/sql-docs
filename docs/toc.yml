@@ -324,7 +324,6 @@
             href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Tips for using R packages
             href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap
@@ -343,7 +342,7 @@
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
-      - name: Manage with notebooks
+      - name: List operations notebooks
         href: big-data-cluster/cluster-manage-notebooks.md
     - name: Monitor
       items:

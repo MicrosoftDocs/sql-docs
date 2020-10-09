@@ -90,8 +90,6 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
-      - name: Active Directory mode
-        href: big-data-cluster/deploy-active-directory.md
       - name: Deploy with high availability
         items:
         - name: Master instance
@@ -132,6 +130,22 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Active Directory mode
+      items:
+      - name: Prerequisites
+        href: big-data-cluster/active-directory-prerequisites.md
+      - name: Deploy
+        href: big-data-cluster/active-directory-deploy.md
+      - name: Connect
+        href: big-data-cluster/active-directory-connect.md
+      - name: Multiple BDCs in the same AD domain
+        href: big-data-cluster/active-directory-deployment-background.md
+      - name: Auto-generated AD objects
+        href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
+      - name: Manage user access
+        href: big-data-cluster/manage-user-access.md
     - name: Private cluster
       items:
       - name: Deploy
@@ -341,16 +355,8 @@
         href: big-data-cluster/kubernetes-rbac.md
       - name: Update AZDATA_PASSWORD
         href: big-data-cluster/change-azdata-password.md
-      - name: Manage user access
-        href: big-data-cluster/manage-user-access.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
-      - name: Multiple BDCs in the same AD domain
-        href: big-data-cluster/active-directory-deployment-background.md
-      - name: Auto-generated AD objects
-        href: big-data-cluster/active-directory-objects.md
-      - name: AD DNS reconciliation
-        href: big-data-cluster/active-directory-dns-reconciliation.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -367,13 +373,17 @@
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Troubleshoot pyspark notebook
         href: big-data-cluster/troubleshoot-pyspark-notebook.md
-      - name: Active directory domain group scope
-        href: big-data-cluster/troubleshoot-active-directory.md
-      - name: Active Directory DNS
-        href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-      - name: Active Directory login fails
-        href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-      - name: HDFS admin permissions
+      - name: Troubleshoot Active Directory
+        items:
+        - name: AD deployment stops
+          href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+        - name: AD domain group scope
+          href: big-data-cluster/troubleshoot-active-directory.md
+        - name: AD DNS
+          href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+        - name: AD login fails
+          href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
   - name: Reference
     items:

@@ -41216,6 +41216,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/big-data-cluster/deploy-active-directory.md",
+      "redirect_url": "/sql/big-data-cluster/active-directory-prerequisites",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/big-data-cluster/reference-bdc-pool-status.md",
       "redirect_url": "/sql/big-data-cluster/reference-azdata",
       "redirect_document_id": false

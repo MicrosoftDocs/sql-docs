@@ -192,7 +192,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## Create external tables for Azure Data Lake Store
 Applies to: Azure SQL Data Warehouse
 
-For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+For more information, see [Load with Azure Data Lake Store](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
 
 **1. Create Database Scoped Credential**   
 
@@ -561,5 +561,5 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
   
 ## See Also  
-[Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
+[Get started with PolyBase](./polybase-guide.md)   
 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

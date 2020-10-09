@@ -158,5 +158,5 @@ public class A {
   
 ## See also  
 
-- [SQL Server Support for In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
+- [SQL Server Support for In-Memory OLTP](./transact-sql-support-for-in-memory-oltp.md)
 - [Overview of SMO](../server-management-objects-smo/overview-smo.md)

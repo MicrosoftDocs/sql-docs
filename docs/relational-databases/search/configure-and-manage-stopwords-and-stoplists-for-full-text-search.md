@@ -63,7 +63,7 @@ Use [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-t
   
     -   **Create from an existing full-text stoplist**  
   
-     For more information, see [New Full-Text Stoplist &#40;General Page&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     For more information, see [New Full-Text Stoplist &#40;General Page&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130)).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -90,7 +90,7 @@ Use [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alte
   
 4.  Right-click the stoplist whose properties you want to change, and select **Properties**.  
   
-5.  In the [Full-Text Stoplist Properties](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) dialog box:  
+5.  In the [Full-Text Stoplist Properties](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) dialog box:  
   
     1.  In the **Action** list box, select one of the following actions: **Add stopword**, **Delete stopword**, **Delete all stopwords**, or **Clear stoplist**.  
   
@@ -133,6 +133,5 @@ Use the [transform noise words Server Configuration Option](../../database-engin
   
 ## Upgrade noise words from SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] noise words have been replaced by stopwords. When a database is upgraded from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the noise-word files are no longer used. However, the noise-word files are stored in the FTDATA\ FTNoiseThesaurusBak folder, and you can use them later when updating or building the corresponding stoplists. For information about upgrading noise-word files to stoplists, see [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md).  
-  
   
   

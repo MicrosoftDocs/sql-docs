@@ -70,7 +70,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### Create a self-signed certificate using SQL Server Management Studio (SSMS)
 
 For details, see [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in the Windows Certificate Store, see [Always Encrypted Wizard tutorial (Windows Certificate Store)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
+For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in the Windows Certificate Store, see [Always Encrypted Wizard tutorial (Windows Certificate Store)](/azure/azure-sql/database/always-encrypted-certificate-store-configure).
 
 
 ### Making Certificates Available to Applications and Users
@@ -98,7 +98,7 @@ To grant a user the *Read* permission for a certificate stored in the local mach
 
 ## Creating Column Master Keys in Azure Key Vault
 
-Azure Key Vault helps safeguard cryptographic keys and secrets, and is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault.
+Azure Key Vault helps safeguard cryptographic keys and secrets, and is a convenient option for storing column master keys for Always Encrypted, especially if your applications are hosted in Azure. To create a key in [Azure Key Vault](/azure/key-vault/general/overview), you need an [Azure subscription](https://azure.microsoft.com/free/) and an Azure Key Vault.
 
 ### Using PowerShell
 
@@ -122,7 +122,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### Using SQL Server Management Studio (SSMS)
 
 For details on how to create a column master key in Azure Key Vault using SSMS, see [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
-For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in an Azure Key Vault, see [Always Encrypted Wizard tutorial (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
+For a step-by-step tutorial that uses SSMS and stores Always Encrypted keys in an Azure Key Vault, see [Always Encrypted Wizard tutorial (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### Making Azure Key Vault Keys Available to Applications and Users
 
@@ -132,7 +132,7 @@ To provision column encryption keys that are protected with a column master key 
 
 #### Using PowerShell
 
-To enable users and applications access to the actual keys in the Azure Key Vault, you must set the vault access policy ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
+To enable users and applications access to the actual keys in the Azure Key Vault, you must set the vault access policy ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -221,4 +221,4 @@ Consult the documentation for your HSM and CSP for how to configure the CSP on a
   
 ## See Also 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

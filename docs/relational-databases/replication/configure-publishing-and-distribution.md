@@ -127,7 +127,7 @@ The following example demonstrates how to configure publishing and distribution 
 
 5. Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
+   > `IMPORTANT!!` When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
 6. Create an instance of the <xref:Microsoft.SqlServer.Replication.DistributionPublisher> class.
 
@@ -152,7 +152,7 @@ The following example demonstrates how to configure publishing and distribution 
 11. Call the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Pass the name of the remote Distributor and the password for the remote Distributor specified in step 5.
 
 > [!IMPORTANT]
-> When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.
+> When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](/previous-versions/aa719848(v=vs.71)) provided by the Windows .NET Framework.
 
 ###  <a name="PShellExample"></a> Example (RMO) 
 You can programmatically configure replication publishing and distribution by using Replication Management Objects (RMO).
@@ -166,6 +166,4 @@ You can programmatically configure replication publishing and distribution by us
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  
 [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-[Configure Replication for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md) 
-
-
+[Configure Replication for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)

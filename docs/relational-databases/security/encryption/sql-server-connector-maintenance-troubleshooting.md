@@ -169,7 +169,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 - *.vault.azure.net/*:443
 
 **How do I connect to Azure Key Vault through an HTTP(S) Proxy Server?**
-  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
+  The Connector uses Internet Explorer's Proxy configuration settings. These settings can be controlled via [Group Policy](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) or via the Registry, but it's important to note that they aren't system-wide settings and will need to be targeted to the service account running the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If a Database Administrator views or edits the settings in Internet Explorer, they'll only affect the Database Administrator's account rather than the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine. Logging on to the server interactively using the service account isn't recommended and is blocked in many secure environments. Changes to the configured proxy settings may require restarting the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance to take effect as they're cached when the Connector first attempts to connect to a key vault.
 
 **What are the minimum permission levels required for each configuration step in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Though you could perform all the configuration steps as a member of the sysadmin fixed server role, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourages you to minimize the permissions you use. The following list defines the minimum permission level for each action.  
@@ -198,7 +198,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
     > [!NOTE] 
     > You may not have permissions to actually change the default directory on your Azure subscription. In this case, create the AAD service principal within your default directory so that it is in the same directory as the Azure Key Vault used later.
 
-To learn more about Active Directory, read [How Azure subscription are related to Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
+To learn more about Active Directory, read [How Azure subscription are related to Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
   
 ##  <a name="AppendixC"></a> C. Error Code Explanations for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector
 
@@ -399,9 +399,9 @@ SQL Server Version  |Redistributable Install Link
   
  Azure Key Vault documentation:  
   
-- [What is Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+- [What is Azure Key Vault?](/azure/key-vault/general/basic-concepts)  
   
-- [Get Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
+- [Get Started with Azure Key Vault](/azure/key-vault/general/overview)  
   
 - PowerShell [Azure Key Vault Cmdlets](/powershell/module/azurerm.keyvault/) reference  
   

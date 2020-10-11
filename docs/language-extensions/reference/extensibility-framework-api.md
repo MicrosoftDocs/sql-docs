@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 author: dphansen
 ms.author: davidph 
-ms.date: 04/09/2020
+ms.date: 10/09/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 You can use the extensibility framework to write programming language extensions for SQL Server. The Extensibility Framework API for Microsoft SQL Server is an API that can be used by a language extension to interact with and exchange data with SQL Server.
 
-As a language extension author, you can use this reference together with the open-sourced [Java language extension for SQL Server](../how-to/extensibility-sdk-java-sql-server.md) to understand how to use the API for writing your own language extensions. You can find the source code for the Java language extension at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
+As a language extension author, you can use this reference together with the open-sourced language extensions to understand how to use the API for writing your own. You can find the source code for the language extensions at [aka.ms/mssql-lang-extensions](https://aka.ms/mssql-lang-extensions).
 
 Find the syntax and arguments information about all API functions below.
 
@@ -30,7 +30,7 @@ Any output by the extension to the standard output or error streams will be trac
 
 ## Init
 
-This function is only called once and is used to initialize the runtime for execution. For example, the Java Extension initializes the JVM.
+This function is only called once and is used to initialize the runtime for execution. 
 
 ### Syntax
 
@@ -75,7 +75,7 @@ SQLRETURN Init(
 
 ## InitSession
 
-This function is called once per session and initializing session specific settings.
+This function is called once per session and initializing session-specific settings.
 
 ### Syntax
 
@@ -256,7 +256,7 @@ For SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY data types, values larger than 8000
 *StrLen_or_Ind*  
 \[Input\] An integer value indicating the length in bytes of *ParamValue*, or SQL_NULL_DATA to indicate that the data is NULL.
 
-StrLen_or_Ind\[col\] can be ignored if a column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP. Otherwise it points to a valid array with \[RowsNumber\] elements, where each element contains its length or null indicator data.
+StrLen_or_Ind\[col\] can be ignored if a column is not nullable and doesn't represent one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY, SQL_C_NUMERIC or SQL_C_TYPE_TIMESTAMP. Otherwise it points to a valid array with \[RowsNumber\] elements, where each element contains its length or null indicator data.
 
 *InputOutputType*  
 \[Input\] The type of the parameter. The *InputOutputType* argument is one of the following values:
@@ -298,14 +298,14 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 \[Input\] The number of rows in the *Data*.
 
 *Data*  
-\[Input\] A 2-dimensional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Input\] A two-dimensional array that contains the result set of `@input_data_1` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 The total number of columns is *InputSchemaColumnsNumber* that was received in the [InitSession](#initsession) call. Each column contains *RowsNumber* elements that should be interpreted according to the column type from [InitColumn](#initcolumn).
 
 Elements indicated to be NULL in *StrLen_or_Ind* are not guaranteed to be valid and should be ignored.
 
 *StrLen_or_Ind*  
-\[Input\] A 2-dimensional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
+\[Input\] A two-dimensional array that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
 
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
@@ -401,19 +401,19 @@ When `@parallel = 1` in [sp_execute_external_script](../../relational-databases/
 \[Output\] A pointer to a buffer that contains the number of rows in the *Data*.
 
 *Data*  
-\[Output\] A pointer to a 2-dimensional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+\[Output\] A pointer to a two-dimensional array allocated by the extension that contains the result set of `@script` n [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 The total number of columns should be *OutputSchemaColumnsNumber* that was retrieved in the [Execute](#execute) call. Each column should contain *RowsNumber* elements that should be interpreted according to the column type from [GetResultColumn](#getresultcolumn).
 
 *StrLen_or_Ind*  
-\[Output\] A pointer to a 2-dimensional array allocated by the extension that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
+\[Output\] A pointer to a two-dimensional array allocated by the extension that contains the length/NULL indicator for each value in *Data*. Possible values of each cell:
 
 - n, where n > 0. Indicating the length of the data in bytes
 - SQL_NULL_DATA, indicating a NULL value.
 
 The total number of columns should be *OutputSchemaColumnsNumber* that was received in the [Execute](#execute) call. Each column contains *RowsNumber* elements that should be interpreted according to the column type from [GetResultColumn](#getresultcolumn).
 
-StrLen_or_Ind\[col\] will be ignored, if one column is not nullable and doesn't represents one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates]. Otherwise it points to a valid array with *RowsNumber* elements, each element contains its length or null indicator data.
+StrLen_or_Ind\[col\] will be ignored, if one column is not nullable and doesn't represent one of the following data types: SQL_C_CHAR, SQL_C_WCHAR and SQL_C_BINARY [add dates]. Otherwise it points to a valid array with *RowsNumber* elements, each element contains its length or null indicator data.
 
 ## GetOutputParam
 
@@ -579,7 +579,7 @@ SQLRETURN InstallExternalLibrary(
 \[Input\] The length of the LibraryInstallDirectory string.
 
 *LibraryError*  
-\[Output\] An optional output parameter. In case there was an error during the installation of the library, LibraryError would point to a string describing the error.
+\[Output\] An optional output parameter. In case, there was an error during the installation of the library, LibraryError would point to a string describing the error.
 
 *LibraryErrorLength*  
 \[Output\] The length of the LibraryError string.
@@ -634,3 +634,5 @@ SQLRETURN UninstallExternalLibrary(
 ## Next steps
 
 - [Microsoft Extensibility SDK for Java for SQL Server](../how-to/extensibility-sdk-java-sql-server.md)
+- [Python custom runtime](../../machine-learning/install/custom-runtime-python.md)
+- [R custom runtime](../../machine-learning/install/custom-runtime-r.md).

@@ -35,8 +35,86 @@ catalog.check_schema_version [ @use32bitruntime = ] use32bitruntime
  [ @use32bitruntime= ] *use32bitruntime*  
  When the parameter is set to **1**, the 32-bit version of dtexec is called. The *use32bitruntime* is an **int**.  
   
-## Result Set  
- None  
+ 
+## Return Code Value 0 (success) 
+
+## Result Sets Returns a table that has the following format:
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Column name</th>
+
+<th>Data type</th>
+
+<th>Description</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>SERVER_BUILD</td>
+
+<td>**decimal**</td>
+
+<td>SQL Server Version Number. Sample values for a server running SQL Server 2014 is `14.0.3335.7`.</td>
+
+</tr>
+
+<tr>
+
+<td>SCHEMA_VERSION</td>
+
+<td>**tinyint**</td>
+
+<td>SQL Server Version Number. Sample values for servers running SQL Server 2017 are 2019 and `6` and `7`.</td>
+
+</tr>
+
+<tr>
+
+<td>SCHEMA_BUILD</td>
+
+<td>**string (w.x.y.z)**</td>
+
+<td>Schema Build. Sample values for servers running SQL Server 2017 and 2019 are `14.0.3335.7` and `15.0.2000.5`.</td>
+
+</tr>
+
+<tr>
+
+<td>ASSEMBLY_BUILD</td>
+
+<td>**string (w.x.y.z)**</td>
+
+<td>Assembly Build. Sample values for servers running SQL Server 2017 and 2019 are `14.0.3335.0` and `15.0.2000.0`.</td>
+
+</tr>
+
+<tr>
+
+<td>SHARED_COMPONENT_VERSION</td>
+
+<td>**string (w.x.y.z)**</td>
+
+<td>Assembly Build. Sample values for servers running SQL Server 2017 and 2019 are `14.0.3335.7` and `14.0.3335.7`.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+ 
+ 
+ 
   
 ## Permissions  
  This stored procedure requires the following permission:  

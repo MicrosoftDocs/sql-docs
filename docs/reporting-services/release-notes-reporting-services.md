@@ -49,7 +49,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 ## SQL Server 2019 Reporting Services
 
 ## 15.0.7545.4810, 2020/08/31 
-**(Product Version: 15.0.1102.861)**
+/*(Product Version: 15.0.1102.861)*/
 
 | Fixed issue | Details |
 | :---------- | :------ |
@@ -68,7 +68,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Command line upgrade no longer requires EULA flag  | &nbsp; |
 
 ## 15.0.7243.37714, 2019/11/01
-**(Product Version: 15.0.1102.675)**
+/*(Product Version: 15.0.1102.675)*/
 
 Initial release.
 

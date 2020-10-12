@@ -44,7 +44,7 @@ DROP USER [ IF EXISTS ] user_name
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP USER user_name  
-  
+```  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

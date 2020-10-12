@@ -43,6 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallpr
   
 ## Permissions  
  Any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication login can see their own login name, and the sa login. To see other logins, requires ALTER ANY LOGIN, or a permission on the login.  
+ To view the contents of the password_hash column, the CONTROL SERVER permission is required.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

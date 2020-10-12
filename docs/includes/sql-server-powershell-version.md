@@ -15,8 +15,6 @@ ms.author: maghan
 >
 > The **SqlServer** module contains updated versions of the cmdlets in **SQLPS** and includes new cmdlets to support the latest SQL features.
 >
-> Previous versions of the **SqlServer** module were included with [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 16.x versions of SSMS only.
->
-> To use PowerShell with SSMS 17.0 and later, install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
+> Install the **SqlServer** module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
 >
 > For more information, see [SQL Server PowerShell](../powershell/sql-server-powershell.md).

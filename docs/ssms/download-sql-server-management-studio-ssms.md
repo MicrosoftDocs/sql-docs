@@ -40,7 +40,8 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS 18.7 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.7 upgrades it to 18.7.
 
-**SQL Server Management Studio (SSMS) now installs with Azure Data Studio as a combined tool set to help better manage your databases. Azure Data Studio is a cross-platform database tool for data professionals using Windows, MacOS, or Linux.**
+> [!Important]
+> **SQL Server Management Studio (SSMS) now installs with Azure Data Studio as a combined tool set to help better manage your databases. Azure Data Studio is a cross-platform database tool for data professionals using Windows, MacOS, or Linux.**
 
 - Release number: 18.7
 - Build number: 15.0.xxxx.x

@@ -35,7 +35,8 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 
 ### What's new in 18.7
 
-**SQL Server Management Studio (SSMS) now installs with Azure Data Studio as a combined tool set to help better manage your databases. Azure Data Studio is a cross-platform database tool for data professionals using Windows, MacOS, or Linux.**
+> [!Important]
+> **SQL Server Management Studio (SSMS) now installs with Azure Data Studio as a combined tool set to help better manage your databases. Azure Data Studio is a cross-platform database tool for data professionals using Windows, MacOS, or Linux.**
 
 | New item | Details |
 |----------|---------|

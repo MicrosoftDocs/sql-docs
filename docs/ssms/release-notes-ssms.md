@@ -35,11 +35,11 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 
 ### What's new in 18.7
 
-**SQL Server Management Studio (SSMS) is now coupled with Azure Data Studio as a combined tool set to help better manage your SQL Server, Azure SQL, Azure SQL Managed Instance databases. Azure Data Studio can also help manage your Azure Data Explorer clusters and your Postgres SQL databases.**
+**SQL Server Management Studio (SSMS) now installs with Azure Data Studio as a combined tool set to help better manage your databases. Azure Data Studio is a cross-platform database tool for data professionals using Windows, MacOS, or Linux.**
 
 | New item | Details |
 |----------|---------|
-| Azure Data Studio installation integration | Installation of SSMS also installs Azure Data Studio. Visit [What is Azure Data Studio](../azure-data-studio/what-is.md) to learn more about Azure Data Studio. |
+| Azure Data Studio installation integration | Installation of SSMS also installs Azure Data Studio. Visit [What is Azure Data Studio](../azure-data-studio/what-is.md) to learn more about Azure Data Studio. To Learn more about the differences between SSMS and Azure Data Studio please visit the [FAQ](../azure-data-studio/faq.md) page. |
 | Always Encrypted | SSMS needs to be updated to recognize the new HSM endpoints. This is done by consuming the new AKV Provider NugetPackage. |
 | Import Flat File | Made an improvement to better predict data types by learning on 300 lines by default. |
 | Import Flat File | Prevent columns from being declared as TinyInt that should be SmallInt. |

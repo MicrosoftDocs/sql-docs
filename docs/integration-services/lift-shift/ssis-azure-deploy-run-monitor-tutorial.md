@@ -145,7 +145,7 @@ if ($folders.Count -gt 0)
 {
     foreach ($filefolder in $folders)
     {
-        Write-Host "Creating Folder " $filefolder.Name " ..."
+        Write-Host "Creating Folder " + $filefolder.Name + " ..."
 
         # Create a new folder
         $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
@@ -157,7 +157,7 @@ if ($folders.Count -gt 0)
             foreach($projectfile in $projects)
             {
                 $projectfilename = $projectfile.Name.Replace(".ispac", "")
-                Write-Host "Deploying " $projectfilename " project ..."
+                Write-Host "Deploying " + $projectfilename + " project ..."
 
                 # Read the project file, and deploy it to the folder
                 [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)

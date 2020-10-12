@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "database_query_store_options catalog view"
   - "sys.database_query_store_options catalog view"
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_query_store_options (Transact-SQL)

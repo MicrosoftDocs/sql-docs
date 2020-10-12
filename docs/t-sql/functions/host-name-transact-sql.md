@@ -31,7 +31,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 HOST_NAME ()  
 ```  
 
@@ -49,14 +48,14 @@ HOST_NAME ()
 ## Examples  
  The following example creates a table that uses `HOST_NAME()` in a `DEFAULT` definition to record the workstation name of computers that insert rows into a table recording orders.  
   
-```  
+```sql  
 CREATE TABLE Orders  
-   (OrderID     int        PRIMARY KEY,  
-    CustomerID  nchar(5)   REFERENCES Customers(CustomerID),  
-    Workstation nchar(30)  NOT NULL DEFAULT HOST_NAME(),  
-    OrderDate   datetime   NOT NULL,  
-    ShipDate    datetime   NULL,  
-    ShipperID   int        NULL REFERENCES Shippers(ShipperID));  
+   (OrderID     INT        PRIMARY KEY,  
+    CustomerID  NCHAR(5)   REFERENCES Customers(CustomerID),  
+    Workstation NCHAR(30)  NOT NULL DEFAULT HOST_NAME(),  
+    OrderDate   DATETIME   NOT NULL,  
+    ShipDate    DATETIME   NULL,  
+    ShipperID   INT        NULL REFERENCES Shippers(ShipperID));  
 GO  
 ```  
   

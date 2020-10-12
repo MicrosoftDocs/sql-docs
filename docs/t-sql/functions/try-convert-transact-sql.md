@@ -30,7 +30,6 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-20
 ## Syntax  
   
 ```syntaxsql
-  
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  
   
@@ -119,7 +118,7 @@ Explicit conversion from data type int to xml is not allowed.
 ### C. TRY_CONVERT succeeds  
  This example demonstrates that the expression must be in the expected format.  
   
-```  
+```sql
 SET DATEFORMAT mdy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  

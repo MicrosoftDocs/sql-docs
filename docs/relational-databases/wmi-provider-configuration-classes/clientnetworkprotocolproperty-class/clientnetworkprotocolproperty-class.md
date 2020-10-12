@@ -16,8 +16,8 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetworkProtocolProperty class"
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ClientNetworkProtocolProperty Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,6 +36,5 @@ ms.author: "carlrab"
 -   Set flags for the current property.  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

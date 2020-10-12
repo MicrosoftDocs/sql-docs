@@ -12,8 +12,8 @@ f1_keywords:
   - "sp_get_redirected_publisher_TSQL"
   - "sp_get_redirected_publisher"
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

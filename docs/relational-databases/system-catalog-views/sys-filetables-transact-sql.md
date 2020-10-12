@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.filetables catalog view"
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.filetables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_getqueuedrows"
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

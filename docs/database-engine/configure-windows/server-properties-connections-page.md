@@ -67,7 +67,6 @@ ms.author: maghan
  View the currently running values for the options on this pane. These values are read-only.  
   
 ## See Also  
- [Options &#40;Query Execution: SQL Server: Advanced Page&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [Options &#40;Query Execution: SQL Server: Advanced Page&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
   

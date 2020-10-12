@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dm_db_objects_impacted_on_version_change"
   - "sys.dm_db_objects_impacted_on_version_change"
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---

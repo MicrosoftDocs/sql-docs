@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_help_jobs"
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

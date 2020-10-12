@@ -39,7 +39,7 @@ External resource pools are created by using [CREATE EXTERNAL RESOURCE POOL &#40
   
 ## Syntax  
   
-```
+```syntaxsql
 DROP EXTERNAL RESOURCE POOL pool_name  
 ```  
   
@@ -72,9 +72,6 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
 ```  
-
-> [!NOTE]
-> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
 
 ## See Also
 

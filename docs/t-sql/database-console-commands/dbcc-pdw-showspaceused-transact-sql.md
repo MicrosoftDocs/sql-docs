@@ -35,6 +35,8 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 [;]  
 ```  
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments
 
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  

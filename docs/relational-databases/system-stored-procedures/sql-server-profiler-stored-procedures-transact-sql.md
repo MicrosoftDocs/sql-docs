@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server], stored procedures"
   - "performance [SQL Server], stored procedures"
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Profiler Stored Procedures (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

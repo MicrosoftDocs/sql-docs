@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_invalidate_textptr"
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

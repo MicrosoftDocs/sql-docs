@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)
+SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux Documentation](/sql/linux/)
 
 [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
@@ -78,7 +78,7 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 - DAX Editor for SSDT. (CTP 2.0)
 - Encoding hints, an advanced feature for optimizing data refresh of large in-memory tabular models. (CTP 1.3)
 - Support for the **1400 Compatibility level** for tabular models. To create new or upgrade existing tabular model projects to the 1400 compatibility level, download and install [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
-- A modern **Get Data** experience for tabular models at the 1400 compatibility level. See the [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- A modern **Get Data** experience for tabular models at the 1400 compatibility level. See the [Analysis Services Team Blog](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services). (CTP 1.1)
 - **Hide Members** property to hide blank members in ragged hierarchies. (CTP 1.1)
 - New **Detail Rows** end-user action to **Show Details** for aggregated information. [SELECTCOLUMNS](/dax/selectcolumns-function-dax) and **DETAILROWS** functions for creating Detail Rows expressions. (CTP 1.1)
 - DAX **IN** operator for specifying multiple values. (CTP 1.1)
@@ -88,7 +88,7 @@ For more information, see [What's new in SQL Server Analysis Services](/analysis
 ## SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments.
-- In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 - To enable development of modern applications and customization, SSRS now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
@@ -112,7 +112,7 @@ For more information, see [What's new in SQL Server Machine Learning Services](~
 
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).
-- Find out [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
+- Find out [What's new for SQL Server 2017 on Linux](../linux/sql-server-linux-whats-new.md).
 - Find out [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

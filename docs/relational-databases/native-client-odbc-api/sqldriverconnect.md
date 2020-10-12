@@ -75,10 +75,9 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## See Also  
- [SQLDriverConnect Function](https://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect Function](../../odbc/reference/syntax/sqldriverconnect-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
-  
   

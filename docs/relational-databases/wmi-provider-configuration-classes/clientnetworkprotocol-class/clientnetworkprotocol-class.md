@@ -16,8 +16,8 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetworkProtocol class"
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ClientNetworkProtocol Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

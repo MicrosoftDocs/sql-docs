@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_execution_log view"
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_execution_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

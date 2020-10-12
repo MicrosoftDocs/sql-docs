@@ -16,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.masked_columns catalog view"
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.masked_columns (Transact-SQL)

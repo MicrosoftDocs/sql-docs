@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "sys.sp_query_store_remove_query"
   - "sp_query_store_remove_query"
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_remove_query (Transact-SQL)

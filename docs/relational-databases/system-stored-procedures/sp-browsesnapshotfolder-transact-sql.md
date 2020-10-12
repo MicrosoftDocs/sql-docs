@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_browsesnapshotfolder"
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

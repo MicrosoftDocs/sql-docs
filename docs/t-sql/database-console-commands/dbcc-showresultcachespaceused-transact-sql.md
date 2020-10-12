@@ -29,6 +29,9 @@ Shows the storage space used result set caching for an Azure [!INCLUDE[ssSDW](..
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Remarks
 
 The `DBCC SHOWRESULTCACHESPACEUSED` command doesn't take any parameters and returns the space used by the database where the command is run.

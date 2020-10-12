@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MScached_peer_lsns system table"
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MScached_peer_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

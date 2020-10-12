@@ -16,12 +16,12 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetEnable method"
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetEnable Method (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Enables the client network protocol that is specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
+  Enables the client network protocol that is specified by the [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
 ## Syntax  
   
@@ -40,6 +40,5 @@ object.SetEnableMethod()
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configuring Client Network Protocols and Net-Libraries](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

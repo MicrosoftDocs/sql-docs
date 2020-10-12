@@ -46,7 +46,7 @@ ms.author: chugu
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [SMTP Connection Manager Editor](../../integration-services/connection-manager/smtp-connection-manager-editor.md).  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [SMTP Connection Manager Editor]().  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -76,4 +76,3 @@ ms.author: chugu
   
  **Enable Secure Sockets Layer (SSL)**  
  Select to encrypt communication using TLS/SSL when sending e-mail messages.  
-  

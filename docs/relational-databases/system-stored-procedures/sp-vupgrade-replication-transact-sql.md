@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_vupgrade_replication"
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

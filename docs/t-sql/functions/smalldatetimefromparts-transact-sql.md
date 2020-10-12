@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )  
 ```  
   
@@ -61,7 +61,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## Examples  
   
-```  
+```sql  
 SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result  
 ```  
   

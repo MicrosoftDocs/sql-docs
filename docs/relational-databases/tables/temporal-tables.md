@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal tables
@@ -29,7 +29,7 @@ SQL Server 2016 introduced support for temporal tables (also known as system-ver
   - [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
   - [Temporal Table Usage Scenarios](../../relational-databases/tables/temporal-table-usage-scenarios.md)
 
-  - [Getting Started with Temporal Tables in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)
+  - [Getting Started with Temporal Tables in Azure SQL Database](/azure/azure-sql/temporal-tables)
 
 - **Examples:**
 

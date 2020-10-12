@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "messages [Service Broker], sending"
   - "sending messages"
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -35,7 +35,7 @@ Provides transaction log space usage statistics for all databases. In [!INCLUDE[
   
 ## Syntax  
   
-```
+```syntaxsql
 DBCC SQLPERF   
 (  
      [ LOGSPACE ]  

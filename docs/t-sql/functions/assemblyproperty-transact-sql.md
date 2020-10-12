@@ -29,7 +29,7 @@ This function returns information about a property of an assembly.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASSEMBLYPROPERTY('assembly_name', 'property_name')  
 ```  
   

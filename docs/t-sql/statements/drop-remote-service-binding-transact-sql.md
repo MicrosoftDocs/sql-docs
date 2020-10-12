@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], dropping"
   - "DROP REMOTE SERVICE BINDING statement"
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,6 @@ ms.author: carlrab
 ## Syntax  
   
 ```syntaxsql
-  
 DROP REMOTE SERVICE BINDING binding_name  
 [ ; ]  
 ```  
@@ -50,7 +49,7 @@ DROP REMOTE SERVICE BINDING binding_name
 ## Examples  
  The following example deletes the remote service binding `APBinding` from the database.  
   
-```  
+```sql 
 DROP REMOTE SERVICE BINDING APBinding ;  
 ```  
   

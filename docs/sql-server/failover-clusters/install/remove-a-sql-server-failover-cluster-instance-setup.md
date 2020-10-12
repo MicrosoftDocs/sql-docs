@@ -34,7 +34,7 @@ Use this procedure to uninstall an Always On [!INCLUDE[ssNoVersion](../../../inc
   
 -   If you uninstall a failover cluster that has more than one SQL IP cluster resource, you must remove the additional SQL IP resources using Failover Cluster Manager or PowerShell.  
   
- For information about command prompt syntax, see [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ For information about command prompt syntax, see [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### To uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance
   
@@ -42,5 +42,4 @@ Use this procedure to uninstall an Always On [!INCLUDE[ssNoVersion](../../../inc
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

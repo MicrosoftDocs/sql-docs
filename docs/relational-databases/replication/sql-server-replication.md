@@ -128,7 +128,6 @@ For backward compatibility information see, [Replication Backward Compatibility]
 -   [Allow Non-Administrators to Use Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Programmatically Monitor Replication](monitor/programmatically-monitor-replication.md)    
 -   [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](view-conflict-information-for-merge-publications.md) 
+-   [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](./view-and-resolve-data-conflicts-for-merge-publications.md) 
 -   [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
-  
   

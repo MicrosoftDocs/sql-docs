@@ -1,6 +1,6 @@
 ---
 title: SQL Server PowerShell version includes
-description: Explains that the sqlserver PowerShell module is the current SQL Server PowerShell command set.
+description: Explains that the Sqlserver PowerShell module is the current SQL Server PowerShell command set.
 author: markingmyname
 ms.author: maghan
 ---

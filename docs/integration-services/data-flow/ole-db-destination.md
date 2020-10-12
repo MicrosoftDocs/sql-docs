@@ -90,7 +90,7 @@ ms.author: chugu
   
 |Fast load option|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Specifies the size in kilobytes to insert. The option has the form **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
+|KILOBYTES_PER_BATCH|Specifies the size in kilobytes to insert. The option has the form **KILOBYTES_PER_BATCH** = *\<positive integer value>*.|  
 |FIRE_TRIGGERS|Specifies whether triggers fire on the insert table. The option has the form **FIRE_TRIGGERS**. The presence of the option indicates that triggers fire.|  
 |ORDER|Specifies how the input data is sorted. The option has the form ORDER \<column name> ASC&#124;DESC. Any number of columns may be listed and it is optional to include the sort order. If sort order is omitted, the insert operation assumes the data is unsorted.<br /><br /> Note: Performance can be improved if you use the ORDER option to sort the input data according to the clustered index on the table.|  
   

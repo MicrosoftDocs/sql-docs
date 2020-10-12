@@ -29,7 +29,7 @@ All public contributions are validated by the SQL content team for technical acc
 
 ## <a id="githubui"></a> Edit in your browser
 
-You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, you can see the [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
+You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, you can see the [Microsoft Docs contributor guide overview](/contribute/#quick-edits-to-existing-documents). 
 
 The following steps summarize the process: 
 
@@ -54,10 +54,10 @@ Another editing option is to fork the **sql-docs** or **azure-docs** repositorie
 
 To contribute with this method, see the following articles:
 
-- [Create a GitHub account](https://docs.microsoft.com/contribute/get-started-setup-github)
-- [Install content authoring tools](https://docs.microsoft.com/contribute/get-started-setup-tools)
-- [Set up a Git repository locally](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Use tools to contribute](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
+- [Create a GitHub account](/contribute/get-started-setup-github)
+- [Install content authoring tools](/contribute/get-started-setup-tools)
+- [Set up a Git repository locally](/contribute/get-started-setup-local)
+- [Use tools to contribute](/contribute/how-to-write-workflows-major)
 
 If you submit a pull request with significant changes to documentation, you will get a comment in GitHub asking you to submit an online **Contribution License Agreement (CLA)**. You must complete the online form before your pull request can be accepted.
 
@@ -107,8 +107,8 @@ To find the correct applies-to include file for your article, use the following 
 
 ## Contributor resources
 
-- [Contributor guide for docs.microsoft.com](https://docs.microsoft.com/contribute/)
-- [Microsoft Style Guide](https://docs.microsoft.com/teamblog/style-guide)
+- [Contributor guide for docs.microsoft.com](/contribute/)
+- [Microsoft Style Guide](/teamblog/style-guide)
 - [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 
 > [!TIP]

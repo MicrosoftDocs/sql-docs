@@ -1,6 +1,6 @@
 ---
 title: Connect and query with Azure Synapse Analytics
-description: This quickstart shows how to use Azure Data Studio to connect to an Azure Synapse Analytics and run a query
+description: This quickstart shows how to use Azure Data Studio to connect to using dedicated SQL pool in Azure Synapse Analytics and run a query.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: "alayu, maghan, sstein"
@@ -11,21 +11,21 @@ ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
 ---
 
-# Quickstart: Use Azure Data Studio to connect and query data in Azure Synapse Analytics
+# Quickstart: Use Azure Data Studio to connect and query data using dedicated SQL pool in Azure Synapse Analytics
 
-This quickstart demonstrates how to use Azure Data Studio to connect to Azure Synapse Analytics, and then use Transact-SQL statements to create, insert, and select data. 
+This quickstart demonstrates how to use Azure Data Studio to connect to using dedicated SQL pool in Azure Synapse Analytics, and then use Transact-SQL statements to create, insert, and select data. 
 
 ## Prerequisites
-To complete this quickstart, you need Azure Data Studio, and an Azure Synapse Analytics.
+To complete this quickstart, you need Azure Data Studio, and a dedicated SQL pool in Azure Synapse Analytics.
 
 - [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-If you don't already have a SQL data warehouse, see [Create a SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+If you don't already have a dedicated SQL pool, see [Create a SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Remember the server name, and login credentials!
 
 
-## Connect to your data warehouse
+## Connect to your dedicated SQL pool
 
 Use Azure Data Studio to establish a connection to your Azure Synapse Analytics server.
 
@@ -53,7 +53,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 4. After successfully connecting your server opens in the *Servers* sidebar.
 
-## Create the tutorial data warehouse
+## Create the tutorial dedicated SQL pool
 1. Right click on your server, in the object explorer and select **New Query.**
 
 1. Paste the following snippet into the query editor and click **Run**:

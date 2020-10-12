@@ -1,6 +1,6 @@
 ---
-title: SQL loopback connection in Pyrhon and R
-description: Learn how t use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. 
+title: SQL loopback connection in Python and R
+description: Learn how to use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. 
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/20/2020

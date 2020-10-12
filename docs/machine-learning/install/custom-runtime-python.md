@@ -69,7 +69,7 @@ Language Extensions use the extensibility framework for executing external code.
     + Database Engine Services
     + Machine Learning Services and Language Extensions
 
-1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. After setup is complete, if you're instructed to restart the computer, do so now. It's important to read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 
 ## Install Python 3.7 
@@ -134,7 +134,7 @@ Download the [zip file containing the Python language extension for Windows](htt
 
 ## Register external language
 
-Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL command. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
+Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect to SQL Server and run the following T-SQL command. Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
 
 > [!NOTE]
 > Python is a reserved word. Use a different name for the external language, for example, "myPython".
@@ -280,7 +280,7 @@ Download the [zip file containing the Python language extension for Linux](https
 
 ## Register external language
 
-Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) to connect to SQL Server and run the following T-SQL command. 
+Register this Python language extension with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md) for each database you want to use it in. Use [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) to connect to SQL Server and run the following T-SQL command. 
 Modify the path in this statement to reflect the location of the downloaded language extension zip file (python-lang-extension.zip).
 
 > [!NOTE]
@@ -298,7 +298,7 @@ GO
 
 An external script in Python can be executed via the stored procedure [sp_execute_external script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) run against SQL Server. 
 
-To enable external scripts, execute the following SQL commands using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), connected to SQL Server.
+To enable external scripts, execute the following SQL commands using [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md), connected to SQL Server.
 
 ```sql
 sp_configure 'external scripts enabled', 1;

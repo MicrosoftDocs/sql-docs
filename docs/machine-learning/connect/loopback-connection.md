@@ -1,6 +1,6 @@
 ---
-title: SQL loopback connection in Pyrhon and R
-description: Learn how t use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. 
+title: SQL loopback connection in Python and R
+description: Learn how to use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. 
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/20/2020
@@ -42,7 +42,7 @@ Here is an example of the loopback connection string on Linux:
 
 The server address, client certificate file location, and client key file location are unique to every `sp_execute_external_script` and can be obtained by the use of the API **rx_get_sql_loopback_connection_string()** for Python or **rxGetSqlLoopbackConnectionString()** for R.
 
-For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
+For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
 
 ## Generate connection string with revoscalepy for Python
 

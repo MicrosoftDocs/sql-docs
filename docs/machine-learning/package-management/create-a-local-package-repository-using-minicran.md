@@ -190,4 +190,4 @@ After you have a local repository with the packages you need, move the package r
 ## See also
 
 + [Get R package information](../package-management/r-package-information.md)
-+ [R tutorials](../tutorials/sql-server-r-tutorials.md)
++ [R tutorials](../tutorials/r-tutorials.md)

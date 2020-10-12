@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/14/2020
+ms.date: 10/14/2020 
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)

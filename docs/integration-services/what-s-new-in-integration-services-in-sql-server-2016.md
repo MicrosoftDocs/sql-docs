@@ -106,7 +106,7 @@ These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or late
         
         -   [Support for Azure Data Lake Store released](#datalakestore)
         
-        -   [Support for Azure SQL Data Warehouse released](#sqldwupload)
+        -   [Support for Azure Synapse Analytics released](#sqldwupload)
   
 -   **Usability and productivity**  
   
@@ -303,7 +303,7 @@ With SQL Server 2016 Service Pack 1 installed, the OData Source and OData Connec
 
 The latest version of the Azure Feature Pack includes a connection manager, source, and destination to move data to and from Azure Data Lake Store. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
-#### <a name="sqldwupload"></a> Support for Azure SQL Data Warehouse released
+#### <a name="sqldwupload"></a> Support for Azure Synapse Analytics released
 
 The latest version of the Azure Feature Pack includes the Azure SQL DW Upload task for populating SQL Data Warehouse with data. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 

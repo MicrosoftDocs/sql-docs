@@ -118,7 +118,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - Azure Data Lake Store.
 
-  - Azure SQL Data Warehouse.
+  - Azure Synapse Analytics.
 
   - Azure Data Lake Storage (Gen2).
 

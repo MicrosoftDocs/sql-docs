@@ -66,7 +66,7 @@ In-Memory Analytics refers to SQL SELECTs which aggregate transactional data, ty
 There are two major scenarios:  
   
 - *Batch Operational Analytics* refers to aggregation processes that run either after business hours or on secondary hardware which has copies of the transactional data.  
-  - [Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) also relates to batch operational analytics.  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) also relates to batch operational analytics.  
 - *Real-time Operational Analytics* refers to aggregration processes that run during business hours and on the primary hardware which is used for transactional workloads.  
   
   

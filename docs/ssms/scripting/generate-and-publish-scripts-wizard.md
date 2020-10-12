@@ -242,7 +242,7 @@ Use this page to monitor the progress of the wizard as it occurs.
 
 If all the settings are correct, your configuration finishes successfully.
 
-## Generating Scripts on Azure SQL Data Warehouse
+## Generating Scripts on Azure Synapse Analytics
 
 If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 
@@ -253,7 +253,7 @@ In order to script objects with [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]
 1. Select **Tools** then **Options**.
 2. Under **General Scripting Options** set:
     1. Script for the database engine type: **Microsoft Azure SQL Database**.
-    2. Script for the database engine edition: **Microsoft Azure SQL Data Warehouse Edition**.
+    2. Script for the database engine edition: **Microsoft Azure Synapse Analytics Edition**.
 3. Select **OK**.
 
 ### How to Generate Scripts for SQL Data Warehouse when it is not the default scripting option
@@ -265,7 +265,7 @@ If you set [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] as your default scri
 3. Choose the Objects you wish to script.
 4. In **Scripting Options**, select **Advanced**. Under **General** set:
     1. Script for the database engine type: **Microsoft Azure SQL Database**.
-    2. Script for the database engine edition: **Microsoft Azure SQL Data Warehouse Edition**.
+    2. Script for the database engine edition: **Microsoft Azure Synapse Analytics Edition**.
 5. Select **Save or Publish Scripts** then **Finish**.
 
 The options set in Step 4 aren't remembered. If you prefer for these options to be remembered, follow the instructions in **How to set default scripting options to SQL Data Warehouse**.

@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ## Syntax  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
 ```

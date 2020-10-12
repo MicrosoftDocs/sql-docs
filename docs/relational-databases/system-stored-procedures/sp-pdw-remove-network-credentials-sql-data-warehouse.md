@@ -1,7 +1,7 @@
 ---
 description: "sp_pdw_remove_network_credentials (SQL Data Warehouse)"
 title: "sp_pdw_remove_network_credentials"
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -26,7 +26,7 @@ ms.custom: seo-dt-2019
 ## Syntax  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
 ```

@@ -58,7 +58,7 @@ For more information, see [DTC Programmer's Reference](/previous-versions/window
 
 ## C# alternative for SQL Database in the cloud
 
-MSDTC isn't supported for either Azure SQL Database or Azure SQL Data Warehouse.
+MSDTC isn't supported for either Azure SQL Database or Azure Synapse Analytics.
 
 However, a distributed transaction can be created for SQL Database by having your C# program use the .NET class [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope).
 

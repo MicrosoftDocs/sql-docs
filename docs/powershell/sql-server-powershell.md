@@ -50,7 +50,7 @@ The **SqlServer** module comes with:
 
 ## SQL Server versions
 
-SQL PowerShell cmdlets can be used to manage instances of Azure SQL Database, Azure SQL Data Warehouse, and all [supported SQL Server products](https://support.microsoft.com/lifecycle/search/1044).
+SQL PowerShell cmdlets can be used to manage instances of Azure SQL Database, Azure Synapse Analytics, and all [supported SQL Server products](https://support.microsoft.com/lifecycle/search/1044).
 
 ## SQL Server identifiers that contain characters not supported in PowerShell paths
 

@@ -34,7 +34,7 @@ This function returns the database identification (ID) number of a specified dat
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DB_ID ( [ 'database_name' ] )   
 ```  
   
@@ -81,8 +81,8 @@ GO
 This example uses `DB_ID` to return the database ID of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in the system function `sys.dm_db_index_operational_stats`. The function takes a database ID as the first parameter.
   
 ```sql
-DECLARE @db_id int;  
-DECLARE @object_id int;  
+DECLARE @db_id INT;  
+DECLARE @object_id INT;  
 SET @db_id = DB_ID(N'AdventureWorks2012');  
 SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
 IF @db_id IS NULL   

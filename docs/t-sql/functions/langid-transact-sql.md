@@ -32,7 +32,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LANGID  
 ```  
   
@@ -47,7 +47,7 @@ ms.author: maghan
 ## Examples  
  The following example sets the language for the current session to `Italian`, and then uses `@@LANGID` to return the ID for Italian.  
   
-```  
+```sql  
 SET LANGUAGE 'Italian'  
 SELECT @@LANGID AS 'Language ID'  
 ```  

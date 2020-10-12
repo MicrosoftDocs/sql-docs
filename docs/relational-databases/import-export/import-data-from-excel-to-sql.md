@@ -129,7 +129,7 @@ To query the Excel data without importing it, just use the standard `SELECT ... 
 
 For more info about distributed queries, see the following topics:
 
-- [Distributed Queries](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx) (Distributed queries are still supported in SQL Server 2016, but the documentation for this feature has not been updated.)
+- [Distributed Queries](/previous-versions/sql/sql-server-2008-r2/ms188721(v=sql.105)) (Distributed queries are still supported in SQL Server 2016, but the documentation for this feature has not been updated.)
 - [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 - [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
@@ -246,8 +246,8 @@ As described previously in the [Prerequisite](#prereq) section, you have to expo
 
 For more info about the Copy Wizard, see the following topics:
 
-- [Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Tutorial: Create a pipeline with Copy Activity using Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+- [Data Factory Copy Wizard](/azure/data-factory/data-factory-azure-copy-wizard)
+- [Tutorial: Create a pipeline with Copy Activity using Data Factory Copy Wizard](/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="adf"></a> Azure Data Factory
 
@@ -257,14 +257,14 @@ As described previously in the [Prerequisite](#prereq) section, you have to expo
 
 For more info about using these Data Factory sources and sinks, see the following topics:
 
-- [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
-- [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [File system](/azure/data-factory/data-factory-onprem-file-system-connector)
+- [SQL Server](/azure/data-factory/data-factory-sqlserver-connector)
+- [Azure SQL Database](/azure/data-factory/data-factory-azure-sql-connector)
 
 To start learning how to copy data with Azure data factory, see the following topics:
 
-- [Move data by using Copy Activity](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Move data by using Copy Activity](/azure/data-factory/data-factory-data-movement-activities)
+- [Tutorial: Create a pipeline with Copy Activity using Azure portal](/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## Common errors
 

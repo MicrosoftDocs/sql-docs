@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.schemas catalog view"
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schemas Catalog Views - sys.schemas
@@ -49,8 +49,7 @@ Each schema has a an owner. The owner is a security [principal](../../relational
 
 [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 
-[Schemas Catalog Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+[Schemas Catalog Views &#40;Transact-SQL&#41;](./catalog-views-transact-sql.md)   
 
 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
-  
   

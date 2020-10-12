@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.partition_schemes catalog view"
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.partition_schemes (Transact-SQL)

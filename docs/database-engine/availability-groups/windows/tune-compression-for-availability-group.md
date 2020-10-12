@@ -39,6 +39,6 @@ Trace flag | Description
 
 [Database Engine Startup Options](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
 
-[Automatic Seeding](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
+[Automatic Seeding](./automatically-initialize-always-on-availability-group.md)
 
-[Always On Prerequisites](prereqs-restrictions-recommendations-always-on-availability.md) 
+[Always On Prerequisites](prereqs-restrictions-recommendations-always-on-availability.md)

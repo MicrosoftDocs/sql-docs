@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_stop_job"
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

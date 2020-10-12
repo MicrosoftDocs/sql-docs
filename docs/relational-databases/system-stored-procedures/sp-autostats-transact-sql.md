@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_autostats"
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_autostats (Transact-SQL)
@@ -66,7 +66,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|Name of the index or statistics.|  
+|**Index Name**|**sysname**|Name of the index or statistics.|  
 |**AUTOSTATS**|**varchar(3)**|Current value for the AUTO_UPDATE_STATISTICS option.|  
 |**Last Updated**|**datetime**|Date of the most recent statistics update.|  
   

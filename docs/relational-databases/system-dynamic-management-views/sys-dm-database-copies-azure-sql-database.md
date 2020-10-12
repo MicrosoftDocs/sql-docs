@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "dm_database_copies"
   - "sys.dm_database_copies"
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_database_copies (Azure SQL Database)

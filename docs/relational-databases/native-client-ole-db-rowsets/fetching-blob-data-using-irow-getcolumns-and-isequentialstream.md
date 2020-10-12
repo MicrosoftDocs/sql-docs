@@ -83,6 +83,5 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 ```  
   
 ## See Also  
- [Fetching BLOB Data Using IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
-  
+ [Fetching BLOB Data Using IRow](./fetching-a-single-row-with-irow.md)  
   

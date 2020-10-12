@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.numbered_procedure_parameters catalog view"
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

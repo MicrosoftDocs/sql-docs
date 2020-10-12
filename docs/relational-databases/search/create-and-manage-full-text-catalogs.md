@@ -40,7 +40,7 @@ GO
   
 3.  Select **New Full-Text Catalog**.  
   
-4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](https://docs.microsoft.com/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
+4.  In the **New Full-Text Catalog** dialog box, specify the information for the catalog that you are re-creating. For more information, see [New Full-Text Catalog &#40;General Page&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
     > [!NOTE]  
     >  Full-text catalog IDs begin at 00005 and are incremented by one for each new catalog created.  

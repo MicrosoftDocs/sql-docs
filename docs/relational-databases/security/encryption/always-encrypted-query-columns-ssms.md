@@ -84,7 +84,7 @@ If you don't enable Always Encrypted for a connection, the .NET Framework Data P
 You can enable or disable Always Encrypted when you create a new connection or you change an existing connection using the **Connect to Server** dialog. 
 
 To enable (disable) Always Encrypted:
-1. Open **Connect To Server** dialog (see [Connect to a SQL Server instance](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance) for details).
+1. Open **Connect To Server** dialog (see [Connect to a SQL Server instance](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance) for details).
 1. Click **Options >>**.
 1. If you're using SSMS 18 or newer:
     1. Select the **Always Encrypted** tab.
@@ -103,7 +103,7 @@ To enable (disable) Always Encrypted:
    
 ## <a name="param"></a>Parameterization for Always Encrypted   
  
-Parameterization for Always Encrypted is a feature in SQL Server Management Studio that automatically converts Transact-SQL variables into query parameters (instances of [SqlParameter Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)). (Requires at least SSMS version 17.0.) This allows the underlying .NET Framework Data Provider for SQL Server to detect data targeting encrypted columns, and to encrypt such data before sending it to the database. 
+Parameterization for Always Encrypted is a feature in SQL Server Management Studio that automatically converts Transact-SQL variables into query parameters (instances of [SqlParameter Class](/dotnet/api/system.data.sqlclient.sqlparameter)). (Requires at least SSMS version 17.0.) This allows the underlying .NET Framework Data Provider for SQL Server to detect data targeting encrypted columns, and to encrypt such data before sending it to the database. 
   
 Without parameterization, the .NET Framework Data Provider passes each statement, you author in the Query Editor, as a non-parameterized query. If the query contains literals or Transact-SQL variables that target encrypted columns, the .NET Framework Data Provider for SQL Server won't be able to detect and encrypt them, before sending the query to the database. As a result, the query will fail due to type mismatch (between the plaintext literal Transact-SQL variable and the encrypted column). For example, the following query will fail without parameterization, assuming the `SSN` column is encrypted.   
 
@@ -167,7 +167,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 For an attempted parameterization to succeed:   
 - The type of the literal used for the initialization of the variable to be parametrized, must match the type in the variable declaration.   
-- If the declared type of the variable is a date type or a time type, the variable must be initialized using a string using one of the following [ISO 8601-compliant formats](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles).    
+- If the declared type of the variable is a date type or a time type, the variable must be initialized using a string using one of the following [ISO 8601-compliant formats](../../../t-sql/functions/cast-and-convert-transact-sql.md#date-and-time-styles).    
 
 Here are the examples of Transact-SQL variable declarations that will result in parameterization errors:   
 ```sql
@@ -177,7 +177,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 ```
 SQL Server Management Studio uses Intellisense to inform you which variables can be successfully parameterized and which parameterization attempts fail (and why).   
 
-A declaration of a variable that can be successfully parameterized is marked with a warning underline in the Query Editor. If you hover on a declaration statement that got marked with a warning underline, you'll see the results of the parameterization process, including the values of the key properties of the resulting [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) object (the variable is mapped to): [SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), [Size](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.size.aspx), [Precision](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.precision.aspx), [Scale](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.scale.aspx), [SqlValue](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqlvalue.aspx). You can also see the complete list of all variables that have been successfully parameterized in the **Warning** tab of the **Error List** view. To open the **Error List** view, select **View** from the main menu and then select **Error List**.    
+A declaration of a variable that can be successfully parameterized is marked with a warning underline in the Query Editor. If you hover on a declaration statement that got marked with a warning underline, you'll see the results of the parameterization process, including the values of the key properties of the resulting [SqlParameter](/dotnet/api/system.data.sqlclient.sqlparameter) object (the variable is mapped to): [SqlDbType](/dotnet/api/system.data.sqlclient.sqlparameter.sqldbtype), [Size](/dotnet/api/system.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/system.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/system.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/system.data.sqlclient.sqlparameter.sqlvalue). You can also see the complete list of all variables that have been successfully parameterized in the **Warning** tab of the **Error List** view. To open the **Error List** view, select **View** from the main menu and then select **Error List**.    
 
 If SQL Server Management Studio has attempted to parameterize a variable, but the parameterization has failed, the declaration of the variable will be marked with an error underline. If you hover on the declaration statement that has been marked with an error underline, you'll get the results about the error. You can also see the complete list of parameterization errors for all variables in the **Error** tab of the **Error List** view. To open the **Error List** view, select **View** from the main menu and then select **Error List**.   
 

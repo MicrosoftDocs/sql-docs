@@ -87,7 +87,7 @@ Every login belongs to the `public` fixed server role, and every database user b
   
  The following topics are included in this section of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online:  
   
--   [Managing Logins, Users, and Schemas How-to Topics](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Managing Logins, Users, and Schemas How-to Topics](./create-a-login.md)  
   
 -   [Server-Level Roles](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
@@ -103,5 +103,4 @@ Every login belongs to the `public` fixed server role, and every database user b
  [sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [Server-Level Roles](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md)  
-  
   

@@ -37,8 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SUSER_ID ( [ 'login' ] )   
 ```  
   
@@ -61,7 +60,7 @@ SUSER_ID ( [ 'login' ] )
 ## Examples  
  The following example returns the login identification number for the `sa` login.  
   
-```  
+```sql
 SELECT SUSER_ID('sa');  
 ```  
   

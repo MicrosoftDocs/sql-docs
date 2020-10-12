@@ -202,11 +202,11 @@ The SQL Server 2012 Express Service Pack 1 (SP1) release includes the full versi
 ### SQL Server Data-Tier Application Framework (DACFx)  
 **In-place Upgrade Support**  
   
-This version of the Data-Tier Application Framework (DACFx) supports in-place upgrade from previous versions, so it is not required to remove previous DACFx installations before upgrading to this release. You can find future releases of DACFx [here](https://msdn.microsoft.com/library/dn702988.aspx).  
+This version of the Data-Tier Application Framework (DACFx) supports in-place upgrade from previous versions, so it is not required to remove previous DACFx installations before upgrading to this release. You can find future releases of DACFx [here](/previous-versions/sql/sql-server-2016/dn702988(v=sql.130)).  
   
 **Support for Selective XML Index**  
   
-SQL Server 2012 SP1 includes support for [Selective XML Index (SXI)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44), a new SQL Server feature that provides a new way of indexing XML column data with increased performance and efficiency.  
+SQL Server 2012 SP1 includes support for [Selective XML Index (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md), a new SQL Server feature that provides a new way of indexing XML column data with increased performance and efficiency.  
   
 DACFx now supports SXI indexes across all DAC scenarios and client tools. SXI is only supported in the latest version of SSDT. SSDT RTM and September 2012 versions do not support SXI.  
   
@@ -226,7 +226,7 @@ Previously, DACFx did not preserve the state (WITH CHECK/NOCHECK) of check const
   
 -   Import BACPAC - Import a .bacpac file to create a new or populate an empty SQL Server or Azure SQL Database.  
   
-Full SqlPackage.exe documentation on MSDN can be found [here](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
+Full SqlPackage.exe documentation on MSDN can be found [here](../tools/sqlpackage.md).  
   
 **Package compatibility**  
   
@@ -237,11 +237,11 @@ This release introduces several forward compatibility scenarios for DAC packages
 -   All DAC packages created by previous versions of DACFx can be consumed by this release.  
   
 ## See Also
-- [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [Install SQL Server 2012 Servicing Updates](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185)
-- [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [Install SQL Server 2012 Servicing Updates](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [How to identify your SQL Server version and edition](https://support.microsoft.com/help/321185) 
 - [How to determine the version and edition of SQL Server](https://support.microsoft.com/kb/321185)  
-- [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Features Supported by the Editions of SQL Server 2014](./editions-and-components-of-sql-server-2016.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -16,8 +16,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
 
-If you encounter script errors not covered here, post them on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). This forum supports the machine learning components used in various SQL machine learning products.
-
 ## Valid script fails in T-SQL or in stored procedures
 
 Before wrapping your R code in a stored procedure, it is a good idea to run your R code in an external IDE, or in one of the R tools such as RTerm or RGui. By using these methods, you can test and debug the code by using the detailed error messages that are returned by R.

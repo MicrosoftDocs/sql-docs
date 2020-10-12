@@ -25,8 +25,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_dynamic_filters"
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

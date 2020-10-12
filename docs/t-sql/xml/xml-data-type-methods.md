@@ -35,9 +35,9 @@ ms.author: genemi
   
  You call these methods by using the user-defined type method invocation syntax. For example:  
   
-```  
+```sql
 SELECT XmlCol.query(' ... ')  
-FROM   Table  
+FROM Table  
 ```  
   
 > [!NOTE]  

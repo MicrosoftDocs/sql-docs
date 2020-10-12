@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_change_agent_parameter"
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_files catalog view"
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_files (Transact-SQL)
@@ -74,7 +74,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Determining Database Size in Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) on the SQL Customer Advisory Team blog.
+For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Determining Database Size in Azure SQL Database V12](/archive/blogs/sqlcat/determining-database-size-in-azure-sql-database-v12) on the SQL Customer Advisory Team blog.
   
 ## See Also  
  [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
@@ -83,5 +83,4 @@ For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
-  
   

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_control_proc_exec_stats"
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "Setup [SQL Server]"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mikeray
+ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2019 on Linux
 

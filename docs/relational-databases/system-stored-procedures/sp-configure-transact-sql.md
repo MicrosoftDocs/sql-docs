@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_configure"
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sp_configure (Transact-SQL)
@@ -108,7 +108,10 @@ RECONFIGURE
  For more information, see [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## Advanced Options  
- Some configuration options, such as **affinity mask** and **recovery interval**, are designated as advanced options. By default, these options are not available for viewing and changing. To make them available, set the **ShowAdvancedOptions** configuration option to 1.  
+ Some configuration options, such as **affinity mask** and **recovery interval**, are designated as advanced options. By default, these options are not available for viewing and changing. To make them available, set the **Show Advanced Options** configuration option to 1. 
+ 
+> [!CAUTION]  
+> When the option **Show Advanced Options** is set to 1, this setting applies to all users. It is recommended to only use this state temporarily and switch back to 0 when done with the task that required viewing the advanced options.  
   
  For more information about the configuration options and their settings, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   

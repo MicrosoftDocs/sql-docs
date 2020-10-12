@@ -19,7 +19,7 @@ ms.custom: "seo-lt-2019"
   
  For more information, see the following SharePoint article:  
   
- [Create a custom dictionary (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
+ [Create a custom dictionary (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/cc263242(v=office.14))  
   
  For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], place custom dictionary files in the following folder:  
   
@@ -28,5 +28,4 @@ ms.custom: "seo-lt-2019"
  After creating or changing custom dictionary files, restart the SQL Full-text Daemon Launcher with the following command:  
   
  `exec sp_fulltext_service 'restart_all_fdhosts'`  
-  
   

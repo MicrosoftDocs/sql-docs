@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ### A. Using SUSER_SNAME  
  The following example returns the login name for the current security context.  
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 ```  
@@ -77,7 +77,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
@@ -85,7 +85,7 @@ GO
 ### C. Using SUSER_SNAME as a DEFAULT constraint  
  The following example uses `SUSER_SNAME` as a `DEFAULT` constraint in a `CREATE TABLE` statement.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sname_example  
@@ -104,7 +104,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 EXECUTE AS LOGIN = 'WanidaBenShoof';  
@@ -112,8 +112,7 @@ SELECT SUSER_SNAME();
 REVERT;  
 GO  
 SELECT SUSER_SNAME();  
-GO  
-  
+GO 
 ```  
   
  Here is the result.  
@@ -129,7 +128,7 @@ sa
 ### E. Using SUSER_SNAME  
  The following example returns the login name for the security identification number with a value of `0x01`.  
   
-```  
+```sql
 SELECT SUSER_SNAME(0x01);  
 GO  
 ```  
@@ -137,7 +136,7 @@ GO
 ### F. Returning the Current Login  
  The following example returns the login name of the current login.  
   
-```  
+```sql
 SELECT SUSER_SNAME() AS CurrentLogin;  
 GO  
 ```  

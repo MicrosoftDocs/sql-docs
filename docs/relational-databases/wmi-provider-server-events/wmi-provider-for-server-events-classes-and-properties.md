@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "WMI Provider for Server Events, events listed"
   - "classes [WMI]"
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # WMI Provider for Server Events Classes and Properties
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

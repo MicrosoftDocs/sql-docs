@@ -134,5 +134,4 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[Executing the SSMA Console (Access)](./executing-the-ssma-console-accesstosql.md)  

@@ -39,13 +39,13 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 
 | New item | Details |
 |----------|---------|
-| Azure Data Studio installation integration | Installation of SSMS also installs Azure Data Studio. Visit [What is Azure Data Studio](../azure-data-studio/what-is.md) to learn more about Azure Data Studio. To Learn more about the differences between SSMS and Azure Data Studio please visit the [FAQ](../azure-data-studio/faq.md) page. |
-| Always Encrypted | SSMS needs to be updated to recognize the new HSM endpoints. This is done by consuming the new AKV Provider NugetPackage. |
+| Azure Data Studio installation integration | Installation of SSMS also installs Azure Data Studio. |
+| Always Encrypted | To recognize the new HSM endpoints you need to upgrade SSMS. This is done by consuming the new AKV Provider NugetPackage. |
 | Import Flat File | Made an improvement to better predict data types by learning on 300 lines by default. |
 | Import Flat File | Prevent columns from being declared as TinyInt that should be SmallInt. |
-| Import Flat File | Made an improvement where DW tables are properly cleaned up, if there is a failure in data import. |
+| Import Flat File | Made an improvement where DW tables are properly cleaned, if there is a failure in data import. |
 | Resource Governor | Added support for decimal values. |
-| ShowPlan | Added PREDICT operator |
+| ShowPlan | Added PREDICT operator. |
 | XEvent UI | Added capability to script out Extended Events using the wait_type name. Users are requesting to use the value of map_value column instead of map_key in wait_type filter predicate as the key value is subjected to change during version upgrade. Fix: Added a checkbox and given the option to users, to choose either map_value or map_key for the wait_type filter predicate value. |
 
 ### Bug fixes in 18.7
@@ -53,35 +53,47 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | New Item | Details |
 |----------|---------|
 | Accessibility | Fixed tab ordering of buttons in the "The following settings are not supported by the database" window that pops up when querying against DW. |
-| Accessibility | Import and Export Wizard: the page layout is incorrect in high dpi mode |
+| Accessibility | Import and Export Wizard: the page layout is incorrect in high dpi mode. |
 | Activity Monitor | Fixed an issue where Activity Monitor was pausing when opening the "Processes" tab. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/37050118). |
 | Always On Availability Group | Fixed an issue where Read Scale Availability Group Failover was not working. |
-| Backup/Restore | Fixed an issue where clicking on "View Connection Properties" yielded a SMO error on HostDistribution prop being missing (SQL 2016 and below). |
-| Database Designer | Fixed an issue which was causing SSMS to crash when handling decimal numbers |
+| Analysis Services | Updated PowerQuery components to 2.84.982 for AS Tabular models scenarios. |
+| Analysis Services | Fixed an issue that may have resulted in an error when trying to connect to SSAS via msmdpump.dll. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
+| Backup/Restore | Fixed an issue where selecting "View Connection Properties" yielded a SMO error on HostDistribution prop being missing for SQL 2016 and earlier. |
+| Database Designer | Fixed an issue, which was causing SSMS to crash when handling decimal numbers. |
 | Database Diagrams | Fixed an issue that could cause SSMS to crash or hang when using Database Diagrams where "Add Table" dialog was not properly displayed. |
+| Database Mirroring | Fixed an issue that was causing mirror configuration to fail. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
+| General SSMS | Fixed an issue where trying to connect to an Azure SQL DB, which could take several seconds (SQL login in a user database). |
+| General SSMS | Fixed an issue where SSMS was not handling/displaying deadlock captured (.xdl files). |
+| General SSMS | Fixed an issue where trying to open error log settings for SQL Server 2008 R2 and below failed with ErrorLogSizeKb property not found. |
 | Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
-| Import/Export Data-Tier Application | Fixed the default service tier to be Standard S0 when importing a bacpac (same as Azure Portal and SqlPackage.exe behavior). |
+| Import/Export Data-Tier Application | Fixed the default service tier to be Standard S0 when importing a bacpac (same as Azure portal and SqlPackage.exe behavior). |
+| Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
+| Integration Services | Fixed an issue that Azure Subscription ComboBox items are duplicate in IR Creation Wizard and Job Migration Wizard when different subscriptions have the same name. |
+| Integration Services | Fixed an issue that sometimes Connect button cannot be enabled in IR Creation Wizard. |
+| Integration Services | Fixed an issue that items of "Use Environment variable" ComboBox in "Set Parameter Value" dialog are not in order. |
+| Intellisense | Fixed a crash in SSMS that could happen when executing a query. |
+| Intellisense | Fixed an issue where intellisense doesn't work when the user is connected to an Availability Group configured for Read-Only Routing. |
 | Linked Servers | Fixed an issue where a user with CONTROL SERVER permission (but not in sysadmin role) was not able to add a linked server. |
 | Log Viewer | Fixed an issue where a user with VIEW SERVER STATE permissions was not able to view the SQL Server Error Logs. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/32899204). |
 | Registered Servers | Fixed an issue where SSMS crashed when trying to register a Central Management Server. |
 | Registered Servers | Fixed the issue where menu items to launch Azure Data Studio from Registered Servers was missing. |
-| Reports | Fixed an issue where on the Performance Dashboard where trying to navigate to sublinks (e.g. "Expensive Queries") was not working. This issue was common on most non-English versions of SSMS. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/41454499). |
+| Reports | Fixed an issue where on the Performance Dashboard you try to navigate to sublinks (e.g. "Expensive Queries") and it doesn't work. This issue was common on most non-English versions of SSMS. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/41454499). |
 | ShowPlan | Fixed and issue that was causing SSMS to crash when using Find Node to search for text. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40421650). |
 | ShowPlan | Add KB suffix on the Memory Grant tooltip row |
 | Vulnerability Assessment | Fixed an issue that was causing SSMS to throw an error when trying to set baselines in Vulnerability Assessment. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40578565). |
 | XEvent UI | Fixed the issue where hitting F1 was not landing on the correct page on DOCS. |
-| XEvent UI | Fixed log in XEvent Viewer where the tooltip was not  displaying correctly text containing text encoded using surrogate pairs. [@MatteoT - checking with v-asgusa on exact wording and/or UV. Changeset#1454896] |
+| XEvent UI | Fixed log in XEvent Viewer where the tooltip was not  displaying correctly text containing text encoded using surrogate pairs. |
 
 #### Known issues (18.7)
 
 | New Item | Details | Workaround |
 |----------|---------|------------|
 | Analysis Services | Error when connecting to SSAS via msmdpump.dll. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). | N/A |
-| Analysis Services | In rare cases when using upgrade setup there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | To solve this issue, uninstall and then reinstall SSMS. |
+| Analysis Services | In rare cases when using upgrade setup, there may be an "Object not set to instance of an object" error when attempting to open the DAX editor after upgrading SSMS. | To solve this issue, uninstall and then reinstall SSMS. |
 | General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A |
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
-| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/A|
-| Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. Workaround: Identify the Integration services related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect | N/A|
+| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/A |
+| Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. Workaround: Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect | N/A |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 

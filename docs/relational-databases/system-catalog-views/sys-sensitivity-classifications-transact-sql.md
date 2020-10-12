@@ -81,4 +81,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Getting started with SQL Information Protection](https://aka.ms/sqlip)
+[Getting started with SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)

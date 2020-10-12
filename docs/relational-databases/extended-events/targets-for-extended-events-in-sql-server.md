@@ -150,7 +150,7 @@ The **event_file** target writes event session output from buffer to a disk file
 > [!NOTE]
 > Azure SQL Database only supports storing `xel` files on Azure blob storage. 
 >
-> For an **event_file** code example particular to SQL Database (and to SQL Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> For an **event_file** code example particular to SQL Database (and to SQL Managed Instance), see [Event File target code for extended events in SQL Database](/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 
@@ -786,9 +786,6 @@ If encountered, error **25726** means the event stream filled up with data faste
 ### XEvent namespaces
 
 
-- [Microsoft.SqlServer.Management.XEvent Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
+- [Microsoft.SqlServer.Management.XEvent Namespace](/dotnet/api/microsoft.sqlserver.management.xevent)
 
-- [Microsoft.SqlServer.XEvent.Linq Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
-
-
+- [Microsoft.SqlServer.XEvent.Linq Namespace](/dotnet/api/microsoft.sqlserver.xevent.linq)

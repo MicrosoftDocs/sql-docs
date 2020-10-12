@@ -1,6 +1,6 @@
 ---
-description: "sp_special_columns_100 (SQL Data Warehouse)"
-title: "sp_special_columns_100 (SQL Data Warehouse) | Microsoft Docs"
+description: "sp_special_columns_100 (Azure Synapse Analytics)"
+title: "sp_special_columns_100 (Azure Synapse Analytics)"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
@@ -15,7 +15,7 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sp_special_columns_100 (SQL Data Warehouse)
+# sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Returns the optimal set of columns that uniquely identify a row in the table. Also returns columns automatically updated when any value in the row is updated by a transaction.  
@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ## Syntax  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -71,7 +71,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Actual scope of the row ID. Can be 0, 1, or 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always returns 0. This field always returns a value.<br /><br /> 0 = SQL_SCOPE_CURROW. The row ID is guaranteed to be valid only while positioned on that row. A later reselect using the row ID may not return a row if the row was updated or deleted by another transaction.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. The row ID is guaranteed to be valid for the duration of the current transaction.<br /><br /> 2 = SQL_SCOPE_SESSION. The row ID is guaranteed to be valid for the duration of the session (across transaction boundaries).|  
-|COLUMN_NAME|**sysname**|Column name for each column of the *table*returned. This field always returns a value.|  
+|COLUMN_NAME|**sysname**|Column name for each column of the *table* returned. This field always returns a value.|  
 |DATA_TYPE|**smallint**|ODBC SQL data type.|  
 |TYPE_NAME|**sysname**|Data source-dependent data type name; for example, **char**, **varchar**, **money**, or **text**.|  
 |PRECISION|**Int**|Precision of the column on the data source. This field always returns a value.|  

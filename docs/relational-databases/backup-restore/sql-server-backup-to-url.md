@@ -77,8 +77,6 @@ Backup of a large database to blob storage is subject to the limitations listed 
 
 ##  <a name="limitations"></a> Limitations  
   
--   Backup to premium storage is not supported.  
-  
 -   SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
   
     > [!IMPORTANT]  
@@ -103,6 +101,8 @@ Backup of a large database to blob storage is subject to the limitations listed 
 - If your server accesses Azure via a proxy server, you must use trace flag 1819 and then set the WinHTTP proxy configuration via one of the following methods:
    - The [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) utility on Windows XP or Windows Server 2003 and earlier. 
    - The [netsh.exe](/windows/win32/winsock/netsh-exe) utility on Windows Vista and Windows Server 2008 or later. 
+
+- [Immutable storage for Azure Blob storage](/azure/storage/blobs/storage-blob-immutable-storage) is not supported. Set the **Immutable Storage** policy to false. 
   
 ## Supported arguments & statements
 

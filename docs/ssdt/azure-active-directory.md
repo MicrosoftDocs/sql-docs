@@ -16,7 +16,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) provides several [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) authentication methods.
+SQL Server Data Tools (SSDT) provides several [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis) authentication methods.
 
 In Visual Studio, open the **SQL Server Object Explorer** (in the **View** menu), and select **Add SQL Server**:
 
@@ -36,18 +36,18 @@ This article discusses Azure AD for the following list of *Azure SQL products* i
 - You are logged in to Windows with credentials from a domain that is not federated with Azure, or
 - You are using Azure AD authentication with Azure AD, and it is based on the initial or client domain.
 
-For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication).  
 
 ## Active Directory Integrated Authentication
 
-*Active Directory Integrated Authentication* is a mechanism of connecting to the listed Azure SQL products by using identities in Azure Active Directory (Azure AD). Use this method for connecting if you are logged in to Windows using your Azure Active Directory credentials from a federated domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+*Active Directory Integrated Authentication* is a mechanism of connecting to the listed Azure SQL products by using identities in Azure Active Directory (Azure AD). Use this method for connecting if you are logged in to Windows using your Azure Active Directory credentials from a federated domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/sql-database/sql-database-aad-authentication).
 
 ## Active Directory Interactive Authentication
 
-*Active Directory Interactive Authentication* is available when connecting to the listed Azure SQL products with SSDT, but only with [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) or a later version.
+*Active Directory Interactive Authentication* is available when connecting to the listed Azure SQL products with SSDT, but only with [.NET Framework 4.7.2](/dotnet/api/?view=netframework-4.7.2) or a later version.
 
 - [Download and install for .NET Framework, any version](https://www.microsoft.com/net/download/all).
-- [Visual Studio 2017 version 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), or a later version.
+- [Visual Studio 2017 version 15.6](/visualstudio/releasenotes/vs2017-relnotes), or a later version.
 
 #### Multi-Factor Authentication (MFA)
 
@@ -81,9 +81,9 @@ The MFA enforcement is provided by Azure AD through this additional MFA pop-up w
 
 ## See Also  
 
-[Multi-factor authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
-[Azure Active Directory authentication with SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
+[Multi-factor authentication](/azure/sql-database/sql-database-ssms-mfa-authentication)  
+[Azure Active Directory authentication with SQL Database](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT Team Blog](https://docs.microsoft.com/archive/blogs/ssdt/)  
-[DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)  
-[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  
+[SSDT Team Blog](/archive/blogs/ssdt/)  
+[DACFx API Reference](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
+[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: bcp Utility
 description: The bulk copy program (bcp) utility bulk copies data between an instance of SQL Server and a data file in a user-specified format.
 ms.prod: sql
@@ -177,7 +177,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Specifies the database to connect to. By default, bcp.exe connects to the user's default database. If -d database_name and a three part name (database_name.schema.table, passed as the first parameter to bcp.exe) are specified, an error will occur because you cannot specify the database name twice. If *database_name* begins with a hyphen (-) or a forward slash (/), do not add a space between **-d** and the database name.  
 
 **-D**<a name="D"></a>  
-Causes the value passed to the `bcp` `-S` option to be interpreted as a data source name (DSN). For more information, see _DSN Support in sqlcmd and bcp_ in [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+Causes the value passed to the `bcp` `-S` option to be interpreted as a data source name (DSN). A DSN may be used to embed driver options to simplify command lines, enforce driver options that are not otherwise accessible from the command line such as MultiSubnetFailover, or to help protect sensitive credentials from being discoverable as command line arguments. For more information, see _DSN Support in sqlcmd and bcp_ in [Connecting with sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+
 
  **-e** _**err\_file**_<a name="e"></a>  
  Specifies the full path of an error file used to store any rows that the **bcp** utility cannot transfer from the file to the database. Error messages from the **bcp** command go to the workstation of the user. If this option is not used, an error file is not created.  

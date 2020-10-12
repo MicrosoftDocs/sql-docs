@@ -52,10 +52,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### Valid Instances  
-For a **LineString** instance to be valid it must meet the following criteria.  
+For a LineString instance to be valid, it must meet the following criteria.  
   
 1.  The **LineString** instance must be accepted.  
-2.  If a **LineString** instance is not empty then it must contain at least two distinct points.  
+2.  If a LineString instance is not empty, then it must contain at least two distinct points.  
 3.  The **LineString** instance cannot overlap itself over an interval of two or more consecutive points.  
   
 The following **LineString** instances are valid.  

@@ -1,6 +1,6 @@
 ---
 title: Azure Active Directory in SSDT
-description: "Learn about the Azure Active Directory authentication methods that SQL Server Data Tools (SSDT) provides for Azure SQL Database and Azure SQL Data Warehouse."
+description: "Learn about the Azure Active Directory authentication methods that SQL Server Data Tools (SSDT) provides for Azure SQL Database and Azure Synapse Analytics."
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -27,7 +27,7 @@ In Visual Studio, open the **SQL Server Object Explorer** (in the **View** menu)
 This article discusses Azure AD for the following list of *Azure SQL products* in the [Azure cloud](https://azure.microsoft.com/):
 
 - Azure SQL Database
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ## Active Directory Password Authentication
 

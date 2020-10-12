@@ -879,7 +879,7 @@ The *December Public Preview* includes several bugs fixes across all feature are
 
 | Change | Details |
 | :----- | :------ |
-| Create Firewall Rule Dialog is now available to assist connecting to Azure SQL Database and Azure SQL Data Warehouse. | &nbsp; |
+| Create Firewall Rule Dialog is now available to assist connecting to Azure SQL Database and Azure Synapse Analytics. | &nbsp; |
 | Added Windows Setup, and Linux DEB and RPM installation packages. | &nbsp; |
 | Manage Dashboard visual layout editor. | &nbsp; |
 | *Script As Alter* and *Script As Execute* commands. | &nbsp; |

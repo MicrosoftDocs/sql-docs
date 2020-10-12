@@ -76,7 +76,7 @@ The following Transact-SQL commands are used in this section:
 
 ## SQL Server connector compatible types
 
-You can make a connection to other data sources that recognizes a SQL Server connection. Use the SQL Server PolyBase connector to create an external table of both Azure SQL Data Warehouse and Azure SQL Database. To accomplish this task, follow the same steps listed previously. Make sure the database scoped credential, server address, port, and location string correlate to that of the compatible data source you want to connect to.
+You can make a connection to other data sources that recognizes a SQL Server connection. Use the SQL Server PolyBase connector to create an external table of both Azure Synapse Analytics and Azure SQL Database. To accomplish this task, follow the same steps listed previously. Make sure the database scoped credential, server address, port, and location string correlate to that of the compatible data source you want to connect to.
 
 ## Next steps
 

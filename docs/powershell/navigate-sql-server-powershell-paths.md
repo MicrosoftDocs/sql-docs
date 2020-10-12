@@ -136,4 +136,4 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 
 - [SQL Server PowerShell Provider](sql-server-powershell-provider.md)
 - [Work With SQL Server PowerShell Paths](work-with-sql-server-powershell-paths.md)
- -[SQL Server PowerShell](sql-server-powershell.md)
+- [SQL Server PowerShell](sql-server-powershell.md)

@@ -70,7 +70,7 @@ SELECT TOP ( number )
   
  It is recommended that the new spatial index tessellations be used for indexes used in Nearest Neighbor queries. For more information on spatial index tessellations, see [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-## Example  
+## Example 1  
  The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2016` database.  
   
 ```sql  
@@ -84,7 +84,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Create a spatial index on the column SpatialLocation to see how a Nearest Neighbor query uses a spatial index. For more information on creating spatial indexes, see [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## Example  
+## Example 2  
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  
   
 ```sql  

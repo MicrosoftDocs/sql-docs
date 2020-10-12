@@ -27,7 +27,7 @@ If a **CompoundCurve** contains a sequence of multiple **CircularString** and **
 ## CompoundCurve instances  
 The following illustration shows valid **CompoundCurve** types.  
   
-![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
+![CompoundCurve examples](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
 ### Accepted instances  
  **CompoundCurve** instance is accepted if it is an empty instance or meets the following criteria.  

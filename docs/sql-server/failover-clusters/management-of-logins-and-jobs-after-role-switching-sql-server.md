@@ -31,7 +31,7 @@ ms.author: mikeray
 > [!NOTE]  
 >  This problem affects Windows local accounts on different computers. However, this problem does not occur for domain accounts because the SID is the same on each of the computers.  
   
- For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (a Database Engine blog).  
+ For more information, see [Orphaned Users with Database Mirroring and Log Shipping](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (a Database Engine blog).  
   
 ## Jobs  
  Jobs, such as backup jobs, require special consideration. Typically, after a role switch, the database owner or system administrator must re-create the jobs for the new primary/principal database.  
@@ -44,5 +44,4 @@ ms.author: mikeray
 ## See Also  
  [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
-  
   

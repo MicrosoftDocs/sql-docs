@@ -26,7 +26,7 @@ ms.custom: seo-dt-2019
 ## Syntax  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
 ```

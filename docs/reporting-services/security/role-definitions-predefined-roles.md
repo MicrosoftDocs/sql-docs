@@ -56,11 +56,11 @@ ms.author: maggies
 |----------|-----------------|  
 |Consume reports|Reads report definitions.|  
 |Create linked reports|Create linked reports that are based on a non-linked report.|  
-|Manage all subscriptions|View, modify, and delete any subscription for reports and linked reports, regardless of who owns the subscription. This task supports the creation of data-driven subscriptions. It also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Manage all subscriptions|View, modify, and delete any subscription for reports and linked reports, regardless of who owns the subscription. This task supports the creation of data-driven subscriptions. It also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
 |Manage data sources|Create and delete shared data source items, view, and modify data source properties and content.|  
 |Manage folders|Create, view, and delete folders, and view and modify folder properties.|  
 |Manage models|Create, view, and delete models, and view and modify model properties.|  
-|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports. This task also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports. This task also supports the editing and execution of [scheduled refresh for Power BI (.pbix) files in Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
 |Manage report history|Create, view, and delete report history, view report history properties, and view, and modify settings that determine snapshot history limits and how caching works.|  
 |Manage reports|Add and delete reports, modify report parameters, view and modify report properties, view and modify data sources that provide content to the report, view and modify report definitions, and set security policies at the report level.|  
 |Manage resources|Create, modify, and delete resources, and view and modify resource properties.|  
@@ -212,4 +212,3 @@ The following table lists tasks that are included in the **System User** role de
 [Modify or Delete a Role Assignment &#40;SSRS web portal&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)
-  

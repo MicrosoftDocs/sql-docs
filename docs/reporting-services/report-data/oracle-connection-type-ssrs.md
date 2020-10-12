@@ -54,7 +54,8 @@ C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config 
 
 ## 32-bit drivers for Report Builder
 
-Report Builder uses **Managed ODP.NET** for authoring paginated (RDL) reports. The following steps are only needed when using Oracle ODAC drivers 12.2 and later as they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to the c:\oracle32 folder where Report Builder is installed. Follow these steps to register Managed ODP.NET:
+Report Builder uses **Managed ODP.NET** for authoring paginated (RDL) reports. You only need the following steps when using Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to the c:\oracle32 folder where Report Builder is installed. Follow these steps to register Managed ODP.NET:
+
 
 1. On the Oracle download site, install the [Oracle 32-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
 2. Register ODP.NET Managed Client to GAC:

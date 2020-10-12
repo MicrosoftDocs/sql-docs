@@ -26,7 +26,7 @@ ms.custom: seo-dt-2019
 ```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
-sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
+sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'  
 ```  
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]

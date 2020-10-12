@@ -13,7 +13,7 @@ ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CompoundCurve
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A **CompoundCurve** is a collection of zero or more continuous **CircularString** or **LineString** instances of either geometry or geography types.  
   
 An empty **CompoundCurve** instance can be instantiated, but for a **CompoundCurve** to be valid it must meet the following criteria:  

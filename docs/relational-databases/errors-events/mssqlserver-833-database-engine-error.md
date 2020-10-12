@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_833
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sql-asdbmi.md)]
   
 ## Details  
   
@@ -28,10 +28,10 @@ ms.author: mathoma
 |Message Text|SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database `[%ls] (%d)`.  The OS file handle is 0x%p.  The offset of the latest long I/O is: %#016I64x.|  
   
 ## Explanation  
-This message indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has issued a read or write request from disk, and that the request has taken longer than 15 seconds to return. This error is reported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and indicates a problem with the I/O subsystem. You might also notice other symptoms associated with this message: high wait times for PAGEIOLATCH waits, warnings or errors in the system event log, indications of disk latency issues in system monitor counters. 
+This message indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has issued a read or write request from disk, and that the request has taken longer than 15 seconds to return. This error is reported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and indicates a problem with the I/O subsystem. You might also notice other symptoms associated with this message: high wait times for PAGEIOLATCH waits, warnings, or errors in the system event log, indications of disk latency issues in system monitor counters. Monitor [sys.dm_io_virtual_file_stats](../system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) and choose appropriate storage tier and IOPS for your storage throughput. 
   
 ### Possible Causes  
-This problem can be caused by operating system performance issues, hardware errors, firmware errors, device driver problems, or filter driver intervention in the I/O process or storage path of database files. SQL Server records the time that it initiated an I/O request and records the time that the I/O was completed. If that difference is 15 seconds or longer, this condition is detected. This also means that SQL Server is not the cause of a delayed I/O condition that this message describes and reports. This condition is generally known as "stalled I/O." Most disk requests occur within the typical speed of the disk. This typical disk speed is frequently known as "disk seek time." Disk seek time for most standard disks occurs in 10 milliseconds or less. Therefore, 15 seconds is a very long time for the system I/O path to return to SQL Server. 
+This problem can be caused by operating system performance issues, hardware errors, firmware errors, device driver problems, or filter driver intervention in the I/O process or storage path of database files. SQL Server records the time that it initiated an I/O request and records the time that the I/O was completed. If that difference is 15 seconds or longer, this condition is detected. This also means that SQL Server is not the cause of a delayed I/O condition that this message describes and reports. This condition is known as "stalled I/O." Most disk requests occur within the typical speed of the disk. This typical disk speed is frequently known as "disk seek time." Disk seek time for most standard disks occurs in 10 milliseconds or less. Therefore, 15 seconds is a very long time for the system I/O path to return to SQL Server. 
   
 ## User Action  
 Troubleshoot this error by examining the system event log for hardware-related error messages. Also, examine hardware-specific logs if they are available. You should use the necessary methods and techniques to determine the cause of the delay in the operating system, with the drivers, or with the I/O hardware. Resolution of this problem could involve updating all device drivers and firmware or performing other diagnostics that are associated with your disk system. 

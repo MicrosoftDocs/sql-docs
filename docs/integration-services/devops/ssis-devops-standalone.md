@@ -31,7 +31,7 @@ Double-click the .exe file to install, then specify a folder to extract the exec
 
 - Install via command line
 
-```bash
+```
 SSISDevOpsTools-0.1.0-Preview.exe /Q /C /T:<full path>
 ```
 
@@ -55,32 +55,32 @@ SSISBuild.exe -project|-p:<dtproj file path> [-configuration|-c:<configuration n
 |-projectPassword\|-pp:\<project password>|Password of the SSIS project and its packages. This argument is only valid when the protection level of the SSIS project and packages is EncryptSensitiveWithPassword or EncryptAllWithPassword. For package deployment model, all packages must share the same password specified by this argument.|
 |-stripSensitive\|-ss|Convert the protection level of the SSIS project to DontSaveSensitve. When protection level is EncryptSensitiveWithPassword or EncryptAllWithPassword, the argument -projectPassword must be correctly set. This option is only valid for project deployment model.|
 |-output\|-o:\<output path>|Output path of the build artifact. The value of this argument will overwrite the default output path in the project configuration.|
-|-log\|-l:\<log level>[;\<log path>]|Log related settings for running this utility. <li>log level: Only logs with equal or higher logging level will be written to the log file. There are four logging levels (from low to high): DIAG, INFO, WRN, ERR. The default logging level is INFO if it's not specified. <li> log path: Path of the file to persist logs. Log file will not be generated if the path is not specified.|
+|-log\|-l:\<log level>[;\<log path>]|Log related settings. <li>log level: Only logs with equal or higher logging level will be written to the log file. There are four logging levels (from low to high): DIAG, INFO, WRN, ERR. The default logging level is INFO if it's not specified. <li> log path: Path of the file to persist logs. Log file will not be generated if the path is not specified.|
 |-quiet\|-q|Do not display any logs to the standard output.|
 |-help\|-h\|-?|Show detailed usage information of this command-line utility.|
 
 **Examples**
 
-1. Build a dtproj with the first defined project configuration, without encrypted password:    
-    ```bash
-    SSISBuild.exe -p:"C:\projects\test\test.dtproj"
+1. Build a dtproj with the first defined project configuration, not encrypted with password:    
+    ```
+    SSISBuild.exe -p:"C:\projects\demo\demo.dtproj"
     ```
 
-1. Build a dtproj with configuration "DevConfiguration" that is encrypted with password, and output the build artifacts to a specific folder:
-    ```bash
-    SSISBuild.exe -p:C:\projects\test\test.dtproj -c:DevConfiguration -pp:encryptionpassword -o:D:\folder
+1. Build a dtproj with configuration "DevConfiguration", encrypted with password, and output the build artifacts to a specific folder:
+    ```
+    SSISBuild.exe -p:C:\projects\demo\demo.dtproj -c:DevConfiguration -pp:encryptionpassword -o:D:\folder
     ```
 
-1. Build a dtproj with configuration "DevConfiguration" that is encrypted with password, and stripe its sensitive data, with log level DIAG:
-    ```bash
-    SSISBuild.exe -p:C:\projects\test\test.dtproj -c:DevConfiguration -pp:encryptionpassword -ss -l:diag
+1. Build a dtproj with configuration "DevConfiguration", encrypted with password, striping its sensitive data, and log level DIAG:
+    ```
+    SSISBuild.exe -p:C:\projects\demo\demo.dtproj -c:DevConfiguration -pp:encryptionpassword -ss -l:diag
     ```
 
 ## SSISDeploy.exe
 
 **Syntax**
 
-```bash
+```
 SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [-authType|-at:<auth type name>] [-connectionStringSuffix|-css:<connection string suffix>] [-projectPassword|-pp:<project password>] [-username|-u:<username>] [-password|-p:<password>] [-log|-l:<log level>[;<log path>]] [-quiet|-q] [-help|-h|-?]
 ```
 
@@ -89,7 +89,7 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 |Parameter|Description|
 |---------|---------|
 |-source\|-s:\<source path>|Local file path of artifacts to be deployed. Path of folder, ISPAC, DTSX, SSISDeploymentManfiest are allowed.|
-|-destination\|-d:\<type>;<path>[;server]|Destination type, path of the destination folder, and server name of the SSIS catalog where the source file will be deployed to. Currently we support following two destination types: <li> *CATALOG*: deploy single or multiple ISPAC files to the specified SSIS catalog. The path of CATALOG destination should be in such format: <br> /SSISDB/\<folder name>[/\<project name>] <br> The optional <project name> is only valid when the source specifies a single ISPAC file path. Server name must be specified for CATALOG destination. <li> *FILE*: deploy SSIS packages or files specified in a single or multiple SSISDeploymentManifest files to the specified path of the file system. The path of FILE destination can be a local folder path or a network folder path in such format: <br>\\\\\<machine name>\\\<folder name>[\\\<sub folder name>\...]|
+|-destination\|-d:\<type>;\<path>[;server]|Destination type, path of the destination folder, and server name of the SSIS catalog where the source file will be deployed to. Currently we support following two destination types: <li> *CATALOG*: deploy single or multiple ISPAC files to the specified SSIS catalog. The path of CATALOG destination should be in such format: <br> /SSISDB/\<folder name>[/\<project name>] <br> The optional <project name> is only valid when the source specifies a single ISPAC file path. Server name must be specified for CATALOG destination. <li> *FILE*: deploy SSIS packages or files specified in a single or multiple SSISDeploymentManifest files to the specified path of the file system. The path of FILE destination can be a local folder path or a network folder path in such format: <br>\\\\\<machine name>\\\<folder name>[\\\<sub folder name>\...]|
 |-authType\|-at:\<auth type name>|Authentication type to access SQL Server. Mandatory for CATALOG destination. Following types are supported: <li> WIN:  Windows Authentication <li> SQL:  SQL Server Authentication <li> ADPWD:  Active Directory - Password <li> ADINT:  Active Directory - Integrated|
 |-connectionStringSuffix\|-css:\<connection string suffix> |Suffix of the connection string, which is used to connect to the SSIS catalog.|
 |-projectPassword\|-pp:\<project password> |Password to decrypt the ISPAC or DTSX files.|
@@ -101,29 +101,29 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 
 **Examples**
 
-1. Deploy a single ISPAC without encrypted password to SSIS catalog with Windows authentication.
-    ```bash
-    SSISDeploy.exe -s:D:\myfolder\test.ispac -d:catalog;/SSISDB/folder;myssisserver -at:win
+1. Deploy a single ISPAC not encrypted with password to SSIS catalog with Windows authentication.
+    ```
+    SSISDeploy.exe -s:D:\myfolder\demo.ispac -d:catalog;/SSISDB/destfolder;myssisserver -at:win
     ```
 
 1. Deploy a single ISPAC encrypted with password to SSIS catalog with SQL authentication, and rename the project name.
-    ```bash
+    ```
     SSISDeploy.exe -s:D:\myfolder\test.ispac -d:catalog;/SSISDB/folder/testproj;myssisserver -at:sql -u:sqlusername -p:sqlpassword -pp:encryptionpassword
     ```
 
 1. Deploy ISPAC files from a folder that are encrypted with a same password to SSIS catalog with Windows authentication, and append TrustServerCertificate=True to the connection string.
-    ```bash
+    ```
     SSISDeploy.exe -s:D:\myfolder -d:catalog;/SSISDB/folder;myssisserver -at:win -css:TrustServerCertificate=True -pp:encryptionpassword
     ```
 
 1. Deploy a single SSISDeploymentManifest and its associated files to Azure file share.
-    ```bash
-    SSISDeploy.exe -s:D:\myfolder\mypackage.SSISDeploymentManifest -d:file;\\myssisshare.file.core.windows.net\folder -u:Azure\myssisshare -p:storagekey
+    ```
+    SSISDeploy.exe -s:D:\myfolder\mypackage.SSISDeploymentManifest -d:file;\\myssisshare.file.core.windows.net\destfolder -u:Azure\myssisshare -p:storagekey
     ```
 
 1. Deploy a folder of DTSX files to on-premises file system.
-    ```bash
-    SSISDeploy.exe -s:D:\myfolder -d:file;\\myssisshare\test
+    ```
+    SSISDeploy.exe -s:D:\myfolder -d:file;\\myssisshare\destfolder
     ```
 
 ## Release notes

@@ -31,6 +31,8 @@ https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azu
 
 ## Plan for attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
 
+[!INCLUDE [asdb](../../../includes/applies-to-version/asdb.md)]
+
 [Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) (preview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel SGX enclaves in Azure SQL databases using the DC-series hardware configuration.
 
 To use Azure Attestation for attesting Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], you need to:
@@ -41,4 +43,4 @@ To use Azure Attestation for attesting Intel SGX enclaves in [!INCLUDE[ssSDSfull
 
 ## Next steps
 
-- [Configure enclave-enabled hardware generation](./always-encrypted-enclaves-sqldbmi-enable-sgx.md)
+- [Enable Intel SGX for your Azure SQL database](./always-encrypted-enclaves-sqldbmi-enable-sgx.md)

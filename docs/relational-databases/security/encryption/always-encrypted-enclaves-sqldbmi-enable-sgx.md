@@ -1,5 +1,5 @@
 ---
-title: "Enable Intel SGX for your database"
+title: "Enable Intel SGX for your Azure SQL database"
 ms.custom: ""
 ms.date: 11/18/2020
 ms.prod: sql
@@ -11,7 +11,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Enable Intel SGX for your database 
+# Enable Intel SGX for your Azure SQL database 
 
 [!INCLUDE [asdb](../../../includes/applies-to-version/asdb.md)]
 

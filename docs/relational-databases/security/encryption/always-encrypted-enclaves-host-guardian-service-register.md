@@ -284,3 +284,7 @@ The table below explains the most common values and how to remediate the errors.
 | Iommu | This computer does not have an IOMMU device enabled. If it's a physical computer, enable the IOMMU in the UEFI configuration menu. If it's a virtual machine and an IOMMU is not available, run `Disable-HgsAttestationPolicy Hgs_IommuEnabled` on the HGS server. |
 | SecureBoot | Secure Boot is not enabled on this computer. Enable Secure Boot in the UEFI configuration menu to resolve this error. |
 | VirtualSecureMode | Virtualization-based security is not running on this computer. Follow the guidance in [Step 2: Verify VBS is running on the computer](#step-2-verify-virtualization-based-security-is-running). |
+
+## Next steps
+
+- [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md)

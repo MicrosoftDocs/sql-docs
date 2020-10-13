@@ -13,6 +13,8 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Configure Azure Attestation for your Azure SQL database server
 
+[!INCLUDE [asdb](../../../includes/applies-to-version/asdb.md)]
+
 [Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) (preview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel SGX enclaves. 
 
 To use Azure Attestation for attesting Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], you need to:

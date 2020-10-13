@@ -1,7 +1,7 @@
 ---
 title: "Configure the secure enclave in SQL Server"
 ms.custom: ""
-ms.date: 12/11/2020
+ms.date: 11/11/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -12,9 +12,10 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
+# Configure the secure enclave in SQL Server
+
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-# Configure the secure enclave in SQL Server
 
 Before you can use [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) in SQL Server, you need to configure your instance to initialize the secure enclave during startup. By default, SQL Server does not initialize the secure enclave. You can change that, by setting the  **column encryption enclave type** Server Configuration Option to the value that represents a valid enclave type for your environment.
 
@@ -29,4 +30,4 @@ For detailed instructions on how to configure the enclave type, see [Configure t
  [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
 
 ## See Also  
- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+ [Server Configuration Options (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)

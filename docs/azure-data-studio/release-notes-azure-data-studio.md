@@ -8,12 +8,25 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
+ms.date: 10/14/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## October 2020
+
+October 14, 2020 &nbsp; / &nbsp; version: 1.23.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/1.23.0). |
+| Extension updates | Azure Arc</br>azdata</br>Machine Learning</br>Kusto (KQL)</br>Schema Compare</br>SQL Assessment</br>SQL Database Projects</br>SQL Server Import. |
+| New deployment features | Added Azure SQL DB and VM deployments. |
+| PowerShell | Added PowerShell kernel results streaming support. |
 
 ## September 2020 (hotfix)
 
@@ -23,7 +36,7 @@ September 30, 2020 &nbsp; / &nbsp; version: 1.22.1
 
 | Change | Details |
 | ------ | ------- |
-| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1). |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1). |
 
 ## September 2020
 
@@ -63,8 +76,8 @@ July 17, 2020 &nbsp; / &nbsp; version: 1.20.1
 
 | Change | Details |
 | :----- | :------ |
-| Fix bug #11372 Object Explorer drag-and-drop table incorrectly wraps table names | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| Fix bug #11356 Dark theme is now the default theme | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| Fix bug #11372 Object Explorer drag-and-drop table incorrectly wraps table names | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| Fix bug #11356 Dark theme is now the default theme | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### Known Issue
@@ -85,7 +98,6 @@ July 15, 2020 &nbsp; / &nbsp; version: 1.20.0
 | Added Azure Account icon to Activity Bar | Users can now easily see where to sign in to Azure |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
-
 
 ## June 2020
 

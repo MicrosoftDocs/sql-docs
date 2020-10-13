@@ -45,4 +45,4 @@ This topic describes how to organize the servers in Registered Servers in [!INCL
 
 ## See Also
 
-[Register Servers](../../tools/sql-server-management-studio/register-servers.md)
+[Register Servers](./register-servers.md)

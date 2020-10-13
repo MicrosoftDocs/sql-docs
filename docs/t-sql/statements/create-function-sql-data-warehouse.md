@@ -152,7 +152,7 @@ RETURNS TABLE
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
-## Best Practices  
+## Best practices  
  If a user-defined function is not created with the SCHEMABINDING clause, changes that are made to underlying objects can affect the definition of the function and produce unexpected results when it is invoked. We recommend that you implement one of the following methods to ensure that the function does not become outdated because of changes to its underlying objects:  
   
 -   Specify the WITH SCHEMABINDING clause when you are creating the function. This ensures that the objects referenced in the function definition cannot be modified unless the function is also modified.  
@@ -168,7 +168,7 @@ RETURNS TABLE
 
 In an inline table-valued function (preview), only a single select statement is allowed.
   
-## Limitations and Restrictions  
+## Limitations and restrictions  
  User-defined functions cannot be used to perform actions that modify the database state.  
   
  User-defined functions can be nested; that is, one user-defined function can call another. The nesting level is incremented when the called function starts execution, and decremented when the called function finishes execution. User-defined functions can be nested up to 32 levels. Exceeding the maximum levels of nesting causes the whole calling function chain to fail.   
@@ -253,7 +253,7 @@ CROSS APPLY dbo.ModulesByType(o.type);
 GO
 ```
   
-## See Also  
+## See also  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   

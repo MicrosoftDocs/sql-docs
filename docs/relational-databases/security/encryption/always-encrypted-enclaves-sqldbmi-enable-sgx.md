@@ -1,7 +1,8 @@
 ---
 title: "Enable Intel SGX for your Azure SQL database"
+description: "Learn how to enable Intel SGX for Always Encrypted with secure enclaves in Azure SQL database by selecting an SGX-enabled hardware generation."
 ms.custom: ""
-ms.date: 11/18/2020
+ms.date: 12/101/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"

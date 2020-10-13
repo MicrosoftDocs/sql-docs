@@ -1,5 +1,6 @@
 ---
 title: "Configure the secure enclave in SQL Server"
+description: "Configure the secure enclave for Always Encrypted with secure enclaves in SQL Server."
 ms.custom: ""
 ms.date: 11/11/2020
 ms.prod: sql
@@ -30,4 +31,5 @@ For detailed instructions on how to configure the enclave type, see [Configure t
  [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
 
 ## See Also  
+ 
  [Server Configuration Options (SQL Server)](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)

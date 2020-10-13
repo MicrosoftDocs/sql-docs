@@ -1,7 +1,8 @@
 ---
 title: "Configure Azure Attestation for your Azure SQL database server"
+description: "Configure Azure Attestation for Always Encrypted with secure enclaves in Azure SQL Database."
 ms.custom: ""
-ms.date: 11/18/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"

@@ -1,5 +1,6 @@
 ---
-title: "Plan for SGX enclaves and attestation in Azure SQL Database"
+title: "Plan for Intel SGX enclaves and attestation in Azure SQL Database"
+description: "Plan the deployment of Always Encrypted with secure enclaves in Azure SQL Database."
 ms.custom: ""
 ms.date: 11/18/2020
 ms.prod: sql

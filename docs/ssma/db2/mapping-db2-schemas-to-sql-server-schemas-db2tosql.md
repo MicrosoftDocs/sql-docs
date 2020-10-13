@@ -54,9 +54,8 @@ If you customize the mapping between an DB2 schema and a [!INCLUDE[ssNoVersion](
 1.  Under the schema mapping tab, select any row and click **Reset to Default** to revert to the default database and schema.  
   
 ## Next Steps  
-If you want to analyze the conversion of DB2 objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you can [Data Migration Report (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241).  
+If you want to analyze the conversion of DB2 objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you can [Data Migration Report (SSMA Common)](../sybase/data-migration-report-sybasetosql.md).  
   
 ## See Also  
 [Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [Migrating DB2 Databases to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
-  

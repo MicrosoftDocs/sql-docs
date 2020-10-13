@@ -18,7 +18,7 @@ For more information, see how to install [SQL Server Machine Learning Services o
 
 ## Changes to isolation mechanism
 
-On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes. This change replaces local worker accounts with [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), an isolation technology for client applications running on Windows. 
+On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes. This change replaces local worker accounts with [AppContainers](/windows/desktop/secauthz/appcontainer-isolation), an isolation technology for client applications running on Windows. 
 
 There are no specific action items for the administrator as a result of the modification. On a new or upgraded server, all external scripts and code executed from [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) follow the new isolation model automatically. 
 
@@ -33,7 +33,7 @@ Although the isolation model has changed, the Installation wizard and command li
 
 In previous releases, **SQLRUserGroup** contained a pool of local Windows user accounts (MSSQLSERVER00-MSSQLSERVER20) used for isolating and running external processes. When an external process was needed, SQL Server Launchpad service would take an available account and use it to run a process. 
 
-In SQL Server 2019, Setup no longer creates local worker accounts. Instead, isolation is achieved through [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). At run time, when embedded script or code is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
+In SQL Server 2019, Setup no longer creates local worker accounts. Instead, isolation is achieved through [AppContainers](/windows/desktop/secauthz/appcontainer-isolation). At run time, when embedded script or code is detected in a stored procedure or query, SQL Server calls Launchpad with a request for an extension-specific launcher. Launchpad invokes the appropriate runtime environment in a process under its identity, and instantiates an AppContainer to contain it. This change is beneficial because local account and password management is no longer required. Also, on installations where local user accounts are prohibited, elimination of the local user account dependency means you can now use this feature.
 
 As implemented by SQL Server, AppContainers are an internal mechanism. While you won't see physical evidence of AppContainers in Process Monitor, you can find them in outbound firewall rules created by Setup to prevent processes from making network calls.
 

@@ -71,7 +71,7 @@ Explore security anomalies and threats in Azure Security Center.
 
    ![Vulnerability report](media/configure-advanced-data-security/vulnerabilities-report.png)
 
-1. Click on any security alert for full details and further explore the attack in [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview). The following diagram is an example of the brute force alert.
+1. Click on any security alert for full details and further explore the attack in [Azure Sentinel](/azure/sentinel/overview). The following diagram is an example of the brute force alert.
 
    ![Brute force alert](media/configure-advanced-data-security/brute-force-alert.png)
 

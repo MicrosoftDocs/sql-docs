@@ -40,7 +40,7 @@ sp_droprolemember [ @rolename = ] 'role' ,
      [ @membername = ] 'security_account'  
 ```  
 
-### Syntax for both Azure SQL Data Warehouse and Parallel Data Warehouse
+### Syntax for both Azure Synapse Analytics and Parallel Data Warehouse
 
 ```syntaxsql  
 sp_droprolemember 'role' ,  

@@ -34,7 +34,7 @@ Converting your R code in SQL is easier if some optimizations are done beforehan
 
 ## Integrate R and Python with applications
 
-Because you can run R or Python from a stored procedure, you can execute scripts from any application that can send a T-SQL statement and handle the results. For example, you might retrain a model on a schedule by using the [Execute T-SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in Integration Services, or by using another job scheduler that can run a stored procedure.
+Because you can run R or Python from a stored procedure, you can execute scripts from any application that can send a T-SQL statement and handle the results. For example, you might retrain a model on a schedule by using the [Execute T-SQL task](../../integration-services/control-flow/execute-t-sql-statement-task.md) in Integration Services, or by using another job scheduler that can run a stored procedure.
 
 Scoring is an important task that can easily be automated, or started from external applications. You train the model beforehand, using R or Python or a stored procedure, and [save the model in binary format](../tutorials/walkthrough-build-and-save-the-model.md) to a table. Then, the model can be loaded into a variable as part of a stored procedure call, using one of these options for scoring from T-SQL:
 
@@ -64,6 +64,6 @@ If your R solution uses complex aggregations or involves large datasets, you can
 
 The same R code that you run against [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data can be used against other data sources, such as Spark over HDFS, when you use the [standalone server option](../install/sql-machine-learning-standalone-windows-install.md) in SQL Server setup or when you install the non-SQL branded product, Microsoft Machine Learning Server (formerly known as **Microsoft R Server**):
 
-+ [Machine Learning Server Documentation](https://docs.microsoft.com/r-server/)
++ [Machine Learning Server Documentation](/r-server/)
 
 ::: moniker-end

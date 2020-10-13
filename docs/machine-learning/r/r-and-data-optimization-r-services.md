@@ -126,19 +126,19 @@ This section provides miscellaneous tips and resources that are specific to Revo
 
 Many RevoScaleR algorithms support parameters to control how the trained model is generated. While  the accuracy and correctness of the model is important, the performance of the algorithm might be equally important. To get the right balance between accuracy and training time, you can modify parameters to increase the speed of computation, and in many cases, improve performance without reducing the accuracy or correctness.
 
-+ [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
++ [rxDTree](/r-server/r-reference/revoscaler/rxdtree)
 
     `rxDTree` supports the `maxDepth` parameter, which controls the depth of the decision tree. As `maxDepth` is increased, performance can degrade, so it is important to analyze the benefits of increasing the depth vs. hurting performance.
 
     You can also control the balance between time complexity and prediction accuracy by adjusting parameters such as `maxNumBins`, `maxDepth`, `maxComplete`, and `maxSurrogate`. Increasing the depth to beyond 10 or 15 can make the computation very expensive.
 
-+ [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
++ [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
 
     Try using the `cube` argument if the first dependent variable in the formula is a factor variable.
     
     When `cube` is set to `TRUE`, the regression is performed using a partitioned inverse, which might be faster and use less memory than standard regression computation. If the formula has a large number of variables, the performance gain can be significant.
 
-+ [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
++ [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
 
     Use the `cube` argument if the first dependent variable is a factor variable.
     
@@ -148,34 +148,34 @@ For additional guidance on optimization of RevoScaleR, see these articles:
 
 + Support article: [Performance tuning options for rxDForest and rxDTree](https://support.microsoft.com/kb/3104235)
 
-+ Methods for controlling model fit in a boosted tree model: [Estimating Models Using Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Methods for controlling model fit in a boosted tree model: [Estimating Models Using Stochastic Gradient Boosting](/r-server/r/how-to-revoscaler-boosting)
 
-+ Overview of how RevoScaleR moves and processes data: [Write custom chunking algorithms in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Overview of how RevoScaleR moves and processes data: [Write custom chunking algorithms in ScaleR](/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Programming model for RevoScaleR: [Managing threads in RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Programming model for RevoScaleR: [Managing threads in RevoScaleR](/r-server/r/how-to-developer-manage-threads)
 
-+ Function reference for [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
++ Function reference for [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
-+ Function reference for [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
++ Function reference for [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
 
 ### Use MicrosoftML
 
 We also recommend that you look into the new **MicrosoftML** package, which provides scalable machine learning algorithms that can use the compute contexts and transformations provided by RevoScaleR.
 
-+ [Get started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Get started with MicrosoftML](/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [How to choose a MicrosoftML algorithm](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [How to choose a MicrosoftML algorithm](/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
 ### Operationalize a solution using Microsoft R Server
 
 If your scenario involves fast prediction using a stored model, or integrating machine learning into an application, you can use the
-[operationalization](https://docs.microsoft.com/r-server/what-is-operationalization)
+[operationalization](/r-server/what-is-operationalization)
 features in Microsoft R Server (formerly known as DeployR).
 
-+ As a **data scientist**, use the [mrsdeploy package](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) to share R
-code with other computers, and integrate R analytics inside web, desktop, mobile, and dashboard applications: [How to publish and manage R web services in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ As a **data scientist**, use the [mrsdeploy package](/r-server/r-reference/mrsdeploy/mrsdeploy-package) to share R
+code with other computers, and integrate R analytics inside web, desktop, mobile, and dashboard applications: [How to publish and manage R web services in R Server](/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ As an **administrator**, learn how to manage packages, monitor web nodes and compute nodes, and control security on R jobs: [How to interact with and consume web services in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ As an **administrator**, learn how to manage packages, monitor web nodes and compute nodes, and control security on R jobs: [How to interact with and consume web services in R](/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## Articles in this series
 

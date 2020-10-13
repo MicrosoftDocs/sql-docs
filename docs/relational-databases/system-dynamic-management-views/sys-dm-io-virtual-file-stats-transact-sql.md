@@ -42,7 +42,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 
 ```  
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
@@ -108,7 +108,7 @@ GO
   
 ### B. Return statistics for file in tempdb
 
-**Applies to:** Azure SQL Data Warehouse
+**Applies to:** Azure Synapse Analytics
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 

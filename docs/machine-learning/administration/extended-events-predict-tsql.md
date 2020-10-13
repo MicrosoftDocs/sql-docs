@@ -17,7 +17,7 @@ Learn how to use extended events to monitor and troubleshooting [PREDICT](../../
 
 ## Table of extended events
 
-The following extended events are available in all versions of SQL Server that support the [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL statement. 
+The following extended events are available in all versions of SQL Server that support the [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL statement. 
 
 |name |object_type|description| 
 |----|----|----|
@@ -41,7 +41,7 @@ WHERE object_name LIKE `predict%'
 
 To capture information about performance of a scoring session using PREDICT:
 
-1. Create a new extended event session, using Management Studio or another supported [tool](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+1. Create a new extended event session, using Management Studio or another supported [tool](../../relational-databases/extended-events/extended-events-tools.md).
 2. Add the events `predict_function_completed` and `predict_model_cache_hit` to the session.
 3. Start the extended event session.
 4. Run the query that uses PREDICT.
@@ -76,6 +76,6 @@ WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 For more information about extended events (sometimes called XEvents), and how to track events in a session, see these articles:
 
 + [Monitor Python and R scripts with extended events in SQL Server Machine Learning Services](extended-events.md)
-+ [Extended Events concepts and architecture](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Set up event capture in SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [Manage event sessions in the Object Explorer](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [Extended Events concepts and architecture](../../relational-databases/extended-events/extended-events.md)
++ [Set up event capture in SSMS](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
++ [Manage event sessions in the Object Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)

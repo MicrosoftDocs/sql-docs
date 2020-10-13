@@ -1615,7 +1615,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: Load data to SQL Server or SQL Database
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: Load data to SQL Data Warehouse
+- name: Load data to Azure Synapse Analytics
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 
 

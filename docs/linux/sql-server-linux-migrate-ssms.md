@@ -26,7 +26,7 @@ You should always install and use the most recent version of SQL Server Manageme
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. Connect to your source database in Object Explorer. The source database can be in Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database or Azure SQL Data Warehouse.
+2. Connect to your source database in Object Explorer. The source database can be in Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database or Azure Synapse Analytics.
 
 3. Right-click the source database in the Object Explorer, point to **Tasks**, and click **Export Data-Tier Application...**
 
@@ -44,7 +44,7 @@ The *.BACPAC file is successfully created at the location you chose and you are 
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. Connect to your target server in Object Explorer. The target server can be Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database or Azure SQL Data Warehouse.
+2. Connect to your target server in Object Explorer. The target server can be Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database or Azure Synapse Analytics.
 
 3. Right-click the **Databases** folder in the Object Explorer and click **Import Data-tier Application...**
 

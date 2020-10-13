@@ -103,7 +103,7 @@ Use the information in the following tables to determine the set of features tha
 
 |Management tools|Description|
 |----------------------|-----------------|
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment to access, configure, manage, administer, and develop components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS lets developers and administrators of all skill levels use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The latest edition of SSMS updates SMO, which includes the S[QL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Download and install <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment to access, configure, manage, administer, and develop components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS lets developers and administrators of all skill levels use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The latest edition of SSMS updates SMO, which includes the S[QL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md).<br /><br/> Download and install <br />[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager provides basic configuration management for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services, server protocols, client protocols, and client aliases.|
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] provides a graphical user interface to monitor an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] or [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor|[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor helps create optimal sets of indexes, indexed views, and partitions.|
@@ -233,7 +233,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Dynamic data masking|Yes|Yes|Yes|Yes|Yes|
 |Server audit|Yes|Yes|Yes|Yes|Yes|
 |Database audit|Yes|Yes|Yes|Yes|Yes|
-|Transparent database encryption|Yes|Yes|No|No|No|
+|Transparent database encryption|Yes|Yes|Yes|No|No|
 |Extensible key management|Yes|Yes|No|No|No|
 |User-defined roles|Yes|Yes|Yes|Yes|Yes|
 |Contained databases|Yes|Yes|Yes|Yes|Yes|

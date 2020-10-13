@@ -27,15 +27,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     -   For the fourth parameter, put a program-defined column identifier.  
   
-2.  Calling [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) returns SQL_NEED_DATA, which indicates that data-at-execution columns are ready for processing.  
+2.  Calling [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) returns SQL_NEED_DATA, which indicates that data-at-execution columns are ready for processing.  
   
 3.  For each data-at-execution column:  
   
-    -   Call [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) to get the column array pointer. It will return SQL_NEED_DATA if there is another data-at-execution column.  
+    -   Call [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) to get the column array pointer. It will return SQL_NEED_DATA if there is another data-at-execution column.  
   
     -   Call [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) one or more times to send the column data, until length is sent.  
   
-4.  Call [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) to indicate that all the data for the final data-at-execution column is sent. It will not return SQL_NEED_DATA.  
+4.  Call [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) to indicate that all the data for the final data-at-execution column is sent. It will not return SQL_NEED_DATA.  
 
 ## Example  
  The sample shows how to read a SQL_LONG variable character data using SQLGetData. This sample is not supported on IA64.  
@@ -182,6 +182,5 @@ GO
 ```  
   
 ## See Also  
- [Managing text and image Columns How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Managing text and image Columns How-to Topics &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

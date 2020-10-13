@@ -356,9 +356,9 @@ For more information about how to use this feature with the JDBC Driver, see the
 
 ### Added connection property: useBulkCopyForBatchInsert
 
-Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `useBulkCopyForBatchInsert`. This property is supported only for Azure SQL Data Warehouse.
+Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `useBulkCopyForBatchInsert`. This property is supported only for Azure Synapse Analytics.
 
-This property is disabled by default. You can enable it to increase performance of user applications when you're pushing large amounts data to Azure SQL Data Warehouse. Enabling this property changes the behavior of batch insert operations to switch to bulk copy operations with user-provided data. For more information about this property and its limitations, see [Using Bulk Copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md).
+This property is disabled by default. You can enable it to increase performance of user applications when you're pushing large amounts data to Azure Synapse Analytics. Enabling this property changes the behavior of batch insert operations to switch to bulk copy operations with user-provided data. For more information about this property and its limitations, see [Using Bulk Copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md).
 
 ### Added connection property: cancelQueryTimeout
 

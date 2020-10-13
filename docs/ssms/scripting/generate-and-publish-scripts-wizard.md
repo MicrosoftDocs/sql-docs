@@ -242,7 +242,7 @@ Use this page to monitor the progress of the wizard as it occurs.
 
 If all the settings are correct, your configuration finishes successfully.
 
-## Generating Scripts on Azure SQL Data Warehouse
+## Generating Scripts on Azure Synapse Analytics
 
 If the syntax generated when using "Script As..." does not look like [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] syntax or if you receive an error message, you may need to set your scripting options in SQL Server Management Studio to [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 

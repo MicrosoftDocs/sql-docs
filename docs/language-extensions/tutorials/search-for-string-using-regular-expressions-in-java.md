@@ -20,7 +20,7 @@ This sample code uses a regular expression that checks if a text contains the wo
 
 ## Prerequisites
 
-+ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/install-sql-server-language-extensions-on-windows.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
++ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../../linux/sql-server-linux-setup-language-extensions.md). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio or Azure Data Studio for executing T-SQL.
 
@@ -211,11 +211,11 @@ GO
 
 To execute Java code, a user needs to be granted external script execution on that specific language.
 
-For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+For more information, see [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## Create external libraries
 
-Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) to create an external library for your `.jar` files. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.
+Use [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) to create an external library for your `.jar` files. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 

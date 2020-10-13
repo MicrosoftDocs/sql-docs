@@ -1,6 +1,6 @@
 ---
-description: "Step 3: Proof of concept connecting to SQL using Ruby"
-title: "Step 3: Proof of concept connecting to SQL using Ruby | Microsoft Docs"
+title: "Step 3: Proof of concept connecting to SQL using Ruby"
+description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Ruby. The basic examples demonstrate selecting and inserting data."
 ms.custom: ""
 ms.date: 06/22/2020
 ms.prod: sql

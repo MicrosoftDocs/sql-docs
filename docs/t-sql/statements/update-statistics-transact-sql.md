@@ -80,8 +80,10 @@ UPDATE STATISTICS [ schema_name . ] table_name
     ]  
 [;]  
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
  *table_or_indexed_view_name*  
@@ -209,7 +211,7 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### PDW / Azure Synapse Analytics  
  The following syntax is not supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
-```syntaxsql
+```sql
 UPDATE STATISTICS t1 (a,b);   
 ```  
   

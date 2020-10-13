@@ -20,7 +20,7 @@ Memory-optimized tables require that sufficient memory exist to keep all of the 
 
 Whether you are creating a new memory-optimized table or migrating an existing disk-based table to an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table, it is important to have a reasonable estimate of each table's memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
   
-If you are contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) provide guidance on migrating from disk-based to memory-optimized tables. 
+If you are contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) provide guidance on migrating from disk-based to memory-optimized tables. 
   
 ## Basic Guidance for Estimating Memory Requirements
 
@@ -126,7 +126,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 If you are creating a new table, you'll need to estimate the array size or gather data from your testing prior to deployment.  
   
-For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
 #### Setting the hash index array size  
   
@@ -188,5 +188,4 @@ The above calculations estimate your memory needs for the table as it currently 
   
 ## See Also
 
-[Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[Migrating to In-Memory OLTP](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

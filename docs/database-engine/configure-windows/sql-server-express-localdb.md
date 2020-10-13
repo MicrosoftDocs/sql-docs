@@ -50,7 +50,7 @@ An instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB is 
 
 The LocalDB setup program uses the `SqlLocalDB.msi` program to install the necessary files on the computer. Once installed, LocalDB is an instance of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] that can create and open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases. The system database files for the database are stored in the local AppData path, which is normally hidden. For example, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. User database files are stored where the user designates, typically somewhere in the `C:\Users\<user>\Documents\` folder.
 
-For more information about including LocalDB in an application, see [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Local Data Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Create a database and add tables in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
+For more information about including LocalDB in an application, see [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Local Data Overview](/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Create a database and add tables in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
 
 For more information about the LocalDB API, see [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).
 

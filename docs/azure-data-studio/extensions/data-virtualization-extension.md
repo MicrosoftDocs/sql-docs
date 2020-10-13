@@ -17,7 +17,7 @@ The Data Virtualization extension for Azure Data Studio provides support for the
 
 ## Install the Data Virtualization extension
 
-To install the Data Virtualization extension, visit [Extend the functionality of Azure Data Studio](../extensions.md).
+To install the Data Virtualization extension, visit [Extend the functionality of Azure Data Studio](./add-extensions.md).
 
 ## Changes in release 1.0
 

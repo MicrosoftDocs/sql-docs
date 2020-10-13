@@ -253,8 +253,8 @@ Cleanup:
 ```
 
 ## Next steps
-- [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](https://go.microsoft.com/fwlink/?linkid=2072672).
+- [Authorize access to Azure Active Directory web applications using the OAuth 2.0 code grant flow](/azure/active-directory/azuread-dev/v1-protocols-oauth-code).
 
-- Learn about [Azure Active Directory Authentication](https://go.microsoft.com/fwlink/?linkid=2073783) to SQL Server.
+- Learn about [Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview) to SQL Server.
 
 - Configure driver connections using [connection string keywords](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md) the OLE DB driver supports.

@@ -84,7 +84,6 @@ SSERRORINFO;
  Pointers in the structure reference addresses in the string returned in the *ppErrorStrings* argument.  
   
 ## See Also  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

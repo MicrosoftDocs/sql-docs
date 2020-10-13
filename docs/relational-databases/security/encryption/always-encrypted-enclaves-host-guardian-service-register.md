@@ -115,7 +115,7 @@ There are three data files collected for TPM attestation, some of which can be r
 | -------------------- | ---------------- | ---------- |
 | Platform identifier  | The public endorsement key in the computer's TPM and the endorsement key certificate from the TPM manufacturer. | 1 for each computer |
 | TPM baseline | The platform control registers (PCRs) in the TPM that measure the firmware and OS configuration loaded during the boot process. Examples include Secure Boot state and whether crash dumps are encrypted. | One baseline per unique computer configuration (identical hardware and software can use the same baseline) |
-| Code integrity policy | The [Windows Defender Application Control](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) policy you trust to protect the computers | One per unique CI policy deployed to the computers. |
+| Code integrity policy | The [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) policy you trust to protect the computers | One per unique CI policy deployed to the computers. |
 
 You can configure more than one of each attestation artifact on HGS to support a mixed fleet of hardware and software.
 HGS only requires that a computer attesting matches one policy from each policy category.
@@ -142,7 +142,7 @@ If you are already using a custom WDAC code integrity policy on the computers to
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Follow the guidance in the [Windows Defender Application Control deployment guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) to deploy the `allowall_cipolicy.bin` file to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers using [Group Policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). For workgroup computers, follow the same process using the Local Group Policy Editor (`gpedit.msc`).
+2. Follow the guidance in the [Windows Defender Application Control deployment guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) to deploy the `allowall_cipolicy.bin` file to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers using [Group Policy](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). For workgroup computers, follow the same process using the Local Group Policy Editor (`gpedit.msc`).
 
 3. Run `gpupdate /force` on the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to configure the new code integrity policy, then restart the computers to apply the policy.
 
@@ -238,7 +238,7 @@ Repeat Step 4B for every [!INCLUDE [ssnoversion-md](../../../includes/ssnoversio
 
 After you've registered the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer with HGS ([Step 4A](#step-4a-register-a-computer-in-tpm-mode) for TPM mode, [Step 4B](#step-4b-register-a-computer-in-host-key-mode) for host key mode), you should confirm it's able to successfully attest.
 
-You can check the configuration of the HGS attestation client and perform an attestation attempt at any time with [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+You can check the configuration of the HGS attestation client and perform an attestation attempt at any time with [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 The output of the command will look similar to below:
 
 ```

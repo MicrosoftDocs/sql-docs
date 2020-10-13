@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # Principals (Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  *Principals* are entities that can request [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resources. Like other components of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authorization model, principals can be arranged in a hierarchy. The scope of influence of a principal depends on the scope of the definition of the principal: Windows, server, database; and whether the principal is indivisible or a collection. A Windows Login is an example of an indivisible principal, and a Windows Group is an example of a principal that is a collection. Every principal has a security identifier (SID). This topic applies to all version of SQL Server, but there are some restrictions on server-level principals in SQL Database or SQL Data Warehouse. 
+  *Principals* are entities that can request [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resources. Like other components of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authorization model, principals can be arranged in a hierarchy. The scope of influence of a principal depends on the scope of the definition of the principal: Windows, server, database; and whether the principal is indivisible or a collection. A Windows Login is an example of an indivisible principal, and a Windows Group is an example of a principal that is a collection. Every principal has a security identifier (SID). This topic applies to all version of SQL Server, but there are some restrictions on server-level principals in SQL Database or Azure Synapse Analytics. 
   
 ## SQL Server-level principals  
   
@@ -87,7 +87,7 @@ Every login belongs to the `public` fixed server role, and every database user b
   
  The following topics are included in this section of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online:  
   
--   [Managing Logins, Users, and Schemas How-to Topics](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Managing Logins, Users, and Schemas How-to Topics](./create-a-login.md)  
   
 -   [Server-Level Roles](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
@@ -103,5 +103,4 @@ Every login belongs to the `public` fixed server role, and every database user b
  [sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [Server-Level Roles](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md)  
-  
   

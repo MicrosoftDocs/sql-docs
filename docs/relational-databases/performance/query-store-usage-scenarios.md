@@ -71,7 +71,7 @@ When you identify a query with suboptimal performance, your action depends on th
   
 -   Creating missing indexes on tables referenced by expensive queries.  
   
--   Applying filtering policy for row-level security. For more information, see [Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
+-   Applying filtering policy for row-level security. For more information, see [Optimizing Row Level Security with Query Store](/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store).  
   
 -   Adding temporal system-versioning to tables that are frequently modified by your OLTP applications.  
   
@@ -216,4 +216,3 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  

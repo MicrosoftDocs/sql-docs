@@ -61,7 +61,7 @@ Operate on a single value and then return a single value. Scalar functions can b
 |[String Functions](string-functions-transact-sql.md)|Perform operations on a string (**char** or **varchar**) input value and return a string or numeric value.|  
 |[System Functions](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Perform operations and return information about values, objects, and settings in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[System Statistical Functions](system-statistical-functions-transact-sql.md)|Return statistical information about the system.|  
-|[Text and Image Functions](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Perform operations on text or image input values or columns, and return information about the value.|  
+|[Text and Image Functions](./text-and-image-functions-textptr-transact-sql.md)|Perform operations on text or image input values or columns, and return information about the value.|  
   
 ## Function Determinism  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] built-in functions are either deterministic or nondeterministic. Functions are deterministic when they always return the same result any time they are called by using a specific set of input values. Functions are nondeterministic when they could return different results every time they are called, even with the same specific set of input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  
@@ -77,5 +77,4 @@ Operate on a single value and then return a single value. Scalar functions can b
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Using Stored Procedures &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

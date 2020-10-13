@@ -24,7 +24,7 @@ To view and manage all the open breakpoints, you can use the **Breakpoints** win
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## The Breakpoints Window  
- The **Breakpoints** window lists information such as which line of code the breakpoint is located on. In the **Breakpoints** window, you can also delete, disable, and enable breakpoints. For more information about the **Breakpoints** window, see [Breakpoints Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)  
+ The **Breakpoints** window lists information such as which line of code the breakpoint is located on. In the **Breakpoints** window, you can also delete, disable, and enable breakpoints. For more information about the **Breakpoints** window, see [Breakpoints Window](./transact-sql-debugger-breakpoints-window.md)  
   
  Disabling a breakpoint prevents it from pausing execution, but leaves the definition in place in case you want to enable the breakpoint later. Deleting a breakpoint removes it permanently. You must toggle a new breakpoint to pause execution on the statement.  
   
@@ -96,6 +96,5 @@ To view and manage all the open breakpoints, you can use the **Breakpoints** win
 -   On the toolbar of the **Breakpoints** window, click the **Delete All Breakpoints** button.  
   
 ## See Also  
- [Toggle a Breakpoint](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [Toggle a Breakpoint](./toggle-a-breakpoint.md)  
   

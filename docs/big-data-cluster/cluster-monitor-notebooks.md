@@ -39,16 +39,16 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG022 - Get external IP address for kubeadm host|Get the external IP address of the host of kubeadm. |
 |TSG023 - Get all BDC objects (Kubernetes)|Get a summary of all Kubernetes resources for the system namespace and the Big Data Cluster namespace. |
 |TSG042 - Get node name and external mounts for Data and Logs PVCs|Get node name hosting pod along with the Data and Logs external mounts. |
-|TSG063 - Get storage classes (Kubernetes)|TSG063 - Get storage classes (Kubernetes). |
+|TSG063 - Get storage classes (Kubernetes)|Use this notebook to get Kubernetes storage classes. |
 |TSG064 - Get BDC Persistent Volume Claims|Show the persistent volume claims (PVCs) for the Big Data Cluster. |
 |TSG065 - Get BDC secrets (Kubernetes)|View the big data cluster secrets. |
-|TSG066 - Get BDC event (Kubernetes)|View the big data cluster secrets.|
+|TSG066 - Get BDC event (Kubernetes)|View the big data cluster events.|
 |TSG072 - Get Persistent Volumes (Kubernetes)|Show the persistent volume (PVs) for the Kubernetes cluster. Persistent Volumes are non-namespaces objects. |
 |TSG081 - Get namespaces (Kubernetes)|Get the kubernetes namespaces. |
 |TSG089 - Describe BDC non-running pods|Show non-running BDC pods for the Kubernetes cluster. |
 |TSG097 - Get BDC stateful sets (Kubernetes)|Show BDC statefulsets for the Kubernetes cluster. |
 |TSG098 - Get BDC replicasets (Kubernetes)|Show BDC replicasets for the Kubernetes cluster. |
-|TSG098 - TSG099 - Get BDC daemonsets (Kubernetes)|Show BDC daemonsets for the Kubernetes cluster. |
+|TSG099 - Get BDC daemonsets (Kubernetes)|Show BDC daemonsets for the Kubernetes cluster. |
 
 
 ## Monitor Big Data Cluster (BDC)
@@ -61,7 +61,7 @@ This section contains a set of notebooks useful for getting information and stat
 |TSG004 - Show BDC Apps|View the apps up and running in BDC cluster.|
 |TSG012 - Show BDC Status|Get the current status of different components of BDC cluster.|
 |TSG013 - Show file list in Storage Pool (HDFS)|Get file list in Storage Pool (HDFS). |
-|TSG014 - Show BDC endpoints|Get all available endpoints for BDC Cluster|
+|TSG014 - Show BDC endpoints|Get all available endpoints for BDC Cluster.|
 |TSG017 - Show BDC Configuration|Get BDC Configuration. |
 |TSG033 - Show BDC SQL status|Get the SQL Server status of BDC deployed in Kubernetes cluster. |
 |TSG049 - Show BDC Controller status|et the controller status of BDC deployed in Kubernetes cluster. |

@@ -103,7 +103,7 @@ The catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] h
         
         [Spatial Data Catalog Views](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Stretch Database Catalog Views &#40;Transact-SQL&#41;](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

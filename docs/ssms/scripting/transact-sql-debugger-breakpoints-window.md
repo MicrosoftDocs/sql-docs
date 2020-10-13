@@ -90,4 +90,4 @@ Lists all the columns that can be displayed in the **Breakpoints** window. A che
 
 ## See Also
 
-[Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
+[Transact-SQL Debugger](./transact-sql-debugger.md)

@@ -128,5 +128,5 @@ Regular expressions are a concise and flexible notation for finding and replacin
 |Ideographic/Han/Kanji|:Id|Matches ideographic characters, such as Han and Kanji.|  
   
 ## See Also  
- [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
- [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)  
+ [Search and Replace](./search-and-replace.md)   
+ [Search Text with Wildcards](./search-text-with-wildcards.md)

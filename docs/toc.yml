@@ -17210,4 +17210,4 @@
       - name: String Search in XQuery
         href: xquery/string-search-in-xquery.md
       - name: Handling Namespaces in XQuery
-        href: xquery/handling-namespaces-in-xquery.md
+        href: xquery/handling-namespaces-in-xquery.md 

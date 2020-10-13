@@ -289,7 +289,7 @@ replmerg [-?]
  Specifies whether the Merge Agent should process in parallel the changes uploaded to the Publisher and those downloaded to the Subscriber, which can be useful in high volume environments with high network bandwidth. However, note the warning below for cases where **ParallelUploadDownload** is set to **1**.
  
 > [!WARNING]
->  [!INCLUDE[TODO: NEEDS LINK TO KB](../../../includes/ssnotedepfuturedontuse-md.md)] This parameter is on the list for possible deprecation soon. We recommend setting the **ParallelUploadDownload** parameter to 0 and avoiding use of the "High Volume Server-to-Server" Merge agent Profile, as **ParallelUploadDownload** is set to 1 in this profile.
+This parameter is on the list for possible deprecation soon. We recommend setting the **ParallelUploadDownload** parameter to 0 and avoiding use of the "High Volume Server-to-Server" Merge agent Profile, as **ParallelUploadDownload** is set to 1 in this profile.
   
  **-PacketSize**  
  Is the packet size, in bytes. The default is 4096 (bytes).  

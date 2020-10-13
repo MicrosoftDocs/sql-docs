@@ -86,10 +86,10 @@
       href: extensions/sql-server-profiler-extension.md
   - name: Extension Authoring
     items:
-    - name: Extensibility overview
-      href: extensibility.md
     - name: Extension authoring
       href: extensions/extension-authoring.md
+    - name: Extensibility overview
+      href: extensibility.md
     - name: Extensibility APIs
       href: extensibility-apis.md
     - name: Keymap extension

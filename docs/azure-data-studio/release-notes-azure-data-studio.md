@@ -1,5 +1,5 @@
 ---
-title: Release notes
+title: Azure Data Studio release notes
 description: This article has release notes for Azure Data Studio releases from November, 2017, until now. For many of the summarized issues there are links to additional details.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -23,7 +23,9 @@ October 14, 2020 &nbsp; / &nbsp; version: 1.23.0
 
 | Change | Details |
 | ------ | ------- |
+| Azure SQL Edge | Support for Azure SQL Edge objects. |
 | Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed). |
+| Databases| Support for same database reference. |
 | Extension updates | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[Schema Compare](extensions/schema-compare-extension.md)</br>SQL Assessment</br>[SQL Database Projects](extensions/sql-database-project-extension.md)</br>[SQL Server Import](extensions/sql-server-import-extension.md) |
 | New deployment features | Added Azure SQL DB and VM deployments. |
 | PowerShell | Added PowerShell kernel results streaming support. |

@@ -14171,7 +14171,7 @@
       - name: sp_xp_cmdshell_proxy_account
         href: relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md
     - name: Snapshot Backup
-      items:SQK
+      items:
       - name: sp_delete_backup_file_snapshot
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup

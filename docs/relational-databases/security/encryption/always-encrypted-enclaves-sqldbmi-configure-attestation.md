@@ -28,7 +28,7 @@ To use Azure Attestation for attesting Intel SGX enclaves in [!INCLUDE[ssSDSfull
 
 An [attestation provider](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-provider) is a resource in Azure Attestation that evaluates [attestation requests](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-request) against [attestation policies](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-request) and issues [attestation tokens](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-token). 
 
-Attestation policies are specified using the [claim rule grammer](https://docs.microsoft.com/azure/attestation/claim-rule-grammar).
+Attestation policies are specified using the [claim rule grammar](https://docs.microsoft.com/azure/attestation/claim-rule-grammar).
 
 Microsoft recommends the following policy for attesting Intel SGX enclaves used for Always Encrypted in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]:
 
@@ -50,11 +50,16 @@ The above policy verifies:
 - The version id (svn) of the library is greater than 0.
 - The library in the enclave has been signed using the Microsoft signing key (the value of the sgx-mrsigner claim is the hash of the signing key).
 
-For instructions for how create an attestation provider and configure with an attestation policy using:
+For instructions for how to create an attestation provider and configure with an attestation policy using:
 
 - Azure Portal - see ...
 - Azure Powershell - see [Quickstart: Set up Azure Attestation with Azure PowerShell](https://docs.microsoft.com/azure/attestation/quickstart-powershell)
 - ARM templates - see [Quickstart: Create an Azure Attestation provider with an ARM template](https://docs.microsoft.com/azure/attestation/quickstart-template?tabs=CLI)
+
+## Grant your Azure SQL database server access to your attestation provider
+
+Now you need to lll
+
 
 ## Next Steps
  [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)

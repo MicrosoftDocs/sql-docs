@@ -1,6 +1,6 @@
 ---
-title: Load data into Azure SQL Data Warehouse with SQL Server Integration Services (SSIS) | Microsoft Docs
-description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources to Azure SQL Data Warehouse.
+title: Load data into Azure Synapse Analytics with SQL Server Integration Services (SSIS) | Microsoft Docs
+description: Shows you how to create a SQL Server Integration Services (SSIS) package to move data from a wide variety of data sources to Azure Synapse Analytics.
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: "integration-services"
@@ -11,13 +11,13 @@ ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
 ---
-# Load data into Azure SQL Data Warehouse with SQL Server Integration Services (SSIS)
+# Load data into Azure Synapse Analytics with SQL Server Integration Services (SSIS)
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
-Create a SQL Server Integration Services (SSIS) package to load data into [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
+Create a SQL Server Integration Services (SSIS) package to load data into [Azure Synapse Analytics](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 
 This article shows you how to do the following things:
 
@@ -40,7 +40,7 @@ SQL Server Integration Services (SSIS) is a flexible set of tools that provides 
 
 1. The preferred method, which provides the best performance, is to create a package that uses the [Azure SQL DW Upload Task](control-flow/azure-sql-dw-upload-task.md) to load the data. This task encapsulates both source and destination information. It assumes that your source data is stored locally in delimited text files.
 
-2. Alternately, you can create a package that uses a Data Flow task that contains a source and a destination. This approach supports a wide range of data sources, including SQL Server and Azure SQL Data Warehouse.
+2. Alternately, you can create a package that uses a Data Flow task that contains a source and a destination. This approach supports a wide range of data sources, including SQL Server and Azure Synapse Analytics.
 
 ## Prerequisites
 To step through this tutorial, you need the following things:
@@ -48,7 +48,7 @@ To step through this tutorial, you need the following things:
 1. **SQL Server Integration Services (SSIS)**. SSIS is a component of SQL Server and requires a licensed version, or the developer or evaluation version, of SQL Server. To get an evaluation version of SQL Server, see [Evaluate SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (optional). To get the free Visual Studio Community Edition, see [Visual Studio Community][Visual Studio Community]. If you don't want to install Visual Studio, you can install SQL Server Data Tools (SSDT) only. SSDT installs a version of Visual Studio with limited functionality.
 3. **SQL Server Data Tools for Visual Studio (SSDT)**. To get SQL Server Data Tools for Visual Studio, see [Download SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
-4. **An Azure SQL Data Warehouse database and permissions**. This tutorial connects to a SQL Data Warehouse instance and loads data into it. You have to have permission to connect, to create a table, and to load data.
+4. **An Azure Synapse Analytics database and permissions**. This tutorial connects to a SQL Data Warehouse instance and loads data into it. You have to have permission to connect, to create a table, and to load data.
 
 ## Create a new Integration Services project
 1. Launch Visual Studio.
@@ -74,7 +74,7 @@ To continue the tutorial with this option, you need the following things:
 
 - The [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. The SQL DW Upload task is a component of the Feature Pack.
 
-- An [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure SQL Data Warehouse. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into SQL Data Warehouse.
+- An [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) account. The SQL DW Upload task loads data from Azure Blob Storage into Azure Synapse Analytics. You can load files that are already in Blob Storage, or you can load files from your computer. If you select files on your computer, the SQL DW Upload task uploads them to Blob Storage first for staging, and then loads them into SQL Data Warehouse.
 
 ### Add and configure the SQL DW Upload Task
 
@@ -92,11 +92,11 @@ For more control, you can manually create a package that emulates the work done 
 
 1. Use the Azure Blob Upload Task to stage the data in Azure Blob Storage. To get the Azure Blob Upload task, download the [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
-2. Then use the SSIS Execute SQL task to launch a PolyBase script that loads the data into SQL Data Warehouse. For an example that loads data from Azure Blob Storage into SQL Data Warehouse (but not with SSIS), see [Tutorial: Load data to Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
+2. Then use the SSIS Execute SQL task to launch a PolyBase script that loads the data into SQL Data Warehouse. For an example that loads data from Azure Blob Storage into SQL Data Warehouse (but not with SSIS), see [Tutorial: Load data to Azure Synapse Analytics](/azure/sql-data-warehouse/load-data-wideworldimportersdw).
 
 ## Option 2 - Use a source and destination
 
-The second approach is a typical package which uses a Data Flow task that contains a source and a destination. This approach supports a wide range of data sources, including SQL Server and Azure SQL Data Warehouse.
+The second approach is a typical package which uses a Data Flow task that contains a source and a destination. This approach supports a wide range of data sources, including SQL Server and Azure Synapse Analytics.
 
 This tutorial uses SQL Server as the data source. SQL Server runs on premises or on an Azure virtual machine.
 
@@ -165,7 +165,7 @@ To continue the tutorial with this option, you need the following things:
 1. Double-click the destination adapter to open the **ADO.NET Destination Editor**.
    
     ![Screenshot of the the ADO.NET Destination Editor. The Connection Manager tab is visible and contains controls for configuring data flow properties.][11]
-2. On the **Connection Manager** tab of the **ADO.NET Destination Editor**, click the **New** button next to the **Connection manager** list to open the **Configure ADO.NET Connection Manager** dialog box and create connection settings for the Azure SQL Data Warehouse database into which this tutorial loads data.
+2. On the **Connection Manager** tab of the **ADO.NET Destination Editor**, click the **New** button next to the **Connection manager** list to open the **Configure ADO.NET Connection Manager** dialog box and create connection settings for the Azure Synapse Analytics database into which this tutorial loads data.
 3. In the **Configure ADO.NET Connection Manager** dialog box, click the **New** button to open the **Connection Manager** dialog box and create a new data connection.
 4. In the **Connection Manager** dialog box, do the following things.
    1. For **Provider**, select the SqlClient Data Provider.
@@ -183,7 +183,7 @@ To continue the tutorial with this option, you need the following things:
    
    1. Change the name of the destination table to **SalesOrderDetail**.
    2. Remove the **rowguid** column. The **uniqueidentifier** data type is not supported in SQL Data Warehouse.
-   3. Change the data type of the **LineTotal** column to **money**. The **decimal** data type is not supported in SQL Data Warehouse. For info about supported data types, see [CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
+   3. Change the data type of the **LineTotal** column to **money**. The **decimal** data type is not supported in SQL Data Warehouse. For info about supported data types, see [CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)].
       
        ![Screenshot of the Create Table dialog box, with code to create a table named SalesOrderDetail with LineTotal as a money column and no rowguid column.][12b]
    4. Click **OK** to create the table and return to the **ADO.NET Destination Editor**.
@@ -205,7 +205,7 @@ When the package has finished running, you see green check marks to indicate suc
 
 ![Screenshot showing the source and destination adapters. Green check marks are over each adapter, and the text "121317 rows" is between them.][15]
 
-Congratulations! You've successfully used SQL Server Integration Services to load data into Azure SQL Data Warehouse.
+Congratulations! You've successfully used SQL Server Integration Services to load data into Azure Synapse Analytics.
 
 ## Next steps
 
@@ -236,7 +236,7 @@ Congratulations! You've successfully used SQL Server Integration Services to loa
 <!-- MSDN references -->
 [PolyBase Guide]: ../relational-databases/polybase/polybase-guide.md
 [Download SQL Server Data Tools (SSDT)]: ../ssdt/download-sql-server-data-tools-ssdt.md
-[CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
+[CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)]: ../t-sql/statements/create-table-azure-sql-data-warehouse.md
 [Data Flow]: ./data-flow/data-flow.md
 [Troubleshooting Tools for Package Development]: ./troubleshooting/troubleshooting-tools-for-package-development.md
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md

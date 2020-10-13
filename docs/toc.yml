@@ -11888,7 +11888,7 @@
         href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
       - name: sys.spatial_reference_systems
         href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-    - name: SQL Data Warehouse
+    - name: Azure Synapse Analytics
       href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties

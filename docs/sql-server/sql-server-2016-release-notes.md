@@ -18,7 +18,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 
 # SQL Server 2016 Release Notes
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
-  This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
+  This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](./what-s-new-in-sql-server-2016.md).
 
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
@@ -66,14 +66,14 @@ Supportability and Diagnostics related improvements included in SQL Server 2016 
 |Segment information in sys.dm_exec_query_stats   |   New columns were added to sys.dm_exec_query_stats to track number of columnstore segments skipped and read, such as total_columnstore_segment_reads, and total_columnstore_segment_skips.   |   [KB4051358](https://support.microsoft.com/help/4051358)   |
 |Setting correct compatibility level for distribution database   |   After Service Pack installation, the Distribution database compatibility level changes to 90. This was because of an code path in sp_vupgrade_replication stored procedure. The SP has now been changed to set the correct compatibility level for the distribution database.   |      |
 |Expose last known good DBCC CHECKDB information   |   A new database option has been added to programmatically return the date of the last successful DBCC CHECKDB run. Users can now query DATABASEPROPERTYEX([database], 'lastgoodcheckdbtime') to obtain a single value representing the date/time of the last successful DBCC CHECKDB run on the specified database.   |      |
-|Showplan XML enhancements|   [Information on which statistics were used to compile the query plan](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/), including statistics name, modification counter, sampling percent, and when the statistics was updated last time. Note this is added for CE models 120 and later only. For example it is not supported for CE 70.| |
-| |A new attribute [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) is added to showplan XML if Query Optimizer uses "row goal" logic.| |
-| |New runtime attributes [UdfCpuTime and UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) in actual showplan XML, to track time spent in scalar User-Defined Functions (UDF).| |
-| |Add CXPACKET wait type to [list of possible top 10 waits](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) in actual showplan XML - Parallel query execution frequently involves CXPACKET waits, but this type of wait was not reporting in actual showplan XML.   |      |
+|Showplan XML enhancements|   [Information on which statistics were used to compile the query plan](/archive/blogs/sql_server_team/sql-server-2017-showplan-enhancements), including statistics name, modification counter, sampling percent, and when the statistics was updated last time. Note this is added for CE models 120 and later only. For example it is not supported for CE 70.| |
+| |A new attribute [EstimateRowsWithoutRowgoal](/archive/blogs/sql_server_team/more-showplan-enhancements-row-goal) is added to showplan XML if Query Optimizer uses "row goal" logic.| |
+| |New runtime attributes [UdfCpuTime and UdfElapsedTime](/archive/blogs/sql_server_team/more-showplan-enhancements-udfs) in actual showplan XML, to track time spent in scalar User-Defined Functions (UDF).| |
+| |Add CXPACKET wait type to [list of possible top 10 waits](/archive/blogs/sql_server_team/new-showplan-enhancements) in actual showplan XML - Parallel query execution frequently involves CXPACKET waits, but this type of wait was not reporting in actual showplan XML.   |      |
 | |Extended the runtime spill warning to report number of pages written to TempDB during a parallelism operator spill.| |
 |Replication Support for databases with Supplemental characters collations   |   Replication is now supportable on databases which use the Supplemental Character Collation.   |      |
 |Proper handling of Service Broker with Availability group failover   |   In the current implementation when Service Broker is enabled on an Availability Group Databases, during an AG failover all Service broker connections which originated on the Primary Replica are left open. This improvement targets to close all such open connections during an AG failover.   |      |
-|Improved parallelism waits troubleshooting   |   by adding a new [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/) wait.   |      |
+|Improved parallelism waits troubleshooting   |   by adding a new [CXCONSUMER](/archive/blogs/sql_server_team/making-parallelism-waits-actionable) wait.   |      |
 |Improved consistency between DMVs for same information   |   The sys.dm_exec_session_wait_stats DMV now tracks CXPACKET and CXCONSUMER waits consistently with the sys.dm_os_wait_stats DMV.   |      |
 |Improved troubleshooting of intra-query parallelism deadlocks | A new exchange_spill Extended Event to report the number of pages written to TempDB during a parallelism operator spill, in the xEvent field name worktable_physical_writes.| |
 | |The spills columns in the sys.dm_exec_query_stats, sys.dm_exec_procedure_stats, and sys.dm_exec_trigger_stats DMVs (such as total_spills) now also include the data spilled by parallelism operators.| |
@@ -103,21 +103,21 @@ The following table summarizes key improvements provided in SQL Server 2016 SP1.
 
 |Feature|Description|More information|
 |---|---|---|
-|Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no nonclustered indexes.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|CREATE OR ALTER|Deploy objects such as Stored Procedures, Triggers, User-Defined Functions, and Views.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
+|Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no nonclustered indexes.|[Migrating SAP workloads to SQL Server just got 2.5x faster](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|CREATE OR ALTER|Deploy objects such as Stored Procedures, Triggers, User-Defined Functions, and Views.|[SQL Server Database Engine Blog](/archive/blogs/sqlserverstorageengine/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1)|
 |DROP TABLE support for replication|DROP TABLE DDL support for replication to allow replication articles to be dropped.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
-|Filestream RsFx Driver signing|The Filestream RsFx driver is signed and certified using Windows Hardware Developer Center Dashboard portal (Dev Portal) allowing SQL Server 2016 SP1 Filestream RsFx driver to be installed on Windows Server 2016/Windows 10 without any issue.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|LPIM to SQL service account - programmatic identification|Allow DBAs to programmatically identify if Lock Pages in Memory (LPIM) privilege is in effect at the service startup time.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|Filestream RsFx Driver signing|The Filestream RsFx driver is signed and certified using Windows Hardware Developer Center Dashboard portal (Dev Portal) allowing SQL Server 2016 SP1 Filestream RsFx driver to be installed on Windows Server 2016/Windows 10 without any issue.|[Migrating SAP workloads to SQL Server just got 2.5x faster](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
+|LPIM to SQL service account - programmatic identification|Allow DBAs to programmatically identify if Lock Pages in Memory (LPIM) privilege is in effect at the service startup time.|[Developers Choice: Programmatically identify LPIM and IFI privileges in SQL Server](/archive/blogs/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
 |Manual Change Tracking Cleanup|New stored procedure cleans the change tracking internal table on demand.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
-|Parallel INSERT..SELECT Changes for Local temp tables|New Parallel INSERT in INSERT..SELECT operations.|[SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
+|Parallel INSERT..SELECT Changes for Local temp tables|New Parallel INSERT in INSERT..SELECT operations.|[SQL Server Customer Advisory Team](/archive/blogs/sqlcat/real-world-parallel-insert-what-else-you-need-to-know)|
 |Showplan XML|Extended diagnostics including grant warning and maximum memory enabled for a query, enabled trace flags, and also surfaces other diagnostic information. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
-|Storage class memory|Boost the transaction processing using Storage Class Memory in Windows Server 2016, resulting in the ability to accelerate transaction commit times by orders of magnitude.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|Use the query option, `OPTION(USE HINT('<option>'))` to alter query optimizer behavior using supported query level hints. Unlike QUERYTRACEON, the USE HINT option does not require sysadmin privileges.|[Developers Choice: USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
-|XEvent additions|New XEvents and Perfmon diagnostics capabilities improve latency troubleshooting.|[Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
+|Storage class memory|Boost the transaction processing using Storage Class Memory in Windows Server 2016, resulting in the ability to accelerate transaction commit times by orders of magnitude.|[SQL Server Database Engine Blog](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)|
+|USE HINT|Use the query option, `OPTION(USE HINT('<option>'))` to alter query optimizer behavior using supported query level hints. Unlike QUERYTRACEON, the USE HINT option does not require sysadmin privileges.|[Developers Choice: USE HINT query hints](/archive/blogs/sql_server_team/developers-choice-use-hint-query-hints)|
+|XEvent additions|New XEvents and Perfmon diagnostics capabilities improve latency troubleshooting.|[Extended Events](../relational-databases/extended-events/extended-events.md)|
 
 In addition, note the following fixes:
 - Based on feedback from DBAs and SQL community, starting SQL 2016 SP1, the Hekaton logging messages are reduced to minimal.
-- Review new [Trace flags](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Review new [Trace flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 - The full versions of the WideWorldImporters sample databases now work with Standard Edition and Express Edition, starting SQL Server 2016 SP1 and are available on [Github]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). No changes are needed in the sample. The database backups created at RTM for Enterprise edition work with Standard and Express in SP1.
 
 The SQL Server 2016 SP1 installation may require reboot post installation. As a best practice, we recommend to plan and perform a reboot following the installation of SQL Server 2016 SP1.
@@ -125,9 +125,9 @@ The SQL Server 2016 SP1 installation may require reboot post installation. As a 
 ### Download pages and more information
 
 - [Download Service Pack 1 for Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 (SP1) Released](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/)
+- [SQL Server 2016 Service Pack 1 (SP1) Released](/archive/blogs/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545)
-- ![info_tip](../sql-server/media/info-tip.png) [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
+- ![info_tip](../sql-server/media/info-tip.png) [SQL Server Update Center](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
 ![horizontal-bar.png](media/horizontal-bar.png)
 
@@ -215,7 +215,7 @@ Also, execute the following Query Store stored procedures periodically to clean 
  **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the online version of the F1 Help article is displayed in the browser. The issues is browser-based help even when you have configured and installed local Help.
 
 **Updating content:**
-In SQL Server Management Studio and Visual Studio, the Help Viewer application may stop responding during the process of adding the documentation. To resolve this issue, complete the following steps. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).
+In SQL Server Management Studio and Visual Studio, the Help Viewer application may stop responding during the process of adding the documentation. To resolve this issue, complete the following steps. For more information about this issue, see [Visual Studio Help Viewer freezes](/previous-versions/mt654096(v=vs.140)).
 
 * Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings file in Notepad and change the date in the following code to some date in the future.
 
@@ -224,8 +224,8 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
 ```
 
 ## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
++ [SQL Server 2016 installation](../database-engine/install-windows/install-sql-server.md)
++ [SQL Server Update Center - links and information for all supported versions](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

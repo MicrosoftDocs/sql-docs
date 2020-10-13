@@ -16,7 +16,7 @@
     href: quickstart-sql-server.md
   - name: Connect & query Azure SQL Database
     href: quickstart-sql-database.md
-  - name: Connect & query Azure SQL Data Warehouse
+  - name: Connect & query Azure Synapse Analytics
     href: quickstart-sql-dw.md
   - name: Connect & query PostgreSQL
     href: quickstart-postgres.md

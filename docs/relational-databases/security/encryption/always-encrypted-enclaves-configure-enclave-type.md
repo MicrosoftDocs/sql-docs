@@ -1,0 +1,30 @@
+---
+title: "Configure the secure enclave in SQL Server"
+description: 
+ms.custom: ""
+ms.date: 12/01/2020
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+ms.reviewer: "vanto"
+ms.technology: security
+ms.topic: conceptual
+author: jaszymas
+ms.author: jaszymas
+monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+---
+
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+# Configure the secure enclave in SQL Server
+
+Before you can use [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) in SQL Server, you need to configure your instance to initialize the secure enclave during startup. By default, SQL Server does not initialize the secure enclave. You can change that, by setting the  **column encryption enclave type** Server Configuration Option to the value that represents a valid enclave type for your environment.
+
+The supported enclave type for [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] is virtualization based security (VBS). Before configuring the VBS enclave type, we recommend you set up attestation with Host Guardian Service (HGS) for the computer hosting your instance - to get started with HGS, see [Plan for Host Guardian Service attestation](always-encrypted-enclaves-host-guardian-service-plan.md). Setting up attestation also enables virtualization based security, which is required for a VBS enclave to get initialized properly - see [Verify virtualization-based security is running](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running).
+
+For detailed instructions on how to configure the enclave type, see [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
+
+## Next Steps
+ [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
+
+## See Also  
+ [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

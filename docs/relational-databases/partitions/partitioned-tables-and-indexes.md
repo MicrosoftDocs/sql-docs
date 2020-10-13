@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports table and index partitioning. The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, partitioned tables and indexes were not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports table and index partitioning. The data of partitioned tables and indexes is divided into units that may optionally be spread across more than one filegroup in a database. The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, partitioned tables and indexes were not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports up to 15,000 partitions by default. In versions earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the number of partitions was limited to 1,000 by default. On x86-based systems, creating a table or index with more than 1,000 partitions is possible, but is not supported.  
@@ -34,9 +34,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   You may improve query performance, based on the types of queries you frequently run and on your hardware configuration. For example, the query optimizer can process equi-join queries between two or more partitioned tables faster when the partitioning columns are the same as the columns on which the tables are joined. See [Queries](#queries) below for further information.
   
-When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs data sorting for I/O operations, it sorts the data first by partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesses one drive at a time, and this might reduce performance. To improve data sorting performance, stripe the data files of your partitions across more than one disk by setting up a RAID. In this way, although [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still sorts data by partition, it can access all the drives of each partition at the same time.  
+When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs data sorting for I/O operations, it sorts the data first by partition. To improve data sorting performance, stripe the data files of your partitions across more than one disk by setting up a RAID. In this way, although [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still sorts data by partition, it can access all the drives of each partition at the same time.  
   
 In addition, you can improve performance by enabling lock escalation at the partition level instead of a whole table. This can reduce lock contention on the table. To reduce lock contention by allowing lock escalation to the partition, set the `LOCK_ESCALATION` option of the `ALTER TABLE` statement to AUTO. 
+
+> [!TIP]
+> Partitions of a table or index can be placed on one filegroup, for example the `PRIMARY` filegroup, or on multiple filegroups. When using tiered storage, using multiple filegroups lets you assign specific partitions to specific storage tiers. All other partitioning benefits apply regardless of the number of filegroups used or partition placement on specific filegroups.
   
 ## Components and Concepts  
 The following terms are applicable to table and index partitioning.  
@@ -109,6 +112,8 @@ If you frequently run queries that involve an equi-join between two or more part
 -  Define the same number of partitions.
 -  Define the same boundary values for partitions.
 In this way, the query optimizer can process the join faster, because the partitions themselves can be joined. If a query joins two tables that are not collocated or are not partitioned on the join field, the presence of partitions may actually slow down query processing instead of accelerate it.
+
+For more information about partition handling in query processing, see [Query Processing Enhancements on Partitioned Tables and Indexes](../../relational-databases/query-processing-architecture-guide.md#query-processing-enhancements-on-partitioned-tables-and-indexes).
 
 ## Behavior changes in statistics computation during partitioned index operations  
  Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. After upgrading a database with partitioned indexes, you may notice a difference in the histogram data for these indexes. This change in behavior may not affect query performance. To obtain statistics on partitioned indexes by scanning all the rows in the table, use `CREATE STATISTICS` or `UPDATE STATISTICS` with the `FULLSCAN` clause.  

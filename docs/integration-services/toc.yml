@@ -85,10 +85,8 @@
 - name: SSIS DevOps
   href: ../integration-services/devops/ssis-devops-overview.md
   items:
-    - name: Azure DevOps SSIS DevOps Tools extension
-    href: ../integration-services/devops/ssis-devops-overview.md
     - name: Standalone SSIS DevOps Tools
-    href: ../integration-services/devops/ssis-devops-standalone.md
+      href: ../integration-services/devops/ssis-devops-standalone.md
 - name: User interface
   href: ../integration-services/integration-services-user-interface.md
   items:

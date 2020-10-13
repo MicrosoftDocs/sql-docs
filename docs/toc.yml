@@ -1707,7 +1707,7 @@
         href: relational-databases/indexes/columnstore-indexes-query-performance.md
       - name: Real-time operational analytics
         href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-      - name: Azure Synapse Analytics
+      - name: Data Warehouse
         href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
       - name: Defragment
         href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -11888,7 +11888,7 @@
         href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
       - name: sys.spatial_reference_systems
         href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-    - name: Azure Synapse Analytics
+    - name: SQL Data Warehouse
       href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties
@@ -12495,7 +12495,7 @@
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-    - name: Azure Synapse Analytics & Parallel Data Warehouse
+    - name: SQL Data Warehouse & Parallel Data Warehouse
       href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
       items:
       - name: sys.dm_pdw_component_health_active_alerts
@@ -14176,7 +14176,7 @@
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: Azure Synapse Analytics
+    - name: SQL Data Warehouse
       href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
       - name: sp_datatype_info_90
@@ -16583,7 +16583,7 @@
           href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
         - name: FUNCTION
           href: t-sql/statements/create-function-transact-sql.md
-        - name: FUNCTION (Azure Synapse Analytics)
+        - name: FUNCTION (SQL Data Warehouse)
           href: t-sql/statements/create-function-sql-data-warehouse.md
         - name: INDEX
           href: t-sql/statements/create-index-transact-sql.md

@@ -1707,7 +1707,7 @@
         href: relational-databases/indexes/columnstore-indexes-query-performance.md
       - name: Real-time operational analytics
         href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-      - name: Data Warehouse
+      - name: Azure Synapse Analytics
         href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
       - name: Defragment
         href: relational-databases/indexes/reorganize-and-rebuild-indexes.md

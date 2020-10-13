@@ -24,7 +24,7 @@ October 14, 2020 &nbsp; / &nbsp; version: 1.23.0
 | Change | Details |
 | ------ | ------- |
 | Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/1.23.0). |
-| Extension updates | Azure Arc</br>azdata</br>Machine Learning</br>Kusto (KQL)</br>Schema Compare</br>SQL Assessment</br>SQL Database Projects</br>SQL Server Import |
+| Extension updates | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[Schema Compare](extensions/schema-compare-extension.md)</br>SQL Assessment</br>[SQL Database Projects](extensions/sql-database-project-extension.md)</br>[SQL Server Import](extensions/sql-server-import-extension.md) |
 | New deployment features | Added Azure SQL DB and VM deployments. |
 | PowerShell | Added PowerShell kernel results streaming support. |
 

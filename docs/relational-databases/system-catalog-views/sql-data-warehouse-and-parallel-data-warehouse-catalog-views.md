@@ -14,7 +14,7 @@ ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---
-# SQL Data Warehouse and Parallel Data Warehouse Catalog Views
+# Azure Synapse Analytics and Parallel Data Warehouse Catalog Views
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 

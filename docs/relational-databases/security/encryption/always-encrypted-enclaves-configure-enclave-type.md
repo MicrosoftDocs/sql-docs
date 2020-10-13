@@ -1,8 +1,7 @@
 ---
 title: "Configure the secure enclave in SQL Server"
-description: 
 ms.custom: ""
-ms.date: 12/01/2020
+ms.date: 12/11/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -13,7 +12,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
-[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 # Configure the secure enclave in SQL Server
 
@@ -24,7 +23,10 @@ The supported enclave type for [!INCLUDE[sql-server-2019](../../../includes/sssq
 For detailed instructions on how to configure the enclave type, see [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
 
 ## Next Steps
- [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
+
+ [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
+
+ [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
 
 ## See Also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

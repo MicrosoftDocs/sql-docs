@@ -1,8 +1,7 @@
 ---
 title: "Configure Azure Attestation for your Azure SQL database server"
-description: 
 ms.custom: ""
-ms.date: 12/18/2020
+ms.date: 11/18/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -26,7 +25,7 @@ To use Azure Attestation for attesting Intel SGX enclaves in [!INCLUDE[ssSDSfull
 
 An [attestation provider](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-provider) is a resource in Azure Attestation that evaluates [attestation requests](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-request) against [attestation policies](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-request) and issues [attestation tokens](https://docs.microsoft.com/azure/attestation/basic-concepts#attestation-token). 
 
-Attestation policies are specified using the [claim rule grammer](https://docs.microsoft.com/en-us/azure/attestation/claim-rule-grammar).
+Attestation policies are specified using the [claim rule grammer](https://docs.microsoft.com/azure/attestation/claim-rule-grammar).
 
 Microsoft recommends the following policy for attesting Intel SGX enclaves used for Always Encrypted in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]:
 
@@ -55,4 +54,4 @@ For instructions for how create an attestation provider and configure with an at
 - ARM templates - see [Quickstart: Create an Azure Attestation provider with an ARM template](https://docs.microsoft.com/azure/attestation/quickstart-template?tabs=CLI)
 
 ## Next Steps
- [Manage keys for Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
+ [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)

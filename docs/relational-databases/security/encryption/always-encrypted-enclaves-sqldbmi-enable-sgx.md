@@ -1,8 +1,7 @@
 ---
 title: "Enable Intel SGX for your database"
-description: 
 ms.custom: ""
-ms.date: 12/18/2020
+ms.date: 11/18/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"

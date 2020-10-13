@@ -20,7 +20,7 @@ To complete this quickstart, you need Azure Data Studio, and a dedicated SQL poo
 
 - [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-If you don't already have a dedicated SQL pool, see [Create a SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+If you don't already have a dedicated SQL pool, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Remember the server name, and login credentials!
 

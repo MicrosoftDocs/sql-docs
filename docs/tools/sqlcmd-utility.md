@@ -60,8 +60,8 @@ Release number: 15.0.2<br>
 Build number: 15.0.2000.5<br>
 Release date: September 11, 2020
 
-The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, SQL Data Warehouse, and Always Encrypted features.
-The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and SQL Data Warehouse.
+The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, Azure Synapse Analytics, and Always Encrypted features.
+The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and Azure Synapse Analytics.
 
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
@@ -161,7 +161,7 @@ Interprets the server name provided to -S as a DSN instead of a hostname. For mo
 > The -D option is only available on Linux and MacOS clients. On Windows clients, it previously referred to a now-obsolete option which has been removed and is ignored.
 
 **-l** _login_timeout_  
-Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to **sqlcmd** is eight seconds. When using the **-G** option to connect to SQL Database or SQL Data Warehouse and authenticate using Azure Active Directory, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message. A value of 0 specifies time-out to be infinite.
+Specifies the number of seconds before a **sqlcmd** login to the ODBC driver times out when you try to connect to a server. This option sets the **sqlcmd** scripting variable SQLCMDLOGINTIMEOUT. The default time-out for login to **sqlcmd** is eight seconds. When using the **-G** option to connect to SQL Database or Azure Synapse Analytics and authenticate using Azure Active Directory, a timeout value of at least 30 seconds is recommended. The login time-out must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, **sqlcmd** generates an error message. A value of 0 specifies time-out to be infinite.
 
 **-E**  
 Uses a trusted connection instead of using a user name and password to sign in to SQL Server. By default, without **-E** specified, **sqlcmd** uses the trusted connection option.  
@@ -172,7 +172,7 @@ The **-E** option ignores possible user name and password environment variable s
 Sets the Column Encryption Setting to `Enabled`. For more information, see [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Only master keys stored in Windows Certificate Store are supported. The -g switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`.
 
 **-G**  
-This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option is not supported with the -G option.
+This switch is used by the client when connecting to SQL Database or Azure Synapse Analytics to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
@@ -212,7 +212,7 @@ This switch is used by the client when connecting to SQL Database or SQL Data Wa
 
 - **Azure Active Directory Interactive**
 
-    The Azure AD Interactive authentication for Azure SQL Database and SQL Data Warehouse, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+    The Azure AD Interactive authentication for Azure SQL Database and Azure Synapse Analytics, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
    Azure AD interactive requires **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) or later as well as [ODBC version 17.2 or later](https://aka.ms/downloadmsodbcsql).  
 

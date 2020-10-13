@@ -10147,7 +10147,7 @@
   items:
   - name: Azure SQL Database >
     href: /azure/sql-database/
-  - name: Azure SQL Data Warehouse >
+  - name: Azure Synapse Analytics >
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -16249,7 +16249,7 @@
         items:
         - name: AT TIME ZONE
           href: t-sql/queries/at-time-zone-transact-sql.md
-        - name: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
+        - name: Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
@@ -16263,7 +16263,7 @@
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search Condition
           href: t-sql/queries/search-condition-transact-sql.md
-        - name: Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)
+        - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: Table Value Constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16643,11 +16643,11 @@
           href: t-sql/statements/create-synonym-transact-sql.md
         - name: TABLE
           href: t-sql/statements/create-table-transact-sql.md
-        - name: TABLE (Azure SQL Data Warehouse)
+        - name: TABLE (Azure Synapse Analytics)
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md
         - name: TABLE (SQL Graph)
           href: t-sql/statements/create-table-sql-graph.md
-        - name: TABLE AS SELECT (Azure SQL Data Warehouse)
+        - name: TABLE AS SELECT (Azure Synapse Analytics)
           href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
         - name: TABLE IDENTITY (Property)
           href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16907,7 +16907,7 @@
           href: t-sql/statements/open-master-key-transact-sql.md
         - name: OPEN SYMMETRIC KEY
           href: t-sql/statements/open-symmetric-key-transact-sql.md
-        - name: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)"
+        - name: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
           href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: REVERT
           href: t-sql/statements/revert-transact-sql.md

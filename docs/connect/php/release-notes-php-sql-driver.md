@@ -172,7 +172,7 @@ This release only applies to Linux and macOS.
   - Always Encrypted is only supported with Microsoft ODBC Driver 17 and above
 - Support for non-UTF8 locales on Linux and macOS
   - Non-UTF8 locales on Linux and macOS are only supported with Microsoft ODBC Driver 17 and above
-- Support for Azure SQL Data Warehouse
+- Support for Azure Synapse Analytics
 - Support for Azure SQL Managed Instance
 
 ## 4.3

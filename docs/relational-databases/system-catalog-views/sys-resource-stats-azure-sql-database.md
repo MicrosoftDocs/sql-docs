@@ -38,7 +38,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |sku|**nvarchar(128)**|Service Tier of the database. The following are the possible values:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />General Purpose<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|Maximum storage size in megabytes for the time period, including database data, indexes, stored procedures, and metadata.|  
 |avg_cpu_percent|**decimal(5,2)**|Average compute utilization in percentage of the limit of the service tier.|  
-|avg_data_io_percent|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the service tier. For Hyperscale databases, see [Data IO in resource utilization statistics](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
+|avg_data_io_percent|**decimal(5,2)**|Average I/O utilization in percentage based on the limit of the service tier. For Hyperscale databases, see [Data IO in resource utilization statistics](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal(5,2)**|Average write resource utilization in percentage of the limit of the service tier.|  
 |max_worker_percent|**decimal(5,2)**|Maximum concurrent workers (requests) in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent worker counts.|  
 |max_session_percent|**decimal(5,2)**|Maximum concurrent sessions in percentage based on the limit of the database's service tier.<br /><br /> Maximum is currently calculated for the five-minute interval based on the 15-second samples of concurrent session counts.|  
@@ -48,10 +48,10 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL Database process.|
 |avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL Database process.|
 |cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is NULL.|
-|allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL Database](/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
->  For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
+>  For more context about these limits and service tiers, see the topics [Service Tiers](/azure/azure-sql/database/purchasing-models).  
     
 ## Permissions  
  This view is available to all user roles with permissions to connect to the virtual **master** database.  
@@ -79,7 +79,6 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## See Also  
- [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Service tier capabilities and limits](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
+ [Service Tiers](/azure/azure-sql/database/purchasing-models)   
+ [Service tier capabilities and limits](/azure/azure-sql/database/performance-guidance)  
   

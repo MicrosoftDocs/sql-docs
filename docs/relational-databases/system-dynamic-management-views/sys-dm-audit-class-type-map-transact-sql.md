@@ -32,7 +32,7 @@ ms.author: maghan
 |**securable_class_desc**|**nvarchar(120)**|The securable object that maps to the class_type being audited. Is NULL if the class_type does not map to a securable object. Can be related to class_desc in sys.dm_audit_actions.|  
   
 ## Permissions  
- Principal must have **SELECT** permission. By default, this is granted to Public.  
+This view is visible to the public.  
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

@@ -2,7 +2,7 @@
 description: "ALTER TABLE (Transact-SQL)"
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/04/2020"
+ms.date: "09/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -169,14 +169,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | DATA_DELETION =  OFF | ON  
-                      [(    
-                         [ FILTER_COLUMN = column_name ],   
-                         [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                              | MONTH | MONTHS | YEAR | YEARS }}]    
-                      )]
-          )
-
+            | DATA_DELETION =  
+                {
+                      OFF 
+                    | ON  
+                        [(  [ FILTER_COLUMN = column_name ]   
+                            [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                                    | MONTH | MONTHS | YEAR | YEARS }}]   
+                        )]
+     	           }
     | REBUILD
       [ [PARTITION = ALL]
         [ WITH ( <rebuild_option> [ ,...n ] ) ]
@@ -388,9 +389,9 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 <column_constraint>::=
     [ CONSTRAINT constraint_name ] 
     {
-        DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
-        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
 {
@@ -794,13 +795,15 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEK
 
 Specifies finite or infinite retention for historical data in a temporal table. If omitted, infinite retention is assumed.
 
-SET (DATA_DELETION =  OFF | ON  
-            [(
-                [ FILTER_COLUMN = column_name ],    
-                [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                    | MONTH | MONTHS | YEAR | YEARS }}]    
-            )]    
-          )   
+SET (DATA_DELETION =  
+      {
+            OFF 
+        | ON  
+                [(  [ FILTER_COLUMN = column_name ]   
+                    [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                            | MONTH | MONTHS | YEAR | YEARS }}]   
+                )]
+       }   
 **Applies to:** Azure SQL Edge *only*
 
 Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
@@ -1108,7 +1111,7 @@ ALTER TABLE permissions apply to both tables involved in an ALTER TABLE SWITCH s
 
 If you've defined any columns in the ALTER TABLE statement to be of a common language runtime (CLR) user-defined type or alias data type, REFERENCES permission on the type is required.
 
-Adding a column that updates the rows of the table requires **UPDATE** permission on the table. For example, adding a **NOT NULL** column with a default value or adding an identity column when the table isn't empty.
+Adding or altering a column that updates the rows of the table requires **UPDATE** permission on the table. For example, adding a **NOT NULL** column with a default value or adding an identity column when the table isn't empty.
 
 ## <a name="Example_Top"></a> Examples
 

@@ -19,7 +19,7 @@ This article describes how to run an application inside a SQL Server Big Data Cl
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)
-- [azdata command-line utility](deploy-install-azdata.md)
+- [azdata command-line utility](../azdata/install/deploy-install-azdata.md)
 
 ## Capabilities
 

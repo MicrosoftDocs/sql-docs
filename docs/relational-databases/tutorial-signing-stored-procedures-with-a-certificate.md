@@ -33,11 +33,11 @@ Each code block in this example is explained in line. To copy the complete examp
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Download [AdventureWorks2017 sample databases](../samples/adventureworks-install-configure.md).
 
-For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## 1. Configure the Environment  
 To set the initial context of the example, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] open a new Query and run the following code to open the Adventureworks2017 database. This code changes the database context to `AdventureWorks2012` and creates a new server login and database user account (`TestCreditRatingUser`), using a password.  
@@ -282,6 +282,5 @@ GO
   
 ## See Also  
 [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

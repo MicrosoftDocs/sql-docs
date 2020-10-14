@@ -63,12 +63,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Finding More SQL Server Native Client Information](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
  Provides additional resources about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, including links to external resources and getting further assistance.  
   
- [SQL Server Native Client Errors](https://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
+ [SQL Server Native Client Errors](./sql-server-native-client-error-mssqlserver-50000.md)  
  Contains topics about runtime errors associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## See Also  
  [Updating an Application from SQL Server 2005 Native Client](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB How-to Topics](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

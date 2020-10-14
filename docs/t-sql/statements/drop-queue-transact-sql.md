@@ -33,7 +33,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 DROP QUEUE <object>  
 [ ; ]  
   
@@ -62,9 +61,8 @@ DROP QUEUE <object>
 ## Examples  
  The following example drops the **ExpenseQueue** queue from the current database.  
   
-```  
+```sql  
 DROP QUEUE ExpenseQueue ;  
-  
 ```  
   
 ## See Also  

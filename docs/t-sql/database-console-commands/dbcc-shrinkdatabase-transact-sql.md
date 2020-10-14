@@ -146,7 +146,7 @@ Consider the following information when you plan to shrink a database:
 ## Troubleshooting  
 It's possible to block shrink operations by a transaction that is running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). For example, a large delete operation running under a row versioning-based isolation level is in progress when a DBCC SHRINK DATABASE operation is executed. When this situation happens, the shrink operation will wait for the delete operation to complete before it shrinks the files. When the shrink operation waits, DBCC SHRINKFILE and DBCC SHRINKDATABASE operations print out an informational message (5202 for SHRINKDATABASE and 5203 for SHRINKFILE). This message prints to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log every five minutes in the first hour and then every upcoming hour. For example, if the error log contains the following error message:  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -180,7 +180,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### C. Shrinking an Azure Synapse Analytics database
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 

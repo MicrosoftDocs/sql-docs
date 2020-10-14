@@ -80,4 +80,4 @@ Click to save the registered server settings.
 
 ## See Also
 
-[Create a New Registered Server (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
+[Create a New Registered Server (SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md)

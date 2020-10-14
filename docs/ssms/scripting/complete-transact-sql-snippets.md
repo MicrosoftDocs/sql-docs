@@ -35,7 +35,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Select an item from the list, or type a replacement of your choice.  
   
 ## See Also  
- [Insert Transact-SQL Snippets](../../relational-databases/scripting/insert-transact-sql-snippets.md)   
- [Insert Surround-with Transact-SQL snippets](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Insert Transact-SQL Snippets](./insert-transact-sql-snippets.md)   
+ [Insert Surround-with Transact-SQL snippets](./insert-surround-with-transact-sql-snippets.md)  
   

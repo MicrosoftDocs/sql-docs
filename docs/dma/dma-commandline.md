@@ -376,4 +376,4 @@ These commands support recommendations for both Azure SQL Database single databa
 
 ## See also
 - [Data Migration Assistant](https://aka.ms/get-dma) download.
-- The article [Identify the right Azure SQL Database SKU for your on-premises database](https://aka.ms/dma-sku-recommend-sqldb).
+- The article [Identify the right Azure SQL Database SKU for your on-premises database](./dma-sku-recommend-sql-db.md).

@@ -33,7 +33,7 @@ This function returns the message text of the error that caused the CATCH block 
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ERROR_MESSAGE ( )   
 ```  
 

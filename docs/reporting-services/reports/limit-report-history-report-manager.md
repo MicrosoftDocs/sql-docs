@@ -41,11 +41,11 @@ ms.author: maggies
   
 3.  Click the **History** tab.  
   
-4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
+4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## See Also  
  [Add a Snapshot to Report History &#40;Report Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md)  
 
 ::: moniker-end
 
@@ -67,10 +67,9 @@ ms.author: maggies
   
 3.  Click the **History** tab.  
   
-4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
+4.  Select the options for your report and click **Apply**. For details about each option, see [Snapshot Options Properties Page](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130)).  
   
 ## See Also  
  [Add a Snapshot to Report History](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end
-  

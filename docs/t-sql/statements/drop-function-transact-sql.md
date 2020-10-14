@@ -43,7 +43,7 @@ DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]
 ```
 
 ```syntaxsql
- -- Azure SQL Data Warehouse, Parallel Data Warehouse 
+ -- Azure Synapse Analytics, Parallel Data Warehouse 
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 
@@ -75,7 +75,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ### A. Dropping a function  
  The following example drops the `fn_SalesByStore` user-defined function from the `Sales` schema in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. To create this function, see Example B in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
-```  
+```sql  
 DROP FUNCTION Sales.fn_SalesByStore;  
 ```  
   

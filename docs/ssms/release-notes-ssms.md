@@ -75,6 +75,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Intellisense | Fixed an issue where intellisense doesn't work when the user is connected to an Availability Group configured for Read-Only Routing. |
 | Linked Servers | Fixed an issue where a user with CONTROL SERVER permission (but not in sysadmin role) was not able to add a linked server. |
 | Log Viewer | Fixed an issue where a user with VIEW SERVER STATE permissions was not able to view the SQL Server Error Logs. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/32899204). |
+| Object Explorer | Fixed an issue where selecting the **Start PowerShell** menu on some Object Explorer nodes (like "Policy Management", "Extended Events") would cause PowerShell not to start correctly. |
 | Registered Servers | Fixed an issue where SSMS crashed when trying to register a Central Management Server. |
 | Registered Servers | Fixed the issue where menu items to launch Azure Data Studio from Registered Servers was missing. |
 | Reports | Fixed an issue where on the Performance Dashboard you try to navigate to sublinks (e.g. "Expensive Queries") and it doesn't work. This issue was common on most non-English versions of SSMS. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/41454499). |

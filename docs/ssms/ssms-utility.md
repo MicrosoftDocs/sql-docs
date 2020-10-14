@@ -136,4 +136,4 @@ Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 
 ## See Also
 
-[Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[Use SQL Server Management Studio](./sql-server-management-studio-ssms.md)

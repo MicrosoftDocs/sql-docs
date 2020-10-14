@@ -56,7 +56,7 @@ A secure big data cluster implies consistent and coherent support for authentica
 
 Authorization in Big Data context is usually performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files, and job execution.
 
-## Encryption and other security mechanisms
+## Connection Encryption and other security mechanisms
 
 Encryption of communication between clients to the external endpoints, as well as between components inside the cluster are secured with TLS/SSL, using certificates.
 
@@ -65,6 +65,13 @@ All SQL Server to SQL Server communication, such as the SQL master instance comm
 > [!IMPORTANT]
 >  Big data clusters uses etcd to store credentials. As a best practice, you must ensure your Kubernetes cluster is configured to use etcd encryption at rest. By default, secrets stored in etcd are unencrypted. Kubernetes documentation provides details on this administrative task: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ and 
 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## Data Encryption at Rest
+
+SQL Server Big Data Clusters Encryption at Rest support the core scenario of application level encryption for the SQL Server and HDFS components. Please follow the [Encryption at Rest Concepts and Configuration Guide](encryption-at-rest-concepts-and-configuration.md) article for a comprehensive feature usage guide.
+
+> [!IMPORTANT]
+> Volume Encryption is a recommended practice for all SQL Server Big Data Clusters deployments. Storage volumes provided by the customer and configured on Kubernetes clusters should be encrypted to provide the most secure solution architecture. SQL Server Big Data Clusters Encryption at Rest is an additional security layer, providing application level encryption of SQL Server's data files and HDFS encryption zone support.
 
 
 ## Basic administrator login

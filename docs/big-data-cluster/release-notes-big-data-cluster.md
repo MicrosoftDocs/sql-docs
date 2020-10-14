@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/02/2020
+ms.date: 10/??/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -33,7 +33,7 @@ This section explains platforms that are supported with BDC.
 ### Host OS for Kubernetes
 
 |Platform|Host OS|Supported versions|
-|---------|---------|
+|---------|---------|---------|
 |Kubernetes|Ubuntu|16.04|
 |Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
 |OpenShift|Red Hat Enterprise Linux / CoreOS |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
@@ -59,6 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release          | BDC Version    | `azdata` Version| Release date |
 |------------------|----------------|-----------------|--------------|
+| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-??   |
 | [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
@@ -73,6 +74,25 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu8"></a> CU8 (September 2020)
+
+Cumulative Update 8 (CU8) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4073.23 |[2019-CU8-ubuntu-16.04]
+
+This release includes several fixes and a couple of enhancements.
+
+Starting on CU8 and forward, we are providing a complete [packages and libraries version documentation](packages-libraries-cu8.md). This will enable precise version compatibility tracking and validation during application development and maintenance for customers.
+
+### Added capabilities
+
+- [SQL Server Big Data Clusters Encryption at Rest](encryption-at-rest-concepts-and-configuration.md) using system managed keys and certificates.
+   > [!CAUTION]
+   > This is the initial release of SQL Server BDC Encryption at Rest experience and a throughout read of the linked documentation article is highly encouraged. There are additional steps required to enable the functionality on upgrade scenarios.
+- [Oracle Proxy User](tutorial-query-oracle.md) support to the Data Virtualization scenario.
 
 ## <a id="cu6"></a> CU6 (July 2020)
 
@@ -163,6 +183,18 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### HA SQL Server Database Encryption key encryptor rotation
+
+- **Affected releases**: All big data cluster HA deployments irrespective of the release.
+
+- **Issue and customer impact**: With SQL Server deployed with HA, the certificate rotation for the encrypted database fails. When the following command is executed on the master pool, an error message will appear:
+    ```
+    ALTER DATABASE ENCRYPTION KEY
+    ENCRYPTION BY SERVER
+    CERTIFICATE <NewCertificateName>
+    ```
+    There is no impact, the command fails and the target database encryption is preserved using the previous certificate.
+    
 ### Empty Livy jobs before you apply cumulative updates
 
 - **Affected releases**: Through current cumulative update

@@ -11888,7 +11888,7 @@
         href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
       - name: sys.spatial_reference_systems
         href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-    - name: SQL Data Warehouse
+    - name: Azure Synapse Analytics
       href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties
@@ -12495,7 +12495,7 @@
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-    - name: SQL Data Warehouse & Parallel Data Warehouse
+    - name: Azure Synapse Analytics & Parallel Data Warehouse
       href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
       items:
       - name: sys.dm_pdw_component_health_active_alerts
@@ -14176,7 +14176,7 @@
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: SQL Data Warehouse
+    - name: Azure Synapse Analytics
       href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
       - name: sp_datatype_info_90

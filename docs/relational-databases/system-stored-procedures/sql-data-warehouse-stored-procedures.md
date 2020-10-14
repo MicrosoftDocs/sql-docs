@@ -1,6 +1,6 @@
 ---
 description: "Azure Synapse Analytics Stored Procedures"
-title: "Azure Synapse Analytics Stored Procedures | Microsoft Docs"
+title: "Azure Synapse Analytics Stored Procedures"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.service: sql-data-warehouse

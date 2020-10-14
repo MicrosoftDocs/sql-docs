@@ -73,5 +73,4 @@ The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-tr
  [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## Next steps
- For more development tips, see [SQL Data Warehouse development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ ## Next steps Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

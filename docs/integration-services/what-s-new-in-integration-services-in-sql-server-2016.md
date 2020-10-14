@@ -305,7 +305,7 @@ The latest version of the Azure Feature Pack includes a connection manager, sour
 
 #### <a name="sqldwupload"></a> Support for Azure Synapse Analytics released
 
-The latest version of the Azure Feature Pack includes the Azure SQL DW Upload task for populating SQL Data Warehouse with data. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
+The latest version of the Azure Feature Pack includes the Azure SQL DW Upload task for populating Azure Synapse Analytics with data. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
 ## Usability and productivity  
  

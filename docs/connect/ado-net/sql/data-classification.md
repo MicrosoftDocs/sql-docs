@@ -18,7 +18,7 @@ ms.reviewer:
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-[Data Discovery & Classification](../../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017) is a set of advanced services for discovering, classifying, labeling & reporting the sensitive data in your databases. SqlClient provides an API exposing read-only Data Discovery and Classification information when the underlying source supports the feature. This information is accessed through SqlDataReader.
+[Data Discovery & Classification](../../../relational-databases/security/sql-data-discovery-and-classification.md) is a set of advanced services for discovering, classifying, labeling & reporting the sensitive data in your databases. SqlClient provides an API exposing read-only Data Discovery and Classification information when the underlying source supports the feature. This information is accessed through SqlDataReader.
 
 This sample application demonstrates how to access the Data Classification properties of SqlDataReader.
 

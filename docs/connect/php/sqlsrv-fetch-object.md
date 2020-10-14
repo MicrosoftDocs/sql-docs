@@ -86,7 +86,7 @@ If the results returned by this query are retrieved with **sqlsrv_fetch_object**
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## Example  
+## Object example  
 The following example retrieves each row of a result set as a PHP object. The example assumes that the SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ``` 
@@ -125,7 +125,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## Example  
+## Class example  
 The following example retrieves each row of a result set as an instance of the *Product* class defined in the script. The example retrieves product information from the *Purchasing.PurchaseOrderDetail* and *Production.Product* tables of the AdventureWorks database for products that have a specified due date (*DueDate*), and a stocked quantity (*StockQty*) less than a specified value. The example highlights some of the rules that apply when specifying a class in a call to **sqlsrv_fetch_object**:  
   
 -   The *$product* variable is an instance of the *Product* class, because "Product" was specified with the *$className* parameter and the *Product* class exists.  

@@ -95,7 +95,7 @@ EXEC sp_special_columns_100 @table_name = 'FactFinance';
 ```  
   
 ## See Also  
- [SQL Data Warehouse Stored Procedures](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
+ [Azure Synapse Analytics Stored Procedures](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   
 

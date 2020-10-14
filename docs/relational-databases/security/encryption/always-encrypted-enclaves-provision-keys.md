@@ -2,7 +2,7 @@
 description: "Provision enclave-enabled keys"
 title: "Provision enclave-enabled keys | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/01/2019
+ms.date: 12/01/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: "database-engine, sql-database"
@@ -13,7 +13,8 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Provision enclave-enabled keys
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 This article describes how to provision enclave-enabled keys that support computations inside server-side secure enclaves used for [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
 

@@ -13,7 +13,8 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Always Encrypted with secure enclaves
-[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/sqlserver2019-windows-only-asdb.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
  
 Always Encrypted with secure enclaves expands confidential computing capabilities of  [Always Encrypted](always-encrypted-database-engine.md) by enabling in-place encryption and richer confidential queries. Always Encrypted with secure enclaves is available in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] and in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] (in preview).
 

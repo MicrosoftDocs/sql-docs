@@ -86,10 +86,10 @@
       href: extensions/sql-server-profiler-extension.md
   - name: Extension Authoring
     items:
-    - name: Extensibility overview
-      href: extensibility.md
     - name: Extension authoring
       href: extensions/extension-authoring.md
+    - name: Extensibility overview
+      href: extensibility.md
     - name: Extensibility APIs
       href: extensibility-apis.md
     - name: Keymap extension
@@ -104,6 +104,8 @@
       href: extensions/wizard-extension.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
+  - name: Preview features
+    href: preview-features.md
   - name: Server groups
     href: server-groups.md
   - name: Source control
@@ -124,8 +126,12 @@
       href: notebooks/notebooks-kqlmagic.md
   - name: Deployment
     items:
+    - name: Deploy Azure SQL Database
+      href: deploy-azure-sql-database.md
     - name: Deploy Azure SQL Edge
       href: deploy-azure-sql-edge.md
+    - name: Deploy SQL Server on Azure Virtual Machines
+      href: deploy-azure-sql-server-vm.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

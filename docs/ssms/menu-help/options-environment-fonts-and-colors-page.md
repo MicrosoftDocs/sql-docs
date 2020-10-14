@@ -77,4 +77,4 @@ Select this check box to display the text of selected displayitems in bold font.
 Displays a sample of the font style, size, and color scheme for the selected values in **Show settings for** and **Display items**. You can use this text box to preview the results as you experiment with different formatting options.  
   
 ## See Also  
-[Color Coding in Code Editors](../../relational-databases/scripting/color-coding-in-query-editors.md)  
+[Color Coding in Code Editors](../scripting/color-coding-in-query-editors.md)

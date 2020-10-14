@@ -47,5 +47,5 @@ The expression specified must be a valid Transact-SQL expression that evaluates 
   
 ## See Also
 
-- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)
-- [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)
+- [Specify a Hit Count](./specify-a-hit-count.md)
+- [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)

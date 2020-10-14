@@ -30,12 +30,12 @@ This quickstart teaches you how to use SQL Server Management Studio (SSMS) to co
 
 To complete this article, you need SQL Server Management Studio and access to a SQL Server instance.
 
-* Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 
 * **Windows**: [Download SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* **macOS**: [Download SQL Server 2019 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+* **macOS**: [Download SQL Server 2019 on Docker](../../linux/quickstart-install-connect-docker.md).
 
 ## Connect to a SQL Server instance
 
@@ -49,7 +49,7 @@ If you don't have access to a SQL Server instance, select your platform from the
 
     * For **Server type**, select **Database Engine** (usually the default option).
     * For **Server name**, enter the name of your SQL Server instance. (This article uses the instance name SQL2016ST on the hostname NODE5 [NODE5\SQL2016ST].) If you're unsure how to determine your SQL Server instance name, see [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name).
-    * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you're prompted for a username and password. For more information about authentication types, see [Connect to the server (database engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    * For **Authentication**, select **Windows Authentication**. This article uses Windows Authentication, but SQL Server login is also supported. If you select **SQL Login**, you're prompted for a username and password. For more information about authentication types, see [Connect to the server (database engine)](../f1-help/connect-to-server-database-engine.md).
 
     !["Server name" field with option of using SQL Server instance](media/connect-query-sql-server/connection-2.png)
 
@@ -68,7 +68,7 @@ To verify that your SQL Server connection succeeded, expand and explore the obje
   ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> In this article, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management).
+> In this article, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](/azure/sql-database/sql-database-security-overview#access-management).
 
 ## Create a database
 

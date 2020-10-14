@@ -53,4 +53,4 @@ The description pane appears at the bottom of the **Properties** window and show
   
 ## See Also
 
-- [Properties Window in SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)
+- [Properties Window in SQL Server Management Studio](../scripting/use-the-properties-window-in-management-studio.md)

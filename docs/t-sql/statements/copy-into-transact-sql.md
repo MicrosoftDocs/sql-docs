@@ -93,7 +93,7 @@ Is where the files containing the data is staged. Currently Azure Data Lake Stor
 - *External location* for ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> The blob endpoint is available for ADLS Gen2 for backward compatibility. Use the **blob** endpoint for best performance.
+> The .blob endpoint is available for ADLS Gen2 as well and currently yields the best performance. Use the .blob endpoint when .dfs is not required for your authentication method.
 
 - *Account* - The storage account name
 
@@ -135,14 +135,15 @@ Multiple file locations can only be specified from the same storage account and 
 |  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1: You must use the blob endpoint (**.blob**.core.windows.net) in your external location path.
+1: The .blob endpoint (**.blob**.core.windows.net) in your external location path is required for this authentication method.
 
-2: You must use the dfs endpoint (**.dfs**.core.windows.net) in your external location path.
+2: The .dfs endpoint (**.dfs**.core.windows.net) in your external location path is required for this authentication method.
+
 
 > [!NOTE]  
 >
 > - When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
->  - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
+> - If your storage account is associated with a VNet, you must authenticate using MSI (Managed Identity).
 
 - Authenticating with Shared Access Signatures (SAS)
   
@@ -422,9 +423,6 @@ Guidance on the number of files is outlined in the table below. Once the recomme
 
 ### What is the file splitting guidance for the COPY command loading Parquet or ORC files?
 There is no need to split Parquet and ORC files because the COPY command will automatically split files. Parquet and ORC files in the Azure storage account should be 256MB or larger for best performance. 
-
-### When will the COPY command be generally available?
-The COPY command will be generally available by the end of this calendar year (2020). 
 
 ### Are there any limitations on the number or size of files?
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.

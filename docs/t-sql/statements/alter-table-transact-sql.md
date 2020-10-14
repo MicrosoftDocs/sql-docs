@@ -2,7 +2,7 @@
 description: "ALTER TABLE (Transact-SQL)"
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/04/2020"
+ms.date: "09/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -389,9 +389,9 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 <column_constraint>::=
     [ CONSTRAINT constraint_name ] 
     {
-        DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
-        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name [ ,... n ]) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
 {

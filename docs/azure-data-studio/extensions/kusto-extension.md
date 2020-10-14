@@ -13,7 +13,7 @@ ms.date: 09/22/2020
 
 # Kusto (KQL) extension for Azure Data Studio (Preview)
 
-The Kusto (KQL) extension for [Azure Data Studio](../what-is.md) enables you to connect and query to [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) clusters.
+The Kusto (KQL) extension for [Azure Data Studio](../what-is.md) enables you to connect and query to [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) clusters.
 
 Users can write and run KQL queries and author notebooks with the [Kusto kernel](../notebooks/notebooks-kusto-kernel.md) complete with IntelliSense.
 
@@ -28,7 +28,7 @@ If you don't have an Azure subscription, create a [free Azure account](https://a
 The following prerequisites are also required:
 
 - [Azure Data Studio installed](../download-azure-data-studio.md).
-- [An Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [An Azure Data Explorer cluster and database](/azure/data-explorer/create-cluster-database-portal).
 
 ## Install the Kusto (KQL) extension
 
@@ -99,7 +99,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-For more information about writing KQL queries, visit [Write queries for Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
+For more information about writing KQL queries, visit [Write queries for Azure Data Explorer](/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## View extension settings
 
@@ -119,7 +119,7 @@ The extensions settings look like this:
 
 ## SandDance visualization
 
-The [SandDance extension](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
+The [SandDance extension](../sanddance-extension.md) with the Kusto (KQL) extension in Azure Data Studio bring rich interactive visualization together. From the KQL query result set, select the **Visualizer** button to launch [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance visualization":::
 
@@ -140,6 +140,6 @@ You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?ass
 
 - [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)
 - [Kqlmagic notebook in Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
-- [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [What is Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [SQL to Kusto cheat sheet](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
 - [Using SandDance visualizations](https://sanddance.js.org/)

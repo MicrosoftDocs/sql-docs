@@ -895,7 +895,7 @@ Console.WriteLine(result.DeploymentReport);
 **Analysis Services & Reporting Services**
 
 SSAS tabular designer DAX parser has improved performance when working with large DAX expressions.
-For more information, please read the [Analysis Services blog post](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+For more information, please read the [Analysis Services blog post](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 ### Fixed / Improved this month
 
@@ -931,11 +931,11 @@ _For SQL Server 2016._
 
 **What's New?**
 
-Schema Compare is now supported in SqlPackage.exe and the Data-Tier Application Framework (DacFx) API. For details, see [Schema Compare in SqlPackage and the Data-Tier Application Framework](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/).
+Schema Compare is now supported in SqlPackage.exe and the Data-Tier Application Framework (DacFx) API. For details, see [Schema Compare in SqlPackage and the Data-Tier Application Framework](/archive/blogs/ssdt/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx).
 
 **Analysis Services - Integrated Workspace Mode for SSDT Tabular (SSAS)**
 
-SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts automatically in the background if integrated workspace mode is enabled so that you can add and view tables, columns, and data in the model designer without having to provide an external workspace server instance. Integrated workspace mode does not change how SSDT Tabular works with a workspace server and database. What changes is where SSDT Tabular hosts the workspace database. To enable integrated workspace mode, select the Integrated Workspace option in the Tabular Model Designer dialog box displayed when creating a new tabular project. For existing tabular projects that currently use an explicit workspace server, you can switch to integrated workspace mode by setting the Integrated Workspace Mode parameter to True in the Properties window, which is displayed when you select the Model.bim file in Solution Explorer. For details, see the [Analysis Services blog post](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
+SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts automatically in the background if integrated workspace mode is enabled so that you can add and view tables, columns, and data in the model designer without having to provide an external workspace server instance. Integrated workspace mode does not change how SSDT Tabular works with a workspace server and database. What changes is where SSDT Tabular hosts the workspace database. To enable integrated workspace mode, select the Integrated Workspace option in the Tabular Model Designer dialog box displayed when creating a new tabular project. For existing tabular projects that currently use an explicit workspace server, you can switch to integrated workspace mode by setting the Integrated Workspace Mode parameter to True in the Properties window, which is displayed when you select the Model.bim file in Solution Explorer. For details, see the [Analysis Services blog post](/archive/blogs/analysisservices/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular).
 
 **Updates and fixes**
 **Database tools:**
@@ -1008,7 +1008,7 @@ _For SQL Server 2016._
 **What's New?**  
 - **Always Encrypted support:** For Databases that contain Always Encrypted columns, this release adds full support for Always Encrypted through our core APIs and command-line tool (SqlPackage.exe). You can build and publish database projects with full support for all Always Encrypted features.  
 - **Temporal Tables enhanced support:** Simplified the experience by unlinking temporal tables before alterations and relinking once these have completed. This means that Temporal Tables have parity with other table types (standard, in-memory) in terms of the operations that are supported. 
-- **SqlPackage.exe and installation changes:** Changes to isolate SSDT from SQL Server engine and SSMS updates. For details, see [Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
+- **SqlPackage.exe and installation changes:** Changes to isolate SSDT from SQL Server engine and SSMS updates. For details, see [Changes to SSDT and SqlPackage.exe installation and updates](/archive/blogs/ssdt/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates).
 
 
 **Updates and fixes**
@@ -1046,12 +1046,12 @@ _Released:_ &nbsp; June 1, 2016
 _Build number:_ &nbsp; 14.0.60525.0  
 _For SQL Server 2016._
 
-SSDT General Availability (GA) is now released. The SSDT GA update for June 2016 adds support for the latest updates of SQL Server 2016 RTM, and various bug fixes. For details, see [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/).
+SSDT General Availability (GA) is now released. The SSDT GA update for June 2016 adds support for the latest updates of SQL Server 2016 RTM, and various bug fixes. For details, see [SQL Server Data Tools GA update for June 2016](/archive/blogs/ssdt/sql-server-data-tools-ga-update-for-june-2016).
 
 ## Additional Resources
 
 - [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
-- [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx)
-- [What's New in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [What's New in Database Engine](../sql-server/what-s-new-in-sql-server-2016.md)
+- [What's New in Analysis Services](/analysis-services/what-s-new-in-analysis-services)
 - [What's New in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)

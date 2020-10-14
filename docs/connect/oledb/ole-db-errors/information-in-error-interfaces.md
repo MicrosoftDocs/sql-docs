@@ -40,7 +40,7 @@ ms.author: v-daenge
 |Member function|Description|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Fills an ERRORINFO structure with basic information about an error. An ERRORINFO structure contains members that identify the HRESULT return value for the error, and the provider and interface to which the error applies.|  
-|**GetCustomErrorObject**|Returns a reference on interfaces **ISQLErrorInfo,** and [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).|  
+|**GetCustomErrorObject**|Returns a reference on interfaces **ISQLErrorInfo,** and [ISQLServerErrorInfo](../ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15).|  
 |**GetErrorInfo**|Returns a reference on an **IErrorInfo** interface.|  
 |**GetErrorParameters**|The OLE DB Driver for SQL Server does not return parameters to the consumer through **GetErrorParameters**.|  
 |**GetRecordCount**|Count of error records available.|  
@@ -54,5 +54,4 @@ ms.author: v-daenge
   
 ## See Also  
  [Errors](../../oledb/ole-db-errors/errors.md)  
-  
   

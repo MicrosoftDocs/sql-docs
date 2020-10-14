@@ -21,14 +21,14 @@ When you attempt to connect without specifying enough information, the OLE DB dr
 > [!NOTE]  
 > SQL Server Login Dialog prompting behavior is controlled by the `DBPROP_INIT_PROMPT` initialization property. For more information, see:
 > - [Initialization and Authorization Properties](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [OLE DB Programmer's Guide](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [OLE DB Programmer's Guide](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![Screenshot of SQL Server Login Dialog Box](../media/sql-server-login-dialog.png)
 
 ## Options
 |Option|Description|
 |---   |---        |
-|Server|The name of an instance of SQL Server on your network. Select a server\instance name from the list, or type the server\instance name in the **Server** box. Optionally, you can create a server alias on the client computer using **SQL Server Configuration Manager**, and type that name in the **Server** box. <br/><br/>You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.<br/><br/>For more information about server names for different types of networks, see [SQL Server Installation](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Server|The name of an instance of SQL Server on your network. Select a server\instance name from the list, or type the server\instance name in the **Server** box. Optionally, you can create a server alias on the client computer using **SQL Server Configuration Manager**, and type that name in the **Server** box. <br/><br/>You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.<br/><br/>For more information about server names for different types of networks, see [SQL Server Installation](../../../database-engine/install-windows/install-sql-server.md).|
 |Authentication Mode|You can select the following authentication options from the drop-down list:<br/><ul><li>`Windows Authentication:` Authentication to SQL Server using the currently logged-in user's Windows account credentials.</li><li>`SQL Server Authentication:` Authentication using login ID and password.</li><li>`Active Directory - Integrated:` Integrated authentication with an Azure Active Directory identity. This mode can also be used for Windows authentication to SQL Server.</li><li>`Active Directory - Password:` User ID and password authentication with an Azure Active Directory identity.</li><li>`Active Directory - Universal with MFA support:` Interactive authentication with an Azure Active Directory identity. This mode supports Azure multi-factor authentication (MFA).</li></ul>|
 |Server SPN|If you use a trusted connection, you can specify a service principal name (SPN) for the server.|
 |Login ID|Specifies the login ID to use for the connection. The Login ID text box is only enabled if `Authentication Mode` is set to `SQL Server Authentication`, `Active Directory - Password` or `Active Directory - Universal with MFA support`.|

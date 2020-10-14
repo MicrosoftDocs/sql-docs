@@ -187,16 +187,16 @@ After you commit or roll back the transaction, you can use `ALTER DATABASE` to s
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
-For more information about resolving in-doubt transactions, see [Resolve Transactions Manually](https://technet.microsoft.com/library/cc754134.aspx).
+For more information about resolving in-doubt transactions, see [Resolve Transactions Manually](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754134(v=ws.10)).
 
 ## Next Steps  
 
-[Distributed Transactions](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
+[Distributed Transactions](/dotnet/framework/data/adonet/distributed-transactions)
 
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transactions - Always On availability groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md)  
 
-[Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+[Supporting XA Transactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10))
 
-[How It Works: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[How It Works: Session/SPID (-2) for DTC Transactions](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions)

@@ -24,10 +24,10 @@ The following table lists common big data cluster tools and how to install them:
 | Tool | Required | Description | Installation |
 |---|---|---|---|
 | `python` | Yes | Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Many parts of big data clusters for SQL Server use python. | [Install python](#python)|
-| `azdata` | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-azdata.md) |
+| `azdata` | Yes | Command-line tool for installing and managing a big data cluster. | [Install](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kubernetes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
-| **Azure Data Studio** | Yes | Cross-platform graphical tool for querying SQL Server. | [Install](https://aka.ms/getazuredatastudio) |
-| **Data Virtualization extension** | Yes | Extension for Azure Data Studio that provides a Data Virtualization wizard. | [Install](../azure-data-studio/data-virtualization-extension.md) |
+| **Azure Data Studio** | Yes | Cross-platform graphical tool for querying SQL Server. | [Install](../azure-data-studio/download-azure-data-studio.md) |
+| **Data Virtualization extension** | Yes | Extension for Azure Data Studio that provides a Data Virtualization wizard. | [Install](../azure-data-studio/extensions/data-virtualization-extension.md) |
 | **Azure CLI**<sup>2</sup> | For AKS | Modern command-line interface for managing Azure services. Used with AKS big data cluster deployments ([More info](/cli/azure/?view=azure-cli-latest)). | [Install](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Optional | Modern command-line interface for querying SQL Server ([More info](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | For some scripts | Legacy command-line tool for querying SQL Server ([More info](../tools/sqlcmd-utility.md?view=sql-server-ver15)). You might need to install the Microsoft ODBC Driver 11 for SQL Server before installing the SQLCMD package. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
@@ -80,7 +80,7 @@ The remaining tools are only required in certain scenarios. **Azure CLI** can be
 
 Azure Data Studio provides capabilities and features specifically for SQL Server Big Data Clusters.
 
-[Get the latest Azure Data Studio](https://aka.ms/getazuredatastudio).
+[Get the latest Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
 For details about the latest release, see the [release notes](./release-notes-big-data-cluster.md).
 

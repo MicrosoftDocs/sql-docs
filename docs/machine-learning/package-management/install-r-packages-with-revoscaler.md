@@ -29,12 +29,12 @@ The following table describes the functions used for R package installation and 
 
 | Function | Description |
 |----------|-------------|
-| [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Determine the path of the instance library on the remote SQL Server. |
-| [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Gets the path for one or more packages on the remote SQL Server. |
-| [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Call this function from a remote R client to install packages in a SQL Server compute context, either from a specified repository, or by reading locally saved zipped packages. This function checks for dependencies and ensures that any related packages can be installed to SQL Server, just like R package installation in the local compute context. To use this option, you must have enabled package management on the server and database. Both client and server environments must have the same version of RevoScaleR. |
-| [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | Gets a list of packages installed in the specified compute context. |
-| [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Copy information about a package library between the file system and database, for the specified compute context. |
-| [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Removes packages from a specified compute context. It also computes dependencies and ensures that packages that are no longer used by other packages on SQL Server are removed, to free up resources. |
+| [rxSqlLibPaths](/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | Determine the path of the instance library on the remote SQL Server. |
+| [rxFindPackage](/machine-learning-server/r-reference/revoscaler/rxfindpackage) | Gets the path for one or more packages on the remote SQL Server. |
+| [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) | Call this function from a remote R client to install packages in a SQL Server compute context, either from a specified repository, or by reading locally saved zipped packages. This function checks for dependencies and ensures that any related packages can be installed to SQL Server, just like R package installation in the local compute context. To use this option, you must have enabled package management on the server and database. Both client and server environments must have the same version of RevoScaleR. |
+| [rxInstalledPackages](/machine-learning-server/r-reference/revoscaler/rxinstalledpackages) | Gets a list of packages installed in the specified compute context. |
+| [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Copy information about a package library between the file system and database, for the specified compute context. |
+| [rxRemovePackages](/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Removes packages from a specified compute context. It also computes dependencies and ensures that packages that are no longer used by other packages on SQL Server are removed, to free up resources. |
 
 ## Prerequisites
 
@@ -52,14 +52,14 @@ The following table describes the functions used for R package installation and 
 
 ## Client connections
 
-A client workstation can be [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/install-on-windows) or a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) (data scientists often use the free developer edition) on the same network.
+A client workstation can be [Microsoft R Client](/machine-learning-server/r-client/install-on-windows) or a [Microsoft Machine Learning Server](/machine-learning-server/install/machine-learning-server-windows-install) (data scientists often use the free developer edition) on the same network.
 
-When calling package management functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.
+When calling package management functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.
 
 User identity is typically specified when setting the compute context. If you don't specify a user name and password when you create the compute context, the identity of the user running the R code is used.
 
 1. From an R command line, define a connection string to the instance and database.
-2. Use the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) constructor to define a SQL Server compute context, using the connection string.
+2. Use the [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) constructor to define a SQL Server compute context, using the connection string.
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -70,7 +70,7 @@ User identity is typically specified when setting the compute context. If you do
     packageList <- c("e1071", "mice")
     ```
 
-4. Call [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) and pass the compute context and the string variable containing the package names.
+4. Call [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) and pass the compute context and the string variable containing the package names.
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)

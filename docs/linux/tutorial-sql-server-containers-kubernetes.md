@@ -2,8 +2,8 @@
 title: Deploy a SQL Server container with Azure Kubernetes Services (AKS)
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Kubernetes Service.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/01/2020
 ms.topic: tutorial
@@ -79,7 +79,7 @@ Configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/pers
 
    ```yaml
    kind: StorageClass
-   apiVersion: storage.k8s.io/v1beta1
+   apiVersion: storage.k8s.io/v1
    metadata:
         name: azure-disk
    provisioner: kubernetes.io/azure-disk

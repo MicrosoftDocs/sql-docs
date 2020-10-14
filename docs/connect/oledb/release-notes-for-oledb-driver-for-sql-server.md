@@ -43,8 +43,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed various bugs in the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
-| Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
+| Fixed various bugs in the [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) interface | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
+| Fixed a memory leak in the [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed a memory leak in the [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
 | Fixed a bug in scenarios involving a `sql_variant` data type and non-ASCII strings. | Executing certain scenarios involving a `sql_variant` data type and non-ASCII strings may result in data corruption. For details, see: [Known issues](ole-db-data-types/ssvariant-structure.md#known-issues). |
 | Fixed issues with the *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) | The *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) now honors initialization properties set in the *All* tab. |
 | Fixed the `SSPROP_INIT_PACKETSIZE` property default value handling | Fixed an unexpected error when the `SSPROP_INIT_PACKETSIZE` property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
@@ -76,7 +76,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed drop index logic in [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Previous versions of the OLE DB driver can't drop a primary key index when the schema ID and the user ID of the owner of the index aren't equal. |
+| Fixed drop index logic in [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)). | Previous versions of the OLE DB driver can't drop a primary key index when the schema ID and the user ID of the owner of the index aren't equal. |
 | &nbsp; | &nbsp; |
 
 Download previous OLE DB Driver versions by clicking the download links in the following sections:
@@ -114,7 +114,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed non-interactive Azure Active Directory authentication in multithreaded apartment (MTA). | The OLE DB Driver 18.2.1 incorrectly tries to change the COM concurrency model on an apartment that was previously initialized as multithreaded (MTA). As a result, in an application that makes more than one subsequent call to [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) or [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) prior to calling the [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522) interface, the driver fails to connect when using any of the Azure Active Directory authentication modes. |
+| Fixed non-interactive Azure Active Directory authentication in multithreaded apartment (MTA). | The OLE DB Driver 18.2.1 incorrectly tries to change the COM concurrency model on an apartment that was previously initialized as multithreaded (MTA). As a result, in an application that makes more than one subsequent call to [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) or [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) prior to calling the [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) interface, the driver fails to connect when using any of the Azure Active Directory authentication modes. |
 | &nbsp; | &nbsp; |
 
 ## 18.2.1

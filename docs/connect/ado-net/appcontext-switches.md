@@ -65,7 +65,7 @@ TransparentNetworkIPResolution is enabled by default. MultiSubnetFailover is dis
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.DisableTNIRByDefaultInConnectionString", true);
 ```
 
-For more information about setting these properties, see the documentation for [SqlConnection.ConnectionString Property](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). 
+For more information about setting these properties, see the documentation for [SqlConnection.ConnectionString Property](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring). 
 
 ## Enable a minimum timeout during login
 
@@ -89,4 +89,4 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.MakeReadAsyncBlocking", fa
 
 ## See also
 
-[AppContext Class](https://docs.microsoft.com/dotnet/api/system.appcontext?view=netcore-3.1)
+[AppContext Class](/dotnet/api/system.appcontext?view=netcore-3.1)

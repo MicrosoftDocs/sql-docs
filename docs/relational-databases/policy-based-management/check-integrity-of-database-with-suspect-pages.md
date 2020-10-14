@@ -26,9 +26,8 @@ ms.author: vanto
   
 -   Complete a full database consistency check ([DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)).  
   
--   Implement the user actions that are defined in [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397).  
+-   Implement the user actions that are defined in [MSSQLSERVER_824](/previous-versions/sql/sql-server-2016/aa337274(v=sql.130)).  
   
 ## For More Information  
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
-  
   

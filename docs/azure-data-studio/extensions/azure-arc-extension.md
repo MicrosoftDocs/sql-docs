@@ -13,7 +13,7 @@ ms.date: 09/22/2020
 
 # Azure Arc extension for Azure Data Studio (Preview)
 
-The [Azure Arc extension (preview)](https://aka.ms/azurearcdata-docs) is an extension for creating and managing Azure Arc data services resources.
+The [Azure Arc extension (preview)](/azure/azure-arc/data/) is an extension for creating and managing Azure Arc data services resources.
 
 **Key actions include:**
 - Create a resource
@@ -56,4 +56,4 @@ Once connected, you can view the resources deployed on the data controller. You 
 These dashboards will provide additional information about the resource, including option to open in Azure portal.
 
 ## Next steps
-To learn more about Azure Arc data services, [check our documentation.](https://aka.ms/azurearcdata-docs)
+To learn more about Azure Arc data services, [check our documentation.](/azure/azure-arc/data/)

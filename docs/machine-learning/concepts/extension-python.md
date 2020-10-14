@@ -36,8 +36,8 @@ Python packages added by Microsoft for parallel and distributed workloads includ
 
 | Library | Description |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information, see [revoscalepy module with SQL Server](../python/ref-py-revoscalepy.md).  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [microsoftml module with SQL Server](../python/ref-py-microsoftml.md). |
+| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supports data source objects and data exploration, manipulation, transformation, and visualization. It supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information, see [revoscalepy module with SQL Server](../python/ref-py-revoscalepy.md).  |
+| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contains machine learning algorithms that have been optimized for speed and accuracy, as well as in-line transformations for working with text and images. For more information, see [microsoftml module with SQL Server](../python/ref-py-microsoftml.md). |
 
 Microsoftml and revoscalepy are tightly coupled; data sources used in microsoftml are defined as revoscalepy objects. Compute context limitations in revoscalepy transfer to microsoftml. Namely, all functionality is available for local operations, but switching to a remote compute context requires RxInSqlServer.
 
@@ -96,7 +96,7 @@ The following diagram summarizes the overall workflow when scripts are sent from
 ## Next steps
 
 + [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md)
-+ [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy function reference](/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Extensibility framework in SQL Server](extensibility-framework.md)
 + [R and machine learning extensions in SQL Server](extension-r.md)
 + [Get Python package information](../package-management/python-package-information.md)

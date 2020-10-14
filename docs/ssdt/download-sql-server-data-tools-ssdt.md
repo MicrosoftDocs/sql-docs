@@ -34,7 +34,7 @@ With Visual Studio 2019, the required functionality to enable Analysis Services,
 
 ### Install SSDT with Visual Studio 2019
 
-If [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019&preserve-view=true) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
+If [Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019) is already installed, you can edit the list of workloads to include SSDT. If you don’t have Visual Studio 2019 installed, then you can download and install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
 
 To modify the installed Visual Studio workloads to include SSDT, use the Visual Studio Installer.
 
@@ -159,7 +159,7 @@ For available options, run `SSDT-Setup-ENU.exe /help`
 
 |Project Templates|SQL Platforms Supported|
 |-------------------|--------------------|
-|Relational databases| SQL Server 2005\* - SQL Server 2017<br> (use SSDT 17.x or SSDT for Visual Studio 2017 to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md))<br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (supports queries only; database projects aren't yet supported)<br /><br /> \* SQL Server 2005 support is deprecated,<br /><br /> move to an officially supported SQL version|
+|Relational databases| SQL Server 2005\* - SQL Server 2017<br> (use SSDT 17.x or SSDT for Visual Studio 2017 to connect to [SQL Server on Linux](../linux/sql-server-linux-overview.md))<br /><br />Azure SQL Database<br /><br />Azure Synapse Analytics (supports queries only; database projects aren't yet supported)<br /><br /> \* SQL Server 2005 support is deprecated,<br /><br /> move to an officially supported SQL version|
 |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 - SQL Server 2017|
 |Integration Services packages| SQL Server 2012 - SQL Server 2019 |
 
@@ -175,9 +175,9 @@ To download and install SSDT for Visual Studio 2015, or an older version of SSDT
 
 * [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT Team Blog](https://docs.microsoft.com/archive/blogs/ssdt/)
+* [SSDT Team Blog](/archive/blogs/ssdt/)
 
-* [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
+* [DACFx API Reference](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))
 
 * [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -189,7 +189,7 @@ After installing SSDT, work through these tutorials to learn how to create datab
 
 * [SSIS Tutorial: Create a Simple ETL Package](../integration-services/ssis-how-to-create-an-etl-package.md)
 
-* [Analysis Services tutorials](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)
+* [Analysis Services tutorials](/analysis-services/analysis-services-tutorials-ssas)
 
 * [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

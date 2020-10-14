@@ -28,11 +28,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns page and row-count information for every partition in the current database.  
   
 > [!NOTE]  
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_partition_stats**. The partition_id in sys.dm_pdw_nodes_db_partition_stats differs from the partition_id in the sys.partitions catalog view for Azure SQL Data Warehouse.
+> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_db_partition_stats**. The partition_id in sys.dm_pdw_nodes_db_partition_stats differs from the partition_id in the sys.partitions catalog view for Azure Synapse Analytics.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|ID of the partition. This is unique within a database. This is the same value as the **partition_id** in the **sys.partitions** catalog view except for Azure SQL Data Warehouse.|  
+|**partition_id**|**bigint**|ID of the partition. This is unique within a database. This is the same value as the **partition_id** in the **sys.partitions** catalog view except for Azure Synapse Analytics.|  
 |**object_id**|**int**|Object ID of the table or indexed view that the partition is part of.|  
 |**index_id**|**int**|ID of the heap or index the partition is part of.<br /><br /> 0 = Heap<br /><br /> 1 = Clustered index.<br /><br /> > 1 = Nonclustered index|  
 |**partition_number**|**int**|1-based partition number within the index or heap.|  

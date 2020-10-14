@@ -30,7 +30,7 @@ This section contains a set of notebooks useful for getting logs from a SQL Serv
 | TSG061 - Get tail of all container logs for pods in BDC namespace | Get all container logs for pods from BDC cluster in the namespace. |
 | TSG062 - Get tail of all previous container logs for pods in BDC namespace | Get all previous container logs for pods  from BDC cluster in the namespace. |
 | TSG083 - Run kubectl cluster-info dump | Use the kubetl command line interface to dump BDC cluster-related information. |
-| TSG084 - Internal Query Processor Error | Using DMV query to get more information on the internal query processor error |
+| TSG084 - Internal Query Processor Error | Using DMV query to get more information on the internal query processor error. |
 | TSG091 - Get the azdata CLI logs | Get the azdata logs from the local machine. |
 
 

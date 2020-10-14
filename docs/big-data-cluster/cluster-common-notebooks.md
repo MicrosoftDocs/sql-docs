@@ -33,6 +33,19 @@ The notebooks in this section are used as prerequisites for other notebooks, suc
 |SOP028 - azdata login|Use the azdata command line interface to login to a Big Data Cluster. |
 |SOP033 - azdata logout|Use the azdata command line interface to logout of a Big Data Cluster. |
 |SOP034 - Wait for BDC to be Healthy|Blocks until the Big Data Cluster is healthy, or the specified timeout expires.The min_pod_count parameter indicates that the health check will not pass until at least this number of pods exists in the cluster. If any existing pods beyond this limit are unhealthy, the cluster is not healthy.|
+|OPR001 - Create app-deploy|Use this notebook to create an app in Big Data Cluster. |
+|OPR002 - Run app-deploy|Use this notebook to run an app in Big Data Cluster. |
+|OPR003 - Create cronjob|Use this notebook to create a cronjob in Big Data Cluster. |
+|OPR004 - Suspend cronjob|Use this notebook to suspend a cronjob in Big Data Cluster. |
+|OPR005 - Resume cronjob|Use this notebook to resume a cronjob in Big Data Cluster. |
+|OPR006 - Delete cronjob|Use this notebook to delete a cronjob in Big Data Cluster. |
+|OPR007 - Delete app-deploy|Use this notebook to delete an app in Big Data Cluster. |
+|OPR100 - Deploy and Schedule notebook(s)|Use this notebook to deploy a list of notebooks to an App-Deploy pod, run the App-Deploy on a schedule using a Kubernetes CronJob and install a Grafana dashboard to view results.|
+|OPR600 - Monitor infrastructure (Kubernetes)|Use this notebook to monitor infrastructure.|
+|OPR700 - Create Grafana Dashboard for App-Deploy Applications|Use this notebook to create a dashboard in Grafana to monitor App-Deploy results and generate alerts if a Canary or Application starts failing.|
+|OPR900 - Troubleshoot run app-deploy|Use this notebook to run the app-deploy script directly in the container (using kubectl exec). This can give more debugging information for troubleshooting issues, especially related to issues in the script start up stage.|
+|OPR901 - Troubleshoot cronjob|Use this notebook to run the cronjob script directly in the container (using kubectl exec). This can give more debugging information for troubleshooting issues.|
+
 
 ## Analyze logs from Big Data Clusters (BDC)
 

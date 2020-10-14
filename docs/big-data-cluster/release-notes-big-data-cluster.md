@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 10/??/2020
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -59,7 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release          | BDC Version    | `azdata` Version| Release date |
 |------------------|----------------|-----------------|--------------|
-| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-??   |
+| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
 | [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
@@ -197,7 +197,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
     
 ### Empty Livy jobs before you apply cumulative updates
 
-- **Affected releases**: Through current cumulative update
+- **Affected releases**: All version up to CU6. Resolved for CU8.
 
 - **Issue and customer impact**: During an upgrade, sparkhead returns 404 error.
 

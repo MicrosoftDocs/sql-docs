@@ -24,7 +24,7 @@ For a tutorial that shows you how to quickly get started with Always Encrypted w
 
 ## Set up the secure enclave and attestation
 
-Before you can use Always Encrypted with secure enclaves in your database, you need to configure your environment to ensure the secure enclave is available for the database. You also you need set up [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation). 
+Before you can use Always Encrypted with secure enclaves, you need to configure your environment to ensure the secure enclave is available for the database. You also you need set up [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation). 
 
 The process for setting up your environment depends on whether you are using [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] or [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 

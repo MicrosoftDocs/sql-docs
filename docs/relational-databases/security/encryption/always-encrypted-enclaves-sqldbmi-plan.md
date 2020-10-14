@@ -2,7 +2,7 @@
 title: "Plan for Intel SGX enclaves and attestation in Azure SQL Database"
 description: "Plan the deployment of Always Encrypted with secure enclaves in Azure SQL Database."
 ms.custom: ""
-ms.date: 11/18/2020
+ms.date: 12/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -13,6 +13,9 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Plan for Intel SGX enclaves and attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 
+
+
+[!INCLUDE [asdb](../../../includes/applies-to-version/asdb.md)]
 
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] uses [Intel Software Guard Extensions (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/) enclaves and requires [Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) for [enclave attestation](always-encrypted-enclaves.md#secure-enclave-attestation).
 
@@ -31,8 +34,6 @@ https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azu
 
 
 ## Plan for attestation in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
-
-[!INCLUDE [asdb](../../../includes/applies-to-version/asdb.md)]
 
 [Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) (preview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel SGX enclaves in Azure SQL databases using the DC-series hardware configuration.
 

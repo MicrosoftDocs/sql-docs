@@ -1,5 +1,5 @@
 ---
-description: "sp_pdw_remove_network_credentials (SQL Data Warehouse)"
+description: "sp_pdw_remove_network_credentials (Azure Synapse Analytics)"
 title: "sp_pdw_remove_network_credentials"
 titleSuffix: Azure Synapse Analytics
 ms.date: "03/14/2017"
@@ -16,7 +16,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---
-# sp_pdw_remove_network_credentials (SQL Data Warehouse)
+# sp_pdw_remove_network_credentials (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   This removes network credentials stored in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] to access a network file share. For example, use this stored procedure to remove permission for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] to perform backup and restore operations on a server that resides within your own network.  
@@ -54,7 +54,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ## Metadata  
  To list all credentials and to verify the credentials have been removed, use [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
- To add credentials, use [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+ To add credentials, use [sp_pdw_add_network_credentials &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

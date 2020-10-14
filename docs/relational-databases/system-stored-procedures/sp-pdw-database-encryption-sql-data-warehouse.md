@@ -1,6 +1,6 @@
 ---
-description: "sp_pdw_database_encryption (SQL Data Warehouse)"
-title: "sp_pdw_database_encryption (SQL Data Warehouse) | Microsoft Docs"
+description: "sp_pdw_database_encryption (Azure Synapse Analytics)"
+title: "sp_pdw_database_encryption (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.service: sql-data-warehouse
@@ -13,7 +13,7 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sp_pdw_database_encryption (SQL Data Warehouse)
+# sp_pdw_database_encryption (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Use **sp_pdw_database_encryption** to enable transparent data encryption on for a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appliance. When **sp_pdw_database_encryption** set to 1, use the **ALTER DATABASE** statement to encrypt a database by using TDE.  
@@ -55,7 +55,7 @@ EXEC sys.sp_pdw_database_encryption 1;
 ```  
   
 ## See Also  
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
- [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
+ [sp_pdw_log_user_data_masking &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
   

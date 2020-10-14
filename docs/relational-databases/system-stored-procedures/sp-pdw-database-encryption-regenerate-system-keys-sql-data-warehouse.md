@@ -1,5 +1,5 @@
 ---
-title: "sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse) | Microsoft Docs"
+title: "sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 # ms.service: sql-data-warehouse
@@ -14,7 +14,7 @@ ms.author: rortloff
 ms.reviewer: ""
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
+# sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
@@ -49,7 +49,7 @@ EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;
 ```  
   
 ## See Also  
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_log_user_data_masking &#40;Azure Synapse Analytics&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
   

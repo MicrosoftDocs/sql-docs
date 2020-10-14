@@ -61,17 +61,17 @@ SSISBuild.exe -project|-p:<dtproj file path> [-configuration|-c:<configuration n
 
 **Examples**
 
-1. Build a dtproj with the first defined project configuration, not encrypted with password:    
+- Build a dtproj with the first defined project configuration, not encrypted with password:    
     ```
     SSISBuild.exe -p:"C:\projects\demo\demo.dtproj"
     ```
 
-1. Build a dtproj with configuration "DevConfiguration", encrypted with password, and output the build artifacts to a specific folder:
+- Build a dtproj with configuration "DevConfiguration", encrypted with password, and output the build artifacts to a specific folder:
     ```
     SSISBuild.exe -p:C:\projects\demo\demo.dtproj -c:DevConfiguration -pp:encryptionpassword -o:D:\folder
     ```
 
-1. Build a dtproj with configuration "DevConfiguration", encrypted with password, striping its sensitive data, and log level DIAG:
+- Build a dtproj with configuration "DevConfiguration", encrypted with password, striping its sensitive data, and log level DIAG:
     ```
     SSISBuild.exe -p:C:\projects\demo\demo.dtproj -c:DevConfiguration -pp:encryptionpassword -ss -l:diag
     ```
@@ -101,27 +101,27 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 
 **Examples**
 
-1. Deploy a single ISPAC not encrypted with password to SSIS catalog with Windows authentication.
+- Deploy a single ISPAC not encrypted with password to SSIS catalog with Windows authentication.
     ```
     SSISDeploy.exe -s:D:\myfolder\demo.ispac -d:catalog;/SSISDB/destfolder;myssisserver -at:win
     ```
 
-1. Deploy a single ISPAC encrypted with password to SSIS catalog with SQL authentication, and rename the project name.
+- Deploy a single ISPAC encrypted with password to SSIS catalog with SQL authentication, and rename the project name.
     ```
     SSISDeploy.exe -s:D:\myfolder\test.ispac -d:catalog;/SSISDB/folder/testproj;myssisserver -at:sql -u:sqlusername -p:sqlpassword -pp:encryptionpassword
     ```
 
-1. Deploy ISPAC files from a folder that are encrypted with a same password to SSIS catalog with Windows authentication, and append TrustServerCertificate=True to the connection string.
+- Deploy ISPAC files from a folder that are encrypted with a same password to SSIS catalog with Windows authentication, and append TrustServerCertificate=True to the connection string.
     ```
     SSISDeploy.exe -s:D:\myfolder -d:catalog;/SSISDB/folder;myssisserver -at:win -css:TrustServerCertificate=True -pp:encryptionpassword
     ```
 
-1. Deploy a single SSISDeploymentManifest and its associated files to Azure file share.
+- Deploy a single SSISDeploymentManifest and its associated files to Azure file share.
     ```
     SSISDeploy.exe -s:D:\myfolder\mypackage.SSISDeploymentManifest -d:file;\\myssisshare.file.core.windows.net\destfolder -u:Azure\myssisshare -p:storagekey
     ```
 
-1. Deploy a folder of DTSX files to on-premises file system.
+- Deploy a folder of DTSX files to on-premises file system.
     ```
     SSISDeploy.exe -s:D:\myfolder -d:file;\\myssisshare\destfolder
     ```
@@ -137,4 +137,4 @@ Initial preview release of standalone SSIS DevOps Tools.
 ## Next steps
 
 - Get [standalone SSIS DevOps Tools](https://aka.ms/AA9xp65)
-- If you have questions, visit [Q&A](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools&ssr=false#qna) or [ssistoolsfeedbacks@microsoft.com](mailto:ssistoolsfeedbacks@microsoft.com)
+- If you have questions, visit [Q&A](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools&ssr=false#qna)

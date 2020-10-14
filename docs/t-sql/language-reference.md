@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 This topic gives the basics about how to find and use the Microsoft [!INCLUDE[tsql](../includes/tsql-md.md)] (T-SQL) reference topics. T-SQL is central to using Microsoft SQL products and services. All tools and applications that communicate with a SQL database do so by sending T-SQL commands.  
 
 ## T-SQL compliance to SQL Standard
-For detailed technical documents about how certain standards are implemented in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the [Microsoft SQL Server Standards Support documentation](https://docs.microsoft.com/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
+For detailed technical documents about how certain standards are implemented in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see the [Microsoft SQL Server Standards Support documentation](/openspecs/sql_standards/ms-sqlstandlp/89fb00b1-4b9e-4296-92ce-a2b3f7ca01d2).
 
 ## Tools that use T-SQL
 Some of the Microsoft tools that issue T-SQL commands are:
@@ -37,7 +37,7 @@ Some of the Microsoft tools that issue T-SQL commands are:
 To find T-SQL topics, use search at the top right of this page, or use the table of contents on the left side of the page. You can also type a T-SQL key word in the Management Studio Query Editor window, and press F1. 
   
 ## Find system views
-To find the system tables, views, functions, and procedures, see these links which are in the [Using relational databases](../relational-databases/database-features.md) section of the SQL documentation.
+To find the system tables, views, functions, and procedures, see these links which are in the [Using relational databases](../relational-databases/databases/databases.md) section of the SQL documentation.
 
 - [System catalog Views](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [System compatibility views](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
@@ -61,7 +61,7 @@ Another example, the following label indicates a topic that applies only to Azur
 In some cases, the topic is used by a product or service, but all of the arguments are not supported. In this case, additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the topic.  
  
 ## Get help from Microsoft Q & A  
-For online help, see the [Microsoft Q & A Transact-SQL Forum](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
+For online help, see the [Microsoft Q & A Transact-SQL Forum](/answers/topics/sql-server-transact-sql.html).  
  
 ## See other language references
 The SQL docs include these other language references:
@@ -69,7 +69,7 @@ The SQL docs include these other language references:
 - [XQuery Language Reference](../xquery/xquery-language-reference-sql-server.md)
 - [Integration Services Language Reference](../integration-services/integration-services-language-reference.md)
 - [Replication Language Reference](../relational-databases/replication/replication-language-reference.md)
-- [Analysis Services Language Reference](../mdx/analysis-services-language-reference.md)  
+- [Analysis Services Language Reference](../mdx/multidimensional-expressions-mdx-reference.md)  
 
 ## Next steps
 Now that you understand how to find the T-SQL reference topics, you are ready to:
@@ -77,5 +77,4 @@ Now that you understand how to find the T-SQL reference topics, you are ready to
 - Work through a short tutorial about how to write T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - View the [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
-  
   

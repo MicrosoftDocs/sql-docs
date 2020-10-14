@@ -84,6 +84,9 @@
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
 - name: SSIS DevOps
   href: ../integration-services/devops/ssis-devops-overview.md
+  items:
+    - name: Standalone SSIS DevOps Tools
+      href: ../integration-services/devops/ssis-devops-standalone.md
 - name: User interface
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -1615,7 +1618,7 @@
   href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: Load data to SQL Server or SQL Database
   href: ../integration-services/load-data-to-sql-database-with-ssis.md
-- name: Load data to SQL Data Warehouse
+- name: Load data to Azure Synapse Analytics
   href: ../integration-services/load-data-to-sql-data-warehouse.md
 
 

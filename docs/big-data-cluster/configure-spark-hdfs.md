@@ -150,5 +150,5 @@ Configurations can only be specified at category level. To specify multiple conf
 ## Next steps
 
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties.](reference-config-spark-hadoop.md)
-- [`azdata` reference](reference-azdata.md)
+- [`azdata` reference](../azdata/reference/reference-azdata.md)
 - [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

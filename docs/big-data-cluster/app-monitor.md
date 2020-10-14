@@ -21,7 +21,7 @@ This article describes how to monitor an application inside a SQL Server Big Dat
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)
-- [azdata command-line utility](deploy-install-azdata.md)
+- [azdata command-line utility](../azdata/install/deploy-install-azdata.md)
 
 ## Capabilities
 

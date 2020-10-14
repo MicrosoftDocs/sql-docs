@@ -40,7 +40,7 @@ SELECT...INTO creates a new table in the default filegroup and inserts the resul
   
 ## Syntax  
   
-```  
+```syntaxsql
 [ INTO new_table ]
 [ ON filegroup ]
 ```  

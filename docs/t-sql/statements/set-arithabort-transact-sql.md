@@ -45,7 +45,7 @@ SET ARITHABORT { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET ARITHABORT ON
 ```
@@ -94,7 +94,7 @@ Requires membership in the **public** role.
 ## Examples  
 The following example demonstrates the divide-by-zero and overflow errors that have `SET ARITHABORT` settings.  
   
-```  
+```sql  
 -- SET ARITHABORT  
 -------------------------------------------------------------------------------  
 -- Create tables t1 and t2 and insert data values.  

@@ -15,7 +15,7 @@ ms.author: v-daenge
 # PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, `lastInsertId` returns the most recently inserted sequence number for the provided sequence name (for more information about sequence numbers, see [here](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Returns the identifier for the row most recently inserted into a table in the database. The table must have an IDENTITY NOT NULL column. If a sequence name is provided, `lastInsertId` returns the most recently inserted sequence number for the provided sequence name (for more information about sequence numbers, see [here](../../relational-databases/sequence-numbers/sequence-numbers.md)).
   
 ## Syntax  
   
@@ -149,4 +149,3 @@ Last sequence number when a table name is supplied =
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

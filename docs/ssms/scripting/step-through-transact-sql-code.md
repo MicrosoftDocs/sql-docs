@@ -28,7 +28,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger enables you to control 
 
 ## Breakpoints
 
-A breakpoint signals the debugger to pause execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information about breakpoints, see [Transact-SQL Breakpoints](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+A breakpoint signals the debugger to pause execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information about breakpoints, see [Transact-SQL Breakpoints](./transact-sql-breakpoints.md).  
   
 ## Controlling Statement Execution
 
@@ -62,4 +62,4 @@ In the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger, you can specify the
   
 ## See Also
 
-- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)

@@ -37,7 +37,7 @@ The computer running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md
 ### High availability
 
 The HGS feature automatically installs and configures a failover cluster.
-In a production environment, it's recommended to use three HGS servers for high availability. Refer to the [failover cluster documentation](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum) for details on how cluster quorum is determined and alternative configurations, including two node clusters with an external witness.
+In a production environment, it's recommended to use three HGS servers for high availability. Refer to the [failover cluster documentation](/windows-server/failover-clustering/manage-cluster-quorum) for details on how cluster quorum is determined and alternative configurations, including two node clusters with an external witness.
 
 Shared storage is not required between the HGS nodes. A copy of the attestation database is stored on each HGS server and is automatically replicated over the network by the cluster service.
 
@@ -63,7 +63,7 @@ HGS supports two attestation modes for use with [!INCLUDE [ssnoversion-md](../..
 In general, we make the following recommendations:
 
 - For **physical production servers**, we recommend using TPM attestation for the additional assurances it provides.
-- For **virtual production servers**, we recommend host key attestation since most virtual machines do not have virtual TPMs or Secure Boot. If you're using a security-enhanced VM like an [on-premises shielded VM](https://aka.ms/shieldedvms), you may choose to use TPM mode. In all virtualized deployments, the attestation process only analyzes your VM environment -- not the virtualization platform underneath the VM.
+- For **virtual production servers**, we recommend host key attestation since most virtual machines do not have virtual TPMs or Secure Boot. If you're using a security-enhanced VM like an [on-premises shielded VM](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node), you may choose to use TPM mode. In all virtualized deployments, the attestation process only analyzes your VM environment -- not the virtualization platform underneath the VM.
 - For **dev/test scenarios**, we recommend host key attestation because it is easier to set up.
 
 ### Trust model
@@ -111,7 +111,7 @@ Do not join the HGS computer(s) to a domain before you start.
 
 ### [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer prerequisites
 
-The computer(s) running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] must meet both the [Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) and the [Hyper-V hardware requirements](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
+The computer(s) running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] must meet both the [Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) and the [Hyper-V hardware requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 
 These requirements include:
 
@@ -121,7 +121,7 @@ These requirements include:
   - Intel VT-x with Extended Page Tables.
   - AMD-V with Rapid Virtualization Indexing.
   - If you're running [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] in a VM, the hypervisor and physical CPU must offer nested virtualization capabilities. See the [trust model](#trust-model) section for information on the assurances when running VBS enclaves in a VM.
-    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - On Hyper-V 2016 or later, [enable nested virtualization extensions on the VM processor](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - In Azure, select a VM size that supports nested virtualization. All v3 series VMs support nested virtualization, for example Dv3 and Ev3. See [Create a nesting capable Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - On VMWare vSphere 6.7 or later, enable virtualization-based security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Other hypervisors and public clouds may support nested virtualization capabilities that enable Always Encrypted with VBS Enclaves as well. Check your virtualization solution's documentation for compatibility and configuration instructions.

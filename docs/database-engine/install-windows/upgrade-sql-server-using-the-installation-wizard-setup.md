@@ -40,7 +40,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizar
 You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share, and is a local administrator.  
   
 > [!WARNING]  
->  Be aware that you cannot change the features to be upgraded, and you cannot add features during the upgrade operation. For more information about how to add features to an upgraded instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] after the upgrade operation is complete, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+>  Be aware that you cannot change the features to be upgraded, and you cannot add features during the upgrade operation. For more information about how to add features to an upgraded instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] after the upgrade operation is complete, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
   
  If you are  upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) and then perform the following tasks, as appropriate for your environment:  
   
@@ -114,7 +114,7 @@ You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](..
   
      When you are finished specifying login information for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, click **Next**.  
   
-15. On the Full-Text Search Upgrade Options page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. On the Full-Text Search Upgrade Options page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](./install-sql-server.md).  
   
 16. The Feature Rules window will automatically advance if all rules pass.  
   
@@ -137,6 +137,5 @@ You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](..
   
 ## See Also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

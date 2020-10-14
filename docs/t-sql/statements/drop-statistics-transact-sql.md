@@ -42,7 +42,7 @@ DROP STATISTICS table.statistics_name | view.statistics_name [ ,...n ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP STATISTICS [ schema_name . ] table_name.statistics_name   
 [;]  

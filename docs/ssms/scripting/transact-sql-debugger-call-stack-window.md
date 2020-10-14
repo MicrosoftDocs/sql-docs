@@ -72,6 +72,6 @@ All expressions in the **Locals**, **Watch**, and **QuickWatch** windows are eva
   
 ## See Also
 
-- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Transact-SQL Debugger](./transact-sql-debugger.md)
+- [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)
+- [Step Through Transact-SQL Code](./step-through-transact-sql-code.md)

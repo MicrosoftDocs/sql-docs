@@ -36,8 +36,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```sql  
-  
+```syntaxsql
 UPDATE ( column )   
 ```  
   

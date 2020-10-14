@@ -37,7 +37,7 @@ The OLE DB Driver for SQL Server files (msoledbsql.dll, msoledbsqlr.rll) are ins
 
 The OLE DB Driver for SQL Server header and library files (msoledbsql.h and msoledbsql.lib) are installed in `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`. Additionally, the x64 msoledbsql.msi installs the same files in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
-You can distribute OLE DB Driver for SQL Server through msoledbsql.msi. You might have to install OLE DB Driver for SQL Server when you deploy an application. One way to install multiple packages in what seems to the user to be a single installation is to use chainer and bootstrapper technology. For more information, see [Authoring a Custom Bootstrapper Package for Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) and [Adding Custom Prerequisites](https://go.microsoft.com/fwlink/?LinkId=115668).  
+You can distribute OLE DB Driver for SQL Server through msoledbsql.msi. You might have to install OLE DB Driver for SQL Server when you deploy an application. One way to install multiple packages in what seems to the user to be a single installation is to use chainer and bootstrapper technology. For more information, see [Authoring a Custom Bootstrapper Package for Visual Studio 2005](/previous-versions/aa730839(v=vs.80)) and [Adding Custom Prerequisites](/visualstudio/deployment/creating-bootstrapper-packages).  
   
 The x64 msoledbsql.msi also installs the 32-bit version of OLE DB Driver for SQL Server. If your application targets a platform other than the one it was developed on, you can download versions of msoledbsql.msi for x64 and x86.
 
@@ -57,4 +57,4 @@ The value passed to APPGUID is your specific product code. A product code must b
 The APPGUID option requires running the installer from an elevated Command Prompt.
 
 ## See Also  
- [Building Applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [Building Applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)

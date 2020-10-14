@@ -67,7 +67,7 @@ This method will throw an **ArgumentException** in **FullGlobe** instances where
   
 0.999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Earth's circumference)  
   
-The error between the theoretical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the _tolerance_ parameter. For more information on extents, see [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+The error between the theoretical and computed buffer is max(tolerance, extents \* 1.E-7) where tolerance is the value of the _tolerance_ parameter. For more information on extents, see [geography Data Type Method Reference](./stequals-geography-data-type.md).  
   
 This method isn't precise.  
   
@@ -83,5 +83,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ## See Also  
 [STBuffer &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
   

@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.   
   
-The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. For more information on Server Core, see [Install Server Core](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). For more information on Server Core as implemented on [!INCLUDE[win8srv](../../includes/win8srv-md.md)], see [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. For more information on Server Core, see [Install Server Core](/windows-server/get-started/getting-started-with-server-core). For more information on Server Core as implemented on [!INCLUDE[win8srv](../../includes/win8srv-md.md)], see [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
  For a list of currently supported operating systems, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -71,7 +71,7 @@ The Server Core installation option provides a minimal environment for running s
  On Server Core installations, upgrading from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] is supported.  
   
 ## Install  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] does not support setup by using the installation wizard on the Server Core operating system. When installing on Server Core, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports full quiet mode by using the /Q parameter, or Quiet Simple mode by using the /QS parameter. For more information, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] does not support setup by using the installation wizard on the Server Core operating system. When installing on Server Core, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports full quiet mode by using the /Q parameter, or Quiet Simple mode by using the /QS parameter. For more information, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
   
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
@@ -318,13 +318,11 @@ If you accidentally close the command prompt, you can start a new command prompt
 3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## See also  
- [Install SQL Server Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Install SQL Server Using a Configuration File](./install-sql-server-using-a-configuration-file.md)   
+ [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md)   
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [Install Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Install Server Core](/windows-server/get-started/getting-started-with-server-core)   
+ [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](/windows-server/get-started/sconfig-on-ws2016)   
  [Failover Cluster Cmdlets in Windows PowerShell](/powershell/module/failoverclusters/)
 
   
-  
-

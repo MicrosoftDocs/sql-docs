@@ -1,11 +1,11 @@
 ---
 title: azdata bdc spark statement reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc spark statement commands. 
+description: Reference article for azdata bdc spark statement commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,12 +13,13 @@ ms.technology: big-data-cluster
 
 # azdata bdc spark statement
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to `azdata`
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | List all the statements in the given Spark session.
 [azdata bdc spark statement create](#azdata-bdc-spark-statement-create) | Create a new Spark statement in the given session.
@@ -33,7 +34,7 @@ azdata bdc spark statement list --session-id -i
 ### Examples
 List all the session statements.
 ```bash
-azdata spark statement list --session-id 0
+azdata bdc spark statement list --session-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -58,7 +59,7 @@ azdata bdc spark statement create --session-id -i
 ### Examples
 Run a statement.
 ```bash
-azdata spark statement create --session-id 0 --code "2+2"
+azdata bdc spark statement create --session-id 0 --code "2+2"
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -85,7 +86,7 @@ azdata bdc spark statement info --session-id -i
 ### Examples
 Get statement info for session with ID of 0 and statement ID of 0.
 ```bash
-azdata spark statement info --session-id 0 --statement-id 0
+azdata bdc spark statement info --session-id 0 --statement-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -112,7 +113,7 @@ azdata bdc spark statement cancel --session-id -i
 ### Examples
 Cancel a statement.
 ```bash
-azdata spark statement cancel --session-id 0 --statement-id 0
+azdata bdc spark statement cancel --session-id 0 --statement-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -133,4 +134,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

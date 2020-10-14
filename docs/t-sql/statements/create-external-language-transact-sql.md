@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server. For more information, see [Language Extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Currently, only **Java** is supported as an external language. **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/).
+> **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/).
 
 ## Syntax
 

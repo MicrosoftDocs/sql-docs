@@ -13,7 +13,7 @@ author: chugugrace
 ---
 # Load data into a dedicated SQL pool in Azure Synapse Analytics with SQL Server Integration Services (SSIS)
 
-[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/appliesto-xx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[asa](../includes/applies-to-version/asa.md)]
 
 Create a SQL Server Integration Services (SSIS) package to load data into a dedicated SQL pool in Azure Synapse Analytics](/azure/sql-data-warehouse/index). You can optionally restructure, transform, and cleanse the data as it passes through the SSIS data flow.
 

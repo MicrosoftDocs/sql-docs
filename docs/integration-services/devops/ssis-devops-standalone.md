@@ -137,3 +137,4 @@ Initial preview release of standalone SSIS DevOps Tools.
 ## Next steps
 
 - Get [standalone SSIS DevOps Tools](https://aka.ms/AA9xp65)
+- If you have questions, visit [Q&A](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools&ssr=false#qna) or [ssistoolsfeedbacks@microsoft.com](mailto:ssistoolsfeedbacks@microsoft.com)

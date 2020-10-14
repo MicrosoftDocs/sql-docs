@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2020
+ms.date: 09/24/2019
 ---
 
 # Source control in Azure Data Studio

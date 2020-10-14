@@ -27,7 +27,7 @@ After you navigate to a node in a [!INCLUDE[ssDE](../includes/ssde-md.md)] provi
   
 -   You can call the methods from the associated [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] management object model, such as SMO. For example, if you navigate to the Databases node in a path, you can use the methods and properties of the <xref:Microsoft.SqlServer.Management.Smo.Database> class.  
   
- The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider is used to manage the objects in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. It is not used to work with the data in databases. If you have navigated to a table or view, you cannot use the provider to select, insert, update, or delete data. Use the **Invoke-Sqlcmd** cmdlet to query or change data in tables and views from the Windows PowerShell environment. For more information, see [Invoke-Sqlcmd cmdlet](invoke-sqlcmd-cmdlet.md).  
+ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider is used to manage the objects in an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. It is not used to work with the data in databases. If you have navigated to a table or view, you cannot use the provider to select, insert, update, or delete data. Use the **Invoke-Sqlcmd** cmdlet to query or change data in tables and views from the Windows PowerShell environment. For more information, see [Invoke-Sqlcmd cmdlet](/powershell/module/sqlserver/invoke-sqlcmd).  
   
 ##  <a name="ListPropMeth"></a> Listing Methods and Properties  
  **Listing Methods and Properties**  
@@ -94,7 +94,6 @@ $MyDBVar.State
 ## See Also  
  [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [Navigate SQL Server PowerShell Paths](navigate-sql-server-powershell-paths.md)   
- [Convert URNs to SQL Server Provider Paths](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)   
+ [Convert URNs to SQL Server Provider Paths](/powershell/module/sqlserver/Convert-UrnToPath)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
   

@@ -88,5 +88,5 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
 
 - [SQL Server PowerShell](sql-server-powershell.md)
 - [SQL Server PowerShell Provider](sql-server-powershell-provider.md)
-- [Invoke-Sqlcmd cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd)
+- [Invoke-Sqlcmd cmdlet](/powershell/module/sqlserver/invoke-sqlcmd)
 - [Use PowerShell with Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

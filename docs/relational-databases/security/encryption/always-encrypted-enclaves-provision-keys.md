@@ -47,7 +47,7 @@ To provision an enclave-enabled column master key, follow the steps in [Provisio
 ![Allow enclave computations](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> The **Allow enclave computations** checkbox appears only if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance contains a correctly initialized secure enclave. For more information, see [Configure the enclave type for Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
+> The **Allow enclave computations** checkbox appears only if a secure enclave is  configured for your database. If you are using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md). If you are using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], see [Enable Intel SGX for your Azure SQL database](always-encrypted-enclaves-sqldbmi-enable-sgx.md).
 
 > [!TIP]
 > To check if a column master key is enclave-enabled, right-click on it in Object Explorer and select **Properties**. If the key is enclave-enabled, **Enclave Computations: Allowed** appears in the window showing the properties of the key. Alternativelly, you can use the [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) view.

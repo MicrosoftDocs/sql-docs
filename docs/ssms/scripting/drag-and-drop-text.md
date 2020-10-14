@@ -44,6 +44,5 @@ You can select text and then drag and drop it in another location. You can drag 
  Dragging text moves it; that is, the text is erased from the old location and moved to the new location. Pressing the CTRL key while dragging text copies it to the new location. Dragging an object from Object Explorer is an exception and does not delete the object name from Object Explorer.  
   
 ## See Also  
- [Navigate Code and Text](../../relational-databases/scripting/navigate-code-and-text.md)  
-  
+ [Navigate Code and Text](./navigate-code-and-text.md)  
   

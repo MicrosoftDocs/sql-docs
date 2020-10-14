@@ -37,7 +37,7 @@ You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you
 
 The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger are as follows:
 
-- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- If your [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor is connected to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on another computer, you must have configured the debugger for remote debugging. For more information, see [Configure firewall rules before running the TSQL Debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] must be running under a Windows account that is a member of the sysadmin fixed server roll.
 
@@ -109,8 +109,8 @@ The requirements to start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugg
   
 ## See Also
 
-- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL Debugger](./transact-sql-debugger.md)
+- [Step Through Transact-SQL Code](./step-through-transact-sql-code.md)
+- [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)
+- [Database Engine Query Editor &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)

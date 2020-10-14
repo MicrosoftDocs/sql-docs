@@ -20,7 +20,7 @@ The version of RevoScaleR included in SQL Server 2017 includes the ability to sy
 This feature was provided to make it easier to back up R package collections associated with SQL Server databases. Using this feature, an administrator can restore not just the database, but any R packages that were used by data scientists working in that database.
 
 This article describes the package synchronization feature, and how to use the
-[rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) function to perform the following tasks:
+[rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) function to perform the following tasks:
 
 + Synchronize a list of packages for an entire SQL Server database
 
@@ -53,7 +53,7 @@ To use package synchronization requires that the new package management feature 
 1. The server administrator enables the feature for the SQL Server instance.
 2. For each database, the administrator grants individual users the ability to install or share R packages, using database roles.
 
-When this is done, you can use RevoScaleR functions, such as [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) to install packages into a database.  Information about users and the packages that they can use is stored in the SQL Server instance. 
+When this is done, you can use RevoScaleR functions, such as [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) to install packages into a database.  Information about users and the packages that they can use is stored in the SQL Server instance. 
 
 Whenever you add a new package using the package management functions, both the records in SQL Server and the file system are updated. This information can be used to restore package information for the entire database.
 
@@ -71,8 +71,8 @@ Whenever you add a new package using the package management functions, both the 
 
 ## How package synchronization works
 
-To use package synchronization, call [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), which is a new function in
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). 
+To use package synchronization, call [rxSyncPackages](/r-server/r-reference/revoscaler/rxsyncpackages), which is a new function in
+[RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler). 
 
 For each call to `rxSyncPackages`, you must specify a SQL Server instance and database. Then, either list the packages to synchronize, or specify package scope.
 

@@ -284,7 +284,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	
 	![JDBC_AAD_Token](media/jdbc_aad_token.png)  
 2. Sign in to your Azure SQL Server's user database as an Azure Active Directory admin and using a T-SQL command
-provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
+provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
  for more details on how to create an Azure Active Directory admin and a contained database user.
 
 	```

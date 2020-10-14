@@ -17,13 +17,13 @@ monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
 
 This article explains how to install new R packages on an instance of SQL Server where machine learning is enabled. There are multiple approaches to choose from. Using T-SQL works best for server administrators who are unfamiliar with R.
 
-The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement makes it possible to add a package or set of packages to an instance or a specific database without running R or Python code directly. However, this method requires package preparation and additional database permissions.
+The [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) statement makes it possible to add a package or set of packages to an instance or a specific database without running R or Python code directly. However, this method requires package preparation and additional database permissions.
 
 + All packages must be available as a local zipped file, rather than downloaded on demand from the internet.
 
 + All dependencies must be identified by name and version, and included in the zip file. The statement fails if required packages are not available, including downstream package dependencies. 
 
-+ You must be **db_owner** or have CREATE EXTERNAL LIBRARY permission in a database role. For details, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
++ You must be **db_owner** or have CREATE EXTERNAL LIBRARY permission in a database role. For details, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ## Download packages in archive format
 
@@ -64,4 +64,4 @@ EXEC sp_execute_external_script
 ## See also
 
 + [Get R package information](r-package-information.md)
-+ [R tutorials](../tutorials/sql-server-r-tutorials.md)
++ [R tutorials](../tutorials/r-tutorials.md)

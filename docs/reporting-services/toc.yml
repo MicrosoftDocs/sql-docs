@@ -1469,7 +1469,7 @@
 - name: Relational Databases
   items:
   - name: How To Manage Logins, Users, and Schemas
-    href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+    href: ../relational-databases/security/authentication-access/create-a-login.md
   - name: Dynamic Data Masking
     href: ../relational-databases/security/dynamic-data-masking.md
   - name: SQL Server Express LocalDB Reference

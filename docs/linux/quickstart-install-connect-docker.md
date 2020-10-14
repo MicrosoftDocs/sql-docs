@@ -166,7 +166,7 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-deployment.md#troubleshooting).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
 
 The `-h` (host name) parameter as discussed above, changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 

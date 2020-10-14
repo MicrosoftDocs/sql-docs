@@ -79,7 +79,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    This command creates a SQL Server 2017 container with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
 
    > [!IMPORTANT]
-   > This example uses a data volume container within Docker. If you instead chose to map a host directory, note that there are limitations for this approach on Docker for Mac and Windows. For more information, see [Configure SQL Server container images on Docker](./sql-server-linux-docker-container-deployment.md#persist).
+   > This example uses a data volume container within Docker. If you instead chose to map a host directory, note that there are limitations for this approach on Docker for Mac and Windows. For more information, see [Configure SQL Server container images on Docker](./sql-server-linux-docker-container-configure.md#persist).
 
 1. To view your Docker containers, use the `docker ps` command.
 
@@ -91,7 +91,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    docker ps -a
    ```
 
-1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-deployment.md#troubleshooting).
+1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
 
   ```bash
   $ sudo docker ps -a
@@ -147,7 +147,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
    docker ps -a
    ```
 
-1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-deployment.md#troubleshooting).
+1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
 
    ```bash
    $ sudo docker ps -a

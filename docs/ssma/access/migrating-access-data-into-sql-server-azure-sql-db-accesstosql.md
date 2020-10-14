@@ -24,7 +24,7 @@ ms.author: "alexiva"
 After you have successfully created the database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can migrate data from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
 ## Setting Migration Options  
-Before you migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, review the project migration options in the **Project Settings** dialog box. In this dialog box, you can set the migration batch size, table locking, constraint checking, insertion trigger firing, identity and null value handling, and how to handle dates that are out of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] range. For more information, see [Project Settings (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Before you migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, review the project migration options in the **Project Settings** dialog box. In this dialog box, you can set the migration batch size, table locking, constraint checking, insertion trigger firing, identity and null value handling, and how to handle dates that are out of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] range. For more information, see [Project Settings (Migration)](./project-settings-migration-accesstosql.md).  
   
 ## Migrating Data  
 Migrating data is a bulk-load operation that moves rows of data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure in transactions. The number of rows to be loaded into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure in each transaction is configured in the project settings.  
@@ -51,4 +51,3 @@ If you have Access database applications that you want to continue to use after 
 ## See Also  
 [Migrating Access Databases to SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Setting Conversion and Migration Options](setting-conversion-and-migration-options-accesstosql.md)  
-  

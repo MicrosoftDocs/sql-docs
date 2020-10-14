@@ -28,7 +28,7 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-For more information about how to use extended events, see [Extended Events Tools](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+For more information about how to use extended events, see [Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md).
 
 ## Additional events specific to Machine Learning Services
 

@@ -37,7 +37,8 @@ Removes all clean buffers from the buffer pool, and columnstore objects from the
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax
-Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+
+Syntax for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  

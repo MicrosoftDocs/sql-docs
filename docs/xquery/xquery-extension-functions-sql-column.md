@@ -125,11 +125,10 @@ select @x
 ```  
   
 ## See Also  
- [SQL Server XQuery Extension Functions](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery Extension Functions]()   
  [Compare Typed XML to Untyped XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Create Instances of XML Data](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml Data Type Methods](../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

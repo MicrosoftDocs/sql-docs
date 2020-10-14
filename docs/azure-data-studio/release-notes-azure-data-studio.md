@@ -901,7 +901,7 @@ See one of the following quickstarts to get started:
 
 - [Connect & Query SQL Server](quickstart-sql-server.md)
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
-- [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
+- [Connect & Query Azure Synapse Analytics](quickstart-sql-dw.md)
 
 Contribute to Azure Data Studio:
 

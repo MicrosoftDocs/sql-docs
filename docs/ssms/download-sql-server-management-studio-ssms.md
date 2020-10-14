@@ -128,7 +128,7 @@ These components aren't uninstalled because they can be shared with other produc
 
 ## SSMS System Requirements
 
-This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
+The current release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
 
 Supported Operating Systems:
 
@@ -147,7 +147,7 @@ Supported hardware:
 - Hard disk space: Minimum of 2 GB up to 10 GB of available space
 
 > [!NOTE]
-> SSMS runs on Windows only. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Azure Data Studio is a cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS is available only as a 32-bit application for Windows. If you need a tool that runs on operating systems other than Windows, we recommend Azure Data Studio. Azure Data Studio is a cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

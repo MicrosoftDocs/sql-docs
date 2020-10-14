@@ -38,11 +38,11 @@ To script any object in **Object Explorer**, right-click it and select the **Scr
 
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-* Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Install [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Download [AdventureWorks2016 sample databases](https://github.com/Microsoft/sql-server-samples/releases).
 
-Instructions for restoring databases in SSMS are here: [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Instructions for restoring databases in SSMS are here: [Restore a database](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## Script queries from the GUI
 
@@ -142,7 +142,7 @@ The following section teaches you to script out the database by using the **Scri
    ![Script objects](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > You can script the data for the database when you select *Schema and data* for the **Types of data to script** option. However, this isn't ideal with large databases. It can take more memory than SSMS can allocate. This limitation is okay for small databases. If you want to move data for a larger database, use the [Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > You can script the data for the database when you select *Schema and data* for the **Types of data to script** option. However, this isn't ideal with large databases. It can take more memory than SSMS can allocate. This limitation is okay for small databases. If you want to move data for a larger database, use the [Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 6. Select **OK**, and then select **Next**.
 
@@ -195,7 +195,7 @@ In this section, you'll learn how to drop and create a stored procedure.
 
 ## Script extended events
 
-This section covers how to script out [extended events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
+This section covers how to script out [extended events](../../relational-databases/extended-events/extended-events.md).
 
 1. Connect to a server that's running SQL Server.
 
@@ -222,7 +222,7 @@ This section covers how to script out [extended events](https://docs.microsoft.c
 
 The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-* [Connect to and query an instance](connect-query-sql-server.md)
+* [Connect to and query an instance](../quickstarts/connect-query-sql-server.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)

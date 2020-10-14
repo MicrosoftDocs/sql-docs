@@ -8,14 +8,14 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu, maghan, sstein"
 ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.date: "10/14/2020"
 ---
 
 # Azure Data Studio FAQ
 
 ## What is Azure Data Studio?
 
-Azure Data Studio is a new open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, macOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
+Azure Data Studio is an open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, macOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
 
 Research has shown that users spend an order of magnitude more time working on query editing than on any other task with SQL Server Management Studio. For that reason, Azure Data Studio has been designed to focus deeply on the functionality that is used the most, with additional experiences made available as optional extensions into the product. This allows every user to customize their environment to the workflows that they use most often.
 
@@ -29,7 +29,7 @@ Anyone can use Azure Data Studio. However, it is designed to simplify tasks perf
 
 ## What can I do with Azure Data Studio?
 
-Azure Data Studio is built on top of Visual Studio Code and offers a lightweight, keyboard focused modern code workflow experience when working with SQL Server, Azure SQL Database, Azure SQL DW. Azure Data Studio makes the core experiences that you rely on every day simple and easy with built-in features such as multiple tab windows, a rich SQL editor, IntelliSense, keyword completion, code snippets & code navigation and source control integration (Git and TFS). You can execute on-demand queries, view & save results as text, JSON, or Excel, edit data, organize & manage your favorite database connections, and browse database objects in a familiar object browsing experience.
+Azure Data Studio is built on top of Visual Studio Code and offers a lightweight, keyboard focused modern code workflow experience when working with SQL Server, Azure SQL Database, Azure Synapse Analytics. Azure Data Studio makes the core experiences that you rely on every day simple and easy with built-in features such as multiple tab windows, a rich SQL editor, IntelliSense, keyword completion, code snippets & code navigation and source control integration (Git and TFS). You can execute on-demand queries, view & save results as text, JSON, or Excel, edit data, organize & manage your favorite database connections, and browse database objects in a familiar object browsing experience.
 
 Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, psql, and ssh) in the Integrated Terminal window right within the Azure Data Studio user interface. Easily generate and execute CREATE and INSERT scripts for your database objects to create copies of your database for development or testing purposes. Boost your productivity with smart code snippets and rich graphical experiences that create new databases and database objects (such as tables, views, stored procedures, users, logins, roles, etc.) or update existing database objects. Use rich customizable dashboards to monitor and quickly troubleshoot performance bottlenecks in your databases on-premises, in Azure or any cloud.
 
@@ -37,7 +37,7 @@ Azure Data Studio offers a consistent experience to back up and restore your dat
 
 ## Is Azure Data Studio Open Source?
 
-The source code for Azure Data Studio and its data providers is available on GitHub. The source code for the front-end Azure Data Studio (which is based on Visual Studio Code) is available under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. The source code for the data providers is available under the MIT license at [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice).
+The source code for Azure Data Studio and its data providers is available on GitHub. The source code for the front-end [Azure Data Studio](https://github.com/microsoft/azuredatastudio) (which is based on Visual Studio Code) is available under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. The source code for the data providers is available under the MIT license at [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice).
 
 ## Do we plan to open source SSMS?
 
@@ -65,9 +65,8 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 - Are doing security management, including user management, vulnerability assessment, and configuration of security features.
 - Need to make use of performance tuning advisors and dashboards.
 - Use database diagrams and table designers.
-- Are doing import/export of DACPACs.
 - Need access to Registered Servers.
-- Make use of sqlcmd mode, live query stats, or client statistics.
+- Make use of live query stats or client statistics.
 
 ## Feature Comparison
 
@@ -99,17 +98,16 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 |:---|:---|:---|
 |Chart Viewer|Yes||
 |Export Results to CSV, JSON, XLSX|Yes||
+|Results to File||Yes|
+|Results to Text||Yes|
 |IntelliSense|Yes|Yes|
 |Snippets|Yes|Yes|
 |Show Plan|Preview|Yes|
 |Client Statistics||Yes|
 |Live Query Stats||Yes|
 |Query Options||Yes|
-|Results to File||Yes|
-|Results to Text||Yes|
 |Spatial Viewer||Yes|
-|SQLCMD||Yes|
-|T-SQL Debugger||Yes|
+|SQLCMD|Yes|Yes|
 
 ### Operating System Support
 
@@ -132,7 +130,7 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Backup / Restore|Yes|Yes|
-|Flat File Import|Preview|Yes|
+|Flat File Import|Yes|Yes|
 |SQL Agent|Preview|Yes|
 |SQL Profiler|Preview|Yes|
 |Always On||Yes|

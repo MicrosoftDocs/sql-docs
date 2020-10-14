@@ -16,7 +16,7 @@ author: rajeshsetlem
 ms.author: rajpo
 ms.custom: 
 ---
-# DMACMD: Assess readiness of a SQL Server data estate migrating to Azure SQL Database 
+# DMACMD: Assess readiness of a SQL Server data estate migrating to Azure SQL 
 
 With many organizations trying to migrate to Azure, it is critical to assess existing on-premise SQL Server instances and identify the right Azure SQL target - Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VMs. 
 

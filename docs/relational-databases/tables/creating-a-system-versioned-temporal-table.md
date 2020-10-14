@@ -78,7 +78,7 @@ The history table is created using the same rules as apply to creating an "anony
 
 - The schema name is mandatory for the **HISTORY_TABLE** parameter.
 - If the specified schema does not exist, the **CREATE TABLE** statement will fail.
-- If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](https://msdn.microsoft.com/library/dn935015.aspx). If you specify an invalid history table, the **CREATE TABLE** statement will fail.
+- If the table specified by the **HISTORY_TABLE** parameter already exists, it will be validated against the newly created temporal table in terms of [schema consistency and temporal data consistency](./temporal-tables.md). If you specify an invalid history table, the **CREATE TABLE** statement will fail.
 
 ## Creating a temporal table with a user-defined history table
 
@@ -201,4 +201,4 @@ ALTER TABLE ProjectTaskCurrent
 - [Modifying Data in a System-Versioned Temporal Table](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [Changing the Schema of a System-Versioned Temporal Table](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Stopping System-Versioning on a System-Versioned Temporal Table](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [Stopping System-Versioning on a System-Versioned Temporal Table](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

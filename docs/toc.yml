@@ -90,8 +90,6 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
-      - name: Active Directory mode
-        href: big-data-cluster/deploy-active-directory.md
       - name: Deploy with high availability
         items:
         - name: Master instance
@@ -132,6 +130,22 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Active Directory mode
+      items:
+      - name: Prerequisites
+        href: big-data-cluster/active-directory-prerequisites.md
+      - name: Deploy
+        href: big-data-cluster/active-directory-deploy.md
+      - name: Connect
+        href: big-data-cluster/active-directory-connect.md
+      - name: Multiple BDCs in the same AD domain
+        href: big-data-cluster/active-directory-deployment-background.md
+      - name: Auto-generated AD objects
+        href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
+      - name: Manage user access
+        href: big-data-cluster/manage-user-access.md
     - name: Private cluster
       items:
       - name: Deploy
@@ -310,7 +324,6 @@
             href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Tips for using R packages
             href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap
@@ -323,34 +336,44 @@
       items:
       - name: Connect
         href: big-data-cluster/connect-to-big-data-cluster.md
-      - name: View cluster status
-        href: big-data-cluster/view-cluster-status.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
+      - name: List operations notebooks
+        href: big-data-cluster/cluster-manage-notebooks.md
+    - name: Monitor
+      items:
+      - name: View cluster status
+        href: big-data-cluster/view-cluster-status.md
+      - name: Monitor with Azure Data Studio
+        href: big-data-cluster/cluster-monitor-ads.md
+      - name: Monitor with cmdlet
+        href: big-data-cluster/cluster-monitor-cmdlet.md
+      - name: Monitor with notebooks
+        href: big-data-cluster/cluster-common-notebooks.md
+      - name: Monitor - Grafana
+        href: big-data-cluster/cluster-monitor-grafana.md
+      - name: Logging - Kibana
+        href: big-data-cluster/cluster-logging-kibana.md
+      - name: List monitoring notebooks
+        href: big-data-cluster/cluster-monitor-notebooks.md
+      - name: List logging notebooks
+        href: big-data-cluster/cluster-logging-notebooks.md
     - name: Performance
       items:
-        - name: Tuning guide
-          href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Tuning guide
+        href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
         href: big-data-cluster/kubernetes-rbac.md
       - name: Update AZDATA_PASSWORD
         href: big-data-cluster/change-azdata-password.md
-      - name: Manage user access
-        href: big-data-cluster/manage-user-access.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
-      - name: Multiple BDCs in the same AD domain
-        href: big-data-cluster/active-directory-deployment-background.md
-      - name: Auto-generated AD objects
-        href: big-data-cluster/active-directory-objects.md
-      - name: AD DNS reconciliation
-        href: big-data-cluster/active-directory-dns-reconciliation.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -363,18 +386,26 @@
         href: big-data-cluster/spark-history-server.md
     - name: Troubleshoot
       items:
+      - name: Overview
+        href: big-data-cluster/cluster-troubleshoot-overview.md
       - name: Troubleshoot Kubernetes
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Troubleshoot pyspark notebook
         href: big-data-cluster/troubleshoot-pyspark-notebook.md
-      - name: Active directory domain group scope
-        href: big-data-cluster/troubleshoot-active-directory.md
-      - name: Active Directory DNS
-        href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-      - name: Active Directory login fails
-        href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-      - name: HDFS admin permissions
+      - name: Troubleshoot Active Directory
+        items:
+        - name: AD deployment stops
+          href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+        - name: AD domain group scope
+          href: big-data-cluster/troubleshoot-active-directory.md
+        - name: AD DNS
+          href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+        - name: AD login fails
+          href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+      - name: Cluster troubleshooting notebooks
+        href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
     - name: BDC partners
@@ -4335,6 +4366,10 @@
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
+  - name: Diagnosing latch contention
+    href: relational-databases/diagnose-resolve-latch-contention.md
+  - name: Diagnosing spinlock contention
+    href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: Installation
   items:
   - name: Overview
@@ -7801,6 +7836,8 @@
           href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: SQL Server Connector troubleshooting
           href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+        - name: SQL Server Connector logging
+          href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
       - name: Back up service master key
         href: relational-databases/security/encryption/back-up-the-service-master-key.md
       - name: Restore service master key
@@ -10131,7 +10168,7 @@
   items:
   - name: Azure SQL Database >
     href: /azure/sql-database/
-  - name: Azure SQL Data Warehouse >
+  - name: Azure Synapse Analytics >
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -16233,7 +16270,7 @@
         items:
         - name: AT TIME ZONE
           href: t-sql/queries/at-time-zone-transact-sql.md
-        - name: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
+        - name: Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
@@ -16247,7 +16284,7 @@
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search Condition
           href: t-sql/queries/search-condition-transact-sql.md
-        - name: Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)
+        - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: Table Value Constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16567,7 +16604,7 @@
           href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
         - name: FUNCTION
           href: t-sql/statements/create-function-transact-sql.md
-        - name: FUNCTION (SQL Data Warehouse)
+        - name: FUNCTION (Azure Synapse Analytics)
           href: t-sql/statements/create-function-sql-data-warehouse.md
         - name: INDEX
           href: t-sql/statements/create-index-transact-sql.md
@@ -16627,11 +16664,11 @@
           href: t-sql/statements/create-synonym-transact-sql.md
         - name: TABLE
           href: t-sql/statements/create-table-transact-sql.md
-        - name: TABLE (Azure SQL Data Warehouse)
+        - name: TABLE (Azure Synapse Analytics)
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md
         - name: TABLE (SQL Graph)
           href: t-sql/statements/create-table-sql-graph.md
-        - name: TABLE AS SELECT (Azure SQL Data Warehouse)
+        - name: TABLE AS SELECT (Azure Synapse Analytics)
           href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
         - name: TABLE IDENTITY (Property)
           href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16891,7 +16928,7 @@
           href: t-sql/statements/open-master-key-transact-sql.md
         - name: OPEN SYMMETRIC KEY
           href: t-sql/statements/open-symmetric-key-transact-sql.md
-        - name: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)"
+        - name: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
           href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: REVERT
           href: t-sql/statements/revert-transact-sql.md

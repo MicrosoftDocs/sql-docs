@@ -103,6 +103,6 @@ After setup is complete, both machines can function as PolyBase Group head nodes
   
 ## Next steps  
 
-For troubleshooting, see [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+For troubleshooting, see [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130)).
   
 For more information about PolyBase, see the [PolyBase overview](../../relational-databases/polybase/polybase-guide.md).

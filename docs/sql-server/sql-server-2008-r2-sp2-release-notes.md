@@ -23,7 +23,7 @@ This Release Notes document describes known issues that you should read about be
 Added the dynamic management view (DMV) **sys.dm_db_stats_properties**. You can use this DMV to return statistics properties for a specified table or indexed view in the current database. For example, this DMV returns the number of rows that were sampled and the number of steps in the histogram.  
   
 ## 2.0 Before You Install  
-For information about how to install [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] updates, see [SQL Server 2008 R2 Servicing Documentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
+For information about how to install [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] updates, see [SQL Server 2008 R2 Servicing Documentation](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105)).  
   
 For general information about how to get started and install SQL Server 2008 R2, see the SQL Server 2008 R2 Readme. The Readme document is available on the installation media.
   
@@ -59,4 +59,3 @@ For a complete list of bugs and known issues fixed in this service pack, see thi
   
 ## See Also  
 [How to determine the version and edition of SQL Server](https://support.microsoft.com/kb/321185)  
-  

@@ -29,7 +29,7 @@ SQL Server 2016 introduced support for temporal tables (also known as system-ver
   - [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
   - [Temporal Table Usage Scenarios](../../relational-databases/tables/temporal-table-usage-scenarios.md)
 
-  - [Getting Started with Temporal Tables in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)
+  - [Getting Started with Temporal Tables in Azure SQL Database](/azure/azure-sql/temporal-tables)
 
 - **Examples:**
 

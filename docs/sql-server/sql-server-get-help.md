@@ -28,7 +28,7 @@ If you're interested in engaging the vibrant SQL Server community for assistance
 
 ### Microsoft Q & A
 
-You can also get help by searching and posting questions on [Microsoft Q & A](https://docs.microsoft.com/answers/products/sql-server).
+You can also get help by searching and posting questions on [Microsoft Q & A](/answers/products/sql-server).
 
 ### Communities
 
@@ -76,7 +76,7 @@ The following SQL Server blogs provide the latest information about SQL Server:
 
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 - [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
-- [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
+- [SQL Tiger Team](/archive/blogs/sql_server_team/)
 - [SQL Support Team](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 
 
@@ -86,5 +86,3 @@ If you would like to download and review the license information for SQL Server,
 
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-

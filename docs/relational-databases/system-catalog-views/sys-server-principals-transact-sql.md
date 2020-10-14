@@ -32,7 +32,8 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**name**|**sysname**|Name of the principal. Is unique within a server.|  
 |**principal_id**|**int**|ID number of the Principal. Is unique within a server.|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) of the principal. If Windows principal, then it matches Windows SID.|  
-|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /><br /> U = Windows login<br /><br /> G = Windows group<br /><br /> R = Server role<br /><br /> C = Login mapped to a certificate<br /><br /> K = Login mapped to an asymmetric key|  
+|**type**|**char(1)**|Principal type:<br /><br /> S = SQL login<br /><br /> U = Windows login<br /><br /> G = Windows group<br /><br /> R = Server role<br /><br /> C = Login mapped to a certificate<br /><br /> E = External Login from Azure Active Directory<br /><br /> X = External group from Azure Active Directory group or applications
+<br /><br /> K = Login mapped to an asymmetric key|  
 |**type_desc**|**nvarchar(60)**|Description of the principal type:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Login is disabled.|  
 |**create_date**|**datetime**|Time at which the principal was created.|  

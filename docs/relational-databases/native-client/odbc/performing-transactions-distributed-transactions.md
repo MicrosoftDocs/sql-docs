@@ -54,11 +54,11 @@ _(1)_ MSDTC can be invoked without ODBC. In such a case, MSDTC becomes the trans
 
 Suppose that your C++ Native Client ODBC application is enlisted in a distributed transaction. Next the application enlists in a second distributed transaction. In this case, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver leaves the original distributed transaction, and enlists in the new distributed transaction.
 
-For more information, see [DTC Programmer's Reference](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+For more information, see [DTC Programmer's Reference](/previous-versions/windows/desktop/ms686108(v=vs.85)).
 
 ## C# alternative for SQL Database in the cloud
 
-MSDTC isn't supported for either Azure SQL Database or Azure SQL Data Warehouse.
+MSDTC isn't supported for either Azure SQL Database or Azure Synapse Analytics.
 
 However, a distributed transaction can be created for SQL Database by having your C# program use the .NET class [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope).
 

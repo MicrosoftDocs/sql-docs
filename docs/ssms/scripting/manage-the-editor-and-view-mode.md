@@ -86,7 +86,7 @@ The Editor gives you a number of ways to control the view of your code.
  When Virtual Space mode is not enabled, the cursor wraps from the end of one line to the first character of the next line and vice-versa.  
   
 ## Displaying Line Numbers  
- You can turn on line numbering in your code. Line numbers are useful for navigating code. For more information, see [Navigate Code and Text](../../relational-databases/scripting/navigate-code-and-text.md).  
+ You can turn on line numbering in your code. Line numbers are useful for navigating code. For more information, see [Navigate Code and Text](./navigate-code-and-text.md).  
   
 > [!NOTE]  
 >  Turning on line numbering does not mean that the document will print with line numbers. For line numbers to print, you must select the **Line numbers** check box in the **Page Setup** command on the **File** menu.  
@@ -117,5 +117,4 @@ The Editor gives you a number of ways to control the view of your code.
 #### To hide all the tool windows at once  
   
 1.  Select **Auto Hide All** on the **Window** menu.  
-  
   

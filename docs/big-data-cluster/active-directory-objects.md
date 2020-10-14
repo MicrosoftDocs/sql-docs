@@ -1,12 +1,12 @@
 ---
 title: Active Directory objects
 titleSuffix: SQL Server Big Data Cluster
-description: Learn about SQL Server Big Data Cluster deployment in Active Directory Domain.
-author: mihaelablendea
-ms.author: mihaelab
+description: Describes Active Directory objects created for SQL Server Big Data Clusters..
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
-ms.topic: conceptual
+ms.date: 09/30/2020
+ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
@@ -462,6 +462,6 @@ The following groups are created in the OU provided by the user. The members of 
 
 ## Next steps
 
-[Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md)
+[Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
 
 [Deploy multiple [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in the same Active Directory domain](active-directory-deployment-background.md)

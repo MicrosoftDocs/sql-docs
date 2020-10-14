@@ -4,8 +4,8 @@ description: Learn how to install the Azure Data Studio PostgreSQL extension. It
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: rachel-msft
-ms.author: raagyema
+author: sunilagarwal
+ms.author: sunila
 ms.reviewer: alayu, maghan
 ms.custom: 
 ms.date: 03/19/2019

@@ -16,7 +16,7 @@ ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiLineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A **MultiLineString** is a collection of zero or more **geometry** or **geographyLineString** instances.  
   
 ## MultiLineString instances  
@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 -   Figure 6 is a simple, closed **MultiLineString** instance. It is closed because all its elements are closed. It is simple because none of its elements intersect at the interiors.  
   
 ### Accepted instances  
- For a **MultiLineString** instance to be accepted it must either be empty or comprised of only **LineString** intances that are accepted. For more information on accepted **LineString** instances, see [LineString](../../relational-databases/spatial/linestring.md). The following are examples of accepted **MultiLineString** instances.  
+ For a **MultiLineString** instance to be accepted it must either be empty or comprised of only **LineString** instances that are accepted. For more information on accepted **LineString** instances, see [LineString](../../relational-databases/spatial/linestring.md). The following are examples of accepted **MultiLineString** instances.  
   
 ```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  

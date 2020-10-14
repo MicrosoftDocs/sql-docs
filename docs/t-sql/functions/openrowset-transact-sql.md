@@ -536,7 +536,7 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Azure SQL Database only supports reading from Azure Blob Storage.
 
-Another way to access the storage account is via [Managed Identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). To do this follow the [Steps 1 thru 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) to configure SQL Database to access Storage via Managed Identity, after which you can implement code sample as below
+Another way to access the storage account is via [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview). To do this follow the [Steps 1 thru 3](/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json#steps) to configure SQL Database to access Storage via Managed Identity, after which you can implement code sample as below
 ```sql
 --> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';

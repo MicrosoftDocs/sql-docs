@@ -24,7 +24,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.event_log (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Returns successful [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database connections, connection failures, and deadlocks. You can use this information to track or troubleshoot your database activity with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

@@ -1,9 +1,9 @@
 ---
 title: Install from a command prompt
-description: Run SQL Server command line setup to add Machine Learning Services with R and Python to a SQL Server database engine instance.
+description: Run SQL Server command line setup to add Machine Learning Services with Python and R to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/30/2020  
+ms.date: 10/12/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -13,12 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Install SQL Server Machine Learning Services with R and Python from the command line
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article provides instructions for installing [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) from a command line:
-
-+ [New In-Database instance](#indb)
-+ [Add to an existing database engine instance](#add-existing)
-+ [Silent install](#silent)
-+ [New standalone server](#shared-feature)
+This article provides instructions for installing [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) with Python and R from a command line.
 
 You can specify silent, basic, or full interaction with the Setup user interface. This article supplements [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), covering the parameters unique to R and Python machine learning components.
 
@@ -33,7 +28,6 @@ You can specify silent, basic, or full interaction with the Setup user interface
 + Do not install on a domain controller. The Machine Learning Services portion of setup will fail.
 
 + Avoid installing standalone and in-database instances on the same computer. A standalone server will compete for the same resources, undermining the performance of both installations.
-
 
 ## Command line arguments
 
@@ -196,7 +190,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 When setup is finished, you have a server, Microsoft packages, open-source distributions of R and Python, tools, samples, and scripts that are part of the distribution. 
 
-To open an R console window, go to `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` and double-click **RGui.exe**. New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler).
+To open an R console window, go to `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` and double-click **RGui.exe**. New to R? Try this tutorial: [Basic R commands and RevoScaleR functions: 25 common examples](/machine-learning-server/r/tutorial-r-to-revoscaler).
 
 To open a Python command, go to `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` and double-click **python.exe**.
 

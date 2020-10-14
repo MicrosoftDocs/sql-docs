@@ -42,9 +42,9 @@ Here are some ideas for how you can automate your data processing and modeling p
 
 The following example originates from a now-retired MSDN blog post authored by Jimmy Wong at this URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-This example shows you how to automate tasks using SSIS. You create stored procedures with embedded R using SQL Server Management Studio, and then execute those stored procedures from [Execute T-SQL tasks](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) in an SSIS package.
+This example shows you how to automate tasks using SSIS. You create stored procedures with embedded R using SQL Server Management Studio, and then execute those stored procedures from [Execute T-SQL tasks](../../integration-services/control-flow/execute-t-sql-statement-task.md) in an SSIS package.
 
-To step through this example, you should be familiar with Management Studio, SSIS, SSIS Designer, package design, and T-SQL. The SSIS package uses three [Execute T-SQL tasks](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) that insert training data into a table, model the data, and score the data to get prediction output.
+To step through this example, you should be familiar with Management Studio, SSIS, SSIS Designer, package design, and T-SQL. The SSIS package uses three [Execute T-SQL tasks](../../integration-services/control-flow/execute-t-sql-statement-task.md) that insert training data into a table, model the data, and score the data to get prediction output.
 
 ### Load training data
 
@@ -78,7 +78,7 @@ begin
 end;
 ```
 
-In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) that executes the stored procedure you just defined. The script for **SQLStatement** removes existing data, specifies which data to insert, and then calls the stored procedure to provide the data.
+In SSIS Designer, create an [Execute SQL task](../../integration-services/control-flow/execute-sql-task.md) that executes the stored procedure you just defined. The script for **SQLStatement** removes existing data, specifies which data to insert, and then calls the stored procedure to provide the data.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -103,7 +103,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-Create a stored procedure that generates a linear model using [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). RevoScaleR and revoscalepy libraries are automatically available in R and Python sessions on SQL Server so there is no need to import the library.
+Create a stored procedure that generates a linear model using [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod). RevoScaleR and revoscalepy libraries are automatically available in R and Python sessions on SQL Server so there is no need to import the library.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -122,7 +122,7 @@ end;
 GO
 ```
 
-In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) to execute the **generate_iris_rx_model** stored procedure. The model is serialized and saved to the ssis_iris_models table. The script for **SQLStatement** is as follows:
+In SSIS Designer, create an [Execute SQL task](../../integration-services/control-flow/execute-sql-task.md) to execute the **generate_iris_rx_model** stored procedure. The model is serialized and saved to the ssis_iris_models table. The script for **SQLStatement** is as follows:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -138,7 +138,7 @@ As a checkpoint, after this task completes, you can query the ssis_iris_models t
 
 Now that you have code that loads training data and generates a model, the only step left is using the model to generate predictions. 
 
-To do this, put the R script in the SQL query to trigger the [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) built-in R function on ssis_iris_model. A stored procedure called **predict_species_length** accomplishes this task.
+To do this, put the R script in the SQL query to trigger the [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) built-in R function on ssis_iris_model. A stored procedure called **predict_species_length** accomplishes this task.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -166,7 +166,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-In SSIS Designer, create an [Execute SQL task](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) that executes the **predict_species_length** stored procedure to generate predicted petal length.
+In SSIS Designer, create an [Execute SQL task](../../integration-services/control-flow/execute-sql-task.md) that executes the **predict_species_length** stored procedure to generate predicted petal length.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';

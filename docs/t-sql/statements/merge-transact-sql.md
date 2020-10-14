@@ -227,7 +227,6 @@ Specifies the graph match pattern. For more information about the arguments for 
 >[!NOTE]
 > In Azure Synapse Analytics, the MERGE command has following differences compared to SQL server and Azure SQL database.  
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
-> - The semi-colon is required at the end of a MERGE command, or the query will return a syntax error. 
 > - The support for tables with different distribution types is described in this table:
 
 >|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  

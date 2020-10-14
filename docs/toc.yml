@@ -1845,13 +1845,13 @@
       href: relational-databases/tables/graph-edge-constraints.md
       items:
       - name: Create
-        href: relational-databases/tables/create-edge-constraints.md
+        href: ./relational-databases/tables/graph-edge-constraints.md
       - name: Delete
-        href: relational-databases/tables/delete-edge-constraint.md
+        href: ./relational-databases/tables/graph-edge-constraints.md
       - name: Modify
-        href: relational-databases/tables/modify-edge-constraint.md
+        href: ./relational-databases/tables/graph-edge-constraints.md
       - name: View
-        href: relational-databases/tables/view-edge-constraint-properties.md
+        href: ./relational-databases/tables/graph-edge-constraints.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
@@ -2275,7 +2275,7 @@
   items:
   - name: Code a client program > 
     displayName: ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby
-    href: connect/index.md
+    href: ./connect/homepage-sql-connection-programming.md
   - name: Data tier applications
     href: relational-databases/data-tier-applications/data-tier-applications.md
     items:
@@ -4828,7 +4828,7 @@
   - name: Migration documentation
     href: sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
-    href: integration-services/index.md
+    href: ./integration-services/sql-server-integration-services.md
   - name: Bulk Copy Utility (bcp)
     href: tools/bcp-utility.md
   - name: Azure Migration Services >
@@ -5318,7 +5318,7 @@
         - name: Filter published data
           href: relational-databases/replication/merge/filter-published-data-for-merge-replication.md
         - name: View conflict information
-          href: relational-databases/replication/view-conflict-information-for-merge-publications.md
+          href: ./relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md
         - name: Conflict resolution
           items:
           - name: Choose a resolver
@@ -7040,7 +7040,7 @@
   - name: Joins
     href: relational-databases/performance/joins.md
   - name: Scripting
-    href: relational-databases/scripting/database-engine-scripting.md
+    href: ./ssms/scripting/database-engine-scripting.md
   - name: Subqueries
     href: relational-databases/performance/subqueries.md
   - name: Data virtualization (Polybase)
@@ -7096,7 +7096,7 @@
         - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
         - name: Virtualize CSV file
-          href: relational-databases/polybase/data-virtualization-csv.md
+          href: ./big-data-cluster/data-virtualization-csv.md
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot
@@ -7223,11 +7223,11 @@
     href: machine-learning/
   - name: Analytics Platform System > 
     displayName: APS, PDW, Parallel Data Warehouse
-    href: analytics-platform-system/index.md
+    href: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
   - name: SQL Server Analysis Services (SSAS) > 
-    href: https://docs.microsoft.com/analysis-services/analysis-services-overview
+    href: /analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) > 
-    href: reporting-services/index.md
+    href: ./reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
   - name: Master Data Services
     displayName: MDS
     href: master-data-services/master-data-services-overview-mds.md
@@ -8299,7 +8299,7 @@
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
     - name: SQL Server Tools
-      href: ssdt/sql-server-tools.md
+      href: ./tools/overview-sql-tools.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
       items:
@@ -8654,7 +8654,7 @@
           - name: Objects Supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Query & Text Editors
-          href: https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15
+          href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15
           items:
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
@@ -9074,7 +9074,7 @@
         - name: Query & Text Editors
           href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
         - name: Database Engine Query Editor
-          href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+          href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor
           href: ssms/scripting/xml-editor-sql-server-management-studio.md
         - name: Configure Editors
@@ -9150,7 +9150,7 @@
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
           href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
         - name: Connection Properties Dialog Box
-          href: ssms/f1-help/connection-properties-dialog-box.md
+          href: ./ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
         - name: Connect to Server - Database Engine
           href: ssms/f1-help/connect-to-server-database-engine.md
         - name: Connect to Server - Properties Page - Database Engine
@@ -9158,31 +9158,31 @@
         - name: Connect to Server - Login - Database Engine
           href: ssms/f1-help/connect-to-server-login-page-database-engine.md
         - name: Login - Connect to SSAS Server
-          href: ssms/f1-help/connect-to-server-login-page-analysis-services.md
+          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Connect to SSAS
-          href: ssms/f1-help/connect-to-server-analysis-services.md
+          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Connect to SSAS Server (Connection Properties Page)
-          href: ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md
+          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
         - name: Login - Connect to SSRS Server
-          href: ssms/f1-help/connect-to-server-login-page-reporting-services.md
+          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
         - name: Connect to SSRS Server
-          href: ssms/f1-help/connect-to-server-reporting-services.md
+          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
         - name: Connect to SSRS Server (Connection Properties Page)
-          href: ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md
+          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
         - name: Browse for Servers (Local Servers)
-          href: ssms/f1-help/browse-for-servers-local-servers.md
+          href: ./tools/configuration-manager/sql-server-browser-service.md
         - name: Connect to Server (Additional Connection Parameters)
-          href: ssms/f1-help/connect-to-server-additional-connection-parameters-page.md
+          href: ./relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
         - name: Browse for Servers (Network Servers)
-          href: ssms/f1-help/browse-for-servers-network-servers.md
+          href: ./tools/configuration-manager/sql-server-browser-service.md
         - name: Password Expired
-          href: ssms/f1-help/password-expired.md
+          href: ./relational-databases/security/choose-an-authentication-mode.md
         - name: Connect to SSIS Server
-          href: ssms/f1-help/connect-to-server-integration-services.md
+          href: ./integration-services/service/integration-services-service-ssis-service.md
         - name: Connect to SSIS Server (Login Page)
-          href: ssms/f1-help/connect-to-server-login-page-integration-services.md
+          href: ./integration-services/service/integration-services-service-ssis-service.md
         - name: Connect to SSIS Server (Connection Properties Page)
-          href: ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md
+          href: ./integration-services/service/integration-services-service-ssis-service.md
       - name: Menu help
         items:
         - name: SQL Server Management Studio Menu Help
@@ -10001,7 +10001,7 @@
       - name: Connectivity libraries
         href: linux/sql-server-linux-develop-connectivity-libraries.md
       - name: Use Visual Studio Code
-        href: linux/sql-server-linux-develop-use-vscode.md
+        href: ./tools/visual-studio-code/sql-server-develop-use-vscode.md
       - name: Use SSDT
         href: linux/sql-server-linux-develop-use-ssdt.md
     - name: Manage
@@ -10138,7 +10138,7 @@
     - name: Stack Overflow >>
       href: https://stackoverflow.com/questions/tagged/sql-server  # Note: this S.O. https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
     - name: Microsoft Q & A >>
-      href: https://docs.microsoft.com/answers/products/sql-server
+      href: /answers/products/sql-server
     - name: Submit feedback >>
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit >>
@@ -10172,7 +10172,7 @@
     - name: Educational resources 
       href: sql-server/educational-sql-resources.yml
     - name: Microsoft Learn >>
-      href: https://docs.microsoft.com/learn/
+      href: /learn/
     - name: SQL on Channel 9 >>
       href: https://channel9.msdn.com/Search
   - name: Help
@@ -10180,7 +10180,7 @@
     - name: Get help
       href: sql-server/sql-server-get-help.md
     - name: Microsoft Q & A >>
-      href: https://docs.microsoft.com/answers/products/sql-server
+      href: /answers/products/sql-server
     - name: DBA Stack Exchange >>
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
@@ -10194,11 +10194,11 @@
     - name: SQL Server >>
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
     - name: Database Engine >>
-      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+      href: /archive/blogs/sqlserverstorageengine/
     - name: Security >>
-      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+      href: /archive/blogs/sqlsecurity/
     - name: Data Tools >>
-      href: https://blogs.msdn.microsoft.com/ssdt/
+      href: /archive/blogs/ssdt/
   - name: Feedback
     items: 
     - name: SQL Docs >> 

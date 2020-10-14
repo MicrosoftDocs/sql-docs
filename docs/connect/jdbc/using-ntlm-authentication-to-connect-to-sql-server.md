@@ -74,7 +74,7 @@ For example, your SPN might look like: "MSSQLSvc/some-server.zzz.corp.contoso.co
 
 For more information about service principal names (SPNs), see:
 
-- [Service Principal Name (SPN) Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
+- [Service Principal Name (SPN) Support in Client Connections](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
 
 > [!NOTE]  
 > The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.

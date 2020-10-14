@@ -1,4 +1,4 @@
----
+﻿---
 description: "ADO MD Object Model"
 title: "ADO MD Object Model | Microsoft Docs"
 ms.prod: sql
@@ -26,7 +26,7 @@ This topic describes how objects are represented and related in ADO MD.
  The [Axis](./axis-object-ado-md.md), [Cell](./cell-object-ado-md.md), [Cellset](./cellset-object-ado-md.md), [CubeDef](./cubedef-object-ado-md.md), [Dimension](./dimension-object-ado-md.md), [Hierarchy](./hierarchy-object-ado-md.md), [Level](./level-object-ado-md.md), and [Member](./member-object-ado-md.md) objects each have a standard ADO [Properties](../ado-api/properties-collection-ado.md) collection.  
   
 ## See Also  
- [ADO MD API Reference](?view=sql-server-ver15)   
+ [ADO MD API Reference](?view=sql-server-ver15&preserve-view=true)   
  [ADO MD Code Examples](./ado-md-code-examples.md)   
  [ADO MD Collections](./ado-md-collections.md)   
  [ADO MD Enumerated Constants](./ado-md-enumerated-constants.md)   

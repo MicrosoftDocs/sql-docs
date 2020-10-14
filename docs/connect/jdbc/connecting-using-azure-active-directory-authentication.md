@@ -282,7 +282,7 @@ The example below contains a simple Java application that connects to Azure SQL 
 	11. Under section "Keys", create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
 	12. Click Azure Active Directory on the left side panel. Under "App Registrations", find the "End points" tab. Copy the URL under "OATH 2.0 TOKEN ENDPOINT", this is your STS URL.
 	
-	![JDBC_AAD_Token](media/jdbc_aad_token.png)  
+    ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)  
 2. Sign in to your Azure SQL Server's user database as an Azure Active Directory admin and using a T-SQL command
 provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
  for more details on how to create an Azure Active Directory admin and a contained database user.

@@ -1619,7 +1619,8 @@ ORDER BY message_id
 |    3280    |    16    |    No    |    Backups on raw devices are not supported. '%ls' is a raw device.    |
 |    3281    |    10    |    No    |    Released and initiated rewind on '%ls'.    |
 |    3283    |    16    |    No    |    The file "%ls" failed to initialize correctly. Examine the error logs for more details.    |
-|    3284    |    16    |    No    |    Filemark on device '%ls' is not aligned. Re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value.    |
+|    3284    |    16    |    No    |    Filemark on device '%ls' is not aligned. Re-issue the restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value.    |
+|    3285    |    10    |    Yes    |    Filemark on device '%ls' appears not to be aligned. The restore operation will proceed using less efficient I/O.  To avoid this, re-issue the Restore statement with the same blocksize used to create the backupset: '%d' looks like a possible value.    |
 |    3301    |    21    |    Yes    |    The transaction log contains a record (logop %d) that is not valid. The log has been corrupted. Restore the database from a full backup, or repair the database.    |
 |    3302    |    21    |    Yes    |    Redoing of logged operations in database '%.*ls' failed to reach end of log at log record ID %S_LSN. This indicates corruption around log record ID %S_LSN. Restore the database from a full backup, or repair the database.    |
 |    [3313](mssqlserver-3313-database-engine-error.md)    |    21    |    Yes    |    During redoing of a logged operation in database '%.*ls', an error occurred at log record ID %S_LSN. Typically, the specific failure is previously logged as an error in the Windows Event Log service. Restore the database from a full backup, or repair the database.    |

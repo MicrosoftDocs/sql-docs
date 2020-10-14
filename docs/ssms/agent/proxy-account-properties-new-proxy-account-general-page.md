@@ -19,7 +19,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 Use this page to view or change the properties of a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account.  
   
@@ -31,7 +31,7 @@ Type the name of the proxy.
 Type the name of the credential for the proxy.  
   
 > [!NOTE]  
-> The credential name provided must be the name of an existing credential. For information on creating credentials, see [How to: Create a Proxy](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> The credential name provided must be the name of an existing credential. For information on creating credentials, see [How to: Create a Proxy](../../relational-databases/security/authentication-access/create-a-credential.md)  
   
 **...**  
 Launches the **Select Credential** dialog.  
@@ -47,4 +47,3 @@ Select the proxy to reassign job steps to. This list is enabled when you revoke 
   
 ## See Also  
 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
-  

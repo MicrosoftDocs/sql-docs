@@ -2,7 +2,7 @@
 description: "sp_rename (Transact-SQL)"
 title: "sp_rename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2018"
+ms.date: "10/14/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -38,13 +38,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
+```sql  
 -- Transact-SQL Syntax for sp_rename in SQL Server and Azure SQL Database
 sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
     [ , [ @objtype = ] 'object_type' ]   
 ```  
 
-```  
+```sql  
 -- Transact-SQL Syntax for sp_rename in Azure Synapse Analytics
 sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'   
     , [ @objtype = ] 'COLUMN'   

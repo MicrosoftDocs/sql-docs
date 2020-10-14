@@ -32,7 +32,7 @@ Double-click the .exe file to install, then specify a folder to extract the exec
 - Install via command line
 
 ```
-SSISDevOpsTools-0.1.0-Preview.exe /Q /C /T:<full path>
+SSISDevOpsTools.exe /Q /C /T:<full path>
 ```
 
 ![Installation command ine](media/installation-command-line.png)

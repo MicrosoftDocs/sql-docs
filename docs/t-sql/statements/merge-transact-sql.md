@@ -231,7 +231,7 @@ Specifies the graph match pattern. For more information about the arguments for 
 
 >|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  
 >|-----------------|---------------|-----------------|-----------|  
->|**WHEN MATCHED**| HASH, ROUND_ROBIN |All distribution types||  
+>|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |All distribution types||  
 >|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
 >|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables.||  
 

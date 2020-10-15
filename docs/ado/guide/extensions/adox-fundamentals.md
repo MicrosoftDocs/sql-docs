@@ -1,4 +1,4 @@
-﻿---
+---
 description: "ADOX Fundamentals"
 title: "ADOX Fundamentals | Microsoft Docs"
 ms.prod: sql
@@ -38,7 +38,7 @@ Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and S
 -   [ADOX Examples](../../reference/adox-api/adox-code-examples.md)  
   
 ## See Also  
- [ADOX API Reference](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15&preserve-view=true)   
+ [ADOX API Reference](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
  [ADOX Code Examples](../../reference/adox-api/adox-code-examples.md)   
  [ADOX Collections](../../reference/adox-api/adox-collections.md)   
  [ADOX Enumerated Constants](../../reference/adox-api/adox-enumerated-constants.md)   

@@ -24,7 +24,7 @@ Displays distribution information for columns in a materialized view.
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID of the object to which the column belongs. |  
 |column_id|**int**|The ID of the column.|  
-|distribution_ordinal|**tinyint**|0 = Not a distribution column.</br> 1 = SQL Data Warehouse is using this column to distribute the materialized view.|
+|distribution_ordinal|**tinyint**|0 = Not a distribution column.</br> 1 = Azure Synapse Analytics is using this column to distribute the materialized view.|
  
 ## Permissions 
 

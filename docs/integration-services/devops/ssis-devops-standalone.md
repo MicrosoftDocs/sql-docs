@@ -111,11 +111,6 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     SSISDeploy.exe -s:D:\myfolder\test.ispac -d:catalog;/SSISDB/folder/testproj;myssisserver -at:sql -u:sqlusername -p:sqlpassword -pp:encryptionpassword
     ```
 
-- Deploy ISPAC files from a folder that are encrypted with a same password to SSIS catalog with Windows authentication, and append TrustServerCertificate=True to the connection string.
-    ```
-    SSISDeploy.exe -s:D:\myfolder -d:catalog;/SSISDB/folder;myssisserver -at:win -css:TrustServerCertificate=True -pp:encryptionpassword
-    ```
-
 - Deploy a single SSISDeploymentManifest and its associated files to Azure file share.
     ```
     SSISDeploy.exe -s:D:\myfolder\mypackage.SSISDeploymentManifest -d:file;\\myssisshare.file.core.windows.net\destfolder -u:Azure\myssisshare -p:storagekey

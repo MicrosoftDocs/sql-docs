@@ -225,7 +225,7 @@ Specifies the graph match pattern. For more information about the arguments for 
   
 ## Remarks
 >[!NOTE]
-> In Azure Synapse Analytics, the MERGE command has following differences compared to SQL server and Azure SQL database.  
+> In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
 > - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
 > - The support for tables with different distribution types is described in this table:
 

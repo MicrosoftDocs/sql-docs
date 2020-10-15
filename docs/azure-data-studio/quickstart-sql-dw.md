@@ -131,14 +131,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 ## Clean up resources
 
-If you plan to continue on to work with subsequent quickstarts, don't clean up the resources created in this quickstart.
-
-If you don't plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
-
-Clean up resources by deleting the resource groups.
-
-For details, see [Clean up resources](/azure/sql-database/ql-database-get-started-portal#clean-up-resources).
-
+If you don't plan to continue working with the sample databases created in this article, then [delete the resource group](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## Next steps
 

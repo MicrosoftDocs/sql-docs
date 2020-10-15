@@ -95,7 +95,7 @@ MERGE
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ```syntaxsql
--- Azure Synapse Analytics (Preview)
+-- MERGE (Preview) for Azure Synapse Analytics 
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ INTO ] <target_table> [ [ AS ] table_alias ]  

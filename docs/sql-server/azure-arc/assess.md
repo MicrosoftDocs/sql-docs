@@ -58,10 +58,10 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 
 ## View SQL Assessment results
 
-* The **View SQL Assessment results** button on the _Environment Health_ screen remains disabled until the results are ready in Log Analytics. After the button is enabled, select it to view the results.
+* On the _Environment Health_ pane, select the **View SQL Assessment results** button to view the results.
 
    > [!NOTE]
-   > It might take up to two hours to see the results in Log Analytics after the data files are processed on the target machine.
+   > The **View SQL Assessment results** button remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
 
    :::image type="content" source="media/assess/sql-assessment-results.png" alt-text="Screenshot showing the SQL Assessment results." lightbox="media/assess/sql-assessment-results.png":::
 

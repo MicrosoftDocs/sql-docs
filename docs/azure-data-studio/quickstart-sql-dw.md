@@ -3,12 +3,12 @@ title: Connect and query with Azure Synapse Analytics
 description: This quickstart shows how to use Azure Data Studio to connect to using dedicated SQL pool in Azure Synapse Analytics and run a query.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu, maghan, sstein"
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
+ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
-ms.date: 10/12/2020
+ms.date: 10/15/2020
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query data using dedicated SQL pool in Azure Synapse Analytics
@@ -37,7 +37,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
    |   Setting    | Suggested value | Description |
    |--------------|-----------------|-------------| 
-   | **Server name** | The fully qualified server name | The name should be something like this: **sqldwsample.database.windows.net** |
+   | **Server name** | The fully qualified server name | The name should be something like this: **sqlpoolservername.database.windows.net** |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
@@ -45,11 +45,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
    | **Database name** | *leave blank* | The name of the database to which to connect. |
    | **Server Group** | Select <Default> | If you created a server group, you can set to a specific server group. | 
 
-   ![New Connection Icon](media/quickstart-sql-dw/new-connection-screen.png) 
-
 3. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](/azure/sql-database/sql-database-firewall-configure).
-
-   ![New firewall rule](media/quickstart-sql-dw/firewall.png)
 
 4. After successfully connecting your server opens in the *Servers* sidebar.
 
@@ -78,10 +74,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 1. Change the connection context to **TutorialDB**:
 
-   ![Change context](media/quickstart-sql-database/change-context.png)
-
-
-1. Paste the following snippet into the query editor and click **Run**:
+2. Paste the following snippet into the query editor and click **Run**:
 
    > [!NOTE]
    > You can append this to, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
@@ -103,6 +96,9 @@ The query editor is still connected to the *master* database, but we want to cre
    GO
    ```
 
+    :::image type="content" source="media/quickstart-sql-dw/create-table.png" alt-text="Create a table in the TutorialDB database":::
+
+
 ## Insert rows
 
 1. Paste the following snippet into the query editor and click **Run**:
@@ -117,6 +113,8 @@ The query editor is still connected to the *master* database, but we want to cre
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Create rows in the table":::
+
 ## View the result
 
 1. Paste the following snippet into the query editor and click **Run**:
@@ -128,7 +126,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 2. The results of the query are displayed:
 
-   ![Select results](media/quickstart-sql-dw/select-results.png)
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="View the results":::
 
 
 ## Clean up resources

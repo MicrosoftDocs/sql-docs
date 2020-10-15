@@ -122,12 +122,6 @@ The *user installer* is recommended because it does not require administrator pr
 
 In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
 
-## Uninstall Azure Data Studio
-
-If you installed Azure Data Studio using the Windows Installer, then uninstall the same way you remove any Windows application.
-
-If you installed Azure Data Studio with a .zip or other archive, then simply delete the files.
-
 ## Supported Operating Systems
 
 Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the following platforms:
@@ -197,9 +191,7 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
 5. If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
 
-## Unattended install
-
-### Windows
+## Unattended install for Windows
 
 You can also install Azure Data Studio using a command prompt script.
 
@@ -222,6 +214,12 @@ If you want to install Azure Data Studio in the background with no GUI prompts a
     You can also pass */SILENT* instead of */VERYSILENT* to see the setup UI.
 
 3. If all goes well, you can see Azure Data Studio installed.
+
+## Uninstall Azure Data Studio
+
+If you installed Azure Data Studio using the Windows Installer, then uninstall the same way you remove any Windows application.
+
+If you installed Azure Data Studio with a .zip or other archive, then simply delete the files.
 
 ## Next Steps
 

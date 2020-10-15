@@ -1,4 +1,4 @@
-﻿---
+---
 description: "ADO Programmer&#39;s Reference"
 title: "ADO Programmer&#39;s Reference | Microsoft Docs"
 ms.custom: ""
@@ -21,6 +21,6 @@ This section contains the following topics.
   
 -   [RDS API Reference](./rds-api/rds-api-reference.md)  
   
--   [ADO MD API Reference](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)  
+-   [ADO MD API Reference](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15)  
   
--   [ADOX API Reference](./adox-api/adox-object-model.md?view=sql-server-ver15&preserve-view=true)
+-   [ADOX API Reference](./adox-api/adox-object-model.md?view=sql-server-ver15)

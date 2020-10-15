@@ -1,4 +1,4 @@
-﻿---
+---
 description: "ADO Programmer's Guide for using ADO Objects"
 title: "ADO Programmer's Guide | Microsoft Docs"
 ms.custom: ""
@@ -21,7 +21,7 @@ This documentation provides an overview of how to use ADO objects to work with d
 
 -   [Introduction](./ado-introduction.md)
 
--   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15&preserve-view=true)
+-   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15)
 
 -   [Remote Data Services (RDS)](./remote-data-service/remote-data-service-rds.md)
 
@@ -29,4 +29,4 @@ This documentation provides an overview of how to use ADO objects to work with d
 
 -   [ADO Extensions for Data Definition Language and Security (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [Appendixes](./appendixes/appendix-a-providers.md?view=sql-server-ver15&preserve-view=true)
+-   [Appendixes](./appendixes/appendix-a-providers.md?view=sql-server-ver15)

@@ -28,7 +28,7 @@ In addition to notebooks, you can view a collection of notebooks, which is calle
 
 You need these prerequisites to open a notebook:
 
-* The latest version of [Azure Data Studio Insiders build](./deploy-big-data-tools.md?viewFallbackFrom=sqlallproducts)
+* The latest version of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 * The [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension, installed in Azure Data Studio
 
 In addition to those prerequisites, to deploy SQL Server 2019 Big Data Clusters, you also need:

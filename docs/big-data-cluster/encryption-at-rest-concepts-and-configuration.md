@@ -6,7 +6,7 @@ author: dacoelho
 ms.author: dacoelho
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 10/14/2020
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -70,18 +70,18 @@ The feature set introduces the __BDC KMS controller service__ to provide __syste
 
 ### SQL Server instances
 
-*	A system generated certificate will be installed on SQL Server pods to be used with TDE encryption commands. The system managed certificate naming standard is ‘TDECertificate+timestamp’. Example:  *TDECertificate2020_09_15_22_46_27*
-*	Master instance BDC provisioned databases and user databases won’t be encrypted automatically. DBA’s may use the installed certificate to encrypt any database.
-*	Compute Pool and Storage Pool will be automatically encrypted using the system generated certificate.
-*	Data Pool encryption, albeit technically possible using T-SQL’s ‘EXECUTE AT’ commands, is discouraged and unsupported at this time. Using this techniques to encrypt Data Pool databases might not be effective and encryption may not be happening at the desired state. It will also create an incompatible upgrade path towards next releases.
-*	There is no certificate rotation, this will come in future releases with the appropriate azdata command set. It is supported to decrypt and then encrypt with a new certificate if not on HA deployments.
-*	Encryption monitoring happens through existing standard SQL Server DMVs for TDE.
-*	It is supported to backup and restore a TDE enabled database into the cluster.
-*	HA is supported. If a database on the primary instance of SQL Server is encrypted, then all secondary replica of the database will be encrypted as well.
+* A system generated certificate will be installed on SQL Server pods to be used with TDE encryption commands. The system managed certificate naming standard is ‘TDECertificate+timestamp’. Example:  *TDECertificate2020_09_15_22_46_27*
+* Master instance BDC provisioned databases and user databases won’t be encrypted automatically. DBA’s may use the installed certificate to encrypt any database.
+* Compute Pool and Storage Pool will be automatically encrypted using the system generated certificate.
+* Data Pool encryption, albeit technically possible using T-SQL’s ‘EXECUTE AT’ commands, is discouraged and unsupported at this time. Using this techniques to encrypt Data Pool databases might not be effective and encryption may not be happening at the desired state. It will also create an incompatible upgrade path towards next releases.
+* There is no certificate rotation, this will come in future releases with the appropriate azdata command set. It is supported to decrypt and then encrypt with a new certificate if not on HA deployments.
+* Encryption monitoring happens through existing standard SQL Server DMVs for TDE.
+* It is supported to backup and restore a TDE enabled database into the cluster.
+* HA is supported. If a database on the primary instance of SQL Server is encrypted, then all secondary replica of the database will be encrypted as well.
 
 ### HDFS Encryption Zones
 
-*	Active Directory integration is required to enable the encryption zones feature for HDFS.
+* [Active Directory integration](active-directory-prerequisites.md) is required to enable the encryption zones feature for HDFS.
 *	A system generated key will be provisioned in Hadoop KMS. The key name is __‘securelakekey’__. On CU8 the default key is 256 bit and we support 256 bit AES encryption.
 *	A default encryption zone will be provisioned using the above system generated key on a path named __```/securelake```__.
 *	Users can create additional keys and encryption zones using specific instructions provided in this guide. Users will be able to choose the key size of 128, 192, or 256 during key creation.
@@ -96,7 +96,7 @@ During __new deployments of SQL Server Big Data Clusters__, CU8 onwards, __Encry
 
 * BDC KMS component will be deployed in the controller and will generate a default set of keys and certificates.
 * SQL Server will be deployed with TDE turned on and certificates will get installed by the controller.
-* Hadoop KMS (for HDFS) will be configured to interact with BDC KMS for encryption operations.
+* Hadoop KMS (for HDFS) will be configured to interact with BDC KMS for encryption operations. HDFS Encryption Zones are configured and ready to use.
 
 Requirements and default behaviors described in the previous section apply.
 
@@ -124,13 +124,18 @@ On existing clusters, the upgrade process __won't enforce encryption on user dat
 
 Execute the following actions if you upgraded your cluster to CU8 (azdata upgrade) and want to enable HDFS Encryption Zones.
 
+Requirements:
+- [Active Directory](active-directory-prerequisites.md) integrated cluster.
+- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) installed and connected to the cluster.
+- From the [SQL Server BDC Operation Notebooks](cluster-manage-notebooks.md) execute the __```sop128-enable-encryption-zones```__ notebook to perform the configuration and validation of HDFS Encryption Zones support.
 
 ## Next steps
 
 To learn more about how to effectively use Encryption at Rest SQL Server Big Data Clusters see the following:
 
-- [Encryption at Rest - SQL Server](encryption-at-rest-sql-server.md)
+- [Encryption at Rest - SQL Server TDE](encryption-at-rest-sql-server-tde.md)
 - [Encryption at Rest - HDFS Encryption Zones](encryption-at-rest-hdfs-encryption-zones.md)
+- [Encryption at Rest - Key Management](encryption-at-rest-key-management.md)
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 

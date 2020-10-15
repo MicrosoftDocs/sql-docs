@@ -68,9 +68,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
-<sup>1</sup>The following releases are not available for BDC:
-- CU7
-- CU8
+<sup>1</sup>The following releases are not available for BDC: CU7
 
 <sup>2</sup>`azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
@@ -78,7 +76,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu8"></a> CU8 (September 2020)
+## <a id="cu8"></a> CU8 (October 2020)
 
 Cumulative Update 8 (CU8) release for SQL Server 2019.
 
@@ -88,7 +86,7 @@ Cumulative Update 8 (CU8) release for SQL Server 2019.
 
 This release includes several fixes and a couple of enhancements.
 
-Starting on CU8 and forward, we are providing a complete [packages and libraries version documentation](packages-libraries-cu8.md). This will enable precise version compatibility tracking and validation during application development and maintenance for customers.
+Starting on CU8 and forward, we are providing a complete [packages and libraries version documentation](packages-libraries-versions.md). This will enable precise version compatibility tracking and validation during application development and maintenance for customers.
 
 ### Added capabilities
 

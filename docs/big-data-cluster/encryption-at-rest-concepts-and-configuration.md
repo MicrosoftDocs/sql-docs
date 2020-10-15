@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 # Encryption at Rest Concepts and Configuration Guide
 
 
-Starting on SQL Server Big Data Clusters CU8, a comprehensive Encryption at Rest features set is available to provide application level encryption to all data stored in the platform. This guide documents the concepts, architecture and configuration fo the Encryption at Rest feature set for SQL Server Big Data Clusters.
+Starting from SQL Server Big Data Clusters CU8, a comprehensive Encryption at Rest feature set is available to provide application level encryption to all data stored in the platform. This guide documents the concepts, architecture and configuration for the Encryption at Rest feature set for SQL Server Big Data Clusters.
 
 SQL Server Big data clusters stores data in the following two locations:
 

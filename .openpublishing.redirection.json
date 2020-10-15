@@ -59049,6 +59049,11 @@
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/connect-query-sql-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sanddance-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sanddance-extension",
+      "redirect_document_id": true
     }
   ]
 }

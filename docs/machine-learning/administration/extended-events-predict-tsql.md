@@ -8,10 +8,10 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Monitor PREDICT T-SQL statements with extended events in SQL Server Machine Learning Services
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Learn how to use extended events to monitor and troubleshooting [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL statements in SQL Server Machine Learning Services.
 
@@ -19,22 +19,22 @@ Learn how to use extended events to monitor and troubleshooting [PREDICT](../../
 
 The following extended events are available in all versions of SQL Server that support the [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL statement. 
 
-|name |object_type|description| 
-|----|----|----|
-|predict_function_completed	|event	|Builtin execution time breakdown|
-|predict_model_cache_hit |event|Occurs when a model is retrieved from the PREDICT function model cache. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
-|predict_model_cache_insert	|event	|	Occurs when a model is insert into the PREDICT function model cache. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.	|
-|predict_model_cache_miss	|event|Occurs when a model is not found in the PREDICT function model cache. Frequent occurrences of this event could indicate that SQL Server needs more memory. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
-|predict_model_cache_remove	|event| Occurs when a model is removed from model cache for PREDICT function. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
+| name                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | event       | Builtin execution time breakdown|
+| predict_model_cache_hit    | event       | Occurs when a model is retrieved from the PREDICT function model cache. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
+| predict_model_cache_insert | event       | Occurs when a model is insert into the PREDICT function model cache. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.	|
+| predict_model_cache_miss   | event       | Occurs when a model is not found in the PREDICT function model cache. Frequent occurrences of this event could indicate that SQL Server needs more memory. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
+| predict_model_cache_remove | event       | Occurs when a model is removed from model cache for PREDICT function. Use this event along with other predict_model_cache_* events to troubleshoot issues caused by the PREDICT function model cache.|
 
 ## Query for related events
 
 To view a list of all columns returned for these events, run the following query in SQL Server Management Studio:
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## Examples

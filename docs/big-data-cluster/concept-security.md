@@ -68,7 +68,7 @@ https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
 
 ## Data Encryption at Rest
 
-SQL Server Big Data Clusters Encryption at Rest support the core scenario of application level encryption for the SQL Server and HDFS components. Please follow the [Encryption at Rest Concepts and Configuration Guide](encryption-at-rest-concepts-and-configuration.md) article for a comprehensive feature usage guide.
+SQL Server Big Data Clusters Encryption at Rest capability, supports the core scenario of application level encryption for the SQL Server and HDFS components. Please follow the [Encryption at Rest Concepts and Configuration Guide](encryption-at-rest-concepts-and-configuration.md) article for a comprehensive feature usage guide.
 
 > [!IMPORTANT]
 > Volume Encryption is a recommended practice for all SQL Server Big Data Clusters deployments. Storage volumes provided by the customer and configured on Kubernetes clusters should be encrypted to provide the most secure solution architecture. SQL Server Big Data Clusters Encryption at Rest is an additional security layer, providing application level encryption of SQL Server's data files and HDFS encryption zone support.

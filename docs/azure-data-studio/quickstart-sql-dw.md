@@ -37,7 +37,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
    |   Setting    | Suggested value | Description |
    |--------------|-----------------|-------------| 
-   | **Server name** | The fully qualified server name | The name should be something like this: **sqlpoolservername.database.windows.net** |
+   | **Server name** | The fully qualified server name | For example the name should look like to this: **sqlpoolservername.database.windows.net**. |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |

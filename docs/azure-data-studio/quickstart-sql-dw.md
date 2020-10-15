@@ -49,7 +49,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 4. After successfully connecting your server opens in the *Servers* sidebar.
 
-## Create the tutorial dedicated SQL pool
+## Create a database in your dedicated SQL pool
 
 1. Right-click on your server, in the object explorer and select **New Query.**
 

@@ -1,6 +1,6 @@
 ---
 title: Connect and query with Azure Synapse Analytics
-description: This quickstart shows how to use Azure Data Studio to connect to using dedicated SQL pool in Azure Synapse Analytics and run a query.
+description: This quickstart shows connecting to a dedicated SQL pool in Azure Synapse Analytics using Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: quickstart
@@ -13,12 +13,12 @@ ms.date: 10/15/2020
 
 # Quickstart: Use Azure Data Studio to connect and query data using dedicated SQL pool in Azure Synapse Analytics
 
-This quickstart demonstrates how to use Azure Data Studio to connect to using dedicated SQL pool in Azure Synapse Analytics, and then use Transact-SQL statements to create, insert, and select data. 
+This quickstart shows connecting to a dedicated SQL pool in Azure Synapse Analytics using Azure Data Studio.
 
 ## Prerequisites
 To complete this quickstart, you need Azure Data Studio, and a dedicated SQL pool in Azure Synapse Analytics.
 
-- [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
+- [Install Azure Data Studio](./download-azure-data-studio.md).
 
 If you don't already have a dedicated SQL pool, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
@@ -29,7 +29,7 @@ Remember the server name, and login credentials!
 
 Use Azure Data Studio to establish a connection to your Azure Synapse Analytics server.
 
-1. The first time you run Azure Data Studio the **Connection** page should open. If you don't see the **Connection** page, click **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
+1. The first time you run Azure Data Studio the **Connection** page should open. If you don't see the **Connection** page, select **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
 
@@ -41,7 +41,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
-   | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
+   | **Save Password?** | Yes or No | Select Yes if you don't want to enter the password each time. |
    | **Database name** | *leave blank* | The name of the database to which to connect. |
    | **Server Group** | Select <Default> | If you created a server group, you can set to a specific server group. | 
 
@@ -51,9 +51,9 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 ## Create the tutorial dedicated SQL pool
 
-1. Right click on your server, in the object explorer and select **New Query.**
+1. Right-click on your server, in the object explorer and select **New Query.**
 
-2. Paste the following snippet into the query editor and click **Run**:
+2. Paste the following snippet into the query editor and select **Run**:
 
    ```sql
     IF NOT EXISTS (
@@ -74,10 +74,10 @@ The query editor is still connected to the *master* database, but we want to cre
 
 1. Change the connection context to **TutorialDB**:
 
-2. Paste the following snippet into the query editor and click **Run**:
+2. Paste the following snippet into the query editor and select **Run**:
 
    > [!NOTE]
-   > You can append this to, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
+   > You can append this to, or overwrite the previous query in the editor. Note that selecting **Run** executes only the query that is selected. If nothing is selected, selecting **Run** executes all queries in the editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -101,7 +101,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 ## Insert rows
 
-1. Paste the following snippet into the query editor and click **Run**:
+1. Paste the following snippet into the query editor and select **Run**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -117,7 +117,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 ## View the result
 
-1. Paste the following snippet into the query editor and click **Run**:
+1. Paste the following snippet into the query editor and select **Run**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -131,8 +131,13 @@ The query editor is still connected to the *master* database, but we want to cre
 
 ## Clean up resources
 
-Other articles in this collection build upon this quickstart. If you plan to continue on to work with subsequent quickstarts, do not clean up the resources created in this quickstart. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
-Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+If you plan to continue on to work with subsequent quickstarts, don't clean up the resources created in this quickstart.
+
+If you don't plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
+
+Clean up resources by deleting the resource groups.
+
+For details, see [Clean up resources](/azure/sql-database/ql-database-get-started-portal#clean-up-resources).
 
 
 ## Next steps

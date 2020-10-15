@@ -61,7 +61,7 @@
     - name: PowerShell extension
       href: extensions/powershell-extension.md
     - name: SandDance extension
-      href: sanddance-extension.md
+      href: extensions/sanddance-extension.md
     - name: Schema Compare extension
       href: extensions/schema-compare-extension.md
     - name: SQL Database Projects extension

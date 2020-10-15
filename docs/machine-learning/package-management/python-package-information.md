@@ -101,17 +101,13 @@ When you select the Python language option during setup, Anaconda 4.2 distributi
 The following example script displays a list of all Python packages installed in the SQL Server instance.
 
 ```sql
-EXECUTE sp_execute_external_script 
-  @language = N'Python', 
+EXECUTE sp_execute_external_script
+  @language = N'Python',
   @script = N'
 import pkg_resources
-import pandas as pd
-installed_packages = pkg_resources.working_set
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
-df = pd.DataFrame(installed_packages_list)
-OutputDataSet = df
-'
-WITH RESULT SETS (( PackageVersion nvarchar (150) ))
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version) for i in pkg_resources.working_set]))'
+WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128)));
 ```
 
 ## Find a single Python package

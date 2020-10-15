@@ -108,7 +108,7 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]
     [ OPTION ( <query_hint> [ ,...n ] ) ]
-;  -- In Azure Synapse Analytics, the semi-colon is required, or the query will return syntax  error. 
+;  -- The semi-colon is required, or the query will return syntax  error. 
 ```
  
 ## Arguments

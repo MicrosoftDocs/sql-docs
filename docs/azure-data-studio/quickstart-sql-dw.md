@@ -8,7 +8,7 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
-ms.date: 09/24/2018
+ms.date: 10/12/2020
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query data using dedicated SQL pool in Azure Synapse Analytics
@@ -35,8 +35,8 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL server:
 
-   | Setting       | Suggested value | Description |
-   | ------------ | ------------------ | ------------------------------------------------- | 
+   |   Setting    | Suggested value | Description |
+   |--------------|-----------------|-------------| 
    | **Server name** | The fully qualified server name | The name should be something like this: **sqldwsample.database.windows.net** |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
@@ -49,14 +49,15 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 3. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](/azure/sql-database/sql-database-firewall-configure).
 
-   ![New firewall rule](media/quickstart-sql-dw/firewall.png)  
+   ![New firewall rule](media/quickstart-sql-dw/firewall.png)
 
 4. After successfully connecting your server opens in the *Servers* sidebar.
 
 ## Create the tutorial dedicated SQL pool
+
 1. Right click on your server, in the object explorer and select **New Query.**
 
-1. Paste the following snippet into the query editor and click **Run**:
+2. Paste the following snippet into the query editor and click **Run**:
 
    ```sql
     IF NOT EXISTS (
@@ -70,7 +71,6 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
     ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
     GO
    ```
-
 
 ## Create a table
 
@@ -103,7 +103,6 @@ The query editor is still connected to the *master* database, but we want to cre
    GO
    ```
 
-
 ## Insert rows
 
 1. Paste the following snippet into the query editor and click **Run**:
@@ -118,8 +117,8 @@ The query editor is still connected to the *master* database, but we want to cre
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
-
 ## View the result
+
 1. Paste the following snippet into the query editor and click **Run**:
 
    ```sql
@@ -127,7 +126,7 @@ The query editor is still connected to the *master* database, but we want to cre
    SELECT * FROM dbo.Customers;
    ```
 
-1. The results of the query are displayed:
+2. The results of the query are displayed:
 
    ![Select results](media/quickstart-sql-dw/select-results.png)
 

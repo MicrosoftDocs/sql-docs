@@ -59,7 +59,7 @@ RECONFIGURE WITH override;
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!IMPORTANT]
-> On Azure SQL Managed Instance, running this command triggers a SQL server restart for the RG settings to take effect. This can cause a few seconds of unavailability.
+> On Azure SQL Managed Instance, running the sp_configure and RECONFIGURE commands triggers a SQL server restart for the RG settings to take effect. This can cause a few seconds of unavailability.
 ::: moniker-end
 
 Run the following SQL statement if you want to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory and the standard library path.

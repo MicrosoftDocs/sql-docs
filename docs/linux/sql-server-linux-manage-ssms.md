@@ -101,7 +101,7 @@ While connected to the *master* database, you can create databases on the server
 
 3. In the *New Database* dialog, enter a name for your new database, and then click *OK*
 
-The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md).
+The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md).
 
 ### Drop a database
 
@@ -137,6 +137,6 @@ When a pane is expanded, Activity Monitor queries the instance for information. 
 ## See also
 - [What is SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Export and Import a database with SSMS](sql-server-linux-migrate-ssms.md)
-- [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)

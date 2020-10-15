@@ -74,7 +74,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux&preserve-view=true), a free download that runs on Linux.
++ You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
 ## Package list
 
@@ -135,11 +135,11 @@ sudo zypper install mssql-server-extensibility-java
 
 1. Grant permissions on Linux
 
-    You don't need to perform this step if you are using external libraries. The recommended way of working is using external libraries. For help creating an external library from your jar file, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
+    You don't need to perform this step if you are using external libraries. The recommended way of working is using external libraries. For help creating an external library from your jar file, see [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md)
 
     If you are not using external libraries, you need to provide SQL Server with permissions to execute the Java classes in your jar.
 
-    To grant read and execute access to a jar file, run the following **chmod** command on the jar file. We recommend always putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](https://docs.microsoft.com/sql/language-extensions/how-to/create-a-java-jar-file-from-class-files).
+    To grant read and execute access to a jar file, run the following **chmod** command on the jar file. We recommend always putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](../language-extensions/how-to/create-a-java-jar-file-from-class-files.md).
 
     ```cmd
     chmod ug+rx <MyJarFile.jar>
@@ -184,11 +184,11 @@ sudo zypper install mssql-server-extensibility-java
 
 6. Restart the `mssql-launchpadd` service again.
 
-7. For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+7. For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md).
 
 ## Register external language
 
-For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md).
 
 The following example adds an external language called Java to a database on SQL Server on Linux.
 
@@ -202,7 +202,7 @@ For the Java extension, the environment variable “JRE_HOME” is used to deter
 
 CREATE EXTERNAL LANGUAGE ddl provides a parameter (ENVIRONMENT_VARIABLES) to set environment variables specifically for the process hosting the extension. This is the recommended and most effective way to set environment variables required by external language extensions.
 
-For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+For more information, see [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md).
 
 ## Verify installation
 
@@ -240,7 +240,7 @@ You can install and configure the database engine and Language Extensions in one
 
 ## Unattended installation
 
-Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended) for the Database Engine, add the packages for mssql-server-extensibility-java.
+Using the [unattended install](./sql-server-linux-setup.md#unattended) for the Database Engine, add the packages for mssql-server-extensibility-java.
 
 <a name="offline-install"></a>
 

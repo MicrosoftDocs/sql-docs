@@ -88,7 +88,7 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 
 |Parameter|Description|
 |---------|---------|
-|-source\|-s:\<source path>|Local file path of artifacts to be deployed. Path of folder, ISPAC, DTSX, SSISDeploymentManfiest are allowed.|
+|-source\|-s:\<source path>|Local file path of artifacts to be deployed. ISPAC, DTSX, path of folder for DTSX, SSISDeploymentManfiest are allowed.|
 |-destination\|-d:\<type>;\<path>[;server]|Destination type, path of the destination folder, and server name of the SSIS catalog where the source file will be deployed to. Currently we support following two destination types: <li> *CATALOG*: deploy single or multiple ISPAC files to the specified SSIS catalog. The path of CATALOG destination should be in such format: <br> /SSISDB/\<folder name>[/\<project name>] <br> The optional <project name> is only valid when the source specifies a single ISPAC file path. Server name must be specified for CATALOG destination. <li> *FILE*: deploy SSIS packages or files specified in a single or multiple SSISDeploymentManifest files to the specified path of the file system. The path of FILE destination can be a local folder path or a network folder path in such format: <br>\\\\\<machine name>\\\<folder name>[\\\<sub folder name>\...]|
 |-authType\|-at:\<auth type name>|Authentication type to access SQL Server. Mandatory for CATALOG destination. Following types are supported: <li> WIN:  Windows Authentication <li> SQL:  SQL Server Authentication <li> ADPWD:  Active Directory - Password <li> ADINT:  Active Directory - Integrated|
 |-connectionStringSuffix\|-css:\<connection string suffix> |Suffix of the connection string, which is used to connect to the SSIS catalog.|
@@ -109,11 +109,6 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 - Deploy a single ISPAC encrypted with password to SSIS catalog with SQL authentication, and rename the project name.
     ```
     SSISDeploy.exe -s:D:\myfolder\test.ispac -d:catalog;/SSISDB/folder/testproj;myssisserver -at:sql -u:sqlusername -p:sqlpassword -pp:encryptionpassword
-    ```
-
-- Deploy ISPAC files from a folder that are encrypted with a same password to SSIS catalog with Windows authentication, and append TrustServerCertificate=True to the connection string.
-    ```
-    SSISDeploy.exe -s:D:\myfolder -d:catalog;/SSISDB/folder;myssisserver -at:win -css:TrustServerCertificate=True -pp:encryptionpassword
     ```
 
 - Deploy a single SSISDeploymentManifest and its associated files to Azure file share.

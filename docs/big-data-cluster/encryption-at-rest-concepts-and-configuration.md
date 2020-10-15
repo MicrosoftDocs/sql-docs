@@ -31,7 +31,7 @@ The Encryption at Rest feature set of SQL Server Big Data Clusters supports the 
 
 The following capabilities are provided:
 
-* __System managed encryption at rest__. This is available on CU8.
+* __System managed encryption at rest__. This is available in CU8.
 * __User managed encryption at rest (BYOK)__, with both service managed and external KMS/HSM provider integrations. This will be available in a future release.
 
 ## Key Definitions

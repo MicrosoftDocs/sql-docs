@@ -1,8 +1,8 @@
 ---
 title: Configure SQL Server Always On Availability Group on Windows and Linux
-description: Configure SQL Server Availability Group with replicas on Windows and Linux.
-author: MikeRayMSFT
-ms.author: mikeray
+description: Learn how to create a SQL Server Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server.
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/31/2018
 ms.topic: conceptual

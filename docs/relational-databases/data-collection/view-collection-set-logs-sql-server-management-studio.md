@@ -1,4 +1,5 @@
 ---
+description: "View collection set logs (SQL Server Management Studio)"
 title: "View collection set logs (SSMS)"
 ms.date: 06/03/2020
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "sp_addqreader_agent (Transact-SQL)"
 title: "sp_addqreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addqreader_agent"
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sys.sysindexkeys (Transact-SQL)"
 title: "sys.sysindexkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

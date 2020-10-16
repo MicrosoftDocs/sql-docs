@@ -1,4 +1,5 @@
 ---
+description: "The CDC Designer Console Introduction"
 title: "The CDC Designer Console Introduction | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

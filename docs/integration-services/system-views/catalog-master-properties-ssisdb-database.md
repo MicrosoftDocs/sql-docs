@@ -1,4 +1,5 @@
 ---
+description: "catalog.master_properties (SSISDB Database)"
 title: "catalog.master_properties (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

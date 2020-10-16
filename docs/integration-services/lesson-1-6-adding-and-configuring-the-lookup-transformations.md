@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-6: Add and configure the Lookup transformations"
 title: "Step 6: Add and configure the Lookup transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/19/2019

@@ -43,7 +43,7 @@ productDirectory:
       - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
         text: Azure SQL Managed Instance      
       - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
-        text: Azure SQL Edge (preview)         
+        text: Azure SQL Edge       
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
         text: Azure Synapse Analytics (SQL DW)
   - title: SQL Server on Linux
@@ -90,6 +90,9 @@ conceptualContent:
           itemType: whats-new
         - text: SQL Server Machine Learning Services
           url: machine-learning/index.yml
+          itemType: whats-new
+        - text: SQL Server enabled Azure Arc (preview)
+          url: sql-server/azure-arc/overview.md
           itemType: whats-new
     - title: Install 
       links:
@@ -147,9 +150,9 @@ additionalContent:
             url: connect/homepage-sql-connection-programming.md
           - text: DevOps using SQL Server 
             url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
-          - text: Azure SQL DB applications
+          - text: Azure SQL Database applications
             url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
-          - text: Azure SQL DB connectivity libraries
+          - text: Azure SQL Database connectivity libraries
             url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
           - text: Transact-SQL (T-SQL)
             url: t-sql/language-reference.md

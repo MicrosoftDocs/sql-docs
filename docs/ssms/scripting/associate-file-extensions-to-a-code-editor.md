@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -52,6 +52,5 @@ Associating file extensions to a specific code editor allows you to open a file 
 4.  In the **Editor** box, click the code editor that you wish to use to open this file type, click **Add**, and then click **OK**.  
   
 ## See Also  
- [Ssms Utility](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Ssms Utility](../ssms-utility.md)  
   

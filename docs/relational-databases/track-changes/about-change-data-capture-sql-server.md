@@ -1,4 +1,5 @@
 ---
+description: "About Change Data Capture (SQL Server)"
 title: "About Change Data Capture"
 ms.custom: seo-dt-2019
 ms.date: "01/14/2019"

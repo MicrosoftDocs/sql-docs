@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Compact Edition Destination"
 title: "SQL Server Compact Edition Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

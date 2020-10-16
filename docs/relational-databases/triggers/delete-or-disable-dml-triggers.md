@@ -1,4 +1,5 @@
 ---
+description: "Delete or Disable DML Triggers"
 title: "Delete or Disable DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

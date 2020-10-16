@@ -1,4 +1,5 @@
 ---
+description: "Configure Peer-to-Peer Topology Wizard"
 title: "Configure Peer-to-Peer Topology Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

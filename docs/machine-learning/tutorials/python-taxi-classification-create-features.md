@@ -1,5 +1,6 @@
 ---
 title: "Python tutorial: Create data features"
+titleSuffix: SQL machine learning
 description: In part three of this five-part tutorial series, you'll add calculations to stored procedures for use in Python machine learning models with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
@@ -13,7 +14,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-curr
 ---
 
 # Python tutorial: Create Data Features using T-SQL
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 In part three of this five-part tutorial series, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. You'll then call that function from a SQL stored procedure to create a table that contains the feature values.
 

@@ -1,4 +1,5 @@
 ---
+description: "EXPORT (DMX)"
 title: "EXPORT (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -55,6 +56,5 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
  [IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)   
- [Export and Import Data Mining Objects](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [Export and Import Data Mining Objects](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

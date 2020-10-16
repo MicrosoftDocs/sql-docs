@@ -4,7 +4,7 @@ description: Learn how to move a breakpoint in a Transact-SQL script file to ano
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint location"
@@ -41,7 +41,7 @@ When you edit a breakpoint location, the breakpoint moves to the new location, c
   
 ## See Also
 
-- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)
-- [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)
-- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)
-- [Specify a Breakpoint Filter](../../relational-databases/scripting/specify-a-breakpoint-filter.md)
+- [Specify a Hit Count](./specify-a-hit-count.md)
+- [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)
+- [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)
+- [Specify a Breakpoint Filter](./specify-a-breakpoint-filter.md)

@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (SybaseToSQL)"
 title: "Managing Passwords (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/07/2020
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Sybase Console,Managing Passwords"
   - "Sybase Console,Securing Password"
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Managing Passwords (SybaseToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers.
@@ -125,5 +126,4 @@ The SSMA Console application allows you to export encrypted database passwords p
 8. Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[Executing the SSMA Console (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

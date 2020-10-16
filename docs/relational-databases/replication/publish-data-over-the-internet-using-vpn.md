@@ -1,4 +1,5 @@
 ---
+description: "Publish Data over the Internet Using VPN"
 title: "Publish Data over the Internet Using VPN | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

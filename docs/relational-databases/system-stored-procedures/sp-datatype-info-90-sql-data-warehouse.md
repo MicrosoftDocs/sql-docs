@@ -1,5 +1,6 @@
 ---
-title: "sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs"
+description: "sp_datatype_info_90 (Azure Synapse Analytics)"
+title: "sp_datatype_info_90 (Azure Synapse Analytics)"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.service: sql-data-warehouse
@@ -12,7 +13,7 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sp_datatype_info_90 (SQL Data Warehouse)
+# sp_datatype_info_90 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Returns information about the data types supported by the current environment.  
@@ -21,12 +22,14 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 `[ @data_type = ] data_type`
@@ -72,7 +75,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example retrieves information for the **sysname** and **nvarchar** data types by specifying the *data_type* value of `-9`.  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_datatype_info_90 -9;  
@@ -80,7 +83,7 @@ GO
 ```  
   
 ## See Also  
- [SQL Data Warehouse Stored Procedures](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
+ [Azure Synapse Analytics Stored Procedures](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

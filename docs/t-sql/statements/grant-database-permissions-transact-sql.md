@@ -1,4 +1,5 @@
 ---
+description: "GRANT Database Permissions (Transact-SQL)"
 title: "GRANT Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/22/2019

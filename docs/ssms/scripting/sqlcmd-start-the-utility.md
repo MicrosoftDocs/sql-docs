@@ -4,7 +4,7 @@ description: Learn how to start the sqlcmd utility, which lets you enter Transac
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
@@ -47,6 +47,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     >  Entered [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are stored in a buffer. They are executed as a batch when the GO command is encountered.  
   
 ## See Also  
- [Run Transact-SQL Script Files Using sqlcmd](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
-  
+ [Run Transact-SQL Script Files Using sqlcmd](./sqlcmd-run-transact-sql-script-files.md)  
   

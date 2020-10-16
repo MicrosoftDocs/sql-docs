@@ -1,4 +1,5 @@
 ---
+description: "Batching Stored Procedure Calls"
 title: "Batching Stored Procedure Calls | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

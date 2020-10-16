@@ -1,4 +1,5 @@
 ---
+description: "SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)"
 title: "SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"

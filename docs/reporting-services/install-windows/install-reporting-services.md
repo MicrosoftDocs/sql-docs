@@ -1,4 +1,5 @@
 ---
+description: "Install SQL Server Reporting Services"
 title: "Install SQL Server Reporting Services | Microsoft Docs"
 ms.date: 05/01/2020
 ms.prod: reporting-services
@@ -62,7 +63,7 @@ Installing a report server is straightforward. There are only a few steps to ins
     > [!NOTE]
     > The default path is C:\Program Files\Microsoft SQL Server Reporting Services.
 
-7. After a successful setup, select **Configure Report Server** to launch the Reporting Services Configuration Manager.
+7. After a successful setup, select **Configure Report Server** to launch the Report Server Configuration Manager.
 
 ## Configure your report server
 

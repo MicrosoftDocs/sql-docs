@@ -1,4 +1,5 @@
 ---
+description: "getDate Method (java.lang.String, java.util.Calendar) (SQLServerResultSet)"
 title: "getDate Method (java.util.Calendar) column | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DROP TABLE Statement Limitations"
 title: "DROP TABLE Statement Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

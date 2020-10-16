@@ -1,4 +1,5 @@
 ---
+description: "Using a stored procedure with output parameters"
 title: "Using a stored procedure with output parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

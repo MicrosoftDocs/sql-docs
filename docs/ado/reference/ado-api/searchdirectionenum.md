@@ -1,8 +1,9 @@
 ---
+description: "SearchDirectionEnum"
 title: "SearchDirectionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,12 +18,12 @@ author: rothja
 ms.author: jroth
 ---
 # SearchDirectionEnum
-Specifies the direction of a record search within a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Specifies the direction of a record search within a [Recordset](./recordset-object-ado.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adSearchBackward**|-1|Searches backward, stopping at the beginning of the **Recordset**. If a match is not found, the record pointer is positioned at [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
-|**adSearchForward**|1|Searches forward, stopping at the end of the **Recordset**. If a match is not found, the record pointer is positioned at [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
+|**adSearchBackward**|-1|Searches backward, stopping at the beginning of the **Recordset**. If a match is not found, the record pointer is positioned at [BOF](./bof-eof-properties-ado.md).|  
+|**adSearchForward**|1|Searches forward, stopping at the end of the **Recordset**. If a match is not found, the record pointer is positioned at [EOF](./bof-eof-properties-ado.md).|  
   
 ## ADO/WFC Equivalent  
  Package: **com.ms.wfc.data**  
@@ -33,4 +34,4 @@ Specifies the direction of a record search within a [Recordset](../../../ado/ref
 |AdoEnums.SearchDirection.FORWARD|  
   
 ## Applies To  
- [Find Method (ADO)](../../../ado/reference/ado-api/find-method-ado.md)
+ [Find Method (ADO)](./find-method-ado.md)

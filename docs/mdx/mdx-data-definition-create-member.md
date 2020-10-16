@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - CREATE MEMBER"
 title: "CREATE MEMBER Statement (MDX) | Microsoft Docs"
 ms.date: 07/22/2020
 ms.prod: sql

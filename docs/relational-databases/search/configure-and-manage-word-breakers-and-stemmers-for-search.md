@@ -1,4 +1,5 @@
 ---
+description: "Configure & manage word breakers & stemmers for search (SQL Server)"
 title: "Configure & manage word breakers & stemmers for search"
 ms.date: "03/14/2017"
 ms.prod: sql

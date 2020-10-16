@@ -1,4 +1,5 @@
 ---
+description: "Monitor DQS Activities"
 title: "Monitor DQS Activities"
 ms.date: "03/01/2017"
 ms.prod: sql

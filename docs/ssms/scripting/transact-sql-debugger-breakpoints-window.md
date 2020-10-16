@@ -3,7 +3,7 @@ title: Breakpoints Window
 description: Learn how to use the Breakpoints window of the Database Engine Query Editor to manage Transact-SQL debugger breakpoints.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Breakpoints Window [Transact-SQL]"
@@ -90,4 +90,4 @@ Lists all the columns that can be displayed in the **Breakpoints** window. A che
 
 ## See Also
 
-[Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)
+[Transact-SQL Debugger](./transact-sql-debugger.md)

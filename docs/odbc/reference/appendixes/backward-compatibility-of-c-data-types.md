@@ -1,4 +1,5 @@
 ---
+description: "Backward Compatibility of C Data Types"
 title: "Backward Compatibility of C Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

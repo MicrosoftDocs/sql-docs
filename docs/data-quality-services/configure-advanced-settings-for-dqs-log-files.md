@@ -1,4 +1,5 @@
 ---
+description: "Configure Advanced Settings for DQS Log Files"
 title: "Configure Advanced Settings for DQS Log Files"
 ms.date: "03/01/2017"
 ms.prod: sql

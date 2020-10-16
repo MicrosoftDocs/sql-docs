@@ -1,4 +1,5 @@
 ---
+description: "Filter Table Rows"
 title: "Filter Table Rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

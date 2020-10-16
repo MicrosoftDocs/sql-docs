@@ -1,4 +1,5 @@
 ---
+description: "sys.assembly_references (Transact-SQL)"
 title: "sys.assembly_references (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.assembly_references catalog view"
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.assembly_references (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

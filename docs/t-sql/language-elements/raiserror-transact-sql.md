@@ -1,4 +1,5 @@
 ---
+description: "RAISERROR (Transact-SQL)"
 title: "RAISERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2017"
@@ -53,7 +54,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
     { ,severity ,state }  

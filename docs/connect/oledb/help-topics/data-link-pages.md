@@ -1,6 +1,6 @@
 ---
 title: "Universal Data Link (UDL) Configuration | Microsoft Docs"
-description: "Universal Data Link (UDL) Configuration using Microsoft OLE DB Driver for SQL Server"
+description: Learn how to use the Connection tab to specify how to connect to your data using the OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "10/11/2019"
 ms.prod: sql
@@ -50,7 +50,7 @@ Use the Advanced tab to view and set additional initialization properties.
 
 
 > [!NOTE]  
->  For more general Data Link connection information, see the [Data Link API Overview](https://go.microsoft.com/fwlink/?linkid=2067432).
+>  For more general Data Link connection information, see the [Data Link API Overview](/previous-versions/windows/desktop/ms718102(v=vs.85)).
 
 ## Next steps
 - [Authenticate to Azure Active Directory](../features/using-azure-active-directory.md) using the OLE DB driver.

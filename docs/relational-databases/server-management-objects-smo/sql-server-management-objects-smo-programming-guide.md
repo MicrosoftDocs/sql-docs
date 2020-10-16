@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Management Objects (SMO) Programming Guide"
 title: "SQL Server Management Objects (SMO) Programming Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"

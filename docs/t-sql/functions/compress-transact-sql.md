@@ -1,4 +1,5 @@
 ---
+description: "COMPRESS (Transact-SQL)"
 title: "COMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2018"
@@ -25,12 +26,10 @@ This function compresses the input expression, using the GZIP algorithm. The fun
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *expression*  
 A

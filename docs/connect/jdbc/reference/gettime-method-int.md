@@ -1,4 +1,5 @@
 ---
+description: "getTime Method (int)"
 title: "getTime Method (int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

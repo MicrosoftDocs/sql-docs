@@ -1,4 +1,5 @@
 ---
+description: "Data type synonyms (Transact-SQL)"
 title: "Data type synonyms (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"

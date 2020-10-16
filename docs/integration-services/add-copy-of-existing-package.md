@@ -1,4 +1,5 @@
 ---
+description: "Add Copy of Existing Package"
 title: "Add Copy of Existing Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -42,8 +43,7 @@ ms.author: chugu
  Type the package path, or click the browse button **(...)** and locate the package to copy.  
   
 ## See Also  
- [Save Copy of Package](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
+ [Save Copy of Package](./save-packages.md)   
  [Save Packages](../integration-services/save-packages.md)   
  [Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md)
-  
   

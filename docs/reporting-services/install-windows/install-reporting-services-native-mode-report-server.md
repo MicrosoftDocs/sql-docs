@@ -1,4 +1,5 @@
 ---
+description: "Install Reporting Services 2016 native mode report server"
 title: "Install Reporting Services 2016 native mode report server | Microsoft Docs"
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -53,7 +54,7 @@ Setup installs the following [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 
 - Connection information, also known as the data source name (DSN), for the report server databases.
 
- Setup does not configure the unattended execution account, report server e-mail, back up the encryption keys, or a scale-out deployment. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure these properties. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+ Setup does not configure the unattended execution account, report server e-mail, back up the encryption keys, or a scale-out deployment. You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure these properties. For more information, see [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 ## <a name="bkmk_whentoinstalldefaultconfig"></a> When to install the default configuration for native mode
 

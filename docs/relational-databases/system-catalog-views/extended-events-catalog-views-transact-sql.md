@@ -1,4 +1,5 @@
 ---
+description: "Extended Events Catalog Views (Transact-SQL)"
 title: "Extended Events Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "xe"
   - "catalog views [SQL Server], extended events"
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Extended Events Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

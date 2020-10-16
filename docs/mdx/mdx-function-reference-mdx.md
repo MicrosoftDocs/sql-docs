@@ -1,4 +1,5 @@
 ---
+description: "MDX Function Reference (MDX)"
 title: "MDX Function Reference (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Use Certificates for a Database Mirroring Endpoint (Transact-SQL)"
 title: "Use certificates for a database mirroring endpoint"
 descriptoin: "Steps to configure the use of a certificate on both inbound and outbound connections for a SQL Server database mirroring endpoint." 
 ms.custom: "seo-lt-2019"

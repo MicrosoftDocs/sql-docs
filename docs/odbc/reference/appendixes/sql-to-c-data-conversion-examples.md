@@ -1,4 +1,5 @@
 ---
+description: "SQL to C Data Conversion Examples"
 title: "SQL to C Data Conversion Examples | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2019"

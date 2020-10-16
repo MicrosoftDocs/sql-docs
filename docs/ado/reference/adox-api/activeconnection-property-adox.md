@@ -1,8 +1,9 @@
 ---
+description: "ActiveConnection Property (ADOX)"
 title: "ActiveConnection Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # ActiveConnection Property (ADOX)
-Indicates the ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to which the [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md) belongs.  
+Indicates the ADO [Connection](../ado-api/connection-object-ado.md) object to which the [Catalog](./catalog-object-adox.md) belongs.  
   
 ## Settings and Return Values  
  Sets a **Connection** object or a **String** containing the definition for a connection. Returns the active **Connection** object.  
@@ -32,18 +33,18 @@ Indicates the ADO [Connection](../../../ado/reference/ado-api/connection-object-
  The default value is a null object reference.  
   
 ## Applies To  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog Object (ADOX)](./catalog-object-adox.md)  
   
 ## See Also  
- [Catalog ActiveConnection Property Example (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Connection Close Method, Table Type Property Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Parameters Collection, Command Property Example (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Procedures Append Method Example (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Procedures Delete Method Example (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Procedures Refresh Method Example (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Views and Fields Collections Example (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views Append Method Example (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views Collection, CommandText Property Example (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Views Refresh Method Example (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Create Method (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Catalog ActiveConnection Property Example (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Command and CommandText Properties Example (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Connection Close Method, Table Type Property Example (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Parameters Collection, Command Property Example (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Procedures Append Method Example (VB)](./procedures-append-method-example-vb.md)   
+ [Procedures Delete Method Example (VB)](./procedures-delete-method-example-vb.md)   
+ [Procedures Refresh Method Example (VB)](./procedures-refresh-method-example-vb.md)   
+ [Views and Fields Collections Example (VB)](./views-and-fields-collections-example-vb.md)   
+ [Views Append Method Example (VB)](./views-append-method-example-vb.md)   
+ [Views Collection, CommandText Property Example (VB)](./views-collection-commandtext-property-example-vb.md)   
+ [Views Refresh Method Example (VB)](./views-refresh-method-example-vb.md)   
+ [Create Method (ADOX)](./create-method-adox.md)

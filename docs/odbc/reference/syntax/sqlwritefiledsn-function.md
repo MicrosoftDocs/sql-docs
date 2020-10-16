@@ -1,4 +1,5 @@
 ---
+description: "SQLWriteFileDSN Function"
 title: "SQLWriteFileDSN Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

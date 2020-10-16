@@ -1,4 +1,5 @@
 ---
+description: "Add Analysis Services Connection Manager Dialog Box UI Reference"
 title: "Add Analysis Services Connection Manager Dialog Box UI Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Add New Items to a Project"
 title: "Add New Items to a Project"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -48,7 +49,6 @@ Add new items to a project to extend application functionality. A new item can b
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
-[Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[Associating File Extensions to a Code Editor](../scripting/associate-file-extensions-to-a-code-editor.md)  
 [Add Existing Items to a Project](../../ssms/solution/add-existing-items-to-a-project.md)  
 [Remove or Delete an Item or Project](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_diag_sessions (Transact-SQL)"
 title: "sys.pdw_diag_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -27,6 +28,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |**database_id**|**int**|ID of the database that is the scope of the diagnostic session.|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

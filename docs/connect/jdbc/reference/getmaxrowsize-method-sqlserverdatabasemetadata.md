@@ -1,4 +1,5 @@
 ---
+description: "getMaxRowSize Method (SQLServerDatabaseMetaData)"
 title: "getMaxRowSize Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

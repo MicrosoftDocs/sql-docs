@@ -1,4 +1,5 @@
 ---
+description: "Errors and Batches"
 title: "Errors and Batches | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

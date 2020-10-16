@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 title: "ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"
@@ -28,7 +29,6 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -63,7 +63,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### A. Changing the password of a database scoped credential  
  The following example changes the secret stored in a database scoped credential called `Saddles`. The database scoped credential contains the Windows login `RettigB` and its password. The new password is added to the database scoped credential using the SECRET clause.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -72,7 +72,7 @@ GO
 ### B. Removing the password from a credential  
  The following example removes the password from a database scoped credential named `Frames`. The database scoped credential contains Windows login `Aboulrus8` and a password. After the statement is executed, the database scoped credential will have a NULL password because the SECRET option is not specified.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

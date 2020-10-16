@@ -1,4 +1,5 @@
 ---
+description: "Hadoop and HDFS Support in Integration Services (SSIS)"
 title: "Hadoop and HDFS Support in Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

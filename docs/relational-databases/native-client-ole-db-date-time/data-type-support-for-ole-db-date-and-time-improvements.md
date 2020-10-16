@@ -1,4 +1,5 @@
 ---
+description: "Data type support for date and time improvements (Native Client OLE DB provider)"
 title: "Data type support for date and time improvements (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

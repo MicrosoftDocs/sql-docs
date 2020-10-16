@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSUFFICIENT_BUFFER"
 title: "LOCALDB_ERROR_INSUFFICIENT_BUFFER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

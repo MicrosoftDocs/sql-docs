@@ -1,4 +1,5 @@
 ---
+description: "Azure Blob Destination"
 title: "Azure Blob Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2016"

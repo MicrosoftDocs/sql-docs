@@ -1,4 +1,5 @@
 ---
+description: "Work with Change Data (SQL Server)"
 title: "Work with Change Data"
 ms.custom: seo-dt-2019
 ms.date: "01/02/2019"

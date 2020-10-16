@@ -1,4 +1,5 @@
 ---
+description: "MERGE in Integration Services Packages"
 title: "MERGE in Integration Services Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

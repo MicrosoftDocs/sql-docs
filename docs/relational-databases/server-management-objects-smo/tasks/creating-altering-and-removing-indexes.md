@@ -1,4 +1,5 @@
 ---
+description: "Creating, Altering, and Removing Indexes"
 title: "Creating, Altering, and Removing Indexes"
 ms.custom: seo-dt-2019
 ms.date: 01/11/2019

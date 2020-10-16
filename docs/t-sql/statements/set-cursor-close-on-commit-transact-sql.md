@@ -1,4 +1,5 @@
 ---
+description: "SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)"
 title: "SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -21,8 +22,8 @@ helpviewer_keywords:
   - "cursors [SQL Server], closing"
   - "SET CURSOR_CLOSE_ON_COMMIT statement"
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +39,9 @@ ms.author: carlrab
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When SET CURSOR_CLOSE_ON_COMMIT is ON, this setting closes any open cursors on commit or rollback in compliance with ISO. When SET CURSOR_CLOSE_ON_COMMIT is OFF, the cursor is not closed when a transaction is committed.  
   
 > [!NOTE]  

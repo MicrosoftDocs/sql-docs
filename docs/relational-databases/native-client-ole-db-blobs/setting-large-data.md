@@ -1,4 +1,5 @@
 ---
+description: "Setting Large Data in SQL Server Native Client"
 title: Setting large data (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

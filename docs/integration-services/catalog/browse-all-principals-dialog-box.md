@@ -1,4 +1,5 @@
 ---
+description: "Browse All Principals Dialog Box"
 title: "Browse All Principals Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

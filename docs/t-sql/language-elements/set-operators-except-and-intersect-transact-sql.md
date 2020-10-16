@@ -1,4 +1,5 @@
 ---
+description: "Set Operators - EXCEPT and INTERSECT (Transact-SQL)"
 title: "EXCEPT and INTERSECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

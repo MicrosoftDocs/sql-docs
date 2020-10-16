@@ -1,4 +1,5 @@
 ---
+description: "GET CONVERSATION GROUP (Transact-SQL)"
 title: "GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -22,8 +23,8 @@ helpviewer_keywords:
   - "GET CONVERSATION GROUP statement"
   - "conversations [Service Broker], groups"
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,8 +35,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
       FROM <queue>  
@@ -99,7 +99,7 @@ ms.author: carlrab
 ### A. Getting a conversation group, waiting indefinitely  
  The following example sets `@conversation_group_id` to the conversation group identifier for the next available message on `ExpenseQueue`. The command waits until a message becomes available.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 WAITFOR (  
@@ -111,7 +111,7 @@ WAITFOR (
 ### B. Getting a conversation group, waiting one minute  
  The following example sets `@conversation_group_id` to the conversation group identifier for the next available message on `ExpenseQueue`. If no message becomes available within one minute, GET CONVERSATION GROUP returns without changing the value of `@conversation_group_id`.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER  
   
 WAITFOR (  
@@ -123,7 +123,7 @@ TIMEOUT 60000 ;
 ### C. Getting a conversation group, returning immediately  
  The following example sets `@conversation_group_id` to the conversation group identifier for the next available message on `ExpenseQueue`. If no message is available, `GET CONVERSATION GROUP` returns immediately without changing `@conversation_group_id`.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 GET CONVERSATION GROUP @conversation_group_id  

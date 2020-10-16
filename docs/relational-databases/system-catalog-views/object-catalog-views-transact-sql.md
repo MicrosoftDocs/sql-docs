@@ -1,4 +1,5 @@
 ---
+description: "Object Catalog Views (Transact-SQL)"
 title: "Object Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2019
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "object catalog views [SQL Server]"
   - "catalog views [SQL Server], objects"
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Object Catalog Views (Transact-SQL)
 
@@ -109,7 +110,5 @@ This section contains links to the following catalog views.
   
 ## See Also  
  [System Catalog Views](catalog-views-transact-sql.md)
- [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
   
-  
-

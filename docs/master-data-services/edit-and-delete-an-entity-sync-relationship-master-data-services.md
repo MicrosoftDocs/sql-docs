@@ -1,4 +1,5 @@
 ---
+description: "Edit and Delete an Entity Sync Relationship (Master Data Services)"
 title: Edit and Delete an Entity Sync Relationship
 ms.custom: ""
 ms.date: "03/01/2017"

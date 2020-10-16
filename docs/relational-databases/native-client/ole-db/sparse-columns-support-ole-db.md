@@ -1,4 +1,5 @@
 ---
+description: "Sparse Columns Support in SQL Server Native Client (OLE DB)"
 title: "Sparse Columns Support (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.login_token (Transact-SQL)"
 title: "sys.login_token (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Run Queries (Visual Database Tools)"
 title: Run Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

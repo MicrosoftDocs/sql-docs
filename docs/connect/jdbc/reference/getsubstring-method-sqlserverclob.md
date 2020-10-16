@@ -1,4 +1,5 @@
 ---
+description: "getSubString Method (SQLServerClob)"
 title: "getSubString Method (SQLServerClob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

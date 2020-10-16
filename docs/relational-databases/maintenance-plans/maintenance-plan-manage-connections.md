@@ -1,4 +1,5 @@
 ---
+description: "Maintenance Plan (Manage Connections)"
 title: "Maintenance Plan (Manage Connections) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

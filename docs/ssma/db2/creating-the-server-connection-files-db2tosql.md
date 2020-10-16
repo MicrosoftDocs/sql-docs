@@ -1,4 +1,5 @@
 ---
+description: "Creating the Server Connection Files (DB2ToSQL)"
 title: "Creating the Server Connection Files (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -67,4 +68,4 @@ The next step in operating the console is [Executing the SSMA Console &#40;DB2To
 
 ## See Also
 
-- [Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)
+- [Executing the SSMA Console](./executing-the-ssma-console-db2tosql.md)

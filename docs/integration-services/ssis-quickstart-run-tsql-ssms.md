@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package from SSMS with Transact-SQL"
 title: "Run an SSIS package with Transact-SQL (SSMS) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

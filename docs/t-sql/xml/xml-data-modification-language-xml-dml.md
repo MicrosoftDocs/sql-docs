@@ -1,4 +1,5 @@
 ---
+description: "XML Data Modification Language (XML DML)"
 title: XML Data Modification Language (XML DML)
 ms.custom: ""
 ms.date: "03/16/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Find Databases Wizard (Select Files) (AccessToSQL)"
 title: "Find Databases Wizard (Select Files) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Find Databases Wizard (Select Files) (AccessToSQL)
 The Select Files page of the Find Databases Wizard lists the files that were found during the search. To select a file to add to SSMA, select the row that contains the file name. When you are finished selecting files, click **Next** to view the Verify Selection page.  
@@ -45,5 +46,4 @@ The date and time the database was created.
 The date and time the database was last updated.  
   
 ## See Also  
-[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[User Interface Reference(Access)](./user-interface-reference-accesstosql.md)  

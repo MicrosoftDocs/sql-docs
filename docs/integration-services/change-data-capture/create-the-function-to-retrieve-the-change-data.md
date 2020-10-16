@@ -1,4 +1,5 @@
 ---
+description: "Create the Function to Retrieve the Change Data"
 title: "Create the Function to Retrieve the Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

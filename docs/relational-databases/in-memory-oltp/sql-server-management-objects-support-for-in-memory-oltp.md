@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-author: "CarlRabeler"
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Management Objects Support for In-Memory OLTP
@@ -158,5 +158,5 @@ public class A {
   
 ## See also  
 
-- [SQL Server Support for In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
+- [SQL Server Support for In-Memory OLTP](./transact-sql-support-for-in-memory-oltp.md)
 - [Overview of SMO](../server-management-objects-smo/overview-smo.md)

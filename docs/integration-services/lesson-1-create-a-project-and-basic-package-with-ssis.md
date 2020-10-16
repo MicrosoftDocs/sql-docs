@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Create a project and basic package with SSIS"
 title: "Lesson 1: Create a project and basic package with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

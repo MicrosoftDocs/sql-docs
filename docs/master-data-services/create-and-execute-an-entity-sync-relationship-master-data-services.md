@@ -1,4 +1,5 @@
 ---
+description: "Create and Execute an Entity Sync Relationship (Master Data Services)"
 title: Create and Execute an Entity Sync Relationship
 ms.custom: ""
 ms.date: "03/01/2017"

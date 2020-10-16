@@ -1,4 +1,5 @@
 ---
+description: "Generating Reports (AccessToSQL)"
 title: "Generating Reports (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Generating Reports (AccessToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  
@@ -133,5 +134,4 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[Executing the SSMA Console (Access)](./executing-the-ssma-console-accesstosql.md)  

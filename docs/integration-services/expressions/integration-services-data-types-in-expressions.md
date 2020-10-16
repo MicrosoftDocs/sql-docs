@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Data Types in Expressions"
 title: "Integration Services Data Types in Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

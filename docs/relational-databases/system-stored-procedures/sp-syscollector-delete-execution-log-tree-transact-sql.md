@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_delete_execution_log_tree (Transact-SQL)"
 title: "sp_syscollector_delete_execution_log_tree (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "sp_syscollector_delete_execution_log_tree"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

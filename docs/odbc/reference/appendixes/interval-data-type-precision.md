@@ -1,4 +1,5 @@
 ---
+description: "Interval Data Type Precision"
 title: "Interval Data Type Precision | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

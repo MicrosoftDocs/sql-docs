@@ -1,4 +1,5 @@
 ---
+description: "Oracle Subscribers"
 title: "Oracle Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

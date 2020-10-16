@@ -1,4 +1,5 @@
 ---
+description: "Change a Server&#39;s Registration (SQL Server Management Studio)"
 title: Change a Server's Registration
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -28,4 +29,4 @@ This topic describes how to change a server's registration in [!INCLUDE[ssCurren
 
 ## See Also
 
-[Register Servers](../../tools/sql-server-management-studio/register-servers.md)
+[Register Servers](./register-servers.md)

@@ -1,4 +1,5 @@
 ---
+description: "Glossary of Terms for Oracle Publishing"
 title: "Glossary of Terms for Oracle Publishing | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

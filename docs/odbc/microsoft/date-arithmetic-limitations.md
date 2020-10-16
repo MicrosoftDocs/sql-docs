@@ -1,4 +1,5 @@
 ---
+description: "Date Arithmetic Limitations"
 title: "Date Arithmetic Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

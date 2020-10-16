@@ -1,4 +1,5 @@
 ---
+description: "Foreach Loop Container"
 title: "Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"

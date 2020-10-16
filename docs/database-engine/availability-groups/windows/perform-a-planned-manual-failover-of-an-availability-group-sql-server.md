@@ -89,7 +89,7 @@ A planned manual failover is supported only when the primary replica and the tar
 2. Use the **Switch-SqlAvailabilityGroup** cmdlet. 
   
     > [!NOTE] 
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get help for SQL Server PowerShell](../../../powershell/sql-server-powershell.md). 
   
      The following example manually fails over the *MyAg* availability group to the secondary replica with the specified path: 
   
@@ -99,8 +99,8 @@ A planned manual failover is supported only when the primary replica and the tar
   
     To set up and use the SQL Server PowerShell provider: 
   
-    -   [SQL Server PowerShell provider](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [Get help for SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [SQL Server PowerShell provider](../../../powershell/sql-server-powershell-provider.md) 
+    -   [Get help for SQL Server PowerShell](../../../powershell/sql-server-powershell.md) 
 
 ##  <a name="FollowUp"></a> Follow up: After you manually fail over an availability group 
  If you failed over outside the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the Windows Server failover clustering nodes to reflect your new availability group configuration. For more information, see [Windows Server failover clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
@@ -116,5 +116,4 @@ A planned manual failover is supported only when the primary replica and the tar
  * [Overview of AlwaysOn availability groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Failover and failover modes &#40;AlwaysOn availability groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [Perform a forced manual failover of an availability group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   

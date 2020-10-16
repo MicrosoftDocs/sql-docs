@@ -1,4 +1,5 @@
 ---
+description: "Version Property  (WMI MSReportServer_ConfigurationSetting)"
 title: "Version Property  (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services

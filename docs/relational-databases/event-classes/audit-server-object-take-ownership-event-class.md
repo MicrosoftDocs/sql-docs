@@ -1,4 +1,5 @@
 ---
+description: "Audit Server Object Take Ownership Event Class"
 title: "Audit Server Object Take Ownership Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

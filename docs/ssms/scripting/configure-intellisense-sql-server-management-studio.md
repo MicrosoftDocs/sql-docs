@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### To turn statement completion options off by default  
 
 > [!NOTE]
-> SQL Data Warehouse does not support IntelliSense.
+> Azure Synapse Analytics does not support IntelliSense.
 >
 >
   

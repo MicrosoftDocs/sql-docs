@@ -1,4 +1,5 @@
 ---
+description: "C Data Types in ODBC"
 title: "C Data Types in ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

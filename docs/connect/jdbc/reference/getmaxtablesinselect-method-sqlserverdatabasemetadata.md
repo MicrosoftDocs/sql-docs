@@ -1,4 +1,5 @@
 ---
+description: "getMaxTablesInSelect Method (SQLServerDatabaseMetaData)"
 title: "getMaxTablesInSelect Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

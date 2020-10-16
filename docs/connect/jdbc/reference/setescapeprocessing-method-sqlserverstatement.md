@@ -1,4 +1,5 @@
 ---
+description: "setEscapeProcessing Method (SQLServerStatement)"
 title: "setEscapeProcessing Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

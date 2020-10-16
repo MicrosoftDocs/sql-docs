@@ -1,4 +1,5 @@
 ---
+description: "sp_enclave_send_keys (Transact-SQL)"
 title: "sp_enclave_send_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/19/2019

@@ -1,4 +1,5 @@
 ---
+description: "SET OFFSETS (Transact-SQL)"
 title: "SET OFFSETS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -20,8 +21,8 @@ helpviewer_keywords:
   - "offsets [SQL Server]"
   - "SET OFFSETS statement"
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET OFFSETS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

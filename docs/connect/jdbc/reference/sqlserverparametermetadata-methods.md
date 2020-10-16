@@ -1,4 +1,5 @@
 ---
+description: "SQLServerParameterMetaData Methods"
 title: "SQLServerParameterMetaData Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

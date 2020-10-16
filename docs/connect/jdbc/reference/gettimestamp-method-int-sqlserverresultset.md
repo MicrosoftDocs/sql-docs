@@ -1,4 +1,5 @@
 ---
+description: "getTimestamp Method (int) (SQLServerResultSet)"
 title: "getTimestamp Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

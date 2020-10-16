@@ -1,4 +1,5 @@
 ---
+description: "Transaction Log Disk Space for Index Operations"
 title: "Transaction Log Disk Space for Index Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

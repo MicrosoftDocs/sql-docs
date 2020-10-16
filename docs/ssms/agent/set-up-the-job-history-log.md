@@ -1,4 +1,5 @@
 ---
+description: "Set Up the Job History Log"
 title: "Set Up the Job History Log"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,7 +22,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 This topic describes how to set up the [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.  
   
@@ -53,4 +54,3 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 [Implement Jobs](../../ssms/agent/implement-jobs.md)  
 [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
 [Create Jobs](../../ssms/agent/create-jobs.md)  
-  

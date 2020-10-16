@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Message Results"
 title: SQL Server message results (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

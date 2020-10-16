@@ -1,4 +1,5 @@
 ---
+description: "Add Attributes to a Change Tracking Group (Master Data Services)"
 title: Add Attributes to Change Tracking Group
 ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"

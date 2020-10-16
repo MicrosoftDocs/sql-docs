@@ -1,4 +1,5 @@
 ---
+description: "Tool Windows in SQL Server Management Studio"
 title: "Tool Windows in SQL Server Management Studio"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -32,5 +33,4 @@ The tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] work
 -   Open a SQL Editor window connected to a specific database from Object Explorer.  
   
 ## See Also  
-[Use SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-  
+[Use SQL Server Management Studio](./sql-server-management-studio-ssms.md)  

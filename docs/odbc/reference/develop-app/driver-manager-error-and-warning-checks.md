@@ -1,4 +1,5 @@
 ---
+description: "Driver Manager Error and Warning Checks"
 title: "Driver Manager Error and Warning Checks | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

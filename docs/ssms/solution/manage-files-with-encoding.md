@@ -1,4 +1,5 @@
 ---
+description: "Manage Files with Encoding"
 title: "Manage Files with Encoding"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -58,5 +59,4 @@ If you are using Visual SourceSafe to store files with ANSI, UTF8, or Unicode, b
   
 ## See Also  
 [Files That Manage Solutions and Projects](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
-[Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  
+[Associating File Extensions to a Code Editor](../scripting/associate-file-extensions-to-a-code-editor.md)  

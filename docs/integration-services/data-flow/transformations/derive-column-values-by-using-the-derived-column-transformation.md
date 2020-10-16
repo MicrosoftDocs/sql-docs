@@ -1,4 +1,5 @@
 ---
+description: "Derive Column Values with the Derived Column Transformation"
 title: "Derive Column Values with the Derived Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Create or Edit a Server Group (SQL Server Management Studio)"
 title: Create or Edit a Server Group
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -44,4 +45,4 @@ This topic describes how to organize the servers in Registered Servers in [!INCL
 
 ## See Also
 
-[Register Servers](../../tools/sql-server-management-studio/register-servers.md)
+[Register Servers](./register-servers.md)

@@ -1,4 +1,5 @@
 ---
+description: "Replication Related Dynamic Management Views (Transact-SQL)"
 title: "Replication Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], replication"
   - "replication dynamic management objects [SQL Server]"
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Replication Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

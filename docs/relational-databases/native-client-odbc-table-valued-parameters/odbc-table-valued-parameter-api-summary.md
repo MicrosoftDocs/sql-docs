@@ -1,4 +1,5 @@
 ---
+description: "ODBC Table-Valued Parameter API Summary"
 title: "ODBC Table-Valued Parameter API Summary | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

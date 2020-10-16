@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Destination"
 title: "OLE DB Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -89,7 +90,7 @@ ms.author: chugu
   
 |Fast load option|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Specifies the size in kilobytes to insert. The option has the form **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
+|KILOBYTES_PER_BATCH|Specifies the size in kilobytes to insert. The option has the form **KILOBYTES_PER_BATCH** = *\<positive integer value>*.|  
 |FIRE_TRIGGERS|Specifies whether triggers fire on the insert table. The option has the form **FIRE_TRIGGERS**. The presence of the option indicates that triggers fire.|  
 |ORDER|Specifies how the input data is sorted. The option has the form ORDER \<column name> ASC&#124;DESC. Any number of columns may be listed and it is optional to include the sort order. If sort order is omitted, the insert operation assumes the data is unsorted.<br /><br /> Note: Performance can be improved if you use the ORDER option to sort the input data according to the clustered index on the table.|  
   
@@ -123,6 +124,8 @@ ms.author: chugu
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+> 
+>  The **CommandTimeout** property only takes effective when data access mode is **SQL command**.
   
 ### Static Options  
  **OLE DB connection manager**  

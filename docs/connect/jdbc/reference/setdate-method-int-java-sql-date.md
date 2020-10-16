@@ -1,4 +1,5 @@
 ---
+description: "setDate Method (int, java.sql.Date)"
 title: "setDate Method to date value - int | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

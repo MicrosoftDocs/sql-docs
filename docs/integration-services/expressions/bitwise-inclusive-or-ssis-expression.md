@@ -1,4 +1,5 @@
 ---
+description: "| (Bitwise Inclusive OR) (SSIS Expression)"
 title: "| (Bitwise Inclusive OR) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

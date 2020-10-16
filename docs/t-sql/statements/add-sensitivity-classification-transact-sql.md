@@ -1,4 +1,5 @@
 ---
+description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
@@ -30,7 +31,7 @@ monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.
 
-For SQL Server, this was introduced in SQL Server 2019.
+For SQL Server, this was introduced in SQL Server 2012.
 
 Classifying sensitive data in your database environment helps achieve extended visibility and better protection. Additional information can be found in [Getting started with SQL Information Protection](https://aka.ms/sqlip)
 
@@ -106,7 +107,7 @@ The following example classifies the columns **dbo.sales.price** and **dbo.sales
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK=CRITICAL )
 ```  
 
 ### B. Classifying only a label

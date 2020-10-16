@@ -3,7 +3,7 @@ title: Generate Scripts
 description: Learn how to use the Generate and Publish Scripts Wizard to create Transact-SQL scripts for multiple objects, and how to use the Script as menu in Object Explorer to generate scripts for individual or multiple objects.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.
 
-For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), see [Tutorial: Scripting in SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), see [Tutorial: Scripting in SSMS](../tutorials/scripting-ssms.md).
 
 ## Before You Begin
 
@@ -28,7 +28,7 @@ Choose the mechanism that best meets your requirements.
 
 ###  <a name="GenPubScriptWiz"></a> Generate and Publish Scripts Wizard
 
-Use the **Generate and Publish Scripts Wizard** to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] script for many objects. The wizard generates a script of all the objects in a database, or a subset of the objects that you select. The wizard has many options for your scripts, such as whether to include permissions, collation, constraints, and so on. For instructions on using the wizard, see [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).
+Use the **Generate and Publish Scripts Wizard** to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] script for many objects. The wizard generates a script of all the objects in a database, or a subset of the objects that you select. The wizard has many options for your scripts, such as whether to include permissions, collation, constraints, and so on. For instructions on using the wizard, see [Generate and Publish Scripts Wizard](./generate-and-publish-scripts-wizard.md).
   
 ### <a name="OEScriptAsMenu"></a> Object Explorer Script As Menu
 
@@ -62,7 +62,7 @@ You can use the **Object Explorer Details** pane to generate a script for multip
 
 4. Open the **Object Explorer Details** pane by either selecting **F7**, or opening the **View** menu and selecting **Object Explorer Details**.
 
-    ![Object Explorer](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![View menu](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. Left-click one of the objects you want to script.
 
@@ -70,4 +70,4 @@ You can use the **Object Explorer Details** pane to generate a script for multip
 
 7. Right-click one of the selected objects, and select **Script \<object type> as**.
 
-    ![Object Explorer](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Details](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

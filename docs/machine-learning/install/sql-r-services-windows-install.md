@@ -4,7 +4,7 @@ titleSuffix:
 description: Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -12,20 +12,21 @@ ms.custom: contperfq4
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server 2016 R Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 
 > [!NOTE]
-> In SQL Server 2017 and later, R is included in [Machine Learning Services](../sql-server-machine-learning-services.md) along with Python. If you want R  and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature.
+> In SQL Server 2017 and later, R is included in [Machine Learning Services](../sql-server-machine-learning-services.md) along with Python. If you want R and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature.
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## Pre-install checklist
 
 + A database engine instance is required. You can't install R only, although you can add it incrementally to an existing instance.
 
-+ For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for R Services. You have to install R Services, and configure packages, on each node.
++ For business continuity, [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for R Services. You have to install R Services, and configure packages, on each node.
 
 + Don't install R Services on a SQL Server Always On Failover Cluster Instance (FCI). The security mechanism used for isolating R processes is not compatible with a SQL Server Always On Failover Cluster Instance (FCI) environment.
 
@@ -84,7 +85,7 @@ For local installations, you must run Setup as an administrator. If you install 
     + Database Engine Services
     + R Services (In-Database)
 
-1. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## Set environment variables
 
@@ -103,7 +104,7 @@ This step requires a server restart. You can hold off on the restart until all o
 
 ##  Enable script execution
 
-1. Open [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or [Azure Data Studio](../../azure-data-studio/what-is.md).
+1. Open [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 1. Connect to the instance where you installed R Services, click **New Query** to open a query window, and run the following command:
 
@@ -174,7 +175,7 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 1. Start with a baseline instance already installed: SQL Server 2016 initial release, SQL Server 2016 SP 1, or SQL Server 2016 SP 2.
 
-1. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. Go to the cumulative update list: [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. Select the latest service pack (of not already installed as the baseline instance) and cumulative update. An executable is downloaded and extracted automatically.
 
@@ -182,7 +183,10 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 1. Continue through the wizard, accepting the licensing terms for the R distribution.
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> Cumulative Update (CU) 14 and later for SQL Server 2016 SP2 include a newer version of the R runtime. For more information, see [Change the default language runtime version](change-default-language-runtime-version.md).
+
+<a name="bkmk_FollowUp"></a>
 
 ## Additional configuration
 
@@ -195,7 +199,7 @@ At the instance level, additional configuration might include:
 * [Firewall configuration for SQL Server Machine Learning Services](../../machine-learning/security/firewall-configuration.md).
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md).
-* [Manage disk quotas](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space.
+* [Manage disk quotas](/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space.
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>
@@ -206,7 +210,7 @@ On the database, you might need the following configuration updates:
 * [Add SQLRUserGroup as a database user](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional installation guidance can be found here: [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 ## Suggested optimizations
 

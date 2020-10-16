@@ -1,8 +1,8 @@
 ---
 title: "SQL Data Discovery and Classification JDBC Sample"
-description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use a result set to retrieve Data Discovery and CLassification information."
+description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use a result set to retrieve Data Discovery and Classification information."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -104,13 +104,13 @@ public class DataDiscoveryAndClassification {
 
         // Set Sensitivity Classification tags to table columns
         stmt.execute("ADD SENSITIVITY CLASSIFICATION TO " + tableName
-                + ".CompanyName WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Company name', INFORMATION_TYPE_ID='COMPANY')");
+                + ".CompanyName WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Company name', INFORMATION_TYPE_ID='COMPANY', RANK='LOW')");
         stmt.execute("ADD SENSITIVITY CLASSIFICATION TO " + tableName
-                + ".ContactName WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Person name', INFORMATION_TYPE_ID='NAME')");
+                + ".ContactName WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Person name', INFORMATION_TYPE_ID='NAME', RANK='MEDIUM')");
         stmt.execute("ADD SENSITIVITY CLASSIFICATION TO " + tableName
-                + ".Phone WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Contact Information', INFORMATION_TYPE_ID='CONTACT')");
+                + ".Phone WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Contact Information', INFORMATION_TYPE_ID='CONTACT', RANK='HIGH')");
         stmt.execute("ADD SENSITIVITY CLASSIFICATION TO " + tableName
-                + ".Fax WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Contact Information', INFORMATION_TYPE_ID='CONTACT')");
+                + ".Fax WITH (LABEL='PII', LABEL_ID='L1', INFORMATION_TYPE='Contact Information', INFORMATION_TYPE_ID='CONTACT', RANK='CRITICAL')");
     }
 
     /**
@@ -157,7 +157,11 @@ public class DataDiscoveryAndClassification {
                         System.out.println("Information Type Name: " + sp.getInformationType().getName());
                         System.out.println();
                     }
+                    
+                    System.out.println("Rank: " + sp.getSensitivityRank());
                 }
+                
+                System.out.println("Rank: " + rs.getSensitivityClassification.getSensitivityRank());
             }
         }
     }

@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_UNKNOWN_INSTANCE"
 title: "LOCALDB_ERROR_UNKNOWN_INSTANCE | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

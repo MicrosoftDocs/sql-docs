@@ -17,7 +17,7 @@ ms.author: v-daenge
 # Connecting with sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
+The [sqlcmd](../../../tools/sqlcmd-utility.md) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS.
   
 The following commands show how to use Windows Authentication (Kerberos) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, respectively:
   
@@ -210,9 +210,13 @@ You can specify a data source name (DSN) instead of a server name in the **sqlcm
   
 System DSNs are stored in the `odbc.ini` file in the ODBC SysConfigDir directory (`/etc/odbc.ini` on standard installations). User DSNs are stored in `.odbc.ini` in a user's home directory (`~/.odbc.ini`).
 
+On Windows systems, System and User DSNs are stored in the registry and managed via odbcad32.exe. File DSNs are not supported by bcp and sqlcmd.
+
 See [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for the list of entries which the driver supports.
 
-In a DSN, only the DRIVER entry is required, but to connect to a server, `sqlcmd` or `bcp` needs the value in the SERVER entry.  
+In a DSN, only the DRIVER entry is required, but to connect to a remote server, `sqlcmd` or `bcp` needs a value in the SERVER element. If the SERVER element is empty or not present in the DSN, `sqlcmd` and `bcp` will attempt to connect to the default instance on the local system.
+
+When using bcp on Windows systems, [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] and earlier require the SQL Native Client 11 driver (sqlncli11.dll) while [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and higher require the Microsoft ODBC Driver 17 for SQL Server driver (msodbcsql17.dll).  
 
 If the same option is specified in both the DSN and the `sqlcmd` or `bcp` command line, the command line option overrides the value used in the DSN. For example, if the DSN has a DATABASE entry and the `sqlcmd` command line includes **-d**, the value passed to **-d** is used. If **Trusted_Connection=yes** is specified in the DSN, Kerberos authentication is used and user name (**-U**) and password (**-P**), if provided, are ignored.
 
@@ -220,4 +224,4 @@ Existing scripts that invoke `isql` can be modified to use `sqlcmd` by defining 
 
 ## See Also  
 [Connecting with **bcp**](connecting-with-bcp.md)  
- 
+[Release Notes](release-notes-tools.md)

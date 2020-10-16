@@ -1,4 +1,5 @@
 ---
+description: "SQLInstallTranslator Mapping"
 title: "SQLInstallTranslator Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

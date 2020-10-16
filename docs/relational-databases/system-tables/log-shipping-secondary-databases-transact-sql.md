@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_secondary_databases (Transact-SQL)"
 title: "log_shipping_secondary_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_secondary_databases system table"
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # log_shipping_secondary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

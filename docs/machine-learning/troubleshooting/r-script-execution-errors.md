@@ -12,11 +12,9 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Common R scripting errors in SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
-
-If you encounter script errors not covered here, post them on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). This forum supports the machine learning components used in various SQL machine learning products.
 
 ## Valid script fails in T-SQL or in stored procedures
 
@@ -95,6 +93,6 @@ If there are multiple variables to delete, we suggest that you save the names of
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 
-[Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md)
+[Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 [Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

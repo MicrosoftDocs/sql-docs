@@ -1,4 +1,5 @@
 ---
+description: "Delete an Attribute Group (Master Data Services)"
 title: Delete an Attribute Group
 ms.custom: ""
 ms.date: "03/15/2017"

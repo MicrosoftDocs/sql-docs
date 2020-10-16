@@ -1,4 +1,5 @@
 ---
+description: "-- (Comment) (Transact-SQL)"
 title: "-- (Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2019"

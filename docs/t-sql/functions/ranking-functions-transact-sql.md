@@ -1,4 +1,5 @@
 ---
+description: "Ranking Functions (Transact-SQL)"
 title: "Ranking Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -46,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
  The following example shows the four ranking functions used in the same query. For function-specific examples, see each ranking function.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  

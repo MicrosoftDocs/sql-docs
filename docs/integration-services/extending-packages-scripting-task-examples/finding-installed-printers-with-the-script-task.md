@@ -1,4 +1,5 @@
 ---
+description: "Finding Installed Printers with the Script Task"
 title: "Finding Installed Printers with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Creating a Driver Application - Asynchronous Mode and SQLCancel"
 title: "Asynchronous Mode and SQLCancel | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

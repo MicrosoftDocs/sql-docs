@@ -1,4 +1,5 @@
 ---
+description: "Apply the Changes to the Destination"
 title: "Apply the Changes to the Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Gathering a List for the ForEach Loop with the Script Task"
 title: "Gathering a List for the ForEach Loop with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

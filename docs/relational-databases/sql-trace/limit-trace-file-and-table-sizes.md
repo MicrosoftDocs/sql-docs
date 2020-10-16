@@ -1,4 +1,5 @@
 ---
+description: "Limit Trace File and Table Sizes"
 title: "Limit Trace File and Table Sizes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

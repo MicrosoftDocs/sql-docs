@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_backup_file_snapshot (Transact-SQL)"
 title: "sp_delete_backup_file_snapshot (Transact-SQL) | Microsoft Docs"
 ms.date: "08/09/2016"
 ms.prod: sql

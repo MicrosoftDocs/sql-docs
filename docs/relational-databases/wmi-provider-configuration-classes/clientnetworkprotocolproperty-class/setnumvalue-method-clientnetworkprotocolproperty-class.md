@@ -1,4 +1,5 @@
 ---
+description: "SetNumValue Method (ClientNetworkProtocolProperty Class)"
 title: "SetNumValue Method (ClientNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetNumValue method"
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetNumValue Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

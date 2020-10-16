@@ -1,4 +1,5 @@
 ---
+description: "SetOrderValue Method (ClientNetworkProtocol Class)"
 title: "SetOrderValue Method (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetOrderValue method"
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetOrderValue Method (ClientNetworkProtocol Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,6 +46,5 @@ object.SetOrderValue(OrderValue)
 ## Remarks  
   
 ## See Also  
- [Client Protocols Properties (Order Tab)](https://technet.microsoft.com/library/ms187884.aspx)  
-  
+ [Client Protocols Properties (Order Tab)](../../../tools/configuration-manager/client-protocols-properties-order-tab.md)  
   

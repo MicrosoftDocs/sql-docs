@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysproxylogin (Transact-SQL)"
 title: "dbo.sysproxylogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysproxylogin system table"
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

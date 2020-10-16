@@ -1,4 +1,5 @@
 ---
+description: "Indexes on Computed Columns"
 title: "Indexes on Computed Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"

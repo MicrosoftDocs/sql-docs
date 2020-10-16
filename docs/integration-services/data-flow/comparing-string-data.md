@@ -1,4 +1,5 @@
 ---
+description: "Comparing String Data"
 title: "Comparing String Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

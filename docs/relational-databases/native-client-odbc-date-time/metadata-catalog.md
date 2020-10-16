@@ -1,4 +1,5 @@
 ---
+description: "Metadata - Catalog"
 title: "Catalog Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -61,6 +62,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |USERTYPE|0|0|12|22|0|0|  
   
 ## See Also  
- [Metadata &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
-  
+ [Metadata &#40;ODBC&#41;](./date-and-time-improvements-odbc.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: "Publication (Peer-to-Peer Replication)"
 title: "Publication (Peer-to-Peer Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_get_field"
 title: "sqlsrv_get_field | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2018"

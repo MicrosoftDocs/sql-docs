@@ -34,7 +34,7 @@ Before you install SSMA, make sure that the computer meets the following require
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or later versions.
 - The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.7.2 or a later version. You can obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Microsoft OLE DB Provider for DB2 version 5 or a later version, and connectivity to the DB2 databases that you want to migrate.
-- Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB where you will be migrating database objects and data. For more information, see [Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).
+- Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database where you will be migrating database objects and data. For more information, see [Connecting to SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).
 - 4 GB RAM recommended.
 
 ## Microsoft OLE DB Provider for DB2

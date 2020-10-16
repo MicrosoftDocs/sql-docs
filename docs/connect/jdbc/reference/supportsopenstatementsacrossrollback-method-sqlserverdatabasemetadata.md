@@ -1,4 +1,5 @@
 ---
+description: "supportsOpenStatementsAcrossRollback Method (SQLServerDatabaseMetaData)"
 title: "supportsOpenStatementsAcrossRollback Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

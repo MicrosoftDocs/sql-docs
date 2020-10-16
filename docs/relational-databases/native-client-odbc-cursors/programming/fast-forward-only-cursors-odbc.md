@@ -1,4 +1,5 @@
 ---
+description: "Fast Forward-Only Cursors (ODBC)"
 title: "Fast Forward-Only Cursors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

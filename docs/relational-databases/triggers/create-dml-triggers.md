@@ -1,4 +1,5 @@
 ---
+description: "Create DML Triggers"
 title: "Create DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2017"

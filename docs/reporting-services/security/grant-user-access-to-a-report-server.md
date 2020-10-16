@@ -1,4 +1,5 @@
 ---
+description: "Grant user access to a report server"
 title: "Grant user access to a report server | Microsoft Docs"
 ms.date: 05/6/2019
 ms.prod: reporting-services

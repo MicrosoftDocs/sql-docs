@@ -1,4 +1,5 @@
 ---
+description: "Template Explorer"
 title: "Template Explorer"
 ms.prod: sql
 ms.prod_service: "sql-tools"

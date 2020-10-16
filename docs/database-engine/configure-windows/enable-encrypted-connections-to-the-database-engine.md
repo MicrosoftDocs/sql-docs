@@ -68,7 +68,7 @@ Enabling TLS encryption increases the security of data transmitted across networ
 > To use encryption with a failover cluster, you must install the server certificate with the fully qualified DNS name of the virtual server on all nodes in the failover cluster. For example, if you have a two-node cluster, with nodes named ***test1.\*\<your company>\*.com*** and ***test2.\*\<your company>\*.com***, and you have a virtual server named ***virtsql***, you need to install a certificate for ***virtsql.\*\<your company>\*.com*** on both nodes. You can set the value of the **ForceEncryption** option on the **Protocols for virtsql** property box of **SQL Server Network Configuration** to **Yes**.
 
 > [!NOTE]
-> When creating encrypted connections for an Azure Search indexer to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an Azure VM, see [Configure a connection from an Azure Search indexer to SQL Server on an Azure VM](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
+> When creating encrypted connections for an Azure Search indexer to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an Azure VM, see [Configure a connection from an Azure Search indexer to SQL Server on an Azure VM](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
 
 ## Certificate requirements
 
@@ -78,7 +78,7 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Account must have the necessary permission to access the TLS certificate.
 
-- The current system time must be after the **Valid from** property of the certificate and before the Valid to property of the certificate.
+- The current system time must be after the **Valid from** property of the certificate and before the **Valid to** property of the certificate.
 
 - The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
 
@@ -117,6 +117,10 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
 9. Right-click the imported certificate, point to **All Tasks**, and then click **Manage Private Keys**. In the **Security** dialog box, add read permission for the user account used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account.  
   
 10. Complete the **Certificate Import Wizard**, to add a certificate to the computer, and close the MMC console. For more information about adding a certificate to a computer, see your Windows documentation.  
+
+> [!IMPORTANT]
+> For production environments, it is recommended to obtain a trusted certificate from a Certificate Authority.    
+> For testing purposes, self-signed certificate can also be used. To create a self-signed certificate, see the [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) or [certreq command](/windows-server/administration/windows-commands/certreq_1).
   
 ## Install across multiple servers
 
@@ -135,9 +139,9 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
 Configure the server to force encrypted connections.
 
 > [!IMPORTANT]
-> The SQL Server Service Account must have read permissions on the certificate used to force encryption on the SQL Server. For a non-privileged service account, read permissions will need to be added to the certificate. Failure to do so can cause the SQL Server service restart to fail.
+> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must have read permissions on the certificate used to force encryption on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a non-privileged service account, read permissions will need to be added to the certificate. Failure to do so can cause the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service restart to fail.
   
-1. In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, right-click **Protocols for** _\<server instance>_, and then select**Properties**.  
+1. In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, right-click **Protocols for** _\<server instance>_, and then select **Properties**.  
   
 2. In the **Protocols for** _\<instance name>_ **Properties** dialog box, on the **Certificate** tab, select the desired certificate from the drop-down for the **Certificate** box, and then click **OK**.  
   
@@ -162,7 +166,7 @@ Configure the client to request encrypted connections.
   
 ## Use SQL Server Management Studio
   
-To encrypt a connection from SQL Server Management Studio:  
+To encrypt a connection from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
 
 1. On the Object Explorer toolbar, click **Connect**, and then click **Database Engine**.  
   
@@ -177,3 +181,4 @@ To encrypt a connection from SQL Server Management Studio:
 
 + [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Powershell Cmdlet New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

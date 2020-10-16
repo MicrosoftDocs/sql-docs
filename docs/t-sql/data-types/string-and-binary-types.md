@@ -1,4 +1,5 @@
 ---
+description: "String and Binary Types"
 title: "String and Binary Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"

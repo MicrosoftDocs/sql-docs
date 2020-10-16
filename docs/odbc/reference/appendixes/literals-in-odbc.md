@@ -1,4 +1,5 @@
 ---
+description: "Literals in ODBC"
 title: "Literals in ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

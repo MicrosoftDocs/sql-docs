@@ -66,7 +66,7 @@ If the query fails because of non "SQL server" related errors, the driver will l
 
 ## Example
 
-Below is an example code that demonstrates the use case for a batch insert operation against Azure DW of a thousand rows, for both (regular vs Bulk Copy API) scenarios.
+Below is an example code that demonstrates the use case for a batch insert operation against Azure Synapse Analytics (SQL DW) of a thousand rows, for both (regular vs Bulk Copy API) scenarios.
 
 ```java
     public static void main(String[] args) throws Exception

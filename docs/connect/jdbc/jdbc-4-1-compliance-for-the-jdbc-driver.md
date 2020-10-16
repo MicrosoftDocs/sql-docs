@@ -1,4 +1,5 @@
 ---
+description: "JDBC 4.1 compliance for the JDBC driver"
 title: "JDBC 4.1 compliance for the JDBC driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

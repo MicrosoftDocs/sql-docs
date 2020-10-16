@@ -1,4 +1,5 @@
 ---
+description: "DBCC (Transact-SQL)"
 title: DBCC (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"

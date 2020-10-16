@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)"
 title: "@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/19/2017"
@@ -30,7 +31,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LOCK_TIMEOUT  
 ```  
   
@@ -47,7 +48,7 @@ ms.author: maghan
 ## Examples  
  This example shows the result set when a LOCK_TIMEOUT value is not set.  
   
-```  
+```sql  
 SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  
 GO  
 ```  
@@ -62,7 +63,7 @@ Lock Timeout
   
  This example sets LOCK_TIMEOUT to 1800 milliseconds and then calls @@LOCK_TIMEOUT.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  
 GO  

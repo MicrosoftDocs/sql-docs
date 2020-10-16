@@ -1,4 +1,5 @@
 ---
+description: "getStatementHandleCacheEntryCount Method (SQLServerConnection)"
 title: "getStatementHandleCacheEntryCount Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"

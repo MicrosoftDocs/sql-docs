@@ -4,7 +4,7 @@ description: 'Learn how to use wildcards in the "Find what" field of a Find and 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords:
@@ -39,5 +39,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Set of characters|[ ]|Matches any one of the characters specified in the set.|  
   
 ## See Also  
- [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [Search and Replace](./search-and-replace.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)

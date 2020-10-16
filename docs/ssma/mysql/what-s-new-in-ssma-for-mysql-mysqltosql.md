@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/31/2020"
+ms.date: "9/28/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,17 @@ ms.author: alexiva
 # What's New in SSMA for MySQL (MySQLToSql)
 
 This article lists SQL Server Migration Assistant (SSMA) for MySQL changes in each release.
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for MySQL requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for MySQL contains the following changes:
+
+* Consider implicit type casts when converting procedure and function calls
+* Improve logging for source connection string to help troubleshoot connection issues
 
 ## SSMA v8.12
 
@@ -109,9 +120,9 @@ The v8.1 release of SSMA for MySQL is enhanced with targeted fixes that are desi
 
 The v8.0 release of SSMA for MySQL is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -233,8 +244,8 @@ The January 2016 maintenance release of SSMA for MySQL contains the following ch
 
 The July 2014 release of SSMA for MySQL contains the following changes:
   
-* Improved Azure SQL DB code conversion.
-* Extension pack functionality moved to schema to support Azure SQL DB.
+* Improved Azure SQL Database code conversion.
+* Extension pack functionality moved to schema to support Azure SQL Database.
 * Performance improvements tested for databases with over 10k objects.
 * UI improvements for dealing with large number of objects.
 * Highlighting of well-known LOB schemas (so they can be ignored in conversion).

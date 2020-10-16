@@ -1,4 +1,5 @@
 ---
+description: "How to View the CDC Instance Properties"
 title: "How to View the CDC Instance Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

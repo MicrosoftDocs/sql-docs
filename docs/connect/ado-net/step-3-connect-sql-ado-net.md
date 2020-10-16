@@ -2,7 +2,7 @@
 title: "Step 3: Proof of concept connecting to SQL using ADO.NET | Microsoft Docs"
 description: "Contains C# code examples for connecting to SQL Server, executing a query and inserting a row."
 ms.custom: ""
-ms.date: "08/15/2019"
+ms.date: "08/05/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -28,9 +28,8 @@ The method **SqlConnection.Open** is used to connect to your SQL database.
 
 
 ```csharp
-// C# , ADO.NET  
 using System;
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -71,9 +70,9 @@ The method SqlCommand.ExecuteReader:
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  
@@ -159,9 +158,9 @@ This example demonstrates how to:
   
   
 ```csharp
-using System;  // C# , ADO.NET  
-using DT = System.Data;            // System.Data.dll  
-using QC = Microsoft.Data.SqlClient;  // System.Data.dll  
+using System;
+using DT = System.Data;
+using QC = Microsoft.Data.SqlClient;
   
 namespace ProofOfConcept_SQL_CSharp  
 {  

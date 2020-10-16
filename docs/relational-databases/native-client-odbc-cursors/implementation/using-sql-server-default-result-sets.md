@@ -1,4 +1,5 @@
 ---
+description: "Using SQL Server Default Result Sets"
 title: "Using SQL Server Default Result Sets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

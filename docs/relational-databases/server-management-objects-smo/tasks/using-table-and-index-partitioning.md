@@ -1,4 +1,5 @@
 ---
+description: "Using Table and Index Partitioning"
 title: "Using Table and Index Partitioning | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

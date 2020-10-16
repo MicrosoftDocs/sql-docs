@@ -1,4 +1,5 @@
 ---
+description: "Create Indexed Views"
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"

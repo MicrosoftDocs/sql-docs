@@ -1,4 +1,5 @@
 ---
+description: "Allocating a Statement Handle"
 title: "Allocating a Statement Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

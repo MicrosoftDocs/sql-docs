@@ -1,4 +1,5 @@
 ---
+description: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard"
 title: "Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

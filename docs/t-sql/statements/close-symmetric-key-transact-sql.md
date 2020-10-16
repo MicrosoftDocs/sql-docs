@@ -1,4 +1,5 @@
 ---
+description: "CLOSE SYMMETRIC KEY (Transact-SQL)"
 title: "CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"
@@ -53,7 +54,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ### A. Closing a symmetric key  
  The following example closes the symmetric key `ShippingSymKey04`.  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY ShippingSymKey04;  
 GO  
 ```  
@@ -61,7 +62,7 @@ GO
 ### B. Closing all symmetric keys  
  The following example closes all symmetric keys that are open in the current session, and also the explicitly opened database master key.  
   
-```  
+```sql  
 CLOSE ALL SYMMETRIC KEYS;  
 GO  
 ```  

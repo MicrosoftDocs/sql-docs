@@ -1,4 +1,5 @@
 ---
+description: "catalog.validate_project (SSISDB Database)"
 title: "catalog.validate_project (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

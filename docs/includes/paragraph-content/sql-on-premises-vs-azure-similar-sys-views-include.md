@@ -8,7 +8,7 @@
 Some Transact-SQL code examples written for SQL Server on-premises need small changes to run on Azure SQL Database service in the cloud. One category of such code examples involves system views whose name prefixes differ slightly between the two database systems:
 
 - **server\_** &nbsp; - &nbsp; _prefix for on-premises_
-- **database\_** &nbsp; - &nbsp; _prefix for Azure SQL DB service in the cloud_
+- **database\_** &nbsp; - &nbsp; _prefix for Azure SQL Database_
 
 For illustration, the following table lists and compares two subsets of the system views. For brevity, the subsets are restricted to view names that also contain the string `_event`. The subsets have differing name prefixes because they come from two different database systems.
 

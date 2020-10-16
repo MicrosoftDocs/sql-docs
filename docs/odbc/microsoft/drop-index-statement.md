@@ -1,4 +1,5 @@
 ---
+description: "DROP INDEX Statement"
 title: "DROP INDEX Statement | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

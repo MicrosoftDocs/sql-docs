@@ -1,4 +1,5 @@
 ---
+description: "Lock:Timeout (timeout &gt; 0) Event Class"
 title: "Lock:Timeout (timeout &gt; 0) Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

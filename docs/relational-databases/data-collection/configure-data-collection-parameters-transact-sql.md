@@ -1,4 +1,5 @@
 ---
+description: "Configure Data Collection Parameters (Transact-SQL)"
 title: "Configure Data Collection Parameters (T-SQL)"
 ms.date: 06/03/2020
 ms.prod: sql

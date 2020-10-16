@@ -1,4 +1,5 @@
 ---
+description: "!&gt; (Not Greater Than) (Transact-SQL)"
 title: "!&gt; (Not Greater Than) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

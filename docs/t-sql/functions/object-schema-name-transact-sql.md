@@ -1,4 +1,5 @@
 ---
+description: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 title: "OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2018"
@@ -32,7 +33,6 @@ ms.author: jrasnick
 ## Syntax  
   
 ```syntaxsql
-  
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
   
@@ -66,15 +66,13 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
 FROM master.sys.objects;  
-  
 ```  
   
  The following example specifies the database ID for the `master` database in the `OBJECT_SCHEMA_NAME` function and returns the correct results.  
   
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
-FROM master.sys.objects;  
-  
+FROM master.sys.objects;   
 ```  
   
 ## Examples  

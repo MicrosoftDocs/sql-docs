@@ -1,4 +1,5 @@
 ---
+description: "Translation DLLs and Desktop Database Drivers"
 title: "Translation DLLs and Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

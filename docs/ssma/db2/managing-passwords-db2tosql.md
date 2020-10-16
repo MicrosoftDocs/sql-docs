@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (DB2ToSQL)"
 title: "Managing Passwords (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Managing Passwords (DB2ToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  
@@ -132,5 +133,4 @@ _Import functionality_ reads the server id and password information from the sec
 8. Confirm password: xxxxxxxx
 
 ## See Also  
-[Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Executing the SSMA Console](./executing-the-ssma-console-db2tosql.md)  

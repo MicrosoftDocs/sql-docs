@@ -1,4 +1,5 @@
 ---
+description: "Raising and Defining Events in a Data Flow Component"
 title: "Raising and Defining Events in a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

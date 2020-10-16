@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling Task and Viewer"
 title: "Data Profiling Task and Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

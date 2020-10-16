@@ -1,4 +1,5 @@
 ---
+description: "Developing Specific Types of Script Components"
 title: "Developing Specific Types of Script Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

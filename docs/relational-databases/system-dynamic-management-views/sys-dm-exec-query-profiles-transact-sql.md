@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_profiles (Transact-SQL)"
 title: "sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2019"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_profiles dynamic management view"
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)
@@ -83,7 +84,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the *standa
 > The query under investigation has to start **after** the query profiling infrastructure has been enabled, enabling it after the query started will not produce results in `sys.dm_exec_query_profiles`. For more information on how to enable the query profiling infrastructures, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, requires `VIEW DATABASE STATE` permission and membership of the `db_owner` database role.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, requires `VIEW DATABASE STATE` permission and membership of the `db_owner` database role.   
 On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
    
 ## Examples  

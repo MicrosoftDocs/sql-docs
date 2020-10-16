@@ -3,7 +3,7 @@ title: QuickWatch Dialog Box
 description: Learn how to use the QuickWatch dialog box as you debug code, to quickly view the data type and value of one Transact-SQL expression (such as a variable). 
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.quickwatch"
@@ -78,11 +78,10 @@ Use the **QuickWatch** dialog box to quickly view the data type and value of one
  Displays the data type of the expression.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Watch Window](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Locals Window](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [Transact-SQL Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
+ [Watch Window](./transact-sql-debugger-watch-window.md)   
+ [Locals Window](./transact-sql-debugger-locals-window.md)   
+ [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "Rotate enclave-enabled keys"
 title: "Rotate  | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/31/2019

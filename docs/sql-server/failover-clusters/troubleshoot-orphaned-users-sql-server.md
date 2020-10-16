@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "orphaned users [SQL Server]"
   - "logins [SQL Server], orphaned users"
@@ -67,9 +67,9 @@ WHERE sp.SID IS NULL
   
  The output lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication  users and corresponding security identifiers (SID) in the current database that are not linked to any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
 
-**For SQL Database and SQL Data Warehouse**
+**For SQL Database and Azure Synapse Analytics**
 
-The `sys.server_principals` table is not available in SQL Database or SQL Data Warehouse. Identify orphaned users in those environments with the following steps:
+The `sys.server_principals` table is not available in SQL Database or Azure Synapse Analytics. Identify orphaned users in those environments with the following steps:
 
 1. Connect to the `master` database and select the SID's for the logins with the following query:
     ```
@@ -113,8 +113,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
 > [!IMPORTANT]  
 >  Any login can change its own password. Only logins with the `ALTER ANY LOGIN` permission can change the password of another user's login. However, only members of the **sysadmin** role can modify passwords of **sysadmin** role members.  
-  
- The deprecated procedure [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) also works with orphaned users. `sp_change_users_login` cannot be used with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## See Also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

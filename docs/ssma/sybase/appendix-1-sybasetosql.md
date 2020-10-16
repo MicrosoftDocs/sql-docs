@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (SybaseToSQL)"
 title: "Appendix - 1 (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Sybase Console,Appendix"
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Appendix - 1 (SybaseToSQL)
 Quick view of the SSMA Console command line options:  
@@ -27,5 +28,4 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[Executing the SSMA Console (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

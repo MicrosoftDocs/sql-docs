@@ -1,8 +1,9 @@
 ---
+description: "Microsoft OLE DB Provider for Internet Publishing Overview"
 title: "Microsoft OLE DB Provider for Internet Publishing | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -19,13 +20,13 @@ ms.author: jroth
 The Microsoft OLE DB Provider for Internet Publishing allows ADO to access resources served by Microsoft FrontPage or Microsoft Internet Information Server. Resources include web source files such as HTML files, or Windows 2000 web folders.
 
 ## Connection String Parameters
- To connect to this provider, set the *Provider* argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to:
+ To connect to this provider, set the *Provider* argument of the [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) property to:
 
 ```vb
 MSDAIPP.DSO
 ```
 
- This value can also be set or read using the [Provider](../../../ado/reference/ado-api/provider-property-ado.md) property.
+ This value can also be set or read using the [Provider](../../reference/ado-api/provider-property-ado.md) property.
 
 ## Typical Connection String
  A typical connection string for this provider is:
@@ -55,8 +56,8 @@ MSDAIPP.DSO
  If you set the *ResourceURL* value from the "URL=" in the connection string to an invalid value, by default the Internet Publishing Provider raises a dialog box to prompt for a valid value. This is undesirable behavior for a component in the middle tier of an application, because it suspends program execution until the dialog box is cleared and the client appears to freeze because it has not received a response from the component.
 
 > [!NOTE]
->  If MSDAIPP.DSO is explicitly specified as the value of the provider, either with the *Provider* connection string keyword or the **Provider** property, you cannot use "URL=" in the connection string. If you do, an error will occur. Instead, simply specify the URL as shown in the topic [Using ADO with the OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md).
+>  If MSDAIPP.DSO is explicitly specified as the value of the provider, either with the *Provider* connection string keyword or the **Provider** property, you cannot use "URL=" in the connection string. If you do, an error will occur. Instead, simply specify the URL as shown in the topic [Using ADO with the OLE DB Provider for Internet Publishing](../data/the-ole-db-provider-for-internet-publishing.md).
 
 ## See Also
- [Internet Publishing Scenario](../../../ado/guide/data/internet-publishing-scenario.md)
- [The OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+ [Internet Publishing Scenario](../data/internet-publishing-scenario.md)
+ [The OLE DB Provider for Internet Publishing](../data/the-ole-db-provider-for-internet-publishing.md)

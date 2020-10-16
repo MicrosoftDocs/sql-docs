@@ -1,4 +1,5 @@
 ---
+description: "ODBC Destination Custom Properties"
 title: "ODBC Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

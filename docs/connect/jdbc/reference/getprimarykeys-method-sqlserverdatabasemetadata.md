@@ -1,4 +1,5 @@
 ---
+description: "getPrimaryKeys Method (SQLServerDatabaseMetaData)"
 title: "getPrimaryKeys Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

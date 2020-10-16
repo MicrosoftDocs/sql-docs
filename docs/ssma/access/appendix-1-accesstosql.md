@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (AccessToSQL)"
 title: "Appendix - 1 (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Appendix - 1 (AccessToSQL)
 Quick view of the SSMA Console command line options:  
@@ -25,5 +26,4 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console (Access)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[Executing the SSMA Console (Access)](./executing-the-ssma-console-accesstosql.md)  

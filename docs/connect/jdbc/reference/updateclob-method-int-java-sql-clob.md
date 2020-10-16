@@ -1,4 +1,5 @@
 ---
+description: "updateClob Method (int, java.sql.Clob)"
 title: "updateClob Method (int, java.sql.Clob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Closing objects when not in use"
 title: "Closing objects when not in use | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

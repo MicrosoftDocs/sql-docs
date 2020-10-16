@@ -1,4 +1,5 @@
 ---
+description: "Working with Policy-Based Management Facets"
 title: "Working with Policy-Based Management Facets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

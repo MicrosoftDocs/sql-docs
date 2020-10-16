@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_set_parameter (Transact-SQL)"
 title: "managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sp_set_parameter"
   - "smart_admin.sp_set_parameter"
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

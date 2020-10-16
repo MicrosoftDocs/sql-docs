@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -35,7 +35,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Select an item from the list, or type a replacement of your choice.  
   
 ## See Also  
- [Insert Transact-SQL Snippets](../../relational-databases/scripting/insert-transact-sql-snippets.md)   
- [Insert Surround-with Transact-SQL snippets](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Insert Transact-SQL Snippets](./insert-transact-sql-snippets.md)   
+ [Insert Surround-with Transact-SQL snippets](./insert-surround-with-transact-sql-snippets.md)  
   

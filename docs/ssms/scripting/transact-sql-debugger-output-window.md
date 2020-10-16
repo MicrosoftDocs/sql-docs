@@ -3,7 +3,7 @@ title: Output Window
 description: Learn how to use the Output window to view status messages and other output from the SQL Server Management Studio debugger and other tools.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Output Window [Transact-SQL]"
@@ -37,4 +37,4 @@ This window displays status messages for various features in [!INCLUDE[ssManStud
  Displays the output for the selected pane in **Output panelist**.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
+ [Transact-SQL Debugger](./transact-sql-debugger.md)

@@ -1,4 +1,5 @@
 ---
+description: "Slowly Changing Dimension Transformation"
 title: "Slowly Changing Dimension Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Generate Mirror Tables and CDC Capture Instances"
 title: "Generate Mirror Tables and CDC Capture Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

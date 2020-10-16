@@ -1,4 +1,5 @@
 ---
+description: "SP:StmtCompleted Event Class"
 title: "SP:StmtCompleted Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

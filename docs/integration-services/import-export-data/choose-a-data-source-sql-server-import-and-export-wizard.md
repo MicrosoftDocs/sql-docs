@@ -1,4 +1,5 @@
 ---
+description: "Choose a Data Source (SQL Server Import and Export Wizard)"
 title: "Choose a Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"

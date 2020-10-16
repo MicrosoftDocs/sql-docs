@@ -1,4 +1,5 @@
 ---
+description: "sysarticlecolumns (System View) (Transact-SQL)"
 title: "sysarticlecolumns (System View) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

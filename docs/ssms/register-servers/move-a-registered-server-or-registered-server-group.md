@@ -1,4 +1,5 @@
 ---
+description: "Move a Registered Server or Registered Server Group"
 title: Move a Registered Server or Server Group
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -34,6 +35,6 @@ This topic describes how to organize the servers in Registered Servers by moving
 
 ## See Also
 
-[Register Servers](../../tools/sql-server-management-studio/register-servers.md)
+[Register Servers](./register-servers.md)
 
-[Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)
+[Create or Edit a Server Group &#40;SQL Server Management Studio&#41;](./create-or-edit-a-server-group-sql-server-management-studio.md)

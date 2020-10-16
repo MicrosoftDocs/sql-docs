@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;PACK_RECEIVED (Transact-SQL)"
 title: "@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
@@ -44,7 +45,7 @@ ms.author: vanto
 ## Examples  
  The following example shows the usage of `@@PACK_RECEIVED`.  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   

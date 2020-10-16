@@ -3,7 +3,7 @@ title: Watch Window
 description: Learn about Watch windows (as many as four at once), which display information about expressions you select. The information displays only in debug mode.
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Watch Window [Transact-SQL]"
@@ -59,9 +59,9 @@ The **Watch** window displays information about the expressions that you have se
  Displays the data type of the expression.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Locals Window](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [QuickWatch Dialog Box](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
+ [Locals Window](./transact-sql-debugger-locals-window.md)   
+ [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
+ [QuickWatch Dialog Box](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

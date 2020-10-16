@@ -1,4 +1,5 @@
 ---
+description: "Distributor Password"
 title: "Distributor Password | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

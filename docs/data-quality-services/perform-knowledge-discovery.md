@@ -1,4 +1,5 @@
 ---
+description: "Perform Knowledge Discovery"
 title: "Perform Knowledge Discovery"
 ms.date: "06/04/2013"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Querying Extended Stored Procedures Installed in SQL Server"
 title: "Querying extended stored procedures"
 ms.date: "03/14/2017"
 ms.prod: sql

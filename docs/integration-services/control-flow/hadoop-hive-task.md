@@ -1,4 +1,5 @@
 ---
+description: "Hadoop Hive Task"
 title: "Hadoop Hive Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

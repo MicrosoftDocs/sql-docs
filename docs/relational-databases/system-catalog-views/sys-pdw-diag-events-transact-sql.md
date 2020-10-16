@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_diag_events (Transact-SQL)"
 title: "sys.pdw_diag_events (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -25,6 +26,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |**is_enabled**|**bit**|Whether the event is being published.||  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

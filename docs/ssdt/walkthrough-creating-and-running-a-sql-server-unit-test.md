@@ -35,7 +35,7 @@ In this walkthrough, you perform the following tasks:
 After one of the unit tests detects an error in a stored procedure, you correct that error and re-run your test.  
   
 ## Prerequisites  
-To complete this walkthrough, you must be able to connect to a database server (or LocalDB database) on which you have permissions to create and deploy a database. For more information, see [Required Permissions for Database Features of Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+To complete this walkthrough, you must be able to connect to a database server (or LocalDB database) on which you have permissions to create and deploy a database. For more information, see [Required Permissions for Database Features of Visual Studio](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100)).  
   
 ## <a name="CreateScript"></a>Create a Script that Contains a Database Schema  
   
@@ -987,4 +987,3 @@ After you establish a baseline, you can create and modify database objects and t
 [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [How to: Create an Empty SQL Server Unit Test](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [How to: Configure SQL Server Unit Test Execution](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

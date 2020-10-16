@@ -1,4 +1,5 @@
 ---
+description: "Getting Large Data from a SQL Server Native Client OLE DB Provider"
 title: "Getting large data (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

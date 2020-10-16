@@ -1,4 +1,5 @@
 ---
+description: "Sparse Columns Support (ODBC)"
 title: "Sparse Columns Support (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

@@ -1,4 +1,5 @@
 ---
+description: "getSQLKeywords Method (SQLServerDatabaseMetaData)"
 title: "getSQLKeywords Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

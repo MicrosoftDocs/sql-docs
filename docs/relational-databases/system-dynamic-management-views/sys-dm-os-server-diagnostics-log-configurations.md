@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_server_diagnostics_log_configurations"
 title: "sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "dm_os_server_diagnostics_log_configurations"
   - "sys.dm_os_server_diagnostics_log_configurations"
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_server_diagnostics_log_configurations

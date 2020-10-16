@@ -3,7 +3,7 @@ title: Specify a Breakpoint Condition
 description: Learn how to establish a breakpoint condition to control whether the debugger performs a breakpoint action when the breakpoint is hit and the hit count is reached. 
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint conditions"
@@ -47,5 +47,5 @@ The expression specified must be a valid Transact-SQL expression that evaluates 
   
 ## See Also
 
-- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)
-- [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)
+- [Specify a Hit Count](./specify-a-hit-count.md)
+- [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)

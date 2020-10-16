@@ -1,4 +1,5 @@
 ---
+description: "Disable Indexes and Constraints"
 title: "Disable Indexes and Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

@@ -1,4 +1,5 @@
 ---
+description: "UPDATE, DELETE, and INSERT Statements"
 title: "UPDATE, DELETE, and INSERT Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

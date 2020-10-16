@@ -1,4 +1,5 @@
 ---
+description: "Perform Index Operations Online"
 title: Perform Index Operations Online | Microsoft Docs
 ms.custom: ""
 ms.date: 11/15/2019

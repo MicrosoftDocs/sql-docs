@@ -1,4 +1,5 @@
 ---
+description: "Attribute Groups (Master Data Services)"
 title: Attribute Groups
 ms.custom: ""
 ms.date: "03/15/2017"

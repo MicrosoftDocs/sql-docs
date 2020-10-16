@@ -58,6 +58,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Known Issues](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Programming Guidelines](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [Release Notes](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Release Notes (mssql-tools)](../../connect/odbc/linux-mac/release-notes-tools.md)
 - [Support for High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [Using Integrated Authentication (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 

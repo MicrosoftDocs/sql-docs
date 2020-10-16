@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Management Studio Keyboard Shortcuts"
 title: "SQL Server Management Studio Keyboard Shortcuts"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

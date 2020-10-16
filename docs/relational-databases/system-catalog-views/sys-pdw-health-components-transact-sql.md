@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_health_components (Transact-SQL)"
 title: "sys.pdw_health_components (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -23,6 +24,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |component_name|**nvarchar(255)**|Name of the component.|NOT NULL|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

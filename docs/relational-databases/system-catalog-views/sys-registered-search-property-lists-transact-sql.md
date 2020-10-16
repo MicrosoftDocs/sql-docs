@@ -1,4 +1,5 @@
 ---
+description: "sys.registered_search_property_lists (Transact-SQL)"
 title: "sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

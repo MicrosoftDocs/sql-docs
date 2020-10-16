@@ -1,4 +1,5 @@
 ---
+description: "SQLProcedures"
 title: "SQLProcedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -27,7 +28,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  **SQLProcedures** returns information about any procedures whose names match *ProcName* and can be executed by the current user, or for which the current user has been granted VIEW DEFINITION permission.  
   
 ## See Also  
- [SQLProcedures Function](https://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures Function](../../odbc/reference/syntax/sqlprocedures-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

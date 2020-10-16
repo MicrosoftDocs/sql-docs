@@ -1,4 +1,5 @@
 ---
+description: "updateDouble Method (int, double)"
 title: "updateDouble Method (int, double) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_cursorclose (Transact-SQL)"
 title: "sp_cursorclose (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorclose"
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursorclose (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

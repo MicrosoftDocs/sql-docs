@@ -1,4 +1,5 @@
 ---
+description: "updateByte Method (SQLServerResultSet)"
 title: "updateByte Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

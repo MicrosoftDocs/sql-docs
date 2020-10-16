@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - Arguments (Transact-SQL)"
 title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2018"

@@ -1,4 +1,5 @@
 ---
+description: "Manage an Oracle CDC Service"
 title: "Manage an Oracle CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Table-Valued Parameter Descriptor Fields"
 title: "Table-Valued Parameter Descriptor Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

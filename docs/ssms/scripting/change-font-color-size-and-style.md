@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -40,7 +40,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The settings for text color and font type are global for all text element types, such as comments, strings, and so on.  
   
 ## See Also  
- [Print Code and Results](../../relational-databases/scripting/print-code-and-results.md)   
- [Color Coding in Query Editors](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-  
+ [Print Code and Results](./print-code-and-results.md)   
+ [Color Coding in Query Editors](./color-coding-in-query-editors.md)  
   

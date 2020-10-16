@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TOTAL_WRITE (Transact-SQL)"
 title: "@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -31,8 +32,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 @@TOTAL_WRITE  
 ```  
   
@@ -47,7 +47,7 @@ ms.author: jrasnick
 ## Examples  
  The following example shows returning the total number of disk reads and writes as of the current date and time.  
   
-```  
+```sql
 SELECT @@TOTAL_READ AS 'Reads', @@TOTAL_WRITE AS 'Writes', GETDATE() AS 'As of'  
 ```  
   

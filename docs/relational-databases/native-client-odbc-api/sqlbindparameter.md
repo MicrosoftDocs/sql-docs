@@ -1,4 +1,5 @@
 ---
+description: "SQLBindParameter"
 title: "SQLBindParameter | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -53,6 +54,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SQLBindParameter Function](https://go.microsoft.com/fwlink/?LinkId=59328)  
-  
+ [SQLBindParameter Function](../../odbc/reference/syntax/sqlbindparameter-function.md)  
   

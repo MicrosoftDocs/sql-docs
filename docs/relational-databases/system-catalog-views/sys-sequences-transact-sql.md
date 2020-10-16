@@ -1,4 +1,5 @@
 ---
+description: "sys.sequences (Transact-SQL)"
 title: "sys.sequences (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,8 +19,8 @@ helpviewer_keywords:
   - "sequence number object, sys. sequences catalog view"
   - "sys.sequences catalog view"
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sequences (Transact-SQL)

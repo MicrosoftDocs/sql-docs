@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_stats (Transact-SQL)"
 title: "sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2019"
@@ -17,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_stats dynamic management view"
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
@@ -110,10 +111,10 @@ Returns aggregate performance statistics for cached query plans in [!INCLUDE[ssN
 |**min_spills**|**bigint**|The minimum number of pages that this query has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|The maximum number of pages that this query has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|Total number of remote page server reads performed by executions of this plan since it was compiled.<br /><br /> **Applies to:** Azure SQL DB Hyperscale |  
-|**last_page_server_reads**|**bigint**|Number of remote page server reads performed the last time the plan was executed.<br /><br /> **Applies To:** Azure SQL DB Hyperscale |  
-|**min_page_server_reads**|**bigint**|Minimum number of remote page server reads that this plan has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL DB Hyperscale |  
-|**max_page_server_reads**|**bigint**|Maximum number of remote page server reads that this plan has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL DB Hyperscale |  
+|**total_page_server_reads**|**bigint**|Total number of remote page server reads performed by executions of this plan since it was compiled.<br /><br /> **Applies to:** Azure SQL Database Hyperscale |  
+|**last_page_server_reads**|**bigint**|Number of remote page server reads performed the last time the plan was executed.<br /><br /> **Applies To:** Azure SQL Database Hyperscale |  
+|**min_page_server_reads**|**bigint**|Minimum number of remote page server reads that this plan has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale |  
+|**max_page_server_reads**|**bigint**|Maximum number of remote page server reads that this plan has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale |  
 > [!NOTE]
 > <sup>1</sup> For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than one millisecond, the value will be 0.  
   

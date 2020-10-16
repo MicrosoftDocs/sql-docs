@@ -1,4 +1,5 @@
 ---
+description: "Audit Login Change Password Event Class"
 title: "Audit Login Change Password Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

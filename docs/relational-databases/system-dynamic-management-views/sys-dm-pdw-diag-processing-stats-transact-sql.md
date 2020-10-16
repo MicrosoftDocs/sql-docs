@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_diag_processing_stats (Transact-SQL)"
 title: "sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -9,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: df659c55-4f63-45f8-8afe-ce300031bc5b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_diag_processing_stats (Transact-SQL)
@@ -27,6 +28,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |**lost_events_count**|**bigint**|The number of events lost.|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (MySQLToSQL)"
 title: "Managing Passwords (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -10,8 +11,8 @@ helpviewer_keywords:
   - "Password management, importing or exporting encrypted password"
   - "Password management, securing password"
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Managing Passwords (MySQLToSQL)
 This article is about securing database passwords and the procedure to import or export them across servers.
@@ -128,5 +129,4 @@ Import functionality reads the server id and password information from the secur
 8. Please confirm password: xxxxxxxx  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[Executing the SSMA Console (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

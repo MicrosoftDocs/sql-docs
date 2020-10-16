@@ -1,4 +1,5 @@
 ---
+description: "IDENT_SEED (Transact-SQL)"
 title: "IDENT_SEED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   

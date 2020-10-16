@@ -1,4 +1,5 @@
 ---
+description: "SqlService Class"
 title: "SqlService Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlService class"
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SqlService Class
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Use Database Mail Instead of SQL Mail"
 title: "Use Database Mail Instead of SQL Mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

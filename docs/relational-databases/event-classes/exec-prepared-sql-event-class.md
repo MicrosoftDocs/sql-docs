@@ -1,4 +1,5 @@
 ---
+description: "Exec Prepared SQL Event Class"
 title: "Exec Prepared SQL Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

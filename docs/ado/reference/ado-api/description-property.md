@@ -3,7 +3,7 @@ title: "Description Property | Microsoft Docs"
 description: Learn about the description property of the Error object in ADO that returns a string value containing a description of the error.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

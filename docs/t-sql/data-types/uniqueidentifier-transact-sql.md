@@ -1,4 +1,5 @@
 ---
+description: "uniqueidentifier (Transact-SQL)"
 title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
@@ -42,26 +43,26 @@ The **uniqueidentifier** type is considered a character type for the purposes of
 
 These tools and features do not support the `uniqueidentifier` data type:
 - PolyBase
-- [dwloader loading tool](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) for Parallel Data Warehouse
+- [dwloader loading tool](../../analytics-platform-system/dwloader.md) for Parallel Data Warehouse
 
 ## Examples  
 The following example converts a `uniqueidentifier` value to a `char` data type.
   
 ```sql
 DECLARE @myid uniqueidentifier = NEWID();  
-SELECT CONVERT(char(255), @myid) AS 'char';  
+SELECT CONVERT(CHAR(255), @myid) AS 'char';  
 ```  
   
 The following example demonstrates the truncation of data when the value is too long for the data type being converted to. Because the **uniqueidentifier** type is limited to 36 characters, the characters that exceed that length are truncated.
   
 ```sql
-DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
+DECLARE @ID NVARCHAR(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';  
 SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 String                                       TruncatedValue  
 -------------------------------------------- ------------------------------------  
 0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong    0E984725-C51C-4BF4-9960-E1C80E27ABA0  
@@ -79,5 +80,4 @@ String                                       TruncatedValue
 [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "Initialize a Subscription with a Snapshot for a New Publication"
 title: Initialize subscription with snapshot
 ms.custom:
 ms.date: 03/23/2020

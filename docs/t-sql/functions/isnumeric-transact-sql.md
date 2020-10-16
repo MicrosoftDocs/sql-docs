@@ -1,4 +1,5 @@
 ---
+description: "ISNUMERIC (Transact-SQL)"
 title: "ISNUMERIC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -33,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-``` 
+```syntaxsql 
 ISNUMERIC ( expression )  
 ```  
   

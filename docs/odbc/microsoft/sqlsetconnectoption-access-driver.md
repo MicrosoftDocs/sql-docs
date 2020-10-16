@@ -1,4 +1,5 @@
 ---
+description: "SQLSetConnectOption (Access Driver)"
 title: "SQLSetConnectOption (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

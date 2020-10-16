@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords: 
   - "automatic page repair"
   - "Availability Groups [SQL Server], automatic page repair"

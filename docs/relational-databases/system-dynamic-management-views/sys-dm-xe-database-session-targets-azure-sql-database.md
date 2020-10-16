@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_database_session_targets (Azure SQL Database)"
 title: "sys.dm_xe_database_session_targets"
 titleSuffix: Azure SQL Database
 ms.date: "06/10/2016"
@@ -7,8 +8,8 @@ ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "language-reference"
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---

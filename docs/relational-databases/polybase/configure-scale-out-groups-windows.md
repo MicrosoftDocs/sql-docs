@@ -28,7 +28,7 @@ The following steps summarize the process for creating a PolyBase scale-out grou
   
 1. Install the same version of SQL Server with PolyBase on N machines.
   
-2. Select one SQL Server instance as the head node. A head node can only be designated on an instance running SQL Server Enterprise.
+2. Select one SQL Server instance as the head node. 
   
 3. Add remaining SQL Server instances as compute nodes using [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
 
@@ -103,6 +103,6 @@ After setup is complete, both machines can function as PolyBase Group head nodes
   
 ## Next steps  
 
-For troubleshooting, see [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+For troubleshooting, see [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130)).
   
 For more information about PolyBase, see the [PolyBase overview](../../relational-databases/polybase/polybase-guide.md).

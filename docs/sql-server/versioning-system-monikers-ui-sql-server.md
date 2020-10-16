@@ -1,12 +1,13 @@
 ---
+description: "Versioning system for SQL documentation"
 title: Versioning system SQL docs
-ms.date: 07/22/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Versioning system for SQL documentation
@@ -153,17 +154,17 @@ The versioning system is fully implemented for SQL Server version 2016 onward.
 
 - _2012 and earlier:_ &nbsp; The versioning system is not used for SQL Server 2012 or earlier versions.
     - The special moniker of **SQL Server - older** is meant to hide almost all articles. The rare exceptions are a couple of articles that customers of older versions might need once.
-    - [Previous versions of SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
+    - [Previous versions of SQL Server, 2012-2005](./previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; The versioning system is half implemented for SQL Server 2014. You can choose SQL Server 2014 in the versioning control, and it works. Yet internally the files for 2014 are dedicated to just 2014, the same way the files for 2008 are dedicated to just 2008.
-    - [SQL Server 2014 offline documentation](/sql/sql-server/sql-server-offline-documentation)
+    - [SQL Server 2014 offline documentation](./sql-server-offline-documentation.md)
 
 - _2016 and later:_ &nbsp; The versioning system is fully implemented for SQL Server 2016 and later versions.
-    - [Welcome to SQL Server documentation 2016 and later](/sql/sql-server/?view=sql-server-2016)
+    - [Welcome to SQL Server documentation 2016 and later](./index.yml?preserve-view=true&view=sql-server-2016)
     - [SQL Server 2016 offline documentation](sql-server-offline-documentation.md)
 
 ## See also
 
-[Previous versions of SQL Server, 2014-2005](../toc/previous-versions-sql-server.md)  
+[Previous versions of SQL Server, 2014-2005](./previous-versions-sql-server.md)  
 [SQL Server docs navigation guide](sql-docs-navigation-guide.md)  
-[How to contribute to SQL Server Documentation](sql-server-docs-contribute.md)  
+[How to contribute to SQL Server Documentation](sql-server-docs-contribute.md)

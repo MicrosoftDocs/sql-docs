@@ -1,4 +1,5 @@
 ---
+description: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)"
 title: "CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

@@ -1,4 +1,5 @@
 ---
+description: "sp_changesubscription (Transact-SQL)"
 title: "sp_changesubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscription"
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

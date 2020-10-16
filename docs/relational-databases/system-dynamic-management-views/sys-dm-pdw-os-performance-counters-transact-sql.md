@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_os_performance_counters (Transact-SQL)"
 title: "sys.dm_pdw_os_performance_counters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -9,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_os_performance_counters (Transact-SQL)
@@ -28,6 +29,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |last_update_time|**Datetime2(3)**|Timestamp of last time the value was updated.||  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

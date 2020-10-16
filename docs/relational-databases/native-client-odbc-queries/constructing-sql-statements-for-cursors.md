@@ -1,4 +1,5 @@
 ---
+description: "Constructing SQL Statements for Cursors"
 title: "Constructing SQL Statements for Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

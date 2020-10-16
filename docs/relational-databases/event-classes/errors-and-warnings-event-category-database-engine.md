@@ -1,4 +1,5 @@
 ---
+description: "Errors and Warnings Event Category (Database Engine)"
 title: "Errors and Warnings Event Category"
 ms.date: 06/03/2020
 ms.prod: sql

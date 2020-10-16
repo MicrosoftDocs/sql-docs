@@ -1,4 +1,5 @@
 ---
+description: "Other Text File Driver Programming Details"
 title: "Other Text File Driver Programming Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Batches of SQL Statements"
 title: "Batches of SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

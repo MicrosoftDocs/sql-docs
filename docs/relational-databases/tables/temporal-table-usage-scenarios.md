@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Usage Scenarios"
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Temporal table usage scenarios
 
@@ -52,7 +53,7 @@ Various options to create temporal system-versioned table are described in [Crea
 
 ### Enabling system-versioning on an existing table for data audit
 
-If you need to perform data audit in existing databases, use ALTER TABLE to extend non-temporal tables to become system-versioned. In order to avoid breaking changes in your application, add period columns as HIDDEN, as explained in [Alter Non-Temporal Table to be System-Versioned Temporal Table](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). The following example illustrates enabling system-versioning on an existing Employee table in a hypothetical HR database:
+If you need to perform data audit in existing databases, use ALTER TABLE to extend non-temporal tables to become system-versioned. In order to avoid breaking changes in your application, add period columns as HIDDEN, as explained in [Alter Non-Temporal Table to be System-Versioned Temporal Table](./creating-a-system-versioned-temporal-table.md). The following example illustrates enabling system-versioning on an existing Employee table in a hypothetical HR database:
 
 ```sql
 /*

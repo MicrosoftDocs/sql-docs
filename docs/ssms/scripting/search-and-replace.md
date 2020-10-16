@@ -4,7 +4,7 @@ description: Learn about the four different ways to find and replace text, each 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -45,10 +45,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Generally, you cannot search items with graphical views.  
   
 ## See Also  
- [Search an Active Document Incrementally](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [Search Documents Interactively](../../relational-databases/scripting/search-documents-interactively.md)   
- [Search Documents Using Results Lists](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Search an Active Document Incrementally](./search-an-active-document-incrementally.md)   
+ [Search Documents Interactively](./search-documents-interactively.md)   
+ [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
+ [Search Text with Wildcards](./search-text-with-wildcards.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

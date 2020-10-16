@@ -1,4 +1,5 @@
 ---
+description: "Upgrading the Version of a Data Flow Component"
 title: "Upgrading the Version of a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Using Capture Mode"
 title: "Using Capture Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "updateFloat Method (int, float)"
 title: "updateFloat Method (int, float) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

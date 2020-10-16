@@ -1,4 +1,5 @@
 ---
+description: "Facet Properties Dialog Box, Dependent Conditions Page"
 title: "Facet Properties Dialog Box, Dependent Conditions Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

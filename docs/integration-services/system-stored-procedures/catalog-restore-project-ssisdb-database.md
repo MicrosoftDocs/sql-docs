@@ -1,4 +1,5 @@
 ---
+description: "catalog.restore_project (SSISDB Database)"
 title: "catalog.restore_project (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

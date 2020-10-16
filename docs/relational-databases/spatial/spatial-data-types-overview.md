@@ -1,4 +1,5 @@
 ---
+description: "Spatial Data Types Overview"
 title: "Spatial Data Types Overview | Microsoft Docs"
 ms.date: "07/21/2020"
 ms.prod: sql
@@ -18,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Spatial Data Types Overview
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   
 There are two types of spatial data. The **geometry** data type supports planar, or Euclidean (flat-earth), data. The **geometry** data type both conforms to the *Open Geospatial Consortium (OGC) Simple Features for SQL Specification* version 1.1.0 and is compliant with SQL MM (ISO standard).
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also supports the **geography** data type, which stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.
@@ -67,7 +68,7 @@ Circular arc segments for geometry types are defined on the XY Cartesian coordin
 
 In the planar (flat-earth) system, measurements of distances and areas are given in the same unit of measurement as coordinates. Using the **geometry** data type, the distance between (2, 2) and (5, 6) is five units, regardless of the units used.  
 
-In an ellipsoidal, or round-earth system, coordinates are given in degrees of latitude and longitude. However, lengths and areas are typically measured in meters and square meters, though the measurement may depend on the [spatial reference identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) of the **geography** instance. The most common unit of measurement for the **geography** data type is meters.  
+In an ellipsoidal, or round-earth system, coordinates are given in degrees of latitude and longitude. However, lengths and areas are typically measured in meters and square meters, though the measurement may depend on the [spatial reference identifier](./spatial-reference-identifiers-srids.md) of the **geography** instance. The most common unit of measurement for the **geography** data type is meters.  
 
 ### Orientation of spatial data
 
@@ -194,10 +195,10 @@ SELECT @g.ToString(), @g.STLength();
 
 ## See also
 
-- [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx)
-- [geography Data Type Method Reference](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [Spatial Data (SQL Server)](./spatial-data-sql-server.md)
+- [geometry Data Type Method Reference](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [geography Data Type Method Reference](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

@@ -1,4 +1,5 @@
 ---
+description: "Generating Reports (SybaseToSQL)"
 title: "Generating Reports (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Sybase Console,refresh-from-database report"
   - "Sybase Console,synchronize-target report"
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Generating Reports (SybaseToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  
@@ -136,5 +137,4 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
-  
+[Executing the SSMA Console (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

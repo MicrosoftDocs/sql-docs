@@ -1,4 +1,5 @@
 ---
+description: "CLOSE (Transact-SQL)"
 title: "CLOSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

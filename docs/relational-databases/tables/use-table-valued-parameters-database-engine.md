@@ -1,4 +1,5 @@
 ---
+description: "Use Table-Valued Parameters (Database Engine)"
 title: "Use Table-Valued Parameters (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

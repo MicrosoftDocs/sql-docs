@@ -1,4 +1,5 @@
 ---
+description: "Discontinued Master Data Services Features"
 title: Discontinued Master Data Services Features
 ms.custom: ""
 ms.date: "03/14/2017"

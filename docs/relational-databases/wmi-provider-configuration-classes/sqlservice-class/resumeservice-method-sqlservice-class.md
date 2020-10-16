@@ -1,4 +1,5 @@
 ---
+description: "ResumeService Method (SqlService Class)"
 title: "ResumeService Method (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ResumeService method"
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ResumeService Method (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Reconcile a Database Diagram with a Modified Database (Visual Database Tools)"
 title: Reconcile a Database Diagram with a Modified Database
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

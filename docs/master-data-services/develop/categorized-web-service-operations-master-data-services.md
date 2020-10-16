@@ -1,4 +1,5 @@
 ---
+description: "Categorized Web Service Operations (Master Data Services)"
 title: Categorized Web Service Operations
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "KEY_GUID (Transact-SQL)"
 title: "KEY_GUID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -29,8 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 Key_GUID( 'Key_Name' )  
 ```  
   
@@ -54,7 +54,7 @@ Key_GUID( 'Key_Name' )
 ## Examples  
  The following example returns the GUID of a symmetric key called `ABerglundKey1`.  
   
-```  
+```sql  
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   

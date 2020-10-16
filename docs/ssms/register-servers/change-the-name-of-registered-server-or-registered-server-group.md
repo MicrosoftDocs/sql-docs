@@ -1,4 +1,5 @@
 ---
+description: "Change the Name of Registered Server or Registered Server Group"
 title: Change the Name of Registered Server or Server Group
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -40,4 +41,4 @@ From the menu navigate to **View\\Registered Servers** to open the **Registered 
 
 ## See Also
 
-[Change a Server's Registration &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)
+[Change a Server's Registration &#40;SQL Server Management Studio&#41;](./change-a-server-s-registration-sql-server-management-studio.md)

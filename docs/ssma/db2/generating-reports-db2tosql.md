@@ -1,4 +1,5 @@
 ---
+description: "Generating Reports (DB2ToSQL)"
 title: "Generating Reports (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Generating Reports (DB2ToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  
@@ -128,5 +129,4 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Executing the SSMA Console](./executing-the-ssma-console-db2tosql.md)  

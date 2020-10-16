@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_database_backuphistory (Transact-SQL)"
 title: "sp_delete_database_backuphistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_database_backuphistory"
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

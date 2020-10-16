@@ -1,4 +1,5 @@
 ---
+description: "SQLSetDescField"
 title: "SQLSetDescField | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -42,7 +43,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
+ [SQLSetDescField](../../odbc/reference/syntax/sqlsetdescfield-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

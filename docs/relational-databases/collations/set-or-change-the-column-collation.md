@@ -1,4 +1,5 @@
 ---
+description: "Set or Change the Column Collation"
 title: "Set or Change the Column Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/05/2019"

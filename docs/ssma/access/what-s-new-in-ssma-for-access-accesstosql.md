@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/31/2020"
+ms.date: "9/28/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,18 @@ ms.author: alexiva
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.14
+
+In addition to several improvements to ensure greater accessibility for people with disabilities, the v8.14 release of SSMA for Access requires a project upgrade, as it now stores full source/target server version in the project metadata.
+
+## SSMA v8.13
+
+The v8.13 release of SSMA for Access contains the following changes:
+
+* Fix `ORDER BY` conversion with `UNION` clause
+* Support for filtered unique indexes
+* Consider implicit type casts when converting procedure and function calls
 
 ## SSMA v8.12
 
@@ -109,9 +121,9 @@ The v8.1 release of SSMA for Access is enhanced with targeted fixes that are des
 
 The v8.0 release of SSMA for Access is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
@@ -226,8 +238,8 @@ The January 2016 maintenance release of SSMA for Access contains the following c
 
 The July 2014 release of SSMA for Access contains the following changes:
 
-* Improved Azure SQL DB code conversion.
-* Moved extension pack functionality to schema to support Azure SQL DB.
+* Improved Azure SQL Database code conversion.
+* Moved extension pack functionality to schema to support Azure SQL Database.
 * Tested performance improvements for databases with over 10k objects.
 * Added UI improvements for dealing with large number of objects.
 * Added support for highlighting of "well known" LOB schemas (so they can be ignored in conversion).

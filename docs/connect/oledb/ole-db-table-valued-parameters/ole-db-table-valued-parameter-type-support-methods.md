@@ -1,6 +1,6 @@
 ---
 title: "OLE DB Table-Valued Parameter Type Support (Methods) | Microsoft Docs"
-description: "OLE DB Table-Valued Parameter type support (Methods)"
+description: Learn about standard OLE DB methods that support table-valued parameters in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -10,8 +10,8 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (OLE DB), API support (methods)"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

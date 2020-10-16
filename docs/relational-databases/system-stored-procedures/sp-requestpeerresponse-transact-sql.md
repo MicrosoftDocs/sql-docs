@@ -1,4 +1,5 @@
 ---
+description: "sp_requestpeerresponse (Transact-SQL)"
 title: "sp_requestpeerresponse (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_requestpeerresponse"
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

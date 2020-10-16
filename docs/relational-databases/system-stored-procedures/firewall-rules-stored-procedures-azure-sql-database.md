@@ -1,4 +1,5 @@
 ---
+description: "Firewall Rules Stored Procedures (Azure SQL Database)"
 title: "Firewall Rules Stored Procedures"
 titleSuffix: Azure SQL Database
 ms.date: "07/28/2016"
@@ -21,7 +22,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 # Firewall Rules Stored Procedures (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  This section contains the following stored procedures that set or delete firewall rules. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] firewall rules can be used with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. For more information, see [Configure Azure SQL Database firewall rules - overview](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
+  This section contains the following stored procedures that set or delete firewall rules. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] firewall rules can be used with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. For more information, see [Configure Azure SQL Database firewall rules - overview](/azure/azure-sql/database/firewall-configure).
 
 :::row:::
     :::column:::
@@ -43,6 +44,3 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 &nbsp;
   
 For [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], use Window firewall rules. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
-  
-
-

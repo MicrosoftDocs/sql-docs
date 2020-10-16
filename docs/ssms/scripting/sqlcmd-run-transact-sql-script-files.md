@@ -4,7 +4,7 @@ description: Learn how to use sqlcmd to run a Transact-SQL script file. It can c
 ms.custom: seo-lt-2019
 ms.date: "07/15/2016"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -63,7 +63,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  No output is returned in the Command Prompt window. Instead, the output is sent to the EmpAdds.txt file. You can verify this output by opening the EmpAdds.txt file.  
   
 ## See Also  
- [Start the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
+ [Start the sqlcmd Utility](./sqlcmd-start-the-utility.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "Revert word breakers used by Search to previous version (SQL Server Search)"
 title: "Revert word breakers used by Search to previous version"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -374,5 +375,4 @@ ms.custom: "seo-lt-2019"
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)
- 
+ [Behavior Changes to Full-Text Search](./full-text-search.md?view=sql-server-ver15)

@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Security"
 title: "Temporal Table Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2019"
@@ -8,13 +9,15 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Security
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 To understand security as it applies to temporal tables, it is important to understand the security principals that apply to temporal tables. After you understand these security principles, you are ready to dive into the security around the **CREATE TABLE**, **ALTER TABLE**, and **SELECT** statements.
 

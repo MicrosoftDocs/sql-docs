@@ -1,4 +1,5 @@
 ---
+description: "Transfer Octet Length"
 title: "Transfer Octet Length | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2019"

@@ -1,4 +1,5 @@
 ---
+description: "getMoreResults Method (SQLServerStatement)"
 title: "getMoreResults Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

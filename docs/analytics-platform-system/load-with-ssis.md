@@ -248,7 +248,7 @@ Run the package on your computer Integration Services.
 [Tutorial: Creating a Basic Package Using a Wizard](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Getting Started (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Dynamic Package Generation Sample](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[Designing Your SSIS Packages for Parallelism (SQL Server Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Designing Your SSIS Packages for Parallelism (SQL Server Video)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Microsoft SQL Server Community Examples: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Improving Incremental Loads with Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Slowly Changing Dimension Transformation](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  

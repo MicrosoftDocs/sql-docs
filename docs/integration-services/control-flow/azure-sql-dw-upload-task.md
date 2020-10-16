@@ -1,4 +1,5 @@
 ---
+description: "Azure SQL DW Upload Task"
 title: "Azure SQL DW Upload Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
@@ -20,8 +21,8 @@ ms.author: "lingxl"
 
 
 
-The **Azure SQL DW Upload Task** enables an SSIS package to copy tabular data to Azure SQL Data Warehouse (DW) from file system or Azure Blob Storage.
-The task leverages PolyBase to improve performance, as described in the article [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).
+The **Azure SQL DW Upload Task** enables an SSIS package to copy tabular data to Azure Synapse Analytics (DW) from file system or Azure Blob Storage.
+The task leverages PolyBase to improve performance, as described in the article [Azure Synapse Analytics Loading Patterns and Strategies](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies).
 The currently supported source data file format is delimited text in UTF8 encoding.
 When copying from file system, data will first be uploaded to Azure Blob Storage for staging, and then to Azure SQL DW. Therefore, an Azure Blob Storage account is needed.
 

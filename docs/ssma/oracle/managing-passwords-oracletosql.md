@@ -1,4 +1,5 @@
 ---
+description: "Managing Passwords (OracleToSQL)"
 title: "Managing Passwords (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -10,9 +11,9 @@ helpviewer_keywords:
   - "Managing Passwords in Oracle, Exporting or Importing Encrypted Password"
   - "Managing passwords in Oracle, Securing Password"
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Managing Passwords (OracleToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers.
@@ -125,5 +126,4 @@ The SSMA Console application allows you to export encrypted database passwords p
 8. Please confirm password: xxxxxxxx  
 
 ## See Also  
-[Executing the SSMA Console (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[Executing the SSMA Console (Oracle)](./executing-the-ssma-console-oracletosql.md)  

@@ -1,4 +1,5 @@
 ---
+description: "sys.systypes (Transact-SQL)"
 title: "sys.systypes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

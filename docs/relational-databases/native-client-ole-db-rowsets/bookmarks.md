@@ -1,4 +1,5 @@
 ---
+description: "Row bookmarks (Native Client OLE DB provider)"
 title: "Row bookmarks (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

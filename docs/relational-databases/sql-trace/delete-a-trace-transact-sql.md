@@ -1,4 +1,5 @@
 ---
+description: "Delete a Trace (Transact-SQL)"
 title: "Delete a Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

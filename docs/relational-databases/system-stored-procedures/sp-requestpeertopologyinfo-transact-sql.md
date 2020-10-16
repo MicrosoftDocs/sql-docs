@@ -1,4 +1,5 @@
 ---
+description: "sp_requestpeertopologyinfo (Transact-SQL)"
 title: "sp_requestpeertopologyinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_requestpeertopologyinfo"
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

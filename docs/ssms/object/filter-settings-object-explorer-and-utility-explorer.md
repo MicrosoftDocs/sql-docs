@@ -1,4 +1,5 @@
 ---
+description: "Filter Settings (Object Explorer and Utility Explorer)"
 title: "Filter Settings (Object Explorer and Utility Explorer)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -68,6 +69,5 @@ Type the value to compare to the property. For dates, click the down arrow to sh
 Removes all current filter settings.  
   
 ## See Also  
-[Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
+[Use SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
 [Overview of SQL Server Utility](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  

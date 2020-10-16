@@ -2,7 +2,7 @@
 title: Azure Data Studio FAQ
 description: 'Get answers to questions frequently asked about Azure Data Studio, such as "What does it do?", "Who should use it?", and "How much does it cost?".'
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
@@ -176,9 +176,9 @@ SQL PowerShell is available today on the PowerShell gallery and you can use it o
 
 Developers and DBAs are usually the users of Azure Data Studio.
 
-## Does Azure Data Studio integrate with Azure SQL Data Warehouse?
+## Does Azure Data Studio integrate with Azure Synapse Analytics?
 
-Yes. Azure Data Studio support for Azure SQL Data Warehouse is currently in preview, together with Azure SQL Database Managed Instance, and SQL Server 2019 Big Data.
+Yes. Azure Data Studio support for Azure Synapse Analytics is currently in preview, together with Azure SQL Managed Instance, and SQL Server 2019 Big Data.
 
 ## Why is Azure Data Studio important for the new version of SQL Server?
 

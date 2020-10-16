@@ -1,4 +1,5 @@
 ---
+description: "Enabling Visual Studio Analyzer"
 title: "Enabling Visual Studio Analyzer | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

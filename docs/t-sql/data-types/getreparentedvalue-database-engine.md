@@ -1,4 +1,5 @@
 ---
+description: "GetReparentedValue (Database Engine)"
 title: "GetReparentedValue (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -25,12 +26,12 @@ Returns a node whose path from the root is the path to _newRoot_, followed by th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 node. GetReparentedValue ( oldRoot, newRoot )  
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  
@@ -106,8 +107,7 @@ this. GetReparentedValue(oldParent, newParent)
 ```  
   
 ## See also
-[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](./hierarchyid-data-type-method-reference.md)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

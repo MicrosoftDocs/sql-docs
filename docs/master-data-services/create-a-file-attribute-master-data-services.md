@@ -1,4 +1,5 @@
 ---
+description: "Create a File Attribute (Master Data Services)"
 title: Create a File Attribute
 ms.custom: ""
 ms.date: "03/15/2017"

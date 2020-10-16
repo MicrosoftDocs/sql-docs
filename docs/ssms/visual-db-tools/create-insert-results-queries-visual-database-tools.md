@@ -1,4 +1,5 @@
 ---
+description: "Create Insert Results Queries (Visual Database Tools)"
 title: Create Insert Results Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

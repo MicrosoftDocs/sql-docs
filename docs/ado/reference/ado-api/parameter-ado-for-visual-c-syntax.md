@@ -1,8 +1,9 @@
 ---
+description: "Parameter (ADO for Visual C++ Syntax)"
 title: "Parameter (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -45,4 +46,4 @@ put_Value(VARIANT val)
 ```  
   
 ## See Also  
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter Object](./parameter-object.md)

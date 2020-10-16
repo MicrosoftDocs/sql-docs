@@ -1,4 +1,5 @@
 ---
+description: "Mount Tape Event Class"
 title: "Mount Tape Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

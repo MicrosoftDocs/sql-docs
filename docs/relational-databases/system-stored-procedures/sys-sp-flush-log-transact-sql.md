@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_flush_log (Transact-SQL)"
 title: "sys.sp_flush_log (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

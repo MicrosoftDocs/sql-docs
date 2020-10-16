@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL)"
 title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/16/2018"
 ms.prod: sql
@@ -85,7 +86,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## Examples  
  The following example alters the database encryption key to use the `AES_256` algorithm.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 ALTER DATABASE ENCRYPTION KEY  

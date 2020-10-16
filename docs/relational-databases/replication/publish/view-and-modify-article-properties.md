@@ -1,4 +1,5 @@
 ---
+description: "View and Modify Article Properties"
 title: "View and Modify Article Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "&lt;source data query&gt;"
 title: "&lt;source data query&gt; | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -47,6 +48,5 @@ author: minewiskan
 ## See Also  
  [Data Mining Extensions &#40;DMX&#41; Data Manipulation Statements](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../dmx/data-mining-extensions-dmx-statements.md)   
- [Nested Tables &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
-  
+ [Nested Tables &#40;Analysis Services - Data Mining&#41;](/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   

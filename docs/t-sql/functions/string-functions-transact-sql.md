@@ -1,4 +1,5 @@
 ---
+description: "String Functions (Transact-SQL)"
 title: "String Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2016"

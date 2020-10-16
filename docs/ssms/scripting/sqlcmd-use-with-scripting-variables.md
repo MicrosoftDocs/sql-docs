@@ -4,7 +4,7 @@ description: Learn how to use scripting variables to make a script that that can
 ms.custom: seo-lt-2019
 ms.date: "08/09/2016"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 dev_langs: 
@@ -326,8 +326,7 @@ C:\> sqlcmd
 ```
   
 ## See Also  
- [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+ [Use the sqlcmd Utility](./sqlcmd-use-the-utility.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [Command Prompt Utility Reference &#40;Database Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
-  
   

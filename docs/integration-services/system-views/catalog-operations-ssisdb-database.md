@@ -1,4 +1,5 @@
 ---
+description: "catalog.operations (SSISDB Database)"
 title: "catalog.operations (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

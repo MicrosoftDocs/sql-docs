@@ -1,4 +1,5 @@
 ---
+description: "Creating Script Files (DB2ToSQL)"
 title: "Creating Script Files (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "F"
+ms.author: "alexiva"
 ---
 # Creating Script Files (DB2ToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  

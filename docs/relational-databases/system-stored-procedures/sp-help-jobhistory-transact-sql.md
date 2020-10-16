@@ -1,4 +1,5 @@
 ---
+description: "sp_help_jobhistory (Transact-SQL)"
 title: "sp_help_jobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobhistory"
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

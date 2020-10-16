@@ -1,4 +1,5 @@
 ---
+description: "DBCC CLEANTABLE (Transact-SQL)"
 title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -37,7 +38,6 @@ Reclaims space from dropped variable-length columns in tables or indexed views.
 ## Syntax  
   
 ```syntaxsql
-  
 DBCC CLEANTABLE  
 (  
     { database_name | database_id | 0 }  
@@ -75,7 +75,7 @@ DBCC CLEANTABLE should not be executed as a routine maintenance task. Instead, u
 ## Result Sets  
 DBCC CLEANTABLE returns:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

@@ -1,4 +1,5 @@
 ---
+description: "Select Source Tables and Views (SQL Server Import and Export Wizard)"
 title: "Select Source Tables and Views (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"

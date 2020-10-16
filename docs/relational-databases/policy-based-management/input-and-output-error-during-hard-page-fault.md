@@ -1,4 +1,5 @@
 ---
+description: "Input and Output Error During Hard Page Fault"
 title: "Input and Output Error During Hard Page Fault | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -20,6 +21,5 @@ ms.author: vanto
 ## Best Practices Recommendations  
  Review the following Microsoft Knowledge Base article for more information about how to troubleshoot this error:  
   
--   [Microsoft Knowledge Base article 305547](https://go.microsoft.com/fwlink/?linkid=117748)  
-  
+-   [Microsoft Knowledge Base article 305547](/troubleshoot/windows-server/performance/support-for-booting-from-storage-area-network)  
   

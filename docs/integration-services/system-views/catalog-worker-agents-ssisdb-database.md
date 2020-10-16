@@ -1,4 +1,5 @@
 ---
+description: "catalog.worker_agents (SSISDB Database)"
 title: "catalog.worker_agents (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

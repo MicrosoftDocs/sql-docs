@@ -1,4 +1,5 @@
 ---
+description: "Design-time Methods of a Data Flow Component"
 title: "Design-time Methods of a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Steps in the SQL Server Import and Export Wizard"
 title: "Steps in the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020

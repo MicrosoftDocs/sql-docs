@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Extensions (DMX) Syntax Elements"
 title: "Data Mining Extensions (DMX) Syntax Elements | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

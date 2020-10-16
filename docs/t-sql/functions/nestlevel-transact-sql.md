@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;NESTLEVEL (Transact-SQL)"
 title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2017"
@@ -29,7 +30,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@NESTLEVEL  
 ```  
   
@@ -48,7 +49,7 @@ ms.author: jrasnick
 ### A. Using @@NESTLEVEL in a procedure  
  The following example creates two procedures: one that calls the other, and one that displays the `@@NESTLEVEL` setting of each.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'usp_OuterProc', N'P')IS NOT NULL  
@@ -83,7 +84,7 @@ Inner Level
 ### B. Calling @@NESTLEVEL  
  The following example shows the difference in values returned by `SELECT`, `EXEC`, and `sp_executesql` when each of them calls `@@NESTLEVEL`.  
   
-```  
+```sql  
 CREATE PROC usp_NestLevelValues AS  
     SELECT @@NESTLEVEL AS 'Current Nest Level';  
 EXEC ('SELECT @@NESTLEVEL AS OneGreater');   

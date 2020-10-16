@@ -1,4 +1,5 @@
 ---
+description: "Setup of the Data Profiling Task"
 title: "Setup of the Data Profiling Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SQRT (Transact-SQL)"
 title: "SQRT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SQRT ( float_expression )  
 ```  
   
@@ -45,8 +46,8 @@ SQRT ( float_expression )
 ## Examples  
  The following example returns the square root of numbers between `1.00` and `10.00`.  
   
-```  
-DECLARE @myvalue float;  
+```sql  
+DECLARE @myvalue FLOAT;  
 SET @myvalue = 1.00;  
 WHILE @myvalue < 10.00  
    BEGIN  
@@ -82,7 +83,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the square root of numbers `1.00` and `10.00`.  
   
-```  
+```sql  
 SELECT SQRT(1.00), SQRT(10.00);  
 ```  
   

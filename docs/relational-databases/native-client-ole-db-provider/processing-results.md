@@ -1,4 +1,5 @@
 ---
+description: "Processing Results (Native Client OLE DB provider)"
 title: Processing results (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

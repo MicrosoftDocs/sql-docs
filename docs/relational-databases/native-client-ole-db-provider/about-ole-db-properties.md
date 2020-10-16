@@ -1,4 +1,5 @@
 ---
+description: "About SQL Server Native Client OLE DB Properties"
 title: "About OLE DB Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -44,6 +45,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Creating a SQL Server Native Client OLE DB Provider Application](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
- [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
-  
+ [Properties (OLE DB)](/previous-versions/windows/desktop/ms722734(v=vs.85))  
   

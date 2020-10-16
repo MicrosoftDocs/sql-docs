@@ -1,4 +1,5 @@
 ---
+description: "Open With (New File)"
 title: "Open With (New File)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -37,4 +38,4 @@ To specify a default editor (and language encoding options, if applicable) for t
 > In the list of programs under **Select a program to open**, the name of the default editor for the type of file selected is followed by **(Default)**.  
   
 ## See Also  
-[Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[Associating File Extensions to a Code Editor](../scripting/associate-file-extensions-to-a-code-editor.md)

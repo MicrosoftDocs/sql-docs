@@ -1,4 +1,5 @@
 ---
+description: "Create a Model Administrator (Master Data Services)"
 title: Create a Model Administrator
 ms.custom: ""
 ms.date: "03/01/2017"

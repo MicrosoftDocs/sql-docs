@@ -1,4 +1,5 @@
 ---
+description: "Cleanse Data in a Composite Domain"
 title: "Cleanse Data in a Composite Domain"
 ms.date: "03/01/2017"
 ms.prod: sql

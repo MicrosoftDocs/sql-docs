@@ -1,4 +1,5 @@
 ---
+description: "Limit Search Results with RANK"
 title: "Limit Search Results with RANK | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Sending an HTML Mail Message with the Script Task"
 title: "Sending an HTML Mail Message with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

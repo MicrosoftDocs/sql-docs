@@ -1,4 +1,5 @@
 ---
+description: "sp_get_query_template (Transact-SQL)"
 title: "sp_get_query_template (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_get_query_template"
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

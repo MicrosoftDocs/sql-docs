@@ -89,6 +89,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Describes how Parameters are used in a stored procedure.|[Parameters](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## Related Content  
- [CLR Stored Procedures](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [CLR Stored Procedures](/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
  [Deferred name resolution](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
-  

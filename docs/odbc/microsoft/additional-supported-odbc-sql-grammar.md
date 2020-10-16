@@ -1,4 +1,5 @@
 ---
+description: "Additional Supported ODBC SQL Grammar"
 title: "Additional Supported ODBC SQL Grammar | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

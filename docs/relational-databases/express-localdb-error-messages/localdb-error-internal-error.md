@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INTERNAL_ERROR"
 title: "LOCALDB_ERROR_INTERNAL_ERROR | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

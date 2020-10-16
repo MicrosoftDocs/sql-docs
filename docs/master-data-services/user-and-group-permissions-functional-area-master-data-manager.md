@@ -1,4 +1,5 @@
 ---
+description: "User and Group Permissions Functional Area (Master Data Manager)"
 title: User and Group Permissions Functional Area
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Filter Published Data"
 title: "Filter Published Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

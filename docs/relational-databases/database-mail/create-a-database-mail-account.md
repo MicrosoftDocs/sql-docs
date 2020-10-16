@@ -1,4 +1,5 @@
 ---
+description: "Create a Database Mail Account"
 title: "Create a Database Mail Account | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ODBC Core Subkey"
 title: "ODBC Core Subkey | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Developing a Custom Transformation Component with Asynchronous Outputs"
 title: "Developing a Custom Transformation Component with Asynchronous Outputs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

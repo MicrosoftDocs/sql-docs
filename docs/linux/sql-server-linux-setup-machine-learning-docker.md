@@ -87,7 +87,7 @@ Complete the following steps to build the docker image:
    ```
   
    > [!NOTE]
-   > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
+   > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](./sql-server-linux-docker-container-deployment.md). If you use the same container names and ports, the rest of this walkthrough still works with production containers.
 
 2. To view your Docker containers, run the `docker ps` command:
 
@@ -95,7 +95,7 @@ Complete the following steps to build the docker image:
    sudo docker ps -a
    ```
 
-3. If the **STATUS** column shows a status of **Up**, SQL Server is running  in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+3. If the **STATUS** column shows a status of **Up**, SQL Server is running  in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](./sql-server-linux-docker-container-troubleshooting.md).
 
  
     Output:
@@ -124,4 +124,4 @@ Python developers can learn how to use Python with SQL Server by following these
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
 + [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/r-taxi-classification-introduction.md)

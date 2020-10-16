@@ -5,7 +5,7 @@ description: In part five of this five-part tutorial series, you'll operationali
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -52,11 +52,11 @@ EXEC sp_execute_external_script @language = N'R',
   @script = N' 
     mod <- unserialize(as.raw(model));
     print(summary(mod))
-    OutputDataSet<-Predict(mod, InputDataSet);
+    OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
     str(OutputDataSet)
     print(OutputDataSet)
-    ', 
-  @input_data_1 = @inquery, 
+    ',
+  @input_data_1 = @inquery,
   @params = N'@model varbinary(max)',
   @model = @lmodel2 
   WITH RESULT SETS (("Score" float));
@@ -115,7 +115,7 @@ A more common scenario is to generate predictions for multiple observations in b
      @script = N'
        mod <- unserialize(as.raw(model));
        print(summary(mod))
-       OutputDataSet<-Predict(mod, InputDataSet);
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet)
        print(OutputDataSet)
      ',
@@ -164,7 +164,7 @@ If you call the stored procedure from an external application, make sure that th
      @script = N'  
        mod <- unserialize(as.raw(model));  
        print(summary(mod));  
-       OutputDataSet<-Predict(mod, InputDataSet);
+       OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));
        str(OutputDataSet);
        print(OutputDataSet); 
        ',  
@@ -179,7 +179,7 @@ If you call the stored procedure from an external application, make sure that th
    Open a new **Query** window, and call the stored procedure, providing values for each of the parameters. The parameters represent feature columns used by the model and are required.
 
    ```sql
-   EXEC [dbo].[RPredictSingleRow] @model = 'TrainLog_model',
+   EXEC [dbo].[RPredictSingleRow] @model = 'TrainLogit_model',
    @passenger_count = 1,
    @trip_distance = 2.5,
    @trip_time_in_secs = 631,
@@ -192,7 +192,7 @@ If you call the stored procedure from an external application, make sure that th
    Or, use this shorter form supported for [parameters to a stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
    ```sql
-   EXEC [dbo].[RPredictSingleRow] 'TrainLog_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+   EXEC [dbo].[RPredictSingleRow] 'TrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
 3. The results indicate that the probability of getting a tip is low (zero) on these top 10 trips, since all are single-passenger trips over a relatively short distance.

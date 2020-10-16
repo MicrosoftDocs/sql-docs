@@ -249,8 +249,9 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
 Learn more about notebooks and Kqlmagic:
 
+- [Kusto (KQL) extension for Azure Data Studio (Preview)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
+- [Create and run a Kusto (KQL) notebook (Preview)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
 - [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
 - [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
-- [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)

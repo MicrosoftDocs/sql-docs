@@ -2,8 +2,8 @@
 title: Install SQL Server Java Language Extensions on Windows 
 titleSuffix:
 description: Learn how to install the Java Language Extensions feature on SQL Server on Windows by running the SQL Server setup wizard.
-author: dphansen
-ms.author: davidph 
+author: cawrites
+ms.author: chadam 
 ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Learn how to install the Language Extensions component on SQL Server by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 > [!NOTE]
-> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](../..//linux/sql-server-linux-setup-language-extensions.md)
+> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)
 
 <a name="prerequisites"></a> 
 

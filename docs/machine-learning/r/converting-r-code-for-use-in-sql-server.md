@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Convert R code for execution in SQL Server (In-Database) instances
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 This article provides high-level guidance on how to modify R code to work in SQL Server. 
 
@@ -116,9 +116,9 @@ How much you change your code depends on whether you intend to submit the R code
   For example, this R solution shows how user-defined T-SQL functions and R can perform the same feature engineering task: [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
   ::: moniker-end
 
-+ If possible, replace conventional R functions with **ScaleR** functions that support distributed execution. For more information, see [Comparison of Base R and Scale R Functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
++ If possible, replace conventional R functions with **ScaleR** functions that support distributed execution. For more information, see [Comparison of Base R and Scale R Functions](/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
 
-+ Consult with a database developer to determine ways to improve performance by using SQL Server features such as [memory-optimized tables](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), or, if you have Enterprise Edition, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
++ Consult with a database developer to determine ways to improve performance by using SQL Server features such as [memory-optimized tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md), or, if you have Enterprise Edition, [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)).
 
 ## Step 3. Prepare for deployment
 

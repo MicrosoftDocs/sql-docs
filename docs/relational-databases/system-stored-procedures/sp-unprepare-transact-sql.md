@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 ## Syntax  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_unprepare handle           
 ```  

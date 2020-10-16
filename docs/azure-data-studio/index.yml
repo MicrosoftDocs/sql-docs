@@ -35,7 +35,7 @@ landingContent:
             url: quickstart-sql-server.md
           - text: Connect and query Azure SQL database
             url: quickstart-sql-database.md
-          - text: Connect and query data in Azure SQL data warehouse
+          - text: Connect and query data in Azure Synapse Analytics
             url: quickstart-sql-dw.md
           - text: Connect and query data in  PostgreSQL
             url: quickstart-postgres.md

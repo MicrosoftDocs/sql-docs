@@ -211,6 +211,13 @@ If you want to install Azure Data Studio in the background with no GUI prompts a
     %systemdrive%\azuredatastudio-windows-user-setup-1.23.0.exe /VERYSILENT /MERGETASKS=!runcode
     ```
 
+    > [!Note]
+    > The example also works with the system installer file.
+    > 
+    > ```console
+    > <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    > ```
+
     You can also pass */SILENT* instead of */VERYSILENT* to see the setup UI.
 
 3. If all goes well, you can see Azure Data Studio installed.

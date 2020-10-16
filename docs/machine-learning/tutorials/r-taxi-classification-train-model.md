@@ -38,7 +38,7 @@ When calling R from T-SQL, you use the system stored procedure, [sp_execute_exte
 
 1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window.
 
-2. Run the following statement to create the stored procedure **TrainLogModel**. This stored procedure defines the input data and uses **lm** to create a logistic regression model.
+2. Run the following statement to create the stored procedure **RTrainLogitModel**. This stored procedure defines the input data and uses **lm** to create a logistic regression model.
 
    ```sql
    CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)

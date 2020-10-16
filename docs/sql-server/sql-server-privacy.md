@@ -70,7 +70,7 @@ Customer data is defined as data stored within user tables, directly or indirect
 
 Data received from a user, or generated from their use of the product.
 - Linkable to an individual user.
-- Does not contain content.
+- Does not contain customer data.
 
 ### Examples of personal data
 
@@ -134,7 +134,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
     - Permitted usage scenarios
 
       > [!NOTE]
-      > All object metadata values are hashed before collection.
+      > All metadata values are hashed before collection.
       >
 
       |Scenario  |Access restrictions  |Retention requirements|

@@ -211,7 +211,7 @@ Using virtual machines to deploy Linux-based [!INCLUDE[ssnoversion-md](../includ
 When it comes to AGs and FCIs under virtualization, ensure that anti-affinity is set for the nodes of a given Pacemaker cluster. When configured for high availability in an AG or FCI configuration, the VMs hosting [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] should never be running on the same hypervisor host. For example, if a two-node FCI is deployed, there would need to be *at least* three hypervisor hosts so that there is somewhere for one of the VMs hosting a node to go in the event of a host failure, especially if using features like Live Migration or vMotion.
 
 For more specifics, consult:
--   Hyper-V Documentation - [Using Guest Clustering for High Availability](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   Hyper-V Documentation - [Using Guest Clustering for High Availability](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11))
 -   Whitepaper (written for Windows-based deployments, but most of the concepts still apply) - [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 ### Networking

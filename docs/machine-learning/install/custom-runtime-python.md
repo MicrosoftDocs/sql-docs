@@ -35,7 +35,7 @@ Before installing a Python custom runtime, install the following:
   > [!NOTE]
   > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
-+ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/windows-java.md).
 
 + [Python 3.7]( https://www.python.org/downloads/release/python-379/).
 
@@ -164,7 +164,7 @@ When you install SQL Server on Linux, you must configure a Microsoft repository.
   > [!NOTE]
   > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
 
-+ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions.md).
++ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [Python 3.7](https://www.python.org/downloads/release/python-379/).
 

@@ -63,7 +63,7 @@ For the latest release notes and what's new information, see the following:
     
 > [![Download from Evaluation Center](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
-> ![Azure Virtual Machine small](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**   
+> ![Azure Virtual Machine small](/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)**   
   
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -103,7 +103,7 @@ For the latest release notes and what's new information, see the following:
   
 |Management tools|Description|  
 |----------------------|-----------------|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is an integrated environment to access, configure, manage, administer, and develop components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] lets developers and administrators of all skill levels use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Download and install <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is an integrated environment to access, configure, manage, administer, and develop components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] lets developers and administrators of all skill levels use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Download and install <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] from  [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager provides basic configuration management for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] services, server protocols, client protocols, and client aliases.|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] provides a graphical user interface to monitor an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)] or [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor|[!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor helps create optimal sets of indexes, indexed views, and partitions.|  
@@ -334,23 +334,23 @@ For info about the Integration Services (SSIS) features supported by the edition
 
 ##  <a name="SSAS"></a> Analysis Services  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016). 
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016). 
   
 ##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
    
 ##  <a name="BIT"></a> BI Semantic Model (Tabular)  
   
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
+For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
+For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
   
 ##  <a name="DM"></a> Data Mining  
   
-For information about the Data Mining features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
+For information about the Data Mining features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016).
   
 ##  <a name="SSRS"></a> Reporting Services  
   
@@ -358,7 +358,7 @@ For information about the Reporting Services features supported by the editions 
 
 ##  <a name="BIC"></a> Business Intelligence Clients  
 
-For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](https://docs.microsoft.com/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016) or [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](/analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016) or [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
 ##  <a name="SLS"></a> Spatial and Location Services  
   
@@ -386,7 +386,6 @@ For information about the Business Intelligence Client features supported by the
 > [![Download SSMS](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## See Also  
- [Install SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Install SQL Server](../database-engine/install-windows/install-sql-server.md)  
  
-  
   

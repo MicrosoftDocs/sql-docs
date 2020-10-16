@@ -45,7 +45,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | Added support for secure enclave import and export for SQL Server 2019 |
 | Deployment | Added support to ignore change data capture enabled tables when exporting from Azure SQL Database |
 | Deployment | Added support for index option OPTIMIZE_FOR_SEQUENTIAL_KEY in Azure SQL Database |
-| Deployment | Added support for identity columns for Azure SQL Data Warehouse | 
+| Deployment | Added support for identity columns for Azure Synapse Analytics | 
 | Help | Output the sqlpackage version in the help (/?) and support the /version parameter | 
 
 ### Fixes
@@ -57,12 +57,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Deployment | Fixed dacpac registration when deploying for .NET Core | 
 | Deployment | Fixed sqlpackage on .NET Core handling of the /accessToken (/at) parameter | 
 | Deployment | Allow ALTER TABLE statements in stored procedures as non-top level statements | 
-| Deployment | Fixed Azure SQL Data Warehouse validation of materialized views to be case insensitive | 
+| Deployment | Fixed Azure Synapse Analytics validation of materialized views to be case insensitive | 
 
 ### Known Issues
 | Feature | Details |
 | :------ | :------ |
-| Deployment | The Azure SQL Data Warehouse Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | 
+| Deployment | The Azure Synapse Analytics Workload Management feature (Workload Groups and Workload Classifiers) is not yet supported | 
 
 ## 18.5.1 sqlpackage
 
@@ -90,14 +90,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### Features
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Data Sensitivity classification now supported for SQL Server 2008 and up, Azure SQL Database, and Azure SQL Data Warehouse |
-| Deployment | Add Azure SQL Data Warehouse support for table constraints |
-| Deployment | Add Azure SQL Data Warehouse support for ordered clustered column store index |
+| Deployment | Data Sensitivity classification now supported for SQL Server 2008 and up, Azure SQL Database, and Azure Synapse Analytics |
+| Deployment | Add Azure Synapse Analytics support for table constraints |
+| Deployment | Add Azure Synapse Analytics support for ordered clustered column store index |
 | Deployment | Add support for External Data Source (for Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster) and External Table for SQL Server 2019 Big Data Cluster |
 | Deployment | Add SQL Database Edge Instance as supported edition |
 | Deployment | Support Managed Instance server names of the form '\<server>.\<dnszone>.database.windows.net' |
-| Deployment | Add support for copy command in Azure SQL Data Warehouse |
-| Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure SQL Data Warehouse |
+| Deployment | Add support for copy command in Azure Synapse Analytics |
+| Deployment | Add deployment option 'IgnoreTablePartitionOptions' during Publish to avoid table recreation when there is change in partition function on table for Azure Synapse Analytics |
 | .NET Core | Add support for Microsoft.Data.SqlClient in .NET Core version of sqlpackage |
 | &nbsp; | &nbsp; |
 
@@ -108,9 +108,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Deployment | Fix generating GRANT statements for AlterAnyDatabaseScopedConfiguration and AlterAnySensitivityClassification permissions |
 | Deployment | Fix External Script permission not being recognized |
 | Deployment | Fix for inline property - the implicit addition of the property should not show in difference but explicit mention should show through script |
-| Deployment | Resolved an issue where changing a Table referenced by a Materialized View (MV) causes Alter View statements to be generated which is not supported for MVs for Azure SQL Data Warehouse |
-| Deployment | Fix publish failing when adding column to a table with data for Azure SQL Data Warehouse |
-| Deployment | Fix update script should move data to a new table when changing the distribution column type (data loss scenario) for Azure SQL Data Warehouse |
+| Deployment | Resolved an issue where changing a Table referenced by a Materialized View (MV) causes Alter View statements to be generated which is not supported for MVs for Azure Synapse Analytics |
+| Deployment | Fix publish failing when adding column to a table with data for Azure Synapse Analytics |
+| Deployment | Fix update script should move data to a new table when changing the distribution column type (data loss scenario) for Azure Synapse Analytics |
 | ScriptDom | Fix ScriptDom bug where it couldn't recognize inline constraints defined after an inline index |
 | ScriptDom | Fix ScriptDom SYSTEM_TIME missing closing parenthesis when in a batch statement |
 | Always Encrypted | Fix #tmpErrors table failing to drop if sqlpackage reconnects and the temp table is already gone because the temporary table goes away when the connection dies |
@@ -158,7 +158,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Add support to deploy to Azure SQL Data Warehouse (GA). | 
+| Deployment | Add support to deploy to Azure Synapse Analytics (GA). | 
 | Platform | sqlpackage .NET Core GA for macOS, Linux, and Windows. | 
 | Security | Remove SHA1 code signing. |
 | Deployment | Add support for new Azure database editions: GeneralPurpose, BusinessCritical, Hyperscale |
@@ -197,7 +197,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | Details |
 | :------ | :------ |
-| Deployment | Add support to deploy to Azure SQL Data Warehouse (preview). | 
+| Deployment | Add support to deploy to Azure Synapse Analytics (preview). | 
 | Deployment | Add /p:DatabaseLockTimeout=(INT32 '60') parameter to sqlpackage. | 
 | Deployment | Add /p:LongRunningCommandTimeout=(INT32) parameter to sqlpackage. |
 | Export/Extract | Add /p:TempDirectoryForTableData=(STRING) parameter to sqlpackage. |

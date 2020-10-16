@@ -71,5 +71,4 @@ When registering [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registered Ser
 Saves the settings in **Registered Servers**.  
   
 ## See Also  
-[Connection Properties Dialog Box](../../ssms/f1-help/connection-properties-dialog-box.md)  
-  
+[Connection Properties Dialog Box]()  

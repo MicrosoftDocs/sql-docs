@@ -20,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides two mechanisms for generating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. You can create scripts for multiple objects by using the **Generate and Publish Scripts Wizard**. You can also generate a script for individual objects or multiple objects by using the **Script as** menu in **Object Explorer**.
 
-For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), see [Tutorial: Scripting in SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+For a detailed Tutorial on scripting various objects using SQL Server Management Studio (SSMS), see [Tutorial: Scripting in SSMS](../tutorials/scripting-ssms.md).
 
 ## Before You Begin
 
@@ -28,7 +28,7 @@ Choose the mechanism that best meets your requirements.
 
 ###  <a name="GenPubScriptWiz"></a> Generate and Publish Scripts Wizard
 
-Use the **Generate and Publish Scripts Wizard** to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] script for many objects. The wizard generates a script of all the objects in a database, or a subset of the objects that you select. The wizard has many options for your scripts, such as whether to include permissions, collation, constraints, and so on. For instructions on using the wizard, see [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).
+Use the **Generate and Publish Scripts Wizard** to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] script for many objects. The wizard generates a script of all the objects in a database, or a subset of the objects that you select. The wizard has many options for your scripts, such as whether to include permissions, collation, constraints, and so on. For instructions on using the wizard, see [Generate and Publish Scripts Wizard](./generate-and-publish-scripts-wizard.md).
   
 ### <a name="OEScriptAsMenu"></a> Object Explorer Script As Menu
 

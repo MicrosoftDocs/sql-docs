@@ -18,7 +18,7 @@ This article introduces [SQL Server Management Studio (SSMS)](../ssms/sql-server
 > [!TIP]
 > If you do not have a Windows machine to run SSMS on, consider the new [Azure Data Studio](../azure-data-studio/index.yml). It provides a graphical tool for managing SQL Server and runs on both Linux and Windows.
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of SQL Server. It can connect to SQL Server running on any platform both on-premises, in Docker containers, and in the cloud. It also connects to Azure SQL Database and Azure SQL Data Warehouse. SSMS combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server to developers and administrators of all skill levels.
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of SQL Server. It can connect to SQL Server running on any platform both on-premises, in Docker containers, and in the cloud. It also connects to Azure SQL Database and Azure Synapse Analytics. SSMS combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server to developers and administrators of all skill levels.
 
 SSMS offers a broad set of development and management capabilities for SQL Server, including tools to:
 
@@ -101,7 +101,7 @@ While connected to the *master* database, you can create databases on the server
 
 3. In the *New Database* dialog, enter a name for your new database, and then click *OK*
 
-The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md).
+The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-transact-sql.md).
 
 ### Drop a database
 
@@ -137,6 +137,6 @@ When a pane is expanded, Activity Monitor queries the instance for information. 
 ## See also
 - [What is SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Export and Import a database with SSMS](sql-server-linux-migrate-ssms.md)
-- [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Tutorial: SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
 - [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)

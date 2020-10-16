@@ -43,7 +43,7 @@ The **uniqueidentifier** type is considered a character type for the purposes of
 
 These tools and features do not support the `uniqueidentifier` data type:
 - PolyBase
-- [dwloader loading tool](https://msdn.microsoft.com/sql/analytics-platform-system/dwloader) for Parallel Data Warehouse
+- [dwloader loading tool](../../analytics-platform-system/dwloader.md) for Parallel Data Warehouse
 
 ## Examples  
 The following example converts a `uniqueidentifier` value to a `char` data type.
@@ -80,5 +80,4 @@ String                                       TruncatedValue
 [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
-  
   

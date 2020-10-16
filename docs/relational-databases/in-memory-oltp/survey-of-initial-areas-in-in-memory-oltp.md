@@ -66,8 +66,8 @@ In-Memory Analytics refers to SQL SELECTs which aggregate transactional data, ty
 There are two major scenarios:  
   
 - *Batch Operational Analytics* refers to aggregation processes that run either after business hours or on secondary hardware which has copies of the transactional data.  
-  - [Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) also relates to batch operational analytics.  
-- *Real-time Operational Analytics* refers to aggregration processes that run during business hours and on the primary hardware which is used for transactional workloads.  
+  - [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) also relates to batch operational analytics.  
+- *Real-time Operational Analytics* refers to aggregation processes that run during business hours and on the primary hardware which is used for transactional workloads.  
   
   
 The present article focuses on OLTP, and not on Analytics. For information on how columnstore indexes bring Analytics to SQL, see:  
@@ -91,20 +91,20 @@ A sequence of excellent blog posts elegantly explains columnstore indexes from s
 3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)
 4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)
 5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)
-6. [Real-Time Operational Analytics: Compression Delay Option for Nonclustered Columnstore Index (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
+6. [Real-Time Operational Analytics: Compression Delay Option for Nonclustered columnstore index (NCCI)](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)
 7. [Real-Time Operational Analytics: Compression Delay option with NCCI and the performance](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)
-8. [Real-Time Operational Analytics: Memory-Optimized Tables and Columnstore Index](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
+8. [Real-Time Operational Analytics: Memory-Optimized Tables and columnstore index](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)
 
 #### Defragment a columnstore index
 
-1. [Columnstore Index Defragmentation using REORGANIZE Command](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
-2. [Columnstore Index Merge Policy for REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
+1. [Columnstore index Defragmentation using REORGANIZE Command](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command)
+2. [Columnstore index Merge Policy for REORGANIZE](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)
 
 #### Bulk importation of data
 
 1. [Clustered Column Store: Bulk Load](/archive/blogs/sqlserverstorageengine/clustered-column-store-index-bulk-loading-the-data)
-2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
-3. [Clustered columnstore Index: Data Load Optimization - Parallel Bulk Import](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
+2. [Clustered columnstore index: Data Load Optimizations - Minimal Logging](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-data-load-optimizations-minimal-logging)
+3. [Clustered columnstore index: Data Load Optimization - Parallel Bulk Import](/archive/blogs/sqlserverstorageengine/clustered-columnstore-index-parallel-bulk-import)
 
 
 

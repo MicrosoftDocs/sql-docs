@@ -72,7 +72,6 @@ The following big data cluster container images are required for an offline inst
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**

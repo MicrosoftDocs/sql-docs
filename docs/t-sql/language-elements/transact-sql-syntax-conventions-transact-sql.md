@@ -113,10 +113,8 @@ There's a section near the top of each article indicating which products support
 The general subject of the article might be used in a product, but all of the arguments aren't supported in some cases. For example, contained database users were introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Use the **CREATE USER** statement in any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product, however the **WITH PASSWORD** syntax can't be used with older versions. Additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the article.  
   
 ## See Also  
-[Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
+[Transact-SQL Reference &#40;Database Engine&#41;](../language-reference.md)    
 [Reserved Keywords &#40;Transact SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
-[Transact-SQL Design Issues](https://msdn.microsoft.com/library/dd193411.aspx)    
-[Transact-SQL Naming Issues](https://msdn.microsoft.com/library/dd193246.aspx)        
-[Transact-SQL Performance Issues](https://msdn.microsoft.com/library/dd172117.aspx)    
-
-
+[Transact-SQL Design Issues](/previous-versions/visualstudio/visual-studio-2010/dd193411(v=vs.100))    
+[Transact-SQL Naming Issues](/previous-versions/visualstudio/visual-studio-2010/dd193246(v=vs.100))        
+[Transact-SQL Performance Issues](/previous-versions/visualstudio/visual-studio-2010/dd172117(v=vs.100))

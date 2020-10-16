@@ -74,7 +74,7 @@ For information, see [High availability and data protection for Availability Gro
 >[!NOTE]
 >The availability groups can include additional synchronous or asynchronous replicas. 
 
-Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 
+Create the AG for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](../t-sql/statements/create-availability-group-transact-sql.md) with `CLUSTER_TYPE = EXTERNAL`. 
 
 * Availability group - `CLUSTER_TYPE = EXTERNAL` 
    Specifies that an external cluster entity manages the AG. Pacemaker is an example of an external cluster entity. When the AG cluster type is external, 

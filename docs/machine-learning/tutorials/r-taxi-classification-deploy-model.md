@@ -68,7 +68,7 @@ GO
 
 + The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [PREDICT](/sql/t-sql/queries/predict-transact-sql) function which generates the scores.
   
-  `OutputDataSet<-Predict(mod, InputDataSet);`
+  `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   
   Because a data.frame can contain a single row, you can use the same code for batch or single scoring.
   

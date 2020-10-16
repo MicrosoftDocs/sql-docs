@@ -11,7 +11,7 @@ ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
 ---
 
-# Quickstart: Use Azure Data Studio to connect and query data using dedicated SQL pool in Azure Synapse Analytics
+# Quickstart: Use Azure Data Studio to connect and query data using a dedicated SQL pool in Azure Synapse Analytics
 
 This quickstart shows connecting to a dedicated SQL pool in Azure Synapse Analytics using Azure Data Studio.
 

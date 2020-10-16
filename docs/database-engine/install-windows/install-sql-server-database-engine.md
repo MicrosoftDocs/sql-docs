@@ -34,7 +34,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
 -   [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md) - is an optional component  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) and [Language Extensions](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - is an optional component
+-   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R and Python) and [Language Extensions](../..//language-extensions/install/windows-java.md) (Java) - is an optional component
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"

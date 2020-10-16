@@ -111,11 +111,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
     For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`.
 
-    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
+    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
-2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
+2. In Control Panel, open **System and Security**, open **System**, and select **Advanced System Properties**.
 
-3. Click **Environment Variables**.
+3. Select **Environment Variables**.
 
 4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 

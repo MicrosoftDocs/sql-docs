@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 10/14/2020
+ms.date: 10/16/2020
 ---
 
 # Create an Azure SQL Database using Azure Data Studio
@@ -37,7 +37,7 @@ If you chose to create a database, follow the steps below.
  1. Sign in to your Azure account if you have not already. You can refresh your connection if you have issues on this page of the wizard.
  2. Select your desired subscription and server. Then select **Next**.
  3. Enter a database name.
- 4. Enter a firewall rule name. By default the firewall start and end range will be set to the IP of the machine running Azure Data Studio. This is so you can connect to the server and database from ADS right after it has been created.
+ 4. Enter a firewall rule name and the IP range of your local client machine running Azure Data Studio. This is so you can connect to the server and database from ADS right after it has been created.
  5. Select **Next**.
  6. Review the parameters you have entered and then select **Script to Notebook**.
 

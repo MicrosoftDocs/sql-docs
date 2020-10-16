@@ -10,7 +10,7 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ---
-# SQL Server Integration Services (SSIS) DevOps Tools
+# SQL Server Integration Services (SSIS) DevOps Tools Azure DevOps extension
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
 

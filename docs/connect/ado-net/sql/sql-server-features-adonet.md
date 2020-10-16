@@ -17,7 +17,7 @@ ms.reviewer: v-kaywon
 
 The topics in this section discuss features in SQL Server that are targeted at developing database applications using ADO.NET.  
   
-For more information, see [Development (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=115245) from SQL Server Books Online.
+For more information, see [Development (Database Engine)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100)) from SQL Server Books Online.
   
 ## In this section  
 [Enumerating instances of SQL Server (ADO.NET)](enumerate-instances-sql-server.md)  

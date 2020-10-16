@@ -353,19 +353,19 @@ The following are links to information, tools, and scripts used in the developme
 
 + [How to determine the appropriate page file size for 64-bit versions of Windows](https://support.microsoft.com/kb/2860880)
 
-+ [Understanding NUMA](https://technet.microsoft.com/library/ms178144.aspx)
++ [Understanding NUMA](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [How SQL Server supports NUMA](https://technet.microsoft.com/library/ms180954.aspx)
++ [How SQL Server supports NUMA](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### Learn about SQL Server optimizations
 
 + [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [Introduction to memory-optimized tables](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [Introduction to memory-optimized tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ [Demonstration: Performance improvement of in-memory OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [Demonstration: Performance improvement of in-memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [Data compression](../../relational-databases/data-compression/data-compression.md)
 
@@ -379,7 +379,7 @@ The following are links to information, tools, and scripts used in the developme
 
 + [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Introducing Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
++ [Introducing Resource Governor](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [An example of configuring Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -387,7 +387,7 @@ The following are links to information, tools, and scripts used in the developme
 
 + [DISKSPD storage load generator/performance test tool](https://github.com/microsoft/diskspd)
 
-+ [FSUtil utility reference](https://technet.microsoft.com/library/cc753059.aspx)
++ [FSUtil utility reference](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))
 
 
 ## Other articles in this series

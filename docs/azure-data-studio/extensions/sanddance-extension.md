@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 07/03/2019
+ms.date: 07/03/2019 
 ---
 
 # SandDance for Azure Data Studio (Preview)

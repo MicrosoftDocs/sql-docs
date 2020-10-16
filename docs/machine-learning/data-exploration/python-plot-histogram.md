@@ -23,11 +23,11 @@ This article describes how to plot data using the Python package [pandas'.hist()
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database. For how to sign up, see [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+* Azure SQL Database. For how to sign up, see [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. For how to sign up, see [Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart).
+* Azure SQL Managed Instance. For how to sign up, see [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
@@ -89,5 +89,3 @@ df.hist(bins=10)
 The display shows the age distribution of customers in the FactInternetSales table.
 
 ![Pandas Histogram](./media/python-histogram.png)
-
-

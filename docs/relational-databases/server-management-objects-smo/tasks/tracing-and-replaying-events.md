@@ -52,9 +52,8 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
  The SMO trace objects reside in the <xref:Microsoft.SqlServer.Management.Trace> namespace, which requires a reference to the Microsoft.SQLServer.ConnectionInfo.dll file.  
   
- The **Trace** and **Replay** objects require a [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)<xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> object to establish a connection with the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) object resides in the [Microsoft.SqlServer.Management.Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) namespace, which requires a reference to the Microsoft.SQLServer.ConnectionInfo.dll file.  
+ The **Trace** and **Replay** objects require a [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120))<xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> object to establish a connection with the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The [ServerConnection](/previous-versions/sql/sql-server-2014/ms218641(v=sql.120)) object resides in the [Microsoft.SqlServer.Management.Common](/previous-versions/sql/sql-server-2014/ms212673(v=sql.120)) namespace, which requires a reference to the Microsoft.SQLServer.ConnectionInfo.dll file.  
   
 > [!NOTE]  
 >  The **Trace** and **Replay** objects are not supported on a 64-bit platform.  
-  
   

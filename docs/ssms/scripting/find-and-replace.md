@@ -85,10 +85,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Indicates how to interpret special characters entered in the **Find what** or **Replace with** text boxes. The options include **Wildcards** and **Regular Expressions**.  
   
  **Regular Expressions**  
- Special notations define patterns of text to match. For a list, see [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ Special notations define patterns of text to match. For a list, see [Search Text with Regular Expressions](./search-text-with-regular-expressions.md).  
   
  **Wildcards**  
- Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ Special characters such as asterisks (`*`) and question marks (`?`) represent one or more characters. For a list, see [Search Text with Wildcards](./search-text-with-wildcards.md).  
   
  **Find Next**  
  Begins searching for the text in the **Find what** box.  
@@ -118,4 +118,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This toolbar tab changes the dialog box to a **Replace in Files** dialog box  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

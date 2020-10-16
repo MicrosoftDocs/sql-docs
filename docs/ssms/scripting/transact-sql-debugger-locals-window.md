@@ -49,9 +49,9 @@ The **Locals** window displays information about the local expressions in the cu
  Displays the data type of the expression.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Watch Window](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Call Stack Window](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [QuickWatch Dialog Box](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL Debugger](./transact-sql-debugger.md)   
+ [Transact-SQL Debugger Information](./transact-sql-debugger-information.md)   
+ [Watch Window](./transact-sql-debugger-watch-window.md)   
+ [Call Stack Window](./transact-sql-debugger-call-stack-window.md)   
+ [QuickWatch Dialog Box](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

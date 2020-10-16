@@ -74,11 +74,10 @@ where:
   
 @ErrorState is an arbitrary integer from 1 - 127. You can use this integer to differentiate between occurrences of a single error that is raised at different locations in the code.  
   
-For more information, see [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). An example of using RAISERROR in a SQL Server unit test is provided in the topic, [How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+For more information, see [RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md). An example of using RAISERROR in a SQL Server unit test is provided in the topic, [How to: Write a SQL Server Unit Test that Runs within the Scope of a Single Transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## See Also  
 [Creating and Defining SQL Server Unit Tests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Using Test Conditions in SQL Server Unit Tests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Verifying Database Code by Using SQL Server Unit Tests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [How to: Open a SQL Server Unit Test to Edit](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
-  

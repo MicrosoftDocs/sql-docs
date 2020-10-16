@@ -151,7 +151,7 @@ The following example queries the `sys.databases` and `sys.dm_database_copies` v
   
 ```sql
 -- Execute from the master database.  
-SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
+SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percent_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  

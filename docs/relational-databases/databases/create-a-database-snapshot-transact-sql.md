@@ -32,7 +32,11 @@ ms.author: "sstein"
   
 -   The source database cannot be configured as a scalable shared database.  
 
-- The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup. For more information, see [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+
+- The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup.
+
+:::moniker-end
 
 > [!IMPORTANT]
 > For information about other significant considerations, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  

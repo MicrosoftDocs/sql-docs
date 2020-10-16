@@ -29,7 +29,7 @@ First, find and select Azure SQL Database in the deployment wizard.
  1. In Azure Data Studio, select the Connections viewlet on the left-side navigation.
  2. Select the **...** button at the top of the Connections panel and choose **New Deployment...**
  3. In the deployment wizard, select the **Azure SQL Database** tile and check the terms acceptance checkbox
- 4.  4. In the Resource type dropdown, select what you would like to create - either a database, database server, or elastic pool. If you don't have any SQL databases in Azure, we recommend starting by creating a database.
+ 4. In the Resource type dropdown, select what you would like to create - either a database, database server, or elastic pool. If you don't have any SQL databases in Azure, we recommend starting by creating a database.
  5. Select **Create in Azure portal** if you chose to create a server or pool or select **Select** if you chose to create a database.
 
 If you chose to create a database, follow the steps below.

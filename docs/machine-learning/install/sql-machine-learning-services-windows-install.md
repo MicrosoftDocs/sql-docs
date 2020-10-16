@@ -104,7 +104,7 @@ For local installations, you must run the setup as an administrator. If you inst
      Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
+   For information on installing and using Java, see [Install SQL Server Language Extensions on Windows](../../language-extensions/install/windows-java.md).
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"

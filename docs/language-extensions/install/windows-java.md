@@ -2,8 +2,8 @@
 title: Install SQL Server Java Language Extensions on Windows 
 titleSuffix:
 description: Learn how to install the Java Language Extensions feature on SQL Server on Windows by running the SQL Server setup wizard.
-author: dphansen
-ms.author: davidph 
+author: cawrites
+ms.author: chadam 
 ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Learn how to install the Language Extensions component on SQL Server by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 > [!NOTE]
-> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](../..//linux/sql-server-linux-setup-language-extensions.md)
+> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)
 
 <a name="prerequisites"></a> 
 
@@ -111,11 +111,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
     For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`.
 
-    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
+    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
-2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
+2. In Control Panel, open **System and Security**, open **System**, and select **Advanced System Properties**.
 
-3. Click **Environment Variables**.
+3. Select **Environment Variables**.
 
 4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 

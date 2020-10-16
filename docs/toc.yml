@@ -2715,7 +2715,7 @@
     - name: Install
       items:
       - name: Install Language Extensions on Windows
-        href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        href: language-extensions/install/windows-java.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
@@ -9970,7 +9970,7 @@
       - name: Install SQL Server Machine Learning Services on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
-        href: linux/sql-server-linux-setup-language-extensions.md
+        href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md
     - name: Configure

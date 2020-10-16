@@ -20,7 +20,7 @@ This sample code uses a regular expression that checks if a text contains the wo
 
 ## Prerequisites
 
-+ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../../linux/sql-server-linux-setup-language-extensions.md). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
++ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/windows-java.md) or [on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio or Azure Data Studio for executing T-SQL.
 
@@ -250,7 +250,7 @@ In this sample, you will create two external libraries. One for the SDK and one 
 > [!NOTE]
 > Skip this step, if you use external libraries in the previous step. The recommended way is to create an external library from your `.jar` file.
 
-If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in  the [installation guide](../install/install-sql-server-language-extensions-on-windows.md).
+If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in  the [installation guide](../install/windows-java.md).
 
 ### On Linux
 

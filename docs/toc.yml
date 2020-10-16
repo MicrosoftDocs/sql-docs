@@ -1845,13 +1845,13 @@
       href: relational-databases/tables/graph-edge-constraints.md
       items:
       - name: Create
-        href: ./relational-databases/tables/graph-edge-constraints.md
+        href: relational-databases/tables/create-edge-constraints.md
       - name: Delete
-        href: ./relational-databases/tables/graph-edge-constraints.md
+        href: relational-databases/tables/delete-edge-constraint.md
       - name: Modify
-        href: ./relational-databases/tables/graph-edge-constraints.md
+        href: relational-databases/tables/modify-edge-constraint.md
       - name: View
-        href: ./relational-databases/tables/graph-edge-constraints.md
+        href: relational-databases/tables/view-edge-constraint-properties.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
@@ -2275,7 +2275,7 @@
   items:
   - name: Code a client program > 
     displayName: ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby
-    href: ./connect/homepage-sql-connection-programming.md
+    href: connect/index.md
   - name: Data tier applications
     href: relational-databases/data-tier-applications/data-tier-applications.md
     items:
@@ -2710,10 +2710,12 @@
         href: language-extensions/language-extensions-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
+      - name: Java Language Extension Overview
+        href: language-extensions/java-overview.md
     - name: Install
       items:
       - name: Install Language Extensions on Windows
-        href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        href: language-extensions/install/windows-java.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
@@ -4828,7 +4830,7 @@
   - name: Migration documentation
     href: sql-server/migrate/index.yml
   - name: SQL Server Integration Services (SSIS) > 
-    href: ./integration-services/sql-server-integration-services.md
+    href: integration-services/index.md
   - name: Bulk Copy Utility (bcp)
     href: tools/bcp-utility.md
   - name: Azure Migration Services >
@@ -5318,7 +5320,7 @@
         - name: Filter published data
           href: relational-databases/replication/merge/filter-published-data-for-merge-replication.md
         - name: View conflict information
-          href: ./relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md
+          href: relational-databases/replication/view-conflict-information-for-merge-publications.md
         - name: Conflict resolution
           items:
           - name: Choose a resolver
@@ -7040,7 +7042,7 @@
   - name: Joins
     href: relational-databases/performance/joins.md
   - name: Scripting
-    href: ./ssms/scripting/database-engine-scripting.md
+    href: relational-databases/scripting/database-engine-scripting.md
   - name: Subqueries
     href: relational-databases/performance/subqueries.md
   - name: Data virtualization (Polybase)
@@ -7096,7 +7098,7 @@
         - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
         - name: Virtualize CSV file
-          href: ./big-data-cluster/data-virtualization-csv.md
+          href: relational-databases/polybase/data-virtualization-csv.md
       - name: Troubleshoot
         items:
         - name: Monitor & troubleshoot
@@ -7223,11 +7225,11 @@
     href: machine-learning/
   - name: Analytics Platform System > 
     displayName: APS, PDW, Parallel Data Warehouse
-    href: ./analytics-platform-system/home-analytics-platform-system-aps-pdw.md
+    href: analytics-platform-system/index.md
   - name: SQL Server Analysis Services (SSAS) > 
-    href: /analysis-services/analysis-services-overview
+    href: https://docs.microsoft.com/analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) > 
-    href: ./reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+    href: reporting-services/index.md
   - name: Master Data Services
     displayName: MDS
     href: master-data-services/master-data-services-overview-mds.md
@@ -8299,7 +8301,7 @@
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
     - name: SQL Server Tools
-      href: ./tools/overview-sql-tools.md
+      href: ssdt/sql-server-tools.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
       items:
@@ -8654,7 +8656,7 @@
           - name: Objects Supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Query & Text Editors
-          href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15
+          href: https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15
           items:
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
@@ -9074,7 +9076,7 @@
         - name: Query & Text Editors
           href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
         - name: Database Engine Query Editor
-          href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
+          href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor
           href: ssms/scripting/xml-editor-sql-server-management-studio.md
         - name: Configure Editors
@@ -9150,7 +9152,7 @@
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
           href: ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
         - name: Connection Properties Dialog Box
-          href: ./ssms/f1-help/connect-to-server-connection-properties-page-database-engine.md
+          href: ssms/f1-help/connection-properties-dialog-box.md
         - name: Connect to Server - Database Engine
           href: ssms/f1-help/connect-to-server-database-engine.md
         - name: Connect to Server - Properties Page - Database Engine
@@ -9158,31 +9160,31 @@
         - name: Connect to Server - Login - Database Engine
           href: ssms/f1-help/connect-to-server-login-page-database-engine.md
         - name: Login - Connect to SSAS Server
-          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
+          href: ssms/f1-help/connect-to-server-login-page-analysis-services.md
         - name: Connect to SSAS
-          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
+          href: ssms/f1-help/connect-to-server-analysis-services.md
         - name: Connect to SSAS Server (Connection Properties Page)
-          href: /analysis-services/instances/connect-from-client-applications-analysis-services?viewFallbackFrom=sql-server-ver15
+          href: ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md
         - name: Login - Connect to SSRS Server
-          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+          href: ssms/f1-help/connect-to-server-login-page-reporting-services.md
         - name: Connect to SSRS Server
-          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+          href: ssms/f1-help/connect-to-server-reporting-services.md
         - name: Connect to SSRS Server (Connection Properties Page)
-          href: ./reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+          href: ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md
         - name: Browse for Servers (Local Servers)
-          href: ./tools/configuration-manager/sql-server-browser-service.md
+          href: ssms/f1-help/browse-for-servers-local-servers.md
         - name: Connect to Server (Additional Connection Parameters)
-          href: ./relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md
+          href: ssms/f1-help/connect-to-server-additional-connection-parameters-page.md
         - name: Browse for Servers (Network Servers)
-          href: ./tools/configuration-manager/sql-server-browser-service.md
+          href: ssms/f1-help/browse-for-servers-network-servers.md
         - name: Password Expired
-          href: ./relational-databases/security/choose-an-authentication-mode.md
+          href: ssms/f1-help/password-expired.md
         - name: Connect to SSIS Server
-          href: ./integration-services/service/integration-services-service-ssis-service.md
+          href: ssms/f1-help/connect-to-server-integration-services.md
         - name: Connect to SSIS Server (Login Page)
-          href: ./integration-services/service/integration-services-service-ssis-service.md
+          href: ssms/f1-help/connect-to-server-login-page-integration-services.md
         - name: Connect to SSIS Server (Connection Properties Page)
-          href: ./integration-services/service/integration-services-service-ssis-service.md
+          href: ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md
       - name: Menu help
         items:
         - name: SQL Server Management Studio Menu Help
@@ -9968,7 +9970,7 @@
       - name: Install SQL Server Machine Learning Services on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
-        href: linux/sql-server-linux-setup-language-extensions.md
+        href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md
     - name: Configure
@@ -10001,7 +10003,7 @@
       - name: Connectivity libraries
         href: linux/sql-server-linux-develop-connectivity-libraries.md
       - name: Use Visual Studio Code
-        href: ./tools/visual-studio-code/sql-server-develop-use-vscode.md
+        href: linux/sql-server-linux-develop-use-vscode.md
       - name: Use SSDT
         href: linux/sql-server-linux-develop-use-ssdt.md
     - name: Manage
@@ -10138,7 +10140,7 @@
     - name: Stack Overflow >>
       href: https://stackoverflow.com/questions/tagged/sql-server  # Note: this S.O. https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
     - name: Microsoft Q & A >>
-      href: /answers/products/sql-server
+      href: https://docs.microsoft.com/answers/products/sql-server
     - name: Submit feedback >>
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit >>
@@ -10147,7 +10149,7 @@
   items:
   - name: Azure SQL Database >
     href: /azure/sql-database/
-  - name: Azure Synapse Analytics >
+  - name: Azure SQL Data Warehouse >
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -10172,7 +10174,7 @@
     - name: Educational resources 
       href: sql-server/educational-sql-resources.yml
     - name: Microsoft Learn >>
-      href: /learn/
+      href: https://docs.microsoft.com/learn/
     - name: SQL on Channel 9 >>
       href: https://channel9.msdn.com/Search
   - name: Help
@@ -10180,7 +10182,7 @@
     - name: Get help
       href: sql-server/sql-server-get-help.md
     - name: Microsoft Q & A >>
-      href: /answers/products/sql-server
+      href: https://docs.microsoft.com/answers/products/sql-server
     - name: DBA Stack Exchange >>
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
@@ -10194,11 +10196,11 @@
     - name: SQL Server >>
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
     - name: Database Engine >>
-      href: /archive/blogs/sqlserverstorageengine/
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
     - name: Security >>
-      href: /archive/blogs/sqlsecurity/
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
     - name: Data Tools >>
-      href: /archive/blogs/ssdt/
+      href: https://blogs.msdn.microsoft.com/ssdt/
   - name: Feedback
     items: 
     - name: SQL Docs >> 
@@ -11888,7 +11890,7 @@
         href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
       - name: sys.spatial_reference_systems
         href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-    - name: Azure Synapse Analytics
+    - name: SQL Data Warehouse
       href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties
@@ -12495,7 +12497,7 @@
       items:
       - name: sys.dm_db_objects_disabled_on_compatibility_level_change
         href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-    - name: Azure Synapse Analytics & Parallel Data Warehouse
+    - name: SQL Data Warehouse & Parallel Data Warehouse
       href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
       items:
       - name: sys.dm_pdw_component_health_active_alerts
@@ -14176,7 +14178,7 @@
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: Azure Synapse Analytics
+    - name: SQL Data Warehouse
       href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
       - name: sp_datatype_info_90
@@ -16249,7 +16251,7 @@
         items:
         - name: AT TIME ZONE
           href: t-sql/queries/at-time-zone-transact-sql.md
-        - name: Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
@@ -16263,7 +16265,7 @@
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search Condition
           href: t-sql/queries/search-condition-transact-sql.md
-        - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: Table Value Constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16583,7 +16585,7 @@
           href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
         - name: FUNCTION
           href: t-sql/statements/create-function-transact-sql.md
-        - name: FUNCTION (Azure Synapse Analytics)
+        - name: FUNCTION (SQL Data Warehouse)
           href: t-sql/statements/create-function-sql-data-warehouse.md
         - name: INDEX
           href: t-sql/statements/create-index-transact-sql.md
@@ -16643,11 +16645,11 @@
           href: t-sql/statements/create-synonym-transact-sql.md
         - name: TABLE
           href: t-sql/statements/create-table-transact-sql.md
-        - name: TABLE (Azure Synapse Analytics)
+        - name: TABLE (Azure SQL Data Warehouse)
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md
         - name: TABLE (SQL Graph)
           href: t-sql/statements/create-table-sql-graph.md
-        - name: TABLE AS SELECT (Azure Synapse Analytics)
+        - name: TABLE AS SELECT (Azure SQL Data Warehouse)
           href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
         - name: TABLE IDENTITY (Property)
           href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16907,7 +16909,7 @@
           href: t-sql/statements/open-master-key-transact-sql.md
         - name: OPEN SYMMETRIC KEY
           href: t-sql/statements/open-symmetric-key-transact-sql.md
-        - name: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
+        - name: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)"
           href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: REVERT
           href: t-sql/statements/revert-transact-sql.md

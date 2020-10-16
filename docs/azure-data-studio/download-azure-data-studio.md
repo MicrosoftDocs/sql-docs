@@ -32,7 +32,7 @@ For details about the latest release, see the [release notes](./release-notes-az
 
 This release of Azure Data Studio includes a standard Windows Installer experience, and a .zip file.
 
-The *user installer* is recommended because it does not require administrator privileges, which simplify both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+We recommend the *user installer* because it doesn't require administrator privileges, which simplify both installs and upgrades. The user installer doesn't require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
 **User Installer** (recommended)
 
@@ -120,7 +120,7 @@ The *user installer* is recommended because it does not require administrator pr
 
 ## Download Insiders build of Azure Data Studio
 
-In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
+In general, users should download the stable release of Azure Data Studio above. However, if you want to try out the beta features and send feedback, you can download the [Insiders build of Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
 
 ## Supported Operating Systems
 
@@ -161,9 +161,9 @@ Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the fol
 
 ## Check for updates
 
-To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**.
+To check for latest updates, select the gear icon on the bottom left of the window and select **Check for Updates**.
 
-In an offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version.  Uninstalling prior versions of Azure Data Studio is not necessary as the installer updates a currently installed application, if present.
+Offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version. Uninstalling prior versions of Azure Data Studio isn't necessary. The installer updates a currently installed application, if present.
 
 ## Supported SQL offerings
 
@@ -171,15 +171,15 @@ In an offline environment updates can be applied by [installing the latest versi
 
 ## Move user settings
 
-If you want to move your custom settings, keyboard shortcuts, or code snippets, follow the steps below. This is important to do if you are upgrading from SQL Operations Studio version to Azure Data Studio.
+If you want to move your custom settings, keyboard shortcuts, or code snippets, follow the steps below. This is important to do if you're upgrading from SQL Operations Studio version to Azure Data Studio.
 
 *If you already have Azure Data Studio, or you've never installed or customized SQL Operations Studio, then you can ignore this section.*
 
-1. Open Settings by clicking the gear on the bottom left and clicking **Settings.**
+1. Open Settings by selecting the gear on the bottom left and selecting **Settings.**
 
    ![edit settings in Azure Data Studio](./media/download/open-settings.png)
 
-2. Right-click the **User Settings** tab on top and click **Reveal in Explorer**
+2. Right-click the **User Settings** tab on top and select **Reveal in Explorer**
 
    ![launch explorer which will take you to your local file system](./media/download/reveal-in-explorer.png)
 
@@ -187,7 +187,7 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
    ![use the files and copy over to your location](./media/download/copy-settings.png)
 
-4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, keybindings, or snippets in their respective locations.
+4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, key bindings, or snippets in their respective locations.
 
 5. If overriding an existing installation, delete the old install directory before installation to avoid errors connecting to your Azure account for the resource explorer.
 
@@ -195,7 +195,7 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
 You can also install Azure Data Studio using a command prompt script.
 
-If you want to install Azure Data Studio in the background with no GUI prompts and you are on the Windows platform, then follow the steps below.
+If you want to install Azure Data Studio in the background with no GUI prompts and you're on the Windows platform, then follow the steps below.
 
 1. Launch the command prompt with elevated permissions.
 
@@ -226,7 +226,7 @@ If you want to install Azure Data Studio in the background with no GUI prompts a
 
 If you installed Azure Data Studio using the Windows Installer, then uninstall the same way you remove any Windows application.
 
-If you installed Azure Data Studio with a .zip or other archive, then simply delete the files.
+If you installed Azure Data Studio with a .zip or other archive, then delete the files.
 
 ## Next Steps
 

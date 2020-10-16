@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql
 SYSTEM_USER  
 ```  
 
@@ -62,8 +62,8 @@ SYSTEM_USER
 ### A. Using SYSTEM_USER to return the current system user name  
  The following example declares a `char` variable, stores the current value of `SYSTEM_USER` in the variable, and then prints the value stored in the variable.  
   
-```  
-DECLARE @sys_usr char(30);  
+```sql
+DECLARE @sys_usr CHAR(30);  
 SET @sys_usr = SYSTEM_USER;  
 SELECT 'The current system user is: '+ @sys_usr;  
 GO  
@@ -81,15 +81,15 @@ The current system user is: WillisJo
 ### B. Using SYSTEM_USER with DEFAULT constraints  
  The following example creates a table with `SYSTEM_USER` as a `DEFAULT` constraint for the `SRep_tracking_user` column.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Sales.Sales_Tracking  
 (  
-    Territory_id int IDENTITY(2000, 1) NOT NULL,  
-    Rep_id  int NOT NULL,  
-    Last_sale datetime NOT NULL DEFAULT GETDATE(),  
-    SRep_tracking_user varchar(30) NOT NULL DEFAULT SYSTEM_USER  
+    Territory_id INT IDENTITY(2000, 1) NOT NULL,  
+    Rep_id INT NOT NULL,  
+    Last_sale DATETIME NOT NULL DEFAULT GETDATE(),  
+    SRep_tracking_user VARCHAR(30) NOT NULL DEFAULT SYSTEM_USER  
 );  
 GO  
 INSERT Sales.Sales_Tracking (Rep_id)  
@@ -107,7 +107,7 @@ GO
   
  The following query to selects all the information from the `Sales_Tracking` table:  
   
-```  
+```sql
 SELECT * FROM Sales_Tracking ORDER BY Rep_id;  
 GO  
 ```  
@@ -131,7 +131,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
 ### C: Using SYSTEM_USER to return the current system user name  
  The following example returns the current value of `SYSTEM_USER`.  
   
-```  
+```sql
 SELECT SYSTEM_USER;  
 ```  
   

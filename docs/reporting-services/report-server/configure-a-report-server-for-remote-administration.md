@@ -136,6 +136,6 @@ ms.author: maggies
 13. In the **Allow** column, select **Enable Account**, **Remote Enable**, and **Read Security**, and then click **OK**.  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Report Server Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

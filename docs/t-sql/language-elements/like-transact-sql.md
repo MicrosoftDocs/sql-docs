@@ -49,12 +49,12 @@ match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
 ```  
 >[!NOTE]
-> Currently ESCAPE and STRING_ESCAPE are not supported in Azure SQL Data Warehouse or Parallel Data Warehouse.
+> Currently ESCAPE and STRING_ESCAPE are not supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

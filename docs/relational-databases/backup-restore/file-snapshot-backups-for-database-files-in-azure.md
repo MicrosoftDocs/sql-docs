@@ -66,7 +66,7 @@ ms.author: mikeray
   
 -   RESTORE WITH MOVE is required.  
   
--   For additional information about premium storage, see [Premium Storage: High-Performance Storage for Azure Virtual Machine Workloads](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/)  
+-   For additional information about premium storage, see [Premium Storage: High-Performance Storage for Azure Virtual Machine Workloads](/azure/virtual-machines/disks-types)  
   
  **Single storage account:** The file-snapshot and destination blobs must use the same storage account.  
   
@@ -74,7 +74,7 @@ ms.author: mikeray
   
  **Online Restore:** When using file-snapshot backups, you cannot perform an Online Restore. For more information about Online Restore, see [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
- **Billing:** When using SQL Server file-snapshot backup, additional charges will be incurred as data changes. For more information, see [Understanding How Snapshots Accrue Charges](https://msdn.microsoft.com/library/azure/hh768807.aspx).  
+ **Billing:** When using SQL Server file-snapshot backup, additional charges will be incurred as data changes. For more information, see [Understanding How Snapshots Accrue Charges](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges).  
   
  **Archival:** If you wish to archive a file-snapshot backup, you can archive to blob storage or to streaming backup. To archive to blob storage, copy the snapshots in the file-snapshot backup set into separate blobs. To archive to streaming backup, restore the file-snapshot backup as a new database and then perform a normal streaming backup with compression and/or encryption and archive it for as long as desired, independent of the base blobs.  
   
@@ -172,5 +172,4 @@ GO
   
 ## See Also  
  [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

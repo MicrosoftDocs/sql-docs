@@ -49,8 +49,7 @@ Each schema has a an owner. The owner is a security [principal](../../relational
 
 [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 
-[Schemas Catalog Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+[Schemas Catalog Views &#40;Transact-SQL&#41;](./catalog-views-transact-sql.md)   
 
 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
-  
   

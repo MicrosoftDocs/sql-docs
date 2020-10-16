@@ -34,7 +34,7 @@ Returns part of a character, binary, text, or image expression in [!INCLUDE[ssNo
   
 ## Syntax  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -72,7 +72,7 @@ SUBSTRING ( expression ,start , length )
 ### A. Using SUBSTRING with a character string  
  The following example shows how to return only a part of a character string. From the `sys.databases` table, this query returns the system database names in the first column, the first letter of the database in the second column, and the third and fourth characters in the final column.  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -92,7 +92,7 @@ WHERE database_id < 5;
   
  Here is how to display the second, third, and fourth characters of the string constant `abcdef`.  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -113,7 +113,7 @@ bcd
   
  The following example shows how to return the first 10 characters from each of a **text** and **image** data column in the `pub_info` table of the `pubs` database. **text** data is returned as **varchar**, and **image** data is returned as **varbinary**.  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -133,7 +133,7 @@ WHERE pub_id = '1756';
   
  The following example shows the effect of SUBSTRING on both **text** and **ntext** data. First, this example creates a new table in the `pubs` database named `npub_info`. Second, the example creates the `pr_info` column in the `npub_info` table from the first 80 characters of the `pub_info.pr_info` column and adds an `ü` as the first character. Lastly, an `INNER JOIN` retrieves all publisher identification numbers and the `SUBSTRING` of both the **text** and **ntext** publisher information columns.  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -143,7 +143,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -178,7 +178,7 @@ ORDER BY pr.pub_id ASC;
 ### C. Using SUBSTRING with a character string  
  The following example shows how to return only a part of a character string. From the `dbo.DimEmployee` table, this query returns the last name in one column with only the first initial in the second column.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -199,7 +199,7 @@ Barreto de Mattos    P
   
  The following example shows how to return the second, third, and fourth characters of the string constant `abcdef`.  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

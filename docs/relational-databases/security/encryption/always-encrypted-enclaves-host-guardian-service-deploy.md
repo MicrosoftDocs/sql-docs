@@ -48,7 +48,7 @@ Before you start, ensure the computer you're using is running Windows Server 201
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    Your HGS computer will restart again to finish configuring the Active Directory forest. The next time you log in, your administrator account will be a domain admin account. We recommend reviewing the [Active Directory Domain Services Operations docs](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations) for more information about managing and securing your new forest.
+    Your HGS computer will restart again to finish configuring the Active Directory forest. The next time you log in, your administrator account will be a domain admin account. We recommend reviewing the [Active Directory Domain Services Operations docs](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations) for more information about managing and securing your new forest.
 
 3. Next, you will set up the HGS cluster and install the attestation service by running the following command in an elevated Windows PowerShell console:
 
@@ -213,7 +213,7 @@ It is recommended that all production instances of HGS use an HTTPS binding.
 
 1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you do not know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (e.g. if HGS is behind a network load balancer with a different address).
 
-2. On the HGS computer, use [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver) to enable the HTTPS binding and specify the TLS certificate obtained in the previous step. If your certificate is already installed on the computer in the local certificate store, use the following command to register it with HGS:
+2. On the HGS computer, use [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) to enable the HTTPS binding and specify the TLS certificate obtained in the previous step. If your certificate is already installed on the computer in the local certificate store, use the following command to register it with HGS:
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_execute handle OUTPUT  
     [,bound_param  ]  [,...n ]  ]  

@@ -62,7 +62,7 @@ The Service Master Key can only be opened by the Windows service account under w
 >  If you lose all access to the keys described earlier, you will lose access to the objects, connections, and data secured by those keys. You can restore the service master key, as described in the links that are shown here, or you can go back to the original encrypting system to recover the access. There is no "back-door" to recover the access.  
   
 ## In This Section  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Service Master Key]()  
  Provides a brief explanation for the service master key and its best practices.  
   
  [Extensible Key Management &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -99,5 +99,4 @@ The Service Master Key can only be opened by the Windows service account under w
  [Delete and Re-create Encryption Keys  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Add and Remove Encryption Keys for Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

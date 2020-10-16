@@ -28,8 +28,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 DROP DATABASE SCOPED CREDENTIAL credential_name  
 ```  
   

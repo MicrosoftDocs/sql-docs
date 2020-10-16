@@ -58,10 +58,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The **Replace All** command replaces all search matches, including those you have skipped with the **Find Next** button. To cancel **Replace All**, click **Undo** from the **Edit** menu before closing any of the files.  
   
 ## See Also  
- [Search an Active Document Incrementally](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
- [Search Documents Using Results Lists](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Search an Active Document Incrementally](./search-an-active-document-incrementally.md)   
+ [Search and Replace](./search-and-replace.md)   
+ [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
+ [Search Text with Wildcards](./search-text-with-wildcards.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

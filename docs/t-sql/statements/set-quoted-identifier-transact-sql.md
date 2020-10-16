@@ -38,13 +38,13 @@ Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the I
 ## Syntax
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+-- Syntax for SQL Server, Azure SQL Database and SQL on-demand (preview) in Azure Synapse Analytics
 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET QUOTED_IDENTIFIER ON
 ```

@@ -39,7 +39,7 @@ The rest of this topic discusses parameterized queries using the SQLSRV driver.
 > [!NOTE]  
 > Parameters are implicitly bound by using **sqlsrv_prepare**. This means that if a parameterized query is prepared using **sqlsrv_prepare** and values in the parameter array are updated, the updated values will be used upon the next execution of the query. See the second example in this topic for more detail.  
   
-## Example  
+## Query example  
 The following example updates the quantity for a specified product ID in the *Production.ProductInventory* table of the AdventureWorks database. The quantity and product ID are parameters in the UPDATE query.  
   
 The example then queries the database to verify that the quantity has been correctly updated. The product ID is a parameter in the SELECT query.  
@@ -107,7 +107,7 @@ sqlsrv_close( $conn);
   
 The previous example uses the **sqlsrv_query** function to execute queries. This function is good for executing one-time queries since it does both statement preparation and execution. The combination of **sqlsrv_prepare**/**sqlsrv_execute** is best for re-execution of a query with different parameter values. To see an example of re-execution of a query with different parameter values, see the next example.  
   
-## Example  
+## Prepare example  
 The following example demonstrates the implicit binding of variables when you use the **sqlsrv_prepare** function. The example inserts several sales orders into the *Sales.SalesOrderDetail* table. The *$params* array is bound to the statement (*$stmt*) when **sqlsrv_prepare** is called. Before each execution of a query that inserts a new sales order into the table, the *$params* array is updated with new values corresponding to sales order details. The subsequent query execution uses the new parameter values.  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  

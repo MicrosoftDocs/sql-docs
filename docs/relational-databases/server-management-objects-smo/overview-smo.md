@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 -   The management of Database Mail that lets you create e-mail servers, e-mail profiles, and e-mail accounts in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
--   Registered Servers support for registering connection information. For more information, see [Register Servers](../../tools/sql-server-management-studio/register-servers.md).  
+-   Registered Servers support for registering connection information. For more information, see [Register Servers](../../ssms/register-servers/register-servers.md).  
   
 -   Trace and replay of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. For more information, see [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), and [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
@@ -170,5 +170,4 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## See Also  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
-  
   

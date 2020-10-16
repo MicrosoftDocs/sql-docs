@@ -176,9 +176,9 @@ SQL PowerShell is available today on the PowerShell gallery and you can use it o
 
 Developers and DBAs are usually the users of Azure Data Studio.
 
-## Does Azure Data Studio integrate with Azure SQL Data Warehouse?
+## Does Azure Data Studio integrate with Azure Synapse Analytics?
 
-Yes. Azure Data Studio support for Azure SQL Data Warehouse is currently in preview, together with Azure SQL Managed Instance, and SQL Server 2019 Big Data.
+Yes. Azure Data Studio support for Azure Synapse Analytics is currently in preview, together with Azure SQL Managed Instance, and SQL Server 2019 Big Data.
 
 ## Why is Azure Data Studio important for the new version of SQL Server?
 

@@ -28,7 +28,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     { TO | FROM } <grantee_principal> [ ,...n ]  
         [ CASCADE ]  
@@ -147,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ### A. Revoking a permission from a login  
  The following example revokes `VIEW SERVER STATE` permission from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `WanidaBenshoof`.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW SERVER STATE FROM WanidaBenshoof;  
 GO  
@@ -156,7 +155,7 @@ GO
 ### B. Revoking the WITH GRANT option  
  The following example revokes the right to grant `CONNECT SQL` from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `JanethEsteves`.  
   
-```  
+```sql  
 USE master;  
 REVOKE GRANT OPTION FOR CONNECT SQL FROM JanethEsteves;  
 GO  

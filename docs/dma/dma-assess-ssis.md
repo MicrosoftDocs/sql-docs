@@ -68,6 +68,6 @@ The Compatibility issues category provides partially supported or unsupported fe
 
 ## Next steps
 
-- [Migrate on-premises SSIS workloads to SSIS in ADF overview](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrate SQL Server Integration Services packages to an Azure SQL Managed Instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [Redeploy SQL Server Integration Services packages to Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)
+- [Migrate on-premises SSIS workloads to SSIS in ADF overview](/azure/data-factory/scenario-ssis-migration-overview)
+- [Migrate SQL Server Integration Services packages to an Azure SQL Managed Instance](/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Redeploy SQL Server Integration Services packages to Azure SQL Database](/azure/dms/how-to-migrate-ssis-packages)

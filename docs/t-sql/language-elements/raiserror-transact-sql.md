@@ -54,7 +54,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
     { ,severity ,state }  

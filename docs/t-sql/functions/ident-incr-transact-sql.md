@@ -30,7 +30,7 @@ Returns the increment value specified when creating a table or view's identity c
   
 ## Syntax  
   
-```  
+```syntaxsql 
 IDENT_INCR ( 'table_or_view' )  
 ```  
   

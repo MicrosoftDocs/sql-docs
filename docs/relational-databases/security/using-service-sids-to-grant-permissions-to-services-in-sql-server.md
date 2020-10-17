@@ -107,22 +107,23 @@ GO
   >
   > ```sql
   > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
-  > GO
+  > 
   > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
-  > GO
+  > 
   > CREATE LOGIN [NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
-  > GO
+  > 
   > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLSERVERAGENT]
-  > GO
+  > ```
   > For a named instance of SQL Server, use the following Transact-SQL commands:
+  > ```sql
   > CREATE LOGIN [NT SERVICE\MSSQL$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
-  > GO
+  > 
   > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQL$SQL2019]
-  > GO
+  > 
   > CREATE LOGIN [NT SERVICE\SQLAgent$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
-  > GO
+  > 
   > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
-  > GO
+  > 
   > ```
   > In this example, `SQL2019` is the instance name of the SQL Server.
 

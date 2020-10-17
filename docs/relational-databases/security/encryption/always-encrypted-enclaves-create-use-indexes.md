@@ -2,7 +2,7 @@
 description: "Create and use indexes on columns using Always Encrypted with secure enclaves"
 title: "Create and use indexes on columns using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/30/2019
+ms.date: 12/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -13,9 +13,10 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Create and use indexes on columns using Always Encrypted with secure enclaves
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-This article describes how to create and use indexes on columns encrypted using enclave-enabled column encryption keys with [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
+
+This article describes how to create and use indexes on columns encrypted using enclave-enabled column encryption keys with [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 
 Always Encrypted with secure enclaves supports:
 - Clustered and non-clustered indexes on columns encrypted using deterministic encryption and enclave-enabled keys.

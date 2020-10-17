@@ -1,7 +1,7 @@
 ---
-title: Install azdata with Windows Installer
+title: Install Azure Data CLI with Windows Installer
 titleSuffix:
-description: Learn how to install the azdata tool with the installer. 
+description: Learn how to install the Azure Data CLI tool with the installer. 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,22 +11,22 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install `azdata` with Windows Installer
+# Install Azure Data CLI with Windows Installer
 
 [!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 
-This article describes how to install `azdata` on Windows with an installer. Use `azdata` to manage SQL Server Big Data Clusters or Azure Arc enabled data services.
+This article describes how to install Azure Data CLI on Windows with an installer. Use Azure Data CLI to manage SQL Server Big Data Clusters or Azure Arc enabled data services.
 
-## Steps to Install `azdata` with the Microsoft Windows Installer
+## Steps to Install Azure Data CLI with the Microsoft Windows Installer
 
-To install `azdata` on with the Microsoft Windows Installer,
+To install Azure Data CLI on with the Microsoft Windows Installer,
 
-1. Remove `azdata` if it was installed using `pip`. If `azdata` was installed using Windows Installer, proceed to the next step.
-1. Install `azdata` using the [Windows Installer](https://aka.ms/azdata-msi).
+1. Remove Azure Data CLI if it was installed using `pip`. If Azure Data CLI was installed using Windows Installer, proceed to the next step.
+1. Install Azure Data CLI using the [Windows Installer](https://aka.ms/azdata-msi).
 
-### Uninstall `azdata` with Windows Installer
+### Uninstall Azure Data CLI with Windows Installer
 
-To uninstall `azdata` with Windows Installer, follow the instructions for the appropriate operating system.
+To uninstall Azure Data CLI with Windows Installer, follow the instructions for the appropriate operating system.
 
 | Platform      | Instructions                                           |
 | ------------- |--------------------------------------------------------|
@@ -39,4 +39,4 @@ The program to uninstall is called `Azdata CLI` . Select this application, then 
 
 For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)
 
-Use azdata with [Azure Arc enabled data services](/azure/azure-arc/data/)
+Use Azure Data CLI with [Azure Arc enabled data services](/azure/azure-arc/data/)

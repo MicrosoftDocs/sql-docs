@@ -1,6 +1,6 @@
 ---
-title: Install azdata with apt
-description: Learn how to install the azdata tool with apt. 
+title: Install Azure Data CLI with apt
+description: Learn how to install the Azure Data CLI tool with apt. 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,7 +10,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install `azdata` with apt
+# Install Azure Data CLI with apt
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

@@ -1,7 +1,7 @@
 ---
-title: Install azdata
+title: Install Azure Data CLI
 titleSuffix: 
-description: Learn how to install the azdata tool.
+description: Learn how to install the Azure Data CLI tool.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Install `azdata`
+# Install Azure Data CLI
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 
-`azdata` is a command-line utility written in Python to bootstrap and manage the data services via REST APIs. 
+Azure Data CLI is a command-line utility written in Python to bootstrap and manage the data services via REST APIs. 
 
 ## Find latest version
 

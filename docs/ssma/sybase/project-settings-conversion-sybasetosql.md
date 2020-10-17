@@ -21,10 +21,10 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
 -   To specify settings for the current project, on the **Tools** menu, select **Project Settings**, click **General** at the bottom of the left pane, and then click **Conversion**.  
   
 ## Miscellaneous Options  
-**@@ERROR**  
+**\@\@ERROR**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure and ASE use different error codes.  
   
-Use this setting to specify the type of message (Warning or Error) that SSMA shows in the Output or Error List pane when it encounters a reference to **@@ERROR** in the ASE code.  
+Use this setting to specify the type of message (Warning or Error) that SSMA shows in the Output or Error List pane when it encounters a reference to **\@\@ERROR** in the ASE code.  
   
 -   If you select **Convert and mark with warning**, SSMA will convert the statements and mark them with warning comments.  
   

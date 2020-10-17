@@ -179,7 +179,7 @@ If you call the stored procedure from an external application, make sure that th
    Open a new **Query** window, and call the stored procedure, providing values for each of the parameters. The parameters represent feature columns used by the model and are required.
 
    ```sql
-   EXEC [dbo].[RPredictSingleRow] @model = 'TrainLogit_model',
+   EXEC [dbo].[RPredictSingleRow] @model = 'RTrainLogit_model',
    @passenger_count = 1,
    @trip_distance = 2.5,
    @trip_time_in_secs = 631,
@@ -192,7 +192,7 @@ If you call the stored procedure from an external application, make sure that th
    Or, use this shorter form supported for [parameters to a stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
    ```sql
-   EXEC [dbo].[RPredictSingleRow] 'TrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+   EXEC [dbo].[RPredictSingleRow] 'RTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
    ```
 
 3. The results indicate that the probability of getting a tip is low (zero) on these top 10 trips, since all are single-passenger trips over a relatively short distance.

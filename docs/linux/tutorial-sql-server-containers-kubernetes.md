@@ -169,6 +169,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:

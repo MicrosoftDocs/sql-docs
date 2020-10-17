@@ -1,6 +1,5 @@
 ---
 title: What is Java Language Extension?
-titleSuffix: 
 description: In SQL Server 2019, Java, Python, and R are supported language extensions.Language Extensions are a feature of SQL Server used for executing external code.  Relational data can be used in the external code using the extensibility framework.
 author: cawrites
 ms.author: chadam 

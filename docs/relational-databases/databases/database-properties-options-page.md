@@ -163,6 +163,7 @@ Enables this feature.
  
  **Delayed Durability**  
  Enables this feature.  
+ https://docs.microsoft.com/en-us/sql/relational-databases/logs/control-transaction-durability
  
  **Is Read Committed Snapshot On**  
  Enables this feature.  

@@ -50,9 +50,9 @@ We will reference this service as __BDC KMS__ throughout the rest of this docume
 
 The BDC KMS service will manage all keys and certificates for SQL Server and HDFS.
 
-## Encryption at rest on SQL Server Big Data Clusters CU8
+### User provided certificates
 
-User provided keys and certificates to be managed by BDC KMS, commonly known as BYOK.
+User provided keys and certificates to be managed by BDC KMS, commonly known as bring your own key (BYOK).
 
 ### External Providers
 
@@ -126,7 +126,7 @@ Execute the following actions if you upgraded your cluster to CU8 (azdata upgrad
 Requirements:
 - [Active Directory](active-directory-prerequisites.md) integrated cluster.
 - [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) installed and connected to the cluster.
-- From the [SQL Server BDC Operation Notebooks](cluster-manage-notebooks.md) execute the __```sop128-enable-encryption-zones```__ notebook to perform the configuration and validation of HDFS encryption zones support.
+- From the [SQL Server BDC Operation Notebooks](cluster-manage-notebooks.md) execute the __`sop128-enable-encryption-zones`__ notebook to perform the configuration and validation of HDFS encryption zones support.
 
 ## Next steps
 

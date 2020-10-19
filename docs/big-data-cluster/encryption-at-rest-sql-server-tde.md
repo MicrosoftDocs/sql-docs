@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 This guide demonstrates how to use encryption at rest capabilities of SQL Server Big Data Clusters to encrypt databases.
 
-Experience is in general the same as SQL Server on Linux and [standard TDE documentation](../sql/relational-databases/security/encryption/transparent-data-encryption.md) applies except where noted. In order to monitor status of encryption on master, follow standard DMV query patterns on top of [`sys.dm_database_encryption_keys`](../sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) and [`sys.certificates`](../sql/relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
+Experience is in general the same as SQL Server on Linux and [standard TDE documentation](../relational-databases/security/encryption/transparent-data-encryption.md) applies except where noted. In order to monitor status of encryption on master, follow standard DMV query patterns on top of [`sys.dm_database_encryption_keys`](../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) and [`sys.certificates`](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
 
 __Unsupported features:__
 * Data pool encryption

@@ -31,7 +31,7 @@ The Encryption at Rest feature set of SQL Server Big Data Clusters supports the 
 The following capabilities are provided:
 
 * __System managed encryption at rest__. This is available in CU8.
-* __User managed encryption at rest (BYOK)__, with both service managed and external key provider integrations. This will be available in a future release.
+* __User managed encryption at rest (BYOK)__, with both service managed and external key provider integrations. Currently only service managed user created keys are supported.
 
 ## Key Definitions
 
@@ -42,7 +42,7 @@ A Controller hosted service responsible for managing keys and certificates for t
 * Secure management and storage of keys and certificates used for encryption at rest.
 * Hadoop KMS compatibility. It acts as the key management service for HDFS component on BDC.
 * SQL Server TDE certificate management.
-* *Keys Versioning support*. This will be available in a future release.
+* *Keys Versioning support*. This isn't supported at this time.
 
 We will reference this service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
 
@@ -52,11 +52,11 @@ The BDC KMS service will manage all keys and certificates for SQL Server and HDF
 
 ### User Provided Keys and Certificates
 
-User provided keys and certificates to be managed by BDC KMS, commonly known as BYOK. This feature will provided in a future release.
+User provided keys and certificates to be managed by BDC KMS, commonly known as BYOK.
 
 ### External Providers
 
-External key solutions compatible with BDC KMS for external delegation. This feature will provided in a future release.
+External key solutions compatible with BDC KMS for external delegation. This isn't supported at this time.
 
 ## Encryption at Rest on SQL Server Big Data Clusters CU8
 
@@ -73,7 +73,7 @@ The feature set introduces the __BDC KMS controller service__ to provide __syste
 * Master instance BDC provisioned databases and user databases won’t be encrypted automatically. DBA’s may use the installed certificate to encrypt any database.
 * Compute Pool and Storage Pool will be automatically encrypted using the system generated certificate.
 * Data Pool encryption, albeit technically possible using T-SQL’s ‘EXECUTE AT’ commands, is discouraged and unsupported at this time. Using this techniques to encrypt Data Pool databases might not be effective and encryption may not be happening at the desired state. It will also create an incompatible upgrade path towards next releases.
-* There is no certificate rotation, this will come in future releases with the appropriate azdata command set. It is supported to decrypt and then encrypt with a new certificate if not on HA deployments.
+* There is no certificate rotation at this time. It is supported to decrypt and then encrypt with a new certificate using T-SQL commands if not on HA deployments.
 * Encryption monitoring happens through existing standard SQL Server DMVs for TDE.
 * It is supported to backup and restore a TDE enabled database into the cluster.
 * HA is supported. If a database on the primary instance of SQL Server is encrypted, then all secondary replica of the database will be encrypted as well.

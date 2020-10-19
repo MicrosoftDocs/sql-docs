@@ -365,8 +365,6 @@
             href: big-data-cluster/encryption-at-rest-sql-server-tde.md
           - name: HDFS Encryption Zones
             href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
-          - name: Key Management
-            href: big-data-cluster/encryption-at-rest-key-management.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio

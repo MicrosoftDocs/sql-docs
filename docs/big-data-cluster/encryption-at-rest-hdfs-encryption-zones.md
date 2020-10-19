@@ -24,9 +24,9 @@ Note that there is already a default encryption zone mounted at __```/securelake
 - [SQL Server Big Data Cluster CU8+](release-notes-big-data-cluster.md) with Active Directory Integration.
 - User with administrative privileges.
 
-## Login into the name node.
+## Login into the name node
 
-1. Use [Active Directory connection instructions](active-directory-connect.md) to perform cluster login. Log into the namenode (nmnode-0-0) to issue key and encryption zones commands.
+Use [Active Directory connection instructions](active-directory-connect.md) to perform cluster login. Log into the namenode (nmnode-0-0) to issue key and encryption zones commands.
 
    ```console
    kubectl exec -it -c hadoop -n <cluster_namespace> nmnode-0-0 -- /bin/bash

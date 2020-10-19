@@ -121,21 +121,24 @@ On existing clusters, the upgrade process won't enforce encryption on user data 
     1. __HDFS__. The upgrade process won't touch HDFS files and folders outside encryption zones.
     1. __Encryption Zones won't be configured__. The Hadoop KMS component won't be configured to use BDC KMS. In order to configure and enable HDFS encryption zones feature after upgrade follow the next section.
 
-### Enabling HDFS encryption zones after upgrade
+### Enable HDFS encryption zones after upgrade
 
-Execute the following actions if you upgraded your cluster to CU8 (azdata upgrade) and want to enable HDFS encryption zones.
+Execute the following actions if you upgraded your cluster to CU8 (`azdata upgrade`) and want to enable HDFS encryption zones.
 
 Requirements:
-- [Active Directory](active-directory-prerequisites.md) integrated cluster.
-- __```azdata```__ configured and logged into the cluster in AD mode.
-- Follow the following procedure to reconfigure the cluster with encryption zones support.
 
-    After performing the upgrade with __```azdata```__, save the following scripts. 
+- [Active Directory](active-directory-prerequisites.md) integrated cluster.
+
+- Azure Data CLI (`azdata`) configured and logged into the cluster in AD mode.
+
+Follow the following procedure to reconfigure the cluster with encryption zones support.
+
+1. After performing the upgrade with `azdata`, save the following scripts.
 
     Scripts execution requirements:
         
     * Both scripts should be located in the same directory. 
-    * __```kubectl```__ on PATH
+    * `kubectl` on `PATH
     * ```config``` file for Kubernetes in the folder ```$HOME/.kube```
     
     This script should be named __```run-key-provider-patch.sh```__:

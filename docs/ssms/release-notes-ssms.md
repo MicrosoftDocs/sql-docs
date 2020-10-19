@@ -10,7 +10,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/20/2020 
+ms.date: 10/20/2020
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -26,10 +26,10 @@ This article provides details about updates, improvements, and bug fixes for the
 ![download](media/download-icon.png) [Download SSMS 18.7](download-sql-server-management-studio-ssms.md)
 
 - Release number: 18.7
-- Build number: 15.0.xxxx.0
+- Build number: 15.0.18357.0
 - Release date: October 20, 2020
 
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2146265&clcid=0x40a)
 
 SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
@@ -40,7 +40,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | New item | Details |
 |----------|---------|
 | Azure Data Studio installation integration | Installation of SSMS also installs Azure Data Studio. |
-| Always Encrypted | To recognize the new HSM endpoints you need to upgrade SSMS. This is done by consuming the new AKV Provider NugetPackage. |
+| Always Encrypted | To recognize the new HSM endpoints, you need to upgrade SSMS. This is done by consuming the new AKV Provider NugetPackage. |
 | Import Flat File | Made an improvement to better predict data types by learning on 300 lines by default. |
 | Import Flat File | Prevent columns from being declared as TinyInt that should be SmallInt. |
 | Import Flat File | Made an improvement where DW tables are properly cleaned, if there is a failure in data import. |
@@ -65,6 +65,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue where trying to connect to an Azure SQL DB, which could take several seconds (SQL login in a user database). |
 | General SSMS | Fixed an issue where SSMS was not handling/displaying deadlock captured (.xdl files). |
 | General SSMS | Fixed an issue where trying to open error log settings for SQL Server 2008 R2 and below failed with ErrorLogSizeKb property not found. |
+| General SSMS | General fixes and improvements around [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) support. |
 | Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
 | Import/Export Data-Tier Application | Fixed the default service tier to be Standard S0 when importing a bacpac (same as Azure portal and SqlPackage.exe behavior). |
 | Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
@@ -78,7 +79,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Object Explorer | Fixed an issue where selecting the **Start PowerShell** menu on some Object Explorer nodes (like "Policy Management", "Extended Events") would cause PowerShell not to start correctly. |
 | Registered Servers | Fixed an issue where SSMS crashed when trying to register a Central Management Server. |
 | Registered Servers | Fixed the issue where menu items to launch Azure Data Studio from Registered Servers was missing. |
-| Reports | Fixed an issue where on the Performance Dashboard you try to navigate to sublinks (e.g. "Expensive Queries") and it doesn't work. This issue was common on most non-English versions of SSMS. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/41454499). |
+| Reports | Fixed an issue where on the Performance Dashboard you try to navigate to sublinks (such as **Expensive Queries**) and it doesn't work. This issue was common on most non-English versions of SSMS. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/41454499). |
 | ShowPlan | Fixed and issue that was causing SSMS to crash when using Find Node to search for text. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40421650). |
 | ShowPlan | Add KB suffix on the Memory Grant tooltip row |
 | Vulnerability Assessment | Fixed an issue that was causing SSMS to throw an error when trying to set baselines in Vulnerability Assessment. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40578565). |
@@ -95,6 +96,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | SSMS Extensions using SMO should be recompiled targeting the new SSMS-specific SMO v161 package. A preview version is available at https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Extensions compiled against previous 160 versions of Microsoft.SqlServer.SqlManagementObjects package will still function. | N/A |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/A |
 | Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. Workaround: Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect | N/A |
+| Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics SQL on-demand, you need SSMS 18.7 or later.
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -119,7 +121,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 ### 18.6
 
-![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
+![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
 
 - Release number: 18.6
 - Build number: 15.0.18338.0

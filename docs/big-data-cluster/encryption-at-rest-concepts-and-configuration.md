@@ -127,8 +127,123 @@ Execute the following actions if you upgraded your cluster to CU8 (azdata upgrad
 
 Requirements:
 - [Active Directory](active-directory-prerequisites.md) integrated cluster.
-- [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) installed and connected to the cluster.
-- From the [SQL Server BDC Operation Notebooks](cluster-manage-notebooks.md) execute the __`sop128-enable-encryption-zones`__ notebook to perform the configuration and validation of HDFS encryption zones support.
+- __```azdata```__ configured and logged into the cluster in AD mode.
+- Follow the following procedure to reconfigure the cluster with encryption zones support.
+
+    After performing the upgrade with __```azdata```__, save the following scripts. 
+
+    Scripts execution requirements:
+        
+    * Both scripts should be located in the same directory. 
+    * __```kubectl```__ on PATH
+    * ```config``` file for Kubernetes in the folder ```$HOME/.kube```
+    
+    This script should be named __```run-key-provider-patch.sh```__:
+
+    ```console
+    #!/bin/bash
+    
+    if [[ -z "${BDC_DOMAIN}" ]]; then
+      echo "BDC_DOMAIN environment variable with the domain name of the cluster is not defined."
+      exit 1
+    fi
+    
+    if [[ -z "${BDC_CLUSTER_NS}" ]]; then
+      echo "BDC_CLUSTER_NS environment variable with the cluster namespace is not defined."
+      exit 1
+    fi
+    
+    kubectl get configmaps -n test
+    
+    diff <(kubectl get configmaps mssql-hadoop-storage-0-configmap -n $BDC_CLUSTER_NS -o json | ./updatekeyprovider.py) <(kubectl get configmaps mssql-hadoop-storage-0-configmap -n $BDC_CLUSTER_NS -o json | python -m json.tool)
+    
+    diff <(kubectl get configmaps mssql-hadoop-sparkhead-configmap -n $BDC_CLUSTER_NS -o json | ./updatekeyprovider.py) <(kubectl get configmaps mssql-hadoop-sparkhead-configmap -n $BDC_CLUSTER_NS -o json | python -m json.tool)
+    
+    # Replace the config maps.
+    #
+    kubectl replace -n $BDC_CLUSTER_NS -o json -f <(kubectl get configmaps mssql-hadoop-storage-0-configmap -n $BDC_CLUSTER_NS -o json | ./updatekeyprovider.py)
+    
+    kubectl replace -n $BDC_CLUSTER_NS -o json -f <(kubectl get configmaps mssql-hadoop-sparkhead-configmap -n $BDC_CLUSTER_NS -o json | ./updatekeyprovider.py)
+    
+    # Restart the pods which need to have the necessary changes with the core-site.xml
+    kubectl delete pods -n $BDC_CLUSTER_NS nmnode-0-0
+    kubectl delete pods -n $BDC_CLUSTER_NS storage-0-0
+    kubectl delete pods -n $BDC_CLUSTER_NS storage-0-1
+    
+    # Wait for sometime for pods to restart
+    #
+    sleep 300
+    
+    # Check for the KMS process status.
+    #
+    kubectl exec -n $BDC_CLUSTER_NS -c hadoop nmnode-0-0 -- bash -c 'ps aux | grep kms'
+    kubectl exec -n $BDC_CLUSTER_NS -c hadoop storage-0-0 -- bash -c 'ps aux | grep kms'
+    kubectl exec -n $BDC_CLUSTER_NS -c hadoop storage-0-1 -- bash -c 'ps aux | grep kms'
+    ```
+
+    This script should be named __```updatekeyprovider.py```__:
+
+    ```python
+    #!/usr/bin/env python3
+    
+    import json
+    import re
+    import sys
+    import xml.etree.ElementTree as ET
+    import os
+    
+    class CommentedTreeBuilder(ET.TreeBuilder):
+        def comment(self, data):
+            self.start(ET.Comment, {})
+            self.data(data)
+            self.end(ET.Comment)
+    
+    domain_name = os.environ['BDC_DOMAIN']
+    
+    parser = ET.XMLParser(target=CommentedTreeBuilder())
+    
+    core_site = 'core-site.xml'
+    j = json.load(sys.stdin)
+    cs = j['data'][core_site]
+    csxml = ET.fromstring(cs, parser=parser)
+    props = [prop.find('value').text for prop in csxml.findall(
+        "./property/name/..[name='hadoop.security.key.provider.path']")]
+    
+    kms_provider_path=''
+    
+    for x in range(5):
+        if len(kms_provider_path) != 0:
+            kms_provider_path = kms_provider_path + ';'
+        kms_provider_path = kms_provider_path + 'nmnode-0-0.' + domain_name
+    
+    if len(props) == 0:
+        prop = ET.SubElement(csxml, 'property')
+        name = ET.SubElement(prop, 'name')
+        name.text = 'hadoop.security.key.provider.path'
+        value = ET.SubElement(prop, 'value')
+        value.text = 'kms://https@' + kms_provider_path + ':9600/kms'
+        cs = ET.tostring(csxml, encoding='utf-8').decode('utf-8')
+    
+    j['data'][core_site] = cs
+    
+    kms_site = 'kms-site.xml.tmpl'
+    ks = j['data'][kms_site]
+    
+    kp_uri_regex = re.compile('(<name>hadoop.kms.key.provider.uri</name>\s*<value>\s*)(.*)(\s*</value>)', re.MULTILINE)
+    
+    def replace_uri(match_obj):
+        key_provider_uri = 'bdc://https@hdfsvault-svc.' + domain_name
+        if match_obj.group(2) == 'jceks://file@/var/run/secrets/keystores/kms/kms.jceks' or match_obj.group(2) == key_provider_uri:
+            return match_obj.group(1) + key_provider_uri + match_obj.group(3)
+        return match_obj.group(0)
+    
+    ks = kp_uri_regex.sub(replace_uri, ks)
+    
+    j['data'][kms_site] = ks
+    print(json.dumps(j, indent=4, sort_keys=True))
+    ```
+
+    Execute __```run-key-provider-patch.sh```__ with the appropriate parameters. 
 
 ## Next steps
 

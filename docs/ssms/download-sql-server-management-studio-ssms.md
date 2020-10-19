@@ -23,7 +23,7 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/14/2020
+ms.date: 10/20/2020
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -44,7 +44,7 @@ SSMS 18.7 is the latest general availability (GA) version of SSMS. If you have a
 
 - Release number: 18.7
 - Build number: 15.0.xxxx.x
-- Release date: October 14, 2020
+- Release date: October 20, 2020
 
 If you have comments or suggestions, or you want to report issues, the best way to contact the SSMS team is at [SQL Server user feedback](https://aka.ms/sqlfeedback).
 

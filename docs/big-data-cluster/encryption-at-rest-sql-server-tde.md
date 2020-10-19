@@ -1,6 +1,6 @@
 ---
-title: SQL Server Big Data Clusters TDE Encryption at Rest usage guide
-titleSuffix: SQL Server big data clusters
+title: SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide
+titleSuffix: SQL Server Big Data Clusters
 description: This article show how to use SQL Server TDE Encryption at Rest feature of BDC
 author: DaniBunny
 ms.author: dacoelho
@@ -11,17 +11,17 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# SQL Server Big Data Clusters TDE Encryption at Rest usage guide
+# SQL Server Big Data Clusters transparent data encryption (TDE) at rest usage guide
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This guide demonstrates how to use Encryption at Rest capabilities of SQL Server Big Data Clusters to encrypt databases.
+This guide demonstrates how to use encryption at rest capabilities of SQL Server Big Data Clusters to encrypt databases.
 
-Experience is in general the same as SQL Server on Linux and [standard TDE documentation](../sql/relational-databases/security/encryption/transparent-data-encryption.md) applies except where noted. In order to monitor status of encryption on master, follow standard DMV query patterns on top of [```sys.dm_database_encryption_keys```](../sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) and [```sys.certificates```](../sql/relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
+Experience is in general the same as SQL Server on Linux and [standard TDE documentation](../sql/relational-databases/security/encryption/transparent-data-encryption.md) applies except where noted. In order to monitor status of encryption on master, follow standard DMV query patterns on top of [`sys.dm_database_encryption_keys`](../sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) and [`sys.certificates`](../sql/relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
 
 __Unsupported features:__
-* Data Pool Encryption
-* HA SQL Server Database Encryption key encryptor rotation
+* Data pool encryption
+* Encryption key rotation for databases in a contained availability group in an [HA deployment](deployment-high-availability.md).
 
 
 ## <a id="prereqs"></a> Prerequisites
@@ -78,6 +78,6 @@ In the following examples consider a database named __userdb__ as the target for
 
 ## Next steps
 
-Learn about Encryption at Rest for HDFS:
+Learn about encryption at rest for HDFS:
 > [!div class="nextstepaction"]
 > [HDFS Encryption Zones](encryption-at-rest-hdfs-encryption-zones.md)

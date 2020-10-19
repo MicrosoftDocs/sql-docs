@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/17/2020
+ms.date: 10/19/2020
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
@@ -52,7 +52,7 @@ Sets header values for all URLs matching the specified regex pattern. Users can 
 <CustomHeaders>
     <Header>
         <Name>X-Frame-Options</Name>
-        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
         <Value>SAMEORIGIN</Value>
     </Header>
 </CustomHeaders>
@@ -88,8 +88,8 @@ The below example shows how to set the HSTS and other custom headers for URLs wi
 <CustomHeaders>
     <Header>
         <Name>Strict-Transport-Security</Name>
-        <Pattern>\/Reports\/mobilereport</Pattern>
-        <Value>max-age=86400</Value>
+        <Pattern>(.+)\/Reports\/mobilereport(.+)</Pattern>
+        <Value>max-age=86400; includeSubDomains=true</Value>
     </Header>
     <Header>
         <Name>Embed</Name>
@@ -99,7 +99,7 @@ The below example shows how to set the HSTS and other custom headers for URLs wi
 </CustomHeaders>
 ```
 
-The first header in the above XML adds `Strict-Transport-Security: max-age=86400` header to the matched requests.
+The first header in the above XML adds `Strict-Transport-Security: max-age=86400; includeSubDomains=true` header to the matched requests.
 - http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - Regex matched and will set HSTS header
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report – Match Failed
 

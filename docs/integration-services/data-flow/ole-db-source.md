@@ -28,7 +28,7 @@ ms.author: chugu
   The OLE DB source extracts data from a variety of OLE DB-compliant relational databases by using a database table, a view, or an SQL command. For example, the OLE DB source can extract data from tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../load-data-to-from-excel-with-ssis.md).  
   
  The OLE DB source provides four different data access modes for extracting data:  
   
@@ -95,7 +95,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -116,9 +116,9 @@ ms.author: chugu
   Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.  
   
 > [!NOTE]  
->  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
+>  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
 >   
->  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
+>  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;](./excel-source.md).  
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the OLE DB source is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
@@ -144,7 +144,7 @@ ms.author: chugu
 |Option|Description|  
 |------------|-----------------|  
 |Table or view|Retrieve data from a table or view in the OLE DB data source.|  
-|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](../integration-services-ssis-variables.md)|  
 |SQL command|Retrieve data from the OLE DB data source by using a SQL query.|  
 |SQL command from variable|Specify the SQL query text in a variable.|  
   
@@ -228,5 +228,4 @@ ms.author: chugu
  [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
   

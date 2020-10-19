@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ~ expression  
 ```  
   
@@ -65,7 +65,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
  The following example creates a table using the **int** data type to store the values and inserts the two values into one row.  
   
-```  
+```sql  
 CREATE TABLE bitwise (  
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL); 
@@ -76,7 +76,7 @@ GO
   
  The following query performs the bitwise NOT on the `a_int_value` and `b_int_value` columns.  
   
-```  
+```sql  
 SELECT ~ a_int_value, ~ b_int_value  
 FROM bitwise;  
 ```  

@@ -162,8 +162,7 @@ Enables this feature.
  When **False**, correlation statistics are not maintained.  
  
  **Delayed Durability**  
- Enables this feature.  
- https://docs.microsoft.com/en-us/sql/relational-databases/logs/control-transaction-durability
+ Enables this feature. For more information, see [Control Transaction Durability](../logs/control-transaction-durability.md).
  
  **Is Read Committed Snapshot On**  
  Enables this feature.  

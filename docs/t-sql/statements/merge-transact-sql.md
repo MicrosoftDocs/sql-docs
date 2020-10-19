@@ -23,12 +23,12 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], MERGE statement"
   - "inserting data"
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
+author: XiaoyuMSFT
+ms.author: XiaoyuL
 ---
 # MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Runs insert, update, or delete operations on a target table from the results of a join with a source table. For example, synchronize two tables by inserting, updating, or deleting rows in one table based on differences found in the other table.  
   
@@ -46,6 +46,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## Syntax  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -90,9 +92,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## Arguments
 
 WITH \<common_table_expression>  
@@ -206,6 +224,16 @@ Specifies the search conditions to specify \<merge_search_condition> or \<clause
 Specifies the graph match pattern. For more information about the arguments for this clause, see [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## Remarks
+>[!NOTE]
+> In Azure Synapse Analytics, the MERGE command (preview) has following differences compared to SQL server and Azure SQL database.  
+> - A MERGE update is implemented as a delete and insert pair. The affected row count for a MERGE update includes the deleted and inserted rows. 
+> - The support for tables with different distribution types is described in this table:
+
+>|MERGE CLAUSE in Azure Synapse Analytics|Supported TARGE distribution table| Supported SOURCE distribution table|Comment|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |All distribution types||  
+>|**NOT MATCHED BY TARGET**|HASH |All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables. |
+>|**NOT MATCHED BY SOURCE**|All distribution types|All distribution types|Use UPDATE/DELETE FROM…JOIN to synchronize two tables.||  
 
 At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable can't be updated more than once in the same MATCHED clause.  
   
@@ -218,7 +246,8 @@ When used after MERGE, [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions
 MERGE is a fully reserved keyword when the database compatibility level is set to 100 or higher. The MERGE statement is available under both 90 and 100 database compatibility levels; however, the keyword isn't fully reserved when the database compatibility level is set to 90.  
   
 Don't use the **MERGE** statement when using queued updating replication. The **MERGE** and queued updating trigger aren't compatible. Replace the **MERGE** statement with an insert or an update statement.  
-  
+
+
 ## Trigger Implementation
 
 For every insert, update, or delete action specified in the MERGE statement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fires any corresponding AFTER triggers defined on the target table, but doesn't guarantee on which action to fire triggers first or last. Triggers defined for the same action honor the order you specify. For more information about setting trigger firing order, see [Specify First and Last Triggers](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
@@ -477,9 +506,6 @@ GO
 ### E. Using MERGE to do INSERT or UPDATE on a target edge table in a graph database
 
 In this example, you create node tables `Person` and `City` and an edge table `livesIn`. You use the MERGE statement on the `livesIn` edge and insert a new row if the edge doesn't already exist between a `Person` and `City`. If the edge already exists, then you just update the StreetAddress attribute on the `livesIn` edge.
-
-> [!NOTE]
-> The following example applies to SQL Server starting with 2019.
 
 ```sql
 -- CREATE node and edge tables

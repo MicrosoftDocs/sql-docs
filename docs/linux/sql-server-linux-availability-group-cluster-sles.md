@@ -316,7 +316,7 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 To add an ordering constraint, run the following command on one node: 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

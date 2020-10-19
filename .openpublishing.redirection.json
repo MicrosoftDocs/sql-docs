@@ -57596,6 +57596,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql/language-extensions/install/install-sql-server-language-extensions-on-windows.md",
+      "redirect_url": "/sql/language-extensions/install/windows-java",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/sql/linux/sql-server-linux-setup-language-extensions.md",
+      "redirect_url": "/sql/linux/sql-server-linux-setup-language-extensions-java",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/linux/index.md",
       "redirect_url": "/sql/linux/sql-server-linux-overview",
       "redirect_document_id": false
@@ -59049,6 +59059,11 @@
       "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
       "redirect_url": "/sql/ssms/quickstarts/connect-query-sql-server",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sanddance-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sanddance-extension",
+      "redirect_document_id": true
     }
   ]
 }

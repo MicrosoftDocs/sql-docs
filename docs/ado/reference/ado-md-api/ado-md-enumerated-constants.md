@@ -1,4 +1,4 @@
-﻿---
+---
 description: "ADO MD Enumerated Constants"
 title: "ADO MD Enumerated Constants | Microsoft Docs"
 ms.prod: sql
@@ -24,7 +24,7 @@ To assist debugging, the ADO MD enumerated constants list a value for each const
 -   [MemberTypeEnum](./membertypeenum.md)  
   
 ## See Also  
- [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
+ [ADO MD API Reference](./ado-md-object-model.md?view=sql-server-ver15)   
  [ADO MD Code Examples](./ado-md-code-examples.md)   
  [ADO MD Collections](./ado-md-collections.md)   
  [ADO MD Methods](./ado-md-methods.md)   

@@ -57,7 +57,7 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release          | BDC Version    | `azdata` Version| Release date |
+| Release <sup>1</sup> | BDC Version    | Azure Data CLI (`azdata`) version| Release date |
 |------------------|----------------|-----------------|--------------|
 | [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
 | [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
@@ -68,9 +68,9 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
-<sup>1</sup>The following releases are not available for BDC: CU7
+<sup>1</sup> CU7 is not available for BDC.
 
-<sup>2</sup>`azdata` version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
+<sup>2</sup>Azure Data CLI version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
 ## How to install updates
 
@@ -88,9 +88,11 @@ This release includes several fixes and a couple of enhancements.
 
 ### Added capabilities
 
-- [SQL Server Big Data Clusters Encryption at Rest](encryption-at-rest-concepts-and-configuration.md) using system managed keys and certificates.
+- [SQL Server Big Data Clusters encryption at rest](encryption-at-rest-concepts-and-configuration.md) using system managed keys and certificates.
    > [!CAUTION]
-   > This is the initial release of SQL Server BDC Encryption at Rest experience and a throughout read of the linked documentation article is highly encouraged. There are additional steps required to enable the functionality on upgrade scenarios.
+   > This is the initial release of SQL Server BDC encryption at rest. Review the following articles: 
+   > - [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md)
+   > - [Encryption at rest concepts and configuration Guide](encryption-at-rest-concepts-and-configuration.md)
 - [Oracle Proxy User](tutorial-query-oracle.md) support to the Data Virtualization scenario.
 
 ## <a id="cu6"></a> CU6 (July 2020)

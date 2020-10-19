@@ -1,6 +1,6 @@
 ---
-title: Run on-demand SQL Assessment on a SQL Server instance with Azure Arc enabled
-description: Run on-demand SQL Assessment on a SQL Server instance with Azure Arc enabled
+title: Configure on-demand SQL Assessment on an Azure Arc enabled SQL Server instance
+description: Configure on-demand SQL Assessment on an Azure Arc enabled SQL Server instance
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -8,7 +8,7 @@ ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ---
-# Run SQL Assessment on a SQL Server instance with Azure Arc enabled
+# Configure SQL Assessment on an Azure Arc enabled SQL Server instance
 
 SQL Assessment provides a mechanism to evaluate the configuration of your SQL Server. This article provides instructions for using SQL Assessment on an Azure Arc enabled SQL Server instance.
 
@@ -24,11 +24,12 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 
 * Make sure you've reviewed the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
-## Run SQL Assessment on demand
+## Run On-demand SQL Assessment
 
 1. Open your SQL Server – Azure Arc resource and select **Environment Health** in the left pane.
 
-   :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Screenshot showing the Environment Health screen of a SQL Server - Azure Arc resource." lightbox="media/assess/sql-assessment-heading-sql-server-arc.png":::
+   > [!div class="mx-imgBorder"]
+   > [ ![Screenshot showing the Environment Health screen of a SQL Server - Azure Arc resource.](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
 1. Specify a working directory on the data collection machine. By default, `C:\sql_assessment\work_dir` is used. During collection and analysis, data is temporarily stored in that folder. If the folder doesn't exist, it's created automatically.
 
@@ -63,15 +64,18 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
    > [!NOTE]
    > The **View SQL Assessment results** button remains disabled until the results are ready in Log Analytics. This process might take up to two hours after the data files are processed on the target machine.
 
-   :::image type="content" source="media/assess/sql-assessment-results.png" alt-text="Screenshot showing the SQL Assessment results." lightbox="media/assess/sql-assessment-results.png":::
+   > [!div class="mx-imgBorder"]
+   > [ ![Screenshot showing the SQL Assessment results.](media/assess/sql-assessment-results.png) ](media/assess/sql-assessment-results.png#lightbox)
 
 * You can see the state of data processing on the collection machine by checking the files in the working folder. After the scheduled task is completed, you should see several files with the _new._ prefix in the working directory.
 
-   :::image type="content" source="media/assess/sql-assessment-data-files-ready.png" alt-text="Screenshot showing a File Manager window displaying new data files in the working folder.":::
+   > [!div class="mx-imgBorder"]
+   > [ ![Screenshot showing a File Manager window displaying new data files in the working folder.](media/assess/sql-assessment-data-files-ready.png) ](media/assess/sql-assessment-data-files-ready.png#lightbox)
 
 * The Microsoft Monitoring Agent scans the working folder every 15 minutes. It looks for _new.*_ files and sends the data to the Log Analytics workspace. After MMA uploads the file, it changes the prefix change from _new._ to _processed._
 
-   :::image type="content" source="media/assess/sql-assessment-data-files-processed.png" alt-text="Screenshot showing a File Manager window displaying processed data files.":::
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot showing a File Manager window displaying processed data files.](media/assess/sql-assessment-data-files-processed.png)
 
 ## Next steps
 

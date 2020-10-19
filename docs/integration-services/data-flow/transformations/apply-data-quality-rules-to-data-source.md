@@ -25,8 +25,7 @@ ms.author: chugu
   
 1.  Create a package.  
   
-2.  Add and configure the DQS Cleansing transformation. For more information, see [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+2.  Add and configure the DQS Cleansing transformation. For more information, see [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   
 3.  Connect the DQS Cleansing transformation to a data source.  
-  
   

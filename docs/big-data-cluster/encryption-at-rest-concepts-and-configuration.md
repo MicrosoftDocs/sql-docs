@@ -54,9 +54,9 @@ BDC KMS service will generate and manage all keys and certificates for SQL Serve
 
 User provides keys and certificates to be managed by BDC KMS, commonly known as BYOK. This feature will provided in a future release.
 
-### External HSM/KMS Providers
+### External Providers
 
-External HSM/KMS solutions compatible with BDC KMS for external delegation. This feature will provided in a future release.
+External key solutions compatible with BDC KMS for external delegation. This feature will provided in a future release.
 
 ## Encryption at Rest on SQL Server Big Data Clusters CU8
 

@@ -34,7 +34,7 @@ Multiplies two numbers and sets a value to the result of the operation. For exam
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression *= expression  
 ```  
   

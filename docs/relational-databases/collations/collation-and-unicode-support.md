@@ -423,7 +423,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> Locale    
-A locale is a set of information that's associated with a location or a culture. The information can include the name and identifier of the spoken language, the script that's used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
+A locale is a set of information that's associated with a location or a culture. The information can include the name and identifier of the spoken language, the script that's used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).    
     
 ###  <a name="Code_Page_Defn"></a> Code page    
 A code page is an ordered set of characters of a given script in which a numeric index, or code point value, is associated with each character. A Windows code page is typically referred to as a *character set* or a *charset*. Code pages are used to provide support for the character sets and keyboard layouts that are used by different Windows system locales.     
@@ -650,4 +650,4 @@ For more information, see the following related content:
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     
 [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
-[Single-Byte and Multibyte Character Sets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
+[Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

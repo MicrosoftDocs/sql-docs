@@ -20,9 +20,9 @@ This tutorial shows you how to deploy a SQL Server Integration Services (SSIS) p
 
 ## Prerequisites
 
-Before you start, make sure you have version 17.2 or later of SQL Server Management Studio. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have version 17.2 or later of SQL Server Management Studio. To download the latest version of SSMS, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
-Also make sure that you have set up the SSISDB database in Azure and provisioned the Azure-SSIS Integration Runtime. For info about how to provision SSIS on Azure, see [Deploy SQL Server Integration Services packages to Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Also make sure that you have set up the SSISDB database in Azure and provisioned the Azure-SSIS Integration Runtime. For info about how to provision SSIS on Azure, see [Deploy SQL Server Integration Services packages to Azure](/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## For Azure SQL Database, get the connection info
 
@@ -186,7 +186,7 @@ To view the status of currently running Integration Services operations on the I
 
 You can also select a package in Object Explorer, right-click and select **Reports**, then **Standard Reports**, then **All Executions**.
 
-For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+For more info about how to monitor running packages in SSMS, see [Monitor Running Packages and Other Operations](../performance/monitor-running-packages-and-other-operations.md).
 
 ## Monitor the Execute SSIS Package activity
 
@@ -198,7 +198,7 @@ If you're running a package as part of an Azure Data Factory pipeline with the E
 
 To get status info about the Azure-SSIS Integration Runtime in which packages are running, use the following PowerShell commands. For each of the commands, provide the names of the Data Factory, the Azure-SSIS IR, and the resource group.
 
-For more info, see [Monitor Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+For more info, see [Monitor Azure-SSIS integration runtime](/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### Get metadata about the Azure-SSIS Integration Runtime
 

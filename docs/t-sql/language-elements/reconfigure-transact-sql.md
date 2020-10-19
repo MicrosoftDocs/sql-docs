@@ -33,8 +33,7 @@ ms.author: jroth
     
 ## Syntax    
     
-```    
-    
+```syntaxsql
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
@@ -62,7 +61,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## Examples    
  The following example sets the upper limit for the `recovery interval` configuration option to `75` minutes and uses `RECONFIGURE WITH OVERRIDE` to install it. Recovery intervals greater than 60 minutes are not recommended and disallowed by default. However, because the `WITH OVERRIDE` option is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not check whether the value specified (`75`) is a valid value for the `recovery interval` configuration option.    
     
-```    
+```sql    
 EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    

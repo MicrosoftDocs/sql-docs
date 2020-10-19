@@ -31,7 +31,7 @@ ms.custom: seo-dt-2019
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
   > [!NOTE]
-  > SQL Agent on Managed Instance is always configured to use Database Mail, so this content is not applicable on Managed Instance. In Managed Instance you need to have a profile that must be called **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** in order to bind SQL Agent with Database Mail. 
+  > SQL Agent on Managed Instance is always configured to use Database Mail, so this content is not applicable on Managed Instance. In Managed Instance you need to have a profile that must be called **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** in order to bind SQL Agent with Database Mail. 
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
@@ -75,5 +75,4 @@ ms.custom: seo-dt-2019
 -   [Operators](../../ssms/agent/operators.md)  
   
      Operators are aliases for people or groups that can receive electronic notification  
-  
   

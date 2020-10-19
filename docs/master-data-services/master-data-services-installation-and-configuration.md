@@ -104,7 +104,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
  For more information about installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using setup, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- For more information about installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using a command prompt, see [Install SQL Server 2016 from the Command Prompt](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). When you use a command prompt, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is available as a feature parameter.  
+ For more information about installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using a command prompt, see [Install SQL Server 2016 from the Command Prompt](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). When you use a command prompt, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is available as a feature parameter.  
   
  For a brief description with links to additional information about pre-installation tasks, see [Install Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
@@ -288,5 +288,4 @@ For more information about the settings on the Web Configuration page, see [Web 
  [Master Data Manager Web Application](../master-data-services/master-data-manager-web-application.md)   
  [Database Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Score new data (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 8 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 8 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this tutorial, you'll use the logistic regression model that you created in the previous tutorial to score another data set that uses the same independent variables as inputs.
 
@@ -54,7 +54,7 @@ In this tutorial, you'll use the logistic regression model that you created in t
   
 4. As a precaution, check for the existence of the output table. If one already exists with the same name, you will get an error when attempting to write the new table.
   
-    To do this, make a call to the functions [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) and [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), passing the table name as input.
+    To do this, make a call to the functions [rxSqlServerTableExists](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) and [rxSqlServerDropTable](/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), passing the table name as input.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
@@ -63,7 +63,7 @@ In this tutorial, you'll use the logistic regression model that you created in t
     + **rxSqlServerTableExists** queries the ODBC driver and returns TRUE if the table exists, FALSE otherwise.
     + **rxSqlServerDropTable** executes the DDL and returns TRUE if the table is successfully dropped, FALSE otherwise.
 
-5. Execute [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) to create the scores, and save them in the new table defined in data source sqlScoreDS.
+5. Execute [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) to create the scores, and save them in the new table defined in data source sqlScoreDS.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -75,7 +75,7 @@ In this tutorial, you'll use the logistic regression model that you created in t
         overwrite = TRUE)
     ```
   
-    The **rxPredict** function is another function that supports running in remote compute contexts. You can use the **rxPredict** function to create scores from models based on [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit), or [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    The **rxPredict** function is another function that supports running in remote compute contexts. You can use the **rxPredict** function to create scores from models based on [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit), or [rxGlm](/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - The parameter *writeModelVars* is set to **TRUE** here. This means that the variables that were used for estimation will be included in the new table.
   
@@ -113,7 +113,7 @@ After the new table has been created, compute and display a histogram of the 10,
 
      From this example, you can see how easy it is to use **RxSqlServerData** data source objects to define arbitrary datasets based on SQL queries, functions, or stored procedures, and then use those in your R code. The variable does not store the actual values, just the data source definition; the query is executed to generate the values only when you use it in a function like **rxImport**.
       
-2. Call the [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function to put the values in a data frame that can be shared across compute contexts.
+2. Call the [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) function to put the values in a data frame that can be shared across compute contexts.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)

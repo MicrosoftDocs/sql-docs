@@ -25,15 +25,15 @@ To prepare, you need to create and configure an Azure SQL Managed Instance and c
 
 ### Create and configure the database
 
-1. Create a managed instance with a virtual network. See [Quickstart: Create a SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) for details.
+1. Create a managed instance with a virtual network. See [Quickstart: Create a SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) for details.
 
-1. Configure a Point-to-Site connection. See [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
+1. Configure a Point-to-Site connection. See [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
-1. Configure Azure Active Directory authentication with SQL Managed Instance. See [Configure and manage Azure Active Directory authentication with SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) for details.
+1. Configure Azure Active Directory authentication with SQL Managed Instance. See [Configure and manage Azure Active Directory authentication with SQL](/azure/sql-database/sql-database-aad-authentication-configure) for details.
 
 ### Configure web application machine
 
-1. Install a Point-to-Site connection certificate and VPN to ensure that the machine can access the managed instance. Refer to [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
+1. Install a Point-to-Site connection certificate and VPN to ensure that the machine can access the managed instance. Refer to [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
 1. Install the following Roles and Features:
    - Roles:

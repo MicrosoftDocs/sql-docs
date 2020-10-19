@@ -28,7 +28,7 @@ This step assumes an ongoing R session based on previous steps in this walkthrou
 
 ## Create a histogram
 
-1. Generate the first plot, using the [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) function.  The rxHistogram function provides functionality similar to that in open-source R packages, but can run in a remote execution context.
+1. Generate the first plot, using the [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) function.  The rxHistogram function provides functionality similar to that in open-source R packages, but can run in a remote execution context.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -68,7 +68,7 @@ Typically, database servers block Internet access. This can be inconvenient when
 
     + The *mapPlot* function takes two arguments: an existing data object, which you defined earlier using RxSqlServerData, and the map representation passed from the client.
     + In the line beginning with the *ds* variable, rxImport is used to load into memory data from the previously created data source, *inDataSource*. (That data source contains only 1000 rows; if you want to create a map with more data points, you can substitute a different data source.)
-    + Whenever you use open-source R functions, data must be loaded into data frames in local memory. However, by calling the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function, you can run in the memory of the remote compute context.
+    + Whenever you use open-source R functions, data must be loaded into data frames in local memory. However, by calling the [rxImport](/r-server/r-reference/revoscaler/rximport) function, you can run in the memory of the remote compute context.
 
 2. Change the compute context to local, and load the libraries required for creating the maps.
 
@@ -84,7 +84,7 @@ Typically, database servers block Internet access. This can be inconvenient when
 
     + The line beginning with `googmap` generates a map with the specified coordinates at the center.
 
-3. Switch to the SQL Server compute context, and render the results, by wrapping the plot function in [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) as shown here. The rxExec function is part of the **RevoScaleR** package, and supports execution of arbitrary R functions in a remote compute context.
+3. Switch to the SQL Server compute context, and render the results, by wrapping the plot function in [rxExec](/r-server/r-reference/revoscaler/rxexec) as shown here. The rxExec function is part of the **RevoScaleR** package, and supports execution of arbitrary R functions in a remote compute context.
 
     ```R
     rxSetComputeContext(sqlcc)

@@ -27,7 +27,7 @@ For other migration guides, see [Database Migration](https://datamigration.micro
 To migrate your DB2 database to SQL Server, you need:
 
 - to verify your source environment is supported.
-- to download [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254).
+- [SQL Server Migration Assistant (SSMA) for DB2](https://www.microsoft.com/download/details.aspx?id=54254).
 
 
 
@@ -35,7 +35,7 @@ To migrate your DB2 database to SQL Server, you need:
 
 After you have met the prerequisites, you are ready to discover the topology of your environment and assess the feasibility of your migration. 
 
-### Assess and convert
+### Assess 
 
 Create an assessment using SQL Server Migration Assistant (SSMA). 
 
@@ -76,7 +76,7 @@ Validate the default data type mappings and change them based on requirements if
 
 1. You can change the type mapping for each table by selecting the table in the **DB2 Metadata explorer**. 
 
-### Schema conversion 
+### Convert schema 
 
 To convert the schema, follow these steps:
 

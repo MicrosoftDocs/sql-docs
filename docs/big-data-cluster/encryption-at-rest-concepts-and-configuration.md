@@ -1,5 +1,5 @@
 ---
-title: Encryption at Rest
+title: Encryption at rest
 titleSuffix: SQL Server Big Data Clusters
 description: Learn all about encryption at rest on a SQL Server 2019 Big Data Cluster.
 author: dacoelho
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Encryption at Rest Concepts and Configuration Guide
+# Encryption at rest concepts and configuration Guide
 
 Starting from SQL Server Big Data Clusters CU8, a comprehensive Encryption at Rest feature set is available to provide application level encryption to all data stored in the platform. This guide documents the concepts, architecture and configuration for the Encryption at Rest feature set for SQL Server Big Data Clusters.
 
@@ -23,14 +23,14 @@ SQL Server Big data clusters stores data in the following two locations:
 
 To be able to transparently encrypt data in SQL Server Big Data Clusters there are two possible approaches:
 
-* __Volume encryption__. This is supported by the Kubernetes platform and is expected as a best practice for Big Data Clusters deployments. This guide does not cover volume encryption. Please consult your kubenetes platform or appliance documentation for guides on how to properly encrypt volumes that will be used for SQL Server Big Data Clusters.
+* __Volume encryption__. This is supported by the Kubernetes platform and is expected as a best practice for Big Data Clusters deployments. This guide does not cover volume encryption. Please consult your Kubernetes platform or appliance documentation for guides on how to properly encrypt volumes that will be used for SQL Server Big Data Clusters.
 * __Application level encryption__. This architecture refers to the encryption of data by the application handling the data before it is written to disk. In case the volumes are exposed, an attacker wouldn’t be able to restore data artifacts elsewhere, unless the destination system also has been configured with the same encryption keys. 
 
 The Encryption at Rest feature set of SQL Server Big Data Clusters supports the core scenario of application level encryption for the SQL Server and HDFS components.
 
 The following capabilities are provided:
 
-* __System managed encryption at rest__. This is available in CU8.
+* __System-managed encryption at rest__. This is available in CU8.
 * __User managed encryption at rest (BYOK)__, with both service managed and external key provider integrations. This will be available in a future release.
 
 ## Key Definitions
@@ -46,33 +46,25 @@ A Controller hosted service responsible for managing keys and certificates for t
 
 We will reference this service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
 
-### System Managed Keys and Certificates
+### System-managed keys and certificates
 
 The BDC KMS service will manage all keys and certificates for SQL Server and HDFS.
 
-### User Provided Keys and Certificates
+## Encryption at rest on SQL Server Big Data Clusters CU8
 
-User provided keys and certificates to be managed by BDC KMS, commonly known as BYOK. This feature will provided in a future release.
+SQL Server Big Data Clusters CU8 is the initial release of the encryption at rest feature set. Please read this document carefully to completely assess your scenario.
 
-### External Providers
-
-External key solutions compatible with BDC KMS for external delegation. This feature will provided in a future release.
-
-## Encryption at Rest on SQL Server Big Data Clusters CU8
-
-SQL Server Big Data Clusters CU8 is the initial release of the Encryption at Rest feature set. Please read this document carefully to completely assess your scenario.
-
-The feature set introduces the __BDC KMS controller service__ to provide __system managed keys and certificates for data encryption at rest on both SQL Server and HDFS__. Those keys and certificates are service managed and this documentation will provide proper operational guidance on how to interact with the service.
+The feature set introduces the __BDC KMS controller service__ to provide __system-managed keys and certificates for data encryption at rest on both SQL Server and HDFS__. Those keys and certificates are service managed and this documentation will provide proper operational guidance on how to interact with the service.
 
 * __SQL Server__ instances leverages the established [__Transparent Data Encryption (TDE)__](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15) functionality.
 * __HDFS__ uses native Hadoop KMS within each pod to interact with BDC KMS on the controller. This enables HDFS Encryption Zones, which provide secure paths on HDFS.
 
 ### SQL Server instances
 
-* A system generated certificate will be installed on SQL Server pods to be used with TDE encryption commands. The system managed certificate naming standard is ‘TDECertificate+timestamp’. Example:  *TDECertificate2020_09_15_22_46_27*
+* A system generated certificate will be installed on SQL Server pods to be used with TDE encryption commands. The system-managed certificate naming standard is `TDECertificate` + `timestamp`. For example, `TDECertificate2020_09_15_22_46_27`.
 * Master instance BDC provisioned databases and user databases won’t be encrypted automatically. DBA’s may use the installed certificate to encrypt any database.
-* Compute Pool and Storage Pool will be automatically encrypted using the system generated certificate.
-* Data Pool encryption, albeit technically possible using T-SQL’s ‘EXECUTE AT’ commands, is discouraged and unsupported at this time. Using this techniques to encrypt Data Pool databases might not be effective and encryption may not be happening at the desired state. It will also create an incompatible upgrade path towards next releases.
+* Compute pool and storage pool will be automatically encrypted using the system generated certificate.
+* Data pool encryption, albeit technically possible using T-SQL’s `EXECUTE AT` commands, is discouraged and unsupported at this time. Using this techniques to encrypt data pool databases might not be effective and encryption may not be happening at the desired state. It will also create an incompatible upgrade path towards next releases.
 * There is no certificate rotation, this will come in future releases with the appropriate azdata command set. It is supported to decrypt and then encrypt with a new certificate if not on HA deployments.
 * Encryption monitoring happens through existing standard SQL Server DMVs for TDE.
 * It is supported to backup and restore a TDE enabled database into the cluster.
@@ -81,8 +73,8 @@ The feature set introduces the __BDC KMS controller service__ to provide __syste
 ### HDFS Encryption Zones
 
 * [Active Directory integration](active-directory-prerequisites.md) is required to enable the encryption zones feature for HDFS.
-* A system generated key will be provisioned in Hadoop KMS. The key name is __‘securelakekey’__. On CU8 the default key is 256 bit and we support 256 bit AES encryption.
-* A default encryption zone will be provisioned using the above system generated key on a path named __```/securelake```__.
+* A system generated key will be provisioned in Hadoop KMS. The key name is `securelakekey`. On CU8 the default key is 256 bit and we support 256 bit AES encryption.
+* A default encryption zone will be provisioned using the above system generated key on a path named `/securelake`.
 * Users can create additional keys and encryption zones using specific instructions provided in this guide. Users will be able to choose the key size of 128, 192, or 256 during key creation.
 * In place key rotation for HDFS is not possible in CU8. As an alternative, the data can be moved from one encryption zone to another using distcp.
 * Its not supported to perform HDFS Tiering mounting on top of an encryption zone.
@@ -111,8 +103,8 @@ On existing clusters, the upgrade process __won't enforce encryption on user dat
 * __SQL Server__
 
     1. __Master instance databases__. The upgrade process won’t affect any master instance databases and installed TDE certificates, but it is highly encouraged to backup your databases and your manually installed TDE certificates before the upgrade process. It is also advised to store those artifacts outside the SQL Server BDC cluster.
-    1. __Compute and Storage Pool__. Those databases are system managed, volatile and will be recreated and automatically encrypted on cluster upgrade.
-    1. __Data Pools__. The upgrade process won’t touch data pool tables.
+    1. __Compute and storage pool__. Those databases are system-managed, volatile and will be recreated and automatically encrypted on cluster upgrade.
+    1. __Data pools__. The upgrade process won’t touch data pool tables.
 
 * __HDFS__
 

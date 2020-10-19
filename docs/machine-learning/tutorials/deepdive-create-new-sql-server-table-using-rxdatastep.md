@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Create new SQL Server table using rxDataStep (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 11 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 11 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this tutorial, you'll learn how to move data between in-memory data frames, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] context, and local files.
 
@@ -29,7 +29,7 @@ This tutorial takes a different approach, and uses data from a file saved in the
 
 **What is XDF?**
 
-The XDF format is an XML standard developed for high-dimensional data and is the native file format used by [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). It is a binary file format with an R interface that optimizes row and column processing and analysis.  You can use it for moving data and to store subsets of data that are useful for analysis.
+The XDF format is an XML standard developed for high-dimensional data and is the native file format used by [Machine Learning Server](/machine-learning-server/r/concept-what-is-xdf). It is a binary file format with an R interface that optimizes row and column processing and analysis.  You can use it for moving data and to store subsets of data that are useful for analysis.
 
 1. Set the compute context to the local workstation. **DDL permissions are needed for this step.**
 
@@ -45,7 +45,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. Call [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) on the in-memory data to view a summary of the dataset.
+3. Call [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) on the in-memory data to view a summary of the dataset.
   
     ```R
     rxGetVarInfo(xdfAirDemo)

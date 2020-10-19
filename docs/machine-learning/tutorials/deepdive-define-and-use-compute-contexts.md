@@ -14,9 +14,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Define and use compute contexts (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 4 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 4 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In the previous tutorial, you used **RevoScaleR** functions to inspect data objects. This tutorial introduces the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for a remote SQL Server. With a remote compute context, you can shift R execution from a local session to a remote session on the server. 
+In the previous tutorial, you used **RevoScaleR** functions to inspect data objects. This tutorial introduces the [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function, which lets you define a compute context for a remote SQL Server. With a remote compute context, you can shift R execution from a local session to a remote session on the server. 
 
 > [!div class="checklist"]
 > * Learn the elements of a remote SQL Server compute context
@@ -58,7 +58,7 @@ This section walks you through each part.
   
     The *wait* argument to **RxInSqlServer** supports these options:
   
-    -   **TRUE**. The job is configured as blocking and does not return until it has completed or has failed.  For more information, see [Distributed and parallel computing in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+    -   **TRUE**. The job is configured as blocking and does not return until it has completed or has failed.  For more information, see [Distributed and parallel computing in Machine Learning Server](/machine-learning-server/r/how-to-revoscaler-distributed-computing).
   
     -   **FALSE**. Jobs are configured as non-blocking and return immediately, allowing you to continue running other R code. However, even in non-blocking mode, the client connection with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be maintained while the job is running.
 
@@ -85,9 +85,9 @@ This section walks you through each part.
     
     The syntax for **RxInSqlServer** looks almost identical to that of the **RxSqlServerData** function that you used earlier to define the data source. However, there are some important differences.
       
-    - The data source object, defined by using the function [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata), specifies where the data is stored.
+    - The data source object, defined by using the function [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata), specifies where the data is stored.
     
-    - In contrast, the compute context, defined by using the function [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) indicates where aggregations and other computations are to take place.
+    - In contrast, the compute context, defined by using the function [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver) indicates where aggregations and other computations are to take place.
     
     Defining a compute context does not affect any other generic R computations that you might perform on your workstation, and does not change the source of the data. For example, you could define a local text file as the data source but change the compute context to SQL Server and do all your reading and summaries on the data on the SQL Server computer.
 
@@ -130,7 +130,7 @@ Sometimes operations work on your local context, but have issues when running in
   
    In this example, the *traceLevel* property is set to 7, meaning "show all tracing information."
 
-2. Use the [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) function to specify the tracing-enabled compute context by name.
+2. Use the [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) function to specify the tracing-enabled compute context by name.
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

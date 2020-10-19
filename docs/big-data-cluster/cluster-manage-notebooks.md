@@ -1,5 +1,5 @@
 ---
-title: Managing Big Data Clusters (BDC) with Jupyter notebooks and Azure Data Studio
+title: Manage Big Data Clusters (BDC) with Jupyter notebooks and Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
 description: Managing Big Data Clusters (BDC) with Jupyter notebooks and Azure Data Studio on SQL Server 2019 big data cluster.
 author: cloudmelon
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Managing Big Data Clusters (BDC) the cluster with notebooks
+# Manage Big Data Clusters (BDC) the cluster with notebooks
 
 This page is an index of notebooks for SQL Server Big Data Clusters. Those executable notebooks (.ipynb) are designed for SQL Server 2019 to assist in managing Big Data Clusters.
 

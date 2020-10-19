@@ -56,7 +56,7 @@ A secure big data cluster implies consistent and coherent support for authentica
 
 Authorization in Big Data context is usually performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files, and job execution.
 
-## Connection Encryption and other security mechanisms
+## Encryption in flight and other security mechanisms
 
 Encryption of communication between clients to the external endpoints, as well as between components inside the cluster are secured with TLS/SSL, using certificates.
 

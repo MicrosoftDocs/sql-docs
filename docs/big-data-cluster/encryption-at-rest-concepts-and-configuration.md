@@ -14,7 +14,6 @@ ms.technology: big-data-cluster
 
 # Encryption at Rest Concepts and Configuration Guide
 
-
 Starting from SQL Server Big Data Clusters CU8, a comprehensive Encryption at Rest feature set is available to provide application level encryption to all data stored in the platform. This guide documents the concepts, architecture and configuration for the Encryption at Rest feature set for SQL Server Big Data Clusters.
 
 SQL Server Big data clusters stores data in the following two locations:
@@ -22,30 +21,30 @@ SQL Server Big data clusters stores data in the following two locations:
 * __SQL Server__
 * __HDFS__ used by Storage pool and Spark.
 
-To be able to transparently encrypt data in BDC there are two possible approaches:
+To be able to transparently encrypt data in SQL Server Big Data Clusters there are two possible approaches:
 
 * __Volume encryption__. This is supported by the Kubernetes platform and is expected as a best practice for Big Data Clusters deployments. This guide does not cover volume encryption. Please consult your kubenetes platform or appliance documentation for guides on how to properly encrypt volumes that will be used for SQL Server Big Data Clusters.
 *	__Application level encryption__. This architecture refers to the encryption of data by the application handling the data before it is written to disk. In case the volumes are exposed, an attacker wouldn’t be able to restore data artifacts elsewhere, unless the destination system also has been configured with the same encryption keys. 
 
-The Encryption at Rest feature set of SQL Server Big Data Clusters supports the core scenario of application level encryption for the SQL Server and HDFS components of BDC.
+The Encryption at Rest feature set of SQL Server Big Data Clusters supports the core scenario of application level encryption for the SQL Server and HDFS components.
 
 The following capabilities are provided:
 
 * __System managed encryption at rest__. This is available in CU8.
-* __User managed encryption at rest (BYOK)__, with both service managed and external KMS/HSM provider integrations. This will be available in a future release.
+* __User managed encryption at rest (BYOK)__, with both service managed and external key provider integrations. This will be available in a future release.
 
 ## Key Definitions
 
 ### SQL Server Big Data Clusters Key Management Service - BDC KMS
 
-A Controller hosted service responsible for managing keys and certificates for the Encryption at Rest feature set for the BDC cluster. It’s an AKV API based service that supports the following features:
+A Controller hosted service responsible for managing keys and certificates for the Encryption at Rest feature set for the SQL Server BDC cluster. It’s a service that supports the following features:
 
 * Secure management and storage of keys and certificates.
-* Hadoop KMS compatibility.
+* Hadoop KMS compatibility. It acts as the key management service for HDFS component on BDC.
 * SQL Server TDE certificate management.
-* *Versioning support*. This will be available in a future release.
+* *Keys Versioning support*. This will be available in a future release.
 
-We will reference this service as __BDC KMS__ throughout the rest of this document.
+We will reference this service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
 
 ### System Generated and Managed Keys and Certificates
 

@@ -40,7 +40,7 @@ The following capabilities are provided:
 
 A Controller hosted service responsible for managing keys and certificates for the Encryption at Rest feature set for the BDC cluster. It’s an AKV API based service that supports the following features:
 
-* Secure management and storage of keys and certificates.
+* Secure management and storage of keys and certificates used for encryption at rest.
 * Hadoop KMS compatibility.
 * SQL Server TDE certificate management.
 * *Versioning support*. This will be available in a future release.

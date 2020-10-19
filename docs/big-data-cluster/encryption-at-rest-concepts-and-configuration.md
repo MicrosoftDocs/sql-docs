@@ -24,7 +24,7 @@ SQL Server Big data clusters stores data in the following two locations:
 To be able to transparently encrypt data in SQL Server Big Data Clusters there are two possible approaches:
 
 * __Volume encryption__. This is supported by the Kubernetes platform and is expected as a best practice for Big Data Clusters deployments. This guide does not cover volume encryption. Please consult your kubenetes platform or appliance documentation for guides on how to properly encrypt volumes that will be used for SQL Server Big Data Clusters.
-*	__Application level encryption__. This architecture refers to the encryption of data by the application handling the data before it is written to disk. In case the volumes are exposed, an attacker wouldn’t be able to restore data artifacts elsewhere, unless the destination system also has been configured with the same encryption keys. 
+* __Application level encryption__. This architecture refers to the encryption of data by the application handling the data before it is written to disk. In case the volumes are exposed, an attacker wouldn’t be able to restore data artifacts elsewhere, unless the destination system also has been configured with the same encryption keys. 
 
 The Encryption at Rest feature set of SQL Server Big Data Clusters supports the core scenario of application level encryption for the SQL Server and HDFS components.
 
@@ -39,7 +39,7 @@ The following capabilities are provided:
 
 A Controller hosted service responsible for managing keys and certificates for the Encryption at Rest feature set for the SQL Server BDC cluster. It’s a service that supports the following features:
 
-* Secure management and storage of keys and certificates.
+* Secure management and storage of keys and certificates used for encryption at rest.
 * Hadoop KMS compatibility. It acts as the key management service for HDFS component on BDC.
 * SQL Server TDE certificate management.
 * *Keys Versioning support*. This will be available in a future release.
@@ -81,11 +81,11 @@ The feature set introduces the __BDC KMS controller service__ to provide __syste
 ### HDFS Encryption Zones
 
 * [Active Directory integration](active-directory-prerequisites.md) is required to enable the encryption zones feature for HDFS.
-*	A system generated key will be provisioned in Hadoop KMS. The key name is __‘securelakekey’__. On CU8 the default key is 256 bit and we support 256 bit AES encryption.
-*	A default encryption zone will be provisioned using the above system generated key on a path named __```/securelake```__.
-*	Users can create additional keys and encryption zones using specific instructions provided in this guide. Users will be able to choose the key size of 128, 192, or 256 during key creation.
-*	In place key rotation for HDFS is not possible in CU8. As an alternative, the data can be moved from one encryption zone to another using distcp.
-*	Its not supported to perform HDFS Tiering mounting on top of an encryption zone.
+* A system generated key will be provisioned in Hadoop KMS. The key name is __‘securelakekey’__. On CU8 the default key is 256 bit and we support 256 bit AES encryption.
+* A default encryption zone will be provisioned using the above system generated key on a path named __```/securelake```__.
+* Users can create additional keys and encryption zones using specific instructions provided in this guide. Users will be able to choose the key size of 128, 192, or 256 during key creation.
+* In place key rotation for HDFS is not possible in CU8. As an alternative, the data can be moved from one encryption zone to another using distcp.
+* Its not supported to perform HDFS Tiering mounting on top of an encryption zone.
 
 ## Configuration Guide
 

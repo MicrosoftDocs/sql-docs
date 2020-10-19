@@ -86,8 +86,6 @@ Cumulative Update 8 (CU8) release for SQL Server 2019.
 
 This release includes several fixes and a couple of enhancements.
 
-Starting on CU8 and forward, we are providing a complete [packages and libraries version documentation](packages-libraries-versions.md). This will enable precise version compatibility tracking and validation during application development and maintenance for customers.
-
 ### Added capabilities
 
 - [SQL Server Big Data Clusters Encryption at Rest](encryption-at-rest-concepts-and-configuration.md) using system managed keys and certificates.

@@ -46,13 +46,13 @@ A Controller hosted service responsible for managing keys and certificates for t
 
 We will reference this service as __BDC KMS__ throughout the rest of this document. Also the term __BDC__ is used to refer to the __SQL Server Big Data Clusters__ computing platform.
 
-### System Generated and Managed Keys and Certificates
+### System Managed Keys and Certificates
 
-BDC KMS service will generate and manage all keys and certificates for SQL Server and HDFS.
+The BDC KMS service will manage all keys and certificates for SQL Server and HDFS.
 
 ### User Provided Keys and Certificates
 
-User provides keys and certificates to be managed by BDC KMS, commonly known as BYOK. This feature will provided in a future release.
+User provided keys and certificates to be managed by BDC KMS, commonly known as BYOK. This feature will provided in a future release.
 
 ### External Providers
 
@@ -62,7 +62,7 @@ External key solutions compatible with BDC KMS for external delegation. This fea
 
 SQL Server Big Data Clusters CU8 is the initial release of the Encryption at Rest feature set. Please read this document carefully to completely assess your scenario.
 
-The feature set introduces the __BDC KMS controller service__ to provide __system generated and system managed keys and certificates for encryption on both SQL Server and HDFS__. Those keys and certificates are service managed and this documentation will provide proper operational guidance on how to interact with the service.
+The feature set introduces the __BDC KMS controller service__ to provide __system managed keys and certificates for data encryption at rest on both SQL Server and HDFS__. Those keys and certificates are service managed and this documentation will provide proper operational guidance on how to interact with the service.
 
 * __SQL Server__ instances leverages the established [__Transparent Data Encryption (TDE)__](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15) functionality.
 * __HDFS__ uses native Hadoop KMS within each pod to interact with BDC KMS on the controller. This enables HDFS Encryption Zones, which provide secure paths on HDFS.
@@ -110,7 +110,7 @@ On existing clusters, the upgrade process __won't enforce encryption on user dat
 
 * __SQL Server__
 
-    1. __Master instance databases__. The upgrade process won’t touch any master instance databases and installed TDE certificates, but it is highly encouraged to backup your databases and your manually installed TDE certificates before the upgrade process. It is also advised to store those artifacts outside the SQL Server BDC cluster.
+    1. __Master instance databases__. The upgrade process won’t affect any master instance databases and installed TDE certificates, but it is highly encouraged to backup your databases and your manually installed TDE certificates before the upgrade process. It is also advised to store those artifacts outside the SQL Server BDC cluster.
     1. __Compute and Storage Pool__. Those databases are system managed, volatile and will be recreated and automatically encrypted on cluster upgrade.
     1. __Data Pools__. The upgrade process won’t touch data pool tables.
 
@@ -134,7 +134,6 @@ To learn more about how to effectively use Encryption at Rest SQL Server Big Dat
 
 - [Encryption at Rest - SQL Server TDE](encryption-at-rest-sql-server-tde.md)
 - [Encryption at Rest - HDFS Encryption Zones](encryption-at-rest-hdfs-encryption-zones.md)
-- [Encryption at Rest - Key Management](encryption-at-rest-key-management.md)
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 

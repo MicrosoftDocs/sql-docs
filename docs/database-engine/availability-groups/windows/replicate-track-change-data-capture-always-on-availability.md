@@ -145,7 +145,7 @@ ms.author: mathoma
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
         ON r.group_id = g.group_id  
-    WHERE g.name = N'MY_AG_NAME;  
+    WHERE g.name = N'MY_AG_NAME';  
     ```  
   
      Either the availability group listener name or the explicit node name can be used to locate the secondary replica. If the availability group listener name is used, access will be directed to any suitable secondary replica.  

@@ -211,7 +211,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
     ```
 
     >[!TIP]
-    > R Tools for Visual Studio (RTVS) provides great integration with both SQL Server and R. See this article for more examples of using RODBC with a SQL Server connection: [Working with SQL Server and R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > R Tools for Visual Studio (RTVS) provides great integration with both SQL Server and R. See this article for more examples of using RODBC with a SQL Server connection: [Working with SQL Server and R](/visualstudio/rtvs/sql-server)
 
 ## Next steps
 
@@ -224,5 +224,5 @@ You might also want to explore these additional samples and resources:
 
 + [Data science scenarios and solution templates](data-science-scenarios-and-solution-templates.md)
 + [In-database advanced analytics](r-taxi-classification-introduction.md)
-+ [Machine Learning Server How-to guides](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server Additional Resources](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [Machine Learning Server How-to guides](/machine-learning-server/r/how-to-introduction)
++ [Machine Learning Server Additional Resources](//machine-learning-server/resources-more)

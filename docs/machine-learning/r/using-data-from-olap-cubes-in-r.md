@@ -25,7 +25,7 @@ This article describes the API, along with an overview of OLAP and MDX for R use
 
 OLAP is short for Online Analytical Processing. OLAP solutions are widely used for capturing and storing critical business data over time. OLAP data is consumed for business analytics by a variety of tools, dashboards, and visualizations. For more information, see [Online analytical processing](https://en.wikipedia.org/wiki/Online_analytical_processing).
 
-Microsoft provides [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), which lets you design, deploy, and query OLAP data in the form of _cubes_ or _tabular models_. A cube is a multi-dimensional database. _Dimensions_ are like facets of the data, or factors in R: you use dimensions to identify some particular subset of data that you want to summarize or analyze. For example, time is an important dimension, so much so that many OLAP solutions include multiple calendars defined by default, to use when slicing and summarizing data. 
+Microsoft provides [Analysis Services](/analysis-services/analysis-services-overview), which lets you design, deploy, and query OLAP data in the form of _cubes_ or _tabular models_. A cube is a multi-dimensional database. _Dimensions_ are like facets of the data, or factors in R: you use dimensions to identify some particular subset of data that you want to summarize or analyze. For example, time is an important dimension, so much so that many OLAP solutions include multiple calendars defined by default, to use when slicing and summarizing data. 
 
 For performance reasons, an OLAP database often calculates summaries (or _aggregations_) in advance, and then stores them for faster retrieval. Summaries are based on  *measures*, which represent formulas that can be applied to numerical data. You use the dimensions to define a subset of data, and then compute the measure over that data. For example, you would use a measure to compute the total sales for a certain product line over multiple quarters minus taxes, to report the average shipping costs for a particular supplier, year-to-date cumulative wages paid, and so forth.
 
@@ -90,11 +90,11 @@ You can also view and query the server properties to determine which type of mod
 
 See the following article for general information about the two types of models:
 
-+ [Comparing multidimensional and tabular models](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [Comparing multidimensional and tabular models](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 See the following article for information about querying server properties:
 
-+ [OLE DB for OLAP Schema Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [OLE DB for OLAP Schema Rowsets](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### Writeback is not supported
 
@@ -102,9 +102,9 @@ It is not possible to write the results of custom R calculations back to the cub
 
 In general, even when a cube is enabled for writeback, only limited operations are supported, and additional configuration might be required. We recommend that you use MDX for such operations.
 
-+ [Write-enabled dimensions](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [Write-enabled partitions](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [Set custom access to cell data](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [Write-enabled dimensions](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [Write-enabled partitions](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [Set custom access to cell data](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### Long-running MDX queries block cube processing
 

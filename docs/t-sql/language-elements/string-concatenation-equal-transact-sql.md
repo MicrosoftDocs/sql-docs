@@ -30,8 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 expression += expression  
 ```  
   
@@ -49,7 +48,7 @@ expression += expression
   
  The += operator cannot be used without a variable. For example, the following code will cause an error:  
   
-```  
+```sql  
 SELECT 'Adventure' += 'Works'  
 ```  
   
@@ -57,8 +56,8 @@ SELECT 'Adventure' += 'Works'
 ### A. Concatenation using += operator
  The following example concatenates using the `+=` operator.  
   
-```  
-DECLARE @v1 varchar(40);  
+```sql  
+DECLARE @v1 VARCHAR(40);  
 SET @v1 = 'This is the original.';  
 SET @v1 += ' More text.';  
 PRINT @v1;  
@@ -71,10 +70,10 @@ PRINT @v1;
 ### B. Order of evaluation while concatenating using += operator
 The following example concatenates multiple strings to form one long string and then tries to compute the length of the final string. This example demonstrates the evaluation order and truncation rules, while using the concatenation operator. 
 
-```
-DECLARE @x varchar(4000) = replicate('x', 4000)
-DECLARE @z varchar(8000) = replicate('z',8000)
-DECLARE @y varchar(max);
+```sql
+DECLARE @x VARCHAR(4000) = REPLICATE('x', 4000)
+DECLARE @z VARCHAR(8000) = REPLICATE('z',8000)
+DECLARE @y VARCHAR(max);
  
 SET @y = '';
 SET @y += @x + @z;

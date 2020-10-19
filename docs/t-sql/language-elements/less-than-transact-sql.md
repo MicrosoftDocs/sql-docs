@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression < expression  
 ```  
   
@@ -52,7 +52,7 @@ expression < expression
 ### A. Using < in a simple query  
  The following example returns all rows in the `HumanResources.Department` table that have a value in `DepartmentID` that is less than the value 3.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
@@ -76,10 +76,9 @@ DepartmentID Name
   
 ### B. Using < to compare two variables  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a < @b, 'TRUE', 'FALSE' ) AS Result;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

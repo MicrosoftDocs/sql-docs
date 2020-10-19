@@ -62,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
  The following example finds all Silver colored bicycles that do not have a standard price over $400.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID, Name, Color, StandardCost  
@@ -87,7 +87,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example restricts results to `SalesOrderNumber` to values starting with `SO6` and `ProductKeys` greater than or equal to 400.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductKey, CustomerKey, OrderDateKey, ShipDateKey  

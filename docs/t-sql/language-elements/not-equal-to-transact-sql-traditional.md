@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression <> expression  
 ```  
   
@@ -53,13 +53,12 @@ expression <> expression
 ### A. Using <> in a simple query  
  The following example returns all rows in the `Production.ProductCategory` table that do not have value in `ProductCategoryID` that is equal to the value 3 or the value 2.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductCategoryID, Name  
 FROM Production.ProductCategory  
 WHERE ProductCategoryID <> 3 AND ProductCategoryID <> 2;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

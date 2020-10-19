@@ -21,7 +21,7 @@ SQL Server Management Studio is an integrated environment for managing any SQL i
 
 ## Prerequisites
 
-Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Before you start, make sure you have the latest version of SQL Server Management Studio. To download SSMS, see [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 The validation described in this article for deployment to Azure SQL Database requires SQL Server Data Tools (SSDT) version 17.4 or later. To get the latest version of SSDT, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
@@ -117,4 +117,4 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md)

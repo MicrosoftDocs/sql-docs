@@ -63,7 +63,6 @@ Before you can build the deployment utility, you must modify the properties of t
 [Step 2: Verifying the Deployment Bundle](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## See Also  
-[Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md)  
-  
+[Create a Deployment Utility](./packages/legacy-package-deployment-ssis.md)  
   
   

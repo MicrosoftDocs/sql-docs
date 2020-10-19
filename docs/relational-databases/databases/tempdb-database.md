@@ -34,9 +34,9 @@ The `tempdb` system database is a global resource that's available to all users 
   > [!IMPORTANT]
   > Azure SQL Database single databases and elastic pools support global temporary tables and global temporary stored procedures that are stored in `tempdb` and are scoped to the database level. 
   >
-  > Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same SQL database. User sessions from other SQL databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) supports the same temporary objects as does SQL Server.
+  > Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same SQL database. User sessions from other SQL databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) supports the same temporary objects as does SQL Server.
   >
-  > For Azure SQL Database single databases and elastic pools, only the master database and `tempdb` database apply. For more information, see [What is an Azure SQL Database server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). For a discussion of `tempdb` in the context of Azure SQL Database single databases and elastic pools, see [tempdb database in Azure SQL Database single databases and elastic pools](#tempdb-database-in-sql-database). 
+  > For Azure SQL Database single databases and elastic pools, only the master database and `tempdb` database apply. For more information, see [What is an Azure SQL Database server?](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). For a discussion of `tempdb` in the context of Azure SQL Database single databases and elastic pools, see [tempdb database in Azure SQL Database single databases and elastic pools](#tempdb-database-in-sql-database). 
   >
   > For Azure SQL Managed Instance, all system databases apply.
 
@@ -143,7 +143,7 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ### tempdb sizes for vCore-based service tiers
 
-See [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
+See [vCore-based resource limits](/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## Restrictions
 
@@ -217,7 +217,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` perfor
 - All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.  
 - For the primary filegroup, the `AUTOGROW_ALL_FILES` property is turned on and the property can't be modified.
 
-For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
+For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## Memory-optimized tempdb metadata
 Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
@@ -349,4 +349,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [Move database files](../../relational-databases/databases/move-database-files.md)    
-  

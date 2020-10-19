@@ -59,7 +59,7 @@ boolean_expression OR boolean_expression
 ## Examples  
  The following example uses the `vEmployeeDepartmentHistory` view to retrieve the names of `Quality Assurance` personnel who work either the evening shift or the night shift. If the parentheses are omitted, the query returns `Quality Assurance` employees who work the evening shift and all employees who work the night shift.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Shift   
@@ -80,7 +80,7 @@ WHERE Department = 'Quality Assurance'
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example retrieves the names of employees who either earn a `BaseRate` less than 20 or have a `HireDate` January 1, 2001 or later.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, BaseRate, HireDate   

@@ -71,7 +71,7 @@ ELSE
 ```sql
 -- Uses AdventureWorksDW  
 
-DECLARE @maxWeight float, @productKey integer  
+DECLARE @maxWeight FLOAT, @productKey INTEGER  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
 IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey = @productKey)   

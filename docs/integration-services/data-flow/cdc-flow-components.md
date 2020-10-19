@@ -80,7 +80,7 @@ A message is displayed after you install the components. Click **Yes** when prom
   
  This [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Control Flow contains two CDC Control Tasks and the Data Flow task. The first task called **Get CDC Processing Range** establishes the LSN range for the changes that are processed in the data-flow task called **Process Changes**. This range is established based on what was processed during the last package run and was saved in a persistent store.  
   
- For more information about using the CDC Control Task, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) and [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ For more information about using the CDC Control Task, see [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) and [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  The following figure shows the **Process Changes** data flow, which conceptually shows how the changes are processes.  
   
@@ -98,11 +98,11 @@ A message is displayed after you install the components. Click **Yes** when prom
   
  [CDC Source](../../integration-services/data-flow/cdc-source.md)  
   
- [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [CDC Source Editor &#40;Connection Manager Page&#41;](./cdc-source.md)  
   
- [CDC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [CDC Source Editor &#40;Columns Page&#41;](./cdc-source.md)  
   
- [CDC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC Source Editor &#40;Error Output Page&#41;](./cdc-source.md)  
   
  For more information about the CDC Splitter, see:  
   
@@ -211,9 +211,8 @@ A message is displayed after you install the components. Click **Yes** when prom
   
 -   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
   
--   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
+-   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
   
 ## See Also  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

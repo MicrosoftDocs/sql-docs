@@ -16,11 +16,13 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
 # sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
+
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Monitors real time data warehouse query progress while the query is in execution.   
   
-## Table returned  
+## Table returned
+  
 The counters returned are per operator per thread. The results are dynamic and do not match the results of existing options such as `SET STATISTICS XML ON` which only create output when the query is finished.  
   
 |Column name|Data type|Description|  
@@ -63,15 +65,18 @@ The counters returned are per operator per thread. The results are dynamic and d
 |actual_read_row_count|**bigint**|Number of rows read by an operator before the residual predicate was applied.| 
 |estimated_read_row_count|**bigint**|**Applies to:** Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Number of rows estimated to be read by an operator before the residual predicate was applied.|  
   
-## Remarks  
+## Remarks
+
 The same remarks in [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) apply.  
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
 
-## See also  
+## See also
+
  [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## Next steps
- For more development tips, see [SQL Data Warehouse development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ ## Next steps 
+
+Azure Synapse Analytics development overview](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

@@ -41,7 +41,6 @@ Returns the value of a numeric expression (a unary operator). Unary operators pe
 ## Syntax  
   
 ```syntaxsql
-  
 + numeric_expression  
 ```  
   
@@ -62,8 +61,8 @@ Returns the value of a numeric expression (a unary operator). Unary operators pe
 ### A. Setting a variable to a positive value  
  The following example sets a variable to a positive value.  
   
-```  
-DECLARE @MyNumber decimal(10,2);  
+```sql  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = +123.45;  
 SELECT @MyNumber;  
 GO  
@@ -81,10 +80,10 @@ GO
 ### B. Using the unary plus operator with a negative value  
  The following example shows using the unary plus with a negative expression and the ABS() function on the same negative expression. The unary plus does not affect the expression, but the ABS function returns the positive value of the expression.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = -5;  
 SELECT +@Num1, ABS(@Num1);  
 GO  

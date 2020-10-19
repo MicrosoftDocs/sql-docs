@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Tutorial: Query Oracle from a SQL Server big data cluster
+# Tutorial: Query Oracle from SQL Server Big Data Cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -87,7 +87,7 @@ The first step is to create an external data source that can access your Oracle 
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
    ```
 
-### Optional: Oracle Proxy Authentication
+### Optional: Oracle proxy authentication
 
 Oracle supports proxy authentication to provide fine grain access control. A proxy user connects to the Oracle database using its credentials and impersonates another user in the database. 
 

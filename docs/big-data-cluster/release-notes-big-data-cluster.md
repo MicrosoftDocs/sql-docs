@@ -57,7 +57,7 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release <sup>1</sup> | BDC Version    | Azure Data CLI (`azdata`) version| Release date |
+| Release <sup>1</sup> | BDC Version    | Azure Data CLI (`azdata`) version <sup>2</sup>| Release date |
 |------------------|----------------|-----------------|--------------|
 | [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
 | [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
@@ -70,7 +70,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 <sup>1</sup> CU7 is not available for BDC.
 
-<sup>2</sup>Azure Data CLI version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
+<sup>2</sup> Azure Data CLI version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
 ## How to install updates
 

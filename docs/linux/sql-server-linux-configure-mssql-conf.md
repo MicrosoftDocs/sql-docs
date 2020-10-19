@@ -172,7 +172,7 @@ The **telemetry.customerfeedback** setting changes whether SQL Server sends feed
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md) and the [SQL Server Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).
+For more information, see [Customer Feedback for SQL Server on Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md) and the [SQL Server Privacy Statement](../sql-server/sql-server-privacy.md).
 
 ## <a id="datadir"></a> Change the default data or log directory location
 
@@ -470,7 +470,7 @@ The **telemetry.userrequestedlocalauditdirectory** setting enables Local Audit a
    sudo systemctl restart mssql-server
    ```
 
-For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md).
+For more information, see [Customer Feedback for SQL Server on Linux](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 ## <a id="lcid"></a> Change the SQL Server locale
 
@@ -722,7 +722,7 @@ Any settings not shown in this file are using their default values. The next sec
 
 ## <a id="mssql-conf-format"></a> mssql.conf format
 
-The following **/var/opt/mssql/mssql.conf** file provides an example for each setting. You can use this format to manually make changes to the **mssql.conf** file as needed. If you do manually change the file, you must restart SQL Server before the changes are applied. To use the **mssql.conf** file with Docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). First add a complete **mssql.conf** file to your host directory and then run the container. There is an example of this in  [Customer Feedback](sql-server-linux-customer-feedback.md).
+The following **/var/opt/mssql/mssql.conf** file provides an example for each setting. You can use this format to manually make changes to the **mssql.conf** file as needed. If you do manually change the file, you must restart SQL Server before the changes are applied. To use the **mssql.conf** file with Docker, you must have Docker [persist your data](./sql-server-linux-docker-container-deployment.md). First add a complete **mssql.conf** file to your host directory and then run the container. There is an example of this in  [Customer Feedback](./usage-and-diagnostic-data-configuration-for-sql-server-linux.md).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

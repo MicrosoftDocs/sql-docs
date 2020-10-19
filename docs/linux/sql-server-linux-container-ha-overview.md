@@ -37,5 +37,5 @@ To create a container in Kubernetes, see [Deploy a SQL Server container in Kuber
 ## Next steps
 
 To deploy SQL Server containers in Azure Kubernetes Service (AKS), see these examples:
-* [Deploy SQL Server in Docker container](sql-server-linux-configure-docker.md)
+* [Deploy SQL Server in Docker container](./sql-server-linux-docker-container-deployment.md)
 * [Deploy a SQL Server container in Kubernetes](tutorial-sql-server-containers-kubernetes.md)

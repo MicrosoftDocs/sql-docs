@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Encryption at rest concepts and configuration Guide
+# Encryption at rest concepts and configuration guide
 
 Starting from SQL Server Big Data Clusters CU8, a comprehensive encryption at rest feature set is available to provide application level encryption to all data stored in the platform. This guide documents the concepts, architecture, and configuration for the encryption at rest feature set for SQL Server Big Data Clusters.
 
@@ -35,7 +35,7 @@ The following capabilities are provided:
 
 ## Key Definitions
 
-### SQL Server Big Data Clusters Key Management Service - BDC KMS
+### SQL Server Big Data Clusters key management service (KMS)
 
 A Controller hosted service responsible for managing keys and certificates for the Encryption at Rest feature set for the SQL Server BDC cluster. It’s a service that supports the following features:
 
@@ -56,7 +56,7 @@ The BDC KMS service will manage all keys and certificates for SQL Server and HDF
 
 User provided keys and certificates to be managed by BDC KMS, commonly known as bring your own key (BYOK).
 
-### External Providers
+### External providers
 
 External key solutions compatible with BDC KMS for external delegation. This capability isn't supported at this time.
 
@@ -89,7 +89,7 @@ The feature set introduces the __BDC KMS controller service__ to provide system-
 * In place key rotation for HDFS is not possible in CU8. As an alternative, the data can be moved from one encryption zone to another using distcp.
 * It's not supported to perform HDFS Tiering mounting on top of an encryption zone.
 
-## Configuration Guide
+## Configuration guide
 
 SQL Server Big Data Clusters encryption at rest is a service-managed feature and, depending on your deployment path, may require additional steps.
 

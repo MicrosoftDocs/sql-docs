@@ -111,7 +111,10 @@ This document lists only arguments pertaining to SQL graph. For a full list and 
  Creates an edge table.  
  
  *table_constraint*   
- Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION constraint, a CHECK constraint, or a DEFAULT definition added to a table
+ Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION constraint, a CHECK constraint, or a DEFAULT definition added to a table.
+ 
+ > [!NOTE]   
+ > CONNECTION constraint applies only to an edge table type.
  
  ON { partition_scheme | filegroup | "default" }    
  Specifies the partition scheme or filegroup on which the table is stored. If partition_scheme is specified, the table is to be a   partitioned table whose partitions are stored on a set of one or more filegroups specified in partition_scheme. If filegroup is specified, the table is stored in the named filegroup. The filegroup must exist within the database. If "default" is specified, or if ON is not specified at all, the table is stored on the default filegroup. The storage mechanism of a table as specified in CREATE TABLE cannot be subsequently altered.
@@ -119,7 +122,8 @@ This document lists only arguments pertaining to SQL graph. For a full list and 
  ON {partition_scheme | filegroup | "default"}    
  Can also be specified in a PRIMARY KEY or UNIQUE constraint. These constraints create  indexes. If filegroup is specified, the index is stored in the named filegroup. If "default" is specified, or if ON is not specified at all, the index is stored in the same filegroup as the table. If the PRIMARY KEY or UNIQUE constraint creates a clustered index, the data pages for the table are stored in the same filegroup as the index. If CLUSTERED is specified or the constraint otherwise creates a clustered index, and a partition_scheme is specified that differs from the partition_scheme or filegroup of the table definition, or vice-versa, only the constraint definition will be honored, and the other will be ignored.
   
-## Remarks  
+## Remarks
+
 Creating a temporary table as node or edge table is not supported.  
 
 Creating a node or edge table as a temporal table is not supported.
@@ -157,6 +161,16 @@ The following examples show how to create `EDGE` tables
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+The next example models a rule that **only** people can be friends with other people, which means this edge does not allow reference to any node other than Person.
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

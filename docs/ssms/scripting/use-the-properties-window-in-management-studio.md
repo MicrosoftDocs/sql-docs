@@ -47,6 +47,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 4.  On the **Execution plan** tab of the SQL Query Editor click the icons of the operators to view information about the operators in the Properties window.  
   
 ## See Also  
- [Properties Window &#40;Management Studio&#41;](https://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  
-  
+ [Properties Window &#40;Management Studio&#41;](../properties-window-management-studio.md)  
   

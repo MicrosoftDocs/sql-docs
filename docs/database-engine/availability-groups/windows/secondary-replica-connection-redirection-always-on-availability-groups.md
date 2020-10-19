@@ -83,7 +83,7 @@ In this example, an availability group has three replicas:
 
 The following picture represents the availability group.
 
-![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![Availability group with primary, secondary, and asynchronous secondary](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 The following transact-SQL script creates this AG. In this example, Each replica specifies the `READ_WRITE_ROUTING_URL`.
 ```sql
@@ -138,18 +138,13 @@ GO
 
 In the following diagram, a client application connects to COMPUTER02, with `ApplicationIntent=ReadWrite`. The connection is redirected to the primary replica. 
 
-![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![Connection to computer 2 is re-directed to the primary replica](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 The secondary replica redirects read/write calls to the primary replica. A read write connection to either replica will redirect to the primary replica. 
 
 In the following diagram, the primary replica has been manually failed over to COMPUTER02. A client application connects to COMPUTER01, with `ApplicationIntent=ReadWrite`. The connection is redirected to the primary replica. 
 
-![Original Availability Group](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## SQL Server instance offline
-
-If the instance of SQL Server specified in the connection string is not available (has an outage), the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
+![Connection redirected to new primary replica on computer2](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## See Also
 

@@ -132,4 +132,4 @@ GO
 
 ## See Also  
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)

@@ -17,13 +17,13 @@ You can enable SQL assessment for your SQL Server instances by following these s
 
 * Your SQL Server instance is connected to Azure Arc. Follow these the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
 
-* The MMA extension is installed and configured on the machine. Follow these the instructions to [Install Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). For more information, see [Log Analytics Agent](https://docs.microsoft.com/azure/azure-monitor/platform/log-analytics-agent).
+* The MMA extension is installed and configured on the machine. Follow these the instructions to [Install Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma). For more information, see [Log Analytics Agent](/azure/azure-monitor/platform/log-analytics-agent).
 
 * Your SQL Server has the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 * The [SQL Server browser](../../tools/configuration-manager/sql-server-browser-service.md) is running if you are operating a named instance of SQL Server.
 
-* You reviewed the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+* You reviewed the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
 ## Enable on-demand SQL Assessment
 
@@ -69,6 +69,6 @@ The Microsoft Monitoring Agent scans the working folder every 15 minutes looking
 
 ## Next steps
 
-See the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) for more information.
+See the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) for more information.
 
 To obtain comprehensive support of the On-demand SQL Assessment, a Premier or Unified support subscription is required. See [Azure Premier Support](https://azure.microsoft.com/support/plans/premier) for details.

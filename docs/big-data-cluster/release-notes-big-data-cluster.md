@@ -88,7 +88,7 @@ Cumulative Update 6 (CU6) release for SQL Server 2019.
 This release includes minor fixes and enhancements. The following articles include information related to these updates:
 
 - [Manage big data cluster access in Active Directory mode](manage-user-access.md)
-- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
 - [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
 - [Configure a SQL Server Big Data Cluster](configure-cluster.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
@@ -170,11 +170,11 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Affected releases**: Through current cumulative update
 
-- **Issue and customer impact**: During an upgrade, sparkhead returns 404 error.
+- **Issue and customer impact**: During an upgrade, `sparkhead` returns 404 error.
 
 - **Workaround**: Before upgrading BDC, ensure that there are no active Livy sessions or batch jobs. Follow the instructions under [Upgrade from supported release](deployment-upgrade.md#upgrade-from-supported-release) to avoid this. 
 
-   If Livy returns a 404 error during the upgrade process, restart the Livy server on both sparkhead nodes. For example:
+   If Livy returns a 404 error during the upgrade process, restart the Livy server on both `sparkhead` nodes. For example:
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy

@@ -68,7 +68,7 @@ The v8.9 release of SSMA for Oracle contains the following changes:
 * Add support for basic `ALTER TRIGGER`/`ALTER INDEX` DDL (enable/disable, etc.)
 * Improved conversion for columns that match built-in function names
 * Generate filtered unique indexes for `NULL`-able columns
-* Improved variable declaration conversion for Azure SQL Data Warehouse
+* Improved variable declaration conversion for Azure Synapse Analytics
 * Fix for the issue with special characters in project name
 
 ## SSMA v8.8
@@ -80,7 +80,7 @@ The v8.8 release of SSMA for Oracle includes:
 * Improved conversion of analytical `OVER PARTITION` clauses
 * New conversion for `LEAD` analytical function
 * New conversion for subquery factoring clauses
-* New `REPLICATE` distribution option for Azure SQL Data Warehouse
+* New `REPLICATE` distribution option for Azure Synapse Analytics
 * Brand new Oracle syntax parser to further improve conversion performance
 
 ## SSMA v8.7
@@ -246,7 +246,7 @@ The v7.5 release of SSMA for Oracle contains the following changes:
 
 The v7.4 release of SSMA for Oracle contains the following changes:
 
-* SSMA for Oracle now supports Azure SQL Data Warehouse as a target platform for migration.
+* SSMA for Oracle now supports Azure Synapse Analytics as a target platform for migration.
 
   ![New Project window](../media/new-project.png)
   * Supports the Data Warehouse storage options as shown in the following image:

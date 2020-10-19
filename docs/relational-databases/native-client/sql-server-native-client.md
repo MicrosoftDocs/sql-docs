@@ -21,7 +21,7 @@ SNAC, or SQL Server Native Client, is a term that has been used interchangeably 
 > The SQL Server Native Client (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
 
 > [!NOTE]
-> For more information and to download the SNAC or ODBC Drivers, see the [SNAC lifecycle explained blog post](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+> For more information and to download the SNAC or ODBC Drivers, see the [SNAC lifecycle explained blog post](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained).
 > For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
  Information on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client features released with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the last available version of SQL Server native Client:
@@ -38,13 +38,13 @@ SNAC, or SQL Server Native Client, is a term that has been used interchangeably 
 
 ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supports three features that were added to standard ODBC in the Windows 7 SDK:  
 
--   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](https://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](../../odbc/reference/develop-app/asynchronous-execution-polling-method.md).  
 
--   C Data Type Extensibility. For more information, see [C Data Types in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
+-   C Data Type Extensibility. For more information, see [C Data Types in ODBC](../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
 
      To support this feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField can return **SQL_C_SS_TIME2** (for **time** types) or **SQL_C_SS_TIMESTAMPOFFSET** (for **datetimeoffset**) instead of **SQL_C_BINARY**, if your application uses ODBC 3.8. For more information, see [Data Type Support for ODBC Date and Time Improvements](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md).  
 
--   Calling **SQLGetData** with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Calling **SQLGetData** with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
 
  The following topics describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client behavior changes in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
 
@@ -56,4 +56,4 @@ ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 
 
 ## See also  
 [Install SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
- [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)

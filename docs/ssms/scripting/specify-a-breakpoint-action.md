@@ -68,5 +68,5 @@ A print message is specified in the **Print a Message** option, and is specified
 3.  Click **OK** to implement the changes, or **Cancel** to exit without applying the changes.  
   
 ## See Also  
- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)   
+ [Specify a Hit Count](./specify-a-hit-count.md)

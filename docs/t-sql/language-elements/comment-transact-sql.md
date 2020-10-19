@@ -33,8 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 -- text_of_comment  
 ```  
   
@@ -59,7 +58,7 @@ Use two hyphens (**--**) for single-line or nested comments. Comments inserted w
 ## Examples  
  The following example uses the -- commenting characters.  
   
-```  
+```sql  
 -- Choose the AdventureWorks2012 database.  
 USE AdventureWorks2012;  
 GO  

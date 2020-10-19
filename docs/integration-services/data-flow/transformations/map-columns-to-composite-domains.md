@@ -35,7 +35,7 @@ ms.author: chugu
   
 5.  As needed, modify the names that appear in the **Source Alias**, **Output Alias**, and **Status Alias** fields.  
   
-6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   
 ### To map a column with delimited values to a composite domain  
   
@@ -49,9 +49,8 @@ ms.author: chugu
   
 5.  As needed, modify the names that appear in the **Source Alias**, **Output Alias**, and **Status Alias** fields.  
   
-6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+6.  As needed, set properties on the **Advanced** tab. For more information about the properties, see [DQS Cleansing Transformation Editor Dialog Box](./dqs-cleansing-transformation.md).  
   
 ## See Also  
  [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
-  
   

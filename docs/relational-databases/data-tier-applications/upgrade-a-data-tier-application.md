@@ -280,6 +280,5 @@ $fileStream.Close()
   
 ## See Also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
-  
+ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   

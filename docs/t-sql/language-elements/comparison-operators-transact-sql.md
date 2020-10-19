@@ -48,10 +48,10 @@ ms.author: jroth
   
  Expressions with **Boolean** data types are used in the WHERE clause to filter the rows that qualify for the search conditions and in control-of-flow language statements such as IF and WHILE, for example:  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
-DECLARE @MyProduct int;  
+DECLARE @MyProduct INT;  
 SET @MyProduct = 750;  
 IF (@MyProduct <> 0)  
    SELECT ProductID, Name, ProductNumber  

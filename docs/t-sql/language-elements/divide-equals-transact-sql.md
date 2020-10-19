@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression /= expression  
 ```  
   
@@ -52,7 +52,7 @@ expression /= expression
 ## Examples  
 The following example, sets a variable to 17. Then uses the `/=` operator to set the variable to half of it's original value.  
 ```sql  
-DECLARE @myVariable decimal(5,2);
+DECLARE @myVariable DECIMAL(5,2);
 SET @myVariable = 17.5;
 SET @myVariable /= 2;
 SELECT @myVariable AS ResultVariable;  

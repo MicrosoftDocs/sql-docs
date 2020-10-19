@@ -125,7 +125,7 @@ ms.author: chugu
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -136,5 +136,4 @@ ms.author: chugu
  [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

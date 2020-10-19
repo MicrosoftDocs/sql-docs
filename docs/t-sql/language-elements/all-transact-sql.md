@@ -30,7 +30,6 @@ ms.author: jroth
 ## Syntax  
   
 ```syntaxsql
-  
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
   
@@ -64,10 +63,10 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## Examples  
  The following example creates a stored procedure that determines whether all the components of a specified `SalesOrderID` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database can be manufactured in the specified number of days. The example uses a subquery to create a list of the number of `DaysToManufacture` values for all of the components of the specific `SalesOrderID`, and then confirms that all the `DaysToManufacture` are within the number of days specified.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE DaysToBuild @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE DaysToBuild @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays >= ALL  
@@ -81,12 +80,11 @@ IF
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
 PRINT 'Some items for this order can''t be manufactured in specified number of days or less.' ;  
-  
 ```  
   
  To test the procedure, execute the procedure by using the `SalesOrderID 49080`, which has one component requiring `2` days and two components that require 0 days. The first statement below meets the criteria. The second query doesn't.  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 2 ;  
 ```  
   
@@ -94,7 +92,7 @@ EXECUTE DaysToBuild 49080, 2 ;
   
  `All items for this order can be manufactured in specified number of days or less.`  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 1 ;  
 ```  
   

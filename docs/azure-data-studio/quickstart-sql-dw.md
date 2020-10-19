@@ -1,24 +1,24 @@
 ---
 title: Connect and query with Azure Synapse Analytics
-description: This quickstart shows how to use Azure Data Studio to connect to using dedicated SQL pool in Azure Synapse Analytics and run a query.
+description: This quickstart shows connecting to a dedicated SQL pool in Azure Synapse Analytics using Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu, maghan, sstein"
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
+ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
-ms.date: 09/24/2018
+ms.date: 10/15/2020
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query data using dedicated SQL pool in Azure Synapse Analytics
 
-This quickstart demonstrates how to use Azure Data Studio to connect to using dedicated SQL pool in Azure Synapse Analytics, and then use Transact-SQL statements to create, insert, and select data. 
+This quickstart shows connecting to a dedicated SQL pool in Azure Synapse Analytics using Azure Data Studio.
 
 ## Prerequisites
 To complete this quickstart, you need Azure Data Studio, and a dedicated SQL pool in Azure Synapse Analytics.
 
-- [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
+- [Install Azure Data Studio](./download-azure-data-studio.md).
 
 If you don't already have a dedicated SQL pool, see [Create a dedicated SQL pool](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
@@ -29,34 +29,31 @@ Remember the server name, and login credentials!
 
 Use Azure Data Studio to establish a connection to your Azure Synapse Analytics server.
 
-1. The first time you run Azure Data Studio the **Connection** page should open. If you don't see the **Connection** page, click **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
+1. The first time you run Azure Data Studio the **Connection** page should open. If you don't see the **Connection** page, select **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL server:
 
-   | Setting       | Suggested value | Description |
-   | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Server name** | The fully qualified server name | The name should be something like this: **sqldwsample.database.windows.net** |
+   |   Setting    | Suggested value | Description |
+   |--------------|-----------------|-------------| 
+   | **Server name** | The fully qualified server name | For example the name should look like to this: **sqlpoolservername.database.windows.net**. |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
-   | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
+   | **Save Password?** | Yes or No | Select Yes if you don't want to enter the password each time. |
    | **Database name** | *leave blank* | The name of the database to which to connect. |
    | **Server Group** | Select <Default> | If you created a server group, you can set to a specific server group. | 
 
-   ![New Connection Icon](media/quickstart-sql-dw/new-connection-screen.png) 
-
 3. If your server doesn't have a firewall rule allowing Azure Data Studio to connect, the **Create new firewall rule** form opens. Complete the form to create a new firewall rule. For details, see [Firewall rules](/azure/sql-database/sql-database-firewall-configure).
-
-   ![New firewall rule](media/quickstart-sql-dw/firewall.png)  
 
 4. After successfully connecting your server opens in the *Servers* sidebar.
 
-## Create the tutorial dedicated SQL pool
-1. Right click on your server, in the object explorer and select **New Query.**
+## Create a database in your dedicated SQL pool
 
-1. Paste the following snippet into the query editor and click **Run**:
+1. Right-click on your server, in the object explorer and select **New Query.**
+
+2. Paste the following snippet into the query editor and select **Run**:
 
    ```sql
     IF NOT EXISTS (
@@ -71,20 +68,16 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
     GO
    ```
 
-
 ## Create a table
 
 The query editor is still connected to the *master* database, but we want to create a table in the *TutorialDB* database. 
 
 1. Change the connection context to **TutorialDB**:
 
-   ![Change context](media/quickstart-sql-database/change-context.png)
-
-
-1. Paste the following snippet into the query editor and click **Run**:
+2. Paste the following snippet into the query editor and select **Run**:
 
    > [!NOTE]
-   > You can append this to, or overwrite the previous query in the editor. Note that clicking **Run** executes only the query that is selected. If nothing is selected, clicking **Run** executes all queries in the editor.
+   > You can append this to, or overwrite the previous query in the editor. Note that selecting **Run** executes only the query that is selected. If nothing is selected, selecting **Run** executes all queries in the editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -103,10 +96,12 @@ The query editor is still connected to the *master* database, but we want to cre
    GO
    ```
 
+    :::image type="content" source="media/quickstart-sql-dw/create-table.png" alt-text="Create a table in the TutorialDB database":::
+
 
 ## Insert rows
 
-1. Paste the following snippet into the query editor and click **Run**:
+1. Paste the following snippet into the query editor and select **Run**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -118,25 +113,25 @@ The query editor is still connected to the *master* database, but we want to cre
       SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
+    :::image type="content" source="media/quickstart-sql-dw/create-rows.png" alt-text="Create rows in the table":::
 
 ## View the result
-1. Paste the following snippet into the query editor and click **Run**:
+
+1. Paste the following snippet into the query editor and select **Run**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. The results of the query are displayed:
+2. The results of the query are displayed:
 
-   ![Select results](media/quickstart-sql-dw/select-results.png)
+    :::image type="content" source="media/quickstart-sql-dw/view-results.png" alt-text="View the results":::
 
 
 ## Clean up resources
 
-Other articles in this collection build upon this quickstart. If you plan to continue on to work with subsequent quickstarts, do not clean up the resources created in this quickstart. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
-Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
-
+If you don't plan to continue working with the sample databases created in this article, then [delete the resource group](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## Next steps
 

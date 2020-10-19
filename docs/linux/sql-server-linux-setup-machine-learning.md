@@ -41,7 +41,7 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 * You should have a tool for running T-SQL commands. 
 
-  * You can use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
+  * You can use [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), a free database tool that runs on Linux, Windows, and macOS.
 
 ## Package list
 
@@ -433,4 +433,4 @@ Python developers can learn how to use Python with SQL Server by following these
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
 + [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/r-taxi-classification-introduction.md)

@@ -2731,10 +2731,12 @@
         href: language-extensions/language-extensions-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
+      - name: Java Language Extension Overview
+        href: language-extensions/java-overview.md
     - name: Install
       items:
       - name: Install Language Extensions on Windows
-        href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        href: language-extensions/install/windows-java.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
@@ -9989,7 +9991,7 @@
       - name: Install SQL Server Machine Learning Services on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
-        href: linux/sql-server-linux-setup-language-extensions.md
+        href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md
     - name: Configure
@@ -10168,7 +10170,7 @@
   items:
   - name: Azure SQL Database >
     href: /azure/sql-database/
-  - name: Azure Synapse Analytics >
+  - name: Azure SQL Data Warehouse >
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -16270,7 +16272,7 @@
         items:
         - name: AT TIME ZONE
           href: t-sql/queries/at-time-zone-transact-sql.md
-        - name: Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
@@ -16284,7 +16286,7 @@
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search Condition
           href: t-sql/queries/search-condition-transact-sql.md
-        - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: Table Value Constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16604,7 +16606,7 @@
           href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
         - name: FUNCTION
           href: t-sql/statements/create-function-transact-sql.md
-        - name: FUNCTION (Azure Synapse Analytics)
+        - name: FUNCTION (SQL Data Warehouse)
           href: t-sql/statements/create-function-sql-data-warehouse.md
         - name: INDEX
           href: t-sql/statements/create-index-transact-sql.md
@@ -16664,11 +16666,11 @@
           href: t-sql/statements/create-synonym-transact-sql.md
         - name: TABLE
           href: t-sql/statements/create-table-transact-sql.md
-        - name: TABLE (Azure Synapse Analytics)
+        - name: TABLE (Azure SQL Data Warehouse)
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md
         - name: TABLE (SQL Graph)
           href: t-sql/statements/create-table-sql-graph.md
-        - name: TABLE AS SELECT (Azure Synapse Analytics)
+        - name: TABLE AS SELECT (Azure SQL Data Warehouse)
           href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
         - name: TABLE IDENTITY (Property)
           href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16928,7 +16930,7 @@
           href: t-sql/statements/open-master-key-transact-sql.md
         - name: OPEN SYMMETRIC KEY
           href: t-sql/statements/open-symmetric-key-transact-sql.md
-        - name: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
+        - name: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)"
           href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: REVERT
           href: t-sql/statements/revert-transact-sql.md

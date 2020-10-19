@@ -38,7 +38,7 @@ TRUE on success, otherwise FALSE.
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## Example  
+## Parameter example  
 This example shows that after the value of $contact is bound, changing the value does not change the value passed in the query.  
   
 ```  
@@ -73,7 +73,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 > [!NOTE]
 > It is recommended to use strings as inputs when binding values to a [decimal or numeric column](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## Example  
+## Decimal input example  
 This code sample shows how to bind a decimal value as an input parameter.  
 
 ```

@@ -31,7 +31,7 @@ Before installing an R custom runtime, install the following:
 
 + [SQL Server 2019 for Windows (Cumulative Update 3 or later)](../../database-engine/install-windows/install-sql-server.md).
 
-+ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md).
++ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/windows-java.md).
 
 + [R Version 3.3 or higher](https://cran.r-project.org/).
 
@@ -190,7 +190,7 @@ Before installing an R custom runtime, install the following:
 + [SQL Server 2019 for Linux (Cumulative Update 3 or later)](../../linux/sql-server-linux-setup.md).
 Before you install SQL Server on Linux, you must configure a Microsoft repository. For more information, see [configuring repositories](../../linux/sql-server-linux-change-repo.md).
 
-+ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions.md).
++ [SQL Server Language Extensions on Linux with the extensibility framework](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 + [R Version 3.3 or higher](https://cran.r-project.org/).
 

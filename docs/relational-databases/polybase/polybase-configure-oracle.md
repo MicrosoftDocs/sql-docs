@@ -11,7 +11,7 @@ ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
-# Configure PolyBase to access external data in Oracled
+# Configure PolyBase to access external data in Oracle
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

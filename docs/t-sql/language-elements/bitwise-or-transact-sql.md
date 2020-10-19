@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```   
+```syntaxsql   
 expression | expression  
 ```  
   
@@ -69,7 +69,7 @@ GO
   
  The following query performs the bitwise OR on the **a_int_value** and **b_int_value** columns.  
   
-```  
+```sql  
 SELECT a_int_value | b_int_value  
 FROM bitwise;  
 GO  

@@ -1,7 +1,6 @@
 ---
 title: What is Java Language Extension?
-titleSuffix: 
-description: In SQL Server 2019, Java, Python, and R are supported language extensions.Language Extensions are a feature of SQL Server used for executing external code.  Relational data can be used in the external code using the extensibility framework.
+description: In SQL Server 2019, Java, Python, and R are supported language extensions. Language Extensions are a feature of SQL Server used for executing external code.  Relational data can be used in the external code using the extensibility framework.
 author: cawrites
 ms.author: chadam 
 ms.date: 10/06/2020
@@ -26,7 +25,7 @@ Language Extensions uses the extensibility framework for executing external code
 
 External languages are defined with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). The system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is used as the interface for executing the code.
 
-Language Extensions provides multiple advantages:
+Language Extensions provide various advantages:
 
 + Data security. Bringing external language execution closer to the source of data avoids wasteful or insecure data movement.
 + Speed. Databases are optimized for set-based operations. Recent innovations in databases such as in-memory tables make summaries and aggregations lightning, and are a perfect complement to data science.
@@ -41,7 +40,7 @@ Language Extensions provides multiple advantages:
 
 ### Step 2: Configure a development tool
 
-Developers typically write code on their own laptop or development workstation. With language extensions in SQL Server, there is no need to change this process. After installation is complete, you can run Java code on SQL Server.
+Developers typically write code on their own laptop or development workstation. With language extensions in SQL Server, there's no need to change this process. After installation is complete, you can run Java code on SQL Server.
 
 + **Use the IDE you prefer** for developing Java code.
 
@@ -59,7 +58,7 @@ Execute Java code from within T-SQL script:
 
 ## Limitations
 
-+ The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
++ The number of values in input and output buffers can't exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
 ## Next steps
 

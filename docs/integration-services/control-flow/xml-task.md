@@ -125,7 +125,7 @@ ms.author: chugu
   
  For more information about how to set properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Programmatic Configuration of the XML Task  
  For more information about programmatically setting these properties, click the following topic:  
@@ -133,12 +133,12 @@ ms.author: chugu
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## Related Tasks  
- [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## XML Task Editor (General Page)
   Use the **General Node** of the **XML Task Editor** dialog box to specify the operation type and configure the operation.  
   
- To learn about this task, see [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
+ To learn about this task, see [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](/previous-versions/aa720019(v=vs.71))" in the MSDN Library.  
   
 ### Static Options  
  **OperationType**  
@@ -167,11 +167,11 @@ ms.author: chugu
   
  If **Source** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **Source** is set to **Variable**, select an existing variable, or click **\<New variable...>** to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
 ### OperationType Dynamic Options  
   
@@ -187,7 +187,7 @@ ms.author: chugu
  **Destination**  
  Select an existing File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -228,11 +228,11 @@ ms.author: chugu
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
 #### OperationType = XSLT  
  Specify options for the XSLT operation.  
@@ -246,11 +246,11 @@ ms.author: chugu
  **Destination**  
  If **DestinationType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -274,11 +274,11 @@ ms.author: chugu
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
 #### OperationType = XPATH  
  Specify options for the XPath operation.  
@@ -292,11 +292,11 @@ ms.author: chugu
  **Destination**  
  If **DestinationType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -320,11 +320,11 @@ ms.author: chugu
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
  **PutResultInOneNode**  
  Specify whether the result is written to a single node.  
@@ -355,11 +355,11 @@ ms.author: chugu
   
  If **XPathStringSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
  When you use an XPath statement to identify the merge location in the source document, this statement is expected to return a single node. If the statement returns multiple nodes, only the first node is used. The contents of the second document are merged under the first node that the XPath query returns.  
   
@@ -372,11 +372,11 @@ ms.author: chugu
  **Destination**  
  If **DestinationType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -400,11 +400,11 @@ ms.author: chugu
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
 #### OperationType = Diff  
  Specify options for the Diff operation.  
@@ -447,11 +447,11 @@ ms.author: chugu
  **Destination**  
  If **DestinationType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -475,11 +475,11 @@ ms.author: chugu
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
 #### OperationType = Patch  
  Specify options for the Patch operation.  
@@ -493,11 +493,11 @@ ms.author: chugu
  **Destination**  
  If **DestinationType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -521,14 +521,13 @@ ms.author: chugu
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
- **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../connection-manager/file-connection-manager.md)  
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](../integration-services-ssis-variables.md)  
   
 ## Related Content  
 
 -   CodePlex sample, [Process XML Data Package Sample](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), on www.codeplex.com  
-  
   

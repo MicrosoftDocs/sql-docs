@@ -52,7 +52,7 @@ The main methods for accessing the data in the storage pool are:
 You can also interact with HDFS using:
 
 - Azure Data Studio.
-- Azure Data CLI.
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 - kubectl to issue commands to the Hadoop container.
 - HDFS http gateway.
 

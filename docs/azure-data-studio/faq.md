@@ -4,11 +4,11 @@ description: 'Get answers to questions frequently asked about Azure Data Studio,
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-ms.reviewer: "alayu, maghan, sstein"
-ms.custom: "seodec18"
-ms.date: "10/14/2020"
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: alayu, maghan
+ms.custom: seodec18
+ms.date: 10/20/2020
 ---
 
 # Azure Data Studio FAQ

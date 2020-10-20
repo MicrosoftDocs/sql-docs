@@ -130,6 +130,8 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Administration resources
+      href: big-data-cluster/view-cluster-status.md
     - name: Active Directory mode
       items:
       - name: Prerequisites
@@ -346,8 +348,6 @@
         href: big-data-cluster/cluster-manage-notebooks.md
     - name: Monitor
       items:
-      - name: View cluster status
-        href: big-data-cluster/view-cluster-status.md
       - name: Monitor with Azure Data Studio
         href: big-data-cluster/cluster-monitor-ads.md
       - name: Monitor with cmdlet
@@ -394,8 +394,6 @@
         href: big-data-cluster/spark-history-server.md
     - name: Troubleshoot
       items:
-      - name: Overview
-        href: big-data-cluster/cluster-troubleshoot-overview.md
       - name: Troubleshoot Kubernetes
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Troubleshoot pyspark notebook

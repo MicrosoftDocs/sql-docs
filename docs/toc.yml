@@ -357,6 +357,14 @@
         href: big-data-cluster/change-azdata-password.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
+      - name: Encryption at rest
+        items:
+          - name: Concepts and configuration
+            href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+          - name: SQL Server TDE
+            href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+          - name: HDFS encryption zones
+            href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio

@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 In SQL Server 2019, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
 
-Partition-based modeling is enabled through two new parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+Partition-based modeling is enabled through two new parameters on [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md):
 
 + **input_data_1_partition_by_columns**, which specifies a column to partition by.
 + **input_data_1_order_by_columns** specifies which columns to order by. 
@@ -35,7 +35,7 @@ To complete this tutorial, you must have the following:
 
 + Sufficient system resources. The data set is large and training operations are resource-intensive. If possible, use a system having at least 8 GB RAM. Alternatively, you can use smaller data sets to work around resource constraints. Instructions for reducing the data set are inline. 
 
-+ A tool for T-SQL query execution, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
++ A tool for T-SQL query execution, such as [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which you can [download and restore](demo-data-nyctaxi-in-sql.md) to your local database engine instance. File size is approximately 90 MB.
 
@@ -101,7 +101,7 @@ GO
 
 This tutorial wraps R script in a stored procedure. In this step, you create a stored procedure that uses R to create an input dataset, build a classification model for predicting tip outcomes, and then stores the model in the database.
 
-Among the parameter inputs used by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**. Recall that these parameters are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) to process partitions with the external script executing once for every partition. 
+Among the parameter inputs used by this script, you'll see **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**. Recall that these parameters are the mechanism by which partitioned modeling occurs. The parameters are passed as inputs to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to process partitions with the external script executing once for every partition. 
 
 For this stored procedure, [use parallelism](#parallel) for faster time to completion.
 
@@ -165,7 +165,7 @@ GO
 
 ### Parallel execution
 
-Notice that the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
+Notice that the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) inputs include `@parallel=1`, used to enable parallel processing. In contrast with previous releases, in SQL Server 2019, setting `@parallel=1` delivers a stronger hint to the query optimizer, making parallel execution a much more likely outcome.
 
 By default, the query optimizer tends to operate under `@parallel=1` on tables having more than 256 rows, but if you can handle this explicitly by setting `@parallel=1` as shown in this script.
 
@@ -332,8 +332,7 @@ FROM prediction_results;
 
 ## Next steps
 
-In this tutorial, you used [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) to iterate operations over partitioned data. For a closer look at calling external scripts in stored procedures and using RevoScaleR functions, continue with the following tutorial.
+In this tutorial, you used [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to iterate operations over partitioned data. For a closer look at calling external scripts in stored procedures and using RevoScaleR functions, continue with the following tutorial.
 
 > [!div class="nextstepaction"]
 > [walkthrough for R and SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
-

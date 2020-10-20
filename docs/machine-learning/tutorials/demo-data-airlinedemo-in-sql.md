@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 In this exercise, create a SQL Server database to store imported data from R or Python built-in Airline demo data sets. R and Python distributions provide equivalent data, which you can import to a SQL Server database using Management Studio.
 
-To complete this exercise, you should have [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) or another tool that can run T-SQL queries.
+To complete this exercise, you should have [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017) or another tool that can run T-SQL queries.
 
 Tutorials and quickstarts using this data set include the following:
 

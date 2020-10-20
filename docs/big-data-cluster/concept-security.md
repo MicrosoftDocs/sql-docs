@@ -32,7 +32,7 @@ The external cluster endpoints support AD authentication. Use your AD identity t
 
 There are five entry points to the big data cluster
 
-* Master Instance - TDS endpoint for accessing SQL Server Master Instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from Azure Data CLI (`azdata`), the tool will connect to the other endpoints, depending on the operation.
+* Master Instance - TDS endpoint for accessing SQL Server Master Instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], the tool will connect to the other endpoints, depending on the operation.
 
 * Gateway to access HDFS files, Spark (Knox) - HTTPS endpoint for accessing services like webHDFS and Spark.
 

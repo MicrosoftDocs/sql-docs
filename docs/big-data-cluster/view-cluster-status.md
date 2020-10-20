@@ -1,17 +1,17 @@
 ---
-title: Administrating Big Data Clusters (BDC) 
-titleSuffix: SQL Server big data clusters
-description: This article explains the end-to-end approach about how to administer Big Data Clusters (BDC).
+title: Administration resources for Big Data Clusters (BDC) 
+titleSuffix: SQL Server
+description: This article provides links to administration resources for SQL Server Big Data Clusters (BDC).
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 10/19/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to administer a big data cluster 
+# Administration resources for Big Data Clusters (BDC) 
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 

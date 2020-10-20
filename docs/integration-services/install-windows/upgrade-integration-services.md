@@ -45,14 +45,14 @@ manager: erikre
 > -   Execute DTS 2000 Package task  
 > -   Upgrade Advisor scan of DTS packages.  
 > 
->  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
+>  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500429(v=sql.130)).  
   
 ## Upgrading Integration Services  
  You can upgrade by using one of the following methods:  
   
 -   Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup and select the option to **Upgrade from SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
--   Run **setup.exe** at the command prompt and specify the **/ACTION=upgrade** option. For more information, see the section, "Installation Scripts for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]," in [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   Run **setup.exe** at the command prompt and specify the **/ACTION=upgrade** option. For more information, see the section, "Installation Scripts for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]," in [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  You cannot use upgrade to perform the following actions:  
   
@@ -145,5 +145,4 @@ manager: erikre
   
 ## External Resources  
  Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951), on blogs.msdn.com.  
-  
   

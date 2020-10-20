@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Build an R model and save to SQL Server (walkthrough)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-In this step, learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By saving a model, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) or the [PREDICT (T-SQL) function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
+In this step, learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By saving a model, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) or the [PREDICT (T-SQL) function](../../t-sql/queries/predict-transact-sql.md).
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ GO
 
 The model is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson to train the tip classifier, using logistic regression.
 
-1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model. 
+1. Call the [rxLogit](/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -104,7 +104,7 @@ The model is a binary classifier that predicts whether the taxi driver is likely
 
 Now that the model is built, you can use to predict whether the driver is likely to get a tip on a particular drive or not.
 
-1. First, use the [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) function to define a data source object for storing the scoring result.
+1. First, use the [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) function to define a data source object for storing the scoring result.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -118,7 +118,7 @@ Now that the model is built, you can use to predict whether the driver is likely
   
     + To create the table that stores the predicted values, the SQL login running the rxSqlServer data function must have DDL privileges in the database. If the login cannot create tables, the statement fails.
 
-2. Call the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function to generate results.
+2. Call the [rxPredict](/r-server/r-reference/revoscaler/rxpredict) function to generate results.
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -133,7 +133,7 @@ Now that the model is built, you can use to predict whether the driver is likely
 
 ## Plot model accuracy
 
-To get an idea of the accuracy of the model, you can use the [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) function to plot the Receiver Operating Curve. Because rxRoc is one of the new functions provided by the RevoScaleR package that supports remote compute contexts, you have two options:
+To get an idea of the accuracy of the model, you can use the [rxRoc](/r-server/r-reference/revoscaler/rxroc) function to plot the Receiver Operating Curve. Because rxRoc is one of the new functions provided by the RevoScaleR package that supports remote compute contexts, you have two options:
 
 + You can use the rxRoc function to execute the plot in the remote compute context and then return the plot to your local client.
 
@@ -168,7 +168,7 @@ In this section, you'll experiment with both techniques.
 
 You can verify the compute context is local by running `rxGetComputeContext()` at the command prompt. The return value should be "RxLocalSeq Compute Context".
 
-1. For the local compute context, the process is much the same. You use the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function to bring the specified data into your local R environment.
+1. For the local compute context, the process is much the same. You use the [rxImport](/r-server/r-reference/revoscaler/rximport) function to bring the specified data into your local R environment.
 
     ```R
     scoredOutput = rxImport(scoredOutput)

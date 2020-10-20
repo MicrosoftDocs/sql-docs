@@ -90,7 +90,7 @@ Extract the logs and locate `\mssql-cluster\control-<identifier>\controller\cont
 >
 > - TSG027 - Observe cluster deployment
 > - TSG061 - Get tail of all container logs for pods in BDC namespace
-> - TSG001 - Run Azure Data CLI copy-logs
+> - TSG001 - Run `azdata copy-logs`
 >
 
 ## Inspect the logs

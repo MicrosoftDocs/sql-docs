@@ -644,7 +644,7 @@ For disabling the container that runs ElasticSearch to run in privileged mode, y
 }
 ```
 
-You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use Azure Data CLI CLI to patch the `control.json` file:
+You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use Azure Data CLI to patch the `control.json` file:
 
 ```json
 {

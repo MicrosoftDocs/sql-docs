@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 HDFS as a file system is similar to the Linux based file systems that use POSIX for file permissions. In addition to the traditional POSIX permissions model, HDFS also supports POSIX access control lists (ACL). For more information, see the [Apache Hadoop article about ACLs](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 
-The following sections provide examples of how to use the Azure Data CLI CLI to for managing HDFS file and directory permissions.
+The following sections provide examples of how to use the Azure Data CLI to for managing HDFS file and directory permissions.
 
 ## Prerequisites
 

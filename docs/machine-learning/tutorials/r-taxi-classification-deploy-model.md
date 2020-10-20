@@ -96,12 +96,11 @@ A more common scenario is to generate predictions for multiple observations in b
 
    **Sample results**
 
-   ```text
-   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
-   1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
-   1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
-   1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
-   ```
+   | passenger_count | trip_time_in_secs | trip_distance | dropoff_datetime        | direct_distance |
+   |-----------------|-------------------|---------------|-------------------------|-----------------|
+   | 1               | 283               | 0.7           | 2013-03-27 14:54:50.000 | 0.5427964547    |
+   | 1               | 289               | 0.7           | 2013-02-24 12:55:29.000 | 0.3797099614    |
+   | 1               | 214               | 0.7           | 2013-06-26 13:28:10.000 | 0.6970098661    |
 
 2. Create a stored procedure called **RPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
@@ -140,7 +139,6 @@ A more common scenario is to generate predictions for multiple observations in b
 The stored procedure returns a series of values representing the prediction for each of the top 10 trips. However, the top trips are also single-passenger trips with a relatively short trip distance, for which the driver is unlikely to get a tip.
 
 > [!TIP]
-> 
 > Rather than returning just the "yes-tip" and "no-tip" results, you could also return the probability score for the prediction, and then apply a WHERE clause to the _Score_ column values to categorize the score as "likely to tip" or "unlikely to tip", using a threshold value such as 0.5 or 0.7. This step is not included in the stored procedure but it would be easy to implement.
 
 ## Single-row scoring of multiple inputs

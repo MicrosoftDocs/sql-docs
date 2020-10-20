@@ -34,11 +34,11 @@ In [part five](r-taxi-classification-deploy-model.md), you'll learn how to opera
 
 ## Create the stored procedure
 
-When calling R from T-SQL, you use the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). However, for processes that you repeat often, such as retraining a model, it is easier to encapsulate the call to  sp_execute_exernal_script in another stored procedure.
+When calling R from T-SQL, you use the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). However, for processes that you repeat often, such as retraining a model, it is easier to encapsulate the call to `sp_execute_external_script` in another stored procedure.
 
 1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window.
 
-2. Run the following statement to create the stored procedure **RTrainLogitModel**. This stored procedure defines the input data and uses **lm** to create a logistic regression model.
+2. Run the following statement to create the stored procedure **RTrainLogitModel**. This stored procedure defines the input data and uses **glm** to create a logistic regression model.
 
    ```sql
    CREATE PROCEDURE [dbo].[RTrainLogitModel] (@trained_model varbinary(max) OUTPUT)

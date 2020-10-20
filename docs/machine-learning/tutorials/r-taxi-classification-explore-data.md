@@ -18,11 +18,11 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-curr
 
 In part two of this five-part tutorial series, you'll explore the sample data and generate some plots. Later, you'll learn how to serialize graphics objects in Python, and then deserialize those objects and make plots.
 
-In part two of this five-part tutorial series, you'll review the sample data and then generate some plots using the generic `histogram` and `hist` functions in base R.
+In part two of this five-part tutorial series, you'll review the sample data and then generate some plots using the generic `barplot` and `hist` functions in base R.
 
 A key objective of this article is showing how to call R functions from [!INCLUDE[tsql](../../includes/tsql-md.md)] in stored procedures and save the results in application file formats:
 
-+ Create a stored procedure using `histogram` to generate an R plot as varbinary data. Use **bcp** to export the binary stream to an image file.
++ Create a stored procedure using `barplot` to generate an R plot as varbinary data. Use **bcp** to export the binary stream to an image file.
 + Create a stored procedure using `hist` to generate a plot, saving results as JPG and PDF output.
 
 > [!NOTE]
@@ -79,9 +79,9 @@ In the original public dataset, the taxi identifiers and trip records were provi
 > Starting in SQL Server 2019, the isolation mechanism requires you to give appropriate permissions to the directory where the plot file is stored. For more information on how to set these permissions, see the [File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-To create the plot, use the R function `histogram`. This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **RPlotHistogram**.
+To create the plot, use the R function `barplot`. This step plots a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. You can wrap this function in a stored procedure, **RPlotHistogram**.
 
-1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database and select **New Query**.
+1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click the **NYCTaxi_Sample** database and select **New Query**. Or, in Azure Data Studio, select **New Notebook** from the **File** menu and connect to the database.
 
 2. Paste in the following script to create a stored procedure that plots the histogram. This example is named **RPlotHistogram**.
 
@@ -97,8 +97,7 @@ To create the plot, use the R function `histogram`. This step plots a histogram 
       image_file = tempfile();  
       jpeg(filename = image_file);  
       #Plot histogram  
-      histogram(~tipped, data=InputDataSet, col=''lightgreen'',   
-      title = ''Tip Histogram'', xlab =''Tipped or not'', ylab =''Counts'');  
+      barplot(table(InputDataSet$tipped), main = 'Tip Histogram', col="lightgreen", xlab="Tipped or not", ylab = "Counts", space=0)
       dev.off();  
       OutputDataSet <- data.frame(data=readBin(file(image_file, "rb"), what=raw(), n=1e6));  
       ',  
@@ -114,7 +113,7 @@ Key points to understand in this script include the following:
   
 + Within the R script, a variable (`image_file`) is defined to store the image.
 
-+ The `histogram` function is called to generate the plot.
++ The `barplot` function is called to generate the plot.
   
 + The R device is set to **off** because you are running this command as an external script in SQL Server. Typically in R, when you issue a high-level plotting command, R opens a graphics window, called a *device*. You can turn the device off if you are writing to a file or handling the output some other way.
   

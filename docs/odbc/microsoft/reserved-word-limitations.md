@@ -23,7 +23,6 @@ The reserved keyword limitation also applies to any shorthand form of the reserv
 
 A list of the ODBC reserved keywords is available at:
 
-- [ODBC Reserved Keywords](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+- [ODBC Reserved Keywords](../reference/appendixes/reserved-keywords.md).
 
-- In the *ODBC Programmer's Reference Guide*, see [Appendix C: SQL Grammar](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
-
+- In the *ODBC Programmer's Reference Guide*, see [Appendix C: SQL Grammar](../reference/appendixes/appendix-c-sql-grammar.md).

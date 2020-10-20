@@ -50,17 +50,16 @@ END
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  In the following example, `BEGIN` and `END` define a series of [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statements that run together. If the `BEGIN...END` block are not included, the following example will be in a continuous loop.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @Iteration Integer = 0  
+DECLARE @Iteration INTEGER = 0  
 WHILE @Iteration <10  
 BEGIN  
     SELECT FirstName, MiddleName   
     FROM dbo.DimCustomer WHERE LastName = 'Adams';  
 SET @Iteration += 1  
 END;  
-  
 ```  
   
 ## See Also  

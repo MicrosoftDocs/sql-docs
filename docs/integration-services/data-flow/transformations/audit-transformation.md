@@ -49,7 +49,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -76,5 +76,4 @@ ms.author: chugu
 |**User name**|Insert the login name of the user who launched the package.|  
 |**Task name**|Insert the name of the Data Flow task with which the Audit transformation is associated.|  
 |**Task ID**|Insert the GUID that uniquely identifies the Data Flow task with which the Audit transformation is associated.|  
-  
   

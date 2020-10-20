@@ -36,7 +36,6 @@ ms.author: jroth
 ## Syntax  
   
 ```syntaxsql
-  
 RETURN [ integer_expression ]   
 ```  
   
@@ -62,7 +61,7 @@ RETURN [ integer_expression ]
 ### A. Returning from a procedure  
  The following example shows if no user name is specified as a parameter when `findjobs` is executed, `RETURN` causes the procedure to exit after a message has been sent to the user's screen. If a user name is specified, the names of all objects created by this user in the current database are retrieved from the appropriate system tables.  
   
-```  
+```sql  
 CREATE PROCEDURE findjobs @nm sysname = NULL  
 AS   
 IF @nm IS NULL  
@@ -82,10 +81,10 @@ ELSE
 ### B. Returning status codes  
  The following example checks the state for the ID of a specified contact. If the state is Washington (`WA`), a status of `1` is returned. Otherwise, `2` is returned for any other condition (a value other than `WA` for `StateProvince` or `ContactID` that did not match a row).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE PROCEDURE checkstate @param varchar(11)  
+CREATE PROCEDURE checkstate @param VARCHAR(11)  
 AS  
 IF (SELECT StateProvince FROM Person.vAdditionalContactInfo WHERE ContactID = @param) = 'WA'  
     RETURN 1  
@@ -96,8 +95,8 @@ GO
   
  The following examples show the return status from executing `checkstate`. The first shows a contact in Washington; the second, contact not in Washington; and the third, a contact that is not valid. The `@return_status` local variable must be declared before it can be used.  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '2';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -115,8 +114,8 @@ GO
   
  Execute the query again, specifying a different contact number.  
   
-```  
-DECLARE @return_status int;  
+```sql  
+DECLARE @return_status INT;  
 EXEC @return_status = checkstate '6';  
 SELECT 'Return Status' = @return_status;  
 GO  
@@ -133,8 +132,8 @@ GO
   
  Execute the query again, specifying another contact number.  
   
-```  
-DECLARE @return_status int  
+```sql  
+DECLARE @return_status INT  
 EXEC @return_status = checkstate '12345678901';  
 SELECT 'Return Status' = @return_status;  
 GO  

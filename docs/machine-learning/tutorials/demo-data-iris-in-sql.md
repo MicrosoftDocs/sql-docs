@@ -124,7 +124,7 @@ You can obtain built-in Iris data from either R or Python. You can use Python or
     EXEC dbo.get_iris_dataset;
     ```
 
-    If you're new to T-SQL, be aware that the INSERT statement only adds new data; it won't check for existing data, or delete and rebuild the table. To avoid getting multiple copies of the same data in a table, you can run this statement first: `TRUNCATE TABLE iris_data`. The T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) statement deletes existing data but keeps the structure of the table intact.
+    If you're new to T-SQL, be aware that the INSERT statement only adds new data; it won't check for existing data, or delete and rebuild the table. To avoid getting multiple copies of the same data in a table, you can run this statement first: `TRUNCATE TABLE iris_data`. The T-SQL [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) statement deletes existing data but keeps the structure of the table intact.
 
 ## Query the data
 

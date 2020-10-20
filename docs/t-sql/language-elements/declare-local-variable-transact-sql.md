@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DECLARE   
@@ -68,7 +68,7 @@ See CREATE TABLE for index option syntax.
   
 ```  
   
-```  
+
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DECLARE   
@@ -193,19 +193,18 @@ Is a subset of information used to define a table in CREATE TABLE. Elements and 
 ### A. Using DECLARE  
  The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Man`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @find varchar(30);   
+DECLARE @find VARCHAR(30);   
 /* Also allowed:   
-DECLARE @find varchar(30) = 'Man%';   
+DECLARE @find VARCHAR(30) = 'Man%';   
 */  
 SET @find = 'Man%';   
 SELECT p.LastName, p.FirstName, ph.PhoneNumber  
 FROM Person.Person AS p   
 JOIN Person.PersonPhone AS ph ON p.BusinessEntityID = ph.BusinessEntityID  
 WHERE LastName LIKE @find;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -223,12 +222,12 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 ### B. Using DECLARE with two variables  
  The following example retrieves the names of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sales representatives who are located in the North American sales territory and have at least $2,000,000 in sales for the year.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT ON;  
 GO  
-DECLARE @Group nvarchar(50), @Sales money;  
+DECLARE @Group nvarchar(50), @Sales MONEY;  
 SET @Group = N'North America';  
 SET @Sales = 2000000;  
 SET NOCOUNT OFF;  
@@ -240,14 +239,14 @@ WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;
 ### C. Declaring a variable of type table  
  The following example creates a `table` variable that stores the values specified in the OUTPUT clause of the UPDATE statement. Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. Note that the results in the `INSERTED.ModifiedDate` column differ from the values in the `ModifiedDate` column in the `Employee` table. This is because the `AFTER UPDATE` trigger, which updates the value of `ModifiedDate` to the current date, is defined on the `Employee` table. However, the columns returned from `OUTPUT` reflect the data before triggers are fired. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE(  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
+    ModifiedDate DATETIME);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25   
 OUTPUT INSERTED.BusinessEntityID,  
@@ -270,7 +269,7 @@ GO
 ### D. Declaring a variable of user-defined table type  
  The following example creates a table-valued parameter or table variable called `@LocationTVP`. This requires a corresponding user-defined table type called `LocationTableType`. For more information about how to create a user-defined table type, see [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md). For more information about table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
-```  
+```sql  
 DECLARE @LocationTVP   
 AS LocationTableType;  
 ```  
@@ -280,12 +279,12 @@ AS LocationTableType;
 ### E. Using DECLARE  
  The following example uses a local variable named `@find` to retrieve contact information for all last names beginning with `Walt`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @find varchar(30);  
+DECLARE @find VARCHAR(30);  
 /* Also allowed:   
-DECLARE @find varchar(30) = 'Man%';  
+DECLARE @find VARCHAR(30) = 'Man%';  
 */  
 SET @find = 'Walt%';  
   
@@ -297,10 +296,10 @@ WHERE LastName LIKE @find;
 ### F. Using DECLARE with two variables  
  The following example retrieves uses variables to specify the first and last names of employees in the `DimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @lastName varchar(30), @firstName varchar(30);  
+DECLARE @lastName VARCHAR(30), @firstName VARCHAR(30);  
   
 SET @lastName = 'Walt%';  
 SET @firstName = 'Bryan';  

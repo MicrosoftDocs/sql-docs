@@ -66,7 +66,7 @@ GO
 
 + The SELECT statement gets the serialized model from the database, and stores the model in the R variable `mod` for further processing using R.
 
-+ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) function in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), which generates the scores.
++ The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) function in [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), which generates the scores.
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -189,7 +189,7 @@ If you call the stored procedure from an external application, make sure that th
    @dropoff_longitude = -73.977303
    ```
 
-   Or, use this shorter form supported for [parameters to a stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+   Or, use this shorter form supported for [parameters to a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md):
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

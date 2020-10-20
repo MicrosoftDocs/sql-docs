@@ -89,7 +89,7 @@ match_expression [ NOT ] LIKE pattern
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName char(20)  
+CREATE PROCEDURE FindEmployee @EmpLName CHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -107,7 +107,7 @@ GO
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
+CREATE PROCEDURE FindEmployee @EmpLName VARCHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -134,21 +134,21 @@ David          Barber               Snohomish
   
 ```sql  
 -- ASCII pattern matching with char column  
-CREATE TABLE t (col1 char(30));  
+CREATE TABLE t (col1 CHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- returns 1 row  
   
 -- Unicode pattern matching with nchar column  
-CREATE TABLE t (col1 nchar(30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- no rows returned  
   
 -- Unicode pattern matching with nchar column and RTRIM  
-CREATE TABLE t (col1 nchar (30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   

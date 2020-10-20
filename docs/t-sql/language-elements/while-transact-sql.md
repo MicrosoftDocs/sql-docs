@@ -73,7 +73,7 @@ WHILE Boolean_expression
 ### A. Using BREAK and CONTINUE with nested IF...ELSE and WHILE  
  In the following example, if the average list price of a product is less than `$300`, the `WHILE` loop doubles the prices and then selects the maximum price. If the maximum price is less than or equal to `$500`, the `WHILE` loop restarts and doubles the prices again. This loop continues doubling the prices until the maximum price is greater than `$500`, and then exits the `WHILE` loop and prints a message.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WHILE (SELECT AVG(ListPrice) FROM Production.Product) < $300  
@@ -92,9 +92,9 @@ PRINT 'Too much for the market to bear';
 ### B. Using WHILE in a cursor  
  The following example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loop.  
   
-```  
-DECLARE @EmployeeID as nvarchar(256)
-DECLARE @Title as nvarchar(50)
+```sql  
+DECLARE @EmployeeID as NVARCHAR(256)
+DECLARE @Title as NVARCHAR(50)
 
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LoginID, JobTitle   
@@ -117,7 +117,7 @@ GO
 ### C: Simple While Loop  
  In the following example, if the average list price of a product is less than `$300`, the `WHILE` loop doubles the prices and then selects the maximum price. If the maximum price is less than or equal to `$500`, the `WHILE` loop restarts and doubles the prices again. This loop continues doubling the prices until the maximum price is greater than `$500`, and then exits the `WHILE` loop.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300  
@@ -128,7 +128,6 @@ BEGIN
     IF ( SELECT MAX (ListPrice) FROM dbo.DimProduct) > $500  
         BREAK;  
 END  
-  
 ```  
   
 ## See Also  

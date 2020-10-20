@@ -1,7 +1,7 @@
 ---
 title: View cluster status
 titleSuffix: SQL Server big data clusters
-description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and azdata commands.
+description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray

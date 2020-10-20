@@ -55,6 +55,7 @@ ALTER CERTIFICATE certificate_name
          [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
       }  
 ``` 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
  
 > [!Note]
 > [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]

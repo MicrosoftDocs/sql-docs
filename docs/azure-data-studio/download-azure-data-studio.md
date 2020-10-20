@@ -217,7 +217,7 @@ If you want to install Azure Data Studio in the background with no GUI prompts a
     > The example also works with the system installer file.
     > 
     > ```console
-    > <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
     > ```
 
     You can also pass */SILENT* instead of */VERYSILENT* to see the setup UI.

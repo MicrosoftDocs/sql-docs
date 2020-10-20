@@ -4,6 +4,8 @@ description: Find out how SQL Server Data Tools can work with connected database
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
+f1_keywords: 
+  - "sql.data.tools.sqlserverobjectexplorer"
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan

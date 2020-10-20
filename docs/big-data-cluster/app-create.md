@@ -27,7 +27,7 @@ This article describes how to deploy and manage R and Python script as an applic
 - Support hosting additional application types - SQL Server Integration Services (SSIS) and MLeap.
 - [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
 
-Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
+Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 The following types of apps are supported:
 

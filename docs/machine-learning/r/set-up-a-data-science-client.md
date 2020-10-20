@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 R integration is available in SQL Server 2016 or later when you include the R language option in an [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) installation. 
 
-To develop and deploy R solutions for SQL Server, install [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) on your development workstation to get [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries. The RevoScaleR library, which is also required on the remote SQL Server instance, coordinates computing requests between both systems. 
+To develop and deploy R solutions for SQL Server, install [Microsoft R Client](/machine-learning-server/r-client/what-is-microsoft-r-client) on your development workstation to get [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) and other R libraries. The RevoScaleR library, which is also required on the remote SQL Server instance, coordinates computing requests between both systems. 
 
 In this article, learn how to configure an R client development workstation so that you can interact with a remote SQL Server enabled for machine learning and R integration. After completing the steps in this article, you will have the same R libraries as those on SQL Server. You will also know how to push computations from a local R session to a remote R session on SQL Server.
 
@@ -29,7 +29,7 @@ To validate the installation, you can use built-in **RGUI** tool as described in
 
 ## Commonly used tools
 
-Whether you are an R developer new to SQL, or a SQL developer new to R and in-database analytics, you will need both an R development tool and a T-SQL query editor such as [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) to exercise all of the capabilities of in-database analytics.
+Whether you are an R developer new to SQL, or a SQL developer new to R and in-database analytics, you will need both an R development tool and a T-SQL query editor such as [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) to exercise all of the capabilities of in-database analytics.
 
 For simple R development scenarios, you can use the RGUI executable, bundled in the base R distribution in MRO and SQL Server. This article explains how to use RGUI for both local and remote R sessions. For improved productivity, you should use a full-featured IDE such as [RStudio or Visual Studio](#install-ide).
 
@@ -37,7 +37,7 @@ SSMS is a separate download, useful for creating and running stored procedures o
 
 ## 1 - Install R packages
 
-Microsoft's R packages are available in multiple products and services. On a local workstation, we recommend installing Microsoft R Client. R Client provides [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils), and other R packages.
+Microsoft's R packages are available in multiple products and services. On a local workstation, we recommend installing Microsoft R Client. R Client provides [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package), [SQLRUtils](/machine-learning-server/r-reference/sqlrutils/sqlrutils), and other R packages.
 
 1. [Download Microsoft R Client](https://aka.ms/rclient/download).
 
@@ -98,7 +98,7 @@ If your code requires packages that are not installed by default with SQL Server
 
 ## 5 - Test connections
 
-As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server. SQL Server must be enabled for [remote connections](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server) and you must have permissions, including a user login and a database to connect to. 
+As a verification step, use **RGUI** and RevoScaleR to confirm connectivity to the remote server. SQL Server must be enabled for [remote connections](../../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md) and you must have permissions, including a user login and a database to connect to. 
 
 The following steps assume the demo database, [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md), and Windows authentication.
 
@@ -214,8 +214,8 @@ When you reopen RStudio, the R executable from R Client (or standalone server) i
 If you don't already have a preferred IDE for R, we recommend **R Tools for Visual Studio**.
 
 + [Download R Tools for Visual Studio (RTVS)](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
-+ [Installation instructions](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS is available in several versions of Visual Studio.
-+ [Get started with R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
++ [Installation instructions](/visualstudio/rtvs/installing-r-tools-for-visual-studio) - RTVS is available in several versions of Visual Studio.
++ [Get started with R Tools for Visual Studio](/visualstudio/rtvs/getting-started-with-r)
 
 ### Connect to SQL Server from RTVS
 

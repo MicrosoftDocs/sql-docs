@@ -30,6 +30,8 @@ For details about the latest release, see the [release notes](./release-notes-az
 
 ## Get Azure Data Studio for Windows
 
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
 This release of Azure Data Studio includes a standard Windows Installer experience, and a .zip file.
 
 We recommend the *user installer* because it doesn't require administrator privileges, which simplify both installs and upgrades. The user installer doesn't require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).

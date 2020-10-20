@@ -36,6 +36,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Removes the selected extended property.  
   
 ## See Also  
- [Extended Properties Catalog Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/f39fd324-efd4-4468-884c-bf77ed1a026f)  
-  
+ [Extended Properties Catalog Views &#40;Transact-SQL&#41;](../system-catalog-views/catalog-views-transact-sql.md)  
   

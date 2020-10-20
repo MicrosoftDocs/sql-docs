@@ -39,5 +39,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Set of characters|[ ]|Matches any one of the characters specified in the set.|  
   
 ## See Also  
- [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [Search and Replace](./search-and-replace.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)

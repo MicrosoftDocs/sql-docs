@@ -51,7 +51,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) can take either a query consisting of a valid SELECT query, provided as the argument to the _sqlQuery_ parameter, or the name of a table object, provided as the _table_ parameter.
+    - [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) can take either a query consisting of a valid SELECT query, provided as the argument to the _sqlQuery_ parameter, or the name of a table object, provided as the _table_ parameter.
     
     - If you want to sample data from a table, you must use the _sqlQuery_ parameter, define sampling parameters using the T-SQL TABLESAMPLE clause, and set the _rowBuffering_ argument to FALSE.
 
@@ -86,7 +86,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     rxSetComputeContext("local");
     ```
 
-5. Call the [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) function to get the feature engineering data, and apply the `env$ComputeDist` function to the data in memory.
+5. Call the [rxDataStep](/r-server/r-reference/revoscaler/rxdatastep) function to get the feature engineering data, and apply the `env$ComputeDist` function to the data in memory.
 
     ```R
     start.time <- proc.time();
@@ -104,7 +104,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + The rxDataStep function supports various methods for modifying data in place. For more information, see this article:  [How to transform and subset data in Microsft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + The rxDataStep function supports various methods for modifying data in place. For more information, see this article:  [How to transform and subset data in Microsft R](/r-server/r/how-to-revoscaler-data-transform)
     
     However, a couple of points worth noting regarding rxDataStep: 
     
@@ -112,7 +112,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
     The preceding code can also produce a warning message when run on larger data sets. When the number of rows times the number of columns being created exceeds a set value (the default is 3,000,000), rxDataStep returns a warning, and the number of rows in the returned data frame will be truncated. To remove the warning, you can modify the _maxRowsByCols_ argument in the rxDataStep function. However, if  _maxRowsByCols_ is too large, you might experience problems when loading the data frame into memory.
 
-7. Optionally, you can call [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) to inspect the schema of the transformed data source.
+7. Optionally, you can call [rxGetVarInfo](/r-server/r-reference/revoscaler/rxgetvarinfo) to inspect the schema of the transformed data source.
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -122,7 +122,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
 In this exercise, learn how to accomplish the same task using SQL functions instead of custom R functions. 
 
-Switch to [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or another query editor to run the T-SQL script.
+Switch to [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or another query editor to run the T-SQL script.
 
 1. Use a SQL function, named *fnCalculateDistance*. The function should already exist in the NYCTaxi_Sample database. In Object Explorer, verify the function exists by navigating this path: Databases > NYCTaxi_Sample > Programmability > Functions > Scalar-valued Functions >  dbo.fnCalculateDistance.
 
@@ -249,4 +249,3 @@ Your times might vary significantly, depending on your network speed, and your h
 
 > [!div class="nextstepaction"]
 > [Build an R model and save to SQL](walkthrough-build-and-save-the-model.md)
-

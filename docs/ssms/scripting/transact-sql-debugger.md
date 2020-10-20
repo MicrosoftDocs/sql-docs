@@ -42,7 +42,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger provides the following 
 
     If you want to debug a stored procedure or function, you can step into the module. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] opens a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window that is populated with the source code for the module, places the window into debug mode, and then pauses execution on the first statement in the module. You can then navigate through the module code, for example, by setting breakpoints or stepping through the code.  
 
-For more information about how the debugger enables you to navigate code, see [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+For more information about how the debugger enables you to navigate code, see [Step Through Transact-SQL Code](./step-through-transact-sql-code.md).  
 
 ## Viewing debugger information
 
@@ -64,11 +64,11 @@ Each time the debugger pauses execution on a specific [!INCLUDE[tsql](../../incl
 
 |Task Description|Topic|  
 |----------------------|-----------|  
-|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the TSQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Describes how to start, stop, and control the operation of the debugger.|[Run the Transact-SQL Debugger](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code.|[Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|Describes how to configure the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger for remote debugging.|[Configure firewall rules before running the TSQL Debugger](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|Describes how to start, stop, and control the operation of the debugger.|[Run the Transact-SQL Debugger](./run-the-transact-sql-debugger.md)|  
+|Describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger to step through code.|[Step Through Transact-SQL Code](./step-through-transact-sql-code.md)|  
+|Describes how to use the debugger to view [!INCLUDE[tsql](../../includes/tsql-md.md)] data, such as parameters and variables, and system information.|[Transact-SQL Debugger Information](./transact-sql-debugger-information.md)|  
 
 ## See also
 
-[Query and Text Editors &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Query and Text Editors &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

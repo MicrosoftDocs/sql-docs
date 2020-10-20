@@ -108,10 +108,10 @@ The effect of a ROLLBACK on cursors is defined by these three rules:
 ```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int);  
+CREATE TABLE ValueTable ([value] INT);  
 GO  
   
-DECLARE @TransactionName varchar(20) = 'Transaction1';  
+DECLARE @TransactionName VARCHAR(20) = 'Transaction1';  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  

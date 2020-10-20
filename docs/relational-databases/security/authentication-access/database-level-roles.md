@@ -91,7 +91,7 @@ These database roles exist only in the virtual master database. Their permission
 |**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]
-> The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](/azure/azure-sql/database/logins-create-manage). 
 
 Some database roles are not applicable to Azure SQL or Synapse SQL:
 - **db_backupoperator** is not applicable in Azure SQL database (not managed instance) and Synapse SQL serverless pool because backup and restore T-SQL comands are not available.
@@ -147,5 +147,4 @@ Some database roles are not applicable to Azure SQL or Synapse SQL:
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
  [sp_helprotect &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
-  
   

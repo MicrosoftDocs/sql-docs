@@ -105,5 +105,5 @@ To download the files included in each template, you can use GitHub commands, or
 
 ## Next steps
 
-+ [Python tutorials](sql-server-python-tutorials.md)
-+ [R tutorials](sql-server-r-tutorials.md)
++ [Python tutorials](./python-tutorials.md)
++ [R tutorials](./r-tutorials.md)

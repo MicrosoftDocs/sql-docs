@@ -35,6 +35,5 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |[XQuery Static Type Event Class](../../relational-databases/event-classes/xquery-static-type-event-class.md)|Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an XQuery expression.|  
   
 ## See Also  
- [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
-  
+ [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/language-reference.md)  
   

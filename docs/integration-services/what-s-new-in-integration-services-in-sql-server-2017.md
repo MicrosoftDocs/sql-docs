@@ -72,7 +72,7 @@ You can now develop SSIS projects and packages that target SQL Server versions 2
 -   The performance of logging to SSISDB for package executions in Scale Out has been improved. The Event Message and Message Context logs are now written to SSISDB in batch mode instead of one by one. Here are some additional notes about this improvement:        
     - Some reports in the current version of SQL Server Management Studio (SSMS) don't currently display these logs for executions in Scale Out. We anticipate that they will be supported in the next release of SSMS. The affected reports include the *All Connections* report, the *Error Context* report, and the *Connection Information* section in the Integration Service Dashboard.
     - A new column **event_message_guid** has been added. Use this column to join the [catalog].[event_message_context] view and the [catalog].[event_messages] view instead of using **event_message_id** when you query these logs of executions in Scale Out.
--   To get the management application for SSIS Scale Out, [download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 or later.
+-   To get the management application for SSIS Scale Out, [download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 17.1 or later.
 
 ## New in SSIS in SQL Server 2017 CTP 2.0
 
@@ -107,4 +107,3 @@ For more information, see [Integration Services Scale Out](../integration-servic
 ### Support for Microsoft Dynamics Online Resources
 
 The OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online.
-

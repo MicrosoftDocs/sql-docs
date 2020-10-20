@@ -1,11 +1,11 @@
 ---
 title: Deploy multiple in Active Directory domain
 titleSuffix: SQL Server Big Data Cluster
-description: Learn about SQL Server Big Data Cluster deployment in Active Directory Domain.
-author: mihaelablendea
-ms.author: mihaelab
+description: Learn how to deploy multiple SQL Server Big Data Clusters in a single Active Directory domain.
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -135,7 +135,7 @@ It is not required, but is recommended. Providing separate OUs for separate clus
 
 ### How to revert back to the pre-CU5 behavior?
 
-There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example you must deploy a pre-CU5 release and you already upgraded `azdata` CLI. This is highly unlikely, but if you need to revert to the pre-CU5 behavior you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.
+There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example you must deploy a pre-CU5 release and you already upgraded [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. This is highly unlikely, but if you need to revert to the pre-CU5 behavior you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.
 
 The following example sets `useSubdomain` to `false` for this scenario.
 

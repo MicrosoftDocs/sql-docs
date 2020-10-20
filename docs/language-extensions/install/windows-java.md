@@ -1,23 +1,23 @@
 ---
-title: Install SQL Server Language Extensions on Windows
+title: Install SQL Server Java Language Extensions on Windows 
 titleSuffix:
-description: Learn how to install the Language Extensions feature on SQL Server on Windows by running the SQL Server setup wizard.
-author: dphansen
-ms.author: davidph 
+description: Learn how to install the Java Language Extensions feature on SQL Server on Windows by running the SQL Server setup wizard.
+author: cawrites
+ms.author: chadam 
 ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Language Extensions on Windows
+# Install SQL Server Language Java Extensions on Windows
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Learn how to install the Language Extensions component on SQL Server by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 > [!NOTE]
-> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
+> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)
 
 <a name="prerequisites"></a> 
 
@@ -27,7 +27,7 @@ Learn how to install the Language Extensions component on SQL Server by running 
 
 + A database engine instance is required. You cannot install just the Language Extensions features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Language Extensions. You have to install language extensions, and configure packages, on each node.
++ For business continuity, [Always On Availability Groups](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) are supported for Language Extensions. You have to install language extensions, and configure packages, on each node.
 
 + Installing Language Extensions is supported on a failover cluster in SQL Server 2019.
 
@@ -81,7 +81,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
         - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select Java.
 
-        If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](https://docs.microsoft.com/sql/machine-learning/install/sql-machine-learning-services-windows-install).
+        If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
 
     ![Feature options for Language Extensions](../media/sql-install-feature-selection.png)
 
@@ -101,7 +101,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-6. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+6. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## Add the JRE_HOME variable
 
@@ -111,11 +111,11 @@ For local installations, you must run Setup as an administrator. If you install 
 
     For example, the JRE home path for the default Java runtime Zulu JRE 11.0.3 is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Binn\AZUL-OpenJDK-JRE\`.
 
-    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
+    Depending on your SQL Server installation path or if you chose another Java runtime, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
-2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
+2. In Control Panel, open **System and Security**, open **System**, and select **Advanced System Properties**.
 
-3. Click **Environment Variables**.
+3. Select **Environment Variables**.
 
 4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
 
@@ -155,7 +155,7 @@ If you did not install the default Zulu Open JRE that was included with SQL Serv
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > You can also use [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
   
@@ -188,7 +188,7 @@ You can restart the service using the right-click **Restart** command for the in
 
 ## Register external language
 
-For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 The following example adds an external language called Java to a database on SQL Server on Windows.
 
@@ -198,7 +198,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+For more information, see [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md).
 
 ## Verify installation
 
@@ -235,7 +235,7 @@ At the instance level, additional configuration might include:
 On the database, you might need the following configuration updates:
 
 * [Give users permission to SQL Server Machine Learning Services](../../machine-learning/security/user-permission.md)
-* [Give users permission to execute a specific language](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
+* [Give users permission to execute a specific language](../../t-sql/statements/create-external-language-transact-sql.md#permissions)
 
 > [!NOTE]
 > Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.

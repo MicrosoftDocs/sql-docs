@@ -7,8 +7,8 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: "quickstart"
-author: "rachel-msft"
-ms.author: "raagyema"
+author: "sunilagarwal"
+ms.author: "sunila"
 ---
 
 # Quickstart: Use Azure Data Studio to connect and query PostgreSQL

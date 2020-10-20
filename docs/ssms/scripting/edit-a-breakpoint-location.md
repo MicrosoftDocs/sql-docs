@@ -41,7 +41,7 @@ When you edit a breakpoint location, the breakpoint moves to the new location, c
   
 ## See Also
 
-- [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)
-- [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)
-- [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)
-- [Specify a Breakpoint Filter](../../relational-databases/scripting/specify-a-breakpoint-filter.md)
+- [Specify a Hit Count](./specify-a-hit-count.md)
+- [Specify a Breakpoint Action](./specify-a-breakpoint-action.md)
+- [Specify a Breakpoint Condition](./specify-a-breakpoint-condition.md)
+- [Specify a Breakpoint Filter](./specify-a-breakpoint-filter.md)

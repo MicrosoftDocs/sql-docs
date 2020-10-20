@@ -37,4 +37,4 @@ This window displays status messages for various features in [!INCLUDE[ssManStud
  Displays the output for the selected pane in **Output panelist**.  
   
 ## See Also  
- [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
+ [Transact-SQL Debugger](./transact-sql-debugger.md)

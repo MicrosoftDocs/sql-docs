@@ -10,10 +10,10 @@ ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.SWB.SELECTCOLUMNS.F1"
+  - "sql13.SWB.SELECTCOLUMNS.F1"
   - "sql13.swb.tableproperties.storage.f1"
   - "sql13.swb.tableproperties.changetracking.f1"
   - "sql13.swb.tableproperties.general.f1"
-  - "sql13.SWB.SELECTCOLUMNS.F1"
   - "sql13.swb.tableproperties.filetable.f1"
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
@@ -66,7 +66,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Indicates if the object was created with the quoted identifier option set to ON. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)  
   
  **Lock Escalation**  
- Indicates the lock escalation granularity of the table. For more information about locking in the Database Engine, see [SQL Server Transaction Locking and Row Versioning Guide](../sql-server-transaction-locking-and-row-versioning-guide.md?view=sql-server-ver15). Possible values are:  
+ Indicates the lock escalation granularity of the table. For more information about locking in the Database Engine, see [SQL Server Transaction Locking and Row Versioning Guide](../sql-server-transaction-locking-and-row-versioning-guide.md). Possible values are:  
   
  AUTO  
  This option allows the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to select the lock escalation granularity that is appropriate for the table schema.  

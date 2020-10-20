@@ -7,7 +7,7 @@ ms.prod_service: "search, sql-database"
 ms.technology: search
 ms.topic: conceptual
 f1_keywords:
-  sql13.swb.fulltextsearch.ftcatalog.general.f1
+  - sql13.swb.fulltextsearch.ftcatalog.general.f1
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
   - "full-text search [SQL Server], using SQL Server Management Studio"

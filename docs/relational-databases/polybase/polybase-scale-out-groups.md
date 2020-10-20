@@ -44,7 +44,7 @@ For e.g., let's say you have an external SQL Server table with 12 monthly partit
 > [!NOTE]
 >  that this is different from scale-out reads over Hadoop. 
 
-![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase scale-out groups")
+![PolyBase scale-out reads](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase scale-out groups")
   
 ## Distributed query processing  
 

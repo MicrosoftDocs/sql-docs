@@ -26,7 +26,7 @@ CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features availa
 -   Query or import external data.  
 
 > [!NOTE]  
-> Since CTAS adds to the capabilities of creating a table, this topic tries not to repeat the CREATE TABLE topic. Instead, it describes the differences between the CTAS and CREATE TABLE statements. For the CREATE TABLE details, see [CREATE TABLE (Azure Synapse Analytics)](https://msdn.microsoft.com/library/mt203953/) statement. 
+> Since CTAS adds to the capabilities of creating a table, this topic tries not to repeat the CREATE TABLE topic. Instead, it describes the differences between the CTAS and CREATE TABLE statements. For the CREATE TABLE details, see [CREATE TABLE (Azure Synapse Analytics)](./create-table-azure-sql-data-warehouse.md) statement. 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,13 +75,13 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="arguments-bk"></a>
   
 ## Arguments  
-For details, see the [Arguments section](https://msdn.microsoft.com/library/mt203953/#Arguments) in CREATE TABLE.  
+For details, see the [Arguments section](./create-table-azure-sql-data-warehouse.md#Arguments) in CREATE TABLE.  
 
 <a name="column-options-bk"></a>
 
 ### Column options
 `column_name` [ ,...`n` ]   
- Column names do not allow the [column options](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) mentioned in CREATE TABLE.  Instead, you can provide an optional list of one or more column names for the new table. The columns in the new table will use the names you specify. When you specify column names, the number of columns in the column list must match the number of columns in the select results. If you don't specify any column names, the new target table will use the column names in the select statement results. 
+ Column names do not allow the [column options](./create-table-azure-sql-data-warehouse.md#ColumnOptions) mentioned in CREATE TABLE.  Instead, you can provide an optional list of one or more column names for the new table. The columns in the new table will use the names you specify. When you specify column names, the number of columns in the column list must match the number of columns in the select results. If you don't specify any column names, the new target table will use the column names in the select statement results. 
   
  You cannot specify any other column options such as data types, collation, or nullability. Each of these attributes is derived from the results of the `SELECT` statement. However, you can use the SELECT statement to change the attributes. For an example, see [Use CTAS to change column attributes](#ctas-change-column-attributes-bk).   
 
@@ -92,14 +92,14 @@ For details, see the [Arguments section](https://msdn.microsoft.com/library/mt20
 `DISTRIBUTION` = `HASH` ( *distribution_column_name* ) | ROUND_ROBIN | REPLICATE      
 The CTAS statement requires a distribution option and does not have default values. This is different from CREATE TABLE which has defaults. 
 
-For details and to understand how to choose the best distribution column, see the [Table distribution options](https://msdn.microsoft.com/library/mt203953/#TableDistributionOptions) section in CREATE TABLE. 
+For details and to understand how to choose the best distribution column, see the [Table distribution options](./create-table-azure-sql-data-warehouse.md#TableDistributionOptions) section in CREATE TABLE. 
 
 <a name="table-partition-options-bk"></a>
 
 ### Table partition options
 The CTAS statement creates a non-partitioned table by default, even if the source table is partitioned. To create a partitioned table with the CTAS statement, you must specify the partition option. 
 
-For details, see the [Table partition options](https://msdn.microsoft.com/library/mt203953/#TablePartitionOptions) section in CREATE TABLE.
+For details, see the [Table partition options](./create-table-azure-sql-data-warehouse.md#TablePartitionOptions) section in CREATE TABLE.
 
 <a name="select-options-bk"></a>
 
@@ -121,12 +121,12 @@ Users can set MAXDOP to an integer value to control the maximum degree of parall
 ## Permissions  
 CTAS requires `SELECT` permission on any objects referenced in the *select_criteria*.
 
-For permissions to create a table, see [Permissions](https://msdn.microsoft.com/library/mt203953/#Permissions) in CREATE TABLE. 
+For permissions to create a table, see [Permissions](./create-table-azure-sql-data-warehouse.md#Permissions) in CREATE TABLE. 
   
 <a name="general-remarks-bk"></a>
   
 ## General Remarks
-For details, see [General Remarks](https://msdn.microsoft.com/library/mt203953/#GeneralRemarks) in CREATE TABLE.
+For details, see [General Remarks](./create-table-azure-sql-data-warehouse.md#GeneralRemarks) in CREATE TABLE.
 
 <a name="limitations-bk"></a>
 
@@ -141,7 +141,7 @@ For details, see [Limitations and Restrictions](https://msdn.microsoft.com/libra
 <a name="locking-behavior-bk"></a>
   
 ## Locking Behavior  
- For details, see [Locking Behavior](https://msdn.microsoft.com/library/mt203953/#LockingBehavior) in CREATE TABLE.
+ For details, see [Locking Behavior](./create-table-azure-sql-data-warehouse.md#LockingBehavior) in CREATE TABLE.
  
 <a name="performance-bk"></a>
  
@@ -842,8 +842,5 @@ OPTION (MAXDOP 1);
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
+ [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](./create-external-table-transact-sql.md)  
   
-  
-
-

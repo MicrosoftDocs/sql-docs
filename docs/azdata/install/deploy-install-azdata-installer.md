@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] with Windows Installer
+# Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with Windows Installer
 
 [!INCLUDE [azdata](../../includes/applies-to-version/azdata.md)]
 

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] on macOS
+# Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] on macOS
 
 For the macOS platform, you can install the `azdata-cli` with Homebrew package manager. The CLI package has been tested on macOS versions:
 

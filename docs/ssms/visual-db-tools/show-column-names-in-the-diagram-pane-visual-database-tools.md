@@ -12,6 +12,7 @@ helpviewer_keywords:
   - "queries [SQL Server], columns"
   - "Diagram pane [Visual Database Tools]"
   - "names [SQL Server], columns"
+  - "sql13.SWB.SELECTCOLUMNS.F1"
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan

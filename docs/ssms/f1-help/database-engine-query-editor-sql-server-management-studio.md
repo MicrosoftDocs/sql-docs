@@ -7,7 +7,10 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - sql13.swb.tsqlquery.f1
-  - sql23.swb.tsqlresults.f1
+  - sql13.swb.tsqlresults.f1
+  - sql13.swb.query.general.f1
+  - sql13.swb.query.advanced.f1
+  - sql13.swb.query.ansi.f1
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -295,8 +298,8 @@ If the help search engine doesn't find a topic with an F1 help keyword that exac
 | Drag text from one location in a script and drop it in a new location.| [Drag and drop text](../scripting/drag-and-drop-text.md) |
 | How to set bookmarks in order to more easily find important pieces of code. | [Manage bookmarks](../scripting/manage-bookmarks.md) |
 | How to print scripts or the results in a window or grid.| [Print Code and Results](../scripting/print-code-and-results.md) |
-| View and use the basic features in the MDX Query Editor. | [Create Analysis Services Scripts](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| View and use the basic features in the DMX Query Editor. | [Create a DMX Query](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| View and use the basic features in the MDX Query Editor. | [Create Analysis Services Scripts](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| View and use the basic features in the DMX Query Editor. | [Create a DMX Query](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | View and use the basic features in the XML/A Editor. | [XML Editor](../scripting/xml-editor-sql-server-management-studio.md) |
 | How to use the sqlcmd features in the Database Engine Query Editor.| [Edit SQLCMD Scripts](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | How to use code snippets in the Database Engine Query Editor. Snippets are templates for commonly used statements or blocks, and can be customized or extended to include site-specific snippets.| [T-SQL Code Snippets](../scripting/add-transact-sql-snippets.md) |

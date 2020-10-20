@@ -75,7 +75,7 @@ GO
 ```  
   
 ## See Also  
- [Service Master Key](../../relational-databases/security/encryption/service-master-key.md)   
+ [Service Master Key](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

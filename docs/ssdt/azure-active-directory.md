@@ -85,5 +85,4 @@ The MFA enforcement is provided by Azure AD through this additional MFA pop-up w
 [Azure Active Directory authentication with SQL Database](/azure/sql-database/sql-database-aad-authentication-configure)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT Team Blog](/archive/blogs/ssdt/)  
-[DACFx API Reference](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
 [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

@@ -7,7 +7,9 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - sql13.swb.tsqlquery.f1
-  - sql23.swb.tsqlresults.f1
+  - sql13.swb.tsqlresults.f1
+  - sql13.swb.query.general.f1
+  - sql13.swb.query.advanced.f1
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

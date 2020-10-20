@@ -32,7 +32,7 @@ Depending on the edition of SQL Server you're using, some machine learning funct
 
 In general, the version of Microsoft R that is installed when you select the R Services feature or the Machine Learning Services feature is determined by the SQL Server build number. If you upgrade or patch SQL Server, you must also upgrade or patch its R components.
 
-For a list of releases and links to R component downloads, see [Install machine learning components without internet access](/sql/machine-learning/install/sql-ml-component-install-without-internet-access). On computers with internet access, the required version of R is identified and installed automatically.
+For a list of releases and links to R component downloads, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md). On computers with internet access, the required version of R is identified and installed automatically.
 
 It's possible to upgrade the R Server components separately from the SQL Server database engine, in a process known as binding. Therefore, the version of R that you use when you run R code in SQL Server might differ depending on both the installed version of SQL Server and whether you have migrated the server to the latest R version.
 

@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 This article is the second in a series that describes performance optimization for R Services based on two case studies.  This article provides guidance about the hardware and network configuration of the computer that is used to run SQL Server R Services. It also contains information about ways to configure the SQL Server instance, database, or tables used in a solution. Because use of NUMA in SQL Server blurs the line between hardware and database optimizations, a third section discusses CPU affinitization and resource governance in detail.
 
 > [!TIP]
-> If you are new to SQL Server, we highly recommend that you also review the SQL Server performance tuning guide: [Monitor and tune for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+> If you are new to SQL Server, we highly recommend that you also review the SQL Server performance tuning guide: [Monitor and tune for performance](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 ## Hardware optimization
 
@@ -145,7 +145,7 @@ FROM sys.dm_os_memory_clerks
 
 If the query returns a single memory node (node 0), either you do not have hardware NUMA, or the hardware is configured as interleaved (non-NUMA). SQL Server also ignores hardware NUMA when there four or fewer CPUs, or if at least one node has only one CPU.
 
-If your computer has multiple processors but does not have hardware-NUMA, you can also use [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) to subdivide CPUs into smaller groups.  In both SQL Server 2016 and SQL Server 2017, the Soft-NUMA feature is automatically enabled when starting the SQL Server service.
+If your computer has multiple processors but does not have hardware-NUMA, you can also use [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) to subdivide CPUs into smaller groups.  In both SQL Server 2016 and SQL Server 2017, the Soft-NUMA feature is automatically enabled when starting the SQL Server service.
 
 When Soft-NUMA is enabled, SQL Server automatically manages the nodes for you; however, to optimize for specific workloads, you can disable _soft affinity_ and manually configure CPU affinity for the soft NUMA nodes. This can give you more control over which workloads are assigned to which nodes, particularly if you are using an edition of SQL Server that supports resource governance. By specifying CPU affinity and aligning resource pools with groups of CPUs, you can reduce latency, and ensure that related processes are performed within the same NUMA node.
 
@@ -160,7 +160,7 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 
 **Other resources:**
 
-+ [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA in SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     How to map soft-NUMA nodes to CPUs
 
@@ -174,7 +174,7 @@ One pain point with R is that it is usually processed on a single CPU. This is a
 
 There are multiple ways to improve the performance of feature engineering. You can either optimize your R code and keep feature extraction inside the modeling process, or move the feature engineering process into SQL.
 
-- Using R. You define a function and then pass it as the argument to [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) during training. If the model supports parallel processing, the feature engineering task can be processed using multiple CPUs. Using this approach, the data science team observed a 16% performance improvement in terms of scoring time. However, this approach requires a model that supports parallelization and a query that can be executed using a parallel plan.
+- Using R. You define a function and then pass it as the argument to [rxTransform](/r-server/r-reference/revoscaler/rxtransform) during training. If the model supports parallel processing, the feature engineering task can be processed using multiple CPUs. Using this approach, the data science team observed a 16% performance improvement in terms of scoring time. However, this approach requires a model that supports parallelization and a query that can be executed using a parallel plan.
 
 - Use R with a SQL compute context. In a multiprocessor environment with isolated resources available for execution of separate batches, you can achieve greater efficiency by isolating the SQL queries used for each batch, to extract data from tables and constrain the data on the same workload group. Methods used to isolate the batches include partitioning, and use of PowerShell to execute separate queries in parallel.
 

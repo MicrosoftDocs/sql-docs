@@ -10,7 +10,7 @@ ms.prod: sql
 ---
 # Configure SQL Assessment on an Azure Arc enabled SQL Server instance
 
-SQL Assessment provides a mechanism to evaluate the configuration of your SQL Server. This article provides instructions for using SQL Assessment on an Azure Arc enabled SQL Server instance.
+SQL Assessment provides a mechanism to evaluate your configuration of SQL Server. This article provides instructions for using SQL Assessment on an Azure Arc enabled SQL Server instance.
 
 ## Prerequisites
 
@@ -18,13 +18,13 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 
 * The Microsoft Monitoring Agent (MMA) extension must be installed and configured on the machine. View the [Install MMA](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma) article for instructions. You can also get more information on the [Log Analytics Agent](/azure/azure-monitor/platform/log-analytics-agent) article.
 
-* Your SQL Server must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
+* Your SQL Server instance must have the [TCP/IP protocol enabled](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
 * The [SQL Server browser service](../../tools/configuration-manager/sql-server-browser-service.md) must be running if you're operating a named instance of SQL Server.
 
 * Make sure you've reviewed the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
-## Run On-demand SQL Assessment
+## Run on-demand SQL Assessment
 
 1. Open your SQL Server – Azure Arc resource and select **Environment Health** in the left pane.
 
@@ -35,9 +35,9 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 
 1. Select **Download configuration script**. Copy the downloaded script to the target machine.
 
-1. Launch an admin instance of **powershell.exe** and execute one of the following code blocks:
+1. Open an admin instance of **powershell.exe** and execute one of the following code blocks:
 
-   * _Domain account_ -  You'll be prompted for the user account and password.
+   * _Domain account_:  You'll be prompted for the user account and password.
 
       ```powershell
       Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
@@ -55,7 +55,7 @@ SQL Assessment provides a mechanism to evaluate the configuration of your SQL Se
 > The script schedules a task named *SQLAssessment*, which triggers data collection. This task executes within an hour after you've run the script. It then repeats every seven days.
 
 > [!TIP]
-> You can modified the task to run on a different date and time or even force it to run immediately. In the the task scheduler library, find > **Microsoft** > **Operations Management Suite** > **AOI\*\*\*** > **Assessments** > **SQLAssessment**.
+> You can modified the task to run on a different date and time or even force it to run immediately. In the the task scheduler library, find **Microsoft** > **Operations Management Suite** > **AOI\*\*\*** > **Assessments** > **SQLAssessment**.
 
 ## View SQL Assessment results
 

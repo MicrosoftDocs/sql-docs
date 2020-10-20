@@ -58,6 +58,7 @@ RETURNS return_data_type
 }  
   
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  *schema_name*  

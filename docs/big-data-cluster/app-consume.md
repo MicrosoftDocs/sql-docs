@@ -21,7 +21,7 @@ This article describes how to consume an app deployed on a SQL Server big data c
 ## Prerequisites
 
 - [SQL Server big data cluster](deployment-guidance.md)
-- [azdata command-line utility](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - An app deployed using either [azdata](app-create.md) or the [App Deploy extension](app-deployment-extension.md)
 
 > [!NOTE]

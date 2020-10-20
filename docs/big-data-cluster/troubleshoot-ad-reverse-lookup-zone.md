@@ -85,12 +85,12 @@ azdata bdc debug copy-logs -n mssql-cluster -c security-support
 Extract the logs and locate `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
 
 > [!TIP]
-> There are multiple ways to collect the logs. Instead of copying the logs with `azdata`, you can use a notebook in Azure Data Studio.
+> There are multiple ways to collect the logs. Instead of copying the logs with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], you can use a notebook in Azure Data Studio.
 > In Azure Data Studio, connect to the Kubernetes cluster, and run an appropriate troubleshooting notebook. The following are examples of notebooks.
 >
 > - TSG027 - Observe cluster deployment
 > - TSG061 - Get tail of all container logs for pods in BDC namespace
-> - TSG001 - Run `azdata` copy-logs
+> - TSG001 - Run `azdata copy-logs`
 >
 
 ## Inspect the logs

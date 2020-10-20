@@ -5,6 +5,8 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+f1_keywords:
+  - sql13.swb.polybasescaleoutcluster.page.f1
 helpviewer_keywords: 
   - "PolyBase"
   - "PolyBase, scale-out groups"

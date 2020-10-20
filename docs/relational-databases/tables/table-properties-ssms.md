@@ -1,6 +1,6 @@
 ---
+title: Table Properties - SSMS
 description: "Table Properties - SSMS"
-title: "Table Properties - SSMS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -9,17 +9,20 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 
+  - "sql12.SWB.SELECTCOLUMNS.F1"
   - "sql13.swb.tableproperties.storage.f1"
   - "sql13.swb.tableproperties.changetracking.f1"
   - "sql13.swb.tableproperties.general.f1"
-  - "sql12.SWB.SELECTCOLUMNS.F1"
+  - "sql13.SWB.SELECTCOLUMNS.F1"
   - "sql13.swb.tableproperties.filetable.f1"
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Table Properties - SSMS
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes the table properties that are displayed in the Table Properties dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about how to display these properties, see [View the Table Definition](../../relational-databases/tables/view-the-table-definition.md).  

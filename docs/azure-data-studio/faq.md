@@ -47,11 +47,11 @@ No. However, next generation multi-OS CLI and GUI tools are open source. For exa
 
 No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue in addition to the next generation of multi-OS and multi-DB CLI and GUI tools. The goal is to offer customers the choice of using the tools they want on the platforms of their choice for their scenarios. Azure Data Studio is more tightly focused on the experiences around query editing and data development, which research has shown is the most heavily used capability in SQL Server Management Studio by an order of magnitude. Additional high-value administrative features such as backup, restore, agent job management, and server profiling are also available as extensions in Azure Data Studio. Azure Data Studio is also cross-platform, allowing users to work on their platform of choice. However, SQL Server Management Studio still offers the broadest range of administrative functions and remains the flagship tool for platform management tasks. 
 
-## When Should I Use Azure Data Studio vs SQL Server Management Studio?
+## When Should I Use Azure Data Studio or SQL Server Management Studio?
 
 *Use Azure Data Studio if you:*
 
-- Spend most of your time editing or executing queries.
+- Are mostly editing or executing queries.
 - Need the ability to quickly chart and visualize result sets.
 - Can execute most administrative tasks via the integrated terminal using sqlcmd or PowerShell.
 - Have minimal need for wizard experiences.
@@ -60,7 +60,6 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 
 *Use SQL Server Management Studio if you:*
 
-- Spend most of your time on database administration tasks.
 - Are doing complex administrative or platform configuration.
 - Are doing security management, including user management, vulnerability assessment, and configuration of security features.
 - Need to make use of performance tuning advisors and dashboards.
@@ -84,11 +83,9 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 |Select from Table|Yes|Yes|
 |Source Code Control|Yes||
 |Task Pane|Yes||
-|Theming|Yes||
-|Dark Mode|Yes||
+|Themes, including Dark Mode|Yes||
 |Azure Resource Explorer|Preview||
-|Generate Scripts Wizard||Yes
-|Import\Export DACPAC||Yes|
+|Generate Scripts Wizard||Yes|
 |Object Properties||Yes|
 |Table Designer||Yes|
 
@@ -148,15 +145,24 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 |Replication||Yes|
 |Security Management||Yes|
 |Service Broker||Yes|
+|SQL Assessment|Preview|Yes|
 |SQL Mail||Yes|
 |Template Explorer||Yes|
 |Vulnerability Assessment||Yes|
 |XEvent Management||Yes|
 
+### Database Development
+|Feature|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Import\Export DACPAC|Yes|Yes|
+|SQL Projects|Preview||
+|Schema Compare|Yes||
+
+
 
 ## Azure Data Studio is missing a feature that is in SSMS/SSDT. Will you add it?
 
-It depends on the scenario & customer/business need. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/azuredatastudio/issues).
+It depends on the scenario & customer/business need. To help prioritize, file a suggestion and vote on existing at [GitHub](https://github.com/microsoft/azuredatastudio/issues).
 
 ## I understand Azure Data Studio and the mssql extension for VS Code are powered by a new tools service that uses SMO APIs under the covers. Is SMO available on Linux and macOS?
 
@@ -164,7 +170,7 @@ The SMO APIs are not yet available on Linux or macOS in a consumable way. We por
 
 ## Do you plan to port the DACFx APIs and/or sqlpackage.exe and/or SSDT to Linux and macOS?
 
-It's on the longer-term roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/azuredatastudio/issues).
+Portions of this have been completed.  [SqlPackage.exe](../tools/sqlpackage-download.md) is now available on .NET Core for Windows, macOS, and Linux.  SQL Projects (SSDT) functionality is enabled in Azure Data Studio in the [SQL Database Projects extension](extensions/sql-database-project-extension.md).
 
 ## Will SQL PowerShell cmdlets be available on Linux and macOS?
 
@@ -178,6 +184,6 @@ Developers and DBAs are usually the users of Azure Data Studio.
 
 Yes. Azure Data Studio support for Azure SQL Data Warehouse is currently in preview, together with Azure SQL Managed Instance, and SQL Server 2019 Big Data.
 
-## Why is Azure Data Studio important for the new version of SQL Server?
+## Why is Azure Data Studio important for big data scenarios?
 
-As SQL Server extends its capabilities into the Big Data space, it needs new tooling to support those use cases. For that reason, Azure Data Studio is today shipping a new preview experience of support for SQL Server Big Data, including the first ever notebook experience in the SQL Server toolset and a new Create External Table wizard that makes accessing data from remote SQL Server and Oracle instances easy and fast.
+As SQL Server extends its capabilities into the Big Data space, it needs new tooling to support those use cases. For that reason, Azure Data Studio has shipped a new experience for SQL Server Big Data, including a notebook experience in the SQL Server toolset and a new Create External Table wizard that makes accessing data from remote SQL Server and Oracle instances easy and fast.

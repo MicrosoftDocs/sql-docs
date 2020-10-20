@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install Azure Data CLI with zypper
+# Install [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] with zypper
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

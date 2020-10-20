@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.prod: sql
 ---
 
-# Install Azure Data CLI
+# Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

@@ -32,7 +32,7 @@ The external cluster endpoints support AD authentication. Use your AD identity t
 
 There are five entry points to the big data cluster
 
-* Master Instance - TDS endpoint for accessing SQL Server Master Instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from azdata, the tool will connect to the other endpoints, depending on the operation.
+* Master Instance - TDS endpoint for accessing SQL Server Master Instance in the cluster, using database tools and applications like SSMS or Azure Data Studio. When using HDFS or SQL Server commands from Azure Data CLI (`azdata`), the tool will connect to the other endpoints, depending on the operation.
 
 * Gateway to access HDFS files, Spark (Knox) - HTTPS endpoint for accessing services like webHDFS and Spark.
 
@@ -54,17 +54,24 @@ There are two levels of authorization checks in the cluster for managing data ac
 
 A secure big data cluster implies consistent and coherent support for authentication and authorization scenarios, across both SQL Server and HDFS/Spark. Authentication is the process of verifying the identity of a user or service and ensuring they are who they are claiming to be. Authorization refers to granting or denying of access to specific resources based on the requesting user's identity. This step is performed after a user is identified through authentication.
 
-Authorization in Big Data context is usually performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files, and job execution.
+Authorization in Big Data context is performed through access control lists (ACLs), which associate user identities with specific permissions. HDFS supports authorization by limiting access to service APIs, HDFS files, and job execution.
 
-## Encryption and other security mechanisms
+## Encryption in flight and other security mechanisms
 
 Encryption of communication between clients to the external endpoints, as well as between components inside the cluster are secured with TLS/SSL, using certificates.
 
 All SQL Server to SQL Server communication, such as the SQL master instance communicating with a data pool, is secured using SQL logins.
 
 > [!IMPORTANT]
->  Big data clusters uses etcd to store credentials. As a best practice, you must ensure your Kubernetes cluster is configured to use etcd encryption at rest. By default, secrets stored in etcd are unencrypted. Kubernetes documentation provides details on this administrative task: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ and 
+>  Big data clusters uses `etcd` to store credentials. As a best practice, you must ensure your Kubernetes cluster is configured to use `etcd` encryption at rest. By default, secrets stored in `etcd` are unencrypted. Kubernetes documentation provides details on this administrative task: https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ and 
 https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## Data encryption at rest
+
+SQL Server Big Data Clusters encryption at rest capability supports the core scenario of application level encryption for the SQL Server and HDFS components. Follow the [Encryption at rest concepts and configuration guide](encryption-at-rest-concepts-and-configuration.md) article for a comprehensive feature usage guide.
+
+> [!IMPORTANT]
+> Volume encryption is recommended for all SQL Server Big Data Cluster deployments. Customer provided storage volumes configured in Kubernetes clusters should be encrypted as well, as a comprehensive approach to data encryption at rest. SQL Server Big Data Cluster encryption at rest capability is an additional security layer, providing application level encryption of SQL Server data and log files and HDFS encryption zone support.
 
 
 ## Basic administrator login

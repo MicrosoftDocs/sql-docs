@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # azdata bdc sql
 
-Applies to `azdata`
+Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 

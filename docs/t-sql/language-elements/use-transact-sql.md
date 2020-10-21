@@ -56,7 +56,7 @@ USE { database_name }
 ## Examples  
  The following example changes the database context to the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ```  

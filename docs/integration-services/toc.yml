@@ -52,9 +52,9 @@
   - name: Tutorial - Deploy and run a package in Azure
     href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
   - name: Connect to data with Windows Authentication
-    href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
+    href: /azure/data-factory/ssis-azure-connect-with-windows-auth
   - name: Save files and connect to file shares
-    href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
+    href: /azure/data-factory/ssis-azure-files-file-shares
   - name: Connect to the SSIS Catalog in Azure
     href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
   - name: Validate packages deployed to Azure
@@ -335,7 +335,7 @@
       href: ../integration-services/control-flow/message-queue-task.md
       items:
       - name: Select Variables
-        href: ../integration-services/control-flow/select-variables.md
+        href: ./control-flow/message-queue-task.md
       - name: Select a Package
         href: ../integration-services/control-flow/select-a-package.md
     - name: Notify Operator Task
@@ -647,7 +647,7 @@
     href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
     items:
     - name: DQS Cleansing Connection Manager
-      href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+      href: ./connection-manager/dqs-cleansing-connection-manager.md
     - name: Apply Data Quality Rules to Data Source
       href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
     - name: Map Columns to Composite Domains
@@ -674,9 +674,9 @@
     - name: Implement a Lookup in No Cache or Partial Cache Mode
       href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
     - name: Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+      href: ./connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
     - name: Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager
-      href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+      href: ./connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
     - name: Create and Deploy a Cache for the Lookup Transformation
       href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
     - name: Create Relationships
@@ -685,7 +685,7 @@
       href: ../integration-services/data-flow/transformations/cache-transform.md
       items:
       - name: Cache Connection Manager
-        href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+        href: ./connection-manager/cache-connection-manager.md
   - name: Merge Transformation
     href: ../integration-services/data-flow/transformations/merge-transformation.md
   - name: Merge Join Transformation
@@ -1911,7 +1911,7 @@
 - name: Resources
   items:
   - name: SSIS forum >>
-    href: https://docs.microsoft.com/answers/topics/sql-server-integration-services.html
+    href: /answers/topics/sql-server-integration-services.html
   - name: Stack Overflow >>
     href: https://stackoverflow.com/questions/tagged/ssis
   - name: SSIS blog >>

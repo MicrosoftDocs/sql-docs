@@ -37,9 +37,9 @@ This article explains how to use the COPY statement in [!INCLUDE[ssSDW](../../in
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 
-- [Quickstart: Bulk load data using the COPY statement](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
-- [Quickstart: Examples using the COPY statement and its supported authentication methods](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI (Workspace preview)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Quickstart: Bulk load data using the COPY statement](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Quickstart: Examples using the COPY statement and its supported authentication methods](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI (Workspace preview)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## Syntax  
 

@@ -118,7 +118,7 @@ ms.author: "sstein"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+     For more information about using the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -264,5 +264,4 @@ ms.author: "sstein"
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md)  
-  
   

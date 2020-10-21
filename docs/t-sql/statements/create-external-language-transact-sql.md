@@ -15,10 +15,10 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server. For more information, see [Language Extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server. For more information, see [Language Extensions](../../language-extensions/language-extensions-overview.md).
 
 > [!NOTE]
-> **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/).
+> **R** and **Python** are reserved names and no external language can be created with those specific names. For more information on how to use **R** and **Python**, see [SQL Server Machine Learning Services](../../machine-learning/index.yml).
 
 ## Syntax
 
@@ -104,7 +104,7 @@ This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the 
 
 ## Permissions
 
-Requires the `CREATE EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to create an external language. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying CREATE EXTERNAL LANGUAGE as the privilege.
+Requires the `CREATE EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to create an external language. For all other users, you must explicitly give them permission using a [GRANT](./grant-database-permissions-transact-sql.md) statement, specifying CREATE EXTERNAL LANGUAGE as the privilege.
 
 To modify a library requires the separate permission, `ALTER ANY EXTERNAL LANGUAGE`.
 
@@ -161,4 +161,4 @@ TO mylogin;
 [ALTER EXTERNAL LANGUAGE (Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

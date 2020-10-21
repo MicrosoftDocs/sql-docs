@@ -36,7 +36,7 @@ The component supports the OData v3 and v4 protocols.
 
 The OData source includes support for the following data sources:
 -   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
--   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: `https://<server>/_vti_bin/ListData.svc`. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: `https://<server>/_vti_bin/ListData.svc`. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)).
 
 ## Supported data types
 
@@ -153,5 +153,4 @@ For the **Decimal** data type, the precision and scale are determined by the sou
   
 ## See Also  
  [OData Connection Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
   

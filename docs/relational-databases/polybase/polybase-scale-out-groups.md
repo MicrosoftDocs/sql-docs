@@ -5,6 +5,8 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+f1_keywords:
+  - sql13.swb.polybasescaleoutcluster.page.f1
 helpviewer_keywords: 
   - "PolyBase"
   - "PolyBase, scale-out groups"
@@ -42,7 +44,7 @@ For e.g., let's say you have an external SQL Server table with 12 monthly partit
 > [!NOTE]
 >  that this is different from scale-out reads over Hadoop. 
 
-![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase scale-out groups")
+![PolyBase scale-out reads](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase scale-out groups")
   
 ## Distributed query processing  
 

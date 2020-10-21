@@ -187,7 +187,7 @@ If you call the stored procedure from an external application, make sure that th
    @dropoff_longitude = -73.977303
    ```
 
-   Or, use this shorter form supported for [parameters to a stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+   Or, use this shorter form supported for [parameters to a stored procedure](../../relational-databases/stored-procedures/specify-parameters.md):
   
    ```sql
    EXEC [dbo].[RPredictSingleRow] 'RTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

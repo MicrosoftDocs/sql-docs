@@ -40,7 +40,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  Specifies the name of the database scoped credential that is being altered.  
   
  IDENTITY **='***identity_name***'**  
- Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage, the identity name must be `SHARED ACCESS SIGNATURE`.  For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage, the identity name must be `SHARED ACCESS SIGNATURE`.  For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).  
     
   
  SECRET **='***secret***'**  
@@ -84,5 +84,4 @@ GO
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
   

@@ -353,7 +353,7 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Deleting Rows From a Remote Table  
- Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
+ Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../functions/opendatasource-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
@@ -535,5 +535,3 @@ FROM dbo.Table2
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
-  
-

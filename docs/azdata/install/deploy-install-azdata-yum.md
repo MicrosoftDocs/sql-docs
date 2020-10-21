@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install `azdata` with yum
+# Install [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)] with yum
 
 [!INCLUDE[azdata](../../includes/applies-to-version/azdata.md)]
 

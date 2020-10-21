@@ -1,7 +1,7 @@
 ---
 title: Deploy in Active Directory on Azure Kubernetes Services (AKS)
 titleSuffix: SQL Server Big Data Cluster
-description: Learn how to deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS).
+description: Explains concepts and planning information for how to deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS).
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -19,7 +19,7 @@ This article explains how to enable BDC deployment in AD mode while deploying in
 
 ## Architecture topologies
 
-**Active Directory Domain Services (AD DS)** can run on an Azure virtual machine (VM) [in the same way](/windows-server/identity/ad-ds/deploy/virtual-dc/adds-on-azure-vm) it runs in many on-premises instances.  After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. AD authentication enables domain-joined clients on [Linux to authenticate to SQL Server](../linux/sql-server-linux-active-directory-auth-overview) using their domain credentials and the Kerberos protocol.
+**Active Directory Domain Services (AD DS)** can run on an Azure virtual machine (VM) [in the same way](/windows-server/identity/ad-ds/deploy/virtual-dc/adds-on-azure-vm) it runs in many on-premises instances.  After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. AD authentication enables domain-joined clients on [Linux to authenticate to SQL Server](../linux/sql-server-linux-active-directory-auth-overview.md) using their domain credentials and the Kerberos protocol.
 
 There are a few variations about how to enable BDC deployment in AD mode in AKS.  Here we introduce two types which are easier to implement and integrate with existing enterprise-grade architectures:
 

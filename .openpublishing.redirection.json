@@ -46196,11 +46196,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/ssdt/sql-server-tools.md",
-      "redirect_url": "/sql/tools/overview-sql-tools",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager.md",
       "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager",
       "redirect_document_id": true

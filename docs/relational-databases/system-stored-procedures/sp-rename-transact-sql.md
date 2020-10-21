@@ -75,10 +75,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |USERDATATYPE|A [CLR User-defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) added by executing [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) or [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 [ @objtype = ] '*COLUMN*' **Applies to**: Azure Synapse Analytics  
-In sp_rename (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the sp_rename (preview) statement. A column can only be renamed if it is a non-distribution column. The following column types are supported:
-- Regular column (including IDENTITY columns)
-- Clustered index and non-clustered index columns
-- Columns with constraints (including PRIMARY KEY and UNIQUE)
+In sp_rename (preview) for [!INCLUDE[ssazuresynapse](../../includes/ssazuresynapse_md.md)], *COLUMN* is a mandatory parameter specifying that the object type to be renamed is a column. It is a **varchar(13)** with no default value and must always be included in the sp_rename (preview) statement. A column can only be renamed if it is a non-distribution column.
 
 ## Return Code Values  
  0 (success) or a nonzero number (failure)  

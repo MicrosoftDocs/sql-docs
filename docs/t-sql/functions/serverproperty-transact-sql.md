@@ -11,6 +11,7 @@ ms.topic: "language-reference"
 f1_keywords: 
   - "SERVERPROPERTY_TSQL"
   - "SERVERPROPERTY"
+  - sql13.swb.serverpropeties.connections.f1
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

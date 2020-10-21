@@ -339,6 +339,12 @@ The configuration JSON schema has three layers:
 
 ## Release notes
 
+### Version 1.0.3
+
+Release Date: October 21, 2020
+
+- Allow specifying connection string suffix for SSIS Deploy task and SSIS Catalog Configuration task.
+
 ### Version 1.0.2
 
 Release Date: May 26, 2020

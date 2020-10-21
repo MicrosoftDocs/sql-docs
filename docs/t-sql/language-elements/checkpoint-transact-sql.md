@@ -40,8 +40,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   

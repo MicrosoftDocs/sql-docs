@@ -1,9 +1,9 @@
 ---
 title: Monitoring Big Data Clusters (BDC) Overview
 titleSuffix: SQL Server big data clusters
-description: This article explains how to monitor Big Data Clusters (BDC) with all available provided options.
-author: cloudmelon
-ms.author: melqin
+description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
+author: yualan
+ms.author: alayu
 ms.reviewer: mikeray
 ms.date: 09/29/2020
 ms.topic: conceptual

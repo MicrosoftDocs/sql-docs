@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 dividend / divisor  
 ```  
   
@@ -56,7 +56,7 @@ dividend / divisor
 ## Examples  
  The following example uses the division arithmetic operator to calculate the sales target per month for the sales people at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT s.BusinessEntityID AS SalesPersonID, FirstName, LastName, SalesQuota, SalesQuota/12 AS 'Sales Target Per Month'  
@@ -83,7 +83,7 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses the division arithmetic operator to calculate a simple ratio of each employees' vacation hours to sick hours.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours/SickLeaveHours AS PersonalTimeRatio  

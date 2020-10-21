@@ -42,9 +42,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  A valid scalar expression that defines the calculated member property's value.  
   
 ## Remarks  
- The CREATE MEMBER statement defines calculated members that are available throughout the session, and therefore, can be used in multiple queries during the session. For more information, see [Creating Session-Scoped Calculated Members &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+ The CREATE MEMBER statement defines calculated members that are available throughout the session, and therefore, can be used in multiple queries during the session. For more information, see [Creating Session-Scoped Calculated Members &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- You can also define a calculated member for use by a single query. To define a calculated member that is limited to a single query, you use the WITH clause in the SELECT statement. For more information, see [Creating Query-Scoped Calculated Members &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ You can also define a calculated member for use by a single query. To define a calculated member that is limited to a single query, you use the WITH clause in the SELECT statement. For more information, see [Creating Query-Scoped Calculated Members &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  *Property_Name* can refer to either standard or optional calculated member properties. Standard member properties are listed later in this topic. Calculated members created with CREATE MEMBER without a **SESSION** value have session scope. Additionally, strings inside calculated member definitions are delimited with double quotation marks. This is different from the method defined by OLE DB, which specifies that strings should be delimited by single quotation marks.  
   
@@ -56,7 +56,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  A calculated member can occur within one of the scopes listed in the following table.  
   
  Query scope  
- The visibility and lifetime of the calculated member is limited to the query. The calculated member is defined in an individual query. Query scope overrides session scope. For more information, see [Creating Query-Scoped Calculated Members &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ The visibility and lifetime of the calculated member is limited to the query. The calculated member is defined in an individual query. Query scope overrides session scope. For more information, see [Creating Query-Scoped Calculated Members &#40;MDX&#41;](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  Session scope  
  The visibility and lifetime of the calculated member is limited to the session in which it is created. (The lifetime is less than the session duration if a DROP MEMBER statement is issued on the calculated member.) The CREATE MEMBER statement creates a calculated member with session scope.  
@@ -118,5 +118,4 @@ WHERE ProfitRatio
  [DROP MEMBER Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [UPDATE MEMBER Statement &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
  [MDX Data Definition Statements &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

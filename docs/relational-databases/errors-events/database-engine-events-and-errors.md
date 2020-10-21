@@ -9105,4 +9105,4 @@ ORDER BY message_id
 ## See Also
 
 [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
-[Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
+[Cause and Resolution of Database Engine Errors](/previous-versions/sql/sql-server-2016/ms365262(v=sql.130))

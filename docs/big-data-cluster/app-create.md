@@ -27,7 +27,7 @@ This article describes how to deploy and manage R and Python script as an applic
 - Support hosting additional application types - SQL Server Integration Services (SSIS) and MLeap.
 - [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
 
-Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
+Applications are deployed and managed using [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 The following types of apps are supported:
 
@@ -39,7 +39,7 @@ The following types of apps are supported:
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)
-- [azdata command-line utility](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## Capabilities
 
@@ -109,7 +109,7 @@ spec.yaml
 
 ## Create an app
 
-To create an application, you use `azdata` with the `app create` command. These files reside locally on the machine that you're creating the app from.
+To create an application, you use [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] with the `app create` command. These files reside locally on the machine that you're creating the app from.
 
 Use the following syntax to create a new app in big data cluster:
 

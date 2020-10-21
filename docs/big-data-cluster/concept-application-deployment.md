@@ -73,7 +73,7 @@ allowedCapabilities:
 ## How to work with Application Deployment
 
 The two main interfaces for application deployment are: 
-- [Command line interface `azdata`](app-create.md)
+- [Command line interface [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](app-create.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
 It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](app-consume.md).

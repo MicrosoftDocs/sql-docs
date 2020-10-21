@@ -1,7 +1,7 @@
 ---
 title: Administration resources for Big Data Clusters (BDC) 
 titleSuffix: SQL Server
-description: This article provides links to administration resources for SQL Server Big Data Clusters (BDC).
+description: This article explains how to view the status of a big data cluster using Azure Data Studio, notebooks, and Azure Data CLI (azdata) commands.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray

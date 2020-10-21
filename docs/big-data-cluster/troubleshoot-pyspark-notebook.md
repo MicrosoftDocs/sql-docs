@@ -25,7 +25,7 @@ To efficiently troubleshoot your PySpark session you will collect and review log
 
 This troubleshooting steps require that you have:
 
-1. `azdata` installed and with configuration correctly set to your cluster.
+1. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] installed and with configuration correctly set to your cluster.
 2. Familiarity with running Linux commands and some log troubleshooting skills.
 
 ## Troubleshooting steps

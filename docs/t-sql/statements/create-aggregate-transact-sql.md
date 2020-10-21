@@ -87,7 +87,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Requires CREATE AGGREGATE permission and also REFERENCES permission on the assembly that is specified in the EXTERNAL NAME clause.  
   
 ## Examples  
- The following example assumes that a StringUtilities.csproj sample application is compiled. For more information, see [String Utility Functions Sample](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ The following example assumes that a StringUtilities.csproj sample application is compiled. For more information, see [String Utility Functions Sample](/previous-versions/sql/sql-server-2016/ff878119(v=sql.130)).  
   
  The example creates aggregate `Concatenate`. Before the aggregate is created, the assembly `StringUtilities.dll` is registered in the local database.  
   
@@ -114,5 +114,4 @@ GO
   
 ## See Also  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
-  
   

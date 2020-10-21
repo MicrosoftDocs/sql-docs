@@ -8306,10 +8306,10 @@
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: SQL Server Data Tools
+      href: ssdt/sql-server-data-tools.md
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
-    - name: SQL Server Tools
-      href: ssdt/sql-server-tools.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
       items:

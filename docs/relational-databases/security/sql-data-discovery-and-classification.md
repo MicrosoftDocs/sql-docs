@@ -43,7 +43,7 @@ The classification includes two metadata attributes:
 
 2. In the SSMS Object Explorer, right click on the database that you would like to classify and choose **Tasks** > **Data Discovery and Classification** > **Classify Data...**.
 
-   ![Screenshot showing the SSMS Object Explorer with the Tasks > Data Discovery and Classification > Classify Data... options selected.][0]
+   ![Screenshot showing the SSMS Object Explorer with Tasks > Data Discovery and Classification > Classify Data... selected.][0]
 
 3. The classification engine scans your database for columns containing potentially sensitive data and provides a list of **recommended column classifications**:
 

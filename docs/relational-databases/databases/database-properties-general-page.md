@@ -10,6 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.general.f1"
   - "sql13.swb.databaseproperties.segments.f1"
+  - ".databaseproperties.databasecapabilities.f1"
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein

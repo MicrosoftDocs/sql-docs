@@ -1,15 +1,18 @@
 ---
+title: Deploy an SSIS project with SSMS
 description: "Deploy an SSIS project with SQL Server Management Studio (SSMS)"
-title: "Deploy an SSIS project with SSMS | Microsoft Docs"
-ms.date: "05/21/2018"
 ms.topic: quickstart
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.custom: ""
 ms.technology: integration-services
+f1_keywords:
+  - sql13.swb.deploymentwizard.deploymentsettings.f1
 author: chugugrace
 ms.author: chugu
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 05/21/2018
 ---
+
 # Deploy an SSIS project with SQL Server Management Studio (SSMS)
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]

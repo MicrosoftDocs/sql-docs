@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
- ![No](media/no-icon.png)SQL Server Reporting Services (2016)
+ :::image type="icon" source="media/no-icon.png":::SQL Server Reporting Services (2016)

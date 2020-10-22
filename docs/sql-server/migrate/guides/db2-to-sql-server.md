@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Migration guide: DB2 to SQL Server
-[!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 This migration guide teaches you to migrate your user databases from DB2 to SQL Server using the SQL Server Migration Assistant for DB2. 
 

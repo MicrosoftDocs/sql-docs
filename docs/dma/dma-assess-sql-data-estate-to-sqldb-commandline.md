@@ -27,7 +27,7 @@ This article teaches you to perform assessments at scale and upload the results 
 To learn more, see the following Channel9 video:
 
 >
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL?WT.mc_id=dataexposed-c9-niner]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Prerequisites 
 

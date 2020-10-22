@@ -284,7 +284,7 @@ Grouping rows together by matching values in a given column, is the first step t
 
 On the extended events toolbar, the **Grouping** button starts a dialog you can use to group the displayed data by a given column. The next screenshot shows a dialog being used to group by the *name* column.
 
-![Toolbar > Grouping button, then the Grouping dialog](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
+![Screenshot showing the toolbar with Grouping selected and the Grouping dialog box.](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
 After the grouping is achieved, the display has a new look, as shown next.
 
@@ -297,11 +297,11 @@ After the grouping is achieved, the display has a new look, as shown next.
 
 After the displayed data has been grouped, you can proceed to aggregate data in other columns.  The next screenshot shows the grouped data is being aggregated by *count*.
 
-![Toolbar > Aggregation button, then the Aggregation dialog](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
+![Screenshot showing the toolbar with Aggregation selected and the Aggregation dialog box.](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
 After the aggregation is achieved, the display has a new look, as shown next.
 
-![Toolbar > Aggregation button, then the Aggregation dialog](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
+![Screenshot of the display showing that a COUNT value has been added.](../../relational-databases/extended-events/media/xevents-ssms-ui52-aggregnewdisplay.png)
 
 
 

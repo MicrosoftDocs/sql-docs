@@ -97,7 +97,7 @@ To create the plot, use the R function `barplot`. This step plots a histogram ba
       image_file = tempfile();  
       jpeg(filename = image_file);  
       #Plot histogram  
-      barplot(table(InputDataSet$tipped), main = 'Tip Histogram', col="lightgreen", xlab="Tipped or not", ylab = "Counts", space=0)
+      barplot(table(InputDataSet$tipped), main = "Tip Histogram", col="lightgreen", xlab="Tipped or not", ylab = "Counts", space=0)
       dev.off();  
       OutputDataSet <- data.frame(data=readBin(file(image_file, "rb"), what=raw(), n=1e6));  
       ',  
@@ -286,7 +286,7 @@ To view the plot, open the destination folder and review the files that were cre
 
 1. Go the folder indicated in the STDOUT message (in the example, this is C:\temp\plots\)
 
-2. Open `rHistogram_Tipped.jpg` to show the number of trips that got a tip vs. the trips that got no tip. (This histogram is much like the one you generated in the previous step.)
+2. Open `rHistogram_Tipped.jpg` to show the number of trips that got a tip vs. the trips that got no tip (this histogram is similar to the one you generated in the previous step).
 
 3. Open `rHistograms_Tip_and_Fare_Amount.pdf` to view distribution of tip amounts, plotted against the fare amounts.
 

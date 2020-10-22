@@ -16,7 +16,7 @@ Learn how to create a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-m
 
 For example, in this report, the gauges across the top act like tabs. When you click the Transportation gauge, the data in the rest of the chart is filtered to the transportation data.
 
-![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
+![Screenshot showing a Financials - Transportation report with the Transportation gauge selected.](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
 Behind the scenes, this is really a set of five separate reports, each with a different parameter that filters the report to match the gauge selected at the top of the report. You create all five reports first, then for each of the five reports, you make the other four gauges into drillthroughs to the other four reports.
 
@@ -91,7 +91,7 @@ In this section, you set each gauge (other than the Sales gauge) as a drillthrou
 
 3. Select one of the gauges to go to the report filtered to that gauge's data.
 
-   ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
+   ![Screenshot showing a Financials - Transportation report with a red arrow pointing to the Transportation gauge which also has a red bo around it.](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
 ### See also
 	

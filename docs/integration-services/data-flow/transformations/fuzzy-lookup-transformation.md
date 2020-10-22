@@ -43,7 +43,7 @@ ms.author: chugu
   The Fuzzy Lookup transformation performs data cleaning tasks such as standardizing data, correcting data, and providing missing values.  
   
 > [!NOTE]  
->  For more detailed information about the Fuzzy Lookup transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+>  For more detailed information about the Fuzzy Lookup transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
  The Fuzzy Lookup transformation differs from the Lookup transformation in its use of fuzzy matching. The Lookup transformation uses an equi-join to locate matching records in the reference table. It returns records with at least one matching record, and returns records with no matching records. In contrast, the Fuzzy Lookup transformation uses fuzzy matching to return one or more close matches in the reference table.  
   
@@ -128,7 +128,7 @@ ms.author: chugu
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,5 +216,4 @@ ms.author: chugu
  [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

@@ -1,11 +1,13 @@
 ---
+title: Create and Manage Full-Text Catalogs
 description: "Create and Manage Full-Text Catalogs"
-title: "Create and Manage Full-Text Catalogs | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
 ms.topic: conceptual
+f1_keywords:
+  - sql13.swb.fulltextsearch.ftcatalog.general.f1
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
   - "full-text search [SQL Server], using SQL Server Management Studio"
@@ -15,7 +17,9 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Create and Manage Full-Text Catalogs
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 A full-text catalog is a logical container for a group of full-text indexes. You have to create a full-text catalog before you can create a full-text index.
 

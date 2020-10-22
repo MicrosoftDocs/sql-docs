@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Compute summary statistics in R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 5 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 5 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 This tutorial uses the established data sources and compute contexts created in previous tutorials to run high-powered R scripts. In this tutorial, you will use local and remote server compute contexts for the following tasks:
 
@@ -41,13 +41,13 @@ To see how a compute context works, generate summary statistics on the sqlFraudD
     rxSetComputeContext(sqlCompute)
     ```
 
-2. Call the [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) function and pass required arguments, such as the formula and the data source, and assign the results to the variable `sumOut`.
+2. Call the [rxSummary](/machine-learning-server/r-reference/revoscaler/rxsummary) function and pass required arguments, such as the formula and the data source, and assign the results to the variable `sumOut`.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    The R language provides many summary functions, but **rxSummary** in **RevoScaleR** supports execution on various remote compute contexts, including  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about similar functions, see [Data summaries using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    The R language provides many summary functions, but **rxSummary** in **RevoScaleR** supports execution on various remote compute contexts, including  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For information about similar functions, see [Data summaries using RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
 3. Print the contents of sumOut  to the console.
   

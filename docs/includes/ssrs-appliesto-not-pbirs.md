@@ -10,4 +10,4 @@
  ms.custom: include file
 ---
 
- ![No](media/no-icon.png)Power BI Report Server
+ :::image type="icon" source="media/no-icon.png":::Power BI Report Server

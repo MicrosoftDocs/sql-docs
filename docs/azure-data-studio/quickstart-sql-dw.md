@@ -11,7 +11,7 @@ ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
 ---
 
-# Quickstart: Use Azure Data Studio to connect and query data using dedicated SQL pool in Azure Synapse Analytics
+# Quickstart: Use Azure Data Studio to connect and query data using a dedicated SQL pool in Azure Synapse Analytics
 
 This quickstart shows connecting to a dedicated SQL pool in Azure Synapse Analytics using Azure Data Studio.
 
@@ -31,7 +31,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 1. The first time you run Azure Data Studio the **Connection** page should open. If you don't see the **Connection** page, select **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
-   ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
+   ![Screenshot of the Connection page with the New Connection icon called out.](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL server:
 
@@ -134,5 +134,6 @@ The query editor is still connected to the *master* database, but we want to cre
 If you don't plan to continue working with the sample databases created in this article, then [delete the resource group](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## Next steps
+For more information, visit [Connecting to Synapse SQL with Azure Data Studio](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
 
 Now that you've successfully connected to an Azure Synapse Analytics and ran a query, try out the [Code editor tutorial](tutorial-sql-editor.md).

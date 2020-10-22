@@ -30,7 +30,7 @@ ms.author: chugu
   
  The CDC source uses the following configurations:  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET connection manager to access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC database. For more information about configuring the CDC source connection, see [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+-   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET connection manager to access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC database. For more information about configuring the CDC source connection, see [CDC Source Editor &#40;Connection Manager Page&#41;]().  
   
 -   A table enabled for CDC.  
   
@@ -99,11 +99,11 @@ use <cdc-enabled-database-name>
   
  For more information, see one of the following topics:  
   
--   [CDC Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [CDC Source Editor &#40;Connection Manager Page&#41;]()  
   
--   [CDC Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [CDC Source Editor &#40;Columns Page&#41;]()  
   
--   [CDC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [CDC Source Editor &#40;Error Output Page&#41;]()  
   
  The **Advanced Editor** dialog box contains the properties that can be set programmatically.  
   
@@ -245,5 +245,4 @@ use <cdc-enabled-database-name>
 ## Related Content  
   
 -   Blog entry, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), on mattmasson.com.  
-  
   

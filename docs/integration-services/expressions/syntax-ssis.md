@@ -75,12 +75,11 @@ ms.author: chugu
  For more information, see [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## Related Tasks  
- [Use an Expression in a Data Flow Component](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Use an Expression in a Data Flow Component](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## Related Content  
   
 -   Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
   
 -   Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
-  
   

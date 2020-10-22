@@ -8,12 +8,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/22/2020
 ---
 
 # SQL Database Projects extension (Preview)
 
 The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. 
+
 
 ## Features
 
@@ -26,6 +27,12 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 7. Build single project.
 8. Deploy single project.
 9. Load connection details (SQL Windows authentication) and SQLCMD variables from deployment profile.
+
+
+Watch this short 10-minute video for an introduction to the SQL Database Projects extension in Azure Data Studio:
+
+[!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## Install the SQL Database Projects extension
 

@@ -97,7 +97,7 @@ To enable (disable) Always Encrypted:
 3. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can specify an enclave protocol and enclave attestation url. If your SQL Server instance doesn't use a secure enclave, make sure you leave the **Attestation Protocol** and **Enclave Attestation URL** fields blank. For more information, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 4. Click **OK** to close **Advanced Properties**.
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![Short video showing the steps to enable Always Encrypted for the connection.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
 > To toggle between Always Encrypted being enabled and disabled for an existing query window, click **Disconnect** and then click **Connnect** and complete the above steps to reconnect to your database with the desired values of the **Always Encrypted** field. 
@@ -128,7 +128,7 @@ To enable/disable Parameterization for Always Encrypted:
 3. Select or unselect **Enable Parameterization for Always Encrypted**.
 4. Close the **Settings** window.
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![Short video showing how to enable/disable Parameterization for Always Encrypted.](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Parameterization for Always Encrypted works only in a query that use database connections with Always Encrypted enabled (see [Enabling and disabling Always Encrypted for a database connection](#enabling-and-disabling-always-encrypted-for-a-database-connection)). No Transact-SQL variables will be parameterized if the query window uses a database connection without Always Encrypted enabled.

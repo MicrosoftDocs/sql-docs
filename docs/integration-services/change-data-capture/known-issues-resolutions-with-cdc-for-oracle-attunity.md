@@ -121,7 +121,7 @@ Reproduce the error and then select the **Collect diagnostics** option to gather
 
 This is a common error displayed in the **Status** message field of the CDC Instance. The instance retries numerous times, so the status icon will change to green momentarily, but then it will fail with the red exclamation and UNEXPECTED status. 
 
-![Screenshot showing the common error displayed in the Status message field of the CDC Instance](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
+![Screenshot showing the common error displayed in the Status message field of the CDC Instance.](media/known-issues-resolutions-with-cdc-for-oracle-attunity/oracle-error.png)
 
 ```
 "ERROR","computername","ERROR","UNEXPECTED",

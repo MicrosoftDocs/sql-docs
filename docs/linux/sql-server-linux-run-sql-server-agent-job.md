@@ -173,7 +173,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. Create a new job schedule.
 
-   ![Screenshot of the New Job dialog box with teh Schedules option highlighted and teh New option called out.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
+   ![Screenshot of the New Job dialog box with the Schedules option highlighted and the New option called out.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
 
    ![Screenshot of the New Job dialog box with the OK option called out.](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 

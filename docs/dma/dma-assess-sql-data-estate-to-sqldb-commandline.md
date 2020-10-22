@@ -24,7 +24,10 @@ With many organizations trying to migrate to Azure, it is critical to assess exi
 
 This article teaches you to perform assessments at scale and upload the results to Azure Migrate hub using the DMA command-line interface (DMACMD). Alternatively, you can use the [DMA GUI](dma-assess-sql-data-estate-to-sqldb.md) to perform the assessment instead.
 
-To learn more, see the following Channel9 video: [Assess SQL Server estate readiness](https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL?WT.mc_id=dataexposed-c9-niner).
+To learn more, see the following Channel9 video:
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL?WT.mc_id=dataexposed-c9-niner]
 
 ## Prerequisites 
 

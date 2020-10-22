@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpmergedeleteconflictrows"
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

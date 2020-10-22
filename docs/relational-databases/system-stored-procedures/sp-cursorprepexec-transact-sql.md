@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorprepexec"
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

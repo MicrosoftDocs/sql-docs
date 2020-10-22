@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 @@LANGUAGE  
 ```  
   
@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Examples  
  The following example returns the language for the current session.  
   
-```  
+```sql  
 SELECT @@LANGUAGE AS 'Language Name';  
 ```  
   

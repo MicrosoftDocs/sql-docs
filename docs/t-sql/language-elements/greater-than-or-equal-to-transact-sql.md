@@ -58,14 +58,13 @@ expression >= expression
 ### A. Using >= in a simple query  
  The following example returns all rows in the `HumanResources.Department` table that have a value in `DepartmentID` that is greater than or equal to the value 13.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE DepartmentID >= 13  
-ORDER BY DepartmentID;  
-  
+ORDER BY DepartmentID;   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

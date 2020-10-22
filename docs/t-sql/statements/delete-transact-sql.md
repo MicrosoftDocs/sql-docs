@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "row removal [SQL Server], DELETE statement"
   - "deleting data"
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DELETE (Transact-SQL)
@@ -75,7 +75,7 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+-- Syntax for Azure Synapse Analytics
 
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  
@@ -353,7 +353,7 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Deleting Rows From a Remote Table  
- Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
+ Examples in this section demonstrate how to delete rows from a remote table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../functions/opendatasource-transact-sql.md) to reference the remote table. A remote table exists on a different server or instance of SQL Server.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
@@ -535,5 +535,3 @@ FROM dbo.Table2
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
-  
-

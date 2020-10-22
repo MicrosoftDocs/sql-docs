@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_fulltext_keymappings"
   - "full-text indexes [SQL Server], troubleshooting"
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_keymappings (Transact-SQL)
@@ -44,7 +44,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  Is an internal document identifier (DocId) that corresponds to the key value. An invalid *docid* value returns no results.  
   
  *key*  
- Is the full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Manage Full-Text Indexes](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Is the full-text key value from the specified table. An invalid *key* value returns no results. For information about full-text key values, see [Manage Full-Text Indexes](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  For information about using one, two, or three parameters, see "Remarks," later in this topic.  
@@ -133,5 +133,4 @@ GO
   
 ## See Also  
  [Full-Text Search and Semantic Search Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
-  
   

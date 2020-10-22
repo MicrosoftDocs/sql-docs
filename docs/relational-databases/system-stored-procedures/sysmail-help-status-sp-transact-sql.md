@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_status_sp"
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

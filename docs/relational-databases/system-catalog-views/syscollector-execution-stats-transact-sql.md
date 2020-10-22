@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "syscollector_execution_stats view"
   - "data collector view"
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # syscollector_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "UPDATE STATISTICS statement"
   - "statistical information [SQL Server], updating"
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE STATISTICS (Transact-SQL)
@@ -67,7 +67,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -80,8 +80,10 @@ UPDATE STATISTICS [ schema_name . ] table_name
     ]  
 [;]  
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
  *table_or_indexed_view_name*  
@@ -108,7 +110,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sampling of dat
   
  For most workloads, a full scan is not required, and default sampling is adequate.  
 However, certain workloads that are sensitive to widely varying data distributions may require an increased sample size, or even a full scan.  
-For more information, see  the [CSS SQL Escalation Services blog](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
+For more information, see  the [CSS SQL Escalation Services blog](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
  RESAMPLE  
  Update each statistic using its most recent sample rate.  
@@ -206,10 +208,10 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### Determining the Last Statistics Update  
  To determine when statistics were last updated, use the [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function.  
   
-### PDW / SQL Data Warehouse  
- The following syntax is not supported by PDW / SQL Data Warehouse  
+### PDW / Azure Synapse Analytics  
+ The following syntax is not supported by [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]  
   
-```syntaxsql
+```sql
 UPDATE STATISTICS t1 (a,b);   
 ```  
   
@@ -312,4 +314,4 @@ UPDATE STATISTICS Customer;
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)

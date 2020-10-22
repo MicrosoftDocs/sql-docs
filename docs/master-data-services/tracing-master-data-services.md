@@ -45,7 +45,7 @@ manager: erikre
   
 -   Tracing is enabled for Warning and ActivityTracing messages.  
   
-     For more information, see [SourceLevels Enumeration](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     For more information, see [SourceLevels Enumeration](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   The logs are saved in the Logs folder under the WebApplication folder. The default location is C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -64,6 +64,5 @@ manager: erikre
     |Message|Message body of the trace|  
   
 ## External Resources  
- Blog post, [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377), on msdn.com.  
-  
+ Blog post, [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214), on msdn.com.  
   

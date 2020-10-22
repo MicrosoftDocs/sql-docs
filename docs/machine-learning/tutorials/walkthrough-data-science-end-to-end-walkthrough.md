@@ -28,7 +28,7 @@ Because the walkthrough is designed to introduce R developers to [!INCLUDE[rsql_
 
 + [Database permissions](../security/user-permission.md) and a SQL Server database user login
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
@@ -42,7 +42,7 @@ Alternatively, you can run the walkthrough on a computer that has both [!INCLUDE
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 > [!NOTE]
-> If you are using [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) or the [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/), instead of R Client, the path to RevoScaleR is C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
+> If you are using [Machine Learning Server](/machine-learning-server/) or the [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/), instead of R Client, the path to RevoScaleR is C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR
 
 <a name="add-packages"></a>
 

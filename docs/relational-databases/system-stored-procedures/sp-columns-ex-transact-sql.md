@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_columns_ex"
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

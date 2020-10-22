@@ -48,7 +48,7 @@ The basic guidance is to use Azure Disks, unless you have a scenario where you r
 ### Azure Storage Concepts  
 When using SQL Server Data Files in Azure feature, you need to create a storage account and a container in Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
 
-In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of blobs. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](/azure/azure-subscription-service-limits). A container provides a grouping of a set of [blobs](/azure/storage/common/storage-introduction#blob-storage). All blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of blobs. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
 
 ### Azure billing considerations  
 
@@ -85,7 +85,7 @@ ON
 >[!IMPORTANT]
 >If there are any active references to data files in a container, attempts to delete the corresponding SQL Server credential fails.
 
-For more information, see [Manage Access to Azure Storage Resources](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
+For more information, see [Manage Access to Azure Storage Resources](/azure/storage/blobs/storage-manage-access-to-resources)  
 
 ### Security  
  The following are security considerations and requirements when storing SQL Server Data Files in Azure Storage.
@@ -114,7 +114,7 @@ For more information, see [Manage Access to Azure Storage Resources](https://doc
   
 - When using the SQL Server Data Files in Azure feature, geo-replication for your storage account is not supported. If a storage account is geo-replicated and a geo-failover happened, database corruption could occur.  
   
-- For capacity limitations, see [Introduction to Blob storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+- For capacity limitations, see [Introduction to Blob storage](/azure/storage/blobs/storage-blobs-introduction).  
   
 - It is not possible to store In-Memory OLTP data in Blob storage using the SQL Server Data Files in Azure Storage feature. This is because In-Memory OLTP has a dependency on **FileStream** and, in the current release of this feature, storing **FileStream** data in Azure Storage is not supported.  
   
@@ -160,10 +160,10 @@ For more information, see [Manage Access to Azure Storage Resources](https://doc
     Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first release the lease.  
   
 - *Shared Access Signature has not been created on the container correctly.*   
-     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).  
   
 - *SQL Server credential has not been not created correctly.*   
-    Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-3-database-backup-to-url.md).  
+    Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url).  
   
  **Lease blob errors:**  
   
@@ -171,25 +171,30 @@ For more information, see [Manage Access to Azure Storage Resources](https://doc
   
  **Database errors**  
   
-1.  *Errors when creating a database*   
-    Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+**Errors when creating a database**
+Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
-2.  *Errors when running the Alter statement*   
-    Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+**Errors when running the Alter statement** 
+Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
+**Error code - 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**   
 
-    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
+Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidentally started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
-     To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
-  
-    1.  Set the file path of Server A to a local folder by using the ALTER Database statement.  
-  
-    2.  Set the database offline in Server A.  
-  
-    3.  Then, copy database files from Azure Storage to the local folder in Server A. This ensures that ServerA still has a copy of the database locally.  
-  
-    4.  Set the database online.  
+To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
+
+1.  Set the file path of Server A to a local folder by using the ALTER Database statement.  
+
+2.  Set the database offline in Server A.  
+
+3.  Then, copy database files from Azure Storage to the local folder in Server A. This ensures that ServerA still has a copy of the database locally.  
+
+4.  Set the database online.
+
+**Error code 833 - I/O requests taking longer than 15 seconds to complete** 
+   
+   This error indicates the storage system is unable to meet the demands of the SQL Server workload. Either decrease IO activity from the application layer, or increase throughput capability on the storage layer. To learn more, see [Error 833](../errors-events/mssqlserver-833-database-engine-error.md). If performance problems persist, consider moving files to a different storage tier such as Premium or UltraSSD. For SQL Server on Azure VMs, see [optimizing storage performance](/azure/virtual-machines/premium-storage-performance).
+
 
 ## Next steps  
   

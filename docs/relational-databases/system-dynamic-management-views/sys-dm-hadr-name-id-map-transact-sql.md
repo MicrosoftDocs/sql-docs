@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_hadr_name_id_map dynamic management view"
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

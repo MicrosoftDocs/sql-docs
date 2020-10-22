@@ -108,7 +108,7 @@ Requires ALTER permission on the object and CONTROL permission on the certificat
 
  The following example signs the stored procedure `HumanResources.uspUpdateEmployeeLogin` with the certificate `HumanResourcesDP`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  
@@ -119,7 +119,7 @@ GO
 
 The following example creates a new database and creates a certificate to use in the example. The example creates and signs a simple stored procedure and retrieves the signature BLOB from `sys.crypt_properties`. The signature is then dropped and added again. The example signs the procedure by using the WITH SIGNATURE syntax.  
   
-```  
+```sql  
 CREATE DATABASE TestSignature ;  
 GO  
 USE TestSignature ;  
@@ -129,6 +129,7 @@ CREATE CERTIFICATE cert_signature_demo
     ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
     WITH SUBJECT = 'ADD SIGNATURE demo';  
 GO  
+
 -- Create a simple procedure.  
 CREATE PROC [sp_signature_demo]  
 AS  
@@ -139,6 +140,7 @@ ADD SIGNATURE TO [sp_signature_demo]
     BY CERTIFICATE [cert_signature_demo]   
     WITH PASSWORD = 'pGFD4bb925DGvbd2439587y' ;  
 GO  
+
 -- Get the signature binary BLOB for the sp_signature_demo procedure.  
 SELECT cp.crypt_property  
     FROM sys.crypt_properties AS cp  
@@ -150,11 +152,12 @@ GO
   
  The `crypt_property` signature that is returned by this statement will be different each time you create a procedure. Make a note of the result for use later in this example. For this example, the result demonstrated is: `0x831F5530C86CC8ED606E5BC2720DA835351E46219A6D5DE9CE546297B88AEF3B6A7051891AF3EE7A68EAB37CD8380988B4C3F7469C8EABDD9579A2A5C507A4482905C2F24024FFB2F9BD7A953DD5E98470C4AA90CE83237739BB5FAE7BAC796E7710BDE291B03C43582F6F2D3B381F2102EEF8407731E01A51E24D808D54B373`.  
   
-```  
+```sql  
 -- Drop the signature so that it can be signed again.  
 DROP SIGNATURE FROM [sp_signature_demo]   
     BY CERTIFICATE [cert_signature_demo];  
 GO  
+
 -- Add the signature. Use the signature BLOB obtained earlier.  
 ADD SIGNATURE TO [sp_signature_demo]   
     BY CERTIFICATE [cert_signature_demo]  
@@ -166,14 +169,14 @@ GO
 
 The following example shows how countersigning can help control access to an object.  
   
-```  
+```sql  
 -- Create tesT1 database  
 CREATE DATABASE testDB;  
 GO  
 USE testDB;  
 GO  
 -- Create table T1  
-CREATE TABLE T1 (c varchar(11));  
+CREATE TABLE T1 (c VARCHAR(11));  
 INSERT INTO T1 VALUES ('This is T1.');  
   
 -- Create a TestUser user to own table T1  
@@ -246,7 +249,6 @@ USE master;
 GO  
 DROP DATABASE testDB;  
 DROP LOGIN Alice;  
-  
 ```  
   
 ## See Also

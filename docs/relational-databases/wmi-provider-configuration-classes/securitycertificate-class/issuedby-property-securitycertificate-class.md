@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "IssuedBy property"
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # IssuedBy Property (SecurityCertificate Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -63,7 +63,7 @@ boolean_expression AND boolean_expression
 ### A. Using the AND operator  
  The following example selects information about employees who have both the title of `Marketing Assistant` and more than `41` vacation hours available.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT  BusinessEntityID, LoginID, JobTitle, VacationHours   
@@ -75,7 +75,7 @@ AND VacationHours > 41 ;
 ### B. Using the AND operator in an IF statement  
  The following examples show how to use AND in an IF statement. In the first statement, both `1 = 1` and `2 = 2` are true; therefore, the result is true. In the second example, the argument `2 = 17` is false; therefore, the result is false.  
   
-```  
+```sql  
 IF 1 = 1 AND 2 = 2  
 BEGIN  
    PRINT 'First Example is TRUE'  

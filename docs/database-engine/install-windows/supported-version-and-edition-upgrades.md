@@ -41,7 +41,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
   
--   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can add features by using the [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+-   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], you can add features by using the [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 -   Failover Clusters are not supported in WOW mode.  
   
@@ -169,8 +169,7 @@ Additionally you can also perform an edition upgrade between [!INCLUDE[sssql15-m
   
 ## See Also  
 
-[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)     
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
 [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)    
-  
   

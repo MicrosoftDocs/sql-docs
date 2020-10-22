@@ -16,8 +16,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
 
-If you encounter script errors not covered here, post them on the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). This forum supports the machine learning components used in various SQL machine learning products.
-
 ## Valid script fails in T-SQL or in stored procedures
 
 Before wrapping your R code in a stored procedure, it is a good idea to run your R code in an external IDE, or in one of the R tools such as RTerm or RGui. By using these methods, you can test and debug the code by using the detailed error messages that are returned by R.
@@ -28,7 +26,7 @@ However, sometimes code that works perfectly in an external IDE or utility might
 
 2. Review messages to see whether either the input data or output data contains columns with incompatible or unsupported data types. For example, queries on a SQL database often return GUIDs or RowGUIDs, both of which are unsupported. For more information, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
-3. Review the help pages for individual R functions to determine whether all parameters are supported for the SQL Server compute context. For ScaleR help, use the inline R help commands, or see [Package Reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Review the help pages for individual R functions to determine whether all parameters are supported for the SQL Server compute context. For ScaleR help, use the inline R help commands, or see [Package Reference](/r-server/r-reference/revoscaler/revoscaler).
 
 If the R runtime is functioning but your script returns errors, we recommend that you try debugging the script in a dedicated R development environment, such as  R Tools for Visual Studio.
 

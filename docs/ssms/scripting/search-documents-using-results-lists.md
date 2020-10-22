@@ -59,9 +59,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Replacement information appears in the Find Results 1 window by default. You can browse replacements by double-clicking each entry in the Find Results 1 window.  
   
 ## See Also  
- [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
- [Search Documents Interactively](../../relational-databases/scripting/search-documents-interactively.md)   
- [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Search and Replace](./search-and-replace.md)   
+ [Search Documents Interactively](./search-documents-interactively.md)   
+ [Search Text with Wildcards](./search-text-with-wildcards.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

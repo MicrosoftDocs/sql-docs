@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   You can create a unique constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to ensure no duplicate values are entered in specific columns that do not participate in a primary key. Creating a unique constraint automatically creates a corresponding unique index.  
   
 > [!NOTE]    
-> See [Primary key, foreign key, and unique key in Azure Synapse Analytics](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) for information on unique constraints in Azure Synapse Analytics.
+> See [Primary key, foreign key, and unique key in Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints) for information on unique constraints in Azure Synapse Analytics.
   
  **In This Topic**  
   
@@ -57,9 +57,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  In the **Indexes/Keys** dialog box, click **Add**.  
   
-4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property.  
+4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property, and then click **Close**.  
   
-5.  On the **File** menu, click **Save**_table name_.  
+5.  On the **File** menu, click **Save** _table name_.  
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -100,7 +100,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     ```  
   
-#### To create a unique constraint in an new table  
+#### To create a unique constraint on a new table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -122,4 +122,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), and [table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a>  
+###  <a name="TsqlExample"></a>

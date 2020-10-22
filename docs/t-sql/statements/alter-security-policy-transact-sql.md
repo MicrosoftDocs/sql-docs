@@ -106,7 +106,7 @@ The following examples demonstrate the use of the **ALTER SECURITY POLICY** synt
 ### A. Adding an additional predicate to a policy  
 The following syntax alters a security policy, adding a filter predicate on the `mytable` table.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1   
     ADD FILTER PREDICATE schema_preds.SecPredicate(column1)   
     ON myschema.mytable;  
@@ -115,14 +115,14 @@ ALTER SECURITY POLICY pol1
 ### B. Enabling an existing policy  
 The following example uses the ALTER syntax to enable a security policy.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1 WITH ( STATE = ON );  
 ```  
   
 ### C. Adding and dropping multiple predicates  
 The following syntax alters a security policy, adding filter predicates on the `mytable1` and `mytable3` tables, and removing the filter predicate on the `mytable2` table.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
 ADD FILTER PREDICATE schema_preds.SecPredicate1(column1)   
     ON myschema.mytable1,  
@@ -135,7 +135,7 @@ ADD FILTER PREDICATE schema_preds.SecPredicate2(column2, 1)
 ### D. Changing the predicate on a table  
 The following syntax changes the existing filter predicate on the mytable table to be the SecPredicate2 function.  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
     ALTER FILTER PREDICATE schema_preds.SecPredicate2(column1)  
         ON myschema.mytable;  
@@ -144,7 +144,7 @@ ALTER SECURITY POLICY pol1
 ### E. Changing a block predicate  
 Changing the block predicate function for an operation on a table.  
   
-```  
+```sql 
 ALTER SECURITY POLICY rls.SecPol  
     ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) 
     ON dbo.Sales AFTER INSERT;  

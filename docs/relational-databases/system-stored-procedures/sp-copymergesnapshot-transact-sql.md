@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_copymergesnapshot"
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

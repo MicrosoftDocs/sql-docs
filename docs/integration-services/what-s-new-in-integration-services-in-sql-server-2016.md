@@ -106,7 +106,7 @@ These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or late
         
         -   [Support for Azure Data Lake Store released](#datalakestore)
         
-        -   [Support for Azure SQL Data Warehouse released](#sqldwupload)
+        -   [Support for Azure Synapse Analytics released](#sqldwupload)
   
 -   **Usability and productivity**  
   
@@ -303,7 +303,7 @@ With SQL Server 2016 Service Pack 1 installed, the OData Source and OData Connec
 
 The latest version of the Azure Feature Pack includes a connection manager, source, and destination to move data to and from Azure Data Lake Store. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
-#### <a name="sqldwupload"></a> Support for Azure SQL Data Warehouse released
+#### <a name="sqldwupload"></a> Support for Azure Synapse Analytics released
 
 The latest version of the Azure Feature Pack includes the Azure SQL DW Upload task for populating SQL Data Warehouse with data. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)
 
@@ -357,7 +357,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
  The Dimension Processing Destination does not work for Tabular models with the SQL 2016 compatibility level.  The Analysis Services Processing Task and the Partition Processing Destination are all you need for tabular processing. 
 
 ####  <a name="builtinR"></a> Support for Built-in R Services  
- SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
+ SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296). 
 
 ####  <a name="ValidateXML"></a> Rich XML validation output in the XML Task  
  Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task. Before the **ValidationDetails** property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set **ValidationDetails** to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents. For more info, see [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
@@ -370,4 +370,4 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 
 ## See Also  
  [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Editions and Supported Features for SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Editions and Supported Features for SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

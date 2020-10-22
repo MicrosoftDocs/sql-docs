@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_datatype_info"
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]

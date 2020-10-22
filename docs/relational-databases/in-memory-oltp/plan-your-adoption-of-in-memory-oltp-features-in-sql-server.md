@@ -26,7 +26,7 @@ This article describes the ways in which the adoption of In-Memory features affe
 
 The following subsections discuss factors you must consider when you plan to adopt and implement In-Memory features. A lot of explanatory information is available at:
 
-- [Use In-Memory OLTP to improve your application performance in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
+- [Use In-Memory OLTP to improve your application performance in Azure SQL Database](/azure/azure-sql/in-memory-oltp-configure)
 
 
 
@@ -36,7 +36,7 @@ One prerequisite for using the In-Memory features can involve the edition or ser
 
 - [Requirements for Using Memory-Optimized Tables](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)
 	- [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-	- [SQL Database pricing tier recommendations](https://azure.microsoft.com/documentation/articles/sql-database-service-tier-advisor/)
+	- [SQL Database pricing tier recommendations](/azure/azure-sql/database/service-tiers-vcore)
 
 
 ### A.2 Forecast the amount of active memory
@@ -53,8 +53,8 @@ A memory-optimized table which contains 200 GB of data requires more than 200 GB
 
 For a database hosted in the Azure SQL Database cloud service, your chosen service tier affects the amount of active memory your database is allowed to consume. You should plan to monitor the memory usage of your database by using an alert. For details, see:
 
-- Review the In-Memory OLTP Storage limits for your [Pricing Tier](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
-- [Monitor In-Memory OLTP Storage](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- Review the In-Memory OLTP Storage limits for your [Pricing Tier](/azure/sql-database/sql-database-purchase-models)
+- [Monitor In-Memory OLTP Storage](/azure/azure-sql/in-memory-oltp-monitor-space)
 
 #### Memory-optimized table variables
 
@@ -255,7 +255,7 @@ Particular elements of Transact-SQL are not supported in natively compiled T-SQL
 
 For considerations when migrating a Transact-SQL modules that uses unsupported features to natively compiled, see:
 
-- [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
+- [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)
 
 Besides limitations on certain elements of Transact-SQL, there are also limitation on query operators supported in natively compiled T-SQL modules. Because of these limitations, natively compiled stored procedures are not suitable for analytical queries that process large data sets.
 
@@ -291,12 +291,10 @@ In SQL Server 2016:
 You can make your Transact-SQL scripts more robust against a possible transaction error by adding *retry logic* to your scripts. Retry logic is more likely to help when UPDATE and DELETE calls are frequent, or if the memory-optimized table is referenced by a foreign key in another table. For details, see:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Transaction dependency limits with memory optimized tables - Error 41839](/archive/blogs/sqlcat/transaction-dependency-limits-with-memory-optimized-tables-error-41839)
 
 
 
 ## Related links
 
 - [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
-

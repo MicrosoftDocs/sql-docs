@@ -30,7 +30,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 Operators are aliases for people or groups that can receive electronic notification when jobs have completed or alerts have been raised. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service supports the notification of administrators through operators. Operators enable notification and monitoring capabilities of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -119,8 +119,7 @@ You must set up one or more of the following in order to notify an operator:
 |Tasks|Topic|  
 |-|-|  
 |Tasks related to creating an operator|[Create an Operator](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|Tasks related to assigning alerts|[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Define the Response to an Alert &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)<br /><br />[Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## See Also  
 [Database Mail](../../relational-databases/database-mail/database-mail.md)  
-  

@@ -36,7 +36,7 @@ The component supports the OData v3 and v4 protocols.
 
 The OData source includes support for the following data sources:
 -   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
--   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: `https://<server>/_vti_bin/ListData.svc`. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: `https://<server>/_vti_bin/ListData.svc`. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)).
 
 ## Supported data types
 
@@ -48,6 +48,13 @@ For the **Decimal** data type, the precision and scale are determined by the sou
 
 > [!IMPORTANT]
 > The OData Source component does not support complex types, such as multiple-choice items, in SharePoint lists.
+
+> [!Note]
+> If the source only allows TLS 1.2 connection, you need to enforce TLS 1.2 on your machine through registry settings. In an elevated command prompt run the following commands:
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## OData Format and Performance
  Most OData services can return results in multiple formats. You can specify the format of the result set by using the `$format` query option. Formats such as JSON and JSON Light are more efficient than ATOM or XML, and may give you better performance when transferring large amounts of data. The following table provides results from sample tests. As you can see, there was a 30-53% performance gain when switching from ATOM to JSON and a 67% performance gain when switching from ATOM to the new JSON light format (available in WCF Data Services 5.1).  
@@ -146,5 +153,4 @@ For the **Decimal** data type, the precision and scale are determined by the sou
   
 ## See Also  
  [OData Connection Manager](../../integration-services/connection-manager/odata-connection-manager.md)  
-  
   

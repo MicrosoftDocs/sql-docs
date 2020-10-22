@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FlagName property"
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # FlagName Property (ClientSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +40,5 @@ object.FlagName [= value]
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

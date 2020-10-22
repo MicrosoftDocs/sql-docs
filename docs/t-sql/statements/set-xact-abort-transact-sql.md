@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "roll back transactions [SQL Server]"
   - "SET XACT_ABORT statement"
 ms.assetid: cbcaa433-58f2-4dc3-a077-27273bef65b5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET XACT_ABORT (Transact-SQL)

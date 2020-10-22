@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_commands system table"
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSrepl_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

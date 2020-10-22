@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpmergepullsubscription"
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

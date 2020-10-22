@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Inserting Snippets  
  You can use the **Insert Snippet** menu to open a categorized list of snippets to choose from.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] snippets contain replacement points: text that suggests the syntax relevant to that point. For example, the CREATE TABLE snippet has replacement points for elements such as the table name, column names, and column data types. After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] snippets contain replacement points: text that suggests the syntax relevant to that point. For example, the CREATE TABLE snippet has replacement points for elements such as the table name, column names, and column data types. After inserting the snippet, you must change the replacement text to form a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. For more information, see [Complete Transact-SQL Snippets](./complete-transact-sql-snippets.md).  
   
 #### Inserting a Snippet by Using the Insert Snippet Menu  
   
@@ -41,6 +41,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Double-click the snippet, or select the snippet from the snippet picker and then press TAB or ENTER.  
   
 ## See Also  
- [Insert Surround-with Transact-SQL snippets](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Insert Surround-with Transact-SQL snippets](./insert-surround-with-transact-sql-snippets.md)  
   

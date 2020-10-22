@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_tables"
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_tables (Transact-SQL)
@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
      [ , [ @table_owner = ] 'owner' ]   

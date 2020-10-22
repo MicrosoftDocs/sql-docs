@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "WMI Provider for Configuration Management, late binding"
   - "binding [WMI]"
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Working with the WMI Provider for Configuration Management
 

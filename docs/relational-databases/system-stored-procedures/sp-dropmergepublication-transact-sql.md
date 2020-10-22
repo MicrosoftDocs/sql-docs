@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergepublication"
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

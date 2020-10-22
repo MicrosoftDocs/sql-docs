@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression - expression  
 ```  
   
@@ -54,7 +54,7 @@ expression - expression
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(TaxRate) - MIN(TaxRate) AS 'Tax Rate Difference'  
@@ -70,10 +70,10 @@ GO
   
  Applies to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @altstartdate datetime;  
+DECLARE @altstartdate DATETIME;  
 SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);  
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
@@ -93,7 +93,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
 ### C: Using subtraction in a SELECT statement  
  The following example calculates the difference in a base rate between the employee with the highest base rate and the employee with the lowest tax rate, from the `dimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference  

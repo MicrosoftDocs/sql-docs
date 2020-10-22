@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "configuration management [WMI]"
   - "WMI Provider for Configuration Management, about WMI Provider for Configuration Management"
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # WMI Provider for Configuration Management
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

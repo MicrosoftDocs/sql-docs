@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "dropping assemblies"
   - "WITH NO DEPENDENTS option"
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ## Examples  
  The following example assumes the assembly `HelloWorld` is already created in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 DROP ASSEMBLY Helloworld ;  
 ```  
   

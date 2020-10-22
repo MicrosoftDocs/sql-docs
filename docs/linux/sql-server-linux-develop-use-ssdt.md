@@ -105,7 +105,7 @@ If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql
 For more information about developing a database with SQL Data Tools, see the below articles.
 
 * [Download and Install Visual Studio](https://www.visualstudio.com/downloads/)
-* [Download and Install SSDT](https://aka.ms/ssdt-download)
-* [SSDT MSDN documents](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
-* [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx)
-* [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)
+* [Download and Install SSDT](../ssdt/download-sql-server-data-tools-ssdt.md)
+* [SSDT MSDN documents](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103))
+* [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
+* [Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md)

@@ -11,8 +11,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Spatial Data Catalog Views
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

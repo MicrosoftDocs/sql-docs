@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geometry_histogram"
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,6 +150,5 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  `GO`  
   
 ## See Also  
- [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
-  
+ [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](./spatial-index-stored-procedures-arguments-and-properties.md)  
   

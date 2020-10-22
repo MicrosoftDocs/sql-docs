@@ -14,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBGetVersionInfo Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

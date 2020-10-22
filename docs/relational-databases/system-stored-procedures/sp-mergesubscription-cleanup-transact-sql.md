@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_mergesubscription_cleanup"
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

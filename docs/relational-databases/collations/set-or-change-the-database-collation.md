@@ -17,10 +17,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Set or Change the Database Collation
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
+  This topic describes how set and change the database collation by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
   
 > [!IMPORTANT]
-> Altering database collation is not explicitly forbidden in Azure SQL Database. However, altering database collation reqiures exclusive lock on database and other user or background processes (for example background that is taking the backups) might hold the database locks and prevent collation change. `ALTER DATABASE COLLATE` statement on Azure SQL Database is not supported.
+> `ALTER DATABASE COLLATE` statement on Azure SQL Database is not supported.
 
  **In This Topic**  
   
@@ -139,8 +139,7 @@ GO
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
-  
   

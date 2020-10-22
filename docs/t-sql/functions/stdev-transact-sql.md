@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 STDEV ( [ ALL | DISTINCT ] expression )  
   
@@ -67,7 +67,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### A: Using STDEV  
  The following example returns the standard deviation for all bonus values in the `SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT STDEV(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -78,7 +78,7 @@ GO
 ### B: Using STDEV  
  The following example returns the standard deviation of the sales quota values in the table `dbo.FactSalesQuota`. The first column contains the standard deviation of all distinct values and the second column contains the standard deviation of all values including any duplicates values.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEV(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEV(SalesAmountQuota) AS All_Values  
@@ -96,7 +96,7 @@ Distinct_Values   All_Values
 ### C. Using STDEV with OVER  
  The following example returns the standard deviation of the sales quota values for each quarter in a calendar year. Notice that the ORDER BY in the OVER clause orders the STDEV and the ORDER BY of the SELECT statement orders the result set.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

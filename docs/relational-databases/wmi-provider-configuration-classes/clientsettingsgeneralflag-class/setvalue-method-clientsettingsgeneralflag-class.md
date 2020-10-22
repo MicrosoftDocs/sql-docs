@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetValue method"
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetValue Method (ClientSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,6 +46,5 @@ object.SetValue(Value)
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

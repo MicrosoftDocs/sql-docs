@@ -27,10 +27,9 @@ ms.author: chugu
   
 ## See Also  
  [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
- [Transfer Jobs Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
- [Transfer Logins Task Editor &#40;Logins Page&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   
- [Transfer SQL Server Objects Task Editor &#40;Objects Page&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md)   
- [Transfer Master Stored Procedures Task Editor &#40;Stored Procedures Page&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [Transfer Error Messages Task Editor &#40;Messages Page&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
-  
+ [Transfer Jobs Task Editor &#40;General Page&#41;](./transfer-jobs-task.md)   
+ [Transfer Logins Task Editor &#40;Logins Page&#41;](./transfer-logins-task.md)   
+ [Transfer SQL Server Objects Task Editor &#40;Objects Page&#41;](./transfer-sql-server-objects-task.md)   
+ [Transfer Master Stored Procedures Task Editor &#40;Stored Procedures Page&#41;](./transfer-master-stored-procedures-task.md)   
+ [Transfer Error Messages Task Editor &#40;Messages Page&#41;](./transfer-error-messages-task.md)  
   

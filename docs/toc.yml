@@ -60,7 +60,7 @@
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install azdata
+      - name: Install Azure Data CLI
         items:
         - name: Install
           href: azdata/install/deploy-install-azdata.md
@@ -90,8 +90,6 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
-      - name: Active Directory mode
-        href: big-data-cluster/deploy-active-directory.md
       - name: Deploy with high availability
         items:
         - name: Master instance
@@ -132,6 +130,24 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Administration resources
+      href: big-data-cluster/view-cluster-status.md
+    - name: Active Directory mode
+      items:
+      - name: Prerequisites
+        href: big-data-cluster/active-directory-prerequisites.md
+      - name: Deploy
+        href: big-data-cluster/active-directory-deploy.md
+      - name: Connect
+        href: big-data-cluster/active-directory-connect.md
+      - name: Multiple BDCs in the same AD domain
+        href: big-data-cluster/active-directory-deployment-background.md
+      - name: Auto-generated AD objects
+        href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
+      - name: Manage user access
+        href: big-data-cluster/manage-user-access.md
     - name: Private cluster
       items:
       - name: Deploy
@@ -184,7 +200,7 @@
         href: big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps
       items:
-      - name: Deploy with azdata
+      - name: Deploy with Azure Data CLI
         href: big-data-cluster/app-create.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
@@ -310,7 +326,6 @@
             href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Tips for using R packages
             href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap
@@ -323,34 +338,50 @@
       items:
       - name: Connect
         href: big-data-cluster/connect-to-big-data-cluster.md
-      - name: View cluster status
-        href: big-data-cluster/view-cluster-status.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
+      - name: List operations notebooks
+        href: big-data-cluster/cluster-manage-notebooks.md
+    - name: Monitor
+      items:
+      - name: Monitor with Azure Data Studio
+        href: big-data-cluster/cluster-monitor-ads.md
+      - name: Monitor with cmdlet
+        href: big-data-cluster/cluster-monitor-cmdlet.md
+      - name: Monitor with notebooks
+        href: big-data-cluster/cluster-common-notebooks.md
+      - name: Monitor - Grafana
+        href: big-data-cluster/cluster-monitor-grafana.md
+      - name: Logging - Kibana
+        href: big-data-cluster/cluster-logging-kibana.md
+      - name: List monitoring notebooks
+        href: big-data-cluster/cluster-monitor-notebooks.md
+      - name: List logging notebooks
+        href: big-data-cluster/cluster-logging-notebooks.md
     - name: Performance
       items:
-        - name: Tuning guide
-          href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Tuning guide
+        href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
         href: big-data-cluster/kubernetes-rbac.md
       - name: Update AZDATA_PASSWORD
         href: big-data-cluster/change-azdata-password.md
-      - name: Manage user access
-        href: big-data-cluster/manage-user-access.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
-      - name: Multiple BDCs in the same AD domain
-        href: big-data-cluster/active-directory-deployment-background.md
-      - name: Auto-generated AD objects
-        href: big-data-cluster/active-directory-objects.md
-      - name: AD DNS reconciliation
-        href: big-data-cluster/active-directory-dns-reconciliation.md
+      - name: Encryption at rest
+        items:
+          - name: Concepts and configuration
+            href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+          - name: SQL Server TDE
+            href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+          - name: HDFS encryption zones
+            href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -367,14 +398,20 @@
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Troubleshoot pyspark notebook
         href: big-data-cluster/troubleshoot-pyspark-notebook.md
-      - name: Active directory domain group scope
-        href: big-data-cluster/troubleshoot-active-directory.md
-      - name: Active Directory DNS
-        href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-      - name: Active Directory login fails
-        href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-      - name: HDFS admin permissions
+      - name: Troubleshoot Active Directory
+        items:
+        - name: AD deployment stops
+          href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+        - name: AD domain group scope
+          href: big-data-cluster/troubleshoot-active-directory.md
+        - name: AD DNS
+          href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+        - name: AD login fails
+          href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+      - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+      - name: Cluster troubleshooting notebooks
+        href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
     - name: BDC partners
@@ -389,9 +426,9 @@
         href: big-data-cluster/reference-config-master-instance.md
       - name: Apache Spark & Apache Hadoop
         href: big-data-cluster/reference-config-spark-hadoop.md
-    - name: azdata reference
+    - name: Azure Data CLI reference
       items:
-      - name: azdata
+      - name: Azure Data CLI
         items:
         - name: azdata
           href: azdata/reference/reference-azdata.md
@@ -2700,10 +2737,12 @@
         href: language-extensions/language-extensions-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
+      - name: Java Language Extension Overview
+        href: language-extensions/java-overview.md
     - name: Install
       items:
       - name: Install Language Extensions on Windows
-        href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        href: language-extensions/install/windows-java.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
@@ -4335,6 +4374,10 @@
     href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: Memory Management Architecture
     href: relational-databases/memory-management-architecture-guide.md
+  - name: Diagnosing latch contention
+    href: relational-databases/diagnose-resolve-latch-contention.md
+  - name: Diagnosing spinlock contention
+    href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: Installation
   items:
   - name: Overview
@@ -4383,11 +4426,7 @@
     - name: Usage and diagnostic data collection
       items:
       - name: SQL Server privacy supplement
-        items:
-        - name: SQL Server 2017 and prior
-          href: sql-server/sql-server-privacy.md
-        - name: SQL Server 2019
-          href: sql-server/sql-server-privacy-ver15.md
+        href: sql-server/sql-server-privacy.md
       - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure tools usage and diagnostic data
@@ -4824,6 +4863,10 @@
   - name: Azure Migration Services >
     displayName: DMS, Data Migration Service, Azure Data Migration Service
     href: /azure/dms/dms-overview
+  - name: Migration guides
+    items:
+    - name: From DB2
+      href: sql-server/migrate/guides/db2-to-sql-server.md
   - name: Data Quality Services (DQS)
     items:
     - name: Overview
@@ -6035,8 +6078,6 @@
     items:
     - name: What's new
       href: dma/dma-whatsnew.md
-    - name: Assess SQL Database
-      href: dma/dma-assesssqlonprem.md
     - name: Assess SQL Server Integration Services (SSIS)
       href: dma/dma-assess-ssis.md
     - name: Save and load assessments
@@ -6049,8 +6090,6 @@
       href: dma/dma-migrateonpremsqltosqldb.md
     - name: Migrate SQL Server logins
       href: dma/dma-migrateserverlogins.md
-    - name: Assess a SQL Server data estate for Azure SQL Database readiness
-      href: dma/dma-assess-sql-data-estate-to-sqldb.md      
     - name: Best practices
       href: dma/dma-bestpractices.md
     - name: Consolidate assessment reports
@@ -6061,6 +6100,14 @@
       href: dma/dma-commandline.md
     - name: Configure settings
       href: dma/dma-configurationsettings.md
+    - name: Assess Azure SQL DB readiness
+      items: 
+      - name: Create assessment
+        href: dma/dma-assesssqlonprem.md
+      - name: Use DMA GUI
+        href: dma/dma-assess-sql-data-estate-to-sqldb.md
+      - name: Use DMA command-line 
+        href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
   - name: SQL Server Migration Assistant (SSMA)
     href: ssma/toc.yml
 - name: Manage, monitor, & tune
@@ -7797,6 +7844,8 @@
           href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: SQL Server Connector troubleshooting
           href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+        - name: SQL Server Connector logging
+          href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
       - name: Back up service master key
         href: relational-databases/security/encryption/back-up-the-service-master-key.md
       - name: Restore service master key
@@ -8276,10 +8325,10 @@
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: SQL Server Data Tools
+      href: ssdt/sql-server-data-tools.md
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
-    - name: SQL Server Tools
-      href: ssdt/sql-server-tools.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
       items:
@@ -8462,10 +8511,18 @@
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ssms/sql-server-management-studio-ssms.md
-    - name: Tutorials
+    - name: Quickstarts
       items:
       - name: Connect & query SQL Server
-        href: ssms/tutorials/connect-query-sql-server.md
+        href: ssms/quickstarts/connect-query-sql-server.md
+    - name: Tutorials
+      items:
+      - name: SSMS Configuration
+        href: ssms/tutorials/ssms-configuration.md
+      - name: Use other tips & tricks
+        href: ssms/tutorials/ssms-tricks.md
+      - name: Script objects
+        href: ssms/tutorials/scripting-ssms.md
       - name: Import Flat File
         href: relational-databases/import-export/import-flat-file-wizard.md
     - name: Concepts
@@ -8752,12 +8809,6 @@
         href: ssms/install-other-languages.md
       - name: Use templates in SSMS
         href: ssms/template/templates-ssms.md
-      - name: Script objects
-        href: ssms/tutorials/scripting-ssms.md
-      - name: SSMS Configuration
-        href: ssms/tutorials/ssms-configuration.md
-      - name: Use other tips & tricks
-        href: ssms/tutorials/ssms-tricks.md
       - name: Customize Menus & Shortcut Keys
         href: ssms/customize-menus-and-shortcut-keys.md
       - name: Configure WMI to Show Server Status in SQL Server Tools
@@ -9050,7 +9101,7 @@
         href: ssms/scripting/database-engine-scripting.md
         items:
         - name: Query & Text Editors
-          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+          href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
         - name: Database Engine Query Editor
           href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
         - name: XML Editor
@@ -9946,7 +9997,7 @@
       - name: Install SQL Server Machine Learning Services on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
-        href: linux/sql-server-linux-setup-language-extensions.md
+        href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md
     - name: Configure
@@ -10129,6 +10180,18 @@
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: Azure Arc enabled SQL Server (preview)
+  items:
+    - name: Overview
+      href: sql-server/azure-arc/overview.md
+    - name: Connect
+      href: sql-server/azure-arc/connect.md
+    - name: Connect at scale
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: Assess
+      href: sql-server/azure-arc/assess.md
+    - name: Configure advanced data Security
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: Resources
   items:
   - name: Offline SQL Server documentation

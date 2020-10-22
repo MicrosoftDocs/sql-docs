@@ -54,15 +54,15 @@ When you convert to **money** from integer data types, units are assumed to be i
 The following example converts **smallmoney** and **money** values to **varchar** and **decimal** data types, respectively.
   
 ```sql
-DECLARE @mymoney_sm smallmoney = 3148.29,  
-        @mymoney    money = 3148.29;  
-SELECT  CAST(@mymoney_sm AS varchar) AS 'SM_MONEY varchar',  
-        CAST(@mymoney AS decimal)    AS 'MONEY DECIMAL';  
+DECLARE @mymoney_sm SMALLMONEY = 3148.29,  
+        @mymoney    MONEY = 3148.29;  
+SELECT  CAST(@mymoney_sm AS VARCHAR) AS 'SM_MONEY varchar',  
+        CAST(@mymoney AS DECIMAL)    AS 'MONEY DECIMAL';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 SM_MONEY VARCHAR               MONEY DECIMAL  
 ------------------------------ ----------------------  
 3148.29                        3148    

@@ -147,8 +147,7 @@ GO
   
 ## See Also  
  [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Overview of CLR Integration Custom Attributes](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
+ [Overview of CLR Integration Custom Attributes](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)   
  [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  [Data Access from CLR Database Objects](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
-  
   

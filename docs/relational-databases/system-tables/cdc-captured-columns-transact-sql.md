@@ -28,7 +28,7 @@ ms.author: maghan
    
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID of the source table to which the captured column belongs.|  
+|**object_id**|**int**|ID of the change table to which the captured column belongs.|  
 |**column_name**|**sysname**|Name of the captured column.|  
 |**column_id**|**int**|ID of the captured column within the source table.|  
 |**column_type**|**sysname**|Type of the captured column.|  

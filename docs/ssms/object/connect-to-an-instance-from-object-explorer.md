@@ -52,7 +52,7 @@ To work with servers and databases, you must first connect to the server. You ca
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
-[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services)  
+[Integration Services](../../integration-services/sql-server-integration-services.md)  
+[Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)

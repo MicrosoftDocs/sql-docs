@@ -28,7 +28,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
     { FROM | TO } <database_principal> [ ,...n ]   
@@ -129,7 +128,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## Examples  
  The following example revokes `VIEW DEFINITION` permission on the user-defined type `PhoneNumber` from the user `KhalidR`. The `CASCADE` option indicates that `VIEW DEFINITION` permission will also be revoked from principals to which `KhalidR` granted it. `PhoneNumber` is located in schema `Telemarketing`.  
   
-```  
+```sql  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     FROM KhalidR CASCADE;  
 GO  

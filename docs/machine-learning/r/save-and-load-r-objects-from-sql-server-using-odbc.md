@@ -40,7 +40,7 @@ By default, any object that you call from R to move to SQL Server is serialized 
 
 - `rxListKeys` lists as key-value pairs all the available objects. This helps you determine the names and versions of the R objects.
 
-For detailed help on the syntax of each function, use R help. Details are also available in the [ScaleR reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+For detailed help on the syntax of each function, use R help. Details are also available in the [ScaleR reference](/r-server/r-reference/revoscaler/revoscaler).
 
 ## How to store R objects in SQL Server using ODBC
 

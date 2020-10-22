@@ -33,7 +33,7 @@ This function returns the name of the current user. This function is equivalent 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_USER  
 ```  
 

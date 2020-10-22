@@ -27,8 +27,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
-  
+```
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
@@ -53,11 +52,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## Examples  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
-SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+DECLARE @DemographicData XML (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData = (SELECT TOP 1 Demographics FROM Person.Person);  
 SELECT @DemographicData;  
 GO  
 ```  

@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-``` 
+```syntaxsql 
 ISNUMERIC ( expression )  
 ```  
   

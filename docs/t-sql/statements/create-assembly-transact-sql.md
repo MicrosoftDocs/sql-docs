@@ -166,7 +166,7 @@ The following permissions required to create a CLR assembly when `CLR strict sec
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
- The following example assumes that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] samples are installed in the default location of the local computer and the HelloWorld.csproj sample application is compiled. For more information, see [Hello World Sample](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
+ The following example assumes that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] samples are installed in the default location of the local computer and the HelloWorld.csproj sample application is compiled. For more information, see [Hello World Sample](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130)).  
   
 ```sql  
 CREATE ASSEMBLY HelloWorld   
@@ -198,6 +198,5 @@ WITH PERMISSION_SET = SAFE;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
-  
+ [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](/previous-versions/sql/sql-server-2016/ms131078(v=sql.130))  
   

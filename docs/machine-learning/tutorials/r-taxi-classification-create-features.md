@@ -32,7 +32,7 @@ In [part four](r-taxi-classification-train-model.md), you'll load the modules an
 
 In [part five](r-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
-In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](./python-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## About feature engineering
 

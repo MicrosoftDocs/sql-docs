@@ -180,11 +180,8 @@ In this example output, the fault_type shows that a critical event happened on t
 
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
-* [Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)
+* [Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server)](./configure-flexible-automatic-failover-policy.md)
 
-* [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](https://blogs.msdn.microsoft.com/alwaysonpro/2016/01/14/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives/)
+* [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](/archive/blogs/alwaysonpro/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives)
 
 * [Extended Events](../../../relational-databases/extended-events/extended-events.md)
-
-
-

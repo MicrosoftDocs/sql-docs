@@ -52,6 +52,5 @@ Associating file extensions to a specific code editor allows you to open a file 
 4.  In the **Editor** box, click the code editor that you wish to use to open this file type, click **Add**, and then click **OK**.  
   
 ## See Also  
- [Ssms Utility](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Ssms Utility](../ssms-utility.md)  
   

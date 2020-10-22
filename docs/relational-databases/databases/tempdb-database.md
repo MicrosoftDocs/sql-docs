@@ -2,7 +2,7 @@
 title: "tempdb database | Microsoft Docs"
 description: This topic provides details about the configuration and use of the tempdb database in SQL Server and Azure SQL Database.
 ms.custom: "P360"
-ms.date: 04/17/2020
+ms.date: 09/16/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -34,9 +34,9 @@ The `tempdb` system database is a global resource that's available to all users 
   > [!IMPORTANT]
   > Azure SQL Database single databases and elastic pools support global temporary tables and global temporary stored procedures that are stored in `tempdb` and are scoped to the database level. 
   >
-  > Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same SQL database. User sessions from other SQL databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) supports the same temporary objects as does SQL Server.
+  > Global temporary tables and global temporary stored procedures are shared for all users' sessions within the same SQL database. User sessions from other SQL databases can't access global temporary tables. For more information, see [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) supports the same temporary objects as does SQL Server.
   >
-  > For Azure SQL Database single databases and elastic pools, only the master database and `tempdb` database apply. For more information, see [What is an Azure SQL Database server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). For a discussion of `tempdb` in the context of Azure SQL Database single databases and elastic pools, see [tempdb database in Azure SQL Database single databases and elastic pools](#tempdb-database-in-sql-database). 
+  > For Azure SQL Database single databases and elastic pools, only the master database and `tempdb` database apply. For more information, see [What is an Azure SQL Database server?](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). For a discussion of `tempdb` in the context of Azure SQL Database single databases and elastic pools, see [tempdb database in Azure SQL Database single databases and elastic pools](#tempdb-database-in-sql-database). 
   >
   > For Azure SQL Managed Instance, all system databases apply.
 
@@ -109,6 +109,8 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 
 ### tempdb sizes for DTU-based service tiers
 
+<!-- tempdb being larger for Basic and 50 eDTU pools than for 100-400 eDTU pools reflects actual config (historical reasons) --> 
+
 |Service-level objective|Maximum `tempdb` data file size (GB)|Number of `tempdb` data files|Maximum `tempdb` data size (GB)|
 |---|---:|---:|---:|
 |Basic|13.9|1|13.9|
@@ -127,15 +129,21 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 |P6|13.9|12|166.7|
 |P11|13.9|12|166.7|
 |P15|13.9|12|166.7|
-|Premium elastic database pools (all DTU configurations)|13.9|12|166.7|
-|Standard elastic database pools (S0-S2)|13.9|12|166.7|
-|Standard elastic database pools (S3 and above) |32|12|384|
-|Basic elastic database pools (all DTU configurations)|13.9|12|166.7|
+|Basic Elastic Pools (all DTU configurations)|13.9|12|166.7|
+|Standard Elastic Pools (50 eDTU)|13.9|12|166.7|
+|Standard Elastic Pools (100 eDTU)|32|1|32|
+|Standard Elastic Pools (200 eDTU)|32|2|64|
+|Standard Elastic Pools (300 eDTU)|32|3|96|
+|Standard Elastic Pools (400 eDTU)|32|3|96|
+|Standard Elastic Pools (800 eDTU)|32|6|192|
+|Standard Elastic Pools (1200 eDTU)|32|10|320|
+|Standard Elastic Pools (1600-3000 eDTU)|32|12|384|
+|Premium Elastic Pools (all DTU configurations)|13.9|12|166.7|
 ||||
 
 ### tempdb sizes for vCore-based service tiers
 
-See [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
+See [vCore-based resource limits](/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## Restrictions
 
@@ -209,7 +217,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` perfor
 - All allocations in `tempdb` use uniform extents. [Trace flag 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) is no longer required.  
 - For the primary filegroup, the `AUTOGROW_ALL_FILES` property is turned on and the property can't be modified.
 
-For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
+For more information on performance improvements in `tempdb`, see the blog article [TEMPDB - Files and Trace Flags and Updates, Oh My!](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## Memory-optimized tempdb metadata
 Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that's part of the [in-memory database](../in-memory-database.md) feature family: memory-optimized tempdb metadata. 
@@ -221,15 +229,33 @@ Watch this seven-minute video for an overview of how and when to use memory-opti
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
 
+### Configuring and using memory-optimized tempdb metadata
+
 To opt in to this new feature, use the following script:
 
 ```sql
-ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 ```
 
 This configuration change requires a restart of the service to take effect.
 
-This implementation has some limitations:
+You can verify whether or not `tempdb` is memory-optimized by using the following T-SQL command:
+
+```sql
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
+```
+
+If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
+
+To protect the server from potential out-of-memory conditions, you can bind `tempdb` to a [resource pool](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md). This is done through the [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) command rather than the steps you would normally follow to bind a resource pool to a database.
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+```
+
+This change also requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled.
+
+### Memory-optimized tempdb limitations
 
 - Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of `tempdb`, a restart is required to either enable or disable the feature.
 
@@ -242,12 +268,15 @@ This implementation has some limitations:
   Example:
     
   ```sql
-  BEGIN TRAN
+  BEGIN TRAN;
+  
   SELECT *
-  FROM tempdb.sys.tables  -----> Creates a user in-memory OLTP transaction on tempdb
+  FROM tempdb.sys.tables;  -----> Creates a user in-memory OLTP transaction in tempdb
+  
   INSERT INTO <user database>.<schema>.<mem-optimized table>
-  VALUES (1)  ----> Tries to create user in-memory OLTP transaction but will fail
-   COMMIT TRAN
+  VALUES (1); ----> Tries to create a user in-memory OLTP transaction in the user database but will fail
+  
+  COMMIT TRAN;
   ```
     
 - Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views will be in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.
@@ -258,14 +287,6 @@ This implementation has some limitations:
 
 > [!NOTE] 
 > These limitations apply only when you're referencing `tempdb` system views. You can create a temporary table in the same transaction as you access a memory-optimized table in a user database, if desired.
-
-You can verify whether or not `tempdb` is memory-optimized by using the following T-SQL command:
-
-```
-SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
-```
-
-If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
 
 ## Capacity planning for tempdb in SQL Server
 Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described earlier, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
@@ -328,4 +349,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [Move database files](../../relational-databases/databases/move-database-files.md)    
-  

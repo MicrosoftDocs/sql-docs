@@ -21,6 +21,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [Manage Bookmarks](../../relational-databases/scripting/manage-bookmarks.md)  
-  
+ [Manage Bookmarks](./manage-bookmarks.md)  
   

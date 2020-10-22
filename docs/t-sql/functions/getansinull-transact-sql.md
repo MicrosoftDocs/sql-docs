@@ -31,8 +31,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GETANSINULL ( [ 'database' ] )  
 ```  
   
@@ -59,7 +58,7 @@ GETANSINULL returns 1 if the database's nullability allows for null values. This
 ## Examples  
  The following example returns the default nullability for the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT GETANSINULL('AdventureWorks2012')  

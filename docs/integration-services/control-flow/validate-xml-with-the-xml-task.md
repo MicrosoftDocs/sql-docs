@@ -119,6 +119,5 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## See Also  
  [XML Task](../../integration-services/control-flow/xml-task.md)   
- [XML Task Editor &#40;General Page&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
-  
+ [XML Task Editor &#40;General Page&#41;](./xml-task.md)  
   

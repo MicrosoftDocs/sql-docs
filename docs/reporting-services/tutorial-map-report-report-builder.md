@@ -28,7 +28,7 @@ In this tutorial, you build a map report that displays store locations in New Yo
 Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
-For this tutorial, the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs). 
+For this tutorial, the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](./report-design/plan-a-map-report-report-builder-and-ssrs.md). 
 
 For information about other requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
@@ -542,5 +542,3 @@ For more information, see [Maps &#40;Report Builder and SSRS&#41;](../reporting-
 [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
-  
-

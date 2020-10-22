@@ -34,7 +34,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -87,7 +86,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### Permissions  
  Requires **ALTER** permission on the sequence or **ALTER** permission on the schema. To grant **ALTER** permission on the sequence, use **ALTER ON OBJECT** in the following format:  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -102,7 +101,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### A. Altering a sequence  
  The following example creates a schema named Test and a sequence named TestSeq using the **int** data type, having a range from 100 to 200. The sequence starts with 125 and increments by 25 every time that a number is generated. Because the sequence is configure to cycle, when the value exceeds the maximum value of 200, the sequence restarts at the minimum value of 100.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -120,7 +119,7 @@ GO
   
  The following example alters the TestSeq sequence to have a range from 50 to 200. The sequence restarts the numbering series with 100 and increments by 50 every time that a number is generated.  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -137,25 +136,25 @@ GO
 ### B. Restarting a sequence  
  The following example creates a sequence named CountBy1. The sequence uses the default values.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  To generate a sequence value, the owner then executes the following statement:  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  The value returned of -9,223,372,036,854,775,808 is the lowest possible value for the **bigint** data type. The owner realizes he wanted the sequence to start with 1, but did not indicate the **START WITH** clause when he created the sequence. To correct this error, the owner executes the following statement.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  Then the owner executes the following statement again to generate a sequence number.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -163,11 +162,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  The CountBy1 sequence was created using the default value of NO CYCLE so it will stop operating after generating number 9,223,372,036,854,775,807. Subsequent calls to the sequence object will return error 11728. The following statement changes the sequence object to cycle and sets a cache of 20.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  Now when the sequence object reaches 9,223,372,036,854,775,807 it will cycle, and the next number after cycling will be the minimum of the data type, -9,223,372,036,854,775,808.  

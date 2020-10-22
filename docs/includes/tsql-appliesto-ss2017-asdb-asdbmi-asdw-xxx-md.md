@@ -1,9 +1,0 @@
----
-author: dphansen
-ms.service: sql
-ms.topic: include
-ms.date: 06/16/2020
-ms.author: davidph
----
-
-<Token>**APPLIES TO:** :::image type="icon" source="media/yes-icon.png":::SQL Server 2017 and later :::image type="icon" source="media/yes-icon.png":::Azure SQL Database :::image type="icon" source="media/yes-icon.png":::Azure SQL Managed Instance :::image type="icon" source="media/yes-icon.png":::Azure Synapse Analytics (SQL DW) :::image type="icon" source="media/no-icon.png":::Parallel Data Warehouse </Token>

@@ -41181,6 +41181,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/big-data-cluster/cluster-troubleshoot-overview.md",
+      "redirect_url": "/sql/big-data-cluster/view-cluster-status#big-data-clusters-troubleshooting-resources",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/relational-databases/polybase/data-virtualization-csv.md",
       "redirect_url": "/sql/big-data-cluster/data-virtualization-csv",
       "redirect_document_id": true
@@ -46194,11 +46199,6 @@
       "source_path": "docs/integration-services/integration-services-ssis-scale-out.md",
       "redirect_url": "/sql/integration-services/scale-out/integration-services-ssis-scale-out",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssdt/sql-server-tools.md",
-      "redirect_url": "/sql/tools/overview-sql-tools",
-      "redirect_document_id": false
     },
     {
       "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager.md",

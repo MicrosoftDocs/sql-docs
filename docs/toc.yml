@@ -130,6 +130,8 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Administration resources
+      href: big-data-cluster/view-cluster-status.md
     - name: Active Directory mode
       items:
       - name: Prerequisites
@@ -324,7 +326,6 @@
             href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Tips for using R packages
             href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap
@@ -337,18 +338,34 @@
       items:
       - name: Connect
         href: big-data-cluster/connect-to-big-data-cluster.md
-      - name: View cluster status
-        href: big-data-cluster/view-cluster-status.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
+      - name: List operations notebooks
+        href: big-data-cluster/cluster-manage-notebooks.md
+    - name: Monitor
+      items:
+      - name: Monitor with Azure Data Studio
+        href: big-data-cluster/cluster-monitor-ads.md
+      - name: Monitor with cmdlet
+        href: big-data-cluster/cluster-monitor-cmdlet.md
+      - name: Monitor with notebooks
+        href: big-data-cluster/cluster-common-notebooks.md
+      - name: Monitor - Grafana
+        href: big-data-cluster/cluster-monitor-grafana.md
+      - name: Logging - Kibana
+        href: big-data-cluster/cluster-logging-kibana.md
+      - name: List monitoring notebooks
+        href: big-data-cluster/cluster-monitor-notebooks.md
+      - name: List logging notebooks
+        href: big-data-cluster/cluster-logging-notebooks.md
     - name: Performance
       items:
-        - name: Tuning guide
-          href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Tuning guide
+        href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
@@ -393,6 +410,8 @@
           href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
       - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+      - name: Cluster troubleshooting notebooks
+        href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
     - name: BDC partners
@@ -8306,10 +8325,10 @@
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: SQL Server Data Tools
+      href: ssdt/sql-server-data-tools.md
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
-    - name: SQL Server Tools
-      href: ssdt/sql-server-tools.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
       items:

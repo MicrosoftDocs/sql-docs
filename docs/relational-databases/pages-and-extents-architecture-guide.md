@@ -92,7 +92,7 @@ Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the default for mo
 > [!NOTE]
 > Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], trace flag 1118 can be used to change the default allocation to always use uniform extents. For more information about this trace flag, see [DBCC TRACEON - Trace Flags](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the functionality provided by TF 1118 is automatically enabled for tempdb. For user databases, this behavior is controlled by the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE`, with the default value set to OFF, and trace flag 1118 has no effect. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> Starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], the functionality provided by TF 1118 is automatically enabled for tempdb and all user databases. For user databases, this behavior is controlled by the `SET MIXED_PAGE_ALLOCATION` option of `ALTER DATABASE`, with the default value set to OFF, and trace flag 1118 has no effect. For more information, see [ALTER DATABASE SET Options (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the `sys.dm_db_database_page_allocations` system function can report page allocation information for a database, table, index, and partition.
 

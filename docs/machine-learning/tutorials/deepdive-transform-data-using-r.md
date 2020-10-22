@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Transform data using R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 9 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 9 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this tutorial, you'll learn about the **RevoScaleR** functions for transforming data at various stages of your analysis.
 
@@ -26,7 +26,7 @@ Although not specifically for data movement, the functions **rxSummary**, **rxCu
 
 ## Use rxDataStep to transform variables
 
-The [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) function processes data one chunk at a time, reading from one data source and writing to another. You can specify the columns to transform, the transformations to load, and so forth.
+The [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) function processes data one chunk at a time, reading from one data source and writing to another. You can specify the columns to transform, the transformations to load, and so forth.
 
 To make this example interesting, let's use a function from another R package to transform the data. The **boot** package is one of the "recommended" packages, meaning that **boot** is included with every distribution of R, but is not loaded automatically on start-up. Therefore, the package should already be available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance configured for R integration.
 
@@ -71,7 +71,7 @@ From the **boot** package, use the  function **inv.logit**, which computes the i
         overwrite = TRUE)
     ```
 
-    When you define the transformations that are applied to each column, you can also specify any additional R packages that are needed to perform the transformations.  For more information about the types of transformations that you can perform, see [How to transform and subset data using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
+    When you define the transformations that are applied to each column, you can also specify any additional R packages that are needed to perform the transformations.  For more information about the types of transformations that you can perform, see [How to transform and subset data using RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-transform).
   
 6. Call **rxGetVarInfo** to view a summary of the variables in the new data set.
   

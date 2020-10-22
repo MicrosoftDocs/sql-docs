@@ -115,7 +115,7 @@ You can use an automated python script that will automatically pull all required
 
 ## Install tools offline
 
-Big data cluster deployments require several tools, including **Python**, `azdata`, and **kubectl**. Use the following steps to install these tools on an offline server.
+Big data cluster deployments require several tools, including **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], and **kubectl**. Use the following steps to install these tools on an offline server.
 
 ### <a id="python"></a> Install python offline
 
@@ -137,7 +137,7 @@ Big data cluster deployments require several tools, including **Python**, `azdat
 
 ### <a id="azdata"></a> Install azdata offline
 
-1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the `azdata` packages to the current folder.
+1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] packages to the current folder.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -161,7 +161,7 @@ To install **kubectl** to an offline machine, use the following steps.
 
 ## Deploy from private repository
 
-To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following `azdata` commands demonstrate how to change the Docker settings in a custom deployment configuration file named `control.json`:
+To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] commands demonstrate how to change the Docker settings in a custom deployment configuration file named `control.json`:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

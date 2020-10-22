@@ -32,7 +32,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-  
+
 ## Arguments  
  '*target_server_name*'  
  Specifies the target server host name or IP address. Credentials to access this server will be removed from [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. This does not change or remove any permissions on the actual target server which is managed by your own team.  

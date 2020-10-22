@@ -415,11 +415,10 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## External Resources  
   
--   Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx), on technet.microsoft.com  
+-   Video, [How to: Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com  
   
 ## See Also  
  [Understanding the Differences between Local and Remote Execution](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Loading and Running a Local Package Programmatically](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Loading the Output of a Local Package](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
-  
   

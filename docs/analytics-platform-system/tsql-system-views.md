@@ -225,7 +225,7 @@ For more reference information, see [T-SQL language elements](tsql-language-elem
 <!--Image references-->
 
 <!--Article references-->
-[SQL Data Warehouse reference overview]: sql-data-warehouse-overview-reference.md
+[Azure Synapse Analytics reference overview]: sql-data-warehouse-overview-reference.md
 
 <!--MSDN references-->
 

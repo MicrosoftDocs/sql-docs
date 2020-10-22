@@ -17,7 +17,7 @@ ms.author: v-daenge
 
 The Microsoft ODBC Drivers for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] are stand-alone ODBC drivers which provide an application programming interface (API) implementing the standard ODBC interfaces to Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-The Microsoft ODBC Driver for SQL Server can be used to create new applications. You can also upgrade your older applications which currently use an older ODBC driver. The ODBC Driver for SQL Server supports connections to Azure SQL Database, Azure SQL Data Warehouse, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+The Microsoft ODBC Driver for SQL Server can be used to create new applications. You can also upgrade your older applications which currently use an older ODBC driver. The ODBC Driver for SQL Server supports connections to Azure SQL Database, Azure Synapse Analytics, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
 ## Summary
 
@@ -47,6 +47,6 @@ This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../.
   
 ## See Also  
 - [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
-- [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
+- [SQL Server Native Client FAQ](/previous-versions/aa937707(v=msdn.10))   
 - [ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)

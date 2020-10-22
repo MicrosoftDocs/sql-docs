@@ -96,7 +96,7 @@ To run this sample:
 
 1. Create a sample database with a memory-optimized data filegroup. For information on how to create a database with a memory-optimized data filegroup, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 
-2. Create an ODBC data source called PrepExecSample that points to the database. Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client driver. You could also modify the sample and use the [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx).
+2. Create an ODBC data source called PrepExecSample that points to the database. Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client driver. You could also modify the sample and use the [Microsoft ODBC Driver for SQL Server](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md).
 
 3. Run the [!INCLUDE[tsql](../../includes/tsql-md.md)] script (below) on the sample database.
 
@@ -427,4 +427,4 @@ int _tmain() {
 ```
 
 ## See Also
-[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)

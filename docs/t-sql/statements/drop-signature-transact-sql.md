@@ -34,7 +34,6 @@ ms.author: vanto
 ## Syntax  
   
 ```syntaxsql
-  
 DROP [ COUNTER ] SIGNATURE FROM module_name   
     BY <crypto_list> [ ,...n ]  
   
@@ -64,7 +63,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ## Examples  
  The following example removes the signature of certificate `HumanResourcesDP` from the stored procedure `HumanResources.uspUpdateEmployeeLogin`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  

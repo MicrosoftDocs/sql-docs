@@ -77,7 +77,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [XML Source Custom Properties](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -95,7 +95,7 @@ ms.author: chugu
 |Value|Description|  
 |-----------|-----------------|  
 |XML file location|Retrieve data from an XML file.|  
-|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../integration-services-ssis-variables.md)|  
 |XML data from variable|Retrieve XML data from a variable.|  
   
  **Use inline schema**  
@@ -168,4 +168,4 @@ ms.author: chugu
  Apply the error handling option to the selected cells.  
   
 ## Related Tasks  
- [Extract Data by Using the XML Source](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [Extract Data by Using the XML Source](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

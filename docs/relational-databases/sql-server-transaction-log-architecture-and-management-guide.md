@@ -250,7 +250,6 @@ We recommend the following articles and books for additional information about t
 [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[Understanding Logging and Recovery in SQL Server by Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[Understanding Logging and Recovery in SQL Server by Paul Randal](/previous-versions/technet-magazine/dd392031(v=msdn.10))    
 [SQL Server Transaction Log Management by Tony Davis and Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
-  
   

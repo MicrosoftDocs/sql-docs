@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md) article.  
+- [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md) article.  
   
 ## Pre-upgrade planning checklist  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review the following checklist and the associated articles. These articles apply to all upgrades, regardless of upgrade method and help you determine the most appropriate upgrade method: Rolling upgrade, new installation upgrade, or in-place upgrade. For example, you may not be able to perform an upgrade in-place or a rolling upgrade if you are upgrading the operating system, upgrading from SQL Server 2005, or upgrading from a 32-bit version of SQL Server. For a decision tree, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
@@ -54,7 +54,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
     > [!NOTE]  
     >  When you upgrade [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] from a prior version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choose between Enterprise Edition: Core-based Licensing and Enterprise Edition. These Enterprise editions differ only with respect to the licensing modes. For more information, see [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
--   **Backward compatibility:** Review the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] database engine  backward compatibility article to review changes in behavior between [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version from which you are upgrading. See [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
+-   **Backward compatibility:** Review the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] database engine  backward compatibility article to review changes in behavior between [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version from which you are upgrading. See [SQL Server Database Engine Backward Compatibility](../discontinued-database-engine-functionality-in-sql-server.md).  
   
 -   **Data Migration Assistant:** Run the Data Migration Assistant to assist in diagnosing issues that might either block the upgrade process or require modification to existing scripts or applications due to a breaking change.
     You can download the Data Migration Assistant [here](https://aka.ms/get-dma).  
@@ -92,4 +92,4 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## Additional resources 
-[Database Migration Guide](https://aka.ms/datamigration)  
+[Database Migration Guide](https://aka.ms/datamigration)

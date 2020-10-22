@@ -33,7 +33,7 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql  
 OPENQUERY ( linked_server ,'query' )  
 ```  
   

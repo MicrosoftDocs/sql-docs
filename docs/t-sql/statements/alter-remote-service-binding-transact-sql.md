@@ -31,7 +31,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 ALTER REMOTE SERVICE BINDING binding_name   
    WITH [ USER = <user_name> ] [ , ANONYMOUS = { ON | OFF } ]   
 [ ; ]  
@@ -63,7 +62,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## Examples  
  The following example changes the remote service binding `APBinding` to encrypt messages by using the certificates from the account `SecurityAccount`.  
   
-```  
+```sql  
 ALTER REMOTE SERVICE BINDING APBinding  
     WITH USER = SecurityAccount ;  
 ```  

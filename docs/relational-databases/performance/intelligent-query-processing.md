@@ -358,7 +358,7 @@ The two sets of features work together to improve input/output (I/O) and CPU uti
 
 The two technologies take advantage of each other whenever possible. For example, batch mode aggregates can be evaluated as part of a columnstore index scan. Also columnstore data that's compressed is processed by using run-length encoding much more efficiently with batch mode joins and batch mode aggregates. 
  
-It is importand to understand however, that the two features are independent:
+It is important to understand however, that the two features are independent:
 * You can get row mode plans that use columnstore indexes.
 * You can get batch mode plans that use only rowstore indexes. 
 

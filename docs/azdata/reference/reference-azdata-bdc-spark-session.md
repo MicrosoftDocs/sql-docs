@@ -1,11 +1,11 @@
 ---
 title: azdata bdc spark session reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc spark session command. 
+description: Reference article for azdata bdc spark session commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,12 +13,13 @@ ms.technology: big-data-cluster
 
 # azdata bdc spark session
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata bdc spark session create](#azdata-bdc-spark-session-create) | Create a new Spark session.
 [azdata bdc spark session list](#azdata-bdc-spark-session-list) | List all the active sessions in Spark.
@@ -59,7 +60,7 @@ azdata bdc spark session create [--session-kind -k]
 ### Examples
 Create a session.
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### Optional Parameters
 #### `--session-kind -k`
@@ -109,7 +110,7 @@ azdata bdc spark session list
 ### Examples
 List all the active sessions.
 ```bash
-azdata spark session list
+azdata bdc spark session list
 ```
 ### Global Arguments
 #### `--debug`
@@ -131,7 +132,7 @@ azdata bdc spark session info --session-id -i
 ### Examples
 Get session info for session with ID of 0.
 ```bash
-azdata spark session info --session-id 0
+azdata bdc spark session info --session-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -156,7 +157,7 @@ azdata bdc spark session log --session-id -i
 ### Examples
 Get session log for session with ID of 0.
 ```bash
-azdata spark session log --session-id 0
+azdata bdc spark session log --session-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -181,7 +182,7 @@ azdata bdc spark session state --session-id -i
 ### Examples
 Get session state for session with ID of 0.
 ```bash
-azdata spark session state --session-id 0
+azdata bdc spark session state --session-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -206,7 +207,7 @@ azdata bdc spark session delete --session-id -i
 ### Examples
 Delete a session.
 ```bash
-azdata spark session delete --session-id 0
+azdata bdc spark session delete --session-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -225,4 +226,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).
+

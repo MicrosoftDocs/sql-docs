@@ -34,6 +34,8 @@ Returns the binary checksum value computed over a row of a table or over a list 
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -81,7 +83,7 @@ This example uses `BINARY_CHECKSUM` to detect changes in a table row.
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE myTable (column1 int, column2 varchar(256));  
+CREATE TABLE myTable (column1 INT, column2 VARCHAR(256));  
 GO  
 INSERT INTO myTable VALUES (1, 'test');  
 GO  

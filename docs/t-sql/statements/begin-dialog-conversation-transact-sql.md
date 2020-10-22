@@ -42,7 +42,6 @@ ms.author: maghan
 ## Syntax  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -73,7 +72,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  The *service_broker_guid* is of type **nvarchar(128)**. To find the *service_broker_guid* for a database, run the following query in the database:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -126,7 +125,7 @@ WHERE database_id = DB_ID() ;
 ### A. Beginning a dialog  
  The following example begins a dialog conversation and stores an identifier for the dialog in `@dialog_handle.` The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -138,7 +137,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### B. Beginning a dialog with an explicit lifetime  
  The following example begins a dialog conversation and stores an identifier for the dialog in `@dialog_handle`. The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`. If the dialog has not been closed by the END CONVERSATION command within `60` seconds, the broker ends the dialog with an error.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -151,7 +150,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### C. Beginning a dialog with a specific broker instance  
  The following example begins a dialog conversation and stores an identifier for the dialog in `@dialog_handle`. The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`. The broker routes messages on this dialog to the broker identified by the GUID `a326e034-d4cf-4e8b-8d98-4d7e1926c904.`  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -164,7 +163,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### D. Beginning a dialog, and relating it to an existing conversation group  
  The following example begins a dialog conversation and stores an identifier for the dialog in `@dialog_handle`. The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`. The broker associates the dialog with the conversation group identified by `@conversation_group_id` instead of creating a new conversation group.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -180,7 +179,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### E. Beginning a dialog with an explicit lifetime, and relating the dialog to an existing conversation  
  The following example begins a dialog conversation and stores an identifier for the dialog in `@dialog_handle`. The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`. The new dialog belongs to the same conversation group that `@existing_conversation_handle` belongs to. If the dialog has not been closed by the END CONVERSATION command within `600` seconds, [!INCLUDE[ssSB](../../includes/sssb-md.md)] ends the dialog with an error.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -197,7 +196,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### F. Beginning a dialog with optional encryption  
  The following example begins a dialog and stores an identifier for the dialog in `@dialog_handle`. The `//Adventure-Works.com/ExpenseClient` service is the initiator for the dialog, and the `//Adventure-Works.com/Expenses` service is the target of the dialog. The dialog follows the contract `//Adventure-Works.com/Expenses/ExpenseSubmission`. The conversation in this example allows the message to travel over the network without encryption if encryption is not available.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

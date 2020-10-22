@@ -2,7 +2,7 @@
 title: "Connecting using Azure Active Directory authentication"
 description: "Learn how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "06/17/2020"
+ms.date: "09/23/2020"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,7 +18,7 @@ ms.author: v-daenge
 
 This article provides information on how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 
-You can use Azure Active Directory (Azure AD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+You can use Azure Active Directory (Azure AD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). 
 
 Connection properties to support Azure Active Directory authentication in the Microsoft JDBC Driver for SQL Server are:
 *	**authentication**:  Use this property to indicate which SQL authentication method to use for the connection. 
@@ -26,9 +26,9 @@ Possible values are:
     * **ActiveDirectoryMSI**
         * Supported since driver version **v7.2**, `authentication=ActiveDirectoryMSI` can be used to connect to an Azure SQL Database/Data Warehouse from inside of an Azure Resource with "Identity" support enabled. Optionally, **msiClientId** can also be specified in the Connection/DataSource properties along with this authentication mode, which must contain the Client ID of a Managed Identity to be used to acquire the **accessToken** for establishing the connection.
     * **ActiveDirectoryIntegrated**
-        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Data Warehouse using integrated authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it is set up, you can connect by either adding the native library 'mssql-jdbc_auth-\<version>-\<arch>.dll' to the application class path on Windows OS, or setting up a Kerberos ticket for cross-platform authentication support. You will be able to access Azure SQL Database/SQL Data Warehouse without being prompted for credentials when you're logged in to a domain joined machine.
+        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryIntegrated` can be used to connect to an Azure SQL Database/Data Warehouse using integrated authentication. To use this authentication mode, you need to federate the on-premise Active Directory Federation Services (ADFS) with Azure Active Directory in the cloud. Once it is set up, you can connect by either adding the native library 'mssql-jdbc_auth-\<version>-\<arch>.dll' to the application class path on Windows OS, or setting up a Kerberos ticket for cross-platform authentication support. You will be able to access Azure SQL Database/Azure Synapse Analytics without being prompted for credentials when you're logged in to a domain joined machine.
     * **ActiveDirectoryPassword**
-        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD principal name and password.
+        * Supported since driver version **v6.0**, `authentication=ActiveDirectoryPassword` can be used to connect to an Azure SQL Database/Data Warehouse using an Azure AD user name and password.
     * **SqlPassword**
         * Use `authentication=SqlPassword` to connect to a SQL Server using userName/user and password properties.
     * **NotSpecified**
@@ -108,7 +108,7 @@ For more information, see [Set Kerberos ticket on Windows, Linux And macOS](#set
 > [!NOTE]
 >  If you are using an older version of the driver, check this [link](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) for the respective dependencies that are required to use this authentication mode. 
 
-The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD principal, or one of the groups you belong to, must exist in the database and must have the CONNECT permission. 
+The following example shows how to use `authentication=ActiveDirectoryIntegrated` mode. Run this example on a domain joined machine that is federated with Azure Active Directory. A contained database user representing your Azure AD user, or one of the groups you belong to, must exist in the database and must have the CONNECT permission. 
 
 Before building and running the example, on the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
 
@@ -282,9 +282,9 @@ The example below contains a simple Java application that connects to Azure SQL 
 	11. Under section "Keys", create a key by filling in the name field, selecting the duration of the key, and saving the configuration (leave the value field empty). After saving, the value field should be filled automatically, copy the generated value. This is the client Secret.
 	12. Click Azure Active Directory on the left side panel. Under "App Registrations", find the "End points" tab. Copy the URL under "OATH 2.0 TOKEN ENDPOINT", this is your STS URL.
 	
-	![JDBC_AAD_Token](media/jdbc_aad_token.png)  
+    ![Azure Portal App Registration End Point - STS URL](media/jdbc_aad_token.png)  
 2. Sign in to your Azure SQL Server's user database as an Azure Active Directory admin and using a T-SQL command
-provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)
+provision a contained database user for your application principal. For more information, see the [Connecting to SQL Database or Azure Synapse Analytics By Using Azure Active Directory authentication](/azure/azure-sql/database/authentication-aad-overview)
  for more details on how to create an Azure Active Directory admin and a contained database user.
 
 	```
@@ -349,4 +349,4 @@ If the connection is successful, you should see the following message as output:
 ```bash
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>	
-``` 
+```

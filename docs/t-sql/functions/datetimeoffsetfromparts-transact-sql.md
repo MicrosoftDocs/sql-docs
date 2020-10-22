@@ -29,7 +29,7 @@ Returns a **datetimeoffset** value for the specified date and time arguments. Th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, hour_offset, minute_offset, precision )  
 ```  
   
@@ -88,7 +88,7 @@ SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Resu
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ----------------------------------
 2010-12-31 14:23:23.0000000 +12:00  
@@ -115,7 +115,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ----------------------------------  
 2011-08-15 14:30:00.5 +12:30  
   

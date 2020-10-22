@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Starting from a pre-defined set of configuration profiles that are built into the `azdata` management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
+Starting from a pre-defined set of configuration profiles that are built into the [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] management tool, you can easily modify the default settings to better suit your BDC workload requirements. The structure of the configuration files enables you to granularly update settings for each service of the resource.
 
 Watch this 13-minute video for an overview of big data cluster configuration:
 
@@ -167,7 +167,7 @@ To customize your cluster deployment configuration files, you can use any JSON f
 
 ## Prerequisites
 
-- [Install azdata](deploy-install-azdata.md).
+- [Install azdata](../azdata/install/deploy-install-azdata.md).
 
 - Each of the examples in this section assume that you have created a copy of one of the standard configurations. For more information, see [Create a custom configuration](deployment-guidance.md#customconfig). For example, the following command creates a directory called `custom-bdc` that contains two JSON deployment configuration files, `bdc.json` and `control.json`, based on the default `aks-dev-test` configuration:
 
@@ -644,7 +644,7 @@ For disabling the container that runs ElasticSearch to run in privileged mode, y
 }
 ```
 
-You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use `azdata` CLI to patch the `control.json` file:
+You can manually edit the `control.json` and add the above section to the `spec`, or you can create a patch file `elasticsearch-patch.json` like below and use [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] to patch the `control.json` file:
 
 ```json
 {

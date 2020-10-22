@@ -80,6 +80,5 @@ WHERE [Product].[Category].[Bikes]
   
 ## See Also  
  [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
-  
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   

@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics  
   
 OVER (   
        [ <PARTITION BY clause> ]  

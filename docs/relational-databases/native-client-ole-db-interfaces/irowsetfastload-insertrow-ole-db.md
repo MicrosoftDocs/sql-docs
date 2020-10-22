@@ -37,7 +37,7 @@ HRESULT InsertRow(
  The handle of the accessor defining the row data for bulk copy. The accessor referenced is a row accessor, binding consumer-owned memory containing data values.  
   
  *pData*[in]  
- A pointer to the consumer-owned memory containing data values. For more information, see [DBBINDING Structures](https://go.microsoft.com/fwlink/?LinkId=65955).  
+ A pointer to the consumer-owned memory containing data values. For more information, see [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).  
   
 ## Return Code Values  
  S_OK  
@@ -70,5 +70,4 @@ HRESULT InsertRow(
   
 ## See Also  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
   

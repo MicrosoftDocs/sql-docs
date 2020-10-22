@@ -43,14 +43,14 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 |Step|Description and Link|  
 |----------|--------------------------|  
-|Add a SharePoint server to a farm.|You will need to intall SharePoint to deploy another Reporting Services application.<br/><br/>For SharePoint 2013, see [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>For SharePoint 2016, see [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
+|Add a SharePoint server to a farm.|You will need to intall SharePoint to deploy another Reporting Services application.<br/><br/>For SharePoint 2013, see [Add SharePoint server to a farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm).<br/><br/>For SharePoint 2016, see [Add SharePoint server to a farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm).|  
 |Install the SQL Server Reporting Services add-in for SharePoint 2016 products.|There are several methods for installing the add-in. The following steps use the SQL Server setup wizard. For more information on installing the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) Run SQL Server installation.<br /><br /> 2) On the **Setup Role** page, select **SQL Server Feature Installation**<br /><br /> 3) On the **Feature Selection** page, select **Reporting Services add-in for SharePoint products**<br /><br /> 4) Click **Next** on the next several pages to complete the setup options.<br /><br/>For more information on installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md)|  
 |Verify the new server is operational.|1) In SharePoint Central Administration, click **Manage servers in this farm** in the **System Settings** group.<br /><br /> 2) Verify the new server is in the list.|  
 |Update your NLB solution.|If appropriate, update your hardware or software NLB environment to include the new server.|  
 
 ## Next steps
 
-[Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[Add SharePoint server to a farm in SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[Add SharePoint server to a farm in SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

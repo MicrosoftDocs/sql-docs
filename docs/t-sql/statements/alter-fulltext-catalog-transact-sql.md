@@ -33,8 +33,7 @@ ms.author: maghan
   
 ## Syntax  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER FULLTEXT CATALOG catalog_name   
 { REBUILD [ WITH ACCENT_SENSITIVITY = { ON | OFF } ]  
 | REORGANIZE  
@@ -77,7 +76,7 @@ ALTER FULLTEXT CATALOG catalog_name
 ## Examples  
  The following example changes the `accentsensitivity` property of the default full-text catalog `ftCatalog`, which is accent sensitive.  
   
-```  
+```sql  
 --Change to accent insensitive  
 USE AdventureWorks2012;  
 GO  

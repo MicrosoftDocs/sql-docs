@@ -67,7 +67,7 @@ You can close a PDOStatement object by calling `unset`:
 unset($stmt);
 ```
 
-## Example
+## Forward-only example
 This example shows how to use PDO::prepare with parameter markers and a forward-only cursor.
 
 ```
@@ -94,7 +94,7 @@ unset($stmt);
 ?>
 ```
 
-## Example
+## Static cursor example
 This example shows how to use PDO::prepare with a server-side static cursor. For an example showing a client-side cursor, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
 ```
@@ -134,7 +134,7 @@ print_r($row);
 ?>
 ```
 
-## Example
+## Targeted example
 The following two snippets show how to use PDO::prepare with data targeted for CHAR/VARCHAR columns. Because the default encoding for PDO::prepare is UTF-8, the user can use the option `PDO::SQLSRV_ENCODING_SYSTEM` to avoid implicit conversions.
 
 **Option 1**
@@ -163,7 +163,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## Example
+## Prepare example
 
 This example shows how to use PDO::prepare with `PDO::ATTR_EMULATE_PREPARES` set to true.
 

@@ -270,7 +270,7 @@ To work around this behavior, use a format file to bulk import scientific notati
 This example uses the following table:
 
 ```sql
-CREATE TABLE t_float(c1 float, c2 decimal (5,4));
+CREATE TABLE t_float(c1 FLOAT, c2 DECIMAL (5,4));
 ```
 
  The user wants to bulk import data into the `t_float` table. The data file, C:\t_float-c.dat, contains scientific notation **float** data; for example:
@@ -419,7 +419,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
  The following example imports a file that uses the line feed as a row terminator such as a UNIX output:
 
 ```sql
-DECLARE @bulk_cmd varchar(1000);
+DECLARE @bulk_cmd VARCHAR(1000);
 SET @bulk_cmd = 'BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 FROM ''<drive>:\<path>\<filename>''
 WITH (ROWTERMINATOR = '''+CHAR(10)+''')';
@@ -493,27 +493,9 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
-Another way to access the storage account is via [Managed Identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). To do this follow the [Steps 1 thru 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) to configure SQL Database to access Storage via Managed Identity, after which you can implement code sample as below
-```sql
---> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
-GO
---> Change to using Managed Identity instead of SAS key 
-CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
-GO
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH ( TYPE = BLOB_STORAGE,
-          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
-          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
-);
-
-BULK INSERT Sales.Invoices
-FROM 'inv-2017-12-08.csv'
-WITH (DATA_SOURCE = 'MyAzureBlobStorage');
-```
 
 > [!IMPORTANT]
-> Azure SQL Database only supports reading from Azure Blob Storage.
+> Azure SQL only supports reading from Azure Blob Storage.
 
 ### G. Importing data from a file in Azure blob storage and specifying an error file
 

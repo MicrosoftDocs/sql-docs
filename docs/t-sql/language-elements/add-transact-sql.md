@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -54,7 +54,7 @@ expression + expression
 ### A. Using the addition operator to calculate the total number of hours away from work for each employee.  
  This example finds the total number of hours away from work for each employee by adding the number of hours taken for vacation and the number of hours taken as sick leave.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, VacationHours, SickLeaveHours,   
@@ -68,10 +68,9 @@ GO
 ### B. Using the addition operator to add days to date and time values  
  This example adds a number of days to a `datetime` date.  
   
-```  
-  
+```sql
 SET NOCOUNT ON  
-DECLARE @startdate datetime, @adddays int;  
+DECLARE @startdate DATETIME, @adddays INT;  
 SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
@@ -92,8 +91,8 @@ Start Date                  Add Date
 ### C. Adding character and integer data types  
  The following example adds an **int** data type value and a character value by converting the character data type to **int**. If a character that is not valid exists in the **char** string, the [!INCLUDE[tsql](../../includes/tsql-md.md)] returns an error.  
   
-```  
-DECLARE @addvalue int;  
+```sql  
+DECLARE @addvalue INT;  
 SET @addvalue = 15;  
 SELECT '125127' + @addvalue;  
 ```  
@@ -112,7 +111,7 @@ SELECT '125127' + @addvalue;
 ### D: Using the addition operator to calculate the total number of hours away from work for each employee  
  The following example finds the total number of hours away from work for each employee by adding the number of hours taken for vacation and the number of hours taken as sick leave and sorts the results in ascending order.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours, SickLeaveHours,   

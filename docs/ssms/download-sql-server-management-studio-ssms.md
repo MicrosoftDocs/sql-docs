@@ -157,5 +157,6 @@ Supported hardware:
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Latest updates](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 - [Azure Data Architecture Guide](https://docs.microsoft.com/azure/architecture/data-guide/)
+- [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

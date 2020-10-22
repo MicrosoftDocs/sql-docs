@@ -49,7 +49,7 @@ To resolve this issue, use one of the following methods.
     > This method works only if the backup does not have inconsistencies in the metadata.  
 
 - Method 2  
-    If you cannot restore the database from a backup, export the data and the objects to a new database. Then, transfer the contents of the manually-updated database into the new database. Note You cannot repair inconsistencies in the system catalogs by using the REPAIR options in the DBCC CHECKDB commands. Therefore, because the command cannot repair metadata corruption, the command does not provide any recommended repair leve
+    If you cannot restore the database from a backup, export the data and the objects to a new database. Then, transfer the contents of the manually-updated database into the new database. Note You cannot repair inconsistencies in the system catalogs by using the REPAIR options in the DBCC CHECKDB commands. Therefore, because the command cannot repair metadata corruption, the command does not provide any recommended repair level.
 
 > [!NOTE]
 > You can view the data in the system tables through the system catalog views.

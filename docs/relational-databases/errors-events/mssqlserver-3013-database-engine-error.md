@@ -34,4 +34,4 @@ This message is a general failure message.
 
 ## User action
 
-Examine the SQL Errorlog for other messages that occur alongside this error for additional information and troubleshooting.
+Examine the SQL Error log for other messages that occur alongside this error for additional information and troubleshooting.

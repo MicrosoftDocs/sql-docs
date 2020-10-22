@@ -96,11 +96,12 @@ A more common scenario is to generate predictions for multiple observations in b
 
    **Sample results**
 
-   | passenger_count | trip_time_in_secs | trip_distance | dropoff_datetime        | direct_distance |
-   |-----------------|-------------------|---------------|-------------------------|-----------------|
-   | 1               | 283               | 0.7           | 2013-03-27 14:54:50.000 | 0.5427964547    |
-   | 1               | 289               | 0.7           | 2013-02-24 12:55:29.000 | 0.3797099614    |
-   | 1               | 214               | 0.7           | 2013-06-26 13:28:10.000 | 0.6970098661    |
+   ```text
+   passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime          direct_distance
+   1                 283                  0.7            2013-03-27 14:54:50.000   0.5427964547
+   1                 289                  0.7            2013-02-24 12:55:29.000   0.3797099614
+   1                 214                  0.7            2013-06-26 13:28:10.000   0.6970098661
+   ```
 
 2. Create a stored procedure called **RPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

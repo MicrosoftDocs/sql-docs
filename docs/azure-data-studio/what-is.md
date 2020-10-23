@@ -8,12 +8,12 @@ author: "markingmyname"
 ms.author: "maghan"
 ms.reviewer: "alayu, maghan, sstein"
 ms.custom: "seodec18, sqlfreshmay19"
-ms.date: "01/15/2020"
+ms.date: "10/20/2020"
 ---
 
 # What is Azure Data Studio?
 
-Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux.
+Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, macOS, and Linux.
 
 Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It's engineered with the data platform user in mind, with built-in charting of query result sets and customizable dashboards.
 
@@ -54,31 +54,29 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 
 **Use Azure Data Studio if you:**
 
-- Need to run on macOS or Linux
-- Are connecting to a SQL Server 2019 big data cluster
-- Spend most of your time editing or executing queries
-- Need the ability to quickly chart and visualize result sets
-- Can execute most administrative tasks via the integrated terminal using sqlcmd or Powershell
-- Have minimal need for wizard experiences
-- Don't need to do deep administrative configuration
+- Are mostly editing or executing queries.
+- Need the ability to quickly chart and visualize result sets.
+- Can execute most administrative tasks via the integrated terminal using sqlcmd or PowerShell.
+- Have minimal need for wizard experiences.
+- Do not need to do deep administrative or platform related configuration.
+- Need to run on macOS or Linux.
 
 **Use SQL Server Management Studio if you:**
 
-- Spend most of your time on database administration tasks
-- Are doing deep administrative configuration
-- Are doing security management, including user management, vulnerability assessment, and configuration of security features
-- Make use of the Reports for SQL Server Query Store
-- Need to make use of performance tuning advisors and dashboards
-- Are doing Import/Export of DACPACs
-- Need access to Registered Servers and want to control SQL Server services on Windows
+- Are doing complex administrative or platform configuration.
+- Are doing security management, including user management, vulnerability assessment, and configuration of security features.
+- Need to make use of performance tuning advisors and dashboards.
+- Use database diagrams and table designers.
+- Need access to Registered Servers.
+- Make use of live query stats or client statistics.
 
-### Shell
+### Shell features
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure Sign-In|Yes|Yes|
-|Dashboard|Yes||
-|Extensions|Yes||
+|Dashboard|Yes| |
+|Extensions|Yes| |
 |Integrated Terminal|Yes||
 |Object Explorer|Yes|Yes|
 |Object Scripting|Yes|Yes|
@@ -86,77 +84,80 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 |Select from Table|Yes|Yes|
 |Source Code Control|Yes||
 |Task Pane|Yes||
-|Theming|Yes||
-|Dark Mode|Yes||
+|Themes, including Dark Mode|Yes||
 |Azure Resource Explorer|Preview||
-|Generate Scripts Wizard||Preview|
-|Import/Export DACPAC||Yes|
-|Object Properties||Preview|
+|Generate Scripts Wizard||Yes|
+|Object Properties||Yes|
 |Table Designer||Yes|
 
-### Query editor
+### Query Editor
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Chart Viewer|Yes||
 |Export Results to CSV, JSON, XLSX|Yes||
+|Results to File||Yes|
+|Results to Text||Yes|
 |IntelliSense|Yes|Yes|
 |Snippets|Yes|Yes|
 |Show Plan|Preview|Yes|
 |Client Statistics||Yes|
 |Live Query Stats||Yes|
 |Query Options||Yes|
-|Results to File||Yes|
-|Results to Text||Yes|
 |Spatial Viewer||Yes|
-|SQLCMD||Yes|
-|Notebooks|Yes||
-|Save Query as snippet|Yes||
+|SQLCMD|Yes|Yes|
 
-### Operating system support
+### Operating System Support
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Linux|Yes||
-|macOS|Yes||
 |Windows|Yes|Yes|
+|macOS|Yes||
+|Linux|Yes||
 
-### Data engineering
+### Data Engineering
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Create External Table Wizard|Yes||
-|HDFS Integration|Yes||
-|Notebooks|Yes||
+|External Data Wizard|Preview||
+|HDFS Integration|Preview||
+|Notebooks|Preview||
 
-### Database administration
+### Database Administration
 
 |Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Backup / Restore|Yes|Yes|
-|Big Data Cluster Support|Yes||
-|Flat File Import|Preview|Yes|
+|Flat File Import|Yes|Yes|
 |SQL Agent|Preview|Yes|
 |SQL Profiler|Preview|Yes|
 |Always On||Yes|
 |Always Encrypted||Yes|
 |Copy Data Wizard||Yes|
-|Database Engine Tuning Advisor||Yes|
+|Data Tuning Advisor||Yes|
+|Database Diagrams||Yes|
 |Error Log Viewer||Yes|
 |Maintenance Plans||Yes|
 |Multi-Server Query||Yes|
-|Policy-Based Management||Yes|
+|Policy Based Management||Yes|
 |PolyBase||Yes|
 |Query Store||Yes|
 |Registered Servers||Yes|
 |Replication||Yes|
 |Security Management||Yes|
 |Service Broker||Yes|
+|SQL Assessment|Preview|Yes|
 |SQL Mail||Yes|
 |Template Explorer||Yes|
 |Vulnerability Assessment||Yes|
 |XEvent Management||Yes|
-|SQL Assessment API Integration||Yes|
+
+### Database Development
+|Feature|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Import\Export DACPAC|Yes|Yes|
+|SQL Projects|Preview||
+|Schema Compare|Yes||
 
 ## Next steps
 

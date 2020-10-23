@@ -31,7 +31,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
 
 1. The first time you run Azure Data Studio the **Connection** page should open. If you don't see the **Connection** page, select **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
    
-   ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
+   ![Screenshot of the Connection page with the New Connection icon called out.](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL server:
 

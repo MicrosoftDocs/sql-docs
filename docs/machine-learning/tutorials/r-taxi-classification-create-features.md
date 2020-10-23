@@ -5,7 +5,7 @@ description: In part three of this five-part tutorial series, you'll use T-SQL f
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2020 
+ms.date: 10/15/2020 
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph

@@ -155,7 +155,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
     > [!NOTE]
     > When the SQL Server installation is complete, follow the other sections of this topic to configure the SharePoint environment. This includes installing the Reporting Services shared service and creating Reporting Services service applications.  
   
-     ![Screenshot of the Reporting Services SharePoint Integrated Mode section with the Install only. option selected and called out.](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
+     ![Screenshot of the Reporting Services SharePoint Integrated Mode section with the Install only option selected and called out.](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
 13. Review any warnings and then select **Next** on the **Feature Configuration Rules** page if you stop on this page.  
   

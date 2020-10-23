@@ -91,7 +91,7 @@ Create a database called **EstateInventory** and a table called **DatabaseInvent
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![Screenshot of a SQL Server table contents if you're using a SQL Server table.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 If this database isn't on the tools computer, ensure that the tools computer has network connectivity to this SQL Server instance.
 
@@ -108,7 +108,7 @@ Create a database called **EstateInventory** and a table called **InstanceInvent
 - Port
 - AssessmentFlag
 
-![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![Screenshot of a SQL Server table contents if using an Instance Inventory.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## Running a scaled assessment
 

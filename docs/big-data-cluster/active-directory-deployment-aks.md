@@ -28,7 +28,7 @@ There are a few variations about how to enable BDC deployment in AD mode in AKS.
 
 In addition to those architectural solutions which allow to create a landing zone which has all resources to be deployed from scratch or any additional workaround based on existing architecture, we recommend to deploy BDC in AKS cluster on a separate subnet which resides in your target VNet or peered VNet. A typical architecture would look like the following:
 
-:::image type="content" source="media/active-directory-deployment-aks/bdc-deployment-ad-aks.png" alt-text="AKS cluster with ad and SQL Server Big Data Cluster":::
+:::image type="content" source="media/active-directory-deployment-aks/ad-in-aks-diagram.png" alt-text="AKS cluster with AD and SQL Server Big Data Cluster":::
 
 ## Recommendations
 

@@ -69,7 +69,7 @@ ms.author: jrasnick
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Azure SQL Database performance guidance for single databases](/azure/azure-sql/database/performance-guidance)   
  [Optimizing Azure SQL Database Performance using Elastic Pools](/azure/azure-sql/database/elastic-pool-overview)   
- [Azure Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)  
+ [Query Performance Insight for Azure SQL Database](/azure/azure-sql/database/query-performance-insight-use)  
  [Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)  
  [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md)  
  [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md)  

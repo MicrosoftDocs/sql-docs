@@ -1,7 +1,7 @@
 ---
 title: "Generate data in SQL samples WideWorldImporters"
 description: Use these SQL statements to generate and import sample data up to the current date for the WideWorldImporters sample databases.
-ms.date: "04/04/2018"
+ms.date: "10/23/2020"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: sql
@@ -34,9 +34,12 @@ To generate sample data up to the current date:
             @AreDatesPrinted = 1;
     ```
 
-    This statement adds sample sales and purchase data to the database, up to the current date. It displays the progress of the data generation by day. Data generation can take about 10 minutes for every year that needs data. Because of a random factor in the data generation, there are some differences in the data that's generated between runs.
+    This statement adds sample sales and purchase data to the database, up to the current date. It displays the progress of the data generation by day. Because of a random factor in the data generation, there are some differences in the data that's generated between runs.
 
     To increase or decrease the amount of data generated for orders per day, change the value for the parameter `@AverageNumberOfCustomerOrdersPerDay`. Use the parameters `@SaturdayPercentageOfNormalWorkDay` and `@SundayPercentageOfNormalWorkDay` to determine the order volume for weekend days.
+
+> [!TIP]
+> Forcing [delayed durability](../relational-databases/logs/control-transaction-durability.md) on the database may improve data generation speed, particularly when the database transaction log is on a high latency storage subsystem. Be aware of potential [data loss](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) implications when using delayed durability, and consider only enabling delayed durability for the duration of data generation.
 
 ## Import generated data in WideWorldImportersDW
 

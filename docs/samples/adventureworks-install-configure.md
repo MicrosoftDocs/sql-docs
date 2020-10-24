@@ -69,7 +69,7 @@ To restore your database in SQL Server Management Studio, follow these steps:
 3. Open SQL Server Management Studio (SSMS) and connect to your SQL Server in. 
 4. Right-click **Databases** in **Object Explorer** > **Restore Database...** to launch the **Restore Database** wizard. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Screenshot showing how to choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database.":::
 
 
 1. Select **Device** and then select the ellipses **(...)** to choose a device. 
@@ -78,7 +78,7 @@ To restore your database in SQL Server Management Studio, follow these steps:
 1. Check the **Files** tab to confirm the **Restore as** location and file names match your intended location and file names in the **Restore Database** wizard. 
 1. Select **OK** to restore your database. 
 
-   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Screenshot showing the Restore Database window with the backup set to restore highlighted and the OK option called out.":::
 
 For more information on restoring a SQL Server database, see [Restore a database backup using SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
@@ -111,7 +111,7 @@ To restore your database in Azure Data Studio, follow these steps:
 1. Open Azure Data Studio Studio and connect to your SQL Server instance.
 1. Right-click on your server and select **Manage**.
 
-   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Choose to restore your database by right-clicking databases in Object Explorer and then selecting Restore Database":::
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Screenshot showing Azure Data Studio with the Manage option highlighted and called out.":::
 
 1. Select **Restore**
 

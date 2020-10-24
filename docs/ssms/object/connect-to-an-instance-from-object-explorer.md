@@ -31,11 +31,11 @@ To work with servers and databases, you must first connect to the server. You ca
 
 1. If you're connecting to an Azure SQL Server, you might get prompted to sign in to create a firewall rule. Click **Sign In...** (if not, skip to step 6 below)
 
-   ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
+   ![Screenshot of the New Firewall Rule dialog box with the Sign in option called out.](../media/connect-to-server/firewall-rule-sign-in.png)
 
 1. After successfully signing in, the form is pre-populated with your specific IP address. If your IP address changes often, it might be easier to grant access to a range, so select the option that's best for your environment. 
 
-   ![firewall](../media/connect-to-server/new-firewall-rule.png)
+   ![Screenshot of the New Firewall Rule dialog box with the Add my client IP address option selected and the OK option called out.](../media/connect-to-server/new-firewall-rule.png)
 
 1. To create the firewall rule and connect to the server, click **OK**.
 

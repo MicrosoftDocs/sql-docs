@@ -126,11 +126,11 @@ After you successfully create a migration project, under **Assessment tools**, i
 
 5. After the assessment completes, select **Upload to Azure Migrate**.
 
-   ![Azure Migrate - Data Migration Assistant - review results screen](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Screenshot showing the Data Migration Assistant with the Upload to Azure Migrate option called out.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Sign in to the Azure portal.
 
-   ![Azure Migrate - Data Migration Assistant - review results screen](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Screenshot of the Data Migration Assistant showing the Azure portal sign in window.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. Select the subscription and Azure Migrate project into which you want to upload the assessment results, and then select **Upload**.
 

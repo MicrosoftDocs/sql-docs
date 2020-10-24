@@ -132,7 +132,7 @@ TABLOCK
  Causes DBCC CHECKDB to obtain locks instead of using an internal database snapshot. This includes a short-term exclusive (X) lock on the database. TABLOCK will cause DBCC CHECKDB to run faster on a database under heavy load, but decreases the concurrency available on the database while DBCC CHECKDB is running.  
     
 > [!IMPORTANT] 
-> TABLOCK limits the checks that are performed; DBCC CHECKCATALOG is not run on the database, and [!INCLUDE[ssSB](../../includes/sssb-md.md)] data is not validated.
+> TABLOCK limits the checks that are performed; DBCC CHECKCATALOG is not run on the database if the database is not first put into single_user mode, and [!INCLUDE[ssSB](../../includes/sssb-md.md)] data is not validated.
     
 ESTIMATEONLY  
  Displays the estimated amount of tempdb space that is required to run DBCC CHECKDB with all the other specified options. The actual database check is not performed.  
@@ -144,7 +144,7 @@ PHYSICAL_ONLY
  -   Some of the underlying structures to be checked are more complex.  
  -   Many new checks have been introduced to include the new features.  
  Therefore, using the PHYSICAL_ONLY option may cause a much shorter run-time for DBCC CHECKDB on large databases and is recommended for frequent use on production systems. We still recommend that a full run of DBCC CHECKDB be performed periodically. The frequency of these runs depends on factors specific to individual businesses and production environments.    
-This argment always implies NO_INFOMSGS and is not allowed with any one of the repair options.  
+This argument always implies NO_INFOMSGS and is not allowed with any one of the repair options.  
     
 > [!WARNING] 
 > Specifying PHYSICAL_ONLY causes DBCC CHECKDB to skip all checks of FILESTREAM data.

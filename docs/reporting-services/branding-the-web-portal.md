@@ -111,7 +111,7 @@ The interface section is broken down into the following groupings.
 
 The first time you connect to a server with the Mobile Report Publisher, that has a brand package deployed, the theme will be added to the available themes you can use in the upper right-hand menu of the app.  
   
-![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
+![Screenshot of the Choose a color palette dialog box.](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
 You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.   
   
@@ -129,11 +129,11 @@ To add, download, or remove a brand package, you can do the following.
   
 2.  Select **Site Settings**.  
   
-    ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
+    ![Screenshot of the Settings dropdown list with Site Settings option called out.](../reporting-services/media/ssrsgearmenu.png)  
   
 3.  Select **Branding**.  
   
-    ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
+    ![Screenshot of the Site Settings page with the Branding option selected.](../reporting-services/media/ssrsbranding.png) 
   
 **Currently installed brand package** will either display the name of the package that has been uploaded, or it will display None.  
   

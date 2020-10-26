@@ -1,15 +1,11 @@
 ---
 title: SSMS Script objects
-description: "Generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS)."
+description: Generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS).
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.topic: tutorial
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
-author: markingmyname
-ms.author: maghan
-ms.reviewer: sstein
-ms.date: 03/13/2018
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], tutorials"
   - "source controls [SQL Server Management Studio], tutorials"
@@ -19,6 +15,10 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], tutorials"
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein
+ms.date: 03/13/2018
 ---
 
 # Script objects in SQL Server Management Studio
@@ -179,7 +179,7 @@ This section covers how to script out tables from your database. Use this option
 
 ## Script stored procedures
 
-In this section, you'll learn how to drop and create a stored procedure.  
+In this section, you learn how to drop and create a stored procedure.  
 
 1. Connect to a server that's running SQL Server.
 
@@ -191,7 +191,7 @@ In this section, you'll learn how to drop and create a stored procedure.
 
 5. Right-click the stored procedure **dbo.uspGetBillOfMaterials** > **Script Stored Procedure As** > **DROP and CREATE To** > **New Query Editor Window**:
 
-    ![Script stored procedures](media/scripting-ssms/scriptstoredprocedure.PNG)
+    ![Script stored procedures](media/scripting-ssms/script-stored-procedure.png)
 
 ## Script extended events
 

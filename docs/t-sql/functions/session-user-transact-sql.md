@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SESSION_USER  
 ```  
   
@@ -53,7 +53,7 @@ SESSION_USER
 ### A. Using SESSION_USER to return the user name of the current session  
  The following example declares a variable as `nchar`, assigns the current value of `SESSION_USER` to that variable, and then prints the variable with a text description.  
   
-```  
+```sql  
 DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
@@ -72,7 +72,7 @@ This session's current user is: Surya
 ### B. Using SESSION_USER with DEFAULT constraints  
  The following example creates a table that uses `SESSION_USER` as a `DEFAULT` constraint for the name of the person who records receipt of a shipment.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE deliveries3  
@@ -89,7 +89,7 @@ GO
   
  Records added to the table will be stamped with the user name of the current user. In this example, `Wanida`, `Sylvester`, and `Alejandro` verify receipt of shipments. This can be emulated by switching user context by using `EXECUTE AS`.  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida'  
 INSERT deliveries3 (cust_id)  
 VALUES (7510);  
@@ -111,7 +111,7 @@ GO
   
  The following query selects all information from the `deliveries3` table.  
   
-```  
+```sql
 SELECT order_id AS 'Order #', cust_id AS 'Customer #',   
    delivery_date AS 'When Delivered', received_shipment   
    AS 'Received By'  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
 ### C: Using SESSION_USER to return the user name of the current session  
  The following example returns the session user for the current session.  
   
-```  
+```sql
 SELECT SESSION_USER;  
 ```  
   

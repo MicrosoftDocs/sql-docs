@@ -29,7 +29,7 @@ This function returns a **datetime** value for the specified date and time argum
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )  
 ```  
   
@@ -73,7 +73,7 @@ SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ---------------------------  
 2010-12-31 23:59:59.000  

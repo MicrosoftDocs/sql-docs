@@ -17,7 +17,7 @@ This article provides troubleshooting guidance for issues involving the SQL Serv
 
 ## Determine whether Launchpad is running
 
-1. Open the **Services** panel (Services.msc). Or, from the command line, type **SQLServerManager13.msc** or **SQLServerManager14.msc** to open [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. Open the **Services** panel (Services.msc). Or, from the command line, type **SQLServerManager13.msc** or **SQLServerManager14.msc** to open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 2. Make a note of the service account that Launchpad is running under. Each instance where R or Python is enabled should have its own instance of the Launchpad service. For example, the service for a named instance might be something like _MSSQLLaunchpad$InstanceName_.
 
@@ -116,7 +116,7 @@ To grant the necessary permissions to the new service account, use the Local Sec
 
 If you have installed and then enabled machine learning, but you get this error when you try to run an R or Python script, the Launchpad service for the instance might have stopped running.
 
-1. From a Windows command prompt, open the SQL Server Configuration Manager. For more information, see [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. From a Windows command prompt, open the SQL Server Configuration Manager. For more information, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 2. Right-click SQL Server Launchpad for the instance, and then select **Properties**.
 
@@ -218,7 +218,7 @@ If the volume where you are installing R does not support short file names, the 
 
 As a workaround, you can enable the 8dot3 notation on the volume where SQL Server is installed and where R Services is installed. You must then provide the short name for the working directory in the R Services configuration file.
 
-1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described here: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described here: [fsutil 8dot3name](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff621566(v=ws.11)).
 
 2. After the 8dot3 notation is enabled, open the RLauncher.config file and note the property of `WORKING_DIRECTORY`. For information about how to find this file, see [Data collection for Machine Learning troubleshooting](data-collection-ml-troubleshooting-process.md).
 

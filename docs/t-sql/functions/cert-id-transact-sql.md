@@ -31,7 +31,7 @@ This function returns the ID value of a certificate.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 Cert_ID ( 'cert_name' )  
 ```  
   

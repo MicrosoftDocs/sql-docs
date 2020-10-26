@@ -35,7 +35,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [SQL Database](pick-a-product-template.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](pick-a-product-template.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](pick-a-product-template.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)
@@ -58,7 +58,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -82,7 +82,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -104,7 +104,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

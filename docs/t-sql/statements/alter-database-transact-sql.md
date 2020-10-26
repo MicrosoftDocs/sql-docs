@@ -1,8 +1,8 @@
 ---
 description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
-ms.custom: ""
-ms.date: 08/27/2020
+ms.custom: "references_regions"
+ms.date: 09/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -48,7 +48,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -301,7 +301,7 @@ GO
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -336,6 +336,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
     MODIFY NAME = new_database_name
   | MODIFY ( <edition_options> [, ... n] )
+  | MODIFY BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
   | SET { <option_spec> [ ,... n ] WITH <termination>}
   | ADD SECONDARY ON SERVER <partner_server_name>
     [WITH ( <add-secondary-option>::=[, ... n] ) ]
@@ -438,6 +439,12 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
 
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) 
+Changes the storage redundancy of point-in-time restore backups and long-term retention backups (if configured) of the database. The changes are applied to all the future backups taken. Existing backups continue to use the previous setting. 
+
+> [!IMPORTANT]
+> BACKUP_STORAGE_REDUNDANCY option for Azure SQL Database is available in public preview in Southeast Asia Azure region only.  
+
 MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed.
 
@@ -470,7 +477,7 @@ Specifies the maximum size of the database. The maximum size must comply with th
 |1024 GB|N/A|√|√|√|√ (D)|
 |From 1024 GB up to 4096 GB in increments of 256 GB*|N/A|N/A|N/A|N/A|√|
 
-\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU model, see [DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size. P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For additional details regarding resource limitations for the DTU model, see [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
 
 The MAXSIZE value for the DTU model, if specified, has to be a valid value shown in the table above for the service tier specified.
 
@@ -566,7 +573,7 @@ The MAXSIZE value for the DTU model, if specified, has to be a valid value shown
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |Max data size (GB)|1280|1536|2048|4096|4096|
 
-If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore model, see [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. For additional details regarding resource limitations for vCore model, see [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits).
 
 The following rules apply to MAXSIZE and EDITION arguments:
 
@@ -595,10 +602,10 @@ SERVICE_OBJECTIVE
 
   - Specifies the compute size (service objective). Available values for service objective are: `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.
 
-For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) and [vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
+For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](/azure/azure-sql/database/purchasing-models), [DTU resource limits](/azure/sql-database/sql-database-dtu-resource-limits) and [vCore resource limits](/azure/sql-database/sql-database-dtu-resource-limits). Support for PRS service objectives have been removed. For questions, use this e-mail alias: premium-rs@microsoft.com.
 
 MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
-To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the elastic pool. You can also use this option to change the database to a different elastic pool within the same server. For more information, see [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). To remove a database from an elastic pool, use ALTER DATABASE to set the SERVICE_OBJECTIVE to a single database compute size (service objective).
+To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the elastic pool. You can also use this option to change the database to a different elastic pool within the same server. For more information, see [Create and manage a SQL Database elastic pool](/azure/azure-sql/database/elastic-pool-overview). To remove a database from an elastic pool, use ALTER DATABASE to set the SERVICE_OBJECTIVE to a single database compute size (service objective).
 
 > [!NOTE]
 > Databases in the Hyperscale service tier cannot be added to an elastic pool.
@@ -609,6 +616,9 @@ Creates a geo-replication secondary database with the same name on a partner ser
 
 > [!IMPORTANT]
 > The Hyperscale service tier does not currently support geo-replication.
+
+> [!IMPORTANT]
+> By default, the secondary database is created with the same backup storage redundancy as that of the primary or source database. Changing the backup storage redundancy while creating the secondary is not supported via T-SQL. 
 
 WITH ALLOW_CONNECTIONS { **ALL** | NO }
 When ALLOW_CONNECTIONS is not specified, it is set to ALL by default. If it is set ALL, it is a read-only database that allows all logins with the appropriate permissions to connect.
@@ -739,6 +749,14 @@ Updates a single database to the Standard edition (service tier) with a compute 
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
 ```
 
+### H. Update the backup storage redundancy of a database
+
+Updates the backup storage redundancy of a database to zone-redundant. All future backups of this database will use the new setting. This includes point-in-time restore backups and long-term retention backups (if configured). 
+
+```sql
+ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
+```
+
 ## See also
 
 - [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-currentls)
@@ -767,7 +785,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -909,7 +927,7 @@ ALTER DATABASE WideWorldImporters
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -932,7 +950,8 @@ Provides the syntax and related information for changing the attributes of a dat
 
 ## Syntax
 
-```console
+### [SQL pool](#tab/sqlpool)
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
   MODIFY NAME = new_database_name
@@ -955,6 +974,42 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
+### [SQL on-demand (preview)](#tab/sqlod)
+```syntaxsql
+ALTER DATABASE { database_name | Current } 
+{ 
+    COLLATE collation_name 
+  | SET { <optionspec> [ ,...n ] } 
+} 
+[;] 
+
+<optionspec> ::= 
+{ 
+    <auto_option> 
+  | <sql_option> 
+}  
+
+<auto_option> ::= 
+{ 
+    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
+  | AUTO_UPDATE_STATISTICS { ON | OFF } 
+  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 
+} 
+
+<sql_option> ::= 
+{ 
+    ANSI_NULL_DEFAULT { ON | OFF } 
+  | ANSI_NULLS { ON | OFF } 
+  | ANSI_PADDING { ON | OFF } 
+  | ANSI_WARNINGS { ON | OFF } 
+  | ARITHABORT { ON | OFF } 
+  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } 
+  | CONCAT_NULL_YIELDS_NULL { ON | OFF } 
+  | NUMERIC_ROUNDABORT { ON | OFF } 
+  | QUOTED_IDENTIFIER { ON | OFF } 
+} 
+```
+---
 
 ## Arguments
 
@@ -976,7 +1031,7 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
 SERVICE_OBJECTIVE
-Specifies the compute size (service objective). For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+Specifies the compute size (service objective). For more information about service objectives for Azure Synapse, see [Data Warehouse Units (DWUs)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## Permissions
 
@@ -991,7 +1046,7 @@ The owner of the database cannot alter the database unless the owner is a member
 
 The current database must be a different database than the one you are altering, therefore **ALTER must be run while connected to the master database**.
 
-COMPATIBILITY_LEVEL in SQL Analytics is set to 130 by default and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
+COMPATIBILITY_LEVEL in SQL Analytics is set to 130 by default and cannot be changed. For more details, see [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](./alter-database-transact-sql-compatibility-level.md).
 
 > [!NOTE]
 > COMPATIBILITY_LEVEL applies to provisioned resources (pools) only.
@@ -1038,7 +1093,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ## See Also
 
 - [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [Azure Synapse Analytics list of reference articles](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [Azure Synapse Analytics list of reference articles](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
@@ -1051,7 +1106,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1129,7 +1184,7 @@ The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determi
 
 Default is ON for new databases created after upgrading to AU7. The default is OFF for databases created prior to the upgrade.
 
-For more information about statistics, see [Statistics](/sql/relational-databases/statistics/statistics).
+For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md).
 
 ## Permissions
 

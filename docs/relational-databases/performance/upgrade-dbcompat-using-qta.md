@@ -225,4 +225,5 @@ Requires membership of **db_owner** role.
 - [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)
 - [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)
+- [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
+- [Use the SQL Server Query Tuning Assistant](https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/)

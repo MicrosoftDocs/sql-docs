@@ -23,7 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Azure Synapse Analytics and Parallel Data Warehouse  
 SESSION_ID ( )  
 ```  
@@ -41,7 +41,7 @@ SESSION_ID ( )
 ## Examples  
  The following example returns the current session ID.  
   
-```  
+```sql  
 SELECT SESSION_ID();  
 ```  
   

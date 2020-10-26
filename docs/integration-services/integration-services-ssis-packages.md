@@ -55,7 +55,7 @@ ms.author: chugu
 ### Configurations  
  A configuration is a set of property-value pairs that defines the properties of the package and its tasks, containers, variables, connections, and event handlers when the package runs. Using configurations makes it possible to update properties without modifying the package. When the package is run, the configuration information is loaded, updating the values of properties. For example, a configuration can update the connection string of connection.  
   
- The configuration is saved and then deployed with the package when the package is installed on a different computer. The values in the configuration can be updated when the package is installed to support the package in a different environment. For more information, see [Create Package Configurations](../integration-services/packages/create-package-configurations.md).  
+ The configuration is saved and then deployed with the package when the package is installed on a different computer. The values in the configuration can be updated when the package is installed to support the package in a different environment. For more information, see [Create Package Configurations](./packages/legacy-package-deployment-ssis.md).  
   
 ### Logging and Log Providers  
  A log is a collection of information about the package that is collected when the package runs. For example, a log can provide the start and finish time for a package run. A log provider defines the destination type and the format that the package and its containers and tasks can use to log run-time information. The logs are associated with a package, but the tasks and containers in the package can log information to any package log. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a variety of built-in log providers for logging. For example, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes log providers for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and text files. You can also create custom log providers and use them for logging. For more information, see [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md).  
@@ -111,5 +111,4 @@ ms.author: chugu
 -   [Create Packages in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   See [Building Packages Programmatically](../integration-services/building-packages-programmatically/building-packages-programmatically.md) in the Developer Guide. 
-  
   

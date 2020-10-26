@@ -60,7 +60,7 @@ DROP CERTIFICATE certificate_name
 ## Examples  
  The following example drops the certificate `Shipping04` from the `AdventureWorks` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP CERTIFICATE Shipping04;  
 ```  
@@ -68,7 +68,7 @@ DROP CERTIFICATE Shipping04;
 ## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example drops the certificate `Shipping04`.  
   
-```
+```sql
 USE master;  
 DROP CERTIFICATE Shipping04;  
 ```  

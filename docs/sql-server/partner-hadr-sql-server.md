@@ -49,7 +49,7 @@ To learn more about additional partners, see [monitoring][mon_partners], [manage
 [dh2i_website]:https://dh2i.com
 [idera_website]:https://www.idera.com/productssolutions/sqlserver
 [hpe_website]: https://www.hpe.com/us/en/product-catalog/detail/pip.376220.html
-[azure_website]: https://docs.microsoft.com/azure/site-recovery/site-recovery-sql
+[azure_website]: /azure/site-recovery/site-recovery-sql
 [necec_website]: https://www.necam.com/ExpressCluster/
 [portworx_website]: https://portworx.com/
 [sios_website]: https://us.sios.com/

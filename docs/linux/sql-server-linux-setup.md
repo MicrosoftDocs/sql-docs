@@ -20,7 +20,7 @@ This article provides guidance for installing, updating, and uninstalling SQL Se
 For other deployment scenarios, see:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
-- [Docker containers](../linux/sql-server-linux-configure-docker.md)
+- [Docker containers](./sql-server-linux-docker-container-deployment.md)
 - [Kubernetes - Big Data Clusters](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]

@@ -54,7 +54,7 @@ You can connect to the SQL Server instance on your Docker machine from any exter
 
 - [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)
 
 The following example uses **sqlcmd** to connect to SQL Server running in a Docker container. The IP address in the connection string is the IP address of the host machine that is running the container.

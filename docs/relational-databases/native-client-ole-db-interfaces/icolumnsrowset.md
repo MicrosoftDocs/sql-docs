@@ -19,6 +19,5 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client adds the DBCOLUMN_BASETABLEINSTANCE column to IColumnsRowset::GetColumnRowset. This column returns DBTYPE_I2 and is reserved for use by Microsoft. The information in this column is subject to change in future releases.  
   
 ## See Also  
- [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
-  
+ [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
   

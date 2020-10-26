@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**partition_ordinal**|**tinyint**|Ordinal (1-based) within set of partitioning columns. A clustered columnstore index can have at most 1 partitioning column.<br /><br /> 0 = Not a partitioning column.|  
 |**is_descending_key**|**bit**|1 = Index key column has a descending sort direction.<br /><br /> 0 = Index key column has an ascending sort direction, or the column is part of a columnstore or hash index.|  
 |**is_included_column**|**bit**|1 = Column is a nonkey column added to the index by using the CREATE INDEX INCLUDE clause, or the column is part of a columnstore index.<br /><br /> 0 = Column is not an included column.<br /><br /> Columns implicitly added because they are part of the clustering key are not listed in **sys.index_columns**.<br /><br /> Columns implicitly added because they are a partitioning column are returned as 0.| 
-|**column_store_order_ordinal**</br> Applies to: Azure SQL Data Warehouse (preview)|**tinyint**|Ordinal (1-based) within set of order columns in an ordered clustered columnstore index.|
+|**column_store_order_ordinal**</br> Applies to: Azure Synapse Analytics (preview)|**tinyint**|Ordinal (1-based) within set of order columns in an ordered clustered columnstore index.|
   
 ## Permissions
 

@@ -201,7 +201,7 @@ The Full-Text Engine uses two types of filters when it populates a full-text ind
   
  For security reasons, filters are loaded by the filter daemon host processes. A server instance uses a multithreaded process for all multithreaded filters and a single-threaded process for all single-threaded filters. When a document that uses a multithreaded filter contains an embedded document that uses a single-threaded filter, the Full-Text Engine launches a single-threaded process for the embedded document. For example, on encountering a Word document that contains a PDF document, the Full-Text Engine uses the multithreaded process for the Word content and launches a single-threaded process for the PDF content. A single-threaded filter might not work well in this environment, however, and could destabilize the filtering process. In certain circumstances where such embedding is common, destabilization might lead to crashes of the process. When this occurs, the Full-Text Engine re-routes any failed document - for example, a Word document that contains embedded PDF content - to the single-threaded filtering process. If re-routing occurs frequently, it results in performance degradation of the full-text indexing process.  
   
-To work around this problem, mark the filter for the container document (the Word document, in this example) as a single-threaded filter. To mark a filter as a single-threaded filter, set the **ThreadingModel** registry value for the filter to **Apartment Threaded**. For information about single-threaded apartments, see the white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
+To work around this problem, mark the filter for the container document (the Word document, in this example) as a single-threaded filter. To mark a filter as a single-threaded filter, set the **ThreadingModel** registry value for the filter to **Apartment Threaded**. For information about single-threaded apartments, see the white paper [Understanding and Using COM Threading Models](/previous-versions/ms809971(v=msdn.10)).  
   
 ## See Also  
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -211,5 +211,4 @@ To work around this problem, mark the filter for the container document (the Wor
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Troubleshoot Full-Text Indexing](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

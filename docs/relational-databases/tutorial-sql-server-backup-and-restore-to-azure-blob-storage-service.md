@@ -20,10 +20,10 @@ This quickstart helps you understand how to write backups to and restore from th
 To complete this quickstart, you must be familiar with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backup and restore concepts and T-SQL syntax.  You need an Azure storage account, SQL Server Management Studio (SSMS), and access to either a server that's running SQL Server or Azure SQL Managed Instance. Additionally, the account used to issue the BACKUP and RESTORE commands should be in the **db_backupoperator** database role with **alter any credential** permissions. 
 
 - Get a free [Azure Account](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Create an [Azure storage account](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Create an [Azure storage account](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) or deploy [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) with connectivity established through an [Azure SQL virtual machine](/azure/sql-database/sql-database-managed-instance-configure-vm) or [point-to-site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
-- Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
+- Assign the user account to the role of [db_backupoperator](./security/authentication-access/database-level-roles.md) and grant [alter any credential](../t-sql/statements/alter-credential-transact-sql.md) permissions. 
 
 ## Create Azure Blob container
 A container provides a grouping of a set of blobs. All blobs must be in a container. A storage account can contain an unlimited number of containers, but must have at least one container. A container can store an unlimited number of blobs. 
@@ -40,7 +40,7 @@ To create a Container, follow these steps:
     ![New container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > Authentication to the storage account is required for SQL Server backup and restore even if you choose to create a public container. You can also create a container programmatically using REST APIs. For more information, see [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
+  > Authentication to the storage account is required for SQL Server backup and restore even if you choose to create a public container. You can also create a container programmatically using REST APIs. For more information, see [Create container](/rest/api/storageservices/Create-Container)
 
 ## Create a test database 
 In this step, create a test database using SQL Server Management Studio (SSMS). 
@@ -100,7 +100,7 @@ Use the GUI in SQL Server Management Studio to create the credential by followin
 
 1. Select **New container** on the **Select Backup Destination** dialog box to launch the **Connect to a Microsoft Subscription** window. 
 
-   ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
+   ![Screenshot of the Select Backup Destination dialog window with the New container option called out.](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
 1. Sign in to the Azure portal by selecting **Sign In...** and then proceed through the sign-in process. 
 1. Select your **subscription** from the drop-drown. 
@@ -201,7 +201,7 @@ In this step, restore the database using either the GUI in SQL Server Management
 
 1. Select the container from the drop-down and then paste in the Shared Access Signature (SAS) you saved when creating the credential. 
 
-   ![Backup destination](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+   ![Screenshot of the Select a Backup File Location dialog box with the Shared Access Signature field populated.](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
 
 1. Select **OK** to select the backup file location. 
 1. Expand **Containers** and select the container where your backup file exists. 
@@ -230,4 +230,3 @@ Following is some recommended reading to understand the concepts and best practi
   
 -   [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

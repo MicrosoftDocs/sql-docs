@@ -28,8 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 IS_OBJECTSIGNED (   
 'OBJECT', @object_id, @class, @thumbprint  
   )   
@@ -76,7 +75,7 @@ IS_OBJECTSIGNED (
 ### A. Displaying extended properties on a database  
  The following example tests if the spt_fallback_db table in the **master** database is signed by the schema signing certificate.  
   
-```  
+```sql  
 USE master;  
 -- Declare a variable to hold a thumbprint and an object name  
 DECLARE @thumbprint varbinary(20), @objectname sysname;  

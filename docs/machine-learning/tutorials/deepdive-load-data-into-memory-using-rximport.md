@@ -14,11 +14,11 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Load data into memory using rxImport (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 10 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 10 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this tutorial, you'll learn how to get data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then use the **rxImport** function to put the data of interest into a local file. That way, you can analyze it in the local compute context repeatedly, without having to re-query the database.
 
-The [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
+The [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) function can be used to move data from a data source into a data frame in session memory, or into an XDF file on disk. If you don't specify a file as destination, data is put into memory as a data frame.
 
 ## Extract a subset of data from SQL Server to local memory
 
@@ -39,7 +39,7 @@ You've decided that you want to examine only the high risk individuals in more d
         connectionString = sqlConnString)
     ```
 
-3. Call the function [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) to read the data into a data frame in the local R session.
+3. Call the function [rxImport](/machine-learning-server/r-reference/revoscaler/rximport) to read the data into a data frame in the local R session.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)

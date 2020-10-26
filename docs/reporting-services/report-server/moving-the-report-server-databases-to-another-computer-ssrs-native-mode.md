@@ -218,7 +218,7 @@ GO
 [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [Configure a Report Server Database Connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Configure the Unattended Execution Account](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
-[Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Report Server Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [rsconfig Utility](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
 [Configure and Manage Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [Report Server Database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  

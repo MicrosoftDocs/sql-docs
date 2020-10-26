@@ -79,12 +79,12 @@ To create the SQL Server registry, follow these steps:
 1. Type `SQL Server registry` in the search box.  
 1. Choose the **SQL Server registry** option published by [!INCLUDE[msCoName](../../includes/msconame-md.md)], and then select **Create**. 
 
-   ![Choose the SQL Server registry service](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![Screenshot of the Auzre portal that shows how to create a SQL Server registry.](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
 1. Under **Project Details**, choose your subscription from the drop-down. Then either choose an existing **Resource group** or select **Create new** to create a new resource group for your new SQL Server registry service. 
 1. Under **Service Details**, provide a name and region for your new **SQL Server registry** resource: 
 
-   ![Choose the SQL Server registry service](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![Screenshot of the SQL Server registry showing the Basics tab.](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
 1. Select **Review + create** to review the details for your **SQL Server registry**. Select **Create** once validation has passed. 
 

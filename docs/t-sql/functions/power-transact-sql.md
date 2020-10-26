@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 POWER ( float_expression , y )  
 ```  
   
@@ -61,7 +61,7 @@ If the result does not fit in the return type, an arithmetic overflow error occu
 ### A. Using POWER to return the cube of a number  
  The following example demonstrates raising a number to the power of 3 (the cube of the number).  
   
-```  
+```sql  
 DECLARE @input1 FLOAT;  
 DECLARE @input2 FLOAT;  
 SET @input1= 2;  
@@ -82,7 +82,7 @@ Result1                Result2
 ### B. Using POWER to show results of data type conversion  
  The following example shows how the *float_expression* preserves the data type which can return unexpected results.  
   
-```  
+```sql 
 SELECT   
 POWER(CAST(2.0 AS FLOAT), -100.0) AS FloatResult,  
 POWER(2, -100.0) AS IntegerResult,  
@@ -104,7 +104,7 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 ### C. Using POWER  
  The following example returns `POWER` results for `2`.  
   
-```  
+```sql  
 DECLARE @value INT, @counter INT;  
 SET @value = 2;  
 SET @counter = 1;  
@@ -148,7 +148,7 @@ GO
 ### D: Using POWER to return the cube of a number  
  The following example shows returns `POWER` results for `2.0` to the 3rd power.  
   
-```  
+```sql  
 SELECT POWER(2.0, 3);  
 ```  
   

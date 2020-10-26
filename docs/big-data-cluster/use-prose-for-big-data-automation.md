@@ -5,7 +5,7 @@ description: This article describes how to use the PROSE Code Accelerator in Azu
 author: dphansen 
 ms.author: davidph
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 10/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
@@ -15,7 +15,10 @@ ms.technology: machine-learning-bdc
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-PROSE Code Accelerator generates readable Python code for your data wrangling tasks. You can mix the generated code with your hand-written code in a seamless manner while working in a notebook within Azure Data Studio. This article provides an overview of how you can use the Code Accelerator.
+PROSE Code Accelerator generates readable Python code for your data wrangling tasks. 
+You can mix the generated code with your hand-written code while working in a notebook within Azure Data Studio.
+
+This article provides an overview of how you can use the Code Accelerator.
 
  > [!NOTE]
  > Program Synthesis using Examples, aka PROSE, is a Microsoft technology that generates human-readable code using AI. It does so by analyzing a user's intent as well as data, generating several candidate programs, and picking the best program using ranking algorithms. To know more about the PROSE technology, visit the [PROSE homepage](https://microsoft.github.io/prose/).
@@ -36,9 +39,11 @@ To get a general overview of Code Accelerator methods, see the [documentation](/
 
 ## Reading data from a file to a dataframe
 
-Often, reading files to a dataframe involves looking at the content of the file and determining the correct parameters to pass to a data-loading library. Depending on the complexity of the file, identifying the correct parameters may require several iterations.
+Reading files to a dataframe involves looking at the content of the file and determining the correct parameters to pass to a data-loading library.
 
-PROSE Code Accelerator solves this problem by analyzing the structure of the data file and automatically generating code to load the file. In most cases, the generated code parses the data correctly. In a few cases, you might need to tweak the code to meet your needs.
+Depending on the complexity of the file, identifying the correct parameters may require several iterations.
+
+PROSE Code Accelerator solves this problem by analyzing the structure of the data file and automatically generating code to load the file. Normally, the generated code parses the data correctly. In a few cases, you might need to tweak the code to meet your needs.
 
 Consider the following example:
 
@@ -85,9 +90,9 @@ Code Accelerator can generate code to load delimited, JSON, and fixed-width file
 
 ## Fixing data types in a dataframe
 
-It is common to have a pandas or pyspark dataframe with wrong data types. Often, this happens because of a few non-conforming values in a column. As a result, Integers are read as Float or Strings, and Dates are read as Strings. The effort required to manually fix the data types is proportional to the number of columns.
+It's common to have a pandas or pyspark dataframe with wrong data types. The incorrect datatype happens because of a few non-conforming values in a column. As a result, Integers are read as Float or Strings, and Dates are read as Strings. The effort required to manually fix the data types is proportional to the number of columns.
 
-You can use the `DetectTypesBuilder` in these situations. It analyzes the data, and rather than fixing the data types in a black-box manner, it generates code for fixing the data types. The code serves as a starting point. You can review, use, or modify it as needed.
+You can use the `DetectTypesBuilder` in these situations. It analyzes the data and generates code to fix the data types. The code serves as a starting point. You can review, use, or modify it as needed.
 
 ```python
 import prose.codeaccelerator as cx
@@ -105,7 +110,7 @@ To learn more, see the [documentation](/python/api/overview/azure/prose/fixdatat
 
 ## Identifying patterns in Strings
 
-Another common scenario is to detect patterns in a string column for the purpose of cleaning or grouping. For example, you may have a date column with dates in multiple different formats. In order to standardize the values, you might want to write conditional statements using regular expressions.
+p.
 
 
 |Row|Name                      |BirthDate      |

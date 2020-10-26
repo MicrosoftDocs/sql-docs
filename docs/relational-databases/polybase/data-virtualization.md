@@ -53,13 +53,13 @@ In this step, enter your external data source and the credential details to crea
 
 The next step is to configure a credential. Enter a name for the credential. This name is the database scoped credential that's used to securely store the sign-in information for the external data source you create. An example is `TestCred`. Enter a username and password to connect to the data source.
 
-![External data source credentials](media/data-virtualization/data-source-credentials.png)
+![Screenshot showing Step 3 - Create a connection to your Data Source.](media/data-virtualization/data-source-credentials.png)
 
 ## External data table mapping
 
 On the next page, select the tables for which you want to create external views. When you select parent databases, the child tables are included, too. After you select tables, a mapping table appears on the right. Here, you can make changes to types. You also can change the name of the selected external table itself.
 
-![External data source credentials](media/data-virtualization/data-table-map.png)
+![Screenshot showing Step 4 - Map your data source objects to your external table.](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >To change the mapping view, double-click another selected table.

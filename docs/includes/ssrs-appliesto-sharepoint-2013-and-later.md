@@ -11,4 +11,4 @@
 ---
 
 
- ![Yes](media/yes-icon.png)SharePoint 2013 & later
+ :::image type="icon" source="media/yes-icon.png":::SharePoint 2013 & later

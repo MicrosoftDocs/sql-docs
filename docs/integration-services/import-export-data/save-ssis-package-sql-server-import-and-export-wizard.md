@@ -43,7 +43,7 @@ The following screen shot shows the first part of the **Save SSIS Package** page
 
  The following screen shot shows the **Save SSIS Package** page of the wizard if you selected the **SQL Server** option on the **Save and Run Package** page. 
   
-![Save SSIS Package page of the Import and Export Wizard](../../integration-services/import-export-data/media/save-package2.png "Save SSIS Package page of the Import and Export Wizard")  
+![Screenshot showing the Save SSIS Package page of the Import and Export Wizard if you selected the SQL Server option on the Save and Run Package page.](../../integration-services/import-export-data/media/save-package2.png "Save SSIS Package page of the Import and Export Wizard")  
 
 ## Options to specify (Target = SQL Server) 
 
@@ -69,7 +69,7 @@ If you specified SQL Server Authentication, enter the password.
  
 The following screen shot shows the **Save SSIS Package** page of the wizard if you selected the **File system** option on the **Save and Run Package** page. 
   
-![Save SSIS Package page of the Import and Export Wizard](../../integration-services/import-export-data/media/save-package1.png "Save SSIS Package page of the Import and Export Wizard")  
+![Screenshot showing the Save SSIS Package page of the Import and Export Wizard if you selected the File system option on the Save and Run Package page.](../../integration-services/import-export-data/media/save-package1.png "Save SSIS Package page of the Import and Export Wizard")  
 
 ## Options to specify (Target = File system)
 

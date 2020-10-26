@@ -25,7 +25,7 @@ A standalone SQL Server instance with PolyBase can become a performance bottlene
   
 See [Get started with PolyBase](./polybase-guide.md) and [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md).
   
-![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase scale-out groups")  
+![Diagram showing PolyBase scale-out groups.](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase scale-out groups")  
   
 ## Head node  
 

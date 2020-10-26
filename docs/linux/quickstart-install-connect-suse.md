@@ -60,9 +60,9 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Install SQL Server
+## <a id="install"></a>Install SQL Server 2017
 
-To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
+To configure SQL Server 2017 on SLES, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Download the Microsoft SQL Server 2017 SLES repository configuration file:
 
@@ -125,9 +125,9 @@ At this point, SQL Server is running on your SLES machine and is ready to use!
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Install SQL Server
+## <a id="install"></a>Install SQL Server 2019
 
-To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
+To configure SQL Server 2019 on SLES, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Download the Microsoft SQL Server 2019 SLES repository configuration file:
 
@@ -140,9 +140,9 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
    ```
-   
+
    To ensure that the Microsoft package signing key is installed on your system, use the following command to import the key: 
-   
+
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```

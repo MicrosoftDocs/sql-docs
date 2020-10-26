@@ -44,7 +44,7 @@ Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -295,7 +295,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -472,7 +472,7 @@ GO
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -753,7 +753,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -927,7 +927,7 @@ GO
         [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)

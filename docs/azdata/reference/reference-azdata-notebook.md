@@ -34,7 +34,7 @@ View notebook.  This shows all cells.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
-View notebook.  This shows all cells unless a cell with error in it's output is encountered.  In that case the output stops.
+View notebook.  This shows all cells unless a cell with error in its output is encountered.  In that case the output stops.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```

@@ -68,7 +68,7 @@ See CREATE TABLE for index option syntax.
   
 ```  
   
-
+```syntaxsql
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DECLARE   

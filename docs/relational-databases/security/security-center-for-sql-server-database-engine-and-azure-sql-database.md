@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  **Legend**  
   
- ![security-center-legend](../performance/media/security-center-legend.PNG "security-center-legend")  
+ ![Screenshot of the legend that explains the feature availability icons.](../performance/media/security-center-legend.PNG "security-center-legend")  
   
 ##  <a name="Who"></a> Authentication: Who are you?  
   

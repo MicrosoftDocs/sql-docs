@@ -7147,7 +7147,7 @@
       - name: Stack Overflow >>
         href: https://stackoverflow.com/questions/tagged/sql-server
       - name: Microsoft Q & A >>
-        href: https://https://docs.microsoft.com/answers/products/sql-server
+        href: https://docs.microsoft.com/answers/products/sql-server
       - name: Submit feedback >>
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit >>
@@ -8000,8 +8000,6 @@
       href: tools/profiler-utility.md
     - name: sqlagent90 Application
       href: tools/sqlagent90-application.md
-    - name: sqlcmd
-      href: tools/sqlcmd-utility.md
     - name: SQLdiag
       href: tools/sqldiag-utility.md
     - name: sqlmaint
@@ -8295,6 +8293,8 @@
         href: tools/configuration-manager/viewing-the-windows-application-log.md
   - name: SQLCMD
     items:
+    - name: sqlcmd Overview
+      href: tools/sqlcmd-utility.md
     - name: Start the Utility
       href: ssms/scripting/sqlcmd-start-the-utility.md
     - name: Use the Utility

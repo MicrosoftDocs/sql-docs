@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Query columns using Always Encrypted with Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is). With Azure Data Studio, you can:
+This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [Azure Data Studio](../../../azure-data-studio/what-is.md). With Azure Data Studio, you can:
 - Retrieve ciphertext values stored in encrypted columns. 
 - Retrieve plaintext values stored in encrypted columns.  
 - Send plaintext values targeting encrypted columns (for example, in `INSERT` or `UPDATE` statements and as a lookup parameter of the `WHERE` clauses in `SELECT` statements). 
@@ -29,7 +29,7 @@ This section describes how to retrieve data stored in encrypted columns as ciphe
 ### Example
 Assuming `SSN` is an encrypted column in the `Patients` table, the query shown below will retrieve binary ciphertext values, if Always Encrypted is disabled for the database connection.   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![Screenshot of the SELECT * FROM [dbo].[Patients] query and the results of the query shown as binary ciphertext values.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## Retrieving plaintext values stored in encrypted columns    
 This section describes how to retrieve data stored in encrypted columns as ciphertext.
@@ -46,7 +46,7 @@ This section describes how to retrieve data stored in encrypted columns as ciphe
 ### Example
 Assuming SSN is an encrypted column in the `Patients` table, the query shown below will return plaintext values if Always Encrypted is enabled for the database connection, and if you have access to the column master key configured for the `SSN` column.   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![Screenshot of the SELECT * FROM [dbo].[Patients] query and the results of the query shown as plain text values.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## Sending plaintext values targeting encrypted columns       
 This section describes how to run a query that sends values that target an encrypted column. For example, a query that inserts, updates, or filters by a value stored in an encrypted column:
@@ -65,7 +65,7 @@ This section describes how to run a query that sends values that target an encry
 ### Example
 Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the below script will attempt to find a row containing `'795-73-9838'` in the SSN column. The results are returned if Always Encrypted is enabled for the database connection, Parameterization for Always Encrypted is enabled for the query window, and you have access to the column master key configured for the `SSN` column.   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![Screenshot of the DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN query and the results of the query.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## Permissions for querying encrypted columns
 
@@ -97,7 +97,7 @@ To enable (disable) Always Encrypted:
 3. If you're using [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] and your SQL Server instance is configured with a secure enclave, you can specify an enclave protocol and enclave attestation url. If your SQL Server instance doesn't use a secure enclave, make sure you leave the **Attestation Protocol** and **Enclave Attestation URL** fields blank. For more information, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
 4. Click **OK** to close **Advanced Properties**.
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+![Short video showing the steps to enable Always Encrypted for the connection.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
 
 > [!TIP]
 > To toggle between Always Encrypted being enabled and disabled for an existing query window, click **Disconnect** and then click **Connnect** and complete the above steps to reconnect to your database with the desired values of the **Always Encrypted** field. 
@@ -107,7 +107,7 @@ To enable (disable) Always Encrypted:
 
 ## Parameterization for Always Encrypted
 
-Parameterization for Always Encrypted is a feature in Azure Data Studio 18.1 and later that automatically converts Transact-SQL variables into query parameters (instances of [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)). This allows the underlying [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) to detect data targeting encrypted columns, and to encrypt such data before sending it to the database.
+Parameterization for Always Encrypted is a feature in Azure Data Studio 18.1 and later that automatically converts Transact-SQL variables into query parameters (instances of [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)). This allows the underlying [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) to detect data targeting encrypted columns, and to encrypt such data before sending it to the database.
   
 Without parameterization, the Microsoft .NET Data Provider for SQL Server passes each statement you author in the query window as a non-parameterized query. If the query contains literals or Transact-SQL variables that target encrypted columns, the .NET Framework Data Provider for SQL Server won't be able to detect and encrypt them before sending the query to the database. As a result, the query will fail due to type mismatch (between the plaintext literal Transact-SQL variable and the encrypted column). For example, the following query will fail without parameterization, assuming the `SSN` column is encrypted.   
 
@@ -128,7 +128,7 @@ To enable/disable Parameterization for Always Encrypted:
 3. Select or unselect **Enable Parameterization for Always Encrypted**.
 4. Close the **Settings** window.
 
-![always-encrypted-ads-parameterization](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
+![Short video showing how to enable/disable Parameterization for Always Encrypted.](../../../relational-databases/security/encryption/media/always-encrypted-ads-parameterization.gif)
 
 > [!NOTE]
 > Parameterization for Always Encrypted works only in a query that use database connections with Always Encrypted enabled (see [Enabling and disabling Always Encrypted for a database connection](#enabling-and-disabling-always-encrypted-for-a-database-connection)). No Transact-SQL variables will be parameterized if the query window uses a database connection without Always Encrypted enabled.
@@ -174,7 +174,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio uses Intellisense to inform you which variables can be successfully parameterized and which parameterization attempts fail (and why).   
 
-A declaration of a variable that can be successfully parameterized is marked with an info message underline in the query window. If you hover on a declaration statement that got marked with an info message underline, you'll see the message containing the results of the parameterization process, including the values of the key properties of the resulting [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) object (the variable is mapped to: [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). You can also see the complete list of all variables that have been successfully parameterized in the **Problems** view. To open the **Problems** view, select **View** > **Problems**.    
+A declaration of a variable that can be successfully parameterized is marked with an info message underline in the query window. If you hover on a declaration statement that got marked with an info message underline, you'll see the message containing the results of the parameterization process, including the values of the key properties of the resulting [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter) object (the variable is mapped to: [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue)). You can also see the complete list of all variables that have been successfully parameterized in the **Problems** view. To open the **Problems** view, select **View** > **Problems**.    
 
 
 

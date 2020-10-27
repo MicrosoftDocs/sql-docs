@@ -5,7 +5,7 @@ description: In this five-part tutorial series, you'll learn how to embed R code
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2020
+ms.date: 10/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -68,6 +68,10 @@ In [part five](r-taxi-classification-deploy-model.md), you'll learn how to opera
 + Install [R libraries](../package-management/r-package-information.md)
 
 + [Grant permissions to execute Python scripts](../security/user-permission.md)
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
++ Starting in SQL Server 2019, the isolation mechanism requires you to give appropriate permissions to the directory where the plot file is stored. For more information on how to set these permissions, see the [File permissions section in SQL Server 2019 on Windows: Isolation changes for Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
+::: moniker-end
 
 + Restore the [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 

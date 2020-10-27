@@ -69,7 +69,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 TYPE = [HADOOP | BLOB_STORAGE]   
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 For bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.
-The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
 
@@ -99,7 +99,6 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
 ```
-
  The following example alters the credential to a new LOCATION. This example is an external data source created for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
 ```sql  

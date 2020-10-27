@@ -24,6 +24,7 @@ While the SQL Database Project extension for Azure Data Studio provides a graphi
     - Microsoft.Data.Tools.Schema.Sql.dll
     - Microsoft.Data.Tools.Schema.Tasks.Sql.dll
     - Microsoft.Data.Tools.Utilities.dll
+    - System.Io.Packaging.dll
     - Microsoft.SqlServer.Dac.dll
     - Microsoft.SqlServer.Dac.Extensions.dll
     - Microsoft.SqlServer.TransactSql.ScriptDom.dll

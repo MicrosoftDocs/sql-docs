@@ -49,8 +49,8 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**identity**|**nvarchar(128)**|Identity used to authenticate with the cryptographic provider.|  
 |**spid**|**short**|Session ID SPID of the connection. For more information, see [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
-## Remarks  
- The **sys.dm_cryptographic_provider_sessions** view is visible to the public for the current connection. To view all cryptographic connections, you must have the **CONTROL** server permission.  
+## Permissions  
+ Members of the public server role can use **sys.dm_cryptographic_provider_sessions** to return information about the current connection. To view all cryptographic connections, the **CONTROL** server permission is required.  
   
 ## See Also  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

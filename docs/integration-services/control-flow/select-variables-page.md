@@ -37,6 +37,5 @@ ms.author: chugu
  Specifies the data type of a variable.  
   
 ## See Also  
- [Script Task Editor &#40;Script Page&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
-  
+ [Script Task Editor &#40;Script Page&#41;](./script-task.md)  
   

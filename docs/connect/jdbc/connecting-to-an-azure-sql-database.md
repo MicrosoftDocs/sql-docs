@@ -18,9 +18,9 @@ ms.author: v-daenge
 
 This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
   
-- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL Database](/azure/sql-database/sql-database-technical-overview)  
   
-- [How to: Connect to Azure SQL Using JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [How to: Connect to Azure SQL Using JDBC](/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
   
@@ -85,4 +85,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## See also
 
-[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)

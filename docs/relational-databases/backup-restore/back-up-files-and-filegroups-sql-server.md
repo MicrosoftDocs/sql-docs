@@ -196,7 +196,7 @@ GO
   
 ## <a name="PowerShellProcedure"></a> Using PowerShell
 
-Set up and use the [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md).
+Set up and use the [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
   
 Use the **Backup-SqlDatabase** cmdlet and specify **Files** for the value of the **-BackupAction** parameter. Also, specify one of the following parameters:  
   
@@ -220,4 +220,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [File Restores &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [File Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
+ [File Restores &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)

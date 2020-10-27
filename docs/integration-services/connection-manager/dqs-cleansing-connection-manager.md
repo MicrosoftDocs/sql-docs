@@ -25,8 +25,7 @@ ms.author: chugu
 >  The DQS Cleansing connection manager supports only Windows Authentication.  
   
 ## Related Tasks  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically. For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [DQS Cleansing Transformation Editor Dialog Box](../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+ You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically. For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [DQS Cleansing Transformation Editor Dialog Box](../data-flow/transformations/dqs-cleansing-transformation.md).  
   
  For information about configuring a connection manager programmatically, see documentation for the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> class in the Developer Guide.  
-  
   

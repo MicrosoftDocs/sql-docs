@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "docs/sql-server/sql-server-privacy-ver15.md",
+      "redirect_url": "/sql/sql-server/sql-server-privacy",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/2014/2014-toc/case-study-building-an-enterprise-ecosystem.md",
       "redirect_url": "/previous-versions/sql/2014/2014-toc/case-study-building-an-enterprise-ecosystem",
       "redirect_document_id": false
@@ -41176,6 +41181,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/big-data-cluster/cluster-troubleshoot-overview.md",
+      "redirect_url": "/sql/big-data-cluster/view-cluster-status#big-data-clusters-troubleshooting-resources",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/relational-databases/polybase/data-virtualization-csv.md",
       "redirect_url": "/sql/big-data-cluster/data-virtualization-csv",
       "redirect_document_id": true
@@ -41208,6 +41218,11 @@
     {
       "source_path": "docs/sql-server/sql-server-ver15-release-notes.md",
       "redirect_url": "/sql/sql-server/sql-server-version-15-release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/deploy-active-directory.md",
+      "redirect_url": "/sql/big-data-cluster/active-directory-prerequisites",
       "redirect_document_id": false
     },
     {
@@ -46087,7 +46102,7 @@
     },
     {
       "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-byok-azure-sql.md",
-      "redirect_url": "/azure/sql-database//transparent-data-encryption-byok-azure-sql",
+      "redirect_url": "/azure/sql-database/transparent-data-encryption-byok-azure-sql",
       "redirect_document_id": false
     },
     {
@@ -46184,11 +46199,6 @@
       "source_path": "docs/integration-services/integration-services-ssis-scale-out.md",
       "redirect_url": "/sql/integration-services/scale-out/integration-services-ssis-scale-out",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "docs/ssdt/sql-server-tools.md",
-      "redirect_url": "/sql/tools/overview-sql-tools",
-      "redirect_document_id": false
     },
     {
       "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager.md",
@@ -51857,7 +51867,7 @@
     },
     {
       "source_path": "docs/2014/sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md",
-      "redirect_url": "/en-us/sql/sql-server/install/install-sql-server-business-intelligence-features?view=sql-server-2014",
+      "redirect_url": "/sql/sql-server/install/install-sql-server-business-intelligence-features?view=sql-server-2014",
       "redirect_document_id": false
     },
     {
@@ -57586,6 +57596,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/sql/language-extensions/install/install-sql-server-language-extensions-on-windows.md",
+      "redirect_url": "/sql/language-extensions/install/windows-java",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/sql/linux/sql-server-linux-setup-language-extensions.md",
+      "redirect_url": "/sql/linux/sql-server-linux-setup-language-extensions-java",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "docs/linux/index.md",
       "redirect_url": "/sql/linux/sql-server-linux-overview",
       "redirect_document_id": false
@@ -58787,7 +58807,7 @@
     },
     {
       "source_path": "docs/relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md",
-      "redirect_url": "https://docs.microsoft.com/azure/azure-subscription-service-limits",
+      "redirect_url": "/azure/azure-subscription-service-limits",
       "redirect_document_id": false
     },
     {
@@ -58867,12 +58887,12 @@
     },
     {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md",
-      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-connect-with-windows-auth",
+      "redirect_url": "/azure/data-factory/ssis-azure-connect-with-windows-auth",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integration-services/lift-shift/ssis-azure-files-file-shares.md",
-      "redirect_url": "https://docs.microsoft.com/azure/data-factory/ssis-azure-files-file-shares",
+      "redirect_url": "/azure/data-factory/ssis-azure-files-file-shares",
       "redirect_document_id": false
     },
     {
@@ -58882,7 +58902,7 @@
     },
     {
       "source_path": "docs/relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md",
-      "redirect_url": "https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)",
+      "redirect_url": "/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)",
       "redirect_document_id": false
     },
     {
@@ -59033,6 +59053,16 @@
     {
       "source_path": "docs/azure-data-studio/notebooks-tutorial-sql-kernel.md",
       "redirect_url": "/sql/azure-data-studio/notebooks/notebooks-sql-kernel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssms/tutorials/connect-query-sql-server.md",
+      "redirect_url": "/sql/ssms/quickstarts/connect-query-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/azure-data-studio/sanddance-extension.md",
+      "redirect_url": "/sql/azure-data-studio/extensions/sanddance-extension",
       "redirect_document_id": true
     }
   ]

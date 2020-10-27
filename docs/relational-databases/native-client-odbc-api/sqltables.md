@@ -51,7 +51,6 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## See Also  
- [SQLTables Function](https://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables Function](../../odbc/reference/syntax/sqltables-function.md)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

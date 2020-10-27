@@ -62,7 +62,7 @@ GO
  The available levels of non-transactional access are FULL, READ_ONLY, and OFF.  
   
  **Specify the level of non-transactional access by using Transact-SQL**  
- - When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.
+ - When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.
 
    ```sql
    CREATE DATABASE database_name  
@@ -88,7 +88,7 @@ GO
  The name that you specify must be unique across the instance for database-level directories.  
   
 **Specify a directory for FileTables by using Transact-SQL**  
-- When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option.
+- When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) statement with the **DIRECTORY_NAME** FILESTREAM option.
 
    ```sql
    CREATE DATABASE database_name  
@@ -104,7 +104,7 @@ GO
     GO  
     ```  
   
--   When you **attach a database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) statement with the **FOR ATTACH** option and with the **DIRECTORY_NAME** FILESTREAM option.  
+-   When you **attach a database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) statement with the **FOR ATTACH** option and with the **DIRECTORY_NAME** FILESTREAM option.  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -147,5 +147,4 @@ GO
 -   When you enable or disable non-transactional access at the database level, the operation does not check whether the directory name has been specified or whether it is unique.  
   
 -   When you drop a database that was enabled for FileTables, the database-level directory and all the directory structures of all the FileTables under it are removed.  
-  
   

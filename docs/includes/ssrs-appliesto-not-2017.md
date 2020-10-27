@@ -11,4 +11,4 @@
 ---
 
 
- ![No](media/no-icon.png)SQL Server Reporting Services (2017)
+ :::image type="icon" source="media/no-icon.png":::SQL Server Reporting Services (2017)

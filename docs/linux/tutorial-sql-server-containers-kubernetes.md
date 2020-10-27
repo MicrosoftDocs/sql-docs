@@ -2,8 +2,8 @@
 title: Deploy a SQL Server container with Azure Kubernetes Services (AKS)
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Kubernetes Service.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 09/01/2020
 ms.topic: tutorial
@@ -46,7 +46,7 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 * **Kubernetes cluster**
    - The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) to manage the cluster. 
 
-   - See [Deploy an Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
+   - See [Deploy an Azure Kubernetes Service (AKS) cluster](/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
 
    >[!NOTE]
    >To protect against node failure, a Kubernetes cluster requires more than one node.
@@ -79,7 +79,7 @@ Configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/pers
 
    ```yaml
    kind: StorageClass
-   apiVersion: storage.k8s.io/v1beta1
+   apiVersion: storage.k8s.io/v1
    metadata:
         name: azure-disk
    provisioner: kubernetes.io/azure-disk
@@ -169,6 +169,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:
@@ -290,9 +291,9 @@ If you configured the container as described, you can connect with an applicatio
 
 You can use the following applications to connect to the SQL Server instance. 
 
-* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](./sql-server-linux-manage-ssms.md)
 
-* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](./sql-server-linux-develop-use-ssdt.md)
 
 * sqlcmd
 
@@ -343,4 +344,4 @@ In this tutorial, you learned how to deploy SQL Server containers to a Kubernete
 ## Next steps
 
 > [!div class="nextstepaction"]
->[Introduction to Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Introduction to Kubernetes](/azure/aks/intro-kubernetes)

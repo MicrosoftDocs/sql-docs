@@ -31,6 +31,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |condition_value|**bit**|Indicates whether the alert is allowed to occur during system operation.|NULL<br /><br /> Possible values<br /><br /> 0 - alert is not generated.<br /><br /> 1 - alert is generated.|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

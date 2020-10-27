@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.memory_optimized_tables_internal_attributes catalog view"
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-author: "jodebrui"
-ms.author: "jodebrui"
+author: "kevin-farlee"
+ms.author: "kfarlee"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)

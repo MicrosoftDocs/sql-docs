@@ -50,7 +50,7 @@ The end result is a reduction in extraneous recompilations and CPU-overhead.
 
 ### System Tables
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the data that defines the configuration of the server and all its tables in a special set of tables known as system tables. Users cannot directly query or update the system tables. The information in the system tables is made available through the system views. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the data that defines the configuration of the server and all its tables in a special set of tables known as system tables. Users cannot directly query or update the system tables. The information in the system tables is made available through the system views. For more information, see [System Views &#40;Transact-SQL&#41;](../../t-sql/language-reference.md). 
  
 ### Wide Tables
 
@@ -98,5 +98,3 @@ Wide tables have the following performance implications.
 ## See Also
  [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 
  [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
-
-

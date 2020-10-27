@@ -5,7 +5,7 @@ description: Manage instances of SQL Server with Azure Arc enabled SQL Server
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
@@ -33,19 +33,18 @@ Azure Arc enabled SQL Server supports SQL Server 2012 or higher running on one o
 
 - Windows Server 2012 R2 and higher
 - Ubuntu 16.04 and 18.04 (x64)
-- CentOS Linux 7 (x64)
+- Red Hat Enterprise Linux (RHEL) 7 (x64) 
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
 
 ### Required permissions
 
 To connect the SQL Server instances and the hosting to Azure Arc, you must have an account with privileges to perform the following actions:
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read
 
-For optimal security, we recommend creating a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](https://docs.microsoft.com/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-cli).
+For optimal security, we recommend creating a custom role in Azure that has the minimal permissions listed. For information on how to create a custom role in Azure with these permissions, see [Custom roles overview](/azure/active-directory/users-groups-roles/roles-custom-overview). To add role assignment, see [Add or remove role assignments using Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
 ### Azure subscription and service limits
 

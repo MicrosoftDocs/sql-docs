@@ -27,7 +27,11 @@ ms.author: chugu
   
 -   CDC Instance Properties Editor: This dialog box is used to edit any existing Oracle CDC Service instance. For information about editing the CDC instance properties, see [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- The MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ Download Microsoft Change Data Capture Designer for Oracle by Attunity for corresponding SQL Server version from below links:
+
+- [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303) 
   
 ## In This Documentation  
   

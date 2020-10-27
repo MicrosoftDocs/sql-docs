@@ -55,7 +55,7 @@ This topic introduces the steps for configuring instances of [!INCLUDE[ssCurrent
   
 |Task|Link|  
 |----------|----------|  
-|Modify the [flexible failover policy](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) of the availability group to control the conditions that cause an automatic failover. This policy is relevant only when automatic failover is possible.|[Configure the flexible failover policy of an availability group](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
+|Modify the [flexible failover policy](./configure-flexible-automatic-failover-policy.md) of the availability group to control the conditions that cause an automatic failover. This policy is relevant only when automatic failover is possible.|[Configure the flexible failover policy of an availability group](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
 |Perform a planned manual failover or a forced manual failover (with possible data loss), typically called *forced failover*. For more information, see [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).|[Perform a planned manual failover](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Perform a forced manual failover](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |Use a set of predefined policies to view the health of an availability group and its replicas and databases.|[Use policy-based management to view the health of availability groups](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Use the Always On Group Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |Add or remove a secondary replica.|[Add a secondary replica](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Remove a secondary replica](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -84,9 +84,9 @@ This topic introduces the steps for configuring instances of [!INCLUDE[ssCurrent
   
 -   **Video-A Deep Dive into Always On:**  [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Whitepaper:**  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **Whitepaper:**  [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   **Blogs:**  [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
+-   **Blogs:**  [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
 ## See Also  
  [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -96,5 +96,4 @@ This topic introduces the steps for configuring instances of [!INCLUDE[ssCurrent
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Overview of Transact-SQL Statements for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Overview of PowerShell Cmdlets for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

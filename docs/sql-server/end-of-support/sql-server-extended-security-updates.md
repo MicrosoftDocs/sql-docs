@@ -318,7 +318,7 @@ For advice on how to optimize performance for [!INCLUDE[ssNoVersion](../../inclu
 - [SQL Server 2008 / 2008 R2 end of support page](https://aka.ms/sqleos)
 - [Extended Security Updates frequently asked questions (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Manage Windows updates by using Azure Automation](/azure/automation/automation-tutorial-update-management)
+- [Manage Windows updates by using Azure Automation](/azure/automation/update-management/overview)
 - [SQL Server VM automated patching](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Microsoft Data Migration Guide](https://datamigration.microsoft.com/)
 - [Azure migrate: lift-and-shift options to move your current SQL Server 2008 / 2008 R2 into an Azure VM](https://azure.microsoft.com/services/azure-migrate/)

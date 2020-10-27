@@ -31,7 +31,7 @@ To demonstrate the benefits of DTA's recommendations on workload performance, we
 In each case, we then implemented the recommended indexes. We report the CPU Time (in milliseconds) averaged over multiple runs of the query or the workload. The figure below plots the CPU time in milliseconds for workloads across two different customer databases. Note that the y-axis (CPU Time) uses a logarithmic scale.   
 
 
-![DTA-columnstore-rowstore-performance](../../relational-databases/performance/media/dta-columnstore-rowstore-performance.gif)
+![Screenshot of a bar graph showing DTA columnstore rowstore performance.](../../relational-databases/performance/media/dta-columnstore-rowstore-performance.gif)
 
 
 

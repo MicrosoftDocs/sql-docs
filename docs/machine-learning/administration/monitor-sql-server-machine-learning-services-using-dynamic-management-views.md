@@ -244,9 +244,9 @@ The query returns the following columns:
 | Column                   | Description  |
 |--------------------------|--------------|
 | pool_name                | Name of the resource pool. SQL Server resource pools are prefixed with `SQL Server` and external resource pools are prefixed with `External Pool`. |
-| total_cpu_usage_hours    | The cumulative CPU usage in milliseconds  since the Resource Govenor statistics were reset. |
-| read_io_completed_total  | The total read IOs completed since the Resource Govenor statistics were reset.              |
-| write_io_completed_total | The total write IOs completed since the Resource Govenor statistics were reset.             |
+| total_cpu_usage_hours    | The cumulative CPU usage in milliseconds  since the Resource Governor statistics were reset. |
+| read_io_completed_total  | The total read IOs completed since the Resource Governor statistics were reset.              |
+| write_io_completed_total | The total write IOs completed since the Resource Governor statistics were reset.             |
 
 ## Installed packages
 

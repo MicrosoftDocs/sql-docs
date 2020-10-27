@@ -120,7 +120,7 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
 
    - Permitted usage scenarios
 
-     |Scenario  |Access Restrictions  |Retention Requirements|
+     |Scenario  |Access restrictions  |Retention requirements|
      |---------|---------|---------|
      | Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. </br></br>Microsoft will not use this data for licensing audits without customer's advance consent. | Min 90 days - Max 3 years |
 
@@ -155,11 +155,11 @@ Data needed to provide Internet-based services,  per the SQL Server EULA.
      - Event names and error codes
      - Hardware settings and identification such as OEM Manufacturer
 
-   Microsoft does examine application name values set by other programs that use SQL Server (example: SharePoint or third-party packaged programs and includes this information in metadata fields sent to Microsoft when Usage Data is enabled). Customers should not place personal data, such as end-user identifiable information, in those metadata fields or create applications designed to store personal data in these fields.
+   Microsoft does examine application name values set by other programs that use SQL Server (example: SharePoint or third-party packaged programs and includes this information in metadata fields sent to Microsoft when Usage Data is enabled). Customers should not place personal data in those metadata fields or create applications designed to store personal data in these fields.
 
    - Permitted usage scenarios
 
-     |Scenario  |Access Restrictions  |Retention Requirements|
+     |Scenario  |Access restrictions  |Retention requirements|
      |---------|---------|---------|
      |May be used by Microsoft to improve features and or fix bugs in current features.|Limit to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years |
      |May be used to make suggestions to the customer.  For example, "Based on your usage of the product, consider using feature *X* since it would perform better." |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |

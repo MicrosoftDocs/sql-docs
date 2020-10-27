@@ -76,7 +76,7 @@ When a database collation is changed, only new tables will inherit the new datab
 -  Copy data to new tables that use the new collation, and replace original tables in the same database. Create a new table in the current database that will inherit the database collation, copy the data between the old table and the new table, drop the original table, and rename the new table to the name of the original table. This is a faster operation than an in-place conversion, but may become a challenge when handling complex schemas with dependencies such as Foreign Key contraints, Primary Key constraints, and Triggers. It would also require a final data syncronization between the original and the new table before the final cut-off, if data continues to be changed by applications. See the following example for a "copy and replace" conversion of the `MyString` column to a new collation:
 
    ```sql
-   CREATE TABLE dbo.MyTable2 (VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8); 
+   CREATE TABLE dbo.MyTable2 (MyString VARCHAR(50) COLLATE Latin1_General_100_CI_AI_SC_UTF8); 
    
    INSERT INTO dbo.MyTable2 
    SELECT * FROM dbo.MyTable; 

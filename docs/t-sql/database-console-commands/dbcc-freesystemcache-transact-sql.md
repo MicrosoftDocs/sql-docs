@@ -47,7 +47,13 @@ DBCC FREESYSTEMCACHE
 ## Arguments
 ( 'ALL' [,_pool\_name_ ] )  
 ALL specifies all supported caches.  
-_pool\_name_ specifies a Resource Governor pool cache. Only entries associated with this pool are freed.  
+_pool\_name_ specifies a resource governor pool cache. Only entries associated with this pool are freed. To list the available pool names run:
+
+```sql
+SELECT name FROM sys.dm_os_memory_clerks
+```
+
+Most, but not all, caches can be individually freed using this command.
   
 MARK_IN_USE_FOR_REMOVAL  
 Asynchronously frees currently used entries from their respective caches after they're unused. After the DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL runs, new entries created in the cache aren't affected.  
@@ -56,7 +62,7 @@ NO_INFOMSGS
 Suppresses all informational messages.  
   
 ## Remarks  
-Running DBCC FREESYSTEMCACHE clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: 
+Running DBCC FREESYSTEMCACHE clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all upcoming execution plans and can cause a sudden, temporary reduction in query performance. For each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message:
 
 >`SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to 'DBCC FREEPROCCACHE' or 'DBCC FREESYSTEMCACHE' operations.`
 

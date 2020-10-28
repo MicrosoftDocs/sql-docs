@@ -48,7 +48,7 @@ If the mobile report has any navigators, you can bind a gauge to one or more of 
 
 2. Under Filtered by, select the navigator you want to filter the gauge.
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![Screenshot of the Main Value's Options expanded with the Filter by Product List option selected.](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## Set visual properties for a gauge
   

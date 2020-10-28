@@ -145,7 +145,7 @@ You can also **Download** or **Remove** the package. Removing the package will r
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>  
-<SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+<SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
     type="UniversalBrand"  
     version="2.0.2"  
     name="Multicolored example brand"  

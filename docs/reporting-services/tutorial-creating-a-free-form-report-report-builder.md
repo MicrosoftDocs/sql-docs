@@ -276,7 +276,7 @@ You can add text boxes to display static text that is repeated on each report pa
   
 The report displays static text and each report page includes data that pertains to a territory. Sales are formatted as currency.  
   
-![Screenshot howing the preview of the newsletter page in the report builder free form report.](../reporting-services/media/report-builder-newsletter-page-preview.png)
+![Screenshot showing the preview of the newsletter page in the report builder free form report.](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
 ## <a name="Table"></a>5. Add a Table to Show Sales Details  
 Use the New Table and Matrix Wizard to add a table to the free form report. After you complete the wizard, you will manually add a row for totals.  
@@ -322,7 +322,7 @@ Click **Run** to preview the report.
   
 The report displays a table with sales details and totals.  
   
-![Screenshot showing teh preview of the table in the report builder free form report.](../reporting-services/media/report-builder-free-form-with-table.png)
+![Screenshot showing the preview of the table in the report builder free form report.](../reporting-services/media/report-builder-free-form-with-table.png)
    
 ## <a name="Save"></a>6. Save the Report  
 You can save reports to a report server, SharePoint library, or your computer.  

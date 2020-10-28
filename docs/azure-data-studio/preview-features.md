@@ -92,4 +92,4 @@ You can enable or disable preview features anytime in your Settings.
 
 ## Next steps
 
-* [Azure Data Studio](what-is.md)
+* [Azure Data Studio](what-is-azure-data-studio.md)

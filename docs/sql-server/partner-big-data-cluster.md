@@ -88,4 +88,4 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Docs-->
 [netapp_docs]:https://blog.netapp.com/microsoft-sql-server-big-data-clusters-with-storagegrid/
 [streamsets_docs]:https://streamsets.com/documentation/datacollector/latest/help/datacollector/UserGuide/Destinations/SQLServerBDCBulk.html#concept_hjv_5nn_r3b
-[purestorage_docs]:https://www.purestorage.com/pure-folio/docs.html
+[purestorage_docs]:https://www.purestorage.com/docs.html?item=/type/pdf/subtype/doc/path/content/dam/purestorage/pdf/datasheets/ps_ds3p_entry-level-storage_03.pdf

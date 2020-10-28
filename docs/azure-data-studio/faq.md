@@ -71,7 +71,7 @@ Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue in 
 - Need access to Registered Servers.
 - Make use of live query stats or client statistics.
 
-## Feature Comparison b
+## Feature Comparison
 
 For more details on differences between Azure Data Studio and Sql Server Management Studio (SSMS), visit [What is Azure Data Studio](what-is-azure-data-studio.md#feature-comparison-with-sql-server-management-studio-ssms).
 

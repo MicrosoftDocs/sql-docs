@@ -17,9 +17,7 @@ ms.technology: big-data-cluster
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces SQL Server Big Data Clusters.
-
-Use SQL Server Big Data Clusters to:
+Use [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to:
 
 - [Deploy scalable clusters](./deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes. 
 - Read, write, and process big data from Transact-SQL or Spark.
@@ -40,7 +38,7 @@ For more information about new features and known issues for latest release, see
 
 ### Data virtualization
 
-By leveraging [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces new connectors to data sources.
+By leveraging [PolyBase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] can query external data sources without moving or copying the data. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduces new connectors to data sources.
 
 ![Data virtualization](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -91,7 +89,7 @@ In [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 ### Big data clusters architecture
 
-The following diagram shows the components of a big data cluster for SQL Server.
+The following diagram shows the components of a SQL Server big data cluster:
 
 ![Architecture overview](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
@@ -116,4 +114,4 @@ The storage pool consists of storage pool pods comprised of SQL Server on Linux,
 
 ## Next steps
 
-For more information about deploying SQL Server Big Data Clusters, see [Get started with SQL Server Big Data Clusters](deploy-get-started.md).
+For more information about deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).

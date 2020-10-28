@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes the role of the *SQL Server master instance* in a big data cluster for SQL Server 2019. The master instance is a SQL Server instance running in a big data cluster to manage connectivity, scale-out queries, metadata and user databases, and machine learning services.
+This article describes the role of the *SQL Server master instance* in a SQL Server big data cluster. The master instance is a SQL Server instance running in a SQL Server big data cluster to manage connectivity, scale-out queries, metadata and user databases, and machine learning services.
 
 The SQL Server master instance provides the following functionality:
 
@@ -31,8 +31,8 @@ The SQL Server master instance contains the scale-out query engine that is used 
 
 In addition to the standard SQL Server system databases, the SQL master instance also contains the following:
 
-- A metadata database that holds HDFS-table metadata
-- A data plane shard map
+- A metadata database that holds HDFS-table metadata.
+- A data plane shard map.
 - Details of external tables that provide access to the cluster data plane.
 - PolyBase external data sources and external tables defined in user databases.
 
@@ -46,9 +46,9 @@ As part of a SQL Server big data cluster, machine learning services will be avai
 
 ### Advantages of machine learning services in a big data cluster
 
-SQL Server 2019 makes it easy for big data to be joined to the dimensional data typically stored in the enterprise database. The value of the big data greatly increases when it is not just in the hands of parts of an organization, but is also included in reports, dashboards, and applications. At the same time, data scientists can continue to use the Spark/HDFS ecosystem tools and have easy, real time access to the data in the SQL Server master instance and in external data sources accessible _through_ the SQL Server master instance.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] makes it easy for big data to be joined to the dimensional data typically stored in the enterprise database. The value of the big data greatly increases when it is not just in the hands of parts of an organization, but is also included in reports, dashboards, and applications. At the same time, data scientists can continue to use the Spark/HDFS ecosystem tools and have easy, real time access to the data in the SQL Server master instance and in external data sources accessible _through_ the SQL Server master instance.
 
-With [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], you can do more with your enterprise data lakes. SQL Server developers and analysts can:
+With [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], you can do more with your enterprise data lakes. SQL Server developers and analysts can:
 
 * Build applications consuming data from enterprise data lakes.
 * Reason over all data with Transact-SQL queries.

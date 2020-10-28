@@ -23,25 +23,26 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Feature Summary for Product Releases  
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Batch mode execution for multi-threaded queries|yes|yes|yes|yes|yes|yes| 
-|Batch mode execution for single-threaded queries|||yes|yes|yes|yes|  
-|Archival compression option||yes|yes|yes|yes|yes|  
-|Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|yes| 
-|Specify columnstore index when creating a table|||yes|yes|yes|yes|  
-|Always On supports columnstore indexes|yes|yes|yes|yes|yes|yes| 
-|Always On readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
-|Always On readable secondary supports updateable columnstore indexes|||yes|yes|||  
-|Read-only nonclustered columnstore index on heap or B-tree|yes|yes|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|  
-|Updateable nonclustered columnstore index on heap or B-tree|||yes|yes|yes|yes|  
-|Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
-|Updateable clustered columnstore index||yes|yes|yes|yes|yes|  
-|B-tree index on a clustered columnstore index|||yes|yes|yes|yes|  
-|Columnstore index on a memory-optimized table|||yes|yes|yes|yes|  
-|Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|  
-|Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|
-|Columnstore index can have a non-persisted computed column||||yes|||   
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|Batch mode execution for multi-threaded queries|yes|yes|yes|yes|yes|yes|yes| 
+|Batch mode execution for single-threaded queries|||yes|yes|yes|yes|yes|  
+|Archival compression option||yes|yes|yes|yes|yes|yes|  
+|Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|yes|yes| 
+|Specify columnstore index when creating a table|||yes|yes|yes|yes|yes|  
+|Always On supports columnstore indexes|yes|yes|yes|yes|yes|yes|yes| 
+|Always On readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|  
+|Always On readable secondary supports updateable columnstore indexes|||yes||yesyes|||  
+|Read-only nonclustered columnstore index on heap or B-tree|yes|yes|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|yes <sup>1</sup>|  
+|Updateable nonclustered columnstore index on heap or B-tree|||yes|yes|yes|yes|yes|  
+|Additional B-tree indexes allowed on a heap or B-tree that has a nonclustered columnstore index|yes|yes|yes|yes|yes|yes|yes|  
+|Updateable clustered columnstore index||yes|yes|yes||yesyes|yes|  
+|B-tree index on a clustered columnstore index|||yes|yes||yesyes|yes|  
+|Columnstore index on a memory-optimized table|||yes|yes||yesyes|yes|  
+|Nonclustered columnstore index definition supports using a filtered condition|||yes|yes|yes|yes|yes|  
+|Compression delay option for columnstore indexes in `CREATE TABLE` and `ALTER TABLE`|||yes|yes|yes|yes|yes|
+|Columnstore index can have a non-persisted computed column||||yes|yes|||   
+|Tuple mover background merge support||||||yes|yes|yes|
   
  <sup>1</sup> To create a read-only nonclustered columnstore index, store the index on a read-only filegroup.  
  
@@ -52,13 +53,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] adds these new features.
 
 ### Functional
-- Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple-mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. Previously, an index reorganize operation was needed to merge rowgroups with partially deleted data. This improves the columnstore index quality over time. 
+- Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the tuple mover is helped by a background merge task that automatically compresses smaller OPEN delta rowgroups that have existed for some time as determined by an internal threshold, or merges COMPRESSED rowgroups from where a large number of rows has been deleted. Previously, an index reorganize operation was needed to merge rowgroups with partially deleted data. This improves the columnstore index quality over time. 
 
-## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adds these new features.
+## [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] adds these new features.
 
 ### Functional
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supports non-persisted computed columns in clustered columnstore indexes. Persisted computed columns are not supported in clustered columnstore indexes. You cannot create a nonclustered index on a columnstore index that has a computed column. 
+- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] supports non-persisted computed columns in clustered columnstore indexes. Persisted computed columns are not supported in clustered columnstore indexes. You cannot create a nonclustered index on a columnstore index that has a computed column. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. These improvements enhance data warehousing scenarios and enable real-time operational analytics.  

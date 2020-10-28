@@ -45,8 +45,8 @@ FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
  [ IGNORE NULLS | RESPECT NULLS ]     
  **Applies to**: Azure SQL Edge
 
- IGNORE NULLS - Ignore null values in the dataset when computing the last value over a partition.     
- RESPECT NULLS - Respect null values in the dataset when computing last value over a partition.     
+ IGNORE NULLS - Ignore null values in the dataset when computing the first value over a partition.     
+ RESPECT NULLS - Respect null values in the dataset when computing first value over a partition.     
  
   For more information, see [Imputing missing values](/azure/azure-sql-edge/imputing-missing-values/).
   

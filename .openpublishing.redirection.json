@@ -59064,6 +59064,11 @@
       "source_path": "docs/azure-data-studio/sanddance-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/sanddance-extension",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/what-is.md",
+      "redirect_url": "/sql/azure-data-studio/what-is-azure-data-studio.md",
+      "redirect_document_id": true
     }
   ]
 }

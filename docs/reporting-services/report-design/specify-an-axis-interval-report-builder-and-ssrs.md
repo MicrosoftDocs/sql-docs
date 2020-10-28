@@ -32,24 +32,24 @@ To try setting the axis interval with sample data, see [Tutorial: Add a Column C
 
 In this column chart, the horizontal label interval is set to Auto.
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![Screenshot of a report builder column chart preview with the x-axis interval set to Auto.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  Right-click the category axis and click **Horizontal Axis Properties**.   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![Screenshot of a report builder column chart showing how to set x-axis labels.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
 2.  In the **Horizontal Axis Properties** dialog box > **Axis Options** tab, set **Interval** to **1** to show every category group label. To show every other category group label on the x-axis, type **2**. 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![Screenshot of a report builder column chart showing how to set the x-axis interval to one.](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    Now the column chart displays all its horizontal axis labels.
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  When you set an axis interval, all automatic labeling is disabled. If you specify a value for the axis interval, you may see unpredictable labeling behavior, depending on how many categories are on the category axis.  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     Now the column chart displays all its horizontal axis labels.
+     
+     ![Screenshot of the report builder column chart preview showing x-axis labels.](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  When you set an axis interval, all automatic labeling is disabled. If you specify a value for the axis interval, you may see unpredictable labeling behavior, depending on how many categories are on the category axis.  
 
 ## Change the label interval in Properties pane
 
@@ -59,13 +59,13 @@ You can also set the label interval in the Properties pane.
 
 3. In the Properties pane, set LabelInterval to **1**.
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![Screenshot of the report builder column chart showing how to set the label interval.](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     The chart looks the same in design view. 
     
 5.  Click **Run** to preview the report.
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![Screenshot of the report builder column chart preview showing the label interval of one.](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     Now the chart displays all its labels.
   

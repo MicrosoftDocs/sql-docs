@@ -113,8 +113,7 @@ As SQL Server extends its capabilities into the Big Data space, it needs new too
 Yes.
 
 However, not all VS Code extensions translate to Azure Data Studio.
-[ADS] 
-## Next Steps
 
+## Next Steps
 - [What is Azure Data Studio](what-is-azure-data-studio.md)
 - [Download Azure Data Studio](download-azure-data-studio.md)

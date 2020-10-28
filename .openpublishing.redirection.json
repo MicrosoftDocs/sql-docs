@@ -59067,7 +59067,7 @@
     },
     {
       "source_path": "docs/azure-data-studio/what-is.md",
-      "redirect_url": "/sql/azure-data-studio/what-is-azure-data-studio.md",
+      "redirect_url": "/sql/azure-data-studio/what-is-azure-data-studio",
       "redirect_document_id": true
     }
   ]

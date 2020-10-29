@@ -45,7 +45,7 @@ will be automatically removed after execution. If you already have another *Cust
 4. If you want initiate SQL Assessment from the Portal by clicking **Configure SQL Assessment**, a standard deployment bubble will show up.
 
 > [!div class="mx-imgBorder"]
-   > [ ![Screenshot showing deploymentof the CustomScriptExtension.](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment#lightbox)
+   > [ ![Screenshot showing deploymentof the CustomScriptExtension.](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
 
 5. If you prefer initiating SQL Assessment from the target machine, click **Download configuration script**, copy the downloaded script to the target machine and and execute one of the following code blocks in a admin instance of **powershell.exe**:
 

@@ -44,4 +44,4 @@ The following issues apply to this release:
 
 ## Next steps
 
-**Just want to try things out?**  Get started quickly with [Azure Arc enabled SQL Server Jumpstart](http://aka.ms/AzureArcSqlServerJumpstart).
+**Just want to try things out?**  Get started quickly with [Azure Arc enabled SQL Server Jumpstart](https://aka.ms/AzureArcSqlServerJumpstart).

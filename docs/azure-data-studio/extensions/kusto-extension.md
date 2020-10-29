@@ -13,7 +13,7 @@ ms.date: 09/22/2020
 
 # Kusto (KQL) extension for Azure Data Studio (Preview)
 
-The Kusto (KQL) extension for [Azure Data Studio](../what-is.md) enables you to connect and query to [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) clusters.
+The Kusto (KQL) extension for [Azure Data Studio](../what-is-azure-data-studio.md) enables you to connect and query to [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) clusters.
 
 Users can write and run KQL queries and author notebooks with the [Kusto kernel](../notebooks/notebooks-kusto-kernel.md) complete with IntelliSense.
 

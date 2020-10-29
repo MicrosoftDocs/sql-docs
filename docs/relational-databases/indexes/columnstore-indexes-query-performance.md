@@ -89,7 +89,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more details about rowgroups, see [Columnstore Index Design Guidelines](../../relational-databases/sql-server-index-design-guide.md#columnstore_index).    
     
 ### Batch Mode Execution    
- Batch mode  execution refers to processing a set of rows, typically up to 900 rows, together for execution efficiency. For example, the query `SELECT SUM (Sales) FROM SalesData` aggregates the total sales from the table SalesData. In batch mode execution, the query execution engine computes the aggregate in group of 900 values. This spreads metadata  the access costs and other types of overhead over all the rows in a batch, rather than paying the cost for each row thereby significantly reducing the code path. Batch mode processing operates on compressed data when possible and eliminates some of the exchange operators used by row mode processing. This speeds up execution of analytics queries by orders of magnitude.    
+ [Batch mode execution](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) refers to processing a set of rows, typically up to 900 rows, together for execution efficiency. For example, the query `SELECT SUM (Sales) FROM SalesData` aggregates the total sales from the table SalesData. In batch mode execution, the query execution engine computes the aggregate in group of 900 values. This spreads metadata  the access costs and other types of overhead over all the rows in a batch, rather than paying the cost for each row thereby significantly reducing the code path. Batch mode processing operates on compressed data when possible and eliminates some of the exchange operators used by row mode processing. This speeds up execution of analytics queries by orders of magnitude.    
     
  Not all query execution operators can be executed in batch mode. For example, DML operations such as Insert, Delete or Update are executed row at a time. Batch mode operators target  operators for speeding up query performance such as Scan, Join, Aggregate, sort and so on. Since the columnstore index was introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], there is a sustained effort to expand the operators that can be executed in the batch mode. The table below shows the operators that run in batch mode according to the product version.    
     
@@ -113,6 +113,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |window aggregates||NA|NA|yes|New operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+
+For more information, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
     
 ### Aggregate Pushdown    
  A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 

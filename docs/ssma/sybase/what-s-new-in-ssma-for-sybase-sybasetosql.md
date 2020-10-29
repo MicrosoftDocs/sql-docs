@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "9/28/2020"
+ms.date: "10/28/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,14 @@ ms.author: alexiva
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for SAP ASE contains the following changes:
+
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
 
 ## SSMA v8.14
 

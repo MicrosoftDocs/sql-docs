@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/29/2020
 ---
 
 # Kusto (KQL) extension for Azure Data Studio (Preview)
@@ -127,9 +127,9 @@ The [SandDance extension](sanddance-extension.md) with the Kusto (KQL) extension
 
 | Details | Workaround |
 |---------|------------|
-| [In Kusto Notebook, Changing a database connection on a saved alias connection is stuck after an error in code cell execution](https://github.com/microsoft/azuredatastudio/issues/12384) | Close and repoen the Notebook, then connect to the right cluster with the database |
-| [In Kusto Notebook, changing a database connection on a non-saved alias connection does not work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlewt and save it with an alias. Then create a new notebook and connect to the newly saved connection) | 
-| [In Kusto Notebook, the database dropdown is not populated when creating a new ADX connection](https://github.com/microsoft/azuredatastudio/issues/12666) | Create a new connection from Connection Viewlewt and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
+| [In Kusto Notebook, Changing a database connection on a saved alias connection is stuck after an error in code cell execution](https://github.com/microsoft/azuredatastudio/issues/12384) | Close and reopen the Notebook, then connect to the right cluster with the database |
+| [In Kusto Notebook, changing a database connection on a non-saved alias connection doesn't work](https://github.com/microsoft/azuredatastudio/issues/12843) |Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) | 
+| [In Kusto Notebook, the database dropdown isn't populated when creating a new ADX connection](https://github.com/microsoft/azuredatastudio/issues/12666) | Create a new connection from Connection Viewlet and save it with an alias. Then create a new notebook and connect to the newly saved connection) |
 
 You can file a [feature request](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) to provide feedback to the product team.  
 You can file a [bug](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) to provide feedback to the product team.

@@ -79,7 +79,7 @@ In this section, you add a map to your report from the map gallery. The map has 
   
     -   A distance scale that displays kilometers (km) and miles (mi).  
     
-    ![Screenshot of the Choose color theme and sta visualization step of the New Map wizard.](../reporting-services/media/report-builder-map-choose-color-theme.png)
+    ![Screenshot of the Choose color theme and data visualization step of the New Map wizard.](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
 14. Click **Finish**.  
   

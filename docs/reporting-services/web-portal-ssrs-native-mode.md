@@ -96,7 +96,7 @@ The files are stored within Reporting Services, similar to other resource files.
 
 Enter a search term, and see everything you can access. The results are categorized into KPIs, reports, datasets, and other items. You can then interact with the results and add them to your favorites.
 
-![Screenshot showing  the SQL Server Reporting Servers portal with the Search text box called.](../reporting-services/media/ssrswebportal-search.png)
+![Screenshot showing  the SQL Server Reporting Servers portal with the Search text box called out.](../reporting-services/media/ssrswebportal-search.png)
 
 ## Web portal tasks
 

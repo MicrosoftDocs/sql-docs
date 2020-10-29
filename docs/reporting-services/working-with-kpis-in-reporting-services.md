@@ -83,7 +83,7 @@ To use data from a shared dataset, you can do the following steps.
   
 6. Select **Apply**.  
   
-    ![Screenshot of the KPIs showing that the Datasets has 2 items.](../reporting-services/media/rscreatekpi7.png)
+    ![Screenshot of the KPIs showing that the Datasets has two items.](../reporting-services/media/rscreatekpi7.png)
 
 ## Configuring related content
 
@@ -111,7 +111,7 @@ To remove a KPI, you can do the following steps.
   
 2. Select **Delete**. Select **Delete** again on the confirmation dialog.  
   
-    ![Screenshot of teh Delete option.](../reporting-services/media/rsremovekpi2.png)  
+    ![Screenshot of the Delete option.](../reporting-services/media/rsremovekpi2.png)  
   
 ## Refreshing a KPI  
   

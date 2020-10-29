@@ -255,7 +255,7 @@ In this section, you rotate some of the text in the table from the previous sect
   
 Now the text in the `[Territory]` cell runs vertically from the bottom to the top of the cells.  
 
-![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
+![Screenshot showing the Territory values rotated 270 degrees.](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="FormatCurrency"></a>Format Currency  
   

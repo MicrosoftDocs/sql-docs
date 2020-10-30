@@ -65,6 +65,28 @@ For instructions for how to create an attestation provider and configure with an
 - Azure Powershell - see [Quickstart: Set up Azure Attestation with Azure PowerShell](https://docs.microsoft.com/azure/attestation/quickstart-powershell)
 - ARM templates - see [Quickstart: Create an Azure Attestation provider with an ARM template](https://docs.microsoft.com/azure/attestation/quickstart-template?tabs=CLI)
 
+## Determine the attestation URL for your attestation policy
+
+As an administrator of the attestation policy, you need to determine the attestation URL referencing the policy and share it with administrators or users of database client applications in your organization. Client application admins or users will need to configure their apps with the attestation URL, so that they can run statements that use secure enclaves.
+
+### Using PowerShell
+
+```powershell
+$attestationProvider = Get-AzAttestation -Name $attestationProviderName -ResourceGroupName $attestationResourceGroupName 
+$attestationUrl = $attestationProvider.AttestUri + “/attest/SgxEnclave?api-version=2018-09-01-preview”
+Write-Host "Your attestation URL is: " $attestationUrl 
+```
+
+### Using Azure Portal
+
+1. In the Overview pane for you attestation provider copy the value of the Attest URI property to clipboard. An Attest URI should look like this: ht<span>tps://MyAttestationProvider.us.attest.azure.net.
+
+2. Paste the Attest URI property values in a text editor. Append the following to the Attest URI: /attest/SgxEnclave?api-version=2018-09-01-preview. 
+
+The resulting attestation URL should look like this:
+
+> ht<span>tps://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview
+
 ## Grant your Azure SQL database server access to your attestation provider
 
 During the attestation workflow, the Azure SQL database server, containing your database, calls the attestation provider to submit an attestation request. For the Azure SQL database server to be able to submit attestation requests, the server must have a permission for the Microsoft.Attestation/attestationProviders/attestation/read action on the attestation provider. The recommended way to grant the permission is for the administrator of the attestation provider to assign the Azure AD identity of the server to the Attestation Reader role for the attestation provider or its containing resource group.

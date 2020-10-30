@@ -110,7 +110,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 ## Examples  
 
-### A. Generates dump files for errors
+### A. Generate dump files for errors
 
  The following example specifies that the Integration Services server generates dump files when any error occurs during a package execution.  
   

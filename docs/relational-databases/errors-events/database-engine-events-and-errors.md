@@ -8398,7 +8398,7 @@ ORDER BY message_id
 |    23207    |    16    |    No    |    Could not add Share item for '%ls' in Catalog.    |
 |    23208    |    16    |    No    |    ItemPath '%ls' does not exist in Store.    |
 |    23209    |    16    |    No    |    Could not update Store state in Catalog.    |
-|    23210    |    16    |    No    |    Itempath '%ls' is a file-backed item or within it's sub-tree.    |
+|    23210    |    16    |    No    |    Itempath '%ls' is a file-backed item or within its sub-tree.    |
 |    23211    |    16    |    No    |    Could not start Store Manager. Please look in WinFS UT Log for details.    |
 |    23212    |    16    |    No    |    Itempath '%ls' is a compound item.    |
 |    23401    |    16    |    No    |    Operation failed with HRESULT 0x%x.    |

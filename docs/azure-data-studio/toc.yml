@@ -9,7 +9,7 @@
 - name: Overview
   items:
   - name: Azure Data Studio
-    href: what-is.md
+    href: what-is-azure-data-studio.md
 - name: Quickstarts
   items:
   - name: Connect & query SQL Server

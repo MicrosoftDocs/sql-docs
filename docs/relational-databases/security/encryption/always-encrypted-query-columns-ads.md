@@ -29,7 +29,7 @@ This section describes how to retrieve data stored in encrypted columns as ciphe
 ### Example
 Assuming `SSN` is an encrypted column in the `Patients` table, the query shown below will retrieve binary ciphertext values, if Always Encrypted is disabled for the database connection.   
 
-![always-encrypted-ads-query-ciphertext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
+![Screenshot of the SELECT * FROM [dbo].[Patients] query and the results of the query shown as binary ciphertext values.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-ciphertext.png)
  
 ## Retrieving plaintext values stored in encrypted columns    
 This section describes how to retrieve data stored in encrypted columns as ciphertext.
@@ -46,7 +46,7 @@ This section describes how to retrieve data stored in encrypted columns as ciphe
 ### Example
 Assuming SSN is an encrypted column in the `Patients` table, the query shown below will return plaintext values if Always Encrypted is enabled for the database connection, and if you have access to the column master key configured for the `SSN` column.   
 
-![always-encrypted-ads-query-plaintext](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
+![Screenshot of the SELECT * FROM [dbo].[Patients] query and the results of the query shown as plain text values.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-plaintext.png)
  
 ## Sending plaintext values targeting encrypted columns       
 This section describes how to run a query that sends values that target an encrypted column. For example, a query that inserts, updates, or filters by a value stored in an encrypted column:
@@ -65,7 +65,7 @@ This section describes how to run a query that sends values that target an encry
 ### Example
 Assuming `SSN` is an encrypted `char(11)` column in the `Patients` table, the below script will attempt to find a row containing `'795-73-9838'` in the SSN column. The results are returned if Always Encrypted is enabled for the database connection, Parameterization for Always Encrypted is enabled for the query window, and you have access to the column master key configured for the `SSN` column.   
 
-![always-encrypted-ads-query-parameters](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
+![Screenshot of the DECLARE @SSN char(11) = '795-73-9838' SELECT * FROM [dbo].[Patients] WHERE [SSN] = @SSN query and the results of the query.](../../../relational-databases/security/encryption/media/always-encrypted-ads-query-parameters.png)
 
 ## Permissions for querying encrypted columns
 

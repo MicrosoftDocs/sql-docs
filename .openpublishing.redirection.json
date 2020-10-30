@@ -47863,7 +47863,7 @@
     {
       "source_path": "docs/sql-operations-studio/what-is.md",
       "redirect_url": "/sql/azure-data-studio/what-is",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/linux/tutorial-sql-server-ag-kubernetes.md",
@@ -59063,6 +59063,11 @@
     {
       "source_path": "docs/azure-data-studio/sanddance-extension.md",
       "redirect_url": "/sql/azure-data-studio/extensions/sanddance-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/azure-data-studio/what-is.md",
+      "redirect_url": "/sql/azure-data-studio/what-is-azure-data-studio",
       "redirect_document_id": true
     }
   ]

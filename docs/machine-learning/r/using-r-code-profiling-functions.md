@@ -54,7 +54,7 @@ help("Sys.time")
 
 ## Debugging and Profiling in R
 
-The documentation for Microsoft R Open, which is installed by default, includes a manual on developing extensions for the R language that discusses [profiling and debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) in detail. You can find the same documentation on your computer at C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
+The documentation for Microsoft R Open, which is installed by default, includes a manual on developing extensions for the R language that discusses [profiling and debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) in detail.
 
 ## Next steps
 

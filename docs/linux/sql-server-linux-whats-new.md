@@ -52,7 +52,7 @@ Starting with SQL Server 2017 CU20, RHEL 8 is now supported. Check out our Quick
 
 - Command-line configuration tool, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 - Unattended installation support with [environment variables](sql-server-linux-configure-environment-variables.md).
-- Cross-platform [Visual Studio Code mssql-server extension](sql-server-linux-develop-use-vscode.md).
+- Cross-platform [Visual Studio Code mssql-server extension](../tools/visual-studio-code/sql-server-develop-use-vscode.md).
 - Cross-platform script generator, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
 - Cross-platform Dynamic Management View (DMV) monitor, [DBFS tool](https://github.com/Microsoft/dbfs).
 

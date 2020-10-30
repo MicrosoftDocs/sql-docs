@@ -60,8 +60,6 @@ RETURNS return_data_type
 }  
 ```
 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-
 ```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
 CREATE FUNCTION [ schema_name. ] function_name
@@ -76,6 +74,8 @@ RETURNS TABLE
     RETURN [ ( ] select_stmt [ ) ]
 [ ; ]
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  *schema_name*  
@@ -254,9 +254,8 @@ GO
 ```
   
 ## See also  
- [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](/previous-versions/sql/)   
+ [DROP FUNCTION (SQL Server PDW)](/previous-versions/sql/)  
   
   
-
 

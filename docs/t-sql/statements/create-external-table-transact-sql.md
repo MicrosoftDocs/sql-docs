@@ -60,7 +60,7 @@ This command creates an external table for PolyBase to access data stored in a H
 
 Use an external table with an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
 
-- Data virtualization and data load using [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide)
+- Data virtualization and data load using [PolyBase](../../relational-databases/polybase/polybase-guide.md)
 - Bulk load operations using SQL Server or SQL Database using `BULK INSERT` or `OPENROWSET`
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).
@@ -105,7 +105,7 @@ The column definitions, including the data types and number of columns, must mat
 LOCATION = '*folder_or_filepath*'
 Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source.
 
-In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it doesn't already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [PolyBase Queries](/sql/relational-databases/polybase/polybase-queries).
+In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it doesn't already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
@@ -648,13 +648,13 @@ The column definitions, including the data types and number of columns, must mat
 
 Sharded external table options
 
-Specifies the external data source (a non-SQL Server data source) and a distribution method for the [Elastic query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
+Specifies the external data source (a non-SQL Server data source) and a distribution method for the [Elastic query](/azure/azure-sql/database/elastic-query-overview).
 
 DATA_SOURCE
-The DATA_SOURCE clause defines the external data source (a shard map) that is used for the external table. For an example, see [Create external tables](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
+The DATA_SOURCE clause defines the external data source (a shard map) that is used for the external table. For an example, see [Create external tables](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 SCHEMA_NAME and OBJECT_NAME
-The SCHEMA_NAME and OBJECT_NAME clauses map the external table definition to a table in a different schema. If omitted, the schema of the remote object is assumed to be "dbo" and its name is assumed to be identical to the external table name being defined. This is useful if the name of your remote table is already taken in the database where you want to create the external table. For example, you want to define an external table to get an aggregate view of catalog views or DMVs on your scaled out data tier. Since catalog views and DMVs already exist locally, you cannot use their names for the external table definition. Instead, use a different name and use the catalog view's or the DMV's name in the SCHEMA_NAME and/or OBJECT_NAME clauses. For an example, see [Create external tables](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
+The SCHEMA_NAME and OBJECT_NAME clauses map the external table definition to a table in a different schema. If omitted, the schema of the remote object is assumed to be "dbo" and its name is assumed to be identical to the external table name being defined. This is useful if the name of your remote table is already taken in the database where you want to create the external table. For example, you want to define an external table to get an aggregate view of catalog views or DMVs on your scaled out data tier. Since catalog views and DMVs already exist locally, you cannot use their names for the external table definition. Instead, use a different name and use the catalog view's or the DMV's name in the SCHEMA_NAME and/or OBJECT_NAME clauses. For an example, see [Create external tables](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
 DISTRIBUTION
 The DISTRIBUTION clause specifies the data distribution used for this table. The query processor utilizes the information provided in the DISTRIBUTION clause to build the most efficient query plans.
@@ -732,9 +732,9 @@ WITH
 
 ## See Also
 
-- [Azure SQL Database elastic query overview](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
-- [Reporting across scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
-- [Get started with cross-database queries (vertical partitioning)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
+- [Azure SQL Database elastic query overview](/azure/sql-database/sql-database-elastic-query-overview)
+- [Reporting across scaled-out cloud databases](/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Get started with cross-database queries (vertical partitioning)](/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

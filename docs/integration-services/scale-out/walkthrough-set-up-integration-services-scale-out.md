@@ -70,7 +70,7 @@ To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../..
 
 ### Install Scale Out Master from the command prompt
 
-Follow the instructions in [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Set the parameters for Scale Out Master by doing the following things:
+Follow the instructions in [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Set the parameters for Scale Out Master by doing the following things:
  
 1.  Add `IS_Master` to the parameter `/FEATURES`
 
@@ -125,7 +125,7 @@ To install the Scale Out Worker feature, use the [!INCLUDE[ssNoVersion_md](../..
 
 ### Install Scale Out Worker from the command prompt
 
-Follow the instructions in [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Set the parameters for Scale Out Worker by doing the following things:
+Follow the instructions in [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Set the parameters for Scale Out Worker by doing the following things:
 
 1.  Add IS_Worker to the parameter `/FEATURES`.
 

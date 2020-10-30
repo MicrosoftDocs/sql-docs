@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 #  Visualize SQL Server data using R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 6 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 6 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In this tutorial, you'll use R functions to view the distribution of values in the *creditLine* column by gender.
 
@@ -79,13 +79,13 @@ At this point, the modifications affect only the data source object in R; no new
 
 ## Visualize data using rxHistogram
 
-1. Use the following R code to call the [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) function and pass a formula and data source. You can run this locally at first, to see the expected results, and how long it takes.
+1. Use the following R code to call the [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) function and pass a formula and data source. You can run this locally at first, to see the expected results, and how long it takes.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    Internally, **rxHistogram** calls the [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) function, which is included in the **RevoScaleR** package. **rxCube** outputs a single list (or data frame) containing one column for each variable specified in the formula, plus a counts column.
+    Internally, **rxHistogram** calls the [rxCube](/machine-learning-server/r-reference/revoscaler/rxcube) function, which is included in the **RevoScaleR** package. **rxCube** outputs a single list (or data frame) containing one column for each variable specified in the formula, plus a counts column.
     
 2. Now, set the compute context to the remote SQL Server computer and run **rxHistogram** again.
   
@@ -103,7 +103,7 @@ At this point, the modifications affect only the data source object in R; no new
 
 Scatter plots are often used during data exploration to compare the relationship between two variables. You can use built-in R packages for this purpose, with inputs provided by **RevoScaleR** functions.
 
-1. Call the [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) function to compute the mean of *fraudRisk* for every combination of *numTrans* and *numIntlTrans*:
+1. Call the [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) function to compute the mean of *fraudRisk* for every combination of *numTrans* and *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -113,7 +113,7 @@ Scatter plots are often used during data exploration to compare the relationship
   
     The default return value of **rxCube** is an *rxCube object*, which represents a cross-tabulation. 
   
-2. Call [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) function to convert the results into a data frame that can easily be used in one of R's standard plotting functions.
+2. Call [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) function to convert the results into a data frame that can easily be used in one of R's standard plotting functions.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -137,7 +137,7 @@ Scatter plots are often used during data exploration to compare the relationship
   
 From this quick analysis, you can see that the risk of fraud increases with both the number of transactions and the number of international transactions.
 
-For more information about the **rxCube** function and crosstabs in general, see [Data summaries using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+For more information about the **rxCube** function and crosstabs in general, see [Data summaries using RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## Next steps
 

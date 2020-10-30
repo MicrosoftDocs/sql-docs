@@ -23,7 +23,7 @@ For this report, you're going to add the AdventureWorks2016 sample database as y
 
 1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** menu > **Report Data**.
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![Screenshot of the Report Data pane with New > Data Source selected.](media/ssrs-table-tutorial-2-new-data-source.png)
 
     The **Data Source Properties** dialog box opens with the **General** section displayed.
 

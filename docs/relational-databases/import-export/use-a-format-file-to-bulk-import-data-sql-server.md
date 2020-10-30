@@ -24,9 +24,9 @@ This topic illustrates the use of a format file in bulk-import operations.  A fo
 ## Before you begin
 * For a format file to work with a Unicode character data file, all input fields must be Unicode text strings (that is, either fixed-size or character-terminated Unicode strings).
 * To bulk export or import [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) data, use one of the following data types in your format file:
-  * SQLCHAR or SQLVARYCHAR (the data is sent in the client code page or in the code page implied by the collation)
+  * SQLCHAR or SQLVARCHAR (the data is sent in the client code page or in the code page implied by the collation)
   * SQLNCHAR or SQLNVARCHAR (the data is sent as Unicode)
-  * SQLBINARY or SQLVARYBIN (the data is sent without any conversion).
+  * SQLBINARY or SQLVARBIN (the data is sent without any conversion).
 * Azure SQL Database and Azure Synapse Analytics only support [bcp](../../tools/bcp-utility.md).  For additional information, see:
   * [Load data into Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Load data from SQL Server into Azure Synapse Analytics (flat files)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
@@ -136,8 +136,8 @@ Your XML format file, `D:\BCP\myFirstImport.xml` should look as follows:
  </RECORD>
  <ROW>
   <COLUMN SOURCE="1" NAME="PersonID" xsi:type="SQLSMALLINT"/>
-  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARYCHAR"/>
-  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARYCHAR"/>
+  <COLUMN SOURCE="2" NAME="FirstName" xsi:type="SQLVARCHAR"/>
+  <COLUMN SOURCE="3" NAME="LastName" xsi:type="SQLVARCHAR"/>
   <COLUMN SOURCE="4" NAME="BirthDate" xsi:type="SQLDATE"/>
  </ROW>
 </BCPFORMAT>

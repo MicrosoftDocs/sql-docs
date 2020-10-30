@@ -65,6 +65,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
         ENCRYPTION BY PASSWORD ='encryption_password'   
       )   
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

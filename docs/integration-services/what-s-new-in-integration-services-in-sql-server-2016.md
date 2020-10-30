@@ -370,4 +370,4 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 
 ## See Also  
  [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Editions and Supported Features for SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Editions and Supported Features for SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

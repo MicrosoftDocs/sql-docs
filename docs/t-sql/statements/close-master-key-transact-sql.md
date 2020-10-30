@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```syntaxsql
+```syntaxsql  
 CLOSE MASTER KEY  
 ```  
 
@@ -52,7 +52,7 @@ CLOSE MASTER KEY
   
 ## Examples  
   
-```sql
+```sql  
 USE AdventureWorks2012;  
 CLOSE MASTER KEY;  
 GO  
@@ -60,7 +60,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-```sql
+```sql  
 USE master;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO   

@@ -3,15 +3,15 @@ title: Monitor scripts with custom reports
 description: Use custom reports in SQL Server Management Studio (SSMS) to monitor the execution of external scripts (Python and R), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Monitor Python and R script execution using custom reports in SQL Server Management Studio
-[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Use custom reports in [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) to monitor the execution of external scripts (Python and R), resources used, diagnose problems, and tune performance in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
@@ -34,6 +34,11 @@ The reports are designed using SQL Server Reporting Services, but can be used di
 To use these reports, follow these steps:
 
 1. Download the [SSMS Custom Reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) for SQL Server Machine Learning Services from GitHub.
+
+   ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+   >[!NOTE]
+   > The custom report **ML Services - Configure Instance** is not supported on Azure SQL Managed Instance.
+   ::: moniker-end
 
 2. Copy the reports to Management Studio
 

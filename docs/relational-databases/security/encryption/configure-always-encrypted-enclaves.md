@@ -2,7 +2,7 @@
 title: "Configure and use Always Encrypted with secure enclaves| Microsoft Docs"
 description: Learn how to configure and use Always Encrypted with secure enclaves in SQL Server and Azure SQL Database, which enables richer functionality on sensitive data.
 ms.custom: ""
-ms.date: 12/01/2020
+ms.date: 12/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -56,10 +56,9 @@ See the following articles for details:
 > [!NOTE]
 > For a step-by-step tutorial on how to set up a test environment and try the functionality of Always Encrypted with secure enclaves in SSMS, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
 
-## Query columns using Always Encrypted with secure enclaves
+## Run Transaction-SQL statements using secure enclaves
 See the following articles for details:
-- [Query columns using Always Encrypted with secure enclaves - overview](always-encrypted-enclaves-query-columns.md)
-- [Query columns using Always Encrypted with secure enclaves with SSMS](always-encrypted-enclaves-query-columns-ssms.md)
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 
 ## Create and use indexes on enclave-enabled columns
 See the following articles for details:

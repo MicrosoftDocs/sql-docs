@@ -2,7 +2,7 @@
 description: "Configure column encryption in-place using Always Encrypted with secure enclaves"
 title: "Configure column encryption in-place using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/10/2019
+ms.date: 12/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -13,9 +13,9 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions" 
 ---
 # Configure column encryption in-place using Always Encrypted with secure enclaves 
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) supports cryptographic operations on database columns in-place - inside a secure enclave in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In-place encryption eliminates the need to move the data for such operations outside of the database, making the cryptographic operations faster and more reliable. 
+[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) supports cryptographic operations on database columns in-place - inside a secure enclave in the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]. In-place encryption eliminates the need to move the data for such operations outside of the database, making the cryptographic operations faster and more reliable. 
 
 > [!NOTE]
 > Despite the performance benefits of in-place encryption, cryptographic operations on large tables can take a long time and consume substantial resources, potentially impacting and degrading performance and availability of your applications.
@@ -30,7 +30,7 @@ The supported cryptographic operations and the requirements for column encryptio
 
 See [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md) for information how to ensure your column encryption keys are enclave-enabled.
 
-In-place encryption also requires a SQL Server instance that has a correctly initialized secure enclave. See [Configure the enclave type for Always Encrypted Server Configuration Option](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
+You also need ensure that your environment meets the general [Pre-requisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#pre-requisites-for-running-statements-using-secure-enclaves).
 
 A user or an application triggering cryptographic operations must have permissions to make schema changes on the table containing the impacted columns and to access column master keys involved in the operations, and relevant key metadata in the database.
 

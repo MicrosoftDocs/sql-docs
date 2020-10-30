@@ -2,7 +2,7 @@
 description: "Create and use indexes on columns using Always Encrypted with secure enclaves"
 title: "Create and use indexes on columns using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 12/01/2020
+ms.date: 12/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -44,11 +44,11 @@ For this method for invoking indexing operations to work, the application (inclu
 - Connect to the database with both Always Encrypted and enclave computations enabled for the database connection.
 - The application must have access to the column master key protecting the column encryption key for the indexed column.
 
-Once SQL Server Engine parses the application query and determines it will need to update an index on an encrypted column to execute the query, it instructs the client driver to provide the required column encryption key to the enclave over a secure channel. This is exactly the same mechanism that is used to provide the enclave with column encryption keys for processing all other queries. For example, in-place encryption or queries using pattern matching and range comparisons.
+Once SQL Server Engine parses the application query and determines it will need to update an index on an encrypted column to execute the query, it instructs the client driver to release the required column encryption key to the enclave over a secure channel. This is exactly the same mechanism that is used to provide the enclave with column encryption keys for processing any other queries that do not use indexes, for example, in-place encryption or queries using pattern matching and range comparisons.
 
 This method is useful to ensure the presence of indexes on encrypted columns is transparent to applications that are already connected to the database with Always Encrypted and enclave computations enabled. The application connection can use the enclave for query processing. After you create an index on a column, the driver inside your app will transparently provide column encryption keys to the enclave for indexing operations. Note that creating indexes may increase the number of queries that require the application to send the column encryption keys to the enclave.
 
-To use this method, follow the general guidance for running queries using a secure enclave in [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md).
+To use this method, follow the general guidance for running statements using a secure enclave in - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md).
 
 For step-by-step instructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
 
@@ -81,7 +81,7 @@ This method is useful to:
 For step-by-step instructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md). 
 
 ## Next Steps
-- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md).
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 
 ## See Also  
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).

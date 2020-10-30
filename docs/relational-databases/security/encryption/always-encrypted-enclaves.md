@@ -2,7 +2,7 @@
 title: "Always Encrypted with secure enclaves"
 description: Learn about the Always Encrypted with secure enclaves feature for SQL Server. 
 ms.custom: seo-lt-2019
-ms.date: 12/01/2020
+ms.date: 12/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -185,6 +185,6 @@ The following limitations are specific to Always Encrypted with secure enclaves:
 ## See also
 - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
-- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)

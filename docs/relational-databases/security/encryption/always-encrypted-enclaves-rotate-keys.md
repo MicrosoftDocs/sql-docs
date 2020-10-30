@@ -35,7 +35,7 @@ The below high-level steps include links to detailed articles, depending on your
 
     
 ## Next Steps
-- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)  

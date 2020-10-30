@@ -2,7 +2,7 @@
 description: "Develop applications using Always Encrypted with secure enclaves"
 title: "Develop applications using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/15/2019"
+ms.date: "12/09/2020"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -15,9 +15,9 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current" 
 ---
 # Develop applications using Always Encrypted with secure enclaves
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends [Always Encrypted](always-encrypted-database-engine.md) to enable richer functionality of application queries on encrypted sensitive database columns. It leverages secure enclave technologies to allow the query executor in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to delegate computations on encrypted columns to a secure enclave inside the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] process.
+[Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends [Always Encrypted](always-encrypted-database-engine.md) to enable richer functionality of application queries on encrypted sensitive database columns. It leverages secure enclave technologies to allow the query executor in [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] to delegate computations on encrypted columns to a secure enclave inside the [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] process.
 
 ## Client driver for Always Encrypted with secure enclaves
 
@@ -32,12 +32,15 @@ To use the functionality of the secure enclave, you need to configure your appli
 ## Next steps
 
 The following client drivers support Always Encrypted with secure enclaves:
-- .NET Framework Data Provider for SQL Server in .NET Framework 4.7.2 or higher. 
-    - For more information, see [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).
-    - For a step-by-step tutorial, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+
 - Microsoft .NET Data Provider for SQL Server in .NET Framework 4.6 or higher and .NET Core 2.1 or higher. 
     - For more information, see [Using Always Encrypted with the Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md).
-    - For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
+    - For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md).
 - Microsoft ODBC Driver for SQL Server, version 17.4 or higher. 
     - For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md). 
     - For information, on how to enable enclave computations for a database connection using ODBC, see the [Enabling Always Encrypted with Secure Enclaves](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) section.
+- Microsoft JDBC Driver for SQL Server, version 8.2 or higher.
+    - For more information, see [Using Always Encrypted with secure enclaves with the JDBC driver](../../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md)
+- .NET Framework Data Provider for SQL Server in .NET Framework 4.7.2 or higher. 
+    - For more information, see [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md).
+    - For a step-by-step tutorial, see [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)

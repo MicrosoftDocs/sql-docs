@@ -1,5 +1,5 @@
 ---
-description: "Run Transact-SQL statements using enclaves"
+description: "Run Transact-SQL statements using secure enclaves"
 description: "Run DDL statements to configure encryption for your column or manage indexes on encrypted columns, and query encrypted columns"
 title: "Query columns using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
@@ -13,7 +13,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Run Transact-SQL statements using enclaves
+# Run Transact-SQL statements using secure enclaves
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 

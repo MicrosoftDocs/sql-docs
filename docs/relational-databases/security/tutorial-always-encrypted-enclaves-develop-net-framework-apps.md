@@ -2,7 +2,7 @@
 description: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves"
 title: "Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/15/2019
+ms.date: 12/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -154,3 +154,4 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
 
 ## See Also
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)

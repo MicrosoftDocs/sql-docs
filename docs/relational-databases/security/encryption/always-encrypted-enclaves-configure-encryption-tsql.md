@@ -2,7 +2,7 @@
 description: "Configure column encryption in-place with Transact-SQL"
 title: "Configure column encryption in-place with Transact-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/10/2019
+ms.date: 12/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "vanto"
@@ -24,14 +24,14 @@ With the `ALTER TABLE` or `ALTER COLUMN` statement, you can set the target encry
 - If the column is currently encrypted, it will be re-encrypted if you specify the `ENCRYPTED WITH` clause and the specified column encryption type or the column encryption key are different from the currently used encryption type or the column encryption key. 
 
 > [!NOTE]
-> You cannot combine cryptographic operations with other changes in a single an `ALTER TABLE`/`ALTER COLUMN` statement, except changing the column to `NULL` or `NOT NULL`, or changing a collation. For example, you cannot encrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
+> You cannot combine cryptographic operations with other changes in a single `ALTER TABLE`/`ALTER COLUMN` statement, except changing the column to `NULL` or `NOT NULL`, or changing a collation. For example, you cannot encrypt a column AND change a data type of the column in a single `ALTER TABLE`/`ALTER COLUMN` Transact-SQL statement. Use two separate statements.
 
 As any query that uses a server-side secure enclave, an `ALTER TABLE`/`ALTER COLUMN` statement that triggers in-place encryption must be sent over a connection with Always Encrypted and enclave computations enabled. 
 
-The remainder of this article describes how to trigger in-place encryption using the `ALTER TABLE`/`ALTER COLUMN` statement from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from your application. 
+The remainder of this article describes how to trigger in-place encryption using the `ALTER TABLE`/`ALTER COLUMN` statement from SQL Server Management Studio. Alternatively, you can issue `ALTER TABLE`/`ALTER COLUMN` from Azure Data Studio or your application. 
 
 > [!NOTE]
-> Currently, tools other than SSMS, including the [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
+> Currently, the [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) cmdlet in the SqlServer PowerShell module and [sqlcmd](../../../tools/sqlcmd-utility.md), do not support using `ALTER TABLE`/`ALTER COLUMN` for in-place cryptographic operations.
 
 ## Perform in-place encryption with Transact-SQL in SSMS
 ### Pre-requisites
@@ -132,7 +132,7 @@ GO
 ```
 
 ## Next Steps
-- [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md)
+- [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)
 

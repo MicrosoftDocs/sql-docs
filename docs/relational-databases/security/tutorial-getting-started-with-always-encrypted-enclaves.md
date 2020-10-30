@@ -1,8 +1,8 @@
 ---
-title: "Tutorial: Always Encrypted with secure enclaves using SSMS"
-description: This tutorial teaches you how to create a basic Always Encrypted with secure enclaves environment, how to encrypt data in-place, and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS). 
+title: "Tutorial: Always Encrypted with secure enclaves in SQL Server using HGS and SSMS"
+description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in SQL Server, using Virtualization Based Security (VBS) enclaves and Host Guardian Service (HGS) for attestation. You will also learn how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS). 
 ms.custom: seo-lt-2019
-ms.date: 04/10/2020
+ms.date: 12/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -14,18 +14,18 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Tutorial: Always Encrypted with secure enclaves using SSMS
+# Tutorial: Always Encrypted with secure enclaves in [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] using HGS and SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] . It will show you:
 - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
-- How to encrypt data in-place and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS).
+- How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
 
 To get started with Always Encrypted with secure enclaves, you need at least two computers (they can be virtual machines):
 
-- The SQL Server computer to host SQL Server and SSMS.
+- The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]  computer to host [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]  and SSMS.
 - The HGS computer to run Host Guardian Service, which is needed for enclave attestation.
 
 ### SQL Server computer requirements
@@ -185,15 +185,6 @@ In this step, you will enable the functionality of Always Encrypted using enclav
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type | 1     | 1              |
 
-5. To enable rich computations on encrypted columns, run the following query:
-
-   ```sql
-   DBCC traceon(127,-1);
-   ```
-
-    > [!NOTE]
-    > Rich computations are disabled by default in [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)]. They need to be enabled using the above statement after each restart of your SQL Server instance.
-
 ## Step 4: Create a sample database
 In this step, you will create a database with some sample data, which you will encrypt later.
 
@@ -340,7 +331,4 @@ After completing this tutorial, you can go to one of the following tutorials:
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## See Also
-- [Configure enclave type for Always Encrypted Server Configuration Option](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
-- [Provision enclave-enabled keys](encryption/always-encrypted-enclaves-provision-keys.md)
-- [Configure column encryption in-place with Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
-- [Query columns using Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves-query-columns.md)
+- [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)

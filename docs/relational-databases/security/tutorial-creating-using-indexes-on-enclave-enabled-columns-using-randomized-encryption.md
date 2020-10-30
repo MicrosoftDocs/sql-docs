@@ -15,7 +15,8 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Create and use indexes on enclave-enabled columns using randomized encryption
-[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 This tutorial teaches you how to create and use indexes on enclave-enabled columns using randomized encryption supported in [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 
@@ -29,14 +30,14 @@ This tutorial is the continuation of [Tutorial: Getting Started with Always Encr
 ## Step 1: Enable Accelerated Database Recovery (ADR) in your database
 
 > [!NOTE]
-> This step applies only to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. If you're using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], skip this step. ADR is automatically enabled in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] and disabling it is not supported.
+> This step applies only to [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. If you're using [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], skip this step. ADR is automatically enabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and disabling it is not supported.
 
 Microsoft strongly recommends you enable ADR in your database before creating the first index on an enclave-enabled column using randomized encryption. See the [Database Recovery](./encryption/always-encrypted-enclaves.md#database-recovery) section in [Always Encrypted with secure enclaves](./encryption/always-encrypted-enclaves.md).
 
 
 
 1. Close any SSMS instances, you used in the previous tutorial. This will close database connections you've opened, which is required to enable ADR.
-1. Open a new instance of SSMS and connect to your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance as sysadmin **without** Always Encrypted enabled for the database connection.
+1. Open a new instance of SSMS and connect to your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance as sysadmin **without** Always Encrypted enabled for the database connection.
     1. Start SSMS.
     1. In the **Connect to Server** dialog, specify your server name, select an authentication method, and specify your credentials.
     1. Click **Options >>** and select the **Always Encrypted** tab.
@@ -52,7 +53,7 @@ Microsoft strongly recommends you enable ADR in your database before creating th
 
 In this step, you'll create and test an index on an encrypted column. You'll be acting as a single user who is assuming the roles of both a DBA, who manages the database, and the data owner who has access to the keys, protecting the data.
 
-1. Open a new SSMS instance and connect to your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance **with** Always Encrypted enabled for the database connection.
+1. Open a new SSMS instance and connect to your [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] instance **with** Always Encrypted enabled for the database connection.
    1. Start a new instance of SSMS.
    1. In the **Connect to Server** dialog, specify your server name, select an   authentication method, and specify your credentials.
    1. Click **Options >>** and select the **Always Encrypted** tab.

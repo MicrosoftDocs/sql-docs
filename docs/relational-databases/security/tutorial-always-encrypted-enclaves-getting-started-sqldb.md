@@ -14,11 +14,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Tutorial: Always Encrypted with secure enclaves in [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] using HGS and SSMS
-[!INCLUDE [asdb](../../../includes/applies-to-version/asdb.md)]
+# Tutorial: Always Encrypted with secure enclaves in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
+[!INCLUDE [asdb](../../includes/applies-to-version/asdb.md)]
 
-This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. It will show you:
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. It will show you:
 - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
 - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 

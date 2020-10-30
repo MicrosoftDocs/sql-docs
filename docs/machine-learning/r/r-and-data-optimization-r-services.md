@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Performance tuning and data optimization for R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article discusses performance optimizations for R or Python scripts that run in SQL Server. It also describes methods that you can use to update your R code, both to boost performance and to avoid known issues.
+This article discusses performance optimizations for R or Python scripts that run in SQL Server. You can use these methods to update your R code, both to boost performance and to avoid known issues.
 
 ## Choosing a compute context
 
@@ -76,13 +76,13 @@ There are two ways to achieve parallelization with R in SQL Server:
 
 + **Use \@parallel.** When using the `sp_execute_external_script` stored procedure to run an R script, set the `@parallel` parameter to `1`. This is the best method if your R script does **not** use RevoScaleR functions, which have other mechanisms for processing. If your script uses RevoScaleR functions (generally prefixed with "rx"), parallel processing is performed automatically and you do not need to explicitly set `@parallel` to `1`.
 
-  If the R script can be parallelized, and if the SQL query can be parallelized, then the database engine creates multiple parallel processes. The maximum number of processes that can be created is equal to the **max degree of parallelism** (MAXDOP) setting for the instance. All processes then run the same script, but receive only a portion of the data.
+  If the R script can be parallelized, and if the SQL query can be parallelized, then the database engine creates multiple parallel processes. The maximum number of processes that can be created is equal to the **maximum degree of parallelism** (MAXDOP) setting for the instance. All processes then run the same script, but receive only a portion of the data.
   
   Thus, this method is not useful with scripts that must see all the data, such as when training a model. However, it is useful when performing tasks such as batch prediction in parallel. For more information on using parallelism with `sp_execute_external_script`, see the **Advanced tips: parallel processing** section of [Using R Code in Transact-SQL](../tutorials/quickstart-r-create-script.md).
 
 + **Use numTasks =1.** When using **rx** functions in a SQL Server compute context, set the value of the _numTasks_ parameter to the number of processes that you would like to create. The number of processes created can never be more than **MAXDOP**; however, the actual number of processes created is determined by the database engine and may be less than you requested.
 
-  If the R script can be parallelized, and if the SQL query can be parallelized, then SQL Server creates multiple parallel processes when running the rx functions. The actual number of processes that are created depends on a variety of factors such as resource governance, current usage of resources, other sessions, and the query execution plan for the query used with the R script.
+  If the R script can be parallelized, and if the SQL query can be parallelized, then SQL Server creates multiple parallel processes when running the rx functions. The actual number of processes that are created depends on a variety of factors. These include resource governance, current usage of resources, other sessions, and the query execution plan for the query used with the R script.
 
 ## Query parallelization
 
@@ -144,7 +144,7 @@ Many RevoScaleR algorithms support parameters to control how the trained model i
   
   When `cube` is set to `TRUE`, the algorithm uses a partitioned inverse, which might be faster and use less memory. If the formula has a large number of variables, the performance gain can be significant.
 
-For additional guidance on optimization of RevoScaleR, see these articles:
+For more information on optimization of RevoScaleR, see these articles:
 
 + Support article: [Performance tuning options for rxDForest and rxDTree](https://support.microsoft.com/kb/3104235)
 
@@ -168,6 +168,6 @@ We also recommend that you look into the new **MicrosoftML** package, which prov
 
 ## Next steps
 
-+ For resources you can use to improve the performance of your R code, see [Use R code profiling functions to improve performance](using-r-code-profiling-functions.md).
++ For R functions you can use to improve the performance of your R code, see [Use R code profiling functions to improve performance](using-r-code-profiling-functions.md).
 
 + For more complete information about performance tuning on SQL Server, see [Performance Center for SQL Server Database Engine and Azure SQL Database](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database).

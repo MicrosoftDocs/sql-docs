@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Use R code profiling functions to improve performance
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes performance tools provided by R packages to get information about internal function calls.
+This article describes performance tools provided by R packages to get information about internal function calls. You can use this information to improve the performance of your code.
 
 > [!TIP]
 > This article provides basic resources to get you started. For expert guidance, we recommend the *Performance* section in ["Advanced R" by Hadley Wickham](http://adv-r.had.co.nz).

@@ -31,11 +31,23 @@ SQL Assessment provides a mechanism to evaluate your configuration of SQL Server
    > [!div class="mx-imgBorder"]
    > [ ![Screenshot showing the Environment Health screen of a SQL Server - Azure Arc resource.](media/assess/sql-assessment-heading-sql-server-arc.png) ](media/assess/sql-assessment-heading-sql-server-arc.png#lightbox)
 
-1. Specify a working directory on the data collection machine. By default, `C:\sql_assessment\work_dir` is used. During collection and analysis, data is temporarily stored in that folder. If the folder doesn't exist, it's created automatically.
+> [!IMPORTANT]
+> If MMA extension is not installed, you will not be able to initiate the on-demand SQL Assessment.
 
-1. Select **Download configuration script**. Copy the downloaded script to the target machine.
+2. Select the  account type. If you have a Managed service account, it will allow you to initiate SQL Assessment directly from the Portal. Specify the account name.
 
-1. Open an admin instance of **powershell.exe** and execute one of the following code blocks:
+> [!NOTE]
+> Specifying a *Managed service account* will activate the **Configure SQL Assessment** button so you could initiate the assessment from the Portal by deploying a *CustomScriptExtension*. Because only one *CustomScriptExtension* can be deployed at a time, the script extension for SQL Assessment 
+will be automatically removed after execution. If you already have another *CustomScriptExtension* deployed to the hosting machine,  the **Configure SQL Assessment** button will not be activated.
+
+3. Specify a working directory on the data collection machine if you want to change the default. By default, `C:\sql_assessment\work_dir` is used. During collection and analysis, data is temporarily stored in that folder. If the folder doesn't exist, it's created automatically.
+
+4. If you initiate SQL Assessment from the Portal by clicking **Configure SQL Assessment**, a standard deployment bubble will show up.
+
+> [!div class="mx-imgBorder"]
+   > [ ![Screenshot showing deploymentof the CustomScriptExtension.](media/assess/sql-assessment-custom-script-deployment.png) ](media/assess/sql-assessment-custom-script-deployment.png#lightbox)
+
+5. If you prefer initiating SQL Assessment from the target machine, click **Download configuration script**, copy the downloaded script to the target machine and and execute one of the following code blocks in a admin instance of **powershell.exe**:
 
    * _Domain account_:  You'll be prompted for the user account and password.
 

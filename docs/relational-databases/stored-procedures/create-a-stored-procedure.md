@@ -22,7 +22,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE statement.  
   
-##  <a name="Top"></a>   
 -   **Before you begin:**  [Permissions](#Permissions)  
   
 -   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
@@ -126,7 +125,6 @@ This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)]
   
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## See Also  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   

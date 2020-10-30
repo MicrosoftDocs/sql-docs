@@ -18,7 +18,7 @@ ms.prod: sql
 
 Azure Arc enabled SQL Server is released for public preview. Azure Arc enabled SQL Server extends Azure services to SQL Server instances hosted outside of Azure in the customer’s datacenter, on the edge or in a multi-cloud environment.
 
-For details see [Azure Arc enabled SQL Server Overview](overview.md)
+For details, see [Azure Arc enabled SQL Server Overview](overview.md)
 
 ### Known issues
 

@@ -96,7 +96,7 @@ Here are detailed instructions on how to do the tasks:
   
     3.  On the **Credentials** page, supply valid credentials to access APS health state DMVs.  
   
-        ![Screenshot showing the Credentials page of the Create Run As Account Wizard with valid credentials wo access APS health state DMVs..](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
+        ![Screenshot showing the Credentials page of the Create Run As Account Wizard with valid credentials wo access APS health state DMVs.](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
 5.  Configure the **Microsoft APS Action Account** profile to use the newly created Run As account for the APS instance.  
   

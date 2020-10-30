@@ -222,7 +222,7 @@ Ensure that your security standards are enforced for accessing. When configuring
 
    * To test, create a database in that folder. The following example uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
 
-    ![Screenshot of the sqlcmd command and the response to the command showing no switches.][4]
+    ![Screenshot of the sqlcmd command and the response to the command.][4]
  
    * Unmount the share 
 

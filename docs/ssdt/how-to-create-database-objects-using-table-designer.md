@@ -7,6 +7,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.scriptpanel"
   - "sql.data.tools.design.table.context.view"
+  - "Microsoft.Data.Relational.Design.PW.RelationshipsDescriptor.OnDelete"
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan

@@ -28,7 +28,6 @@ ms.custom: seo-dt-2019
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', 'password'  
 ```  
-
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments  

@@ -55,7 +55,6 @@ ALTER CERTIFICATE certificate_name
          [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
       }  
 ``` 
-[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
  
 > [!Note]
 > [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
@@ -71,7 +70,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

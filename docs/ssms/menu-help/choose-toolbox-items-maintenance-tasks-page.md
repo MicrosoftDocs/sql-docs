@@ -35,7 +35,6 @@ Displays the date when the component was last modified.
   
 Click on a name to show the attributes of the component in the **Language** and **Version** boxes, along with the icon.  
   
-## Options  
 **Language**  
 The language of the component.  
   

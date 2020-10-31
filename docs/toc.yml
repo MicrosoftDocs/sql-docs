@@ -10184,6 +10184,8 @@
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
+    - name: Release notes
+      href: sql-server/azure-arc/release-notes.md
     - name: Connect
       href: sql-server/azure-arc/connect.md
     - name: Connect at scale

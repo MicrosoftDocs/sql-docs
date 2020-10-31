@@ -51,7 +51,7 @@ SQL Server return type: **geometry**
 ## Remarks  
  The following illustration shows an example of a geometry instance returned by this method.  
   
- ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
+ ![Diagram showing an example of a geometry instance returned by this method.](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
   
  The following table shows the results returned for different distance values.  
   

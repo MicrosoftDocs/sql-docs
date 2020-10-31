@@ -18,6 +18,10 @@ You can connect your SQL Server instance on premises to Azure Arc by following t
 * Your machine has at least one instance of SQL Server installed
 * For Windows machines, you have installed Azure PowerShell. Follow the instructions to [install Azure PowerShell](/powershell/azure/install-az-ps).
 * For Linux machines, you have downloaded Azure CLI and connected your Azure account. Follow the instructions to [install Azure CLI](/cli/azure/install-azure-cli-apt).
+* The **Microsoft.AzureData** resource provider has been registered. For more information on resource providers, see Azure resource providers and types.
+    * On PowerShell, run `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`
+    * On Linux, run `az provider register --namespace 'Microsoft.AzureData`
+
 
 
 ## Generate a registration script for SQL Server

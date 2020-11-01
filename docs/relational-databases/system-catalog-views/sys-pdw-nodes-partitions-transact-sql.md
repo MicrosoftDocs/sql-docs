@@ -57,7 +57,7 @@ JOIN sys.pdw_nodes_tables AS NTables
 AND pnp.pdw_node_id = NTables.pdw_node_id  
 JOIN sys.pdw_table_mappings AS TMap  
     ON NTables.name = TMap.physical_name 
-    AND substring(TMap.physical_name,40, 10) = pnp.distribution_id 
+    AND try_cast(substring(TMap.physical_name,40, 10) as int) = pnp.distribution_id 
 JOIN sys.objects AS o  
     ON TMap.object_id = o.object_id  
 WHERE o.name = 'myTable'  

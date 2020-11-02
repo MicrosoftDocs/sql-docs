@@ -34,7 +34,8 @@ Power BI Report Server and SQL Server Reporting Services 2016 and later all use 
 1. Register ODP.NET Managed Client to GAC:
 ```
 C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-```
+    ```
+
 2. Add ODP.NET Managed Client entries to machine.config:
     ```
 

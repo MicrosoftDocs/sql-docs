@@ -16,7 +16,7 @@ ms.author: maggies
 
 The web portal of a Reporting Services report server is a web-based experience. In the portal, you can view reports, mobile reports, KPIs, and navigate through the elements in your report server instance. You can also use the web portal to administer a single report server instance.
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png)
+![Screenshot showing SQL Server Reporting Services Portal.](../reporting-services/media/ssrsportal.png)
 
 ## What is the web portal
 
@@ -80,15 +80,15 @@ The web portal will group items into different categories. The available categor
 
 You can control what is displayed by selecting **View** in the upper right. If you select Show Hidden, those items will be displayed in a lighter color.
 
-![ssRSWebPortal-view](../reporting-services/media/ssrswebportal-view.png)
+![Screenshot of the View dropdown with the Show hidden items option selected.](../reporting-services/media/ssrswebportal-view.png)
 
-![ssRSWebPortal-hidden](../reporting-services/media/ssrswebportal-hidden.png)
+![Screenshot showing the unavailable Paginated Reports option.](../reporting-services/media/ssrswebportal-hidden.png)
 
 ### Power BI Desktop Reports and Excel Workbooks
 
 You can upload, organize, and manage permissions for Power BI Desktop reports and Excel workbooks. They will be grouped together within the web portal.
 
-![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
+![Screenshot showing the Power BI Desktop Reports section and the Excel Workbooks section.](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
 The files are stored within Reporting Services, similar to other resource files. Selecting one of these items will download them locally to your desktop. You can save changes you've made by reuploading them to the report server.
 
@@ -96,7 +96,7 @@ The files are stored within Reporting Services, similar to other resource files.
 
 Enter a search term, and see everything you can access. The results are categorized into KPIs, reports, datasets, and other items. You can then interact with the results and add them to your favorites.
 
-![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
+![Screenshot showing  the SQL Server Reporting Servers portal with the Search text box called out.](../reporting-services/media/ssrswebportal-search.png)
 
 ## Web portal tasks
 

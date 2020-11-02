@@ -38,7 +38,7 @@ SQL Server Setup creates log files in a dated and time-stamped folder within **\
    | **For unattended installations** | %temp%\sqlsetup*.log |
 
 
- ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
+ ![Screenshot showing where to find the ConfigurationFiles.ini file in the Setup Bootstrap folder.](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
  > The numbers in the path *nnn* correspond to the version of SQL being installed. In the above picture, SQL 2017 was installed, so the folder is 140. For SQL 2016, the folder would be 130, and for SQL 2014 the folder would be 120.

@@ -1,0 +1,92 @@
+---
+title: SQL Server Big Data Clusters Configuration Properties
+titleSuffix: SQL Server big data clusters
+description: Reference article for configuration properties for Big Data Clusters
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: rahul.ajmera
+ms.date: 08/04/2020
+ms.topic: reference
+ms.prod: sql
+ms.technology: big-data-cluster
+---
+
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+Big Data Clusters configuration settings can be defined: `cluster`, `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope.
+
+## BDC cluster-scope settings
+You can configure the following settings at the cluster scope.
+
+|Property|Options|
+| --- | --- |
+|`[telemetry]`|`customerfeedback = { true | false }` |
+
+## SQL service-scope settings
+You can configure the following settings at the cluster scope.
+
+|Property|Options|
+| --- | --- |
+|`[language]`|`lcid = <language_identifier>` |
+
+## Spark service-scope settings
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## HDFS service-scope settings
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## Gateway service-scope settings
+None available
+
+## App service-scope settings
+None available
+
+## Master Pool resource-scope settings
+|Property|Options|
+| --- | --- |
+|`[sqlagent]`|`enabled = { true | false }` |
+|`[licensing]`|`pid = { Enterprise | Developer }` |
+|`[collation]`|`x = <language_identifier>` |
+
+## Storage Pool resource-scope settings
+The storage pool consists of SQL, Spark, and HDFS components.
+
+### Avaiable SQL configurations
+|Property|Options|
+| --- | --- |
+|`[traceflag]`|`traceflag<#> = <####>` |
+
+### Available Apache Spark and Hadoop configurations
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## Data Pool resource-scope settings
+|Property|Options|
+| --- | --- |
+|`[traceflag]`|`traceflag<#> = <####>` |
+
+## Compute Pool resource-scope settings
+|Property|Options|
+| --- | --- |
+|`[traceflag]`|`traceflag<#> = <####>` |
+
+## Spark Pool resource-scope settings
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## Gateway resource-scope settings
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## Sparkhead resource-scope settings
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## Zookeeper resource-scope settings
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## Namenode resource-scope settings
+Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
+
+## App Proxy resource-scope settings
+None available
+
+## Next steps
+
+[Configure SQL Server Big Data Clusters](configure-bdc-overview.md)

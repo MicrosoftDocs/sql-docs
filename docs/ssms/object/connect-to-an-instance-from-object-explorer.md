@@ -41,7 +41,7 @@ To work with servers and databases, you must first connect to the server. You ca
 
 1. The server appears in **Object Explorer** after successfully connecting:
 
-   ![connected](../media/connect-to-server/connected.png)
+   ![Screenshot of the Object Explorer showing that the server is successfully connected.](../media/connect-to-server/connected.png)
 
 ## Next Steps
 

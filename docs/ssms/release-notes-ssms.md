@@ -159,7 +159,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 
 ### 18.6
 
-![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2146265)
+![download](media/download-icon.png) [Download SSMS 18.6](https://go.microsoft.com/fwlink/?linkid=2135491)
 
 - Release number: 18.6
 - Build number: 15.0.18338.0

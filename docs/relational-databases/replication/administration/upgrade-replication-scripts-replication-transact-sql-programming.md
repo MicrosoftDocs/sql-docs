@@ -122,7 +122,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_2.sql)]  
   
-### C.SQL Server 2000 script to create a merge publication
+### C. SQL Server 2000 script to create a merge publication
  The following is an example of a [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] script that creates a merge publication for the Customers table. Default parameters have been removed for readability.  
   
  [!code-sql[HowTo#sp_createmergepub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_3.sql)]  
@@ -153,7 +153,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpreupgrade](../../../relational-databases/replication/codesnippet/tsql/upgrade-replication-scri_7.sql)]  
   
-### H. SQL Server 2005 and later script to create a push subscription to a transactional publication
+### H. SQL Server 2005 and later script to create a push subscription to a merge publication
  The following is an example of the previous script, which creates a push subscription to a merge publication, upgraded to run successfully for [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and later versions. Defaults for new parameters have been explicitly declared.  
   
 > [!NOTE]  

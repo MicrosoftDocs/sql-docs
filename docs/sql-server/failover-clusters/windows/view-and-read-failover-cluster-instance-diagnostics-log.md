@@ -83,7 +83,7 @@ ORDER BY Time;
 >  You can filter the results for specific components or state using the WHERE clause.  
   
 ##  <a name="TsqlConfigure"></a> Configure Diagnostic Log Properties with Transact-SQL  
- **To **  
+ **To configure the Diagnostic log properties:**  
   
 > [!NOTE]  
 >  For an example of this procedure, see [Example (Transact-SQL)](#TsqlExample), later in this section.  

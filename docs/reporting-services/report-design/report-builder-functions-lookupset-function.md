@@ -93,7 +93,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
-## B. Use Join to create a result list 
+### B. Use Join to create a result list 
  Because **LookupSet** returns a collection of objects, you cannot display the result expression directly in a text box. You can concatenate the value of each object in the collection as a string.  
   
  Use the [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] function **Join** create a delimited string from a set of objects. Use a comma as a separator to combine the objects in a single line. In some renderers, you might use a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] line feed (`vbCrLF`) as a separator to list each value on a new line.  

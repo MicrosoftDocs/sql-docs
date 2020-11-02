@@ -26,7 +26,7 @@ Compatibility indicates that a driver was tested for compatibility against exist
 |----|---|---|---|---|---|---|---|---|---|---|---|
 |17.6|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
 |17.5|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
-|17.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |   |
+|17.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |Yes|   |
 |17.3|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |
 |17.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
 |17.1|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |

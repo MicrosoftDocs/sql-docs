@@ -70,7 +70,8 @@ C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config 
 
 ## 64-bit and 32-bit drivers for Power BI Desktop
 
-Power BI Desktop uses **Unmanaged ODP.NET** for authoring Power BI reports. The following steps are only needed  when using Oracle ODAC drivers 12.2 and later as they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to the c:\oracle64 folder for 64-bit Power BI Desktop or the c:\oracle32 folder for 32-bit Power BI Desktop. Follow these steps to register Unmanaged ODP.NET:
+Power BI Desktop uses **Unmanaged ODP.NET** for authoring Power BI reports. You only need the following steps when using Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to the c:\oracle64 folder for 64-bit Power BI Desktop or the c:\oracle32 folder for 32-bit Power BI Desktop. Follow these steps to register Unmanaged ODP.NET:
+
 
 ### 64-bit Power BI Desktop
 

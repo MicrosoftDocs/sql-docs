@@ -30,7 +30,7 @@ ms.author: ramakoni
 
 ## Explanation
 
-Error 15581 is raised when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not able to recover a database that is enabled for transparent data encryption (TDE). A message An error message like the following is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log
+Error 15581 is raised when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not able to recover a database that is enabled for transparent data encryption (TDE). An error message like the following is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log
 
 > 2020-01-14 22:16:26.47 spid20s Error: 15581, Severity: 16, State: 3.  
 2020-01-14 22:16:26.47 spid20s Please create a master key in the database or open the master key in the session before performing this operation.
@@ -45,7 +45,7 @@ go
 alter master key drop encryption by service master key
 ```
 
-The database master key is used to encrypt the certificate that is used by the database master key. Any attempt to use the TDE-enabled database requires access to the database master key in the master database. A master key that is not encrypted by the service master key must be opened by using the [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) statement together with a password on each session that requires access to the master key. Because this command cannot be run on system sessions, recovery cannot be completed on TDE-enabled databases.
+The service master key is used to encrypt the certificate that is used by the database master key. Any attempt to use the TDE-enabled database requires access to the database master key in the master database. A master key that is not encrypted by the service master key must be opened by using the [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) statement together with a password on each session that requires access to the master key. Because this command cannot be run on system sessions, recovery cannot be completed on TDE-enabled databases.
 
 ## User action
 

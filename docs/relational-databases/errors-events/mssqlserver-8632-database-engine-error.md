@@ -30,7 +30,7 @@ ms.author: ramakoni
 
 ## Explanation
 
-Error 8632 is raised when you run a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains a large number of identifies and constants in a single expression. An error message like the following is reported to the user:
+Error 8632 is raised when you run a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains a large number of identifiers and constants in a single expression. An error message like the following is reported to the user:
 
 > Server: Msg 8632, Level 17, State 2, Line 1  
 Internal error: An expression services limit has been reached. Please look for potentially complex expressions in your query, and try to simplify them.

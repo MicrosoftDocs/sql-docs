@@ -29,7 +29,7 @@ This tutorial requires Azure PowerShell and SQL Server Management Management Stu
 
 ### PowerShell Requirements
 
-See [Overview of Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/?view=azps-2.8.0&viewFallbackFrom=azps-2.4.0) for information on how to install and run Azure PowerShell. 
+See [Overview of Azure PowerShell](https://docs.microsoft.com/powershell/azure) for information on how to install and run Azure PowerShell. 
 
 Minimum version of Az modules required to support attestation operations:
 

@@ -1,5 +1,4 @@
 ---
-description: "Run Transact-SQL statements using secure enclaves"
 description: "Run DDL statements to configure encryption for your column or manage indexes on encrypted columns, and query encrypted columns"
 title: "Query columns using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
@@ -30,7 +29,7 @@ The following types of Transact-SQL statement utilize secure enclaves.
 - [Data Manipulation Language (DML)](../../../t-sql/statements/statements.md#data-manipulation-language) statements/queries against enclave-enabled columns using randomized encryption that:
   - Use one or more of the following Transact-SQL operators:
     - [Comparison Operators](../../../mdx/comparison-operators.md).
-    - [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/bet.ween-transact-sql.md).
+    - [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md).
     - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md).
     - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md).
     - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select).
@@ -90,6 +89,6 @@ You need to make sure you run your statements from a query window that uses a co
 6. Click **OK** to close **Advanced Properties**.
 
 ## See Also
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
 

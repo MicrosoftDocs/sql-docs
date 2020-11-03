@@ -911,7 +911,7 @@ GO
 
 ## Overview
 
-In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement can be used with an Azure SQL server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], this statement can be used with an Azure SQL Server to create a single database or a database in an elastic pool. With this statement, you specify the database name, collation, maximum size, edition, service objective, and, if applicable, the elastic pool for the new database. It can also be used to create the database in an elastic pool. Additionally, it can be used to create a copy of the database on another SQL Database server.
 
 ## Syntax
 

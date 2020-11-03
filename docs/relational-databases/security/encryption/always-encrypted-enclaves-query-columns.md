@@ -90,5 +90,6 @@ You need to make sure you run your statements from a query window that uses a co
 6. Click **OK** to close **Advanced Properties**.
 
 ## See Also
-- [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
 

@@ -7942,7 +7942,7 @@
         href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
     - name: Always Encrypted with secure enclaves
       items:
-      - name: Getting started with Always Encrypted with secure enclaves using SSMS
+      - name: Getting started with Always Encrypted with secure enclaves in SQL Server
         href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
       - name: Create and use indexes on Always Encrypted with secure enclaves columns
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md

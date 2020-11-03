@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Always Encrypted with secure enclaves in SQL Server using HGS and SSMS"
+title: "Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server"
 description: This tutorial teaches you how to create a basic environment for Always Encrypted with secure enclaves in SQL Server, using Virtualization Based Security (VBS) enclaves and Host Guardian Service (HGS) for attestation. You will also learn how to encrypt data in-place, and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS). 
 ms.custom: seo-lt-2019
 ms.date: 12/09/2020
@@ -14,7 +14,7 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
-# Tutorial: Always Encrypted with secure enclaves in [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] using HGS and SSMS
+# Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] . It will show you:
@@ -327,8 +327,10 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 
 ## Next Steps
 After completing this tutorial, you can go to one of the following tutorials:
+- [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## See Also
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
+- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]](tutorial-always-encrypted-enclaves-getting-started-sqldb.md)

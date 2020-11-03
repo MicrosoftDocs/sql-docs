@@ -29,7 +29,7 @@ Secure enclaves is an addition to the existing [Always Encrypted](../../relation
 > The policy files can be downloaded from  [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
 ## Setting up secure enclaves
-Follow this [tutorial](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Follow [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../../relational-databases/security/tutorial-always-encrypted-enclaves-getting-started-sqldb.md) to get started with secure enclaves. For more in-depth information, refer to [Always encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## Connection String properties
 **enclaveAttestationUrl:** the endpoint URL of the attestation service.
@@ -39,7 +39,8 @@ Follow this [tutorial](../../relational-databases/security/tutorial-getting-star
 Users must enable **columnEncryptionSetting** and correctly set **both** of the above connection string properties in order to enable Always Encrypted with secure enclaves from the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 ## Working with secure enclaves
-When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries which trigger enclave computations. You can find the database and table setup at [getting started with always encrypted enclaves](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md).
+When the enclave connection properties are set properly, the feature will work transparently. The driver will determine whether the query requires the use of a secure enclave automatically. The following are examples of queries which trigger enclave computations. You can find the database and table setup in [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) or [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../../relational-databases/security/tutorial-always-encrypted-enclaves-getting-started-sqldb.md).
+
 
 Rich queries will trigger enclave computations:
 ```java

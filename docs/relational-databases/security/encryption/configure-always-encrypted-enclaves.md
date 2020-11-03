@@ -56,7 +56,7 @@ See the following articles for details:
 - [Configure column encryption in-place with Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 
-## Run Transaction-SQL statements using secure enclaves
+## Run Transact-SQL statements using secure enclaves
 See the following articles for details:
 - [Run Transact-SQL statements using secure enclaves](always-encrypted-enclaves-query-columns.md)
 

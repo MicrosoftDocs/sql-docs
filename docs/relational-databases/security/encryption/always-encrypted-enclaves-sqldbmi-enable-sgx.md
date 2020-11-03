@@ -26,7 +26,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 For detailed instructions for how to configure a new or existing database to use a specific hardware generation, see [Selecting a hardware generation](
 https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#selecting-a-hardware-generation).
-
+   
 ## Next steps
 
 - [Configure Azure Attestation for your Azure SQL database server](./always-encrypted-enclaves-sqldbmi-configure-attestation.md)

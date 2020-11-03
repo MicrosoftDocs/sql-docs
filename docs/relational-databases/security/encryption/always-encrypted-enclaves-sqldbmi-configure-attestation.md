@@ -79,7 +79,7 @@ Write-Host "Your attestation URL is: " $attestationUrl
 
 ### Using Azure Portal
 
-1. In the Overview pane for you attestation provider copy the value of the Attest URI property to clipboard. An Attest URI should look like this: ht<span>tps://MyAttestationProvider.us.attest.azure.net.
+1. In the Overview pane for you attestation provider copy the value of the Attest URI property to clipboard. An Attest URI should look like this: `https://MyAttestationProvider.us.attest.azure.net`.
 
 2. Paste the Attest URI property values in a text editor. Append the following to the Attest URI: /attest/SgxEnclave?api-version=2018-09-01-preview. 
 

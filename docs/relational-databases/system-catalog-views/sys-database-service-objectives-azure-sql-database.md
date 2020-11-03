@@ -21,7 +21,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 # sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
-Returns the edition (service tier), service objective (pricing tier) and elastic pool name, if any, for an Azure SQL database or an Azure Synapse Analytics. If logged on to the master database in an Azure SQL Database server, returns information on all databases. For Azure Synapse Analytics, you must be connected to the master database.  
+Returns the edition (service tier), service objective (pricing tier) and elastic pool name, if any, for an Azure SQL Database or an Azure Synapse Analytics. If logged on to the master database in an Azure SQL Database server, returns information on all databases. For Azure Synapse Analytics, you must be connected to the master database.  
   
   
  For information on pricing, see [SQL Database options and performance: SQL Database Pricing](https://azure.microsoft.com/pricing/details/sql-database/) and [Azure Synapse Analytics Pricing](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  

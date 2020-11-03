@@ -33,7 +33,7 @@ Use Azure Data Studio to establish a connection to your Azure Synapse Analytics 
    
    ![Screenshot of the Connection page with the New Connection icon called out.](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL server:
+2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows using the server name, user name, and password for *your* Azure SQL Server:
 
    |   Setting    | Suggested value | Description |
    |--------------|-----------------|-------------| 

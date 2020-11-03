@@ -1,7 +1,7 @@
 ---
 title: "Linux and macOS Installation for the Drivers for PHP"
 description: "In these instructions, learn how to install the Microsoft Drivers for PHP for SQL Server on Linux or macOS."
-ms.date: "09/22/2020"
+ms.date: "10/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -15,7 +15,7 @@ manager: v-mabarw
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
 The following instructions assume a clean environment and show how to install PHP 7.x, the Microsoft ODBC driver, the Apache web server, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 20.04, RedHat 7 and 8, Debian 8, 9, and 10, Suse 12 and 15, Alpine 3.11, and macOS 10.13, 10.14, and 10.15. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-These instructions install PHP 7.4 by default using `pecl install`. You may need to run `pecl channel-update pecl.php.net` first. Note that some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server -- please see the notes at the beginning of each section to install PHP 7.2 or 7.3 instead.
+These instructions install PHP 7.4 by default using `pecl install`. You may need to run `pecl channel-update pecl.php.net` first. Some supported Linux distros default to PHP 7.1 or earlier, which is not supported for the latest version of the PHP drivers for SQL Server. See the notes at the beginning of each section to install PHP 7.2 or 7.3 instead.
 
 Also included are instructions for installing the PHP FastCGI Process Manager, PHP-FPM, on Ubuntu. This is needed if using the nginx web server instead of Apache.
 
@@ -262,7 +262,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 ## Installing the drivers on Suse 12 and 15
 
 > [!NOTE]
-> In the following instructions, replace `<SuseVersion>` with your version of Suse - if you are using Suse Enterprise Linux 15, it will be SLE_15 or SLE_15_SP1. For Suse 12, use SLE_12_SP4 (or above if applicable). Not all versions of PHP are available for all versions of Suse Linux - please refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version PHP available, or to `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
+> In the following instructions, replace `<SuseVersion>` with your version of Suse - if you are using Suse Enterprise Linux 15, it will be SLE_15 or SLE_15_SP1. For Suse 12, use SLE_12_SP4 (or above if applicable). Not all versions of PHP are available for all versions of Suse Linux. Refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version PHP available, or to `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
 
 > [!NOTE]
 > Packages for PHP 7.4 are not available for Suse 12. 
@@ -314,7 +314,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 > The default version of PHP is 7.3. Alternate versions of PHP may be available from other repositories for Alpine 3.11. You can instead compile PHP from source.
 
 ### Step 1. Install PHP
-PHP packages for Alpine can be found in the `edge/community` repository. Please check [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) on their WIKI page. Add the following line to `/etc/apt/repositories`, replacing `<mirror>` with the URL of an Alpine repository mirror:
+PHP packages for Alpine can be found in the `edge/community` repository. Check [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) on their WIKI page. Add the following line to `/etc/apt/repositories`, replacing `<mirror>` with the URL of an Alpine repository mirror:
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -365,7 +365,7 @@ brew tap
 brew tap homebrew/core
 brew install php@7.4
 ```
-PHP should now be in your path -- run `php -v` to verify that you are running the correct version of PHP. If PHP is not in your path or it is not the correct version, run the following:
+PHP should now be in your path. Run `php -v` to verify that you are running the correct version of PHP. If PHP is not in your path or it is not the correct version, run the following:
 ```bash
 brew link --force --overwrite php@7.4
 ```
@@ -405,7 +405,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 ## Testing Your Installation
 
 To test this sample script, create a file called testsql.php in your system's document root. This is `/var/www/html/` on Ubuntu, Debian, and Redhat, `/srv/www/htdocs` on SUSE, `/var/www/localhost/htdocs` on Alpine, or `/usr/local/var/www` on macOS. Copy the following script to it, replacing the server, database, username, and password as appropriate.
-```
+```php
 <?php
 $serverName = "yourServername";
 $connectionOptions = array(
@@ -413,6 +413,15 @@ $connectionOptions = array(
     "uid" => "yourUsername",
     "pwd" => "yourPassword"
 );
+
+function exception_handler($exception) {
+    echo "<h1>Failure</h1>";
+    echo "Uncaught exception: " , $exception->getMessage();
+    echo "<h1>PHP Info for troubleshooting</h1>";
+    phpinfo();
+}
+
+set_exception_handler('exception_handler');
 
 // Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
@@ -432,7 +441,7 @@ if ($stmt === false) {
 }
 ?>
 
-<h1> Results : </h1>
+<h1> Success Results : </h1>
 
 <?php
 while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
@@ -445,6 +454,7 @@ sqlsrv_close($conn);
 function formatErrors($errors)
 {
     // Display errors
+    echo "<h1>SQL Error:</h1>";
     echo "Error information: <br/>";
     foreach ($errors as $error) {
         echo "SQLSTATE: ". $error['SQLSTATE'] . "<br/>";
@@ -454,7 +464,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-Point your browser to https://localhost/testsql.php (https://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database.
+Point your browser to https://localhost/testsql.php (https://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database. If you don't see a success message showing SQL version information, see [Support resources](support-resources-for-the-php-sql-driver.md) for places to go for help.
 
 ## See Also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

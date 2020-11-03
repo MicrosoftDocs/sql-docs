@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: "overview"
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: "alayu, sstein"
 ms.custom: "seodec18, sqlfreshmay19"
 ms.date: "10/20/2020"
 ---
@@ -162,6 +162,7 @@ To learn about authoring extensions, see [Extension authoring](extensions/extens
 ## Next steps
 
 - [Download and Install Azure Data Studio](./download-azure-data-studio.md)
+- [Azure Data Studio FAQ](faq.md)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
 

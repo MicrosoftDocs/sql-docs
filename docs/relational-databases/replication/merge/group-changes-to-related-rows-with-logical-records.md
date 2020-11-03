@@ -35,7 +35,7 @@ ms.author: "mathoma"
   
  In this example, a logical record consists of all the rows in the **Orders** table that are related to a single **CustID** value and all of the rows in the **OrderItems** table that are related to those rows in the **Orders** table. This diagram shows all the rows in the three tables that are in the logical record for Customer2:  
   
- ![Three table logical record with values](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
+ ![First screenshot of a three table logical record with values.](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
   
  To define a logical record relationship between articles, see [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -49,7 +49,7 @@ ms.author: "mathoma"
 ### The Application of Changes As a Unit  
  If merge processing is interrupted, such as in the case of a dropped connection, the partially completed set of related replicated changes is rolled back if logical records are used. For example, consider the case where a Subscriber adds a new order with **OrderID** = 6 and two new rows in the **OrderItems** table with **OrderItemID** = 10 and **OrderItemID** = 11 for **OrderID** = 6.  
   
- ![Three table logical record with values](../../../relational-databases/replication/merge/media/logical-records-04.gif "Three table logical record with values")  
+ ![Second screenshot of a three table logical record with values.](../../../relational-databases/replication/merge/media/logical-records-04.gif "Three table logical record with values")  
   
  If the replication process is interrupted after the **Orders** row for **OrderID** = 6 is complete, but before the **OrderItems** 10 and 11 are completed, and logical records are not used, the **OrderTotal** value for **OrderID** = 6 will not be consistent with the sum of the **OrderAmount** values for the **OrderItems** rows. If logical records are used, the **Orders** row for **OrderID** = 6 is not committed until the related **OrderItems** changes are replicated.  
   

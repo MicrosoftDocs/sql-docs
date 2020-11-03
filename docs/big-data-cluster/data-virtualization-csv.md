@@ -66,7 +66,7 @@ Click **Next**.
 
 Azure Data Studio provides a preview of the imported data.
 
-![External Data Source credentials](media/data-virtualization/130-csv-preview-data.png)
+![Screenshot showing the Create External Table From CSV window with a preview of imported data.](media/data-virtualization/130-csv-preview-data.png)
 
 Once done viewing the preview, click **Next** to continue
 
@@ -74,7 +74,7 @@ Once done viewing the preview, click **Next** to continue
 
 In the next window, you may modify the columns of the external table you intend to create. You are able to alter the column name, change the data type and allow for nullable rows. 
 
-![External Data Source credentials](media/data-virtualization/140-csv-modify-columns.png)
+![Screenshot of the Create External Table From CSV window showing Step 3 Modify Columns.](media/data-virtualization/140-csv-modify-columns.png)
 
 After you verify the destination columns, click **Next**.
 

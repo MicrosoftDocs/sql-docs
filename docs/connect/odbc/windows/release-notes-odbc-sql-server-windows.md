@@ -2,7 +2,7 @@
 title: "Release Notes for ODBC Driver for SQL Server on Windows"
 description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "07/29/2020"
+ms.date: "10/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -163,6 +163,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Azure Active Directory Managed Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
 | Ability to stream input parameters against Always Encrypted columns. | See [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | [Using XA Transactions](../use-xa-with-dtc.md). |
+| Updated Visual C++ Redistributable | Upgraded the runtime dependency to the Visual C++ 2017 Redistributable ([x64 Download](https://aka.ms/vs/15/release/vc_redist.x64.exe), [x86 Download](https://aka.ms/vs/15/release/vc_redist.x86.exe)) |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

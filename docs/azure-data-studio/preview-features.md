@@ -72,7 +72,7 @@ You can enable or disable preview features anytime in your Settings.
 ### First-party extensions in preview
 
 * Admin Pack for SQL Server
-* Azure SQL Data Warehouse Insights
+* Azure Synapse Analytics Insights
 * Central Management Servers
 * Database Administration Tool Extensions for Windows
 * Kusto
@@ -92,4 +92,4 @@ You can enable or disable preview features anytime in your Settings.
 
 ## Next steps
 
-* [Azure Data Studio](what-is.md)
+* [Azure Data Studio](what-is-azure-data-studio.md)

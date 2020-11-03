@@ -40,9 +40,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |classifier_name|**sysname**|For requests utilizing resources, The name of the classifier used for assigning resources and importance.||
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure Synapse Analytics|
 |result_cache_hit|**int**|Details whether a completed query used result set cache.  </br>Applies to: Azure Synapse Analytics| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative integer values = Reasons why result set caching was not used.  See remarks section for details.|
-|command2|**nvarchar9max)**|Holds the full text of the request as submitted by the user. Holds queries that are longer than 4000 characters.|Any valid query or request text. NULL = Queries that are 4000 characters long or less, for these queries the full text can be found under the command column.|
+|client_correlation_id|**nvarchar(255)**|Optional user-defined name for a client session.  To set for a session, call sp_set_session_context 'client_correlation_id', '<CorrelationIDName>'.  Run `SELECT SESSION_CONTEXT(N'client_correlation_id')` to retrieve its value.|
 ||||
-  
+
 ## Remarks 
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.
 
@@ -62,7 +62,6 @@ The negative integer value in the result_cache_hit column is a bitmap value of a
 |-**0x80**(**-128**) |Result set caching is disabled because the result set contains rows with large size (>64kb).|  
 |-**0x100**(**-256**) |Result set caching is disabled because of the use of granular dynamic data masking.|  
 
-  
 ## Permissions
 
  Requires VIEW SERVER STATE permission.  

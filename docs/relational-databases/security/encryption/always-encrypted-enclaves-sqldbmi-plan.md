@@ -46,3 +46,7 @@ To use Azure Attestation for attesting Intel SGX enclaves in [!INCLUDE[ssSDSfull
 ## Next steps
 
 - [Enable Intel SGX for your Azure SQL database](./always-encrypted-enclaves-sqldbmi-enable-sgx.md)
+
+## See also
+
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)

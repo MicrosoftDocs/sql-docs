@@ -18,7 +18,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) extends the existing [Always Encrypted](always-encrypted-database-engine.md) feature to enable richer functionality on sensitive data while keeping the data confidential. This article lists common tasks for configuring and using the feature.
 
-For tutorial that show you how to quickly get started with Always Encrypted with secure enclaves, see:
+For tutorials that show you how to quickly get started with Always Encrypted with secure enclaves, see:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)

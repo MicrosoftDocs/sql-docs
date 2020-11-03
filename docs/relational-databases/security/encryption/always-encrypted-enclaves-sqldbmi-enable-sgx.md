@@ -30,3 +30,7 @@ https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azu
 ## Next steps
 
 - [Configure Azure Attestation for your Azure SQL database server](./always-encrypted-enclaves-sqldbmi-configure-attestation.md)
+
+## See also
+
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)

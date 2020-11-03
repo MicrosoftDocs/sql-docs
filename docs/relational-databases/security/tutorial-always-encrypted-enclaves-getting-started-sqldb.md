@@ -346,4 +346,3 @@ After completing this tutorial, you can go to one of the following tutorials:
 
 ## See Also
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
-- 

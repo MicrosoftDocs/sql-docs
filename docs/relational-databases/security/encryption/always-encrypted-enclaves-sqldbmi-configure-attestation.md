@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 [!INCLUDE [asdb](../../../includes/applies-to-version/asdb.md)]
 
-[Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) (preview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel SGX enclaves. 
+[Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview) is a solution for attesting Trusted Execution Environments (TEEs), including Intel SGX enclaves. 
 
 To use Azure Attestation for attesting Intel SGX enclaves used for [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], you need to:
 
@@ -83,9 +83,7 @@ Write-Host "Your attestation URL is: " $attestationUrl
 
 2. Paste the Attest URI property values in a text editor. Append the following to the Attest URI: /attest/SgxEnclave?api-version=2018-09-01-preview. 
 
-The resulting attestation URL should look like this:
-
-> ht<span>tps://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview
+The resulting attestation URL should look like this: `https://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview`
 
 ## Grant your Azure SQL database server access to your attestation provider
 
@@ -126,3 +124,7 @@ For more information see [Add or remove Azure role assignments using Azure Power
 
 ## Next Steps
  [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
+
+## See also
+
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)

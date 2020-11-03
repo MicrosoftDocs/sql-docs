@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "9/28/2020"
+ms.date: "10/28/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,18 @@ ms.author: alexiva
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.15
+
+In addition to several accessibility improvements, the v8.15 release of SSMA for DB2 contains the following changes:
+
+* Fix conversion of `MIN`/`MAX` aggregate functions with date/time arguments
+* Fix bug in `VARCHAR_FORMAT` emulation function when `DD` placeholder is used
+* Improve type mappings for `TIME` data type
+* Improve conversion of `ROUND` and `TRUNC` functions with numeric arguments
+* Revamp assessment reports to work in modern browsers
+* Use authority provided by the database for Azure AD authentication
+* Improve naming for statements loaded from files
 
 ## SSMA v8.14
 

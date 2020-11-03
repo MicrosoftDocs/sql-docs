@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### Fixes
 | Feature | Details |
 | :------ | :------ | 
-| Deployment | Fixed an incorrect deployment script generated when targeting Azure SQL Database Managed Instance as a non-sysadmin user  | 
+| Deployment | Fixed an incorrect deployment script generated when targeting Azure SQL Managed Instance as a non-sysadmin user  | 
 | Deployment | Fixed loading deployment contributors when running script actions | 
 | Help | Output correct elapsed time in sqlpackage when operation take longer than 1 day | 
 | Deployment | Fixed dacpac registration when deploying for .NET Core | 

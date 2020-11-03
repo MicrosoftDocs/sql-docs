@@ -44,7 +44,7 @@ For older versions of PDW without APS, download the[System Center Monitoring Pac
   
 4.  Click **Install**.  
   
-    ![Confirm installation](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    ![Screenshot of the SQL Server Appliance Base Monitoring MP Installer wizard on the Confirm Installation step with the Install option circled in red.](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
 5.  Click **Close**.  
   
@@ -64,7 +64,7 @@ For older versions of PDW without APS, download the[System Center Monitoring Pac
   
 4.  Click **Install**.  
   
-    ![Confirm installation](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![Screenshot of the PDWMP Installer wizard on the Confirm Installation step with the Install option circled in red.](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  Click **Close**.  
   

@@ -40,6 +40,5 @@ Some components can be configured in either tabbed mode where components appear 
 > When a login (or a contained database user) connects and is authenticated, the connection caches identity information about the login. For a Windows Authentication login, this includes information about membership in Windows groups. The identity of the login remains authenticated as long as the connection is maintained. To force changes in the identity, such as a password reset or change in Windows group membership, the login must logoff from the authentication authority (Windows or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), and log in again. A member of the **sysadmin** fixed server role or any login with the **ALTER ANY CONNECTION** permission can use the **KILL** command to end a connection and force a login to reconnect. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] can reuse connection information when opening multiple connections to Object Explorer and Query Editor windows. Close all connections to force reconnection.  
   
 ## See Also  
-[Use SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
+[Use SQL Server Management Studio](./sql-server-management-studio-ssms.md)  
 [The SQL Server Management Studio Environment](../ssms/the-sql-server-management-studio-environment.md)  
-  

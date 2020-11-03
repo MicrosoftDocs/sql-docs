@@ -47,7 +47,7 @@ VSS coordinates the activities of the following cooperating components:
 
 VSS provides coordination between these parties: 
 
-![Coordinations](media/sql-server-vss-writer-backup-guide/coordinations.png)
+![Diagram showing how VSS provides coordination between these parties.](media/sql-server-vss-writer-backup-guide/coordinations.png)
 
 This diagram shows all the components participating in a typical VSS snapshot activity. In such a scenario, SQL Server (including the SQL writer) is acting as a writer in one of the Writer boxes.  Other such writers might be Exchange Server, etc.
 

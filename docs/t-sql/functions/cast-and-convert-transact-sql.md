@@ -99,7 +99,7 @@ For a date or time data type *expression*,  *style* can have one of the values s
 |**22**|-|U.S.| mm/dd/yy hh:mi:ss AM (or PM)|
 |-|**23**|ISO8601|yyyy-mm-dd|
 |-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (no spaces)<br /><br /> **Note:** For a milliseconds (mmm) value of 0, the millisecond decimal fraction value will not display. For example, the value '2012-11-07T18:26:20.000 displays as '2012-11-07T18:26:20'.| 
-|-|**127**(<sup>6, 7</sup>)|ISO8601 with time zone Z.|yyyy-mm-ddThh:mi:ss.mmmZ (no spaces)<br /><br /> **Note:** For a milliseconds (mmm) value of 0, the millisecond decimal value will not display. For example, the value '2012-11-07T18:26:20.000 will display as '2012-11-07T18:26:20'.|  
+|-|**127**(<sup>6, 7</sup>)|ISO8601 with time zone Z.|yyyy-MM-ddThh:mm:ss.fffZ (no spaces)<br /><br /> **Note:** For a milliseconds (mmm) value of 0, the millisecond decimal value will not display. For example, the value '2012-11-07T18:26:20.000 will display as '2012-11-07T18:26:20'.|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> In this style, **mon** represents a multi-token Hijri unicode representation of the full month name. This value does not render correctly on a default US installation of SSMS.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   

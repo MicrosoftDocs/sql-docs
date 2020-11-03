@@ -57,7 +57,7 @@ The attestation of Intel SGX enclaves in [!INCLUDE[ssSDSfull](../../../includes/
 
 ## Supported client drivers
 
-To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. You need to configure the application and the client driver to enable enclave computations and enclave attestation. For details, including the list of supported client drivers, see [Always Encrypted with secure enclaves](always-encrypted-enclaves.md).
+To use Always Encrypted with secure enclaves, an application must use a client driver that supports the feature. You need to configure the application and the client driver to enable enclave computations and enclave attestation. For details, including the list of supported client drivers, see [Develop applications using Always Encrypted](always-encrypted-client-development.md).
 
 ## Terminology
 

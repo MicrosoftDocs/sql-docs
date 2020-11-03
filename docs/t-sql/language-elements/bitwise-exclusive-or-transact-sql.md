@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 expression ^ expression  
 ```  
   
@@ -64,7 +64,7 @@ expression ^ expression
 ## Examples  
  The following example creates a table using the **int** data type to store the original values and inserts two values into one row.  
   
-```  
+```sql  
 CREATE TABLE bitwise (   
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL);
@@ -75,7 +75,7 @@ GO
   
  The following query performs the bitwise exclusive OR on the `a_int_value` and `b_int_value` columns.  
   
-```  
+```sql  
 SELECT a_int_value ^ b_int_value  
 FROM bitwise;  
 GO  

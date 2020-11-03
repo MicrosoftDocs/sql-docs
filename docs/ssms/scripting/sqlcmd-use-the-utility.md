@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Users submit a **sqlcmd** job either by specifying a single [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to execute, or by pointing the utility to a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to execute. The output is usually directed to a text file, but can also be displayed at the command prompt.  
   
--   [SQLCMD mode](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor.  
+-   [SQLCMD mode](./edit-sqlcmd-scripts-with-query-editor.md) in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor.  
   
 -   SQL Server Management Objects (SMO)  
   
@@ -196,7 +196,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The lines after line `3> GO` are the output of a `SELECT` statement. After you generate output, `sqlcmd` resets the `sqlcmd` prompt and displays `1>`. After entering `EXIT` at line `1>`, the Command Prompt window displays the same line it did when you first opened it. This indicates that `sqlcmd` has exited its session. You can now close the Command Prompt window by typing another `EXIT` command.  
   
 ## Running Transact-SQL script files using sqlcmd  
- You can use **sqlcmd** to execute database script files. Script files are text files that contain a mix of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, **sqlcmd** commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). **sqlcmd** works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that **sqlcmd** reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.  
+ You can use **sqlcmd** to execute database script files. Script files are text files that contain a mix of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, **sqlcmd** commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](./sqlcmd-use-with-scripting-variables.md). **sqlcmd** works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that **sqlcmd** reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.  
   
  There are different ways to create database script files:  
   
@@ -529,9 +529,8 @@ SQLCMD -E -N -C
   
 ## More about sqlcmd  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
- [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [Edit SQLCMD Scripts with Query Editor](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [Use sqlcmd with Scripting Variables](./sqlcmd-use-with-scripting-variables.md)   
+ [Edit SQLCMD Scripts with Query Editor](./edit-sqlcmd-scripts-with-query-editor.md)   
  [Manage Job Steps](../../ssms/agent/manage-job-steps.md)   
  [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

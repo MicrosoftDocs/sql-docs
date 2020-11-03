@@ -60,7 +60,7 @@
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install azdata
+      - name: Install Azure Data CLI
         items:
         - name: Install
           href: azdata/install/deploy-install-azdata.md
@@ -130,6 +130,8 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Administration resources
+      href: big-data-cluster/view-cluster-status.md
     - name: Active Directory mode
       items:
       - name: Prerequisites
@@ -198,7 +200,7 @@
         href: big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps
       items:
-      - name: Deploy with azdata
+      - name: Deploy with Azure Data CLI
         href: big-data-cluster/app-create.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
@@ -324,7 +326,6 @@
             href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Tips for using R packages
             href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
       - name: Spark machine learning models with MLeap
@@ -337,18 +338,34 @@
       items:
       - name: Connect
         href: big-data-cluster/connect-to-big-data-cluster.md
-      - name: View cluster status
-        href: big-data-cluster/view-cluster-status.md
       - name: Manage with controller dashboard
         href: big-data-cluster/manage-with-controller-dashboard.md
       - name: Manage existing notebooks
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
+      - name: List operations notebooks
+        href: big-data-cluster/cluster-manage-notebooks.md
+    - name: Monitor
+      items:
+      - name: Monitor with Azure Data Studio
+        href: big-data-cluster/cluster-monitor-ads.md
+      - name: Monitor with cmdlet
+        href: big-data-cluster/cluster-monitor-cmdlet.md
+      - name: Monitor with notebooks
+        href: big-data-cluster/cluster-common-notebooks.md
+      - name: Monitor - Grafana
+        href: big-data-cluster/cluster-monitor-grafana.md
+      - name: Logging - Kibana
+        href: big-data-cluster/cluster-logging-kibana.md
+      - name: List monitoring notebooks
+        href: big-data-cluster/cluster-monitor-notebooks.md
+      - name: List logging notebooks
+        href: big-data-cluster/cluster-logging-notebooks.md
     - name: Performance
       items:
-        - name: Tuning guide
-          href: big-data-cluster/performance-guidelines-tuned.md
+      - name: Tuning guide
+        href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
@@ -357,6 +374,14 @@
         href: big-data-cluster/change-azdata-password.md
       - name: Non root containers
         href: big-data-cluster/non-root-containers.md
+      - name: Encryption at rest
+        items:
+          - name: Concepts and configuration
+            href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+          - name: SQL Server TDE
+            href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+          - name: HDFS encryption zones
+            href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -385,6 +410,8 @@
           href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
       - name: Troubleshoot HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+      - name: Cluster troubleshooting notebooks
+        href: big-data-cluster/cluster-troubleshooter-notebooks.md
   - name: Reference
     items:
     - name: BDC partners
@@ -399,9 +426,9 @@
         href: big-data-cluster/reference-config-master-instance.md
       - name: Apache Spark & Apache Hadoop
         href: big-data-cluster/reference-config-spark-hadoop.md
-    - name: azdata reference
+    - name: Azure Data CLI reference
       items:
-      - name: azdata
+      - name: Azure Data CLI
         items:
         - name: azdata
           href: azdata/reference/reference-azdata.md
@@ -2710,10 +2737,12 @@
         href: language-extensions/language-extensions-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
+      - name: Java Language Extension Overview
+        href: language-extensions/java-overview.md
     - name: Install
       items:
       - name: Install Language Extensions on Windows
-        href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        href: language-extensions/install/windows-java.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
@@ -7118,7 +7147,7 @@
       - name: Stack Overflow >>
         href: https://stackoverflow.com/questions/tagged/sql-server
       - name: Microsoft Q & A >>
-        href: https://https://docs.microsoft.com/answers/products/sql-server
+        href: https://docs.microsoft.com/answers/products/sql-server
       - name: Submit feedback >>
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit >>
@@ -7971,8 +8000,6 @@
       href: tools/profiler-utility.md
     - name: sqlagent90 Application
       href: tools/sqlagent90-application.md
-    - name: sqlcmd
-      href: tools/sqlcmd-utility.md
     - name: SQLdiag
       href: tools/sqldiag-utility.md
     - name: sqlmaint
@@ -8266,6 +8293,8 @@
         href: tools/configuration-manager/viewing-the-windows-application-log.md
   - name: SQLCMD
     items:
+    - name: sqlcmd Overview
+      href: tools/sqlcmd-utility.md
     - name: Start the Utility
       href: ssms/scripting/sqlcmd-start-the-utility.md
     - name: Use the Utility
@@ -8296,10 +8325,10 @@
       href: ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: SQL Server Data Tools
+      href: ssdt/sql-server-data-tools.md
     - name: Azure Active Directory support
       href: ssdt/azure-active-directory.md
-    - name: SQL Server Tools
-      href: ssdt/sql-server-tools.md
     - name: Project-Oriented Offline Database Development
       href: ssdt/project-oriented-offline-database-development.md
       items:
@@ -9968,7 +9997,7 @@
       - name: Install SQL Server Machine Learning Services on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
       - name: Install SQL Server Language Extensions
-        href: linux/sql-server-linux-setup-language-extensions.md
+        href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md
     - name: Configure
@@ -10147,7 +10176,7 @@
   items:
   - name: Azure SQL Database >
     href: /azure/sql-database/
-  - name: Azure Synapse Analytics >
+  - name: Azure SQL Data Warehouse >
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
   - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
@@ -10155,6 +10184,8 @@
   items:
     - name: Overview
       href: sql-server/azure-arc/overview.md
+    - name: Release notes
+      href: sql-server/azure-arc/release-notes.md
     - name: Connect
       href: sql-server/azure-arc/connect.md
     - name: Connect at scale
@@ -10307,6 +10338,8 @@
           href: relational-databases/errors-events/mssqlserver-824-database-engine-error.md
         - name: 825
           href: relational-databases/errors-events/mssqlserver-825-database-engine-error.md
+        - name: 832
+          href: relational-databases/errors-events/mssqlserver-832-database-engine-error.md
         - name: 833
           href: relational-databases/errors-events/mssqlserver-833-database-engine-error.md
         - name: 844
@@ -10317,6 +10350,12 @@
           href: relational-databases/errors-events/mssqlserver-846-database-engine-error.md
         - name: 847
           href: relational-databases/errors-events/mssqlserver-847-database-engine-error.md
+        - name: 854
+          href: relational-databases/errors-events/mssqlserver-854-database-engine-error.md
+        - name: 855
+          href: relational-databases/errors-events/mssqlserver-855-database-engine-error.md
+        - name: 856
+          href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
         - name: 905
           href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
         - name: 916
@@ -10429,6 +10468,10 @@
           href: relational-databases/errors-events/mssqlserver-2814-database-engine-error.md
       - name: Errors 3000 to 4850
         items:
+        - name: 3013
+          href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
+        - name: 3023
+          href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
         - name: 3151
           href: relational-databases/errors-events/mssqlserver-3151-database-engine-error.md
         - name: 3156
@@ -10471,18 +10514,26 @@
           href: relational-databases/errors-events/mssqlserver-3937-database-engine-error.md
         - name: 3961
           href: relational-databases/errors-events/mssqlserver-3961-database-engine-error.md
+        - name: 3859
+          href: relational-databases/errors-events/mssqlserver-3859-database-engine-error.md
         - name: 4064
           href: relational-databases/errors-events/mssqlserver-4064-database-engine-error.md
         - name: 4104
           href: relational-databases/errors-events/mssqlserver-4104-database-engine-error.md
         - name: 4186
           href: relational-databases/errors-events/mssqlserver-4186-database-engine-error.md
+        - name: 4214
+          href: relational-databases/errors-events/mssqlserver-4214-database-engine-error.md
         - name: 4846
           href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
       - name: Errors 5000 to 8000
         items:
+        - name: 5009
+          href: relational-databases/errors-events/mssqlserver-5009-database-engine-error.md
         - name: 5120
           href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
+        - name: 5180
+          href: relational-databases/errors-events/mssqlserver-5180-database-engine-error.md
         - name: 5228
           href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
         - name: 5229
@@ -10511,6 +10562,8 @@
           href: relational-databases/errors-events/mssqlserver-5515-database-engine-error.md
         - name: 5554
           href: relational-databases/errors-events/mssqlserver-5554-database-engine-error.md
+        - name: 7105
+          href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
         - name: 7308
           href: relational-databases/errors-events/mssqlserver-7308-database-engine-error.md
         - name: 7711
@@ -10739,6 +10792,8 @@
           href: relational-databases/errors-events/mssqlserver-17083-database-engine-error.md
         - name: 17084
           href: relational-databases/errors-events/mssqlserver-17084-database-engine-error.md
+        - name: 17112
+          href: relational-databases/errors-events/mssqlserver-17112-database-engine-error.md
         - name: 17128
           href: relational-databases/errors-events/mssqlserver-17128-database-engine-error.md
         - name: 17130
@@ -10759,6 +10814,8 @@
           href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
         - name: 17300
           href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
+        - name: 17659
+          href: relational-databases/errors-events/mssqlserver-17659-database-engine-error.md
         - name: 17660
           href: relational-databases/errors-events/mssqlserver-17660-database-engine-error.md
         - name: 17676
@@ -10775,6 +10832,8 @@
           href: relational-databases/errors-events/mssqlserver-17884-database-engine-error.md
         - name: 17887
           href: relational-databases/errors-events/mssqlserver-17887-database-engine-error.md
+        - name: 17892
+          href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
         - name: 18264
           href: relational-databases/errors-events/mssqlserver-18264-database-engine-error.md
         - name: 18452
@@ -16249,7 +16308,7 @@
         items:
         - name: AT TIME ZONE
           href: t-sql/queries/at-time-zone-transact-sql.md
-        - name: Aliasing (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
           href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: EXPLAIN
           href: t-sql/queries/explain-transact-sql.md
@@ -16263,7 +16322,7 @@
           href: t-sql/queries/readtext-transact-sql.md
         - name: Search Condition
           href: t-sql/queries/search-condition-transact-sql.md
-        - name: Subqueries (Azure Synapse Analytics, Parallel Data Warehouse)
+        - name: Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)
           href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: Table Value Constructor
           href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16643,11 +16702,11 @@
           href: t-sql/statements/create-synonym-transact-sql.md
         - name: TABLE
           href: t-sql/statements/create-table-transact-sql.md
-        - name: TABLE (Azure Synapse Analytics)
+        - name: TABLE (Azure SQL Data Warehouse)
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md
         - name: TABLE (SQL Graph)
           href: t-sql/statements/create-table-sql-graph.md
-        - name: TABLE AS SELECT (Azure Synapse Analytics)
+        - name: TABLE AS SELECT (Azure SQL Data Warehouse)
           href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
         - name: TABLE IDENTITY (Property)
           href: t-sql/statements/create-table-transact-sql-identity-property.md
@@ -16907,7 +16966,7 @@
           href: t-sql/statements/open-master-key-transact-sql.md
         - name: OPEN SYMMETRIC KEY
           href: t-sql/statements/open-symmetric-key-transact-sql.md
-        - name: "Permissions: GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)"
+        - name: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)"
           href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
         - name: REVERT
           href: t-sql/statements/revert-transact-sql.md

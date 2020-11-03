@@ -29,6 +29,5 @@ When you print a query or file, colorized elements print in color if your printe
  If you have line numbers enabled in the Editor, the line numbers will not print unless you select **Include line numbers** in the **Print** dialog box on the **File** menu.  
   
 ## See Also  
- [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md)  
-  
+ [Change Font Color, Size, and Style](./change-font-color-size-and-style.md)  
   

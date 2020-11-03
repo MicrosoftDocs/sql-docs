@@ -74,7 +74,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  If an error other than a run-time statement error prevents the successful completion of an explicit transaction, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. For example, if the client's network connection to an instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is broken or the client logs off the application, any uncommitted transactions for the connection are rolled back when the network notifies the instance of the break.  
   
- If a run-time statement error occurs in a batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ If a run-time statement error occurs in a batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## General Remarks  
  A session can only run one transaction at a given time; save points and nested transactions are not supported.  
@@ -88,7 +88,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## Limitations and Restrictions  
  You cannot roll back a transaction after a COMMIT statement is issued because the data modifications have been made a permanent part of the database.  
   
- The [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) and [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) commands cannot be used inside an explicit transaction.  
+ The [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) and [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) commands cannot be used inside an explicit transaction.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] does not have a transaction sharing mechanism. This implies that at any given point in time, only one session can be doing work on any transaction in the system.  
   
@@ -144,5 +144,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

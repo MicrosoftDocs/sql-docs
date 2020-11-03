@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Create a login for SQLRUserGroup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Create a [login in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../machine-learning/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
+Create a [login in SQL Server](../../relational-databases/security/authentication-access/create-a-login.md) for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../machine-learning/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
 
 Trusted connections are those having `Trusted_Connection=True` in the connection string. When SQL Server receives a request specifying a trusted connection, it checks whether the identity of the current Windows user has a login. For external processes executing as a worker account (such as MSSQLSERVER01 from **SQLRUserGroup**), the request fails because those accounts do not have a login by default.
 

@@ -24,7 +24,7 @@ Here are some tips and notes for successfully using SMB:
 - The SMB share should be highly available.
 - Security must be set properly on the SMB share. Below is an example from /etc/samba/smb.conf, where SQLData1 is the name of the share.
 
-![05-smbsource][1]
+![Screenshot showing that SQLData1 is the name of the share.][1]
 
 ## Instructions
 

@@ -715,7 +715,7 @@ GO
 ```  
   
 ###  <a name="RemoteTables"></a> Inserting Rows into a Remote Table  
- Examples in this section demonstrate how to insert rows into a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
+ Examples in this section demonstrate how to insert rows into a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../functions/opendatasource-transact-sql.md) to reference the remote table.  
   
 #### M. Inserting data into a remote table by using a linked server  
  The following example inserts rows into a remote table. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form *server.catalog.schema.object*.  
@@ -777,7 +777,7 @@ GO
 ```  
   
 #### P. Inserting into an external table created using PolyBase  
- Export data from SQL Server to Hadoop or Azure Storage. First, create an external table that points to the destination file or directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. The INSERT INTO statement creates the destination file or directory if it does not exist and the results of the SELECT statement are exported to the specified location in the specified file format.  For more information, see [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+ Export data from SQL Server to Hadoop or Azure Storage. First, create an external table that points to the destination file or directory. Then, use INSERT INTO to export data from a local SQL Server table to an external data source. The INSERT INTO statement creates the destination file or directory if it does not exist and the results of the SELECT statement are exported to the specified location in the specified file format.  For more information, see [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
 **Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -1026,7 +1026,3 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
  [Use the inserted and deleted Tables](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
-  
-
-
-

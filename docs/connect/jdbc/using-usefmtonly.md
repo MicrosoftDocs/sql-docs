@@ -85,7 +85,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  The feature only supports `SELECT/INSERT/UPDATE/DELETE` queries. Queries should start with one of the 4 supported key words or a [Common Table Expression](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017) followed by one of the supported queries. Parameters within Common Table Expressions are not supported.
+>  The feature only supports `SELECT/INSERT/UPDATE/DELETE` queries. Queries should start with one of the 4 supported key words or a [Common Table Expression](../../t-sql/queries/with-common-table-expression-transact-sql.md) followed by one of the supported queries. Parameters within Common Table Expressions are not supported.
 
 ## Known issues
   There are currently some issues with the feature, which are caused by deficiencies in SQL parsing logic. These issues may be addressed in a future update to the feature, and are documented below along with workaround suggestions.

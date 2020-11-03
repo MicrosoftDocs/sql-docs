@@ -162,7 +162,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
+|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|Yes|No|No|
 |Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|

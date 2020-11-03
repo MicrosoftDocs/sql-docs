@@ -13,4 +13,4 @@ author: David-Engel
 ms.author: v-daenge
 ---
 # Sample ODBC Program
-The [ODBC code sample](https://go.microsoft.com/fwlink/?LinkId=244831) prompts you for an ODBC data source name.  You will then be prompted to enter a query and the sample will display the results of the query.
+The [ODBC code sample](../../connect/odbc/cpp-code-example-app-connect-access-sql-db.md) prompts you for an ODBC data source name.  You will then be prompted to enter a query and the sample will display the results of the query.

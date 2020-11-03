@@ -63,7 +63,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    The following image shows this complete step.
 
-   ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
+   ![Screenshot of a Git Bash window showing the command.](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
 1. Configure hosts file on both servers or register the server names with DNS.
 
@@ -104,7 +104,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    In the following diagram, ownership and group are set correctly for the certificate and key.
 
-   ![Enable Availability Groups Linux](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
+   ![Screenshot of a Git Bash window showing the .cer and the .pvk in the /var/opt/mssql/data folder.](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
 1. On the secondary replica, create a database login and password and create a master key.

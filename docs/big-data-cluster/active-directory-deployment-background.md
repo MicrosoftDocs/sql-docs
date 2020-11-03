@@ -135,7 +135,7 @@ It is not required, but is recommended. Providing separate OUs for separate clus
 
 ### How to revert back to the pre-CU5 behavior?
 
-There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example you must deploy a pre-CU5 release and you already upgraded `azdata` CLI. This is highly unlikely, but if you need to revert to the pre-CU5 behavior you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.
+There might be scenarios where you can't accommodate the newly introduced `subdomain` parameter. For example you must deploy a pre-CU5 release and you already upgraded [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. This is highly unlikely, but if you need to revert to the pre-CU5 behavior you can set `useSubdomain` parameter to `false` in the active directory section of `control.json`.
 
 The following example sets `useSubdomain` to `false` for this scenario.
 

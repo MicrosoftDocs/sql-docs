@@ -132,7 +132,7 @@ The general technical process for diagnosing SQL Server Spinlock contention is:
 
 2. **Step 2**: Capture statistics from *sys.dm\_ os_spinlock_stats* to find the spinlock type experiencing the most contention.
 
-3. **Step 3**: Obtain debug symbols for sqlservr.exe (sqlservr.pdb) and place the symbols in the same directory as the SQL Server service .exe file (sqlservr.exe) for the instance of SQL Server.\ In order to see the call stacks for the back off events, you must have symbols for the particular version of SQL Server that you are running. Symbols for SQL Server are available on the Microsoft Symbol Server. For more information about how to download symbols from the Microsoft Symbol Server, see [Debugging with symbols](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols).
+3. **Step 3**: Obtain debug symbols for sqlservr.exe (sqlservr.pdb) and place the symbols in the same directory as the SQL Server service .exe file (sqlservr.exe) for the instance of SQL Server.\ In order to see the call stacks for the back off events, you must have symbols for the particular version of SQL Server that you are running. Symbols for SQL Server are available on the Microsoft Symbol Server. For more information about how to download symbols from the Microsoft Symbol Server, see [Debugging with symbols](/windows/win32/dxtecharts/debugging-with-symbols).
 
 4. **Step 4**: Use SQL Server Extended Events to trace the back off events for the spinlock types of interest.
 

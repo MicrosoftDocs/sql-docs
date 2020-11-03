@@ -50,7 +50,7 @@ For a more detailed overview of In-Memory OLTP and a review of scenarios that se
 |[In-Memory OLTP Code Samples](./sample-database-for-in-memory-oltp.md)|Contains code samples that show how to create and use a memory-optimized table.|  
 |[Memory-Optimized Tables](./sample-database-for-in-memory-oltp.md)|Introduces memory-optimized tables.|  
 |[Memory-Optimized Table Variables](./faster-temp-table-and-table-variable-by-using-memory-optimization.md)|Code example showing how to use a memory-optimized table variable instead of a traditional table variable to reduce tempdb use.|  
-|[Indexes on Memory-Optimized Tables](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables)|Introduces memory-optimized indexes.|  
+|[Indexes on Memory-Optimized Tables](./indexes-for-memory-optimized-tables.md)|Introduces memory-optimized indexes.|  
 |[Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)|Introduces natively compiled stored procedures.|  
 |[Managing Memory for In-Memory OLTP](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))|Understanding and managing memory usage on your system.|  
 |[Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|Discusses data and delta files, which store information about transactions in memory-optimized tables.|  
@@ -130,4 +130,3 @@ The general steps seen in the video are as follows:
 
 ## See also  
  [Database Features](../databases/databases.md)  
-  

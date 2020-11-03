@@ -99,6 +99,6 @@ For more information about different locale with previous versions, reference [I
 - [Install non-English language versions of SSMS](install-other-languages.md)
 - [Connect to and query a SQL Server instance](./quickstarts/connect-query-sql-server.md)
 - [Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

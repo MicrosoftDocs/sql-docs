@@ -1,7 +1,7 @@
 ---
 title: "Oracle Connection Type (SSRS & Power BI Report Server)"
 description: Use the information in this article about the Oracle connection type to learn how to build a data source.
-ms.date: 03/12/2020
+ms.date: 10/11/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -19,64 +19,91 @@ To use data from an Oracle database in your report, you must have a dataset that
 
 Use the information in this article to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md). 
 
+> [!IMPORTANT]
+> The following commands that use Oracle's OraProvCfg.exe tool to register Oracle's Managed and Unmanaged ODP.NET drivers are provided as examples for use with the above Microsoft products. For the configuration of the ODP.NET drivers specific to your environment, you may need to contact Oracle support or reference Oracle's documentation for [Configuring Oracle Data Provider for .NET](https://docs.oracle.com/en/database/oracle/oracle-database/19/odpnt/InstallConfig.html#GUID-1F689B90-2CC4-4907-B8FE-A5F4EE36F673).
 
 ## 64-bit drivers for the report servers
 
-Power BI Report Server and SQL Server Reporting Services 2016 and later all use **Managed ODP.NET** for paginated reports. The following steps are only needed  when using Oracle ODAC drivers 12.2 and later as they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to c:\oracle64 and the file version of your Oracle.ManagedDataAccess.dll and Oracle.DataAccess.dll is 4.122.18.3.
+On the Oracle download site, install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). You only need the following steps when using Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to the c:\oracle64 folder.
 
-1. On the Oracle download site, install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
-2. Register ODP.NET Managed Client to GAC:
+
+### Paginated (RDL) Reports use Managed ODP.NET
+
+Power BI Report Server and SQL Server Reporting Services 2016 and later all use **Managed ODP.NET** for paginated (RDL) reports. Follow these steps to register Managed ODP.NET:
+
+1. Register ODP.NET Managed Client to GAC:
+    ```
 
     C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
-3. Add ODP.NET Managed Client entries to machine.config:
 
-    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+    ```
+
+2. Add ODP.NET Managed Client entries to machine.config:
+    ```
+
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+
+```
 
 ### Power BI Reports use Unmanaged ODP.NET
 
-Power BI Reports use **Unmanaged ODP.NET**. Follow these steps to register Unmanaged ODP.NET:
+Power BI Report Server uses **Unmanaged ODP.NET** for Power BI reports. Follow these steps to register Unmanaged ODP.NET:
 
 1. Register ODP.NET Unmanaged Client to GAC:
-
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+```
+C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+```
 2. Add ODP.NET Unmanaged Client entries to machine.config:
+```
+C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+```
 
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
- 
 ## 32-bit drivers for Report Builder
 
-Report Builder uses **Managed ODP.NET** for authoring paginated reports. The following steps are only needed  when using Oracle ODAC drivers 12.2 and later as they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to c:\oracle32 and the file version of your Oracle.ManagedDataAccess.dll is 4.122.18.3.
+Report Builder uses **Managed ODP.NET** for authoring paginated (RDL) reports. You only need the following steps when using Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to the c:\oracle32 folder where Report Builder is installed. Follow these steps to register Managed ODP.NET:
+
 
 1. On the Oracle download site, install the [Oracle 32-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
 2. Register ODP.NET Managed Client to GAC:
-
-    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+```
+C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+```
 3. Add ODP.NET Managed Client entries to machine.config:
-
-    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+```
+C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+```
 
 ## 64-bit and 32-bit drivers for Power BI Desktop
 
-Power BI Reports use **Unmanaged ODP.NET**. The following steps are only needed  when using Oracle ODAC drivers 12.2 and later as they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to c:\oracle64 for 64-bit and c:\oracle32 for 32-bit and the file version of your Oracle.DataAccess.dll is 4.122.18.3. Follow these steps to register Unmanaged ODP.NET:
+Power BI Desktop uses **Unmanaged ODP.NET** for authoring Power BI reports. You only need the following steps when using Oracle ODAC drivers 12.2 and later. Otherwise, they install by default to a non-machine-wide configuration for a new Oracle home installation. These steps assume you've installed the ODAC 18.x files to the c:\oracle64 folder for 64-bit Power BI Desktop or the c:\oracle32 folder for 32-bit Power BI Desktop. Follow these steps to register Unmanaged ODP.NET:
+
 
 ### 64-bit Power BI Desktop
 
-1. Register ODP.NET Unmanaged Client to GAC:
-
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-2. Add ODP.NET Unmanaged Client entries to machine.config:
-
-   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+1. On the Oracle download site, install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html).
+2. Register ODP.NET Unmanaged Client to GAC:
+```
+C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+```
+3. Add ODP.NET Unmanaged Client entries to machine.config:
+```
+C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+```
 
 ### 32-bit Power BI Desktop
 
-1. Register ODP.NET Unmanaged Client to GAC:
+1. On the Oracle download site, install the [Oracle 32-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
+2. Register ODP.NET Unmanaged Client to GAC:
+```
+C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+```
+3. Add ODP.NET Unmanaged Client entries to machine.config:
+```
+    C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
 
-   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-2. Add ODP.NET Unmanaged Client entries to machine.config:
+    ```
 
-   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
-  
+
 ##  <a name="Connection"></a> Connection String  
  Contact your database administrator for connection information and for the credentials to use to connect to the data source. The following connection string example specifies an Oracle database on the server named "Oracle18" using Unicode. The server name must match what is defined in the Tnsnames.ora configuration file as the Oracle server instance name.  
   

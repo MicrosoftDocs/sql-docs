@@ -8815,6 +8815,8 @@
         href: ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
       - name: Configure Login Auditing
         href: ssms/configure-login-auditing-sql-server-management-studio.md
+      - name: Enable copying from find and replace window
+        href: ssms/troubleshoot/enable-copying-find-replace-window.md
       - name: Troubleshoot
         items:
         - name: Get full memory dump 

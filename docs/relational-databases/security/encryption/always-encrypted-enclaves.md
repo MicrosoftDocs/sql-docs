@@ -147,7 +147,7 @@ The following security considerations apply to Always Encrypted with secure encl
 
 ## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considerations for business continuity, disaster recovery and data migration
 
-When you configure a high availability or disaster recovery solution for a database using Always Encrypted with secure enclaves, you need to make sure that all database replicas can use a secure enclave. If the primary database supports enclaves, but a secondary replica does not, any statement that attempts to use the functionality of Always Encrypted with secure enclaves will fail.
+When you configure a high availability or disaster recovery solution for a database using Always Encrypted with secure enclaves, you need to make sure that all database replicas can use a secure enclave. If an enclave is available for the primary replica, but fro the secondary replica, any statement that attempts to use the functionality of Always Encrypted with secure enclaves will fail after the failover.
 
 When you copy or migrate a database using Always Encrypted with secure enclaves, you need to make sure the target environment always supports enclaves. Otherwise, statements that use enclaves will not work on the copy or the migrated database.
 

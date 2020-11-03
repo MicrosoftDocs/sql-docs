@@ -50,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] major version number. Can be NULL.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minor version number. Can be NULL.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] build number. Can be NULL.|  
-|**time_zone**|**smallint**|Difference between local time (where the backup operation is taking place) and Coordinated Universal Time (UTC) in 15-minute intervals. Values can be -48 through +48, inclusive. A value of 127 indicates unknown. For example, -20 is Eastern Standard Time (EST) or five hours after UTC. Can be NULL.|  
+|**time_zone**|**smallint**|Difference between local time (where the backup operation is taking place) and Coordinated Universal Time (UTC) in 15-minute intervals at the time the backup operation started. Values can be -48 through +48, inclusive. A value of 127 indicates unknown. For example, -20 is Eastern Standard Time (EST) or five hours after UTC. Can be NULL.|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format minor version number. Can be NULL.|  
 |**first_lsn**|**numeric(25,0)**|Log sequence number of the first or oldest log record in the backup set. Can be NULL.|  
 |**last_lsn**|**numeric(25,0)**|Log sequence number of the next log record after the backup set. Can be NULL.|  

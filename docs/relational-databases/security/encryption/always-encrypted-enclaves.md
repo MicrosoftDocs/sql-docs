@@ -115,7 +115,7 @@ The operations supported inside the secure enclaves are:
 
 
 > [!NOTE]
-> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a binary2 sort order (BIN2) collation. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], confidential queries on character strings require a BIN2 collation or a UTF-8 collation.
+> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], confidential queries using enclaves on a character string column (`char`, `nchar`) require the column uses a binary2 sort order (BIN2) collation. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], confidential queries on character strings require a BIN2 collation or a UTF-8 collation. 
 
 ### Indexes on enclave-enabled columns 
 You can create nonclustered indexes on enclave-enabled columns using randomized encryption to make confidential (DML) queries using the secure enclave run faster. 

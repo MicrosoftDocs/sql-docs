@@ -67,7 +67,7 @@ will be automatically removed after execution. If you already have another *Cust
 > The script schedules a task named *SQLAssessment*, which triggers data collection. This task executes within an hour after you've run the script. It then repeats every seven days.
 
 > [!TIP]
-> You can modified the task to run on a different date and time or even force it to run immediately. In the the task scheduler library, find **Microsoft** > **Operations Management Suite** > **AOI\*\*\*** > **Assessments** > **SQLAssessment**.
+> You can modify the task to run on a different date and time or even force it to run immediately. In the the task scheduler library, find **Microsoft** > **Operations Management Suite** > **AOI\*\*\*** > **Assessments** > **SQLAssessment**.
 
 ## View SQL Assessment results
 

@@ -83,9 +83,9 @@ Power BI Desktop uses **Unmanaged ODP.NET** for authoring Power BI reports. You 
 1. On the Oracle download site, install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html).
 2. Register ODP.NET Unmanaged Client to GAC:
 
-```
-C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
-```
+   ```
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+   ```
 
 3. Add ODP.NET Unmanaged Client entries to machine.config:
 

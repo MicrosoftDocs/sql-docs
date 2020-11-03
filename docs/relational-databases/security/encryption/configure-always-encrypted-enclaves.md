@@ -63,7 +63,7 @@ See the following articles for details:
 ## Create and use indexes on enclave-enabled columns
 See the following articles for details:
 - [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md)
-
+  
 ## Develop applications using Always Encrypted with secure enclaves
 See the following articles for details:
 - [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md)

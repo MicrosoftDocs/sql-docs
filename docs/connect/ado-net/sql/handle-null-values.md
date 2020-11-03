@@ -101,7 +101,7 @@ In addition, the following rules apply for an instance of `DataRow.["columnName"
   
 - The <xref:System.Data.DataRow.IsNull%2A> method returns `true` for both `DbNull.Value` and `INullable.Null`.  
   
-## Assigning null values  
+## Assigning null values to SqlTypes  
 The default value for any <xref:System.Data.SqlTypes> instance is null.  
   
 Nulls in <xref:System.Data.SqlTypes> are type-specific and cannot be represented by a single value, such as `DbNull`. Use the `IsNull` property to check for nulls.  

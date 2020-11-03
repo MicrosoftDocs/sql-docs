@@ -42,7 +42,7 @@ Point ( Lat, Long, SRID )
  Is a **float** expression representing the x-coordinate of the **Point** being generated. For more information on valid latitude and longitude values, see [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- Is an **int** expression representing the [Spatial Reference Identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) of the **geography** instance you wish to return.  
+ Is an **int** expression representing the [Spatial Reference Identifier](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) of the **geography** instance you wish to return.  
   
 > [!NOTE]  
 >  Arguments for the Point (geography Data Type) method have coordinates reversed compared to WKT.  
@@ -62,4 +62,4 @@ SELECT @g.ToString();
 ```  
   
 ## See Also  
- [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)

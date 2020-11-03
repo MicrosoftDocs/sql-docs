@@ -33,7 +33,7 @@ ms.author: chugu
   The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../load-data-to-from-excel-with-ssis.md).  
   
  The OLE DB destination provides five different data access modes for loading data:  
   
@@ -106,7 +106,7 @@ ms.author: chugu
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -120,7 +120,7 @@ ms.author: chugu
   Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.  
   
 > [!NOTE]  
->  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../load-data-to-from-excel-with-ssis.md).  
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
@@ -141,7 +141,7 @@ ms.author: chugu
 |------------|-----------------|  
 |Table or view|Load data into a table or view in the OLE DB destination.|  
 |Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
-|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](../integration-services-ssis-variables.md)|  
 |Table name or view name variable - fast load|Specify the table or view name in a variable, and use the fast load option to load the data. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |SQL command|Load data into the OLE DB destination by using a SQL query.|  
   
@@ -303,5 +303,4 @@ ms.author: chugu
  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md)  
   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
-  
   

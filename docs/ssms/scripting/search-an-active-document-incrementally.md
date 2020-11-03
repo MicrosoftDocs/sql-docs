@@ -44,10 +44,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 >  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## See Also  
- [Search and Replace](../../relational-databases/scripting/search-and-replace.md)   
- [Search Documents Interactively](../../relational-databases/scripting/search-documents-interactively.md)   
- [Search Documents Using Results Lists](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Search Text with Wildcards](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Search Text with Regular Expressions](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Search and Replace](./search-and-replace.md)   
+ [Search Documents Interactively](./search-documents-interactively.md)   
+ [Search Documents Using Results Lists](./search-documents-using-results-lists.md)   
+ [Search Text with Wildcards](./search-text-with-wildcards.md)   
+ [Search Text with Regular Expressions](./search-text-with-regular-expressions.md)  
   

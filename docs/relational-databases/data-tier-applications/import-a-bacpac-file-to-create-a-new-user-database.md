@@ -116,8 +116,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  **For an Azure SQL Database:**  
   
- - **[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** provides step by step instructions using the Azure portal, PowerShell, SSMS, or SqlPackage.  
- - Consult **[SQL Database options and performance: Understand what's available in each service tier](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** for a detailed look at the different service tiers.  
+ - **[Import a BACPAC file to create a new Azure SQL database](/azure/azure-sql/database/database-import)** provides step by step instructions using the Azure portal, PowerShell, SSMS, or SqlPackage.  
+ - Consult **[SQL Database options and performance: Understand what's available in each service tier](/azure/azure-sql/database/purchasing-models)** for a detailed look at the different service tiers.  
 
 ### Validation Page  
  Use this page to review any issues that block the operation. To continue, resolve blocking issues and then click **Re-run Validation** to ensure that validation is successful.  
@@ -138,8 +138,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Click **Close** to close the wizard.  
   
 ## See Also  
-[Import a BACPAC file to create a new Azure SQL database](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Import a BACPAC file to create a new Azure SQL database](/azure/azure-sql/database/database-import)  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Export a Data-tier Application](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

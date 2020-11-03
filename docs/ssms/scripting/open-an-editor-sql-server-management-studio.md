@@ -47,7 +47,7 @@ This topic describes how to open the [!INCLUDE[ssDE](../../includes/ssde-md.md)]
 ### Using the File/Open Menu  
  On the **File** menu, click **Open**, and then navigate to a file and open it. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens the appropriate type of editor for the file extension, copies the contents of the file into the editor window, and also opens a connection dialog if needed. For example, if you open a file with a .sql extension, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window, copies in the contents of the .sql file, and opens a connection dialog. If you open a file with an extension not associated with a specific editor, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a text editor window and copies in the contents of the file.  
   
- For more information, see [Associate File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ For more information, see [Associate File Extensions to a Code Editor](./associate-file-extensions-to-a-code-editor.md).  
   
 ### Using the Toolbar  
  On the **Standard** toolbar, click one of the following buttons:  

@@ -138,7 +138,7 @@ As a checkpoint, after this task completes, you can query the ssis_iris_models t
 
 Now that you have code that loads training data and generates a model, the only step left is using the model to generate predictions. 
 
-To do this, put the R script in the SQL query to trigger the [rxPredict](//machine-learning-server/r-reference/revoscaler/rxpredict) built-in R function on ssis_iris_model. A stored procedure called **predict_species_length** accomplishes this task.
+To do this, put the R script in the SQL query to trigger the [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) built-in R function on ssis_iris_model. A stored procedure called **predict_species_length** accomplishes this task.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))

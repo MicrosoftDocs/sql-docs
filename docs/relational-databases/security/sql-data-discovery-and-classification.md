@@ -43,47 +43,47 @@ The classification includes two metadata attributes:
 
 2. In the SSMS Object Explorer, right click on the database that you would like to classify and choose **Tasks** > **Data Discovery and Classification** > **Classify Data...**.
 
-   ![Navigation pane][0]
+   ![Screenshot showing the SSMS Object Explorer with Tasks > Data Discovery and Classification > Classify Data... selected.][0]
 
 3. The classification engine scans your database for columns containing potentially sensitive data and provides a list of **recommended column classifications**:
 
     * To view the list of recommended column classifications, click on the recommendations notification box at the top or the recommendations panel at the bottom of the window:
 
-        ![Navigation pane][2]
+        ![Screenshot showing the notification that says We have found 39 columns with classification recommendations. Click here to view them.][2]
 
-        ![Navigation pane][3]
+        ![Screenshot showing the notification that says 39 columns with classification recommendations (click to view).][3]
 
     * Review the list of recommendations:
         * To accept a recommendation for a specific column, check the checkbox in the left column of the relevant row. You can also mark *all recommendations* as accepted by checking the checkbox in the recommendations table header.
 
         * You can also change the recommended Information Type and Sensitivity Label using the drop down boxes.        
 
-        ![Navigation pane][4]
+        ![Screenshot showing the list of recommendations.][4]
 
     * To apply the selected recommendations, click on the blue **Accept selected recommendations** button.
 
-        ![Navigation pane][5]
+        ![Screenshot of the Accept selected recommendations button.][5]
 
 4. You can also **manually classify** columns as an alternative, or in addition, to the recommendation-based classification:
 
     * Click on **Add classification** in the top menu of the window.
 
-        ![Navigation pane][6]
+        ![Screenshot showing the top menu with the Add classification option called out.][6]
 
     * In the context window that opens, select the schema > table > column that you want to classify, and the information type and sensitivity label. Then click on the blue **Add classification** button at the bottom of the context window.
 
-        ![Navigation pane][7]
+        ![Screenshot showing the Add Classification context window.][7]
 
 5. To complete your classification and persistently label (tag) the database columns with the new classification metadata, click on **Save** in the top menu of the window.
 
-    ![Navigation pane][8]
+    ![Screenshot showing the top menu with the Save option called out.][8]
 
 
 6. To generate a report with a full summary of the database classification state, click on **View Report** in the top menu of the window. (You can also generate a report using SSMS. Right click on the database where you would like to generate the report, and choose **Tasks** > **Data Discovery and Classification** > **Generate Report...**)
 
-    ![Navigation pane][9]
+    ![Screenshot showing the top menu with the View Report option called out.][9]
 
-    ![Navigation pane][10]
+    ![Screenshot showing the SQL Data Classification Report.][10]
 
 ## <a id="subheading-3"></a>Manage information protection policy with SSMS
 

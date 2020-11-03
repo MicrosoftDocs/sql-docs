@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Create R models (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 7 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 7 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 You have enriched the training data. In this tutorial, you'll analyze the data using regression modeling. Linear models are an important tool in the world of predictive analytics. The **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
 
@@ -26,7 +26,7 @@ You have enriched the training data. In this tutorial, you'll analyze the data u
 
 In this step, create a simple linear model that estimates the credit card balance for the customers using as independent variables the values in the *gender* and *creditLine* columns.
   
-To do this, use the [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) function, which supports remote compute contexts.
+To do this, use the [rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) function, which supports remote compute contexts.
   
 1. Create an R variable to store the completed model, and call **rxLinMod**, passing an appropriate formula.
   
@@ -70,7 +70,7 @@ Condition number: 1.0184
 
 ## Create a logistic regression model
 
-Next, create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
+Next, create a logistic regression model that indicates whether a particular customer is a fraud risk. You'll use the **RevoScaleR** [rxLogit](/machine-learning-server/r-reference/revoscaler/rxlogit) function, which supports fitting of logistic regression models in remote compute contexts.
 
 Keep the compute context as is. You'll also continue to use the same data source as well.
 

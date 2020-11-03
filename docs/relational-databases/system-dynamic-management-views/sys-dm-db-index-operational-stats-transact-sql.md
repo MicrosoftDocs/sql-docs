@@ -37,7 +37,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax    
     
 ```    
-    
 sys.dm_db_index_operational_stats (    
     { database_id | NULL | 0 | DEFAULT }    
   , { object_id | NULL | 0 | DEFAULT }    
@@ -48,20 +47,7 @@ sys.dm_db_index_operational_stats (
     
 ## Arguments    
 
-:::row:::
-    :::column:::
-        *database_id*
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*database_id* | NULL | 0 | DEFAULT
 
   ID of the database. *database_id* is **smallint**. Valid inputs are the ID number of a database, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
     
@@ -69,20 +55,7 @@ sys.dm_db_index_operational_stats (
     
  The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.    
 
-:::row:::
-    :::column:::
-        *object_id*
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*object_id* | NULL | 0 | DEFAULT
 
  Object ID of the table or view the index is on. *object_id* is **int**.    
     
@@ -90,42 +63,13 @@ sys.dm_db_index_operational_stats (
     
  Specify NULL to return cached information for all tables and views in the specified database. If you specify NULL for *object_id*, you must also specify NULL for *index_id* and *partition_number*.    
 
-:::row:::
-    :::column:::
-        *index_id*
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        -1
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*index_id* | 0 | NULL | -1 | DEFAULT
 
  ID of the index. *index_id* is **int**. Valid inputs are the ID number of an index, 0 if *object_id* is a heap, NULL, -1, or DEFAULT. The default is -1, NULL, -1, and DEFAULT are equivalent values in this context.    
     
  Specify NULL to return cached information for all indexes for a base table or view. If you specify NULL for *index_id*, you must also specify NULL for *partition_number*.    
 
-:::row:::
-    :::column:::
-        *partition_number*
-    :::column-end:::
-    :::column:::
-        NULL
-    :::column-end:::
-    :::column:::
-        0
-    :::column-end:::
-    :::column:::
-        DEFAULT
-    :::column-end:::
-:::row-end:::
+*partition_number* | NULL | 0 | DEFAULT
 
  Partition number in the object. *partition_number* is **int**. Valid inputs are the *partion_number* of an index or heap, NULL, 0, or DEFAULT. The default is 0. NULL, 0, and DEFAULT are equivalent values in this context.    
     
@@ -184,7 +128,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_success_count**|**bigint**|Number of data pages that were compressed by using PAGE compression for specific partitions of a table, index, or indexed view. Always 0 for  columnstore index.|    
     
 ## Remarks    
- This dynamic management object does not accept correlated parameters from CROSS APPLY and OUTER APPLY.    
+ This dynamic management object does not accept correlated parameters from `CROSS APPLY` and `OUTER APPLY`.    
     
  You can use **sys.dm_db_index_operational_stats** to track the length of time that users must wait to read or write to a table, index, or partition, and identify the tables or indexes that are encountering significant I/O activity or hot spots.    
     
@@ -229,26 +173,26 @@ sys.dm_db_index_operational_stats (
     
  The value in the columns **lob_fetch_in_pages** and **lob_fetch_in_bytes** can be greater than zero for nonclustered indexes that contain one or more LOB columns as included columns. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). Similarly, the value in the columns **row_overflow_fetch_in_pages** and **row_overflow_fetch_in_bytes** can be greater than 0 for nonclustered indexes if the index contains columns that can be pushed off-row.    
     
-## How the Counters in the Metadata Cache Are Reset    
+## How the counters in the Metadata Cache are reset    
  The data returned by **sys.dm_db_index_operational_stats** exists only as long as the metadata cache object that represents the heap or index is available. This data is neither persistent nor transactionally consistent. This means you cannot use these counters to determine whether an index has been used or not, or when the index was last used. For information about this, see [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
     
  The values for each column are set to zero whenever the metadata for the heap or index is brought into the metadata cache and statistics are accumulated until the cache object is removed from the metadata cache. Therefore, an active heap or index will likely always have its metadata in the cache, and the cumulative counts may reflect activity since the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started. The metadata for a less active heap or index will move in and out of the cache as it is used. As a result, it may or may not have values available. Dropping an index will cause the corresponding statistics to be removed from memory and no longer be reported by the function. Other DDL operations against the index may cause the value of the statistics to be reset to zero.    
     
-## Using System Functions to Specify Parameter Values    
+## Using system functions to specify parameter values    
  You can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] functions [DB_ID](../../t-sql/functions/db-id-transact-sql.md) and [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) to specify a value for the *database_id* and *object_id* parameters. However, passing values that are not valid to these functions may cause unintended results. Always make sure that a valid ID is returned when you use DB_ID or OBJECT_ID. For more information, see the Remarks section in [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
 ## Permissions    
  Requires the following permissions:    
     
--   CONTROL permission on the specified object within the database    
+-   `CONTROL` permission on the specified object within the database    
     
--   VIEW DATABASE STATE permission to return information about all objects within the specified database, by using the object wildcard @*object_id* = NULL    
+-   `VIEW DATABASE STATE` permission to return information about all objects within the specified database, by using the object wildcard @*object_id* = NULL    
     
--   VIEW SERVER STATE permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
+-   `VIEW SERVER STATE` permission to return information about all databases, by using the database wildcard @*database_id* = NULL    
     
- Granting VIEW DATABASE STATE allows all objects in the database to be returned, regardless of any CONTROL permissions denied on specific objects.    
+ Granting `VIEW DATABASE STATE` allows all objects in the database to be returned, regardless of any CONTROL permissions denied on specific objects.    
     
- Denying VIEW DATABASE STATE disallows all objects in the database to be returned, regardless of any CONTROL permissions granted on specific objects. Also, when the database wildcard @*database_id*=NULL is specified, the database is omitted.    
+ Denying `VIEW DATABASE STATE` disallows all objects in the database to be returned, regardless of any CONTROL permissions granted on specific objects. Also, when the database wildcard `@database_id=NULL` is specified, the database is omitted.    
     
  For more information, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
     
@@ -258,9 +202,9 @@ sys.dm_db_index_operational_stats (
  The following example returns information for all indexes and partitions of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Executing this query requires, at a minimum, CONTROL permission on `Person.Address` table.    
     
 > [!IMPORTANT]    
->  When you are using the [!INCLUDE[tsql](../../includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always ensure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.    
+> When you are using the [!INCLUDE[tsql](../../includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always ensure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.    
     
-```    
+```sql    
 DECLARE @db_id int;    
 DECLARE @object_id int;    
 SET @db_id = DB_ID(N'AdventureWorks2012');    
@@ -278,16 +222,14 @@ ELSE
     SELECT * FROM sys.dm_db_index_operational_stats(@db_id, @object_id, NULL, NULL);    
   END;    
 GO    
-    
 ```    
     
 ### B. Returning information for all tables and indexes    
  The following example returns information for all tables and indexes within the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Executing this query requires VIEW SERVER STATE permission.    
     
-```    
+```sql    
 SELECT * FROM sys.dm_db_index_operational_stats( NULL, NULL, NULL, NULL);    
-GO    
-    
+GO        
 ```    
     
 ## See Also    

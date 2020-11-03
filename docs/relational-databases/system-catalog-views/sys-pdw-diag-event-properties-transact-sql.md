@@ -25,6 +25,6 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |**property_name**|**nvarchar(255)**|Name of a property of the event.||  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

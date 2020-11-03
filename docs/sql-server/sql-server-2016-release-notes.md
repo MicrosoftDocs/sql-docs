@@ -81,7 +81,7 @@ Supportability and Diagnostics related improvements included in SQL Server 2016 
 | |The XML deadlock graph is improved for deadlocks involving batch-mode operators, with more attributes added to the SyncPoint resource.| |
 |Dynamic reloading of some replication agent profile parameters   |   In the current implementation of replication agents any change in the agent profile parameter requires the agent to be stopped and restarted. This improvements allows for the parameters to be dynamically reloaded without having to restart the replication agent.   |      |
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Screenshot of a horizontal bar.](media/horizontal-bar.png)
 
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 includes all cumulative updates up to SQL Server 2016 RTM CU3 including Security Update MS16-136. It contains a roll-up of solutions provided in SQL Server 2016 cumulative updates up to and includes the latest Cumulative Update - CU3 and Security Update MS16-136 released on November 8th, 2016.
@@ -129,7 +129,7 @@ The SQL Server 2016 SP1 installation may require reboot post installation. As a 
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545)
 - ![info_tip](../sql-server/media/info-tip.png) [SQL Server Update Center](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]
 
-![horizontal-bar.png](media/horizontal-bar.png)
+![Another screenshot of a horizontal bar.](media/horizontal-bar.png)
 
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Database Engine (GA)](#bkmk_ga_instalpatch)

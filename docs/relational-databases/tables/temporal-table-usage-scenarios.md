@@ -27,7 +27,7 @@ Temporal system-versioned tables allow you to plan for data audit scenarios in t
 The following diagram shows an Employee table scenario with the data sample including current (marked with blue color) and historical row versions (marked with grey color).
 The right-hand portion of the diagram visualizes row versions on time axis and what are the rows you select with different types of querying on temporal table with or without SYSTEM_TIME clause.
 
-![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
+![Diagram showing the first Temporal Usage scenario.](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")
 
 ### Enabling system-versioning on a new table for data audit
 
@@ -170,7 +170,7 @@ Examples of the real-world scenarios that fit well into this category are invent
 
 The following diagram shows simplified data model used for inventory management:
 
-![TemporalUsageInMemory](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
+![Diagram showing simplified data model used for inventory management.](../../relational-databases/tables/media/temporalusageinmemory.png "TemporalUsageInMemory")
 
 The following code example creates ProductInventory as an in-memory system-versioned temporal table with a clustered columnstore index on the history table (which actually replaces the row-store index created by default):
 
@@ -256,7 +256,7 @@ END;
 
 The spUpdateInventory stored procedure either inserts a new product in the inventory or updates the product quantity for the particular location. The business logic is very simple and focused on maintaining the latest state accurate all the time by incrementing / decrementing the Quantity field through table update, while system-versioned tables transparently add history dimension to the data, as depicted on the diagram below.
 
-![TemporalUsageInMemory2b](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
+![Diagram showing Temporal Usage with current usage In-Memory and historic usage in a clustered columnstore.](../../relational-databases/tables/media/temporalusageinmemory2b.png "TemporalUsageInMemory2b")
 
 Now, querying of the latest state can be performed efficiently from the natively compiled module:
 
@@ -290,7 +290,7 @@ SELECT * FROM vw_GetProductInventoryHistory
 
 The diagram below shows the data history for one product which can be easily rendered importing the view above in the Power Query, Power BI or similar business intelligence tool:
 
-![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
+![Diagram showing the data history for one product.](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")
 
 Temporal tables can be used in this scenario to perform other types of time travel analysis, such as reconstructing the state of the inventory AS OF any point in time in the past or comparing snapshots that belong to different moments in time.
 
@@ -343,7 +343,7 @@ SELECT * FROM vw_ProductInventoryDetails
 
 The following picture shows the execution plan generated for the SELECT query. This illustrates that all complexity of dealing with temporal relations is fully handled by the SQL Server engine:
 
-![ASOFExecutionPlan](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
+![Diagram showing the execution plan generated for the SELECT query illustrating that all complexity of dealing with temporal relations is fully handled by the SQL Server engine.](../../relational-databases/tables/media/asofexecutionplan.png "ASOFExecutionPlan")
 
 Use the following code to compare state of product inventory between two points in time (a day ago and a month ago):
 
@@ -385,7 +385,7 @@ CREATE TABLE [dbo].[Product]
 
 The following diagram shows the purchases over time:
 
-![TemporalAnomalyDetection](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
+![Diagram showing the purchases over time.](../../relational-databases/tables/media/temporalanomalydetection.png "TemporalAnomalyDetection")
 
 Assuming that during the regular days number of purchased products has small variance, the following query identifies singleton outliers - samples which difference compared to their immediate neighbors is significant (2x), while surrounding samples do not differ significantly (less than 20%):
 
@@ -461,7 +461,7 @@ No additional code is required to maintain SCD during the data warehouse loading
 
 The following illustration shows how you can use Temporal Tables in a simple scenario involving 2 SCDs (DimLocation and DimProduct) and one fact table.
 
-![TemporalSCD](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
+![Diagram showing how you can use Temporal Tables in a simple scenario involving 2 SCDs (DimLocation and DimProduct) and one fact table.](../../relational-databases/tables/media/temporalscd.png "TemporalSCD")
 
 In order to use above SCDs in reports, you need to effectively adjust querying. For example, you might want to calculate the total sales amount and the average number of sold products per capita for the last six months. Note that both metrics requires the correlation of data from the fact table and dimensions that might have changed their attributes important for the analysis (DimLocation.NumOfCustomers, DimProduct.UnitPrice). The following query properly calculates the required metrics:
 
@@ -534,13 +534,13 @@ This stored procedure takes @EmployeeID and @versionNumber as input parameters. 
 
 The following picture shows state of the row before and after the procedure invocation. Red rectangle marks current row version that is incorrect, while green rectangle marks correct version from the history.
 
-![TemporalUsageRepair1](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
+![Screenshot showing the state of the row before and after the procedure invocation](../../relational-databases/tables/media/temporalusagerepair1.png "TemporalUsageRepair1")
 
 ```sql
 EXEC sp_RepairEmployeeRecord @EmployeeID = 1, @versionNumber = 1
 ```
 
-![TemporalUsageRepair2](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
+![Screenshot showing the corrected row.](../../relational-databases/tables/media/temporalusagerepair2.png "TemporalUsageRepair2")
 
 This repair stored procedure can be defined to accept an exact timestamp instead of row version. It will restore row to any version that was active for the point in time provided (i.e. AS OF point in time).
 
@@ -562,11 +562,11 @@ UPDATE Employee
 
 For the same data sample the following picture illustrates repair scenario with time condition. Highlighted are @asOf parameter, selected row in the history that was actual at the provided point in time and new row version in the current table after repair operation:
 
-![TemporalUsageRepair3](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
+![Screenshot showing the repair scenario with time condition.](../../relational-databases/tables/media/temporalusagerepair3.png "TemporalUsageRepair3")
 
 Data correction can become part of automated data loading in data warehousing and reporting systems. If a newly updated value is not correct then, in many scenarios, restoring the previous version from history is good enough mitigation. The following diagram shows how this process can be automated:
 
-![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
+![Diagram showing how the process can be automated.](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")
 
 ## Next steps
 

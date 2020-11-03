@@ -45,7 +45,7 @@ Renames a database user or changes its default schema.
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -228,7 +228,7 @@ GO
         **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -420,7 +420,7 @@ GO
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -696,7 +696,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -825,7 +825,7 @@ GO
         [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)

@@ -24,7 +24,7 @@ For information about Power BI Report Server, see [What is Power BI Report Serve
 
 ## SQL Server 2019 Reporting Services
 
-**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+**Download** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) is available for download from the Microsoft Download Center.
 
@@ -62,7 +62,7 @@ The newly released version of Report Builder is fully compatible with the 2016, 
 
 ## SQL Server 2017 Reporting Services
 
-**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+**Download** :::image type="icon" source="https://docs.microsoft.com/analysis-services/analysis-services/media/download.png":::
 
 To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
@@ -112,7 +112,7 @@ To create Mobile Reports, you need the [!INCLUDE[SS_MobileReptPub_Short](../incl
 
 For more information about the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], see [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
-![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
+![Screenshot showing the SQL Server Reporting Services portal.](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
 #### Custom branding for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -124,7 +124,7 @@ For more information about custom branding, see [Branding the web portal](https:
 
 You create KPIs directly in the [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] that are contextual to the current folder. When creating KPIs, you can choose dataset fields, and summarize their values. You can also select related content to drill-through to expose more details.
 
-![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
+![Screenshot showing KPIS in the SQL Server Reporting Services portal.](../reporting-services/media/ssrs-webportal-kpi.png)
 
 For more information, see [Working with KPIs in the web portal](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
 
@@ -189,13 +189,13 @@ For more information on browser support, see [Browser Support for Reporting Serv
 
 ![note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
 
-![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
+![Screenshot showing the Pin to Power BI Dashboard dialog box.](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
 For more information, see [Power BI Report Server Integration &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) and [Pin Reporting Services items to Power BI Dashboards](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
 **PowerPoint Rendering and Export:** The Microsoft PowerPoint (PPTX) format is a new [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] rendering extension. You can export reports in the PPTX format from the usual applications; Report Builder, Report Designer (in SSDT), and the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. For the example, the following image shows the export menu from the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
-![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
+![Screenshot showing the Export dropdown list with the PowerPoint option called out.](../reporting-services/media/ssrs-export-powerpoint.png) 
 
 You can also select the PPTX format for subscription output and use Report Server URL access to render and export a report. For example, the following  URL command in your browser exports a report from a named instance of the report server.  
 
@@ -209,13 +209,13 @@ For more information, see [Export a Report Using URL Access](../reporting-servic
 
 For more information, see [Enable and Disable Client-Side Printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
-![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
+![Screenshot of the Print dialog box.](../reporting-services/media/ssrs-pdf-printing.png)
 
 ### Subscription Improvements  
 
 |Feature|Supported server mode|  
 |-------------|---------------------------|  
-|**Enable and disable subscriptions**. New user interface options to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily enabled.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> For more information, see [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Native mode|  
+|**Enable and disable subscriptions**. New user interface options to quickly disable and enable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily enabled.<br /><br /> ![Screenshot showing the Enable, Disable, and Delete options.](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> For more information, see [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Native mode|  
 |**Subscription description**. When you create a new subscription, you can now include a description of the report as part of the subscription properties. The description is included on the subscription summary page.|SharePoint and Native mode|  
 |**Change subscription owner**. Enhanced user interface to quickly change the owner of a subscription. Previous versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] allow administrators to change subscription owners using script. Starting with the [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] release, you can change subscription owners using the user interface or script. Changing the subscription owner is a common administrative task when users leave or change roles in your organization.|SharePoint and Native mode|  
 |**Shared credential for file share subscriptions**. Two workflows now exist with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] file share subscriptions:<br /><br /> New in this release, your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administrator can configure a single file share account, that can be used for multiple subscriptions. The file share account is configured in the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] native mode configuration manager **Specify a file share account**. On the subscription configuration page, users select **Use file share account**.<br /><br /> You configure individual subscriptions with specific credentials for the destination file share.<br /><br /> You can also mix the two approaches and have some file share subscriptions use the central file share account while other subscriptions use specific credentials.|Native mode|

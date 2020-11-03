@@ -91,7 +91,7 @@ ms.author: "sstein"
 -   **UPGRADE** - a database can be upgraded using a DACPAC. Upgrade is supported even on databases that are not previously registered as data-tier applications, but as a consequence of the upgrade, the database will be implicitly registered.  
   
 ## BACPAC  
- A BACPAC is a Windows file with a .bacpac extension that encapsulates a database's schema and data. The primary use case for a BACPAC is to move a database from one server to another - or to [migrate a database from a local server to the cloud](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/) - and archiving an existing database in an open format.  
+ A BACPAC is a Windows file with a .bacpac extension that encapsulates a database's schema and data. The primary use case for a BACPAC is to move a database from one server to another - or to [migrate a database from a local server to the cloud](/azure/azure-sql/database/migrate-to-database-from-sql-server) - and archiving an existing database in an open format.  
  Similar to the DACPAC, the BACPAC file format is open - the schema contents of the BACPAC are identical to that of the DACPAC. The data in a BACPAC is stored in JSON format.  
   
  DACPAC and BACPAC are similar but they target different scenarios. A DACPAC is focused on capturing and deploying schema, including upgrading an existing database. The primary use case for a DACPAC is to deploy a tightly defined schema to development, test, and then to production environments. And also the reverse: capturing production's schema and applying it back to test and development environments.  
@@ -124,6 +124,5 @@ ms.author: "sstein"
 |Describes how to use a wizard to deploy an existing database. The wizard uses DACs to perform the deployment.|[Deploy a Database By Using a DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
 ## See also  
- [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
-  
+ [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
   

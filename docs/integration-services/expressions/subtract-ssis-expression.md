@@ -38,10 +38,9 @@ numeric_expression1 - numeric_expression2
  Determined by the data types of the two arguments. For more information, see [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
 ## Remarks  
- Enclose the minus unary expression in parenthesis to ensure that the expression is evaluated in the correct order  
-  
-## Remarks  
- If either operand is null, the result is null.  
+ - Enclose the minus unary expression in parenthesis to ensure that the expression is evaluated in the correct order  
+
+ - If either operand is null, the result is null.  
   
 ## Expression Examples  
  This example subtracts numeric literals.  

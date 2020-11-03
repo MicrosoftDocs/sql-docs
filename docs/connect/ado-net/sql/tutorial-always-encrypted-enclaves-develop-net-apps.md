@@ -29,7 +29,7 @@ This tutorial teaches you how to develop a simple application that issues databa
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../../../relational-databases/security/tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../../../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
 
 In addition, you need Visual Studio (version 2019 is recommended) - you can download it from [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Your application development environment must use .NET Framework 4.6 or later or .NET Core 2.1 or later.
 

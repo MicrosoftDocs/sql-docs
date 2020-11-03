@@ -22,7 +22,7 @@ Always Encrypted with secure enclaves supports:
 - Clustered and non-clustered indexes on columns encrypted using deterministic encryption and enclave-enabled keys.
   - Such indexes are sorted based on ciphertext. No special considerations apply to such indexes. You can manage and use them the same way as indexes on columns encrypted using deterministic encryption and keys that aren't enclave-enabled (as with Always Encrypted). 
 - Nonclustered indexes on columns encrypted using randomized encryption and enclave-enabled keys.
-  - Processing queries inside an enclave is useful and ensures an index on a column encrypted using randomized encryption doesn't leak sensitive data. The key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. For more information, see [Indexes on Enclave-enabled Columns using Randomized Encryption](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption).
+  - The key values in the index data structure (B-tree) are encrypted and sorted based on their plaintext values. For more information, see [Indexes on enclave-enabled columns](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns).
 
 > [!NOTE]
 > The remainder of this article discusses nonclustered indexes on columns encrypted using randomized encryption and enclave-enabled keys.

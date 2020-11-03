@@ -20,7 +20,7 @@ To complete this quickstart, you need Azure Data Studio, and an Azure SQL Databa
 
 - [Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 
-If you don't have an Azure SQL server, complete one of the following Azure SQL Database quickstarts. Remember the fully qualified server name and sign in credentials for later steps:
+If you don't have an Azure SQL Server, complete one of the following Azure SQL Database quickstarts. Remember the fully qualified server name and sign in credentials for later steps:
 
 - [Create DB - Portal](/azure/sql-database/sql-database-get-started-portal)
 - [Create DB - CLI](/azure/sql-database/sql-database-get-started-cli)
@@ -35,7 +35,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
    
    ![Screenshot showing the Welcome Azure Delta Studio dialog box with the Next connection option called out.](media/quickstart-sql-database/new-connection-icon.png)
 
-2. This article uses SQL sign-in, but also supports Windows authentication. Fill in the following fields using the server name, user name, and password for your Azure SQL server:
+2. This article uses SQL sign-in, but also supports Windows authentication. Fill in the following fields using the server name, user name, and password for your Azure SQL Server:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -61,7 +61,7 @@ After successfully connecting, your server opens in the **SERVERS** sidebar.
 
 The next sections create the TutorialDB database that's used in other Azure Data Studio tutorials.
 
-1. Right-click on your Azure SQL server in the **SERVERS** sidebar and select **New Query**.
+1. Right-click on your Azure SQL Server in the **SERVERS** sidebar and select **New Query**.
 
 1. Paste this SQL into the query editor.
 

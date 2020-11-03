@@ -702,7 +702,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Crashes and freezes|Fixed an issue where system stops responding when connecting to an Azure SQL Database using MFA while ADAL traces are enabled.|
 |Crashes and freezes|Fixed a issue where system stops responding (or perceived hang) in Live Query Statistics when invoked from Activity Monitor (the issue manifested when using SQL Server authentication with no "Persist Security Info" set).|
 |Crashes and freezes|Fixed a issue where system stops responding when selecting "Reports" in Object Explorer, which could manifest on high latency connections or temporary non-accessibility of the resources.|
-|Crashes and freezes|Fixed a crash in SSMS when trying to use Central Management Server and Azure SQL servers. For details, see [SMSS 17.5 application error and crash when using Central Management Server](https://feedback.azure.com/forums/908035/suggestions/33374884).|
+|Crashes and freezes|Fixed a crash in SSMS when trying to use Central Management Server and Azure SQL Servers. For details, see [SMSS 17.5 application error and crash when using Central Management Server](https://feedback.azure.com/forums/908035/suggestions/33374884).|
 |Crashes and freezes|Fixed a issue where system stops responding in Object Explorer by optimizing the way IsFullTextEnabled  property is retrieved.|
 |Crashes and freezes|Fixed a issue where system stops responding in "Copy Database Wizard" by avoiding to build unnecessary queries to retrieve Database properties.|
 |Crashes and freezes|Fixed an issue that was causing SSMS to stop responding/crash while editing T-SQL.|

@@ -57,8 +57,10 @@ Sum(expression, scope, recursive)
   
  For more information about recursive aggregates, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## Example  
- The following two code examples provides a sum of line item totals in the `Order` group or data region.  
+## Examples  
+
+### A. Sum of line item totals 
+ The following two code examples provide a sum of line item totals in the `Order` group or data region.  
   
 ```  
 =Sum(Fields!LineTotal.Value, "Order")  
@@ -66,7 +68,7 @@ Sum(expression, scope, recursive)
 =Sum(CDbl(Fields!LineTotal.Value), "Order")  
 ```  
   
-## Example  
+### B. Maximum value from all nested regions 
  In a matrix data region with nested row groups Category and Subcategory, and nested column groups Year and Quarter, in a cell that belongs to the innermost row and column groups, the following expression evaluates to the maximum value from all quarters for all subcategories.  
   
 ```  

@@ -174,7 +174,7 @@ A partitioning configuration task creates the initial partitioning configuration
 
 The following picture shows initial partitioning configuration to keep 6 months of data.
 
-![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")
+![Diagram showing initial partitioning configuration to keep six months of data.](../../relational-databases/tables/media/partitioning.png "Partitioning")
 
 > [!NOTE]
 > See Performance considerations with table partitioning below for the performance implications of using RANGE LEFT versus RANGE RIGHT when configuring partitioning.
@@ -183,7 +183,7 @@ The first and last partition are "open" on lower and upper boundaries respective
 
 The following picture illustrates the recurring partition maintenance tasks (see detailed steps below).
 
-![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
+![Diagram showing the recurring partition maintenance tasks.](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
 
 The detailed steps for the recurring partition maintenance tasks are:
 
@@ -317,7 +317,7 @@ It is important to perform the MERGE and SPLIT RANGE operations to avoid any dat
 
 Let's first visually explain meaning of the RANGE LEFT and RANGE RIGHT options:
 
-![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
+![Diagram showing the RANGE LEFT and RANGE RIGHT options.](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
 
 When you define a partition function as RANGE LEFT, the specified values are the upper boundaries of the partitions. When you use RANGE RIGHT, the specified values are the lower boundaries of the partitions. When you use the MERGE RANGE operation to remove a boundary from the partition function definition, the underlying implementation also removes the partition which contains the boundary. If that partition is not empty, data will be moved to the partition that is result of MERGE RANGE operation.
 
@@ -338,7 +338,7 @@ The cleanup logic is the same for every temporal table, so it can be automated r
 
 The following diagram illustrates how your cleanup logic should be organized for a single table to reduce impact on the running workloads.
 
-![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
+![Diagram showing how your cleanup logic should be organized for a single table to reduce impact on the running workloads.](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
 
 Here are some high-level guidelines for implementing the process. Schedule cleanup logic to run every day and iterate over all temporal tables that need data cleanup. Use SQL Server Agent or different tool to schedule this process:
 

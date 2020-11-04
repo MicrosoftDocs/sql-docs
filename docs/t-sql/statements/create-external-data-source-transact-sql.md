@@ -673,6 +673,7 @@ Creates an external data source for PolyBase. External data sources are used to 
 
 ## Syntax
 
+### [SQL pool](#tab/provisioned)
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
@@ -681,6 +682,15 @@ WITH
     [ [ , ] TYPE = HADOOP ]
 [ ; ]
 ```
+### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
+```syntaxsql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
+WITH
+(    LOCATION = '<prefix>://<path>[:<port>]'
+) 
+[;]
+```
+---
 
 ## Arguments
 

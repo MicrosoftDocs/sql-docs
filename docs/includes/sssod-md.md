@@ -1,0 +1,1 @@
+Serverless SQL pool (preview)

@@ -35,11 +35,11 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |database_id|**int**|Identifier of database used by explicit context (for example, USE DB_X).|See ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Holds the full text of the request as submitted by the user.|Any valid query or request text. Queries that are longer than 4000 bytes are truncated.|  
 |resource_class|**nvarchar(20)**|The workload group used for this request. |Static Resource Classes</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamic Resource Classes</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|The Importance setting the request executed at.  This is the relative importance of a request in this workload group and across workload groups for shared resources.  Importance specified in the classifier overrides the workload group importance setting.</br>Applies to: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normal (default)</br>above_normal</br>high|
-|group_name|**sysname** |For requests utilizing resources, group_name is the name of the workload group the request is running under.  If the request does not utilize resources, group_name is null.</br>Applies to: Azure SQL Data Warehouse|
+|importance|**nvarchar(128)**|The Importance setting the request executed at.  This is the relative importance of a request in this workload group and across workload groups for shared resources.  Importance specified in the classifier overrides the workload group importance setting.</br>Applies to: Azure Synapse Analytics|NULL</br>low</br>below_normal</br>normal (default)</br>above_normal</br>high|
+|group_name|**sysname** |For requests utilizing resources, group_name is the name of the workload group the request is running under.  If the request does not utilize resources, group_name is null.</br>Applies to: Azure Synapse Analytics|
 |classifier_name|**sysname**|For requests utilizing resources, The name of the classifier used for assigning resources and importance.||
-|resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure SQL Data Warehouse|
-|result_cache_hit|**int**|Details whether a completed query used result set cache.  </br>Applies to: Azure SQL Data Warehouse| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative integer values = Reasons why result set caching was not used.  See remarks section for details.|
+|resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure Synapse Analytics|
+|result_cache_hit|**int**|Details whether a completed query used result set cache.  </br>Applies to: Azure Synapse Analytics| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative integer values = Reasons why result set caching was not used.  See remarks section for details.|
 |client_correlation_id|**nvarchar(255)**|Optional user-defined name for a client session.  To set for a session, call sp_set_session_context 'client_correlation_id', '<CorrelationIDName>'.  Run `SELECT SESSION_CONTEXT(N'client_correlation_id')` to retrieve its value.|
 ||||
 
@@ -75,4 +75,4 @@ The negative integer value in the result_cache_hit column is a bitmap value of a
   
 ## See Also
 
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

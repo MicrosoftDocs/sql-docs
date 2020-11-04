@@ -118,7 +118,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Analysis Services | Fixed an issue that may have resulted in an error when trying to connect to SSAS via msmdpump.dll. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696). |
 | Backup/Restore | Fixed an issue where selecting "View Connection Properties" yielded a SMO error on HostDistribution prop being missing for SQL 2016 and earlier. |
 | Database Designer | Fixed an issue, which was causing SSMS to crash when handling decimal numbers. |
-| Database Diagrams | Fixed an issue that could cause SSMS to crash or hang when using Database Diagrams where "Add Table" dialog was not properly displayed. |
+| Database Diagrams | Fixed an issue that could cause SSMS to crash or stop responding when using Database Diagrams where "Add Table" dialog was not properly displayed. |
 | Database Mirroring | Fixed an issue that was causing mirror configuration to fail. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897281). |
 | General SSMS | Fixed an issue where trying to connect to an Azure SQL DB, which could take several seconds (SQL login in a user database). |
 | General SSMS | Fixed an issue where SSMS was not handling/displaying deadlock captured (.xdl files). |

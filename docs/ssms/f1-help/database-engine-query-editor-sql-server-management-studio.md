@@ -13,7 +13,6 @@ f1_keywords:
   - sql13.swb.sqleditors.multiserverresultssettings
   - sql13.swb.tsqlquery.f1
   - sql13.swb.tsqlresults.f1
-  - VS.CommandWindow
 dev_langs: 
   - TSQL
 helpviewer_keywords: 

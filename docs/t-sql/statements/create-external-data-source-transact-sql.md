@@ -102,7 +102,7 @@ Location path:
 - `<`Namenode`>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.defaultFS` configuration parameter. The default is 8020.
 - `<container>` = the container of the storage account holding the data. Root containers are read-only, data can't be written back to the container.
-- `<storage_account>` = the storage account name of the azure resource.
+- `<storage_account>` = the storage account name of the Azure resource.
 - `<server_name>` = the host name.
 - `<instance_name>` = the name of the SQL Server named instance. Used if you have SQL Server Browser Service running on the target instance.
 
@@ -333,7 +333,7 @@ WITH (
 
 ### G. Create external data source to reference Kafka
 
-In this example, the external data source is a Kafak server with IP address xxx.xxx.xxx.xxx and listenning on port 1900. The kafka external data source is only for data streaming and does not support predicate push down.
+In this example, the external data source is a Kafak server with IP address xxx.xxx.xxx.xxx and listening on port 1900. The kafka external data source is only for data streaming and does not support predicate push down.
 
 ```sql
 -- Create an External Data Source for Kafka
@@ -711,7 +711,7 @@ Provides the connectivity protocol and path to the external data source.
 Location path:
 
 - `<container>` = the container of the storage account holding the data. Root containers are read-only, data can't be written back to the container.
-- `<storage_account>` = the storage account name of the azure resource.
+- `<storage_account>` = the storage account name of the Azure resource.
 
 Additional notes and guidance when setting the location:
 
@@ -970,7 +970,7 @@ Location path:
 - `<Namenode>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.defaultFS` configuration parameter. The default is 8020.
 - `<container>` = the container of the storage account holding the data. Root containers are read-only, data can't be written back to the container.
-- `<storage_account>` = the storage account name of the azure resource.
+- `<storage_account>` = the storage account name of the Azure resource.
 
 Additional notes and guidance when setting the location:
 

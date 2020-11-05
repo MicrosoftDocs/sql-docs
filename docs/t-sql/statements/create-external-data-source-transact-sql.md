@@ -673,7 +673,7 @@ Creates an external data source for PolyBase. External data sources are used to 
 
 ## Syntax
 
-### [Provisioned SQL pool](#tab/provisioned)
+### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH

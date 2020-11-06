@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md). In SQL Server 2019, Java, Python, and R runtimes are supported.
 
 > [!NOTE]
-> For executing Python or R in SQL Server, see the [SQL machine learning](../machine-learning/index.yml) documentation. With SQL Server 2019 and later, you can use a custom Python and R runtime with Language Extensions. For more information, see the [Python custom runtime](../machine-learning/install/custom-runtime-python.md) and the [R custom runtime](../machine-learning/install/custom-runtime-r.md).
+> For executing Python or R in SQL Server, see the [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) documentation. With SQL Server 2019 and later, you can use a custom Python and R runtime with Language Extensions. For more information, see how to install the [Python custom runtime](../machine-learning/install/custom-runtime-python.md) and the [R custom runtime](../machine-learning/install/custom-runtime-r.md).
 
 ## What you can do with Language Extensions
 

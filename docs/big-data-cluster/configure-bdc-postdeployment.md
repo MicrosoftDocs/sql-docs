@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 ---
 
 
-# Configure BDC settings post-deployments
+# Configure BDC settings post deployment
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -23,79 +23,86 @@ Cluster, service, and resource scoped settings for Big Data Clusters can be conf
 
 ## Update BDC to meet your Spark workload requirements
 
-### View the current configurations of the Big Data Cluster Spark service
+### **View the current configurations of the Big Data Cluster Spark service**
 The following example shows how to view the user configured settings of the Spark service. You can view all possible configurable settings, system-managed and all configurable settings, and pending settings through optional parameters. Visit the [azdata reference]() for more information.
 
 ```bash
 azdata bdc spark config settings show
 ```
-Sample output
-```json
+#### **Sample output**
+Spark Service 
+|Setting|Running Value|
+| --- | --- |
+|`spark-defaults-conf.spark.driver.cores`|`1` |
+|`spark-defaults-conf.spark.driver.memory`|`1664m` |
 
-```
 
-### Change the default number of cores and memory for the Spark driver across all resources with Spark (i.e. for the Spark servcice)
+### **Change the default number of cores and memory for the Spark driver across all resources with Spark (i.e. for the Spark servcice)**
 Update the default number of cores to 2 and default memory to 7424m for the Spark service.
 
 ```bash
 azdata bdc spark config settings set spark-defaults-conf.spark.driver.cores=2, spark-defaults-conf.spark.driver.memory=7424m
 ```
-Sample output
-```json
 
+### **Change the default number of cores and memory for the Spark executors in the Storage Pool**
+Update the default number of executor cores to 4 for the Storage Pool.
+
+```bash
+azdata bdc spark config settings set spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
-### View the pending settings changes staged in the BDC
+### **View the pending settings changes staged in the BDC**
 View the pending settings changes for the Spark service only and across the entire BDC cluster.
 
+#### **Pending Spark Service Settings**
 ```bash
 azdata bdc spark config settings show --filter-option=pending --include-details
 ```
-Sample output
-```json
+Spark Service 
+|Setting|Running Value|Configured Value| Configurable | Configured | Last Updated Time|
+| --- | --- | --- | --- | --- | --- |
+|`spark-defaults-conf.spark.driver.cores`|`1`| `2` | `true` | `true` | |
+|`spark-defaults-conf.spark.driver.memory`|`1664m`| `7424m` | `true` | `true` | |
 
-```
-
+#### **All Pending Settings**
 ```bash
 azdata bdc config settings show --filter-option=pending --include-details --recursive
 ```
-Sample output
-```json
 
-```
+Spark Service Settings - Pending
+|Setting|Running Value|Configured Value| Configurable | Configured | Last Updated Time|
+| --- | --- | --- | --- | --- | --- |
+|`spark-defaults-conf.spark.driver.cores`|`1`| `2` | `true` | `true` | |
+|`spark-defaults-conf.spark.driver.memory`|`1664m`| `7424m` | `true` | `true` | |
 
-### Upgrade the BDC with the pending configuration settings
+Storage-0 Resource Spark Settings - Pending
+|Setting|Running Value|Configured Value| Configurable | Configured | Last Updated Time|
+| --- | --- | --- | --- | --- | --- |
+|`spark-defaults-conf.spark.executor.cores`|`1`| `4` | `true` | `true` | |
+
+### **Upgrade the BDC with the pending configuration settings**
 ```bash
 azdata bdc config upgrade
 ```
-Sample output
-```json
 
+### **Monitor the status of the BDC upgrade**
+```bash
+azdata bdc status show -all
 ```
 
-### Monitor the status of the BDC upgrade
+## Optional steps
 
-
-## Additional steps
-
-### Revert pending configuration settings
+### **Revert pending configuration settings**
 If you determine that you no longer want to change the pending configuration settings, you can unstage these settings. This will revert the pending settings at all scopes.
 
 ```bash
 azdata bdc config settings revert
 ```
-Sample output
-```json
 
-```
-### Abort the configuration upgrade
+### **Abort the configuration upgrade**
 If the configuration upgrade fails for any of the components, you can abort the upgrade process and return the BDC back to its prior configurations. Settings that were staged for change during the upgrade will again be listed as pending settings.
 
 ```bash
 azdata bdc config abort-upgrade
-```
-Sample output
-```json
-
 ```
 

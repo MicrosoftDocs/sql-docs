@@ -13,21 +13,22 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Big Data Clusters configuration settings can be defined: `cluster`, `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope.
+Big Data Clusters configuration settings can be defined at the following scopes: `cluster`, `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope.
 
 ## BDC cluster-scope settings
 You can configure the following settings at the cluster scope.
 
 |Property|Options|
 | --- | --- |
-|`[telemetry]`|`customerfeedback = { true | false }` |
+|`mssql.telemetry`|`customerfeedback = { true | false }` |
+|`mssql.traceflag`|`traceflag<#> = <####>` |
 
 ## SQL service-scope settings
-You can configure the following settings at the cluster scope.
+You can configure the following settings at the SQL service scope.
 
 |Property|Options|
 | --- | --- |
-|`[language]`|`lcid = <language_identifier>` |
+|`mssql.language`|`lcid = <language_identifier>` |
 
 ## Spark service-scope settings
 Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
@@ -36,7 +37,7 @@ Visit the (Apache Spark & Apache Hadoop configuration article) to see all suppor
 Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
 
 ## Gateway service-scope settings
-None available
+No gateway service-scope settings configurable. Configure settings at the gateway resource-scope.
 
 ## App service-scope settings
 None available
@@ -44,9 +45,9 @@ None available
 ## Master Pool resource-scope settings
 |Property|Options|
 | --- | --- |
-|`[sqlagent]`|`enabled = { true | false }` |
-|`[licensing]`|`pid = { Enterprise | Developer }` |
-|`[collation]`|`x = <language_identifier>` |
+|`mssql.sqlagent`|`enabled = { true | false }` |
+|`mssql.licensing`|`pid = { Enterprise | Developer }` |
+|`mssql.collation`|`x = <language_identifier>` |
 
 ## Storage Pool resource-scope settings
 The storage pool consists of SQL, Spark, and HDFS components.
@@ -54,7 +55,21 @@ The storage pool consists of SQL, Spark, and HDFS components.
 ### Avaiable SQL configurations
 |Property|Options|
 | --- | --- |
-|`[traceflag]`|`traceflag<#> = <####>` |
+|`mssql.degreeOfParallelism`| |
+|`mssql.minServerMemory`| |
+|`mssql.maxServerMemory`| |
+|`mssql.network.tlscert`| |
+|`mssql.network.tlskey`| |
+|`mssql.numberOfCpus`| |
+|`mssql.storagePoolCacheSize`| |
+|`mssql.tempdb.autogrowthPerDataFile`| |
+|`mssql.tempdb.autogrowthPerLogFile`| |
+|`mssql.tempdb.dataFileSize`| |
+|`mssql.tempdb.dataFileMaxSize`| |
+|`mssql.tempdb.logFileMaxSize`| |
+|`mssql.tempdb.numberOfDataFiles`| |
+|`mssql.traceflag`|`traceflag<#> = <####>` |
+
 
 ### Available Apache Spark and Hadoop configurations
 Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.
@@ -62,12 +77,38 @@ Visit the (Apache Spark & Apache Hadoop configuration article) to see all suppor
 ## Data Pool resource-scope settings
 |Property|Options|
 | --- | --- |
-|`[traceflag]`|`traceflag<#> = <####>` |
+|`mssql.degreeOfParallelism`| |
+|`mssql.minServerMemory`| |
+|`mssql.maxServerMemory`| |
+|`mssql.network.tlscert`| |
+|`mssql.network.tlskey`| |
+|`mssql.numberOfCpus`| |
+|`mssql.storagePoolCacheSize`| |
+|`mssql.tempdb.autogrowthPerDataFile`| |
+|`mssql.tempdb.autogrowthPerLogFile`| |
+|`mssql.tempdb.dataFileSize`| |
+|`mssql.tempdb.dataFileMaxSize`| |
+|`mssql.tempdb.logFileMaxSize`| |
+|`mssql.tempdb.numberOfDataFiles`| |
+|`mssql.traceflag`|`traceflag<#> = <####>` |
 
 ## Compute Pool resource-scope settings
 |Property|Options|
 | --- | --- |
-|`[traceflag]`|`traceflag<#> = <####>` |
+|`mssql.degreeOfParallelism`| |
+|`mssql.minServerMemory`| |
+|`mssql.maxServerMemory`| |
+|`mssql.network.tlscert`| |
+|`mssql.network.tlskey`| |
+|`mssql.numberOfCpus`| |
+|`mssql.storagePoolCacheSize`| |
+|`mssql.tempdb.autogrowthPerDataFile`| |
+|`mssql.tempdb.autogrowthPerLogFile`| |
+|`mssql.tempdb.dataFileSize`| |
+|`mssql.tempdb.dataFileMaxSize`| |
+|`mssql.tempdb.logFileMaxSize`| |
+|`mssql.tempdb.numberOfDataFiles`| |
+|`mssql.traceflag`|`traceflag<#> = <####>` |
 
 ## Spark Pool resource-scope settings
 Visit the (Apache Spark & Apache Hadoop configuration article) to see all supported and unsupported settings.

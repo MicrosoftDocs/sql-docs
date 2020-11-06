@@ -466,13 +466,13 @@ function formatErrors($errors)
 ?>
 ```
 
-Point your browser to https://localhost/testsql.php (https://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database. If you don't see a success message showing SQL version information, you can do some basic troublehooting by running the script from the command line:
+Point your browser to https://localhost/testsql.php (https://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database. If you don't see a success message showing SQL version information, you can do some basic troubleshooting by running the script from the command line:
 
 ```bash
 php testsql.php
 ```
 
-If running from the command line is successful but nothing shows in your browser, check the [Apache log files](https://linuxize.com/post/apache-log-files/#location-of-the-log-files). If you still need help, see [Support resources](support-resources-for-the-php-sql-driver.md) for places to go.
+If running from the command line is successful but nothing shows in your browser, check the [Apache log files](https://linuxize.com/post/apache-log-files/#location-of-the-log-files). For additional help, see [Support resources](support-resources-for-the-php-sql-driver.md) for places to go.
 
 ## See Also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

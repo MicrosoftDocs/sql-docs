@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 ---
 
 
-# Configure BDC settings post deployment
+# How to configure BDC settings post deployment
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -21,7 +21,7 @@ ms.technology: big-data-cluster
 
 Cluster, service, and resource scoped settings for Big Data Clusters can be configured post-deployment through the azdata CLI. This functionality allows BDC adminstrators to adjust configurations to always meet workload requirements. This article goes over example steps to configure a BDC to meet Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
 
-## Update BDC to meet your Spark workload requirements
+## Step by Step: Configure BDC to meet your Spark workload requirements
 
 ### **View the current configurations of the Big Data Cluster Spark service**
 The following example shows how to view the user configured settings of the Spark service. You can view all possible configurable settings, system-managed and all configurable settings, and pending settings through optional parameters. Visit the [azdata reference]() for more information.

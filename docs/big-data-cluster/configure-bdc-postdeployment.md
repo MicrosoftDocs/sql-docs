@@ -59,10 +59,10 @@ View the pending settings changes for the Spark service only and across the enti
 azdata bdc spark config settings show --filter-option=pending --include-details
 ```
 Spark Service 
-|Setting|Running Value|Configured Value| Configurable | Configured | Last Updated Time|
+|Setting|Running Value|Configured Value|Configurable|Configured |Last Updated Time|
 | --- | --- | --- | --- | --- | --- |
-|`spark-defaults-conf.spark.driver.cores`|`1`| `2` | `true` | `true` | |
-|`spark-defaults-conf.spark.driver.memory`|`1664m`| `7424m` | `true` | `true` | |
+|`spark-defaults-conf.spark.driver.cores`|`1`| `2` | `true` | `true` |
+|`spark-defaults-conf.spark.driver.memory`|`1664m`| `7424m` | `true` | `true` |
 
 #### **All Pending Settings**
 ```bash
@@ -70,15 +70,15 @@ azdata bdc config settings show --filter-option=pending --include-details --recu
 ```
 
 Spark Service Settings - Pending
-|Setting|Running Value|Configured Value| Configurable | Configured | Last Updated Time|
+|Setting|Running Value|Configured Value|Configurable|Configured|Last Updated Time|
 | --- | --- | --- | --- | --- | --- |
-|`spark-defaults-conf.spark.driver.cores`|`1`| `2` | `true` | `true` | |
-|`spark-defaults-conf.spark.driver.memory`|`1664m`| `7424m` | `true` | `true` | |
+|`spark-defaults-conf.spark.driver.cores`|`1`| `2` | `true` | `true` |
+|`spark-defaults-conf.spark.driver.memory`|`1664m`| `7424m` | `true` | `true` |
 
 Storage-0 Resource Spark Settings - Pending
-|Setting|Running Value|Configured Value| Configurable | Configured | Last Updated Time|
+|Setting|Running Value|Configured Value|Configurable|Configured|Last Updated Time|
 | --- | --- | --- | --- | --- | --- |
-|`spark-defaults-conf.spark.executor.cores`|`1`| `4` | `true` | `true` | |
+|`spark-defaults-conf.spark.executor.cores`|`1`| `4` | `true` | `true` |
 
 ### **Upgrade the BDC with the pending configuration settings**
 ```bash

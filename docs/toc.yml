@@ -16581,154 +16581,229 @@
       - name: CREATE
         items:
         - name: AGGREGATE
+          displayName: CREATE AGGREGATE
           href: t-sql/statements/create-aggregate-transact-sql.md
         - name: APPLICATION ROLE
+          displayName: CREATE APPLICATION ROLE
           href: t-sql/statements/create-application-role-transact-sql.md
         - name: ASSEMBLY
+          displayName: CREATE ASSEMBLY
           href: t-sql/statements/create-assembly-transact-sql.md
         - name: ASYMMETRIC KEY
+          displayName: CREATE ASYMMETRIC KEY
           href: t-sql/statements/create-asymmetric-key-transact-sql.md
         - name: AVAILABILITY GROUP
+          displayName: CREATE AVAILABILITY GROUP
           href: t-sql/statements/create-availability-group-transact-sql.md
         - name: BROKER PRIORITY
+          displayName: CREATE BROKER PRIORITY
           href: t-sql/statements/create-broker-priority-transact-sql.md
         - name: CERTIFICATE
+          displayName: CREATE CERTIFICATE
           href: t-sql/statements/create-certificate-transact-sql.md
         - name: COLUMNSTORE INDEX
+          displayName: CREATE COLUMNSTORE INDEX
           href: t-sql/statements/create-columnstore-index-transact-sql.md
         - name: COLUMN ENCRYPTION KEY
+          displayName: CREATE COLUMN ENCRYPTION KEY
           href: t-sql/statements/create-column-encryption-key-transact-sql.md
         - name: COLUMN MASTER KEY
+          displayName: CREATE COLUMN MASTER KEY
           href: t-sql/statements/create-column-master-key-transact-sql.md
         - name: CONTRACT
+          displayName: CREATE CONTRACT
           href: t-sql/statements/create-contract-transact-sql.md
         - name: CREDENTIAL
+          displayName: CREATE CREDENTIAL
           href: t-sql/statements/create-credential-transact-sql.md
         - name: CRYPTOGRAPHIC PROVIDER
+          displayName: CREATE CRYPTOGRAPHIC PROVIDER
           href: t-sql/statements/create-cryptographic-provider-transact-sql.md
         - name: DATABASE
+          displayName: CREATE DATABASE
           href: t-sql/statements/create-database-transact-sql.md
         - name: DATABASE AUDIT SPECIFICATION
+          displayName: CREATE DATABASE AUDIT SPECIFICATION
           href: t-sql/statements/create-database-audit-specification-transact-sql.md
         - name: DATABASE ENCRYPTION KEY
+          displayName: CREATE DATABASE ENCRYPTION KEY
           href: t-sql/statements/create-database-encryption-key-transact-sql.md
         - name: DATABASE SCOPED CREDENTIAL
+          displayName: CREATE DATABASE SCOPED CREDENTIAL
           href: t-sql/statements/create-database-scoped-credential-transact-sql.md
         - name: DEFAULT
+          displayName: CREATE DEFAULT
           href: t-sql/statements/create-default-transact-sql.md
         - name: ENDPOINT
+          displayName: CREATE ENDPOINT
           href: t-sql/statements/create-endpoint-transact-sql.md
         - name: EVENT NOTIFICATION
+          displayName: CREATE EVENT NOTIFICATION
           href: t-sql/statements/create-event-notification-transact-sql.md
         - name: EVENT SESSION
+          displayName: EVENT SESSION
           href: t-sql/statements/create-event-session-transact-sql.md
         - name: EXTERNAL DATA SOURCE
+          displayName: CREATE EXTERNAL DATA SOURCE
           href: t-sql/statements/create-external-data-source-transact-sql.md
         - name: EXTERNAL LANGUAGE
+          displayName: CREATE EXTERNAL LANGUAGE
           href: t-sql/statements/create-external-language-transact-sql.md
         - name: EXTERNAL LIBRARY
+          displayName: CREATE EXTERNAL LIBRARY
           href: t-sql/statements/create-external-library-transact-sql.md
         - name: EXTERNAL FILE FORMAT
+          displayName: CREATE EXTERNAL FILE FORMAT
           href: t-sql/statements/create-external-file-format-transact-sql.md
         - name: EXTERNAL RESOURCE POOL
+          displayName: CREATE EXTERNAL RESOURCE POOL
           href: t-sql/statements/create-external-resource-pool-transact-sql.md
         - name: EXTERNAL TABLE
+          displayName: CREATE EXTERNAL TABLE
           href: t-sql/statements/create-external-table-transact-sql.md
         - name: EXTERNAL TABLE AS SELECT
+          displayName: CREATE EXTERNAL TABLE AS SELECT
           href: t-sql/statements/create-external-table-as-select-transact-sql.md
         - name: FULLTEXT CATALOG
+          displayName: CREATE FULLTEXT CATALOG
           href: t-sql/statements/create-fulltext-catalog-transact-sql.md
         - name: FULLTEXT INDEX
+          displayName: CREATE FULLTEXT INDEX
           href: t-sql/statements/create-fulltext-index-transact-sql.md
         - name: FULLTEXT STOPLIST
+          displayName: CREATE FULLTEXT STOPLIST
           href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
         - name: FUNCTION
+          displayName: CREATE FUNCTION
           href: t-sql/statements/create-function-transact-sql.md
         - name: FUNCTION (Azure Synapse Analytics)
+          displayName: CREATE FUNCTION (Azure Synapse Analytics)
           href: t-sql/statements/create-function-sql-data-warehouse.md
         - name: INDEX
+          displayName: CREATE INDEX
           href: t-sql/statements/create-index-transact-sql.md
         - name: LOGIN
+          displayName: CREATE LOGIN
           href: t-sql/statements/create-login-transact-sql.md
         - name: MASTER KEY
+          displayName: CREATE MASTER KEY
           href: t-sql/statements/create-master-key-transact-sql.md
         - name: MATERIALIZED VIEW AS SELECT
+          displayName: CREATE MATERIALIZED VIEW AS SELECT
           href: t-sql/statements/create-materialized-view-as-select-transact-sql.md
         - name: MESSAGE TYPE
+          displayName: CREATE MESSAGE TYPE
           href: t-sql/statements/create-message-type-transact-sql.md
         - name: PARTITION FUNCTION
+          displayName: CREATE PARTITION FUNCTION
           href: t-sql/statements/create-partition-function-transact-sql.md
         - name: PARTITION SCHEME
+          displayName: CREATE PARTITION SCHEME
           href: t-sql/statements/create-partition-scheme-transact-sql.md
         - name: PROCEDURE
+          displayName: CREATE PROCEDURE
           href: t-sql/statements/create-procedure-transact-sql.md
         - name: QUEUE
+          displayName: CREATE QUEUE
           href: t-sql/statements/create-queue-transact-sql.md
         - name: REMOTE SERVICE BINDING
+          displayName: CREATE REMOTE SERVICE BINDING
           href: t-sql/statements/create-remote-service-binding-transact-sql.md
         - name: REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+          displayName: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
           href: t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md
         - name: RESOURCE POOL
+          displayName: CREATE RESOURCE POOL
           href: t-sql/statements/create-resource-pool-transact-sql.md
         - name: ROLE
+          displayName: CREATE ROLE
           href: t-sql/statements/create-role-transact-sql.md
         - name: ROUTE
+          displayName: CREATE ROUTE
           href: t-sql/statements/create-route-transact-sql.md
         - name: RULE
+          displayName: CREATE RULE
           href: t-sql/statements/create-rule-transact-sql.md
         - name: SCHEMA
+          displayName: CREATE SCHEMA
           href: t-sql/statements/create-schema-transact-sql.md
         - name: SEARCH PROPERTY LIST
+          displayName: CREATE SEARCH PROPERTY LIST
           href: t-sql/statements/create-search-property-list-transact-sql.md
         - name: SECURITY POLICY
+          displayName: CREATE SECURITY POLICY
           href: t-sql/statements/create-security-policy-transact-sql.md
         - name: SELECTIVE XML INDEX
+          displayName: CREATE SELECTIVE XML INDEX
           href: t-sql/statements/create-selective-xml-index-transact-sql.md
         - name: SEQUENCE
+          displayName: CREATE SEQUENCE
           href: t-sql/statements/create-sequence-transact-sql.md
         - name: SERVER AUDIT
+          displayName: CREATE SERVER AUDIT
           href: t-sql/statements/create-server-audit-transact-sql.md
         - name: SERVER AUDIT SPECIFICATION
+          displayName: CREATE SERVER AUDIT SPECIFICATION
           href: t-sql/statements/create-server-audit-specification-transact-sql.md
         - name: SERVER ROLE
+          displayName: CREATE SERVER ROLE
           href: t-sql/statements/create-server-role-transact-sql.md
         - name: SERVICE
+          displayName: CREATE SERVICE
           href: t-sql/statements/create-service-transact-sql.md
         - name: SPATIAL INDEX
+          displayName: CREATE SPATIAL INDEX
           href: t-sql/statements/create-spatial-index-transact-sql.md
         - name: STATISTICS
+          displayName: CREATE STATISTICS
           href: t-sql/statements/create-statistics-transact-sql.md
         - name: SYMMETRIC KEY
+          displayName: CREATE SYMMETRIC KEY
           href: t-sql/statements/create-symmetric-key-transact-sql.md
         - name: SYNONYM
+          displayName: CREATE SYNONYM
           href: t-sql/statements/create-synonym-transact-sql.md
         - name: TABLE
+          displayName: CREATE TABLE
           href: t-sql/statements/create-table-transact-sql.md
         - name: TABLE (Azure Synapse Analytics)
+          displayName: CREATE TABLE (Azure Synapse Analytics)
           href: t-sql/statements/create-table-azure-sql-data-warehouse.md
         - name: TABLE (SQL Graph)
+          displayName: CREATE TABLE (SQL Graph)
           href: t-sql/statements/create-table-sql-graph.md
         - name: TABLE AS SELECT (Azure Synapse Analytics)
+          displayName: CREATE TABLE AS SELECT (Azure Synapse Analytics)
           href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
         - name: TABLE IDENTITY (Property)
+          displayName: CREATE TABLE IDENTITY (Property)
           href: t-sql/statements/create-table-transact-sql-identity-property.md
         - name: TRIGGER
+          displayName: CREATE TRIGGER
           href: t-sql/statements/create-trigger-transact-sql.md
         - name: TYPE
+          displayName: CREATE TYPE
           href: t-sql/statements/create-type-transact-sql.md
         - name: USER
+          displayName: CREATE USER
           href: t-sql/statements/create-user-transact-sql.md
         - name: VIEW
+          displayName: CREATE VIEW
           href: t-sql/statements/create-view-transact-sql.md
         - name: WORKLOAD CLASSIFIER
+          displayName: CREATE WORKLOAD CLASSIFIER
           href: t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
+          displayName: CREATE WORKLOAD GROUP
           href: t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
+          displayName: CREATE XML INDEX
           href: t-sql/statements/create-xml-index-transact-sql.md
         - name: XML INDEX (Selective XML Indexes)
+          displayName: CREATE XML INDEX (Selective XML Indexes)
           href: t-sql/statements/create-xml-index-selective-xml-indexes.md
         - name: XML SCHEMA COLLECTION
+          displayName: CREATE XML SCHEMA COLLECTION
           href: t-sql/statements/create-xml-schema-collection-transact-sql.md
       - name: Collations
         items:

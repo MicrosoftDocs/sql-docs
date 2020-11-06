@@ -83,7 +83,6 @@ Visit the (Apache Spark & Apache Hadoop configuration article) to see all suppor
 |`mssql.network.tlscert`| |
 |`mssql.network.tlskey`| |
 |`mssql.numberOfCpus`| |
-|`mssql.storagePoolCacheSize`| |
 |`mssql.tempdb.autogrowthPerDataFile`| |
 |`mssql.tempdb.autogrowthPerLogFile`| |
 |`mssql.tempdb.dataFileSize`| |
@@ -101,7 +100,6 @@ Visit the (Apache Spark & Apache Hadoop configuration article) to see all suppor
 |`mssql.network.tlscert`| |
 |`mssql.network.tlskey`| |
 |`mssql.numberOfCpus`| |
-|`mssql.storagePoolCacheSize`| |
 |`mssql.tempdb.autogrowthPerDataFile`| |
 |`mssql.tempdb.autogrowthPerLogFile`| |
 |`mssql.tempdb.dataFileSize`| |

@@ -55,7 +55,7 @@ The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services Add-in for SharePoint 2010 Products
 
-In the SQL Server 2016 release, the add-in can be installed as part of the SQL Server Installation wizard, in the Feature Selection page. If you want to download and install the add-in separately, the most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center at [Microsoft® SQL Server® 2012 Reporting Services Add-in for Microsoft® SharePoint® Technologies 2010](https://go.microsoft.com/fwlink/?LinkID=207242) page.
+In the SQL Server 2016 release, the add-in can be installed as part of the SQL Server Installation wizard, in the Feature Selection page. If you want to download and install the add-in separately, the most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center at [Microsoft® SQL Server® 2012 Reporting Services Add-in for Microsoft® SharePoint® Technologies 2010](https://www.microsoft.com/download/details.aspx?id=56052) page.
 
 ## Next steps
 

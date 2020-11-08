@@ -9742,6 +9742,8 @@
       href: tools/release-notes-sqlpackage.md
     - name: sqlpackage ref
       href: tools/sqlpackage.md
+    - name: SqlPackage in development pipelines
+      href: tools/sqlpackage-pipelines.md
   - name: SQL Server Profiler
     href: tools/sql-server-profiler/sql-server-profiler.md
     items:

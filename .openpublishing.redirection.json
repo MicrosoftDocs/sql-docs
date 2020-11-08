@@ -42391,6 +42391,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/r/performance-case-study-r-services.md",
+      "redirect_url": "/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/advanced-analytics/r/r-and-data-optimization-r-services.md",
       "redirect_url": "/sql/machine-learning/r/r-and-data-optimization-r-services",
       "redirect_document_id": true
@@ -42441,11 +42446,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/r/sql-server-configuration-r-services.md",
+      "redirect_url": "/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/advanced-analytics/r/sql-server-r-services-performance-tuning.md",
       "redirect_url": "/sql/machine-learning/r/sql-server-r-services-performance-tuning",
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/r/sql-server-r-services-performance-tuning.md",
+      "redirect_url": "/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database",
+      "redirect_document_id": false
+    },
+        {
       "source_path": "docs/advanced-analytics/r/sql-server-r-services.md",
       "redirect_url": "/sql/machine-learning/r/sql-server-r-services",
       "redirect_document_id": true

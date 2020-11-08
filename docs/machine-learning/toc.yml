@@ -343,18 +343,12 @@
       href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
   - name: Performance
     items:
-    - name: R
-      items:
-      - name: Performance tuning overview in R
-        href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-      - name: Performance tuning server configuration
-        href: ../machine-learning/r/sql-server-configuration-r-services.md
-      - name: Performance tuning - data optimization in R
-        href: ../machine-learning/r/r-and-data-optimization-r-services.md
-      - name: Performance tuning for results in R
-        href: ../machine-learning/r/performance-case-study-r-services.md
-      - name: Use R code profiling functions
-        href: ../machine-learning/r/using-r-code-profiling-functions.md
+      - name: R code performance
+        items:
+        - name: Data optimization in R
+          href: ../machine-learning/r/r-and-data-optimization-r-services.md
+        - name: Use R code profiling functions
+          href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: Reference
   items:
   - name: Python packages

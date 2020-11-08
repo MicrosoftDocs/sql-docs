@@ -16,11 +16,11 @@ ms.date: 11/4/2020
 
 **SqlPackage.exe** is a command-line utility that automates several database development tasks and can be incorporated into CI/CD pipelines.
 
-## Managed virtual environments for Azure Pipelines and GitHub Actions
+## Managed virtual environments
 
 The virtual environments used for GitHub Actions hosted runners and Azure Pipelines VM images are managed in the [virtual-environments](https://github.com/actions/virtual-environments) GitHub repository.  SqlPackage is included in the `windows-latest` environment and updates to the images are made within a few weeks of each SqlPackage release.
 
-## Checking the SqlPackage version in a virtual environment
+## Checking the SqlPackage version
 
 During troubleshooting efforts, it is important to know the SqlPackage version in use.  Capturing this information can be done by adding a step to the pipeline to run SqlPackage with the `/version` parameter.  Examples are given below based on the Microsoft and GitHub managed environments, self-hosted environments may have different installation paths for the working directory.
 
@@ -44,10 +44,8 @@ By leveraging the [run](https://docs.github.com/en/free-pro-team@latest/actions/
   run: ./sqlpackage.exe /version
 ```
 
-:::image type="content" source="media/sqlpackage-pipelines-githubaction.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
+:::image type="content" source="media/sqlpackage-pipelines-github-action.png" alt-text="GitHub action output displaying build number 15.0.4897.1":::
 
-## Next Steps
+## Next steps
 
 - Learn more about [sqlpackage](sqlpackage.md)
-
-[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)

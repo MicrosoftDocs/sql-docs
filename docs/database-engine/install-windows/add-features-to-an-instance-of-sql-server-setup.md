@@ -33,7 +33,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 > For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
   
 > [!NOTE]
-> When you add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the ** SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
+> When you add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the **SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
 
 ## Procedures
 

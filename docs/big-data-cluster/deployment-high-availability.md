@@ -207,6 +207,7 @@ These are known issues and limitations with contained availability groups for SQ
 - Certain operations like running server configuration settings with `sp_configure` require a connection to the SQL Server instance `master` database, not the availability group `master`. You cannot use the corresponding primary endpoint. Follow [the instructions](#instance-connect) to expose an endpoint and connect to the SQL Server instance and run `sp_configure`. You can only use SQL authentication when manually exposing the endpoint to connect to the SQL Server instance `master` database.
 - While contained msdb database is included in the availability group and the SQL Agent jobs are replicated across, the jobs are only running per schedule on the primary replica.
 - Replication feature is not supported for contained availability groups. SQL Server instances part of a cotnained AG can not function as a distributor or publisher, at either the instance level or contained AG level.
+- Adding file groups while creating the database is not supported. As a workaround, you can first create the database and then issue an ALTER DATABASE statement to add any file groups.
 - Prior to SQL Server 2019 CU2, databases created as result of workflows other than `CREATE DATABASE` and `RESTORE DATABASE` like `CREATE DATABASE FROM SNAPSHOT` are not automatically added to the availability group. [Connect to the instance](#instance-connect) and add the database to the availability group manually.
 
 ## Next steps

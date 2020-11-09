@@ -73,9 +73,9 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
     When you are finished specifying login information for SQL Server services, select **Next**.
 
-12. Use the **Server Configuration - Collation** tab to specify non-default collations for the Database Engine] and Analysis Services. For more information, see [Server Configuration - Collation](./install-sql-server.md).
+12. Use the **Server Configuration - Collation** tab to specify non-default collations for the Database Engine and Analysis Services. For more information, see [Server Configuration - Collation](./install-sql-server.md).
 
-13. Use the Database Engine] Configuration - Account Provisioning page to specify the following:  
+13. Use the Database Engine Configuration - Account Provisioning page to specify the following:  
 
     - Security Mode - Select Windows Authentication or Mixed Mode Authentication for your instance of SQL Server. If you select Mixed Mode Authentication, you must provide a strong password for the built-in SQL Server system administrator account.
 
@@ -85,14 +85,14 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.
 
-14. Use the Database Engine] Configuration - Data Directories page to specify non-default installation directories. To install to default directories, select **Next**.  
+14. Use the Database Engine Configuration - Data Directories page to specify non-default installation directories. To install to default directories, select **Next**.  
 
     > [!IMPORTANT]
     > If you specify non-default installation directories, ensure that the installation folders are unique to this instance of SQL Server. None of the directories in this dialog box should be shared with directories from other instances of SQL Server.
 
     For more information, see [Database Engine Configuration - Data Directories](./install-sql-server.md).
 
-15. Use the Database Engine] Configuration - FILESTREAM page to enable FILESTREAM for your instance of SQL Server. For more information about FILESTREAM, see [Database Engine Configuration - Filestream](./install-sql-server.md). To continue, select Next.
+15. Use the Database Engine Configuration - FILESTREAM page to enable FILESTREAM for your instance of SQL Server. For more information about FILESTREAM, see [Database Engine Configuration - Filestream](./install-sql-server.md). To continue, select Next.
 
 16. Use the Analysis Services Configuration - Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for Analysis Services. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for Analysis Services. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for Analysis Services. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](./install-sql-server.md).
 
@@ -105,7 +105,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
     For more information, see [Analysis Services Configuration - Data Directories](./install-sql-server.md).
 
-18. Use the [Reporting Services Configuration page to specify the type of [Reporting Services installation to create. For more information about [Reporting Services configuration modes, see [Reporting Services Configuration Options &#40;SSRS&#41;](./install-sql-server.md).
+18. Use the Reporting Services Configuration page to specify the type of Reporting Services installation to create. For more information about Reporting Services configuration modes, see [Reporting Services Configuration Options &#40;SSRS&#41;](./install-sql-server.md).
 
 19. Use the Distributed Replay Controller Configuration page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions will have unlimited access to the Distributed Replay controller service.
 

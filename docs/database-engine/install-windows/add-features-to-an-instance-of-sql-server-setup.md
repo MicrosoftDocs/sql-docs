@@ -1,13 +1,13 @@
 ---
-title: Add Features to an Instance of SQL Server  (Setup)
+title: Add Features to an Instance of SQL Server (Setup)
 description: This article provides a step-by-step procedure for adding instance-aware features to an instance of SQL Server  2019.
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "feature adding [ SQL Server ]"
+  - "feature adding [SQL Server]"
   - " SQL Server, features"
-  - "adding features to  SQL Server "
+  - "adding features to  SQL Server"
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: markingmyname
 ms.author: maghan
@@ -17,13 +17,13 @@ ms.date: 09/07/2019
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
-# Add Features to an Instance of SQL Server  (Setup) 
+# Add Features to an Instance of SQL Server (Setup)
 
-[!INCLUDE [ SQL Server  -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
+[!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance  SQL Server, along with the shared components of if they are not already installed. For a list of features that are supported by the different editions of SQL Server, see [Editions and supported features of SQL Server  2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+This article provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some SQL Server components or services are specific to an instance of SQL Server. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance  SQL Server, along with the shared components of if they are not already installed. For a list of features that are supported by the different editions of SQL Server, see [Editions and supported features of SQL Server  2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-To add features to an instance of SQL Server  from the command prompt, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).  
+To add features to an instance of SQL Server from the command prompt, see [Install SQL Server from the Command Prompt](./install-sql-server-from-the-command-prompt.md).
 
 ## Prerequisites
 
@@ -33,11 +33,11 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 > For local installations, you must run Setup as an administrator. If you install SQL Server from a remote share, you must use a domain account that has read permissions on the remote share.  
   
 > [!NOTE]
-> When you add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the ** SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.  
+> When you add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the existing usage report settings are applied to the newly-added features. To change these settings, use the ** SQL Server  Error and Usage Reporting** tool on the SQL Server **Configuration Tools** menu.
 
 ## Procedures
 
-#### To add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### To add features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 1. Insert the SQL Server installation media. From the root folder, double-click setup.exe. To install from a network share, navigate to the root folder on the share, and then double-click setup.exe. If the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Setup dialog box appears, select **OK** to install the prerequisites, then select **Cancel** to quit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation.  
 
@@ -55,7 +55,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 8. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Each component can be installed only once on a given instance of SQL Server. To install multiple components, you must install an additional instance of SQL Server.
 
-    The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
+    The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.
 
     The System Configuration Checker will verify the system state of your computer before Setup continues. select **Next** to continue.
 
@@ -79,9 +79,9 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
     - Security Mode - Select Windows Authentication or Mixed Mode Authentication for your instance of SQL Server. If you select Mixed Mode Authentication, you must provide a strong password for the built-in SQL Server system administrator account.
 
-         After a device establishes a successful connection to SQL Server, the security mechanism is the same for both Windows Authentication and Mixed Mode. For more information, see [Database Engine Configuration - Server Configuration](./install-sql-server.md).  
+        After a device establishes a successful connection to SQL Server, the security mechanism is the same for both Windows Authentication and Mixed Mode. For more information, see [Database Engine Configuration - Server Configuration](./install-sql-server.md).  
 
-    -  SQL Server  Administrators - You must specify at least one system administrator for the instance of SQL Server. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of SQL Server. For more information, see [Database Engine Configuration - Server Configuration](./install-sql-server.md).
+    - SQL Server  Administrators - You must specify at least one system administrator for the instance of SQL Server. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of SQL Server. For more information, see [Database Engine Configuration - Server Configuration](./install-sql-server.md).
 
     When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.
 

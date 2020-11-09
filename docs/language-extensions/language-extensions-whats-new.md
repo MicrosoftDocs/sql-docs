@@ -22,9 +22,9 @@ For more information about all of the features in this release, see [What's New 
 
 ### New Python and R language extensions
 
-- A [Python custom runtime](../machine-learning/install/custom-runtime-python.md) is available with Language Extensions. To install, see how to [Install a Python custom runtime on Windows](../machine-learning/install/custom-runtime-python.md?view=sql-server-ver15&preserve-view=true) or [Install a Python custom runtime on Linux](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+- A [Python custom runtime](../machine-learning/install/custom-runtime-python.md) is available with Language Extensions. For more information, see how to [Install a Python custom runtime on Windows](../machine-learning/install/custom-runtime-python.md?view=sql-server-ver15&preserve-view=true) or [Install a Python custom runtime on Linux](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
-- An [R custom runtime](../machine-learning/install/custom-runtime-r.md) is available with Language Extensions. To install, see how to [Install a R custom runtime on Windows](../machine-learning/install/custom-runtime-r.md?view=sql-server-ver15&preserve-view=true) or [Install a R custom runtime on Linux](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true).
+- An [R custom runtime](../machine-learning/install/custom-runtime-r.md) is available with Language Extensions. For more information, see how to [Install a R custom runtime on Windows](../machine-learning/install/custom-runtime-r.md?view=sql-server-ver15&preserve-view=true) or [Install a R custom runtime on Linux](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true).
 
 ### New Java language extension
 

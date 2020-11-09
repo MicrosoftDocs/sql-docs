@@ -62,7 +62,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         GO
         DROP TABLE dbo.MyTable;
         GO
-        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
+        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable';
         GO
         ```
 

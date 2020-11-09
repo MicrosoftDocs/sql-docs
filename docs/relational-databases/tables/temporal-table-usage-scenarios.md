@@ -250,6 +250,7 @@ BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL=SNAPSHOT, LANGUAGE=N'English')
                         @productId
                        ,@locationId
                        ,@quantityIncrement
+                   )
         END
 END;
 ```

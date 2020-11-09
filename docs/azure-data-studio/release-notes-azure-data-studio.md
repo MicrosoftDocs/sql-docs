@@ -24,13 +24,10 @@ November 10, 2020 &nbsp; / &nbsp; version: 1.24.0
 
 | Change | Details |
 | ------ | ------- |
-| Azure SQL Edge | Support for Azure SQL Edge objects. |
-| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed). |
-| Databases| Support for same database reference. |
-| Extension updates | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[Schema Compare](extensions/schema-compare-extension.md)</br>SQL Assessment</br>[SQL Database Projects](extensions/sql-database-project-extension.md)</br>[SQL Server Import](extensions/sql-server-import-extension.md) |
-| New deployment features | Added Azure SQL DB and VM deployments. |
-| PowerShell | Added PowerShell kernel results streaming support. |
-
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Extension(s) update | Released update to Postgres extension. |
+| New notebook features | Added new features to SQL to notebook support. <br/> Added new features to	Notebook parameterization support. <br/>  Added new features to results streaming for SQL Notebooks. |
+| Connection dialog | Added new browse tab for connection dialog. |
 
 ## October 2020
 

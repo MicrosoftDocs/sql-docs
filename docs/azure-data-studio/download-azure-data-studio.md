@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/20/2020
+ms.date: 11/10/2020
 ---
 
 # Download and install Azure Data Studio
@@ -22,9 +22,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |--------|--------|------------|---------|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2145989)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2145990)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2145864) | October 14, 2020 | 1.23.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2145865) | October 14, 2020 | 1.23.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866) | October 14, 2020 | 1.23.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2148607)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2148907)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2148908) | November 10, 2020 | 1.24.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2148710) | November 10, 2020 | 1.24.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708) | November 10, 2020 | 1.24.0 |
 
 For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).
 
@@ -38,32 +38,32 @@ We recommend the *user installer* because it doesn't require administrator privi
 
 **User Installer** (recommended)
 
-1. Download and run the [Azure Data Studio *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2145989).
+1. Download and run the [Azure Data Studio *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2148607).
 2. Start the Azure Data Studio app.
 
 **System Installer**
 
-1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2145990).
+1. Download and run the [Azure Data Studio *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2148907).
 2. Start the Azure Data Studio app.
 
 **.zip file**
 
-1. Download [Azure Data Studio .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2145864).
+1. Download [Azure Data Studio .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2148908).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## Get Azure Data Studio for macOS
 
-1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2145865).
+1. Download [Azure Data Studio for macOS](https://go.microsoft.com/fwlink/?linkid=2148710).
 2. To expand the contents of the zip, double-click it.
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
 1. Download Azure Data Studio for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2148806)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2148709)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2148708)
 1. To extract the file and launch Azure Data Studio, open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -158,8 +158,8 @@ Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the fol
 
 | Recommended/Minimum | CPU Cores | Memory/RAM |
 |---------------------|-----------|------------|
-| Recommended         |     4     |   8 GB     |
-|   Minimum           |     2     |   4 GB     |
+|     Recommended     |     4     |   8 GB     |
+|     Minimum         |     2     |   4 GB     |
 
 ## Check for updates
 
@@ -210,7 +210,7 @@ If you want to install Azure Data Studio in the background with no GUI prompts a
     Example:
 
     ```console
-    %systemdrive%\azuredatastudio-windows-user-setup-1.23.0.exe /VERYSILENT /MERGETASKS=!runcode
+    %systemdrive%\azuredatastudio-windows-user-setup-1.24.0.exe /VERYSILENT /MERGETASKS=!runcode
     ```
 
     > [!Note]

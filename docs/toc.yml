@@ -13601,10 +13601,12 @@
         href: relational-databases/system-stored-procedures/sp-oastop-transact-sql.md
     - name: PolyBase
       items:
-      - name: polybase_join_group
+      - name: sp_polybase_join_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md
       - name: sp_polybase_leave_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
+      - name: sp_data_source_table_columns
+        href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
     - name: Policy-Based Management
       href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
       items:

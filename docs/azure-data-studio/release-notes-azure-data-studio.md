@@ -24,9 +24,9 @@ November 11, 2020 &nbsp; / &nbsp; version: 1.24.0
 | Change | Details |
 | ------ | ------- |
 | Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Connection dialog | Added new browse tab for connection dialog. |
 | Extension(s) update | Released update to Postgres extension. |
 | New notebook features | Added new features to SQL to notebook support. <br/> Added new features to	Notebook parameterization support. <br/>  Added new features to results streaming for SQL Notebooks. |
-| Connection dialog | Added new browse tab for connection dialog. |
 
 ### Known issues (1.24.0)
 

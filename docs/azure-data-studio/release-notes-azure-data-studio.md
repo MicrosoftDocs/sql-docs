@@ -29,6 +29,14 @@ November 11, 2020 &nbsp; / &nbsp; version: 1.24.0
 | New notebook features | Added new features to SQL to notebook support. <br/> Added new features to	Notebook parameterization support. <br/>  Added new features to results streaming for SQL Notebooks. |
 | Connection dialog | Added new browse tab for connection dialog. |
 
+### Known issues (1.24.0)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Object Explorer | Releases of ADS before 1.24.0 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in Azure Data Studio with Azure Synapse Analytics SQL on-demand, you need Azure Data Studio 1.24.0 or later. |
+
+You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
+
 ## October 2020
 
 October 14, 2020 &nbsp; / &nbsp; version: 1.23.0

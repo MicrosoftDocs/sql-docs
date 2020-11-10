@@ -16,9 +16,9 @@ ms.reviewer:
 
 # Using Azure Active Directory Authentication with SqlClient
 
-[!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
+[!INCLUDE [appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
-[!INCLUDE [Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
+[!INCLUDE [Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 This article gives an introduction on how to connect to Azure SQL data sources using Azure Active Directory authentication from a .NET application with SqlClient. 
 
@@ -158,7 +158,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
 
 ## Customizing Active Directory authentication with ActiveDirectoryAuthenticationProvider class
 
-Besides using the default Active Directory authentication implemented by the driver, **Microsoft.Data.SqlClient** 2.1.0 and later now provide the option for the client application to customize their authentication procedure. The customization is based on the enhanced _ActiveDirectoryAuthenticationProvider_ class, which is derived from the [_SqlAuthenticationProvider_](/dotnet/api/system.data.sqlclient.sqlauthenticationprovider?view=netframework-4.8) abstract class. During Active Directory authentication, the client application can define its own _ActiveDirectoryAuthencationProvider_ by either using customized callback method or passing `Application Client Id` to the MSAL library via SqlClient driver for fetching access tokens.
+Besides using the default Active Directory authentication implemented by the driver, **Microsoft.Data.SqlClient** 2.1.0 and later now provide the option for the client application to customize their authentication procedure. The customization is based on the enhanced _ActiveDirectoryAuthenticationProvider_ class, which is derived from the [_SqlAuthenticationProvider_](/dotnet/api/system.data.sqlclient.sqlauthenticationprovider) abstract class. During Active Directory authentication, the client application can define its own _ActiveDirectoryAuthencationProvider_ by either using customized callback method or passing `Application Client Id` to the MSAL library via SqlClient driver for fetching access tokens.
 
 The following example displays how to provide custom callback logic when the `Active Directory Device Code Flow` authentication is in use. 
 

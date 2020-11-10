@@ -213,7 +213,6 @@ public class ActiveDirectoryAuthenticationProvider
     // For .NET Standard targeted applications only
     public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
 
-    // kz to check
     // For .NET Framework, .NET Core and .NET Standard targeted applications
     public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
 }

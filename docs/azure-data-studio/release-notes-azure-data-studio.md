@@ -15,7 +15,6 @@ ms.date: 11/11/2020
 
 **[Download and install the latest release!](./download-azure-data-studio.md)**
 
-
 ## November 2020
 
 November 11, 2020 &nbsp; / &nbsp; version: 1.24.0
@@ -28,6 +27,14 @@ November 11, 2020 &nbsp; / &nbsp; version: 1.24.0
 | Extension(s) update | Released update to Postgres extension. |
 | New notebook features | Added new features to SQL to notebook support. <br/> Added new features to	Notebook parameterization support. <br/>  Added new features to results streaming for SQL Notebooks. |
 | Connection dialog | Added new browse tab for connection dialog. |
+
+### Known issues (1.24.0)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Object Explorer | Releases of ADS before 1.24.0 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in Azure Data Studio with Azure Synapse Analytics SQL on-demand, you need to use Azure Data Studio 1.24.0 or later. |
+
+You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio) for other known issues and to provide feedback to the product team.
 
 ## October 2020
 

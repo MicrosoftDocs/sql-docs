@@ -123,6 +123,12 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
 
 ## Release notes
 
+### Version 0.1.1 Preview
+
+Release Date: November 11, 2020
+
+- Fixed an issue that SSISDeploy.exe fails to load an assembly when deploying ispac to SSIS catalog.
+
 ### Version 0.1.0 Preview
 
 Release Date: October 16, 2020

@@ -1,6 +1,6 @@
 ---
 title: "CLR Integration and Transactions | Microsoft Docs"
-description: The System.Transactions namespace provides a transaction framework that is fully integrated with ADO.NET and SQL Server CLR integration.
+description: For CLR integration and transactions, System.Transactions and ADO.NET work together to extend and simplify the use of local and distributed transactions in managed applications.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

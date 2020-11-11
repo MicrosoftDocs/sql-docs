@@ -233,6 +233,8 @@ If you installed Azure Data Studio with a .zip or other archive, then delete the
 
 See one of the following quickstarts to get started:
 
+- [What is Azure Data Studio](what-is-azure-data-studio.md)
+- [Azure Data Studio release notes](release-notes-azure-data-studio.md)
 - [Connect & Query SQL Server](quickstart-sql-server.md)
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)

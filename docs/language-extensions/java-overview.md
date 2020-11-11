@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # What is Java Language Extension?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-Java Language Extension is a feature of SQL Server used for executing external Java code. The relational data can be used in the external Java code using the [extensibility framework](concepts/extensibility-framework.md).
+Java Language Extension is a feature of SQL Server used for executing external Java code. The relational data can be used in the external Java code using the [extensibility framework](concepts/extensibility-framework.md). The Java Language Extension is part of [SQL Server Language Extensions](language-extensions-overview.md).
 
 The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
 

@@ -17,13 +17,13 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 Learn how to install the [Java Language Extension](../java-overview.md) component for SQL Server on Windows.
 
 > [!NOTE]
-> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server Java Language Extension on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)
+> This article is for installation of Java Language Extension for SQL Server on Windows. For Linux, see [Install SQL Server Java Language Extension on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 
 <a name="prerequisites"></a>
 
 ## Pre-install checklist
 
-+ SQL Server 2019 Setup is required if you want to install support for Language Extensions.
++ SQL Server 2019 Setup is required if you want to install support for Java Language Extension.
 
 + A database engine instance is required. You cannot install just the Language Extensions features, although you can add them incrementally to an existing instance.
 

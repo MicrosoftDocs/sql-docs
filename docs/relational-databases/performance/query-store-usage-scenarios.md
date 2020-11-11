@@ -134,7 +134,7 @@ Some workloads do not have dominant queries that you can tune to improve overall
   
  **Top Resource Consuming Queries** view gives you first indication of the ad hoc nature of your workload:  
   
-![Screenshot of the Top Resource Consuming Queries view.](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
+![Screenshot of the Top Resource Consuming Queries view showing that the majority of top resources consuming queries is only executed once.](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 Use **Execution Count** metric to analyze whether your top queries are ad hoc (this requires you to run Query Store with `QUERY_CAPTURE_MODE = ALL`). From the diagram above, you can see that 90% of your **Top Resource Consuming Queries** are executed only once.  
   
@@ -193,7 +193,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 After you apply any of these steps, **Top Resource Consuming Queries** will show you different picture of your workload.  
   
-![Screenshot of the Top Resource Consuming Queries view.](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![Screenshot of the Top Resource Consuming Queries view showing a different picture of your workload.](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 In some cases, your application may generate lots of different queries which are not good candidates for auto-parameterization. In that case, you see large number of queries in the system but the ratio between unique queries and unique `query_hash` is likely close to 1.  
   

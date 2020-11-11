@@ -210,7 +210,7 @@ To fix this issue, you need upgrade the database version:
 
 1. Choose the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you associated with the web application. Select **Connect**, and then select **OK**.
 
-   ![Screenshot of teh Connect to a Master Data Service Database dialog box.](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_ConnectDBName")
+   ![Screenshot of the Connect to a Master Data Service Database dialog box.](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_ConnectDBName")
 
 1. Select **Upgrade Database…** .
 

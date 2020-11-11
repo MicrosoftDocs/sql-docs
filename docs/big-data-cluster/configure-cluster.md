@@ -19,12 +19,12 @@ You can configure properties for the SQL Server master instance, the Apache Spar
 
 After deployment, Big Data Clusters does not support modifying the configuration properties.
 
-## Configuration Scopes
+## Configuration scopes
 Big Data Clusters configuration has two scoping levels: `service`, and `resource`. The hierarchy of the settings follows in this order as well, from highest to lowest. BDC components will take the value of the setting defined at the lowest scope. If the setting is not defined at a given scope, it will inherit the value from its higher parent scope.
 
 For example, you may want to define the default number of cores the Spark driver will use in the Storage Pool and Sparkhead `resources`. You can do this in two ways: 
-    1) Specify a default cores value at the `Spark` service scope 
-    2) Specify a default cores value at the `storage-0` and `sparkhead` resource scope
+- Specify a default cores value at the `Spark` service scope  
+- Specify a default cores value at the `storage-0` and `sparkhead` resource scope
 
 In the first scenario, all lower-scoped resources of the Spark service (Storage Pool and Sparkhead) will *inherit* the default number of cores from the Spark service default value.
 

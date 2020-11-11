@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Language Java Extensions on Windows
+# Install SQL Server Java Language Extension on Windows
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Learn how to install the Language Extensions component on SQL Server by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
+Learn how to install the [Java Language Extension](../java-overview.md) component for SQL Server on Windows.
 
 > [!NOTE]
-> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)
+> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server Java Language Extension on Linux](../../linux/sql-server-linux-setup-language-extensions-java.md)
 
-<a name="prerequisites"></a> 
+<a name="prerequisites"></a>
 
 ## Pre-install checklist
 
@@ -42,7 +42,7 @@ Learn how to install the Language Extensions component on SQL Server by running 
 
 ## Java JRE or JDK
 
-In SQL Server 2019 Release Candidate 1, there are two ways to install and use Java with SQL Server:
+There are two ways to install and use Java with SQL Server:
 
 1. Use the default Java runtime, Zulu Open JRE version 11.0.3. This runtime is supported and included with the SQL Server installation.
 
@@ -51,8 +51,8 @@ In SQL Server 2019 Release Candidate 1, there are two ways to install and use Ja
     Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
     > [!NOTE]
-    > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for the Release Candidate 1 release is Java 11.
-    
+    > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for SQL Server 2019 is Java 11.
+
 ## Get the installation media
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
@@ -61,7 +61,7 @@ In SQL Server 2019 Release Candidate 1, there are two ways to install and use Ja
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-1. Start the setup wizard for SQL Server 2019. 
+1. Start the setup wizard for SQL Server 2019.
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 

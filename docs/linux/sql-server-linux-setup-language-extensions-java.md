@@ -174,29 +174,29 @@ To validate installation, run a T-SQL script that executes a system stored proce
 
 ## Full install of SQL Server and Java Language Extension
 
-You can install and configure the database engine and Java Language Extensios in one procedure by appending Java packages and parameters on a command that installs the database engine.
+You can install and configure the database engine and Java Language Extension in one procedure by appending Java packages and parameters on a command that installs the database engine.
 
 1. Provide a command line that includes the database engine, plus language extension features.
 
-  You can add Java extensibility to a database engine install.
+    You can add Java extensibility to a database engine install.
 
-  ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java 
-  ```
+    ```bash
+    sudo yum install -y mssql-server mssql-server-extensibility-java 
+    ```
 
-3. Accept license agreements and complete the post-install configuration. Use the **mssql-conf** tool for this task.
+1. Accept license agreements and complete the post-install configuration. Use the **mssql-conf** tool for this task.
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf setup
+    ```
 
-  You will be prompted to accept the license agreement for the database engine, choose an edition, and set the administrator password. 
+    You will be prompted to accept the license agreement for the database engine, choose an edition, and set the administrator password. 
 
-4. Restart the service, if prompted to do so.
+1. Restart the service, if prompted to do so.
 
-  ```bash
-  sudo systemctl restart mssql-server.service
-  ```
+    ```bash
+    sudo systemctl restart mssql-server.service
+    ```
 
 ## Unattended installation
 
@@ -260,7 +260,7 @@ There is parity between Linux and Windows for [Resource governance](../t-sql/sta
 |read_io_count | The total read IOs issued since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups blkio subsystem, where value on the read row is blkio.throttle.io_serviced |
 |total_cpu_kernel_ms | The cumulative CPU user kernel time in milliseconds since the Resource Governor statistics were reset. | On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the user row is cpuacct.stat |  
 |total_cpu_user_ms | The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset.| On Linux, this statistic is sourced from the CGroups cpuacct subsystem, where the value on the system row value is cpuacct.stat |
-|active_processes_count | The number of external processes running at the moment of the request.| On Linux, this statistic is sourced from the GGroups pids subsystem, where the value is pids.current |
+|active_processes_count | The number of external processes running at the moment of the request.| On Linux, this statistic is sourced from the CGroups pids subsystem, where the value is pids.current |
 
 ## Next steps
 

@@ -67,6 +67,9 @@ ms.author: maggies
 2.  Change the **ExecutionLogLevel** to **verbose**. This field is a text entry field and the two possible values are **verbose** and **normal**.  
   
 ##  <a name="bkmk_native"></a> Configuration Settings for a Native Mode Report Server  
+
+*** Missing instructions for standalone report server.  e.g. Report server on host 1, Report database on host 2, database instance is not running ssrs. Options to enable logging or verbose logging not available ***
+
  You can turn report execution logging on or off from the Server Properties page in SQL Server Management Studio. The **EnableExecutionLogging** is and Advanced property.  
   
  By default, log entries are kept 60 days. Entries that exceed this date are removed at 2:00 A.M. every day. On a mature installation, only 60 days of information will be available at any given time.  

@@ -400,7 +400,7 @@ GO
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="CaptureResults"></a> Capturing the results of the DELETE statement  

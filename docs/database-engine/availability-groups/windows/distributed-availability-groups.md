@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
 - "Availability Groups [SQL Server], distributed"
 ms.assetid: 
-author: "MashaMSFT"
-ms.author: mathoma
+author: "cawrites"
+ms.author: chadam
 ---
 # Distributed availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

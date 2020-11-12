@@ -86,13 +86,14 @@ ms.custom: ""
 ms.date: 07/26/2019
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
+
 # Install SQL Server from the Command Prompt
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
-  
-  Before you run SQL Server Setup, review [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
-  
- Installing a new instance of SQL Server at the command prompt enables you to specify the features to install and how they should be configured. You can also specify silent, basic, or full interaction with the Setup user interface.  
+
+Before you run SQL Server Setup, review [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
+
+Installing a new instance of SQL Server at the command prompt enables you to specify the features to install and how they should be configured. You can also specify silent, basic, or full interaction with the Setup user interface.  
 
 To install from the command prompt, open an administrative command prompt and navigate to where setup.exe is located within the [SQL Server setup media](https://www.microsoft.com/sql-server/sql-server-downloads). Run the `setup.exe` command, along with the required and optional parameters that accomplish what you're trying to do:
 
@@ -852,7 +853,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||IS_Worker|Includes Scale Out Worker for Integration Services Scale Out.| 
 |MDS||Installs [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |SQL_SHARED_MPY||Installs Python packages for [SQL Server 2017 Machine Learning Server (Standalone)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) |  
-|SQL_SHARED_MR||Installs R packages for [SQL Server 2016 R Server (Standalone)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md?view=sql-server-2016) or [SQL Server Machine Learning Server (Standalone)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) |  
+|SQL_SHARED_MR||Installs R packages for [SQL Server 2016 R Server (Standalone)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) or [SQL Server Machine Learning Server (Standalone)](../../machine-learning/install/sql-machine-learning-standalone-windows-install.md) |  
 |Tools*||Installs client tools and SQL Server Books Online components.|  
 ||BC|Installs backward compatibility components.|  
 ||Conn|Installs connectivity components.|
@@ -864,9 +865,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) is now in a stand-alone installer that is separate from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installer. For details, see [Install SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 
-**LocalDB is an option when installing any SKU of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. For more information, see [SQL Server 2016 Express LocalDB](../configure-windows/sql-server-express-localdb.md). 
-  
-### Feature parameter examples:  
+### Feature parameter examples:
   
 |Parameter and values|Description| 
 |---------------|-----------------|  
@@ -876,49 +875,51 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|Installs SQL Server Books Online components to view and manage help content.|  
 |/FEATURES=SQLEngine,PolyBase|Installs the PolyBase engine.|  
   
-##  <a name="RoleParameters"></a> Role Parameters  
- The setup role or /Role parameter is used to install a preconfigured selection of features. The SSAS roles install an SSAS instance in either an existing SharePoint farm, or a new unconfigured farm. Two setup roles are provided to support each scenario. You can only choose one setup role to install at a time. If you choose a setup role, Setup installs the features and components that belong to the role. You cannot vary the features and components that are designated for that role. For more information about how to use the feature role parameter, see [Install Power Pivot from the Command Prompt](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode). 
-  
- The AllFeatures_WithDefaults role is the default behavior for editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and reduces the number of dialog boxes presented to the user. It can be specified from the command line when installing a SQL Server edition that is not [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
-  
+##  <a name="RoleParameters"></a> Role Parameters
+
+The setup role or /Role parameter is used to install a preconfigured selection of features. The SSAS roles install an SSAS instance in either an existing SharePoint farm, or a new unconfigured farm. Two setup roles are provided to support each scenario. You can only choose one setup role to install at a time. If you choose a setup role, Setup installs the features and components that belong to the role. You cannot vary the features and components that are designated for that role. For more information about how to use the feature role parameter, see [Install Power Pivot from the Command Prompt](/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).
+
+The AllFeatures_WithDefaults role is the default behavior for editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and reduces the number of dialog boxes presented to the user. It can be specified from the command line when installing a SQL Server edition that is not [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].
+
 |Role|Description|Installs...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Installs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on an existing [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm or standalone server.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculation engine, preconfigured for in-memory data storage and processing.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution packages<br /><br /> Installer program for the [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server Books Online|  
 |SPI_AS_NewFarm|Installs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssDE](../../includes/ssde-md.md)] as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] named instance on a new, unconfigured Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm or standalone server. SQL Server Setup will configure the farm during feature role installation.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calculation engine, preconfigured for in-memory data storage and processing.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solution packages<br /><br /> SQL Server Books Online<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Configuration Tools<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
-|AllFeatures_WithDefaults|Installs all features that are available with the current edition.<br /><br /> Adds the current user to the SQL Server **sysadmin** fixed server role.<br /><br /> On [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher and when the operating system is not a domain controller, the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are defaulted to use the NTAUTHORITY\NETWORK SERVICE account, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is defaulted to use the NTAUTHORITY\NETWORK SERVICE account.<br /><br /> This role is enabled by default in editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. For all other editions, this role is not enabled but can be specified through the UI or with command-line parameters.|For editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], installs only those features available in the edition. For other editions, installs all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features.<br /><br /> The **AllFeatures_WithDefaults** parameter can be combined with other parameters that override the **AllFeatures_WithDefaults** parameter settings. For example, using the **AllFeatures_WithDefaults** parameter and the **/Features=RS** parameter overrides the command to install all features and only installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], but honors the **AllFeatures_WithDefaults** parameter to use the default service account for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> When using the **AllFeatures_WithDefaults** parameter along with the **/ADDCURRENTUSERASSQLADMIN=FALSE** the provisioning dialog is not auto populated with the current user. Add **/AGTSVCACCOUNT** and **/AGTSVCPASSWORD** to specify a service account and password for the SQL Server Agent.|  
-  
-##  <a name="RollOwnership"></a> Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter  
-To upgrade a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] failover cluster to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must run the Setup on one failover cluster node at a time, starting with the passive nodes. Setup determines when to fail over to the upgraded node, depending on the total number of nodes in the failover cluster instance, and the number of nodes that have already been upgraded. When half of the nodes or more have already been upgraded, Setup by default will cause a failover to an upgraded node. 
- 
-To control the failover behavior of cluster nodes during the upgrade process, run the upgrade operation at the command prompt and use the /FAILOVERCLUSTERROLLOWNERSHIP parameter to control the failover behavior before the upgrade operation takes the node offline. Use of this parameter is as follows:  
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=0 will not roll cluster ownership (move group) to upgraded nodes, and does not add this node to the list of possible owners of the SQL Server cluster at the end of upgrade. 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=1 will roll cluster ownership (move group) to upgraded nodes, and will add this node to the list of possible owners of the SQL Server cluster at the end of upgrade. 
-  
--   /FAILOVERCLUSTERROLLOWNERSHIP=2 is the default setting. It will be used if this parameter is not specified. This setting indicates that SQL Server Setup will manage cluster ownership (move group) as needed. 
-  
-##  <a name="InstanceID"></a> Instance ID or InstanceID Configuration  
- The Instance ID or /InstanceID parameter is used for specifying where you can install the instance components and the registry path of the instance. The value of INSTANCEID is a string and should be unique. 
-  
--   SQL Instance ID: `MSSQLxx.<INSTANCEID>`  
-  
--   AS Instance ID: `MSASxx.<INSTANCEID>`  
-  
--   RS Instance ID: `MSRSxx.<INSTANCEID>`  
-  
+|AllFeatures_WithDefaults|Installs all features that are available with the current edition.<br /><br /> Adds the current user to the SQL Server **sysadmin** fixed server role.<br /><br /> On [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher and when the operating system is not a domain controller, the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are defaulted to use the NTAUTHORITY\NETWORK SERVICE account, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is defaulted to use the NTAUTHORITY\NETWORK SERVICE account.<br /><br /> This role is enabled by default in editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. For all other editions, this role is not enabled but can be specified through the UI or with command-line parameters.|For editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], installs only those features available in the edition. For other editions, installs all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features.<br /><br /> The **AllFeatures_WithDefaults** parameter can be combined with other parameters that override the **AllFeatures_WithDefaults** parameter settings. For example, using the **AllFeatures_WithDefaults** parameter and the **/Features=RS** parameter overrides the command to install all features and only installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], but honors the **AllFeatures_WithDefaults** parameter to use the default service account for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> When using the **AllFeatures_WithDefaults** parameter along with the **/ADDCURRENTUSERASSQLADMIN=FALSE** the provisioning dialog is not auto populated with the current user. Add **/AGTSVCACCOUNT** and **/AGTSVCPASSWORD** to specify a service account and password for the SQL Server Agent.|
+
+## <a name="RollOwnership"></a> Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter  
+To upgrade a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] failover cluster to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must run the Setup on one failover cluster node at a time, starting with the passive nodes. Setup determines when to fail over to the upgraded node, depending on the total number of nodes in the failover cluster instance, and the number of nodes that have already been upgraded. When half of the nodes or more have already been upgraded, Setup by default will cause a failover to an upgraded node.
+
+To control the failover behavior of cluster nodes during the upgrade process, run the upgrade operation at the command prompt and use the /FAILOVERCLUSTERROLLOWNERSHIP parameter to control the failover behavior before the upgrade operation takes the node offline. Use of this parameter is as follows:
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=0 will not roll cluster ownership (move group) to upgraded nodes, and does not add this node to the list of possible owners of the SQL Server cluster at the end of upgrade. 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=1 will roll cluster ownership (move group) to upgraded nodes, and will add this node to the list of possible owners of the SQL Server cluster at the end of upgrade. 
+
+- /FAILOVERCLUSTERROLLOWNERSHIP=2 is the default setting. It will be used if this parameter is not specified. This setting indicates that SQL Server Setup will manage cluster ownership (move group) as needed. 
+
+##  <a name="InstanceID"></a> Instance ID or InstanceID Configuration
+
+The Instance ID or /InstanceID parameter is used for specifying where you can install the instance components and the registry path of the instance. The value of INSTANCEID is a string and should be unique. 
+
+- SQL Instance ID: `MSSQLxx.<INSTANCEID>`
+
+- AS Instance ID: `MSASxx.<INSTANCEID>`
+
+- RS Instance ID: `MSRSxx.<INSTANCEID>`
+
 The instance-aware components are installed to the following locations:  
-  
-`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<ASInstanceID>`  
-  
-`%Program Files%\Microsoft SQL Server\<RSInstanceID>`  
-  
+
+`%Program Files%\Microsoft SQL Server\<SQLInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<ASInstanceID>`
+
+`%Program Files%\Microsoft SQL Server\<RSInstanceID>`
+
 > [!NOTE]
 > If INSTANCEID is not specified on the command line, then by default Setup substitute \<INSTANCEID> with the \<INSTANCENAME>. 
-  
-## See Also  
- [Install SQL Server 2016 from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
- [Install SQL Server 2016 Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)     
+
+## See Also
+- [Install SQL Server 2016 from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
+- [Install SQL Server 2016 Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)

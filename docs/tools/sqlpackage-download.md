@@ -6,9 +6,9 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
-author: "pensivebrian"
-ms.author: "broneill"
-ms.reviewer: "drskwier; sstein"
+author: "dzsquared"
+ms.author: "drskwier"
+ms.reviewer: "maghan; sstein"
 ms.date: 10/02/2020
 ---
 

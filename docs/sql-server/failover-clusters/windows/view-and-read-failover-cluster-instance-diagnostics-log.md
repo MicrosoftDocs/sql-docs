@@ -50,7 +50,7 @@ ms.author: mathoma
   
 4.  You can filter, and sort the event data using the **ExtendedEvents** menu and selecting the **Filter** option.  
   
-##  <a name="TsqlProcedure"></a> Using Transact-SQL  
+##  <a name="TsqlProcedure"></a> View Diagnostic log files with Transact-SQL  
  **To view the Diagnostic log files:**  
   
  To view all the log items in the SQLDIAG log file, use the following query:  
@@ -82,8 +82,8 @@ ORDER BY Time;
 > [!NOTE]  
 >  You can filter the results for specific components or state using the WHERE clause.  
   
-##  <a name="TsqlConfigure"></a> Using Transact-SQL  
- **To configure the Diagnostic Log Properties**  
+##  <a name="TsqlConfigure"></a> Configure Diagnostic Log Properties with Transact-SQL  
+ **To configure the Diagnostic log properties:**  
   
 > [!NOTE]  
 >  For an example of this procedure, see [Example (Transact-SQL)](#TsqlExample), later in this section.  

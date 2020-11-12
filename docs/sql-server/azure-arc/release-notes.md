@@ -22,7 +22,7 @@ For details, see [Azure Arc enabled SQL Server Overview](overview.md)
 
 ### Known issues
 
-The following issues apply to this release:
+The following issues apply to the September release:
 
 * The **Register Azure Arc enabled SQL Server** blade does not support configuring custom tags. To add custom tags, open the **SQL Server - Azure Arc** resource after registration and change Tags in the **Overview** page.
 
@@ -38,7 +38,7 @@ The October update includes the following improvements:
 
 ### Known issues
 
-The following issues apply to this release:
+The following issues apply to the October release:
 
 * Connecting SQL Server instances to Azure Arc requires an account with a broad set of permissions. For details, see [Required permissions](overview.md#required-permissions).
 

@@ -57,12 +57,12 @@ public boolean supportsResultSetConcurrency(int type,
   
  An **int** that indicates the result set concurrency level, which can be one of the following values as defined in java.sql.ResultSet or SQLServerResultSet:  
   
-## java.sql.ResultSet Types  
+## Concurrency java.sql.ResultSet Types  
  CONCUR_READ_ONLY  
   
  CONCUR_UPDATABLE  
   
-## SQLServerResultSet Types  
+## Concurrency SQLServerResultSet Types  
  CONCUR_SS_OPTIMISTIC_CC  
   
  CONCUR_SS_SCROLL_LOCKS  

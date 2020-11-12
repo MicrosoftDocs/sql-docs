@@ -126,7 +126,6 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## Remarks  
  The following three server permissions were added in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  **CONNECT ANY DATABASE** Permission  

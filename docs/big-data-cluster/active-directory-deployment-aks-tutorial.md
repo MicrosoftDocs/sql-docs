@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Tutorial: Deploy SQL Server Big Data Clusters in AD mode on Azure Kubernetes Services (AKS)
 
-This article explains how to deploy a SQL Server big data cluster (BDC) in the Active Directory authentication mode with a reference architecture which extends your on-premises Active Directory domain Service (AD DS) to Azure. You can deploy it from [Azure Architecture Center](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain) with [Azure building blocks](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks).
+This article explains how to deploy a SQL Server big data cluster (BDC) in the Active Directory authentication mode with a reference architecture. The reference architecture extends your on-premises Active Directory domain Service (AD DS) to Azure. You can deploy it from [Azure Architecture Center](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain) with [Azure building blocks](https://github.com/mspnp/template-building-blocks/wiki/Install-Azure-Building-Blocks).
 
 ## Prerequisites
 
@@ -73,7 +73,7 @@ After deploying an AKS cluster, [connect to the AKS cluster](/azure/aks/tutorial
 
 ## Verify reverse DNS entry for domain controller
 
-Before starting the BDC deployment in AD mode in AKS cluster, virify that the domain controller itself has both **A record** and **PTR record** (reverse DNS entry), registered in the DNS server.
+Before starting the BDC deployment in AD mode in AKS cluster, verify that the domain controller itself has both **A record** and **PTR record** (reverse DNS entry), registered in the DNS server.
 
 To verify this setting, run `nslookup` command or run [the PowerShell script](troubleshoot-ad-reverse-lookup-zone.md) to confirm if you have reverse DNS entry (PTR record) configured.
 

@@ -34,11 +34,11 @@ DistinctCount(Set_Expression)
   
  `WITH SET MySet AS`  
   
- `{[Customer].[Customer Geography].[Country].&[Australia],[Customer].[Customer Geography].[Country].&[Australia],`  
+ `{[Customer].[Customer Geography].[Country].&[Australia],`  
   
  `[Customer].[Customer Geography].[Country].&[Canada],[Customer].[Customer Geography].[Country].&[France],`  
   
- `[Customer].[Customer Geography].[Country].&[United Kingdom],[Customer].[Customer Geography].[Country].&[United Kingdom]}`  
+ `[Customer].[Customer Geography].[Country].&[United Kingdom]`  
   
  `*`  
   

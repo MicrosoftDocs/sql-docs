@@ -18,53 +18,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 Learn how to install the [Java Language Extension](../language-extensions/java-overview.md) component for SQL Server on Linux. The Java Language Extension is part of [SQL Server Language Extensions](../language-extensions/language-extensions-overview.md) and an add-on to the database engine. 
 
-Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
-
-Follow the steps in this article to install the Java language extension.
-
-Package location for the Java extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
-
-Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
-
-Language Extensions and [Machine Learning Services](../machine-learning/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
-
-## Uninstall preview version
-
-If you have installed a preview release (Community Technical Preview (CTP) or Release Candidate (RC)), we recommend uninstalling this version to remove all previous packages before installing SQL Server 2019. Side-by-side installation of multiple versions is not supported, and the package list has changed over the last several preview (CTP/RC) releases.
-
-### 1. Confirm package installation
-
-You might want to check for the existence of a previous installation as a first step. The following files indicate an existing installation: checkinstallextensibility.sh, exthost, launchpad.
-
-```bash
-ls /opt/microsoft/mssql/bin
-```
-
-### 2. Uninstall previous CTP/RC packages
-
-Uninstall at the lowest package level. Any upstream package dependent on a lower-level package is automatically uninstalled.
-
-  + For Java integration, remove **mssql-server-extensibility-java**
-
-Commands for removing packages appear in the following table.
-
-| Platform	| Package removal command(s) | 
-|-----------|----------------------------|
-| RHEL	| `sudo yum remove mssql-server-extensibility-java` |
-| SLES	| `sudo zypper remove mssql-server-extensibility-java` |
-| Ubuntu	| `sudo apt-get remove mssql-server-extensibility-java`|
-
-### 3. Install SQL Server 2019
-
-Install at the highest package level using the instructions in this article for your operating system.
-
-For each OS-specific set of installation instructions, *highest package level* is either **Example 1 - Full installation** for the full set of packages, or **Example 2 - Minimal installation** for the least number of packages required for a viable installation.
-
-1. Run install commands using the package managers and syntax for your Linux distribution: 
-
-   + [RedHat](#RHEL)
-   + [Ubuntu](#ubuntu)
-   + [SUSE](#suse)
+Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components.
 
 ## Prerequisites
 
@@ -78,6 +32,12 @@ For each OS-specific set of installation instructions, *highest package level* i
 
 + You should have a tool for running T-SQL commands. A query editor is necessary for post-install configuration and validation. We recommend [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-2017&preserve-view=true#get-azure-data-studio-for-linux), a free download that runs on Linux.
 
++ Package location for the Java extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
+
++ Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+
++ Language Extensions and [Machine Learning Services](../machine-learning/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+
 ## Package list
 
 On an internet-connected device, packages are downloaded and installed independently of the database engine using the package installer for each operating system. The following table describes all available packages.
@@ -89,7 +49,7 @@ On an internet-connected device, packages are downloaded and installed independe
 
 <a name="RHEL"></a>
 
-## Install Language Extensions
+## Install Java Language Extension
 
 You can install Language Extensions and Java on Linux by installing **mssql-server-extensibility-java**. When you install **mssql-server-extensibility-java**, the package automatically installs JRE 11 if it is not already installed. It will also add the JVM path to an environment variable called JRE_HOME.
 

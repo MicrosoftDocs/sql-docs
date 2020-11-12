@@ -72,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## Remarks
 
- After an application role is activated by using **sp_setapprole**, the role remains active until the user either disconnects from the server or executes **sp_unsetapprole**. **sp_setapprole** can be executed only by direct [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. **sp_setapprole** cannot be executed within another stored procedure or within a user-defined transaction.  
+ After an application role is activated by using **sp_setapprole**, the role remains active until the user either disconnects from the server or executes **sp_unsetapprole**. **sp_setapprole** can be executed only by direct [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, at the ad hoc level and not within another stored procedure, trigger or within a user-defined transaction.  
   
  For an overview of application roles, see [Application Roles](../../relational-databases/security/authentication-access/application-roles.md).  
   

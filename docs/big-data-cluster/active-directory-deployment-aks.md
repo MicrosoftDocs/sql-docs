@@ -5,7 +5,7 @@ description: Explains concepts and planning information for how to deploy SQL Se
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 10/23/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

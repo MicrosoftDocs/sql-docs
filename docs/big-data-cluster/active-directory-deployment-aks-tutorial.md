@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server Big Data Clusters in AD mode on Azur
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 10/23/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -17,20 +17,21 @@ This article explains how to deploy a SQL Server big data cluster (BDC) in the A
 
 ## Prerequisites
 
-Before deploying a SQL Server 2019 big data cluster, you need to:
+Before deploying a SQL Server big data cluster, you need to:
 
-* [Install the big data tools](deploy-big-data-tools.md) on the management Azure VM which resides on the same VNet or peered to the VNET where you deploy the new AKS cluster.
-* Prepare to deploy a SQL Server big data cluster (BDC) in the [Active Directory authentication mode](active-directory-prerequisites.md) in your on-prem AD controller.
+* Access an Azure VM for management. This VM requires access to the Azure Virtual Network (VNet) where you will deploy BDC. It must either reside on the same VNet, or on [peered VNet](/azure/virtual-network/virtual-network-manage-peering).
+* [Install the big data tools](deploy-big-data-tools.md) on the management VM.
+* Prepare to deploy the cluster in the [Active Directory authentication mode](active-directory-prerequisites.md) in your on-premises AD controller.
 
 ## Create AKS subnet
 
 1. Set environment variables
 
    ```console
-   export REGION_NAME=< your Azure Region > 
+   export REGION_NAME=< your Azure Region >
    export RESOURCE_GROUP=<your resource group >
    export SUBNET_NAME=aks-subnet
-   export VNET_NAME= adds-vnet
+   export VNet_NAME= adds-vnet
    export AKS_NAME= <your aks cluster name>
    ```
 
@@ -39,16 +40,18 @@ Before deploying a SQL Server 2019 big data cluster, you need to:
    ```console
    SUBNET_ID=$(az network vnet subnet show \
     --resource-group $RESOURCE_GROUP \
-    --vnet-name $VNET_NAME \
+    --vnet-name $VNet_NAME \
     --name $SUBNET_NAME \
     --query id -o tsv)
    ```
 
-The following screenshot shows how we plan the subnets resides in the VNET in the architecture.
+The following screenshot shows how we plan the subnets resides in the VNet in the architecture.
+
+:::image type="content" source="media/active-directory-deployment-aks/ad-in-aks-diagram.png" alt-text="AKS cluster with AD and SQL Server Big Data Cluster":::
 
 ## Create an AKS private cluster
 
-You can use the following command to deploy AKS private cluster, in case no need to use private AKS cluster , remove `--enable-private-cluster` parameter in the command, any other requirements about creating AKS cluster, see [how to deploy an Azure Kubernetes Cluster (AKS)](/azure/aks/tutorial-kubernetes-deploy-cluster).
+You can use the following command to deploy AKS private cluster. If you do not require a private cluster, remove `--enable-private-cluster` parameter in the command. For information about any other requirements, see [how to deploy an Azure Kubernetes Cluster (AKS)](/azure/aks/tutorial-kubernetes-deploy-cluster).
 
 ```azurecli
 az aks create \
@@ -66,13 +69,13 @@ az aks create \
     --generate-ssh-keys
 ```
 
-After deploying an AKS cluster successfully, you need to [connect to the AKS cluster](/azure/aks/tutorial-kubernetes-deploy-cluster#connect-to-cluster-using-kubectl). 
+After deploying an AKS cluster, [connect to the AKS cluster](/azure/aks/tutorial-kubernetes-deploy-cluster#connect-to-cluster-using-kubectl).
 
 ## Verify reverse DNS entry for domain controller
 
-Before starting the BDC deployment in AD mode in AKS cluster, you need to make sure that the domain controller itself has both **A record** and **PTR record** ( reverse DNS entry ), registered in the DNS server.
+Before starting the BDC deployment in AD mode in AKS cluster, virify that the domain controller itself has both **A record** and **PTR record** (reverse DNS entry), registered in the DNS server.
 
-You can verify this by running **nslookup** command or run [the PowerShell script](troubleshoot-ad-reverse-lookup-zone.md) to confirm if you have reverse DNS entry (PTR record) configured.
+To verify this setting, run `nslookup` command or run [the PowerShell script](troubleshoot-ad-reverse-lookup-zone.md) to confirm if you have reverse DNS entry (PTR record) configured.
 
 ## Create BDC Deployment Profile
 
@@ -84,7 +87,7 @@ azdata bdc config init --source kubeadm-prod  --target bdc-ad-aks
 
 The following commands are utilized to set parameters for a deployment profile.
 
-### control.json 
+### control.json
 
 ```console
 azdata bdc config replace -p bdc-ad-aks/control.json -j "$.spec.storage.data.className=default"
@@ -126,3 +129,6 @@ azdata bdc create --config-profile bdc-ad-aks --accept-eula yes
 
 ## Next steps
 
+[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)
+
+[Tutorial: Load sample data into a SQL Server big data cluster](tutorial-load-sample-data.md)

@@ -1,21 +1,23 @@
 ---
-description: "SQL Trace"
-title: "SQL Trace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/27/2018"
+title: SQL Trace
+description: SQL Trace
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-author: "MashaMSFT"
-ms.author: "mathoma"
+author: MashaMSFT
+ms.author: mathoma
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 11/27/2018
 ---
+
 # SQL Trace
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In SQL Trace, events are gathered if they are instances of event classes listed in the trace definition. These events can be filtered out of the trace or queued for their destination. The destination can be a file or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), which can use the trace information in applications that manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
 > [!IMPORTANT]
 > SQL Trace and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] are deprecated. The *Microsoft.SqlServer.Management.Trace* namespace that contains the Microsoft SQL Server Trace and Replay objects are also deprecated. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
@@ -106,7 +108,7 @@ SQL Trace uses data columns in the trace output to describe events that are retu
 |**ObjectID**|22|The system-assigned ID of the object.|  
 |**ObjectID2**|56|The ID of the related object or entity, if available.|  
 |**ObjectName**|34|The name of the object that is referenced.|  
-|**ObjectType**|28|The value representing the type of the object involved in the event. This value corresponds to the **type** column in **sysobjects**.|  
+|\*\***ObjectType**|28|The value representing the type of the object involved in the event. This value corresponds to the **type** column in **sysobjects**.|  
 |**Offset**|61|The starting offset of the statement within the stored procedure or batch.|  
 |**OwnerID**|58|For lock events only. The type of the object that owns a lock.|  
 |**OwnerName**|37|The database user name of the object owner.|  
@@ -134,12 +136,10 @@ SQL Trace uses data columns in the trace output to describe events that are retu
 |**Type**|57|The integer value dependent on the event class captured in the trace.|  
 |**Writes**|17|The number of physical disk write operations that are performed by the server on behalf of the event.|  
 |**XactSequence**|50|A token to describe the current transaction.|  
-  
- *These data columns are populated by default for all events.  
-  
- \*\*For more information about the **ObjectType** data column, see [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).  
-  
-## SQL Trace Tasks  
+
+\*\* For more information about the **ObjectType** data column, see [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).
+
+## SQL Trace Tasks
   
 |Task Description|Topic|  
 |----------------------|-----------|  

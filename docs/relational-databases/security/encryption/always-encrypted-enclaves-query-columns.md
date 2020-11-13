@@ -88,6 +88,59 @@ You need to make sure you run your statements from a query window that uses a co
 
 6. Click **OK** to close **Advanced Properties**.
 
+## Troubleshooting common issues when running statements using enclaves
+
+### Database connection errors
+
+To run statements using a secure enclave, you need to enable Always Encrypted and specify an attestation URL for the database connection. Your connection will fail if you specify an attestation URL but your database in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or your target [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] instance does not support secure enclaves or is incorrectly configured.
+
+- If you are using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], check your database uses the [DC-series](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration. See [Enable Intel SGX for your Azure SQL database](always-encrypted-enclaves-sqldbmi-enable-sgx.md) for more details.
+- If you are using [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], check the secure enclave is correctly configured for your instance. For details, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md)
+
+### Attestation errors
+
+When you or your application attempts to run a Transact-SQL statement using the secure enclave, the client driver inside your tool or inside the application triggers enclave attestation using an attestation service. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] supports Host Guardian Service , while !INCLUDE[ssde-md](../../../includes/ssde-md.md)] supports Microsoft Azure Attestation for attestation.
+
+Attestation involves the following steps:
+
+1. The client driver passes the attestation URL, specified in the database connection to, [!INCLUDE[ssde-md](../../../includes/ssde-md.md)].
+2. [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] collects the evidence about the enclave, its hosting environment and the code running inside the enclave and sends it to the attestation service referenced in the attestation URL. 
+3. The attestation service validates the evidence and issues an attestation report or an attestation token to [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]. The attestation report/token is signed with the attestation service private key.
+4. [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] sends the attestation report/token back to the client driver.
+5. The client contacts the attestation service at the specified attestation URL to retrieve the public key and it verifies the attestation report/token.
+
+### Attestation errors when using Microsoft Azure Attestation
+
+The common attestation failures are:
+
+- Your Azure SQL database server is unable to connect to the attestation provider in Azure Attestation, specified in the attestation URL. The likely causes include:
+  - The attestation URL is incorrect or incomplete. See [Determine the attestation URL for your attestation policy](always-encrypted-enclaves-sqldbmi-configure-attestation.md#determine-the-attestation-url-for-your-attestation-policy) for details.
+    - The attestation provider has been accidentally deleted.
+    - The firewall was configured for the attestation provider, but it doesn't allow access to Microsoft services.
+    - An intermittent network error causes the attestation provider to be unavailable.
+- The validation of the attestation policy fails. 
+  - The most likely root cause is the configured attestation policy is inconsistent with the Microsoft-recommended policy. See [Create and configure an attestation provider](always-encrypted-enclaves-sqldbmi-configure-attestation.md#create-and-configure-an-attestation-provider).
+  - The policy validation may also fail as a result of a security breach compromising the server-side enclave.
+
+
+
+TITLE: Connect to Server
+------------------------------
+
+Cannot connect to jaszymastest99.database.windows.net.
+
+------------------------------
+ADDITIONAL INFORMATION:
+ss
+You have specified the enclave attestation URL in the connection string, but the SQL Server instance in use does not support enclave based computations. (System.Data)
+
+------------------------------
+BUTTONS:
+
+OK
+------------------------------
+
+
 ## See Also
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)

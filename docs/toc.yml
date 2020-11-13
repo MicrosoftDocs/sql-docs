@@ -137,7 +137,13 @@
       - name: Prerequisites
         href: big-data-cluster/active-directory-prerequisites.md
       - name: Deploy
-        href: big-data-cluster/active-directory-deploy.md
+        items:
+          - name: Simple AD deployment
+            href: big-data-cluster/active-directory-deploy.md
+          - name: Plan AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks.md
+          - name: Tutorial - AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks-tutorial.md
       - name: Connect
         href: big-data-cluster/active-directory-connect.md
       - name: Multiple BDCs in the same AD domain

@@ -2,7 +2,7 @@
 description: "PolyBase features and limitations"
 title: "PolyBase features and limitations | Microsoft Docs"
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
-ms.date: 09/24/2018
+ms.date: 11/13/2020
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -32,7 +32,7 @@ This table lists the key features for PolyBase and the products in which they're
 |Import data from Azure Blob storage|Yes|No|Yes|Yes|
 |Export data to Azure Blob storage|Yes|No|Yes|Yes|  
 |Import data from Azure Data Lake Store|No|No|Yes|No|
-|Export data from Azure Data Lake Store|No|No|Yes|No|
+|Export data to Azure Data Lake Store|No|No|Yes|No|
 |Run PolyBase queries from Microsoft BI tools|Yes|No|Yes|Yes|
 
 ## Pushdown computation supported by T-SQL operators

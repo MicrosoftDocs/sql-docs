@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid:
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 

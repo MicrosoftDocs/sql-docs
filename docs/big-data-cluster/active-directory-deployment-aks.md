@@ -27,7 +27,7 @@ There are a few ways to deploy a BDC in AD mode in AKS.  This article introduces
 
    See how to deploy this solution step by step [in this reference architecture](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-extend-domain).
 
-* **Extend the Active Directory Domain Services (AD DS) resource forest to azure.** In this architecture, you create a new domain in Azure that is trusted by your on-premises AD forest. This architecture shows a [one-way trust from the domain in Azure to the on-premises forest](/azure/architecture/reference-architectures/identity/adds-forest).
+* **Extend the Active Directory Domain Services (AD DS) resource forest to Azure.** In this architecture, you create a new domain in Azure that is trusted by your on-premises AD forest. This architecture shows a [one-way trust from the domain in Azure to the on-premises forest](/azure/architecture/reference-architectures/identity/adds-forest).
 
    The trust allows on-premises users access resources in the domain in Azure. See how to deploy this solution step by step [in this reference architecture](https://github.com/mspnp/identity-reference-architectures/tree/master/adds-forest).
 

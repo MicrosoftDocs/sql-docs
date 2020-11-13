@@ -7,11 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: DavoudEshtehari
-ms.author: v-daesht
-ms.reviewer: v-chmalh
+author: DavoudEshtehari
+ms.author: v-daesht
+ms.reviewer: v-chmalh
 ---
 # Protecting Connection Information
+
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -42,6 +44,8 @@ Protecting access to your data source is one of the most important goals when se
  The default value for `Persist Security Info` is false; we recommend using this default in all connection strings. Setting `Persist Security Info` to `true` or `yes` allows security-sensitive information, including the user ID and password, to be obtained from a connection after it has been opened. When `Persist Security Info` is set to `false` or `no`, security information is discarded after it is used to open the connection, ensuring that an untrusted source does not have access to security-sensitive information.
 
 ## Encrypt Configuration Files
+
+[!INCLUDE[appliesto-netfx-netcore-xxxx-md](../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
  You can also store connection strings in configuration files, which eliminates the need to embed them in your application's code. Configuration files are standard XML files for which the .NET Framework has defined a common set of elements. Connection strings in configuration files are typically stored inside the **\<connectionStrings>** element in the **app.config** for a Windows application, or the **web.config** file for an ASP.NET application. For more information on the basics of storing, retrieving, and encrypting connection strings from configuration files, see [Connection Strings and Configuration Files](connection-strings-and-configuration-files.md).  
   

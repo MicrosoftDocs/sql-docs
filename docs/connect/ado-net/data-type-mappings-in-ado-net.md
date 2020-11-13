@@ -7,11 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: DavoudEshtehari
-ms.author: v-daesht
-ms.reviewer: v-chmalh
+author: DavoudEshtehari
+ms.author: v-daesht
+ms.reviewer: v-chmalh
 ---
 # Data Type Mappings in ADO.NET
+
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -35,5 +37,3 @@ The ADO.NET is based on the common type system, which defines how types are decl
 ## See also
 
 - [SQL Server Data Types and ADO.NET](./sql/sql-server-data-types.md)
-- [Configuring Parameters and Parameter Data Types](configuring-parameters-and-parameter-data-types.md)
-- [Retrieving Database Schema Information](retrieving-database-schema-information.md)

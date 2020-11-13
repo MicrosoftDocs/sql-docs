@@ -7,11 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: DavoudEshtehari
-ms.author: v-daesht
-ms.reviewer: v-chmalh
+author: DavoudEshtehari
+ms.author: v-daesht
+ms.reviewer: v-chmalh
 ---
 # Connecting to a Data Source in ADO.NET
+
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -31,6 +33,3 @@ In ADO.NET, you use a **Connection** object to connect to a specific data source
 
 - [Connection Strings](connection-strings.md)
 - [Connection Pooling](connection-pooling.md)
-- [Commands and Parameters](commands-and-parameters.md)
-- [DataAdapters and DataReaders](dataadapters-and-datareaders.md)
-- [Transactions and Concurrency](transactions-and-concurrency.md)

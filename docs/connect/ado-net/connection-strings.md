@@ -7,11 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: DavoudEshtehari
-ms.author: v-daesht
-ms.reviewer: v-chmalh
+author: DavoudEshtehari
+ms.author: v-daesht
+ms.reviewer: v-chmalh
 ---
 # Connection Strings in ADO.NET
+
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -76,7 +78,3 @@ Describes how to configure provider-specific connection strings for `SqlClient`.
 
 [Protecting Connection Information](protecting-connection-information.md)\
 Demonstrates techniques for protecting information used to connect to a data source.
-
-## See also
-
-- [Connecting to a Data Source](/cpp/data/odbc/connecting-to-a-data-source)

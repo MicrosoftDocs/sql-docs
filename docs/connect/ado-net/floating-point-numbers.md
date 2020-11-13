@@ -6,11 +6,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: DavoudEshtehari
-ms.author: v-daesht
-ms.reviewer: v-chmalh
+author: DavoudEshtehari
+ms.author: v-daesht
+ms.reviewer: v-chmalh
 ---
 # Floating-Point Numbers
+
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 

@@ -7,11 +7,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: DavoudEshtehari
-ms.author: v-daesht
-ms.reviewer: v-chmalh
+author: DavoudEshtehari
+ms.author: v-daesht
+ms.reviewer: v-chmalh
 ---
 # Connection String Syntax
+
+[!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
@@ -38,12 +40,12 @@ The <xref:Microsoft.Data.SqlClient> has a `Connection` object that inherits from
 The syntax for a <xref:Microsoft.Data.SqlClient.SqlConnection> connection string is documented in the <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> property. You can use the <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> property to get or set a connection string for a SQL Server database. The connection string keywords also map to properties in the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>.
 
 > [!IMPORTANT]
-> The default setting for the `Persist Security Info` keyword is `false`. Setting it to `true` or `yes` allows security-sensitive information, including the user ID and password, to be obtained from the connection after the connection has been opened. Keep `Persist Security Info` set to `false` to ensure that an untrusted source does not have access to sensitive connection string information.  
+> The default setting for the `Persist Security Info` keyword is `false`. Setting it to `true` or `yes` allows security-sensitive information, including the user ID and password, to be obtained from the connection after the connection has been opened. Keep `Persist Security Info` set to `false` to ensure that an untrusted source does not have access to sensitive connection string information.
 
 ### Windows authentication with SqlClient
 
- Each of the following forms of syntax uses Windows Authentication to connect to the **AdventureWorks** database on a local server.  
-  
+ Each of the following forms of syntax uses Windows Authentication to connect to the **AdventureWorks** database on a local server.
+
 ```csharp  
 "Persist Security Info=False;Integrated Security=true;  
     Initial Catalog=AdventureWorks;Server=MSSQL1"  
@@ -52,11 +54,11 @@ The syntax for a <xref:Microsoft.Data.SqlClient.SqlConnection> connection string
 "Persist Security Info=False;Trusted_Connection=True;  
     database=AdventureWorks;server=(local)"  
 ```  
-  
+
 ### SQL Server authentication with SqlClient
 
- Windows Authentication is preferred for connecting to SQL Server. However, if SQL Server Authentication is required, use the following syntax to specify a user name and password. In this example, asterisks are used to represent a valid user name and password.  
-  
+ Windows Authentication is preferred for connecting to SQL Server. However, if SQL Server Authentication is required, use the following syntax to specify a user name and password. In this example, asterisks are used to represent a valid user name and password.
+
 ```csharp  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
@@ -101,10 +103,10 @@ You can also set the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.D
 
  To enable encryption when a certificate has not been provisioned on the server, the **Force Protocol Encryption** and the **Trust Server Certificate** options must be set in SQL Server Configuration Manager. In this case, encryption will use a self-signed server certificate without validation if no verifiable certificate has been provisioned on the server.
 
- Application settings cannot reduce the level of security configured in SQL Server, but can optionally strengthen it. An application can request encryption by setting the `TrustServerCertificate` and `Encrypt` keywords to `true`, guaranteeing that encryption takes place even when a server certificate has not been provisioned and **Force Protocol Encryption** has not been configured for the client. However, if `TrustServerCertificate` is not enabled in the client configuration, a provisioned server certificate is still required.  
-  
- The following table describes all cases.  
-  
+ Application settings cannot reduce the level of security configured in SQL Server, but can optionally strengthen it. An application can request encryption by setting the `TrustServerCertificate` and `Encrypt` keywords to `true`, guaranteeing that encryption takes place even when a server certificate has not been provisioned and **Force Protocol Encryption** has not been configured for the client. However, if `TrustServerCertificate` is not enabled in the client configuration, a provisioned server certificate is still required.
+
+ The following table describes all cases.
+
 |Force Protocol Encryption client setting|Trust Server Certificate client setting|Encrypt/Use Encryption for Data connection string/attribute|Trust Server Certificate connection string/attribute|Result|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |No|N/A|No (default)|Ignored|No encryption occurs.|  
@@ -114,7 +116,7 @@ You can also set the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.D
 |Yes|Yes|No (default)|Ignored|Encryption always occurs, but may use a self-signed server certificate.|  
 |Yes|Yes|Yes|No (default)|Encryption occurs only if there is a verifiable server certificate; otherwise, the connection attempt fails.|  
 |Yes|Yes|Yes|Yes|Encryption always occurs, but may use a self-signed server certificate.|  
-  
+
  For more information, see [Using Encryption Without Validation](/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 ## See also

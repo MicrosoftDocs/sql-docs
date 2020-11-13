@@ -9996,11 +9996,11 @@
         href: linux/sql-server-linux-setup-full-text-search.md
       - name: Install SQL Server Integration Services
         href: linux/sql-server-linux-setup-ssis.md
-      - name: Install SQL Server Machine Learning Services
+      - name: Install SQL Server Machine Learning Services (Python and R)
         href: linux/sql-server-linux-setup-machine-learning.md
-      - name: Install SQL Server Machine Learning Services on Docker
+      - name: Install SQL Server Machine Learning Services (Python and R) on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
-      - name: Install SQL Server Language Extensions
+      - name: Install SQL Server Java Language Extension
         href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md

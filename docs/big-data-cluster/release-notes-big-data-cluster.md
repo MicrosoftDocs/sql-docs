@@ -111,7 +111,7 @@ This release includes minor fixes and enhancements. The following articles inclu
 - [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] with high availability](deployment-high-availability.md)
 - [Configure [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
-- [SQL Server master instance configuration properties.](reference-config-master-instance.md)
+- [SQL Server master instance configuration properties](reference-config-master-instance.md)
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
 - [Kubernetes RBAC model & impact on users and service accounts managing BDC](kubernetes-rbac.md)
 

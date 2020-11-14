@@ -236,6 +236,7 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package is not supported.
+
 <sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
 
 ## Next steps

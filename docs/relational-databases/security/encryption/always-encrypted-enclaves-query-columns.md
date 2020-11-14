@@ -22,22 +22,27 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 The following types of Transact-SQL statement utilize secure enclaves.
 
-- The following types of [Data Definition Language (DDL)](../../../t-sql/statements/statements.md#data-definition-language) statements:
-  - [ALTER TABLE column_definition (Transact-SQL)](../../../t-sql/statements/alter-table-column-definition-transact-sql.md) statements that trigger in-place cryptographic operations using enclave-enabled keys - see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
-  - [CREATE INDEX (Transact-SQL)](../../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX (Transact-SQL)](../../../t-sql/statements/alter-index-transact-sql.md) statements that create or alter indexes on enclave-enabled columns using randomized encryption. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
+### DDL statements using secure enclaves
+
+The following types of [Data Definition Language (DDL)](../../../t-sql/statements/statements.md#data-definition-language) statements require secure enclaves.
+
+- [ALTER TABLE column_definition (Transact-SQL)](../../../t-sql/statements/alter-table-column-definition-transact-sql.md) statements that trigger in-place cryptographic operations using enclave-enabled keys - see [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md).
+- [CREATE INDEX (Transact-SQL)](../../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX (Transact-SQL)](../../../t-sql/statements/alter-index-transact-sql.md) statements that create or alter indexes on enclave-enabled columns using randomized encryption. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
   
-- [Data Manipulation Language (DML)](../../../t-sql/statements/statements.md#data-manipulation-language) statements/queries against enclave-enabled columns using randomized encryption that:
-  - Use one or more of the following Transact-SQL operators:
-    - [Comparison Operators](../../../mdx/comparison-operators.md).
-    - [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md).
-    - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md).
-    - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md).
-    - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select).
-    - [Joins](../../performance/joins.md). [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] supports only nested loop joins. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash and merge joins.
-    - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
-    - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
-  - Insert, update or delete rows, which in turn triggers inserting and/or removing an index key to/from an index on an enclave-enabled column. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
-- [DBCC (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-transact-sql.md) administrative commands that involve checking the integrity of indexes on enclave-enabled columns using randomized encryption, for example [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) or [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+### DML statements using secure enclaves
+
+The following [Data Manipulation Language (DML)](../../../t-sql/statements/statements.md#data-manipulation-language) statements/queries against enclave-enabled columns using randomized encryption require secure enclaves:
+
+- Queries that use one or more of the following Transact-SQL operators supported inside secure enclaves:
+  - [Comparison Operators](../../../mdx/comparison-operators.md).
+  - [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md).
+  - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md).
+  - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md).
+  - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select).
+  - [Joins](../../performance/joins.md). [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] supports only nested loop joins. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash and merge joins.
+  - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+  - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+- Queries that insert, update or delete rows, which in turn triggers inserting and/or removing an index key to/from an index on an enclave-enabled column. For more information, see [Create and use indexes on columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Operations on indexes and confidential DML queries using enclaves are only supported on enclave-enabled columns that use randomized encryption. Deterministic encryption is not supported.
@@ -45,20 +50,27 @@ The following types of Transact-SQL statement utilize secure enclaves.
 > [!NOTE]
 > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], confidential queries using enclaves on character string columns (`char`, `nchar`) require a binary2 sort order (BIN2) collation is configured for the column. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], using BIN2 or UTF-8 collations is required.
 
-## Pre-requisites for running statements using secure enclaves
+### DBCC commands using secure enclaves
+
+[DBCC (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-transact-sql.md) administrative commands that involve checking the integrity of indexes may also require secure enclaves, if the database contains indexes on enclave-enabled columns using randomized encryption. For example: [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+
+## Prerequisites for running statements using secure enclaves
 
 Your environment needs to meet te following requirements to support executing statements that use a secure enclave.
 
 - Your [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] instance or your database and server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation. See [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
 - You need to obtain an attestation URL for your environment for your attestation service administrator.
 
-  - If you are using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service, see [Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](always-encrypted-enclaves-host-guardian-service-deploy.md).
+  - If you are using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service, see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
   - If you are using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], see [Determine the attestation URL for your attestation policy](always-encrypted-enclaves-sqldbmi-configure-attestation.md#determine-the-attestation-url-for-your-attestation-policy).
 
 - If you are connecting to your database using your application, it must use a client driver that supports Always Encrypted with secure enclaves and it must connect to the database with Always Encrypted enabled for the database connection and the attestation protocol and the attestation URL properly configured. For detailed information, see [Develop applications using Always Encrypted with secure enclaves](always-encrypted-enclaves-client-development.md).
 - If you are using SQL Server Management Studio or Azure SQL Data Studio, you need to enable Always Encrypted and configure the attestation protocol and the attestation URL when connecting to your database. See the following sections for details.
 
-## Run Transact-SQL statements using enclaves in SSMS
+> [!NOTE]
+> Connecting to the database with Always Encrypted and attestation configured is not required for the following operations, if you are using cached column encryption keys: DDL queries that create or alter indexes, DML queries that update indexes, and DBCC commands that check index integrity. See [Invoke indexing operations using cached column encryption keys](always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys) for details.
+
+### Prerequisites for running Transact-SQL statements using enclaves in SSMS
 
 To use SQL Server Management Studio to run statements using secure enclaves, follow the instructions in [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md). Here are a few things that are specific to enclaves you should be aware of:
 
@@ -72,7 +84,7 @@ You need to make sure you run your statements from a query window that uses a co
 4. Select **Connect**.
 5. If you are prompted to enable Parameterization for Always Encrypted queries, select **Enable** if you plan to run parameterized DML queries.
 
-## Run Transact-SQL statements using enclaves in Azure Data Studio
+### Prerequisites for running Transact-SQL statements using enclaves in Azure Data Studio
 
 To use Azure Data Studio to run statements using secure enclaves, follow the instructions in [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md). Here are a few things that are specific to enclaves you should be aware of:
 
@@ -88,58 +100,83 @@ You need to make sure you run your statements from a query window that uses a co
 
 6. Click **OK** to close **Advanced Properties**.
 
-## Troubleshooting common issues when running statements using enclaves
+## Troubleshoot common issues when running statements using enclaves
+
+This section lists common issues you may encounter when running Transact-SQL statements using secure enclaves.
 
 ### Database connection errors
 
-To run statements using a secure enclave, you need to enable Always Encrypted and specify an attestation URL for the database connection. Your connection will fail if you specify an attestation URL but your database in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or your target [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] instance does not support secure enclaves or is incorrectly configured.
+To run statements using a secure enclave, you need to enable Always Encrypted and specify an attestation URL for the database connection, as explained in the earlier sections. However, your connection will fail if you specify an attestation URL but your database in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] or your target [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]  instance does not support secure enclaves or is incorrectly configured.
 
 - If you are using [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], check your database uses the [DC-series](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) hardware configuration. See [Enable Intel SGX for your Azure SQL database](always-encrypted-enclaves-sqldbmi-enable-sgx.md) for more details.
-- If you are using [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], check the secure enclave is correctly configured for your instance. For details, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md)
-
-### Attestation errors
-
-When you or your application attempts to run a Transact-SQL statement using the secure enclave, the client driver inside your tool or inside the application triggers enclave attestation using an attestation service. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] supports Host Guardian Service , while !INCLUDE[ssde-md](../../../includes/ssde-md.md)] supports Microsoft Azure Attestation for attestation.
-
-Attestation involves the following steps:
-
-1. The client driver passes the attestation URL, specified in the database connection to, [!INCLUDE[ssde-md](../../../includes/ssde-md.md)].
-2. [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] collects the evidence about the enclave, its hosting environment and the code running inside the enclave and sends it to the attestation service referenced in the attestation URL. 
-3. The attestation service validates the evidence and issues an attestation report or an attestation token to [!INCLUDE[ssde-md](../../../includes/ssde-md.md)]. The attestation report/token is signed with the attestation service private key.
-4. [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] sends the attestation report/token back to the client driver.
-5. The client contacts the attestation service at the specified attestation URL to retrieve the public key and it verifies the attestation report/token.
+- If you are using [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], check the secure enclave is correctly configured for your instance. For details, see [Configure the secure enclave in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ### Attestation errors when using Microsoft Azure Attestation
 
-The common attestation failures are:
+> [!NOTE]
+> This section applies only to [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
-- Your Azure SQL database server is unable to connect to the attestation provider in Azure Attestation, specified in the attestation URL. The likely causes include:
+Before a client driver submits a Transact-SQL to Azure SQL database server for execution, the driver triggers the following enclave attestation workflow using Microsoft Azure Attestation.
+
+1. The client driver passes the attestation URL, specified in the database connection, to the Azure SQL database server.
+2. Rhe Azure SQL database server collects the evidence about the enclave, its hosting environment and the code running inside the enclave, and it sends an attestation request to the attestation provider, referenced in the attestation URL.
+3. The attestation provider validates the evidence against the configured policy and issues an attestation token to the Azure SQL database server. The attestation provider signs the attestation token with its private key.
+4. The Azure SQL database server sends the attestation token to the client driver.
+5. The client contacts the attestation provider at the specified attestation URL to retrieve its public key and it verifies the signature in the attestation token.
+
+Errors can occur at various steps of the above workflow due to misconfigurations. Here are the common attestation errors, their root causes and the recommended troubleshooting steps:
+
+- Your Azure SQL database server is unable to connect to the attestation provider in Azure Attestation (step 2 of the above workflow), specified in the attestation URL. The likely causes include:
   - The attestation URL is incorrect or incomplete. See [Determine the attestation URL for your attestation policy](always-encrypted-enclaves-sqldbmi-configure-attestation.md#determine-the-attestation-url-for-your-attestation-policy) for details.
-    - The attestation provider has been accidentally deleted.
-    - The firewall was configured for the attestation provider, but it doesn't allow access to Microsoft services.
-    - An intermittent network error causes the attestation provider to be unavailable.
-- The validation of the attestation policy fails. 
-  - The most likely root cause is the configured attestation policy is inconsistent with the Microsoft-recommended policy. See [Create and configure an attestation provider](always-encrypted-enclaves-sqldbmi-configure-attestation.md#create-and-configure-an-attestation-provider).
+  - The attestation provider has been accidentally deleted.
+  - The firewall was configured for the attestation provider, but it doesn't allow access to Microsoft services.
+  - An intermittent network error causes the attestation provider to be unavailable.
+- Your Azure SQL database server is not authorized to send attestation requests to the attestation provider. Make sure the administrator of your attestation provider has added the database server to the Attestation Reader role. See [Grant your Azure SQL database server access to your attestation provider](always-encrypted-enclaves-sqldbmi-configure-attestation.md#grant-your-azure-sql-database-server-access-to-your-attestation-provider).
+- The validation of the attestation policy fails (in step 3 of the above workflow).
+  - An incorrect attestation policy is the likely root cause. Make sure you are using the Microsoft-recommended policy - see [Create and configure an attestation provider](always-encrypted-enclaves-sqldbmi-configure-attestation.md#create-and-configure-an-attestation-provider).
   - The policy validation may also fail as a result of a security breach compromising the server-side enclave.
+- Your client application is unable to connect to the attestation provider and retrieve the public signing key (in step 5). The likely causes include:
+  - The configuration of firewalls between your application and the attestation provider may block the connections. To troubleshoot this, verify you can connect to the OpenId endpoint of your attestation provider, for example, by using a web browser, from the machine hosting your application. See [Metadata Configuration - Get](https://docs.microsoft.com/rest/api/attestation/metadataconfiguration/get) for more details.
 
+### Attestation errors when using Host Guardian Service
 
+> [!NOTE]
+> This section applies only to [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
 
-TITLE: Connect to Server
-------------------------------
+Before a client driver submits a Transact-SQL to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] for execution, the driver triggers the following enclave attestation workflow using Host Guardian Service (HGS).
 
-Cannot connect to jaszymastest99.database.windows.net.
+1. The client driver calls [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] to initiate attestation.
+2. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] collects the evidence about its enclave, its hosting environment and the code running inside the enclave. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] request a health certificate from the HGS instance, the machine hosting [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] was registered with. See [Register computer with Host Guardian Service](always-encrypted-enclaves-host-guardian-service-register.md).
+3. HGS validates the evidence against and issues the health certificate to [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. HGS signs the health certificate with its private key.
+4. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] sends the health certificate to the client driver.
+5. The client driver contacts HGS at the attestation URL, specified for the database connection, to retrieve the HGS public key. The client driver verifies the signature in the health certificate.
 
-------------------------------
-ADDITIONAL INFORMATION:
-ss
-You have specified the enclave attestation URL in the connection string, but the SQL Server instance in use does not support enclave based computations. (System.Data)
+Errors can occur at various steps of the above workflow due to misconfigurations. Here are the common attestation errors, their root causes and the recommended troubleshooting steps:
 
-------------------------------
-BUTTONS:
+- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is unable to connect to HGS (step 2 of the above workflow), due to an intermittent network error. To troubleshoot this, the administrator of the [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer should verify the computer can connect to the HGS machine.
+- The validation in step 3 fails. To troubleshoot this:
+  - The [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator should work with the client application administrator to verify the [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer is registered with same HGS instance as the instance referenced in the attestation URL on the client side.
+  - The [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator should confirm the [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer can successfully attest, by following the instructions in [Step 5: Confirm the host can attest successfully](always-encrypted-enclaves-host-guardian-service-register.md#step-5-confirm-the-host-can-attest-successfully).
+- Your client application is unable to connect to HGS and retrieve its public signing key (in step 5). The likely causes include:
+  - The configuration of one of the firewalls between your application and the attestation provider may block the connections. Verify the machine hosting your app can connect to the HGS machine.
 
-OK
-------------------------------
+### In-place encryption errors
 
+This section lists common errors you may encounter when using `ALTER TABLE`/`ALTER COLUMN` for in-place encryption (in addition to attestation errors described in earlier sections). See [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md) for details.
+
+- The column encryption key, you are trying to use to encrypt, decrypt or re-encrypt data is not an enclave-enabled key. See [Prerequisites](always-encrypted-enclaves-configure-encryption.md#prerequisites) for in-place encryption. For information on how to provision enclave-enabled keys, see [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md).
+- You have not enabled Always Encrypted and enclave computations for the database connection. See [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves).
+- Your `ALTER TABLE`/`ALTER COLUMN` statement triggers a cryptographic operation and it changes the column data type or sets a collation with a code page different from the current collation code page. Combining cryptographic operations with data type or collation page changes is not allowed. To address the problem, you need to use separate statements: one statement to change the data type or collation code page and another statement for in-place encryption.
+
+### Errors when running confidential DML queries using secure enclaves
+
+This section lists common errors you may encounter when you run confidential DML queries using secure enclaves (in addition to attestation errors described in earlier sections). 
+
+- The column encryption key configured for the column you are querying is not an enclave-enabled key. 
+- You have not enabled Always Encrypted and enclave computations for the database connection. See [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves).
+- The column, you are querying, uses deterministic encryption. Confidential DML queries using secure enclaves are not supported with deterministic encryption. See [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md) for information on how to change the encryption type to randomized.
+- The string column you are querying uses a collation that is not a BIN2 or UTF-8 collation. You need to change the collation to BIN2 or UTF-8. For more details, see [DML statements using secure enclaves](#dml-statements-using-secure-enclaves) in this article.
+- Your query triggers an unsupported operation. For the list of operations supported inside enclaves see [DML statements using secure enclaves](#dml-statements-using-secure-enclaves) in this article.
 
 ## See Also
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)

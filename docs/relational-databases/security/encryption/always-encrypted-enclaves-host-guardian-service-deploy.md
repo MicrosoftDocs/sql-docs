@@ -229,6 +229,27 @@ It is recommended that all production instances of HGS use an HTTPS binding.
 
 3. Repeat steps 1 and 2 for each HGS computer in the cluster. TLS certificates are not automatically replicated between HGS nodes. Additionally, each HGS computer can have its own unique TLS certificate so long as the subject matches the HGS service name.
 
+## Step 6: Determine and share the HGS attestation URL
+
+As the HGS administrator you need share the attestation URL of HGS with both admins of SQL server computers and application admins in your organization. The administrators of SQL Server computers will need the attestation URL to register SQL server computers with HGS. Application admins will need the attestation URL to configure how their apps connect to SQL Server.
+
+To determine the attestation URL, run the following cmdlet.
+
+```powershell
+Get-HGSServer
+```
+The output of the command will look similar to below:
+
+```
+Name                           Value                                                                         
+----                           -----                                                                         
+AttestationOperationMode       HostKey                                                                       
+AttestationUrl                 {http://hgs.bastion.local/Attestation}                                        
+KeyProtectionUrl               {}         
+```
+
+The attestation URL for your HGS is the value of the AttestationUrl property.
+
 ## Next steps
 
 - [Register computers with HGS](./always-encrypted-enclaves-host-guardian-service-register.md)

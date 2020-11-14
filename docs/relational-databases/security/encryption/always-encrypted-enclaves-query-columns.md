@@ -38,7 +38,7 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
   - [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md).
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md).
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md).
-  - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select).
+  - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select). 
   - [Joins](../../performance/joins.md). [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] supports only nested loop joins. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] supports nested loop, hash and merge joins.
   - [SELECT - ORDER BY Clause (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
   - [SELECT - GROUP BY Clause (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Supported in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. Not supported in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].

@@ -21,18 +21,17 @@ ms.author: wiassaf
 
   Allows users to find out what the table objects are available to be virtualized.
 
-> [!NOTE]
-> This article describes objects introduced in SQL Server 2019 CU5. Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster?view=sql-server-ver15#cu5).
+[!NOTE]
+This article describes objects introduced in SQL Server 2019 CU5. Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster?view=sql-server-ver15#cu5).
   
   Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) can be used by customers for schema discovery of external objects. These system stored procedures allow the user via T-SQL to see the schema of tables that are available to be virtualized. The two stored procedures will also be used in the implementation of the Data Virtualization Wizard extension for Azure Data Studio. Use [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) to discover external table schemas represented in SQL Server data types.
 
-> [!NOTE]
-> This stored procedure currently supports only ODBC-based PolyBase connectors (not including BDC Storage Pool). 
+[!NOTE]
+This stored procedure currently supports only ODBC-based PolyBase connectors (not including BDC Storage Pool). 
 
  The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure blob storage.
 
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax  
   

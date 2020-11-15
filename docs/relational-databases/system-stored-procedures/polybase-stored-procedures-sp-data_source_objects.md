@@ -24,7 +24,7 @@ ms.author: wiassaf
 > [!NOTE]
 > This article describes objects introduced in SQL Server 2019 CU5. Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster?view=sql-server-ver15#cu5).
   
-  Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) can be used by customers for schema discovery of external objects. These system stored procedures allow the user via T-SQL to see the schema of tables that are available to be virtualized. These two stored procedures are behind the Data Virtualization Wizard extension for Azure Data Studio. Use [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) to discover external table schemas represented in SQL Server data types.
+  Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) can be used by customers for schema discovery of external objects. These system stored procedures allow the user via T-SQL to see the schema of tables that are available to be virtualized. These two stored procedures are behind the [Data Virtualization extension for Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/data-virtualization-extension?view=sql-server-ver15). Use [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) to discover external table schemas represented in SQL Server data types.
 
 > [!NOTE]
 > This stored procedure currently supports only ODBC-based PolyBase connectors (not including BDC Storage Pool). 
@@ -224,6 +224,8 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 
   
 ## See Also  
+ [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md)
+ [Data Virtualization extension for Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/data-virtualization-extension?view=sql-server-ver15)
  [Get started with PolyBase](../polybase/polybase-guide.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

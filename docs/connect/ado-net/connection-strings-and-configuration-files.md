@@ -104,7 +104,7 @@ Embedding connection strings in your application's code can lead to security vul
 
  This example demonstrates how to retrieve a connection string from a configuration file by specifying its name. The code creates a <xref:System.Configuration.ConnectionStringSettings> object, matching the supplied input parameter to the <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> name. If no matching name is found, the function returns `null` (`Nothing` in Visual Basic).
 
- [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](~/../SqlClient/doc/samples/ConnectionStringSettings_._RetrieveFromConfigByName.cs#1)]
+ [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](~/../SqlClient/doc/samples/ConnectionStringSettings_RetrieveFromConfigByName.cs#1)]
 
 ### Example: Retrieving a Connection String by Provider Name
 

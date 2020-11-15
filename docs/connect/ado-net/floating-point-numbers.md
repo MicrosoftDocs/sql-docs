@@ -1,5 +1,6 @@
 ---
 title: "Floating-Point Numbers"
+description: Learn some of the issues when working with floating-point numbers in ADO.NET and SQL Server.
 ms.date: "11/13/2020"
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
 ms.prod: sql

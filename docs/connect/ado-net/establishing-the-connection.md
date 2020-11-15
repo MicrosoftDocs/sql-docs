@@ -1,5 +1,6 @@
 ---
 title: "Establishing the Connection"
+description: Guideline for connecting to a SQL Server by SqlClient provider.
 ms.date: "11/13/2020"
 dev_langs: 
   - "csharp"
@@ -34,7 +35,7 @@ To connect to Microsoft SQL Server, use the <xref:Microsoft.Data.SqlClient.SqlCo
 
 ## Connecting to SQL Server
 
- The ADO.NET Data Provider for SQL Server supports a connection string format that is similar to the OLE DB (ADO) connection string format. For valid string format names and values, see the <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> property of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. You can also use the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> class to create syntactically valid connection strings at run time. For more information, see [Connection String Builders](connection-string-builders.md).
+ For valid string format names and values, see the <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> property of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. You can also use the <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> class to create syntactically valid connection strings at run time. For more information, see [Connection String Builders](connection-string-builders.md).
 
  The following code example demonstrates how to create and open a connection to a SQL Server database.
 

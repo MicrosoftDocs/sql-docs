@@ -1,6 +1,6 @@
 ---
 title: "Connecting to a Data Source"
-deescription: Learn about Connection objects, used to connect to data sources in ADO.NET. The Connection object you choose depends on the type of data source.
+description: Learn about Connection objects, used to connect to data sources in ADO.NET. The Connection object you choose depends on the type of data source.
 ms.date: "11/13/2020"
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.prod: sql

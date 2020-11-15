@@ -21,17 +21,17 @@ ms.author: wiassaf
 
   Allows users to find out what the table objects are available to be virtualized.
 
-[!NOTE]
-This article describes objects introduced in SQL Server 2019 CU5. Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster?view=sql-server-ver15#cu5).
+> [!NOTE]
+> This article describes objects introduced in SQL Server 2019 CU5. Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster?view=sql-server-ver15#cu5).
   
-  Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) can be used by customers for schema discovery of external objects. These system stored procedures allow the user via T-SQL to see the schema of tables that are available to be virtualized. The two stored procedures will also be used in the implementation of the Data Virtualization Wizard extension for Azure Data Studio. Use [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) to discover external table schemas represented in SQL Server data types.
+  Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) can be used by customers for schema discovery of external objects. These system stored procedures allow the user via T-SQL to see the schema of tables that are available to be virtualized. These two stored procedures are behind the Data Virtualization Wizard extension for Azure Data Studio. Use [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) to discover external table schemas represented in SQL Server data types.
 
-[!NOTE]
-This stored procedure currently supports only ODBC-based PolyBase connectors (not including BDC Storage Pool). 
+> [!NOTE]
+> This stored procedure currently supports only ODBC-based PolyBase connectors (not including BDC Storage Pool). 
 
  The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure blob storage.
 
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax  
   
@@ -51,32 +51,34 @@ The name of the External Data Source to get the metadata from. data_source is sy
 
 *\[ @object_root_name = ] 'object_root_name'*
 
-This is the root of the name of the object(s) to search for. object_root_name is nvarchar(max), with a default of NULL.
+This parameter is the root of the name of the object(s) to search for. object_root_name is nvarchar(max), with a default of NULL.
 
 The results of this call will only return external objects that begin with this parameter.
 
 > [!CAUTION]
 > Due to differences between external data platforms, some platforms do not return any results if the default value of NULL is provided. Some treat NULL as the lack of a filter. For example, Oracle RDMBS will not return results if NULL is provided for *\@object_root_name*.
 
-In the case of an ODBC data source that connects to an RDBMS that uses three-part names, like SQL Server, the string cannot contain a partial database name. In these cases, the parameter *\@object_root_name* should contain all three parts, with the third part being the object name to search.
+If an ODBC data source connects to a Relational Database Management System (RDBMS) that uses three-part names, *\@object_root_name* cannot contain a partial database name. In these cases, the parameter *\@object_root_name* should contain all three parts, with the third part being the object name to search.
 
 *\[ @max_search_depth = ] max_search_depth`*
 
-This value specifies the maximum depth (in parts) past the object_root_name that we wish to search. max_search_depth is an int with a default of 1. 
+This value specifies the maximum depth (in parts) past the object_root_name that we wish to search. max_search_depth is an int with a default of 1.
 
-For example, a max_search_depth of 1, with an object_root_name that is the name of a SQL Server database, would return schemata contained inside the database. 
+For example, a *\@max_search_depth\ of 1, with an object_root_name that is the name of a SQL Server database, would return schemata contained inside the database.
 
-A max_search_depth of NULL will just return information about object_root_name if it exists and is non-empty in the case of catalog or schema. 
+A *\@max_search_depth\ of NULL will return information about *\object_root_name\ if it exists and is non-empty, in the case of catalog or schema.
 
 *\[ @search_options = ] 'search_options'*
 
-This parameter currently isn't used but may be implemented in the future. The *\search_options* parameter is nvarchar(max) with a default of NULL. 
+The *\search_options* parameter is nvarchar(max) with a default of NULL.
+
+This parameter isn't used but may be implemented in the future.
 
 ## Result Sets
 
 | Column Name | Data Type | Description |
 |--|--|--|
-| OBJECT_TYPE | nvarchar(200) | The type of the object (e.g. TABLE or DATABASE). |
+| OBJECT_TYPE | nvarchar(200) | The type of the object (Example: TABLE or DATABASE). |
 | OBJECT_NAME | nvarchar(max) | The fully qualified name of the object. Escaped using backend-specific quote character. |
 | OBJECT_LEAF_NAME | nvarchar(max) | The unqualified object name. |
 | TABLE_LOCATION | nvarchar(max) | A valid table location string that could be used for a CREATE EXTERNAL TABLE statement. Will be NULL if it isn't applicable. |
@@ -85,23 +87,25 @@ This parameter currently isn't used but may be implemented in the future. The *\
  Requires ALTER ANY EXTERNAL DATA SOURCE permission.  
   
 ## Remarks  
- 
+
 The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the SQLTables function. Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
 
-Further, "table" objects are determined by the ODBC driver, so any external data source determines what qualifies as a "table". This can include things like functions in Teradata, or synonyms in Oracle. Some ODBC objects are not able to be pointed to in an external table definition and will therefore not have a value in the TABLE_LOCATION column. Despite that, the presence of one of these objects can make a database or schema non-empty.
+Object types are determined by the external data source's ODBC driver. Each external data source determines what qualifies as a "table". This can include database objects like functions in Teradata, or synonyms in Oracle. PolyBase cannot connect to some ODBC objects as external tables and will therefore not have a value in the TABLE_LOCATION column. Despite that, the presence of one of these objects may make a database or schema non-empty.
 
-Teradata's system views don't use row-level security (RLS), and so users can see the existence of tables that they cannot query. 
+>[!Note]
+> Teradata's system views don't use row-level security (RLS), and so users can see the existence of tables that they cannot query.
 
-Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null object_root_name.
+>[!Note]
+> Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null object_root_name.
   
 ## Examples  
 
-### A. Get all databases, schemata, and tables/views 
+### A. Get all databases, schemata, and tables/views
 
 ```
-declare @data_source SYSNAME = N'SqlServerEDS'; 
-declare @object_root_name NVARCHAR(MAX) = NULL; 
-declare @max_search_depth INT = 3; 
+declare @data_source SYSNAME = N'SqlServerEDS';
+declare @object_root_name NVARCHAR(MAX) = NULL;
+declare @max_search_depth INT = 3;
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 ```
 
@@ -113,11 +117,11 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | TABLE | "tpch0_01g"."dbo"."lineitem" | lineitem | [tpch0_01g].[dbo].[lineitem] |
 | TABLE | "tpch0_01g"."dbo"."nation" | nation | [tpch0_01g].[dbo].[nation] |
 
-### B. Get all databases 
+### B. Get all databases
 
 ```
-declare @data_source SYSNAME = N'SqlServerEDS'; 
-declare @object_root_name NVARCHAR(MAX) = NULL; 
+declare @data_source SYSNAME = N'SqlServerEDS';
+declare @object_root_name NVARCHAR(MAX) = NULL;
 EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
@@ -148,7 +152,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 declare @data_source SYSNAME = N'SqlServerEDS'; 
 declare @object_root_name NVARCHAR(MAX) = N'[tpch0_01g].[dbo]'; 
-EXEC sp_data_source_objects @data_source, @object_root_name 
+EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |

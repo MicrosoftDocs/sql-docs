@@ -222,7 +222,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 
 ## See also
 
-[sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md)   
-[Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)   
-[Get started with PolyBase](../polybase/polybase-guide.md)   
-[System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md)   
+- [Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)   
+- [Get started with PolyBase](../polybase/polybase-guide.md)   
+- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

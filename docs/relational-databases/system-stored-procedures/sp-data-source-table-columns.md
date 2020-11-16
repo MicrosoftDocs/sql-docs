@@ -33,7 +33,7 @@ sp_data_source_table_columns
        , [ @table_location = ] 'table_location'
 [ ; ]
 ```  
-  
+
 ## Arguments
 
 `[ @data_source = ] 'data_source'`
@@ -76,7 +76,7 @@ declare @table_location NVARCHAR(400) = '[server].[schema].[table]';
 EXEC sp_data_source_table_columns @data_source, @table_location
 ```  
   
-## See Also  
- [Get started with PolyBase](../polybase/polybase-guide.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
+## See also
+
+- [Get started with PolyBase](../polybase/polybase-guide.md)   
+- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

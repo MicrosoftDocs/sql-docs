@@ -19,23 +19,23 @@ ms.author: wiassaf
 # sp_data_source_objects (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Allows users to find out what the table objects are available to be virtualized.
+Allows users to find out what the table objects are available to be virtualized.
 
 > [!NOTE]
 > This article describes objects introduced in SQL Server 2019 CU5. Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster?view=sql-server-ver15#cu5).
   
-  Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) can be used by customers for schema discovery of external objects. These system stored procedures allow the user via T-SQL to see the schema of tables that are available to be virtualized. These two stored procedures are behind the [Data Virtualization extension for Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/data-virtualization-extension?view=sql-server-ver15). Use [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) to discover external table schemas represented in SQL Server data types.
+Both sp_data_source_objects and [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) can be used by customers for schema discovery of external objects. These system stored procedures allow the user via T-SQL to see the schema of tables that are available to be virtualized. These two stored procedures are behind the [Data Virtualization extension for Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/data-virtualization-extension?view=sql-server-ver15). Use [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md) to discover external table schemas represented in SQL Server data types.
 
 > [!NOTE]
-> This stored procedure currently supports only ODBC-based PolyBase connectors (not including BDC Storage Pool). 
+> This stored procedure currently supports only ODBC-based PolyBase connectors (not including BDC Storage Pool).
 
- The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure blob storage.
+The SQL Server instance must have the [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed. PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure blob storage.
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## Syntax  
   
-```
+```syntaxsql
 sp_data_source_objects  
          [ @data_source = ] 'data_source'
      [ , [ @object_root_name = ] 'object_root_name' ]
@@ -45,7 +45,7 @@ sp_data_source_objects
 ```  
   
 ## Arguments  
- *\[ @data_source = ] 'data_source'*
+*\[ @data_source = ] 'data_source'*
 
 The name of the External Data Source to get the metadata from. data_source is sysname.  
 
@@ -72,7 +72,7 @@ A *\@max_search_depth\ of NULL will return information about *\object_root_name\
 
 The *\search_options* parameter is nvarchar(max) with a default of NULL.
 
-This parameter isn't used but may be implemented in the future.
+This parameter is not used but may be implemented in the future.
 
 ## Result Sets
 
@@ -84,8 +84,8 @@ This parameter isn't used but may be implemented in the future.
 | TABLE_LOCATION | nvarchar(max) | A valid table location string that could be used for a CREATE EXTERNAL TABLE statement. Will be NULL if it isn't applicable. |
   
 ## Permissions  
- Requires ALTER ANY EXTERNAL DATA SOURCE permission.  
-  
+Requires ALTER ANY EXTERNAL DATA SOURCE permission.  
+
 ## Remarks  
 
 The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the SQLTables function. Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
@@ -97,7 +97,7 @@ Object types are determined by the external data source's ODBC driver. Each exte
 
 >[!Note]
 > Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null object_root_name.
-  
+
 ## Examples  
 
 ### A. Get all databases, schemata, and tables/views
@@ -202,7 +202,6 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | DATABASE | "tpch0_01g" | tpch0_01g | NULL |
 | TABLE | "tpch0_01g"."customer" | customer | [tpch0_01g].[customer] |  
 
-
 ## Mongo DB 
 
 ### A. Get all databases and tables 
@@ -222,9 +221,9 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | TABLE | "tpch0_01g"."nation" | nation | [tpch0_01g].[nation] |
 | TABLE | "tpch0_01g"."orders" | orders | [tpch0_01g].[orders] |
 
-  
-## See Also  
- [sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md)   
- [Data Virtualization extension for Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/extensions/data-virtualization-extension?view=sql-server-ver15)   
- [Get started with PolyBase](../polybase/polybase-guide.md)   
- [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## See also
+
+[sp_data_source_columns](/polybase-stored-procedures-sp-data_source_columns.md)   
+[Data Virtualization extension for Azure Data Studio](../../azure-data-studio/extensions/data-virtualization-extension.md)   
+[Get started with PolyBase](../polybase/polybase-guide.md)   
+[System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)

@@ -92,10 +92,10 @@ The notion of empty vs. non-empty relates to the behavior of the ODBC driver and
 
 Object types are determined by the external data source's ODBC driver. Each external data source determines what qualifies as a "table". This can include database objects like functions in Teradata, or synonyms in Oracle. PolyBase cannot connect to some ODBC objects as external tables and will therefore not have a value in the TABLE_LOCATION column. Despite that, the presence of one of these objects may make a database or schema non-empty.
 
->[!Note]
+>[!NOTE]
 > Teradata's system views don't use row-level security (RLS), and so users can see the existence of tables that they cannot query.
 
->[!Note]
+>[!NOTE]
 > Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null object_root_name.
 
 ## Examples  
@@ -162,7 +162,6 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 | TABLE | "tpch0_01g"."dbo"."nation" | nation | [tpch0_01g].[dbo].[nation] |
 | TABLE | "tpch0_01g"."dbo"."orders" | orders | [tpch0_01g].[dbo].[orders] |
 | TABLE | "tpch0_01g"."dbo"."part" | part | [tpch0_01g].[dbo].[part] |
-
 
 ## Oracle
 

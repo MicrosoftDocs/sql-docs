@@ -79,7 +79,7 @@ The only supported backup to URL pattern is to block blobs, using the Shared Acc
   
 **Credential:** A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. Here, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore processes use credential to authenticate to the Microsoft Azure Blob storage service and its container and blob objects. The Credential stores either the name of the storage account and the storage account **access key** values or container URL and its Shared Access Signature token. Once the credential is created, the syntax of the BACKUP/RESTORE statements determines the type of blob and the credential required.  
   
-For an example about how to create a Shared Access Signature, see [Create a Shared Access Signature](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) examples later in this topic and to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential, see [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) examples later in this topic.  
+For an example about how to create a Shared Access Signature, see [Create a Shared Access Signature](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) examples later in this topic and to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential, see [Create a credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) examples later in this topic.  
   
 For general information about credentials, see [Credentials](../security/authentication-access/credentials-database-engine.md)  
   
@@ -285,7 +285,7 @@ The Restore Database task includes **URL** as a device to restore from.  The fol
 
 This section contains the following examples.  
   
-- [Create a Credential](#credential)  
+- [Create a credential](#credential)  
   
 - [Backing up a complete database](#complete)  
 
@@ -352,7 +352,7 @@ Write-Host $tSql
 
 After successfully running the script, copy the `CREATE CREDENTIAL` command to a query tool, connect to an instancance of SQL Server and run the command to create the credential with the Shared Access Signature. 
 
-###  <a name="credential"></a> Create a Credential
+###  <a name="credential"></a> Create a credential
 
 The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials for authentication to the Microsoft Azure Blob storage service. Do one of the following.
   
@@ -426,7 +426,7 @@ The following example restores the AdventureWorks2016 sample database to its sta
    GO  
    ```  
   
-## See Also  
+## See also  
 
 - [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)

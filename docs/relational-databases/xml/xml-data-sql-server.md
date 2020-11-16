@@ -1,5 +1,6 @@
 ---
 title: XML Data (SQL Server)
+description: XML Data (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: xml

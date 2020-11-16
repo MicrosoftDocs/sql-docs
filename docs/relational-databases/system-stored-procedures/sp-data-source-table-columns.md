@@ -37,14 +37,14 @@ sp_data_source_table_columns
 ## Arguments
 
 `[ @data_source = ] 'data_source'`
-> The name of the external data source to get the metadata from. Type is `sysname`.
+   The name of the external data source to get the metadata from. Type is `sysname`.
 
 `[ @table_location = ] 'table_location'`
-> The table location string that identifies the table. `table_location` type is `nvarchar(max)`.
+   The table location string that identifies the table. `table_location` type is `nvarchar(max)`.
 
 ## Returns
 
-The stored procedure returns the following informaiton:
+The stored procedure returns the following information:
 
 |Column Name |Data Type |Description|
 |---|---|---|

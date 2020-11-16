@@ -13613,6 +13613,8 @@
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
       - name: sp_data_source_table_columns
         href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
+      - name: sp_data_source_objects
+        href: relational-databases/system-stored-procedures/sp-data-source-objects.md
     - name: Policy-Based Management
       href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
       items:

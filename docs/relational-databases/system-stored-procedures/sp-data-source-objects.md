@@ -45,28 +45,26 @@ sp_data_source_objects
 ```  
   
 ## Arguments  
-*\[ @data_source = ] 'data_source'*
 
-The name of the External Data Source to get the metadata from. data_source is sysname.  
+`[ @data_source = ] 'data_source'`
+   The name of the external data source to get the metadata from. `@data_source` is `sysname`.  
 
-*\[ @object_root_name = ] 'object_root_name'*
+`[ @object_root_name = ] 'object_root_name'`
+   This parameter is the root of the name of the object(s) to search for. `@object_root_name` is `nvarchar(max)`, with a default of `NULL`.
 
-This parameter is the root of the name of the object(s) to search for. object_root_name is nvarchar(max), with a default of NULL.
+   The results of this call only returns external objects that begin with `@object_root_name`.
 
-The results of this call will only return external objects that begin with this parameter.
+   If an ODBC data source connects to a Relational Database Management System (RDBMS) that uses three-part names, `@object_root_name` cannot contain a partial database name. In these cases, the parameter `@object_root_name` should contain all three parts, with the third part being the object name to search.
 
-> [!CAUTION]
-> Due to differences between external data platforms, some platforms do not return any results if the default value of NULL is provided. Some treat NULL as the lack of a filter. For example, Oracle RDMBS will not return results if NULL is provided for *\@object_root_name*.
+   > [!CAUTION]
+   > Due to differences between external data platforms, some platforms do not return any results if the default value of `NULL` is provided. Some treat `NULL` as the lack of a filter. For example, Oracle RDMBS will not return results if `NULL` is provided for `@object_root_name`.
 
-If an ODBC data source connects to a Relational Database Management System (RDBMS) that uses three-part names, *\@object_root_name* cannot contain a partial database name. In these cases, the parameter *\@object_root_name* should contain all three parts, with the third part being the object name to search.
+`[ @max_search_depth = ] max_search_depth`
+   This value specifies the maximum depth (in parts) past the `object_root_name` that we wish to search. `max_search_depth` is an `int` with a default of 1.
 
-*\[ @max_search_depth = ] max_search_depth`*
+   For example, a `@max_search_depth` of 1, with an `object_root_name` that is the name of a SQL Server database, would return schemata contained inside the database.
 
-This value specifies the maximum depth (in parts) past the object_root_name that we wish to search. max_search_depth is an int with a default of 1.
-
-For example, a *\@max_search_depth\ of 1, with an object_root_name that is the name of a SQL Server database, would return schemata contained inside the database.
-
-A *\@max_search_depth\ of NULL will return information about *\object_root_name\ if it exists and is non-empty, in the case of catalog or schema.
+A *\@max_search_depth\ of `NULL` will return information about *\object_root_name\ if it exists and is non-empty, in the case of catalog or schema.
 
 *\[ @search_options = ] 'search_options'*
 
@@ -74,16 +72,17 @@ The *\search_options* parameter is nvarchar(max) with a default of NULL.
 
 This parameter is not used but may be implemented in the future.
 
-## Result Sets
+## Result sets
 
 | Column Name | Data Type | Description |
 |--|--|--|
 | OBJECT_TYPE | nvarchar(200) | The type of the object (Example: TABLE or DATABASE). |
 | OBJECT_NAME | nvarchar(max) | The fully qualified name of the object. Escaped using backend-specific quote character. |
 | OBJECT_LEAF_NAME | nvarchar(max) | The unqualified object name. |
-| TABLE_LOCATION | nvarchar(max) | A valid table location string that could be used for a CREATE EXTERNAL TABLE statement. Will be NULL if it isn't applicable. |
+| TABLE_LOCATION | nvarchar(max) | A valid table location string that could be used for a CREATE EXTERNAL TABLE statement. Will be `NULL` if it isn't applicable. |
   
-## Permissions  
+## Permissions
+
 Requires ALTER ANY EXTERNAL DATA SOURCE permission.  
 
 ## Remarks  
@@ -100,12 +99,12 @@ Object types are determined by the external data source's ODBC driver. Each exte
 
 ## Examples  
 
-### A. Get all databases, schemata, and tables/views
+### Get all databases, schemata, and tables/views
 
-```
-declare @data_source SYSNAME = N'SqlServerEDS';
-declare @object_root_name NVARCHAR(MAX) = NULL;
-declare @max_search_depth INT = 3;
+```sql
+DECLARE @data_source SYSNAME = N'SqlServerEDS';
+DECLARE @object_root_name NVARCHAR(MAX) = NULL;
+DECLARE @max_search_depth INT = 3;
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 ```
 
@@ -117,11 +116,11 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | TABLE | "tpch0_01g"."dbo"."lineitem" | lineitem | [tpch0_01g].[dbo].[lineitem] |
 | TABLE | "tpch0_01g"."dbo"."nation" | nation | [tpch0_01g].[dbo].[nation] |
 
-### B. Get all databases
+### Get all databases
 
-```
-declare @data_source SYSNAME = N'SqlServerEDS';
-declare @object_root_name NVARCHAR(MAX) = NULL;
+```sql
+DECLARE @data_source SYSNAME = N'SqlServerEDS';
+DECLARE @object_root_name NVARCHAR(MAX) = NULL;
 EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
@@ -133,11 +132,11 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 | DATABASE | "tempdb" | tempdb | NULL |
 | DATABASE | "tpch0_01g" | tpch0_01g | NULL |
 
-### C. Get all schemata in a database 
+### Get all schemata in a database
 
-```
-declare @data_source SYSNAME = N'SqlServerEDS'; 
-declare @object_root_name NVARCHAR(MAX) = N'[tpch0_01g]'; 
+```sql
+DECLARE @data_source SYSNAME = N'SqlServerEDS'; 
+DECLARE @object_root_name NVARCHAR(MAX) = N'[tpch0_01g]'; 
 EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
@@ -149,9 +148,9 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 
 ### D. Get all tables in schema 
 
-```
-declare @data_source SYSNAME = N'SqlServerEDS'; 
-declare @object_root_name NVARCHAR(MAX) = N'[tpch0_01g].[dbo]'; 
+```sql
+DECLARE @data_source SYSNAME = N'SqlServerEDS'; 
+DECLARE @object_root_name NVARCHAR(MAX) = N'[tpch0_01g].[dbo]'; 
 EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
@@ -165,12 +164,12 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 
 ## Oracle
 
-### A. Get all schemata and tables/views/synonyms/etc. 
+### A. Get all schemata and tables, functions, views, etc
 
-```
-declare @data_source SYSNAME = N'OracleEDS'; 
-declare @object_root_name NVARCHAR(MAX) = N'[XE]'; 
-declare @max_search_depth INT = 2; 
+```sql
+DECLARE @data_source SYSNAME = N'OracleEDS'; 
+DECLARE @object_root_name NVARCHAR(MAX) = N'[XE]'; 
+DECLARE @max_search_depth INT = 2; 
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 ```
 
@@ -182,14 +181,14 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | SCHEMA | "tpch0_01g" | tpch0_01g | NULL |
 | TABLE | "tpch0_01g"."customer" | customer | [XE].[tpch0_01g].[customer] |
 
-## Teradata 
+## Teradata
 
-### A. Get all databases and tables/functions/views/etc. 
+### Get all databases and tables, functions, views, etc
 
-```
-declare @data_source SYSNAME = N'TeradataEDS'; 
-declare @object_root_name NVARCHAR(MAX) = NULL; 
-declare @max_search_depth INT = 2; 
+```SQL
+DECLARE @data_source SYSNAME = N'TeradataEDS';
+DECLARE @object_root_name NVARCHAR(MAX) = NULL;
+DECLARE @max_search_depth INT = 2;
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 ```
 
@@ -201,14 +200,14 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | DATABASE | "tpch0_01g" | tpch0_01g | NULL |
 | TABLE | "tpch0_01g"."customer" | customer | [tpch0_01g].[customer] |  
 
-## Mongo DB 
+## Mongo DB
 
-### A. Get all databases and tables 
+### Get all databases and tables
 
-```
-declare @data_source SYSNAME = N'MongoDbEDS'; 
-declare @object_root_name NVARCHAR(MAX) = NULL; 
-declare @max_search_depth INT = 2; 
+```SQL
+DECLARE @data_source SYSNAME = N'MongoDbEDS';
+DECLARE @object_root_name NVARCHAR(MAX) = NULL;
+DECLARE @max_search_depth INT = 2;
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 ```
 

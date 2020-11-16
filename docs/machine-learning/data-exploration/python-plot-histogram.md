@@ -19,20 +19,20 @@ This article describes how to plot data using the Python package [pandas'.hist()
 ## Prerequisites:
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server. For how to install, see [SQL Server for Windows](../../database-engine/install-windows/install-sql-server.md) or [for Linux](../../linux/sql-server-linux-overview.md).
+* [SQL Server for Windows](../../database-engine/install-windows/install-sql-server.md) or [for Linux](../../linux/sql-server-linux-overview.md)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-* Azure SQL Database. For how to sign up, see [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
+* [Azure SQL Database](/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance. For how to sign up, see [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart).
+* [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/instance-create-quickstart)
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 
-* Azure Data Studio. For how to install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
+* Azure Data Studio. To install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 * [Restore sample DW database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 

@@ -137,7 +137,13 @@
       - name: Prerequisites
         href: big-data-cluster/active-directory-prerequisites.md
       - name: Deploy
-        href: big-data-cluster/active-directory-deploy.md
+        items:
+          - name: Simple AD deployment
+            href: big-data-cluster/active-directory-deploy.md
+          - name: Plan AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks.md
+          - name: Tutorial - AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks-tutorial.md
       - name: Connect
         href: big-data-cluster/active-directory-connect.md
       - name: Multiple BDCs in the same AD domain
@@ -2735,10 +2741,10 @@
       items:
       - name: What is Language Extensions?
         href: language-extensions/language-extensions-overview.md
+      - name: What is Java Language Extension?
+        href: language-extensions/java-overview.md
       - name: What's new?
         href: language-extensions/language-extensions-whats-new.md
-      - name: Java Language Extension Overview
-        href: language-extensions/java-overview.md
     - name: Install
       items:
       - name: Install Language Extensions on Windows
@@ -9996,11 +10002,11 @@
         href: linux/sql-server-linux-setup-full-text-search.md
       - name: Install SQL Server Integration Services
         href: linux/sql-server-linux-setup-ssis.md
-      - name: Install SQL Server Machine Learning Services
+      - name: Install SQL Server Machine Learning Services (Python and R)
         href: linux/sql-server-linux-setup-machine-learning.md
-      - name: Install SQL Server Machine Learning Services on Docker
+      - name: Install SQL Server Machine Learning Services (Python and R) on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
-      - name: Install SQL Server Language Extensions
+      - name: Install SQL Server Java Language Extension
         href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md

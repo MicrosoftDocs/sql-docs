@@ -44,8 +44,8 @@ productDirectory:
         text: Azure SQL Managed Instance      
       - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
         text: Azure SQL Edge       
-      - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-        text: Azure Synapse Analytics (SQL DW)
+      - url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+        text: Azure Synapse Analytics
   - title: SQL Server on Linux
     imageSrc: media/index/linux.svg
     links:
@@ -180,8 +180,8 @@ additionalContent:
             url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
           - text: Data Virtualization with Polybase
             url: relational-databases/polybase/polybase-guide.md
-          - text: Azure Synapse Analytics (SQL DW)
-            url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+          - text: Azure Synapse Analytics
+            url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
           - text: Microsoft Analytics Platform System
             url: analytics-platform-system/index.md
           - text: SQL Server Machine Learning Services (R & Python)

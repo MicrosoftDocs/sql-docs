@@ -408,7 +408,7 @@ The following examples perform a full database backup of the AdventureWorks2016 
 
 The following example restores the AdventureWorks2016 sample database to its state at a point in time, and shows a restore operation.  
   
-1. **From URL using Shared Access Signature**  
+**From URL using Shared Access Signature**  
   
    ```sql
    RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   

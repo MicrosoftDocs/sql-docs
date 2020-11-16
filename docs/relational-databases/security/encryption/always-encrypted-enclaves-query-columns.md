@@ -58,7 +58,7 @@ The following [Data Manipulation Language (DML)](../../../t-sql/statements/state
 
 Your environment needs to meet te following requirements to support executing statements that use a secure enclave.
 
-- Your [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] instance or your database and server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation. See [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
+- Your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance or your database and server in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] must be correctly configured to support enclaves and attestation. See [Set up the secure enclave and attestation](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
 - You need to obtain an attestation URL for your environment for your attestation service administrator.
 
   - If you are using [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] and Host Guardian Service, see [Determine and share the HGS attestation URL](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
@@ -153,10 +153,10 @@ Before a client driver submits a Transact-SQL to [!INCLUDE [ssnoversion-md](../.
 
 Errors can occur at various steps of the above workflow due to misconfigurations. Here are the common attestation errors, their root causes and the recommended troubleshooting steps:
 
-- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is unable to connect to HGS (step 2 of the above workflow), due to an intermittent network error. To troubleshoot this, the administrator of the [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer should verify the computer can connect to the HGS machine.
+- [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] is unable to connect to HGS (step 2 of the above workflow), due to an intermittent network error. To troubleshoot this, the administrator of the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer should verify the computer can connect to the HGS machine.
 - The validation in step 3 fails. To troubleshoot this:
-  - The [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator should work with the client application administrator to verify the [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer is registered with same HGS instance as the instance referenced in the attestation URL on the client side.
-  - The [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer administrator should confirm the [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer can successfully attest, by following the instructions in [Step 5: Confirm the host can attest successfully](always-encrypted-enclaves-host-guardian-service-register.md#step-5-confirm-the-host-can-attest-successfully).
+  - The [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]  computer administrator should work with the client application administrator to verify the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computer is registered with same HGS instance as the instance referenced in the attestation URL on the client side.
+  - The [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]  computer administrator should confirm the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]  computer can successfully attest, by following the instructions in [Step 5: Confirm the host can attest successfully](always-encrypted-enclaves-host-guardian-service-register.md#step-5-confirm-the-host-can-attest-successfully).
 - Your client application is unable to connect to HGS and retrieve its public signing key (in step 5). The likely causes include:
   - The configuration of one of the firewalls between your application and the attestation provider may block the connections. Verify the machine hosting your app can connect to the HGS machine.
 

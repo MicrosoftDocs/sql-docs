@@ -30,7 +30,7 @@ The supported cryptographic operations and the requirements for column encryptio
 
 See [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md) for information how to ensure your column encryption keys are enclave-enabled.
 
-You also need ensure that your environment meets the general [Pre-requisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#pre-requisites-for-running-statements-using-secure-enclaves).
+You also need ensure that your environment meets the general [Prerequisites for running statements using secure enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves).
 
 A user or an application triggering cryptographic operations must have permissions to make schema changes on the table containing the impacted columns and to access column master keys involved in the operations, and relevant key metadata in the database.
 

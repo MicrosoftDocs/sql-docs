@@ -36,11 +36,11 @@ sp_data_source_table_columns
 
 ## Arguments
 
-`[ @data_source = ] 'data_source'`
-   The name of the external data source to get the metadata from. Type is `sysname`.
+`[ @data_source = ] 'data_source'`   
+The name of the external data source to get the metadata from. Type is `sysname`.
 
-`[ @table_location = ] 'table_location'`
-   The table location string that identifies the table. `table_location` type is `nvarchar(max)`.
+`[ @table_location = ] 'table_location'`   
+The table location string that identifies the table. `table_location` type is `nvarchar(max)`.
 
 ## Returns
 

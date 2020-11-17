@@ -41,28 +41,26 @@ sp_data_source_objects
   
 ## Arguments  
 
-`[ @data_source = ] 'data_source'`
-   The name of the external data source to get the metadata from. `@data_source` is `sysname`.  
+`[ @data_source = ] 'data_source'`   
+The name of the external data source to get the metadata from. `@data_source` is `sysname`.  
 
-`[ @object_root_name = ] 'object_root_name'`
-   This parameter is the root of the name of the object(s) to search for. `@object_root_name` is `nvarchar(max)`, with a default of `NULL`.
+`[ @object_root_name = ] 'object_root_name'`   
+This parameter is the root of the name of the object(s) to search for. `@object_root_name` is `nvarchar(max)`, with a default of `NULL`.
 
-   The results of this call only returns external objects that begin with `@object_root_name`.
+The results of this call only returns external objects that begin with `@object_root_name`.
 
-   If an ODBC data source connects to a Relational Database Management System (RDBMS) that uses three-part names, `@object_root_name` cannot contain a partial database name. In these cases, the parameter `@object_root_name` should contain all three parts, with the third part being the object name to search.
+If an ODBC data source connects to a Relational Database Management System (RDBMS) that uses three-part names, `@object_root_name` cannot contain a partial database name. In these cases, the parameter `@object_root_name` should contain all three parts, with the third part being the object name to search.
+> [!CAUTION]
+> Due to differences between external data platforms, some platforms do not return any results if the default value of `NULL` is provided. Some treat `NULL` as the lack of a filter. For example, Oracle RDMBS will not return results if `NULL` is provided for `@object_root_name`.
 
-   > [!CAUTION]
-   > Due to differences between external data platforms, some platforms do not return any results if the default value of `NULL` is provided. Some treat `NULL` as the lack of a filter. For example, Oracle RDMBS will not return results if `NULL` is provided for `@object_root_name`.
+`[ @max_search_depth = ] max_search_depth`   
+This value specifies the maximum depth (in parts) past the `object_root_name` that we wish to search. `max_search_depth` is an `int` with a default of 1.
 
-`[ @max_search_depth = ] max_search_depth`
-   This value specifies the maximum depth (in parts) past the `object_root_name` that we wish to search. `max_search_depth` is an `int` with a default of 1.
+For example, a `@max_search_depth` of 1, with an `object_root_name` that is the name of a SQL Server database, would return schemata contained inside the database.
 
-   For example, a `@max_search_depth` of 1, with an `object_root_name` that is the name of a SQL Server database, would return schemata contained inside the database.
+A `@max_search_depth` of `NULL` will return information about `object_root_name` if it exists and is non-empty, in the case of catalog or schema.
 
-A *\@max_search_depth\ of `NULL` will return information about *\object_root_name\ if it exists and is non-empty, in the case of catalog or schema.
-
-*\[ @search_options = ] 'search_options'*
-
+`[ @search_options = ] 'search_options'*`   
 The *\search_options* parameter is nvarchar(max) with a default of NULL.
 
 This parameter is not used but may be implemented in the future.
@@ -146,7 +144,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 | SCHEMA | "tpch0_01g"."INFORMATION_SCHEMA" | INFORMATION_SCHEMA | NULL |
 | SCHEMA | "tpch0_01g"."sys" | sys | NULL |
 
-### D. Get all tables in schema 
+### Get all tables in schema 
 
 ```sql
 DECLARE @data_source SYSNAME = N'SqlServerEDS'; 

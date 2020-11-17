@@ -164,7 +164,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 
 ## Oracle
 
-### A. Get all schemata and tables, functions, views, etc
+### Get all schemata and tables, functions, views, etc
 
 ```sql
 DECLARE @data_source SYSNAME = N'OracleEDS'; 

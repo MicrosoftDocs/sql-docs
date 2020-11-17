@@ -67,7 +67,7 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
 The results will be a SQL Server representation of the backend schema as interpreted by the PolyBase connector for the backend. The distinction here is that instead of merely passing along the results of the ODBC call to the backend, the results would be based on the outcome of the PolyBase type mapping code. This is necessary because just giving the user the results of the ODBC call wouldn’t be enough to figure out how they should define their External Table.  
 
 > [!NOTE]
-> This article describes objects introduced in SQL Server 2019 CU5. Both [`sp_data_source_objects`](sp-data-source-objects.md) and `sp_data_source_columns` were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster?view=sql-server-ver15#cu5).
+> This article describes objects introduced in SQL Server 2019 CU5. Both [`sp_data_source_objects`](sp-data-source-objects.md) and `sp_data_source_columns` were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster.md#cu5).
   
 Use [`sp_data_source_objects`](sp-data-source-objects.md) and `sp_data_source_table_columns` to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use `sp_data_source_table_columns` to discover external table schemas represented in SQL Server data types.
   

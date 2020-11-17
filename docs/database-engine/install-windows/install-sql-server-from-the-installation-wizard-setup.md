@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server from the Installation Wizard (Setup)

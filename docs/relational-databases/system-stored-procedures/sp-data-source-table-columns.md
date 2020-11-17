@@ -17,11 +17,12 @@ ms.author: mikeray
 ---
 # sp_data_source_table_columns (Transact-SQL)
 
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
-List columns in external data source.
+Returns list of columns in external data source table.
   
-The SQL Server instance must have the  [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.  PolyBase enables the integration of non-SQL Server data sources, such as Hadoop and Azure blob storage. See also [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+> [!NOTE]
+> This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster.md#cu5).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,11 +65,10 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
   
 ## Remarks  
 
-The results will be a SQL Server representation of the backend schema as interpreted by the PolyBase connector for the backend. The distinction here is that instead of merely passing along the results of the ODBC call to the backend, the results would be based on the outcome of the PolyBase type mapping code. This is necessary because just giving the user the results of the ODBC call wouldn’t be enough to figure out how they should define their External Table.  
+The SQL Server instance must have the  [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
 
-> [!NOTE]
-> This article describes objects introduced in SQL Server 2019 CU5. Both [`sp_data_source_objects`](sp-data-source-objects.md) and `sp_data_source_columns` were added in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster.md#cu5).
-  
+The results are a SQL Server representation of the backend schema as interpreted by the PolyBase connector for the backend. The distinction here is that instead of merely passing along the results of the ODBC call to the backend, the results are based on the outcome of the PolyBase type mapping code.
+
 Use [`sp_data_source_objects`](sp-data-source-objects.md) and `sp_data_source_table_columns` to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use `sp_data_source_table_columns` to discover external table schemas represented in SQL Server data types.
   
 ## Example  
@@ -85,3 +85,4 @@ EXEC sp_data_source_table_columns @data_source, @table_location
 
 - [Get started with PolyBase](../polybase/polybase-guide.md)
 - [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+- [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  

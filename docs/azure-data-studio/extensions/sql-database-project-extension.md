@@ -51,11 +51,11 @@ Watch this short 10-minute video for an introduction to the SQL Database Project
 
 ## Known limitations
 
-1. Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected.
-2. SQLCLR objects in project are not supported in .NET Core version of DacFx.
-3. Tasks (build/publish) are not user-defined.
-4. Publish targets defined by DacFx.
-5. WSL environment support is limited.
+- Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected.
+- SQLCLR objects in project are not supported in .NET Core version of DacFx.
+- Tasks (build/publish) are not user-defined.
+- Publish targets defined by DacFx.
+- WSL environment support is limited.
 
 ## Next steps
 

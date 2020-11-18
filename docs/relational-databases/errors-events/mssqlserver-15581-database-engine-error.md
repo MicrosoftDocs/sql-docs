@@ -68,4 +68,4 @@ If this query returns a value of 0, automatic decryption of the master key by th
 
 ## More information
 
-In some cases, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may appear unresponsive. If you query `sys.dm_exec_requests` dynamic management view, you notice that the `LogWriter` thread and other threads that are performing DML operations are waiting indefinitely with WRITE_LOG wait_type. Other sessions may also be waiting while they try to obtain locks.
+In some cases, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may appear unresponsive. If you query `sys.dm_exec_requests` dynamic management view, you notice that the `LogWriter` thread and other threads that are performing DML operations are waiting indefinitely with WRITELOG wait_type. Other sessions may also be waiting while they try to obtain locks.

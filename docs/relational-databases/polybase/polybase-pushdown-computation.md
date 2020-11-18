@@ -18,6 +18,18 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 
 Pushdown computation may improve the performance of queries against external objects.
 
+**TODO**: What are pushdown computations?
+
+## Stages
+
+**TODO**: What are the stages of pushdown computations?
+
+## Supported operations
+
+SQL Server PolyBase supports the following pushdown operations:
+
+- **TODO**: List supported operations. List supported intrinsic functions.
+
 ## Enable pushdown computation
 
 The articles include information about configuring pushdown computation for specific types of external data sources:
@@ -72,6 +84,10 @@ SELECT * FROM customer
 WHERE customer.account_balance <= 200000 
     AND customer.zipcode BETWEEN 92656 AND 92677
 ```
+
+## Verify pushdown computation
+
+**TODO**: How to verify pushdown
 
 ## Limitations & restrictions
 

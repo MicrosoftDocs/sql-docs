@@ -8,7 +8,7 @@ ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---

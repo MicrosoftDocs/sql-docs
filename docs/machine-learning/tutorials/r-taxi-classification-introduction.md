@@ -29,7 +29,7 @@ In this five-part tutorial series for SQL programmers, you'll learn about R inte
 ::: moniker-end
 
 ::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this five-part tutorial series for SQL programmers, you'll learn about R integration in [Machine Learning Services in Azure SQL Managed Instance (preview)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+In this five-part tutorial series for SQL programmers, you'll learn about R integration in [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 You'll build and deploy an R-based machine learning solution using a sample database on SQL Server. You'll use T-SQL, Azure Data Studio or SQL Server Management Studio, and a database engine instance with SQL machine learning and R language support

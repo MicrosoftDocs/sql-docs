@@ -4,13 +4,13 @@ titleSuffix:
 description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft Python and R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services and how to get started.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/19/2020
+ms.date: 11/10/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# What is SQL Server Machine Learning Services (Python and R)?
+# What is SQL Server Machine Learning Services with Python and R?
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open-source packages and frameworks, and the [Microsoft Python and R packages](#packages), for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services and how to get started.
@@ -19,7 +19,7 @@ For machine learning on other SQL platforms, see the [SQL machine learning docum
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> For executing Java in SQL Server, see the [Language Extensions documentation](../language-extensions/language-extensions-overview.md).
+> For executing Java in SQL Server, see the [Java Language Extension documentation](../language-extensions/java-overview.md).
 ::: moniker-end
 
 ## Execute Python and R scripts in SQL Server
@@ -39,7 +39,7 @@ Machine Learning Services uses an extensibility framework to run Python and R sc
 ## Get started with Machine Learning Services
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md) and [Machine Learning Services in Azure SQL Managed Instance \(preview\)](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+1. [Install SQL Server Machine Learning Services on Windows](install/sql-machine-learning-services-windows-install.md) or [on Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json). You can also use [Machine Learning Services on Big Data Clusters](../big-data-cluster/machine-learning-services.md) and [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 1. Configure your development tools. You can use [run Python and R scripts in Azure Data Studio notebooks](install/sql-machine-learning-azure-data-studio.md). You can also run T-SQL in [Azure Data Studio](../azure-data-studio/what-is.md).
 

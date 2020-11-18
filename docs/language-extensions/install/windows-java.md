@@ -5,7 +5,7 @@ description: Learn how to install the SQL Server Java Language Extension feature
 author: dphansen
 ms.author: davidph 
 ms.date: 11/11/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"

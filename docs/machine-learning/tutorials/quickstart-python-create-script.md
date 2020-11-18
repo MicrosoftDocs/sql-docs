@@ -6,9 +6,9 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/28/2020  
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
+
 ms.custom: contperfq1
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---

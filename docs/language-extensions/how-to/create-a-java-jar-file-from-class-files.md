@@ -4,7 +4,7 @@ description: Package your class files into a jar file when using SQL Server Lang
 author: dphansen
 ms.author: davidph 
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

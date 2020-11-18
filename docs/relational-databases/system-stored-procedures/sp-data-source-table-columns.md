@@ -70,7 +70,9 @@ The SQL Server instance must have the  [PolyBase](../../relational-databases/pol
 The results are a SQL Server representation of the backend schema as interpreted by the PolyBase connector for the backend. The distinction here is that instead of merely passing along the results of the ODBC call to the backend, the results are based on the outcome of the PolyBase type mapping code.
 
 Use [`sp_data_source_objects`](sp-data-source-objects.md) and `sp_data_source_table_columns` to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use `sp_data_source_table_columns` to discover external table schemas represented in SQL Server data types.
-  
+
+Due to differences between collations in Hadoop source data and supported collations in SQL Server 2019, the recommended data type lengths for varchar data type columns in external tables may be much larger than expected. This is by design.
+
 ## Example  
 
 The following example returns the table columns for an external table in a SQL Server named `server`, belonging to a schema named `schema`.

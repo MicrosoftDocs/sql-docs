@@ -15,6 +15,8 @@ f1_keywords:
   - "sys.database_scoped_configurations_TSQL"
 helpviewer_keywords: 
   - "sys.database_scoped_configurations catalog view"
+dev_langs: 
+  - TSQL
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto

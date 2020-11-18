@@ -48,7 +48,7 @@ To set up the controller service:
    `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
 
-For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+For more configuration options, see [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## Configure DCOM
 
@@ -88,7 +88,7 @@ Before you set up the client service, use networking tools like ping to verify t
 
     If the configuration is successful, the log displays the message **Registered with controller <controller name\>**.
 
-For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+For more configuration options, see [Configure Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## Set up Distributed Replay administration tools
 

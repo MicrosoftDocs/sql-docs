@@ -53,10 +53,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## See Also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)  
-  
-   
-  
-## See Also  
- [Extended Events](../../relational-databases/extended-events/extended-events.md)  
-  
-  
+

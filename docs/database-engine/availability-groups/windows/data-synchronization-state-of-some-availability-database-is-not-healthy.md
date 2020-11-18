@@ -6,14 +6,14 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.agdashboard.drp3datasynchealthy.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Data synchronization state of some availability database is not healthy
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -6,12 +6,12 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords: 
   - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Add IP Address Dialog Box (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

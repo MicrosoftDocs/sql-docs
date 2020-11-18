@@ -152,7 +152,7 @@ ORDER BY Name;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Name                          MinSalary             MaxSalary             AvgSalary             EmployeesPerDept  
 ----------------------------- --------------------- --------------------- --------------------- ----------------  
 Document Control              10.25                 17.7885               14.3884               5  

@@ -123,7 +123,7 @@ ms.author: "sstein"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-     For more information about how to use the **sqlcmd** utility, see [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+     For more information about how to use the **sqlcmd** utility, see [Use the sqlcmd Utility](../../ssms/scripting/sqlcmd-use-the-utility.md).  
   
 4.  Exit the **sqlcmd** utility or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -173,12 +173,11 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
   
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Move System Databases](../../relational-databases/databases/move-system-databases.md)   
  [Move Database Files](../../relational-databases/databases/move-database-files.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
-  
   

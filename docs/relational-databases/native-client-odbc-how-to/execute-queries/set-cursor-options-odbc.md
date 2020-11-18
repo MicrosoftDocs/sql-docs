@@ -32,7 +32,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  You can control the type of cursor used either by setting SQL_ATTR_CURSOR_TYPE and SQL_ATTR_CONCURRENCY, or by setting SQL_ATTR_CURSOR_SENSITIVITY and SQL_ATTR_CURSOR_SCROLLABLE. You should not mix the two methods of specifying cursor behavior.  
   
-## Example  
+## Examples  
+
+### A. Set a dynamic cursor
+
  The following sample allocates a statement handle, sets a dynamic cursor type with row versioning optimistic concurrency, and then executes a SELECT.  
   
 ```  
@@ -42,7 +45,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CONCURRENCY, SQLPOINTER)SQL_CONCUR_ROW
 retcode = SQLExecDirect(hstmt1, SELECT au_lname FROM authors", SQL_NTS);  
 ```  
   
-## Example  
+### B. Set a scrollable, sensitive cursor
  The following sample allocates a statement handle, sets a scrollable, sensitive cursor, and then executes a SELECT  
   
 ```  

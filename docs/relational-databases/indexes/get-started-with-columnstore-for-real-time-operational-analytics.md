@@ -85,21 +85,21 @@ There is no time delay when analytics and OLTP workloads run on the same underly
   
 -   [Business case for real-time operational analytics](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)  
   
--   [Using a nonclustered columnstore index for real-time operational analytics](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)  
+-   [Using a nonclustered columnstore index for real-time operational analytics](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-using-nonclustered-columnstore-index)  
   
--   [A simple example using a nonclustered columnstore index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)  
+-   [A simple example using a nonclustered columnstore index](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci)  
   
--   [How SQL Server maintains a nonclustered columnstore index  on a transactional workload](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)  
+-   [How SQL Server maintains a nonclustered columnstore index  on a transactional workload](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016)  
   
--   [Minimizing the impact of nonclustered columnstore index maintenance by using a filtered index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+-   [Minimizing the impact of nonclustered columnstore index maintenance by using a filtered index](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
--   [Minimizing the impact of nonclustered columnstore index maintenance by using compression delay](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)  
+-   [Minimizing the impact of nonclustered columnstore index maintenance by using compression delay](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci)  
   
--   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
+-   [Minimizing impact of a nonclustered columnstore index maintenance by using compression delay - performance numbers](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance)  
   
--   [Real-time operational analytics with memory-optimized tables](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
+-   [Real-time operational analytics with memory-optimized tables](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-memory-optimized-table-and-columnstore-index)  
   
--   [Columnstore index and the merge policy for rowgroups](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
+-   [Columnstore index and the merge policy for rowgroups](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)  
   
 ## Performance tip #1: Use filtered indexes to improve query performance  
  Running real-time operational analytics can impact the performance of the OLTP workload. This impact should be minimal. The example below shows how to use filtered indexes to minimize impact of nonclustered columnstore index on transactional workload while still delivering analytics in real time.  
@@ -159,7 +159,7 @@ Group By customername
   
  ![Query plan](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
   
- Please refer to the blog for details on [filtered nonclustered columnstore index.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)  
+ Please refer to the blog for details on [filtered nonclustered columnstore index.](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci)  
   
 ## Performance tip #2: Offload analytics to Always On readable secondary  
  Even though you can minimize the columnstore index maintenance by using a filtered columnstore index, the analytics queries can still require significant computing resources (CPU, I/O, memory) which impact the operational workload performance. For most mission critical workloads, our recommendation is to use the Always On configuration. In this configuration, you can eliminate the impact of running analytics by offloading it to a readable secondary.  
@@ -186,7 +186,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
- Please refer to the blog for details on [compression delay](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/).  
+ Please refer to the blog for details on [compression delay](/archive/blogs/sqlserverstorageengine/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci).  
   
  Here are the recommended best practices:  
   
@@ -216,4 +216,3 @@ ORDER BY created_time DESC;
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Columnstore Indexes for Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
-  

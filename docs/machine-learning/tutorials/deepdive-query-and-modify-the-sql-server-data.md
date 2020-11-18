@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Query and modify the SQL Server data (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 3 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 3 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 In the previous tutorial, you loaded the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In this tutorial, you can explore and modify data using **RevoScaleR**:
 
@@ -28,7 +28,7 @@ Categorical data, or *factor variables*, are useful for exploratory data visuali
 
 Use an R IDE or RGui.exe to run R script. 
 
-First, get a list of the columns and their data types. You can use the function [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) and specify the data source you want to analyze. Depending on your version of **RevoScaleR**, you could also use [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+First, get a list of the columns and their data types. You can use the function [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) and specify the data source you want to analyze. Depending on your version of **RevoScaleR**, you could also use [rxGetVarNames](/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)

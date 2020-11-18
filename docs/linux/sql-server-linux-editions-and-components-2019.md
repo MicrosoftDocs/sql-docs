@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "Setup [SQL Server]"
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: mikeray
+ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2019 on Linux
 
@@ -219,6 +219,7 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | &nbsp; | Buffer Pool Extension |
+| &nbsp; | Backup to URL - page blob<sup>2</sup> |
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Managed Backup |
@@ -235,13 +236,13 @@ The following features and services are not available for SQL Server 2019 on Lin
 | &nbsp; | Master Data Services |
 
 <sup>1</sup> SQL Server R is supported within SQL Server, but SQL Server R services as a separate package is not supported.
-  
+
+<sup>2</sup> Backup to URL is supported for block blobs, using the [Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS).
+
 ## Next steps
  [Editions and supported features for SQL Server 2017 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [Editions and supported features for SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Editions and supported features for SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Editions and supported features for SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
-
-
+ [Installation for SQL Server](../database-engine/install-windows/install-sql-server.md)  
+ [Product Specifications for SQL Server](../sql-server/index.yml)

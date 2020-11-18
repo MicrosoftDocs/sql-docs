@@ -32,7 +32,7 @@ To run the AdventureWorks Product Reviews example application, the following mus
 -   SQL Server 2005 or SQL Server 2008, with the [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database attached, is installed on the local computer.  
 -   A Web browser is installed.  
   
-## Demonstrates  
+## AdventureWorks example  
 The AdventureWorks Product Reviews example application demonstrates the following:  
   
 -   How to open a connection to SQL Server by using Windows Authentication.  
@@ -40,8 +40,7 @@ The AdventureWorks Product Reviews example application demonstrates the followin
 -   How to retrieve data.  
 -   How to check for errors.  
   
-## Example  
-The AdventureWorks Product Reviews example application returns product information from the database for products whose names contain a string entered by the user. From the list of returned products, the user can see reviews, see an image, upload an image, and write a review for a selected product.  
+This example returns product information from the database for products whose names contain a string entered by the user. From the list of returned products, the user can see reviews, see an image, upload an image, and write a review for a selected product.  
   
 Put the following code in a file named adventureworks_demo_pdo.php:  
   
@@ -446,7 +445,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## Example  
+## LOB example  
 The photo.php script returns a product photo for a specified **ProductID**. This script is called from the adventureworks_demo.php script.  
   
 Put the following code in a file named photo_pdo.php:  

@@ -2,12 +2,11 @@
 title: Install on Linux
 titleSuffix: SQL Server Machine Learning Services
 description: 'Learn how to install SQL Server Machine Learning Services (Python and R) on Linux: Red Hat, Ubuntu, and SUSE.'
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ms.date: 03/05/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -41,7 +40,7 @@ This article guides you in the installation of [SQL Server Machine Learning Serv
 
 * You should have a tool for running T-SQL commands. 
 
-  * You can use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio), a free database tool that runs on Linux, Windows, and macOS.
+  * You can use [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md), a free database tool that runs on Linux, Windows, and macOS.
 
 ## Package list
 
@@ -433,4 +432,4 @@ Python developers can learn how to use Python with SQL Server by following these
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
 + [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/r-taxi-classification-introduction.md)

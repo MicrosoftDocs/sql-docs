@@ -55,7 +55,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COT of the angle is: -0.040312                
   
 (1 row(s) affected)  

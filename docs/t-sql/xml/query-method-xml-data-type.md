@@ -24,7 +24,6 @@ Specifies an XQuery against an instance of the **xml** data type. The result is 
 ## Syntax  
   
 ```syntaxsql
-  
 query ('XQuery')  
 ```  
   
@@ -43,8 +42,8 @@ The following example declares a variable **\@myDoc** of **xml** type and assign
 The query retrieves the <`Features`> child element of the <`ProductDescription`> element:  
   
 ```sql
-declare @myDoc xml  
-set @myDoc = '<Root>  
+DECLARE @myDoc XML  
+SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
   <Warranty>1 year parts and labor</Warranty>  
@@ -107,7 +106,6 @@ SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescripti
        AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
-
 ```  
   
 ## See Also  

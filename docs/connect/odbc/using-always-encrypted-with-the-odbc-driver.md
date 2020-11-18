@@ -57,7 +57,7 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 > [!NOTE]
 > On Linux and macOS, OpenSSL version 1.0.1 or later is required to use Always Encrypted with Secure Enclaves.
 
-Beginning with version 17.4, the driver supports Always Encrypted with Secure Enclaves. To enable use of the enclave when connecting to SQL Server 2019 or later, set the `ColumnEncryption` DSN, connection string, or connection attribute to the name of the enclave type and attestation protocol, and associated attestation data, separated by a comma. In version 17.4, only the [Virtualization Based Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave type and [Host Guardian Service](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) attestation protocol, denoted by `VBS-HGS`, is supported; to use it, specify the URL of the attestation server, for example:
+Beginning with version 17.4, the driver supports Always Encrypted with Secure Enclaves. To enable use of the enclave when connecting to SQL Server 2019 or later, set the `ColumnEncryption` DSN, connection string, or connection attribute to the name of the enclave type and attestation protocol, and associated attestation data, separated by a comma. In version 17.4, only the [Virtualization Based Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave type and [Host Guardian Service](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) attestation protocol, denoted by `VBS-HGS`, is supported; to use it, specify the URL of the attestation server, for example:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -377,7 +377,7 @@ The ODBC Driver for SQL Server comes with the following built-in keystore provid
 
 ### Using the Azure Key Vault Provider
 
-Azure Key Vault (AKV) is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The ODBC Driver for SQL Server on Linux, macOS, and Windows includes a built-in column master key store provider for Azure Key Vault. See [Azure Key Vault - Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step), [Getting Started with Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault) for more information on configuring an Azure Key Vault for Always Encrypted.
+Azure Key Vault (AKV) is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The ODBC Driver for SQL Server on Linux, macOS, and Windows includes a built-in column master key store provider for Azure Key Vault. See [Azure Key Vault - Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step), [Getting Started with Key Vault](/azure/key-vault/general/overview), and [Creating Column Master Keys in Azure Key Vault](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault) for more information on configuring an Azure Key Vault for Always Encrypted.
 
 > [!NOTE]
 > The ODBC Driver only supports AKV authentication directly against Azure Active Directory. If you are using Azure Active Directory authentication to AKV and your Active Directory configuration requires authentication against an Active Directory Federation Services endpoint, authentication may fail.
@@ -389,7 +389,7 @@ The driver supports authenticating to Azure Key Vault using the following creden
 
 - Client ID/Secret - with this method, the credentials are an application client ID and an application secret.
 
-- Managed Identity (17.5.2+) - either system or user-assigned; see [Managed Identities for Azure resources](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/) for more information.
+- Managed Identity (17.5.2+) - either system or user-assigned; see [Managed Identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/) for more information.
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 

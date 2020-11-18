@@ -6,9 +6,9 @@ ms.date: "04/03/2010"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: reference
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Always On availability group system object reference

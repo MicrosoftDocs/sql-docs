@@ -98,15 +98,15 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is the Machine Learning extension for Azure Data Studio?
-            url: ../azure-data-studio/machine-learning-extension.md
+            url: ../azure-data-studio/extensions/machine-learning-extension.md
       - linkListType: how-to-guide
         links:
           - text: Manage packages in database
-            url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+            url: ../azure-data-studio/extensions/machine-learning-extension-manage-packages.md
           - text: Make predictions
-            url: ../azure-data-studio/machine-learning-extension-predictions.md
+            url: ../azure-data-studio/extensions/machine-learning-extension-predictions.md
           - text: Import or view models
-            url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+            url: ../azure-data-studio/extensions/machine-learning-extension-import-view-models.md
 
   - title: SQL Server Big Data Clusters
     linkLists:

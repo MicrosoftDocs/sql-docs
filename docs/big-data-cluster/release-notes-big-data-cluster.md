@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 09/02/2020
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -33,7 +33,7 @@ This section explains platforms that are supported with BDC.
 ### Host OS for Kubernetes
 
 |Platform|Host OS|Supported versions|
-|---------|---------|
+|---------|---------|---------|
 |Kubernetes|Ubuntu|16.04|
 |Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
 |OpenShift|Red Hat Enterprise Linux / CoreOS |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
@@ -48,8 +48,8 @@ This section explains platforms that are supported with BDC.
 
 |Platform|Supported versions|
 |---------|---------|
-|`azdata`|As a best practice, use the latest version available. Starting with SQL Server 2019 CU5 release, `azdata` has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
-|Azure Data Studio|Get the latest build of [Azure Data Studio](https://aka.ms/getazuredatastudio).|
+|[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]|As a best practice, use the latest version available. Starting with SQL Server 2019 CU5 release, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
+|Azure Data Studio|Get the latest build of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).|
 
 For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
 
@@ -57,8 +57,9 @@ For a complete list, see [Which tools are required?](deploy-big-data-tools.md#wh
 
 The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release          | BDC Version    | `azdata` Version| Release date |
+| Release <sup>1</sup> | BDC Version    | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup>| Release date |
 |------------------|----------------|-----------------|--------------|
+| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
 | [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
@@ -67,12 +68,32 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
-> [!NOTE]
-> There are no SQL Server 2019 Big Data Clusters updates for CU7.
+<sup>1</sup> CU7 is not available for BDC.
+
+<sup>2</sup> [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
 
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu8"></a> CU8 (September 2020)
+
+Cumulative Update 8 (CU8) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4073.23 |[2019-CU8-ubuntu-16.04]
+
+This release includes several fixes and a couple of enhancements.
+
+### Added capabilities
+
+- [SQL Server Big Data Clusters encryption at rest](encryption-at-rest-concepts-and-configuration.md) using system managed keys and certificates.
+   > [!CAUTION]
+   > This is the initial release of SQL Server BDC encryption at rest. Review the following articles: 
+   > - [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md)
+   > - [Encryption at rest concepts and configuration Guide](encryption-at-rest-concepts-and-configuration.md)
+- [Oracle Proxy User](tutorial-query-oracle.md) support to the Data Virtualization scenario.
 
 ## <a id="cu6"></a> CU6 (July 2020)
 
@@ -85,11 +106,12 @@ Cumulative Update 6 (CU6) release for SQL Server 2019.
 This release includes minor fixes and enhancements. The following articles include information related to these updates:
 
 - [Manage big data cluster access in Active Directory mode](manage-user-access.md)
-- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md)
-- [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
-- [Configure a SQL Server Big Data Cluster](configure-cluster.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on AKS in Active Directory mode](active-directory-deployment-aks.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] with high availability](deployment-high-availability.md)
+- [Configure [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
-- [SQL Server master instance configuration properties.](reference-config-master-instance.md)
+- [SQL Server master instance configuration properties](reference-config-master-instance.md)
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
 - [Kubernetes RBAC model & impact on users and service accounts managing BDC](kubernetes-rbac.md)
 
@@ -106,8 +128,8 @@ Cumulative Update 5 (CU5) release for SQL Server 2019.
 - Support for Big Data Clusters deployment on Red Hat OpenShift. Support includes OpenShift container platform deployed on premises version 4.3 and up and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
 - Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5. 
 - Added support for deploying multiple big data clusters against an Active Directory domain.
-- `azdata` CLI has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
-- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
+- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/extensions/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
 - Added support to persist customizations performed in Grafana. Before CU5 customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
 - Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
 - Added two feature switches to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to false in control.json deployment configuration file. For OpenShift environments, these settings are set to false by default in the built-in deployment profiles, since collecting pod and node metrics required privileged capabilities.
@@ -163,15 +185,27 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### HA SQL Server Database Encryption key encryptor rotation
+
+- **Affected releases**: All big data cluster HA deployments irrespective of the release.
+
+- **Issue and customer impact**: With SQL Server deployed with HA, the certificate rotation for the encrypted database fails. When the following command is executed on the master pool, an error message will appear:
+    ```
+    ALTER DATABASE ENCRYPTION KEY
+    ENCRYPTION BY SERVER
+    CERTIFICATE <NewCertificateName>
+    ```
+    There is no impact, the command fails and the target database encryption is preserved using the previous certificate.
+    
 ### Empty Livy jobs before you apply cumulative updates
 
-- **Affected releases**: Through current cumulative update
+- **Affected releases**: All version up to CU6. Resolved for CU8.
 
-- **Issue and customer impact**: During an upgrade, sparkhead returns 404 error.
+- **Issue and customer impact**: During an upgrade, `sparkhead` returns 404 error.
 
 - **Workaround**: Before upgrading BDC, ensure that there are no active Livy sessions or batch jobs. Follow the instructions under [Upgrade from supported release](deployment-upgrade.md#upgrade-from-supported-release) to avoid this. 
 
-   If Livy returns a 404 error during the upgrade process, restart the Livy server on both sparkhead nodes. For example:
+   If Livy returns a 404 error during the upgrade process, restart the Livy server on both `sparkhead` nodes. For example:
 
    ```console
    kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
@@ -192,7 +226,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 - **Issue and customer impact**: For new big data clusters deployed using SQL Server 2019 CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. This change is a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server 2019 CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
 
 - **Workaround**: Azure Data Studio will handle the credentials change transparently for the connection made to gateway to enable HDFS browsing experience in the ObjectExplorer. You must install [latest Azure Data Studio release](../azure-data-studio/download-azure-data-studio.md) that includes the necessary changes that address this use case.
-For other scenarios where  you must provide credentials for accessing service through the gateway (e.g. logging in with `azdata`, accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
+For other scenarios where  you must provide credentials for accessing service through the gateway (e.g. logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
 
 ### Pods and nodes metrics not being collected
 
@@ -204,7 +238,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 ### `azdata bdc copy-logs` command failure
 
-- **Affected releases**: `azdata` version *20.0.0*
+- **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
 
 - **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a BDC cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
 
@@ -216,7 +250,7 @@ For other scenarios where  you must provide credentials for accessing service th
 
 - **Issue and customer impact**: Upgrade from private repository has specific requirements
 
-- **Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. `azdata` does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+- **Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
 
 Upgrading using different repositories for current and target builds is not supported.
 

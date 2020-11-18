@@ -14,8 +14,7 @@ ms.technology: linux
 
 SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
-  ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![Diagram showing the log shipping workflow.](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 As described in the this picture, a log shipping session involves the following steps:
 
@@ -24,7 +23,7 @@ As described in the this picture, a log shipping session involves the following 
 - Restoring the transaction log backup file on the secondary SQL Server instances
 
 ## Prerequisites
-- [Install SQL Server Agent on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [Install SQL Server Agent on Linux](./sql-server-linux-setup-sql-agent.md)
 
 ## Setup a network share for Log Shipping using CIFS 
 
@@ -313,5 +312,3 @@ As described in the this picture, a log shipping session involves the following 
     ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
-

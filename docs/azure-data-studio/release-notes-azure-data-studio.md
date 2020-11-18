@@ -1,5 +1,5 @@
 ---
-title: Release notes
+title: Azure Data Studio release notes
 description: This article has release notes for Azure Data Studio releases from November, 2017, until now. For many of the summarized issues there are links to additional details.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,12 +8,76 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 08/12/2020
+ms.date: 11/12/2020
 ---
 
 # Release notes for Azure Data Studio
 
-**[Download and install the latest release!](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[Download and install the latest release!](./download-azure-data-studio.md)**
+
+## November 2020
+
+November 12, 2020 &nbsp; / &nbsp; version: 1.24.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2020+Release%22+is%3Aclosed). |
+| Connection dialog | Added new browse tab for connection dialog. |
+| Extension(s) update | Released update to Postgres extension. |
+| New notebook features | Added new features to SQL to notebook support. <br/> Added new features to	Notebook parameterization support. <br/>  Added new features to results streaming for SQL Notebooks. |
+| Python installation | PROSE package has been removed from default Python installation. |
+
+### Known issues (1.24.0)
+
+| New Item | Details | Workaround |
+|----------|---------|------------|
+| Azure Arc extension | [Known Issue:](https://github.com/microsoft/azuredatastudio/issues/13319) The "Script to Notebook" button for Arc MIAA & PG deployments does not do field validation before scripting the notebook. This means that if users enter the password wrong in the password confirm inputs then they may end up with a notebook that has the wrong value for the password.| The "Deploy" button works as expected though so users should use that instead. |
+| Object Explorer | Releases of ADS before 1.24.0 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in Azure Data Studio with Azure Synapse Analytics SQL on-demand, you need to use Azure Data Studio 1.24.0 or later. |
+
+You can reference [Azure Data Studio feedback](https://github.com/microsoft/azuredatastudio) for other known issues and to provide feedback to the product team.
+
+## October 2020
+
+October 14, 2020 &nbsp; / &nbsp; version: 1.23.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Azure SQL Edge | Support for Azure SQL Edge objects. |
+| Bug Fixes | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed). |
+| Databases| Support for same database reference. |
+| Extension updates | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[Schema Compare](extensions/schema-compare-extension.md)</br>SQL Assessment</br>[SQL Database Projects](extensions/sql-database-project-extension.md)</br>[SQL Server Import](extensions/sql-server-import-extension.md) |
+| New deployment features | Added Azure SQL DB and VM deployments. |
+| PowerShell | Added PowerShell kernel results streaming support. |
+
+## September 2020 (hotfix)
+
+September 30, 2020 &nbsp; / &nbsp; version: 1.22.1
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues on GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1). |
+
+## September 2020
+
+September 22, 2020 &nbsp; / &nbsp; version: 1.22.0
+
+&nbsp;
+
+| Change | Details |
+| ------ | ------- |
+| New notebook features | <br/> &bull; &nbsp; Supports brand new text cell editing experience based on rich text formatting and seamless conversion to markdown, also known as WYSIWYG toolbar (What You See Is What You Get) <br/> &bull; &nbsp; Supports Kusto kernel <br/> &bull; &nbsp; Supports pinning of notebooks <br/> &bull; &nbsp; Added support for new version of Jupyter Books <br/> &bull; &nbsp; Improved Jupyter Shortcuts <br/> &bull; &nbsp; Introduced perf loading improvements |
+| SQL Database Projects extension | The SQL Database Projects extension brings project-based database development to Azure Data Studio. In this preview release, SQL projects can be created and published from Azure Data Studio. |
+| Kusto (KQL) extension | Brings native Kusto experiences in Azure Data Studio for data exploration and data analytics against massive amount of real-time streaming data stored in Azure Data Explorer. This preview release supports connecting and browsing Azure Data Explorer clusters, writing KQL queries as well as authoring notebooks with Kusto kernel. |
+| Azure Arc extension | Users can try out Azure Arc public preview through Azure Data Studio. This includes: <br/> &bull; &nbsp; Deploy data controller <br/> &bull; &nbsp; Deploy Postgres <br/> &bull; &nbsp; Deploy Managed Instance for Azure Arc <br/> &bull; &nbsp; Connect to data controller <br/> &bull; &nbsp; Access data service dashboards <br/> &bull; &nbsp; Azure Arc Jupyter Book |
+| Deployment options | <br/> &bull; &nbsp; Azure SQL Database Edge <br/> (Edge will require Azure SQL Edge Deployment Extension) |
+| SQL Server Import extension GA | Announcing the GA of the SQL Server Import extension, features no longer in preview. This extension facilitates importing csv/txt files. Learn more about the extension in [this article](./extensions/sql-server-import-extension.md). |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed). |
 
 ## August 2020
 
@@ -24,7 +88,7 @@ August 12, 2020 &nbsp; / &nbsp; version: 1.21.0
 | Change | Details |
 | :----- | :------ |
 | New notebook features | &bull; &nbsp; Move cell locations <br/> &bull; &nbsp; Convert cells to Text Cell or Code cell
-| Jupyter Books picker | Users can now choose Jupyter Books from Github releases and open seamlessly in Azure Data Studio |
+| Jupyter Books picker | Users can now choose Jupyter Books from GitHub releases and open seamlessly in Azure Data Studio |
 | Search added to Notebooks Viewlet | Users can easily search through content across their notebooks and Jupyter Books |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
@@ -37,8 +101,8 @@ July 17, 2020 &nbsp; / &nbsp; version: 1.20.1
 
 | Change | Details |
 | :----- | :------ |
-| Fix bug #11372 Object Explorer drag-and-drop table incorrectly wraps table names | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| Fix bug #11356 Dark theme is now the default theme | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| Fix bug #11372 Object Explorer drag-and-drop table incorrectly wraps table names | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| Fix bug #11356 Dark theme is now the default theme | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### Known Issue
@@ -60,7 +124,6 @@ July 15, 2020 &nbsp; / &nbsp; version: 1.20.0
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 
-
 ## June 2020
 
 June 15, 2020 &nbsp; / &nbsp; version: 1.19.0
@@ -71,8 +134,8 @@ June 15, 2020 &nbsp; / &nbsp; version: 1.19.0
 | :----- | :------ |
 | Added Azure Data Studio to Azure portal Integration | Users can now directly launch to Azure portal from an Azure SQL Database connection, Azure Postgres, and more. |
 | New notebook features | &bull; &nbsp; New Notebook toolbar <br/> &bull; &nbsp; New Edit Cell toolbar <br/> &bull; &nbsp; Python dependencies wizard UX updates <br/> &bull; &nbsp; Improved spacing across notebooks |
-| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15) |
-| [Machine Learning Extension improvements](https://go.microsoft.com/fwlink/?linkid=2129918) | Now supports Azure SQL Managed Instance. |
+| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md) |
+| [Machine Learning Extension improvements](./extensions/machine-learning-extension.md) | Now supports Azure SQL Managed Instance. |
 | Data Virtualization extension improvements | Now supports MongoDB and Teradata |
 | Postgres extension bug fixes | Fixed Azure MFA |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed). |
@@ -410,12 +473,12 @@ March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
 
 | Change | Details |
 | :----- | :------ |
-| Added [PostgreSQL extension for Azure Data Studio](postgres-extension.md) | Supported features: <br/>&bull; &nbsp; Connection Dialog <br/>&bull; &nbsp; Object Explorer <br/>&bull; &nbsp; Query Editor <br/>&bull; &nbsp; Charting <br/>&bull; &nbsp; Dashboards <br/>&bull; &nbsp; Snippets <br/>&bull; &nbsp; Edit Data <br/>&bull; &nbsp; Notebooks |
+| Added [PostgreSQL extension for Azure Data Studio](./extensions/postgres-extension.md) | Supported features: <br/>&bull; &nbsp; Connection Dialog <br/>&bull; &nbsp; Object Explorer <br/>&bull; &nbsp; Query Editor <br/>&bull; &nbsp; Charting <br/>&bull; &nbsp; Dashboards <br/>&bull; &nbsp; Snippets <br/>&bull; &nbsp; Edit Data <br/>&bull; &nbsp; Notebooks |
 | Added SQL Notebooks | Added SQL Kernel support to built-in Notebook viewer: <br/>&bull; &nbsp; Supports T-SQL <br/>&bull; &nbsp; Support PGSQL |
-| Added PowerShell Extension  | Brings over the [PowerShell extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experience from VS Code.  |
+| Added PowerShell Extension | Brings over the [PowerShell extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experience from VS Code.  |
 | Added SQL Server dacpac extension  | Removes Data-Tier Application Wizard from SQL Server Import extension into a new extension.  |
 | Added Community extension QueryPlan.show | Adds integration support to visualize query plans  |
-| Updated SQL Server 2019 Preview extension | &bull; &nbsp; Jupyter Notebook support, specifically Python3, and Spark kernels, have moved into the core Azure Data Studio tool. <br/>&bull; &nbsp; Bug fixes to External Data Wizard  |
+| Updated SQL Server 2019 Preview extension | &bull; &nbsp; Jupyter Notebook support, specifically Python3, and Spark kernels, have moved into the core Azure Data Studio tool. <br/>&bull; &nbsp; Bug fixes to External Data Wizard |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -443,11 +506,11 @@ February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
 
 | Change | Details |
 | :----- | :------ |
-| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](./extensions/sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./extensions/sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](./extensions/sql-server-import-extension.md) |
 | Added filtering extended event support in Profiler extension. | &nbsp; |
 | Added Save as XML feature that can save T-SQL results as XML. | &nbsp; |
 | Added Data-Tier Application Wizard improvements. | &bull; &nbsp; Added Generate script button<br/>&bull; &nbsp; Added view to give warnings of possible data loss during deployment. |
-| Updates to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Updates to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](./extensions/data-virtualization-extension.md). |
 | Results streaming enabled by default for long running queries. | &nbsp; |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -473,9 +536,9 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 | :----- | :------ |
 | Added a new user installer for Windows. | Unlike the existing system installer, the new user installer does not require administrator privileges. This also enables an easier upgrade experience for non-administrators. |
 | Added Azure Active Directory Authentication support. | &nbsp; |
-| Announcing Idera SQL DM Performance Insights (Preview). | &nbsp; |
+| Announcing Idera SQL DM Performance Insights (preview). | &nbsp; |
 | Data-Tier Application Wizard support in SQL Server Import extension. | &nbsp; |
-| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](./extensions/data-virtualization-extension.md). |
 | SQL Server Profiler improvements. | &nbsp; |
 | Results Streaming for large queries (preview). | &nbsp; |
 | Community extensions: sp_executesql to sql and New Database. | &nbsp; |
@@ -490,7 +553,7 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 
 | Change | Details |
 | :----- | :------ |
-| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](./extensions/data-virtualization-extension.md). |
 | Introducing Paste the Plan extension. | &nbsp; |
 | Introducing High Color queries extension, including SSMS editor theme. | &nbsp; |
 | Fixes in SQL Server Agent, Profiler, and Import extensions. | &nbsp; |
@@ -520,7 +583,7 @@ October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 | Introducing the Azure Resource Explorer to browse Azure SQL Database. | &nbsp; |
 | Improve Object Explorer and Query Editor connectivity robustness. | &nbsp; |
 | SQL Agent extensions improvements. | &nbsp; |
-| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
+| Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](./extensions/data-virtualization-extension.md). |
 | &nbsp; | &nbsp; |
 
 ### Bug Fixes, October 2018
@@ -637,8 +700,8 @@ The *July Public Preview* focuses on the following items:
 
 | Change | Details |
 | :----- | :------ |
-| [SQL Server Agent for SQL Operations Studio extension](sql-server-agent-extension.md) improvements. | Added view of Alerts, Operators, and Proxies and icons on left pane.<br/><br/>Added dialogs for New Job, New Job Step, New Alert, and New Operator.<br/><br/>Added Delete Job, Delete Alert, and Delete Operator (right-click).<br/><br/>Added Previous Runs visualization.<br/><br/>Added Filters for each column name. |
-| [SQL Server Profiler for SQL Operations Studio extension](sql-server-profiler-extension.md) improvements. | Added 5 Default Templates to view Extended Events.<br/><br/>Added Server/Database connection name.<br/><br/>Added support for Azure SQL Database instances.<br/><br/>Added suggestion to exit Profiler when tab is closed when Profiler is still running. |
+| [SQL Server Agent for SQL Operations Studio extension](./extensions/sql-server-agent-extension.md) improvements. | Added view of Alerts, Operators, and Proxies and icons on left pane.<br/><br/>Added dialogs for New Job, New Job Step, New Alert, and New Operator.<br/><br/>Added Delete Job, Delete Alert, and Delete Operator (right-click).<br/><br/>Added Previous Runs visualization.<br/><br/>Added Filters for each column name. |
+| [SQL Server Profiler for SQL Operations Studio extension](./extensions/sql-server-profiler-extension.md) improvements. | Added 5 Default Templates to view Extended Events.<br/><br/>Added Server/Database connection name.<br/><br/>Added support for Azure SQL Database instances.<br/><br/>Added suggestion to exit Profiler when tab is closed when Profiler is still running. |
 | Release of Combine Scripts Extension. | &nbsp; |
 | Wizard and Dialog Extensibility points added for Extension Authors. | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -788,7 +851,7 @@ The *March Public Preview* continues to address the top GitHub issues, and is fo
 
 | Change | Details |
 | :----- | :------ |
-| Enhance the dashboard extensibility model to support tabbed insights and configuration panes. | Extension Manager enables simple acquisition of extensions.<br/><br/>Dashboard extensions for sp\_whoisactive from [whoisactive.com](http://www.whoisactive.com).<br/><br/>For details, see [Extend the functionality of SQL Operations Studio](extensions.md). |
+| Enhance the dashboard extensibility model to support tabbed insights and configuration panes. | Extension Manager enables simple acquisition of extensions.<br/><br/>Dashboard extensions for sp\_whoisactive from [whoisactive.com](http://www.whoisactive.com).<br/><br/>For details, see [Extend the functionality of SQL Operations Studio](./extensions/add-extensions.md). |
 | Add additional [extensibility APIs for connection and object explorer](https://github.com/Microsoft/azuredatastudio/wiki/Extensibility-API) management. | &nbsp; |
 | Continue to fix important customer impacting [GitHub issues](https://github.com/Microsoft/azuredatastudio/issues). | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -853,7 +916,7 @@ The *December Public Preview* includes several bugs fixes across all feature are
 
 | Change | Details |
 | :----- | :------ |
-| Create Firewall Rule Dialog is now available to assist connecting to Azure SQL Database and Azure SQL Data Warehouse. | &nbsp; |
+| Create Firewall Rule Dialog is now available to assist connecting to Azure SQL Database and Azure Synapse Analytics. | &nbsp; |
 | Added Windows Setup, and Linux DEB and RPM installation packages. | &nbsp; |
 | Manage Dashboard visual layout editor. | &nbsp; |
 | *Script As Alter* and *Script As Execute* commands. | &nbsp; |
@@ -875,7 +938,7 @@ See one of the following quickstarts to get started:
 
 - [Connect & Query SQL Server](quickstart-sql-server.md)
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
-- [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
+- [Connect & Query Azure Synapse Analytics](quickstart-sql-dw.md)
 
 Contribute to Azure Data Studio:
 

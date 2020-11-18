@@ -129,4 +129,4 @@ If you are planning to upgrade your SQL Server instance to SQL Server 2016 (or g
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)
+ [Upgrading a Replication Topology to SQL Server 2016](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016)

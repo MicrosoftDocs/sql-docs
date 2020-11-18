@@ -89,10 +89,9 @@ Next
   
      **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL13** **.\<InstanceName>\MSSQL\Log**  
   
- If you are connecting through a firewall, ensure that an exception is set in the firewall for WMI on remote target computers. For more information, see [Connecting to WMI Remotely Starting with Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ If you are connecting through a firewall, ensure that an exception is set in the firewall for WMI on remote target computers. For more information, see [Connecting to WMI Remotely Starting with Windows Vista](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista).  
   
 ## See Also  
  [SqlErrorLogFile Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

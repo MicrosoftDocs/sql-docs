@@ -55,7 +55,7 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
 ```  

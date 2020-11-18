@@ -24,7 +24,7 @@ For the APS PDW workload, download the [System Center Management Pack for the Mi
   
 For the appliance management, download the [SQL Server Appliance Base Management Pack](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
-For older versions of PDW without APS, download the[System Center Monitoring Pack for Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](https://docs.microsoft.com/sql/analytics-platform-system/download-and-apply-microsoft-updates?view=aps-pdw-2016-au7).  
+For older versions of PDW without APS, download the[System Center Monitoring Pack for Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](./download-and-apply-microsoft-updates.md?view=aps-pdw-2016-au7).  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
@@ -44,7 +44,7 @@ For older versions of PDW without APS, download the[System Center Monitoring Pac
   
 4.  Click **Install**.  
   
-    ![Confirm installation](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    ![Screenshot of the SQL Server Appliance Base Monitoring MP Installer wizard on the Confirm Installation step with the Install option circled in red.](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
 5.  Click **Close**.  
   
@@ -64,7 +64,7 @@ For older versions of PDW without APS, download the[System Center Monitoring Pac
   
 4.  Click **Install**.  
   
-    ![Confirm installation](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![Screenshot of the PDWMP Installer wizard on the Confirm Installation step with the Install option circled in red.](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  Click **Close**.  
   
@@ -74,4 +74,4 @@ For older versions of PDW without APS, download the[System Center Monitoring Pac
 Now that you have the Management Packs installed, continue to the next step: [Import the SCOM Management Pack for PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 <!-- MISSING LINKS ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->

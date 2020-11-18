@@ -227,7 +227,7 @@ Stored procedures configure the Query Store.
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+        [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
     :::column-end:::
     :::column:::
         [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
@@ -235,11 +235,13 @@ Stored procedures configure the Query Store.
 :::row-end:::
 :::row:::
     :::column:::
-        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+        sp_query_store_consistency_check &#40;Transact-SQL&#41;<sup>1</sup>
     :::column-end:::
     :::column:::
     :::column-end:::
 :::row-end:::
+
+<sup>1</sup> In extreme scenarios Query Store can enter an ERROR state because of internal errors. Starting with SQL Server 2017 (14.x), if this happens, Query Store can be recovered by executing the sp_query_store_consistency_check stored procedure in the affected database. See [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) for more details described in the actual_state_desc column description.
 
 ## <a name="Scenarios"></a> Key Usage Scenarios
 

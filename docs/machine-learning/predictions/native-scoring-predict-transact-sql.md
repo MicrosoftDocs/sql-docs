@@ -66,7 +66,7 @@ The model must be in an [Open Neural Network Exchange (ONNX)](https://onnx.ai/ge
 
 The model must be trained in advance using one of the supported **rx** algorithms listed below using the [RevoScaleR](../r/ref-r-revoscaler.md) or [revoscalepy](../python/ref-py-revoscalepy.md) package.
 
-Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
+Serialize the model using [rxSerialize](/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -76,19 +76,19 @@ The following algorithms are supported in revoscalepy and RevoScaleR.
 
 + revoscalepy algorithms
 
-  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
-  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
+  + [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + RevoScaleR algorithms
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxLinMod](/r-server/r-reference/revoscaler/rxlinmod)
+  + [rxLogit](/r-server/r-reference/revoscaler/rxlogit)
+  + [rxBTrees](/r-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](/r-server/r-reference/revoscaler/rxdtree)
+  + [rxDForest](/r-server/r-reference/revoscaler/rxdforest)
 
 If you need to use an algorithms from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](../predictions/real-time-scoring.md).
 
@@ -205,7 +205,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> Be sure to use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
+> Be sure to use the [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
 
 You can run a statement such as the following to view the stored model in binary format:
 

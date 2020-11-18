@@ -54,11 +54,11 @@ PolyBase provides these same functionalities for the following SQL products from
 
 - SQL Server 2016 and later versions (Windows only)
 - Analytics Platform System (formerly Parallel Data Warehouse)
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ### Azure integration
 
-With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables Azure SQL Data Warehouse to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
+With the underlying help of PolyBase, T-SQL queries can also import and export data from Azure Blob Storage. Further, PolyBase enables Azure Synapse Analytics to import and export data from Azure Data Lake Store, and from Azure Blob Storage.
 
 ## Why use PolyBase?
 

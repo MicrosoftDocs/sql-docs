@@ -256,7 +256,7 @@ On the **Preview** page, verify that the list of columns and the sample data are
  **Refresh**  
  View the effect of changing the number of rows to skip by clicking **Refresh**. This button only becomes visible after you have changed other connection options.  
  
-For more info about the **Preview** page, see the following Integration Services reference page - [Flat File Connection Manager Editor &#40;Preview Page&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md).
+For more info about the **Preview** page, see the following Integration Services reference page - [Flat File Connection Manager Editor &#40;Preview Page&#41;](../connection-manager/flat-file-connection-manager.md).
 
 ## Connect to a flat file destination
 For a flat file destination, there's only a single page of options, as shown in the following screen shot. Browse to select the file, then verify the settings in the **Format** section.
@@ -298,4 +298,3 @@ For a flat file destination, there's only a single page of options, as shown in 
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

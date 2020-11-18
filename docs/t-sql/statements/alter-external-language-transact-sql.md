@@ -110,7 +110,7 @@ Currently, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
 
 ## Permissions
 
-Requires the `ALTER ANY EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to alter an external language. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying ALTER ANY EXTERNAL LANGUAGE as the privilege.
+Requires the `ALTER ANY EXTERNAL LANGUAGE` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to alter an external language. For all other users, you must explicitly give them permission using a [GRANT](./grant-database-permissions-transact-sql.md) statement, specifying ALTER ANY EXTERNAL LANGUAGE as the privilege.
 
 ## Examples
 
@@ -129,4 +129,4 @@ GO
 [CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

@@ -6,14 +6,14 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords: 
   - "sql13.swb.agdashboard.arp4joined.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability replica is not joined to an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

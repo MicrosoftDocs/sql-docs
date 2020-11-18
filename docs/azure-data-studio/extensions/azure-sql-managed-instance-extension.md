@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: alanyu, maghan, sstein
-ms.custom: seodec18
+ms.custom: 
 ms.date: 10/07/2019
 ---
 
@@ -24,7 +24,7 @@ The Azure SQL Managed Instance extension provides a dashboard for working with a
 ## Install
 
 You can install the official release of this extension. Follow the steps
-in the [Azure Data Studio documentation](../extensions.md).
+in the [Azure Data Studio documentation](./add-extensions.md).
 In the **Extensions** pane, search for "Managed Instance", and install it there. After it's installed, you'll get notified automatically about any future extension updates.
 
 With the extension installed, you'll see a **Managed Instance** tab in Azure Data Studio. Here you can find information specific for your managed instance.
@@ -83,9 +83,9 @@ If you experience any problems with the SQL Managed Instance extension, go to th
 
 ## Code of conduct
 
-This project has adopted the [Microsoft Open Source Code of Conduct][https://opensource.microsoft.com/codeofconduct/].
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 
-For more information, see the [Code of Conduct FAQ][https://opensource.microsoft.com/codeofconduct/faq/] or contact [opencode@microsoft.com][mailto:opencode@microsoft.com-] with any additional questions or comments.
+For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Next steps
 

@@ -187,7 +187,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  The following execution plan for this query shows that the query optimizer used a SORT operator to return the result set in the order specified by the ORDER BY clause.  
   
- ![IndexSort1](../relational-databases/media/indexsort1.gif)
+ ![Diagram of an execution plan for this query showing that the query optimizer used a SORT operator to return the result set in the order specified by the ORDER BY clause.](../relational-databases/media/indexsort1.gif)
   
  If an index is created with key columns that match those in the ORDER BY clause in the query, the SORT operator can be eliminated in the query plan and the query plan is more efficient.  
   
@@ -199,7 +199,7 @@ ON Purchasing.PurchaseOrderDetail
   
  After the query is executed again, the following execution plan shows that the SORT operator has been eliminated and the newly created nonclustered index is used.  
   
- ![InsertSort2](../relational-databases/media/insertsort2.gif)
+ ![Diagram of an execution plan showing that the SORT operator has been eliminated and the newly created nonclustered index is used.](../relational-databases/media/insertsort2.gif)
   
  The [!INCLUDE[ssDE](../includes/ssde-md.md)] can move equally efficiently in either direction. An index defined as `(RejectedQty DESC, ProductID ASC)` can still be used for a query in which the sort direction of the columns in the ORDER BY clause are reversed. For example, a query with the ORDER BY clause `ORDER BY RejectedQty ASC, ProductID DESC` can use the index.  
   
@@ -317,7 +317,7 @@ If the clustered index is not created with the `UNIQUE` property, the [!INCLUDE[
   
  This illustration shows the structure of a clustered index in a single partition.  
  
- ![bokind2](../relational-databases/media/bokind2.gif)  
+ ![Diagram showing the structure of a clustered index in a single partition.](../relational-databases/media/bokind2.gif)  
   
 ### Query Considerations  
  Before you create clustered indexes, understand how your data will be accessed. Consider using a clustered index for queries that do the following:  
@@ -390,7 +390,7 @@ Depending on the data types in the nonclustered index, each nonclustered index s
   
 The following illustration shows the structure of a nonclustered index in a single partition.  
 
-![bokind1a](../relational-databases/media/bokind1a.gif)  
+![Diagram showing the structure of a nonclustered index in a single partition.](../relational-databases/media/bokind1a.gif)  
   
 ### Database Considerations  
  Consider the characteristics of the database when designing nonclustered indexes.  
@@ -981,7 +981,7 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[Improving Performance with SQL Server 2008 Indexed Views](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Improving Performance with SQL Server 2008 Indexed Views](/previous-versions/sql/sql-server-2008/dd171921(v=sql.100))  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Create a Primary Key](../relational-databases/tables/create-primary-keys.md)    
 [Indexes for Memory-Optimized Tables](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
@@ -991,4 +991,4 @@ The performance of a nonclustered index is better than nonclustered hash indexes
 [Index Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [Indexes and ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

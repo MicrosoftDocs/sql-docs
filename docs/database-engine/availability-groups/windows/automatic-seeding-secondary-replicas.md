@@ -6,12 +6,12 @@ ms.date: "11/27/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
-author: "MashaMSFT"
-ms.author: mathoma
+author: "cawrites"
+ms.author: chadam
 ---
 # Use automatic seeding to initialize a secondary replica for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -244,11 +244,11 @@ The following table lists extended events related to automatic seeding.
 
 ## See also
 
-[ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
+[ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Always On Availability Groups Troubleshooting and Monitoring Guide](https://technet.microsoft.com/library/dn135328.aspx)
+[Always On Availability Groups Troubleshooting and Monitoring Guide](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

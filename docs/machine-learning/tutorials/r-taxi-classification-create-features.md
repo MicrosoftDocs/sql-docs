@@ -5,7 +5,7 @@ description: In part three of this five-part tutorial series, you'll use T-SQL f
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2020 
+ms.date: 10/15/2020 
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -32,7 +32,7 @@ In [part four](r-taxi-classification-train-model.md), you'll load the modules an
 
 In [part five](r-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
-In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](./python-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## About feature engineering
 

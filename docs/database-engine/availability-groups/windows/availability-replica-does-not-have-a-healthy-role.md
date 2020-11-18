@@ -6,14 +6,14 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords: 
   - "sql13.swb.agdashboard.arp1rolehealthy.issues.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Availability replica does not have a healthy role for an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

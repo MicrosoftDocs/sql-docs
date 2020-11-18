@@ -32,10 +32,10 @@ Managing temporal table data retention begins with determining the required rete
 
 Once you determine your data retention period, your next step is to develop a plan for managing historical data how and where you store your historical data and how to delete historical data that is older than your retention requirements. The following four approaches for managing historical data in the temporal history table are available:
 
-- [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)
-- [Table Partitioning](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)
-- [Custom Cleanup Script](https://msdn.microsoft.com/library/mt637341.aspx#using-custom-cleanup-script-approach)
-- [Retention Policy](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)
+- [Stretch Database](#using-stretch-database-approach)
+- [Table Partitioning](#using-table-partitioning-approach)
+- [Custom Cleanup Script](#using-custom-cleanup-script-approach)
+- [Retention Policy](#using-temporal-history-retention-policy-approach)
 
  With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes "closed", i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.
 
@@ -47,7 +47,7 @@ Once you determine your data retention period, your next step is to develop a pl
 > [!NOTE]
 > Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
 
 Using the Stretch Database approach, you can stretch some or all of your temporal history tables to Azure and SQL Server will silently move historical data to Azure. Stretch-enabling a history table does not change how you interact with the temporal table in terms of data modification and temporal querying.
 
@@ -92,7 +92,7 @@ See also:
 
 ### Using Transact-SQL to stretch the entire history table
 
-You can also use Transact-SQL to enable Stretch on the local server and [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). You can then [use Transact-SQL to enable Stretch Database on a table](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1). With a database previously enabled for Stretch Database, execute the following Transact-SQL script to stretch an existing system-versioned temporal history table:
+You can also use Transact-SQL to enable Stretch on the local server and [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md). You can then [use Transact-SQL to enable Stretch Database on a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). With a database previously enabled for Stretch Database, execute the following Transact-SQL script to stretch an existing system-versioned temporal history table:
 
 ```sql
 ALTER TABLE <history table name>
@@ -174,7 +174,7 @@ A partitioning configuration task creates the initial partitioning configuration
 
 The following picture shows initial partitioning configuration to keep 6 months of data.
 
-![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")
+![Diagram showing initial partitioning configuration to keep six months of data.](../../relational-databases/tables/media/partitioning.png "Partitioning")
 
 > [!NOTE]
 > See Performance considerations with table partitioning below for the performance implications of using RANGE LEFT versus RANGE RIGHT when configuring partitioning.
@@ -183,7 +183,7 @@ The first and last partition are "open" on lower and upper boundaries respective
 
 The following picture illustrates the recurring partition maintenance tasks (see detailed steps below).
 
-![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
+![Diagram showing the recurring partition maintenance tasks.](../../relational-databases/tables/media/partitioning2.png "Partitioning2")
 
 The detailed steps for the recurring partition maintenance tasks are:
 
@@ -309,7 +309,7 @@ You can slightly modify script above and use it in regular monthly maintenance p
 4. In step (6) alter partition function by merging lower boundary: `MERGE RANGE(N'2015-10-31T23:59:59.999'` after you moved out data for October.
 5. In step (7) split partition function creating new upper boundary: `SPLIT RANGE (N'2016-04-30T23:59:59.999'` after you moved out data for October.
 
-However, the optimal solution would be to regularly run a generic Transact-SQL script that is a capable of performing the appropriate action every month without script modification. It is possible to generalize the script above to act upon provided parameters (lower boundary that needs to be merged and new boundary that will be created by with partition split). In order to avoid staging table creation every month, you can create one beforehand and reuse by changing check constraint to match partition that will be switched out. Take a look at the following pages to get ideas on [how sliding window can be fully automated](https://msdn.microsoft.com/library/aa964122.aspx) using a Transact-SQL script.
+However, the optimal solution would be to regularly run a generic Transact-SQL script that is a capable of performing the appropriate action every month without script modification. It is possible to generalize the script above to act upon provided parameters (lower boundary that needs to be merged and new boundary that will be created by with partition split). In order to avoid staging table creation every month, you can create one beforehand and reuse by changing check constraint to match partition that will be switched out. Take a look at the following pages to get ideas on [how sliding window can be fully automated](/previous-versions/sql/sql-server-2005/administrator/aa964122(v=sql.90)) using a Transact-SQL script.
 
 ### Performance considerations with table partitioning
 
@@ -317,7 +317,7 @@ It is important to perform the MERGE and SPLIT RANGE operations to avoid any dat
 
 Let's first visually explain meaning of the RANGE LEFT and RANGE RIGHT options:
 
-![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
+![Diagram showing the RANGE LEFT and RANGE RIGHT options.](../../relational-databases/tables/media/partitioning3.png "Partitioning3")
 
 When you define a partition function as RANGE LEFT, the specified values are the upper boundaries of the partitions. When you use RANGE RIGHT, the specified values are the lower boundaries of the partitions. When you use the MERGE RANGE operation to remove a boundary from the partition function definition, the underlying implementation also removes the partition which contains the boundary. If that partition is not empty, data will be moved to the partition that is result of MERGE RANGE operation.
 
@@ -338,7 +338,7 @@ The cleanup logic is the same for every temporal table, so it can be automated r
 
 The following diagram illustrates how your cleanup logic should be organized for a single table to reduce impact on the running workloads.
 
-![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
+![Diagram showing how your cleanup logic should be organized for a single table to reduce impact on the running workloads.](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")
 
 Here are some high-level guidelines for implementing the process. Schedule cleanup logic to run every day and iterate over all temporal tables that need data cleanup. Use SQL Server Agent or different tool to schedule this process:
 
@@ -496,7 +496,7 @@ The cleanup task for the clustered columnstore removes entire row groups at once
 
 Excellent data compression and efficient retention cleanup makes clustered columnstore index a perfect choice for scenarios when your workload rapidly generates high amount of historical data. That pattern is typical for intensive transactional processing workloads that use temporal tables for change tracking and auditing, trend analysis, or IoT data ingestion.
 
-Please check [Manage historical data in Temporal Tables with retention policy](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy) for more details.
+Please check [Manage historical data in Temporal Tables with retention policy](/azure/sql-database/sql-database-temporal-tables-retention-policy) for more details.
 
 ## Next steps
 

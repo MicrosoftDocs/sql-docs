@@ -7088,7 +7088,7 @@
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
-      - name: Push-down computation
+      - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md

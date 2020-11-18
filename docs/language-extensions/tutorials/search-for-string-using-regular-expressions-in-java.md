@@ -4,7 +4,7 @@ description: This tutorial shows you how to use SQL Server Language Extensions a
 author: dphansen
 ms.author: davidph 
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

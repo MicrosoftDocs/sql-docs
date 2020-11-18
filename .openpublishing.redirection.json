@@ -59084,6 +59084,11 @@
       "source_path": "docs/azure-data-studio/what-is.md",
       "redirect_url": "/sql/azure-data-studio/what-is-azure-data-studio",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
+      "redirect_url": "/sql/ssma/db2/connecting-to-sql-server-db2tosql",
+      "redirect_document_id": true
     }
   ]
 }

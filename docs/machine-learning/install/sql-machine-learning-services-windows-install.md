@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 02/29/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---

@@ -8,7 +8,7 @@ ms.date: 09/28/2020
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.reviewer: davidph
+
 ms.custom: contperfq1
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---

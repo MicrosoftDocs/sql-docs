@@ -8,7 +8,7 @@ ms.date: 01/21/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Install packages with Python tools on SQL Server

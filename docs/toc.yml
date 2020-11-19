@@ -1876,15 +1876,6 @@
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
     - name: Edge constraints
       href: relational-databases/tables/graph-edge-constraints.md
-      items:
-      - name: Create
-        href: relational-databases/tables/create-edge-constraints.md
-      - name: Delete
-        href: relational-databases/tables/delete-edge-constraint.md
-      - name: Modify
-        href: relational-databases/tables/modify-edge-constraint.md
-      - name: View
-        href: relational-databases/tables/view-edge-constraint-properties.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:

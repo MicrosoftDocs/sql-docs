@@ -17,15 +17,17 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] . It will show you:
-- How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
-- How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
+This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md) in [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. It will show you:
+
+> [!div class="checklist"]
+> - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
+> - How to encrypt data in-place and issue rich confidential queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
 
 To get started with Always Encrypted with secure enclaves, you need at least two computers (they can be virtual machines):
 
-- The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]  computer to host [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]  and SSMS.
+- The [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] computer to host [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] and SSMS.
 - The HGS computer to run Host Guardian Service, which is needed for enclave attestation.
 
 ### SQL Server computer requirements
@@ -326,11 +328,14 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 3. Try the same query again in the SSMS instance that does not have Always Encrypted enabled, and note the failure that occurs.
 
 ## Next Steps
+
 After completing this tutorial, you can go to one of the following tutorials:
+
 - [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## See Also
+
 - [Configure and use Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md)
-- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]](tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
+- [Tutorial: Always Encrypted with secure enclaves in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

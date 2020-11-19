@@ -1,6 +1,6 @@
 ---
 title: "Indexes on enclave-enabled columns with randomized encryption (Tutorial)"
-description: This tutorial teaches you how to create and use index on enclave-enabled columns using randomized encryption supported in Always Encrypted with secure enclaves. 
+description: This tutorial teaches you how to create and use index on enclave-enabled columns using randomized encryption supported in Always Encrypted with secure enclaves for SQL Server and Azure SQL Database. 
 ms.custom: seo-lt-2019
 ms.date: 12/09/2020
 ms.prod: sql
@@ -20,15 +20,16 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This tutorial teaches you how to create and use indexes on enclave-enabled columns using randomized encryption supported in [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 
-- How to create an index when you have access to the keys (the column master key and the column encryption key) protecting the column.
-- How to create an index when you don't have access to the keys protecting the column.
+> [!div class="checklist"]
+> - How to create an index when you have access to the keys (the column master key and the column encryption key) protecting the column.
+> - How to create an index when you don't have access to the keys protecting the column.
 
 ## Prerequisites
 
 Make sure you've completed one of the below tutorials before following the below steps in this tutorial:
 
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 
 ## Step 1: Enable Accelerated Database Recovery (ADR) in your database
 
@@ -60,7 +61,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
    1. Start a new instance of SSMS.
    1. In the **Connect to Server** dialog, specify your server name, select an   authentication method, and specify your credentials.
    1. Click **Options >>** and select the **Always Encrypted** tab.
-   1. Select the **Enable Always Encrypted (column encryption)** checkbox and   specify your enclave attestation URL (for example, ht<span>tp://<   span>hgs.bastion.local/Attestation or ht<span>tps://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview).
+   1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, `http://hgs.bastion.local/Attestation` or `https://MyAttestationProvider.us.attest.azure.net/attest/SgxEnclave?api-version=2018-09-01-preview`).
    1. Select **Connect**.
    1. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
 1. If you weren't prompted to enable Parameterization for Always Encrypted, verify it's enabled.

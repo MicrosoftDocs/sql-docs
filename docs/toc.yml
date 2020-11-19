@@ -7791,12 +7791,14 @@
             href: relational-databases/security/encryption/always-encrypted-client-development.md
           - name: Develop applications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-      - name: Always Encrypted with secure enclaves
+      - name: Configure Always Encrypted with secure enclaves
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
+          - name: Configure the secure enclave in SQL Server
+            href: 
           - name: Set up your environment to support enclaves and attestation
             items:
-              - name: Set up VBS enclaves with Host Guardian Service attestation 
+              - name: Set up SQL Server
                 items:
                   - name: Plan for Host Guardian Service attestation
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
@@ -7813,7 +7815,7 @@
               - name: Rotate enclave-enabled keys
                 href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
           - name: Configure columns with Always Encrypted with secure enclaves
-            items:
+            items: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
               - name: Configure column encryption
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
               - name: Configure column encryption in-place with Transact-SQL 
@@ -7824,8 +7826,6 @@
             items:
               - name: Run Transact-SQL statements using secure enclaves
                 href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
-              - name: Query columns using Always Encrypted with secure enclaves with SSMS
-                href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
           - name: Create and use indexes on enclave-enabled columns
             href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
           - name: Develop applications using Always Encrypted with secure enclaves

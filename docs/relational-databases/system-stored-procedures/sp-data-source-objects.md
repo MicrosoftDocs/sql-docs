@@ -85,13 +85,15 @@ Object types are determined by the external data source's ODBC driver. Each exte
 
 Use `sp_data_source_objects` and [`sp_data_source_table_columns`](sp-data-source-table-columns.md) to discover external objects. These system stored procedures return the schema of tables that are available to be virtualized. Azure Data Studio uses these two stored procedures to support [data virtualization](../../azure-data-studio/extensions/data-virtualization-extension.md). Use [sp_data_source_table_columns](sp-data-source-table-columns.md) to discover external table schemas represented in SQL Server data types.
 
-### Teradata
+### Data source type specific remarks
 
-Teradata's system views don't use row-level security (RLS), and so users can see the existence of tables that they cannot query.
+* Teradata
 
-### MongoDB
+   Teradata system views don't use row-level security (RLS), and so users can see the existence of tables that they cannot query.
 
-Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null `@object_root_name`.
+* MongoDB
+
+   Some earlier versions of MongoDB restrict the ability to list all databases to admin-like users. Users without this permission may get auth errors trying to execute this procedure with a null `@object_root_name`.
 
 ## Examples  
 

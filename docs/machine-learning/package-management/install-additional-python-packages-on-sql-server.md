@@ -7,7 +7,7 @@ ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 

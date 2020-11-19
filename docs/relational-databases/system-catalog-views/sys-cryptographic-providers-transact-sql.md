@@ -36,11 +36,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**dll_path**|**nvarchar(512)**|Path to DLL that implements the Extensible Key Management (EKM) Application Program Interface (API).|  
 |**is_enabled**|**bit**|Whether the provider is enabled on the server or not.<br /><br /> 0 = not enabled  (default)<br /><br /> 1 = enabled|  
   
-## Remarks  
- The **sys.cryptographic_providers** view is visible to the public.  
-  
 ## Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ The **sys.cryptographic_providers** view is visible to the public.  
   
 ## See Also  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

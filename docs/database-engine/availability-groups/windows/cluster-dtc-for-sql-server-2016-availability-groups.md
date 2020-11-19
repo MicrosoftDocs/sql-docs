@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # How to cluster the DTC service for an Always On availability group

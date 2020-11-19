@@ -23,7 +23,7 @@ To successfully migrate objects and data from DB2 databases to [!INCLUDE[ssNoVer
   
 2.  [Connect to the DB2 database](./connecting-to-db2-database-db2tosql.md).  
   
-3.  [Connecting to SQL Server](./connecting-to-sql-server-db2etosql.md).  
+3.  [Connecting to SQL Server](./connecting-to-sql-server-db2tosql.md).  
   
 4.  [Map DB2 schemas to SQL Server schemas](./mapping-db2-schemas-to-sql-server-schemas-db2tosql.md).  
   

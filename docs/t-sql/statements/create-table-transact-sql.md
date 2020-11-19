@@ -906,8 +906,8 @@ Specifies the column, that should be used to determine if the rows in the table 
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS
-                  | MONTH | MONTHS | YEAR | YEARS }}       
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS
+                  \| MONTH \| MONTHS \| YEAR \| YEARS }}       
 Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit.   
 
 MEMORY_OPTIMIZED

@@ -111,7 +111,7 @@ In this step, you will configure the SQL Server computer as a guarded host regis
 
 3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
 
-4. If your SQL Server computer is a virtual machine, a physical machine that does not support UEFI Secure Boot, or a physial machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features.
+4. If your SQL Server computer is a virtual machine, a physical machine that does not support UEFI Secure Boot, or a physical machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features.
     1. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
 
         ```powershell

@@ -59086,14 +59086,14 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
-      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/ssma/db2/connecting-to-sql-server-db2etosql.md",
       "redirect_url": "/sql/ssma/db2/connecting-to-sql-server-db2tosql",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-query-columns",
+      "redirect_document_id": false
     }
   ]
 }

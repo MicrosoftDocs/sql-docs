@@ -37,8 +37,7 @@ A document map provides a set of navigational links to report items in a rendere
   
  For more information, see [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md).  
   
-##  <a name="AddRptItemToMap"></a>   
-#### To add a report item to a document map  
+##  <a name="AddRptItemToMap"></a> To add a report item to a document map  
   
 1.  In Design view, select the report item such as a table, matrix, or gauge that you want to add to the document map. The report item properties appear in the Properties pane.  
   
@@ -55,8 +54,7 @@ A document map provides a set of navigational links to report items in a rendere
 4.  Click **Run**. The report runs and the document map displays the labels you created. Click any link to jump to the report page with that item.  
 
   
-##  <a name="AddUniqueValuesToMap"></a>   
-#### To add unique group values to a document map  
+##  <a name="AddUniqueValuesToMap"></a> To add unique group values to a document map  
   
 1.  In Design view, select the table, matrix, or list that contains the group that you want to display in the document map. The Grouping pane displays the row and column groups.  
   
@@ -72,8 +70,7 @@ A document map provides a set of navigational links to report items in a rendere
   
 7.  Click **Run**. The report runs and the document map displays the group values. Click any link to jump to the report page with that item.  
   
-##  <a name="HideMapWhenViewRpt"></a>   
-#### To hide the document map when you view a report  
+##  <a name="HideMapWhenViewRpt"></a> To hide the document map when you view a report  
   
 1.  In the web portal, browse to the report that has the document map.  
   

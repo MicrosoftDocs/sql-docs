@@ -156,7 +156,7 @@ Memory needed by nonclustered indexes can be computed as follows:
  Nonclustered indexes are best when used for range lookups, as exemplified by the following query:  
   
 ```sql  
-SELECT * FRON t_hk  
+SELECT * FROM t_hk  
    WHERE c2 > 5;  
 ```  
   

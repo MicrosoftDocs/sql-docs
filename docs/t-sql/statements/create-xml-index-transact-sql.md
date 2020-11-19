@@ -1,15 +1,11 @@
 ---
+title: CREATE XML INDEX (Transact-SQL)
 description: "CREATE XML INDEX (Transact-SQL)"
-title: "CREATE XML INDEX (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
-  - "XML_TSQL"
   - "CREATE_XML_INDEX_TSQL"
   - "XML INDEX"
   - "CREATE_XML_TSQL"
@@ -17,7 +13,6 @@ f1_keywords:
   - "CREATE XML"
   - "CREATE XML INDEX"
   - "XML_INDEX_TSQL"
-  - "FOR_XML_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -28,7 +23,11 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "08/10/2017"
 ---
+
 # CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 

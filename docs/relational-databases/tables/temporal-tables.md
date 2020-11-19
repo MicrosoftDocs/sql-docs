@@ -66,7 +66,7 @@ Real data sources are dynamic and more often than not business decisions rely on
 
 ## How does temporal work
 
- System-versioning for a table is implemented as a pair of tables, a current table and a history table. Within each of these tables, the following two additional **datetime2** columns are used to define the period of validity for each row:
+ System-versioning for a table is implemented as a pair of tables, a current table and a history table. The history table has the following two additional **datetime2** columns, which define the period of validity for each row:
 
 - Period start column: The system records the start time for the row in this column, typically denoted as the **SysStartTime** column.
 - Period end column: The system records the end time for the row in this column, typically denoted as the **SysEndTime** column.
@@ -75,7 +75,7 @@ The current table contains the current value for each row. The history table con
 
 ![Diagram showing how a Temporal table works.](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
 
-The following simple example illustrates a scenario with Employee information in hypothetical HR database:
+The following simple example illustrates a scenario with Employee information in a hypothetical HR database:
 
 ```sql
 CREATE TABLE dbo.Employee

@@ -7801,7 +7801,7 @@
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
           - name: Configure the secure enclave in SQL Server
-            href: 
+            href: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
           - name: Set up your environment to support enclaves and attestation
             items:
               - name: Set up SQL Server
@@ -7821,7 +7821,7 @@
               - name: Rotate enclave-enabled keys
                 href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
           - name: Configure columns with Always Encrypted with secure enclaves
-            items: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
+            items:
               - name: Configure column encryption
                 href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
               - name: Configure column encryption in-place with Transact-SQL 

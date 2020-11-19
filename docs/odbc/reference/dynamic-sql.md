@@ -2,7 +2,7 @@
 description: "Dynamic SQL"
 title: "Dynamic SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/03/2020"
+ms.date: "11/16/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -26,7 +26,7 @@ Although static SQL works well in many situations, there is a class of applicati
   
  The simplest way to execute a dynamic SQL statement is with an EXECUTE IMMEDIATE statement. This statement passes the SQL statement to the DBMS for compilation and execution.  
   
- One disadvantage of the EXECUTE IMMEDIATE statement is that the DBMS must go through each of the five steps of processing an SQL statement each time the statement is executed. The overhead involved in this process can be significant if many statements are executed dynamically, and it is wasteful if those statements are similar. To address this situation, dynamic SQL offers an optimized form of execution called prepared execution, which uses the following steps:  
+ One disadvantage of the EXECUTE IMMEDIATE statement is that the DBMS must go through each of the [five steps of processing an SQL statement](processing-a-sql-statement.md) each time the statement is executed. The overhead involved in this process can be significant if many statements are executed dynamically, and it is wasteful if those statements are similar. To address this situation, dynamic SQL offers an optimized form of execution called prepared execution, which uses the following steps:  
   
 1.  The program constructs an SQL statement in a buffer, just as it does for the EXECUTE IMMEDIATE statement. Instead of host variables, a question mark (?) can be substituted for a constant anywhere in the statement text to indicate that a value for the constant will be supplied later. The question mark is called as a parameter marker.  
   

@@ -59,7 +59,7 @@ To provision an enclave-enabled column encryption key, follow the steps in [Prov
 > To check if a column encryption key is enclave-enabled, right-click on it in Object Explorer and select **Properties**. If the key is enclave-enabled, **Enclave Computations: Allowed** appears in the window showing the properties of the key.
 
 ## Provision enclave-enabled keys using PowerShell
-To provision enclave-enabled keys using PowerShell, you need the SqlServer Powershell module version 21.1.18179 or higher.
+To provision enclave-enabled keys using PowerShell, you need the SqlServer PowerShell module version 21.1.18179 or higher.
 
 In general, PowerShell key provisioning workflows (with and without role separation) for Always Encrypted, described in [Provision Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md) also apply to enclave-enabled keys. This section describes details specific to enclave-enabled keys.
 
@@ -150,6 +150,6 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ## See Also  
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Manage keys for Always Encrypted with secure enclaves](always-encrypted-enclaves-manage-keys.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

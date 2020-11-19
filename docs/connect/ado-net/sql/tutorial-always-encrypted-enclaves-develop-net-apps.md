@@ -19,7 +19,7 @@ ms.author: v-jizho2
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
-This tutorial teaches you how to develop a simple application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+This tutorial teaches you how to develop an application that issues database queries that use a server-side secure enclave for [Always Encrypted with secure enclaves](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 > [!NOTE]
 > Always Encrypted with secure enclaves is only supported on Windows.
@@ -43,7 +43,7 @@ In addition, if you store your column master key in Azure Key Vault, you also ne
 
 2. Create a new C\# Console App (.NET Framework / Core) project.
 
-3. Make sure your project targets at least .NET Framework 4.6 or .NET Core 2.1. Right-click on the project in Solution Explorer, select Properties and set the Target framework.
+3. Make sure your project targets at least .NET Framework 4.6 or .NET Core 2.1. Right-click on the project in Solution Explorer, select **Properties** and set the Target framework.
 
 4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 

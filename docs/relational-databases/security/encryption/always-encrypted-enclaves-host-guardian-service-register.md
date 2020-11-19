@@ -2,7 +2,7 @@
 title: "Register computer with Host Guardian Service"
 description: "Register the SQL Server computer with the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom: ""
-ms.date: "11/15/2019"
+ms.date: "12/09/2020"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -61,7 +61,7 @@ In the context of attesting [!INCLUDE [ssnoversion-md](../../../includes/ssnover
 - `Secure Boot` is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. Secure Boot protects against rootkits by requiring a Microsoft-signed bootloader to run immediately after UEFI initialization completes. If you are using Trusted Platform Module (TPM) attestation, Secure Boot enablement will be measured and enforced regardless of whether VBS is configured to require Secure Boot.
 - `DMA Protection` is recommended but not required for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted. DMA protection uses an IOMMU to protect VBS and enclave memory from direct memory access attacks. In a production environment, you should always use computers with DMA protection. In a dev/test environment, it's okay to remove the requirement for DMA protection. If the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] instance is virtualized, you'll most likely not have DMA protection available and will need to remove the requirement for VBS to run. Review the [trust model](./always-encrypted-enclaves-host-guardian-service-plan.md#trust-model) for information about the lowered security assurances when running in a VM.
 
-Before lowering the VBS required security features, check with your OEM or cloud service provider to confirm if there is a way to enable the missing platform requirements in UEFI or BIOS (e.g. enabling Secure Boot, Intel VT-d or AMD IOV).
+Before lowering the VBS required security features, check with your OEM or cloud service provider to confirm if there is a way to enable the missing platform requirements in UEFI or BIOS (for example, enabling Secure Boot, Intel VT-d or AMD IOV).
 
 To change the required platform security features for VBS, run the following command in an elevated PowerShell console:
 
@@ -126,7 +126,7 @@ For example, if you have three TPM baselines registered on HGS, the computer mea
 HGS requires that every computer attesting in TPM mode has a Windows Defender Application Control (WDAC) policy applied.
 WDAC code integrity policies restrict which software can run on a computer by checking each process that tries to execute code against a list of trusted publishers and file hashes.
 For the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] use case, enclaves are protected by virtualization-based security and cannot be modified from the host OS, so the strictness of the WDAC policy does not affect the security of encrypted queries.
-As such, it's recommended that you deploy a simple audit-mode policy to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to meet the attestation requirement without imposing additional restrictions on the system.
+As such, it's recommended that you deploy an audit-mode policy to the [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers to meet the attestation requirement without imposing additional restrictions on the system.
 
 If you are already using a custom WDAC code integrity policy on the computers to harden the OS configuration, you can skip to [Collect TPM attestation information](#collect-tpm-attestation-information).
 

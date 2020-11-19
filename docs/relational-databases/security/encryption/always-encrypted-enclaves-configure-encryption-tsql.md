@@ -62,7 +62,7 @@ The remainder of this article describes how to trigger in-place encryption using
 #### Encrypting a column in-place
 The below example assumes:
 - `CEK1` is an enclave-enabled column encryption key.
-- The `SSN` column is plaintext and is currently using the default database collation, e.g. a Latin1, non-BIN2 collation (for example, `Latin1_General_CI_AI_KS_WS`).
+- The `SSN` column is plaintext and is currently using the default database collation, such as Latin1, non-BIN2 collation (for example, `Latin1_General_CI_AI_KS_WS`).
 
 The statement encrypts the `SSN` column using randomized encryption and the enclave-enabled column encryption key in-place. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 
@@ -120,7 +120,7 @@ The below example assumes:
 - The `SSN` column is encrypted using an enclave-enabled column encryption key.
 - The current collation, set at the column level, is `Latin1_General_BIN2`.
 
-The below statement decrypts the column (and keeps the collation unchanged - alternatively, you can choose to change the collation, for example, to a non-BIN2 collation in the same statement).
+The below statement decrypts the column and keeps the collation unchanged. Alternatively, you can choose to change the collation. For example, change the collation to a non-BIN2 collation in the same statement.
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -140,4 +140,4 @@ GO
 - [Configure column encryption in-place using Always Encrypted with secure enclaves](always-encrypted-enclaves-configure-encryption.md)
 - [Enable Always Encrypted with secure enclaves for existing encrypted columns](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Tutorial: Getting started with Always Encrypted with secure enclaves in SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](../tutorial-always-encrypted-enclaves-getting-started-sqldb.md)
+- [Tutorial: Getting started with Always Encrypted with secure enclaves in Azure SQL Database](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

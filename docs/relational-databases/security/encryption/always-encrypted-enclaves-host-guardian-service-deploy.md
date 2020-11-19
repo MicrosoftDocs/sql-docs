@@ -2,7 +2,7 @@
 title: "Deploy Host Guardian Service"
 description: "Deploy the Host Guardian Service for Always Encrypted with Secure Enclaves."
 ms.custom: ""
-ms.date: "11/15/2019"
+ms.date: "12/09/2020"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -211,7 +211,7 @@ In a default installation, HGS only exposes an HTTP (port 80) binding.
 You can configure an HTTPS (port 443) binding to encrypt all communications between [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers and HGS.
 It is recommended that all production instances of HGS use an HTTPS binding.
 
-1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you do not know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (e.g. if HGS is behind a network load balancer with a different address).
+1. Obtain a TLS certificate from your certificate authority, using the fully qualified HGS service name from Step 1.3 as the subject name. If you do not know your service name, you can find it by running `Get-HgsServer` on any HGS computer. You can add alternative DNS names to the Subject Alternate Name list if your [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] computers use a different DNS name to reach your HGS cluster (for example, if HGS is behind a network load balancer with a different address).
 
 2. On the HGS computer, use [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) to enable the HTTPS binding and specify the TLS certificate obtained in the previous step. If your certificate is already installed on the computer in the local certificate store, use the following command to register it with HGS:
 

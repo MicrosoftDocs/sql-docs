@@ -20,7 +20,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 > [!NOTE]
 > Despite the performance benefits of in-place encryption, cryptographic operations on large tables can take a long time and consume substantial resources, potentially impacting and degrading performance and availability of your applications.
 
-In-place encryption makes it also possible to trigger cryptographic operations using the [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement, which is not possible without an enclave.
+In-place encryption makes it also possible to trigger cryptographic operations using the [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement, which isn't possible without an enclave.
 
 ## Prerequisites
 The supported cryptographic operations and the requirements for column encryption key(s), used for the operations, are:

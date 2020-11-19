@@ -2,7 +2,7 @@
 title: "Configure the enclave type for Always Encrypted Server Configuration Option | Microsoft Docs"
 description: Find out how to enable or disable a secure enclave for Always Encrypted. Learn how to confirm whether an enclave has been correctly initialized.
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "12/09/2020"
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""

@@ -238,6 +238,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
+- Any user defined type
 
 ## Locking
 
@@ -736,6 +737,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
+- Any user defined type
 
 ## Locking
 
@@ -965,6 +967,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
+- Any user defined type
 
 ## Locking
 
@@ -1220,6 +1223,7 @@ The following data types cannot be used in PolyBase external tables:
 - `text`
 - `nText`
 - `xml`
+- Any user defined type
 
 ## Locking
 

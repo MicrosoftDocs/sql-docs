@@ -7797,11 +7797,9 @@
             href: relational-databases/security/encryption/always-encrypted-client-development.md
           - name: Develop applications with .NET Framework
             href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-      - name: Configure Always Encrypted with secure enclaves
+      - name: Always Encrypted with secure enclaves
         href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
-          - name: Configure the secure enclave in SQL Server
-            href: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
           - name: Set up your environment to support enclaves and attestation
             items:
               - name: Set up SQL Server
@@ -7812,6 +7810,8 @@
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
                   - name: Register computer with Host Guardian Service
                     href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                  - name: Configure the secure enclave in SQL Server
+                    href: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
           - name: Manage keys for Always Encrypted with secure enclaves
             items:
               - name: Manage enclave-enabled keys
@@ -7979,6 +7979,8 @@
       items:
       - name: Getting started with Always Encrypted with secure enclaves in SQL Server
         href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+      - name: Getting started with Always Encrypted with secure enclaves in Azure SQL Database >
+        href: /azure/azure-sql/database/always-encrypted-enclaves-getting-started
       - name: Create and use indexes on Always Encrypted with secure enclaves columns
         href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
       - name: Develop a .NET Framework application using Always Encrypted with secure enclaves

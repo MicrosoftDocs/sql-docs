@@ -20,7 +20,7 @@ Pushdown computation improves the performance of queries on external data source
 
 ## Enable pushdown computation
 
-The articles include information about configuring pushdown computation for specific types of external data sources:
+The following articles include information about configuring pushdown computation for specific types of external data sources:
 
 - [Enable pushdown computation in Hadoop](polybase-configure-hadoop.md#pushdown)
 - [Configure PolyBase to access external data in Oracle](polybase-configure-oracle.md)
@@ -44,7 +44,7 @@ SELECT * FROM SensorData WHERE Speed > 65;
 
 Use predicate pushdown to improve performance for a query that selects a subset of columns from an external table.
 
-In this query, SQL Server initiates a map-reduce job to pre-process the Hadoop delimited-text file so that only the data for the two columns, customer.name and customer.zip_code, will be copied to SQL Server..
+In this query, SQL Server initiates a map-reduce job to pre-process the Hadoop delimited-text file so that only the data for the two columns, customer.name and customer.zip_code, will be copied to SQL Server.
 
 ```sql
 SELECT customer.name, customer.zip_code
@@ -56,16 +56,16 @@ WHERE customer.account_balance < 200000
 
 SQL Server allows the following basic expressions and operators for predicate pushdown.
 
-- Binary comparison operators ( \<, >, =, !=, <>, >=, <= ) for numeric, date, and time values.
-- Arithmetic operators ( +, -, *, /, % ).
-- Logical operators (AND, OR).
-- Unary operators (NOT, IS NULL, IS NOT NULL).
+- Binary comparison operators (`<`, `>`, `=`, `!=`, `<>`, `>=`, `<=`) for numeric, date, and time values.
+- Arithmetic operators (`+`, `-`, `*`, `/`, `%`).
+- Logical operators (`AND`, `OR`).
+- Unary operators (`NOT`, `IS NULL`, `IS NOT NULL`).
 
-The operators BETWEEN, NOT, IN, and LIKE might be pushed down. The actual behavior depends on how the query optimizer rewrites the operator expressions as a series of statements that use basic relational operators.
+The operators `BETWEEN`, `NOT`, `IN`, and `LIKE` might be pushed down. The actual behavior depends on how the query optimizer rewrites the operator expressions as a series of statements that use basic relational operators.
 
-The query in this example has multiple predicates that can be pushed down to Hadoop. SQL Server can push map-reduce jobs to Hadoop to perform the predicate `customer.account_balance <= 200000`. The expression `BETWEEN 92656 and 92677` is also composed of binary and logical operations that can be pushed to Hadoop. The logical **AND** in `customer.account_balance and customer.zipcode` is a final expression.
+The query in this example has multiple predicates that can be pushed down to Hadoop. SQL Server can push map-reduce jobs to Hadoop to perform the predicate `customer.account_balance <= 200000`. The expression `BETWEEN 92656 AND 92677` is also composed of binary and logical operations that can be pushed to Hadoop. The logical **AND** in `customer.account_balance AND customer.zipcode` is a final expression.
 
-Given this combination of predicates, the map-reduce jobs can perform all of the WHERE clause. Only the data that meets the SELECT criteria is copied back to SQL Server.
+Given this combination of predicates, the map-reduce jobs can perform all of the WHERE clause. Only the data that meets the `SELECT` criteria is copied back to SQL Server.
 
 ```sql
 SELECT * FROM customer 

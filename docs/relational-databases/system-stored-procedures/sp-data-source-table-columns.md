@@ -78,8 +78,8 @@ Due to differences between collations in Hadoop source data and supported collat
 The following example returns the table columns for an external table in a SQL Server named `server`, belonging to a schema named `schema`.
   
 ```sql
-declare @data_source SYSNAME = N'ServerName';
-declare @table_location NVARCHAR(400) = '[server].[schema].[table]';
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
+DECLARE @table_location NVARCHAR(400) = N'[database].[schema].[table]';
 EXEC sp_data_source_table_columns @data_source, @table_location
 ```  
   

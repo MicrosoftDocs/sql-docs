@@ -100,7 +100,7 @@ Use `sp_data_source_objects` and [`sp_data_source_table_columns`](sp-data-source
 ### Get all databases, schemata, and tables/views
 
 ```sql
-DECLARE @data_source SYSNAME = N'SqlServerEDS';
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
 DECLARE @object_root_name NVARCHAR(MAX) = NULL;
 DECLARE @max_search_depth INT = 3;
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
@@ -108,83 +108,83 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |
 |--|--|--|--|
-| DATABASE | "tpch0_01g" | tpch0_01g | NULL |
-| SCHEMA | "tpch0_01g"."dbo" | dbo | NULL |
-| TABLE | "tpch0_01g"."dbo"."customer" | customer | [tpch0_01g].[dbo].[customer] |
-| TABLE | "tpch0_01g"."dbo"."lineitem" | lineitem | [tpch0_01g].[dbo].[lineitem] |
-| TABLE | "tpch0_01g"."dbo"."nation" | nation | [tpch0_01g].[dbo].[nation] |
+| DATABASE | "database" | database | NULL |
+| SCHEMA | "database"."dbo" | dbo | NULL |
+| TABLE | "database"."dbo"."customer" | customer | [database].[dbo].[customer] |
+| TABLE | "database"."dbo"."lineitem" | lineitem | [database].[dbo].[lineitem] |
+| TABLE | "database"."dbo"."nation" | nation | [database].[dbo].[nation] |
 
 ### Get all databases
 
 ```sql
-DECLARE @data_source SYSNAME = N'SqlServerEDS';
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
 DECLARE @object_root_name NVARCHAR(MAX) = NULL;
 EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |
 |--|--|--|--|
-| DATABASE | "DWQueue" | DWQueue | NULL |
+| DATABASE | "UserDatabase" | UserDatabase | NULL |
 | DATABASE | "master" | master | NULL |
 | DATABASE | "msdb" | msdb | NULL |
 | DATABASE | "tempdb" | tempdb | NULL |
-| DATABASE | "tpch0_01g" | tpch0_01g | NULL |
+| DATABASE | "database" | database | NULL |
 
 ### Get all schemata in a database
 
 ```sql
-DECLARE @data_source SYSNAME = N'SqlServerEDS'; 
-DECLARE @object_root_name NVARCHAR(MAX) = N'[tpch0_01g]'; 
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName'; 
+DECLARE @object_root_name NVARCHAR(MAX) = N'[database]'; 
 EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |
 |--|--|--|--|
-| SCHEMA | "tpch0_01g"."dbo" | dbo | NULL |
-| SCHEMA | "tpch0_01g"."INFORMATION_SCHEMA" | INFORMATION_SCHEMA | NULL |
-| SCHEMA | "tpch0_01g"."sys" | sys | NULL |
+| SCHEMA | "database"."dbo" | dbo | NULL |
+| SCHEMA | "database"."INFORMATION_SCHEMA" | INFORMATION_SCHEMA | NULL |
+| SCHEMA | "database"."sys" | sys | NULL |
 
 ### Get all tables in schema 
 
 ```sql
-DECLARE @data_source SYSNAME = N'SqlServerEDS'; 
-DECLARE @object_root_name NVARCHAR(MAX) = N'[tpch0_01g].[dbo]'; 
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName'; 
+DECLARE @object_root_name NVARCHAR(MAX) = N'[database].[dbo]'; 
 EXEC sp_data_source_objects @data_source, @object_root_name;
 ```
 
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |
 |--|--|--|--|
-| TABLE | "tpch0_01g"."dbo"."customer" | customer | [tpch0_01g].[dbo].[customer] |
-| TABLE | "tpch0_01g"."dbo"."lineitem" | lineitem | [tpch0_01g].[dbo].[lineitem] |
-| TABLE | "tpch0_01g"."dbo"."nation" | nation | [tpch0_01g].[dbo].[nation] |
-| TABLE | "tpch0_01g"."dbo"."orders" | orders | [tpch0_01g].[dbo].[orders] |
-| TABLE | "tpch0_01g"."dbo"."part" | part | [tpch0_01g].[dbo].[part] |
+| TABLE | "database"."dbo"."customer" | customer | [database].[dbo].[customer] |
+| TABLE | "database"."dbo"."lineitem" | lineitem | [database].[dbo].[lineitem] |
+| TABLE | "database"."dbo"."nation" | nation | [database].[dbo].[nation] |
+| TABLE | "database"."dbo"."orders" | orders | [database].[dbo].[orders] |
+| TABLE | "database"."dbo"."part" | part | [database].[dbo].[part] |
 
 ## Oracle
 
 ### Get all schemata and tables, functions, views, etc
 
 ```sql
-DECLARE @data_source SYSNAME = N'OracleEDS'; 
-DECLARE @object_root_name NVARCHAR(MAX) = N'[XE]'; 
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName'; 
+DECLARE @object_root_name NVARCHAR(MAX) = N'[OracleObjectRoot]'; 
 DECLARE @max_search_depth INT = 2; 
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 ```
 
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |
 |--|--|--|--|
-| VIEW | "SYS"."ALL_SQLSET_STATEMENTS" | ALL_SQLSET_STATEMENTS | [XE].[SYS].[ALL_SQLSET_STATEMENTS] |
-| SYSTEM TABLE | "SYS"."BOOTSTRAP$" | BOOTSTRAP$ | [XE].[SYS].[BOOTSTRAP$] |
+| VIEW | "SYS"."ALL_SQLSET_STATEMENTS" | ALL_SQLSET_STATEMENTS | [ORACLEOBJECTROOT].[SYS].[ALL_SQLSET_STATEMENTS] |
+| SYSTEM TABLE | "SYS"."BOOTSTRAP$" | BOOTSTRAP$ | [ORACLEOBJECTROOT].[SYS].[BOOTSTRAP$] |
 | SYNONYM | "PUBLIC"."ALL_ALL_TABLES" | ALL_ALL_TABLES | NULL |
-| SCHEMA | "tpch0_01g" | tpch0_01g | NULL |
-| TABLE | "tpch0_01g"."customer" | customer | [XE].[tpch0_01g].[customer] |
+| SCHEMA | "database" | database | NULL |
+| TABLE | "database"."customer" | customer | [ORACLEOBJECTROOT].[database].[customer] |
 
 ## Teradata
 
 ### Get all databases and tables, functions, views, etc
 
 ```SQL
-DECLARE @data_source SYSNAME = N'TeradataEDS';
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
 DECLARE @object_root_name NVARCHAR(MAX) = NULL;
 DECLARE @max_search_depth INT = 2;
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
@@ -195,15 +195,15 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | FUNCTION | "SYSLIB"."ExtractRoles" | ExtractRoles | NULL |  
 | SYSTEM TABLE | "DBC"."UDTCast" | UDTCast | [DBC].[UDTCast] |  
 | TYPE | "SYSUDTLIB"."XML" | XML | NULL |  
-| DATABASE | "tpch0_01g" | tpch0_01g | NULL |
-| TABLE | "tpch0_01g"."customer" | customer | [tpch0_01g].[customer] |  
+| DATABASE | "database" | database | NULL |
+| TABLE | "database"."customer" | customer | [database].[customer] |  
 
 ## Mongo DB
 
 ### Get all databases and tables
 
 ```SQL
-DECLARE @data_source SYSNAME = N'MongoDbEDS';
+DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
 DECLARE @object_root_name NVARCHAR(MAX) = NULL;
 DECLARE @max_search_depth INT = 2;
 EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
@@ -211,11 +211,11 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |
 |--|--|--|--|
-| DATABASE | "tpch0_01g" | tpch0_01g | NULL |
-| TABLE | "tpch0_01g"."customer" | customer | [tpch0_01g].[customer] |
-| TABLE | "tpch0_01g"."lineitem" | lineitem | [tpch0_01g].[lineitem] |
-| TABLE | "tpch0_01g"."nation" | nation | [tpch0_01g].[nation] |
-| TABLE | "tpch0_01g"."orders" | orders | [tpch0_01g].[orders] |
+| DATABASE | "database" | database | NULL |
+| TABLE | "database"."customer" | customer | [database].[customer] |
+| TABLE | "database"."lineitem" | lineitem | [database].[lineitem] |
+| TABLE | "database"."nation" | nation | [database].[nation] |
+| TABLE | "database"."orders" | orders | [database].[orders] |
 
 ## See also
 

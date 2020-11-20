@@ -10,9 +10,9 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: cheenamalhotra
-ms.author: v-chmalh
-ms.reviewer: v-daenge
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-jizho2
 ---
 # Download Microsoft SqlClient Data Provider for SQL Server
 

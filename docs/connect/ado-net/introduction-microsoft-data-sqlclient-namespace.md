@@ -7,9 +7,9 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: cheenamalhotra
-ms.author: v-chmalh
-ms.reviewer: v-daenge
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-jizho2
 ---
 # Introduction to Microsoft.Data.SqlClient namespace
 
@@ -77,7 +77,7 @@ Connection string examples:
 ```
 
 ### Azure Active Directory Interactive authentication enhancements
-Microsoft.Data.SqlClient v2.1 provides the following new APIs to enable customizations for the "Active Directory Interactive" authentication experience:
+Microsoft.Data.SqlClient v2.1 adds the following APIs to customize the "Active Directory Interactive" authentication experience:
 
 ```csharp
 public class ActiveDirectoryAuthenticationProvider

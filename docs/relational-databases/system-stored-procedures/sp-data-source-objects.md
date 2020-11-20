@@ -79,7 +79,19 @@ Requires ALTER ANY EXTERNAL DATA SOURCE permission.
 
 ## Remarks  
 
-The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the SQLTables function. Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
+The SQL Server instance must have the  [PolyBase](../../relational-databases/polybase/polybase-guide.md) feature installed.
+
+This stored procedure supports connectors for:
+
+- SQL Server
+- Oracle
+- Teradata
+- MongoDB
+- CosmosDB
+
+The stored procedure does not support generic ODBC dta source connectors.
+
+The notion of empty vs. non-empty relates to the behavior of the ODBC driver and the [`SQLTables` function](../native-client-odbc-api/sqltables.md). Non-empty indicates an object contains tables, not rows. For example, an empty schema contains no tables in SQL Server. An empty database contains with no tables inside Teradata.
 
 Object types are determined by the external data source's ODBC driver. Each external data source determines what qualifies as a table. This can include database objects like functions in TeraData, or synonyms in Oracle. PolyBase cannot connect to some ODBC objects as external tables and will therefore not have a value in the TABLE_LOCATION column. Despite that, the presence of one of these objects may make a database or schema non-empty.
 

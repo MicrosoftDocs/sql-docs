@@ -14,6 +14,16 @@ ms.custom: seo-dt-2019
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.7"></a>
+## APS CU7.7
+Release date - November 2020
+
+### SCVMM2016
+APS CU7.7 software upgrades VMM VM to Windows Server 2016 and installs SCVMM2016. SCVMM 2012 R2 that is currently in use has an end of life date of July 2022. The newer SCVMM is needed to be supported making CU7.7 a mandatory upgrade. Customers are urged to upgrade to CU7.7 as soon as possible.
+
+### SSIS destination adapter for SQL Server 2019 as target
+New APS SSIS destination adapter that supports SQL Server 2019 as deployment target can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+
 <a name="h2-aps-cu7.6"></a>
 ## APS CU7.6
 Release date - April 2020

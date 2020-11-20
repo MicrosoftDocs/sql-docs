@@ -168,7 +168,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
 
 1. After you confirm that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain. This command creates a new computer account in AD, creates the **/etc/krb5.keytab** host keytab file, configures the domain in **/etc/sssd/sssd.conf**, and updates **/etc/krb5.conf**.
 
-   Due to an issue with realmd, first set the machine hostname to the FQDN rather than just the machine name otherwise realmd may not create all required SPNs for the machine and DNS entries will not automatically update even if your domain controller supports dynamic DNS updates.
+   Due to an issue with realmd, first set the machine hostname to the FQDN rather than just the machine name. Otherwise, realmd may not create all required SPNs for the machine and DNS entries will not automatically update even if your domain controller supports dynamic DNS updates.
    
    ```bash
    sudo hostname <old hostname>.contoso.com

@@ -10,7 +10,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: Cheena Malhotra
+author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-daenge
 ---

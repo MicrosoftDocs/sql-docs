@@ -64,16 +64,16 @@ Connection string examples:
 
 ```cs
 // For System Assigned Managed Identity
-"Server:{serverURL}; Authentication=Active Directory MSI; Initial Catalog={db};"
+"Server={serverURL}; Authentication=Active Directory MSI; Initial Catalog={db};"
 
 // For System Assigned Managed Identity
-"Server:{serverURL}; Authentication=Active Directory Managed Identity; Initial Catalog={db};"
+"Server={serverURL}; Authentication=Active Directory Managed Identity; Initial Catalog={db};"
 
 // For User Assigned Managed Identity
-"Server:{serverURL}; Authentication=Active Directory MSI; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+"Server={serverURL}; Authentication=Active Directory MSI; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
 
 // For User Assigned Managed Identity
-"Server:{serverURL}; Authentication=Active Directory Managed Identity; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
+"Server={serverURL}; Authentication=Active Directory Managed Identity; User Id={ObjectIdOfManagedIdentity}; Initial Catalog={db};"
 ```
 
 ### Azure Active Directory Interactive authentication enhancements
@@ -122,7 +122,7 @@ SqlAuthenticationProvider.SetProvider(SqlAuthenticationMethod.ActiveDirectoryInt
 
 using (SqlConnection sqlConnection = new SqlConnection("<connection_string>")
 {
-		sqlConnection.Open();
+    sqlConnection.Open();
 }
 ```
 
@@ -132,9 +132,9 @@ _[Applies to .NET Framework and .NET Core]_
 ```csharp
 internal class SqlAuthenticationProviderConfigurationSection : ConfigurationSection
 {
-		...
-		[ConfigurationProperty("applicationClientId", IsRequired = false)]
-		public string ApplicationClientId => this["applicationClientId"] as string;
+    ...
+    [ConfigurationProperty("applicationClientId", IsRequired = false)]
+    public string ApplicationClientId => this["applicationClientId"] as string;
 }
 
 // Inheritance
@@ -169,12 +169,12 @@ Microsoft.Data.SqlClient v2.1 introduces support for Data Classification's "Sens
 ```csharp
 public class SensitivityClassification
 {
-  public SensitivityRank SensitivityRank;
+    public SensitivityRank SensitivityRank;
 }
 
 public class SensitivityProperty
 {
-  public SensitivityRank SensitivityRank;
+    public SensitivityRank SensitivityRank;
 }
 
 public enum SensitivityRank
@@ -194,8 +194,8 @@ Microsoft.Data.SqlClient v2.1 introduces a new `SqlConnection` property, `Server
 ```csharp
 public class SqlConnection
 {
-  // Returns the server process Id (SPID) of the active connection.
-  public int ServerProcessId;
+    // Returns the server process Id (SPID) of the active connection.
+    public int ServerProcessId;
 }
 ```
 
@@ -221,7 +221,7 @@ Microsoft.Data.SqlClient v2.1 introduces the "Command Timeout" connection string
 
 Connection string examples:
 
-`"Server:{serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
+`"Server={serverURL}; Initial Catalog={db}; Integrated Security=true; Command Timeout=60"`
 
 ### Removal of symbols from Native SNI
 With Microsoft.Data.SqlClient v2.1, we've removed the symbols introduced in [v2.0.0](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI/2.0.0) from [Microsoft.Data.SqlClient.SNI.runtime](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime) NuGet starting with [v2.1.1](https://www.nuget.org/packages/Microsoft.Data.SqlClient.SNI.runtime/2.1.1). The public symbols are now published to Microsoft Symbols Server for tools like BinSkim that require access to public symbols.

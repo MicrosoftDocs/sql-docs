@@ -50,8 +50,6 @@ A synonym belongs to a schema, and like other objects in a schema, the name of a
 
         Assembly (CLR) aggregate functions
 
-        Assembly (CLR) aggregate functions
-
         SQL table-valued function
 
         SQL stored procedure

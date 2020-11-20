@@ -48,7 +48,8 @@ Each counter in the object contains the following instances:
 |**CPU Time:Requests**|The number of requests based on CPU time.|  
 
 |**CPU Time:Total(ms)**|The total time the CPU spent on the batch.|  
-|**Elapsed Time:Requests**|The number of total requests.|  
+|**Elapsed Time:Requests**|The number of requests based on elapsed time.|  
+
 |**Elapsed Time:Total(ms)**|The elapsed time of the batch.|  
 
 ## See Also

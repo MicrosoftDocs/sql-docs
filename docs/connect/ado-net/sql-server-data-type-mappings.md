@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Data Type Mappings"
-description: Learn about mapping between the different type systems for SQL Server and the .NET Framework. This article summarizes how the systems interact in Microsoft SqlClient Data Provider for SQL Server.
+description: Learn about mapping between the different type systems for SQL Server and the .NET Framework. This article summarizes how the systems interact in the Microsoft SqlClient Data Provider for SQL Server.
 ms.date: "11/13/2020"
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
 ms.prod: sql

@@ -53,7 +53,7 @@
       items:
       - name: Authentication
         href: ../connect/ado-net/sql/authentication-sql-server.md
-      - name: Azure Active Directory Authentication
+      - name: Azure Active Directory authentication
         href: ../connect/ado-net/sql/azure-active-directory-authentication.md
       - name: Application security scenarios
         href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md

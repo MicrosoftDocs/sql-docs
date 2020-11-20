@@ -17,18 +17,18 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-In ADO.NET, you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string. The **Connection** object you use depends on the type of data source.  
-  
+In Microsoft SqlClient data provider, you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string. The **Connection** object you use depends on the type of data source.
+
 The Microsoft SqlClient Data Provider for SQL Server includes a <xref:Microsoft.Data.SqlClient.SqlConnection> type that is derived from a <xref:System.Data.Common.DbConnection> class.
-  
+
 ## In This Section  
 
- [Establishing the Connection](establishing-the-connection.md)\
- Describes how to use a **Connection** object to establish a connection to a data source.  
-  
- [Connection Events](connection-events.md)\
- Describes how to use an **InfoMessage** event to retrieve informational messages from a data source.  
-  
+[Establishing the Connection](establishing-the-connection.md)\
+Describes how to use a **Connection** object to establish a connection to a data source.
+
+[Connection Events](connection-events.md)\
+Describes how to use an **InfoMessage** event to retrieve informational messages from a data source.
+
 ## See also
 
 - [Connection Strings](connection-strings.md)

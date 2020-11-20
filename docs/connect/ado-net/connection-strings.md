@@ -1,6 +1,6 @@
 ---
 title: "Connection Strings"
-description: Learn about connection strings in ADO.NET, which contain initialization information passed as a parameter from a data provider to a data source.
+description: Learn about connection strings in Microsoft SqlClient Data Provider for SQL Server, which contain initialization information passed as a parameter from a data provider to a data source.
 ms.date: "11/13/2020"
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.prod: sql
@@ -59,11 +59,11 @@ Keyword=a=b=c
 
 Since each value is read until the next semicolon or the end of string, the value in the latter example is `a=b=c`, and the final semicolon is optional.
 
-All connection strings share the same basic syntax described above. The set of recognized keywords depends on the provider. The *ADO.NET* data provider for *SQL Server* (`SqlClient`) supports many keywords from older APIs, but is generally more flexible and accepts synonyms for many of the common connection string keywords.
+All connection strings share the same basic syntax described above. The set of recognized keywords depends on the provider. The *Microsoft SqlClient* data provider for *SQL Server* supports many keywords from older APIs, but is generally more flexible and accepts synonyms for many of the common connection string keywords.
 
 Typing mistakes can cause errors. For example, `Integrated Security=true` is valid, but `IntegratedSecurity=true` causes an error.
 
-Connection strings constructed manually at run time from unvalidated user input are vulnerable to string-injection attacks and jeopardize security at the data source. To address these problems, the [connection string builder](connection-string-builders.md) has created. This connection string builder expose parameters as strongly typed properties, and make it possible to validate the connection string before it's sent to the data source.
+Connection strings constructed manually at run time from unvalidated user input are vulnerable to string-injection attacks and jeopardize security at the data source. To address these problems, the [connection string builder](connection-string-builders.md) has created. This connection string builder exposes parameters as strongly typed properties, and make it possible to validate the connection string before it's sent to the data source.
 
 ## In This Section
 

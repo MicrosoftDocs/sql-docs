@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Data Type Mappings"
-description: Learn about mapping between the different type systems for SQL Server and the .NET Framework. This article summarizes how the systems interact in ADO.NET.
+description: Learn about mapping between the different type systems for SQL Server and the .NET Framework. This article summarizes how the systems interact in Microsoft SqlClient Data Provider for SQL Server.
 ms.date: "11/13/2020"
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
 ms.prod: sql
@@ -19,8 +19,8 @@ ms.reviewer: v-chmalh
 
 SQL Server and the .NET Framework are based on different type systems. For example, the .NET Framework <xref:System.Decimal> structure has a maximum scale of 28, whereas the SQL Server decimal and numeric data types have a maximum scale of 38. To maintain data integrity when reading and writing data, the  <xref:Microsoft.Data.SqlClient.SqlDataReader> exposes SQL Server–specific typed accessor methods that return objects of <xref:System.Data.SqlTypes> as well as accessor methods that return .NET Framework types. Both SQL Server types and .NET Framework types are also represented by enumerations in the <xref:System.Data.DbType> and <xref:System.Data.SqlDbType> classes, which you can use when specifying <xref:Microsoft.Data.SqlClient.SqlParameter> data types.
 
- The following table shows the inferred .NET Framework type, the <xref:System.Data.DbType> and <xref:System.Data.SqlDbType> enumerations, and the accessor methods for the <xref:Microsoft.Data.SqlClient.SqlDataReader>.  
-  
+The following table shows the inferred .NET Framework type, the <xref:System.Data.DbType> and <xref:System.Data.SqlDbType> enumerations, and the accessor methods for the <xref:Microsoft.Data.SqlClient.SqlDataReader>.
+
 |SQL Server Database Engine type|.NET Framework type|SqlDbType enumeration|SqlDataReader SqlTypes typed accessor|DbType enumeration|SqlDataReader DbType typed accessor|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  
 |bigint|Int64|<xref:System.Data.SqlDbType.BigInt>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlInt64%2A>|<xref:System.Data.DbType.Int64>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetInt64%2A>|  
@@ -54,15 +54,15 @@ SQL Server and the .NET Framework are based on different type systems. For examp
 |uniqueidentifier|Guid|<xref:System.Data.SqlDbType.UniqueIdentifier>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlGuid%2A>|<xref:System.Data.DbType.Guid>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetGuid%2A>|  
 |varbinary|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |varchar|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:Microsoft.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|none|  
-  
+|xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|none|
+
 <sup>1</sup> You cannot set the `DbType` property of a `SqlParameter` to `SqlDbType.Date`.  
-<sup>2</sup> Use a specific typed accessor if you know the underlying type of the `sql_variant`.  
-  
+<sup>2</sup> Use a specific typed accessor if you know the underlying type of the `sql_variant`.
+
 ## SQL Server documentation
 
 For more information about SQL Server data types, see [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
-  
+
 ## See also
 
 - [SQL Server Data Types and ADO.NET](./sql/sql-server-data-types.md)

@@ -395,7 +395,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 ## Next steps
 
-[Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](../../configure-windows/database-engine-instances-sql-server?view=sql-server-2017&preserve-view=true).  
+[Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](../../database-engine/configure-windows/database-engine-instances-sql-server.md).  
   
 To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md).  
   

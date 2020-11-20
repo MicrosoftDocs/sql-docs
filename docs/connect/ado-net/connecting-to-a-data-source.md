@@ -17,7 +17,7 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-In Microsoft SqlClient data provider, you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string. The **Connection** object you use depends on the type of data source.
+In the Microsoft SqlClient data provider, you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string. The **Connection** object you use depends on the type of data source.
 
 The Microsoft SqlClient Data Provider for SQL Server includes a <xref:Microsoft.Data.SqlClient.SqlConnection> type that is derived from a <xref:System.Data.Common.DbConnection> class.
 

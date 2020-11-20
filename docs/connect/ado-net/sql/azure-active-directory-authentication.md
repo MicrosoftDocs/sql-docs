@@ -13,7 +13,6 @@ ms.author: v-jizho2
 ms.reviewer: 
 ---
 
-
 # Using Azure Active Directory Authentication with SqlClient
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
@@ -24,7 +23,7 @@ This article describes how to connect to Azure SQL data sources using Azure Acti
 
 Azure Active Directory (Azure AD) authentication uses identities in Azure Active Directory to access Azure SQL data sources such as Azure SQL Database, Azure SQL Managed Instance, and Azure Synapse Analytics. **Microsoft.Data.SqlClient** allows client applications to specify Azure AD credentials in different authentication modes when connecting to Azure SQL Database. By setting the `Authentication` connection property in the connection string, the client can choose a preferred Azure AD authentication mode according to the value provided. For more information about Azure AD authentication, see [Connecting to SQL Database By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview).
 
-Starting with **Microsoft.Data.SqlClient** 2.0.0, support for `Active Directory Password` authentication, `Active Directory Integrated authentication`, and `Active Directory Interactive` authentication has been extended across .NET Framework, .NET Core, and .NET Standard. A new `Active Directory Service Principal` authentication mode is also added in SqlClient 2.0.0 that makes use of the client ID and secret of a service principal identity to accomplish authentication. More authentication modes are added in SqlClient 2.1.0 including `Active Directory Device Code Flow` and `Active Directory Managed Identity` (also known as `Active Directory MSI`). These new modes enable the application to acquire an access token to connect to the server. More information about all the Active Directory authentications are covered in the following sections.
+The early **Microsoft.Data.SqlClient** supports `Active Directory Password` for .NET Framework, .NET Core, and .NET Standard. It also supports `Active Directory Integrated` authentication and `Active Directory Interactive` authentication for .NET Framework. Starting with **Microsoft.Data.SqlClient** 2.0.0, support for `Active Directory Integrated authentication` and `Active Directory Interactive` authentication has been extended across .NET Framework, .NET Core, and .NET Standard. A new `Active Directory Service Principal` authentication mode is also added in SqlClient 2.0.0 that makes use of the client ID and secret of a service principal identity to accomplish authentication. More authentication modes are added in SqlClient 2.1.0 including `Active Directory Device Code Flow` and `Active Directory Managed Identity` (also known as `Active Directory MSI`). These new modes enable the application to acquire an access token to connect to the server. More information about all the Active Directory authentications are covered in the following sections.
 
 
 ## Setting Azure Active Directory authentication in the connection string
@@ -41,12 +40,12 @@ When connecting to Azure SQL data sources with Azure AD authentication, the appl
 | Active Directory Managed Identity, <br>Active Directory MSI | Authenticate with an Azure AD identity using system-assigned or user-assigned managed identity | .NET Framework 4.6+, .NET Core 2.1+, .NET Standard 2.0+ | 2.1.0+ |
 
 > [!NOTE]
-> <sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, the `Active Directory Integrated` and `Active Directory Interactive` authentications are only supported on .NET Framework 4.6+. 
+> <sup>1</sup> Before **Microsoft.Data.SqlClient** 2.0.0, `Active Directory Integrated` and `Active Directory Interactive` authentications are only supported on .NET Framework 4.6+. 
 
 
 ## Connecting with Active Directory Password authentication
 
-The `Active Directory Password` authentication mode supports authentication to Azure data sources with Azure AD for native or federated Azure AD users. When using this mode, user credentials must be provided in the connection string. The following example shows how to use `Active Directory Password` authentication.
+`Active Directory Password` authentication mode supports authentication to Azure data sources with Azure AD for native or federated Azure AD users. When using this mode, user credentials must be provided in the connection string. The following example shows how to use `Active Directory Password` authentication.
 
 ```c#
 // Use your own Server, Database, User Id, and Password.
@@ -60,13 +59,20 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 ## Connecting with Active Directory Integrated authentication
 
-To use the `Active Directory Integrated` authentication mode, you need to federate the on-premise Active Directory with Azure AD in the cloud. Federation can be done using Active Directory Federation Services (ADFS), for example. When logged in to a domain-joined machine, you can access Azure SQL data sources without being prompted for credentials with this mode. Username and password cannot be specified in the connection string. The Credential property of SqlConnection cannot be set in this mode. The following code snippet is an example of when `Active Directory Integrated` authentication is in use.
+To use `Active Directory Integrated` authentication mode, you need to federate the on-premise Active Directory with Azure AD in the cloud. Federation can be done using Active Directory Federation Services (ADFS), for example. When logged in to a domain-joined machine, you can access Azure SQL data sources without being prompted for credentials with this mode. Username and password cannot be specified in the connection string for .NET framework applications. Username is optional in the connection string for .NET Core and .NET Standard applications. The Credential property of SqlConnection cannot be set in this mode. The following code snippet is an example of when `Active Directory Integrated` authentication is in use.
 
 ```c#
 // Use your own Server and Database.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Database=testdb";
+string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Database=testdb";
 
-using (SqlConnection conn = new SqlConnection(ConnectionString)) {
+using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
+    conn.Open();
+}
+
+// User Id is optional for .NET Core and .NET Standard
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Database=testdb; User Id=user@domain.com";
+
+using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
 }
 ```
@@ -79,9 +85,16 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 ```c#
 // Use your own Server, Database, and User Id.
 // User Id is optional.
-string ConnectionString = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Database=testdb; User Id=user@domain.com";
+string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Database=testdb; User Id=user@domain.com";
 
-using (SqlConnection conn = new SqlConnection(ConnectionString)) {
+using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
+    conn.Open();
+}
+
+// User Id is not provided.
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Interactive; Database=testdb";
+
+using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
 }
 ```
@@ -126,11 +139,11 @@ Since **Microsoft.Data.SqlClient** 2.1.0, the driver now supports authentication
 // Use your own Server and Database.
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; Database=testdb";
 
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Database=testdb";
-
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
+
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -144,11 +157,11 @@ The following example demonstrates `Active Directory Managed Identity` authentic
 // Use your own Server, Database, and User Id.
 string ConnectionString1 = @"Server=demo.database.windows.net; Authentication=Active Directory Managed Identity; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
-string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; User Id=ObjectIdOfManagedIdentity; Database=testdb";
-
 using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
+
+string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory MSI; User Id=ObjectIdOfManagedIdentity; Database=testdb";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
     conn.Open();
@@ -198,6 +211,8 @@ The following example shows how to set an application client ID via a configurat
 </configuration>
 ```
 
+## Custom SQL Authentication Provider support
+
 Given more flexibility, the client application can also use its own provider for AD authentication instead of using the _ActiveDirectoryAuthenticationProvider_ class. The custom authentication provider needs to be a subclass of _SqlAuthenticationProvider_ with overridden methods. The following example displays how to use a new authentication provider for `Active Directory Device Code Flow` authentication.
 
 [!code-csharp [CustomDeviceCodeFlowAzureAuthenticationProvider#1](~/../sqlclient/doc/samples/CustomDeviceCodeFlowAzureAuthenticationProvider.cs#1)]
@@ -208,16 +223,27 @@ In addition, to improving the `Active Directory Interactive` authentication expe
 public class ActiveDirectoryAuthenticationProvider
 {
     // For .NET Framework targeted applications only
+    // Sets a reference to the current System.Windows.Forms.IWin32Window that triggers the browser to be shown. 
+    // Used to center the browser pop-up onto this window.
     public void SetIWin32WindowFunc(Func<IWin32Window> iWin32WindowFunc);
 
     // For .NET Standard targeted applications only
+    // Sets a reference to the ViewController (if using Xamarin.iOS), Activity (if using Xamarin.Android) IWin32Window or IntPtr (if using .NET Framework). 
+    // Used for invoking the browser for Active Directory Interactive authentication.
     public void SetParentActivityOrWindowFunc(Func<object> parentActivityOrWindowFunc);
 
     // For .NET Framework, .NET Core and .NET Standard targeted applications
+    // Sets a callback method which is invoked with a custom Web UI instance that will let the user sign-in with Azure Active Directory, present consent if needed, and get back the authorization code. 
+    // Applicable when working with Active Directory Interactive authentication.
     public void SetAcquireAuthorizationCodeAsyncCallback(Func<Uri, Uri, CancellationToken, Task<Uri>> acquireAuthorizationCodeAsyncCallback);
+
+    // For .NET Framework, .NET Core and .NET Standard targeted applications
+    // Clears cached user tokens from the token provider.
+    public static void ClearUserTokenCache();
 }
 ```
 
 
 ## See Also
-[Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals)
+- [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals)
+- [Authentication flows](/azure/active-directory/develop/msal-authentication-flows)

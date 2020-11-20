@@ -25,13 +25,13 @@ Before you configure Active Directory authentication, you need to set up an Acti
 
 ### Reverse DNS (RDNS)
 
-When setting up a Windows Server a domain controller, there may not be a RDNS zone. Ensure that an applicable RDNS zone exists for both the domain controller and the IP address of the Linux machine which will be running SQL Server.
+When you set up a computer running Windows Server as a domain controller, you might not have a RDNS zone by default. Ensure that an applicable RDNS zone exists for both the domain controller and the IP address of the Linux machine that will be running SQL Server.
 
-Also ensure that a PTR record exists pointing to the domain controller(s).
+Also ensure that a PTR record that points to your domain controllers exists.
 
 ## Check the connection to a domain controller
 
-Check that you can contact the domain controller with both the short and fully qualified names of the domain as well as the hostname of the domain controller. The IP of the domain controller should also resolve to the FQDN of the domain controller:
+Check that you can contact the domain controller by using both the short and the fully qualified names of the domain, and by using the hostname of the domain controller. The IP of the domain controller also should resolve to the FQDN of the domain controller:
 
 ```bash
 ping contoso
@@ -150,7 +150,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    
    **SLES 12:**
    
-   Note that these steps are specific for SLES 12 which is the only officially supported version of SUSE for Linux.
+   Note that these steps are specific for SLES 12, which is the only officially supported version of SUSE for Linux.
 
    ```bash
    sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
@@ -168,7 +168,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
 
 1. After you confirm that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain. This command creates a new computer account in AD, creates the **/etc/krb5.keytab** host keytab file, configures the domain in **/etc/sssd/sssd.conf**, and updates **/etc/krb5.conf**.
 
-   Due to an issue with realmd, first set the machine hostname to the FQDN rather than just the machine name. Otherwise, realmd may not create all required SPNs for the machine and DNS entries will not automatically update even if your domain controller supports dynamic DNS updates.
+   Because of an issue with **realmd**, first set the machine hostname to the FQDN instead of to the machine name. Otherwise, **realmd** might not create all required SPNs for the machine and DNS entries won't automatically update, even if your domain controller supports dynamic DNS updates.
    
    ```bash
    sudo hostname <old hostname>.contoso.com

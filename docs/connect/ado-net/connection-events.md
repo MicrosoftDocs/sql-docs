@@ -9,8 +9,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: DavoudEshtehari
-ms.author: v-daesht
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
 # Connection Events

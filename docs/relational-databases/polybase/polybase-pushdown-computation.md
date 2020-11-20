@@ -13,11 +13,9 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Pushdown computations in PolyBase
 
-## DMV
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-
-Pushdown computation improves the performance of queries on your Hadoop cluster.
+Pushdown computation improves the performance of queries on external data sources. Beginning in SQL Server 2016, pushdown computations were available for Hadoop external data sources. SQL Server 2019 introduces pushdown computations for other types of external data sources.
 
 ## Enable pushdown
 

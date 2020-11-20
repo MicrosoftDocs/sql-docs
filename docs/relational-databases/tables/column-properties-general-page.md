@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The type of data that the column can hold. If the data type is a system data type, then the system data type is displayed. If the data type is a user-defined data type, the system data type that makes up the user-defined data type is displayed.  
   
  **Primary Key**  
- Indicates whether the column is a primary key. Possible values are **True**and **False**.  
+ Indicates whether the column is a primary key. Possible values are **True** and **False**.  
   
  **Allow Nulls**  
  Indicates whether the column accepts null values. Possible values are **True** and **False**.  

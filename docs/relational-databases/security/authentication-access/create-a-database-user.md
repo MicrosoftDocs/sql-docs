@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ##  <a name="Understanding"></a> Understanding the Types of Users  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] presents 6 options when creating a database user. The following graphic shows the 6 options in the green box, and indicates what they represent.  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![Diagram that explains the different types of users.](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### Selecting the Type of User  
  **Login or user that is not mapped to a login**  

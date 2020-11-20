@@ -47,7 +47,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 4. On the Product Updates page, the latest available SQL Server product updates are displayed. If you don't want to include the updates, clear the **Include SQL Server product updates** check box. If no product updates are discovered SQL Server Setup does not display this page and auto advances to the **Install Setup Files** page.
 
-5. On the Install Setup files page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for SQL Server Setup is found, and is specified to be included, that update will also be installed. select **Install** to install Setup Support files.  
+5. On the Install Setup files page, Setup provides the progress of downloading, extracting, and installing the Setup files. If an update for SQL Server Setup is found, and is specified to be included, that update will also be installed. Select **Install** to install Setup Support files.  
 
 6. The System Configuration Checker will verify the system state of your computer before Setup continues.  
 
@@ -57,7 +57,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
     The prerequisites for the selected features are displayed on the right-hand pane. SQL Server Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.
 
-    The System Configuration Checker will verify the system state of your computer before Setup continues. select **Next** to continue.
+    The System Configuration Checker will verify the system state of your computer before Setup continues. Select **Next** to continue.
 
 9. The Disk Space Requirements page calculates the required disk space for the features you specify, and compares requirements to the available disk space on the computer where Setup is running.
 
@@ -109,7 +109,7 @@ Before you continue, review articles in [Planning a SQL Server Installation](../
 
 19. Use the Distributed Replay Controller Configuration page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions will have unlimited access to the Distributed Replay controller service.
 
-    select the **Add Current User** button to add the users to whom you want to grant access permissions for the Distributed Replay controller service. select the **Add** button to add access permissions for the Distributed Replay controller service. select the **Remove** button to remove access permissions from the Distributed Replay controller service.
+    Select the **Add Current User** button to add the users to whom you want to grant access permissions for the Distributed Replay controller service. Select the **Add** button to add access permissions for the Distributed Replay controller service. Select the **Remove** button to remove access permissions from the Distributed Replay controller service.
 
     To continue, select **Next**.
 

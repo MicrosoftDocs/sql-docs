@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Manage a replicated Publisher database as part of an Always On availability group
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

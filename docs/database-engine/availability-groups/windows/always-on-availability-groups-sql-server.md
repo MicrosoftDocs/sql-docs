@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "AlwaysOn [SQL Server], see Availability Groups [SQL Server]"
   - "Availability Groups [SQL Server]"
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Always On availability groups: a high-availability and disaster-recovery solution
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

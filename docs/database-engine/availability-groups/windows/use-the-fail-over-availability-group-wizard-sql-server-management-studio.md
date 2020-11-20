@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

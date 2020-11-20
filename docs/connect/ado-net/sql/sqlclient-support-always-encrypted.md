@@ -25,7 +25,7 @@ Always Encrypted allows client applications to encrypt sensitive data and never 
 - Configure Always Encrypted in your database. This involves provisioning Always Encrypted keys and setting up encryption for selected database columns. If you don't already have a database with Always Encrypted configured, follow the directions in [Getting Started with Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
 - Ensure the required .NET platform is installed on your development machine. With [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md), the Always Encrypted feature is supported for both .NET Framework and .NET Core. Make sure [.NET Framework 4.6](/dotnet/framework/) or higher, or [.NET Core 2.1](/dotnet/core/) or higher is configured as the target .NET platform version in your development environment. Starting from Microsoft.Data.SqlClient version 2.1.0, the Always Encrypted feature is also supported for [.NET Standard 2.0](/dotnet/standard/net-standard). To use Always Encrypted with secure enclaves, [.NET Standard 2.1](/dotnet/standard/net-standard) is required. If you're using Visual Studio, refer to [Framework targeting overview](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
-The following table summarizes the required .NET platforms to use Always Encrypted feature with **Microsoft.Data.SqlClient**.
+The following table summarizes the required .NET platforms to use Always Encrypted with **Microsoft.Data.SqlClient**.
 
 | Support Always Encrypted | Support Always Encrypted with Secure Enclave  | Target Framework | Microsoft.Data.SqlClient Version | Operating System |
 |:--|:--|:--|:--:|:--:|
@@ -35,7 +35,7 @@ The following table summarizes the required .NET platforms to use Always Encrypt
 | Yes | Yes | .NET Standard 2.1+ | 2.1.0+ | Windows, Linux, macOS |
 
 > [!NOTE]
-> <sup>1</sup> Before Microsoft.Data.SqlClient version 2.1.0, the Always Encrypted feature is only supported on Windows. 
+> <sup>1</sup> Before Microsoft.Data.SqlClient version 2.1.0, Always Encrypted is only supported on Windows. 
 
 ## Enabling Always Encrypted for application queries
 

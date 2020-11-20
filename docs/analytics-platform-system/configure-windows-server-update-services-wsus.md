@@ -151,7 +151,7 @@ To configure WSUS, you need to:
   
     Select **Critical Updates**, **Security Updates** and **Update Rollups** for the updates that will be synchronized for the Analytics Platform System appliance, and then click **Next**.  
   
-    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choose classifications](./media/configure-windows-server-update-services-wsus/sql-server-pdw-wsus-choose-classifications.png "sql-server-pdw-wsus-choose-classifications")  
   
 10. Configure the synchronization schedule.  
   

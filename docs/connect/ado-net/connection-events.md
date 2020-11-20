@@ -19,7 +19,7 @@ ms.reviewer: v-chmalh
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-All of the .NET Framework data providers have **Connection** objects with two events that you can use to retrieve informational messages from a data source or to determine if the state of a **Connection** has changed. The following table describes the events of the **Connection** object.
+The Microsoft SqlClient Data Provider for SQL Server has **Connection** objects with two events that you can use to retrieve informational messages from a data source or to determine if the state of a **Connection** has changed. The following table describes the events of the **Connection** object.
 
 |Event|Description|  
 |-----------|-----------------|  

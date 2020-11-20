@@ -20,7 +20,7 @@ ms.author: wiassaf
 
 [!INCLUDE [sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
-Returns list of table objects are available to be virtualized.
+Returns list of table objects that are available to be virtualized.
 
 > [!NOTE]
 > This procedure is introduced in [SQL 2019 CU5](../../big-data-cluster/release-notes-big-data-cluster.md#cu5).
@@ -46,7 +46,7 @@ The name of the external data source to get the metadata from. `@data_source` is
 `[ @object_root_name = ] 'object_root_name'`   
 This parameter is the root of the name of the object(s) to search for. `@object_root_name` is `nvarchar(max)`, with a default of `NULL`.
 
-The results of this call only returns external objects that begin with `@object_root_name`.
+This call only returns external objects that begin with the value set for `@object_root_name`.
 
 If an ODBC data source connects to a Relational Database Management System (RDBMS) that uses three-part names, `@object_root_name` cannot contain a partial database name. In these cases, the parameter `@object_root_name` should contain all three parts, with the third part being the object name to search.
 > [!CAUTION]
@@ -97,7 +97,9 @@ Use `sp_data_source_objects` and [`sp_data_source_table_columns`](sp-data-source
 
 ## Examples  
 
-### Get all databases, schemata, and tables/views
+### SQL Server
+
+The following example returns all databases, schemata, and tables/views
 
 ```sql
 DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
@@ -111,10 +113,10 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | DATABASE | "database" | database | NULL |
 | SCHEMA | "database"."dbo" | dbo | NULL |
 | TABLE | "database"."dbo"."customer" | customer | [database].[dbo].[customer] |
-| TABLE | "database"."dbo"."lineitem" | lineitem | [database].[dbo].[lineitem] |
+| TABLE | "database"."dbo"."item" | item | [database].[dbo].[item] |
 | TABLE | "database"."dbo"."nation" | nation | [database].[dbo].[nation] |
 
-### Get all databases
+The following example returns all databases
 
 ```sql
 DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
@@ -130,7 +132,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 | DATABASE | "tempdb" | tempdb | NULL |
 | DATABASE | "database" | database | NULL |
 
-### Get all schemata in a database
+The following example returns all schemata in a database
 
 ```sql
 DECLARE @data_source SYSNAME = N'ExternalDataSourceName'; 
@@ -144,7 +146,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 | SCHEMA | "database"."INFORMATION_SCHEMA" | INFORMATION_SCHEMA | NULL |
 | SCHEMA | "database"."sys" | sys | NULL |
 
-### Get all tables in schema 
+The following example returns all tables in schema 
 
 ```sql
 DECLARE @data_source SYSNAME = N'ExternalDataSourceName'; 
@@ -155,14 +157,14 @@ EXEC sp_data_source_objects @data_source, @object_root_name;
 | OBJECT_TYPE | OBJECT_NAME | OBJECT_LEAF_NAME | TABLE_LOCATION |
 |--|--|--|--|
 | TABLE | "database"."dbo"."customer" | customer | [database].[dbo].[customer] |
-| TABLE | "database"."dbo"."lineitem" | lineitem | [database].[dbo].[lineitem] |
+| TABLE | "database"."dbo"."item" | item | [database].[dbo].[item] |
 | TABLE | "database"."dbo"."nation" | nation | [database].[dbo].[nation] |
 | TABLE | "database"."dbo"."orders" | orders | [database].[dbo].[orders] |
 | TABLE | "database"."dbo"."part" | part | [database].[dbo].[part] |
 
-## Oracle
+### Oracle
 
-### Get all schemata and tables, functions, views, etc
+The following example returns the complete schemata and tables, functions, views, and etc.
 
 ```sql
 DECLARE @data_source SYSNAME = N'ExternalDataSourceName'; 
@@ -179,9 +181,9 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | SCHEMA | "database" | database | NULL |
 | TABLE | "database"."customer" | customer | [ORACLEOBJECTROOT].[database].[customer] |
 
-## Teradata
+### Teradata
 
-### Get all databases and tables, functions, views, etc
+The following example returns all databases and tables, functions, views, and etc.
 
 ```SQL
 DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
@@ -198,9 +200,9 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 | DATABASE | "database" | database | NULL |
 | TABLE | "database"."customer" | customer | [database].[customer] |  
 
-## Mongo DB
+### Mongo DB
 
-### Get all databases and tables
+The following example returns all databases and tables.
 
 ```SQL
 DECLARE @data_source SYSNAME = N'ExternalDataSourceName';
@@ -213,7 +215,7 @@ EXEC sp_data_source_objects @data_source, @object_root_name, @max_search_depth;
 |--|--|--|--|
 | DATABASE | "database" | database | NULL |
 | TABLE | "database"."customer" | customer | [database].[customer] |
-| TABLE | "database"."lineitem" | lineitem | [database].[lineitem] |
+| TABLE | "database"."item" | item | [database].[item] |
 | TABLE | "database"."nation" | nation | [database].[nation] |
 | TABLE | "database"."orders" | orders | [database].[orders] |
 

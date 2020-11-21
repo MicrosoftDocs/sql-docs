@@ -7088,7 +7088,7 @@
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
-      - name: Push-down computation
+      - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md
@@ -13607,10 +13607,14 @@
         href: relational-databases/system-stored-procedures/sp-oastop-transact-sql.md
     - name: PolyBase
       items:
-      - name: polybase_join_group
+      - name: sp_polybase_join_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md
       - name: sp_polybase_leave_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
+      - name: sp_data_source_table_columns
+        href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
+      - name: sp_data_source_objects
+        href: relational-databases/system-stored-procedures/sp-data-source-objects.md
     - name: Policy-Based Management
       href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
       items:

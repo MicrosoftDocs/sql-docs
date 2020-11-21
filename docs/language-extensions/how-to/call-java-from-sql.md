@@ -5,7 +5,7 @@ description: Learn how to call Java classes from a SQL Server stored procedures 
 author: dphansen
 ms.author: davidph 
 ms.date: 06/25/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

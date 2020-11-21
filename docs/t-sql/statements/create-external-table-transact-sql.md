@@ -204,7 +204,7 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and Restrictions
 
-Since the data for an external table is not under the direct management control o fSQL Server, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Since the data for an external table is not under the direct management control of SQL Server, it can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
 You can create multiple external tables that each reference different external data sources. If you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can't simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
@@ -219,13 +219,26 @@ Constructs and operations not supported:
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
 
-Query limitations:
+### Query limitations
 
 PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33k files. We recommend that you keep external file paths short and use no more than 30k files per HDFS folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur.
 
-Table width limitations:
+### Table width limitations
 
 PolyBase in SQL Server 2016 has a row width limit of 32 KB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 32 KB, PolyBase can't query the data.
+
+### Data type limitations
+
+The following data types cannot be used in PolyBase external tables:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Any user defined type
 
 ## Locking
 
@@ -713,6 +726,19 @@ Use of External Tables prevents use of parallelism in the query plan.
 
 External tables are implemented as Remote Query and as such the estimated number of rows returned is generally 1000, there are other rules based on the type of predicate used to filter the external table. They are rules-based estimates rather than estimates based on the actual data in the external table. The optimizer doesn't access the remote data source to obtain a more accurate estimate.
 
+### Data type limitations
+
+The following data types cannot be used in PolyBase external tables:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Any user defined type
+
 ## Locking
 
 Shared lock on the SCHEMARESOLUTION object.
@@ -922,13 +948,26 @@ Constructs and operations not supported:
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
 
-Query limitations:
+### Query limitations
 
 It is recommended to not exceed no more than 30k files per folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur or performance may degrade.
 
-Table width limitations:
+### Table width limitations
 
 PolyBase in Azure Data Warehouse has a row width limit of 1 MB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 1 MB, PolyBase can't query the data.
+
+### Data type limitations
+
+The following data types cannot be used in PolyBase external tables:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Any user defined type
 
 ## Locking
 
@@ -1163,15 +1202,28 @@ Constructs and operations not supported:
 - The DEFAULT constraint on external table columns
 - Data Manipulation Language (DML) operations of delete, insert, and update
 
-Query limitations:
+### Query limitations
 
 PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33k files. We recommend that you keep external file paths short and use no more than 30k files per HDFS folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur.
 
-Table width limitations:
+### Table width limitations
 
 PolyBase in SQL Server 2016 has a row width limit of 32 KB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 32 KB, PolyBase can't query the data.
 
 In Azure Synapse Analytics, this limitation has been raised to 1 MB.
+
+### Data type limitations
+
+The following data types cannot be used in PolyBase external tables:
+
+- `geography`
+- `geometry`
+- `hierarchyid`
+- `image`
+- `text`
+- `nText`
+- `xml`
+- Any user defined type
 
 ## Locking
 

@@ -7,7 +7,7 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---

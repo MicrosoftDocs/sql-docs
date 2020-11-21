@@ -26,7 +26,7 @@ Latches are lightweight synchronization primitives that are used by the SQL Serv
 
 Contention on page latches is the most common scenario encountered on multi-CPU systems and so most of this article will focus on these.
 
-Latch contention occurs when multiple threads concurrently attempt to acquire incompatible latches to the same in-memory structure. As a latch is an internal control mechanism; the SQL engine automatically determines when to user them. Because the behavior of latches is deterministic, application decisions including schema design can affect this behavior. This article aims to provide the following information:
+Latch contention occurs when multiple threads concurrently attempt to acquire incompatible latches to the same in-memory structure. As a latch is an internal control mechanism; the SQL engine automatically determines when to use them. Because the behavior of latches is deterministic, application decisions including schema design can affect this behavior. This article aims to provide the following information:
 
 * Background information on how latches are used by SQL Server. 
 * Tools used to investigate latch contention. 

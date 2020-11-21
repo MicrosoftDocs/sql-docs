@@ -1,7 +1,7 @@
 ---
 title: "Linux and macOS Installation for the Drivers for PHP"
 description: "In these instructions, learn how to install the Microsoft Drivers for PHP for SQL Server on Linux or macOS."
-ms.date: "10/30/2020"
+ms.date: "11/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -405,6 +405,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 ## Testing Your Installation
 
 To test this sample script, create a file called testsql.php in your system's document root. This is `/var/www/html/` on Ubuntu, Debian, and Redhat, `/srv/www/htdocs` on SUSE, `/var/www/localhost/htdocs` on Alpine, or `/usr/local/var/www` on macOS. Copy the following script to it, replacing the server, database, username, and password as appropriate.
+
 ```php
 <?php
 $serverName = "yourServername";
@@ -464,7 +465,14 @@ function formatErrors($errors)
 }
 ?>
 ```
-Point your browser to https://localhost/testsql.php (https://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database. If you don't see a success message showing SQL version information, see [Support resources](support-resources-for-the-php-sql-driver.md) for places to go for help.
+
+Point your browser to https://localhost/testsql.php (https://localhost:8080/testsql.php on macOS). You should now be able to connect to your SQL Server/Azure SQL database. If you don't see a success message showing SQL version information, you can do some basic troubleshooting by running the script from the command line:
+
+```bash
+php testsql.php
+```
+
+If running from the command line is successful but nothing shows in your browser, check the [Apache log files](https://linuxize.com/post/apache-log-files/#location-of-the-log-files). For additional help, see [Support resources](support-resources-for-the-php-sql-driver.md) for places to go.
 
 ## See Also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

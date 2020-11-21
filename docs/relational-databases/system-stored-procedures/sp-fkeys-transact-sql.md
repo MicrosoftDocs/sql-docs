@@ -112,7 +112,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
  The following example retrieves a list of foreign keys for the `DimDate` table in the `AdventureWorksPDW2012` database. No rows are returned because [!INCLUDE[ssDW](../../includes/ssdw-md.md)] does not support foreign keys.  
   
 ```sql  
-EXEC sp_fkeys @pktable_name = N'DimDate;  
+EXEC sp_fkeys @pktable_name = N'DimDate';  
 ```  
   
 ## See Also  

@@ -74,6 +74,8 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**socket_count** |**int** | **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.<br /><br />Specifies the number of processor sockets available on the system. |  
 |**cores_per_socket** |**int** | **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.<br /><br />Specifies the number of processors per socket available on the system. |  
 |**numa_node_count** |**int** | **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later.<br /><br />Specifies the number of numa nodes available on the system. This column includes physical numa nodes as well as soft numa nodes. |  
+|**container_type** |**int** | **Applies to:** <br /><br /> |  
+|**container_type_desc** |**nvarchar(60)** | **Applies to:** <br /><br /> |  
   
 ## Permissions
 

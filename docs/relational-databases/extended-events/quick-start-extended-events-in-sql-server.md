@@ -98,8 +98,8 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
    - For **Operator** choose a LIKE operator.
    - For **Value** type in **%SELECT%HAVING%**.
 
-   > [!NOTE]
-   > In this two part name, *sqlserver* is the package name, and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed* must be in the same package as the field we choose.
+> [!NOTE]
+> In this two part name, *sqlserver* is the package name, and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed* must be in the same package as the field we choose.
 
 9. In the upper-left, click the **Data Storage** page.
 
@@ -108,7 +108,7 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
     - This means the event data will be stored in a file that we can view.
     
 > [!NOTE]
-> SQL Server on premise does not support Azure blob storage as data storage target. 
+> You can't use Azure Blob Storage as a data storage target in an on-premises instance of SQL Server.
 
     ![New Session > Data Storage > Targets > Type > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 

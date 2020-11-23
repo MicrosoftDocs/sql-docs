@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], removing"
   - "Availability Groups [SQL Server], dropping"
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Remove an availability group (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

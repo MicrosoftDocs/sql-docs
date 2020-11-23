@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], installing"
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server Database Engine

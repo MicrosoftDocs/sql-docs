@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "backup jobs [SQL Server]"
   - "primary servers [SQL Server]"
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # About Log Shipping (SQL Server)

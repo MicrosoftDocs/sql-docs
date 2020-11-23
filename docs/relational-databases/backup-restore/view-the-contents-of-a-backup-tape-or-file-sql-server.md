@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database backups [SQL Server], viewing content"
   - "backing up databases [SQL Server], viewing content"
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # View the contents of a backup tape or file (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

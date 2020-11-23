@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Always On Availability group is offline
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

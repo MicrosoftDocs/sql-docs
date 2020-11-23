@@ -460,7 +460,7 @@ For a note about the minimum permission levels needed for each action in this se
 1. Alter the new login, and map the EKM credentials to the new login.
 
      ```sql  
-    --Now drop the credential mapping from the original association
+    --Now add the credential mapping to the new Login
     ALTER LOGIN TDE_Login
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```  

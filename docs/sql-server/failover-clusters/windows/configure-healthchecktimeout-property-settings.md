@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure HealthCheckTimeout Property Settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

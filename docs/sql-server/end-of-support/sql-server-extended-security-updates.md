@@ -2,7 +2,7 @@
 title: "What are Extended Security Updates?"
 description: Learn how to use the SQL Server registry to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, and SQL Server 2008 R2. 
 ms.custom: ""
-ms.date: "12/09/2019"
+ms.date: "11/23/2020"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -201,6 +201,23 @@ To download ESUs, follow these steps:
    ![Check security updates pane for available updates](media/sql-server-extended-security-updates/security-updates-sql-registry.png)
 
 1. Download security updates from here, if and when they are made available. 
+
+## Supported regions and data residency
+
+The **SQL Server registry** service (Preview) is available in a subset of the Azure regions. The following table shows the supported regions and the data residency in each.
+
+| **Region** | **Data residency** |
+|:--|:--|
+|East US| Geo|
+|East US 2| Geo|
+|West US 2| Geo|
+|Australia East| Geo|
+|Southeast Asia| Single region|
+|North Europe| Geo|
+|West Europe| Geo|
+|UK South| Geo|
+
+In the regions with geopgraphic residency, the SQL registry service maintains data backups in a geo-redundant storage account (GRS).  In the regions with the single region residency, the SQL registry service maintains data backups in a zone-redundant storage account (ZRS). For more information, see the [Trust Center](https://azuredatacentermap.azurewebsites.net/).
 
 ## Configure regional redundancy 
 

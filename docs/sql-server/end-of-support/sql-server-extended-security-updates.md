@@ -204,7 +204,7 @@ To download ESUs, follow these steps:
 
 ## Supported regions and data residency
 
-The **SQL Server registry** service (Preview) is available in a subset of the Azure regions. The following table shows the supported regions and the data residency in each.
+The **SQL Server registry** service (Preview) is available in a subset of the Azure regions. The following table shows the supported regions and the data residency type in each.
 
 | **Region** | **Data residency** |
 |:--|:--|

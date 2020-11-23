@@ -161,7 +161,12 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
 
 Reference code block
 
-:::code language="yaml" source="../../sql-server-samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
+```console
+curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml
+```
+
+
+:::code language="yaml" source="../../sql-server-samples/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
 
 Existing code block
 

@@ -159,57 +159,12 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
 
 ## `bdc-scc.yaml` file
 
-Reference code block
-
-```console
-curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml
-```
-
-
 :::code language="yaml" source="../../sql-server-samples/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
 
-Existing code block
+Use the following script to download bdc-scc.yaml.
 
-```yaml
-apiVersion: security.openshift.io/v1
-kind: SecurityContextConstraints
-metadata:
-  annotations:
-    kubernetes.io/description: SQL Server BDC custom scc is based on 'nonroot' scc plus additional capabilities.
-  generation: 2
-  name: bdc-scc
-allowHostDirVolumePlugin: false
-allowHostIPC: false
-allowHostNetwork: false
-allowHostPID: false
-allowHostPorts: false
-allowPrivilegeEscalation: true
-allowPrivilegedContainer: false
-allowedCapabilities:
-  - SETUID
-  - SETGID
-  - CHOWN
-  - SYS_PTRACE
-defaultAddCapabilities: null
-fsGroup:
-  type: RunAsAny
-readOnlyRootFilesystem: false
-requiredDropCapabilities:
-  - KILL
-  - MKNOD
-runAsUser:
-  type: MustRunAsNonRoot
-seLinuxContext:
-  type: MustRunAs
-supplementalGroups:
-  type: RunAsAny
-volumes:
-  - configMap
-  - downwardAPI
-  - emptyDir
-  - persistentVolumeClaim
-  - projected
-  - secret
+```console
+curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml -o bdc-scc.yaml
 ```
 
 ## Next steps

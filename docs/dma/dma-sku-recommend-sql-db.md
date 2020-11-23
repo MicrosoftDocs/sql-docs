@@ -37,6 +37,8 @@ The following are instructions to help you determine the SKU recommendations and
 
 - Download and install the latest version of [DMA](https://aka.ms/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
 - Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about how to find out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+  > [!NOTE]
+  > To collect machine information, the data collection script uses the Get-WmiObject cmdlet, which was deprecated in PowerShell 6. To run this script in PowerShell 6 or 7, you must replace the WMI cmdlets with the newer CIM cmdlets.
 - Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
 - Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
@@ -64,7 +66,7 @@ You don't need to perform this task for each database individually. The performa
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
      -CollectionTimeInSeconds 2400
-     -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
+     -DbConnectionString Server=localhost;Initial Catalog=master;Integrated Security=SSPI;
     ```
 
     After the command executes, the process will output a file including performance counters to the location you specified. You can use this file as input for the next part of the process, which will provide SKU recommendations for both single database and managed instances options.

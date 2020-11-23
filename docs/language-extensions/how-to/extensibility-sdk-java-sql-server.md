@@ -5,9 +5,8 @@ ms.prod: sql
 ms.technology: language-extensions
 ms.date: 11/05/2019
 ms.topic: conceptual
-author: nelgson
-ms.author: negust
-ms.reviewer: dphansen
+author: dphansen
+ms.author: davidph
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 

@@ -22,7 +22,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 This article describes how to identify and resolve Azure Key Vault key access issues that caused a database configured to use [transparent data encryption (TDE) with customer-managed keys in Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) to become inaccessible.
 
 ## Introduction
-When TDE is configured to use a customer-managed key in Azure Key Vault, continuous access to this TDE Protector is required for the database to stay online.  If the logical SQL server loses access to the customer-managed TDE protector in Azure Key Vault, a database will start denying all connections with the appropriate error message and change it's state to *Inaccessible* in the Azure portal.
+When TDE is configured to use a customer-managed key in Azure Key Vault, continuous access to this TDE Protector is required for the database to stay online.  If the logical SQL server loses access to the customer-managed TDE protector in Azure Key Vault, a database will start denying all connections with the appropriate error message and change its state to *Inaccessible* in the Azure portal.
 
 For the first 8 hours, if the underlying Azure key vault key access issue is resolved, the database will auto-heal and come online automatically. This means that for all intermittent and temporary network outage scenarios, no user action is required, and the database will come online automatically. In most cases, user action is required to resolve the underlying key vault key access issue. 
 

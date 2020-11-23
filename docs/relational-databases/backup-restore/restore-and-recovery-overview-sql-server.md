@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "database restores [SQL Server], scenarios"
   - "accelerated database recovery"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: mashamsft
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Restore and Recovery Overview (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

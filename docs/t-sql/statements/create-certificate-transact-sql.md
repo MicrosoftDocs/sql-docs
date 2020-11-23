@@ -106,6 +106,7 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

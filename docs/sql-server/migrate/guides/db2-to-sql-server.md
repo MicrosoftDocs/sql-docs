@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Migration guide: DB2 to SQL Server
-[!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 This migration guide teaches you to migrate your user databases from DB2 to SQL Server using the SQL Server Migration Assistant for DB2. 
 
@@ -155,49 +155,6 @@ For additional assistance, see the following resources, which were developed in 
 |[DB2 LUW pure scale on Azure - setup guide](https://github.com/Microsoft/DataMigrationTeam/blob/master/Whitepapers/DB2%20PureScale%20on%20Azure.pdf)|This guide serves as a starting point for a DB2 implementation plan. While business requirements will differ, the same basic pattern applies. This architectural pattern may also be used for OLAP applications on Azure.|
 
 These resources were developed as part of the Data SQL Ninja Program, which is sponsored by the Azure Data Group engineering team. The core charter of the Data SQL Ninja program is to unblock and accelerate complex modernization and compete data platform migration opportunities to Microsoft's Azure Data platform. If you think your organization would be interested in participating in the Data SQL Ninja program, please contact your account team and ask them to submit a nomination.
-
-## Partners
-
-The following partners can provide alternative methods for migration as well: 
-
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blitzz-logo.png" alt-text="Blitzz":::](https://www.blitzz.io/product)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/blueprint-logo.png" alt-text="Blueprint":::](https://bpcs.com/what-we-do)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/cognizant-logo.png" alt-text="Cognizant":::](https://www.cognizant.com/partners/microsoft)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/dxc-logo.png" alt-text="DXC":::](https://www.dxc.technology/application_services/offerings/139843/142343-application_services_for_microsoft_azure)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/hvr-logo.png" alt-text="HVR":::](https://www.hvr-software.com/solutions/azure-data-integration/)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/infosys-logo.png" alt-text="Infosys":::](https://www.infosys.com/services/)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/ispirer-logo.png" alt-text="Ispirer":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
-   :::column-end:::
-   :::column span="":::
-      [:::image type="content" source="media/db2-to-sql-server/querysurge-logo.png" alt-text="Querysurge":::](https://www.querysurge.com/company/partners/microsoft)
-   :::column-end:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo.png" alt-text="Scalability Experts":::](http://www.scalabilityexperts.com/products/index.html)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column span="":::
-     [:::image type="content" source="media/db2-to-sql-server/wipro-logo.png" alt-text="Wipro":::](https://www.wipro.com/analytics/)
-   :::column-end:::
-:::row-end:::
 
 ## Next steps
 

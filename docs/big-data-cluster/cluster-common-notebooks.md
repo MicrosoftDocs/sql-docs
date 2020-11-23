@@ -54,7 +54,7 @@ A set of example notebooks demonstrating SQL Server Big Data Cluster scenarios.
 |Name |Description |
 |---|---|
 |SAM001a - Query Storage Pool from SQL Server Master Pool (1 of 3) - Load sample data|In this 3 part tutorial, load data into the Storage Pool (HDFS) using azdata, convert it into Parquet (using Spark) and the in the 3rd part, query the data using the Master Pool (SQL Server). |
-|SAM001b - Query Storage Pool from SQL Server Master Pool (2 of 3) - Convert data to parquet|Use the az command line interface to logout of Azure.|n this 2nd part of a 3 part tutorial, use Spark to convert a .csv file into a parquet file.|
+|SAM001b - Query Storage Pool from SQL Server Master Pool (2 of 3) - Convert data to parquet|In this 2nd part of a 3 part tutorial, use Spark to convert a .csv file into a parquet file.|
 |SAM001c - Query Storage Pool from SQL Server Master Pool (3 of 3) - Query HDFS from SQL Server|In this 3rd part of the Storage Pool tutorial, you’ll learn how to create an external table pointing to HDFS data in a big data cluster and join this data with high-value data in the master instance.|
 |SAM002 - Storage Pool (2 of 2) - Query HDFS|In this 2nd part of the Storage Pool tutorial, you’ll learn how to create an external table pointing to HDFS data in a big data cluster and join this data with high-value data in the master instance|
 |SAM003 - Data Pool Example|In this tutorial, you learn how to create a data pool source and an external table in the data pool, then insert data in data pool tables and loading data from one data pool table to another. Join data in the data pool table with other data pool tables, also truncating tables and cleanup. |

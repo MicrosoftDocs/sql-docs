@@ -148,7 +148,7 @@ One of the benefits of availability groups is that both high availability and di
 Outside of an availability group with a cluster type of none, an availability group requires that all replicas are part of the same underlying cluster whether it is a WSFC or Pacemaker. This means that in the picture above, the WSFC is stretched to work in two different data centers which adds complexity. regardless of the platform (Windows Server or Linux). Stretching clusters across distance adds complexity. 
 Introduced in SQL Server 2016, a distributed availability group allows an availability group to span availability groups configured on different clusters. This decouples the requirement to have the nodes all participate in the same cluster, which makes configuring disaster recovery much easier. For more information on distributed availability groups, see [Distributed availability groups](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
-![Distributed Availability Group](media/sql-server-ha-story/image11.png)
+![A diagram of a Distributed Availability Group.](media/sql-server-ha-story/image11.png)
  
 ### Always on failover cluster instances
 
@@ -218,7 +218,7 @@ Before covering the cross-platform and interoperability scenarios, two facts nee
 
 Distributed availability groups are designed to span availability group configurations, whether those two underlying clusters underneath the availability groups are two different WSFCs, Linux distributions, or one on a WSFC and the other on Linux. A distributed availability group will be the primary method of having a cross platform solution. A distributed availability group is also the primary solution for migrations such as converting from a Windows Server-based SQL Server infrastructure to a Linux-based one if that is what your company wants to do. As noted above, availability groups, and especially distributed availability groups, would minimize the time that an application would be unavailable for use. An example of a distributed availability group that spans a WSFC and Pacemaker is shown below.
 
-![Distributed Availability Group](media/sql-server-ha-story/image9.png)
+![Diagram showing a distributed availability group that spans a WSFC and Pacemaker.](media/sql-server-ha-story/image9.png)
  
 If an availability group is configured with a cluster type of None, it can span Windows Server and Linux as well as multiple Linux distributions. Since this is not a true high availability configuration, it should not be used for mission critical deployments, but for read-scale or migration/upgrade scenarios.
 
@@ -235,7 +235,7 @@ Since their introduction in SQL Server 2012, secondary replicas have had the abi
 
 Scaling readable copies of a database via availability groups was first introduced with distributed availability groups in SQL Server 2016. This would allow companies to have read-only copies of the database not only locally, but regionally and globally with a minimal amount of configuration and reduce network traffic and latency by having queries executed locally. Each primary replica of an availability group can seed two other availability groups even if it is not the fully read/write copy, so each distributed availability group can support up to 27 copies of the data that are readable. 
 
-![Distributed Availability Group](media/sql-server-ha-story/image11.png)
+![Diagram showing a Distributed Availability Group related to read-scale.](media/sql-server-ha-story/image11.png)
 
 Starting with SQL Server 2017, It is possible to create a near-real time, read-only solution with availability groups configured with a cluster type of None. If the goal is to use availability groups for readable secondary replicas and not availability, doing this removes the complexity of using a WSFC or Pacemaker, and gives the readable benefits of an availability group in a simpler deployment method. 
 

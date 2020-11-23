@@ -73,7 +73,7 @@ Real data sources are dynamic and more often than not business decisions rely on
 
 The current table contains the current value for each row. The history table contains each previous value for each row, if any, and the start time and end time for the period for which it was valid.
 
-![Temporal-HowWorks](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
+![Diagram showing how a Temporal table works.](../../relational-databases/tables/media/temporal-howworks.PNG "Temporal-HowWorks")
 
 The following simple example illustrates a scenario with Employee information in hypothetical HR database:
 
@@ -105,7 +105,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 
 The **SELECT** statement **FROM**_\<table\>_ clause has a new clause **FOR SYSTEM_TIME** with five temporal-specific sub-clauses to query data across the current and history tables. This new **SELECT** statement syntax is supported directly on a single table, propagated through multiple joins, and through views on top of multiple temporal tables.
 
-![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
+![Diagram showing how Temporal Querying works.](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")
 
 The following query searches for row versions for Employee row with EmployeeID = 1000 that were active at least for a portion of period between 1st January of 2014 and 1st January 2015 (including the upper boundary):
 

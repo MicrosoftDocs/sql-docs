@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "hardware failures [SQL Server]"
   - "recovering failover cluster failures [SQL Server]"
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Recover from failover cluster instance failure
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

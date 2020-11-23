@@ -12,8 +12,8 @@ f1_keywords:
   - "swb.backupdatabase.mediaoptions.f1"
   - "sql13.swb.backupdatabase.mediaoptions.f1"
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Back Up Database (Media Options Page)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -2,7 +2,7 @@
 title: What's new in SQL Server Machine Learning Services?
 titleSuffix: 
 description: New feature announcements for each release of SQL Server Machine Learning Services and SQL Server 2016 R Services.
-ms.date: 11/04/2019
+ms.date: 11/17/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # What's new in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
-Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
+This articles describes what new capabilities and features are included in each version of [SQL Server Machine Learning Services](sql-server-machine-learning-services.md). Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## New in SQL Server 2019

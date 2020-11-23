@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: 
-ms.date: 04/27/2020
+ms.date: 10/29/2020
 ---
 
 # Kqlmagic in Azure Data Studio
@@ -254,5 +254,4 @@ Learn more about notebooks and Kqlmagic:
 - [Use a Jupyter Notebook and Kqlmagic extension to analyze data in Azure Data Explorer](/azure/data-explorer/Kqlmagic)
 - [Extension (Magic) to Jupyter notebook and Jupyter lab](https://github.com/Microsoft/jupyter-Kqlmagic), that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data.
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
-- [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
 - [How to use notebooks in Azure Data Studio](./notebooks-guidance.md)

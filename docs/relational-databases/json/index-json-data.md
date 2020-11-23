@@ -64,7 +64,7 @@ You don't have to rewrite your queries. If you use expressions with the `JSON_VA
 ### Execution plan for this example
 Here's the execution plan for the query in this example.  
   
-![Execution plan](../../relational-databases/json/media/jsonindexblog1.png "Execution plan")  
+![Screenshot showing the execution plan for this example.](../../relational-databases/json/media/jsonindexblog1.png "Execution plan")  
   
 Instead of a full table scan, SQL Server uses an index seek into the nonclustered index and finds the rows that satisfy the specified conditions. Then it uses a key lookup in the `SalesOrderHeader` table to fetch the other columns that are referenced in the query -  in this example, `SalesOrderNumber` and `OrderDate`.  
  
@@ -132,13 +132,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  If you look at the actual execution plan, you see that it uses sorted values from the nonclustered index.  
   
- ![Execution plan](../../relational-databases/json/media/jsonindexblog2.png "Execution plan")  
+ ![Screenshot showing an execution plan that uses sorted values from the non-clustered index.](../../relational-databases/json/media/jsonindexblog2.png "Execution plan")  
   
  Although the query has an `ORDER BY` clause, the execution plan doesn't use a Sort operator. The JSON index is already ordered according to Serbian Cyrillic rules. Therefore SQL Server can use the nonclustered index where results are already sorted.  
   
  However, if you change the collation of the `ORDER BY` expression - for example, if you add `COLLATE French_100_CI_AS_SC` after the `JSON_VALUE` function - you get a different query execution plan.  
   
- ![Execution plan](../../relational-databases/json/media/jsonindexblog3.png "Execution plan")  
+ ![Screenshot showing a different execution plan.](../../relational-databases/json/media/jsonindexblog3.png "Execution plan")  
   
  Since the order of values in the index is not compliant with French collation rules, SQL Server can't use the index to order results. Therefore, it adds a Sort operator that sorts results using French collation rules.  
  

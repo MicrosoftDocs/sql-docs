@@ -22,7 +22,7 @@ To use the pretrained models, call the functions listed in the following table.
 
 | R function (MicrosoftML) | Python function (microsoftml) | Usage |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](//machine-learning-server/python-reference/microsoftml/get-sentiment) | Generates  positive-negative sentiment score over text inputs. |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | Generates  positive-negative sentiment score over text inputs. |
 | [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | Extracts text information from image file inputs. |
 
 ## Prerequisites

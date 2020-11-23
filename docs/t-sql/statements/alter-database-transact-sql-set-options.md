@@ -40,6 +40,9 @@ Select one of the following tabs for the syntax, arguments, remarks, permissions
 
 For more information about the syntax conventions, see [Transact-SQL syntax conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
+> [!NOTE]
+> Setting some options with ALTER DATABASE may require exclusive database access. If the ALTER DATABASE statement does not complete in a timely manner, check to see if other sessions within the database are blocking the ALTER DATABASE session.
+
 ## Select a product
 
 In the following row, select whichever product name you're interested in. Doing that displays different content here on this webpage, appropriate for whichever product you select.
@@ -54,7 +57,7 @@ In the following row, select whichever product name you're interested in. Doing 
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1485,7 +1488,7 @@ SET QUERY_STORE = ON
         **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2380,7 +2383,7 @@ SET QUERY_STORE = ON
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -3175,7 +3178,7 @@ SET QUERY_STORE = ON
         [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server backup to URL best practices and troubleshooting
 

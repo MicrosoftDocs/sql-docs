@@ -76,7 +76,7 @@ ms.author: maggies
   
 ## To install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the command line 
 
- You can also perform a command line installation of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] provides: RBINSTALLDIR and REPORTSERVERURL. RBINSTALLDIR specifies the root installation folder for [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL specifies the default report server that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] uses to save reports on the server.  
+ You can also perform a command line installation of [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and provide arguments to customize the installation. In addition to the standard MSI intrinsic parameters, you can use the custom parameters that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] provides: RBINSTALLDIR and RBSERVERURL. RBINSTALLDIR specifies the root installation folder for [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. RBSERVERURL specifies the default report server that [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] uses to save reports on the server.  
   
  If you want a completely silent installation, with no user interface interaction at all, specify the **/quiet** option. By design, the quiet option flag suppresses installation errors. It is therefore recommended that you include the **/l** option, which specifies logging, when you use the quiet option.   
   
@@ -92,9 +92,9 @@ ms.author: maggies
   
 6.  Type a command with the following format:  
   
-     `msiexec/i ReportBuilder.msi /option [value] [/option [value]]`  
+     `msiexec/i ReportBuilder.msi OPTION=OptionValue [OPTION=OptionValue]`  
   
-     The two options specific to installing [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] are: RBINSTALLDIR and REPORTSERVERURL. You don't have to include these arguments in the command line. The following is the baseline command:  
+     The two options specific to installing [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] are: RBINSTALLDIR and RBSERVERURL. You don't have to include these arguments in the command line. The following is the baseline command:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

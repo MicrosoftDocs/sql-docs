@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upgrade Data Quality Services

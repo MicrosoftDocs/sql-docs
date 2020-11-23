@@ -1,13 +1,11 @@
 ---
-description: "xml (Transact-SQL)"
 title: xml (Transact-SQL)
-ms.custom: ""
-ms.date: "07/26/2017"
+description: xml (Transact-SQL)
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
+  - "XML_TSQL"
   - "xml_TSQL"
   - "xml"
 dev_langs: 
@@ -17,7 +15,11 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "07/26/2017"
 ---
+
 # xml (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 

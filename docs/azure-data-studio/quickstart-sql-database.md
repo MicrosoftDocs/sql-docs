@@ -33,7 +33,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
 
 1. The first time you run Azure Data Studio the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
    
-   ![New Connection Icon](media/quickstart-sql-database/new-connection-icon.png)
+   ![Screenshot showing the Welcome Azure Delta Studio dialog box with the Next connection option called out.](media/quickstart-sql-database/new-connection-icon.png)
 
 2. This article uses SQL sign-in, but also supports Windows authentication. Fill in the following fields using the server name, user name, and password for your Azure SQL server:
 
@@ -47,7 +47,7 @@ Use Azure Data Studio to establish a connection to your Azure SQL Database serve
    | **Database name** | *leave blank* | You're only connecting to the server here. |
    | **Server Group** | Select <Default> | You can set this field to a specific server group you created. | 
 
-   ![New Connection Icon](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Screenshot of the Azure Data Studio - Connection page.](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. Select **Connect**.
 

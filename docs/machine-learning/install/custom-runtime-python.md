@@ -5,8 +5,8 @@ ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 09/20/2020
 ms.topic: how-to
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -24,16 +24,11 @@ This article describes how to install a custom runtime for running Python script
 > [!NOTE]
 > This article describes how to install a custom runtime for Python on Windows. To install on Linux, see [Install a Python custom runtime for SQL Server on Linux](custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
 
-
-
 ## Pre-install checklist
 
 Before installing a Python custom runtime, install the following:
 
-+ [SQL Server 2019 for Windows CU3 or later](../../database-engine/install-windows/install-sql-server.md).
-
-  > [!NOTE]
-  > Python custom runtime requires Cumulative Update (CU) 3 or later for SQL Server 2019.
++ [SQL Server 2019  Cumulative Update (CU) 3 for Windows](../../database-engine/install-windows/install-sql-server.md).
 
 + [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/windows-java.md).
 

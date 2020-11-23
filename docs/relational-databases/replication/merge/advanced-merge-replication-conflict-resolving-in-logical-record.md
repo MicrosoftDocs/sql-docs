@@ -70,7 +70,7 @@ ms.author: "mathoma"
   
  Because the conflicts are resolved at the logical record level, the winning changes made at the Publisher replace the changes made in the Subscriber tables during replication processing.  
   
- ![Series of tables showing changes to related rows](../../../relational-databases/replication/merge/media/logical-records-06.gif "Series of tables showing changes to related rows")  
+ ![First series of tables showing changes to related rows.](../../../relational-databases/replication/merge/media/logical-records-06.gif "Series of tables showing changes to related rows")  
   
 ### Row Level Detection, Logical Record Resolution  
  In this example, the publication is configured with:  
@@ -85,7 +85,7 @@ ms.author: "mathoma"
   
  Because the conflicts are resolved at the logical record level, during synchronization the winning changes made at the Publisher replace the changes made in the Subscriber tables.  
   
- ![Series of tables showing changes to related rows](../../../relational-databases/replication/merge/media/logical-records-07.gif "Series of tables showing changes to related rows")  
+ ![Second series of tables showing changes to related rows.](../../../relational-databases/replication/merge/media/logical-records-07.gif "Series of tables showing changes to related rows")  
   
 ### Logical Record Detection, Logical Record Resolution  
  In this example, the publication is configured with:  
@@ -98,7 +98,7 @@ ms.author: "mathoma"
   
  Because the conflicts are also resolved at the logical record level, during synchronization the winning change made at the Publisher replaces the change made in the Subscriber tables.  
   
- ![Series of tables showing changes to related rows](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
+ ![Third series of tables showing changes to related rows.](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
   
 ## See Also  
  [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

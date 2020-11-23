@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "deleting remote logins"
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
@@ -50,9 +50,9 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
 -   For a renamed computer that hosts a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run the following procedures:  
   
     ```sql
-    sp_dropserver <old_name>;  
+    EXEC sp_dropserver '<old_name>';  
     GO  
-    sp_addserver <new_name>, local;  
+    EXEC sp_addserver '<new_name>', local;  
     GO  
     ```  
   
@@ -61,9 +61,9 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
 -   For a renamed computer that hosts a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run the following procedures:  
   
     ```sql
-    sp_dropserver <old_name\instancename>;  
+    EXEC sp_dropserver '<old_name\instancename>';  
     GO  
-    sp_addserver <new_name\instancename>, local;  
+    EXEC sp_addserver '<new_name\instancename>', local;  
     GO  
     ```  
   
@@ -92,14 +92,14 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
 -   For a default instance, run the following procedure:  
   
     ```sql
-    sp_dropremotelogin old_name;  
+    EXEC sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   For a named instance, run the following procedure:  
   
     ```sql
-    sp_dropremotelogin old_name\instancename;  
+    EXEC sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
   

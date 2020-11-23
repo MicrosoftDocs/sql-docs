@@ -24,7 +24,7 @@ ms.author: jrasnick
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Get-PhysicalDisk](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
+ ![Screenshot of a Windows Powershell window showing the output of the Get-PhysicalDisk cmdlet.](../../relational-databases/performance/media/get-physicaldisk.png "Get-PhysicalDisk")  
   
 > [!NOTE]  
 >  With NVDIMM-N devices, you no longer need to specifically select the devices that can be write-back cache targets.  
@@ -41,7 +41,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![Screenshot of a Windows Powershell window showing the output of the $pd cmdlet.](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
 ## Creating the Storage Pool  
  Using the $pd variable containing the PhysicalDisks, it is easy to build the storage pool using the New-StoragePool PowerShell cmdlet.  
@@ -50,7 +50,7 @@ $pd | Select FriendlyName, MediaType, BusType
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
- ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
+ ![Screenshot of a Windows Powershell window showing the output of the New-StoragePool cmdlet.](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
 ## Creating the Virtual Disk and Volume  
  Now that a pool has been created, the next step is to carve out a virtual disk and format it. In this case only 1 virtual disk will be created and the New-Volume PowerShell cmdlet can be used to streamline this process:  
@@ -59,15 +59,15 @@ New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName N
 New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
- ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  
+ ![Screenshot of a Windows Powershell window showing the output of the New-Volume cmdlet.](../../relational-databases/performance/media/new-volume.png "New-Volume")  
   
  The virtual disk has been created, initialized, and formatted with NTFS. The screen capture below shows that it has a size of 300GB and a write-cache size of 1GB, which will be hosted on the NVDIMM-Ns.  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Screenshot of a Windows Powershell window showing the output of the Get-VirtualDisk cmdlet.](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
   
  You can now view this new volume visible in your server. You can now use this drive for your SQL Server transaction log.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Screenshot of a File Explorer window on the This PC page showing the Log_Space drive.](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## See Also  
  [Windows Storage Spaces in Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

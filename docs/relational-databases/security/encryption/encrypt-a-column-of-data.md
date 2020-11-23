@@ -2,6 +2,7 @@
 title: "Encrypt a Column of Data | Microsoft Docs"
 description: Learn how to encrypt a column of data by using symmetric encryption in SQL Server using Transact-SQL, sometimes known as column-level or cell-level encryption.
 ms.custom: ""
+titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
 ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,6 +20,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest"
 ---
 # Encrypt a Column of Data
+
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
   This article describes how to encrypt a column of data by using symmetric encryption in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. This is sometimes known as column-level encryption, or cell-level encryption. This feature is in preview for Azure Synapse Analytics (SQL DW)

@@ -75,7 +75,7 @@ Choose the best language for the task. R is best for statistical computations th
 
 ### Step 4: Operationalize your solution
 
-Standalone servers can use the [operationalization](//machine-learning-server/what-is-operationalization) functionality of the non-SQL-branded [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server). You can configure a standalone server for operationalization, which gives you these benefits: deploy and host your code as web services, run diagnostics, test web service capacity.
+Standalone servers can use the [operationalization](/machine-learning-server/what-is-operationalization) functionality of the non-SQL-branded [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server). You can configure a standalone server for operationalization, which gives you these benefits: deploy and host your code as web services, run diagnostics, test web service capacity.
 
 ### Step 5: Maintain your server
 

@@ -31,7 +31,7 @@ The following file formats are supported:
   
 - Delimited Text  
   
-- Hive RCFile  
+- Hive RCFile  - Does not apply to Azure Synapse Analytics.
   
 - Hive ORC
   

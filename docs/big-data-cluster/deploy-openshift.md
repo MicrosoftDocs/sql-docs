@@ -44,7 +44,13 @@ This article outlines deployment steps that are specific to the OpenShift platfo
     > [!NOTE]
     > Other processes (e.g. backups, CLR, Fulltext, SQLAgent) also add some overhead, so add a buffer to the estimated value.
 
-2. Create a custom security context constraint (SCC) using the attached [`bdc-scc.yaml`](#bdc-sccyaml-file).
+1. Download the custom security context constraint (SCC) [`bdc-scc.yaml`](#bdc-sccyaml-file):
+
+    ```console
+    curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml -o bdc-scc.yaml
+    ```
+
+1. Apply the SCC to the cluster.
 
     ```console
     oc apply -f bdc-scc.yaml
@@ -159,13 +165,9 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
 
 ## `bdc-scc.yaml` file
 
+The SCC file for this deployment is:
+
 :::code language="yaml" source="../../sql-server-samples/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml":::
-
-Use the following script to download bdc-scc.yaml.
-
-```console
-curl https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/openshift/bdc-scc.yaml -o bdc-scc.yaml
-```
 
 ## Next steps
 

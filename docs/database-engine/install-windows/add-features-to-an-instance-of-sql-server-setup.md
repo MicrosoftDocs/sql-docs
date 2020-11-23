@@ -9,8 +9,8 @@ helpviewer_keywords:
   - " SQL Server, features"
   - "adding features to  SQL Server"
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 09/07/2019

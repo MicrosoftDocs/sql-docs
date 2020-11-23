@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], metadata"
   - "users [SQL Server], orphaned"
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Troubleshoot orphaned users (SQL Server)

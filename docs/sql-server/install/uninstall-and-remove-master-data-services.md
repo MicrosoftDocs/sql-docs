@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Uninstall and Remove Master Data Services
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]

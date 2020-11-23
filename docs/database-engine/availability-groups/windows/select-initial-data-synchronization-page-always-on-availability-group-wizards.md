@@ -12,8 +12,8 @@ f1_keywords:
   - "sql13.swb.newagwizard.selectinitialdatasync.f1"
   - "sql13.swb.addreplicawizard.selectinitialdatasync.f1"
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-author: cawrites
-ms.author: chadam
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Select Initial Data Synchronization Page (Always On Availability Group Wizards)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "IsHadrEnabled server property"
   - "Server Core Installation [SQL Server]"
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure SQL Server on a Server Core Installation

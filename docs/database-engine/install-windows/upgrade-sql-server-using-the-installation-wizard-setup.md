@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "upgrading Database Engine"
   - "Database Engine [SQL Server], upgrading"
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)

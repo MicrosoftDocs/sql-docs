@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Setup [SQL Server], steps"
   - "SQL Server, installing"
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
@@ -320,14 +320,14 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > [!NOTE]  
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    For more information, see the [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
+    For more information, see the [Database Engine Configuration - MaxDOP page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop). 
 
      Use the **Database Engine Configuration - Memory** page to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option.
      
     > [!NOTE]  
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    For more information, see the [Database Engine Configuration - Memory page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
+    For more information, see the [Database Engine Configuration - Memory page](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory). 
 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -395,7 +395,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
 
 ## Next steps
 
-[Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
+[Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](../../database-engine/configure-windows/database-engine-instances-sql-server.md).  
   
 To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md).  
   

@@ -23,19 +23,27 @@ Before you configure Active Directory authentication, you need to set up an Acti
 > [!IMPORTANT]
 > The sample steps described in this article are for guidance only and refer to Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x and SUSE Enterprise Linux (SLES) 12 operating systems. Actual steps may slightly differ in your environment depending on how your overall environment is configured and operating system version. For example, Ubuntu 18.04 uses netplan while Red Hat Enterprise Linux (RHEL) 8.x uses nmcli among other tools to manage and configure network. It is recommended to engage your system and domain administrators for your environment for specific tooling, configuration, customization, and any required troubleshooting.
 
+### Reverse DNS (RDNS)
+
+When you set up a computer running Windows Server as a domain controller, you might not have a RDNS zone by default. Ensure that an applicable RDNS zone exists for both the domain controller and the IP address of the Linux machine that will be running SQL Server.
+
+Also ensure that a PTR record that points to your domain controllers exists.
+
 ## Check the connection to a domain controller
 
-Check that you can contact the domain controller with both the short and fully qualified names of the domain:
+Check that you can contact the domain controller by using both the short and the fully qualified names of the domain, and by using the hostname of the domain controller. The IP of the domain controller also should resolve to the FQDN of the domain controller:
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
 > This tutorial uses **contoso.com** and **CONTOSO.COM** as example domain and realm names, respectively. It also uses **DC1.CONTOSO.COM** as the example fully qualified domain name of the domain controller. You must replace these names with your own values.
 
-If either of these name checks fail, update your domain search list. The following sections provide instructions for Ubuntu, Red Hat Enterprise Linux (RHEL), and SUSE Linux Enterprise Server (SLES) respectively.
+If any of these name checks fail, update your domain search list. The following sections provide instructions for Ubuntu, Red Hat Enterprise Linux (RHEL), and SUSE Linux Enterprise Server (SLES) respectively.
 
 ### Ubuntu 16.04
 
@@ -139,11 +147,15 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   Note that these steps are specific for SLES 12, which is the only officially supported version of SUSE for Linux.
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
    **Ubuntu:**
@@ -155,6 +167,14 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
 1. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.
 
 1. After you confirm that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain. This command creates a new computer account in AD, creates the **/etc/krb5.keytab** host keytab file, configures the domain in **/etc/sssd/sssd.conf**, and updates **/etc/krb5.conf**.
+
+   Because of an issue with **realmd**, first set the machine hostname to the FQDN instead of to the machine name. Otherwise, **realmd** might not create all required SPNs for the machine and DNS entries won't automatically update, even if your domain controller supports dynamic DNS updates.
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   After running the above command, your /etc/hostname file should contain <old hostname>.contoso.com.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v

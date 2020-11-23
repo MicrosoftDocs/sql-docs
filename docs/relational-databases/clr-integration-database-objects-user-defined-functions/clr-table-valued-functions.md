@@ -93,7 +93,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: how-to
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Configure FailureConditionLevel property settings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

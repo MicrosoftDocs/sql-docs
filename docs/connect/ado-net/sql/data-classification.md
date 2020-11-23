@@ -20,7 +20,7 @@ ms.reviewer:
 
 [Data Discovery & Classification](../../../relational-databases/security/sql-data-discovery-and-classification.md) is a set of advanced services for discovering, classifying, labeling & reporting the sensitive data in your databases. SqlClient provides an API exposing read-only Data Discovery and Classification information when the underlying source supports the feature. This information is accessed through SqlDataReader.
 
-Microsoft.Data.SqlClient v2.1.0 introduces support for Data Classification's `Sensitivity Rank` information. `Sensitivity Rank` is an identifier based on a predefined set of values which define sensitivity rank. It can be used by other services like Advanced Threat Protection to detect anomalies based on their rank. The following new APIs are now available in Microsoft.Data.SqlClient namespace:
+Microsoft.Data.SqlClient v2.1.0 introduces support for Data Classification's `Sensitivity Rank` information. `Sensitivity Rank` is an identifier based on a predefined set of values, which define sensitivity rank. It can be used by other services like Advanced Threat Protection to detect anomalies based on their rank. The following new APIs are now available in Microsoft.Data.SqlClient namespace:
 
 ```csharp
 public class SensitivityClassification

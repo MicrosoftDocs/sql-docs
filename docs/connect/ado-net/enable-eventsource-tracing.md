@@ -1,7 +1,7 @@
 ---
 title: "Enabling event tracing in SqlClient"
 description: "Describes how to enable event tracing in SqlClient by implementing an event listener and how to access the event data."
-ms.date: "06/15/2020"
+ms.date: "11/23/2020"
 dev_langs: 
   - "csharp"
 ms.prod: sql

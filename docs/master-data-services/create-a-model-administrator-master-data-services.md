@@ -1,5 +1,6 @@
 ---
-title: "Create a Model Administrator (Master Data Services) | Microsoft Docs"
+description: "Create a Model Administrator (Master Data Services)"
+title: Create a Model Administrator
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,18 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], creating"
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Model Administrator (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a model administrator when you want a group or user to have all permissions to all objects in one or more models.  
   
 > [!TIP]  
->  To simplify administration, create a Windows or local group and configure it as a model adminstrator. You can then add and remove users from the group without accessing [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+>  To simplify administration, create a Windows or local group and configure it as a model administrator. You can then add and remove users from the group without accessing [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## Prerequisites  
  To perform this procedure:  

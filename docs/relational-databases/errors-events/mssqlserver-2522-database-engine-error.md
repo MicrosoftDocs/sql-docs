@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_2522"
 title: "MSSQLSERVER_2522 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 19b9b00c-330f-4dd3-9052-9d88bce83849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_2522
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|2522|  
 |Event Source|MSSQLSERVER|  

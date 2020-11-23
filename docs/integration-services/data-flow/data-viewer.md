@@ -1,4 +1,5 @@
 ---
+description: "Data Viewer"
 title: "Data Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,11 +13,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Viewer dialog box"
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Viewer
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   If a path is configured to use a data viewer, the Data Viewer displays the data buffer by buffer as data moves between two data flow components.  
   
 ## Options  

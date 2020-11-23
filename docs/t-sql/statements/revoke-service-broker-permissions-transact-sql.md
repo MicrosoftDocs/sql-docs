@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Service Broker Permissions (Transact-SQL)"
 title: "REVOKE Service Broker Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -21,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Service Broker Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on a [!INCLUDE[ssSB](../../includes/sssb-md.md)] contract, message type, remote service binding, route, or service.  
   
@@ -32,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON  
     {   
@@ -47,7 +47,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
     [ AS revoking_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the right to grant the specified right to other principals will be revoked. The permission itself will not be revokes.  
   

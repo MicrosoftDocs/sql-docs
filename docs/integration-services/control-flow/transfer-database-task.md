@@ -1,4 +1,5 @@
 ---
+description: "Transfer Database Task"
 title: "Transfer Database Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Database task [Integration Services]"
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Database Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Transfer Database task transfers a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In contrast to the other tasks that only transfer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects by copying them, the Transfer Database task can either copy or move a database. This task can also be used to copy a database within the same server.  
   
 ## Offline and Online Modes  
@@ -37,7 +41,7 @@ manager: craigg
 ## Execution Value  
  The execution value, defined in the **ExecutionValue** property of the task, returns the value 1, because in contrast to other transfer tasks, the Transfer Database task can transfer only one database.  
   
- By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Database task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Database task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../integration-services-ssis-variables.md).  
   
 ## Log Entries  
  The Transfer Database task includes the following custom log entries:  
@@ -74,7 +78,7 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Programmatic Configuration of the Transfer Database Task  
  For more information about programmatically setting these properties, click the following topic:  
@@ -200,4 +204,4 @@ manager: craigg
   
  Enter the network file share location, or click browse to locate the network file share location.  
   
- When you transfer a database in offline mode, the database files are copied to the **Network file share** location before they are transferred to the **Destination folder** location.  
+ When you transfer a database in offline mode, the database files are copied to the **Network file share** location before they are transferred to the **Destination folder** location.

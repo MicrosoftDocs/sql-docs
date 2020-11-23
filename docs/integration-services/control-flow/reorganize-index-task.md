@@ -1,4 +1,5 @@
 ---
+description: "Reorganize Index Task"
 title: "Reorganize Index Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,11 +15,14 @@ helpviewer_keywords:
   - "Reorganize Index task [Integration Services]"
   - "indexes [Integration Services]"
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Reorganize Index Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Reorganize Index task reorganizes indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables and views. For more information about managing indexes, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  By using the Reorganize Index task, a package can reorganize indexes in a single database or multiple databases. If the task reorganizes only the indexes in a single database, you can choose the views or the tables whose indexes the task reorganizes. The Reorganize Index task also includes an option to compact large object data. Large object data is data with the **image**, **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or **xml** data type. For more information, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
@@ -36,10 +40,9 @@ manager: craigg
 -   [Reorganize Index Task &#40;Maintenance Plan&#41;](../../relational-databases/maintenance-plans/reorganize-index-task-maintenance-plan.md)  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
   

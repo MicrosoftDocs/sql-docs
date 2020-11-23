@@ -1,4 +1,5 @@
 ---
+description: "SQLGetPrivateProfileString Function"
 title: "SQLGetPrivateProfileString Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetPrivateProfileString function [ODBC]"
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetPrivateProfileString Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 int SQLGetPrivateProfileString(  
      LPCSTR   lpszSection,  

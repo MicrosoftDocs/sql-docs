@@ -1,5 +1,6 @@
 ---
 title: "Implementing a Command Class for a Data Processing Extension | Microsoft Docs"
+description: Learn how to implement a Command class for a data processing extension so that the extension can formulate requests and pass them on to the data source.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "Command class"
   - "commands [Reporting Services]"
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Implementing a Command Class for a Data Processing Extension
   The **Command** object formulates a request and passes it on to the data source. The command text can take many different syntactical forms, including text and XML. If results are returned, the **Command** object returns results as a **DataReader** object.  

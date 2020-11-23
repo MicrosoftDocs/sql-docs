@@ -1,4 +1,5 @@
 ---
+description: "catalog.environment_variables (SSISDB Database)"
 title: "catalog.environment_variables (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,12 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.environment_variables (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the environment variable details for all environments in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   

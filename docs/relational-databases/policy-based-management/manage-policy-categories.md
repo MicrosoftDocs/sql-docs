@@ -1,4 +1,5 @@
 ---
+description: "Manage Policy Categories"
 title: "Manage Policy Categories | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Manage Policy Categories
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to apply any or all available policies in a category to the whole instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  

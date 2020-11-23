@@ -1,8 +1,9 @@
 ---
+description: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)"
 title: "CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "CreateSSLCertificateBinding"
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - CreateSSLCertificateBinding
-  Creates an SSL Certificate binding.  
+  Creates a TLS/SSL Certificate binding.  
   
 ## Syntax  
   
@@ -42,7 +43,7 @@ public void CreateSSLCertificateBinding(string application,
  The IP address for the application.  
   
  *Port*  
- The SSL port associated with the binding.  
+ The TLS port associated with the binding.  
   
  *Lcid*  
  The locale to use for the error messages returned.  
@@ -59,7 +60,7 @@ public void CreateSSLCertificateBinding(string application,
 ## Remarks  
  This method adds a binding to rsreportserver.config for the application. If a binding does not already exist in HTTP.SYS, it is created there.  
   
- Before creating the binding, the method call examines the Url Reservations for the specified application to determine if the SSL Certificate Binding is valid.  
+ Before creating the binding, the method call examines the Url Reservations for the specified application to determine if the TLS/SSL Certificate Binding is valid.  
   
  The following conditions are validated and can result in errors:  
   

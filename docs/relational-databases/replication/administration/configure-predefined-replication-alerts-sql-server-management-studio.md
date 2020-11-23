@@ -1,6 +1,7 @@
 ---
-title: "Configure Predefined Replication Alerts (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Configure predefined Replication alerts (SSMS)"
+description: Learn how to configure predefined replication alerts using SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure Predefined Replication Alerts (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[applies-to-version/_ssnoversion.md](../../../includes/applies-to-version/sqlserver.md)]
   Replication offers the following predefined alerts, which can be configured to respond to replication events:  
   
 -   **Replication: agent success**  
@@ -37,7 +38,7 @@ manager: craigg
   
  Configure these alerts from the **Alerts** folder in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. For more information about accessing this tab, see [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
- In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). You can also define alerts for other replication events using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alerts infrastructure. For more information, see [Create a User-Defined Event](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
+ In addition to these alerts, Replication Monitor provides a set of warnings and alerts related to status and performance. For more information, see [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). You can also define alerts for other replication events using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] alerts infrastructure. For more information, see [Create a User-Defined Event](../../../ssms/agent/create-a-user-defined-event.md).  
   
 ### To configure a predefined replication alert in Management Studio  
   
@@ -53,12 +54,12 @@ manager: craigg
   
     -   On the **Response** page, specify whether an e-mail should be sent and/or a job should be executed.  
   
-         If the alert is **Replication: Subscriber has failed data validation**, you can specify the response job that replication provides for this alert: Select **Execute job**, and then click the browse button (**…**). In the **Locate Job** dialog box, click **Browse**. In the **Browse for Objects** dialog box, select **Reinitialize subscriptions having data validation failures**. Click **OK** in both open dialog boxes. When the job executes, it uses a remote procedure call (RPC) to a stored procedure that reinitializes the subscription. If the Publisher uses a remote Distributor, you must define a remote server login at the Publisher, so that the RPC from the Distributor to the Publisher can be made.  
+         If the alert is **Replication: Subscriber has failed data validation**, you can specify the response job that replication provides for this alert: Select **Execute job**, and then click the browse button (**...**). In the **Locate Job** dialog box, click **Browse**. In the **Browse for Objects** dialog box, select **Reinitialize subscriptions having data validation failures**. Click **OK** in both open dialog boxes. When the job executes, it uses a remote procedure call (RPC) to a stored procedure that reinitializes the subscription. If the Publisher uses a remote Distributor, you must define a remote server login at the Publisher, so that the RPC from the Distributor to the Publisher can be made.  
   
     -   On the **Options** page, customize the text of the response.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
 ### To configure an alert for a threshold in Replication Monitor  
   
 1.  On the **Warnings** tab click **Configure Alerts**.  
@@ -71,7 +72,7 @@ manager: craigg
   
     -   On the **Response** page, specify whether an e-mail should be sent and/or a job should be executed.  
   
-         If the alert is **Replication: Subscriber has failed data validation**, you can specify the response job that replication provides for this alert: Select **Execute job**, and then click the browse button (**…**). In the **Locate Job** dialog box, click **Browse**. In the **Browse for Objects** dialog box, select **Reinitialize subscriptions having data validation failures**. Click **OK** in both open dialog boxes. When the job executes, it uses a remote procedure call (RPC) to a stored procedure that reinitializes the subscription. If the Publisher uses a remote Distributor, you must define a remote server login at the Publisher, so that the RPC from the Distributor to the Publisher can be made.  
+         If the alert is **Replication: Subscriber has failed data validation**, you can specify the response job that replication provides for this alert: Select **Execute job**, and then click the browse button (**...**). In the **Locate Job** dialog box, click **Browse**. In the **Browse for Objects** dialog box, select **Reinitialize subscriptions having data validation failures**. Click **OK** in both open dialog boxes. When the job executes, it uses a remote procedure call (RPC) to a stored procedure that reinitializes the subscription. If the Publisher uses a remote Distributor, you must define a remote server login at the Publisher, so that the RPC from the Distributor to the Publisher can be made.  
   
     -   On the **Options** page, customize the text of the response.  
   
@@ -81,5 +82,4 @@ manager: craigg
   
 ## See Also  
  [Use Alerts for Replication Agent Events](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
-  
   

@@ -1,6 +1,7 @@
 ---
-title: "User Assistance in SQL Server Management Studio | Microsoft Docs"
-ms.custom: ""
+description: "User Assistance in SQL Server Management Studio"
+title: "User Assistance in SQL Server Management Studio"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -11,12 +12,11 @@ helpviewer_keywords:
   - "Help [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], user assistance"
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # User Assistance in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 User assistance is available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] through the Help menu and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. The Help menu in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offers several different routes to information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also provides access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] community and MSDN Online resources not previously available from within the Help environment. In addition, the Help environment is now configurable to launch either within the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment or in an associated external window of its own.  
   
 ## The Help Interface  

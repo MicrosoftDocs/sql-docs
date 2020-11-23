@@ -1,4 +1,5 @@
 ---
+description: "Using Dimension Expressions"
 title: "Using Dimension Expressions | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,7 +9,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Using Dimension Expressions
 
@@ -53,7 +53,7 @@ manager: kfile
   
  `FROM [Adventure Works]`  
   
- A hierarchy identifier appears as *Dimension_Name**.**Hierarchy_Name* in the BNF notation used to describe MDX statements.  
+ A hierarchy identifier appears as *Dimension_Name.Hierarchy_Name* in the BNF notation used to describe MDX statements.  
   
 ## See Also  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

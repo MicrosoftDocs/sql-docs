@@ -1,4 +1,5 @@
 ---
+description: "backupset (Transact-SQL)"
 title: "backupset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,13 +18,12 @@ helpviewer_keywords:
   - "backup media [SQL Server], backupset system table"
   - "backup sets [SQL Server]"
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # backupset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contains a row for each backup set. A *backup set* contains the backup from a single, successful backup operation. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY, and RESTORE VERIFYONLY statements operate on a single backup set within the media set on the specified backup device or devices.  
   
@@ -50,7 +50,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] major version number. Can be NULL.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minor version number. Can be NULL.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] build number. Can be NULL.|  
-|**time_zone**|**smallint**|Difference between local time (where the backup operation is taking place) and Coordinated Universal Time (UTC) in 15-minute intervals. Values can be -48 through +48, inclusive. A value of 127 indicates unknown. For example, -20 is Eastern Standard Time (EST) or five hours after UTC. Can be NULL.|  
+|**time_zone**|**smallint**|Difference between local time (where the backup operation is taking place) and Coordinated Universal Time (UTC) in 15-minute intervals using the time zone information at the time the backup operation started. Values can be -48 through +48, inclusive. A value of 127 indicates unknown. For example, -20 is Eastern Standard Time (EST) or five hours after UTC. Can be NULL.|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format minor version number. Can be NULL.|  
 |**first_lsn**|**numeric(25,0)**|Log sequence number of the first or oldest log record in the backup set. Can be NULL.|  
 |**last_lsn**|**numeric(25,0)**|Log sequence number of the next log record after the backup set. Can be NULL.|  

@@ -1,5 +1,6 @@
 ---
-title: "Relationship Staging Table (Master Data Services) | Microsoft Docs"
+description: "Relationship Staging Table (Master Data Services)"
+title: Relationship Staging Table
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "relationships staging table [Master Data Services]"
   - "database [Master Data Services], relationships table"
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Relationship Staging Table (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the relationship staging table (stg.name_Relationship) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database to change the location of members in an explicit hierarchy, based on the relationship the members have to one another.  
   

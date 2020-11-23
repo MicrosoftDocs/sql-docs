@@ -1,19 +1,18 @@
 ---
-title: Configure SQL Server settings with environment variables | Microsoft Docs
+title: Configure environment variables for SQL Server on Linux
 description: This article describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/20/2018
+ms.custom: seo-lt-2019
+author: VanMSFT 
+ms.author: vanto
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 
 ---
 # Configure SQL Server settings with environment variables on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -24,7 +23,7 @@ You can use several different environment variables to configure SQL Server 2017
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-You can use several different environment variables to configure SQL Server 2019 preview on Linux. These variables are used in two scenarios:
+You can use several different environment variables to configure SQL Server 2019 on Linux. These variables are used in two scenarios:
 
 ::: moniker-end
 
@@ -41,7 +40,7 @@ You can use several different environment variables to configure SQL Server 2019
 
 | Environment variable | Description |
 |-----|-----|
-| **ACCEPT_EULA** | Accept the SQL Server license agreement when set to any value (for example, 'Y'). |
+| **ACCEPT_EULA** | Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
 | **MSSQL_SA_PASSWORD** | Configure the SA user password. |
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**A product key**</br></br>If specifying a product key, it must be in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter.|
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
@@ -65,7 +64,7 @@ You can use several different environment variables to configure SQL Server 2019
 
 | Environment variable | Description |
 |-----|-----|
-| **ACCEPT_EULA** | Accept the SQL Server license agreement when set to any value (for example, 'Y'). |
+| **ACCEPT_EULA** | Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
 | **MSSQL_SA_PASSWORD** | Configure the SA user password. |
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**A product key**</br></br>If specifying a product key, it must be in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter.|
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
@@ -90,7 +89,7 @@ You can use several different environment variables to configure SQL Server 2019
 This example runs `mssql-conf setup` with configured environment variables. The following environment variables are specified:
 
 - **ACCEPT_EULA** accepts the end user license agreement.
-- **MSSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
+- **MSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
 - **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** sets the TCP port that SQL Server listens on to 1234.
 
@@ -103,7 +102,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 This example docker command uses the following environment variables to create a new SQL Server container:
 
 - **ACCEPT_EULA** accepts the end user license agreement.
-- **MSSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
+- **MSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
 - **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** sets the TCP port that SQL Server listens on to 1234. This means that instead of mapping port 1433 (default) to a host port, the custom TCP port must be mapped with the `-p 1234:1234` command in this example.
 
@@ -123,7 +122,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> The process for running production editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production).
+> The process for running production editions in containers is slightly different. For more information, see [Run production container images](./sql-server-linux-docker-container-deployment.md#production).
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -132,13 +131,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 If you are running Docker on Windows, use the following syntax with double quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end

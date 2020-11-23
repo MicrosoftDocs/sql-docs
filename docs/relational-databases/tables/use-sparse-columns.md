@@ -1,4 +1,5 @@
 ---
+description: "Use Sparse Columns"
 title: "Use Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"
@@ -14,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Sparse Columns
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Sparse columns are ordinary columns that have an optimized storage for null values. Sparse columns reduce the space requirements for null values at the cost of more overhead to retrieve nonnull values. Consider using sparse columns when the space saved is at least 20 percent to 40 percent. Sparse columns and column sets are defined by using the [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) statements.  
   

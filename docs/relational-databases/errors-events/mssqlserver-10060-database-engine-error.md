@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_10060 | Microsoft Docs"
+description: The SQL Server client cannot connect to the server. See an explanation of error 10060 and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10060
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10060|  
 |Event Source|MSSQLSERVER|  

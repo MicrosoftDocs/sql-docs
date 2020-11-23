@@ -1,4 +1,5 @@
 ---
+description: "sp_changepublication (Transact-SQL)"
 title: "sp_changepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -13,12 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changepublication"
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a publication. This stored procedure is executed at the Publisher on the publication database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Package Management (SSIS Service)"
 title: "Package Management (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"
@@ -25,11 +26,14 @@ helpviewer_keywords:
   - "Integration Services service, package management"
   - "services [Integration Services], package management"
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Package Management (SSIS Service)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Package management includes monitoring, managing, importing and exporting packages.  
  
  ## Package Store  

@@ -1,4 +1,5 @@
 ---
+description: "Row Count Transformation"
 title: "Row Count Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,14 @@ helpviewer_keywords:
   - "variables [Integration Services], updating"
   - "counting rows"
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Row Count Transformation
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Row Count transformation counts rows as they pass through a data flow and stores the final count in a variable.  
   
  A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] package can use row counts to update the variables used in scripts, expressions, and property expressions. (For example, the variable that stores the row count can update the message text in an e-mail message to include the number of rows.) The variable that the Row Count transformation uses must already exist, and it must be in the scope of the Data Flow task to which the data flow with the Row Count transformation belongs.  
@@ -34,7 +38,7 @@ manager: craigg
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -45,5 +49,4 @@ manager: craigg
  [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

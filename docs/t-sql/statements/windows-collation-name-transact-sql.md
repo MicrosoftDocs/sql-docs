@@ -1,4 +1,5 @@
 ---
+description: "Windows Collation Name (Transact-SQL)"
 title: "Windows Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2019"
@@ -15,14 +16,13 @@ helpviewer_keywords:
   - "collations [SQL Server], Windows collations"
   - "Collation Designator"
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Windows Collation Name (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The Windows collation name is composed of the collation designator and the comparison styles.
 
@@ -30,8 +30,7 @@ Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVers
 
 ## Syntax
 
-```
-
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -42,9 +41,11 @@ CollationDesignator_<ComparisonStyle>
 | { _BIN | _BIN2 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
-*CollationDesignator*
+*CollationDesignator*   
 Specifies the base collation rules used by the Windows collation. The base collation rules cover the following:
 
 - The sorting and comparison rules that are applied when dictionary sorting is specified. Sorting rules are based on alphabet or language.
@@ -62,20 +63,20 @@ Some examples are:
 **AI** specifies accent-insensitive, **AS** specifies accent-sensitive.
 
 *KanatypeSensitive*  
-**Omitted** specifies kanatype-insensitive, **KS** specifies kanatype-sensitive.
+Omitting this option specifies kanatype-insensitive, **KS** specifies kanatype-sensitive.
 
 *WidthSensitivity*  
-**Omitted** specifies width-insensitive, **WS** specifies width-sensitive.
+Omitting this option specifies width-insensitive, **WS** specifies width-sensitive.
 
 *VariationSelectorSensitivity*  
-**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Omitted** specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
+- Omitting this option specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
 
 **UTF8**  
-**Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Specifies UTF-8 enconding to be used for eligible data types. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+- Specifies UTF-8 encoding to be used for eligible data types. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Specifies the backward-compatible binary sort order to be used.
@@ -135,9 +136,9 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Amharic (Ethiopia)|Latin1_General_100_|Not available|
 |Armenian (Armenia)|Cyrillic_General_100_|Not available|
 |Assamese (India)|Assamese_100_ <sup>1</sup>|Not available|
+|Bangla (Bangladesh)|Bengali_100_<sup>1</sup>|Not available|
 |Bashkir (Russia)|Bashkir_100_|Not available|
 |Basque (Basque)|Latin1_General_100_|Not available|
-|Bengali (Bangladesh)|Bengali_100_<sup>1</sup>|Not available|
 |Bengali (India)|Bengali_100_<sup>1</sup>|Not available|
 |Bosnian (Bosnia and Herzegovina, Cyrillic)|Bosnian_Cyrillic_100_|Not available|
 |Bosnian (Bosnia and Herzegovina, Latin)|Bosnian_Latin_100_|Not available|
@@ -183,7 +184,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Norwegian (Bokmål, Norway)|Norwegian_100_|Not available|
 |Norwegian (Nynorsk, Norway)|Norwegian_100_|Not available|
 |Occitan (France)|French_100_|Not available|
-|Oriya (India)|Indic_General_100_<sup>1</sup>|Not available|
+|Odia (India)|Indic_General_100_<sup>1</sup>|Not available|
 |Pashto (Afghanistan)|Pashto_100_<sup>1</sup>|Not available|
 |Persian (Iran)|Persian_100_|Not available|
 |Punjabi (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -192,10 +193,10 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Quechua (Peru)|Latin1_General_100_|Not available|
 |Romansh (Switzerland)|Romansh_100_|Not available|
 |Sami (Inari, Finland)|Sami_Sweden_Finland_100_|Not available|
-|Sami (Lule,Norway)|Sami_Norway_100_|Not available|
+|Sami (Lule, Norway)|Sami_Norway_100_|Not available|
 |Sami (Lule, Sweden)|Sami_Sweden_Finland_100_|Not available|
 |Sami (Northern, Finland)|Sami_Sweden_Finland_100_|Not available|
-|Sami (Northern,Norway)|Sami_Norway_100_|Not available|
+|Sami (Northern, Norway)|Sami_Norway_100_|Not available|
 |Sami (Northern, Sweden)|Sami_Sweden_Finland_100_|Not available|
 |Sami (Skolt, Finland)|Sami_Sweden_Finland_100_|Not available|
 |Sami (Southern, Norway)|Sami_Norway_100_|Not available|
@@ -222,7 +223,7 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Welsh (United Kingdom)|Welsh_100_|Not available|
 |Wolof (Senegal)|French_100_|Not available|
 |Xhosa/isiXhosa (South Africa)|Latin1_General_100_|Not available|
-|Yakut (Russia)|Yakut_100_|Not available|
+|Sakha (Russia)|Yakut_100_|Not available|
 |Yi (PRC)|Latin1_General_100_|Not available|
 |Yoruba (Nigeria)|Latin1_General_100_|Not available|
 |Zulu/isiZulu (South Africa)|Latin1_General_100_|Not available|
@@ -230,10 +231,11 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Lithuanian_Classic|Lithuanian_Classic|
 |Deprecated, not available at server level in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later|Macedonian|Macedonian|
+||||
 
-<sup>1</sup>Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
+<sup>1</sup> Unicode-only Windows collations can only be applied to column-level or expression-level data. They cannot be used as server or database collations.
 
-<sup>2</sup>Like the Chinese (Taiwan) collation, Chinese (Macau) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
+<sup>2</sup> Like the Chinese (Taiwan) collation, Chinese (Macao) uses the rules of Simplified Chinese; unlike Chinese (Taiwan), it uses code page 950.
 
 ## See Also
 

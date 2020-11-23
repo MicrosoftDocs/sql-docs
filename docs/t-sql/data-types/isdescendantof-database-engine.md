@@ -1,4 +1,5 @@
 ---
+description: "IsDescendantOf (Database Engine)"
 title: "IsDescendantOf (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -17,26 +18,27 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # IsDescendantOf (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns true if *this* is a descendant of parent.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 child. IsDescendantOf ( parent )  
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *parent*  
 The **hierarchyid** node for which the IsDescendantOf test should be performed.
   
@@ -93,8 +95,7 @@ this.IsDescendantOf(Parent)
 ```  
   
 ## See also
-[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](./hierarchyid-data-type-method-reference.md)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

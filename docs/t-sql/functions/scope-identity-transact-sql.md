@@ -1,4 +1,5 @@
 ---
+description: "SCOPE_IDENTITY (Transact-SQL)"
 title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SCOPE_IDENTITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the last identity value inserted into an identity column in the same scope. A scope is a module: a stored procedure, trigger, function, or batch. Therefore, if two statements are in the same stored procedure, function, or batch, they are in the same scope.  
   
@@ -31,11 +31,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SCOPE_IDENTITY()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **numeric(38,0)**  
   
 ## Remarks  
@@ -60,8 +62,8 @@ SCOPE_IDENTITY()
 USE tempdb;  
 GO  
 CREATE TABLE TZ (  
-   Z_id  int IDENTITY(1,1)PRIMARY KEY,  
-   Z_name varchar(20) NOT NULL);  
+   Z_id  INT IDENTITY(1,1)PRIMARY KEY,  
+   Z_name VARCHAR(20) NOT NULL);  
   
 INSERT TZ  
    VALUES ('Lisa'),('Mike'),('Carla');  
@@ -79,8 +81,8 @@ Z_id   Z_name
 ```  
 ```sql 
 CREATE TABLE TY (  
-   Y_id  int IDENTITY(100,5)PRIMARY KEY,  
-   Y_name varchar(20) NULL);  
+   Y_id  INT IDENTITY(100,5)PRIMARY KEY,  
+   Y_name VARCHAR(20) NULL);  
   
 INSERT TY (Y_name)  
    VALUES ('boathouse'), ('rocks'), ('elevator');  

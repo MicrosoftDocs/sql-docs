@@ -1,8 +1,9 @@
 ---
-title: "Chart Types (Report Builder and SSRS) | Microsoft Docs"
+title: "Chart Types (Report Builder) | Microsoft Docs"
+description: Choose from unique chart characteristics to help you visualize your dataset and assist you in choosing an appropriate chart type in Report Builder.
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -10,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Chart Types (Report Builder and SSRS)

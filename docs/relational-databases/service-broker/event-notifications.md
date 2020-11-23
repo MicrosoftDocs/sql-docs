@@ -1,4 +1,5 @@
 ---
+description: "Event Notifications"
 title: "Event Notifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Event Notifications
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Event notifications send information about events to a [!INCLUDE[ssSB](../../includes/sssb-md.md)] service. Event notifications execute in response to a variety of [!INCLUDE[tsql](../../includes/tsql-md.md)] data definition language (DDL) statements and SQL Trace events by sending information about these events to a [!INCLUDE[ssSB](../../includes/sssb-md.md)] service.  
   
  Event notifications can be used to do the following:  

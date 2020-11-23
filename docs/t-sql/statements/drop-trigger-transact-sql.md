@@ -1,4 +1,5 @@
 ---
+description: "DROP TRIGGER (Transact-SQL)"
 title: "DROP TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -22,12 +23,11 @@ helpviewer_keywords:
   - "removing triggers"
   - "DML triggers, removing"
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DROP TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes one or more DML or DDL triggers from the current database.  
   
@@ -35,7 +35,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] [schema_name.]trigger_name [ ,...n ] [ ; ]  
@@ -53,7 +53,9 @@ ON ALL SERVER
 ```  
 
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
@@ -69,7 +71,7 @@ ON ALL SERVER
  Indicates the scope of the DDL trigger applies to the current database. DATABASE must be specified if it was also specified when the trigger was created or modified.  
   
  ALL SERVER  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Indicates the scope of the DDL trigger applies to the current server. ALL SERVER must be specified if it was also specified when the trigger was created or modified. ALL SERVER also applies to logon triggers.  
   
@@ -101,7 +103,7 @@ ON ALL SERVER
 ### A. Dropping a DML trigger  
  The following example drops the `employee_insupd` trigger in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. (Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you can use the DROP TRIGGER IF EXISTS syntax.)  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -112,7 +114,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  Because DDL triggers are not schema-scoped and, therefore do not appear in the **sys.objects** catalog view, the OBJECT_ID function cannot be used to query whether they exist in the database. Objects that are not schema-scoped must be queried by using the appropriate catalog view. For DDL triggers, use **sys.triggers**.  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  

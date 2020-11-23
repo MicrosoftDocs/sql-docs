@@ -6,7 +6,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords: 
   - "sql13.swb.availabilitygroup.joindbs.f1"
 helpviewer_keywords: 
@@ -18,32 +18,15 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Join a secondary database to an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic explains how to join a secondary database to an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. After you prepare a secondary database for a secondary replica, you need to join the database to the availability group as soon as possible. This will start data movement from the corresponding primary database to the secondary database.  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To prepare a secondary database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
+   
 > [!NOTE]  
 >  For information about what happens after a secondary database joins the group, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+   
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   You must be connected to the server instance that hosts the secondary replica.  
   
@@ -51,9 +34,7 @@ manager: craigg
   
 -   The secondary database must have been prepared recently. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -105,11 +86,11 @@ manager: craigg
     ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
@@ -121,5 +102,4 @@ manager: craigg
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Troubleshoot Always On Availability Groups Configuration &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_5256"
 title: "MSSQLSERVER_5256 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 6fe254b4-2926-446f-8b20-0f1d921a4615
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_5256
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|5256|  
 |Event Source|MSSQLSERVER|  

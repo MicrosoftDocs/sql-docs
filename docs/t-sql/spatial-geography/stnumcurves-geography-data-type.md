@@ -1,4 +1,5 @@
 ---
+description: "STNumCurves (geography Data Type)"
 title: "STNumCurves (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumCurves method (geography)"
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STNumCurves (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the number of curves in a one-dimensional **geography** instance.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STNumCurves()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  

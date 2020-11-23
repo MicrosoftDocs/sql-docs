@@ -1,4 +1,5 @@
 ---
+description: "Work with CDC Services"
 title: "Work with CDC Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -10,11 +11,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "cdcServ"
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Work with CDC Services
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   You can use the CDC Service Configuration Console to create a new CDC service and to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for CDC.  
   
 ## Options  

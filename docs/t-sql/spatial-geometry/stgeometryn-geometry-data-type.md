@@ -1,4 +1,5 @@
 ---
+description: "STGeometryN (geometry Data Type)"
 title: "STGeometryN (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryN (geometry Data Type)"
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeometryN (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a specified geometry in a **geometry collection**.
   
@@ -31,7 +31,9 @@ Returns a specified geometry in a **geometry collection**.
 .STGeometryN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of **geometry** instances in the **geometrycollection**.  
   

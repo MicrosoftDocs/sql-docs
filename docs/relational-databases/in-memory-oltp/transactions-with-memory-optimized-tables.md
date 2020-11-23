@@ -1,5 +1,6 @@
 ---
 title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
+description: Learn about transactions for memory-optimized tables and natively compiled stored procedures and how they differ from transactions for disk-based tables.
 ms.custom: ""
 ms.date: "01/16/2018"
 ms.prod: sql
@@ -10,17 +11,16 @@ ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transactions with Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This article describes all the aspects of transactions that are specific to memory-optimized tables and natively compiled stored procedures.  
   
 The transaction isolation levels in SQL Server apply differently to memory-optimized tables versus disk-based tables, and the underlying mechanisms are different. An understanding of the differences helps the programmer design a high throughput system. The goal of transaction integrity is shared in all cases.  
 
-For error conditions specific to transactions on memory-optimized tables, jump to the section [Conflict Detection and Retry Logic](#confdetretry34ni).
+For error conditions specific to transactions on memory-optimized tables, jump to the section [Conflict Detection and Retry Logic](#conflict-detection-and-retry-logic).
   
 For general information, see [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -91,7 +91,7 @@ Disk-based tables indirectly have a row versioning system when READ_COMMITTED_SN
   
 ## Isolation Levels 
   
-The following table lists the possible levels of transaction isolation, in sequence from least isolation to most. For details about conflicts that can occur and retry logic to deal with these conflicts, see [Conflict Detection and Retry Logic](#confdetretry34ni). 
+The following table lists the possible levels of transaction isolation, in sequence from least isolation to most. For details about conflicts that can occur and retry logic to deal with these conflicts, see [Conflict Detection and Retry Logic](#conflict-detection-and-retry-logic). 
   
 | Isolation Level | Description |   
 | :-- | :-- |   
@@ -117,7 +117,7 @@ Descriptions of the phases follow.
 #### Validation: Phase 2 (of 3)  
   
 - The validation phase begins by assigning the end time, thereby marking the transaction as logically complete. This completion makes all changes of the transaction visible to other transactions which take a dependency on this transaction. The dependent transactions are not allowed to commit until this transaction has successfully committed. In addition, transactions which hold such dependencies are not allowed to return result sets to the client, to ensure the client only sees data that has been successfully committed to the database.  
-- This phase comprises the repeatable read and serializable validation. For repeatable read validation, it checks whether any of the rows read by the transaction has since been updated. For serializable validation it checks whether any row has been inserted into any data range scanned by this transaction. Per the table in [Isolation Levels and Conflicts](#confdegreeiso30ni), both repeatable read and serializable validation can happen when using snapshot isolation, to validate consistency of unique and foreign key constraints.  
+- This phase comprises the repeatable read and serializable validation. For repeatable read validation, it checks whether any of the rows read by the transaction has since been updated. For serializable validation it checks whether any row has been inserted into any data range scanned by this transaction. Per the table in [Isolation Levels and Conflicts](#isolation-levels), both repeatable read and serializable validation can happen when using snapshot isolation, to validate consistency of unique and foreign key constraints.  
   
 #### Commit Processing: Phase 3 (of 3)  
   
@@ -137,7 +137,7 @@ The following are the error conditions that can cause transactions to fail when 
 | Error Code | Description | Cause |
 | :-- | :-- | :-- |
 | **41302** | Attempted to update a row that was updated in a different transaction since the start of the present transaction. | This error condition occurs if two concurrent transactions attempt to update or delete the same row at the same time. One of the two transactions receives this error message and will need to be retried. <br/><br/>  | 
-| **41305**| Repeatable read validation failure. A row read from a memory-optimized table this transaction has been updated by another transaction that has committed before the commit of this transaction. | This error can occur when using REPEATABLE READ or SERIALIZABLE isolation, and also if the actions of a concurrent transaction cause violation of a FOREIGN KEY constraint. <br/><br/>Such concurrent violation of foreign key constraints is rare, and typically indicates an issue with the application logic or with data entry. However, the error can also occur if there is no index on the columns involved with the FOREIGN KEY constraint. Therefore, the guidance is to always create an index on foreign key columns in a memory-optimized table. <br/><br/> For more detailed considerations about validation failures caused by foreign key violations, see [this blog post](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) by the SQL Server Customer Advisory Team. |  
+| **41305**| Repeatable read validation failure. A row read from a memory-optimized table this transaction has been updated by another transaction that has committed before the commit of this transaction. | This error can occur when using REPEATABLE READ or SERIALIZABLE isolation, and also if the actions of a concurrent transaction cause violation of a FOREIGN KEY constraint. <br/><br/>Such concurrent violation of foreign key constraints is rare, and typically indicates an issue with the application logic or with data entry. However, the error can also occur if there is no index on the columns involved with the FOREIGN KEY constraint. Therefore, the guidance is to always create an index on foreign key columns in a memory-optimized table. <br/><br/> For more detailed considerations about validation failures caused by foreign key violations, see [this blog post](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) by the SQL Server Customer Advisory Team. |  
 | **41325** | Serializable validation failure. A new row was inserted into a range that was scanned earlier by the present transaction. We call this a phantom row. | This error can occur when using SERIALIZABLE isolation, and also if the actions of a concurrent transaction cause violation of a PRIMARY KEY, UNIQUE, or FOREIGN KEY constraint. <br/><br/> Such concurrent constraint violation is rare, and typically indicates an issue with the application logic or data entry. However, similar to repeatable read validation failures, this error can also occur if there is a FOREIGN KEY constraint with no index on the columns involved. |  
 | **41301** | Dependency failure: a dependency was taken on another transaction that later failed to commit. | This transaction (Tx1) took a dependency on another transaction (Tx2) while that transaction (Tx2) was in its validation or commit processing phase, by reading data that was written by Tx2. Tx2 subsequently failed to commit. Most common causes for Tx2 to fail to commit are repeatable read (41305) and serializable (41325) validation failures; a less common cause is log IO failure. |
 | **41823** and **41840** | Quota for user data in memory-optimized tables and table variables was reached. | Error 41823 applies to SQL Server Express/Web/Standard Edition, as well as single databases in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. Error 41840 applies to elastic pools in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> In most cases these errors indicate that the maximum user data size was reached, and the way to resolve the error is to delete data from memory-optimized tables. However, there are rare cases where this error is transient. We therefore recommend to retry when first encountering these errors.<br/><br/> Like the other errors in this list, errors 41823 and 41840 cause the active transaction to abort. |
@@ -275,6 +275,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Row Versioning-based Isolation Levels in the Database Engine](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [Row Versioning-based Isolation Levels in the Database Engine](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)   
+- [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)

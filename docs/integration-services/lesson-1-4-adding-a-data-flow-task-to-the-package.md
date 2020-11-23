@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-4: Add a Data Flow task to the package"
 title: "Step 4: Add a Data Flow task to the package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-4: Add a Data Flow task to the package
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 After you've created the connection managers for the source and destination data, you add a Data Flow task to your package. The Data Flow task defines the data flow engine that moves data between sources and destinations, and provides the functionality for transforming, cleaning, and modifying data as it is moved. The Data Flow task is where most of the work of an extract, transform, and load (ETL) process occurs.  
   

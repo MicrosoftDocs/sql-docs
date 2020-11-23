@@ -1,5 +1,6 @@
 ---
 title: "Implementing a Connection Class for a Data Processing Extension | Microsoft Docs"
+description: Implement a Connection object for a data processing extension in Reporting Services. See which interfaces to implement and what to require of clients.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "Connection class"
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Implementing a Connection Class for a Data Processing Extension
   The **Connection** object represents a database connection or similar resource and is the starting point for users of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. It represents connections to database servers, though any entity with similar behavior can be exposed as a **Connection**.  

@@ -1,5 +1,6 @@
 ---
-title: "Create and Publish a Business Rule (Master Data Services) | Microsoft Docs"
+title: Create and Publish a Business Rule
+description: Learn how to create a business rule in Master Data Services to ensure the accuracy of your master data. After you create a rule, publish it to apply the rule.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "business rules [Master Data Services], creating"
   - "creating business rules [Master Data Services]"
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create and Publish a Business Rule (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a business rule to ensure the accuracy of your master data. After you create a rule, you must publish it before you can apply it to data.  
   

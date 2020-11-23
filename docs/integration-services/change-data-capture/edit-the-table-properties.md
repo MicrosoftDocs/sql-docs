@@ -1,4 +1,5 @@
 ---
+description: "Edit the Table Properties"
 title: "Edit the Table Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -10,11 +11,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "editTabProps"
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Edit the Table Properties
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Use this dialog box to edit the specific columns from the selected table where changes are being captured. You can also edit the **Security Role** and **Capture Instance** information.  
   
 ### To edit the columns to include in the CDC instance  

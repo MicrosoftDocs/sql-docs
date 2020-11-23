@@ -1,4 +1,5 @@
 ---
+description: "GRANT Certificate Permissions (Transact-SQL)"
 title: "GRANT Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # GRANT Certificate Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Grants permissions on a certificate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
@@ -28,14 +28,16 @@ manager: craigg
   
 ## Syntax  
   
-```
+```syntaxsql
 GRANT permission  [ ,...n ]    
     ON CERTIFICATE :: certificate_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   
     [ AS granting_principal ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a certificate. Listed below.  
   

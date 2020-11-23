@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_version_store_space_usage (Transact-SQL)"
 title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2018"
@@ -18,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: "savjani"
 ms.author: "pariks"
-manager: "ajayj"
+manager: ajayj
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)

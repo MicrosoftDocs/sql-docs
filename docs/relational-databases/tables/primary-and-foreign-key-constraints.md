@@ -1,4 +1,5 @@
 ---
+description: "Primary and Foreign Key Constraints"
 title: "Primary and Foreign Key Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
@@ -15,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Primary and Foreign Key Constraints
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Primary keys and foreign keys are two types of constraints that can be used to enforce data integrity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables. These are important database objects.  
   

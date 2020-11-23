@@ -1,4 +1,5 @@
 ---
+description: "Filter a Trace"
 title: "Filter a Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filter a Trace
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Filters limit the events collected in a trace. If a filter is not set, all events of the selected event classes are returned in the trace output. For example, limiting the Windows user names in a trace to specific users reduces the output data to those users only.  
   
  It is not mandatory to set a filter for a trace. However, a filter minimizes the overhead that is incurred during a trace. A filter returns focused data and thus makes performance analysis and audits easier.  
@@ -39,7 +39,7 @@ manager: craigg
 2.  Identify the data and data columns that contain the information you need.  
   
 3.  Identify a subset of the data you need and define filters based on that subset of data.  
-  
+
  For example, you may be interested only in events that take longer than a certain length of time. You could create a trace that includes events where the **Duration** data column is greater than 300 milliseconds. Your trace will not include events that finish in less than 300 milliseconds.  
   
  You can create filters by using SQL Server Profiler or Transact-SQL stored procedures.  

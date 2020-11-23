@@ -1,6 +1,7 @@
 ---
-title: "Prerequisites, Restrictions, and Recommendations for Database Mirroring | Microsoft Docs"
-ms.custom: ""
+title: "Database Mirroring: Prerequisites, restrictions, & recommendations"
+description: Learn about the prerequisites, restrictions, and recommendations for configuring database mirroring with SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -18,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Prerequisites, Restrictions, and Recommendations for Database Mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
@@ -30,7 +30,7 @@ manager: craigg
   
   
 ##  <a name="DbmSupport"></a> Support For Database Mirroring  
- For information about support for database mirroring in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see   [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+ For information about support for database mirroring in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see   [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Note that database mirroring works with any supported database compatibility level. For information about the supported compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -113,5 +113,4 @@ manager: craigg
  [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
-  
   

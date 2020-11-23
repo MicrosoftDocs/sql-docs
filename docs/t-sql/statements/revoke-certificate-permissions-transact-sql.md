@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Certificate Permissions (Transact-SQL)"
 title: "REVOKE Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Certificate Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions on a certificate.  
   
@@ -27,7 +27,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON CERTIFICATE :: certificate_name   
@@ -36,7 +36,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
     [ AS revoking_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked. The permission itself will not be revoked.  
   

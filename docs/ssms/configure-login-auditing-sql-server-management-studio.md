@@ -1,6 +1,7 @@
 ---
-title: "Configure Login Auditing (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+description: "Configure Login Auditing (SQL Server Management Studio)"
+title: "Configure Login Auditing (SQL Server Management Studio)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -12,12 +13,11 @@ helpviewer_keywords:
   - "audits [SQL Server], logins"
   - "logins [SQL Server], auditing"
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Configure Login Auditing (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 This topic describes how to configure login auditing in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] to monitor [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] login activity. Login auditing can be configured to write to the error log on the following events.  
   
 -   Failed logins  

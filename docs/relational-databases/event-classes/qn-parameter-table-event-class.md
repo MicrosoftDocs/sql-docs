@@ -1,4 +1,5 @@
 ---
+description: "QN:Parameter Table Event Class"
 title: "QN:Parameter Table Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QN:Parameter Table Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The QN:Parameter table event reports information about the operations required to create, keep reference counts for, and drop the internal tables that store parameter information. This event also reports the internal activity to reset the usage count for a parameter table.  
   
 ## QN:Parameter table Event Class Data Columns  

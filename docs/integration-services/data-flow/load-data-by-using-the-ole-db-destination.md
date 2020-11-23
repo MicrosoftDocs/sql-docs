@@ -1,4 +1,5 @@
 ---
+description: "Load Data by Using the OLE DB Destination"
 title: "Load Data by Using the OLE DB Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "OLE DB destination [Integration Services]"
   - "destinations [Integration Services], OLE DB"
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Load Data by Using the OLE DB Destination
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   To add and configure an OLE DB destination, the package must already include at least one Data Flow task and a source.  
   
 ### To load data using an OLE DB destination  

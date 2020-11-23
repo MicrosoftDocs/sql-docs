@@ -1,5 +1,6 @@
 ---
-title: "Delete a Member or Collection (Master Data Services) | Microsoft Docs"
+description: "Delete a Member or Collection (Master Data Services)"
+title: Delete a Member or Collection
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -14,13 +15,12 @@ helpviewer_keywords:
   - "members [Master Data Services], deleting"
   - "consolidated members [Master Data Services], deleting"
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Member or Collection (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], delete a member or collection when you no longer need it. If you want to delete members in bulk, use the staging tables instead. For more information, see [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)  
   

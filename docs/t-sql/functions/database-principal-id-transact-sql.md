@@ -1,9 +1,10 @@
 ---
+description: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
 title: "DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "05/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -18,12 +19,11 @@ helpviewer_keywords:
   - "DATABASE_PRINCIPAL_ID function"
   - "IDs [SQL Server], principals"
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DATABASE_PRINCIPAL_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This function returns the ID number of a principal in the current database. See [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md) for more information about principals.
   
@@ -31,11 +31,13 @@ This function returns the ID number of a principal in the current database. See 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DATABASE_PRINCIPAL_ID ( 'principal_name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *principal_name*  
 An expression of type **sysname**, that represents the principal. When *principal_name* is omitted, `DATABASE_PRINCIPAL_ID` returns the ID of the current user. `DATABASE_PRINCIPAL_ID` requires the parentheses.
   

@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_12305"
 title: "MSSQLSERVER_12305 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 5a65a9fb-6db1-40dd-b410-3199bb410261
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_12305
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|12305|  
 |Event Source|MSSQLSERVER|  

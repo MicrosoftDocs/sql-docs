@@ -1,5 +1,6 @@
 ---
 title: "srv_paramstatus (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_paramstatus returns the status of a particular remote stored procedure call parameter.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_paramstatus (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

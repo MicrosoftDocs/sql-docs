@@ -1,4 +1,5 @@
 ---
+description: "Comparison Operators (Transact-SQL)"
 title: "Comparison Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,12 +19,11 @@ helpviewer_keywords:
   - "comparing expressions"
   - "comparison operators [SQL Server]"
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Comparison Operators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Comparison operators test whether two expressions are the same. Comparison operators can be used on all expressions except expressions of the **text**, **ntext**, or **image** data types. The following table lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] comparison operators.  
   
@@ -48,10 +48,10 @@ manager: craigg
   
  Expressions with **Boolean** data types are used in the WHERE clause to filter the rows that qualify for the search conditions and in control-of-flow language statements such as IF and WHILE, for example:  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
-DECLARE @MyProduct int;  
+DECLARE @MyProduct INT;  
 SET @MyProduct = 750;  
 IF (@MyProduct <> 0)  
    SELECT ProductID, Name, ProductNumber  

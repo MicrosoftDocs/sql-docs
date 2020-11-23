@@ -1,15 +1,16 @@
 ---
-title: "Add Empty Points to a Chart (Report Builder and SSRS) | Microsoft Docs"
+title: "Add Empty Points to a Chart (Report Builder) | Microsoft Docs"
+description: Specify empty points on a chart. These points are calculated in Report Builder by taking the average of the previous and next data points that contain a value. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add Empty Points to a Chart (Report Builder and SSRS)
 Null values are shown on the chart as empty spaces or gaps between data points in a series. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, empty points are data points that can be inserted in the empty space created by null values.  

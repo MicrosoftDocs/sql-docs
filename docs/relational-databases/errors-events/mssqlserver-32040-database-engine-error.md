@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_32040"
 title: "MSSQLSERVER_32040 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_32040
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|32040|  
 |Event Source|MSSQLSERVER|  

@@ -1,6 +1,6 @@
 ---
 title: "Service Principal Name (SPN) Support in Client Connections | Microsoft Docs"
-description: "Service Principal Name (SPN) support in client connections"
+description: Learn about how SQL Server supports Service Principal Name in client connections. See the most common usage scenarios.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, SPNs"
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
-author: pmasl
-ms.author: pelopes
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Service Principal Name (SPN) Support in Client Connections
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -35,9 +35,9 @@ manager: craigg
   
  For more information about Kerberos, see the following articles:  
   
--   [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)  
   
 ## Usage  
  The following table describes the most common scenarios in which client applications can enable secure authentication.  
@@ -64,7 +64,7 @@ manager: craigg
  The new connection behavior is implemented by the client; therefore, it is not specific to a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Linked Servers and Delegation  
- When linked servers are created, the **@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
+ When linked servers are created, the **\@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
   
  Delegation with linked servers requires Kerberos authentication.  
   
@@ -104,4 +104,3 @@ manager: craigg
 ## See Also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

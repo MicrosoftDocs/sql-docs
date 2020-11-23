@@ -1,4 +1,5 @@
 ---
+description: "STConvexHull (geography Data Type)"
 title: "STConvexHull (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,12 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STConvexHull method (geography)"
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STConvexHull (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents the convex hull of a **geography** instance.  
   
@@ -28,7 +28,9 @@ manager: craigg
 .STConvexHull ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geography**  
   
  CLR return type: **SqlGeography**  

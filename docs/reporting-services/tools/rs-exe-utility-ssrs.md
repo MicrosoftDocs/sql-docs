@@ -1,8 +1,9 @@
 ---
-title: "RS.exe Utility (SSRS) | Microsoft Docs"
+title: "RS.exe Utility | Microsoft Docs"
+description: Learn about the commands and syntax for the rs.exe utility that processes scripts used to automate report server deployment and administration tasks.
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "scripts [Reporting Services], command prompt"
   - "deploying reports [Reporting Services]"
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  

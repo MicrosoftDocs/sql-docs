@@ -1,7 +1,8 @@
 ---
+description: "SQLRowCount Function"
 title: "SQLRowCount Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,15 +12,15 @@ apiname:
   - "SQLRowCount"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLRowCount"
 helpviewer_keywords: 
   - "SQLRowCount function [ODBC]"
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRowCount Function
 **Conformance**  
@@ -30,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLRowCount(  
       SQLHSTMT   StatementHandle,  

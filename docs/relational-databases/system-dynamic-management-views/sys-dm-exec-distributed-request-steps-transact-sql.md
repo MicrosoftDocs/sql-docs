@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_distributed_request_steps (Transact-SQL)"
 title: "sys.dm_exec_distributed_request_steps (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,13 +20,12 @@ helpviewer_keywords:
   - "dm_exec_distributed_request_steps"
   - "sys.dm_exec_distributed_request_steps management view"
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_request_steps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Holds information about all steps that compose a given PolyBase request or query. It lists one row per query step.  
   
@@ -45,8 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |command|nvarchar(4000)|Holds the full text of the command of this step.|Any valid request string for a step. Truncated if longer than 4000 characters.|  
   
 ## See Also  
- [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

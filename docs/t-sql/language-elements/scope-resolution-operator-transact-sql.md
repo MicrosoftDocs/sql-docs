@@ -1,4 +1,5 @@
 ---
+description: ":: (Scope Resolution) (Transact-SQL)"
 title: ":: (Scope Resolution) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -10,9 +11,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 
 # :: (Scope Resolution) (Transact-SQL)
@@ -23,7 +23,7 @@ manager: craigg
 ## Examples  
  The following example shows how to use the scope resolution operator to access the `GetRoot()` member of the `hierarchyid` type.  
   
-```  
+```sql  
 DECLARE @hid hierarchyid;  
 SELECT @hid = hierarchyid::GetRoot();  
 PRINT @hid.ToString();  

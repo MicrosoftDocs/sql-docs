@@ -1,4 +1,5 @@
 ---
+description: "Publication (Peer-to-Peer Replication)"
 title: "Publication (Peer-to-Peer Replication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publication (Peer-to-Peer Replication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Publication** page displays transactional publications that are enabled for peer-to-peer replication. Publications are enabled on the **Subscription Options** page of the **Publication Properties** dialog box.  
   
 ## Options  

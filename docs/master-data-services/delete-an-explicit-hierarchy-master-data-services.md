@@ -1,5 +1,6 @@
 ---
-title: "Delete an Explicit Hierarchy (Master Data Services) | Microsoft Docs"
+description: "Delete an Explicit Hierarchy (Master Data Services)"
+title: Delete an Explicit Hierarchy
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "explicit hierarchies, deleting"
   - "deleting explicit hierarchies [Master Data Services]"
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Explicit Hierarchy (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete an explicit hierarchy when you no longer need it.  
   

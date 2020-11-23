@@ -1,6 +1,6 @@
 ---
 title: "DATEADD (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the DATEADD function. This function returns a date that has been modified by the specified date part."
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -23,13 +23,12 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEADD"
   - "DATEADD function [SQL Server]"
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEADD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function adds a specified *number* value (as a signed integer) to a specified *datepart* of an input *date* value, and then returns that modified value.
   
@@ -43,7 +42,9 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 DATEADD (datepart , number , date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *datepart*  
 The part of *date* to which `DATEADD` adds an **integer** *number*. This table lists all valid *datepart* arguments. 
 
@@ -82,7 +83,8 @@ An expression that can resolve to one of the following values:
 For *date*, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
   
 ## Return types
-The *date* argument data type becomes the `DATEADD` return value data type, except for string literal *date* values. For a string literal, `DATEADD` returns a **datetime** value. `DATEADD` will raise an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
+
+The return value data type for this method is dynamic. The return type depends on the argument supplied for `date`. If the value for `date` is a string literal date, `DATEADD` returns a **datetime** value. If another valid input data type is supplied for `date`, `DATEADD` returns the same data type. `DATEADD` raises an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
   
 ## Return Value  
   
@@ -163,7 +165,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 1 millisecond     2007-01-01 13:10:10.1121111  
 2 milliseconds    2007-01-01 13:10:10.1131111  
 1 microsecond     2007-01-01 13:10:10.1111121  
@@ -212,7 +214,7 @@ SELECT 'nanosecond',DATEADD(nanosecond,1,@datetime2);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Year         2008-01-01 13:10:10.1111111  
 quarter      2007-04-01 13:10:10.1111111  
 month        2007-02-01 13:10:10.1111111  
@@ -263,7 +265,7 @@ FROM Sales.SalesOrderHeader;
   
 A partial result set:
   
-```sql
+```
 SalesOrderID OrderDate               PromisedShipDate  
 ------------ ----------------------- -----------------------  
 43659        2005-07-01 00:00:00.000 2005-07-03 00:00:00.000  
@@ -288,14 +290,14 @@ SalesOrderID OrderDate               PromisedShipDate
 This example specifies user-defined variables as arguments for *number* and *date*:
   
 ```sql
-DECLARE @days int = 365,   
-        @datetime datetime = '2000-01-01 01:01:01.111'; /* 2000 was a leap year */;  
+DECLARE @days INT = 365,   
+        @datetime DATETIME = '2000-01-01 01:01:01.111'; /* 2000 was a leap year */;  
 SELECT DATEADD(day, @days, @datetime);  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------------------  
 2000-12-31 01:01:01.110  
   
@@ -312,7 +314,7 @@ SELECT DATEADD(month, 1, SYSDATETIME());
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---------------------------  
 2013-02-06 14:29:59.6727944  
   

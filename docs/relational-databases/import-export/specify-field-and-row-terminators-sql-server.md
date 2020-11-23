@@ -1,5 +1,6 @@
 ---
 title: "Specify Field and Row Terminators (SQL Server) | Microsoft Docs"
+description: Field terminators and row terminators indicate to programs that read the data file where one field or row ends and another field or row begins.
 ms.custom: ""
 ms.date: "07/26/2018"
 ms.prod: sql
@@ -14,13 +15,12 @@ helpviewer_keywords:
   - "row terminators [SQL Server]"
   - "terminators [SQL Server]"
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Field and Row Terminators (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   For character data fields, optional terminating characters allow you to mark the end of each field in a data file with a *field terminator* and the end of each row with a *row terminator*. Terminating characters are one way to indicate to programs that read the data file where one field or row ends and another field or row begins.  
   
 > [!IMPORTANT]

@@ -1,4 +1,5 @@
 ---
+description: "Transfer Error Messages Task"
 title: "Transfer Error Messages Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,11 +15,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Error Messages task [Integration Services]"
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Error Messages Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. User-defined messages are messages with an identifier that is equal to or greater than 50000. Messages with an identifier less than 50000 are system error messages, and cannot be transferred by using the Transfer Error Messages task.  
   
  The Transfer Error Messages task can be configured to transfer all error messages, or only the specified error messages. User-defined error messages may be available in a number of different languages and the task can be configured to transfer only messages in selected languages. A us_english version of the message that uses code page 1033 must exist on the destination server before you can transfer other language versions of the message to that server.  
@@ -43,7 +47,7 @@ manager: craigg
  The Transfer Error Messages task does not report incremental progress of the error message transfer; it reports only 0% and 100 % completion.  
   
 ## Execution Value  
- The execution value, defined in the **ExecutionValue** property of the task, returns the number of error messages that have been transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Error Message task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ The execution value, defined in the **ExecutionValue** property of the task, returns the number of error messages that have been transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Error Message task, information about the error message transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](../integration-services-ssis-variables.md).  
   
 ## Log Entries  
  The Transfer Error Messages task includes the following custom log entries:  
@@ -71,7 +75,7 @@ manager: craigg
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Transfer Error Messages Task Editor (General Page)
   Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
@@ -124,5 +128,4 @@ manager: craigg
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
   

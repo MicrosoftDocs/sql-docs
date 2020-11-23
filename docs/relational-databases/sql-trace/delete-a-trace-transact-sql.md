@@ -1,4 +1,5 @@
 ---
+description: "Delete a Trace (Transact-SQL)"
 title: "Delete a Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -14,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Delete a Trace (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use stored procedures to delete a trace.  
   
  For an example of using trace stored procedures, see [Create a Trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ### To delete a trace  
   
-1.  Execute **sp_trace_setstatus** by specifying **@status = 0** to stop the trace.  
+1.  Execute **sp_trace_setstatus** by specifying `@status = 0` to stop the trace.  
   
-2.  Execute **sp_trace_setstatus** by specifying **@status = 2** to close the trace and delete its information from the server.  
+2.  Execute **sp_trace_setstatus** by specifying `@status = 2` to close the trace and delete its information from the server.  
   
 > [!NOTE]  
 >  A trace must be stopped first before it can be closed.  

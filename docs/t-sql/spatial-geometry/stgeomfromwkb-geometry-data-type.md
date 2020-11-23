@@ -1,4 +1,5 @@
 ---
+description: "STGeomFromWKB (geometry Data Type)"
 title: "STGeomFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomFromWKB (geometry Data Type)"
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomFromWKB (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -31,7 +31,9 @@ Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Kn
 STGeomFromWKB ( 'WKB_geometry' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_geometry*  
  Is the WKB representation of the **geometry** instance you wish to return. *WKB_geometry* is a **varbinary(max)** expression.  
   

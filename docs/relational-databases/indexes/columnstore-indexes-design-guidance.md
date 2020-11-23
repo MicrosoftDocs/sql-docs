@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Design guidance"
 title: "Columnstore indexes - Design guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
@@ -10,11 +11,10 @@ ms.topic: conceptual
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Design guidance
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 High-level recommendations for designing columnstore indexes. A small number of good design decisions helps you achieve the high data compression and query performance that columnstore indexes are designed to provide. 
 
@@ -60,7 +60,7 @@ Don't use a clustered columnstore index when:
 * The table requires varchar(max), nvarchar(max), or varbinary(max) data types. Or, design the columnstore index so that it doesn't include these columns.
 * The table data is not permanent. Consider using a heap or temporary table when you need to store and delete the data quickly.
 * The table has less than one million rows per partition. 
-* More than 10% of the operations on the table are updates and deletes. Large numbers of updates and deletes cause fragmentation. The fragmentation affects compression rates and query performance until you run an operation called reorganize that forces all data into the columnstore and removes fragmentation. For more information, see [Minimizing index fragmentation in columnstore index](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/).
+* More than 10% of the operations on the table are updates and deletes. Large numbers of updates and deletes cause fragmentation. The fragmentation affects compression rates and query performance until you run an operation called reorganize that forces all data into the columnstore and removes fragmentation. For more information, see [Minimizing index fragmentation in columnstore index](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command).
 
 For more information, see [Columnstore indexes - data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
@@ -68,7 +68,7 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
-By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since an non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
+By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since a non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
 Consider using a B-tree index on a columnstore index to:
 * Run queries that search for particular values or small ranges of values.
@@ -94,7 +94,7 @@ To add additional processing resources, you can run the analytics on a readable 
 
 For more information, see [Get started with columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-For more information on choosing the best columnstore index, see Sunil Agarwal's blog [Which columnstore index is right for my workload?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload).
+For more information on choosing the best columnstore index, see Sunil Agarwal's blog [Which columnstore index is right for my workload?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload).
 
 ## Use table partitions for data management and query performance
 Columnstore indexes support partitioning which is a good way to manage and archive data. Partitioning also improves query performance by limiting operations to one or more partitions.
@@ -122,9 +122,9 @@ Unless you have a large enough data size, a columnstore index performs best with
 
 Example:
 * Load 1,000,000 rows into one partition or a non-partitioned table. You get one compressed rowgroup with 1,000,000 rows. This is great for high data compression and fast query performance.
-* Load 1,000,000 rows evenly into 10 partitions. Each partition gets 100,000 rows, which is less than the minimum threshold for columnstore compression. As a result the columnstore index could have 10 delta rowgroups with 100,000 rows in each. There are ways to force the delta rowgroups into the columnstore. However, if these are the only rows in the columnstore index, the comrpessed rowgroups will be too small for best compression and query performance.
+* Load 1,000,000 rows evenly into 10 partitions. Each partition gets 100,000 rows, which is less than the minimum threshold for columnstore compression. As a result the columnstore index could have 10 delta rowgroups with 100,000 rows in each. There are ways to force the delta rowgroups into the columnstore. However, if these are the only rows in the columnstore index, the compressed rowgroups will be too small for best compression and query performance.
 
-For more information about partitioning, see Sunil Agarwal's blog post, [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/).
+For more information about partitioning, see Sunil Agarwal's blog post, [Should I partition my columnstore index?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index).
 
 ## Choose the appropriate data compression method
 The columnstore index offers two choices for data compression: columnstore compression and archive compression. You can choose the compression option when you create the index, or change it later with [ALTER INDEX ... REBUILD](../../t-sql/statements/alter-index-transact-sql.md).
@@ -176,16 +176,14 @@ These are tasks for creating and maintaining columnstore indexes.
 |Drop a columnstore index|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Dropping a columnstore index uses the standard DROP INDEX syntax that B-tree indexes use. Dropping a clustered columnstore index will convert the columnstore table to a heap.|  
 |Delete a row from a columnstore index|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) to delete a row.<br /><br /> **columnstore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted but does not reclaim the physical storage for the row until the index is rebuilt.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logically and physically deletes the row.|  
 |Update a row in the columnstore index|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) to update a row.<br /><br /> **columnstore** row:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted, and then inserts the updated row into the deltastore.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates the row in the deltastore.|  
-|Force all rows in the deltastore to go into the columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore indexes - defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX with the REBUILD option forces all rows to go into the columnstore.|  
+|Force all rows in the deltastore to go into the columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|ALTER INDEX with the REBUILD option forces all rows to go into the columnstore.|  
 |Defragment a columnstore index|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE  defragments columnstore indexes online.|  
 |Merge tables with columnstore indexes.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
-
 
 ## Next steps
 To create an empty columnstore index for:
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)], refer to [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
-* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], refer to [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], refer to [CREATE TABLE (Azure Synapse Analytics)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 For more information on how convert an existing rowstore heap or B-tree index into a clustered columnstore index, or to create a nonclustered columnstore index, refer to [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
-

@@ -1,4 +1,5 @@
 ---
+description: "sp_droprolemember (Transact-SQL)"
 title: "sp_droprolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -16,12 +17,12 @@ helpviewer_keywords:
   - "sp_droprolemember"
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_droprolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes a security account from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] role in the current database.  
   
@@ -31,20 +32,22 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
-  
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
+
+### Syntax for both SQL Server and Azure SQL Database
+
+```syntaxsql  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
+### Syntax for both Azure Synapse Analytics and Parallel Data Warehouse
+
+```syntaxsql  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
 `[ @rolename = ] 'role'`
@@ -69,14 +72,14 @@ sp_droprolemember 'role' ,
 ## Examples  
  The following example removes the user `JonB` from the role `Sales`.  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'Jonb';  
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example removes the user `JonB` from the role `Sales`.  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   

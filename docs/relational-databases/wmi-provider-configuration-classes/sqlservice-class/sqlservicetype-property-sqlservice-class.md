@@ -1,6 +1,7 @@
 ---
-title: "SqlServiceType Property (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+description: "SqlServiceType Property (SqlService Class)"
+title: "SqlServiceType Property (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -15,12 +16,11 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SqlServiceType property"
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # SqlServiceType Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the type of the managed service.  
   
 ## Syntax  
@@ -49,6 +49,11 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService is the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] service.|  
 |*6*|ReportServer is the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service.|  
 |*7*|SQLBrowser is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser service.|  
+|*8*|NsService is the [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Notification service.|  
+|*9*|MSSQLFDLauncher is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Full-text Filter Daemon Launcher service.|  
+|*10*|SQLPBENGINE is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase Engine service.|  
+|*11*|SQLPBDMS is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase Data Movement service.|  
+|*12*|MSSQLLaunchpad is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Launchpad service.|  
   
 ## See Also  
  [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

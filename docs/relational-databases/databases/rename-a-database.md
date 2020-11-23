@@ -1,4 +1,5 @@
 ---
+description: "Rename a Database"
 title: "Rename a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/02/2018"
@@ -13,12 +14,11 @@ helpviewer_keywords:
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename a Database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to rename a user-defined database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or Azure SQL Database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
   
 ## In This Topic
@@ -35,10 +35,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
-> To rename a database in Azure SQL Data Warehouse or Parallel Data Warehouse, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) statement.
+> To rename a database in Azure Synapse Analytics or Parallel Data Warehouse, use the [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) statement.
   
 ## Before You Begin
   
@@ -58,6 +58,7 @@ Requires ALTER permission on the database.
 ## Rename a database using SQL Server Management Studio
 
 Use the following steps to rename a SQL Server or Azure SQL database using SQL Server Management Studio.
+
   
 1. In **Object Explorer**, connect to your SQL instance.  
   
@@ -67,6 +68,8 @@ Use the following steps to rename a SQL Server or Azure SQL database using SQL S
   
 4. Enter the new database name, and then click **OK**.  
   
+5. Optionally, if the database was your default database, see [Reset your default database after rename](#reset-your-default-database-after-rename).
+
 ## Rename a database using Transact-SQL  
   
 ### To rename a SQL Server database by placing it in single-user mode
@@ -88,6 +91,8 @@ Use the following steps to rename a SQL Server database using T-SQL in SQL Serve
    GO
    ```  
 
+4. Optionally, if the database was your default database, see [Reset your default database after rename](#reset-your-default-database-after-rename).
+
 ### To rename an Azure SQL Database database
 
 Use the following steps to rename an Azure SQL database using T-SQL in SQL Server Management Studio.
@@ -105,6 +110,19 @@ Use the following steps to rename an Azure SQL database using T-SQL in SQL Serve
 
 After renaming a database in SQL Server, back up the `master` database. In Azure SQL Database, this is not needed as backups occur automatically.  
   
+## Reset your default database after rename
+
+If the database you're renaming was set as your default database, use the following command to reset your default to the renamed database:
+
+
+```sql
+USE [master]
+GO
+ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+GO
+```
+
+
 ## See Also
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

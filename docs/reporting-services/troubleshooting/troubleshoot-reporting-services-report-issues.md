@@ -1,15 +1,16 @@
 ---
-title: "Troubleshoot  Reporting Services Report Issues | Microsoft Docs"
+title: "Troubleshoot  Reporting Services Report Issues"
+description: In this article, troubleshoot issues with report design, preview, export, and publishing to or viewing on a report server in native or SharePoint mode.
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
 
 
 ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot  Reporting Services Report Issues
 This topic helps you troubleshoot problems with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] report design, previewing a report, publishing a report to a report server in native mode or SharePoint mode, viewing a report on the report server, or exporting a report to a different file format.  
@@ -33,7 +34,7 @@ To view the call stack, log on to the report server by using the local administr
 ## Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] to Verify Queries and Credentials  
 You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] to validate complex queries before you include them in your report.   
   
-For more information, see [Database Engine query editor](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) and [Manage Oojects by using Object Explorer](~/ssms/object/manage-objects-by-using-object-explorer.md).  
+For more information, see [Database Engine query editor](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) and [Manage Oojects by using Object Explorer](~/ssms/object/manage-objects-by-using-object-explorer.md).  
   
 ## Analyze Problem Reports with Report Data Cached on the Client  
 When a report author creates a report in Business Intelligence Development Studio, the authoring client caches data as an .rdl.data file, which is used when you preview a report. Every time the query changes, the cache is updated. To debug report problems, it is sometimes useful to prevent the refresh for report data so that the data does not change when you are debugging.   
@@ -55,5 +56,3 @@ As long as the value is set to 1, only cached report data is used. Be sure to re
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

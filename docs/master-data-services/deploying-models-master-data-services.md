@@ -1,5 +1,6 @@
 ---
-title: "Deploying Models (Master Data Services) | Microsoft Docs"
+title: Deploying Models
+description: Deploy model packages to move copies of models from one Master Data Services environment to another or to create new models in your environment.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "deployment packages [Master Data Services], about deployment packages"
   - "deployment packages [Master Data Services]"
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Deploying Models (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a package is an XML file that contains a deployable model structure, and optionally, data from the model. Use model packages to move copies of models from one MDS environment to another, or to create new models in your existing MDS environment.  
   

@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_21893"
 title: "MSSQLSERVER_21893 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_21893
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|21893|  
 |Event Source|MSSQLSERVER|  

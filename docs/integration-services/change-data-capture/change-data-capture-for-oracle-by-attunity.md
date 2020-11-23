@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture for Oracle by Attunity"
 title: "Change Data Capture for Oracle by Attunity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
@@ -8,16 +9,24 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Change Data Capture for Oracle by Attunity
-The Change Data Capture for Oracle by Attunity download includes the following 2 components.
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+The Change Data Capture for Oracle by Attunity download includes the following two components.
 
 -   [Change Data Capture Designer for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)
 
 -   [Change Data Capture Service for Oracle by Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)   
 
 ## Get the Change Data Capture for Oracle by Attunity download
-The Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 are part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
+
+Download Microsoft Change Data Capture Designer and Service for Oracle by Attunity for corresponding SQL Server version from below links:
+
+- [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)

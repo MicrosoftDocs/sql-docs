@@ -1,4 +1,5 @@
 ---
+description: "SQLGetDiagRec Function"
 title: "SQLGetDiagRec Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDiagRec function [ODBC]"
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetDiagRec Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDiagRec(  
      SQLSMALLINT     HandleType,  

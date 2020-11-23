@@ -1,4 +1,5 @@
 ---
+description: "HDFS File Destination"
 title: "HDFS File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/09/2019
@@ -10,11 +11,14 @@ ms.topic: conceptual
 f1_keywords:
   - "sql13.ssis.designer.hdfsfiledest.f1"
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # HDFS File Destination
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The HDFS File Destination component enables an SSIS package to write data to a HDFS file. The supported file formats are Text, Avro, and ORC.
 
  To configure the HDFS File Destination, drag and drop the HDFS File Source on the data flow designer and double-click the component to open the editor.

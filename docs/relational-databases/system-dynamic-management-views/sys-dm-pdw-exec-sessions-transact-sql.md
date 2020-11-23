@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_exec_sessions (Transact-SQL)"
 title: "sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2019"
@@ -11,11 +12,10 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds information about all sessions currently or recently open on the appliance. It lists one row per session.  
   
@@ -33,12 +33,12 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |app_name|**nvarchar(255)**|Captures application name information optionally set as part of the connection process.|Any valid string.|  
 |sql_spid|**int**|The id number of the SPID. Use the `session_id` this session. Use the `sql_spid` column to join to **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Warning \*\*** This column contains closed SPIDs.||  
   
- For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.  
+ For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.  
   
 ## Permissions  
  Requires the `VIEW SERVER STATE` permission.  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

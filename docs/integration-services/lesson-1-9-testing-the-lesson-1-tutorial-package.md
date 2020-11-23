@@ -1,4 +1,5 @@
 ---
+description: "Step 9: Test the Lesson 1 tutorial package"
 title: "Step 9: Test the Lesson 1 tutorial package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-9: Test the Lesson 1 package
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 In this tutorial, you've done the following tasks:  
   

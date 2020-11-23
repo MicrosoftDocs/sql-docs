@@ -1,4 +1,5 @@
 ---
+description: "Lesson 5-4: Test the Lesson 5 package"
 title: "Step 4: Test the Lesson 5 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 5-4: Test the Lesson 5 package
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 At run time, your package obtains the value for the **Directory** property from a configuration variable, rather than from the directory name specified when you created the package. The value of the variable comes from the **SSISTutorial.dtsConfig** XML file.  
   

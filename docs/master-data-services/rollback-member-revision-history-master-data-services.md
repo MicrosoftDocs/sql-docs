@@ -1,5 +1,6 @@
 ---
-title: "Rollback Member Revision History (Master Data Services) | Microsoft Docs"
+description: "Rollback Member Revision History (Master Data Services)"
+title: Rollback Member Revision History
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Rollback Member Revision History (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A member revision history is recorded each time a member is changed. You can rollback a member revision history to a previous version.  
   

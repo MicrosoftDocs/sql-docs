@@ -1,5 +1,6 @@
 ---
-title: "Merge Conflicts (Master Data Services) | Microsoft Docs"
+description: "Merge Conflicts (Master Data Services)"
+title: Merge Conflicts
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Merge Conflicts (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], if data that you are attempting to publish has been changed by another user, the publish will fail with a conflict error. To resolve this error, you can perform merge conflicts and republish the changes.  
   

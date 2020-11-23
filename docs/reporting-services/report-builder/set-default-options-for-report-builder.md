@@ -1,8 +1,9 @@
 ---
 title: "Set default options for Report Builder | Microsoft Docs"
+description: This article describes useful defaults that you can set in Report Builder. These defaults make report authoring easier and faster. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
@@ -10,15 +11,15 @@ ms.topic: conceptual
 f1_keywords: 
   - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Set default options for Report Builder
   In Report Builder, you can set a number of useful defaults to make report authoring easier and faster.  For example, if you can set or change the default report server, Report Builder saves your reports to the same report server automatically, unless you specify otherwise.  
   
 -   In Report Builder, click **File** > **Options**.  
   
-## UIElement List  
+## UI element list  
  **Use this report server or SharePoint site by default**  
  Your administrator may have configured this. The value can be a well-formed URL starting with http:// or https://. This setting determines which data source connections appear by default in the Table/Matrix and Chart wizards. In addition, your reports will be processed on this server and you can reference resources from this server.  
   

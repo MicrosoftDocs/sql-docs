@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.fn_backup_instance_config (Transact-SQL)"
 title: "managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # managed_backup.fn_backup_instance_config (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Returns 1 row with the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] default configuration settings for the instance of SQL Server.  
   

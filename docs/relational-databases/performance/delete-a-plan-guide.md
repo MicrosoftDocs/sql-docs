@@ -1,5 +1,6 @@
 ---
 title: "Delete a Plan Guide | Microsoft Docs"
+description: Learn to delete or drop a plan guide in SQL Server by using SQL Server Management Studio or Transact-SQL. Use Transact-SQL to delete all guides in a database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Delete a Plan Guide
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can delete (drop) a plan guide in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Using [!INCLUDE[tsql](../../includes/tsql-md.md)], you can also delete all of the plan guides in a database.  
   
  **In This Topic**  
@@ -47,7 +47,7 @@ manager: craigg
 3.  Right-click the plan guide you want to delete and select **Delete**.  
   
 4.  In the **Delete Object** dialog box, ensure that the correct plan guide is selected and then click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To delete a single plan guide  

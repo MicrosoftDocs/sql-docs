@@ -1,5 +1,6 @@
 ---
-title: "Filter Data before Exporting (MDS Add-in for Excel) | Microsoft Docs"
+description: "Filter Data before Exporting (MDS Add-in for Excel)"
+title: Filter Data before Exporting
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Filter Data before Exporting (MDS Add-in for Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filter data when you want to limit the size or scope of data that you are exporting to Excel.  
   

@@ -1,16 +1,20 @@
 ---
+description: "Run an SSIS package with PowerShell"
 title: "Run an SSIS package with PowerShell | Microsoft Docs"
-ms.date: "05/21/2018"
+ms.date: "09/17/2020"
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.custom: ""
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Run an SSIS package with PowerShell
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 This quickstart demonstrates how to use a PowerShell script to connect to a database server and run an SSIS package.
 
 ## Prerequisites
@@ -23,7 +27,7 @@ You can use the information in this quickstart to run an SSIS package on the fol
 
 -   SQL Server on Windows.
 
--   Azure SQL Database. For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   SSIS integration runtime (IR) in Azure Data Factory (ADF), where SSIS catalog (SSISDB) is hosted by Azure SQL Managed Instance (MI). For more info about deploying and running packages in Azure, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 You cannot use the information in this quickstart to run an SSIS package on Linux. For more info about running packages on Linux, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
@@ -31,12 +35,22 @@ You cannot use the information in this quickstart to run an SSIS package on Linu
 
 To run the package on Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
 
-1. Log in to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
 3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 5. Click **Show database connection strings**.
 6. Review the complete **ADO.NET** connection string.
+
+## SSIS PowerShell Provider
+You can use the SSIS PowerShell Provider to connect to an SSIS catalog and execute packages within it.
+
+Below is a basic example of how to execute an SSIS package in a package catalog with the SSIS PowerShell Provider.
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## PowerShell script
 Provide appropriate values for the variables at the top of the following script, and then run the script to run the SSIS package.

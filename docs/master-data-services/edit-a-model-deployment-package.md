@@ -1,5 +1,6 @@
 ---
-title: "Edit a Model Deployment Package | Microsoft Docs"
+description: "Edit a Model Deployment Package"
+title: Edit a Model Deployment Package
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Edit a Model Deployment Package
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic describes how to deploy selected parts of a model in MDS, rather than an entire model. To do so, you edit an MDS model package using the Model Package Editor.  
   

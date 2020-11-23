@@ -1,4 +1,5 @@
 ---
+description: "Divide (SSIS Expression)"
 title: "Divide (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "/ (divide)"
   - "divide operator (/)"
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Divide (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Divides the first numeric expression by the second one.  
   
 ## Syntax  

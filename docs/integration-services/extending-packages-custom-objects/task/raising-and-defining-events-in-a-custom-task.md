@@ -1,4 +1,5 @@
 ---
+description: "Raising and Defining Events in a Custom Task"
 title: "Raising and Defining Events in a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -22,11 +23,14 @@ helpviewer_keywords:
   - "SSIS events, runtime"
   - "IDTSEvents interface"
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Raising and Defining Events in a Custom Task
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] run-time engine provides a collection of events that provide status on the progress of a task as the task is validated and executed. The <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> interface defines these events, and is provided to tasks as a parameter to the <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> and <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> methods.  
   
  There is another set of events, which are defined in the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> interface, that are raised on behalf of the task by the <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>. The <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> raises events that occur before and after validation and execution, whereas the task raises the events that occur during execution and validation.  

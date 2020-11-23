@@ -1,5 +1,6 @@
 ---
 title: "concat Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function concat() that returns a string created by concatenating zero or more strings specified as arguments.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on String Values - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Accepts zero or more strings as arguments and returns a string created by concatenating the values of each of these arguments.  
   

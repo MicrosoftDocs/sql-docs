@@ -1,6 +1,7 @@
 ---
-title: "Group Changes to Related Rows with Logical Records | Microsoft Docs"
-ms.custom: ""
+title: "Group changes to related rows with logical records"
+description: Learn how to make changes to related rows as a unit with Merge Replication in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Group Changes to Related Rows with Logical Records
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -35,7 +35,7 @@ manager: craigg
   
  In this example, a logical record consists of all the rows in the **Orders** table that are related to a single **CustID** value and all of the rows in the **OrderItems** table that are related to those rows in the **Orders** table. This diagram shows all the rows in the three tables that are in the logical record for Customer2:  
   
- ![Three table logical record with values](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
+ ![First screenshot of a three table logical record with values.](../../../relational-databases/replication/merge/media/logical-records-02.gif "Three table logical record with values")  
   
  To define a logical record relationship between articles, see [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
@@ -49,7 +49,7 @@ manager: craigg
 ### The Application of Changes As a Unit  
  If merge processing is interrupted, such as in the case of a dropped connection, the partially completed set of related replicated changes is rolled back if logical records are used. For example, consider the case where a Subscriber adds a new order with **OrderID** = 6 and two new rows in the **OrderItems** table with **OrderItemID** = 10 and **OrderItemID** = 11 for **OrderID** = 6.  
   
- ![Three table logical record with values](../../../relational-databases/replication/merge/media/logical-records-04.gif "Three table logical record with values")  
+ ![Second screenshot of a three table logical record with values.](../../../relational-databases/replication/merge/media/logical-records-04.gif "Three table logical record with values")  
   
  If the replication process is interrupted after the **Orders** row for **OrderID** = 6 is complete, but before the **OrderItems** 10 and 11 are completed, and logical records are not used, the **OrderTotal** value for **OrderID** = 6 will not be consistent with the sum of the **OrderAmount** values for the **OrderItems** rows. If logical records are used, the **Orders** row for **OrderID** = 6 is not committed until the related **OrderItems** changes are replicated.  
   
@@ -95,7 +95,7 @@ manager: craigg
   
 -   If logical records are used in a publication that includes parameterized filters, you must initialize each Subscriber with a snapshot for its partition. If you initialize a Subscriber with another method, the Merge Agent will fail. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
--   Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+-   Conflicts that involve logical records are not displayed in Conflict Viewer. To view information about these conflicts, use replication stored procedures. For more information, see [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
 ### Publication Settings  
   
@@ -138,5 +138,4 @@ manager: craigg
   
 ## See Also  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
   

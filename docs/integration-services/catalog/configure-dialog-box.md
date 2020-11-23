@@ -1,4 +1,5 @@
 ---
+description: "Configure Dialog Box"
 title: "Configure Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,11 +13,14 @@ f1_keywords:
   - "sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
   - "sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1"
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Dialog Box
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Use the **Configure** dialog box to configure parameters, connection managers, and references to environments, for packages and projects.  
   
  **What do you want to do?**  

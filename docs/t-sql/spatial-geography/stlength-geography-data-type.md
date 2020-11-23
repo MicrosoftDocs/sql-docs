@@ -1,4 +1,5 @@
 ---
+description: "STLength (geography Data Type)"
 title: "STLength (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STLength method"
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STLength (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the total length of the elements in a **geography** instance or the **geography** instances within a **GeometryCollection**.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STLength ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **float**  
   
  CLR return type: **SqlDouble**  

@@ -1,5 +1,6 @@
 ---
 title: "Delete Data or Log Files from a Database | Microsoft Docs"
+description: Learn how to delete data or log files in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Delete Data or Log Files from a Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to delete data or log files in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
@@ -62,7 +62,7 @@ manager: craigg
 4.  In the **Database files** grid, select the file to delete and then click **Remove**.  
   
 5.  Click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To delete data or log files from a database  

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_active_catalogs (Transact-SQL)"
 title: "sys.dm_fts_active_catalogs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"
@@ -17,13 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_active_catalogs dynamic management view"
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee 
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_active_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information on the full-text catalogs that have some population activity in progress on the server.  
   
@@ -56,7 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
    
 ## Physical Joins  
  ![Significant joins of this dynamic management view](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Significant joins of this dynamic management view")  

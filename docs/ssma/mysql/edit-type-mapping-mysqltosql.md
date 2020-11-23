@@ -1,4 +1,5 @@
 ---
+description: "Edit Type Mapping (MySQLToSQL)"
 title: "Edit Type Mapping (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: craigg
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Edit Type Mapping (MySQLToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

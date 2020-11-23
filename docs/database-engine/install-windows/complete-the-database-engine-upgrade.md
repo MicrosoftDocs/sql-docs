@@ -1,5 +1,6 @@
 ---
 title: "Complete the Database Engine Upgrade | Microsoft Docs"
+description: This article describes some additional steps you might have to take after you finish upgrading the Database Engine of SQL Server.
 ms.custom: ""
 ms.date: "10/23/2017"
 ms.prod: sql
@@ -7,14 +8,13 @@ ms.technology: install
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Complete the Database Engine Upgrade
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 After the upgrading SQL Server complete, there are a number of additional steps that you may need to take. These include the following:  
   

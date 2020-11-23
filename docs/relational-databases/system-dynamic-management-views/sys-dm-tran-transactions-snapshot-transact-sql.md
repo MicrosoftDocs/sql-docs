@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_transactions_snapshot (Transact-SQL)"
 title: "sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
@@ -17,13 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_transactions_snapshot dynamic management view"
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647 
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_transactions_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a virtual table for the **sequence_number** of transactions that are active when each snapshot transaction starts. The information that is returned by this view can you help you do the following:  
   
@@ -53,13 +53,6 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
   
  Snapshot transaction XSN-60 ignores data modifications made by XSN-57 and XSN-58 and also XSN 59.  
   
-## Syntax  
-  
-```  
-  
-dm_tran_transactions_snapshot  
-```  
-  
 ## Table Returned  
   
 |Column name|Data type|Description|  
@@ -71,7 +64,7 @@ dm_tran_transactions_snapshot
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
   
 ## Remarks  
  When a snapshot transaction starts, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] records all of the transactions that are active at that time. **sys.dm_tran_transactions_snapshot** reports this information for all currently active snapshot transactions.  

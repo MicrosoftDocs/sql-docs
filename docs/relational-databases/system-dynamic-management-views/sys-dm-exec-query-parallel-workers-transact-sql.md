@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_parallel_workers (Transact-SQL)"
 title: "sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2017"
@@ -19,11 +20,11 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9f
 author: "pelopes"
 ms.author: "pelopes"
-manager: "ajayj"
+manager: ajayj
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_parallel_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Returns worker availability information per node.  
   
@@ -39,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
  
 ## Examples  
   

@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKCATALOG (Transact-SQL)"
 title: "DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -23,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC CHECKCATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Checks for catalog consistency within the specified database. The database must be online.  
   
@@ -34,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DBCC CHECKCATALOG   
 [   
     (   
@@ -44,7 +44,9 @@ DBCC CHECKCATALOG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* | *database_id* | 0  
  Is the name or ID of the database for which to check catalog consistency. If not specified, or if 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

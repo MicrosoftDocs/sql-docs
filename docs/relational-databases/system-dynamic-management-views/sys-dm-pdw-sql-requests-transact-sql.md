@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_sql_requests (Transact-SQL)"
 title: "sys.dm_pdw_sql_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -11,11 +12,10 @@ dev_langs:
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_sql_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds information about all SQL Server query distributions as part of a SQL step in the query.  
   
@@ -34,9 +34,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |spid|**int**|Session id on the SQL Server instance running the query distribution.||  
 |command|**nvarchar(4000)**|Full text of command for this query distribution.|Any valid query or request string.|  
   
- For information about the maximum rows retained by this view, see the Maximum System View Values section in the [Minimum and Maximum Values (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) topic.  
+ For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

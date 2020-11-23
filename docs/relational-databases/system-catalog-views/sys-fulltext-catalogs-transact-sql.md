@@ -1,10 +1,10 @@
 ---
+description: "sys.fulltext_catalogs (Transact-SQL)"
 title: "sys.fulltext_catalogs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_catalogs catalog view"
 ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # sys.fulltext_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each full-text catalog.  
   

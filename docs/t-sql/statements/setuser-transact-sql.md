@@ -1,4 +1,5 @@
 ---
+description: "SETUSER (Transact-SQL)"
 title: "SETUSER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SETUSER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Allows a member of the **sysadmin** fixed server role or the owner of a database to impersonate another user.  
   
@@ -34,12 +34,14 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *username* **'**  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows user in the current database that is impersonated. When *username* is not specified, the original identity of the system administrator or database owner impersonating the user is reset.  
   
@@ -62,7 +64,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## Examples  
  The following example shows how the database owner can adopt the identity of another user. User `mary` has created a table called `computer_types`. By using SETUSER, the database owner impersonates `mary` to grant user `joe` access to the `computer_types` table, and then resets his or her own identity.  
   
-```  
+```sql
 SETUSER 'mary';  
 GO  
 GRANT SELECT ON computer_types TO joe;  

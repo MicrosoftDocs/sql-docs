@@ -1,5 +1,6 @@
 ---
-title: "Configure Business Rules to Send Notifications (Master Data Services) | Microsoft Docs"
+description: "Configure Business Rules to Send Notifications (Master Data Services)"
+title: Configure Business Rules to Send Notifications
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,13 +13,12 @@ helpviewer_keywords:
   - "e-mail [Master Data Services], configuring business rules"
   - "notifications [Master Data Services], configuring business rules"
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Configure Business Rules to Send Notifications (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure business rules to send notifications when you want to notify users about attribute value changes.  
   

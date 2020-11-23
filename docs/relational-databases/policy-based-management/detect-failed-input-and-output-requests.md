@@ -1,4 +1,5 @@
 ---
+description: "Detect Failed Input and Output Requests"
 title: "Detect Failed Input and Output Requests | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Detect Failed Input and Output Requests
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the system event log for EventId 50. This error is caused by a failed I/O request.  
   
 ## Best Practices Recommendations  

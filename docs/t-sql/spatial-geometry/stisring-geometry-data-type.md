@@ -1,4 +1,5 @@
 ---
+description: "STIsRing (geometry Data Type)"
 title: "STIsRing (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsRing (geometry Data Type)"
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsRing (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance fulfills the following requirements:
 -   It is a **LineString** instance.  
@@ -37,7 +37,9 @@ Returns 1 if a **geometry** instance fulfills the following requirements:
 .STIsRing ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  

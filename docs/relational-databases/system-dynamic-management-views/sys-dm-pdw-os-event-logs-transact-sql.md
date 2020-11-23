@@ -1,22 +1,21 @@
 ---
+description: "sys.dm_pdw_os_event_logs (Transact-SQL)"
 title: "sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.technology: data-warehouse
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_os_event_logs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Holds information regarding the different Windows Event logs on the different nodes.  
   
@@ -31,9 +30,9 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |generate_time|**datetime**|Time the event was created.||  
 |write_time|**datetime**|Time the event was actually written to the log.||  
   
- For information about the maximum rows retained by this view, see the Maximum System View Values section in the [Minimum and Maximum Values (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) topic.  
+ For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic. 
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

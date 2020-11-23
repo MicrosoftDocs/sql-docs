@@ -1,4 +1,5 @@
 ---
+description: "Oracle Supplemental Logging Script"
 title: "Oracle Supplemental Logging Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Oracle Supplemental Logging Script
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   This dialog box shows the script the Oracle supplemental logging script.  
   
  When you prepare a CDC Instance for use, the CDC Designer creates an Oracle SQL script that sets up supplemental logging for the tables to be captured. The supplemental logging script tells Oracle that when a specific table is updated, the change records it writes to the transaction log should contain the data of all columns of interest, not just the columns that changed.  

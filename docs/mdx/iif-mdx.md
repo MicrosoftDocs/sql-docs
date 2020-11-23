@@ -1,4 +1,5 @@
 ---
+description: "IIf (MDX)"
 title: "IIf (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,7 +9,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # IIf (MDX)
 
@@ -58,7 +58,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER and STRICT are mutually exclusive in the hint; they can be used in the same IIF(,,) over different expressions.  
   
- For more information, see [IIF Function Query Hints in SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) and [Execution Plans and Plan Hints for MDX IIF Function and CASE Statement](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ For more information, see [IIF Function Query Hints in SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) and [Execution Plans and Plan Hints for MDX IIF Function and CASE Statement](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## Examples  
  The following query shows a simple use of **IIF** inside a calculated measure to return one of two different string values when the measure Internet Sales Amount is greater or less than $10000:  

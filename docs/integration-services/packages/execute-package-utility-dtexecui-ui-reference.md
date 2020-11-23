@@ -1,4 +1,5 @@
 ---
+description: "Execute Package Utility (dtexecui)"
 title: "Execute Package Utility (dtexecui) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,11 +22,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "DTExecUI utility"
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Execute Package Utility (dtexecui)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Use the **Execute Package Utility** to run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The utility runs packages that are stored in one of three locations: [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system. This user interface, which can be opened from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by typing **dtexecui** at a command prompt, is an alternative to running packages by using the **DTExec** command prompt tool.  
   
  Packages execute in the same process as the **dtexecui.exe** utility. Because this utility is a 32-bit tool, packages run by using **dtexecui.exe** in a 64-bit environment run in Windows on Win32 (WOW). When developing and testing commands by using the dtexecui.exe utility on a 64-bit computer, you should test the commands in 64-bit mode by using the 64-bit version of **dtexec.exe** before deploying or scheduling the commands on a production server.  
@@ -59,9 +63,8 @@ manager: craigg
  **Package source**  
  Specify the location of the package to run, using the following options:  
   
-|||  
-|-|-|  
 |Value|Description|  
+|-|-|  
 |**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** _username_ and **/PASSWORD** _password_ options to the command prompt.|  
 |**File system**|Select this option when the package resides in the file system.|  
 |**SSIS Package Store**|Select this option when the package resides in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store.|  

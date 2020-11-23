@@ -1,19 +1,17 @@
 ---
 title: Unattended install for SQL Server on Ubuntu
 titleSuffix: SQL Server
-description: SQL Server Script Sample - Unattended Install on Ubuntu
-author: rothja
-ms.author: jroth
-manager: craigg
+description: Learn to use a sample Bash script to install SQL Server 2017 on Ubuntu 16.04 without interactive input.
+author: VanMSFT 
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for Ubuntu
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This sample Bash script installs SQL Server 2017 on Ubuntu 16.04 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
@@ -27,6 +25,9 @@ This sample Bash script installs SQL Server 2017 on Ubuntu 16.04 without interac
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Sample script
+
+> [!NOTE]
+> The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line may resolve this issue.
 
 ```bash
 #!/bin/bash -e

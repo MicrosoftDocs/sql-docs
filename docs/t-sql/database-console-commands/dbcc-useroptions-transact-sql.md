@@ -1,4 +1,5 @@
 ---
+description: "DBCC USEROPTIONS (Transact-SQL)"
 title: "DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -21,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC USEROPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the SET options active (set) for the current connection.
   
@@ -32,20 +32,21 @@ Returns the SET options active (set) for the current connection.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC USEROPTIONS  
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 NO_INFOMSGS  
 Suppresses all informational messages that have severity levels from 0 through 10.
   
 ## Result Sets  
 DBCC USEROPTIONS returns a column for the name of the SET option and a column for the value of the option (values and entries may vary):
 
-```sql
-
+```
 Set Option                   Value`  
 ---------------------------- ---------------------------`  
 textsize                     64512 

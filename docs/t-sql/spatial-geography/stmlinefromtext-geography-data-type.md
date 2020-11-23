@@ -1,4 +1,5 @@
 ---
+description: "STMLineFromText (geography Data Type)"
 title: "STMLineFromText (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STLineFromText method"
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STMLineFromText (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -31,7 +31,9 @@ Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-K
 STMLineFromText ( 'multilinestring_tagged_text' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *multilinestring_tagged_text*  
  Is the WKT representation of the **geographyMultiLineString** instance you wish to return. *multilinestring_tagged_text* is an **nvarchar(max)** expression.  
   

@@ -1,5 +1,6 @@
 ---
-title: "Delete a Derived Hierarchy (Master Data Services) | Microsoft Docs"
+description: "Delete a Derived Hierarchy (Master Data Services)"
+title: Delete a Derived Hierarchy
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "deleting derived hierarchies [Master Data Services]"
   - "derived hierarchies, deleting"
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Derived Hierarchy (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a derived hierarchy when you are sure you no longer need it.  
   

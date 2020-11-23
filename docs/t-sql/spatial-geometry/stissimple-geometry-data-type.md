@@ -1,4 +1,5 @@
 ---
+description: "STIsSimple (geometry Data Type)"
 title: "STIsSimple (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsSimple (geometry Data Type)"
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsSimple (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance is simple, as defined by the Open Geospatial Consortium (OGC). Returns 0 if a **geometry** instance is not simple.
   
@@ -31,7 +31,9 @@ Returns 1 if a **geometry** instance is simple, as defined by the Open Geospatia
 .STIsSimple ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  

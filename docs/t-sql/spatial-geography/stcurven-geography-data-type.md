@@ -1,4 +1,5 @@
 ---
+description: "STCurveN (geography Data Type)"
 title: "STCurveN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STCurveN method (geography)"
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STCurveN (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the curve specified from a **geography** instance that is a **LineString**, **CircularString**, or **CompoundCurve**.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STCurveN( n )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *n*  
  Is an **int** expression between 1 and the number of curves in the **geography** instance.  
   

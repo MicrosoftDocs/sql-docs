@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Database Permissions (Transact-SQL)"
 title: "REVOKE Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -16,11 +17,10 @@ helpviewer_keywords:
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE Database Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Revokes permissions granted and denied on a database.  
   
@@ -28,8 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ]    
     { TO | FROM } <database_principal> [ ,...n ]   
         [ CASCADE ]  
@@ -49,7 +48,9 @@ permission | ALL [ PRIVILEGES ]
     | Database_user_with_no_login    
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a database. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -81,27 +82,27 @@ permission | ALL [ PRIVILEGES ]
  Specifies a database role.  
   
  *Application_role*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to a Windows group.  
   
  *Database_user_mapped_to_certificate*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to a certificate.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to an asymmetric key.  
   
@@ -128,7 +129,7 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
@@ -203,9 +204,9 @@ permission | ALL [ PRIVILEGES ]
 ### A. Revoking permission to create certificates  
  The following example revokes `CREATE CERTIFICATE` permission on the `AdventureWorks2012` database from user `MelanieK`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CREATE CERTIFICATE FROM MelanieK;  
 GO  
@@ -214,9 +215,9 @@ GO
 ### B. Revoking REFERENCES permission from an application role  
  The following example revokes `REFERENCES` permission on the `AdventureWorks2012` database from application role `AuditMonitor`.  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES FROM AuditMonitor;  
 GO  
@@ -225,7 +226,7 @@ GO
 ### C. Revoking VIEW DEFINITION with CASCADE  
  The following example revokes `VIEW DEFINITION` permission on the `AdventureWorks2012` database from user `CarmineEs` and from all principals to which `CarmineEs` has granted `VIEW DEFINITION` permission.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;  
 GO  

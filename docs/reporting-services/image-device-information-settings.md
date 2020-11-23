@@ -1,8 +1,9 @@
 ---
 title: "Image Device Information Settings | Microsoft Docs"
+description: Learn about the various device information settings you can use to render in an image format in Reporting Services.
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "images [Reporting Services], rendering"
   - "device information settings [Reporting Services], IMAGE rendering"
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Image Device Information Settings
   The following table lists the device information settings for rendering in IMAGE format.  

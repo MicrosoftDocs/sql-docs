@@ -1,4 +1,5 @@
 ---
+description: "sp_password (Transact-SQL)"
 title: "sp_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds or changes a password for a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   

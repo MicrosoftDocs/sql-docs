@@ -1,4 +1,5 @@
 ---
+description: "PWDENCRYPT (Transact-SQL)"
 title: "PWDENCRYPT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "PWDENCRYPT function [Transact-SQL]"
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # PWDENCRYPT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] password hash of the input value that uses the current version of the password hashing algorithm.  
   
@@ -30,12 +30,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 PWDENCRYPT ( 'password' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *password*  
  Is the password to be encrypted. *password* is **sysname**.  
   

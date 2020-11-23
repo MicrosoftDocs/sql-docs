@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Manipulation - UPDATE CUBE"
 title: "UPDATE CUBE Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,11 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # MDX Data Manipulation - UPDATE CUBE
 
 
-  The UPDATE CUBE statement is used to write back data to any cell in a cube that aggregates to its parent using the SUM aggregation. For more explanation and an example, see "Understanding Allocations" in this blog post: [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
+  The UPDATE CUBE statement is used to write back data to any cell in a cube that aggregates to its parent using the SUM aggregation. For more explanation and an example, see "Understanding Allocations" in this blog post: [Building a Writeback Application with Analysis Services (blog)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## Syntax  
   
@@ -61,7 +61,7 @@ UPDATE [ CUBE ] Cube_Name
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:**Every leaf cell that contributes to the updated cell will be changed according to the following expression.  
+ **USE_EQUAL_INCREMENT:** Every leaf cell that contributes to the updated cell will be changed according to the following expression.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -104,5 +104,4 @@ Weight_Expression = <leaf cell value> / <existing value>
 ## See Also  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [MDX Data Manipulation Statements &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

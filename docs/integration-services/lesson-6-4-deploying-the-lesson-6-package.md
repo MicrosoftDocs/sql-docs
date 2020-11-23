@@ -1,4 +1,5 @@
 ---
+description: "Lesson 6-4: Deploy the Lesson 6 package"
 title: "Step 4: Deploy the Lesson 6 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 6-4: Deploy the Lesson 6 package
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 Deploying the package involves adding the package to the SSISDB catalog in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on an instance of SQL Server. In this lesson, you add the Lesson 6 package to the SSISDB catalog, set the new parameter, and execute the package. For this lesson, you use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package, you modify the parameter to point to a new location and then run the package.   
 In this task, you:  

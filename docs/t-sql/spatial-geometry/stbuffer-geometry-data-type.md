@@ -1,4 +1,5 @@
 ---
+description: "STBuffer (geometry Data Type)"
 title: "STBuffer (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STBuffer (geometry Data Type)"
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STBuffer (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a geometric object that represents the union of all points whose distance from a **geometry** instance is less than or equal to a specified value.
   
@@ -31,7 +31,9 @@ Returns a geometric object that represents the union of all points whose distanc
 .STBuffer ( distance )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *distance*  
  Is a value of type **float** (**double** in the .NET Framework) specifying the distance from the geometry instance around which to calculate the buffer.  
   
@@ -61,7 +63,7 @@ Returns a geometric object that represents the union of all points whose distanc
   
  A negative buffer removes all points enclosed in given distance of the boundary of the geometry.  
   
- The error between the theoretical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ The error between the theoretical and computed buffer is max(tolerance, extents * 1.E-7) where tolerance = distance \* .001. For more information on extents, see [geometry Data Type Method Reference](./spatial-types-geometry-transact-sql.md).  
   
 ## Examples  
   
@@ -161,5 +163,3 @@ Returns a geometric object that represents the union of all points whose distanc
  [BufferWithTolerance &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
-  
-

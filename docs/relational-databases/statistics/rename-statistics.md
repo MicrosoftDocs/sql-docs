@@ -1,5 +1,6 @@
 ---
 title: "Rename Statistics | Microsoft Docs"
+description: Learn how to rename a statistics object in SQL Server by using Transact-SQL. You must have ALTER permission on the table or view.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Statistics
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can rename a statistics object in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **In This Topic**  

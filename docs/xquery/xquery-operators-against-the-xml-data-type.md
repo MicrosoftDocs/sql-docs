@@ -1,5 +1,6 @@
 ---
 title: "XQuery Operators Against the xml Data Type | Microsoft Docs"
+description: Learn about the XQuery operators that can be used against the xml data type. 
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # XQuery Operators Against the xml Data Type
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the following operators:  
   

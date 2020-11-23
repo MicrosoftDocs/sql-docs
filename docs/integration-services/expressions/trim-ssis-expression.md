@@ -1,4 +1,5 @@
 ---
+description: "TRIM (SSIS Expression)"
 title: "TRIM (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "TRIM function"
   - "trailing blanks"
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # TRIM (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Returns a character expression after removing leading and trailing spaces.  
   
 > [!NOTE]  

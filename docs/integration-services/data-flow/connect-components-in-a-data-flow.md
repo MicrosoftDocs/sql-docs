@@ -1,4 +1,5 @@
 ---
+description: "Connect Components in a Data Flow"
 title: "Connect Components in a Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "components [Integration Services], connections"
   - "connections [Integration Services], data flow components"
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connect Components in a Data Flow
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   This procedure describes how to connect the output of components in a data flow to other components within the same data flow.  
 You construct the data flow in a package on the design surface of the **Data Flow** tab in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer. If a data flow contains two data flow components, you can connect them by connecting the output of a source or transformation to the input of a transformation or destination. The connector between two data flow components is called a path.  
   

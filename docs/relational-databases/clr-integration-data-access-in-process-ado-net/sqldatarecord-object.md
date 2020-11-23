@@ -1,5 +1,6 @@
 ---
 title: "SqlDataRecord Object | Microsoft Docs"
+description: In SQL Server CLR integration, stored procedures can use the SqlDataRecord class to send custom result sets to the client.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # SqlDataRecord Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SqlDataRecord** object represents a single row of data, along with its related metadata.  
   
  Managed stored procedures may send to the client result sets that are not from a **SqlDataReader**. The **SqlDataRecord** class, along with **SendResultsStart**, **SendResultsRow**, and **SendResultsEnd** methods of the **SqlPipe** object, allows stored procedures to send custom result sets to the client.  

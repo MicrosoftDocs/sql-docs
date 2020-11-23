@@ -1,4 +1,5 @@
 ---
+description: "Comment MDX double slash"
 title: "(Comment) (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,7 +9,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Comment MDX double slash
 

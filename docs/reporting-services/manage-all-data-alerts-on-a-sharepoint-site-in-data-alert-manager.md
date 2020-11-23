@@ -1,8 +1,9 @@
 ---
 title: "Manage All Data Alerts on a SharePoint Site in Data Alert Manager | Microsoft Docs"
+description: Learn how to view the data alerts that were created by any site user and information about the alerts. Also, learn how to delete alerts.
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Manage All Data Alerts on a SharePoint Site in Data Alert Manager

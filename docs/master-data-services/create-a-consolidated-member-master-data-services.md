@@ -1,5 +1,6 @@
 ---
-title: "Create a Consolidated Member (Master Data Services) | Microsoft Docs"
+description: "Create a Consolidated Member (Master Data Services)"
+title: Create a Consolidated Member
 ms.custom: ""
 ms.date: "04/01/2016"
 ms.prod: sql
@@ -12,13 +13,12 @@ helpviewer_keywords:
   - "members [Master Data Services], creating consolidated members"
   - "consolidated members [Master Data Services], creating"
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Consolidated Member (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], create a consolidated member when you want a parent node for an explicit hierarchy. If you want to add data in bulk, use the staging tables instead. For more information, see  [Import Data from Tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   

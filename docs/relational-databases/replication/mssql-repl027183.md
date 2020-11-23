@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_REPL027183"
 title: "MSSQL_REPL027183 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # MSSQL_REPL027183
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|27183|  

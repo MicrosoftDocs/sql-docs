@@ -1,5 +1,6 @@
 ---
 title: "data Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery function data() to return the typed value for each item in a specified sequence of items.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Data Accessor Functions - data (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the typed value for each item specified by *$arg*.  
   

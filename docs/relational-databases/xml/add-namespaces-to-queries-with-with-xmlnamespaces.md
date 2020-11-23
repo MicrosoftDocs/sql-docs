@@ -1,5 +1,6 @@
 ---
 title: "Add Namespaces to Queries with WITH XMLNAMESPACES | Microsoft Docs"
+description: Learn how to add namespaces to queries using the WITH XMLNAMESPACES clause.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -21,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Add Namespaces to Queries with WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) provides namespace URI support in the following way:  
   
 -   It makes the namespace prefix to URI mapping available when [Constructing XML Using FOR XML](../../relational-databases/xml/for-xml-sql-server.md) queries.  

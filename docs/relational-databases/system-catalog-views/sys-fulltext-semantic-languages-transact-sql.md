@@ -1,10 +1,10 @@
 ---
+description: "sys.fulltext_semantic_languages (Transact-SQL)"
 title: "sys.fulltext_semantic_languages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,20 +17,19 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_semantic_languages catalog view"
 ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # sys.fulltext_semantic_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each language whose statistics model is registered with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When a language model is registered, that language is enabled for semantic indexing.  
   
  This catalog view is similar to [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
     
-||||  
-|-|-|-|  
-|**Column name**|**Type**|**Description**|  
+|Column name|Type|Description|  
+|-|-|-|   
 |lcid|int|Microsoft Windows locale identifier (LCID) for the language.|  
 |name|sysname|Is either the value of the alias in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponding to the value of **lcid**, or the string representation of the numeric LCID.|  
   

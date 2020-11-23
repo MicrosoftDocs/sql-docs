@@ -1,4 +1,5 @@
 ---
+description: "catalog.set_execution_property_override_value"
 title: "catalog.set_execution_property_override_value | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,12 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
-# catalog.set_execution_property_override_value
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# catalog.set_execution_property_override_value 
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets the value of a property for an instance of execution in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   

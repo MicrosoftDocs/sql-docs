@@ -1,5 +1,6 @@
 ---
 title: "Overview of CLR Integration | Microsoft Docs"
+description: Microsoft SQL Server hosting CLR is called CLR integration. Authoring in managed code can improve performance. SQL Server uses CAS to help secure managed code.
 ms.custom: ""
 ms.date: "04/19/2017"
 ms.prod: sql
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration - Overview
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The common language runtime (CLR) is the heart of the Microsoft .NET Framework and provides the execution environment for all .NET Framework code. Code that runs within the CLR is referred to as managed code. The CLR provides various functions and services required for program execution, including just-in-time (JIT) compilation, allocating and managing memory, enforcing type safety, exception handling, thread management, and security.  See the .NET Framework SDK for more information.  
   
  With the CLR hosted in Microsoft SQL Server (called CLR integration), you can author stored procedures, triggers, user-defined functions, user-defined types, and user-defined aggregates in managed code. Because managed code compiles to native code prior to execution, you can achieve significant performance increases in some scenarios.  
@@ -55,8 +55,7 @@ manager: craigg
   
 ## See Also  
  [Installing the .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [Architecture of CLR Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [Architecture of CLR Integration](./clr-integration-architecture-clr-hosted-environment.md)   
  [Data Access from CLR Database Objects](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Getting Started with CLR Integration](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
-  
   

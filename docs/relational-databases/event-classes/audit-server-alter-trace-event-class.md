@@ -1,4 +1,5 @@
 ---
+description: "Audit Server Alter Trace Event Class"
 title: "Audit Server Alter Trace Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Server Alter Trace Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Server Alter Trace** event class occurs for all statements that check for the ALTER TRACE permission. Statements that check for ALTER TRACE include those used to create or configure a trace, or to set a filter on a trace.  
   
 ## Audit Server Alter Trace Event Class Data Columns  

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2-2 - Verifying the Deployment Bundle"
 title: "Step 2: Verifying the Deployment Bundle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 2-2 - Verifying the Deployment Bundle
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 In lesson 1, you created the Deployment Tutorial project and added packages and ancillary files to the project; in the previous task you built a deployment utility for the project.  
   
 In this task, you will verify the contents of the deployment bundle. The deployment bundle is the folder that you will copy to the destination computer and use to install packages. If you used the default value-bin\Deployment-as the location of the deployment utility, the deployment bundle is the Bin\Deployment folder within the Deployment Tutorial folder in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  

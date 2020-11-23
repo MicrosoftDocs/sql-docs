@@ -1,4 +1,5 @@
 ---
+description: "AsBinaryZM (geography Data Type)"
 title: "AsBinaryZM (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,12 +17,11 @@ helpviewer_keywords:
   - "AsBinaryZM, geography"
   - "AsBinaryZM"
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # AsBinaryZM (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a **geometry** instance augmented with any **Z** (elevation) and **M** (measure) values carried by the instance.  
   
@@ -31,7 +31,9 @@ manager: craigg
   
 .AsBinaryZM()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
   

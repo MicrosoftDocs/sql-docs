@@ -1,7 +1,8 @@
 ---
+description: "SQLDescribeParam Function"
 title: "SQLDescribeParam Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,15 +12,15 @@ apiname:
   - "SQLDescribeParam"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLDescribeParam"
 helpviewer_keywords: 
   - "SQLDescribeParam function [ODBC]"
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDescribeParam Function
 **Conformance**  
@@ -30,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeParam(  
       SQLHSTMT        StatementHandle,  
@@ -41,7 +42,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## Argument  
+## Arguments  
  *StatementHandle*  
  [Input] Statement handle.  
   
@@ -105,7 +106,7 @@ SQLRETURN SQLDescribeParam(
 ## Code Example  
  The following example prompts the user for an SQL statement and then prepares that statement. Next, it calls **SQLNumParams** to determine whether the statement contains any parameters. If the statement contains parameters, it calls **SQLDescribeParam** to describe those parameters and **SQLBindParameter** to bind them. Finally, it prompts the user for the values of any parameters and then executes the statement.  
   
-```  
+```cpp  
 SQLCHAR       Statement[100];  
 SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;  
 SQLUINTEGER   ParamSize;  

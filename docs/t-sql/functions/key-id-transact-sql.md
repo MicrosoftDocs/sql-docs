@@ -1,4 +1,5 @@
 ---
+description: "KEY_ID (Transact-SQL)"
 title: "KEY_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -18,12 +19,11 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], IDs"
   - "IDs [SQL Server], symmetric keys"
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # KEY_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the ID of a symmetric key in the current database.  
   
@@ -31,12 +31,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 Key_ID ( 'Key_Name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *Key_Name* **'**  
  The name of a symmetric key in the database.  
   
@@ -54,14 +55,14 @@ Key_ID ( 'Key_Name' )
 ### A. Returning the ID of a symmetric key  
  The following example returns the ID of a key called `ABerglundKey1`.  
   
-```  
+```sql  
 SELECT KEY_ID('ABerglundKey1');  
 ```  
   
 ### B. Returning the ID of a temporary symmetric key  
  The following example returns the ID of a temporary symmetric key. Note that `#` is prepended to the key name.  
   
-```  
+```sql  
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   

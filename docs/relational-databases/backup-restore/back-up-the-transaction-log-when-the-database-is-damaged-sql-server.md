@@ -1,7 +1,8 @@
 ---
 title: "Back Up the Transaction Log When the Database Is Damaged (SQL Server) | Microsoft Docs"
+description: This topic describes how to back up a transaction log when the database is damaged in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -12,12 +13,11 @@ helpviewer_keywords:
   - "backing up [SQL Server]. damaged database"
   - "transaction log backups [SQL Server], damaged databases"
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: cawrites
+ms.author: chadam
 ---
 # Back Up the Transaction Log When the Database Is Damaged (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to back up a transaction log when the database is damaged in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
@@ -56,7 +56,7 @@ manager: craigg
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
 #### To back up the tail of the transaction log  
-  
+
 1.  After connecting to the appropriate instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
   
 2.  Expand **Databases**, and, depending on the database, either select a user database or expand **System Databases** and select a system database.  

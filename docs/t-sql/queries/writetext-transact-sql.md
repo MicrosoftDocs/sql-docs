@@ -1,4 +1,5 @@
 ---
+description: "WRITETEXT (Transact-SQL)"
 title: "WRITETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
@@ -23,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permits minimally logged, interactive updating of an existing **text**, **ntext**, or **image** column. WRITETEXT overwrites any existing data in the column it affects. WRITETEXT cannot be used on **text**, **ntext**, and **image** columns in views.  
   
@@ -37,14 +37,15 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 WRITETEXT [BULK]  
   { table.column text_ptr }  
   [ WITH LOG ] { data }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  BULK  
  Enables upload tools to upload a binary data stream. The stream must be provided by the tool at the TDS protocol level. When the data stream is not present the query processor ignores the BULK option.  
   
@@ -90,12 +91,12 @@ WRITETEXT [BULK]
 > [!NOTE]  
 >  To run this example, you must install the pubs sample database.  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   

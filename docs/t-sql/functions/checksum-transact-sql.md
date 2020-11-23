@@ -1,4 +1,5 @@
 ---
+description: "CHECKSUM (Transact-SQL)"
 title: "CHECKSUM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -17,14 +18,13 @@ helpviewer_keywords:
   - "CHECKSUM function"
   - "checksum values"
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ---
 # CHECKSUM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 The `CHECKSUM` function returns the checksum value computed over a table row, or over an expression list. Use `CHECKSUM` to build hash indexes.
   
@@ -32,11 +32,14 @@ The `CHECKSUM` function returns the checksum value computed over a table row, or
   
 ## Syntax  
   
-```
+```syntaxsql
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+## Arguments
 \*  
 This argument specifies that the checksum computation covers all table columns. `CHECKSUM` returns an error if any column has a noncomparable data type. Noncomparable data types include:
 
@@ -64,6 +67,8 @@ The expression order affects the computed `CHECKSUM` value. The order of columns
   
 The `CHECKSUM` value depends on the collation. The same value stored with a different collation will return a different `CHECKSUM` value.
   
+`CHECKSUM ()` does not guarantee unique results.
+
 ## Examples  
 These examples show the use of `CHECKSUM` to build hash indexes.
   

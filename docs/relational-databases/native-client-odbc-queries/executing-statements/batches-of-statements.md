@@ -1,4 +1,5 @@
 ---
+description: "Batches of Statements"
 title: "Batches of Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,16 +16,14 @@ helpviewer_keywords:
   - "SQLMoreResults function"
   - "SQLExecDirect function"
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Batches of Statements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  A batch of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360). For example:  
+  A batch of [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements contains two or more statements, separated by a semicolon (;), built into a single string passed to **SQLExecDirect** or [SQLPrepare Function](../../../odbc/reference/syntax/sqlprepare-function.md). For example:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -45,5 +44,4 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
   
 ## See Also  
  [Executing Statements &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
-  
   

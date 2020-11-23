@@ -1,4 +1,5 @@
 ---
+description: "STGeometryN (geography Data Type)"
 title: "STGeometryN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryN method"
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeometryN (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a specified **geography** element in a **GeometryCollection** or one of its subtypes. When STGeometryN() is used on a subtype of a **GeometryCollection**, such as **MultiPoint** or **MultiLineString**, this method returns the **geography** instance if called with N=1.  
   
@@ -30,7 +30,9 @@ manager: craigg
 .STGeometryN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of **geography** instances in the **GeometryCollection**.  
   

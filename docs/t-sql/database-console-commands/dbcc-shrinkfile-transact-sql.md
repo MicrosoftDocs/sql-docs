@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHRINKFILE (Transact-SQL)"
 title: "DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -29,10 +30,9 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Shrinks the current database's specified data or log file size. You can use it to move data from one file to other files in the same filegroup, which empties the file and allows for its database removal. You can shrink a file to less than its size at creation, resetting the minimum file size to the new value.
   
@@ -40,8 +40,7 @@ Shrinks the current database's specified data or log file size. You can use it t
   
 ## Syntax  
   
-```sql
-  
+```syntaxsql
 DBCC SHRINKFILE   
 (  
     { file_name | file_id }   
@@ -52,7 +51,9 @@ DBCC SHRINKFILE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *file_name*  
 The file to be shrunk's logical name.
   
@@ -69,7 +70,7 @@ This option isn't supported for FILESTREAM filegroup containers.
 If specified, DBCC SHRINKFILE tries to shrink the file to *target_size*. Used pages in the file's area to be freed are moved to free space in the file's kept areas. For example, with a 10-MB data file, a DBCC SHRINKFILE operation with an 8 *target_size*  moves all used pages in the file's last 2 MB into any unallocated pages in the file's first 8 MB. DBCC SHRINKFILE doesn't shrink a file past the needed stored data size. For example, if 7 MB of a 10-MB data file is used, a DBCC SHRINKFILE statement with a *target_size* of 6 shrinks the file to only 7 MB, not 6 MB.
   
 EMPTYFILE  
-Migrates all data from the specified file to other files in the **same filegroup**. In other words, EMPTYFILE migrates data from a specified file to other files in the same filegroup. ENPTYFILE assures you that no new data gets added to the file, despite this file not being read-only. You can use the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to remove a file. If you use the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to change file size, the read-only flag is reset and data can be added.
+Migrates all data from the specified file to other files in the **same filegroup**. In other words, EMPTYFILE migrates data from a specified file to other files in the same filegroup. EMPTYFILE assures you that no new data gets added to the file, despite this file not being read-only. You can use the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to remove a file. If you use the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement to change file size, the read-only flag is reset and data can be added.
 
 For FILESTREAM filegroup containers, you can't use ALTER DATABASE to remove a file until the FILESTREAM Garbage Collector has run and deleted all the unnecessary filegroup container files that EMPTYFILE has copied to another container. For more information, see [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
@@ -150,7 +151,7 @@ Typically it's the log file that appears not to shrink. This non-shrinking is us
 
 A transaction running under a [row versioning-based isolation level](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) can block shrink operations. For example, if a large delete operation running under a row versioning-based isolation level is in progress when a DBCC SHRINK DATABASE operation executes, the shrink operation waits for the delete to complete before continuing. When this blocking happens, DBCC SHRINKFILE and DBCC SHRINKDATABASE operations print out an informational message (5202 for SHRINKDATABASE and 5203 for SHRINKFILE) to the SQL Server error log. This message is logged every five minutes in the first hour and then every hour. For example, if the error log contains the following error message then the following error will occur:
   
-```sql
+```
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  

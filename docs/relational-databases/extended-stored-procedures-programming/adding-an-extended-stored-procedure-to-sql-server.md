@@ -1,4 +1,5 @@
 ---
+description: "Adding an Extended Stored Procedure to SQL Server"
 title: "Adding an Extended Stored Procedure to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Adding an Extended Stored Procedure to SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  

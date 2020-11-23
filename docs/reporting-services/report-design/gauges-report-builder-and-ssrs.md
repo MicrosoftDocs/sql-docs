@@ -1,8 +1,9 @@
 ---
-title: "Gauges (Report Builder and SSRS) | Microsoft Docs"
+title: "Gauges (Report Builder) | Microsoft Docs"
+description: Display key performance indicators to illustrate values or to compare data by using a radial or linear gauge in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -156,8 +157,8 @@ f1_keywords:
   - "10190"
   - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Gauges (Report Builder and SSRS)
   In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, a gauge data region displays a single value from your dataset. An individual gauge is always positioned inside a gauge panel, where you can add child or adjacent gauges. Inside a single gauge panel, you can create multiple gauges that share common functions such as filtering, grouping, or sorting.  
@@ -278,16 +279,13 @@ ms.author: maghan
   
 -   [Set a Minimum or Maximum on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Set a Snapping Interval on a Gauge (Report Builder and SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [Specify an Image as a Pointer on a Gauge (Report Builder and SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Set a Snapping Interval on a Gauge (Report Builder and SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 ##  <a name="InThisSection"></a> In This Section  
  The following topics provide additional information about working with gauges.  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|  
 |[Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Provides general information about formatting scales on gauges and detailed information about the formatting options for scales on radial and linear gauges.|  
 |[Formatting Pointers on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Provides general information about formatting pointers on gauges and detailed information about the formatting options for pointer styles available for radial and linear gauges.|  
 |[Formatting Ranges on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Provides information about formatting ranges on gauges to indicate an important subsection of values on the gauge or visually indicate when the pointer value has gone into a certain span of values.|  
@@ -298,5 +296,4 @@ ms.author: maghan
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
   

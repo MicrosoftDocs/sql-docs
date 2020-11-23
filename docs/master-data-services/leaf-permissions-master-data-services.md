@@ -1,5 +1,6 @@
 ---
-title: "Leaf Permissions (Master Data Services) | Microsoft Docs"
+description: "Leaf Permissions (Master Data Services)"
+title: Leaf Permissions
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -14,13 +15,12 @@ helpviewer_keywords:
   - "leaf members [Master Data Services], attribute permissions"
   - "attributes [Master Data Services], leaf member attribute permissions"
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Leaf Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Leaf permissions apply to the attribute values for all leaf members of an entity.  
   

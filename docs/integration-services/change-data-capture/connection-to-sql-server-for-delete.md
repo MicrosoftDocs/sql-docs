@@ -1,4 +1,5 @@
 ---
+description: "Connection to SQL Server for Delete"
 title: "Connection to SQL Server for Delete | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connection to SQL Server for Delete
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   When a login without a database role that includes write permission (for example the **db_owner** role) to the MSXDBCDC database attempts to delete an Oracle CDC instance, the Connect to SQL Server dialog box is displayed.  
   
  In this dialog box you must enter the credentials for a login that has write permission to the MSXDBCDC database, such the **db_owner** database role to delete the Oracle CDC instance.  

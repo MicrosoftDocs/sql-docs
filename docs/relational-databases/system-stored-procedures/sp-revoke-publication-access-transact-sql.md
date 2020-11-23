@@ -1,4 +1,5 @@
 ---
+description: "sp_revoke_publication_access (Transact-SQL)"
 title: "sp_revoke_publication_access (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_revoke_publication_access (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the login from a publications access list. This stored procedure is executed at the Publisher on the publication database.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Some availability replicas do not have a healthy role | Microsoft Docs"
+description: Availability Replicas Role State checks if there are any availability replicas that are not in a healthy role. 
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Some availability replicas do not have a healthy role
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

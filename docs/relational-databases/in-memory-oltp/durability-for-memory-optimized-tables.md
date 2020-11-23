@@ -1,5 +1,6 @@
 ---
 title: "Durability for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how In-Memory OLTP provides full durability for memory-optimized tables, by using transaction logging and by saving data changes to on-disk storage.
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
@@ -8,12 +9,11 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Durability for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] provides full durability for memory-optimized tables. When a transaction that changed a memory-optimized table commits, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (as it does for disk-based tables), guarantees that the changes are permanent (will survive a database restart), provided the underlying storage is available. There are two key components of durability: transaction logging and persisting data changes to on-disk storage.  
   
@@ -32,7 +32,7 @@ manager: craigg
 ### The Data File  
  A data file contains rows from one or more memory-optimized tables that were inserted by multiple transactions as part of INSERT or UPDATE operations. For example, one row can be from memory-optimized table T1 and the next row can be from memory-optimized table T2. The rows are appended to the data file in the order of transactions in the transaction log, making data access sequential. This enables an order of magnitude better I/O throughput compared to random I/O.  
   
- Once the data file is full, the rows inserted by new transactions are stored in another data file. Over time, the rows from durable memory-optimized tables are stored in one of more data files and each data file containing rows from a disjoint but contiguous range of transactions. For example a data file with transaction commit timestamp in the range of (100, 200) has all the rows inserted by transactions that have commit timestamp greater than 100 and less than or equal to 200. The commit timestamp is a monotonically increasing number assigned to a transaction when it is ready to commit. Each transaction has a unique commit timestamp.  
+ Once the data file is full, the rows inserted by new transactions are stored in another data file. Over time, the rows from durable memory-optimized tables are stored in one of more data files and each data file containing rows form a disjoint but contiguous range of transactions. For example a data file with transaction commit timestamp in the range of (100, 200) has all the rows inserted by transactions that have commit timestamp greater than 100 and less than or equal to 200. The commit timestamp is a monotonically increasing number assigned to a transaction when it is ready to commit. Each transaction has a unique commit timestamp.  
   
  When a row is deleted or updated, the row is not removed or changed in-place in the data file but the deleted rows are tracked in another type of file: the delta file. Update operations are processed as a tuple of delete and insert operations for each row. This eliminates random IO on the data file.  
  

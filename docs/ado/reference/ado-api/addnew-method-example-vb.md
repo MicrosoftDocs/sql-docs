@@ -1,8 +1,9 @@
 ---
+description: "AddNew Method Example (VB)"
 title: "AddNew Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -12,12 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "AddNew method [ADO], Visual Basic example"
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # AddNew Method Example (VB)
-This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name.  
+This example uses the [AddNew](./addnew-method-ado.md) method to create a new record with the specified name.  
   
 ```  
 'BeginAddNewVB  
@@ -103,5 +103,5 @@ End Sub
 ```  
   
 ## See Also  
- [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew Method (ADO)](./addnew-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

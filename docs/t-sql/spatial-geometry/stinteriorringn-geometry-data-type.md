@@ -1,4 +1,5 @@
 ---
+description: "STInteriorRingN (geometry Data Type)"
 title: "STInteriorRingN (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STInteriorRingN (geometry Data Type)"
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STInteriorRingN (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the specified interior ring of a **Polygongeometry** instance.
   
@@ -31,7 +31,9 @@ Returns the specified interior ring of a **Polygongeometry** instance.
 .STInteriorRingN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of interior rings in the **geometry** instance.  
   

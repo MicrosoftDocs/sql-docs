@@ -1,6 +1,7 @@
 ---
-title: "SQL Server Multi-Subnet Clustering (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "SQL Server Multi-Subnet Clustering"
+description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment, which provides disaster recovery in addition to high availability.
+ms.custom: seo-lt-2019
 ms.date: "09/01/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,19 +14,18 @@ helpviewer_keywords:
   - "multi-site failover cluster"
   - "failover clustering [SQL Server]"
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: cawrites
+ms.author: chadam
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster is a configuration where each failover cluster node is connected to a different subnet or different set of subnets. These subnets can be in the same location or in geographically dispersed sites. Clustering across geographically dispersed sites is sometimes referred to as stretch clusters. As there is no shared storage that all the nodes can access, data should be replicated between the data storage on the multiple subnets. With data replication, there is more than one copy of the data available. Therefore, a multi-subnet failover cluster provides a disaster recovery solution in addition to high availability.  
   
    
 ##  <a name="VisualElement"></a> SQL Server Multi-Subnet Failover Cluster (Two-Nodes, Two-Subnets)  
  The following illustration represents a two node, two subnet failover cluster instance (FCI) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Multi-Subnet Architecture with MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Multi-Subnet Architecture with MultiSubnetFailover")  
+ ![Multi-Subnet Architecture with MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Multi-Subnet Architecture with MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Multi-Subnet Failover Cluster Instance Configurations  
@@ -44,7 +44,9 @@ manager: craigg
 ##  <a name="ComponentsAndConcepts"></a> IP Address Resource Considerations  
  In a multi-subnet failover cluster configuration, the IP addresses are not owned by all the nodes in the failover cluster, and may not be all online during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] startup. Beginning in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can set the IP address resource dependency to **OR**. This enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to be online when there is at least one valid IP address that it can bind to.  
   
-> **NOTE:** In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a stretch V-LAN technology was used in multi-site cluster configurations to expose a single IP address for failover across sites. With the new capability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to cluster nodes across different subnets, you can now configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters across multiple sites without implementing the stretch V-LAN technology.  
+  > [!NOTE] 
+  > - In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a stretch V-LAN technology was used in multi-site cluster configurations to expose a single IP address for failover across sites. With the new capability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to cluster nodes across different subnets, you can now configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters across multiple sites without implementing the stretch V-LAN technology.  
+
   
 ### IP Address Resource OR Dependency Considerations  
  You may want to consider the following failover behavior if you set the IP address resource dependency is set to **OR**:  
@@ -62,6 +64,9 @@ manager: craigg
  With legacy client libraries or third party data providers, you cannot use the **MultiSubnetFailover** parameter in your connection string. To help ensure that your client application works optimally with multi-subnet FCI in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], try to adjust the connection timeout in the client connection string by 21 seconds for each additional IP address. This ensures that the client's reconnection attempt does not timeout before it is able to cycle through all IP addresses in your multi-subnet FCI.  
   
  The default client connection time-out period for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio and **sqlcmd** is 15 seconds.  
+ 
+ > [!NOTE]
+ > - If you are using multiple subnets, and have a static DNS, you will need to have a process in place to update the DNS record associated with the listener before you perform a failover as otherwise the network name will not come online.
   
    
 ##  <a name="RelatedContent"></a> Related Content  
@@ -69,11 +74,10 @@ manager: craigg
 |Content Description|Topic|  
 |-------------------------|-----------|  
 |Installing a SQL Server Failover Cluster|[Create a New SQL Server Failover Cluster (Setup)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|In-place upgrade of your existing SQL Server Failover Cluster|[Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|In-place upgrade of your existing SQL Server Failover Cluster|[Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](./upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Maintaining your existing SQL Server Failover Cluster|[Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |Use the Failover Cluster Management snap-in to view WSFC events and logs|[View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Use Windows PowerShell to create a log file for all nodes (or a specific a node) in a WSFC failover cluster|[Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
+|Use Windows PowerShell to create a log file for all nodes (or a specific a node) in a WSFC failover cluster|[Get-ClusterLog Failover Cluster Cmdlet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10))|  
   
 
-  
   

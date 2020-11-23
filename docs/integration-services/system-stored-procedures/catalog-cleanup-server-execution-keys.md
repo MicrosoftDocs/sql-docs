@@ -1,4 +1,5 @@
 ---
+description: "catalog.cleanup_server_execution_keys"
 title: "catalog.cleanup_server_execution_keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -8,12 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
-# catalog.cleanup_server_execution_keys
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# catalog.cleanup_server_execution_keys 
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops certificates and symmetric keys from the SSISDB database.  
   

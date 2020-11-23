@@ -1,6 +1,7 @@
 ---
-title: "Reporting Services with Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Reporting Services with availability groups"
+description: Learn about configuring Reporting Services to work with Always On availability groups in SQL Server. Supported functionality differs for different scenarios.
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,35 +15,17 @@ helpviewer_keywords:
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
-manager: "erikre"
+manager: erikre
 ---
 # Reporting Services with Always On Availability Groups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains information about configuring [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The three scenarios for using [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] are databases for report data sources, report server databases, and report design. The supported functionality and required configuration is different for the three scenarios.  
   
  A key benefit of using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data sources is to leverage readable secondary replicas as a reporting data source while, at the same time the secondary replicas are providing a failover for a primary database.  
   
- For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Always On FAQ for SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
-  
- **In This Topic:**  
-  
--   [Requirements for using Reporting Services and Always On Availability Groups](#bkmk_requirements)  
-  
--   [Report Data Sources and Availability Groups](#bkmk_reportdatasources)  
-  
--   [Report Design and Availability Groups](#bkmk_reportdesign)  
-  
--   [Report Server Databases and Availability Groups](#bkmk_reportserverdatabases)  
-  
--   -   [Differences between SharePoint Native Mode](#bkmk_differences_in_server_mode)  
-  
-    -   [Prepare Report Server Databases for Availability Groups](#bkmk_prepare_databases)  
-  
-    -   [Steps to complete disaster recovery of Report Server Databases](#bkmk_steps_to_complete_failover)  
-  
-    -   [Report Server Behavior When a Failover Occurs](#bkmk_failover_behavior)  
-  
+ For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Always On FAQ for SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
+
 ##  <a name="bkmk_requirements"></a> Requirements for using Reporting Services and Always On Availability Groups  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and Power BI Report Server uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
   
@@ -138,7 +121,7 @@ manager: "erikre"
   
 -   ReportServerTempDB  
   
- Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode, you configure the service application database name to be the name of the "client access point" you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
+ Native mode does not support or use the Alerting databases and related features. You configure native mode report servers in the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Configuration Manager. For SharePoint mode, you configure the service application database name to be the name of the "client access point" you created as part of the SharePoint configuration. For more information on configuring SharePoint with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Configure and manage SQL Server availability groups for SharePoint Server (/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))](/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14)).  
   
 > [!NOTE]
 >  SharePoint mode report servers use a synchronization process between the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application databases and the SharePoint content databases. It is important to maintain the report server databases and content databases together. You should consider configuring them in the same availability groups so they failover and recover as a set. Consider the following scenario:  
@@ -158,7 +141,7 @@ manager: "erikre"
   
 -   **Report Server Credentials:** You need to create the appropriate report server credentials on the secondary replicas that you created on the primary. The exact steps depend on what type of authentication you are using in your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] environment; Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service account, Windows user account, or SQL Server authentication. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   Update the database connection to use the Lister DNS Name. for natve mode report servers, change the **Report Server Database Name** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration manager. For SharePoint mode, change the **Database server name** for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application(s).  
+-   Update the database connection to use the Listener DNS Name. for native mode report servers, change the **Report Server Database Name** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration manager. For SharePoint mode, change the **Database server name** for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application(s).  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> Steps to complete disaster recovery of Report Server Databases  
  The following steps need to be completed after a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover to a secondary replica:  
@@ -194,5 +177,3 @@ manager: "erikre"
  [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
-  
-

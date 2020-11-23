@@ -1,4 +1,5 @@
 ---
+description: "Select Source Dialog Box"
 title: "Select Source Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Select Source Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to select the source of the policies to be run. To select one or more XML files that contain policies, select **Files**. To run the policies that are found on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Server**.  
   
  You can open this dialog box in several ways.  

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 6-2: Convert the project to the Project Deployment Model"
 title: "Step 2: Convert the project to the Project Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 6-2: Convert the project to the Project Deployment Model
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 In this task, you use the Integration Services Project Conversion Wizard to convert the project to the Project Deployment Model.  
   

@@ -1,11 +1,11 @@
 ---
 title: Extensions
-author: markingmyname
-ms.author: maghan
-manager: kfile
+description: Learn about the extensions that are readily available in Reporting Services, and how it uses extensions to modularize the types of input or output it accepts.
+author: maggiesMSFT
+ms.author: maggies
 ms.reviewer: ""
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18

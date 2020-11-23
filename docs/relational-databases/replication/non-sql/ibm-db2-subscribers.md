@@ -1,4 +1,5 @@
 ---
+description: "IBM DB2 Subscribers"
 title: "IBM DB2 Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # IBM DB2 Subscribers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports push subscriptions to IBM DB2/AS 400, DB2/MVS, and DB2/Universal Database through the OLE DB providers that are included with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   

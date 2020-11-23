@@ -1,4 +1,5 @@
 ---
+description: "ToString (geometry Data Type)"
 title: "ToString (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -14,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "ToString (geometry Data Type)"
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # ToString (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a geometry instance augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -30,7 +30,9 @@ Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representatio
 .ToString ()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
   
  CLR return type: **SqlString**  

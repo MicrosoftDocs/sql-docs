@@ -1,4 +1,5 @@
 ---
+description: "DENY Schema Permissions (Transact-SQL)"
 title: "DENY Schema Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Schema Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Denies permissions on a schema.  
   
@@ -29,14 +29,16 @@ Denies permissions on a schema.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *permission*  
 Specifies a permission that can be denied on a schema. For a list of these permissions, see the Remarks section later in this article.  
   

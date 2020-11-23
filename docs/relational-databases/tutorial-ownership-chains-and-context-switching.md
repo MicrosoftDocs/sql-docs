@@ -1,6 +1,7 @@
 ---
-title: "Tutorial: Ownership Chains and Context Switching | Microsoft Docs"
-ms.custom: ""
+description: "Tutorial: Ownership Chains and Context Switching"
+title: "Tutorial: Ownership Chains and Context Switching"
+ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Tutorial: Ownership Chains and Context Switching
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  
@@ -34,17 +34,17 @@ To fulfill the requirements of this scenario, the example is broken into four pa
 2.  Creating a stored procedure to access data by purchase order.   
 3.  Accessing the data through the stored procedure.  
 4.  Resetting the environment.  
-  
+
 Each code block in this example is explained in line. To copy the complete example, see [Complete Example](#CompleteExample) at the end of this tutorial.
 
 ## Prerequisites
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Download [AdventureWorks2017 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Download [AdventureWorks2017 sample databases](../samples/adventureworks-install-configure.md).
 
-For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+For instructions on restoring a database in SQL Server Management Studio, see [Restore a database](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## 1. Configure the Environment  
 Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and the following code to open the `AdventureWorks2017` database, and use the `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] statement to check that the dbo user is displayed as the context.  
@@ -328,6 +328,5 @@ GO
   
 ## See Also  
 [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

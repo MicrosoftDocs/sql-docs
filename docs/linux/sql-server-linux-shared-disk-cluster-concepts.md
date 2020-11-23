@@ -1,19 +1,18 @@
 ---
-title: Failover Cluster Instances - SQL Server on Linux | Microsoft Docs
-description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+title: Failover Cluster Instances - SQL Server on Linux
+description: Concepts for SQL Server failover cluster instances on Linux include the clustering layer, number of instances, IP address and name, and shared storage.
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
 # Failover Cluster Instances - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains the concepts related to SQL Server failover cluster instances (FCI) on Linux. 
 

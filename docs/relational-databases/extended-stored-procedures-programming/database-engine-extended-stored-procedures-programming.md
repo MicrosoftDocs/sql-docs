@@ -1,4 +1,5 @@
 ---
+description: "Database Engine Extended Stored Procedures - Programming"
 title: "Programming Extended Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Database Engine Extended Stored Procedures - Programming
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

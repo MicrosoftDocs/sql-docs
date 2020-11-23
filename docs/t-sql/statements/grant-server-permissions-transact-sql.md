@@ -1,4 +1,5 @@
 ---
+description: "GRANT Server Permissions (Transact-SQL)"
 title: "GRANT Server Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # GRANT Server Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on a server. 
   
@@ -28,7 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -49,7 +49,9 @@ GRANT permission [ ,...n ]
     | server_role  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a server. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -124,7 +126,6 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## Remarks  
  The following three server permissions were added in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  **CONNECT ANY DATABASE** Permission  
@@ -144,7 +145,7 @@ GRANT permission [ ,...n ]
 ### A. Granting a permission to a login  
  The following example grants `CONTROL SERVER` permission to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `TerryEminhizer`.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -153,7 +154,7 @@ GO
 ### B. Granting a permission that has GRANT permission  
  The following example grants `ALTER ANY EVENT NOTIFICATION` to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `JanethEsteves` with the right to grant that permission to another login.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -162,7 +163,7 @@ GO
 ### C. Granting a permission to a server role  
  The following example creates two server roles named `ITDevAdmin` and `ITDevelopers`. It grants the `ALTER ANY DATABASE` permission to the `ITDevAdmin` user-defined server role including the `WITH GRANT` option so that the `ITDevAdmin` server role can reassign the `ALTER ANY DATABASE` permission. Then, the example grants the `ITDevelopers` the permission to use the `ALTER ANY DATABASE` permission of the `ITDevAdmin` server role.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

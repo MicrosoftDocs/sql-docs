@@ -1,5 +1,6 @@
 ---
 title: "srv_setcoldata (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn srv_setcoldata in the Extended Stored Procedure API specifies the current address for a column's data. 
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_setcoldata (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

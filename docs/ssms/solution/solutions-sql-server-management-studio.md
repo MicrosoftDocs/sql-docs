@@ -1,6 +1,7 @@
 ---
-title: "Solutions (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+description: "Solutions (SQL Server Management Studio)"
+title: "Solutions (SQL Server Management Studio)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -14,12 +15,11 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], projects"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Solutions (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution is a collection of one or more related projects. Projects are containers that developers use to organize related files, such as sets of commonly used administration scripts.  
   
 ## Solution Overview  
@@ -51,5 +51,4 @@ Solutions and projects can be integrated into a [!INCLUDE[msCoName](../../includ
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
 [Projects &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Solution Explorer Source Control](https://msdn.microsoft.com/library/ms173879.aspx)  
-  
+[Solution Explorer Source Control](./solution-explorer.md)  

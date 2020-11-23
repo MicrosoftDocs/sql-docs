@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_log_shipping_alert_job (Transact-SQL)"
 title: "sp_delete_log_shipping_alert_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_delete_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an alert job from the log shipping monitor server if the job exists and there are no more primary or secondary databases to be monitored.  
   

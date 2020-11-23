@@ -1,7 +1,8 @@
 ---
+description: "SQLParamOptions Function"
 title: "SQLParamOptions Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,15 +12,15 @@ apiname:
   - "SQLParamOptions"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLParamOptions"
 helpviewer_keywords: 
   - "SQLParamOptions function [ODBC]"
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLParamOptions Function
 **Conformance**  

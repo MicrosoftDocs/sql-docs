@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring - Use Certificates for Outbound Connections | Microsoft Docs"
+description: Learn how to configure server instances to use certificates to authenticate inbound connections for database mirroring, after you set up outbound connections.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring - Use Certificates for Outbound Connections
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes the steps for configuring server instances to use certificates to authenticate outbound connections for database mirroring. Outbound connection configuration must be done before you can set up inbound connections.  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ manager: craigg
      For example, to create a certificate for the HOST_A system.  
   
     > [!IMPORTANT]  
-    >  If you intend to use the certificate for more than one year, specify the expiry date in UTC time by using the EXPIRY_DATE option in your CREATE CERTIFICATE statement. Also, we recommend that you use SQL Server Management Studio to create a Policy-Based Management rule to alert you when your certificates are expiring. Using the Policy Management **Create New Condition** dialog box, create this rule on the **@ExpirationDate** field of the **Certificate** facet. For more information, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) and [Securing SQL Server](../../relational-databases/security/securing-sql-server.md).  
+    >  If you intend to use the certificate for more than one year, specify the expiry date in UTC time by using the EXPIRY_DATE option in your CREATE CERTIFICATE statement. Also, we recommend that you use SQL Server Management Studio to create a Policy-Based Management rule to alert you when your certificates are expiring. Using the Policy Management **Create New Condition** dialog box, create this rule on the **\@ExpirationDate** field of the **Certificate** facet. For more information, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) and [Securing SQL Server](../../relational-databases/security/securing-sql-server.md).  
   
     ```  
     USE master;  

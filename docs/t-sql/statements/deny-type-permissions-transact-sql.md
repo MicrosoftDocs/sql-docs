@@ -1,4 +1,5 @@
 ---
+description: "DENY Type Permissions (Transact-SQL)"
 title: "DENY Type Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Type Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -28,7 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
         TO <database_principal> [ ,...n ]  
     [ CASCADE ]  
@@ -45,7 +45,9 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
     | Database_user_with_no_login  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a type. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -112,7 +114,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## Examples  
  The following example denies `VIEW DEFINITION` permission with `CASCADE` on the user-defined type `PhoneNumber` to the `KhalidR`. `PhoneNumber` is located in schema `Telemarketing`.  
   
-```  
+```sql 
 DENY VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR CASCADE;  
 GO  

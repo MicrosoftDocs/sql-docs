@@ -1,4 +1,5 @@
 ---
+description: "Appendix F: ODBC Cursor Library"
 title: "Appendix F: ODBC Cursor Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,9 +14,8 @@ helpviewer_keywords:
   - "cursor library [ODBC], about cursor library"
   - "cursor library [ODBC]"
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Appendix F: ODBC Cursor Library
 > [!IMPORTANT]  
@@ -25,7 +25,7 @@ manager: craigg
   
  The cursor library is a dynamic-link library (DLL) that resides between the Driver Manager and the driver. When an application calls a function, the Driver Manager calls the function in the cursor library, which either executes the function or calls it in the specified driver. For a given connection, an application specifies whether the cursor library is always used, used if the driver does not support scrollable cursors, or never used.  
   
- The cursor library appears as a driver to the Driver Manager. If the cursor library resides between the Driver Manager and an ODBC 2.*x* driver, the cursor library appears as an ODBC 2.*x* driver. If the cursor library resides between the Driver Manager and an ODBC 3*.x* driver, the cursor library appears as an ODBC 3*.x* driver. The behavior exhibited by the cursor library depends upon the version of the driver it is working with, with the exception of binding offsets, which is supported for both ODBC 2.*x* and ODBC 3.*x* drivers.  
+ The cursor library appears as a driver to the Driver Manager. If the cursor library resides between the Driver Manager and an ODBC *2.x* driver, the cursor library appears as an ODBC *2.x* driver. If the cursor library resides between the Driver Manager and an ODBC *3.x* driver, the cursor library appears as an ODBC *3.x* driver. The behavior exhibited by the cursor library depends upon the version of the driver it is working with, with the exception of binding offsets, which is supported for both ODBC *2.x* and ODBC *3.x* drivers.  
   
  To implement block cursors in **SQLFetch** and **SQLFetchScroll**, the cursor library repeatedly calls **SQLFetch** in the driver. To implement scrolling, it caches the data it has retrieved in memory and in disk files. When an application requests a new rowset, the cursor library retrieves it as necessary from the driver or the cache.  
   

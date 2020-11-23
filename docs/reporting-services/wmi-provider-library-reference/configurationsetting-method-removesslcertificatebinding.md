@@ -1,8 +1,9 @@
 ---
+description: "RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)"
 title: "RemoveSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RemoveSSLCertificateBindings method"
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - RemoveSSLCertificateBinding
-  Removes an SSL Certificate binding.  
+  Removes a TLS/SSL Certificate binding.  
   
 ## Syntax  
   
@@ -42,7 +43,7 @@ public void RemoveSSLCertificateBindings(string Application,
  The IP address for the application.  
   
  *Port*  
- The SSL port associated with the binding.  
+ The TLS port associated with the binding.  
   
  *lcid*  
  The locale to use for the error messages that are returned.  

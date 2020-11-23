@@ -1,7 +1,9 @@
 ---
-title: "Breaking Changes to Database Engine Features in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/27/2016"
+title: "Database Engine: Breaking changes | Microsoft Docs"
+titleSuffix: "SQL Server 2016"
+description: Learn about Database Engine changes in SQL Server 2016 (13.x) and earlier that might break previous-version functionality when you upgrade.
+ms.custom: "seo-lt-2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -13,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
-# Breaking Changes to Database Engine Features in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Breaking changes to Database Engine features in SQL Server 2016
 
-  This topic describes breaking changes in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
+
+  This topic describes breaking changes in the [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
   
 ##  <a name="SQL15"></a> Breaking Changes in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
@@ -26,15 +28,13 @@ manager: craigg
   
 -   The *TimeStamp* column of `sys.fn_virtualfilestats` has expanded from an **int** to a **bigint** data type.  
 
--   The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130. Using the MD2, MD4, MD5, SHA, or SHA1 hash algorithm **is not recommended**, but can be done by setting the database compatibility level to a value lower than 130.  
-
 -   Under database compatibility level 130, implicit conversions from **datetime** to **datetime2** data types show improved accuracy by accounting for the fractional milliseconds, resulting in different converted values. Use explicit casting to datetime2 datatype whenever a mixed comparison scenario between datetime and datetime2 datatypes exists. For more information, see this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
 
 -   Under database compatibility level 130, operations that perform implicit conversions between certain numeric and datetime data types show improved accuracy and can result in different converted values. This includes usage of functions that require calculations such as, for example, `DATEDIFF` and `ROUND`. For more information, see this [Microsoft Support Article](https://support.microsoft.com/help/4010261).
 
 ## <a name="previous-versions"></a> Previous Versions  
 
-For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md#SQL14).
+For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016).
 
 #### Archived Documentation for Very Old Versions of SQL Server
 
@@ -42,9 +42,7 @@ For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14
 
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server Database Engine Backward Compatibility](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)   
+ [SQL Server Database Engine Backward Compatibility](./discontinued-database-engine-functionality-in-sql-server.md)   
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server 2016 or SQL Server 2017 on Windows improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261)   
-  
-  
+ [SQL Server 2016 or SQL Server 2017 on Windows improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261)

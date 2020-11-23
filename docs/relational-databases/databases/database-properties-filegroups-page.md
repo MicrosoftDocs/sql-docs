@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Filegroups Page) | Microsoft Docs"
+description: "Learn how to use the Filegroups tab in the Database Properties dialog box to view the filegroups of a database or to add a new filegroup."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Properties (Filegroups Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view the filegroups or add a new filegroup to the selected database. Filegroup types are separated into *row* filegroups, FILESTREAM data, and memory-optimized filegroups.  
   
  Row filegroups contain regular data and log files. FILESTREAM data filegroups contain FILESTREAM data files. These data files store information about how binary large object (BLOB) data is stored on the file system when you are using FILESTREAM storage. The options are the same for both types of filegroups.  

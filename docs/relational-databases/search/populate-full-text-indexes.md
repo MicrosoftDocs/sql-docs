@@ -1,4 +1,5 @@
 ---
+description: "Populate Full-Text Indexes"
 title: "Populate Full-Text Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -23,11 +24,10 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Populate Full-Text Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  
   
 ##  <a name="types"></a> Types of population  
@@ -202,7 +202,7 @@ In some cases, the request for an incremental population results in a full popul
     -   To **remove** an existing schedule, select the existing schedule and click **Delete**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-  
+
 ##  <a name="crawl"></a> Troubleshoot errors in a full-text population (crawl)  
 When an error occurs during a crawl, the Full-Text Search crawl logging facility creates and maintains a crawl log, which is a plain text file. Each crawl log corresponds to a particular full-text catalog. By default, crawl logs for a given instance (in this example, the default instance) are located in `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` folder.
  
@@ -211,8 +211,8 @@ The crawl log file follows the following naming scheme:
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 The variable parts of the crawl log file name are the following.
--   <**DatabaseID**> - The ID of a database. <**dbid**> is a five digit number with leading zeros.  
--   <**FullTextCatalogID**> - Full-text catalog ID. <**catid**> is a five digit number with leading zeros.  
+-   <**DatabaseID**> - The ID of a database. \<**dbid**> is a five digit number with leading zeros.  
+-   <**FullTextCatalogID**> - Full-text catalog ID. \<**catid**> is a five digit number with leading zeros.  
 -   <**n**> - Is an integer that indicates one or more crawl logs of the same full-text catalog exist.  
   
  For example, `SQLFT0000500008.2` is the crawl log file for a database with database ID = 5, and full-text catalog ID = 8. The 2 at the end of the file name indicates that there are two crawl log files for this database/catalog pair.  

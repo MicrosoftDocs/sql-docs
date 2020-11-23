@@ -1,4 +1,5 @@
 ---
+description: "Schedule Traces"
 title: "Schedule Traces | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Schedule Traces
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   There are two ways to schedule tracing in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can:  
   
 -   Enable a trace stop time.  
@@ -41,6 +41,5 @@ manager: craigg
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
 ## See Also  
- [Automated Administration Tasks &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
-  
+ [Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
   

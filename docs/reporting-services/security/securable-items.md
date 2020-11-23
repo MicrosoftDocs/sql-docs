@@ -1,8 +1,9 @@
 ---
+description: "Securable Items"
 title: "Securable Items | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "security [Reporting Services], securable items listed"
   - "role-based security [Reporting Services], securable items"
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Securable Items
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses role-based security to control access to items that are stored on a report server. When you grant a user access to a report server, you typically do so by creating a pair of role assignments:  
@@ -56,7 +57,6 @@ ms.author: maghan
 ## See Also  
  [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Grant User Access to a Report Server &#40;Report Manager&#41;](./grant-user-access-to-a-report-server.md)   
  [Modify or Delete a Role Assignment &#40;Report Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
   

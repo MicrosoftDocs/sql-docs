@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_log_shipping_secondary_database (Transact-SQL)"
 title: "sp_delete_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_delete_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure removes a secondary database and removes the local history and remote history.  
   

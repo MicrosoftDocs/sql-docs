@@ -1,5 +1,6 @@
 ---
 title: "Synchronize a Push Subscription | Microsoft Docs"
+description: Learn how to synchronize a push subscription in SQL Server by using SQL Server Management Studio, replication agents, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,23 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Synchronize a Push Subscription
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to synchronize a push subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](../../relational-databases/replication/agents/replication-agents-overview.md), or Replication Management Objects (RMO).  
   
- **In This Topic**  
-  
--   **To synchronize a push subscription, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Replication Agents](#ReplProg)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
-  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Subscriptions are synchronized by the Distribution Agent (for snapshot and transactional replication) or the Merge Agent (for merge replication). Agents can run continuously, run on demand, or run on a schedule. For more information about specifying synchronization schedules, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -49,7 +41,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 5.  In the **View Synchronization Status - \<Subscriber>:\<SubscriptionDatabase>** dialog box, click **Start**. When synchronization is complete, the message **Synchronization completed** is displayed.  
   
 6.  Click **Close**.  
-  
+
 #### To synchronize a push subscription on demand in Management Studio (at the Subscriber)  
   
 1.  Connect to the Subscriber in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], and then expand the server node.  

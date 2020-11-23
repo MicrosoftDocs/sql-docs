@@ -1,4 +1,5 @@
 ---
+description: "STEquals (geography Data Type)"
 title: "STEquals (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STEquals method"
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STEquals (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns 1 if a **geography** instance represents the same point set as another **geography** instance. Returns 0 if it does not.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STEquals ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare against the instance on which `STEquals()` is invoked.  
   

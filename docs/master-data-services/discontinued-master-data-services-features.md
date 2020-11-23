@@ -1,5 +1,6 @@
 ---
-title: "Discontinued Master Data Services Features | Microsoft Docs"
+description: "Discontinued Master Data Services Features"
+title: Discontinued Master Data Services Features
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -8,13 +9,13 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: "erikre"
+manager: erikre
 ---
 # Discontinued Master Data Services Features
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic describes [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features that are no longer available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

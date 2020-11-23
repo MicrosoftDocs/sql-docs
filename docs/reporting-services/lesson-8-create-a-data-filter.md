@@ -1,5 +1,6 @@
 ---
 title: "Lesson 8: Create a Data Filter | Microsoft Docs"
+description: Learn to create a data filter for the data table that you defined for the child report. Create a table-based filter or a query filter for the drillthrough report.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -7,8 +8,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 8: Create a Data Filter
 After you add a drillthrough action on the parent report, your next step is to create a data filter for the data table that you defined for the child report.  

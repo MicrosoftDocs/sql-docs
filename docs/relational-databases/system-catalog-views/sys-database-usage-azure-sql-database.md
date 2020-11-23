@@ -1,4 +1,5 @@
 ---
+description: "sys.database_usage (Azure SQL Database)"
 title: "sys.database_usage (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,13 +18,12 @@ helpviewer_keywords:
   - "database_usage"
   - "sys.database_usage"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   **Note: This applies only to Azure SQL Database V11.**  
   
@@ -45,6 +45,5 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
   
 ## See Also  
  [SQL Database Pricing Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Accounts and Billing in Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
-  
+ [Accounts and Billing in Azure SQL Database](/previous-versions/azure/ee621788(v=azure.100))  
   

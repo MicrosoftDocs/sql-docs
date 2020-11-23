@@ -1,4 +1,5 @@
 ---
+description: "Data Flow Task"
 title: "Data Flow Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,14 @@ helpviewer_keywords:
   - "data flow [Integration Services], Data Flow task"
   - "Integration Services, performance"
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Data Flow task encapsulates the data flow engine that moves data between sources and destinations, and lets the user transform, clean, and modify data as it is moved. Addition of a Data Flow task to a package control flow makes it possible for the package to extract, transform, and load data.  
   
  A data flow consists of at least one data flow component, but it is typically a set of connected data flow components: sources that extract data; transformations that modify, route, or summarize data; and destinations that load data.  
@@ -98,7 +102,7 @@ manager: craigg
   
  For more information about how to set these properties in the **Properties** window, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Programmatic Configuration of the Data Flow Task  
  For more information about programmatically adding a data flow task to a package and setting data flow properties, click the following topic:  
@@ -106,9 +110,8 @@ manager: craigg
 -   [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## Related Tasks  
- [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## Related Content  
- Video, [Balanced Data Distributer](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), on technet.microsoft.com.  
-  
+ Video, [Balanced Data Distributer](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
   

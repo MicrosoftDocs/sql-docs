@@ -1,4 +1,5 @@
 ---
+description: "DROP SERVER AUDIT  (Transact-SQL)"
 title: "DROP SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP SERVER AUDIT  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a Server Audit Object using the SQL Server Audit feature. For more information on SQL Server Audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -28,13 +28,14 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP SERVER AUDIT audit_name  
     [ ; ]  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  You must set the State of an audit to the OFF option in order to make any changes to an Audit. If DROP AUDIT is run while an audit is enabled with any options other than STATE=OFF, you will receive a MSG_NEED_AUDIT_DISABLED error message.  
   
  A DROP SERVER AUDIT removes the metadata for the Audit, but not the audit data that was collected before the command was issued.  
@@ -47,7 +48,7 @@ DROP SERVER AUDIT audit_name
 ## Examples  
  The following example drops an audit called `HIPAA_Audit`.  
   
-```  
+```sql  
 ALTER SERVER AUDIT HIPAA_Audit  
 STATE = OFF;  
 GO  

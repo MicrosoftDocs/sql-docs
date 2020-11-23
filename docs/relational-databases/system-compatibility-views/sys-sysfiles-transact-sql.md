@@ -1,4 +1,5 @@
 ---
+description: "sys.sysfiles (Transact-SQL)"
 title: "sys.sysfiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each file in a database.  
   

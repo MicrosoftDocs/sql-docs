@@ -1,25 +1,25 @@
 ---
-title: "Basic Data Types Sample | Microsoft Docs"
+title: "Basic data types sample"
+description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use result set methods to retrieve and update values in the database."
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Basic Data Types Sample
+# Basic data types sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to use result set getter methods to retrieve basic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type values, and how to use result set update methods to update those values.
 
-The code file for this sample is named BasicDT.java, and it can be found in the following location:
+The code file for this sample is named BasicDataTypes.java, and it can be found in the following location:
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
@@ -27,18 +27,18 @@ The code file for this sample is named BasicDT.java, and it can be found in the 
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 The sample will create the required table and insert sample data in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database:
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data in the result set using various get\<Type> methods of the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) class.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database, and then retrieves a single row of data from the DataTypesTable test table. The custom displayRow method is then called to display all the data in the result set using various get\<Type> methods of the [SQLServerResultSet](reference/sqlserverresultset-class.md) class.
 
-Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data in the result set, and then calls the [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.
+Next, the sample uses various update\<Type> methods of the SQLServerResultSet class to update the data in the result set, and then calls the [updateRow](reference/updaterow-method-sqlserverresultset.md) method to persist that data back to the database.
 
 Finally, the sample refreshes the data in the result set and then calls the custom displayRow method again to display the data in the result set.
 
@@ -150,9 +150,8 @@ public class BasicDataTypes {
         }
     }
 }
-
 ```
 
-## See Also
+## See also
 
-[Working with Data Types &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)
+[Working with data types &#40;JDBC&#41;](working-with-data-types-jdbc.md)

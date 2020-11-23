@@ -1,4 +1,5 @@
 ---
+description: "Script to Grant Oracle Permissions"
 title: "Script to Grant Oracle Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Script to Grant Oracle Permissions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The script provided in this topic is used during the configuration of an Oracle database that will publish data using [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication. This script is also available in the following directory after installation: *\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. For more information about configuring the Oracle database, see [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: "Delete an Index"
 title: "Delete an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
@@ -16,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete an Index

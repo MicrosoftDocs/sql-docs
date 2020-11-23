@@ -1,6 +1,7 @@
 ---
-title: "Upgrading Always On Availability Group replica instances | Microsoft Docs"
-ms.custom: ""
+title: "Upgrade availability group replicas"
+description: Learn how to reduce downtime for the primary replica during SQL Server upgrades by performing a rolling upgrade.
+ms.custom: "seo-lt-2019"
 ms.date: "01/10/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrading Always On Availability Group Replica Instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 When upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that hosts an Always On Availability Group (AG) to a new [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] version, to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update, you can reduce downtime for the primary replica to only a single manual failover by performing a rolling upgrade (or two manual failovers if failing back to the original primary). During the upgrade process, a secondary replica will not be available for failover or for read-only operations, and after the upgrade, it may take some time for the secondary replica to catch up with the primary replica node depending upon the volume of activity on the primary replica node (so expect high network traffic). Also be aware that after the initial failover to a secondary replica running a newer version of SQL Server, the databases in that Availability Group will run through an upgrade process to bring them to the latest version. During this time, there will be no readable replicas for any of these databases. Downtime after the initial failover will depend on the number of databases in the Availability Group. If you plan on failing back to the original primary, this step will not be repeated when you fail back.
   
 >[!NOTE]  
->This article limits the discussion to the upgrade of SQL Server itself. It does not cover upgrading the operating system containing the Windows Server Failover Cluster (WSFC). Upgrading the Windows operating system hosting the failover cluster is not supported for operating systems before Windows Server 2012 R2. To upgrade a cluster node running on Windows Server 2012 R2, see [Cluster Operating System Rolling Upgrade](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).  
+>This article limits the discussion to the upgrade of SQL Server itself. It does not cover upgrading the operating system containing the Windows Server Failover Cluster (WSFC). Upgrading the Windows operating system hosting the failover cluster is not supported for operating systems before Windows Server 2012 R2. To upgrade a cluster node running on Windows Server 2012 R2, see [Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade).  
   
 ## Prerequisites  
 Before you begin, review the following important information:  
@@ -33,7 +33,7 @@ Before you begin, review the following important information:
 - [Check if change data capture  or replication is used for any AG databases](#special-steps-for-change-data-capture-or-replication): If any databases in the AG are enabled for change data capture (CDC), complete these [instructions](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade, which upgrades the replicas in place. A higher version of a SQL Server instance cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of the SQL Server instance using AGs, the only supported method is a distributed AG, which is in SQL Server 2016 Enterprise Edition or later.
+>Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade and should not exist in that state for extended periods of time as the upgrade should take place quickly. The other option for upgrading SQL Server 2016 and later is through the use of a distributed availability group.
 
 ## Rolling Upgrade Basics for Always On AGs  
 Observe the following guidelines when performing server upgrades or updates in order to minimize downtime and data loss for your AGs:  
@@ -58,7 +58,7 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 -   Always fail over the AG to a synchronous-commit secondary replica instance. If you fail over to an asynchronous-commit secondary replica instance, the databases are vulnerable to data loss, and data movement is automatically suspended until you manually resume data movement.  
   
--   Do not upgrade the primary replica instance before upgrading or updating any other secondary replica instance. An upgraded primary replica can no longer ship logs to any secondary replica whose [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instance that has not yet been upgraded to the same version. When data movement to a secondary replica is suspended, no automatic failover can occur for that replica, and your availability databases are vulnerable to data loss.  
+-   Do not upgrade the primary replica instance before upgrading or updating any other secondary replica instance. An upgraded primary replica can no longer ship logs to any secondary replica whose [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instance that has not yet been upgraded to the same version. When data movement to a secondary replica is suspended, no automatic failover can occur for that replica, and your availability databases are vulnerable to data loss. This also applies during a rolling upgrade where you manually failover from an old primary to a new primary. As such, after you upgrade the old primary, you may need to resume synchronization.
   
 -   Before failing over an AG, verify that the synchronization state of the failover target is SYNCHRONIZED.  
 
@@ -250,12 +250,11 @@ Depending on the update being applied, additional steps may be required for AG r
 
 1. Upgrade the instance that was originally the primary replica.
 
-For background information, see [CDC functionality may break after upgrading to the latest CU](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+For background information, see [CDC functionality may break after upgrading to the latest CU](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016).
 
   
 ## See Also  
  [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
 
- [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-  
+ [Install SQL Server 2016 from the Command Prompt](../../install-windows/install-sql-server-from-the-command-prompt.md)  
   

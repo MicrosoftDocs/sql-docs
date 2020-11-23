@@ -1,4 +1,5 @@
 ---
+description: "time (Transact-SQL)"
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/07/2017
@@ -21,11 +22,11 @@ helpviewer_keywords:
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
   
@@ -72,7 +73,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |ISO 8601|Notes|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh is two digits, ranging from 0 to 14, that represent the number of hours in the time zone offset.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh is two digits, ranging from 0 to 23, that represent the number of hours in the time zone offset.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.|  
   
 |ODBC|Notes|  
 |----------|-----------|  

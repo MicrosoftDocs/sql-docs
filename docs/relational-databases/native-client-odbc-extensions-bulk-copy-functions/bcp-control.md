@@ -1,4 +1,5 @@
 ---
+description: "bcp_control"
 title: "bcp_control | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,14 +16,12 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "bcp_control function"
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_control
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Changes the default settings for various control parameters for a bulk copy between a file and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

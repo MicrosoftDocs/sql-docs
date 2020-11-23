@@ -1,4 +1,5 @@
 ---
+description: "TM: Begin Tran Completed Event Class"
 title: "TM: Begin Tran Completed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Begin Tran Completed Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The TM: Begin Tran Completed event class indicates that a BEGIN TRANSACTION request has been completed. The request was sent from the client through the transaction management interface.  
   
 ## TM: Begin Tran Completed Event Class Data Columns  

@@ -1,4 +1,5 @@
 ---
+description: "Asymmetric Keys Encryption Strength"
 title: "Asymmetric Keys Encryption Strength | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Asymmetric Keys Encryption Strength
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether asymmetric keys were created by using 1024-bit or stronger encryption.  
   
 ## Best Practices Recommendations  

@@ -1,4 +1,5 @@
 ---
+description: "Union All Transformation"
 title: "Union All Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -16,11 +17,14 @@ helpviewer_keywords:
   - "Union All transformation"
   - "datasets [Integration Services], merging"
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Union All Transformation
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Union All transformation combines multiple inputs into one output. For example, the outputs from five different Flat File sources can be inputs to the Union All transformation and combined into one output.  
   
 ## Inputs and Outputs  
@@ -37,7 +41,7 @@ manager: craigg
 ## Configuration of the Union All Transformation  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set programmatically, see [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ For more information about the properties that you can set programmatically, see [Common Properties](../set-the-properties-of-a-data-flow-component.md).  
   
  For more information about how to set properties, click one of the following topics:  
   
@@ -58,5 +62,4 @@ manager: craigg
   
 ## Related Tasks  
  [Merge Data by Using the Union All Transformation](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   

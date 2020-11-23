@@ -1,7 +1,8 @@
 ---
+description: "Broker:Connection Event Class"
 title: "Broker:Connection Event Class | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/24/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -11,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Connection Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Connection** event to report the status of a transport connection managed by Service Broker.  
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Connection** event to report the status of a transport connection managed by Service Broker.  
   
 ## Broker:Connection Event Class Data Columns  
   

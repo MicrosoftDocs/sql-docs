@@ -1,4 +1,5 @@
 ---
+description: "sysmail_update_profileaccount_sp (Transact-SQL)"
 title: "sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sysmail_update_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the sequence number of an account within a Database Mail profile.  
   

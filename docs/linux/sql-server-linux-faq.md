@@ -1,19 +1,17 @@
 ---
-title:  SQL Server on Linux FAQ | Microsoft Docs
-description: This article provides answers to frequently asked questions about SQL Server running on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 01/10/2019
+title:  SQL Server on Linux FAQ
+description: This article provides answers to frequently asked questions (FAQ) about SQL Server running on Linux.
+author: VanMSFT 
+ms.author: vanto
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
 # SQL Server on Linux Frequently Asked Questions (FAQ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 The following sections provide common questions and answers for SQL Server running on Linux.
 
@@ -29,7 +27,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Is SQL Server on Linux the same as on Windows?**
 
-   The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-release-notes.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
+   The core Database Engine for SQL Server is the same on Linux as it is on Windows. However, some features are currently not supported on Linux. For a list of features that are not supported on Linux, see the [Unsupported features & services](sql-server-linux-editions-and-components-2019.md#Unsupported). Also review the [Known issues](sql-server-linux-release-notes.md#known-issues). Unless specified in these lists, other SQL Server features and services are supported on Linux.
 
 1. **What is the support policy for SQL Server?**
 
@@ -92,7 +90,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Can I perform an unattended installation of SQL Server on Linux?**
 
-   Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). See the sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) created by the SQL Server Customer Advisory Team.
+   Yes. For a discussion of unattended installation, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#unattended). See the sample scripts for [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), and [Ubuntu](sample-unattended-install-ubuntu.md). You can also review [this sample script](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux) created by the SQL Server Customer Advisory Team.
 
 ## Tools
 
@@ -102,7 +100,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Is there a tool like SSMS that runs on Linux?**
 
-   The new Azure Data Studio (preview) is a cross-platform tool for managing SQL Server. For more information, see [What is Azure Data Studio (preview)](../azure-data-studio/what-is.md).
+   The new Azure Data Studio is a cross-platform tool for managing SQL Server. For more information, see [What is Azure Data Studio](../azure-data-studio/what-is.md).
 
 1. **Are commands like sqlcmd and bcp available on Linux?**
 
@@ -114,7 +112,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **What tools are available to monitor SQL Server performance on Linux?**
 
-   You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), work remotely in SQL Server Management Studio (SSMS) from Windows.
+   You can use [system dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) to collect various types of information about SQL Server, including Linux process information. You can use [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) to improve query performance. Other tools, such as the built-in [Performance Dashboard](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in), work remotely in SQL Server Management Studio (SSMS) from Windows.
 
    > [!TIP]
    > One way to improve performance is to properly configure your Linux operating system and the SQL Server insance. For more information, see [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md).
@@ -127,7 +125,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Does SQL Server on Linux support multiple instances on the same host?**
 
-   We recommend running multiple containers on a host to have multiple distinct instances. This is easily achieved using docker, but each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers).
+   We recommend running multiple containers on a host to have multiple distinct instances. This is easily achieved using docker, but each container needs to listen on a different port. For more information, see [Run multiple SQL Server containers](./sql-server-linux-docker-container-deployment.md#multiple).
 
 1. **Is Active Directory Authentication supported on Linux?**
 
@@ -147,7 +145,7 @@ The following sections provide common questions and answers for SQL Server runni
 
 1. **Can I migrate my data from Oracle and other database engines to SQL Server on Linux?**
 
-   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Yes. SSMA supports migration from several types of database engines: Microsoft Access, DB2, MySQL, Oracle, and SAP ASE (formerly SAP Sybase ASE). For an example of how to use SSMA, see [Migrate an Oracle schema to SQL Server on Linux with the SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json).
 
 1. **What permissions are required for SQL Server files?**
 
@@ -160,5 +158,9 @@ The following sections provide common questions and answers for SQL Server runni
 1. **Can I change the ownership of SQL Server files and directories from the installed mssql account and group?**
 
    We do not support changing the ownership of SQL Server directory and files from the default installation. The mssql account and group is specifically used for SQL Server and has no interactive login access.
-
+   
+ 1. **Is Symbolic links supported for SQL Server data and log directories?** 
+    
+    No, symbolic links are not supported for SQL Server data and log directories. To change the default data and log directories, see [Change the default data or log directory location](sql-server-linux-configure-mssql-conf.md#datadir).
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

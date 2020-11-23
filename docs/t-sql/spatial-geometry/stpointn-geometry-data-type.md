@@ -1,4 +1,5 @@
 ---
+description: "STPointN (geometry Data Type)"
 title: "STPointN (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointN (geometry Data Type)"
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPointN (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a specified point in a **geometry** instance.
   
@@ -31,7 +31,9 @@ Returns a specified point in a **geometry** instance.
 .STPointN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of points in the **geometry** instance.  
   

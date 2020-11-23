@@ -1,7 +1,8 @@
 ---
+description: "Guidelines for online index operations"
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: table-view-index
@@ -16,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.prod_service: "table-view-index, sql-database"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines for online index operations
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 When you perform online index operations, the following guidelines apply:  
 
@@ -32,7 +32,7 @@ When you perform online index operations, the following guidelines apply:
 - Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Create Index](../../t-sql/statements/create-index-transact-sql.md) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
 
 > [!NOTE]  
-> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-components-of-sql-server-2016.md).  
 
 The following table shows the index operations that can be performed online, the indexes that are excluded from these online operations, and resumable index restrictions. Additional restrictions are also included.  
 
@@ -75,11 +75,11 @@ Because both the source and target structures are maintained during the online i
   
 Although we recommend online operations, you should evaluate your environment and specific requirements. It may be optimal to run index operations offline. In doing this, users have restricted access to the data during the operation, but the operation finishes faster and uses fewer resources.  
   
-On multiprocessor computers that are running SQL Server 2016, index statements may use more processors to perform the scan and sort operations associated with the index statement just like other queries do. You can use the MAXDOP index option to control the number of processors dedicated to the online index operation. In this way, you can balance the resources that are used by index operation with those of the concurrent users. For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md). For more information about the editions of SQL Server that support Parallel indexed operations, see [Features Supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+On multiprocessor computers that are running SQL Server 2016, index statements may use more processors to perform the scan and sort operations associated with the index statement just like other queries do. You can use the MAXDOP index option to control the number of processors dedicated to the online index operation. In this way, you can balance the resources that are used by index operation with those of the concurrent users. For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md). For more information about the editions of SQL Server that support Parallel indexed operations, see [Features Supported by editions](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 Because an S-lock or Sch-M lock is held in the final phase of the index operation, be careful when you run an online index operation inside an explicit user transaction, such as BEGIN TRANSACTION...COMMIT block. Doing this causes the lock to be held until the end of the transaction, therefore impeding user concurrency.  
   
-Online index rebuilding may increase fragmentation when it is allowed to run with `MAX DOP > 1` and `ALLOW_PAGE_LOCKS = OFF` options. For more information, see [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+Online index rebuilding may increase fragmentation when it is allowed to run with `MAX DOP > 1` and `ALLOW_PAGE_LOCKS = OFF` options. For more information, see [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation).  
   
 ## Transaction log considerations
 
@@ -88,7 +88,7 @@ Large-scale index operations, performed offline or online, can generate large da
 ## Resumable index considerations
 
 > [!NOTE]
-> The resumable index option applies to SQL Server (Starting with SQL Server 2017) (index rebuild only) and SQL Database (create index and index rebuild). See [Create Index](../../t-sql/statements/create-index-transact-sql.md) (currently in public preview for [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
+> The resumable index option for create index and index rebuild applies to SQL Server (index rebuild starting with SQL Server 2017, with create index also supported in SQL Server 2019) and SQL Database. See [Create Index](../../t-sql/statements/create-index-transact-sql.md) and [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
 
 When you perform resumable online index create or rebuild, the following guidelines apply:
 
@@ -128,4 +128,4 @@ Both ELEVATE_ONLINE and ELEVATE_RESUMABLE only apply to DDL statements that supp
 - [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

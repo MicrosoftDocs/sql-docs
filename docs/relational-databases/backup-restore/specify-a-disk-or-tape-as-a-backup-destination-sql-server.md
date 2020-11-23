@@ -1,5 +1,6 @@
 ---
-title: "Specify a Disk or Tape As a Backup Destination (SQL Server) | Microsoft Docs"
+title: "Specify disk or tape backup destination"
+description: This article shows you how to specify a disk or tape as a backup destination in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,12 +19,11 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "tape backup devices, backing up"
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: cawrites
+ms.author: chadam
 ---
-# Specify a Disk or Tape As a Backup Destination (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Specify a disk or tape backup destination (SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to specify a disk or tape as a backup destination in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -62,8 +62,8 @@ manager: craigg
 3.  Right-click the database, point to **Tasks**, and then click **Back Up**. The **Back Up Database** dialog box appears.  
   
 4.  In the **Destination** section of the **General** page, click **Disk** or **Tape**. To select the paths of up to 64 disk or tape drives containing a single media set, click **Add**.  
-  
-     To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
+
+   To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

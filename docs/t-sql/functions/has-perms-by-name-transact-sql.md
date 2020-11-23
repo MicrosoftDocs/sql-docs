@@ -1,4 +1,5 @@
 ---
+description: "HAS_PERMS_BY_NAME (Transact-SQL)"
 title: "HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -20,12 +21,11 @@ helpviewer_keywords:
   - "testing permissions"
   - "HAS_PERMS_BY_NAME function"
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # HAS_PERMS_BY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Evaluates the effective permission of the current user on a securable. A related function is [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
@@ -33,13 +33,14 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *securable*  
  Is the name of the securable. If the securable is the server itself, this value should be set to NULL. *securable* is a scalar expression of type **sysname**. There is no default.  
   
@@ -55,7 +56,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  An optional scalar expression of type **sysname** that represents the name of the securable sub-entity against which the permission is tested. The default is NULL.  
   
 > [!NOTE]  
->  In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sub-securables cannot use brackets in the form **'[**_sub name_**]'**. Use **'**_sub name_**'** instead.  
+>  In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and later, sub-securables cannot use brackets in the form **'[**_sub name_**]'**. Use **'**_sub name_**'** instead.  
   
  *sub-securable_class*  
  An optional scalar expression of type **nvarchar(60)** that represent the class of securable subentity against which the permission is tested. The default is NULL.  
@@ -100,30 +101,30 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### A. Do I have the server-level VIEW SERVER STATE permission?  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
 ```  
   
 ### B. Am I able to IMPERSONATE server principal Ps?  
   
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
 ```  
   
 ### C. Do I have any permissions in the current database?  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
 ### D. Does database principal Pd have any permission in the current database?  
  Assume caller has IMPERSONATE permission on principal `Pd`.  
   
-```  
+```sql  
 EXECUTE AS user = 'Pd'  
 GO  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
@@ -135,7 +136,7 @@ GO
 ### E. Can I create procedures and tables in schema S?  
  The following example requires `ALTER` permission in `S` and `CREATE PROCEDURE` permission in the database, and similarly for tables.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')  
     & HAS_PERMS_BY_NAME('S', 'SCHEMA', 'ALTER') AS _can_create_procs,  
     HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE TABLE') &  
@@ -144,7 +145,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')
   
 ### F. Which tables do I have SELECT permission on?  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME  
 (QUOTENAME(SCHEMA_NAME(schema_id)) + '.' + QUOTENAME(name),   
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
@@ -153,20 +154,20 @@ SELECT HAS_PERMS_BY_NAME
 ### G. Do I have INSERT permission on the SalesPerson table in AdventureWorks2012?  
  The following example assumes `AdventureWorks2012` is my current database context, and uses a two-part name.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
 ```  
   
  The following example makes no assumptions about my current database context, and uses a three-part name.  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   
 ### H. Which columns of table T do I have SELECT permission on?  
   
-```  
+```sql  
 SELECT name AS column_name,   
     HAS_PERMS_BY_NAME('T', 'OBJECT', 'SELECT', name, 'COLUMN')   
     AS can_select   

@@ -1,4 +1,5 @@
 ---
+description: "SQLBindCol (Cursor Library)"
 title: "SQLBindCol (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,9 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLAllocStmt function [ODBC], Cursor Library"
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindCol (Cursor Library)
 > [!IMPORTANT]  
@@ -24,8 +24,8 @@ manager: craigg
   
  An application can call **SQLBindCol** to rebind result set columns after it has called **SQLExtendedFetch**, **SQLFetch**, or **SQLFetchScroll**,as long as the C data type, column size, and decimal digits of the bound column remain the same. The application need not close the cursor to rebind columns to different addresses.  
   
- The cursor library supports setting the SQL_ATTR_ROW_BIND_OFFSET_PTR statement attribute to use bind offsets. (**SQLBindCol** does not have to be called for this rebinding to occur.) If the cursor library is used with an ODBC 3*.x* driver, the bind offset is not used when **SQLFetch** is called. The bind offset is used if **SQLFetch** is called when the cursor library is used with an ODBC 2.*x* driver because **SQLFetch** is then mapped to **SQLExtendedFetch**.  
+ The cursor library supports setting the SQL_ATTR_ROW_BIND_OFFSET_PTR statement attribute to use bind offsets. (**SQLBindCol** does not have to be called for this rebinding to occur.) If the cursor library is used with an ODBC *3.x* driver, the bind offset is not used when **SQLFetch** is called. The bind offset is used if **SQLFetch** is called when the cursor library is used with an ODBC *2.x* driver because **SQLFetch** is then mapped to **SQLExtendedFetch**.  
   
  The cursor library supports calling **SQLBindCol** to bind the bookmark column.  
   
- When working with an ODBC 2.*x* driver, the cursor library returns SQLSTATE HY090 (Invalid string or buffer length) when **SQLBindCol** is called to set the buffer length for a bookmark column to a value not equal to 4. When working with an ODBC 3*.x* driver, the cursor library allows the buffer to be any size.
+ When working with an ODBC *2.x* driver, the cursor library returns SQLSTATE HY090 (Invalid string or buffer length) when **SQLBindCol** is called to set the buffer length for a bookmark column to a value not equal to 4. When working with an ODBC *3.x* driver, the cursor library allows the buffer to be any size.

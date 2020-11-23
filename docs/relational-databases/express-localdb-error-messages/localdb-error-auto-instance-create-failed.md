@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED"
 title: "LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -9,14 +10,13 @@ ms.topic: "reference"
 ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|280|  

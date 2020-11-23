@@ -1,15 +1,16 @@
 ---
 title: "Displaying a Series with Multiple Data Ranges on a Chart | Microsoft Docs"
+description: Discover ways to improve readability of your charts using scale breaks, filters, and by separating the data ranges in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Displaying a Series with Multiple Data Ranges on a Chart
@@ -62,7 +63,7 @@ ms.author: maghan
 [Formatting a Chart](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [3D, Bevel, and Other Effects in a Chart](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Axis Properties Dialog Box, Axis Options](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[Axis Properties Dialog Box, Axis Options](/previous-versions/sql/)   
 [Collect Small Slices on a Pie Chart](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

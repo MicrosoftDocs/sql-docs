@@ -1,4 +1,5 @@
 ---
+description: "CPU Threshold Exceeded Event Class"
 title: "CPU Threshold Exceeded Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CPU Threshold Exceeded Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The CPU Threshold Exceeded event class indicates that Resource Governor detects a query that exceeds the CPU threshold specified for REQUEST_MAX_CPU_TIME_SEC.  
   
 > [!NOTE]  

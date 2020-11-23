@@ -1,10 +1,9 @@
 ---
+description: "Azure Data Lake Store File System Task"
 title: "Azure Data Lake Store File System Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
@@ -12,10 +11,13 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "Lingxi-Li"
 ms.author: "lingxl"
-ms.reviewer: "douglasl"
-manager: craigg
+ms.reviewer: maghan
 ---
 # Azure Data Lake Store File System Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 The Azure Data Lake Store File System Task lets users perform various file system operations on [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 

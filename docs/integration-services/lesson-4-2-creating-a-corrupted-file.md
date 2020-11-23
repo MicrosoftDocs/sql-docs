@@ -1,4 +1,5 @@
 ---
+description: "Lesson 4-2: Create a corrupted file"
 title: "Step 2: Create a corrupted file | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 4-2: Create a corrupted file
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 To demonstrate the configuration and handling of transformation errors, you need a sample flat file that, when processed, causes a component to fail.  
   

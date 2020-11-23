@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG014010"
 title: "MSSQL_ENG014010 | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # MSSQL_ENG014010
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|14010|  
@@ -42,7 +43,7 @@ manager: craigg
   
      10.193.17.129 inst1  
   
--   Remove replication, register each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and then reestablish replication. If the value of @@SERVERNAME is not correct for a non-clustered instance, follow these steps:  
+-   Remove replication, register each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and then reestablish replication. If the value of @@SERVERNAME is not correct for a nonclustered instance, follow these steps:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

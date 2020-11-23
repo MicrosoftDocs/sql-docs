@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-1 - Creating Working Folders and Environment Variables"
 title: "Step 1: Creating Working Folders and Environment Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-1 - Creating Working Folders and Environment Variables
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 In this task, you will create the working folder (C:\DeploymentTutorial) and the new system environment variables (`DataTransfer` and `LoadXMLData`) that you will use in later tutorial tasks.  
   
 The working folder is at the root of the C drive. If you must use a different drive or location, you can do that. However, you need to note this location and then use it wherever the tutorial refers to the location of the DeploymentTutorial working folder.  

@@ -1,14 +1,14 @@
 ---
-title: PDW topology - Analytics Platform System | Microsoft Docs
+title: PDW topology
 description: PDW topology for Analytics Platform System.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # PDW Topology

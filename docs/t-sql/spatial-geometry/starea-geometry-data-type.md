@@ -1,4 +1,5 @@
 ---
+description: "STArea (geometry Data Type)"
 title: "STArea (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STArea (geometry Data Type)"
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STArea (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the total surface area of a **geometry** instance.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STArea ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **float**  
   
  CLR return type: **SqlDouble**  

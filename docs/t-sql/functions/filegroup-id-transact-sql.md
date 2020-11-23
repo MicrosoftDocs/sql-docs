@@ -1,4 +1,5 @@
 ---
+description: "FILEGROUP_ID (Transact-SQL)"
 title: "FILEGROUP_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,12 +20,11 @@ helpviewer_keywords:
   - "IDs [SQL Server], filegroups"
   - "names [SQL Server], filegroups"
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # FILEGROUP_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the filegroup identification (ID) number for a specified filegroup name.  
   
@@ -32,11 +32,13 @@ This function returns the filegroup identification (ID) number for a specified f
   
 ## Syntax  
   
-```  
+```syntaxsql 
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *filegroup_name*
 An expression of type **sysname**, representing the filegroup name whose filegroup ID `FILEGROUP_ID` will return.  
   
@@ -49,7 +51,7 @@ An expression of type **sysname**, representing the filegroup name whose filegro
 ## Examples  
 This example returns the filegroup ID for the filegroup named `PRIMARY` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  
 GO  
 ```  

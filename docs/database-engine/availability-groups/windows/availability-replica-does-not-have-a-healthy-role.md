@@ -1,12 +1,12 @@
 ---
-title: "Availability replica does not have a healthy role for an availability group"
-description: "Identify possible causes for why a replica does not have a healthy role within an Always On availability group."
-ms.custom: "seodec18"
+title: "Replica does not have a healthy role for an availability group"
+description: "Identify possible causes for why an availability replica does not have a healthy role within an Always On availability group."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords: 
   - "sql13.swb.agdashboard.arp1rolehealthy.issues.f1"
 helpviewer_keywords: 
@@ -14,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Availability replica does not have a healthy role for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## Introduction  
   

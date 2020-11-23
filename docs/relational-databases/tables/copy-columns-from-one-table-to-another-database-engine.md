@@ -1,4 +1,5 @@
 ---
+description: "Copy Columns from One Table to Another (Database Engine)"
 title: "Copy Columns from One Table to Another (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2016"
@@ -13,11 +14,10 @@ helpviewer_keywords:
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Copy Columns from One Table to Another (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes how to copy columns from one table to another, copying either just the column definition, or the definition and data in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -58,7 +58,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 4.  Click the tab for the table into which you want to copy the columns.  
   
 5.  Select the column you want to follow the inserted columns and, from the **Edit** menu, click **Paste**.  
-  
+
 #### To copy data from one table to another  
   
 1.  Follow the directions for copying column definitions above.  

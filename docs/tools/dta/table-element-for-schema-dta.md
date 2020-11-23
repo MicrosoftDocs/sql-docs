@@ -1,10 +1,8 @@
 ---
-title: "Table Element for Schema (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: "Table Element for Schema (DTA)"
+description: In the dta utility, the Table element for Schema specifies the table for tuning. This article describes that element.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -12,13 +10,18 @@ dev_langs:
 helpviewer_keywords: 
   - "Table element [DTA]"
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Table Element for Schema (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the table for tuning.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Specifies the table for tuning.  
   
 ## Syntax  
   

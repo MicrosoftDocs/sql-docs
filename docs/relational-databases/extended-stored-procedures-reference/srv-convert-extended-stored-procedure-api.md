@@ -1,5 +1,6 @@
 ---
 title: "srv_convert (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_convert in the Extended Stored Procedure API changes data from one data type to another.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_convert (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

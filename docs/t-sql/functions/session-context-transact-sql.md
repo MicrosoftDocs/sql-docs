@@ -1,9 +1,10 @@
 ---
+description: "SESSION_CONTEXT (Transact-SQL)"
 title: "SESSION_CONTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/22/2016"
+ms.date: "05/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -15,12 +16,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "SESSION_CONTEXT function"
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SESSION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns the value of the specified key in the current session context. The value is set by using the [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) procedure.  
   
@@ -28,11 +28,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SESSION_CONTEXT(N'key')  
 ```  
   
-## Arguments  
+## Arguments
  'key'  
  The key (type sysname) of the value being retrieved.  
   
@@ -51,7 +51,7 @@ SESSION_CONTEXT(N'key')
 ## Examples  
  The following simple example sets the session context value for key `user_id` to 4, and then uses the **SESSION_CONTEXT** function to retrieve the value.  
   
-```  
+```sql  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  

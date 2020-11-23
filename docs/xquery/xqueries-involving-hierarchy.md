@@ -1,5 +1,6 @@
 ---
 title: "XQueries Involving Hierarchy | Microsoft Docs"
+description: View examples of XQueries that involve hierarchies.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQueries Involving Hierarchy
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Most **xml** type columns in the **AdventureWorks** database are semi-structured documents. Therefore, documents stored in each row may look different. The query samples in this topic illustrate how to extract information from these various documents.  
   

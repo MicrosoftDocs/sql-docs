@@ -1,6 +1,6 @@
 ---
-title: "Return Codes | Microsoft Docs"
-description: "Return codes"
+title: Return codes (OLE DB driver)
+description: Learn about return codes for OLE DB Driver for SQL Server member functions and how to get more information about results besides success.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -20,18 +20,17 @@ helpviewer_keywords:
   - "S_OK"
   - "FAILED macro"
   - "errors [OLE DB], return codes"
-author: pmasl
-ms.author: pelopes
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Return Codes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   At the most basic level, a member function either succeeds or fails. At a somewhat more precise level, a function can succeed, but its success may not be what the application developer intended.  
   
- For more information about OLE DB return codes, see [Return Codes (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
+ For more information about OLE DB return codes, see [Return Codes (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85)).  
   
  When an OLE DB Driver for SQL Server member function returns S_OK, the function succeeded.  
   
@@ -45,5 +44,4 @@ manager: craigg
   
 ## See Also  
  [Errors](../../oledb/ole-db-errors/errors.md)  
-  
   

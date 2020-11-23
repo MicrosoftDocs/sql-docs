@@ -1,4 +1,5 @@
 ---
+description: "Step 5: Test the Lesson 4 tutorial package"
 title: "Step 5: Test the Lesson 4 tutorial package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 4-5: Test the Lesson 4 package
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 At run time, the corrupted file **Currency_BAD.txt** fails to generate a match within the Currency Key Lookup transformation. Because you configured the error output of Currency Key Lookup to redirect failed rows to the new Failed Rows destination, the component doesn't fail, and the package runs successfully. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes all failed error rows to **ErrorOutput.txt**.  
   

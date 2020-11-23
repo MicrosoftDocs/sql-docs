@@ -1,4 +1,5 @@
 ---
+description: "sys.sysmembers (Transact-SQL)"
 title: "sys.sysmembers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysmembers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each member of a database role.  
   

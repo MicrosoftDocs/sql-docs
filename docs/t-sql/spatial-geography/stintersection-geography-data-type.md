@@ -1,4 +1,5 @@
 ---
+description: "STIntersection (geography Data Type)"
 title: "STIntersection (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STIntersection method"
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIntersection (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents the points where a **geography** instance intersects another **geography** instance.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STIntersection ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare with the instance on which STIntersection() is being invoked.  
   

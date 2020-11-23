@@ -1,4 +1,5 @@
 ---
+description: "SESSIONPROPERTY (Transact-SQL)"
 title: "SESSIONPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,12 +18,11 @@ helpviewer_keywords:
   - "SESSIONPROPERTY function"
   - "sessions [SQL Server], SET options settings"
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the SET options settings of a session.  
   
@@ -30,12 +30,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 SESSIONPROPERTY (option)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *option*  
  Is the current option setting for this session. *option* can be any of the following values.  
   
@@ -59,7 +60,7 @@ SESSIONPROPERTY (option)
 ## Examples  
  The following example returns the setting for the `CONCAT_NULL_YIELDS_NULL` option.  
   
-```  
+```sql  
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   

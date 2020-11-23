@@ -1,4 +1,5 @@
 ---
+description: "SELECT - FOR Clause (Transact-SQL)"
 title: "FOR Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"
@@ -21,11 +22,10 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Use the FOR clause to specify one of the following options for query results.
   
@@ -39,7 +39,7 @@ Use the FOR clause to specify one of the following options for query results.
   
 ## Syntax  
   
-```
+```syntaxsql
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -211,7 +211,10 @@ _Suppress unwanted line breaks:_ You might use SQL Server Management Studio (SSM
  Specifies that the columns are returned as subelements. Otherwise, they are mapped to XML attributes. This option is supported in RAW, AUTO and PATH modes only. For more information, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Specifies that an element with **xsi:nil** attribute set to **True** be created for NULL column values. This option can only be specified with ELEMENTS directive. For more information, see [Generate Elements for NULL Values with the XSINIL Parameter](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).  
+ Specifies that an element with **xsi:nil** attribute set to **True** be created for NULL column values. This option can only be specified with ELEMENTS directive. For more information, see:
+
+- [Generate Elements for NULL Values with the XSINIL Parameter](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).
+- [FOR XML on the SELECT statement](../../relational-databases/xml/for-xml-sql-server.md)
   
  ABSENT  
  Indicates that for null column values, corresponding XML elements will not be added in the XML result. Specify this option only with ELEMENTS.  

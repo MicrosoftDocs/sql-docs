@@ -1,10 +1,8 @@
 ---
-title: "ssbdiagnose Utility (Service Broker) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: ssbdiagnose Utility (Service Broker)
+description: The ssbdiagnose utility reports issues in Service Broker conversations or the configuration of Service Broker services.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -23,14 +21,19 @@ helpviewer_keywords:
   - "Service Broker, ssbdiagnose utility"
   - "ssbdiagnose"
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # ssbdiagnose Utility (Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The **ssbdiagnose** utility reports issues in [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations or the configuration of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Configuration checks can be made for either two services or a single service. Issues are reported either in the command prompt window as human-readable text, or as formatted XML that can be redirected to a file or another program.  
-  
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+
+The **ssbdiagnose** utility reports issues in [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations or the configuration of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Configuration checks can be made for either two services or a single service. Issues are reported either in the command prompt window as human-readable text, or as formatted XML that can be redirected to a file or another program.
+
 ## Syntax  
   
 ```  
@@ -179,14 +182,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  A unique identifier that identifies a conversation endpoint in an application. Conversation handles are unique to one endpoint of a conversation, the initiator and target endpoints have separate conversation handles.  
   
- Conversation handles are returned to applications by the *@dialog_handle* parameter of the **BEGIN DIALOG** statement, and the **conversation_handle** column in the result set of a **RECEIVE** statement.  
+ Conversation handles are returned to applications by the *\@dialog_handle* parameter of the **BEGIN DIALOG** statement, and the **conversation_handle** column in the result set of a **RECEIVE** statement.  
   
  Conversation handles are reported in the **conversation_handle** column of the **sys.transmission_queue** and **sys.conversation_endpoints** catalog views.  
   
  *conversation_group_id*  
  The unique identifier that identifies a conversation group.  
   
- Conversation group IDs are returned to applications by the *@conversation_group_id* parameter of the **GET CONVERSATION GROUP** statement and the **conversation_group_id** column in the result set of a **RECEIVE** statement.  
+ Conversation group IDs are returned to applications by the *\@conversation_group_id* parameter of the **GET CONVERSATION GROUP** statement and the **conversation_group_id** column in the result set of a **RECEIVE** statement.  
   
  Conversation group IDs are reported in the **conversation_group_id** columns of the **sys.conversation_groups** and **sys.conversation_endpoints** catalog views.  
   
@@ -302,7 +305,7 @@ WHERE database_id = DB_ID();
  Reports an issue that is preventing **ssbdiagnose** from completing a configuration analysis or from monitoring conversations.  
   
 ## sqlcmd Environment Variables  
- The **ssbdiagnose** utility supports the SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD, and SQLCMDLOGINTIMOUT environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt SET command, or by using the **setvar** command in [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use **setvar** in **sqlcmd**, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
+ The **ssbdiagnose** utility supports the SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD, and SQLCMDLOGINTIMOUT environment variables that are also used by the **sqlcmd** utility. You can set the environment variables either by using the command prompt SET command, or by using the **setvar** command in [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that you run by using **sqlcmd**. For more information about how to use **setvar** in **sqlcmd**, see [Use sqlcmd with Scripting Variables](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15).  
   
 ## Permissions  
  In each **connectionoptions** clause, the login specified with either **-E** or **-U** must be a member of the **sysadmin** fixed-server role in the instance specified in **-S**.  
@@ -458,5 +461,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
-  
   

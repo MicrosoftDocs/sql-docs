@@ -1,4 +1,5 @@
 ---
+description: "EventLog Event Class"
 title: "EventLog Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EventLog Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The EventLogevent class indicates that events have been logged in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log.  
   
 ## EventLog Event Class Data Columns  

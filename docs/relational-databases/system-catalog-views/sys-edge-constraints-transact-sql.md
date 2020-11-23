@@ -1,4 +1,5 @@
 ---
+description: "sys.edge_constraints (Transact-SQL)"
 title: "sys.edge_constraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2018"
@@ -19,11 +20,10 @@ helpviewer_keywords:
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: ">=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.edge_constraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Contains one row for each object that is an edge constraint. 
   

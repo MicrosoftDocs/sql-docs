@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_53 | Microsoft Docs"
+description: The SQL Server client cannot connect to the server. See an explanation of error 53 and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_53
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|53|  
 |Event Source|MSSQLSERVER|  

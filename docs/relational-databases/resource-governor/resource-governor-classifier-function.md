@@ -1,5 +1,6 @@
 ---
 title: "Resource Governor Classifier Function | Microsoft Docs"
+description: The SQL Server resource governor classification process assigns incoming sessions to a workload group based on the characteristics of the session. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Resource Governor Classifier Function
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource governor classification process assigns incoming sessions to a workload group based on the characteristics of the session. You can tailor the classification logic by writing a user-defined function, called a classifier function.  
   
 ## Classification  
@@ -65,10 +65,10 @@ manager: craigg
   
 1.  Login authentication  
   
-2.  LOGON trigger execution  
+2.  LOGON trigger execution (Occurs only if logon triggers exist in the instance.)
   
 3.  Classification  
-  
+
  When classification starts, Resource Governor executes the classifier function and uses the value returned by the function to send requests to the appropriate workload group.  
   
 > [!NOTE]  

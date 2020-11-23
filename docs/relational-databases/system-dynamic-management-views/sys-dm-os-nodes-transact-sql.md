@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_nodes (Transact-SQL)"
 title: "sys.dm_os_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/13/2018"
@@ -17,13 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_nodes dynamic management view"
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 An internal component named the SQLOS creates node structures that mimic hardware processor locality. These structures can be changed by using [soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) to create custom node layouts.  
 
@@ -59,7 +59,7 @@ The following table provides information about these nodes.
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ## See Also    
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

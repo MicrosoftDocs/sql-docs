@@ -1,4 +1,5 @@
 ---
+description: "Azure Blob Source"
 title: "Azure Blob Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2018"
@@ -11,11 +12,14 @@ f1_keywords:
   - "sql13.dts.designer.afpblobsrc.f1"
   - "sql14.dts.designer.afpblobsrc.f1"
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Blob Source
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The **Azure Blob Source** component enables an SSIS package to read data from an Azure blob. The supported file formats are: CSV and AVRO.
   
   To see the editor for the Azure Blob Source, drag and drop **Azure Blob Source** on the data flow designer and double-click it to open the editor).  

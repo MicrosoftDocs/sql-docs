@@ -1,15 +1,16 @@
 ---
 title: "URL Examples for Items on a Report Server - SharePoint Mode | Microsoft Docs"
+description: View examples of using URLs that specify locations in a SharePoint site Web hierarchy on a report server.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # URL Examples for Items on a Report Server - SharePoint Mode
   To publish reports and related items to a SharePoint library, you can either publish the content using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] authoring tools such as Report Designer or you can upload the content by using SharePoint site actions.  

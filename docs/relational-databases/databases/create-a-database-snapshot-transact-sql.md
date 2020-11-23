@@ -1,5 +1,6 @@
 ---
 title: "Create a Database Snapshot (Transact-SQL) | Microsoft Docs"
+description: "Find out how to create a SQL Server database snapshot by using Transact-SQL. Learn about prerequisites and best practices for creating snapshots."
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Create a Database Snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The only way to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database snapshot is to use [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not support the creation of database snapshots.  
   
   
@@ -32,7 +32,11 @@ manager: craigg
   
 -   The source database cannot be configured as a scalable shared database.  
 
-- The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup. For more information, see [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+
+- The source database must not contain a MEMORY_OPTIMIZED_DATA filegroup.
+
+:::moniker-end
 
 > [!IMPORTANT]
 > For information about other significant considerations, see [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
@@ -93,7 +97,7 @@ AdventureWorks_snapshot_evening
 1.  Based on the current size of the source database, ensure that you have sufficient disk space to hold the database snapshot. The maximum size of a database snapshot is the size of the source database at snapshot creation. For more information, see [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
 2.  Issue a CREATE DATABASE statement on the files using the AS SNAPSHOT OF clause. Creating a snapshot requires specifying the logical name of every database file of the source database. The syntax is as follows:  
-  
+
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -110,7 +114,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
     > [!NOTE]  
     >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
@@ -124,21 +128,21 @@ AdventureWorks_snapshot_evening
   
 -   A. [Creating a snapshot on the AdventureWorks database](#Creating_on_AW)  
   
--   B. [Creating a snapshot on the Sales database](#Creating_on_Sales)  
+-   B. [Creating a snapshot on the Sales database](#Creating_on_Sales)
   
 ####  <a name="Creating_on_AW"></a> A. Creating a snapshot on the AdventureWorks database  
  This example creates a database snapshot on the `AdventureWorks` database. The snapshot name, `AdventureWorks_dbss_1800`, and the file name of its sparse file, `AdventureWorks_data_1800.ss`, indicate the creation time, 6 P.M (1800 hours).  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
-( NAME = AdventureWorks_Data, FILENAME =   
+( NAME = AdventureWorks, FILENAME =   
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks_data_1800.ss' )  
 AS SNAPSHOT OF AdventureWorks;  
 GO  
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. Creating a snapshot on the Sales database  
- This example creates a database snapshot, `sales_snapshot1200`, on the `Sales` database. This database was created in the example, "Creating a database that has filegroups," in [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ This example creates a database snapshot, `sales_snapshot1200`, on the `Sales` database. This database was created in the example, "Creating a database that has filegroups," in [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -169,8 +173,6 @@ GO
 -   [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## See Also  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
-  
-

@@ -1,4 +1,5 @@
 ---
+description: "sp_help_spatial_geography_histogram (Transact-SQL)"
 title: "sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geography_histogram"
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_spatial_geography_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Facilitates the keying of grid parameters for a spatial index.  
   
@@ -77,6 +77,5 @@ EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = S
 ```  
   
 ## See Also  
- [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
-  
+ [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](./spatial-index-stored-procedures-arguments-and-properties.md)  
   

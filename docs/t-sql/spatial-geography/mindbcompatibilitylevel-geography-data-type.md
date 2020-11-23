@@ -1,4 +1,5 @@
 ---
+description: "MinDbCompatibilityLevel (geography Data Type)"
 title: "MinDbCompatibilityLevel (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MinDbCompatibilityLevel method (geography)"
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # MinDbCompatibilityLevel (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the minimum database compatibility that recognizes the **geography** data type.  
   
@@ -31,7 +31,9 @@ manager: craigg
 . MinDbCompatibilityLevel ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **int**  
   
  CLR return type: **int**  
@@ -86,6 +88,5 @@ END
   
 ## See Also  
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [SQL Server Database Engine Backward Compatibility](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
   

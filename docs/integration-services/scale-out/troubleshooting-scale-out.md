@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
+title: "Troubleshoot SSIS Scale Out | Microsoft Docs"
+description: "Troubleshoot common issues with SSIS Scale Out like configuration mistakes and lack of access permissions."
 ms.custom: performance
 ms.date: 01/09/2019
 ms.prod: sql
@@ -10,9 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Troubleshoot Scale Out
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 SSIS Scale Out involves communication among the SSIS Catalog database `SSISDB`, the Scale Out Master service, and the Scale Out Worker service. Sometimes this communication breaks due to configuration mistakes, lack of access permissions, and other reasons. This article helps you to troubleshoot issues with your Scale Out configuration.
 

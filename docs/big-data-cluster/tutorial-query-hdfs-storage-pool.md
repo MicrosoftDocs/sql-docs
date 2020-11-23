@@ -1,20 +1,22 @@
 ---
-title: Query HDFS data in the storage pool
-titleSuffix: SQL Server 2019 big data clusters
-description: This tutorial demonstrates how to query HDFS data in a SQL Server 2019 big data cluster (preview). You create an external table over data in the storage pool and then run a query.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 03/27/2018
+title: "Query HDFS data: storage pool"
+titleSuffix: SQL Server Big Data Clusters
+description: This tutorial demonstrates how to query HDFS data in a SQL Server 2019 big data cluster. You create an external table over data in the storage pool and then run a query.
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Tutorial: Query HDFS in a SQL Server big data cluster
 
-This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster (preview).
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+This tutorial demonstrates how to Query HDFS data in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
 In this tutorial, you learn how to:
 
@@ -24,6 +26,10 @@ In this tutorial, you learn how to:
 
 > [!TIP]
 > If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Data virtualization samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) on GitHub.
+
+This 7-minute video walks you through querying HDFS data in a big data cluster:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a id="prereqs"></a> Prerequisites
 
@@ -69,12 +75,8 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    END
    ```
 

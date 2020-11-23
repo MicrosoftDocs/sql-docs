@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - FILELISTONLY (Transact-SQL)"
 title: "RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -19,9 +20,8 @@ helpviewer_keywords:
   - "RESTORE FILELISTONLY statement"
   - "listing backed up files"
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-author: mashamsft
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - FILELISTONLY (Transact-SQL)
@@ -37,8 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 RESTORE FILELISTONLY   
 FROM <backup_device>   
 [ WITH   
@@ -66,12 +65,14 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
-  
 ```  
-  
+
+> [!NOTE] 
+> URL is the format used to specify the location and the file name for  Microsoft Azure Blob Storage and is supported starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.
+
 ## Arguments  
  For descriptions of the RESTORE FILELISTONLY arguments, see [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -115,7 +116,7 @@ FROM <backup_device>
 ## Examples  
  The following example returns the information from a backup device named `AdventureWorksBackups`. The example uses the `FILE` option to specify the second backup set on the device.  
   
-```  
+```sql  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  
 GO  

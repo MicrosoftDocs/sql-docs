@@ -1,5 +1,6 @@
 ---
-title: "Integration Services (SSIS) Development and Management Tools | Microsoft Docs"
+description: "Integration Services (SSIS) Development and Management Tools"
+title: "Development and Management Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,11 +17,14 @@ helpviewer_keywords:
   - "SQL Server Integration Services, studio environments"
   - "tools [Integration Services], SQL Server Management Studio"
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Development and Management Tools
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes two studios for working with packages:  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for developing the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages that a business solution requires. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in which you create packages.  
@@ -42,7 +46,7 @@ manager: craigg
   
 -   Save copies of packages to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system.  
   
- For more information about [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686.aspx).  
+ For more information about [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], see [SQL Server Data Tools](/previous-versions/sql/sql-server-data-tools/hh272686(v=vs.103)).  
   
 ## SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service that you use to manage packages, monitor running packages, and determine impact and data lineage for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  
@@ -55,4 +59,4 @@ manager: craigg
   
 -   Run the Execute Package utility to generate a command line to use when you run the **dtexec** command prompt utility (dtexec.exe).  
   
--   Import and export packages to and from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system.  
+-   Import and export packages to and from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system.

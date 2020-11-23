@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Source Editor (Error Output Page)"
 title: "SAP BW Source Editor (Error Output Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -10,11 +11,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwsource.erroroutput.f1"
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SAP BW Source Editor (Error Output Page)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Use the **Error Output** page of the **SAP BW Source Editor** to select error handling options and to set properties on error output columns.  
   
  To learn more about the SAP BW source component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md).  

@@ -1,16 +1,18 @@
 ---
 title: "Frequently Asked Questions in PolyBase | Microsoft Docs"
-ms.custom: ""
-ms.date: 03/08/2019
+description: Compare PolyBase and linked servers and compare PolyBase in big data clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
-manager: 
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mikeray
 ---
+
 # Frequently asked questions
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## PolyBase VS. linked servers
 The following table highlights the differences between PolyBase and linked server features:
@@ -21,7 +23,7 @@ The following table highlights the differences between PolyBase and linked serve
 |Uses ODBC drivers|Uses OLEDB providers|
 |Supports read-only operations for all data sources and insert operation for HADOOP & data pool data source only|Supports both read and write operations|
 |Queries to remote data source from a single connection can be scaled-out |Queries to remote data source from a single connection cannot be scaled-out|
-|Predicates push-down is supported|Predicates push-down is supported|
+|Predicates pushdown is supported|Predicates pushdown is supported|
 |No separate configuration needed for availability group|Separate configuration needed for each instance in availability group|
 |Basic authentication only|Basic & integrated authentication|
 |Suitable for analytic queries processing large number of rows|Suitable for OLTP queries returning single or few rows|
@@ -29,7 +31,7 @@ The following table highlights the differences between PolyBase and linked serve
 
 ## What's new in PolyBase 2019? 
 
-PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] can now read data from a larger variety of data sources. The data from theses external data sources can be store as external tables on your SQL Server. PolyBase also supports push-down computation to these external data sources, excluding ODBC generic types.
+PolyBase in [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] can now read data from a larger variety of data sources. The data from these external data sources can be store as external tables on your SQL Server. PolyBase also supports pushdown computation to these external data sources, excluding ODBC generic types.
 
 ### Compatible Data Sources
 

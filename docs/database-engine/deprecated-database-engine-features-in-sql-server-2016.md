@@ -1,7 +1,9 @@
 ---
-title: "Deprecated Database Engine Features in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/09/2018"
+title: "Deprecated Database Engine Features | Microsoft Docs"
+titleSuffix: "SQL Server 2016"
+description: Find out about deprecated database engine features that are still available in SQL Server 2016 (13.x), but shouldn't be used in new applications.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -14,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Deprecated Database Engine Features in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 This topic describes the deprecated [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] features that are still available in [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Deprecated features should not be used in new applications.  
   
@@ -42,10 +43,11 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Backup and Restore|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated. BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued.|None.|BACKUP DATABASE or LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Compatibility levels|Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](https://aka.ms/sqllifecycle), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
+|Backup and Restore|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated. BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued.|None|BACKUP DATABASE or LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
+|Compatibility levels|Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](/lifecycle/products/?products=sql-server), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
 |Database objects|Ability to return result sets from triggers|None|Returning results from trigger|12|  
 |Encryption|Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 is not deprecated.|Use another encryption algorithm such as AES.|Deprecated encryption algorithm|253|  
+|Hash algorithms|Using the MD2, MD4, MD5, SHA, and SHA1 is deprecated.|Use SHA2_256 or SHA2_512 instead. Older algorithms will continue working, but they will raise a deprecation event.|Deprecated hash algorithm|None|  
 |Remote servers|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |Remote servers|\@\@remserver|Replace remote servers by using linked servers.|None|None|  
 |Remote servers|SET REMOTE_PROC_TRANSACTIONS|Replace remote servers by using linked servers.|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -90,7 +92,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Extended stored procedure programming|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Use CLR Integration instead.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Extended stored procedures|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig|44<br /><br /> 45<br /><br /> 59|  
 |Functions|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Hash algorithms|The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130.|Use SHA2_256 or SHA2_512.|Deprecated hash algorithm||  
 |High availability|database mirroring|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> If your edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [!INCLUDE[ssHADR](../includes/sshadr-md.md)], use log shipping.|DATABASE_MIRRORING|267|  
 |Index options|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Index options|CREATE TABLE, ALTER TABLE, or CREATE INDEX syntax without parentheses around the options.|Rewrite the statement to use the current syntax.|INDEX_OPTION|33|  
@@ -167,5 +168,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > The cookie **OUTPUT** parameter for **sp_setapprole** is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(50)**. If developers have allocated **varbinary(50)** the application might require changes if the cookie return size increases in a future release. Though not a deprecation issue this is mentioned in this topic because the application adjustments are similar. For more information, see [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## See Also  
- [Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     
- [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)    
+ [Discontinued Database Engine Functionality in SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
+ [Deprecated Database Engine Features in SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)

@@ -1,4 +1,5 @@
 ---
+description: "Managed Backup Functions (Transact-SQL)"
 title: "Managed Backup Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Managed Backup Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following functions for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_update_policy_category (Transact-SQL)"
 title: "sp_syspolicy_update_policy_category (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_update_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates whether a policy category is set to mandate database subscriptions. If subscription is mandated, the policy category applies to all databases.  
   

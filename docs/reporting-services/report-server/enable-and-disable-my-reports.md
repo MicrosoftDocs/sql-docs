@@ -1,8 +1,9 @@
 ---
 title: "Enable and Disable My Reports | Microsoft Docs"
+description: Learn how to enable and disable the My Reports feature in Reporting Services. My Reports provides storage in the report server database for users.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "My Reports folder [Reporting Services]"
   - "disabling My Reports folder"
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Enable and Disable My Reports
   The My Reports feature allocates personal storage in the report server database so that users can save reports that they own in a private folder. As a report server administrator, you can enable or disable this feature or change how the feature works by modifying the security settings that control what users can do with this workspace.  

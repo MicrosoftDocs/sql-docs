@@ -1,4 +1,5 @@
 ---
+description: "ORIGINAL_LOGIN (Transact-SQL)"
 title: "ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,12 +20,11 @@ helpviewer_keywords:
   - "ORIGINAL_LOGIN function"
   - "names [SQL Server], logins"
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  
   
@@ -32,12 +32,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 ORIGINAL_LOGIN( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **sysname**  
   
 ## Remarks  
@@ -50,7 +51,7 @@ ORIGINAL_LOGIN( )
   >[!NOTE]
   > Although the ORIGINAL_LOGIN function is supported on Azure SQL Database, the following script will fail because *Execute as LOGIN* is not supported on Azure SQL Database. 
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Create a temporary login and user.  

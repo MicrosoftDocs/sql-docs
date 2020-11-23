@@ -1,4 +1,5 @@
 ---
+description: "Driver Manager Connection Pooling"
 title: "Driver Manager Connection Pooling | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,9 +14,8 @@ helpviewer_keywords:
   - "connecting to driver [ODBC], connection pooling"
   - "connecting to data source [ODBC], connection pooling"
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Driver Manager Connection Pooling
 Connection pooling enables an application to use a connection from a pool of connections that do not need to be re-established for each use. Once a connection has been created and placed in a pool, an application can reuse that connection without performing the complete connection process.  
@@ -25,7 +25,7 @@ Connection pooling enables an application to use a connection from a pool of con
  In addition to performance gains, the connection pooling architecture enables an environment and its associated connections to be used by multiple components in a single process. This means that stand-alone components in the same process can interact with each other without being aware of each other. A connection in a connection pool can be used repeatedly by multiple components.  
   
 > [!NOTE]
->  Connection pooling can be used by an ODBC application exhibiting ODBC 2.*x* behavior, as long as the application can call *SQLSetEnvAttr*. When using connection pooling, the application must not execute SQL statements that change the database or the context of the database, such as changing the \<*database**name*>, which changes the catalog used by a data source.  
+>  Connection pooling can be used by an ODBC application exhibiting ODBC 2.*x* behavior, as long as the application can call *SQLSetEnvAttr*. When using connection pooling, the application must not execute SQL statements that change the database or the context of the database, such as changing the \<*database name*>, which changes the catalog used by a data source.  
 
 
  An ODBC driver must be fully thread-safe, and connections must not have thread affinity to support connection pooling. This means the driver is able to handle a call on any thread at any time and is able to connect on one thread, to use the connection on another thread, and to disconnect on a third thread.  
@@ -54,11 +54,11 @@ Connection pooling enables an application to use a connection from a pool of con
     > [!NOTE]  
     >  How a requested connection is matched to a pooled connection is determined by the SQL_ATTR_CP_MATCH environment attribute. For more information, see [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
-     ODBC applications using connection pooling should call [CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307) during application initialization and [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310) when the application closes.  
+     ODBC applications using connection pooling should call [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) during application initialization and [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) when the application closes.  
   
 5.  Calls **SQLDisconnect** when done with the connection. The connection is returned to the connection pool and becomes available for reuse.  
   
- For an in-depth discussion, see [Pooling in the Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776).  
+ For an in-depth discussion, see [Pooling in the Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10)).  
   
 ## Connection Pooling Considerations  
  Performing any of the following actions using a SQL command (rather than through the ODBC API) can affect the connection's state and cause unexpected problems when connection pooling is active:  
@@ -80,4 +80,4 @@ Connection pooling enables an application to use a connection from a pool of con
 ## See Also  
  [Connecting to a Data Source or Driver](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [Developing an ODBC Driver](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Pooling in the Microsoft Data Access Components](https://go.microsoft.com/fwlink/?LinkId=120776)
+ [Pooling in the Microsoft Data Access Components](/previous-versions/ms810829(v=msdn.10))

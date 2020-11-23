@@ -1,4 +1,5 @@
 ---
+description: "Determine Whether the Change Data Is Ready"
 title: "Determine Whether the Change Data Is Ready | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -10,11 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],determining readiness"
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Determine Whether the Change Data Is Ready
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the second task is to ensure that the change data for the selected interval is ready. This step is necessary because the asynchronous capture process might not yet have processed all the changes up to the selected endpoint.  
   
 > [!NOTE]  

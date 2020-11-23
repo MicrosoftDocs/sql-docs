@@ -1,4 +1,5 @@
 ---
+description: "!= (Unequal) (SSIS Expression)"
 title: "!= (Unequal) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "unequal operator (!=)"
   - "!= (not equal to)"
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # != (Unequal) (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Performs a comparison to determine if two expressions with compatible data types are not equal. The expression evaluator automatically converts many data types before it performs the comparison.  
   
  However, some data types require that the expression include an explicit cast before the expression can be evaluated successfully. For more information about legal casts between data types, see [Cast &#40;SSIS Expression&#41;](../../integration-services/expressions/cast-ssis-expression.md).  

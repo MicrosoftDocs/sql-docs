@@ -1,7 +1,8 @@
 ---
-title: "View or Change the Recovery Model of a Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
+title: "Set database recovery model"
+description: Learn how to switch a SQL Server database from one recovery model to another by using SQL Server Management Studio or Transact-SQL.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -16,18 +17,17 @@ helpviewer_keywords:
   - "database restores [SQL Server], recovery models"
   - "modifying database recovery models"
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: cawrites
+ms.author: chadam
 ---
 # View or Change the Recovery Model of a Database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to view or change the database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
   
   A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time. The **model** database sets the default recovery model of new databases.  
   
-  For a more in depth explanation of [recovery models](recovery-models-sql-server.md), see [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) provided by the folks at [MSSQLTips!](https://www.mssqltips.com/)
+  For a more in depth explanation, see [recovery models](recovery-models-sql-server.md).
   
   
 ##  <a name="BeforeYouBegin"></a> Before you begin  
@@ -65,7 +65,7 @@ manager: craigg
 6.  Optionally, to change the recovery model select a different model list. The choices are **Full**, **Bulk-logged**, or **Simple**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view the recovery model  

@@ -1,6 +1,7 @@
 ---
-title: "Add an Existing Project to a Solution | Microsoft Docs"
-ms.custom: ""
+description: "Add an Existing Project to a Solution"
+title: "Add an Existing Project to a Solution"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -14,12 +15,11 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], project additions"
   - "projects [SQL Server Management Studio], adding"
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Add an Existing Project to a Solution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can add one or more projects to an existing solution. A project can be associated with more than one solution.  
   
 ### To add an existing project to a solution  

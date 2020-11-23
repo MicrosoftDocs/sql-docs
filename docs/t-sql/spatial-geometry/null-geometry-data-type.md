@@ -1,4 +1,5 @@
 ---
+description: "Null (geometry Data Type)"
 title: "Null (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -14,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Null (geometry Data Type)"
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Null (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A read-only property providing a null instance of the **geometry** type.
   
@@ -30,7 +30,9 @@ A read-only property providing a null instance of the **geometry** type.
 Null  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **geometry**  

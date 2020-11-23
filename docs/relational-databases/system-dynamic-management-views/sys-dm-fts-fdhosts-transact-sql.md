@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_fdhosts (Transact-SQL)"
 title: "sys.dm_fts_fdhosts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"
@@ -18,13 +19,12 @@ helpviewer_keywords:
   - "sys.dm_fts_fdhosts dynamic management view"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7 
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_fdhosts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information on the current activity of the filter daemon host or hosts on the server instance.  
   
@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Permissions  
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ## Examples  
  The following example returns the name of the filter daemon host and the maximum number of threads in it. It also monitors how many batches are currently being processed in the filter daemon. This information can be used to diagnose performance.  

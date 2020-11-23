@@ -1,15 +1,16 @@
 ---
-title: "Constants in Expressions (Report Builder and SSRS) | Microsoft Docs"
+title: "Constants in Expressions (Report Builder) | Microsoft Docs"
+description: Learn about the literal text or predefined text of constants in expressions for your reports in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Constants in Expressions (Report Builder and SSRS)
   A constant consists of literal text or predefined text. The report processor has access to predefined constants so that when you include them in an expression, the values they represent are substituted in the expression before it is evaluated.  
@@ -47,10 +48,9 @@ ms.author: maghan
 |MistyRose|When you create an expression for a report property that is based on background color, you can specify a color by name. Valid names are listed in the **Expression** dialog box.|  
   
 ## See Also  
- [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [Expression Dialog Box](/previous-versions/sql/)   
  [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Data Types in Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Expression Dialog Box &#40;Report Builder&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
-  
+ [Expression Dialog Box &#40;Report Builder&#41;](./expressions-report-builder-and-ssrs.md)  
   

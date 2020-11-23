@@ -1,10 +1,10 @@
 ---
+description: "sys.registered_search_property_lists (Transact-SQL)"
 title: "sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "sys.registered_search_property_lists catalog view"
   - "search property lists [SQL Server], viewing"
 ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # sys.registered_search_property_lists (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each search property list on the current database.  
   

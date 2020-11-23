@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting Reports for Package Execution"
 title: "Troubleshooting Reports for Package Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Troubleshooting Reports for Package Execution
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor and troubleshoot [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. Two of these package reports in particular help you to view package execution status and identify the cause of execution failures.  
   
 -   **Integration Services Dashboard** - This report provides an overview of all the package executions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance in the past 24 hours. The report displays information such as Status, Operation Type, Package Name, etc., for each package.  

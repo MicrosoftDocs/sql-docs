@@ -1,4 +1,5 @@
 ---
+description: "Object:Altered Event Class"
 title: "Object:Altered Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Object:Altered Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Object:Altered event class indicates that an object has been altered; for example, by an ALTER INDEX, ALTER TABLE, or ALTER DATABASE statement. This event class can be used to determine if objects are being altered; for example, by ODBC applications, which often create temporary stored procedures.  
   
  The Object:Altered event class always occurs as two events. The first event indicates the Begin phase. The second event indicates the Rollback or Commit phase.  

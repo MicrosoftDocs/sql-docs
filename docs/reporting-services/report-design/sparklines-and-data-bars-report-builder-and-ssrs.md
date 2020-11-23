@@ -1,8 +1,9 @@
 ---
-title: "Sparklines and Data Bars (Report Builder and SSRS) | Microsoft Docs"
+title: "Sparklines and Data Bars (Report Builder) | Microsoft Docs"
+description: Discover the benefits of using sparklines and data bars in Report Builder. These compact charts convey much information in very little space. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -11,8 +12,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.sparklines.f1"
   - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Sparklines and Data Bars (Report Builder and SSRS)
   Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often inline with text.   

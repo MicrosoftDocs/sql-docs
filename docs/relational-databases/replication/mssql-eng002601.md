@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG002601"
 title: "MSSQL_ENG002601 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # MSSQL_ENG002601
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|2601|  

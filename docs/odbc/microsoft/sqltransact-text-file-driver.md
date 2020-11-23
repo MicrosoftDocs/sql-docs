@@ -1,4 +1,5 @@
 ---
+description: "SQLTransact (Text File Driver)"
 title: "SQLTransact (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,9 +12,8 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLTransact"
   - "SQLTransact function [ODBC], Text File Driver"
 ms.assetid: 0349bd4e-f402-4a69-b215-046210a433de
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTransact (Text File Driver)
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_start_sp (Transact-SQL)"
 title: "sysmail_start_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sysmail_start_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts Database Mail by starting the [!INCLUDE[ssSB](../../includes/sssb-md.md)] objects that the external program uses.  
   

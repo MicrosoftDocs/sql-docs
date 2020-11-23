@@ -1,4 +1,5 @@
 ---
+description: "sys.sysoledbusers (Transact-SQL)"
 title: "sys.sysoledbusers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysoledbusers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!IMPORTANT]  

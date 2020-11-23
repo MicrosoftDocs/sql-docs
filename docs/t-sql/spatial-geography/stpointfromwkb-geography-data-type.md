@@ -1,4 +1,5 @@
 ---
+description: "STPointFromWKB (geography Data Type)"
 title: "STPointFromWKB (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointFromWKB method"
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPointFromWKB (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geographyPoint** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -31,7 +31,9 @@ Returns a **geographyPoint** instance from an Open Geospatial Consortium (OGC) W
 STPointFromWKB ( 'WKB_point' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_point*  
  Is the WKB representation of the **geographyPoint** instance you wish to return. *WKB_point* is a **varbinary(max)** expression.  
   

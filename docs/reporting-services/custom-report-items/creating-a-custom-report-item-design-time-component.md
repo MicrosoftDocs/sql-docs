@@ -1,5 +1,6 @@
 ---
 title: "Creating a Custom Report Item Design-Time Component | Microsoft Docs"
+description: Learn how to create a custom report item design-time component. This component provides an activated design surface that can accept drag-and-drop operations.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -10,8 +11,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "custom report items, creating"
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Creating a Custom Report Item Design-Time Component
   A custom report item design-time component is a control that can be used in the Visual Studio Report Designer environment. The custom report item design-time component provides an activated design surface that can accept drag-and-drop operations, integration with the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] property browser, and the ability to provide custom property editors.  

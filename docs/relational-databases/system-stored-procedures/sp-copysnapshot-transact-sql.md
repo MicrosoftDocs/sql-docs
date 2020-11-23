@@ -1,4 +1,5 @@
 ---
+description: "sp_copysnapshot (Transact-SQL)"
 title: "sp_copysnapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,14 +14,13 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_copysnapshot"
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_copysnapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Copies the snapshot folder of the specified publication to the folder listed in the **@destination_folder**. This stored procedure is executed at the Publisher on the publication database. This stored procedure is useful for copying a snapshot to removable media, such as CD-ROM.  
+  Copies the snapshot folder of the specified publication to the folder listed in the **\@destination_folder**. This stored procedure is executed at the Publisher on the publication database. This stored procedure is useful for copying a snapshot to removable media, such as CD-ROM.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

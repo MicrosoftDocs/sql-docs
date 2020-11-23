@@ -1,8 +1,9 @@
 ---
+description: "MSReportServer_ConfigurationSetting Properties"
 title: "MSReportServer_ConfigurationSetting Properties | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -16,15 +17,15 @@ helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class"
   - "MSReportServer_ConfigurationSetting class"
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # MSReportServer_ConfigurationSetting Properties
   The MSReportServer_ConfigurationSetting class represents the installation and runtime parameters of a report server instance. These settings are stored in the RSReportServer.config configuration file.  
   
 ## Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|Returns the connection pool size used by the report server to communicate with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|Specifies the logon account used by the report server to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database. Read-only.|  

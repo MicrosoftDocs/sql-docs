@@ -1,4 +1,5 @@
 ---
+description: "String and Binary Types"
 title: "String and Binary Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # String and Binary Types
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following string and binary types.
   

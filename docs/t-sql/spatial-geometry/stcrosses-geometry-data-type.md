@@ -1,4 +1,5 @@
 ---
+description: "STCrosses (geometry Data Type)"
 title: "STCrosses (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STCrosses (geometry Data Type)"
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STCrosses (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance crosses another **geometry** instance. Returns 0 if it does not.
   
@@ -31,7 +31,9 @@ Returns 1 if a **geometry** instance crosses another **geometry** instance. Retu
 .STCrosses ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STCrosses()` is invoked.  
   

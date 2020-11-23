@@ -1,4 +1,5 @@
 ---
+description: "Merge Data by Using the Union All Transformation"
 title: "Merge Data by Using the Union All Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,11 +15,14 @@ helpviewer_keywords:
   - "Union All transformation"
   - "datasets [Integration Services], merging"
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Merge Data by Using the Union All Transformation
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   To add and configure a Union All transformation, the package must already include at least one Data Flow task and two data sources.  
   
  The Union All transformation combines multiple inputs. The first input that is connected to the transformation is the reference input, and the inputs connected subsequently are the secondary inputs. The output includes the columns in the reference input.  

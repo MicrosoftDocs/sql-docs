@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Query"
 title: "Data Mining Query | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -10,11 +11,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataminingquery.f1"
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Query
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The design pane contains the data mining prediction query builder, which you can use to build data mining prediction queries. You can design either prediction queries based on input tables, or singleton prediction queries. Switch to the result view to run the query and view the results. The query view displays the Data Mining Extensions (DMX) query created by the prediction query builder.  
   
 ## Options  
@@ -58,7 +62,6 @@ manager: craigg
  Specify a condition or user expression that applies to the column. Columns can be dragged from the tables containing the mining model and input columns to the cell.  
   
 ## See Also  
- [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Data Mining Query Tools](/analysis-services/data-mining/data-mining-query-tools)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

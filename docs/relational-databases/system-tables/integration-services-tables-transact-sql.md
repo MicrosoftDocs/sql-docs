@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Tables (Transact-SQL)"
 title: "Integration Services Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ helpviewer_keywords:
   - "system tables [Integration Services]"
   - "SSIS, system tables"
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Integration Services Tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section describe the system tables in the msdb database that store information used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

@@ -1,4 +1,5 @@
 ---
+description: "MakeValid (geometry Data Type)"
 title: "MakeValid (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MakeValid (geometry Data Type)"
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # MakeValid (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Converts an invalid **geometry** instance into a **geometry** instance with a valid Open Geospatial Consortium (OGC) type.
   
@@ -31,7 +31,9 @@ Converts an invalid **geometry** instance into a **geometry** instance with a va
 .MakeValid ()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  
   
  CLR return type: **SqlGeometry**  

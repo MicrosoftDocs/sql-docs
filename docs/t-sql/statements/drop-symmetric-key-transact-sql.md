@@ -1,4 +1,5 @@
 ---
+description: "DROP SYMMETRIC KEY (Transact-SQL)"
 title: "DROP SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -23,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a symmetric key from the current database.  
   
@@ -34,12 +34,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *symmetric_key_name*  
  Is the name of the symmetric key to be dropped.  
   
@@ -57,7 +58,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
 ## Examples  
  The following example removes a symmetric key named `GailSammamishKey6` from the current database.  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY GailSammamishKey6;  
 DROP SYMMETRIC KEY GailSammamishKey6;  
 GO  

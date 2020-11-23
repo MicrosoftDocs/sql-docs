@@ -1,4 +1,5 @@
 ---
+description: "sp_add_maintenance_plan_db (Transact-SQL)"
 title: "sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_maintenance_plan_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Associates a database with a maintenance plan.  
   

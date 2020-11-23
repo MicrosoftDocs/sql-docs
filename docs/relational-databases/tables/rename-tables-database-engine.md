@@ -1,4 +1,5 @@
 ---
+description: "Rename Tables (Database Engine)"
 title: "Rename Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/23/2018"
@@ -14,15 +15,15 @@ helpviewer_keywords:
   - "renaming tables"
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Tables (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Rename a table in SQL Server or Azure SQL Database.
 
-To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use the t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) statement. 
+To rename a table in Azure Synapse Analytics or Parallel Data Warehouse, use the t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) statement. 
   
 > [!CAUTION]  
 >  Think carefully before you rename a table. If existing queries, views, user-defined functions, stored procedures, or programs refer to that table, the name modification will make these objects invalid.  
@@ -64,7 +65,7 @@ To rename a table in Azure SQL Data Warehouse or Parallel Data Warehouse, use th
 4.  To cancel this action, press the ESC key before leaving this field.  
   
 5.  From the **File** menu choose **Save** _table name_.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To rename a table  

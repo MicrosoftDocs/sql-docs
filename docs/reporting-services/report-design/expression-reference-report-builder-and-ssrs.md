@@ -1,15 +1,16 @@
 ---
-title: "Expression Reference (Report Builder and SSRS) | Microsoft Docs"
+title: "Expression Reference (Report Builder) | Microsoft Docs"
+description: Learn about the syntax required in expressions, before processing or publishing, to support references to built-in functions and collections in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Expression Reference (Report Builder and SSRS)
   Report expressions support a variety of references to built-in functions and built-in collections. Expressions must have valid [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] syntax before a report can be published or processed.  

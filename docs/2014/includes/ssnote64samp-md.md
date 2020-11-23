@@ -1,1 +1,0 @@
-SQL Server Data Tools is not supported on Itanium\-based computers. However, support for SQL Server Data Tools is available for x64\-based computers. If the SQL Server sample databases have been deployed on an Itanium\-based computer, use BI Development Studio on either an x86\-based or x64\-based computer to modify and run the samples.

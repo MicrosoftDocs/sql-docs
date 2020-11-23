@@ -1,4 +1,5 @@
 ---
+description: "New Project (SybaseToSQL)"
 title: "New Project (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -7,9 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: craigg
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # New Project (SybaseToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

@@ -1,4 +1,5 @@
 ---
+description: "TM: Save Tran Starting Event Class"
 title: "TM: Save Tran Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Save Tran Starting Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The TM: Save Tran Starting event class indicates that a SAVE TRANSACTION request is starting. The request is sent from the client through a transaction management interface.  
   
 ## TM: Save Tran Starting Event Class Data Columns  

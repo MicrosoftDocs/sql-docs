@@ -1,4 +1,5 @@
 ---
+description: "SQLBindCol Function"
 title: "SQLBindCol Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,15 +12,15 @@ apiname:
   - "SQLBindCol"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBindCol"
 helpviewer_keywords: 
   - "SQLBindCol function [ODBC]"
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindCol Function
 **Conformance**  
@@ -30,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLBindCol(  
       SQLHSTMT       StatementHandle,  
@@ -61,9 +62,9 @@ SQLRETURN SQLBindCol(
  If *TargetValuePtr* is a null pointer, the driver unbinds the data buffer for the column. An application can unbind all columns by calling **SQLFreeStmt** with the SQL_UNBIND option. An application can unbind the data buffer for a column but still have a length/indicator buffer bound for the column, if the *TargetValuePtr* argument in the call to **SQLBindCol** is a null pointer but the *StrLen_or_IndPtr* argument is a valid value.  
   
  *BufferLength*  
- [Input] Length of the **TargetValuePtr* buffer in bytes.  
+ [Input] Length of the \**TargetValuePtr* buffer in bytes.  
   
- The driver uses *BufferLength* to avoid writing past the end of the \**TargetValuePtr* buffer when it returns variable-length data, such as character or binary data. Notice that the driver counts the null-termination character when it returns character data to \**TargetValuePtr*. **TargetValuePtr* must therefore contain space for the null-termination character or the driver will truncate the data.  
+ The driver uses *BufferLength* to avoid writing past the end of the \**TargetValuePtr* buffer when it returns variable-length data, such as character or binary data. Notice that the driver counts the null-termination character when it returns character data to \**TargetValuePtr*. \**TargetValuePtr* must therefore contain space for the null-termination character or the driver will truncate the data.  
   
  When the driver returns fixed-length data, such as an integer or a date structure, the driver ignores *BufferLength* and assumes the buffer is large enough to hold the data. Therefore, it is important for the application to allocate a large enough buffer for fixed-length data or the driver will write past the end of the buffer.  
   
@@ -279,7 +280,7 @@ SQLRETURN SQLBindCol(
   
  For more code examples, see [SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLColumns Function](../../../odbc/reference/syntax/sqlcolumns-function.md), [SQLFetchScroll Function](../../../odbc/reference/syntax/sqlfetchscroll-function.md), and [SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 // SQLBindCol_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  
@@ -289,7 +290,7 @@ SQLRETURN SQLBindCol(
 #include <sqlext.h>  
   
 #define NAME_LEN 50  
-#define PHONE_LEN 20  
+#define PHONE_LEN 60
   
 void show_error() {  
    printf("error\n");  
@@ -329,17 +330,24 @@ int main() {
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
   
                   // Bind columns 1, 2, and 3  
-                  retcode = SQLBindCol(hstmt, 1, SQL_C_CHAR, &sCustID, 100, &cbCustID);  
-                  retcode = SQLBindCol(hstmt, 2, SQL_C_CHAR, szName, NAME_LEN, &cbName);  
-                  retcode = SQLBindCol(hstmt, 3, SQL_C_CHAR, szPhone, PHONE_LEN, &cbPhone);   
+                  retcode = SQLBindCol(hstmt, 1, SQL_C_WCHAR, &sCustID, 100, &cbCustID);  
+                  retcode = SQLBindCol(hstmt, 2, SQL_C_WCHAR, szName, NAME_LEN, &cbName);  
+                  retcode = SQLBindCol(hstmt, 3, SQL_C_WCHAR, szPhone, PHONE_LEN, &cbPhone);   
   
                   // Fetch and print each row of data. On an error, display a message and exit.  
-                  for (i ; ; i++) {  
+                  for (int i=0 ; ; i++) {  
                      retcode = SQLFetch(hstmt);  
                      if (retcode == SQL_ERROR || retcode == SQL_SUCCESS_WITH_INFO)  
                         show_error();  
                      if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO)  
-                        wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                     {
+                        //replace wprintf with printf
+                        //%S with %ls
+                        //warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *'
+                        //but variadic argument 2 has type 'SQLWCHAR *'
+                        //wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                        printf("%d: %ls %ls %ls\n", i + 1, sCustID, szName, szPhone);  
+                    }    
                      else  
                         break;  
                   }  

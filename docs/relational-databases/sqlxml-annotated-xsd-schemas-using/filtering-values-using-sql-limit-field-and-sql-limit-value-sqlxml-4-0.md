@@ -1,10 +1,9 @@
 ---
-title: "Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Filter with sql:limit-field and sql:limit-value (SQLXML)"
+description: Learn how to use the sql:limit-field and sql:limit-value annotations in SQLXML 4.0 to filter the data returned by a query on the basis of a limiting value.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,12 +16,13 @@ helpviewer_keywords:
   - "filtering [SQLXML]"
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can limit rows that are returned from a database query on the basis of some limiting value. The **sql:limit-field** and **sql:limit-value** annotations are used to identify the database column that contains limiting values and to specify a specific limiting value to be used to filter the data returned.  
   
  The **sql:limit-field** annotation is used to identify a column that contains a limiting value; it is allowed on each mapped element or attribute.  
@@ -116,7 +116,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     INSERT INTO Addresses values  
                (1, 'Obere Str. 57 Berlin', 'billing')  
     INSERT INTO Addresses values  
-               (1, 'Avda. de la Constitución 2222 México D.F.', 'shipping')  
+               (1, 'Avda. de la Constituci?n 2222 M?xico D.F.', 'shipping')  
     INSERT INTO Addresses values  
                (2, '120 Hanover Sq., London', 'billing')  
     INSERT INTO Addresses values  
@@ -142,7 +142,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```  
   
 5.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
-  
+
      For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  This is the result:  
@@ -151,7 +151,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer CustomerID="1" CompanyName="Company A">   
      <BillTo>Obere Str. 57 Berlin</BillTo>   
-     <ShipTo>Avda. de la Constitución 2222 México D.F.</ShipTo>   
+     <ShipTo>Avda. de la Constituci?n 2222 M?xico D.F.</ShipTo>   
   </Customer>   
   <Customer CustomerID="2" CompanyName="Company B">   
      <BillTo>120 Hanover Sq., London</BillTo>   

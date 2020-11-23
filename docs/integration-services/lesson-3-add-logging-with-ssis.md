@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3: Add Logging with SSIS"
 title: "Lesson 3: Add Logging with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3: Add logging with SSIS
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes logging features that let you troubleshoot and monitor package execution by providing a trace of task and container events. The logging features are flexible. You can enable logging at the package level, or on individual tasks or containers within the package. You select which events you want to log, and create multiple logs against a single package.  
   

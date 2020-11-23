@@ -1,6 +1,7 @@
 ---
-title: "Publication Information-Warning-Merge Publication-SQL Server 2005+ | Microsoft Docs"
-ms.custom: ""
+title: "Warnings (Merge Publication Information)"
+description: Describes the 'Warnings' tab of the Merge Replication Publication Information page within SQL Server Management Studio on SQL Server 2005 and later. 
+ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publication Information, Warnings (Merge Publication, SQL Server 2005 and Later)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Warnings** tab is available for Distributors that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. The **Warnings** tab allows you to perform the following tasks for the selected publication:  
   
 -   Enable warnings.  

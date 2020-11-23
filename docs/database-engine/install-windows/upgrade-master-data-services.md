@@ -1,5 +1,6 @@
 ---
 title: "Upgrade Master Data Services | Microsoft Docs"
+description: Discover the four scenarios for upgrading Microsoft SQL Server Master Data Services. Learn about file locations and troubleshooting for upgrades.
 ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
@@ -7,14 +8,13 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Upgrade Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   The following are the scenarios for upgrading Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
@@ -92,7 +92,7 @@ manager: craigg
         > [!IMPORTANT]  
         >  Your existing MDS web application from an earlier version of SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) is available for selection in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of Master Data Services Configuration Manager. You must not select the existing web application, and instead must create a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] web application for MDS. Otherwise, you will receive an error when you try to associate the web application with the upgraded MDS database stating that the requested page cannot be accessed because the related configuration data for the page is invalid.  
         >   
-        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) and [Remove an Application Pool (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538).  
+        >  If you want to use the same name (alias) for MDS web application as your existing ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) web application, you must first delete the web application and the associated application pool from IIS, and then create a web application with the same name using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] version of Master Data Services Configuration Manager. For information about removing web application and application pools from IIS, see [Remove an Application (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771205(v=ws.10)) and [Remove an Application Pool (IIS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772406(v=ws.10)).  
   
 4.  Associate the new web application with the upgraded MDS database.  
   
@@ -152,5 +152,4 @@ manager: craigg
   
 ## See Also  
  [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
-  
   

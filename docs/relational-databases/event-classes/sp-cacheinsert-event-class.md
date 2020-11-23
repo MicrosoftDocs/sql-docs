@@ -1,4 +1,5 @@
 ---
+description: "SP:CacheInsert Event Class"
 title: "SP:CacheInsert Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:CacheInsert Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The SP:CacheInsert event class indicates that the stored procedure has been inserted into the procedure cache.  
   
 ## SP:CacheInsert Event Class Data Columns  

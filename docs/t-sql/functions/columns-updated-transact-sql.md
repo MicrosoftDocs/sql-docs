@@ -1,7 +1,8 @@
 ---
-title: "COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs"
+description: "COLUMNS_UPDATED (Transact-SQL)"
+title: COLUMNS_UPDATED (Transact-SQL)
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,12 +19,13 @@ helpviewer_keywords:
   - "column testing [SQL Server]"
   - "updated columns"
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
+
 # COLUMNS_UPDATED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns a **varbinary** bit pattern indicating the inserted or updated columns of a table or view. Use `COLUMNS_UPDATED` anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.
   
@@ -31,10 +33,12 @@ This function returns a **varbinary** bit pattern indicating the inserted or upd
   
 ## Syntax  
   
-```sql
+```syntaxsql
 COLUMNS_UPDATED ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **varbinary**
   
@@ -56,6 +60,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+If a trigger applies to a column, the `COLUMNS_UPDATED` returns as `true` or `1`, even if the column value remains unchanged. This is by-design, and the trigger should implement business logic that determines if the insert/update/delete operation is permissible or not. 
   
 ## Column sets
 When a column set is defined on a table, the `COLUMNS_UPDATED` function behaves in the following ways:
@@ -83,33 +89,34 @@ IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
    DROP TABLE auditEmployeeData;  
 GO  
 CREATE TABLE dbo.employeeData (  
-   emp_id int NOT NULL PRIMARY KEY,  
-   emp_bankAccountNumber char (10) NOT NULL,  
-   emp_salary int NOT NULL,  
-   emp_SSN char (11) NOT NULL,  
-   emp_lname nchar (32) NOT NULL,  
-   emp_fname nchar (32) NOT NULL,  
-   emp_manager int NOT NULL  
+   emp_id INT NOT NULL PRIMARY KEY,  
+   emp_bankAccountNumber CHAR (10) NOT NULL,  
+   emp_salary INT NOT NULL,  
+   emp_SSN CHAR (11) NOT NULL,  
+   emp_lname NCHAR (32) NOT NULL,  
+   emp_fname NCHAR (32) NOT NULL,  
+   emp_manager INT NOT NULL  
    );  
 GO  
 CREATE TABLE dbo.auditEmployeeData (  
    audit_log_id uniqueidentifier DEFAULT NEWID() PRIMARY KEY,  
-   audit_log_type char (3) NOT NULL,  
-   audit_emp_id int NOT NULL,  
-   audit_emp_bankAccountNumber char (10) NULL,  
-   audit_emp_salary int NULL,  
-   audit_emp_SSN char (11) NULL,  
+   audit_log_type CHAR (3) NOT NULL,  
+   audit_emp_id INT NOT NULL,  
+   audit_emp_bankAccountNumber CHAR (10) NULL,  
+   audit_emp_salary INT NULL,  
+   audit_emp_SSN CHAR (11) NULL,  
    audit_user sysname DEFAULT SUSER_SNAME(),  
-   audit_changed datetime DEFAULT GETDATE()  
+   audit_changed DATETIME DEFAULT GETDATE()  
    );  
 GO  
 CREATE TRIGGER dbo.updEmployeeData   
 ON dbo.employeeData   
 AFTER UPDATE AS  
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
-columns 2, 3 or 4 have been changed, create an audit record. The
-bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14. To test   
-whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
+columns 2, 3 or 4 have been changed, create an audit record.
+The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
+To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   
    IF (COLUMNS_UPDATED() & 14) > 0  

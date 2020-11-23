@@ -1,4 +1,5 @@
 ---
+description: "Increase the Size of a Database"
 title: "Increase the Size of a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Increase the Size of a Database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   This topic describes how to increase the size of a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The database is expanded by either increasing the size of an existing data or log file or by adding a new file to the database.  
   
  **In This Topic**  
@@ -62,7 +63,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 5.  To increase the size of the database by adding a new file, click **Add** and then enter the values for the new file. For more information, see [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
 6.  Click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To increase the size of a database  

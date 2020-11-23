@@ -10,9 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Add a Scale Out Worker with Scale Out Manager
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 Integration Services Scale Out Manager simplifies the process of adding a Scale Out Worker to your existing Scale Out environment. 
 

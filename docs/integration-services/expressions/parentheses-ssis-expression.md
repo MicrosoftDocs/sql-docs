@@ -1,4 +1,5 @@
 ---
+description: "() (Parentheses) (SSIS Expression)"
 title: "() (Parentheses) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "evaluation order [Integration Services]"
   - "parentheses operator ()"
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # () (Parentheses) (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Identifies the evaluation order of expressions. Expressions enclosed in parentheses have the highest evaluation precedence. Nested expressions enclosed in parentheses are evaluated in inner-to-outer order.  
   
  Parentheses are also used to make complex expressions easier to understand.  

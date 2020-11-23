@@ -1,5 +1,6 @@
 ---
 title: "Create XML Indexes | Microsoft Docs"
+description: Learn how to create primary and secondary XML indexes in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Create XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to create primary and secondary XML indexes.  
   
 ## Creating a Primary XML Index  

@@ -1,4 +1,5 @@
 ---
+description: "SQLStatistics Function"
 title: "SQLStatistics Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLStatistics function [ODBC]"
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLStatistics(  
      SQLHSTMT        StatementHandle,  
@@ -80,7 +80,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE requests that the driver unconditionally retrieve the statistics. (Drivers that conform only to the Open Group standard and do not support ODBC extensions will not be able to support SQL_ENSURE.)  
   
- SQL_QUICK requests that the driver retrieve the CARDINALITY and PAGES only if they are readily available from the server. In this case, the driver does not ensure that the values are current. (Applications that are written to the Open Group standard will always get SQL_QUICK behavior from ODBC 3*.x*-compliant drivers.)  
+ SQL_QUICK requests that the driver retrieve the CARDINALITY and PAGES only if they are readily available from the server. In this case, the driver does not ensure that the values are current. (Applications that are written to the Open Group standard will always get SQL_QUICK behavior from ODBC *3.x*-compliant drivers.)  
   
 ## Returns  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
@@ -120,9 +120,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  For more information about the general use, arguments, and returned data of ODBC catalog functions, see [Catalog Functions](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- The following columns have been renamed for ODBC 3*.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
+ The following columns have been renamed for ODBC *3.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
   
-|ODBC 2.0 column|ODBC 3*.x* column|  
+|ODBC 2.0 column|ODBC *3.x* column|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

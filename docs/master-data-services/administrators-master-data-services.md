@@ -1,5 +1,6 @@
 ---
-title: "Administrators (Master Data Services) | Microsoft Docs"
+title: Administrators
+description: "Learn about the types of administrators in Master Data Services: model administrators, entity administrators, and super user."
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,13 +13,12 @@ helpviewer_keywords:
   - "administrators [Master Data Services]"
   - "models [Master Data Services], administrators"
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Administrators (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article describes the types of administrators in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: model administrators, entity administrators, and super user.  
   
@@ -66,11 +66,10 @@ manager: craigg
 |Entity administrator|Can be an entity administrator based on administrator permissions assigned explicitly or permissions inherited from a group.<br /><br /> Has access only to functional areas that access is granted to.<br /><br /> Automatically has all permissions to all objects and members in the specific entity.<br /><br /> Can approve the pending change sets if the entity changes require approval.|  
   
 ## External Resources  
- Blog post, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
+ Blog post, [Security Improvements](/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
   
 ## See Also  
  [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Create a Master Data Services Database](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Notifications &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
-  
   

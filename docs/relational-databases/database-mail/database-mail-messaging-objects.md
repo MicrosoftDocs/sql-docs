@@ -1,4 +1,5 @@
 ---
+description: "Database Mail Messaging Objects"
 title: "Database Mail Messaging Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Mail Messaging Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **msdb** database is the Database Mail host database. This database contains the stored procedures and messaging objects for Database Mail. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes the Database Mail Configuration Wizard for enabling Database Mail, creating and managing profiles and accounts, and configuring Database Mail options.  
   
 ##  <a name="ComponentsAndConcepts"></a> Objects in **msdb** database  

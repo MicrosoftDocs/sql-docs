@@ -1,5 +1,6 @@
 ---
 title: "srv_sendmsg (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_sendmsg in the Extended Stored Procedure API and how it can send a message to the client.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_sendmsg (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

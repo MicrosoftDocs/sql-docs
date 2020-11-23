@@ -1,4 +1,5 @@
 ---
+description: "Functions (SSIS Expression)"
 title: "Functions (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,11 +15,14 @@ helpviewer_keywords:
   - "SQL Server Integration Services, functions"
   - "SSIS, functions"
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Functions (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The expression language includes a set of functions for use in expressions. An expression can use a single function, but typically an expression combines functions with operators and uses multiple functions.  
   
  The functions can be categorized into the following groups:  

@@ -1,5 +1,6 @@
 ---
 title: "srv_sendrow (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_sendrow in the Extended Stored Procedure API. srv_sendrow transmits a row of data to the client.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_sendrow (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

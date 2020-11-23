@@ -1,5 +1,6 @@
 ---
 title: "Preparing to Implement a Delivery Extension | Microsoft Docs"
+description: Discover how to implement a delivery extension in Reporting Services. Learn about available interfaces and classes and required and optional functionality.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "interfaces [Reporting Services]"
   - "delivery extensions [Reporting Services], implementing"
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Preparing to Implement a Delivery Extension
   Before you implement your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extension, you should define the interfaces to implement. You first need to decide how your delivery extension will be used, what settings your delivery extension will require, and the specific functionality you will need to implement in order to deliver report notifications.  

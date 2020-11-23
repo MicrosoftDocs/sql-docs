@@ -1,8 +1,9 @@
 ---
 title: "Edit a Data Alert in Alert Designer | Microsoft Docs"
+description: Learn how to edit a data alert. You can edit data alerts by accessing them from the Data Alert Manager.
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "editing, alerts"
   - "updating, alerts"
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Edit a Data Alert in Alert Designer

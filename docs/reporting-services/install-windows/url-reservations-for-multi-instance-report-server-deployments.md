@@ -1,4 +1,5 @@
 ---
+description: "URL Reservations for Multi-Instance Report Server Deployments"
 title: "URL Reservations for Multi-Instance Report Server Deployments | Microsoft Docs"
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -8,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "URL reservations"
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # URL Reservations for Multi-Instance Report Server Deployments
   If you install multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer, you must consider how you will define the URL reservations for each instance. Within each instance, the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] must have at least one URL reservation each. The entire set of reservations must be unique in HTTP.SYS.  
@@ -40,7 +41,7 @@ ms.author: maghan
  The underlying technologies used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impose requirements around unique names. HTTP.SYS requires that all URLs within its repository be unique. You can vary the port, host name, or virtual directory name to create a unique URL. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requires that application identities be unique within the same process. This requirement affects the virtual directory names. It specifies that you cannot duplicate a virtual directory name within the same report server instance.  
   
 ## See Also  
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configure Report Server URLs  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: "Index Disk Space Example"
 title: "Index Disk Space Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Index Disk Space Example
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Whenever an index is created, rebuilt, or dropped, disk space for both the old (source) and new (target) structures is required in their appropriate files and filegroups. The old structure is not deallocated until the index creation transaction commits. Additional temporary disk space for sorting operations may also be needed. For more information, see [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  In this example, disk space requirements to create a clustered index are determined.  
@@ -66,7 +66,7 @@ manager: craigg
      Total disk space required to support both the source and target structures for the duration of the index operation is 816 MB (363 + 453). The space currently allocated to the source structures will be deallocated after the index operation is committed.  
   
 3.  Determine additional temporary disk space for sorting.  
-  
+
      Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
   
     1.  When SORT_IN_TEMPDB is set to ON, **tempdb** must have sufficient disk space to hold the largest index (1 million * 200 bytes ~ 200 MB). Fill factor is not considered in the sorting operation.  

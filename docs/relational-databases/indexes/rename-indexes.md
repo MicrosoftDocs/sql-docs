@@ -1,4 +1,5 @@
 ---
+description: "Rename Indexes"
 title: "Rename Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
@@ -14,11 +15,10 @@ helpviewer_keywords:
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic describes how to rename an index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Renaming an index replaces the current index name with the new name that you provide. The specified name must be unique within the table or view. For example, two tables can have an index named **XPK_1**, but the same table cannot have two indexes named **XPK_1**. You cannot create an index with the same name as an existing disabled index. Renaming an index does not cause the index to be rebuilt.  
   
@@ -65,7 +65,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 7.  Click **Close**.  
   
 8.  On the **File** menu, click **Save**_table_name_.  
-  
+
 #### To rename an index by using Object Explorer  
   
 1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to rename an index.  

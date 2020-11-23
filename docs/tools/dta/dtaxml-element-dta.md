@@ -1,10 +1,8 @@
 ---
-title: "DTAXML Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "DTAXML Element (DTA)"
+description: In the dta utility, the DTAXML element contains all elements that describe tuning input and output that the Database Engine Tuning Advisor generates.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -12,13 +10,18 @@ dev_langs:
 helpviewer_keywords: 
   - "DTAXML element"
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # DTAXML Element (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The root element of a Database Engine Tuning Advisor XML input or output file, **DTAXML** contains all elements that describe tuning input and the tuning output that Database Engine Tuning Advisor generates.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The root element of a Database Engine Tuning Advisor XML input or output file, **DTAXML** contains all elements that describe tuning input and the tuning output that Database Engine Tuning Advisor generates.  
   
 ## Syntax  
   

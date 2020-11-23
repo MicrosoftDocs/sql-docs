@@ -1,4 +1,5 @@
 ---
+description: "sp_adduser (Transact-SQL)"
 title: "sp_adduser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a new user to the current database.  
   

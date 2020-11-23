@@ -1,5 +1,6 @@
 ---
-title: "Delete an Attribute (Master Data Services) | Microsoft Docs"
+description: "Delete an Attribute (Master Data Services)"
+title: Delete an Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "attributes [Master Data Services], deleting"
   - "deleting attributes [Master Data Services]"
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Attribute (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete an attribute when you want to permanently delete the attribute and all associated attribute values.  
   

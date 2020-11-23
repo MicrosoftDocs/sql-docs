@@ -1,5 +1,6 @@
 ---
 title: "expanded-QName (XQuery) | Microsoft Docs"
+description: Learn how to use the expanded-QName() function to return the namespace URI and local name part of a QName.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions Related to QNames - expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns a value of the xs:QName type with the namespace URI specified in the *$paramURI* and the local name specified in the *$paramLocal*. If *$paramURI* is the empty string or the empty sequence, it represents no namespace.  
   
@@ -198,6 +198,5 @@ FROM T
  There is one limitation: The **expanded-QName()** function accepts the empty sequence as the second argument and will return empty instead of raising a run-time error when the second argument is incorrect.  
   
 ## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Functions Related to QNames &#40;XQuery&#41;]()  
   

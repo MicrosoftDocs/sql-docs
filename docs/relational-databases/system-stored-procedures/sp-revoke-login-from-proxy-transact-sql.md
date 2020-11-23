@@ -1,4 +1,5 @@
 ---
+description: "sp_revoke_login_from_proxy (Transact-SQL)"
 title: "sp_revoke_login_from_proxy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_revoke_login_from_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes access to a proxy for a security principal.  
   

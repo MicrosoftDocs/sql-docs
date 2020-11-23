@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_3156"
 title: "MSSQLSERVER_3156 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 345d8ed4-177e-4ec3-bab3-25d30000e323
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_3156
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|3156|  
 |Event Source|MSSQLSERVER|  

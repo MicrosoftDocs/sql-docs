@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG014117"
 title: "MSSQL_ENG014117 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # MSSQL_ENG014117
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## Message Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|14117|  
@@ -48,7 +49,7 @@ manager: craigg
   
      10.193.17.129 inst1  
   
--   Disable distribution, register the instance, and then reestablish distribution. If the value of @@SERVERNAME is not correct for a non-clustered instance, follow these steps:  
+-   Disable distribution, register the instance, and then reestablish distribution. If the value of @@SERVERNAME is not correct for a nonclustered instance, follow these steps:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

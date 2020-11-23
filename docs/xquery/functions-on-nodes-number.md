@@ -1,5 +1,6 @@
 ---
 title: "number Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function number() that returns the numeric value of a specified argument.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on Nodes - number
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the numeric value of the node that is indicated by *$arg*.  
   

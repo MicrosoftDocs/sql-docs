@@ -1,4 +1,5 @@
 ---
+description: "KEY_GUID (Transact-SQL)"
 title: "KEY_GUID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,12 +18,11 @@ helpviewer_keywords:
   - "KEY_GUID function"
   - "GUIDs [SQL Server]"
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # KEY_GUID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the GUID of a symmetric key in the database.  
   
@@ -30,12 +30,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 Key_GUID( 'Key_Name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *Key_Name* **'**  
  The name of a symmetric key in the database.  
   
@@ -53,7 +54,7 @@ Key_GUID( 'Key_Name' )
 ## Examples  
  The following example returns the GUID of a symmetric key called `ABerglundKey1`.  
   
-```  
+```sql  
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   

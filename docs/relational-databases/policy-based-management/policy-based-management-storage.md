@@ -1,4 +1,5 @@
 ---
+description: "Policy-Based Management Storage"
 title: "Policy-Based Management Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Policy-Based Management Storage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Policies are stored in the msdb database. After a policy or condition is changed, msdb should be backed up. For more information, see [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## Storing Policies  

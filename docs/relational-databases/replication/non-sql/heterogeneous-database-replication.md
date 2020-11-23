@@ -1,4 +1,5 @@
 ---
+description: "Heterogeneous Database Replication"
 title: "Heterogeneous Database Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/28/2017"
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Heterogeneous Database Replication  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
   
@@ -25,7 +25,7 @@ manager: craigg
 
 -   Publishing data to and from Oracle has the following restrictions:  
 
-  | |2016 or earlier |2017 or later |
+  |Scenario|2016 or earlier |2017 or later |
   |-------|-------|--------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |

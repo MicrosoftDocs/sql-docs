@@ -1,4 +1,5 @@
 ---
+description: "Developing a User Interface for a Custom ForEach Enumerator"
 title: "Developing a User Interface for a Custom ForEach Enumerator | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "custom user interface [Integration Services], custom foreach enumerators"
   - "custom foreach enumerators [Integration Services], developing custom user interface"
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Developing a User Interface for a Custom ForEach Enumerator
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   After you have overridden the implementation of the properties and methods of the base class to provide your custom functionality, you may want to create a custom user interface for your Foreach enumerator. If you do not create a custom user interface, users can only configure the new custom Foreach enumerator by using the Properties window.  
   
  In a custom user interface project or assembly, you create a class that implements <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>. This class derives from System.Windows.Forms.UserControl, which is typically used to create a composite control to host other Windows Forms controls. The control that you create is displayed in the **Enumerator configuration** area of the **Collection** tab of the **Foreach Loop Editor**.  

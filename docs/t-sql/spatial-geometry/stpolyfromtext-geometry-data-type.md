@@ -1,4 +1,5 @@
 ---
+description: "STPolyFromText (geometry Data Type)"
 title: "STPolyFromText (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STPolyFromText (geometry Data Type)"
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPolyFromText (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
   
@@ -31,7 +31,9 @@ Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Kn
 STPolyFromText ( 'polygon_tagged_text' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *polygon_tagged_text*  
  Is the WKT representation of the **geometryPolygon** instance you wish to return. *polygon_tagged_text* is an **nvarchar(max)** expression.  
   

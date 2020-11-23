@@ -1,5 +1,6 @@
 ---
 title: "local-name-from-QName (XQuery) | Microsoft Docs"
+description: Learn how to use the local-name-from-QName() function to return the local name part of a QName.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions Related to QNames - local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Returns an xs:NCNAME that represents the local part of QName specified by *$arg*. The result is an empty sequence if *$arg* is the empty sequence.  
   
@@ -71,6 +71,5 @@ FROM T
 ```  
   
 ## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
-  
+ [Functions Related to QNames &#40;XQuery&#41;](./functions-related-to-qnames-expanded-qname.md)  
   

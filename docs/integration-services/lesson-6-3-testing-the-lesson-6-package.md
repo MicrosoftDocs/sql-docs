@@ -1,4 +1,5 @@
 ---
+description: "Lesson 6-3: Test the Lesson 6 package"
 title: "Step 3: Test the Lesson 6 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 6-3: Test the Lesson 6 package
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 At run time, your package gets the value for the **Directory** property from the **VarFolderName** parameter.  
   
 To verify that the package updates the **Directory** property, execute the package. Because you copied three sample data files to the new directory, the data flow runs three times.

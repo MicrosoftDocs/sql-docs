@@ -1,5 +1,6 @@
 ---
-title: "Model Object Permissions (Master Data Services) | Microsoft Docs"
+description: "Model Object Permissions (Master Data Services)"
+title: Model Object Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "permissions [Master Data Services], model objects"
   - "models [Master Data Services], object permissions"
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Model Object Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Model object permissions are mandatory. They determine the attributes a user can access in the **Explorer** functional area of the UI.  
   
@@ -35,7 +35,7 @@ manager: craigg
  In general, you should assign **ALL** permission to the model object, and then explicitly assign permission to objects underneath.  
   
 ## External Resources  
- Blog post, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
+ Blog post, [Security Improvements](/archive/blogs/e7/improvements-to-autoplay), on msdn.com.  
   
 ## See Also  
  [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
@@ -43,5 +43,4 @@ manager: craigg
  [Functional Area Permissions &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
  [Hierarchy Member Permissions &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
-  
   

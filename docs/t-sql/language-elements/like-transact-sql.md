@@ -1,4 +1,5 @@
 ---
+description: "LIKE (Transact-SQL)"
 title: "LIKE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -30,11 +31,10 @@ helpviewer_keywords:
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determines whether a specific character string matches a specified pattern. A pattern can include regular characters and wildcard characters. During pattern matching, regular characters must exactly match the characters specified in the character string. However, wildcard characters can be matched with arbitrary fragments of the character string. Using wildcard characters makes the LIKE operator more flexible than using the = and != string comparison operators. If any one of the arguments isn't of character string data type, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] converts it to character string data type, if it's possible.  
   
@@ -42,19 +42,23 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
 ```  
-  
-## Arguments  
+>[!NOTE]
+> Currently ESCAPE and STRING_ESCAPE are not supported in [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *match_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data type.  
   
@@ -85,7 +89,7 @@ match_expression [ NOT ] LIKE pattern
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName char(20)  
+CREATE PROCEDURE FindEmployee @EmpLName CHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -103,7 +107,7 @@ GO
 ```sql
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
+CREATE PROCEDURE FindEmployee @EmpLName VARCHAR(20)  
 AS  
 SELECT @EmpLName = RTRIM(@EmpLName) + '%';  
 SELECT p.FirstName, p.LastName, a.City  
@@ -113,16 +117,16 @@ GO
 EXEC FindEmployee @EmpLName = 'Barb';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
- FirstName      LastName            City
- ----------     -------------------- --------------- 
- Angela         Barbariol            Snohomish
- David          Barber               Snohomish
- (2 row(s) affected)  
- ``` 
- 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+FirstName      LastName            City
+----------     -------------------- --------------- 
+Angela         Barbariol            Snohomish
+David          Barber               Snohomish
+(2 row(s) affected)  
+```
+
 ## Pattern Matching by Using LIKE  
  LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -130,26 +134,26 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
 ```sql  
 -- ASCII pattern matching with char column  
-CREATE TABLE t (col1 char(30));  
+CREATE TABLE t (col1 CHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- returns 1 row  
   
 -- Unicode pattern matching with nchar column  
-CREATE TABLE t (col1 nchar(30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE col1 LIKE '% King';   -- no rows returned  
   
 -- Unicode pattern matching with nchar column and RTRIM  
-CREATE TABLE t (col1 nchar (30));  
+CREATE TABLE t (col1 NCHAR(30));  
 INSERT INTO t VALUES ('Robert King');  
 SELECT *   
 FROM t   
 WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row  
-```  
+```
   
 > [!NOTE]  
 >  LIKE comparisons are affected by collation. For more information, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
@@ -187,7 +191,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce, and abcf|  
   
 ## Pattern Matching with the ESCAPE Clause  
- You can search for character strings that include one or more of the special wildcard characters. For example, the discounts table in a customers database may store discount values that include a percent sign (%). To search for the percent sign as a character instead of as a wildcard character, the ESCAPE keyword and escape character must be provided. For example, a sample database contains a column named comment that contains the text 30%. To search for any rows that contain the string 30% anywhere in the comment column, specify a WHERE clause such as `WHERE comment LIKE '%30!%%' ESCAPE '!'`. If ESCAPE and the escape character aren't specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns any rows with the string 30.  
+ You can search for character strings that include one or more of the special wildcard characters. For example, the discounts table in a customers database may store discount values that include a percent sign (%). To search for the percent sign as a character instead of as a wildcard character, the ESCAPE keyword and escape character must be provided. For example, a sample database contains a column named comment that contains the text 30%. To search for any rows that contain the string 30% anywhere in the comment column, specify a WHERE clause such as `WHERE comment LIKE '%30!%%' ESCAPE '!'`. If ESCAPE and the escape character aren't specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns any rows with the string 30!.  
   
  If there is no character after an escape character in the LIKE pattern, the pattern isn't valid and the LIKE returns FALSE. If the character after an escape character isn't a wildcard character, the escape character is discarded and the following character is treated as a regular character in the pattern. These characters include the percent sign (%), underscore (_), and left bracket ([) wildcard characters when they are enclosed in double brackets ([ ]). Escape characters can be used within the double bracket characters ([ ]), including to escape a caret (^), hyphen (-), or right bracket (]).  
   
@@ -211,8 +215,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -227,8 +231,8 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
+```
+
 ### B. Using NOT LIKE with the % wildcard character  
  The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
@@ -245,8 +249,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -258,7 +262,7 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
 ### C. Using the ESCAPE clause  
  The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  

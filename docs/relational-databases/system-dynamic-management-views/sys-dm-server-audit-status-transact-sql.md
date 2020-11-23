@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_server_audit_status (Transact-SQL)"
 title: "sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2016"
@@ -16,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_server_audit_status dynamic management view"
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_server_audit_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns a row for each server audit indicating the current state of the audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -32,12 +32,12 @@ manager: craigg
 |**status**|**smallint**|Numeric status of the server audit:<br /><br /> 0 = Not Started<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Runtime Fail<br /><br /> 3 = Target Create Fail<br /><br /> 4 = Shutting Down|  
 |**status_desc**|**nvarchar(256)**|String that shows the status of the server audit:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC of the last status change for the audit.|  
-|**event_session_address**|**varbinary(8)**|Address of the Extended Events session associated with the audit. Related to the **sys.db_xe_sessions.address** catalog view.|  
+|**event_session_address**|**varbinary(8)**|Address of the Extended Events session associated with the audit. Related to the **sys.dm_xe_sessions.address** catalog view.|  
 |**audit_file_path**|**nvarchar(256)**|Full path and file name of the audit file target that is currently being used. Only populated for file audits.|  
 |**audit_file_size**|**bigint**|Approximate size of the audit file, in bytes. Only populated for file audits.|  
   
 ## Permissions  
- Principals must have **VIEW SERVER STATE** and **SELECT** permissions.  
+ Principals must have the **VIEW SERVER STATE** permission.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

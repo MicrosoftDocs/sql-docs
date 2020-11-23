@@ -1,4 +1,5 @@
 ---
+description: "sp_OAGetProperty (Transact-SQL)"
 title: "sp_OAGetProperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAGetProperty"
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OAGetProperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gets a property value of an OLE object.  
   
@@ -90,7 +90,7 @@ sp_OAGetProperty objecttoken , propertyname
  You can also use **sp_OAMethod** to get a property value.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
   

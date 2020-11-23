@@ -1,4 +1,5 @@
 ---
+description: "SQLConfigDriver Function"
 title: "SQLConfigDriver Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLConfigDriver function [ODBC]"
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLConfigDriver Function
 **Conformance**  
@@ -32,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLConfigDriver(  
      HWND     hwndParent,  

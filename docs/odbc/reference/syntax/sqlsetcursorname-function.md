@@ -1,4 +1,5 @@
 ---
+description: "SQLSetCursorName Function"
 title: "SQLSetCursorName Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetCursorName function [ODBC]"
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetCursorName Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetCursorName(  
      SQLHSTMT      StatementHandle,  
@@ -83,7 +83,7 @@ SQLRETURN SQLSetCursorName(
   
  For another code example, see [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 10  
   

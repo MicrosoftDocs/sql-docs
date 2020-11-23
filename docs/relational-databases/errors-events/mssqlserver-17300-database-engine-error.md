@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_17300"
 title: "MSSQLSERVER_17300 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_17300
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| :-------- | :---- |
 |Product Name|SQL Server|  
 |Event ID|17300|  
 |Event Source|MSSQLSERVER|  

@@ -1,4 +1,5 @@
 ---
+description: "Add Non-SQL Server Subscriber"
 title: "Add Non-SQL Server Subscriber | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Add Non-SQL Server Subscriber
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Replication supports creating push subscriptions to snapshot and transactional publications for Oracle and IBM DB2 Subscribers.  
   
 ## Options  

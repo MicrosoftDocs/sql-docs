@@ -1,12 +1,13 @@
 ---
-title: "Export Reports (Report Builder and SSRS) | Microsoft Docs"
+title: "Export Reports (Report Builder) | Microsoft Docs"
+description: You can export a Reporting Services report to another file format, like PowerPoint or PDF, using Report Builder, Report Designer, or the report server.
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Export Reports (Report Builder and SSRS)
@@ -102,7 +103,7 @@ ms.author: maghan
      The following hard page-break rendering extensions are supported: TIFF and PDF.  
   
 ##  <a name="ExportFormats"></a> Formats you can export while viewing reports  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides rendering extensions that render reports in different formats. You should optimize the report design for your chosen file format.  The followin table lists the formats you can export from the user interface.  There are additional formats you can use with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions or if you are exporting from URL access.  See the section [Other Ways of Exporting Reports](#OtherWaysExportingReports)in this topic.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides rendering extensions that render reports in different formats. You should optimize the report design for your chosen file format.  The following table lists the formats you can export from the user interface.  There are additional formats you can use with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions or if you are exporting from URL access.  See the section [Other Ways of Exporting Reports](#OtherWaysExportingReports)in this topic.  
   
 |Format|Rendering Extension Type|Description|  
 |------------|------------------------------|-----------------|  

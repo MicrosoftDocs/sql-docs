@@ -1,4 +1,5 @@
 ---
+description: "SQLExecute Function"
 title: "SQLExecute Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLExecute function [ODBC]"
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLExecute Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecute(  
      SQLHSTMT     StatementHandle);  

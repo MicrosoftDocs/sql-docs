@@ -1,4 +1,5 @@
 ---
+description: "Import Policies Dialog Box"
 title: "Import Policies Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Import Policies Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to import one or more policies (and their referenced condition) that are saved as XML files, into the current [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance.  
   
 ## Options  

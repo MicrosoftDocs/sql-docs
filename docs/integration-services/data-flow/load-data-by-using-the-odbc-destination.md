@@ -1,4 +1,5 @@
 ---
+description: "Load Data by Using the ODBC Destination"
 title: "Load Data by Using the ODBC Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Load Data by Using the ODBC Destination
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   This procedure shows how to load data by using the ODBC destination. To add and configure an ODBC destination, the package must already include at least one Data Flow task and source.  
   
 ### To load data using an ODBC destination  
@@ -46,8 +50,7 @@ manager: craigg
 12. To save the updated package, click **Save Selected Items** on the **File** menu.  
   
 ## See Also  
- [ODBC Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [ODBC Destination Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [ODBC Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [ODBC Destination Editor &#40;Connection Manager Page&#41;](./odbc-destination.md)   
+ [ODBC Destination Editor &#40;Mappings Page&#41;](./odbc-destination.md)   
+ [ODBC Source Editor &#40;Error Output Page&#41;](./odbc-source.md)  
   

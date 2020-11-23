@@ -1,4 +1,5 @@
 ---
+description: "STConvexHull (geometry Data Type)"
 title: "STConvexHull (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STConvexHull (geometry Data Type)"
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STConvexHull (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns an object representing the convex hull of a **geometry** instance.
   
@@ -31,7 +31,9 @@ Returns an object representing the convex hull of a **geometry** instance.
 .STConvexHull ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  
   
  CLR return type: **SqlGeometry**  

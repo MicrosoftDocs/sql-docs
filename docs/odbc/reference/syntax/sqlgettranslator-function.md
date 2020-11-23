@@ -1,4 +1,5 @@
 ---
+description: "SQLGetTranslator Function"
 title: "SQLGetTranslator Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetTranslator function [ODBC]"
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetTranslator Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLGetTranslator(  
      HWND      hwndParent,  

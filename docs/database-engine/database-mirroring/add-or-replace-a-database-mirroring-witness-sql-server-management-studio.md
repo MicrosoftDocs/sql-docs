@@ -1,6 +1,7 @@
 ---
-title: "Add or Replace a Database Mirroring Witness (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Add or replace a mirror witness (SSMS)"
+description: Learn how to add or replace a database mirroring witness using SQL Server Management Studio when the database mirroring endpoints use Windows Authentication.
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Add or Replace a Database Mirroring Witness (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If the database mirroring endpoints use Windows Authentication,, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to add or replace a witness. Adding a witness in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] also changes the operating mode to high-safety mode with automatic failover.  
   
 > [!NOTE]  

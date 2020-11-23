@@ -1,8 +1,9 @@
 ---
 title: "Report Design View (Report Builder) | Microsoft Docs"
+description: This article describes the controls in the Report Builder window used to add, select, and organize your report resources, and change report item properties.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "user interface"
   - "overview of Report Builder"
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Design View (Report Builder)
   The Report Builder window is designed to help you easily organize your report resources and quickly build the paginated reports you need. The design surface is at the center of the window, with the ribbon and the panes around it. The design surface is where you add and organize your report items. This article explains the panes you use to add, select, and organize your report resources, and change report item properties.  
@@ -94,7 +95,7 @@ ms.author: maghan
   
 -   [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)  
   
--   [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+-   [Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
 -   [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

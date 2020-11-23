@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_701"
 title: "MSSQLSERVER_701 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_701
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|701|  
 |Event Source|MSSQLSERVER|  
@@ -56,7 +56,7 @@ The following list outlines general steps that will help in troubleshooting memo
 4.  Observe DBCC MEMORYSTATUS output and the way it changes when you see these error messages.  
   
 5.  Check the workload (for example, number of concurrent sessions, currently executing queries).  
-  
+
 The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  

@@ -1,4 +1,5 @@
 ---
+description: "View User-defined Functions"
 title: "View User-defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -18,11 +19,10 @@ helpviewer_keywords:
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View User-defined Functions
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can gain information about the definition or properties of a user-defined function in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You may need to see the definition of the function to understand how its data is derived from the source tables or to see the data defined by the function.  
   
 > [!IMPORTANT]  
@@ -64,7 +64,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     -   Aggregate Function  
   
 4.  Right-click the function of which you want to view the properties and select **Properties**.  
-  
+
      The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
      **Database**  

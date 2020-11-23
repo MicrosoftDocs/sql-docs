@@ -1,4 +1,5 @@
 ---
+description: "EXECUTE AS Clause (Transact-SQL)"
 title: "EXECUTE AS Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,10 +26,9 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # EXECUTE AS Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can define the execution context of the following user-defined modules: functions (except inline table-valued functions), procedures, queues, and triggers.  
   
@@ -38,7 +38,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -53,9 +53,8 @@ Queues
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
   
-```  
-  
--- Windows Azure SQL Database Syntax  
+```syntaxsql
+-- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -66,7 +65,9 @@ DDL Triggers with Database Scope
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **CALLER**  
  Specifies the statements inside the module are executed in the context of the caller of the module. The user executing the module must have appropriate permissions not only on the module itself, but also on any database objects that are referenced by the module.  
   
@@ -147,7 +148,7 @@ DDL Triggers with Database Scope
   
  When the following `CREATE PROCEDURE` statement is run, the `CompanyDomain\SqlUser1` is implicitly created as a database principal in the `Sales` database.  
   
-```  
+```sql  
 USE Sales;  
 GO  
 CREATE PROCEDURE dbo.usp_Demo  
@@ -162,7 +163,7 @@ GO
   
  Assume the following stored procedure is called by `SqlUser2`.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_Demo  
 WITH EXECUTE AS 'SqlUser1'  
 AS  
@@ -194,7 +195,7 @@ GO
 ## Examples  
  The following example creates a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and assigns the execution context to `OWNER`.  
   
-```  
+```sql  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
 @DeptValue int  
 WITH EXECUTE AS OWNER  
@@ -213,7 +214,6 @@ GO
 -- Execute the stored procedure by specifying department 5.  
 EXECUTE HumanResources.uspEmployeesInDepartment 5;  
 GO  
-  
 ```  
   
 ## See Also  

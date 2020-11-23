@@ -1,8 +1,9 @@
 ---
 title: "Move or Delete an Item (Report Manager) | Microsoft Docs"
+description: A Report Manager report server stores reports and related items in folders. You can move or delete items. Report server maintains references to items you move.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "moving items"
   - "items [Reporting Services], moving"
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Move or Delete an Item (Report Manager)
   Reports and report-related items that you publish to a report server are stored in folders. You can move items to a different folder and references to those items are maintained automatically by the report server. Before you delete an item, consider whether other items depend on it.  
@@ -35,7 +36,7 @@ ms.author: maghan
   
 #### To move an item from within the Contents page  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page, and locate the item that you want to move.  
   
@@ -52,11 +53,11 @@ ms.author: maghan
  Alternatively, you can navigate to the object you want to move, click **Properties**, and then click **Move** at the top of the page.  
   
 ## Delete an item  
- Before you delete an item, determine if it is used by other items. For example, if you delete a shared data source, reports and models that use that data source will no longer run. If you delete a report, subscriptions and report history associated with that report are also deleted. To find dependent items for an item, see [Dependent Items Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e).  
+ Before you delete an item, determine if it is used by other items. For example, if you delete a shared data source, reports and models that use that data source will no longer run. If you delete a report, subscriptions and report history associated with that report are also deleted. To find dependent items for an item, see [Dependent Items Page &#40;Report Manager&#41;](../web-portal-ssrs-native-mode.md).  
   
 #### To delete a report or item  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page, and locate the item that you want to delete.  
   
@@ -67,7 +68,6 @@ ms.author: maghan
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## See Also  
- [Contents Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Contents Page &#40;Report Manager&#41;](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
   

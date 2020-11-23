@@ -1,4 +1,5 @@
 ---
+description: "Coding a Custom Connection Manager"
 title: "Coding a Custom Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -10,11 +11,14 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom connection managers [Integration Services], coding"
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Coding a Custom Connection Manager
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   After you have created a class that inherits from the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> base class, and applied the <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> attribute to the class, you must override the implementation of the properties and methods of the base class to provide your custom functionality.  
   
  For samples of custom connection managers, see [Developing a User Interface for a Custom Connection Manager](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). The code examples shown in this topic are drawn from the SQL Server Custom Connection Manager sample.  

@@ -1,8 +1,9 @@
 ---
 title: "Server Properties (General Page) | Microsoft Docs"
+description: Learn about the options on the Report Server Properties page.
 ms.date: 06/08/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -10,8 +11,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.serverproperties.general.f1"
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Server Properties (General Page)
   Use this page to view or modify the title used in Report Manager, enable or disable My Reports, select a role definition for My Reports security, and enable or disable the client print control.  
@@ -37,7 +38,7 @@ ms.author: maghan
  This property is read-only. It identifies the types of authentication requests accepted by the report server instance. To change the authentication mode, you must edit the **RSReportServer.config** file. For more information, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
  **URL**  
- This property is read-only. Specifies the URL to the Report Server Web service. This value is specified in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+ This property is read-only. Specifies the URL to the Report Server Web service. This value is specified in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. For more information, see [Configure a URL  &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
  **Enable a My Reports folder for each user**  
  Make **My Reports** available to users. This option is only available for native mode report servers.  

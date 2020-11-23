@@ -1,4 +1,5 @@
 ---
+description: "sp_changepublication_snapshot (Transact-SQL)"
 title: "sp_changepublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,12 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changepublication_snapshot"
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_changepublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes properties of the Snapshot Agent for the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   

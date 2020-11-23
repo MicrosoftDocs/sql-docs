@@ -1,5 +1,6 @@
 ---
-title: "Create an Entity (Master Data Services) | Microsoft Docs"
+title: Create an Entity
+description: Learn how to create an entity in Master Data Services to contain members and their attributes. You must have permissions for the System Administration area.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "entities [Master Data Services], creating"
   - "creating entities [Master Data Services]"
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Entity (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create an entity to contain members and their attributes.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Adding Data Flow Components Programmatically"
 title: "Adding Data Flow Components Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,14 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Adding Data Flow Components Programmatically
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   When you build a data flow, you start by adding components. Then you configure those components and connect them together to establish the flow of data at run time. This section describes adding a component to the data flow task, creating the design-time instance of the component, and then configuring the component. For information about how to connect components, see [Connecting Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## Adding a Component  
@@ -275,7 +279,7 @@ End Module
 ```  
   
 ## External Resources  
- Blog entry, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
+ Blog entry, [EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042), on blogs.msdn.com.  
 
 ## See Also  
  [Connecting Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

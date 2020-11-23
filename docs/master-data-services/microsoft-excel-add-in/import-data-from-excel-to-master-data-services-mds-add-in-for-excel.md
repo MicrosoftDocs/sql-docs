@@ -1,6 +1,7 @@
 ---
-title: "Import Data from Excel to Master Data Services (MDS Add-in for Excel) | Microsoft Docs"
-ms.custom: microsoft-excel-add-in
+description: "Import Data from Excel to Master Data Services (MDS Add-in for Excel)"
+title: Import Data from Excel
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Import Data from Excel to Master Data Services (MDS Add-in for Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publish data to the MDS repository when you are finished working in Excel and want to save your changes so other users have access to them.  
   

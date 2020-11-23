@@ -1,4 +1,5 @@
 ---
+description: "Configure a Native Mode Report Server Scale-Out Deployment"
 title: "Configure a Native Mode Report Server Scale-Out Deployment | Microsoft Docs"
 ms.date: 11/29/2018
 ms.prod: reporting-services
@@ -10,8 +11,8 @@ helpviewer_keywords:
   - "deploying [Reporting Services], scale-out deployment model"
   - "scale-out deployments [Reporting Services]"
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Configure a Native Mode Report Server Scale-Out Deployment
@@ -23,6 +24,9 @@ Reporting Services native mode supports a scale-out deployment model that allows
 For Power BI Report Server, you need to configure client affinity (sometimes called sticky sessions) on the load balancer for any scale-out environment, to ensure proper performance.  
   
 For SQL Server 2016 Reporting Services and earlier, SharePoint mode report servers utilize the SharePoint products infrastructure for scale-out. SharePoint mode scale-out is performed by adding more SharePoint mode report servers to the SharePoint farm. For information on scale-out in SharePoint mode, see [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
  
   A *scale-out deployment* is used in the following scenarios:  
   
@@ -54,7 +58,7 @@ For SQL Server 2016 Reporting Services and earlier, SharePoint mode report serve
   
          To avoid database compatibility errors when connecting the server instances to the shared database, be sure that all instances are the same version. For example, if you create the report server database using a SQL Server 2016 report server instance, all other instances in the same deployment must also be SQL Server 2016.  
   
-    -   Use the Reporting Services Configuration manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
+    -   Use the Report Server Configuration Manager to connect each report server to the shared database. You can only connect to and configure one report server at a time.  
   
     -   Use the Reporting Services Configuration tool to complete the scale-out by joining new report server instances to the first report server instance already connected to the report server database.  
   
@@ -86,9 +90,9 @@ The issue will be intermittent is that only the server who created the SQL Agent
   
 2.  Start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool.  
   
-3.  Configure the Report Server Web service URL, Web Portal URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Configure the Report Server Web service URL, Web Portal URL, and the report server database. For more information, see [Configure a Report Server &#40;Reporting Services Native Mode&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)
   
-4.  Verify that the report server is operational. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+4.  Verify that the report server is operational. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
 ## To install and configure the second report server instance  
   
@@ -139,7 +143,7 @@ The issue will be intermittent is that only the server who created the SQL Agent
 
 ## Next steps
 
-[Configure a Service Account](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[Configure a Service Account](configure-the-report-server-service-account-ssrs-configuration-manager.md)
 [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configure Report Server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   

@@ -1,5 +1,6 @@
 ---
-title: "Merge Conflicts (MDS Add-in for Excel) | Microsoft Docs"
+description: "Merge Conflicts (MDS Add-in for Excel)"
+title: Merge Conflicts
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Merge Conflicts (MDS Add-in for Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Add-in for Excel, if data has been changed on the server by another user, the publish will fail with a conflict error. To resolve this error, you can perform merge conflicts and republish the changes.  
   

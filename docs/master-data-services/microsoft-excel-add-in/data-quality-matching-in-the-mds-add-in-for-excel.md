@@ -1,6 +1,7 @@
 ---
-title: "Data Quality Matching in the MDS Add-in for Excel | Microsoft Docs"
-ms.custom: microsoft-excel-add-in
+description: "Data Quality Matching in the MDS Add-in for Excel"
+title: Data Quality Matching
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Data Quality Matching in the MDS Add-in for Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Over time, you will want to add more data to the MDS repository. Before adding data, it can be useful to compare the new data to the data that's already managed in MDS, to ensure you are not adding duplicate or inaccurate data.  
   

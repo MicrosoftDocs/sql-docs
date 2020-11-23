@@ -1,4 +1,5 @@
 ---
+description: "catalog.explicit_object_permissions (SSISDB Database)"
 title: "catalog.explicit_object_permissions (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,12 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.explicit_object_permissions (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays only the permissions that have been explicitly assigned to the user.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Non-SQL Server Publishers"
 title: "Non-SQL Server Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Non-SQL Server Publishers  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Publishing data from non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sources allows you to consolidate data in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can subscribe to snapshot or transactional data published from an Oracle database. For more information about publishing from Oracle, see [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
@@ -27,10 +27,12 @@ Publishing data from non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 -   Publishing data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
 
 -   Publishing data to and from Oracle has the following restrictions:  
-  | |2016 or earlier |2017 or later |
-  |-------|-------|--------|
+
+  |Replication |2016 or earlier |2017 or later |
+  |:-----------|:---------------|:-------------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

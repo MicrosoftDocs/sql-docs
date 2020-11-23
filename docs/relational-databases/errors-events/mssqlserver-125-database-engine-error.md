@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_125"
 title: "MSSQLSERVER_125 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_125
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|125|  
 |Event Source|MSSQLSERVER|  

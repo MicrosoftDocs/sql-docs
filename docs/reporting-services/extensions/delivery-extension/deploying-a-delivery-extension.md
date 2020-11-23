@@ -1,5 +1,6 @@
 ---
 title: "Deploying a Delivery Extension | Microsoft Docs"
+description: Learn how to deploy a delivery extension to a report server. See which entries to add to which configuration files so the report server locates the extension.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Deploying a Delivery Extension
   Delivery extensions supply their configuration information in the form of an XML configuration file. The XML file conforms to the XML schema defined for delivery extensions. Delivery extensions provide infrastructure for setting and modifying the configuration file.  

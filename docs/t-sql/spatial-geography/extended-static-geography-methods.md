@@ -1,4 +1,5 @@
 ---
+description: "Extended Static Geography Methods"
 title: "Extended Static Geography Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,12 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Extended Static Geography Methods"
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Extended Static Geography Methods
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports several extensions to the static geography methods of the Open Geospatial Consortium (OGC).  
   

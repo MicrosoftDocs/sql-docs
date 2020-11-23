@@ -1,4 +1,5 @@
 ---
+description: "Audit Login Failed Event Class"
 title: "Audit Login Failed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Login Failed Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Login Failed** event class indicates that a user tried to log in to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and failed. Events in this class are fired by new connections or by connections that are reused from a connection pool.  
   
 ## Audit Login Failed Event Class Data Columns  

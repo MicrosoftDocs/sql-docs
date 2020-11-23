@@ -1,5 +1,6 @@
 ---
 title: "Additional Sample XQueries Against the xml Data Type | Microsoft Docs"
+description: View samples that show how to use XQuery queries against the xml data type.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Additional Sample XQueries Against the xml Data Type
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   The topics in this section provide additional samples that show how to use XQuery queries against the **xml** data type:  
   

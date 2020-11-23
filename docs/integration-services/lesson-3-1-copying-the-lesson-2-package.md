@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-1: Copy the Lesson 2 package"
 title: "Step 1: Copy the Lesson 2 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3-1: Copy the Lesson 2 package
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 In this task, you create a copy of the Lesson 2.dtsx package from Lesson 2. If you didn't complete Lesson 2, you can add the completed lesson 2 package included with this tutorial to the project, and then copy it instead. You use this new copy throughout the rest of Lesson 3.
 

@@ -1,4 +1,5 @@
 ---
+description: "STNumGeometries (geography Data Type)"
 title: "STNumGeometries (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumGeometries method"
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STNumGeometries (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the number of **geometries** that make up a **geography** instance.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STNumGeometries ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **int**  
   
  CLR return type: **SqlInt32**  

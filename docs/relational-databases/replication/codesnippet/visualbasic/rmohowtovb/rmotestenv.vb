@@ -1038,7 +1038,7 @@ Class RMOTestEnv
         Dim publicationDbName As String = "AdventureWorks2012"
 
         'Create a connection to the Publisher.
-        Dim conn As ServerConnection = New ServerConnection(subscriberName)
+        Dim conn As ServerConnection = New ServerConnection(publisherName)
 
         ' Create the objects that we need.
         Dim publication As TransPublication
@@ -1283,7 +1283,7 @@ Class RMOTestEnv
         Dim hostname As String = "adventure-works\garrett1"
 
         'Create a connection to the Publisher.
-        Dim conn As ServerConnection = New ServerConnection(subscriberName)
+        Dim conn As ServerConnection = New ServerConnection(publisherName)
 
         ' Create the objects that we need.
         Dim publication As MergePublication

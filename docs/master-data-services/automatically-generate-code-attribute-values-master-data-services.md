@@ -1,5 +1,6 @@
 ---
-title: "Automatically Generate Code Attribute Values (Master Data Services) | Microsoft Docs"
+description: "Automatically Generate Code Attribute Values (Master Data Services)"
+title: Automatically Generate Code Attribute Values
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity's Code attribute when you want an integer to be automatically assigned to the Code value each time a new member is created.  
   

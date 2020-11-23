@@ -1,7 +1,8 @@
 ---
+description: "SQLFetch Function"
 title: "SQLFetch Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,15 +12,15 @@ apiname:
   - "SQLFetch"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLFetch"
 helpviewer_keywords: 
   - "SQLFetch function [ODBC]"
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFetch Function
 **Conformance**  
@@ -30,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetch(  
      SQLHSTMT     StatementHandle);  

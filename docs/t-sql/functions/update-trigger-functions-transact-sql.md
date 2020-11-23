@@ -1,4 +1,5 @@
 ---
+description: "UPDATE - Trigger Functions (Transact-SQL)"
 title: "UPDATE() (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -23,12 +24,11 @@ helpviewer_keywords:
   - "verifying column updates"
   - "checking column updates"
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 ---
 # UPDATE - Trigger Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a Boolean value that indicates whether an INSERT or UPDATE attempt was made on a specified column of a table or view. UPDATE() is used anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.  
   
@@ -36,12 +36,13 @@ manager: craigg
   
 ## Syntax  
   
-```sql  
-  
+```syntaxsql
 UPDATE ( column )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *column*  
  Is the name of the column to test for either an INSERT or UPDATE action. Because the table name is specified in the ON clause of the trigger, do not include the table name before the column name. The column can be of any [data type](../../t-sql/data-types/data-types-transact-sql.md) supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, computed columns cannot be used in this context.  
   
@@ -59,6 +60,8 @@ UPDATE ( column )
 >  The IF UPDATE(*column*) clause functions the same as an IF, IF...ELSE, or WHILE clause and can use the BEGIN...END block. For more information, see [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) can be used anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger.  
+ 
+If a trigger applies to a column, the `UPDATED` value will return as `true` or `1`, even if the column value remains unchanged. This is by-design, and the trigger should implement business logic that determines if the insert/update/delete operation is permissible or not. 
   
 ## Examples  
  The following example creates a trigger that prints a message to the client when anyone tries to update the `StateProvinceID` or `PostalCode` columns of the `Address` table.  

@@ -1,6 +1,7 @@
 ---
-title: "Options (Environment - Help - General Page) | Microsoft Docs"
-ms.custom: ""
+description: "Options (Environment - Help - General Page)"
+title: "Options (Environment - Help - General Page)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -10,12 +11,11 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Environment.Help.General"
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (Environment - Help - General Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Options** dialog box to choose documentation sets and decide whether to display topics internally in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or externally in a separate window. To access this dialog box, click **Options** on the **Tools** menu, expand **Help** in the **Environment** node, and then click **General**.  
   
 > [!NOTE]  

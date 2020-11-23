@@ -1,4 +1,5 @@
 ---
+description: "sp_OAGetErrorInfo (Transact-SQL)"
 title: "sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAGetErrorInfo"
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Obtains OLE Automation error information.  
   
@@ -90,7 +90,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  For more information about processing HRESULT Return Codes, see [OLE Automation Return Codes and Error Information](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
  The following example displays OLE Automation error information.  

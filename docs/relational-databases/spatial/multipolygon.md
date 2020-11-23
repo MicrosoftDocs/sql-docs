@@ -1,4 +1,5 @@
 ---
+description: "MultiPolygon"
 title: "MultiPolygon | Microsoft Docs"
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ helpviewer_keywords:
   - "MultiPolygon geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiPolygon
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   A **MultiPolygon** instance is a collection of zero or more **Polygon** instances.  
   
 ## Polygon Instances  
@@ -59,7 +59,7 @@ The second instance in the MultiPolygon is a LineString instance and not an acce
 1.  All of the instances comprising the **MultiPolygon** instance are valid **Polygon** instances. For valid **Polygon** instances, see [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  None of the **Polygon** instances comprising the **MultiPolygon** instance overlap.  
-  
+
 The following example shows two valid **MultiPolygon** instances and one invalid **MultiPolygon** instance.  
   
 ```sql  

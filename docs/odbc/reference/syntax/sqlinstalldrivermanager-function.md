@@ -1,4 +1,5 @@
 ---
+description: "SQLInstallDriverManager Function"
 title: "SQLInstallDriverManager Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLInstallDriverManager function [ODBC]"
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLInstallDriverManager Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverManager(  
      LPSTR    lpszPath,  

@@ -1,5 +1,6 @@
 ---
-title: "Reverse a Transaction (Master Data Services) | Microsoft Docs"
+description: "Reverse a Transaction (Master Data Services)"
+title: Reverse a Transaction
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Master Data Services], reversing"
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Reverse a Transaction (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], administrators can reverse a transaction when an action needs to be undone. Examples of transactions are attribute value changes, hierarchy moves, or member deletions. This topic only applies to transactions of entities with transaction log type "Attribute". Go to entity explorer page to view the transaction history of the entities with transaction log type "Member".  
   

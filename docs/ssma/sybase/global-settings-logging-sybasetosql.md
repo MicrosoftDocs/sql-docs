@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Logging) (SybaseToSQL)"
 title: "Global Settings (Logging) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -7,9 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: craigg
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Global Settings (Logging) (SybaseToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

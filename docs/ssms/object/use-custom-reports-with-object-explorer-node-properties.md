@@ -1,6 +1,7 @@
 ---
-title: "Use Custom Reports with Object Explorer Node Properties | Microsoft Docs"
-ms.custom: ""
+description: "Use Custom Reports with Object Explorer Node Properties"
+title: "Use Custom Reports with Object Explorer Node Properties"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -10,12 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Use Custom Reports with Object Explorer Node Properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Custom reports can execute in the context of a selected Object Explorer node if the custom reports reference the report parameters of that node. This enables a custom report to use the current context, for example the current database, or a database or server object.  
   
 ## Object Explorer Node Report Parameters  

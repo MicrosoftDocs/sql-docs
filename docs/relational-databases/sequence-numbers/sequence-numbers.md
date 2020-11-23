@@ -1,4 +1,5 @@
 ---
+description: "Sequence Numbers"
 title: "Sequence Numbers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,10 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sequence Numbers
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A sequence is a user-defined schema-bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and may cycle (repeat) as requested. Sequences, unlike identity columns, are not associated with tables. An application refers to a sequence object to receive its next value. The relationship between sequences and tables is controlled by the application. User applications can reference a sequence object and coordinate the values keys across multiple rows and tables.  
   
  A sequence is created independently of the tables by using the **CREATE SEQUENCE** statement. Options enable you to control the increment, maximum and minimum values, starting point, automatic restarting capability, and caching to improve performance. For information about the options, see [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md).  
@@ -52,6 +52,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  The sequence object generates numbers according to its definition, but the sequence object does not control how the numbers are used. Sequence numbers inserted into a table can have gaps when a transaction is rolled back, when a sequence object is shared by multiple tables, or when sequence numbers are allocated without using them in tables. When created with the CACHE option, an unexpected shutdown, such as a power failure, can lose the sequence numbers in the cache.  
   
  If there are multiple instances of the **NEXT VALUE FOR** function specifying the same sequence generator within a single [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, all those instances return the same value for a given row processed by that [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. This behavior is consistent with the ANSI standard.  
+ 
+ Sequence numbers are generated outside the scope of the current transaction. They are consumed whether the transaction using the sequence number is committed or rolled back. Duplicate validation only occurs once a record is fully populated. This can result in some cases where the same number is used for more than one record during creation, but then gets identified as a duplicate. If this occurs and other autonumber values have been applied to subsequent records, this can result in a gap between autonumber values.
   
 ## Typical Use  
  To create an integer sequence number that increments by 1 from -2,147,483,648 to 2,147,483,647, use the following statement.  

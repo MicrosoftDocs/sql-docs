@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (MySQLToSQL)"
 title: "Appendix - 1 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: craigg
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Appendix - 1 (MySQLToSQL)
 Quick view of the SSMA Console command line options:  
@@ -26,5 +26,4 @@ Quick view of the SSMA Console command line options:
 |8|-?|No|Not Applicable|Not Applicable|  
   
 ## See Also  
-[Executing the SSMA Console (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[Executing the SSMA Console (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

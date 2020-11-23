@@ -1,4 +1,5 @@
 ---
+description: "IS NULL (Transact-SQL)"
 title: "IS NULL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -31,11 +32,10 @@ helpviewer_keywords:
 ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IS NULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determines whether a specified expression is NULL.  
   
@@ -43,11 +43,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 expression IS [ NOT ] NULL  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
@@ -68,7 +70,7 @@ expression IS [ NOT ] NULL
 ## Examples  
  The following example returns the name and the weight for all products for which either the weight is less than `10` pounds or the color is unknown, or `NULL`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight, Color  
@@ -81,7 +83,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the full names of all employees with middle initials.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, MiddleName  

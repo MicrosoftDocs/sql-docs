@@ -1,4 +1,5 @@
 ---
+description: "Understanding the Differences between Local and Remote Execution"
 title: "Understanding the Differences between Local and Remote Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "packages [Integration Services], running"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Understanding the Differences between Local and Remote Execution
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Package developers and administrators should be aware that there are restrictions related to where an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package runs.  
   
 -   **A package runs on the same computer as the program that launches it**. Even when a program loads a package that is stored remotely on another server, the package runs on the local computer.  

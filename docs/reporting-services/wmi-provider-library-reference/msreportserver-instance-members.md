@@ -1,8 +1,9 @@
 ---
+description: "MSReportServer_Instance Members"
 title: "MSReportServer_Instance Members | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,15 +16,15 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "MSReportServer_Instance class"
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # MSReportServer_Instance Members
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  
   
 ## Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Returns the edition of the report server.|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Returns the human readable name of the report server edition.|  
@@ -34,7 +35,7 @@ ms.author: maghan
   
 ## Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Lists URLs users can use to access the report server and report manager.|  
   

@@ -1,5 +1,6 @@
 ---
-title: "Approve or Reject a Changeset (Master Data Services) | Microsoft Docs"
+description: "Approve or Reject a Changeset (Master Data Services)"
+title: Approve or Reject a Changeset
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Approve or Reject a Changeset (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A changeset is a collection of the pending changes on the master data. If the entity changes require administrator approval and a changeset is submitted for approval, you can review and then approve or reject the changeset.  
   

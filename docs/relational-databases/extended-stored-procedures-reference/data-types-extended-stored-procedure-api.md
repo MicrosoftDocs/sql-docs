@@ -1,5 +1,6 @@
 ---
 title: "Data Types (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about how Extended Stored Procedure API data types can be expanded by including the Srv.h header file in your program.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Data Types (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

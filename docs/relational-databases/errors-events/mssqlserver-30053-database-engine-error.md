@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_30053"
 title: "MSSQLSERVER_30053 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -9,15 +10,14 @@ ms.topic: "language-reference"
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_30053
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|30053|  
 |Event Source|MSSQLSERVER|  

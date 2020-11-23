@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_10773"
 title: "MSSQLSERVER_10773 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 4a7d33e8-e98a-49f5-8d4b-8224f3c8e22d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10773
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|MSSQLSERVER|  
 |Event ID|10773|  
 |Event Source|MSSQLSERVER|  

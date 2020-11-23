@@ -1,4 +1,5 @@
 ---
+description: "SQLSetConnectAttrForDbcInfo Function"
 title: "SQLSetConnectAttrForDbcInfo Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,9 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetConnectAttrForDbcInfo function [ODBC]"
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectAttrForDbcInfo Function
 **Conformance**  
@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectAttrForDbcInfo(  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 SQLINTEGER            Attribute,  

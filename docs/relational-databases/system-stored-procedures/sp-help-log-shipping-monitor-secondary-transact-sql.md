@@ -1,4 +1,5 @@
 ---
+description: "sp_help_log_shipping_monitor_secondary (Transact-SQL)"
 title: "sp_help_log_shipping_monitor_secondary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_help_log_shipping_monitor_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information regarding a secondary database from the monitor tables.  
   

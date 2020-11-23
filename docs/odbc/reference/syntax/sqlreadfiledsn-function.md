@@ -1,4 +1,5 @@
 ---
+description: "SQLReadFileDSN Function"
 title: "SQLReadFileDSN Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLReadFileDSN function [ODBC]"
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLReadFileDSN Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLReadFileDSN(  
      LPCSTR   lpszFileName,  

@@ -1,4 +1,5 @@
 ---
+description: "SQLBrowseConnect Function"
 title: "SQLBrowseConnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -18,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBrowseConnect function [ODBC]"
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBrowseConnect Function
 **Conformance**  
@@ -31,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLBrowseConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -219,7 +219,7 @@ SQLRETURN SQLBrowseConnect(
   
  This is the final piece of information the driver needs to connect to the data source; **SQLBrowseConnect** returns SQL_SUCCESS, and **OutConnectionString* contains the completed connection string:  
   
-```  
+```cpp  
 // SQLBrowseConnect_Function.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

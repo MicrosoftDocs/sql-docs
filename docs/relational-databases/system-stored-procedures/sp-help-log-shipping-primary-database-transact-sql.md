@@ -1,4 +1,5 @@
 ---
+description: "sp_help_log_shipping_primary_database (Transact-SQL)"
 title: "sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_help_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retrieves primary database settings.  
   

@@ -1,483 +1,379 @@
 ---
-title: Release notes
-titleSuffix: SQL Server 2019 big data clusters
-description: This article describes the latest updates and known issues for SQL Server 2019 big data clusters (preview). 
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 03/27/2018
+title: SQL Server Big Data Clusters release notes
+titleSuffix: SQL Server big data clusters
+description: This article describes the latest updates and known issues for SQL Server Big Data Clusters. 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
-# Release notes for big data clusters on SQL Server
 
-This article lists the updates and know issues for the most recent releases of SQL Server big data clusters.
+# SQL Server 2019 Big Data Clusters release notes
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-## <a id="ctp24"></a> CTP 2.4 (March)
+The following release notes apply to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads. The article also lists [known issues](#known-issues) for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
-The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.4.
+## Supported platforms
 
-### What's New
+This section explains platforms that are supported with BDC.
 
-| New feature or update | Details |
-|:---|:---|
-| Guidance on GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md) |
-| **SqlDataPool** and **SqlStoragePool** data sources are no longer created by default. | Create these manually as needed. See the [known issues](#externaltablesctp24). |
-| Spark runtime upgrade to Spark 2.4. | |
+### Kubernetes platforms
 
-### Known issues
+|Platform|Supported versions|
+|---------|---------|
+|Vanilla (upstream) Kubernetes|Deploy BDC on premises using a Kubernetes cluster version minimum 1.13. See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
+|Red Hat OpenShift|Deploy BDC on premises using an OpenShift cluster version minimum 4.3. See [Red Hat OpenShift Container Platform Life Cycle Policy](https://access.redhat.com/support/policy/updates/openshift).<br><br> Support introduced in SQL Server 2019 CU5.|
+|Azure Kubernetes Service (AKS)|Deploy BDC on AKS cluster version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
+|Azure Red Hat OpenShift (ARO)|Deploy BDC on ARO version minimum 4.3. See [Azure Red Hat OpenShift](/azure/openshift/). <br><br> Support introduced in SQL Server 2019 CU5.|
 
-The following sections describe the known issues and limitations with this release.
+### Host OS for Kubernetes
 
-#### Deployment
+|Platform|Host OS|Supported versions|
+|---------|---------|---------|
+|Kubernetes|Ubuntu|16.04|
+|Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
+|OpenShift|Red Hat Enterprise Linux / CoreOS |See [OpenShift release notes](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
 
-- Upgrading a big data data cluster from a previous release is not supported.
+### SQL Server Editions
 
-   > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+|Edition|Notes|
+|---------|---------|
+|Enterprise<br/>Standard<br/>Developer| Big Data Cluster edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition after deployment. See [Configure SQL Server master instance](./configure-sql-server-master-instance.md). |
 
-- After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
+## Tools
 
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+|Platform|Supported versions|
+|---------|---------|
+|[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]|As a best practice, use the latest version available. Starting with SQL Server 2019 CU5 release, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has an independent semantic version from the server. <br/><br/>Run `azdata –-version` to validate the version.<br/><br/>See [Release history](#release-history) for latest version.|
+|Azure Data Studio|Get the latest build of [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).|
 
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+For a complete list, see [Which tools are required?](deploy-big-data-tools.md#which-tools-are-required)
 
-- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
+## Release history
 
-#### kubeadm deployments
+The following table lists the release history for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-If you use kubeadm to deploy Kubernetes on multiple machines, the cluster administration portal does not correctly display the endpoints needed to connect to the big data cluster. If you are experiencing this problem, use the following work around to discover the service endpoint IP addresses:
+| Release <sup>1</sup> | BDC Version    | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version <sup>2</sup>| Release date |
+|------------------|----------------|-----------------|--------------|
+| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
+| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
+| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
+| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
+| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 2020-02-13   |
+| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
+| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
-- If you are connecting from within the cluster, query Kubernetes for the service IP for the endpoint that you want to connect to. For example, the following **kubectl** command displays the IP address of the SQL Server master instance:
+<sup>1</sup> CU7 is not available for BDC.
+
+<sup>2</sup> [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version reflects the version of the tool at the time of the CU release. `azdata` can also release independently of the server release, therefore you might get newer versions when you install the latest packages. Newer versions are compatible with previously released CUs.
+
+## How to install updates
+
+To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a id="cu8"></a> CU8 (September 2020)
+
+Cumulative Update 8 (CU8) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4073.23 |[2019-CU8-ubuntu-16.04]
+
+This release includes several fixes and a couple of enhancements.
+
+### Added capabilities
+
+- [SQL Server Big Data Clusters encryption at rest](encryption-at-rest-concepts-and-configuration.md) using system managed keys and certificates.
+   > [!CAUTION]
+   > This is the initial release of SQL Server BDC encryption at rest. Review the following articles: 
+   > - [Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](concept-security.md)
+   > - [Encryption at rest concepts and configuration Guide](encryption-at-rest-concepts-and-configuration.md)
+- [Oracle Proxy User](tutorial-query-oracle.md) support to the Data Virtualization scenario.
+
+## <a id="cu6"></a> CU6 (July 2020)
+
+Cumulative Update 6 (CU6) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+This release includes minor fixes and enhancements. The following articles include information related to these updates:
+
+- [Manage big data cluster access in Active Directory mode](manage-user-access.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on AKS in Active Directory mode](active-directory-deployment-aks.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] with high availability](deployment-high-availability.md)
+- [Configure [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
+- [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
+- [SQL Server master instance configuration properties](reference-config-master-instance.md)
+- [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
+- [Kubernetes RBAC model & impact on users and service accounts managing BDC](kubernetes-rbac.md)
+
+## <a id="cu5"></a> CU5 (June 2020)
+
+Cumulative Update 5 (CU5) release for SQL Server 2019.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4043.16 |[2019-CU5-ubuntu-16.04]
+
+### Added capabilities
+
+- Support for Big Data Clusters deployment on Red Hat OpenShift. Support includes OpenShift container platform deployed on premises version 4.3 and up and Azure Red Hat OpenShift. See [Deploy SQL Server Big Data Clusters on OpenShift](deploy-openshift.md)
+- Updated the BDC deployment security model so privileged containers deployed as part of BDC are no longer *required*. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5. 
+- Added support for deploying multiple big data clusters against an Active Directory domain.
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] has its own semantic version, independent from the server. Any dependency between the client and the server version of azdata is removed. We recommend using the latest version for both client and server to ensure you are benefiting from latest enhancements and fixes.
+- Introduced two new stored procedures,  sp_data_source_objects and sp_data_source_table_columns, to support introspection of certain External Data Sources. They can be used by customers directly via T-SQL for schema discovery and to see what tables are available to be virtualized. We leverage these changes in the External Table Wizard of the [Data Virtualization Extension](../azure-data-studio/extensions/data-virtualization-extension.md) for  Azure Data Studio, which allows you to create external tables from SQL Server, Oracle, MongoDB, and Teradata.
+- Added support to persist customizations performed in Grafana. Before CU5 customers would notice that any edits in Grafana configurations would be lost upon `metricsui` pod (that hosts Grafana dashboard) restart. This issue is fixed and all configurations are now persisted. 
+- Fixed security issue related to the API used to collect pod and node metrics using Telegraf (hosted in the `metricsdc` pods). As a result of this change, Telegraf now requires a service account, cluster role and cluster bindings to have the necessary permissions to collect the pod and node metrics. See [Custer role required for pods and nodes metrics collection](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) for more details.
+- Added two feature switches to control the collection of pod and node metrics. In case you are using different solutions for monitoring your Kubernetes infrastructure, you can turn off the built-in metrics collection for pods and host nodes by setting *allowNodeMetricsCollection* and *allowPodMetricsCollection* to false in control.json deployment configuration file. For OpenShift environments, these settings are set to false by default in the built-in deployment profiles, since collecting pod and node metrics required privileged capabilities.
+
+## <a id="cu4"></a> CU4 (April 2020)
+
+Cumulative Update 4 (CU4) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4033.1.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
+
+## <a id="cu3"></a> CU3 (March 2020)
+
+Cumulative Update 3 (CU3) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4023.6.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### Resolved issues
+
+SQL Server 2019 CU3 resolves the following issues from previous releases.
+
+- [Deployment with private repository](#deployment-with-private-repository)
+- [Upgrade may fail due to timeout](#upgrade-may-fail-due-to-timeout)
+
+## <a id="cu2"></a> CU2 (February 2020)
+
+Cumulative Update 2 (CU2) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4013.40.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
+
+## <a id="cu1"></a> CU1 (January 2020)
+
+Cumulative Update 1 (CU1) release for SQL Server 2019. The SQL Server Database Engine version for this release is 15.0.4003.23.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
+
+## <a id="rtm"></a> GDR1 (November 2019)
+
+SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general availability for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. The SQL Server Database Engine version for this release is 15.0.2070.34.
+
+|Package version | Image tag |
+|-----|-----|
+|15.0.2070.34|[2019-GDR1-ubuntu-16.04]
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
+
+## Known issues
+
+### HA SQL Server Database Encryption key encryptor rotation
+
+- **Affected releases**: All big data cluster HA deployments irrespective of the release.
+
+- **Issue and customer impact**: With SQL Server deployed with HA, the certificate rotation for the encrypted database fails. When the following command is executed on the master pool, an error message will appear:
+    ```
+    ALTER DATABASE ENCRYPTION KEY
+    ENCRYPTION BY SERVER
+    CERTIFICATE <NewCertificateName>
+    ```
+    There is no impact, the command fails and the target database encryption is preserved using the previous certificate.
+    
+### Empty Livy jobs before you apply cumulative updates
+
+- **Affected releases**: All version up to CU6. Resolved for CU8.
+
+- **Issue and customer impact**: During an upgrade, `sparkhead` returns 404 error.
+
+- **Workaround**: Before upgrading BDC, ensure that there are no active Livy sessions or batch jobs. Follow the instructions under [Upgrade from supported release](deployment-upgrade.md#upgrade-from-supported-release) to avoid this. 
+
+   If Livy returns a 404 error during the upgrade process, restart the Livy server on both `sparkhead` nodes. For example:
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### Big data cluster generated service accounts passwords expiration
+
+- **Affected releases**: All big data cluster deployments with Active Directory integration, irrespective of the release
+
+- **Issue and customer impact**: During big data cluster deployment, the workflow generates a set of [service accounts](active-directory-objects.md).Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met.
+
+- **Workaround**: Update the expiration policy for the BDC service accounts to “Password never expires” in the Domain Controller. For a complete list of these accounts see [Auto generated Active Directory objects](active-directory-objects.md). This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
+
+### Credentials for accessing services through gateway endpoint
+
+- **Affected releases**: New clusters deployed starting with CU5.
+
+- **Issue and customer impact**: For new big data clusters deployed using SQL Server 2019 CU5, gateway username is not **root**. If the application used to connect to gateway endpoint is using the wrong credentials, you will see an authentication error. This change is a result of running applications within the big data cluster as non-root user (a new default behavior starting with SQL Server 2019 CU5 release, when you deploy a new big data cluster using CU5, the username for the gateway endpoint is based on the value passed through **AZDATA_USERNAME** environment variable. It is the same username used for the controller and SQL Server endpoints. This is only impacting new deployments, existing big data clusters deployed with any of the previous releases will continue to use **root**. There is no impact to credentials when the cluster is deployed to use Active Directory authentication. 
+
+- **Workaround**: Azure Data Studio will handle the credentials change transparently for the connection made to gateway to enable HDFS browsing experience in the ObjectExplorer. You must install [latest Azure Data Studio release](../azure-data-studio/download-azure-data-studio.md) that includes the necessary changes that address this use case.
+For other scenarios where  you must provide credentials for accessing service through the gateway (e.g. logging in with [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], accessing web dashboards for Spark), you must ensure the correct credentials are used. If you are targeting an existing cluster deployed before CU5 you will continue using **root** username to connect to gateway, even after upgrading the cluster to CU5. If you deploy a new cluster using CU5 build, log in by providing the username corresponding to **AZDATA_USERNAME** environment variable.
+
+### Pods and nodes metrics not being collected
+
+- **Affected releases**: New and existing clusters that are using CU5 images
+
+- **Issue and customer impact**: As a result of a security fix related to the API that `telegraf` was using to collect metrics pod and host node metrics, customers may noticed that the metrics are not being collected. This is possible in both new and existing deployments of BDC (after upgrade to CU5). As a result of the fix, Telegraf now requires a service account with cluster wide role permissions. The deployment attempts to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment/upgrade proceeds with a warning and succeeds, but the pod & node metrics will not be collected.
+
+- **Workaround**: You can ask an administrator to create the role and service account (either before or after the deployment/upgrade), and BDC will use them. [This article](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) describes how to create the required artifacts.
+
+### `azdata bdc copy-logs` command failure
+
+- **Affected releases**: [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] version *20.0.0*
+
+- **Issue and customer impact**: Implementation of *copy-logs* command is assuming `kubectl` client tool is installed on the client machine from which the command is issued. If you are issuing the command against a BDC cluster installed on OpenShift, from a client where only `oc` tool is installed, you will get an error: *An error occurred while collecting the logs: [WinError 2] The system cannot find the file specified*.
+
+- **Workaround**: Install `kubectl` tool on the same client machine and re-issue the `azdata bdc copy-logs` command. See instructions [here](deploy-big-data-tools.md) how to install `kubectl`.
+
+### Deployment with private repository
+
+- **Affected releases**: GDR1, CU1, CU2. Resolved for CU3.
+
+- **Issue and customer impact**: Upgrade from private repository has specific requirements
+
+- **Workaround**: If you use a private repository to pre-pull the images for deploying or upgrading BDC, ensure that the current build images as well as the target build images are in the private repository. This enables successful rollback, if necessary. Also, if you changed the credentials of the  private repository since the original deployment, update the corresponding secret in Kubernetes before you upgrade. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] does not support updating the credentials through `AZDATA_PASSWORD` and `AZDATA_USERNAME` environment variables. Update the secret using [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
+
+Upgrading using different repositories for current and target builds is not supported.
+
+### Upgrade may fail due to timeout
+
+- **Affected releases**: GDR1, CU1, CU2. Resolved for CU 3.
+
+- **Issue and customer impact**: An upgrade may fail due to timeout.
+
+   The following code shows what the failure might look like:
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+   This error is more likely to occur when you upgrade BDC in Azure Kubernetes Service (AKS).
+
+- **Workaround**: Increase the timeout for the upgrade. 
+
+   To increase the timeouts for an upgrade, edit the upgrade config map. To edit the upgrade config map:
+
+   1. Run the following command:
+
+      ```bash
+      kubectl edit configmap controller-upgrade-configmap
+      ```
+
+   2. Edit the following fields:
+
+       **`controllerUpgradeTimeoutInMinutes`** Designates the number of minutes to wait for the controller or controller db to finish upgrading. Default is 5. Update to at least 20.
+
+       **`totalUpgradeTimeoutInMinutes`**: Designates the combines amount of time for both the controller and controller db to finish upgrading (`controller` + `controllerdb` upgrade). Default is 10. Update to at least  40.
+
+       **`componentUpgradeTimeoutInMinutes`**: Designates the amount of time that each subsequent phase of the upgrade has to complete. Default is 30. Update to 45.
+
+   3. Save and exit
+
+   The python script below is another way to set the timeout:
+
+   ```python
+   from kubernetes import client, config
+   import json
+
+   def set_upgrade_timeouts(namespace, controller_timeout=20, controller_total_timeout=40, component_timeout=45):
+       """ Set the timeouts for upgrades
+
+       The timeout settings are as follows
+
+       controllerUpgradeTimeoutInMinutes: sets the max amount of time for the controller
+           or controllerdb to finish upgrading
+
+       totalUpgradeTimeoutInMinutes: sets the max amount of time to wait for both the
+           controller and controllerdb to complete their upgrade
+
+       componentUpgradeTimeoutInMinutes: sets the max amount of time allowed for
+           subsequent phases of the upgrade to complete
+       """
+       config.load_kube_config()
+
+       upgrade_config_map = client.CoreV1Api().read_namespaced_config_map("controller-upgrade-configmap", namespace)
+
+       upgrade_config = json.loads(upgrade_config_map.data["controller-upgrade"])
+
+       upgrade_config["controllerUpgradeTimeoutInMinutes"] = controller_timeout
+
+       upgrade_config["totalUpgradeTimeoutInMinutes"] = controller_total_timeout
+
+       upgrade_config["componentUpgradeTimeoutInMinutes"] = component_timeout
+
+       upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
+
+       client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
+   ```
+
+### Livy job submission from Azure Data Studio (ADS) or curl fail with 500 error
+
+- **Issue and customer impact**: In an HA configuration, Spark shared resources `sparkhead` are configured with multiple replicas. In this case, you might experience failures with Livy job submission from Azure Data Studio (ADS) or `curl`. To verify, `curl` to any `sparkhead` pod results in refused connection. For example, `curl https://sparkhead-0:8998/` or `curl https://sparkhead-1:8998` returns 500 error.
+
+   This happens in the following scenarios:
+
+   - Zookeeper pods, or processes for each zookeeper instance, are restarted a few times.
+   - When networking connectivity is unreliable between `sparkhead` pod and Zookeeper pods.
+
+- **Workaround**: Restarting both Livy servers.
 
    ```bash
-   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
    ```
-
-- If you are connecting from outside the cluster, use the following steps to connect:
-
-   1. Get the IP address of the node running the SQL Server master instance: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
-
-   1. Connect to SQL Server master instance using this IP address.
-
-   1. Query the **cluster_endpoint_table** in master database for other external endpoints.
-
-      If this fails with a connection timeout, it is possible the respective node is firewalled. In this case, you must contact your Kubernetes cluster administrator and ask for the node IP that is exposed externally. This could be any node. You can then use that IP and the corresponding port to connect to various services running in the cluster. For example, the administrator can find this IP by running:
-
-      ```
-      [root@m12hn01 config]# kubectl cluster-info
-      Kubernetes master is running at https://172.50.253.99:6443
-      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-      ```
-
-#### Delete cluster fails
-
-When you attempt to delete a cluster with **mssqlctl**, it fails with the following error:
-
-```
-2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
-Error processing command: "TypeError"
-delete_namespaced_service() takes 3 positional arguments but 4 were given
-Makefile:61: recipe for target 'delete-cluster' failed
-make[2]: *** [delete-cluster] Error 1
-Makefile:223: recipe for target 'deploy-clean' failed
-make[1]: *** [deploy-clean] Error 2
-Makefile:203: recipe for target 'deploy-clean' failed
-make: *** [deploy-clean] Error 2
-```
-
-A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API, which currently breaks **mssqlctl**. This only happens if you have a newer Kubernetes python client installed. You can work around this problem by directly deleting the cluster using **kubectl** (`kubectl delete ns <ClusterName>`), or you can install the older version using `sudo pip install kubernetes==8.0.1`.
-
-#### <a id="externaltablesctp24"></a> External tables
-
-- Big data cluster deployment no longer creates the **SqlDataPool** and **SqlStoragePool** external data sources. You can create these data sources manually to support data virtualization to the data pool and storage pool.
-
-   ```sql
-   -- Create the SqlDataPool data source:
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   END
-   ```
-
-- It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- If you are creating an external table to Oracle that use character data types, the Azure Data Studio virtualization wizard interprets these columns as VARCHAR in the external table definition. This will cause a failure in the external table DDL. Either modify the Oracle schema to use the NVARCHAR2 type, or create EXTERNAL TABLE statements manually and specify NVARCHAR instead of using the wizard.
-
-#### Application deployment
-
-- When calling an R, Python, or MLeap application from the RESTful API, the call times-out in 5 minutes.
-
-#### Spark and notebooks
-
-- POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.
-
-- If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
-
-- In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
-
-#### HDFS
-
-- If you right-click on a file in HDFS to preview it, you might see the following error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
-
-- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
-
-#### Security
-
-- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- AKS logs may contain SA password for big data cluster deployments.
-
-## <a id="ctp23"></a> CTP 2.3 (February)
-
-The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
-
-### What's New
-
-| New feature or update | Details |
-| :---------- | :------ |
-| Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on SQL Server big data clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](big-data-cluster-create-apps.md) |
-| VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to SQL Server big data clusters](app-deployment-extension.md) |
-| Changes to the **mssqlctl** tool command usage. | For more details see the [known issues for mssqlctl](#mssqlctlctp23). |
-| Use Sparklyr in big data cluster | [Use Sparklyr in SQL Server 2019 big data cluster](sparklyr-from-RStudio.md) |
-| Mount external HDFS-compatible storage into big data cluster with **HDFS tiering**. | See [HDFS tiering](hdfs-tiering.md). |
-| New unified connection experience for the SQL Server master instance and the HDFS/Spark Gateway. | See [SQL Server master instance and the HDFS/Spark Gateway](connect-to-big-data-cluster.md). |
-| Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
-| _Security_ endpoint names have been changed and consolidated. | **service-security-lb** and **service-security-nodeport** have been consolidated into the **endpoint-security** endpoint. |
-| _Proxy_ endpoint names have been changed and consolidated. | **service-proxy-lb** and **service-proxy-nodeport** have been consolidated into the **endpoint-service-proxy** endpoint. |
-| _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** enpoint. |
-| &nbsp; | &nbsp; |
-
-### Known issues
-
-The following sections describe the known issues and limitations with this release.
-
-#### Deployment
-
-- Upgrading a big data data cluster from a previous release is not supported.
-
-   > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
-
-- The **ACCEPT_EULA** environment variable must be "yes" or "Yes" to accept the EULA. Previous releases permitted "y" and "Y" but these are no longer accepted and will cause the deployment to fail.
-
-- The **CLUSTER_PLATFORM** environment variables does not have a default as it did in previous releases.
-
-- After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
-
-#### kubeadm deployments
-
-If you use kubeadm to deploy Kubernetes on multiple machines, the cluster administration portal does not correctly display the endpoints needed to connect to the big data cluster. If you are experiencing this problem, use the following work around to discover the service endpoint IP addresses:
-
-- If you are connecting from within the cluster, query Kubernetes for the service IP for the endpoint that you want to connect to. For example, the following **kubectl** command displays the IP address of the SQL Server master instance:
 
    ```bash
-   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
    ```
 
-- If you are connecting from outside the cluster, use the following steps to connect:
+### Create memory optimized table when master instance in an availability group
 
-   1. Get the IP address of the node running the SQL Server master instance: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
+- **Issue and customer impact**: You cannot use the primary endpoint exposed for connecting to availability group databases (listener) to create memory optimized tables.
 
-   1. Connect to SQL Server master instance using this IP address.
+- **Workaround**: To create memory optimized tables when SQL Server master instance is an availability group configuration, [connect to the SQL Server instance](deployment-high-availability.md#instance-connect), expose an endpoint, connect to the SQL Server database, and create the memory optimized tables in the session created with the new connection.
 
-   1. Query the **cluster_endpoint_table** in master database for other external endpoints.
+### Insert to external tables Active Directory authentication mode
 
-      If this fails with a connection timeout, it is possible the respective node is firewalled. In this case, you must contact your Kubernetes cluster administrator and ask for the node IP that is exposed externally. This could be any node. You can then use that IP and the corresponding port to connect to various services running in the cluster. For example, the administrator can find this IP by running:
+- **Issue and customer impact**: When SQL Server master instance is in Active Directory authentication mode, a query that selects only from external tables, where at least one of the external tables is in a storage pool, and inserts into another external table, the query returns:
 
-      ```
-      [root@m12hn01 config]# kubectl cluster-info
-      Kubernetes master is running at https://172.50.253.99:6443
-      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-      ```
-
-#### <a id="mssqlctlctp23"></a> mssqlctl
-
-- The **mssqlctl** tool changed from a verb-noun command ordering to a noun-verb order. For example, `mssqlctl create cluster` is now `mssqlctl cluster create`.
-
-- The `--name` parameter is now required when creating a cluster with `mssqlctl cluster create`.
-
-   ```bash
-   mssqlctl cluster create --name <cluster_name>
+   ```
+   Msg 7320, Level 16, State 102, Line 1
+   Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- For important information about upgrading to the latest version of big data clusters and **mssqlctl**, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+- **Workaround**: Modify the query in one of the following ways. Either join the storage pool table to a local table, or insert into the local table first, then read from the local table to insert into the data pool.
 
-#### External tables
+### Transparent Data Encryption capabilities can not be used with databases that are part of the availability group in the SQL Server master instance
 
-- It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
+- **Issue and customer impact**: In an HA configuration, databases that have encryption enabled can't be used after a failover since the master key used for encryption is different on each replica. 
 
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- If you are creating an external table to Oracle that use character data types, the Azure Data Studio virtualization wizard interprets these columns as VARCHAR in the external table definition. This will cause a failure in the external table DDL. Either modify the Oracle schema to use the NVARCHAR2 type, or create EXTERNAL TABLE statements manually and specify NVARCHAR instead of using the wizard.
-
-#### Application deployment
-
-- When calling an R, Python, or MLeap application from the RESTful API, the call times-out in 5 minutes.
-
-#### Spark and notebooks
-
-- POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.
-
-- If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
-
-- In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
-
-#### HDFS
-
-- If you right-click on a file in HDFS to preview it, you might see the following error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
-
-- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
-
-#### Security
-
-- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- AKS logs may contain SA password for big data cluster deployments.
-
-## <a id="ctp22"></a> CTP 2.2 (December 2018)
-
-The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.2.
-
-### New features
-
-- Cluster Admin Portal accessed with `/portal` (**https://\<ip-address\>:30777/portal**).
-- Master pool service name changed from `service-master-pool-lb` and `service-master-pool-nodeport` to `endpoint-master-pool`.
-- New version of **mssqlctl** and updated images.
-- Miscellaneous bug fixes and improvements.
-
-### Known issues
-
-The following sections describe the known issues and limitations with this release.
-
-#### Deployment
-
-- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
-
-- After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
-
-#### Cluster administration portal
-
-The cluster administration portal does not display the endpoint for the SQL Server master instance. To find the IP address and port for the master instance, use the following **kubectl** command:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
-#### External tables
-
-- It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### Spark and notebooks
-
-- POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.
-
-- If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
-
-- In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
-
-#### HDFS
-
-- If you right-click on a file in HDFS to preview it, you might see the following error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
-
-- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
-
-#### Security
-
-- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- AKS logs may contain SA password for big data cluster deployments.
-
-## <a id="ctp21"></a> CTP 2.1 (November 2018)
-
-The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.1.
-
-### New features
-
-- [Deploy Python and R apps](big-data-cluster-create-apps.md) in a big data cluster.
-- New version of **mssqlctl** and updated images. 
-- Miscellaneous bug fixes and improvements.
-
-### Known issues
-
-The following sections provide known issues for SQL Server big data clusters in CTP 2.1.
-
-#### Deployment
-
-- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
-
-- After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
-
-#### Admin portal
-
-- When you [create an app using msqlctl-ctp command](big-data-cluster-create-apps.md) and deploy it on a SQL Server big data cluster, the Cluster Admin Portal shows the pods where the application was deployed as "Unknown" in the Controller section of the Admin Portion.
-
-#### External tables
-
-- It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### Spark and notebooks
-
-- POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.
-
-- If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
-
-- In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
-
-#### HDFS
-
-- If you right-click on a file in HDFS to preview it, you might see the following error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
-
-- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
-
-#### Security
-
-- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- AKS logs may contain SA password for big data cluster deployments.
-
-## <a id="ctp20"></a> CTP 2.0 (October 2018)
-
-The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.0.
-
-### New features
-
-- Simple deployment experience using mssqlctl management tool
-- Native notebook experience in Azure Data Studio
-- Query HDFS files via Storage Instance of SQL Server
-- Data virtualization via master to SQL Server, Oracle, MongoDB, and HDFS
-- Data virtualization wizard for SQL Server and Oracle in Azure Data Studio
-- ML Services on master
-- Cluster administration portal that you can use for monitoring and troubleshooting
-- Spark job submit in Azure Data Studio 
-- Spark UI in the cluster administration portal
-- Volume mounting to storage classes
-- Queries over data pools from master
-- Show plan for distributed queries in SSMS
-- Pip package for mssqlctl management tool
-- Built-in deployment engine through controller service
-
-### Known issues
-
-The following sections provide known issues for SQL Server big data clusters in CTP 2.0.
-
-#### Deployment
-
-- If you are using Azure Kubernetes Service (AKS), the recommended version of Kubernetes is 1.10.*, which does not support disk resizing. You should make sure you are sizing the storage accordingly at deployment time. For more information on how to adjust storage sizes, see the [Data persistence](concept-data-persistence.md) article. For Kubernetes deployed on VMs, the recommended version is 1.11.
-
-- After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- If a big data cluster deployment fails, the associated namespace is not removed. This could result in an orphaned namespace on the cluster. A workaround is to delete the namespace manually before deploying a cluster with the same name.
-
-#### External tables
-
-- It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- If you query a storage pool external table, you might get an error if the underlying file is being copied into HDFS at the same time.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### Spark and notebooks
-
-- POD IP addresses may change in the Kubernetes environment as PODs restarts. In the scenario where the master-pod restarts, the Spark session may fail with `NoRoteToHostException`. This is caused by JVM caches that don't get refreshed with new IP addresses.
-
-- If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
-
-- In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
-
-#### HDFS
-
-- If you right-click on a file in HDFS to preview it, you might see the following error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
-
-- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
-
-#### Security
-
-- The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- AKS logs may contain SA password for big data cluster deployments.
+- **Workaround**: There is no workaround for this issue. We recommend to not enable encryption in this configuration until a fix is in place.
 
 ## Next steps
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

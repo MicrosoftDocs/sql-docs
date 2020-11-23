@@ -1,5 +1,6 @@
 ---
-title: "DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs"
+description: "DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)"
+title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
@@ -10,11 +11,12 @@ dev_langs:
   - "TSQL"
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
+
 # DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Displays the size and number of rows for each partition of a table in a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.
   
@@ -22,14 +24,16 @@ Displays the size and number of rows for each partition of a table in a [!INCLUD
   
 ## Syntax  
   
-```sql
-Show the partition stats for a table  
+```syntaxsql
+--Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments  
- [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  The one, two, or three-part name of the table to be displayed.  For two or three-part table names, the name must be enclosed with double quotes (""). Using quotes around a one-part table name is optional.  
   
 ## Permissions
@@ -56,7 +60,8 @@ DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");  
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
+
 ## See also
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
- 
+
+- [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+- [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  

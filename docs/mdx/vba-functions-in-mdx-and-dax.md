@@ -1,4 +1,5 @@
 ---
+description: "VBA functions in MDX and DAX"
 title: "VBA functions in MDX and DAX | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,11 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # VBA functions in MDX and DAX
 
 
-  This document contains a crossed reference of all VBA functions available in [Visual Basic for Applications Functions](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) that are supported in MDX; also, the list includes a note when there is functional equivalence with the DAX language.  
+  This document contains a crossed reference of all VBA functions available in [Visual Basic for Applications Functions](/office/vba/Language/Reference/functions-visual-basic-for-applications) that are supported in MDX; also, the list includes a note when there is functional equivalence with the DAX language.  
   
 ## Visual Basic for Applications Functions Reference  
   
@@ -47,10 +47,10 @@ manager: kfile
 |CVErr|Not supported||  
 |Date|MDX only|**Warning** DAX implements a different function with the same name; the DATE(Year, Month, Day) function, used to generate a date type value from the given arguments|  
 |DateAdd|MDX only|**Warning** DAX implements a different function with the same name; the DATEADD (\<dates>,<number_of_intervals>,\<interval>) function, used to shift the given dates by a number of given intervals|  
-|DateDiff]|MDX only||  
+|DateDiff|MDX only||  
 |DatePart|MDX only||  
 |DateSerial|MDX only||  
-|DateValue]|DAX, MDX||  
+|DateValue|DAX, MDX||  
 |Day|DAX, MDX||  
 |DDB|MDX only||  
 |Dir|Not supported||  
@@ -112,7 +112,7 @@ manager: kfile
 |MonthName|Not supported||  
 |MsgBox|Not supported||  
 |Now|DAX, MDX||  
-|NPer]|MDX only||  
+|NPer|MDX only||  
 |NPV|MDX only||  
 |Oct|MDX only||  
 |Partition|MDX only||  
@@ -140,7 +140,7 @@ manager: kfile
 |Str|MDX only||  
 |StrComp|MDX only||  
 |StrConv|MDX only||  
-|String]|MDX only||  
+|String|MDX only||  
 |StrReverse|Not supported||  
 |Switch|MDX only||  
 |SYD|MDX only||  
@@ -150,7 +150,7 @@ manager: kfile
 |Timer|MDX only||  
 |TimeSerial|MDX only||  
 |TimeValue|DAX, MDX||  
-|Trim]|DAX, MDX||  
+|Trim|DAX, MDX||  
 |TypeName|MDX only||  
 |UBound|Not supported||  
 |UCase|MDX only||  
@@ -159,5 +159,4 @@ manager: kfile
 |Weekday|DAX, MDX||  
 |WeekdayName|Not supported||  
 |Year|DAX, MDX||  
-  
   

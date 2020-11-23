@@ -1,4 +1,5 @@
 ---
+description: "Set the AUTO_SHRINK Database Option to OFF"
 title: "Set the AUTO_SHRINK Database Option to OFF | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Set the AUTO_SHRINK Database Option to OFF
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether the AUTO_SHRINK database option is set to OFF. Frequently shrinking and expanding a database can lead to physical fragmentation.  
   
 ## Best Practices Recommendations  

@@ -1,15 +1,16 @@
 ---
-title: "Sum Function (Report Builder and SSRS) | Microsoft Docs"
+title: "Sum Function (Report Builder) | Microsoft Docs"
+description: The Sum function in Report Builder returns the sum of all the non-null numeric values specified by the expression.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Builder Functions - Sum Function
   Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.  
@@ -56,8 +57,10 @@ Sum(expression, scope, recursive)
   
  For more information about recursive aggregates, see [Creating Recursive Hierarchy Groups &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## Example  
- The following two code examples provides a sum of line item totals in the `Order` group or data region.  
+## Examples  
+
+### A. Sum of line item totals 
+ The following two code examples provide a sum of line item totals in the `Order` group or data region.  
   
 ```  
 =Sum(Fields!LineTotal.Value, "Order")  
@@ -65,7 +68,7 @@ Sum(expression, scope, recursive)
 =Sum(CDbl(Fields!LineTotal.Value), "Order")  
 ```  
   
-## Example  
+### B. Maximum value from all nested regions 
  In a matrix data region with nested row groups Category and Subcategory, and nested column groups Year and Quarter, in a cell that belongs to the innermost row and column groups, the following expression evaluates to the maximum value from all quarters for all subcategories.  
   
 ```  

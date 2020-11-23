@@ -1,6 +1,6 @@
 ---
 title: "Creating an OLE DB Driver for SQL Server Application | Microsoft Docs"
-description: "Creating an OLE DB Driver for SQL Server application"
+description: Learn about the steps necessary to create an OLE DB Driver for SQL Server application and find additional resources.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,12 +12,11 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, application creation"
   - "applications [OLE DB Driver for SQL Server]"
   - "OLE DB, creating applications"
-author: pmasl
-ms.author: pelopes
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Creating an OLE DB Driver for SQL Server Application
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,7 +29,7 @@ manager: craigg
 3.  Processing the results.  
   
 > [!NOTE]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with [the Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with [the Win32 cryptoAPI](/windows/win32/seccng/cng-portal).  
   
 ## In This Section  
   
@@ -46,5 +45,4 @@ manager: craigg
   
 ## See Also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

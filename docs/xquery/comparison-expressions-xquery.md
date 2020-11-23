@@ -1,5 +1,6 @@
 ---
 title: "Comparison Expressions (XQuery) | Microsoft Docs"
+description: Learn how to use XQuery comparison expressions that contain general, value, node, and node order comparison operators.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Comparison Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery provides the following types of comparison operators:  
   

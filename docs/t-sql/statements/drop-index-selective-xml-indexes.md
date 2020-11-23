@@ -1,4 +1,5 @@
 ---
+description: "DROP INDEX (Selective XML Indexes)"
 title: "DROP INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -14,10 +15,9 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # DROP INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Drops an existing selective XML index or secondary selective XML index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -25,15 +25,12 @@ manager: "craigg"
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP INDEX index_name ON <object>  
     [ WITH ( <drop_index_option> [ ,...n ] ) ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-        table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_index_option> ::=  
 {  
@@ -68,7 +65,7 @@ DROP INDEX index_name ON <object>
 ## Example  
  The following example shows a DROP INDEX statement.  
   
-```  
+```sql  
 DROP INDEX sxi_index ON tbl;  
 ```  
   

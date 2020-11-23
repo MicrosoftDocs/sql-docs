@@ -1,5 +1,6 @@
 ---
 title: "Implementing a Data Processing Extension | Microsoft Docs"
+description: Find out how to create a bridge between a data source and a dataset in Reporting Services by implementing a data processing extension.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services]"
   - "extensions [Reporting Services], data processing"
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Implementing a Data Processing Extension
   Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  

@@ -1,5 +1,6 @@
 ---
-title: "Lesson 6: Use parameters with the Project Deployment Model in SSIS | Microsoft Docs"
+description: "Lesson 6: Use parameters with the Project Deployment Model in SSIS"
+title: "Lesson 6: Use parameters with the Project Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"
 ms.prod: sql
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 6: Use parameters with the Project Deployment Model in SSIS
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 SQL Server 2012 introduced a new deployment model where you can deploy your projects to the Integration Services server. The Integration Services server enables you to manage and run packages, and to configure runtime values for packages.  
   

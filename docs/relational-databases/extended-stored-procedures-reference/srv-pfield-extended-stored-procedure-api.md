@@ -1,5 +1,6 @@
 ---
 title: "srv_pfield (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_pfield in the Extended Stored Procedure API returns information about a database connection.  
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_pfield (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

@@ -1,4 +1,5 @@
 ---
+description: "Delete Foreign Key Relationships"
 title: "Delete Foreign Key Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
@@ -14,11 +15,11 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Foreign Key Relationships
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   You can delete a foreign key constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Deleting a foreign key constraint removes the requirement to enforce referential integrity.  
   
@@ -50,7 +51,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  Right-click the constraint and then click **Delete**.  
   
 3.  In the **Delete Object** dialog box, click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To delete a foreign key constraint  

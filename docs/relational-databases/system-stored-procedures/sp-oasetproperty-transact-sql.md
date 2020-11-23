@@ -1,4 +1,5 @@
 ---
+description: "sp_OASetProperty (Transact-SQL)"
 title: "sp_OASetProperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OASetProperty"
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OASetProperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets a property of an OLE object to a new value.  
   
@@ -57,7 +57,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  For more information about HRESULT Return Codes, see [OLE Automation Return Codes and Error Information](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
  The following example sets the `HostName` property (of the previously created **SQLServer** object) to a new value.  

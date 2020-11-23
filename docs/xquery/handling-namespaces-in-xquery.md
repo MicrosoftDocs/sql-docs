@@ -1,5 +1,6 @@
 ---
 title: "Handling Namespaces in XQuery | Microsoft Docs"
+description: View examples of handling namespaces in an XQuery that include how to declare new and default namespaces.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Handling Namespaces in XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides samples for handling namespaces in queries.  
   

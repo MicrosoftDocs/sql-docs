@@ -1,5 +1,6 @@
 ---
-title: "Create a Numeric Attribute (Master Data Services) | Microsoft Docs"
+description: "Create a Numeric Attribute (Master Data Services)"
+title: Create a Numeric Attribute
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "attributes [Master Data Services], creating number attributes"
   - "creating number attributes [Master Data Services]"
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Numeric Attribute (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a numeric attribute when you want users to enter a number as an attribute value.  
   

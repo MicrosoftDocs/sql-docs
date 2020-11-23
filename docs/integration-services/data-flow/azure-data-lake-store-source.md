@@ -1,4 +1,5 @@
 ---
+description: "Azure Data Lake Store Source"
 title: "Azure Data Lake Store Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/16/2018"
@@ -11,11 +12,14 @@ f1_keywords:
   - "SQL13.DTS.DESIGNER.AFPADLSSRC.F1"
   - "sql14.dts.designer.afpadlssrc.f1"
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Data Lake Store Source
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The **Azure Data Lake Store Source** component enables an SSIS package to read data from an Azure Data Lake Store. The supported file formats are: Text and Avro.
   
  The **Azure Data Lake Store Source** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

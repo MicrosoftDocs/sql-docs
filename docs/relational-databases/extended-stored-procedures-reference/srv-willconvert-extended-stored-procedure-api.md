@@ -1,5 +1,6 @@
 ---
 title: "srv_willconvert (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_willconvert determines whether a specific data type conversion is available within the ODS Library.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_willconvert (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
@@ -56,7 +56,7 @@ desttype
  For a description of each data type, see [Data Types &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
   
 > [!IMPORTANT]  
->  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://www.microsoft.com/en-us/msrc?rtc=1).  
+>  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://www.microsoft.com/msrc?rtc=1).  
   
 ## See Also  
  [srv_convert &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md)  

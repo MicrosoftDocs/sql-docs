@@ -1,5 +1,6 @@
 ---
 title: "Data for Reporting Services mobile reports | Microsoft Docs"
+description: After you import data into SQL Server Mobile Report Publisher, mobile report creation and design is the same, whether data is from Excel files or shared datasets.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -7,8 +8,8 @@ ms.technology: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Data for Reporting Services mobile reports
 The [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] data model is simple. Data is imported into [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] as a collection of datasets. Formal relationships between datasets aren't necessary. Lookups from one dataset to another work as long as the key values match. Date/time aggregations are handled by the mobile report runtime and they will match between different datasets, even if the date/time data granularity is different between datasets.   

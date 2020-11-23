@@ -1,4 +1,5 @@
 ---
+description: "Bitmap Warning Event Class"
 title: "Bitmap Warning Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bitmap Warning Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Bitmap Warning** event class can be used to monitor bitmap filter usage in queries. The event subclass can be used to report when bitmap filters have been disabled in a query.  
   
 ## Bitmap Warning Event Class Data Columns  

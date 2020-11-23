@@ -2,10 +2,8 @@
 title: "Azure Data Lake Analytics task | Microsoft Docs"
 description: You can submit U-SQL jobs to Azure Data Lake Analytics service with the Data Lake Analytics task.
 ms.custom: ""
-ms.date: "05/18/2018"
+ms.date: "06/27/2019"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
@@ -13,11 +11,13 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "yanancai"
 ms.author: "yanacai"
-ms.reviewer: "douglasl"
-manager: craigg
+ms.reviewer: maghan
 ---
-
 # Azure Data Lake Analytics task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 You can submit U-SQL jobs to Azure Data Lake Analytics service with the Data Lake Analytics task. This task is a component of the [SQL Server Integration Services (SSIS) feature pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -29,7 +29,7 @@ To add a Data Lake Analytics task to a package, drag the task from SSIS Toolbox 
 
 ## General page configuration
 
-Use the **General** page to configure the task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL language reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
+Use the **General** page to configure the task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL language reference](/u-sql/).
 
 ### Basic configuration
 
@@ -46,14 +46,16 @@ U-SQL configuration has two settings: **SourceType**, and dynamic options based 
 |**DirectInput**|Specifies the U-SQL script through the inline editor. Selecting this value displays the dynamic option, **USQLStatement**.|  
 |**FileConnection**|Specifies a local .usql file that contains the U-SQL script. Selecting this option displays the dynamic option, **FileConnection**.|  
 |**Variable**|Specifies an SSIS variable that contains the U-SQL script. Selecting this value displays the dynamic option, **SourceVariable**.|
+| &nbsp; | &nbsp; |
 
 **SourceType Dynamic Options** specifies the script content for the U-SQL query. 
 
 |SourceType|Dynamic Options|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Type the U-SQL query to be submitted in the option box directly, or select the browse button (...) to type the U-SQL query in the **Enter U-SQL Query** dialog box.|  
-|**SourceType = FileConnection**|Select an existing file connection manager, or select <**New connection...**> to create a new file connection. For related information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) and [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Select an existing variable, or select \<**New variable...**> to create a new variable. For related information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = FileConnection**|Select an existing file connection manager, or select <**New connection...**> to create a new file connection. For related information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) and [File Connection Manager Editor](../connection-manager/file-connection-manager.md).|  
+|**SourceType = Variable**|Select an existing variable, or select \<**New variable...**> to create a new variable. For related information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Add Variable](../integration-services-ssis-variables.md).|
+| &nbsp; | &nbsp; |
 
 
 ### Job configuration
@@ -71,6 +73,7 @@ Job configuration specifies U-SQL job submission properties.
   |-----------|-----------------|
   |True|The task result is based on the U-SQL job execution result. Job succeeds > task succeeds. Job fails > task fails. Task succeeds or fails > task completes.|
   |False|The task result is based on the U-SQL job submission and preparation result. Job submission succeeds and passes the preparation phase > task succeeds. Job submission fails or job fails at the preparation phase > task fails. Task succeeds or fails > task completes.|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut:** Specifies a time-out time, in seconds, for job execution. If the job times out, it is cancelled and marked as failed. This property is not available if **Synchronous** is set to false.
 
@@ -118,6 +121,7 @@ Note that the input and output paths are defined in **\@in** and **\@out** param
 |-------------|--------------|
 |User: Variable1|\@in|
 |User: Variable2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## Expression page configuration
 
@@ -127,4 +131,3 @@ You can assign all properties in the General page configuration as a property ex
 - [Azure Data Lake Analytics Connection Manager](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Azure Data Lake Store File System Task](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Azure Data Lake Store Connection Manager](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-

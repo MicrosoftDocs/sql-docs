@@ -1,5 +1,6 @@
 ---
 title: "Modify a Stored Procedure | Microsoft Docs"
+description: Learn how to modify a stored procedure in SQL Server 2019 (15.x) by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,11 +14,10 @@ helpviewer_keywords:
 ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify a Stored Procedure
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
     
 ##  <a name="Top"></a> This topic describes how to modify a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -60,7 +60,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 6.  To save the modifications to the procedure definition, on the **Query** menu, click **Execute**.  
   
 7.  To save the updated procedure definition as a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, on the **File** menu, click **Save As**. Accept the file name or replace it with a new name, and then click **Save**.  
-  
+
 > [!IMPORTANT]  
 >  Validate all user input. Do not concatenate user input before you validate it. Never execute a command constructed from unvalidated user input.  
   

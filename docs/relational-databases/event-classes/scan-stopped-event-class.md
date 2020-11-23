@@ -1,4 +1,5 @@
 ---
+description: "Scan:Stopped Event Class"
 title: "Scan:Stopped Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scan:Stopped Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Scan:Stopped event class occurs when a table or index scan stops.  
   
 ## Scan:Stopped Event Class Data Columns  

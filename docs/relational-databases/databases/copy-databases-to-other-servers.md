@@ -1,5 +1,6 @@
 ---
 title: "Copy Databases to Other Servers | Microsoft Docs"
+description: Learn how to copy a SQL Server database from one computer to another for testing, to make it available to remote-branch operations, or for other reasons.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Copy Databases to Other Servers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   It is sometimes useful to copy a database from one computer to another, whether for testing, checking consistency, developing software, running reports, creating a mirror database, or, possibly, to make the database available to remote-branch operations.  
   
  There are several ways to copy a database:  
@@ -39,6 +39,5 @@ manager: craigg
   
 -   Using the Generate Scripts Wizard to publish databases  
   
-     You can use the Generate Scripts Wizard to transfer a database from a local computer to a Web hosting provider. For more information, see [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
-  
+     You can use the Generate Scripts Wizard to transfer a database from a local computer to a Web hosting provider. For more information, see [Generate and Publish Scripts Wizard](../../ssms/scripting/generate-and-publish-scripts-wizard.md).  
   

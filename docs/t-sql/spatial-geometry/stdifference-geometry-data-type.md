@@ -1,4 +1,5 @@
 ---
+description: "STDifference (geometry Data Type)"
 title: "STDifference (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STDifference (geometry Data Type)"
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STDifference (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns an object that represents the point set from one **geometry** instance that does not lie within another **geometry** instance.
   
@@ -31,7 +31,9 @@ Returns an object that represents the point set from one **geometry** instance t
 .STDifference ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance indicating which points to remove from the instance on which `STDifference()` is being invoked.  
   

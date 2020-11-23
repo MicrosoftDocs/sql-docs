@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_601"
 title: "MSSQLSERVER_601 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 2039cc0a-9a43-4369-a04a-935e384388b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_601
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|601|  
 |Event Source|MSSQLSERVER|  

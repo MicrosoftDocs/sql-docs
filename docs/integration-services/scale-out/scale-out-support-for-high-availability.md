@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availability | Microsoft Docs"
-description: "This article describes how to configure SSIS Scale Out for high availability"
+title: "Scale Out Support for High Availability | Microsoft Docs"
+description: "Learn to configure SQL Server Integration Services (SSIS) Scale Out Master side for high availability."
 ms.custom: performance
 ms.date: "05/23/2018"
 ms.prod: sql
@@ -10,9 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Scale Out support for high availability
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 
 In SSIS Scale Out, high availability on the Scale Out Worker side is provided by executing packages with multiple Scale Out Workers.
 
@@ -23,7 +26,7 @@ Alternatively, high availability on the Scale Out Master side can be achieved wi
 To set up high availability on the Scale Out Master side with always on for SSIS catalog, do the following things:
 
 ## 1. Prerequisites
-Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) for instructions. Install the feature and tools on all cluster nodes.
+Set up a Windows failover cluster. See the blog post [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) for instructions. Install the feature and tools on all cluster nodes.
 
 ## 2. Install Scale Out Master on the primary node
 Install SQL Server Database Engine Services, Integration Services, and Scale Out Master on the primary node for Scale Out Master. 
@@ -37,14 +40,14 @@ This account must be able to access SSISDB on the secondary node in the Windows 
 
 ### 2.2 Include the DNS host name for the Scale Out Master service in the CNs of the Scale Out Master certificate
 
-This host name is used in the Scale Out Master endpoint. (Be sure to provide a DNS host name and not a server name.)
+This host name is the Scale Out Master endpoint, which is created as a clustered Generic Service in the failover cluster (see Step 7).   (Be sure to provide a DNS host name and not a server name.)
 
 ![HA master configuration](media/ha-master-config.PNG)
 
 ## 3. Install Scale Out Master on the secondary node
 Install SQL Server Database Engine Services, Integration Services, and Scale Out Master on the secondary node for Scale Out Master. 
 
-Use the same Scale Out Master certificate that you used on the primary node. Export the Scale Out Master SSL certificate on the primary node with a private key and install it to the Root certificate store of the local computer on the secondary node. Select this certificate when installing Scale Out Master on the secondary node.
+Use the same Scale Out Master certificate that you used on the primary node. Export the Scale Out Master TLS/SSL certificate on the primary node with a private key and install it to the Root certificate store of the local computer on the secondary node. Select this certificate when installing Scale Out Master on the secondary node.
 
 ![HA master config 2](media/ha-master-config2.PNG)
 
@@ -89,9 +92,9 @@ Call the stored procedure `[catalog].[update_logdb_info]` with the following par
 
 On Azure virtual machines, this configuration step requires additional steps. A full explanation of these concepts and these steps is beyond the scope of this article.
 
-1.  You have to set up an Azure domain. Windows Server Failover Clustering requires all computers in the cluster to be members of the same domain. For more info, see [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+1.  You have to set up an Azure domain. Windows Server Failover Clustering requires all computers in the cluster to be members of the same domain. For more info, see [Enable Azure Active Directory Domain Services using the Azure portal](/azure/active-directory-domain-services/create-instance).
 
-2. You have to set up an Azure load balancer. This is a requirement for the availability group listener. For more info, see [Tutorial: Load balance internal traffic with Basic Load Balancer to VMs using the Azure portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. You have to set up an Azure load balancer. This is a requirement for the availability group listener. For more info, see [Tutorial: Load balance internal traffic with Basic Load Balancer to VMs using the Azure portal](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## 8. Update the Scale Out Master address in SSISDB
 

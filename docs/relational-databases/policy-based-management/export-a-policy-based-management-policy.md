@@ -1,4 +1,5 @@
 ---
+description: "Export a Policy-Based Management Policy"
 title: "Export a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Export a Policy-Based Management Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to export a Policy-Based Management policy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
@@ -52,5 +52,4 @@ manager: craigg
 6.  In the **Export Policy** dialog box, type the path and name of the file in the address bar. Alternately, find a suitable location for the file in the dialog box's navigation pane, and then type the name of the XML file in the **File Name** box.  
   
 7.  When finished, click **Save**.  
-  
-  
+

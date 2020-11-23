@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_version_store (Transact-SQL)"
 title: "sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"
@@ -17,13 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_version_store dynamic management view"
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a virtual table that displays all version records in the version store. **sys.dm_tran_version_store** is inefficient to run because it queries the entire version store, and the version store can be very large.  
   
@@ -56,7 +56,7 @@ sys.dm_tran_version_store
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
   
 ## Examples  
  The following example uses a test scenario in which four concurrent transactions, each identified by a transaction sequence number (XSN), are running in a database that has the ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT options set to ON. The following transactions are running:  

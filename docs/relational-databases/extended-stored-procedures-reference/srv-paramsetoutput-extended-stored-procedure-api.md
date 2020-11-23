@@ -1,6 +1,7 @@
 ---
-title: "srv_paramsetoutput (Extended Stored Procedure API) | Microsoft Docs"
-ms.custom: ""
+title: "srv_paramsetoutput (Extended Stored Procedure API)"
+description: Learn how srv_paramsetoutput in the Extended Stored Procedure API sets the value of a return parameter.
+ms.custom: seo-dt-2019
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_paramsetoutput (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

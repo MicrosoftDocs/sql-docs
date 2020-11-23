@@ -1,5 +1,6 @@
 ---
 title: "Write SQL Server Audit Events to the Security Log | Microsoft Docs"
+description: Learn how to write SQL Server audit events to the Windows Security log. Find out about the limitations and restrictions to using that log.
 ms.custom: ""
 ms.date: "09/21/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---  
 # Write SQL Server Audit Events to the Security Log  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 In a high security environment, the Windows Security log is the appropriate location to write events that record object access. Other audit locations are supported but are more subject to tampering.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_set_config_enabled (Transact-SQL)"
 title: "sp_syspolicy_set_config_enabled (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_set_config_enabled (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enables or disables Policy-Based Management.  
   

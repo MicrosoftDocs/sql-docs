@@ -1,4 +1,5 @@
 ---
+description: "catalog.stop_operation (SSISDB Database)"
 title: "catalog.stop_operation (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,12 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.stop_operation (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stops a validation or instance of execution in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   

@@ -1,4 +1,5 @@
 ---
+description: "UnionAggregate (geography Data Type)"
 title: "UnionAggregate (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "UnionAggregate method (geography)"
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # UnionAggregate (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Performs a union operation on a set of geography objects.
   
@@ -30,8 +30,10 @@ Performs a union operation on a set of geography objects.
   
 UnionAggregate ( geography_operand )  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geography_operand*  
  Is a **geography** type table column that holds the set of **geography** objects on which to perform a union operation.  
   

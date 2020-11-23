@@ -1,4 +1,5 @@
 ---
+description: "View Collation Information"
 title: "View Collation Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Collation Information
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
     
 <a name="Top"></a> You can view the collation of a server, database, or column in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] using Object Explorer menu options or by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -57,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  In the query window, enter the following statement that uses the SERVERPROPERTY system function.  
   
     ```sql  
-    SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
+    SELECT CONVERT (varchar(256), SERVERPROPERTY('collation'));  
     ```  
   
 3.  Alternatively, you can use the sp_helpsort system stored procedure.  
@@ -89,7 +89,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  Alternatively, you can use the DATABASEPROPERTYEX system function.  
   
     ```sql  
-    SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
+    SELECT CONVERT (varchar(256), DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
  **To view the collation setting of a column**  
@@ -102,6 +102,20 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
+ **To view the collation settings for tables and columns**  
+
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and on the toolbar, click **New Query**.  
+  
+2.  In the query window, enter the following statement that uses the sys.columns system catalog view.  
+  
+    ```sql  
+    SELECT t.name TableName, c.name ColumnName, collation_name  
+    FROM sys.columns c  
+    inner join sys.tables t on c.object_id = t.object_id;  
+    ```  
+
+
+
 ## See Also  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   

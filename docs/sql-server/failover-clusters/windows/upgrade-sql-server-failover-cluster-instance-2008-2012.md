@@ -1,16 +1,17 @@
 ---
-title: "Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters | Microsoft Docs"
-ms.date: 01/25/2018
-ms.prod: sql  
+title: "Upgrade SQL Server instances: Windows Server 2012 & older clusters"
+description: Describes how to upgrade your SQL Server failover cluster instances running on Windows Server 2008, Windows Server 2008 R2, and Windows Server 2012. 
+ms.date: "06/15/2020"
+ms.custom: seo-lt-2019
+ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "upgrading failover clusters"
   - "clusters [SQL Server], upgrading"
   - "failover clustering [SQL Server], upgrading"
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: cawrites
+ms.author: chadam
 ---
 
 # Upgrade SQL Server instances running on Windows Server 2008/2008 R2/2012 clusters
@@ -42,8 +43,8 @@ The proper migration strategy depends on certain parameters of the original [!IN
 |                                   | Requires all server objects and VNNS | Requires all server objects and VNNS | Does not require server objects/VNNS\* | Does not require server objects/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
 | **_Availability Groups? (Y/N)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
-| **Cluster uses SQL FCI only**         | [Scenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
-| **Cluster uses standalone instances** | [Scenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+| **Cluster uses SQL FCI only**         | [Scenario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Scenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Scenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **Cluster uses standalone instances** | [Scenario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Scenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* Excluding Availability Group listener names
 
@@ -315,7 +316,7 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 ## Next steps
 - [Complete the Database Engine Upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Change the Database Compatibility Mode and Use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [Take Advantage of New SQL Server 2016 Features](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [Take Advantage of New SQL Server 2016 Features](../../what-s-new-in-sql-server-2017.md)
 - [Upgrade a SQL Server Failover Cluster Instance](upgrade-a-sql-server-failover-cluster-instance.md)
 - [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [Add Features to an Instance of SQL Server 2016 (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [Add Features to an Instance of SQL Server 2016 (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)

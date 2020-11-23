@@ -1,7 +1,7 @@
 ---
-title: "Configure settings for Data Migration Assistant (SQL Server) | Microsoft Docs"
+title: "Configure settings for Data Migration Assistant"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
-ms.custom: ""
+ms.custom: "seo-lt-2019"
 ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
@@ -12,9 +12,8 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-manager: craigg
 ---
 
 # Configure settings for Data Migration Assistant
@@ -107,7 +106,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## Stretch Database: Recommendation threshold
 
-With [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. Stretch Database targets transactional databases with large amounts of cold data. The Stretch Database recommendation, under Storage feature recommendation, first identifies tables that it thinks will benefit from this feature, and then it identifies changes that need to be made to enable the table for this feature.
+With [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. Stretch Database targets transactional databases with large amounts of cold data. The Stretch Database recommendation, under Storage feature recommendation, first identifies tables that it thinks will benefit from this feature, and then it identifies changes that need to be made to enable the table for this feature.
 
 Starting with Data Migration Assistant v2.0, you can control this threshold for a table to qualify for the Stretch Database feature using the recommendedNumberOfRows configuration value. Default value is 100,000 rows. If you want to analyze the stretch capabilities for even smaller tables, then lower the value accordingly.
 
@@ -126,7 +125,7 @@ Starting with Data Migration Assistant v2.0, you can control this threshold for 
 
 ## SQL connection timeout
 
-You can control the [SQL connection time-out](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx)
+You can control the [SQL connection time-out](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout)
 for source and target instances while running an assessment or migration, by setting the connection timeout value to a specified number of seconds. The default value is 15 seconds.
 
 ```
@@ -137,6 +136,17 @@ for source and target instances while running an assessment or migration, by set
 </appSettings>
 ```
 
+## Ignore error codes
+
+Each rule has an error code in its title. If you don't need rules and want to ignore them, use the ignoreErrorCodes property. You can specify to ignore a single error or multiple errors. To ignore multiple errors, use a semicolon, e.g., ignoreErrorCodes="46010;71501". The default value is 71501, which is associated with unresolved references identified when an object references system objects such as procedures, views, etc.
+
+```
+<workflowSettings>
+
+<assessment parallelDatabases="8" ignoreErrorCodes="71501" />
+
+</workflowSettings>
+```
 
 ## See also
 

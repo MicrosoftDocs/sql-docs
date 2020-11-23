@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Add a Bar Chart to Your Report (Report Builder) | Microsoft Docs"
+description: Learn how to use a wizard in Report Builder to create a bar chart in a Reporting Services paginated report.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -7,8 +8,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Add a Bar Chart to Your Report (Report Builder)
 In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 
@@ -21,7 +22,7 @@ A bar chart displays category data horizontally. This can help to:
   
 The following illustration shows the bar chart that you will create, with sales for 2014 and 2015 for the top five salespeople, from most to least 2015 sales.  
   
-![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
+![Screenshot of a report builder bar chart.](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  

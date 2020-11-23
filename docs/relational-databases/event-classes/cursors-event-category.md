@@ -1,4 +1,5 @@
 ---
+description: "Cursors Event Category"
 title: "Cursors Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,10 @@ helpviewer_keywords:
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursors Event Category
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Cursors** event category contains event classes that are used to monitor the behavior of cursors.  
   
 ## In This Section  

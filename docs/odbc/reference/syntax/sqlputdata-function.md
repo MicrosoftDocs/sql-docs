@@ -1,4 +1,5 @@
 ---
+description: "SQLPutData Function"
 title: "SQLPutData Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLPutData function [ODBC]"
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLPutData Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLPutData(  
       SQLHSTMT     StatementHandle,  
@@ -108,11 +108,11 @@ SQLRETURN SQLPutData(
 ## Example  
  The following sample assumes a data source name called Test. The associated database should have a table that you can create, as follows:  
   
-```  
+```sql  
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
   
-```  
+```cpp  
 // SQLPutData.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <stdio.h>  

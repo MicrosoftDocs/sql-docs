@@ -1,4 +1,5 @@
 ---
+description: "UnionAggregate (geometry Data Type)"
 title: "UnionAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -12,12 +13,11 @@ dev_langs:
 helpviewer_keywords: 
   - "UnionAggregate method (geometry)"
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # UnionAggregate (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Performs a union operation on a set of geometry objects.
   
@@ -28,7 +28,9 @@ Performs a union operation on a set of geometry objects.
 UnionAggregate ( geometry_operand )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometry_operand*  
  Is a **geometry** type table column that holds the set of **geometry** objects on which to perform a union operation.  
   

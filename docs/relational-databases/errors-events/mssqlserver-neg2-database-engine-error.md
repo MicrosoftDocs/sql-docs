@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_-2"
 title: "MSSQLSERVER_-2 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: f37a7b7d-26e1-4b9e-bcb4-57f7805393d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_-2
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|-2|  
 |Event Source|MSSQLSERVER|  

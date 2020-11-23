@@ -1,15 +1,16 @@
 ---
-title: "Area Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Area Charts (Report Builder) | Microsoft Docs"
+description: Learn how to use area charts, which display a series as a set of points connected by a line, with all the area filled in below the line in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Area Charts (Report Builder and SSRS)
   An area chart displays a series as a set of points connected by a line, with all the area filled in below the line. For more information on how to add data to an area chart, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

@@ -1,4 +1,5 @@
 ---
+description: "Move an Existing Index to a Different Filegroup"
 title: "Move an Existing Index to a Different Filegroup | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Move an Existing Index to a Different Filegroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -71,7 +71,7 @@ manager: craigg
 8.  Click **Close**.  
   
 9. On the **File** menu, select **Save**_table_name_.  
-  
+
 #### To move an existing index to a different filegroup in Object Explorer  
   
 1.  In Object Explorer, click the plus sign to expand the database that contains the table containing the index that you want to move.  

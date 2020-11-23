@@ -1,4 +1,5 @@
 ---
+description: "Installing Integration Services Versions Side by Side"
 title: "Installing Integration Services Versions Side by Side | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "interoperability and coexistence [Integration Services]"
   - "Integration Services, interoperability and coexistence"
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Installing Integration Services Versions Side by Side
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   You can install   
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) side-by-side with earlier versions of SSIS. This topic describes some limitations of side-by-side installations.  
   

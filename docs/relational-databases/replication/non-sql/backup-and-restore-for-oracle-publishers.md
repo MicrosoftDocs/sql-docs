@@ -1,4 +1,5 @@
 ---
+description: "Backup and Restore for Oracle Publishers"
 title: "Backup and Restore for Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Backup and Restore for Oracle Publishers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Follow these guidelines when backing up and restoring:  
   

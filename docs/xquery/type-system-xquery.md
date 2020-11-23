@@ -1,5 +1,6 @@
 ---
 title: "Type System (XQuery) | Microsoft Docs"
+description: Learn about the XQuery type system that includes built-in types of XML schema and types defined in the xpath-datatypes namespace.
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
@@ -23,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Type System (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery is a strongly-typed language for schema types and a weakly-typed language for untyped data. The predefined types of XQuery include the following:  
   

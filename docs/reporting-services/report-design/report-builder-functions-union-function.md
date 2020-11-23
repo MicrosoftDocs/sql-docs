@@ -1,15 +1,16 @@
 ---
-title: "Union Function (Report Builder and SSRS) | Microsoft Docs"
+title: "Union Function (Report Builder) | Microsoft Docs"
+description: Find out about this function that returns the union of all the non-null numeric values that are specified by an expression.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Builder Functions - Union Function
   Returns the union of all the non-null numeric values specified by the expression, evaluated in the given scope.  

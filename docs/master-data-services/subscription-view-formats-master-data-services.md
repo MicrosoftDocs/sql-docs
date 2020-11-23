@@ -1,5 +1,6 @@
 ---
-title: "Subscription View Formats (Master Data Services) | Microsoft Docs"
+description: "Subscription View Formats (Master Data Services)"
+title: Subscription View Formats
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Subscription View Formats (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Based on the entity or derived hierarchy you select, the following formats are available for your subscription view.  
   

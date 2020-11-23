@@ -1,6 +1,7 @@
 ---
-title: "Delete Objects | Microsoft Docs"
-ms.custom: ""
+description: "Delete Objects"
+title: "Delete Objects"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -12,15 +13,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete Objects dialog box"
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Delete Objects
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use this dialog box to delete a database or database object.  
   
-## UIElement List  
+## UI element list  
 **Object to be deleted**  
 Displays the names, types, owners, and status of the objects that are about to be deleted, as well as any messages about errors during execution.  
   

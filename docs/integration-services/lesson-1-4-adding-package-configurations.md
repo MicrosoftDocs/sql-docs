@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-4 - Adding Package Configurations"
 title: "Step 4: Adding Package Configurations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 1-4 - Adding Package Configurations
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a variety of configuration types. You can store configurations in environment variables, registry entries, user-defined variables, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables, and XML files. To provide additional flexibility, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supports the use of indirect configurations. This means that you use an environment variable to specify the location of the configuration, which in turn specifies the actual values. The packages in the Deployment Tutorial project use a combination of XML configuration files and indirect configurations. An XML configuration file can include configurations for multiple properties, and when appropriate, can be referenced by multiple packages. In this tutorial, you will use a separate configuration file for each package.  
@@ -129,6 +133,6 @@ Check the project's current Deployment Model, and set it to **Package Deployment
 [Step 5: Testing the Updated Packages](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## See Also  
-[Package Configurations](../integration-services/packages/package-configurations.md)  
-[Create Package Configurations](../integration-services/packages/create-package-configurations.md)  
-[Access to Files Used by Packages](../integration-services/security/security-overview-integration-services.md#files)  
+[Package Configurations](./packages/legacy-package-deployment-ssis.md)  
+[Create Package Configurations](./packages/legacy-package-deployment-ssis.md)  
+[Access to Files Used by Packages](../integration-services/security/security-overview-integration-services.md#files)

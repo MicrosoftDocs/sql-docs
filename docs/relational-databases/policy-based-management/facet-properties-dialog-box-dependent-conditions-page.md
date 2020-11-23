@@ -1,4 +1,5 @@
 ---
+description: "Facet Properties Dialog Box, Dependent Conditions Page"
 title: "Facet Properties Dialog Box, Dependent Conditions Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Facet Properties Dialog Box, Dependent Conditions Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to display a list of conditions that currently reference this Policy-Based Management facet.  
   
 ## Options  

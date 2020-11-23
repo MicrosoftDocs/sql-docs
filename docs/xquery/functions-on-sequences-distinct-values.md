@@ -1,5 +1,6 @@
 ---
 title: "distinct-values Function (XQuery) | Microsoft Docs"
+description: Learn how to use the distinct-values function in an XQuery to remove duplicate values from a sequence.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on Sequences - distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Removes duplicate values from the sequence specified by *$arg*. If *$arg* is an empty sequence, the function returns the empty sequence.  
   

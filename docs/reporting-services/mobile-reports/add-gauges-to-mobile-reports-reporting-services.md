@@ -1,5 +1,6 @@
 ---
 title: "Add gauges to mobile reports | Reporting Services | Microsoft Docs"
+description: You can add gauges to a Reporting Services mobile report. Gauges display a single value in a dataset by itself or compared to a goal.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -7,8 +8,8 @@ ms.technology: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add gauges to mobile reports | Reporting Services
 Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset - just the value, or the value compared to a goal.
@@ -47,7 +48,7 @@ If the mobile report has any navigators, you can bind a gauge to one or more of 
 
 2. Under Filtered by, select the navigator you want to filter the gauge.
 
-   ![mobile-report-gauge-navigator](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![Screenshot of the Main Value's Options expanded with the Filter by Product List option selected.](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## Set visual properties for a gauge
   

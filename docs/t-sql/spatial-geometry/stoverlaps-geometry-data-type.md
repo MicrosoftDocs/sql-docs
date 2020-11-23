@@ -1,4 +1,5 @@
 ---
+description: "STOverlaps (geometry Data Type)"
 title: "STOverlaps (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STOverlaps (geometry Data Type)"
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STOverlaps (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance overlaps another **geometry** instance. Returns 0 if it does not.
   
@@ -31,7 +31,9 @@ Returns 1 if a **geometry** instance overlaps another **geometry** instance. Ret
 .STOverlaps ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STOverlaps()` is invoked.  
   

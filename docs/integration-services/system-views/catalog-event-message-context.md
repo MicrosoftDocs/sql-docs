@@ -1,4 +1,5 @@
 ---
+description: "catalog.event_message_context"
 title: "catalog.event_message_context | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,12 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
-# catalog.event_message_context
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# catalog.event_message_context 
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays information about the conditions that are associated with execution event messages, for executions on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
@@ -32,9 +36,8 @@ manager: craigg
 ## Remarks  
  The following table lists the context types.  
   
-||||  
-|-|-|-|  
 |Context type value|Type Name|Description|  
+|-|-|-|  
 |10|Task|State of a task when an error occurred.|  
 |20|Pipeline|Error from a pipeline component: source, destination, or transformation component.|  
 |30|Sequence|State of a sequence.|  

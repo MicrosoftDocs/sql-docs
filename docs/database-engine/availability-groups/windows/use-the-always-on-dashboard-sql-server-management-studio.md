@@ -1,6 +1,7 @@
 ---
-title: "Use the Always On Availability Group dashboard (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Using the availability group dashboard in SSMS"
+description: "Describes how to use the Always On availability group dashboard to monitor the health of your availability group in SQL Server Management Studio (SSMS)."
+ms.custom: "seo-lt-2019"
 ms.date: "08/09/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Always On Availability Group dashboard (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Database administrators use the Always On Availability Group dashboard to obtain an at-a-glance view the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Some of the typical uses for the availability group dashboard are:  
   
@@ -34,14 +34,12 @@ manager: craigg
 -   Synchronization mode and state    
 -   Time to restore log  
   
-##  Before You Begin  
   
-### Prerequisites  
+## Prerequisites  
  You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
   
-### Security  
-  
-#### Permissions  
+ 
+### Permissions  
  Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  To start the Always On dashboard  
@@ -50,7 +48,7 @@ manager: craigg
   
 2.  Expand the **Always On High Availability** node, right-click the **Availability Groups** node, and then click **Show Dashboard**.  
   
-###  Change Always On Dashboard Options  
+##  Change Always On Dashboard Options  
  You can use the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On Dashboard behavior for automatic refreshing and enabling an auto-defined Always On policy.  
   
 1.  From the **Tools** menu, click **Options**.  
@@ -210,8 +208,7 @@ The **Availability replica** pane displays the following columns:
     -   For a secondary database, indicates that the database has not started log synchronization because of a connection issue, is being suspended, or is going through transition states during startup or a role switch.  
   
 -   **Synchronizing**:
--   
-     On a primary replica:   
+- On a primary replica:   
     - On a primary database, indicates that this database is ready to accept a scan request from a secondary database.  
     - On a secondary replica, indicates that there is active data movement going on for that secondary database. 
   
@@ -329,7 +326,7 @@ The availability group latency report is a reporting tool built into the availab
 
 SQL Agent runs the data collection and must be enabled on both the primary replica, and at least one of the secondary replicas. View the report by right-clicking the availability group > Reports > Standard Reports in **Object Explorer** of SQL Server Management Studio.  
 
-For more information, please see [Always On Availability Group latency reports](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+For more information, please see [Always On Availability Group latency reports](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports).
 
 ## Related Tasks  
   
@@ -338,5 +335,4 @@ For more information, please see [Always On Availability Group latency reports](
 ## See Also  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: "systranschemas (Transact-SQL)"
 title: "systranschemas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # systranschemas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **systranschemas** table is used to track schema changes in articles published in transactional and snapshot publications. This table is stored in both publication and subscription databases.  
   

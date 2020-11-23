@@ -1,15 +1,16 @@
 ---
-title: "RowNumber Function (Report Builder and SSRS) | Microsoft Docs"
+title: "RowNumber Function (Report Builder) | Microsoft Docs"
+description: Use the RowNumber function in Report Builder to return a running count of the number of rows for the specified scope.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Builder Functions - RowNumber Function
   Returns a running count of the number of rows for the specified scope.  

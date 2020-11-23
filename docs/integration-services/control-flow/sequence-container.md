@@ -1,4 +1,5 @@
 ---
+description: "Sequence Container"
 title: "Sequence Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,11 +16,14 @@ helpviewer_keywords:
   - "containers [Integration Services], Sequence"
   - "subset control flow [Integration Services]"
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Sequence Container
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Sequence container defines a control flow that is a subset of the package control flow. Sequence containers group the package into multiple separate control flows, each containing one or more tasks and containers that run within the overall package control flow.  
   
  The Sequence container can include multiple tasks in addition to other containers. Adding tasks and containers to a Sequence container is similar to adding them to a package, except you drag the tasks and containers to the Sequence container instead of to the package container. If the Sequence container includes more than one task or container, you can connect them using precedence constraints just as you do in a package. For more information, see [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
@@ -48,11 +52,10 @@ manager: craigg
  For information about programmatically setting these properties, see documentation for the **T:Microsoft.SqlServer.Dts.Runtime.Sequence** class in the Developer Guide.  
   
 ## Related Tasks  
- For information about how to set properties of the component in the [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For information about how to set properties of the component in the [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
 ## See Also  
  [Add or Delete a Task or a Container in a Control Flow](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connect Tasks and Containers by Using a Default Precedence Constraint](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
+ [Connect Tasks and Containers by Using a Default Precedence Constraint](./precedence-constraints.md)   
  [Integration Services Containers](../../integration-services/control-flow/integration-services-containers.md)  
-  
   

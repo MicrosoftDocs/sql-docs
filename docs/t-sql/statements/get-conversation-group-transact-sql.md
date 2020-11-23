@@ -1,4 +1,5 @@
 ---
+description: "GET CONVERSATION GROUP (Transact-SQL)"
 title: "GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -22,12 +23,11 @@ helpviewer_keywords:
   - "GET CONVERSATION GROUP statement"
   - "conversations [Service Broker], groups"
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the conversation group identifier for the next message to be received, and locks the conversation group for the conversation that contains the message. The conversation group identifier can be used to retrieve conversation state information before retrieving the message itself.  
   
@@ -35,8 +35,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
       FROM <queue>  
@@ -44,16 +43,16 @@ manager: craigg
 [ ; ]  
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ] queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WAITFOR  
  Specifies that the GET CONVERSATION GROUP statement waits for a message to arrive on the queue if no messages are currently present.  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  Is a variable used to store the conversation group ID returned by the GET CONVERSATION GROUP statement. The variable must be of type **uniqueidentifier**. If there are no conversation groups available, the variable is set to NULL.  
   
  FROM  
@@ -69,7 +68,7 @@ manager: craigg
  Is the name of the queue to get the conversation group from.  
   
  TIMEOUT *timeout*  
- Specifies the length of time, in milliseconds, that Service Broker waits for a message to arrive on the queue. This clause may only be used with the WAITFOR clause. If a statement that uses WAITFOR does not include this clause or the *timeout* is -1, the wait time is unlimited. If the timeout expires, GET CONVERSATION GROUP sets the *@conversation_group_id* variable to NULL.  
+ Specifies the length of time, in milliseconds, that Service Broker waits for a message to arrive on the queue. This clause may only be used with the WAITFOR clause. If a statement that uses WAITFOR does not include this clause or the *timeout* is -1, the wait time is unlimited. If the timeout expires, GET CONVERSATION GROUP sets the *\@conversation_group_id* variable to NULL.  
   
 ## Remarks  
   
@@ -100,7 +99,7 @@ manager: craigg
 ### A. Getting a conversation group, waiting indefinitely  
  The following example sets `@conversation_group_id` to the conversation group identifier for the next available message on `ExpenseQueue`. The command waits until a message becomes available.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 WAITFOR (  
@@ -112,7 +111,7 @@ WAITFOR (
 ### B. Getting a conversation group, waiting one minute  
  The following example sets `@conversation_group_id` to the conversation group identifier for the next available message on `ExpenseQueue`. If no message becomes available within one minute, GET CONVERSATION GROUP returns without changing the value of `@conversation_group_id`.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER  
   
 WAITFOR (  
@@ -124,7 +123,7 @@ TIMEOUT 60000 ;
 ### C. Getting a conversation group, returning immediately  
  The following example sets `@conversation_group_id` to the conversation group identifier for the next available message on `ExpenseQueue`. If no message is available, `GET CONVERSATION GROUP` returns immediately without changing `@conversation_group_id`.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 GET CONVERSATION GROUP @conversation_group_id  

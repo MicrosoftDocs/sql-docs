@@ -1,41 +1,27 @@
 ---
-title: "Create a CmdExec Job Step | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+description: "Create a CmdExec Job Step"
+title: "Create a CmdExec Job Step"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CmdExec jobs"
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a CmdExec Job Step
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 This topic describes how to create and define a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that uses an executable program or operating system command by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
-  
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To create a CmdExec job step, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -85,16 +71,15 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
         @job_name = N'Weekly Sales Data Backup',  
         @step_name = N'Set database to read only',  
         @subsystem = N'CMDEXEC',  
-        @command = C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
+        @command = 'C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
         @retry_attempts = 5,  
         @retry_interval = 5 ;  
     GO  
     ```  
   
-For more information, see [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
+For more information, see [sp_add_jobstep (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To create a CmdExec job step**  
   
 Use the **JobStep** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.  
-  

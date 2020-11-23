@@ -1,15 +1,16 @@
 ---
 title: "Managing Report Parts | Microsoft Docs"
+description: Organize report parts for multiple users and reports, with choices of flexible options for publishing, permissions, and security.
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Managing Report Parts
   Report parts can be reused in paginated reports, by multiple users and in multiple reports. Users can search for report parts on the server and add them to a report.  Users can also be informed of updates to the report part on the server, and republish new versions of a report part. Those report authoring actions can be affected by and controlled by reporting services security permissions.  This topic reviews report part properties and behavior after they are on the server.  
@@ -85,7 +86,6 @@ ms.author: maghan
 ## See Also  
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Report Server Content Management &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Troubleshoot Report Parts (Report Builder and SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

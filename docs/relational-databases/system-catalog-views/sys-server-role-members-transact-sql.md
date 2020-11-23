@@ -1,4 +1,5 @@
 ---
+description: "sys.server_role_members (Transact-SQL)"
 title: "sys.server_role_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,11 +20,10 @@ helpviewer_keywords:
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Returns one row for each member of each fixed and user-defined server role.  
   

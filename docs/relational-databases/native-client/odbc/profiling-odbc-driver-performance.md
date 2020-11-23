@@ -1,4 +1,5 @@
 ---
+description: "Profiling ODBC Driver Performance"
 title: "Profiling ODBC Driver Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -17,14 +18,12 @@ helpviewer_keywords:
   - "SQLPERF data structure"
   - "statistical information [ODBC]"
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Profiling ODBC Driver Performance
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver can profile two types of performance data:  
   
@@ -81,7 +80,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Number of SELECT statements processed after SQL_PERF_START.|  
 |SQLSelectRows|Number of rows selected after SQL_PERF_START.|  
 |Transactions|Number of user transactions after SQL_PERF_START, including rollbacks. When an ODBC application is running with SQL_AUTOCOMMIT_ON, each command is considered a transaction.|  
-|SQLPrepares|Number of [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) calls after SQL_PERF_START.|  
+|SQLPrepares|Number of [SQLPrepare Function](../../../odbc/reference/syntax/sqlprepare-function.md) calls after SQL_PERF_START.|  
 |ExecDirects|Number of **SQLExecDirect** calls after SQL_PERF_START.|  
 |SQLExecutes|Number of **SQLExecute** calls after SQL_PERF_START.|  
 |CursorOpens|Number of times the driver has opened a server cursor after SQL_PERF_START.|  
@@ -119,5 +118,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

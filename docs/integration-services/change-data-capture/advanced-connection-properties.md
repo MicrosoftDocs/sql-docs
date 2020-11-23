@@ -1,4 +1,5 @@
 ---
+description: "Advanced Connection Properties"
 title: "Advanced Connection Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Advanced Connection Properties
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Use the **Advanced Connection Properties** dialog box to add more connection parameters to the connection string.  
   
  The additional connection parameters can be any ODBC connection parameter that is supported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database instance you are using.  

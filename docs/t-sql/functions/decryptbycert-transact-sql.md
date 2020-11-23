@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYCERT (Transact-SQL)"
 title: "DECRYPTBYCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,12 +18,11 @@ helpviewer_keywords:
   - "decryption [SQL Server], certificates"
   - "DECRYPTBYCERT function"
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses the private key of a certificate to decrypt encrypted data.  
   
@@ -30,13 +30,14 @@ This function uses the private key of a certificate to decrypt encrypted data.
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_ID*  
 The ID of a certificate in the database. *certificate_ID* has an **int** data type.  
   
@@ -50,7 +51,7 @@ A variable of type **varbinary** containing data encrypted with the certificate.
 The password used to encrypt the private key of the certificate. *cert_password* must have a Unicode data format.  
   
  @cert_password  
-A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *@cert_password* must have a Unicode data format.  
+A variable of type **nchar** or **nvarchar** containing the password used to encrypt the private key of the certificate. *\@cert_password* must have a Unicode data format.  
 
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes.  
@@ -64,8 +65,8 @@ This function decrypts data with the private key of a certificate. Cryptographic
 ## Examples  
 This example selects rows from `[AdventureWorks2012].[ProtectedData04]` marked as data originally encrypted by certificate `JanainaCert02`. The example first decrypts the private key of certificate `JanainaCert02` with the password of certificate `pGFD4bb925DGvbd2439587y`. Then, the example decrypts the ciphertext with this private key. The example converts the decrypted data from **varbinary** to **nvarchar**.  
 
-```  
-SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
+```sql  
+SELECT CONVERT(NVARCHAR(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  
 FROM [AdventureWorks2012].[ProtectedData04]   
 WHERE Description   

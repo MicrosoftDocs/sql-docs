@@ -1,4 +1,5 @@
 ---
+description: "SQRT (SSIS Expression)"
 title: "SQRT (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "SQRT function"
   - "square root of given expression"
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SQRT (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Returns the square root of a numeric expression.  
   
 ## Syntax  

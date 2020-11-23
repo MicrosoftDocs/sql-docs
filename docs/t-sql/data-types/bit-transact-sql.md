@@ -1,4 +1,5 @@
 ---
+description: "bit (Transact-SQL)"
 title: "bit (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -17,11 +18,10 @@ helpviewer_keywords:
 ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bit (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   An integer data type that can take a value of 1, 0, or NULL.  
   

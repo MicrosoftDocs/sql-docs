@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;PACK_SENT (Transact-SQL)"
 title: "@@PACK_SENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -20,12 +21,11 @@ helpviewer_keywords:
   - "connections [SQL Server], packets"
   - "output packets written to network [SQL Server]"
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # &#x40;&#x40;PACK_SENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of output packets written to the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
   
@@ -33,11 +33,13 @@ manager: craigg
   
 ## Syntax  
   
-```sql
+```syntaxsql
 @@PACK_SENT  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

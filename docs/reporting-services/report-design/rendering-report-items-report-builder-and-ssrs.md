@@ -1,15 +1,16 @@
 ---
-title: "Rendering Report Items (Report Builder and SSRS) | Microsoft Docs"
+title: "Rendering Report Items (Report Builder) | Microsoft Docs"
+description: Learn how report items such as number, size, and locations affect rendering pagination in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Rendering Report Items (Report Builder and SSRS)
   The number, size, and location of report items affect how the renderers paginate the report body. Below is a description of how various report items are rendered.  

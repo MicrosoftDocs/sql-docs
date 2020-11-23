@@ -1,7 +1,8 @@
 ---
+description: "SQLExtendedFetch Function"
 title: "SQLExtendedFetch Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,15 +12,15 @@ apiname:
   - "SQLExtendedFetch"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLExtendedFetch"
 helpviewer_keywords: 
   - "SQLExtendedFetch function [ODBC]"
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLExtendedFetch Function
 **Conformance**  
@@ -33,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLExtendedFetch(  
       SQLHSTMT         StatementHandle,  

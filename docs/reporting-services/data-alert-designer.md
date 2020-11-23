@@ -1,8 +1,9 @@
 ---
 title: "Data Alert Designer | Microsoft Docs"
+description: Learn about data alert definitions and how to create and edit data alert definitions in Data Alert Designer.
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "updating, alerts"
   - "creating, data alerts"
   - "creating, alerts"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: "Configure Data Source Properties for a Paginated Report - SSRS | Microsoft Docs"
+description: Learn to configure data source properties in Reporting Services for a paginated report. Also set the properties to vary the data source connection information.
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], embedded"
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure Data Source Properties for a Paginated Report
   When you run a paginated report, the report server retrieves property information to determine how to connect to a data source. The data source type, connection string, and credential information are specified in the Data Source property pages of the published report. You can set the properties to vary the data source connection information from the original values that were specified when the report was created.  
@@ -48,7 +49,7 @@ ms.author: maghan
   
     -   If the data source does not use credentials (for example, if the data source is an XML file that is accessed from the file system), click **Credentials are not required**. You should only specify this credential type if it is valid for the data source. If you select this option for a data source that requires authentication, the connection will fail. If you select this option, be sure to configure the unattended execution account that allows the report server to connect to other computers to retrieve data or files when user credentials are not available.  
   
- For more information about configuring credentials, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). For more information about the unattended execution account, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ For more information about configuring credentials, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). For more information about the unattended execution account, see [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## See Also  
 [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   

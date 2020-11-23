@@ -1,4 +1,5 @@
 ---
+description: "STPointN (geography Data Type)"
 title: "STPointN (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointN method"
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPointN (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the specified point in a **geography** instance.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STPointN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of points in the **geography** instance.  
   

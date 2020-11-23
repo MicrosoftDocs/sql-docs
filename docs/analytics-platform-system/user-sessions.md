@@ -1,14 +1,14 @@
 ---
-title: User sessions in Analytics Platform System | Microsoft Docs"
+title: User sessions
 description: User sessions in Analytics Platform System's Parallel Data Warehouse.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # User Sessions in Analytics Platform System

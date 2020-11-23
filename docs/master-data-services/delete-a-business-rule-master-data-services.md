@@ -1,5 +1,6 @@
 ---
-title: "Delete a Business Rule (Master Data Services) | Microsoft Docs"
+description: "Delete a Business Rule (Master Data Services)"
+title: Delete a Business Rule
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "deleting business rules [Master Data Services]"
   - "business rules [Master Data Services], deleting"
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Business Rule (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a business rule when it is no longer needed.  
   

@@ -1,4 +1,5 @@
 ---
+description: "STAsBinary (geography Data Type)"
 title: "STAsBinary (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STAsBinary method"
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STAsBinary (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a **geography** instance.  
   
@@ -33,7 +33,9 @@ manager: craigg
 .STAsBinary ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
   
  CLR return type: **SqlBytes**  

@@ -1,4 +1,5 @@
 ---
+description: "Variables Window"
 title: "Variables Window | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,11 +14,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "Variables Window dialog box"
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Variables Window
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Use the **Variables** window to create and modify user-defined variables and view system variables.  
   
  By default, the **Variables** window is located below the **Connection Managers** area in the SSIS Designer, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. If you don't see the **Variables** window, click **Variables** on the **SSIS** menu to display the window.  
@@ -40,7 +44,7 @@ manager: craigg
  Select a variable from the list, and then click **Delete Variable**.  
   
  **Grid Options**  
- Click to open the **Variable Grid Options** dialog box where you can change the column selection and apply filters to the **Variables** window. For more information, see [Variable Grid Options](../integration-services/variable-grid-options.md).  
+ Click to open the **Variable Grid Options** dialog box where you can change the column selection and apply filters to the **Variables** window. For more information, see [Variable Grid Options]().  
   
  **Name**  
  View the variable name. You can update the name for user-defined variables.  
@@ -106,8 +110,7 @@ manager: craigg
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Use Variables in Packages](./integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

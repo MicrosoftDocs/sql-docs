@@ -1,5 +1,6 @@
 ---
 title: "Conditional Expressions (XQuery) | Microsoft Docs"
+description: Learn about the conditional expressions that are supported by XQuery.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Conditional Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the following conditional **if-then-else** statement:  
   

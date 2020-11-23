@@ -1,4 +1,5 @@
 ---
+description: "Modify Views"
 title: "Modify Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,10 @@ helpviewer_keywords:
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Views
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   After you define a view, you can modify its definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] without dropping and re-creating the view by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  

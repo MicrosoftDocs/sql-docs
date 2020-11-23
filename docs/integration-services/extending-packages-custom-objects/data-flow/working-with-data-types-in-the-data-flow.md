@@ -1,4 +1,5 @@
 ---
+description: "Working with Data Types in the Data Flow"
 title: "Working with Data Types in the Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "data flow components [Integration Services], mapping data types"
   - "data types [Integration Services], converting"
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Working with Data Types in the Data Flow
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   When developing a custom data flow component in Integration Services, you work constantly with data types, copying data into and out of data flow buffers and transforming values. The information in this topic helps you to choose the correct [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types, and to use the correct methods when working with them.  
   
 ## Inserting Data into the Data Flow  

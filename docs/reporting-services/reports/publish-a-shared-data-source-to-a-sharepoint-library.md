@@ -1,8 +1,9 @@
 ---
 title: "Publish a Shared Data Source to a SharePoint Library | Microsoft Docs"
+description: Learn how to publish a shared data source to a report server that is running in SharePoint integrated mode.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reports
 
 
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], publishing to a library"
   - "publishing reports [Reporting Services], to a SharePoint library"
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Publish a Shared Data Source to a SharePoint Library
   To publish a shared data source to a report server that is running in SharePoint integrated mode, you must set the report project properties in Report Designer. In the project properties, all references to servers, reports, and shared data sources must be fully qualified URLs.  
@@ -43,7 +44,7 @@ ms.author: maghan
 9. In Solution Explorer, right-click the shared data source you want to publish, and click **Deploy**. The data source is published to the location specified in **TargetDataSourceFolder**. Deployment errors appear in the Output window.  
   
     > [!NOTE]  
-    >  After you publish a shared data source to a SharePoint site, the file name extension is changed to .rsds. You can edit and manage a shared data source directly on the SharePoint site. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+    >  After you publish a shared data source to a SharePoint site, the file name extension is changed to .rsds. You can edit and manage a shared data source directly on the SharePoint site. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](/previous-versions/sql/).  
   
 ## See Also  
  [Publish a Report to a SharePoint Library](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
@@ -52,5 +53,4 @@ ms.author: maghan
  [Set Deployment Properties &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
  [Use an Office Data Connection &#40;.odc&#41; with Reports &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
-  
   

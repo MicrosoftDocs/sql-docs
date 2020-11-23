@@ -1,4 +1,5 @@
 ---
+description: "DBCC TRACESTATUS (Transact-SQL)"
 title: "DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -24,10 +25,9 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Displays the status of trace flags.
   
@@ -35,12 +35,14 @@ Displays the status of trace flags.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )   
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *trace#*  
 Is the number of the trace flag for which the status is displayed. If *trace#*, and -1 are not specified, all trace flags that are enabled for the session are displayed.
   

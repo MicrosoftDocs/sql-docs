@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_stacks (Transact-SQL)"
 title: "sys.dm_os_stacks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -17,13 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_stacks dynamic management view"
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_stacks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This dynamic management view is used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to do the following:  
   
@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 
 ## See Also  

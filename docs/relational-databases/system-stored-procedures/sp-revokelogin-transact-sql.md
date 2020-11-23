@@ -1,4 +1,5 @@
 ---
+description: "sp_revokelogin (Transact-SQL)"
 title: "sp_revokelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_revokelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the login entries from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for a Windows user or group created by using CREATE LOGIN, **sp_grantlogin**, or **sp_denylogin**.  
   

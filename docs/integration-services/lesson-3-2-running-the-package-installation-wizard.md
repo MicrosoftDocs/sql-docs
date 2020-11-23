@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-2 - Running the Package Installation Wizard"
 title: "Step 2: Running the Package Installation Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 3-2 - Running the Package Installation Wizard
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 In this task, you will run the Package Installation Wizard to deploy the packages from the Deployment Tutorial project to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Only packages can be installed in the sysssispackages table in the msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the supporting files that the deployment bundle includes will be deployed to the file system.  
   
 The Package Installation Wizard will guide you through the steps to install and configure the packages. You will install the packages to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the destination computer (the computer to which you copied the deployment bundle. You will also create a folder, C:\DeploymentTutorialInstall, in which the wizard will install the non-package files.  

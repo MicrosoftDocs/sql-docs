@@ -1,4 +1,5 @@
 ---
+description: "CDC Instance Deployment Script"
 title: "CDC Instance Deployment Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Instance Deployment Script
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The CDC Instance Deployment Script dialog box that displays the CDC instance deployment script. This script can be used to re-create the CDC database with all of its artifacts on a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
  At the completion of the deployment script, you should make sure of the following:  

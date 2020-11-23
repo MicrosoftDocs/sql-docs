@@ -1,4 +1,5 @@
 ---
+description: "sysssispackagefolders (Transact-SQL)"
 title: "sysssispackagefolders (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackagefolders system table"
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # sysssispackagefolders (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each logical folder in the folder hierarchy that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses. These folders are listed in Object Explorer of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] when you connect to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A folder lists packages that are saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or to the file system.  
   

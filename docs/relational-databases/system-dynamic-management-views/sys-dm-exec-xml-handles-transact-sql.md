@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_xml_handles (Transact-SQL)"
 title: "sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,9 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_xml_handles dynamic management function"
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)

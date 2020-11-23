@@ -1,5 +1,7 @@
 ---
+description: "Setting the Item Namespace for the GetProperties Method"
 title: "Setting the Item Namespace for the GetProperties Method | Microsoft Docs"
+Description: Learn how to retrieve properties based on either the path or the ID of an item by using the GetProperties method and the ItemNamespaceHeader SOAP header.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +14,8 @@ helpviewer_keywords:
   - "ItemNamespaceHeader SOAP header"
   - "GetProperties method"
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Setting the Item Namespace for the GetProperties Method
   You can use the <xref:ReportService2010.ItemNamespaceHeader> SOAP header in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to retrieve item properties based on two different item identifiers: the full path of the item or the ID of the item.  

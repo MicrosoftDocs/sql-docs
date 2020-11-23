@@ -1,4 +1,5 @@
 ---
+description: "Modify Data Through a View"
 title: "Modify Data Through a View | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2016"
@@ -14,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Data Through a View
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  You can modify the data of an underlying base table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  You can modify the data of an underlying base table in SQL Server by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     > **IMPORTANT!!** You cannot delete a row if the view references more than one base table. You can only update columns that belong to a single base table.  
   
 5.  To insert a row, scroll down to the end of the rows and insert the new values.  
-  
+
     > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

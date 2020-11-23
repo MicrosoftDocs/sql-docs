@@ -1,4 +1,5 @@
 ---
+description: "DECOMPRESS (Transact-SQL)"
 title: "DECOMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2018"
@@ -13,12 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "DECOMPRESS function"
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DECOMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 This function will decompress an input expression value, using the GZIP algorithm. `DECOMPRESS` will return a byte array (VARBINARY(MAX) type).  
   
@@ -26,11 +26,11 @@ This function will decompress an input expression value, using the GZIP algorith
   
 ## Syntax  
   
-```  
+```syntaxsql  
 DECOMPRESS ( expression )  
 ```  
   
-## Arguments  
+## Arguments
  *expression*  
 A **varbinary(**_n_**)**, **varbinary(max)**, or **binary(**_n_**)** value. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.  
   
@@ -44,7 +44,7 @@ A value of data type **varbinary(max)**. `DECOMPRESS` will use the ZIP algorithm
 ### A. Decompress Data at Query Time  
 This example shows how to return compressed table data:  
   
-```  
+```sql  
 SELECT _id, name, surname, datemodified,  
              CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  
 FROM player;  
@@ -53,13 +53,13 @@ FROM player;
 ### B. Display Compressed Data Using Computed Column  
 This example shows how to create a table for decompressed data storage:  
   
-```  
+```sql  
 CREATE TABLE example_table (  
-    _id int primary key identity,  
-    name nvarchar(max),  
-    surname nvarchar(max),  
-    info varbinary(max),  
-    info_json as CAST(decompress(info) as nvarchar(max))  
+    _id INT PRIMARY KEY IDENTITY,  
+    name NVARCHAR(max),  
+    surname NVARCHAR(max),  
+    info VARBINARY(max),  
+    info_json as CAST(DECOMPRESS(info) as NVARCHAR(max))  
 );  
 ```  
   

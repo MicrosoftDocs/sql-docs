@@ -1,5 +1,6 @@
 ---
 title: "sum Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function sum() that returns the sum of a sequence of numbers.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Aggregate Functions - sum
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the sum of a sequence of numbers.  
   

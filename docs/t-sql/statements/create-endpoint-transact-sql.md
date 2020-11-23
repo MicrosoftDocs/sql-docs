@@ -1,5 +1,6 @@
 ---
-title: "CREATE ENDPOINT (Transact-SQL) | Microsoft Docs"
+description: "CREATE ENDPOINT (Transact-SQL)"
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
@@ -29,12 +30,13 @@ helpviewer_keywords:
   - "SERVICE_BROKER option"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
+
 # CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates endpoints and defines their properties, including the methods available to client applications. For related permissions information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
@@ -54,7 +56,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  
 AS { TCP } (  
@@ -67,7 +69,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -102,7 +104,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *endPointName*  
  Is the assigned name for the endpoint you are creating. Use when updating or deleting the endpoint.  
   
@@ -164,7 +168,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Specifies that the endpoint is to connect using Windows Authentication protocol to authenticate the endpoints. This is the default.  
   
  If you specify an authorization method (NTLM or KERBEROS), that method is always used as the authentication protocol. The default value, NEGOTIATE, causes the endpoint to use the Windows negotiation protocol to choose either NTLM or Kerberos.  
@@ -172,13 +176,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  Specifies that the endpoint is to authenticate the connection using the certificate specified by *certificate_name* to establish identity for authorization. The far endpoint must have a certificate with the public key matching the private key of the specified certificate.  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Specifies that endpoint is to try to connect by using Windows Authentication and, if that attempt fails, to then try using the specified certificate.  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Specifies that endpoint is to try to connect by using the specified certificate and, if that attempt fails, to then try using Windows Authentication.  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  Specifies whether encryption is used in the process. The default is REQUIRED.  
   
  DISABLED  
@@ -271,7 +275,7 @@ FOR DATABASE_MIRRORING (
 ### Creating a database mirroring endpoint  
  The following example creates a database mirroring endpoint. The endpoint uses port number `7022`, although any available port number would work. The endpoint is configured to use Windows Authentication using only Kerberos. The `ENCRYPTION` option is configured to the nondefault value of `SUPPORTED` to support encrypted or unencrypted data. The endpoint is being configured to support both the partner and witness roles.  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -281,6 +285,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### Create a new endpoint pointing to a specific IPv4 address and port
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### Create a new endpoint pointing to a specific IPv6 address and port
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## See also  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

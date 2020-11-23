@@ -1,5 +1,6 @@
 ---
 title: "FLWOR Statement and Iteration (XQuery) | Microsoft Docs"
+description: Learn about the for, let, where, order by, and return clauses that make up the FLOWR iteration syntax in XQuery.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -23,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # FLWOR Statement and Iteration (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery defines the FLWOR iteration syntax. FLWOR is the acronym for `for`, `let`, `where`, `order by`, and `return`.  
   

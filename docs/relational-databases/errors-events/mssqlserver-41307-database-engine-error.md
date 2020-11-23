@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_41307"
 title: "MSSQLSERVER_41307 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56f56410-b07d-4379-b01c-702c95761070
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_41307
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|41307|  
 |Event Source|MSSQLSERVER|  

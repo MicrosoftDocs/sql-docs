@@ -1,4 +1,5 @@
 ---
+description: "GRANT Assembly Permissions (Transact-SQL)"
 title: "GRANT Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # GRANT Assembly Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Grants permissions on an assembly.  
   
@@ -27,14 +27,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name  
     TO database_principal [ ,...n ]  
     [ WITH GRANT OPTION ]  
     [ AS granting_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an assembly. Listed below.  
   

@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_41350"
 title: "MSSQLSERVER_41350 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_41350
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|41350|  
 |Event Source|MSSQLSERVER|  

@@ -1,4 +1,5 @@
 ---
+description: "IDENTITY (Function) (Transact-SQL)"
 title: "IDENTITY (Function) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # IDENTITY (Function) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Is used only in a SELECT statement with an INTO *table* clause to insert an identity column into a new table. Although similar, the IDENTITY function is not the IDENTITY property that is used with CREATE TABLE and ALTER TABLE.  
   
@@ -35,12 +35,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *data_type*  
  Is the data type of the identity column. Valid data types for an identity column are any data types of the integer data type category, except for the **bit** data type, or **decimal** data type.  
   
@@ -59,7 +60,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## Remarks  
  Because this function creates a column in a table, a name for the column must be specified in the select list in one of the following ways:  
   
-```  
+```sql  
 --(1)  
 SELECT IDENTITY(int, 1,1) AS ID_Num  
 INTO NewTable  
@@ -69,13 +70,12 @@ FROM OldTable;
 SELECT ID_Num = IDENTITY(int, 1, 1)  
 INTO NewTable  
 FROM OldTable;  
-  
 ```  
   
 ## Examples  
  The following example inserts all rows from the `Contact` table from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database into a new table called `NewContact`. The IDENTITY function is used to start identification numbers at 100 instead of 1 in the `NewContact` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'Person.NewContact', N'U') IS NOT NULL  
@@ -93,7 +93,6 @@ ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;
 GO  
 SELECT ContactNum, First, Last FROM Person.NewContact;  
 GO  
-  
 ```  
   
 ## See Also  

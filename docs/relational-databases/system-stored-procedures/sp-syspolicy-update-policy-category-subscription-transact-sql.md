@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_update_policy_category_subscription (Transact-SQL)"
 title: "sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_update_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates a policy category subscription for a specified database.  
   

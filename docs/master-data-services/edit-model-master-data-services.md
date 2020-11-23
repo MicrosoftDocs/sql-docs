@@ -1,5 +1,6 @@
 ---
-title: "Edit Model (Master Data Services) | Microsoft Docs"
+description: "Edit Model (Master Data Services)"
+title: Edit Model
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], changing name"
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Edit Model (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name and description of a model and indicate how many days you want to retain transaction logs.  
   

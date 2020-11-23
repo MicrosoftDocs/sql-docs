@@ -1,4 +1,5 @@
 ---
+description: "ntext, text, and image (Transact-SQL)"
 title: "ntext, text, and image (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -21,17 +22,15 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # ntext, text, and image (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Fixed and variable-length data types for storing large non-Unicode and Unicode character and binary data. Unicode data uses the UNICODE UCS-2 character set.
   
 >**IMPORTANT!**  **ntext**, **text**, and **image** data types will be removed in a future version of SQL Server. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), and [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) instead.  
   
-  
-## Arguments  
+## Arguments
 **ntext**  
 Variable-length Unicode data with a maximum string length of 2^30 - 1 (1,073,741,823) bytes. Storage size, in bytes, is two times the string length that is entered. The ISO synonym for **ntext** is **national text**.
   

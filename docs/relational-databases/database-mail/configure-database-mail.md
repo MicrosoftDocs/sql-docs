@@ -1,4 +1,5 @@
 ---
+description: "Configure Database Mail"
 title: "Configure Database Mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -39,10 +40,9 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Configure Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable and configure Database Mail using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
@@ -68,7 +68,7 @@ manager: craigg
 3.  Right-click **Database Mail**, and then click **Configure Database Mail**.  
   
 4.  Complete the Wizard dialogs  
-  
+
     -   [Welcome Page](#Welcome)  
   
     -   [Select Configuration Task Page](#ConfigTask)  
@@ -190,13 +190,13 @@ manager: craigg
  View or update the description of the account. The description is optional.  
   
  **E-mail address**  
- View or update the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for Microsoft SQL Server Agent may send e-mail from the address **SqlAgent@Adventure-Works.com**.  
+ View or update the name of the e-mail address for the account. This is the e-mail address that e-mail is sent from. For example, an account for Microsoft SQL Server Agent may send e-mail from the address **SqlAgent\@Adventure-Works.com**.  
   
  **Display name**  
  View or update the name to show on e-mail messages sent from this account. The display name is optional. This is the name displayed on messages sent from this account. For example, an account for SQL Server Agent may display the name **SQL Server Agent Automated Mailer** on e-mail messages.  
   
  **Reply e-mail**  
- View or update the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for SQL Server Agent may go to the database administrator, **danw@Adventure-Works.com**.  
+ View or update the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for SQL Server Agent may go to the database administrator, **danw\@Adventure-Works.com**.  
   
  **Server name**  
  View or update the name of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.<your_company>.com**. For help with this, consult your mail administrator.  
@@ -434,7 +434,7 @@ manager: craigg
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)topic.  
+ Click to open Books Online to the [Troubleshooting Database Mail](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105))topic.  
   
  [Database Mail Configuration Wizard](#DBWizard)  
   
@@ -454,5 +454,4 @@ manager: craigg
 6.  Execute the script to create the configuration.  
   
 7.  The script does not grant any database users access to the profile. Therefore, by default, the profile can only be used by members of the **sysadmin** fixed security role. For more information about granting access to profiles, see [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
-  
   

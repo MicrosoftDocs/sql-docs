@@ -1,4 +1,5 @@
 ---
+description: "STTouches (geometry Data Type)"
 title: "STTouches (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STTouches (geometry Data Type)"
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STTouches (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance spatially touches another **geometry** instance. Returns 0 if it does not.
   
@@ -31,7 +31,9 @@ Returns 1 if a **geometry** instance spatially touches another **geometry** inst
 .STTouches ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STTouches()` is invoked.  
   

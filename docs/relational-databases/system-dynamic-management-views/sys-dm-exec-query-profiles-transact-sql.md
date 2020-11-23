@@ -1,7 +1,8 @@
 ---
+description: "sys.dm_exec_query_profiles (Transact-SQL)"
 title: "sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
+ms.date: "10/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,18 +18,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_profiles dynamic management view"
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Monitors real time query progress while the query is in execution. For example, use this DMV to determine which part of the query is running slow. Join this DMV with other system DMVs using the columns identified in the description field. Or, join this DMV with other performance counters (such as Performance Monitor, xperf) by using the timestamp columns.  
   
 ## Table Returned  
- The counters returned are per operator per thread. The results are dynamic and do not match the results of existing options such as SET STATISTICS XML ON which only create output when the query is finished.  
+The counters returned are per operator per thread. The results are dynamic and do not match the results of existing options such as `SET STATISTICS XML ON` which only create output when the query is finished.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -74,23 +74,18 @@ Monitors real time query progress while the query is in execution. For example, 
   
  The I/O-related counters reported by this DMV are more granular than the ones reported by `SET STATISTICS IO` in the following two ways:  
   
--   `SET STATISTICS IO` groups the counters for all I/O to a given table together. With this DMV you will get separate counters for every node in the query plan that performs IO to the table.  
+-   `SET STATISTICS IO` groups the counters for all I/O to a given table together. With this DMV you will get separate counters for every node in the query plan that performs I/O to the table.  
   
 -   If there is a parallel scan, this DMV reports counters for each of the parallel threads working on the scan.
  
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the standard query execution statistics profiling infrastructure exists side-by-side with a lightweight query execution statistics profiling infrastructure. 
-
-`SET STATISTICS XML ON` and `SET STATISTICS PROFILE ON` always use the standard query execution statistics profiling infrastructure.
-
-To enable output in `sys.dm_exec_query_profiles` enable the query profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the *standard query execution statistics profiling infrastructure* exists side-by-side with a *lightweight query execution statistics profiling infrastructure*. `SET STATISTICS XML ON` and `SET STATISTICS PROFILE ON` always use the *standard query execution statistics profiling infrastructure*. For `sys.dm_exec_query_profiles` to be populated, one of the query profiling infrastructures must be enabled. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> The query under investigation has to start after the profiling infrastructure has been enabled. If the query is already running, staring an Extended event session will not produce results in sys.dm_exec_query_profiles.
+> The query under investigation has to start **after** the query profiling infrastructure has been enabled, enabling it after the query started will not produce results in `sys.dm_exec_query_profiles`. For more information on how to enable the query profiling infrastructures, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## Permissions  
-
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and Azure SQL Managed Instance, requires `VIEW DATABASE STATE` permission and membership of the `db_owner` database role.   
+On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
    
 ## Examples  
  Step 1: Login to a session in which you plan to run the query you will analyze with `sys.dm_exec_query_profiles`. To configure the query for profiling use `SET STATISTICS PROFILE ON`. Run your query in this same session.  
@@ -126,6 +121,4 @@ ORDER BY node_id;
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
-  
-
+ 

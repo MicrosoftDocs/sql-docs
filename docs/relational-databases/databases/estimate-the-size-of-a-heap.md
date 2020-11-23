@@ -1,5 +1,6 @@
 ---
 title: "Estimate the Size of a Heap | Microsoft Docs"
+description: Use this procedure to estimate the amount of space that is required to store data in a heap in SQL Server.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,11 +17,10 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate the Size of a Heap
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can use the following steps to estimate the amount of space that is required to store data in a heap:  
   
 1.  Specify the number of rows that will be present in the table:  
@@ -77,7 +77,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      The number of pages estimated should be rounded up to the nearest whole page.  
   
 8.  Calculate the amount of space that is required to store the data in the heap (8192 total bytes per page):  
-  
+
      Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  This calculation does not consider the following:  

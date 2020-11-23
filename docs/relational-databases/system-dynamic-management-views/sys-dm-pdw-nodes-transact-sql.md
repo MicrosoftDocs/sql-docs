@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_nodes (Transact-SQL)"
 title: "sys.dm_pdw_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -11,11 +12,10 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds information about all of the nodes in [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]. It lists one row per node in the appliance.  
   
@@ -29,6 +29,6 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |region|**nvarchar(32)**|The region where the node is running.|'PDW', 'HDINSIGHT'|  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

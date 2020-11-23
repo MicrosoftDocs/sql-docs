@@ -1,5 +1,6 @@
 ---
 title: "srv_rpcowner (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_rpcowner in the Extended Stored Procedure API returns the owner component for the current remote stored procedure.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_rpcowner (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

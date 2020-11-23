@@ -1,4 +1,5 @@
 ---
+description: "DENY Full-Text Permissions (Transact-SQL)"
 title: "DENY Full-Text Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"
@@ -18,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # DENY Full-Text Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a full-text catalog and full-text stoplists.  
   
@@ -30,7 +30,7 @@ manager: "craigg"
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
     FULLTEXT   
         {  
@@ -42,7 +42,9 @@ DENY permission [ ,...n ] ON
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   

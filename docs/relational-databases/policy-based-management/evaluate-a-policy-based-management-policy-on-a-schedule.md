@@ -1,4 +1,5 @@
 ---
+description: "Evaluate a Policy-Based Management Policy on a Schedule"
 title: "Evaluate a Policy-Based Management Policy on a Schedule | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Evaluate a Policy-Based Management Policy on a Schedule
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to evaluate a Policy-Based Management policy on a schedule in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  

@@ -1,5 +1,6 @@
 ---
-title: "Delete an Entity (Master Data Services) | Microsoft Docs"
+description: "Delete an Entity (Master Data Services)"
+title: Delete an Entity
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "entities [Master Data Services], deleting"
   - "deleting entities [Master Data Services]"
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Entity (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete an entity to delete all members and attributes for the entity.  
   

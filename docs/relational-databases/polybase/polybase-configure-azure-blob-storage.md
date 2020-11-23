@@ -1,20 +1,22 @@
 ---
-title: "Configure PolyBase to access external data in Azure Blob Storage | Microsoft Docs"
-ms.custom: ""
-ms.date: 09/24/2018
+title: "Access external data: Azure Blob Storage - PolyBase"
+description: The article uses PolyBase on a SQL Server instance with Azure Blob Storage. PolyBase is suited for ad-hoc queries of external tables and data import/export.
+ms.date: 12/13/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
+ms.custom: seo-dt-2019, seo-lt-2019
+
 ---
 # Configure PolyBase to access external data in Azure Blob Storage
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
+The article explains how to use PolyBase on a SQL Server instance to query external data in Azure Blob Storage.
 
 ## Prerequisites
 
@@ -85,7 +87,7 @@ To query the data in your Hadoop data source, you must define an external table 
                USE_TYPE_DEFAULT = TRUE))  
    ```
 
-1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
+1. Create an external table pointing to data stored in Azure storage with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

@@ -1,5 +1,6 @@
 ---
-title: "Change Tracking (Master Data Services) | Microsoft Docs"
+description: "Change Tracking (Master Data Services)"
+title: Change Tracking
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server]"
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change Tracking (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can use change tracking groups to take action when an attribute value changes. Use change tracking when you don't know what the new value will be, but instead want to know if any change occurred.  
   

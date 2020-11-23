@@ -1,15 +1,16 @@
 ---
 title: "Update Credentials in Report Data Sources from a SharePoint Site | Microsoft Docs"
+description: Learn how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
 ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Update Credentials in Report Data Sources from a SharePoint Site
   This topic describes how to update data sources embedded in reports and shared data sources that are saved in a SharePoint document library.  
@@ -38,7 +39,7 @@ ms.author: maghan
   
      The **Credentials are not required** option can also be used under some circumstances.  
   
-     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 7.  Type a user name and password.  
   
@@ -64,7 +65,7 @@ ms.author: maghan
   
      The **Credentials are not required** option can also be used under some circumstances. This option works only if the data source does not accept credentials or if you are passing credentials some other way.  
   
-     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     From some data source types, the unattended execution account must be configured on the report server. For more information, see the topic for the corresponding data source type in [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) and [Configure the Unattended Execution Account &#40;Report Server Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 5.  Type a user name and password.  
   

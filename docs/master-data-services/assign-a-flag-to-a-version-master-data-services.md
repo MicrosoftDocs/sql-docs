@@ -1,5 +1,6 @@
 ---
-title: "Assign a Flag to a Version (Master Data Services) | Microsoft Docs"
+description: "Assign a Flag to a Version (Master Data Services)"
+title: Assign a Flag to a Version
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "version flags [Master Data Services], assigning flags"
   - "versions [Master Data Services], assigning flags"
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Assign a Flag to a Version (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], assign a flag to a version to indicate the version that users or subscribing systems should use.  
   

@@ -1,7 +1,8 @@
 ---
 title: "Analyze an Actual Execution Plan | Microsoft Docs"
+description: Learn how to analyze actual graphical execution plans, which contain runtime information, by using SQL Server Management Studio Plan Analysis feature.
 ms.custom: ""
-ms.date: "08/21/2017"
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,8 +18,10 @@ ms.author: pelopes
 manager: amitban
 ---
 # Analyze an Actual Execution Plan
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-This topic describes analyze actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan Analysis feature. 
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+This topic describes how you can analyze actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan Analysis feature. This feature is available starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. We generally recommend that you [install the latest version of SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!NOTE]
 > Actual execution plans are generated after the [!INCLUDE[tsql](../../includes/tsql-md.md)] queries or batches execute. Because of this, an actual execution plan contains runtime information, such as actual number of rows, resource usage metrics and runtime warnings (if any). For more information, see [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).

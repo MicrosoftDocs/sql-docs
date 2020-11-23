@@ -1,4 +1,5 @@
 ---
+description: "Database Mail"
 title: "Database Mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Database Mail is an enterprise solution for sending e-mail messages from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Using Database Mail, your database applications can send e-mail messages to users. The messages can contain query results, and can also include files from any resource on your network.  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  Database Mail is an enterprise solution for sending e-mail messages from the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index). Using Database Mail, your database applications can send e-mail messages to users. The messages can contain query results, and can also include files from any resource on your network.  
   
-  
+> [!NOTE] 
+> Database mail is available in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index), but not in Azure SQL database Singleton and Elastic pools. 
+
 ##  <a name="Benefits"></a> Benefits of using Database Mail  
  Database Mail is designed for reliability, scalability, security, and supportability.  
   
@@ -108,7 +110,7 @@ manager: craigg
 -   A scheduled task, such as a database backup or replication event, succeeds or fails. For example, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail to notify operators if an error occurs during processing at the end of a month.  
   
   
-##  <a name="RelatedContent"></a> Database Mail Component Topics  
+##  <a name="RelatedContent"></a> See also  
   
 -   [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   
@@ -119,6 +121,5 @@ manager: craigg
 -   [Database Mail Log and Audits](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
 -   [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
-  
   
   

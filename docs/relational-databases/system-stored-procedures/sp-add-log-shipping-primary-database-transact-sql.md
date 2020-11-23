@@ -1,4 +1,5 @@
 ---
+description: "sp_add_log_shipping_primary_database (Transact-SQL)"
 title: "sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets up the primary database for a log shipping configuration, including the backup job, local monitor record, and remote monitor record.  
   

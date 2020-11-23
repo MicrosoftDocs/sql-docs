@@ -1,4 +1,5 @@
 ---
+description: "Long (geography Data Type)"
 title: "Long (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
@@ -15,22 +16,24 @@ dev_langs:
 helpviewer_keywords: 
   - "Long method"
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
+
 # Long (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The longitude property of the **geography** instance.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .Long  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Value  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **float**  
   

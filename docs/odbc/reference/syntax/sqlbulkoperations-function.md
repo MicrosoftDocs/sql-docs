@@ -1,7 +1,8 @@
 ---
+description: "SQLBulkOperations Function"
 title: "SQLBulkOperations Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,15 +12,15 @@ apiname:
   - "SQLBulkOperations"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBulkOperations"
 helpviewer_keywords: 
   - "SQLBulkOperations function [ODBC]"
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBulkOperations Function
 **Conformance**  
@@ -30,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLBulkOperations(  
      SQLHSTMT       StatementHandle,  
@@ -255,7 +256,7 @@ SQLRETURN SQLBulkOperations(
 ## Code Example  
  The following example fetches 10 rows of data at a time from the Customers table. It then prompts the user for an action to take. To reduce network traffic, the example buffer updates, deletes, and inserts locally in the bound arrays, but at offsets past the rowset data. When the user chooses to send updates, deletes, and inserts to the data source, the code sets the binding offset appropriately and calls **SQLBulkOperations**. For simplicity, the user cannot buffer more than 10 updates, deletes, or inserts.  
   
-```  
+```cpp  
 // SQLBulkOperations_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

@@ -1,4 +1,5 @@
 ---
+description: "sp_addapprole (Transact-SQL)"
 title: "sp_addapprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_addapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds an application role to the current database.  
   

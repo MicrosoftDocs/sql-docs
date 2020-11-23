@@ -1,4 +1,5 @@
 ---
+description: "IHextendedArticleView (Transact-SQL)"
 title: "IHextendedArticleView (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHextendedArticleView** view exposes information on articles in a non-SQL Server publication. This view is stored in the **distribution** database.  
   

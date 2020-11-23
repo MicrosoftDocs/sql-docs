@@ -1,6 +1,7 @@
 ---
-title: "Delete a Solution | Microsoft Docs"
-ms.custom: ""
+description: "Delete a Solution"
+title: "Delete a Solution"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -12,12 +13,11 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], deleting"
   - "deleting solutions"
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Delete a Solution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Deleting a solution permanently erases files from physical storage as well as the file items in the solution.  
   
 > [!NOTE]  

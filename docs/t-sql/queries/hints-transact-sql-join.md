@@ -1,4 +1,5 @@
 ---
+description: "Hints (Transact-SQL) - Join"
 title: "Join Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -22,15 +23,14 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Hints (Transact-SQL) - Join
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Join hints specify that the query optimizer enforce a join strategy between two tables in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For general information about joins and join syntax, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
-> [!IMPORTANT]  
->  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints, including \<join_hint>, be used only as a last resort by experienced developers and database administrators.
+> [!CAUTION]  
+>  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.
   
  **Applies to:**  
   
@@ -44,15 +44,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  
 ```  
   
-## Arguments  
- LOOP | HASH | MERGE  
- Specifies that the join in the query should use looping, hashing, or merging. Using LOOP |HASH | MERGE JOIN enforces a particular join between two tables. LOOP cannot be specified together with RIGHT or FULL as a join type.  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ LOOP \| HASH \| MERGE  
+ Specifies that the join in the query should use looping, hashing, or merging. Using LOOP |HASH | MERGE JOIN enforces a particular join between two tables. LOOP cannot be specified together with RIGHT or FULL as a join type. For more information, see [Joins](../../relational-databases/performance/joins.md).
   
  REMOTE  
  Specifies that the join operation is performed on the site of the right table. This is useful when the left table is a local table and the right table is a remote table. REMOTE should be used only when the left table has fewer rows than the right table.  
@@ -71,7 +72,7 @@ manager: craigg
 ### A. Using HASH  
  The following example specifies that the `JOIN` operation in the query is performed by a `HASH` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT p.Name, pr.ProductReviewID  
 FROM Production.Product AS p  
 LEFT OUTER HASH JOIN Production.ProductReview AS pr  
@@ -82,7 +83,7 @@ ORDER BY ProductReviewID DESC;
 ### B. Using LOOP  
  The following example specifies that the `JOIN` operation in the query is performed by a `LOOP` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory   
 FROM Sales.SalesPersonQuotaHistory AS spqh  
     INNER LOOP JOIN Sales.SalesPerson AS sp  
@@ -94,7 +95,7 @@ GO
 ### C. Using MERGE  
  The following example specifies that the `JOIN` operation in the query is performed by a `MERGE` join. The example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 SELECT poh.PurchaseOrderID, poh.OrderDate, pod.ProductID, pod.DueDate, poh.VendorID   
 FROM Purchasing.PurchaseOrderHeader AS poh  
 INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod   

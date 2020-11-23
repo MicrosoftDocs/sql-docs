@@ -1,7 +1,7 @@
 ---
-title: "Event Tracing for Windows Target | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Event Tracing for Windows Target"
+description: Learn how to use Event Tracing for Windows (ETW) as a target. Use ETW tracing either together with Extended Events or as an Extended Events event consumer.
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Event Tracing for Windows Target
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Before you use Event Tracing for Windows (ETW) as a target, we recommend that you have a working knowledge of ETW. ETW tracing is either used together with Extended Events or as an Extended Events event consumer. The following external links provide a starting point for obtaining background information about ETW:  
   
--   [Windows Events](https://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows Events](/windows/win32/events/windows-events)  
   
--   [Improve Debugging And Performance Tuning With ETW](https://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [Improve Debugging And Performance Tuning With ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)  
   
  The ETW target is a singleton target, although the target can be added to many sessions. If an event is raised on many sessions, the event will only be propagated to the ETW target one time per event occurrence. The Extended Events engine is limited to a single instance per process.  
   
@@ -54,7 +53,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |default_etw_session_logfile_size_mb|Any unsigned integer. This value is optional.|The log file size, in megabytes (MB), for the Extended Events session. The default is 20 MB.|  
 |default_etw_session_buffer_size_kb|Any unsigned integer. This value is optional.|The in-memory buffer size, in kilobytes (KB), for the Extended Events session. The default is 128 KB.|  
 |retries|Any unsigned integer.|The number of times to retry publishing the event to the ETW subsystem before dropping the event. The default is 0.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  Configuring these settings is optional. The ETW target uses default values for these settings.  
   
  The ETW target is responsible for:  
@@ -74,21 +74,23 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     > [!IMPORTANT]  
     >  The file path cannot be changed after the first session starts.  
   
--   Managed Object Format (MOF) files are in *\<your install path>*\Microsoft SQL Server\Shared. For more information, see [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) on MSDN.  
-  
+-   Managed Object Format (MOF) files are in *\<your install path>*\Microsoft SQL Server\Shared. For more information, see [Managed Object Format](/windows/win32/wmisdk/managed-object-format--mof-) on MSDN.
+
+<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+-->
+
 ## Adding the Target to a Session  
  To add the ETW target to an Extended Events session, you must include the following statement when you create or alter an event session:  
   
-```  
+```sql
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
  For more information about a full example that shows how to use the ETW target, including how to view the data, see [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## See Also  
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server Extended Events Targets](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  
-  
   

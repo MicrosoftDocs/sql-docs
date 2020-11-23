@@ -1,4 +1,5 @@
 ---
+description: "FTP Task"
 title: "FTP Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,11 +15,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "FTP task [Integration Services]"
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # FTP Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The FTP task downloads and uploads data files and manages directories on servers. For example, a package can download data files from a remote server or an Internet location as part of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package workflow. You can use the FTP task for the following purposes:  
   
 -   Copying directories and data files from one directory to another, before or after moving data, and applying transformations to the data.  
@@ -67,7 +71,7 @@ manager: craigg
 ## Related Tasks  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
  For more information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
@@ -81,7 +85,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  The FTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- **Related Topics**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Related Topics**: [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../connection-manager/ftp-connection-manager.md)  
   
  **StopOnFailure**  
  Indicate whether the FTP task terminates if an FTP operation fails.  
@@ -147,7 +151,7 @@ manager: craigg
  **RemotePath**  
  Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.  
   
- **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../connection-manager/ftp-connection-manager.md)  
   
 ### IsLocalPathVariable Dynamic Options  
   
@@ -166,5 +170,4 @@ manager: craigg
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
   

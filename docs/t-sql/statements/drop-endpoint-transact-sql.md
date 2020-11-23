@@ -1,4 +1,5 @@
 ---
+description: "DROP ENDPOINT (Transact-SQL)"
 title: "DROP ENDPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,12 +20,11 @@ helpviewer_keywords:
   - "DROP ENDPOINT statement"
   - "dropping endpoints"
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DROP ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops an existing endpoint.  
   
@@ -32,12 +32,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP ENDPOINT endPointName  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *endPointName*  
  Is the name of the endpoint to be removed.  
   
@@ -50,7 +51,7 @@ DROP ENDPOINT endPointName
 ## Examples  
  The following example removes a previously created endpoint called `sql_endpoint`.  
   
-```  
+```sql  
 DROP ENDPOINT sql_endpoint;  
 ```  
   

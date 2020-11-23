@@ -1,5 +1,6 @@
 ---
-title: "Revert the Word Breakers Used by Search to the Previous Version | Microsoft Docs"
+description: "Revert word breakers used by Search to previous version (SQL Server Search)"
+title: "Revert word breakers used by Search to previous version"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
@@ -9,11 +10,11 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Revert the Word Breakers Used by Search to the Previous Version
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# Revert word breakers used by Search to previous version (SQL Server Search)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
   
  This article does not discuss the following languages:  
@@ -75,7 +76,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Neutral|Neutral|0000|  
 |Norwegial Bokmaal|nor|1044|  
 |Punjabi|pan|1094|  
-|Brazilian Portuguese|ptb|1046|  
+|Portuguese (Brazil)|ptb|1046|  
 |Portuguese|ptg|2070|  
 |Romanian|rom|1048|  
 |Slovak|sky|1051|  
@@ -103,7 +104,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
 4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   
 1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  
@@ -374,5 +375,4 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)
- 
+ [Behavior Changes to Full-Text Search](./full-text-search.md?view=sql-server-ver15)

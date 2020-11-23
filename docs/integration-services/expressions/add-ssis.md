@@ -1,4 +1,5 @@
 ---
+description: "+ (Add) (SSIS)"
 title: "+ (Add) (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "add operator (+)"
   - "adding expressions"
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # + (Add) (SSIS)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Adds two numeric expressions.  
   
 ## Syntax  

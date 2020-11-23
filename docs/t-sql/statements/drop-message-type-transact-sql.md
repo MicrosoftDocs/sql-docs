@@ -1,4 +1,5 @@
 ---
+description: "DROP MESSAGE TYPE (Transact-SQL)"
 title: "DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,12 +20,11 @@ helpviewer_keywords:
   - "DROP MESSAGE TYPE statement"
   - "removing message types"
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DROP MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops an existing message type.  
   
@@ -32,13 +32,14 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP MESSAGE TYPE message_type_name  
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *message_type_name*  
  The name of the message type to delete. Server, database, and schema names cannot be specified.  
   
@@ -51,7 +52,7 @@ DROP MESSAGE TYPE message_type_name
 ## Examples  
  The following example deletes the `//Adventure-Works.com/Expenses/SubmitExpense` message type from the database.  
   
-```  
+```sql  
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   

@@ -1,15 +1,16 @@
 ---
-title: "Add an External Image (Report Builder and SSRS) | Microsoft Docs"
+title: "Add an External Image (Report Builder) | Microsoft Docs"
+description: Learn how to add an image to your report from an external source with appropriate verification and permissions in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add an External Image (Report Builder and SSRS)
   External images can be on a report server in native mode or SharePoint integrated mode, or on any other Web site. When you include external images in your report, you must verify that the image exists and that the report reader has permissions to access the image. For more information, see [Images &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md).  
@@ -42,6 +43,5 @@ ms.author: maghan
 ## See Also  
  [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Add a Background Image &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md)   
- [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
-  
+ [Image Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](./images-report-builder-and-ssrs.md)  
   

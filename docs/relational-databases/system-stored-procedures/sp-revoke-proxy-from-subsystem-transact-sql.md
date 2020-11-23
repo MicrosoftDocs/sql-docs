@@ -1,4 +1,5 @@
 ---
+description: "sp_revoke_proxy_from_subsystem (Transact-SQL)"
 title: "sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes access to a subsystem from a proxy.  
   

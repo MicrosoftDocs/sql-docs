@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_18264"
 title: "MSSQLSERVER_18264 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_18264
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|Microsoft SQL Server|  
 |Event ID|18264|  
 |Event Source|MSSQLENGINE|  

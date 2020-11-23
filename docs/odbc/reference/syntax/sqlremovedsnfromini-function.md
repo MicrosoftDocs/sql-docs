@@ -1,4 +1,5 @@
 ---
+description: "SQLRemoveDSNFromIni Function"
 title: "SQLRemoveDSNFromIni Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDSNFromIni function [ODBC]"
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRemoveDSNFromIni Function
 **Conformance**  
@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
      LPCSTR   lpszDSN);  

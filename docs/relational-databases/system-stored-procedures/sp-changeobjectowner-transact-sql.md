@@ -1,4 +1,5 @@
 ---
+description: "sp_changeobjectowner (Transact-SQL)"
 title: "sp_changeobjectowner (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_changeobjectowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the owner of an object in the current database.  
   

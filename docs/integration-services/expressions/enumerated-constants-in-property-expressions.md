@@ -1,4 +1,5 @@
 ---
+description: "Enumerated Constants in Property Expressions"
 title: "Enumerated Constants in Property Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,14 @@ helpviewer_keywords:
   - "enumerated constants [Integration Services]"
   - "property expressions [Integration Services]"
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Enumerated Constants in Property Expressions
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   If property expressions include values from an enumerator member list, the expression must use the numeric value of the enumerator member instead of the friendly name of the member. For example, if an expression sets the **LoggingMode** property then you must use the numeric value 2 instead of the friendly name Disabled.  
   
  This topic lists only the numeric values equivalent to friendly names of enumerators whose members are commonly used in property expressions. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] object model includes many additional enumerators that you use when you program the object model to build packages programmatically or code custom package elements such as tasks and data flow components.  

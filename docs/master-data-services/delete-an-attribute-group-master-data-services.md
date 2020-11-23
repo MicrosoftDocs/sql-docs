@@ -1,5 +1,6 @@
 ---
-title: "Delete an Attribute Group (Master Data Services) | Microsoft Docs"
+description: "Delete an Attribute Group (Master Data Services)"
+title: Delete an Attribute Group
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "deleting attribute groups [Master Data Services]"
   - "attribute groups [Master Data Services], deleting"
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Attribute Group (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete an attribute group when you no longer need the tab to display in the **Explorer** functional area of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

@@ -1,4 +1,5 @@
 ---
+description: "Enable or Disable Data Collection"
 title: "Enable or Disable Data Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Enable or Disable Data Collection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable or disable data collection in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
@@ -44,7 +44,7 @@ manager: craigg
 1.  In Object Explorer, expand the **Management** node.  
   
 2.  Right-click **Data Collection**, and then click **Enable Data Collection**.  
-  
+
 #### To disable the data collector  
   
 1.  In Object Explorer, expand the **Management** node.  

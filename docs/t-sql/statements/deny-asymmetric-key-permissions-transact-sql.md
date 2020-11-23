@@ -1,4 +1,5 @@
 ---
+description: "DENY Asymmetric Key Permissions (Transact-SQL)"
 title: "DENY Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on an asymmetric key.  
    
@@ -31,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   
@@ -40,7 +40,9 @@ DENY { permission  [ ,...n ] }
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an asymmetric key. Listed below.  
   

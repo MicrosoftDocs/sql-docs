@@ -1,4 +1,5 @@
 ---
+description: "XACT_STATE (Transact-SQL)"
 title: "XACT_STATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -20,13 +21,12 @@ helpviewer_keywords:
   - "transactions [SQL Server], state"
   - "active transactions"
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XACT_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Is a scalar function that reports the user transaction state of a current running request. XACT_STATE indicates whether the request has an active user transaction, and whether the transaction is capable of being committed.  
   
@@ -34,10 +34,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 XACT_STATE()  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Return Type  
  **smallint**  
   
@@ -55,7 +59,7 @@ XACT_STATE()
 ## Examples  
  The following example uses `XACT_STATE` in the `CATCH` block of a `TRY...CATCH` construct to determine whether to commit or roll back a transaction. Because `SET XACT_ABORT` is `ON`, the constraint violation error causes the transaction to enter an uncommittable state.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   

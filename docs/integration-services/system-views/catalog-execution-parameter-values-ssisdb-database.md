@@ -1,4 +1,5 @@
 ---
+description: "catalog.execution_parameter_values (SSISDB Database)"
 title: "catalog.execution_parameter_values (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -8,12 +9,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.execution_parameter_values (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the actual parameter values that are used by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages during an instance of execution.  
   

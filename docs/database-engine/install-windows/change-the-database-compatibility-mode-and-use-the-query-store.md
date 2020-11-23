@@ -1,7 +1,8 @@
 ---
-title: "Change the Database Compatibility Level and Use the Query Store | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/06/2019"
+title: "Use Query Store after upgrade"
+description: This article explains the place of using the query store to establish a baseline and changing the database compatibility level in a SQL Server upgrade.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -11,16 +12,15 @@ helpviewer_keywords:
   - "upgrading SQL Server, migrating query plans"
   - "plan guides [SQL Server], migrating query plans"
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Change the Database Compatibility Level and use the Query Store
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], some changes are only enabled once the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) has been changed. This was done for several reasons:  
+In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, some changes are only enabled once the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) has been changed. This was done for several reasons:  
   
 - Since upgrade is a one-way operation (it is not possible to downgrade the file format), there is value in separating the enablement of new features to a separate operation within the database. It is possible to revert a setting to a prior database compatibility level.  The new model reduces the number of things that must happen during an outage window.  
   
@@ -40,7 +40,7 @@ The upgrade process to enable new query processor functionality is related to th
   
 The recommended workflow for upgrading the query processor to the latest version of the code is documented in the [Keep performance stability during the upgrade to newer SQL Server section of Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), as seen below.  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![Diagram showing the recommended workflow for upgrading the query processor to the latest version of the code.](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, users can be guided through the recommended workflow using the Query Tuning Assistant. For more information, see [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Assembly Permissions (Transact-SQL)"
 title: "REVOKE Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Assembly Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on an assembly.  
   
@@ -26,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ASSEMBLY :: assembly_name   
@@ -35,7 +35,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     [ AS revoking_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant or deny the specified permission will be revoked. The permission itself will not be revoked.  
   

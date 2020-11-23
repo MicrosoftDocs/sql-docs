@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_1793"
 title: "MSSQLSERVER_1793 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -9,15 +10,14 @@ ms.topic: "language-reference"
 ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_1793
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|1793|  
 |Event Source|MSSQLSERVER|  

@@ -1,4 +1,5 @@
 ---
+description: "Manage an Oracle CDC Service"
 title: "Manage an Oracle CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -10,11 +11,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Manage an Oracle CDC Service
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   You can use the CDC Service Configuration Console to manage a specific CDC Service.  
   
  **To select the CDC service you want to work with**  

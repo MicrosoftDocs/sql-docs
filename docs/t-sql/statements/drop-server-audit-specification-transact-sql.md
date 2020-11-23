@@ -1,4 +1,5 @@
 ---
+description: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL)"
 title: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,12 +18,11 @@ helpviewer_keywords:
   - "audits [SQL Server], specification"
   - "DROP SERVER AUDIT SPECIFICATION statement"
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops a server audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -30,13 +30,14 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  Name of an existing server audit specification object.  
   
@@ -49,7 +50,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 ## Examples  
  The following example drops a server audit specification called `HIPAA_Audit_Specification`.  
   
-```  
+```sql  
 DROP SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification;  
 GO  
 ```  

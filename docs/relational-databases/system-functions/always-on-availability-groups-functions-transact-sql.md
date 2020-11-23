@@ -1,4 +1,5 @@
 ---
+description: "Always On Availability Groups Functions (Transact-SQL)"
 title: "Always On Availability Groups Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -12,10 +13,9 @@ dev_langs:
 ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Always On Availability Groups Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following Always On Availability Groups functions.  
   

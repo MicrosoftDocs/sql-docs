@@ -1,8 +1,9 @@
 ---
-title: "Formatting Axis Labels on a Chart (Report Builder and SSRS) | Microsoft Docs"
+title: "Formatting Axis Labels on a Chart (Report Builder) | Microsoft Docs"
+description: Learn how to format axis labels on a chart using a dialog box or by using the properties pane to categorize and display relationships in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -25,8 +26,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Formatting Axis Labels on a Chart (Report Builder and SSRS)
   Coordinate-based chart types (column, bar, area, point, line, and range) have two axes that are used to categorize and display data relationships. Different types of formatting will be applied to each axis.  
@@ -101,7 +102,7 @@ ms.author: maghan
   
  There are two ways to set a scalar axis:  
   
--   Select the **Scalar axis** option in the **Axis Properties** dialog box. This will add numeric or date/time values to the axis where no data grouping values exist. For more information, see [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Select the **Scalar axis** option in the **Axis Properties** dialog box. This will add numeric or date/time values to the axis where no data grouping values exist. For more information, see [Axis Properties Dialog Box, Axis Options &#40;Report Builder and SSRS&#41;](/previous-versions/sql/).  
   
 -   Select a field or type an expression for the **Category field** option in the **Series Properties** dialog box. The chart will add axis intervals for all values in the category field you specified.  
   
@@ -123,5 +124,4 @@ ms.author: maghan
  [Formatting a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
-  
   

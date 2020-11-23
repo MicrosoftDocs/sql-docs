@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2-1 - Building the Deployment Utility"
 title: "Step 1: Building the Deployment Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lesson 2-1 - Building the Deployment Utility
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 In this task, you will configure and build a deployment utility for the Deployment Tutorial project.  
   
 Before you can build the deployment utility, you must modify the properties of the Deployment Tutorial project. You will use the **Deployment Tutorial Property Pages** dialog box to configure these properties. In this dialog box, you must enable the ability to update configurations during deployment and specify that the build process generates a deployment utility. After you set the properties, you will build the project.  
@@ -59,7 +63,6 @@ Before you can build the deployment utility, you must modify the properties of t
 [Step 2: Verifying the Deployment Bundle](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## See Also  
-[Create a Deployment Utility](../integration-services/packages/create-a-deployment-utility.md)  
-  
+[Create a Deployment Utility](./packages/legacy-package-deployment-ssis.md)  
   
   

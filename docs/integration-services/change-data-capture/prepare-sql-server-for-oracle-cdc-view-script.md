@@ -1,4 +1,5 @@
 ---
+description: "Prepare SQL Server for Oracle CDC-View Script"
 title: "Prepare SQL Server for Oracle CDC-View Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,11 +9,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Prepare SQL Server for Oracle CDC-View Script
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   This dialog box shows the Prepare SQL script that creates the MSXDBCDC database. This database is must be on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance for it to be used with Oracle CDC for SQL Server.  
   
  Do the following in the Prepare SQL Server Script dialog box.  

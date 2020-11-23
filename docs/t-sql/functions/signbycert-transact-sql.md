@@ -1,4 +1,5 @@
 ---
+description: "SIGNBYCERT (Transact-SQL)"
 title: "SIGNBYCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,12 +22,11 @@ helpviewer_keywords:
   - "SIGNBYCERT function"
   - "cryptography [SQL Server], certificates"
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SIGNBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Signs text with a certificate and returns the signature.  
   
@@ -34,16 +34,17 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_ID*  
  Is the ID of a certificate in the current database. *certificate_ID* is **int**.  
   
- *@cleartext*  
+ *\@cleartext*  
  Is a variable of type **nvarchar**, **char**, **varchar**, or **nchar** that contains data that will be signed.  
   
  **'** *password* **'**  
@@ -58,8 +59,8 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## Examples  
  The following example signs the text in `@SensitiveData` with certificate `ABerglundCert07`, having first decrypted the certificate with password "pGFD4bb925DGvbd2439587y". It then inserts the cleartext and the signature in table `SignedData04`.  
   
-```  
-DECLARE @SensitiveData nvarchar(max);  
+```sql  
+DECLARE @SensitiveData NVARCHAR(max);  
 SET @SensitiveData = N'Saddle Price Points are   
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29';  
 INSERT INTO [SignedData04]  

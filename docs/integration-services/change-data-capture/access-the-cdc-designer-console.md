@@ -1,4 +1,5 @@
 ---
+description: "Access the CDC Designer Console"
 title: "Access the CDC Designer Console | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -10,11 +11,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "accMsDes"
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Access the CDC Designer Console
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   You can access the CDC Designer Console from the computer where you installed the console. For more information about installation, see Installation.  
   
  When you open the CDC Designer Console, the Connect to SQL Server dialog box opens.  

@@ -1,5 +1,6 @@
 ---
-title: "Create a Version Flag (Master Data Services) | Microsoft Docs"
+description: "Create a Version Flag (Master Data Services)"
+title: Create a Version Flag
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,13 +13,12 @@ helpviewer_keywords:
   - "version flags [Master Data Services], creating"
   - "versions [Master Data Services], creating flags"
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Version Flag (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a version flag to assign to a version. The flag can indicate the version that users or subscribing systems should use.  
   

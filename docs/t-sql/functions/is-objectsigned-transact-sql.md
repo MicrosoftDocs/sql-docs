@@ -1,4 +1,5 @@
 ---
+description: "IS_OBJECTSIGNED (Transact-SQL)"
 title: "IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/10/2016"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IS_OBJECTSIGNED function"
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # IS_OBJECTSIGNED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indicates whether an object is signed by a specified certificate or asymmetric key.  
   
@@ -28,31 +28,32 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 IS_OBJECTSIGNED (   
 'OBJECT', @object_id, @class, @thumbprint  
   )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'OBJECT'**  
  The type of securable class.  
   
- *@object_id*  
- The object_id of the object being tested. *@object_id* is type **int**.  
+ *\@object_id*  
+ The object_id of the object being tested. *\@object_id* is type **int**.  
   
- *@class*  
+ *\@class*  
  The class of the object:  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- *@class* is **sysname**.  
+ *\@class* is **sysname**.  
   
- *@thumbprint*  
- The SHA thumbprint of the object. *@thumbprint* is type **varbinary(32)**.  
+ *\@thumbprint*  
+ The SHA thumbprint of the object. *\@thumbprint* is type **varbinary(32)**.  
   
 ## Returned Types  
  **int**  
@@ -74,7 +75,7 @@ IS_OBJECTSIGNED (
 ### A. Displaying extended properties on a database  
  The following example tests if the spt_fallback_db table in the **master** database is signed by the schema signing certificate.  
   
-```  
+```sql  
 USE master;  
 -- Declare a variable to hold a thumbprint and an object name  
 DECLARE @thumbprint varbinary(20), @objectname sysname;  

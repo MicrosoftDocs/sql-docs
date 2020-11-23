@@ -1,5 +1,6 @@
 ---
 title: "Generate Siblings with a Nested AUTO Mode Query | Microsoft Docs"
+description: Learn how to generate XML siblings by using a nested AUTO mode query as an alternative to using EXPLICIT mode.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Generate Siblings with a Nested AUTO Mode Query
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following example shows how to generate siblings by using a nested AUTO mode query. The only other way to generate such XML is to use the EXPLICIT mode. However, this can be cumbersome.  
   
 ## Example  

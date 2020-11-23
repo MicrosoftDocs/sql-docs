@@ -1,4 +1,5 @@
 ---
+description: "sp_replcounters (Transact-SQL)"
 title: "sp_replcounters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,12 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replcounters"
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replcounters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns replication statistics about latency, throughput, and transaction count for each published database. This stored procedure is executed at the Publisher on any database.  
   

@@ -1,57 +1,39 @@
 ---
-title: "Create an availability group using Transact-SQL (T-SQL)"
-description: "Steps to creating an Always On availability group using Transact-SQL (T-SQL). "
-ms.custom: "seodec18"
+title: "Create an availability group with Transact-SQL (T-SQL)"
+description: "Use Transact-SQL to create and configure an availability group on instances of SQL Server 2019 (15.x) on which the Always On availability groups feature is enabled."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], creating"
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create an Always On availability group using Transact-SQL (T-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use [!INCLUDE[tsql](../../../includes/tsql-md.md)] to create and configure an availability group on instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] on which the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature is enabled. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  
 >  For an introduction to availability groups, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   **Before you begin:**  
-  
-     [Prerequisites](#PrerequisitesRestrictions)  
-  
-     [Security](#Security)  
-  
-     [Summary of Tasks and Corresponding Transact-SQL Statements](#SummaryTsqlStatements)  
-  
--   **To create and configure an availability group, using:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Example:**  [Configuring an Availability Group that Uses Windows Authentication](#ExampleConfigAGWinAuth)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
 > [!NOTE]  
 >  As an alternative to using [!INCLUDE[tsql](../../../includes/tsql-md.md)], you can use the Create Availability Group wizard or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md), or [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
- We strongly recommend that you read this section before attempting to create your first availability group.  
-  
-###  <a name="PrerequisitesRestrictions"></a> Prerequisites, Restrictions, and Recommendations  
+## <a name="PrerequisitesRestrictions"></a> Prerequisites, Restrictions, and Recommendations  
   
 -   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance meets all other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
+##  <a name="TsqlProcedure"></a> Using Transact-SQL to Create and Configure an Availability Group 
+
 ###  <a name="SummaryTsqlStatements"></a> Summary of Tasks and Corresponding Transact-SQL Statements  
  The following table lists the basic tasks involved in creating and configuring an availability group and indicates which [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements to use for these tasks. The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks must be performed in the sequence in which they are presented in the table.  
   
@@ -63,10 +45,9 @@ manager: craigg
 |Prepare the secondary database|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) and [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Create backups on the server instance that hosts the primary replica.<br /><br /> Restore backups on each server instance that hosts a secondary replica, using RESTORE WITH NORECOVERY.|  
 |Start data synchronization by joining each secondary database to availability group|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Execute on each server instance that hosts a secondary replica.|  
   
- *To perform a given task, connect to the indicated server instance or instances.  
-  
-##  <a name="TsqlProcedure"></a> Using Transact-SQL to Create and Configure an Availability Group  
-  
+ *To perform a given task, connect to the indicated server instance or instances.   
+ 
+### Using Transact-SQL 
 > [!NOTE]  
 >  For a sample configuration procedure containing code examples of each these [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements, see [Example: Configuring an Availability Group that Uses Windows Authentication](#ExampleConfigAGWinAuth).  
   
@@ -100,7 +81,7 @@ manager: craigg
   
     1.  The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] example creates these databases and alters them to use the full recovery model:  
   
-        ```  
+        ```sql  
         -- Create sample databases:  
         CREATE DATABASE MyDb1;  
         GO  
@@ -115,18 +96,17 @@ manager: craigg
   
     2.  The following code example creates a full database backup of *MyDb1* and *MyDb2*. This code example uses a fictional backup share, \\\\*FILESERVER*\\*SQLbackups*.  
   
-        ```  
+        ```sql  
         -- Backup sample databases:  
         BACKUP DATABASE MyDb1   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
   
         BACKUP DATABASE MyDb2   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
-  
         ```  
   
  [&#91;TopOfExample&#93;](#ExampleConfigAGWinAuth)  
@@ -143,26 +123,24 @@ manager: craigg
   
 1.  Create a database mirroring endpoint named *dbm_endpoint* on the server instance on which you plan to create the availability group (this is an instance named `AgHostInstance` on `COMPUTER01`). This endpoint uses port 7022. Note that the server instance on which you create the availability group will host the primary replica.  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the primary replica:  
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 2.  Create an endpoint *dbm_endpoint* on the server instance that will host the secondary replica (this is the default server instance on `COMPUTER02`). This endpoint uses port 5022.  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the secondary replica:   
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=5022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 3.  > [!NOTE]  
@@ -172,7 +150,7 @@ manager: craigg
   
      The following code example shows the [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements for creating a login and granting it permission on an endpoint. The domain account of the remote server instance is represented here as *domain_name*\\*user_name*.  
   
-    ```  
+    ```sql  
     -- If necessary, create a login for the service account, domain_name\user_name  
     -- of the server instance that will host the other replica:  
     USE master;  
@@ -189,9 +167,8 @@ manager: craigg
   
      The following code example creates an availability group named *MyAG* on the server instance on which the sample databases, *MyDb1* and *MyDb2*, were created. The local server instance, `AgHostInstance`, on *COMPUTER01* is specified first. This instance will host the initial primary replica. A remote server instance, the default server instance on *COMPUTER02*, is specified to host a secondary replica. Both availability replica are configured to use asynchronous-commit mode with manual failover (for asynchronous-commit replicas manual failover means  forced failover with possible data loss).  
   
-    ```  
-  
-              -- Create the availability group, MyAG:   
+    ```sql
+    -- Create the availability group, MyAG:   
     CREATE AVAILABILITY GROUP MyAG   
        FOR   
           DATABASE MyDB1, MyDB2   
@@ -217,7 +194,7 @@ manager: craigg
   
      The following code example joins the secondary replica on `COMPUTER02` to the `MyAG` availability group.  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- join the secondary replica to the availability group:  
     ALTER AVAILABILITY GROUP MyAG JOIN;  
@@ -228,19 +205,18 @@ manager: craigg
   
      The following code example creates the *MyDb1* and *MyDb2* secondary databases by restoring database backups using RESTORE WITH NORECOVERY.  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- Restore database backups using the WITH NORECOVERY option:  
     RESTORE DATABASE MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NORECOVERY  
+        WITH NORECOVERY;  
     GO  
   
     RESTORE DATABASE MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH NORECOVERY  
-    GO  
-  
+        WITH NORECOVERY;  
+    GO 
     ```  
   
 7.  On the server instance that hosts the primary replica, back up the transaction log on each of the primary databases.  
@@ -250,19 +226,18 @@ manager: craigg
   
      The following code example creates a transaction log backup on MyDb1 and on MyDb2.  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the primary replica,   
     -- Backup the transaction log on each primary database:  
     BACKUP LOG MyDb1   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NOFORMAT  
+        WITH NOFORMAT;  
     GO  
   
     BACKUP LOG MyDb2   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITHNOFORMAT  
-    GO  
-  
+        WITHNOFORMAT;  
+    GO
     ```  
   
     > [!TIP]  
@@ -275,16 +250,16 @@ manager: craigg
     > [!IMPORTANT]  
     >  When you are preparing a real secondary database, you need to apply every log backup taken since the database backup from which you created the secondary database, starting with the earliest and always using RESTORE WITH NORECOVERY. Of course, if you restore both full and differential database backups, you would only need to apply the log backups taken after the differential backup.  
   
-    ```  
+    ```sql  
     -- Restore the transaction log on each secondary database,  
     -- using the WITH NORECOVERY option:  
     RESTORE LOG MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     RESTORE LOG MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     ```  
   
@@ -292,7 +267,7 @@ manager: craigg
   
      The following code example, joins the *MyDb1* secondary database and then the *MyDb2* secondary databases to the *MyAG* availability group.  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the secondary replica,   
     -- join each secondary database to the availability group:  
     ALTER DATABASE MyDb1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -300,7 +275,6 @@ manager: craigg
   
     ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
     GO  
-  
     ```  
   
 ###  <a name="CompleteCodeExample"></a> Complete Code Example for Sample Configuration Procedure  
@@ -326,7 +300,7 @@ manager: craigg
 > [!NOTE]  
 >  For additional [!INCLUDE[tsql](../../../includes/tsql-md.md)] code examples of creating an availability group, see [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md).  
   
-```  
+```sql  
 -- on the server instance that will host the primary replica,   
 -- create sample databases:  
 CREATE DATABASE MyDb1;  
@@ -342,26 +316,26 @@ GO
 -- Backup sample databases:  
 BACKUP DATABASE MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 BACKUP DATABASE MyDb2   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 -- Create the endpoint on the server instance that will host the primary replica:  
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- Create the endpoint on the server instance that will host the secondary replica:   
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- If both service accounts run under the same domain account, skip this step. Otherwise,   
@@ -419,18 +393,18 @@ GO
 -- Restore database backups onto this server instance, using RESTORE WITH NORECOVERY:  
 RESTORE DATABASE MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 RESTORE DATABASE MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 -- Back up the transaction log on each primary database:  
 BACKUP LOG MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NOFORMAT  
+    WITH NOFORMAT;  
 GO  
   
 BACKUP LOG MyDb2   
@@ -442,11 +416,11 @@ GO
 -- using the WITH NORECOVERY option:  
 RESTORE LOG MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
 RESTORE LOG MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
   
 -- On the server instance that hosts the secondary replica,   
@@ -456,7 +430,6 @@ GO
   
 ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
 GO  
-  
 ```  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
@@ -522,11 +495,11 @@ GO
   
 -   **Blogs:**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
   
 -   **Videos:**  
   
@@ -536,9 +509,9 @@ GO
   
 -   **Whitepapers:**  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -547,5 +520,4 @@ GO
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

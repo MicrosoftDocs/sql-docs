@@ -1,5 +1,6 @@
 ---
-title: "Delete Users or Groups (Master Data Services) | Microsoft Docs"
+description: "Delete Users or Groups (Master Data Services)"
+title: Delete Users or Groups
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,13 +14,12 @@ helpviewer_keywords:
   - "users [Master Data Services], deleting"
   - "deleting users [Master Data Services]"
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete Users or Groups (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Delete users or groups when you no longer want them to access [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

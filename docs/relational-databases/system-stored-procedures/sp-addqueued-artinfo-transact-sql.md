@@ -1,4 +1,5 @@
 ---
+description: "sp_addqueued_artinfo (Transact-SQL)"
 title: "sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,12 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addqueued_artinfo"
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addqueued_artinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   
   

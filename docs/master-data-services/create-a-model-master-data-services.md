@@ -1,5 +1,6 @@
 ---
-title: "Create a Model (Master Data Services) | Microsoft Docs"
+title: Create a Model
+description: Learn how to create a model in Master Data Services to contain model objects. You must have permissions for the System Administration area.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "models [Master Data Services], creating models"
   - "creating models [Master Data Services]"
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Model (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a model to contain model objects.  
   

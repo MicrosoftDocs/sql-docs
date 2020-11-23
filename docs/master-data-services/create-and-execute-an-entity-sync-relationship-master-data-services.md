@@ -1,5 +1,6 @@
 ---
-title: "Create and Execute an Entity Sync Relationship (Master Data Services) | Microsoft Docs"
+description: "Create and Execute an Entity Sync Relationship (Master Data Services)"
+title: Create and Execute an Entity Sync Relationship
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create and Execute an Entity Sync Relationship (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Entity sync is a one-way and repeatable synchronization between entity versions. It provides a way to share entity data between different models.  
   

@@ -1,5 +1,6 @@
 ---
-title: "exist() Method (xml Data Type) | Microsoft Docs"
+description: "exist() Method (xml Data Type)"
+title: exist() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # exist() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a **bit** that represents one of the following conditions:  
   
@@ -29,12 +29,13 @@ manager: "craigg"
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 exist (XQuery)   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  XQuery  
  Is an XQuery expression, a string literal.  
   
@@ -43,10 +44,10 @@ exist (XQuery)
 > [!NOTE]  
 >  The **exist()** method returns 1 for the XQuery expression that returns a nonempty result. If you specify the **true()** or **false()** functions inside the **exist()** method, the **exist()** method will return 1, because the functions **true()** and **false()** return Boolean True and False, respectively. That is, they return a nonempty result). Therefore, **exist()** will return 1 (True), as shown in the following example:  
   
-```  
-declare @x xml;  
-set @x='';  
-select @x.exist('true()');   
+```sql
+DECLARE @x XML;  
+SET @x='';  
+SELECT @x.exist('true()');   
 ```  
   
 ## Examples  
@@ -55,27 +56,27 @@ select @x.exist('true()');
 ### Example: Specifying the exist() method against an xml type variable  
  In the following example, @x is an **xml** type variable (untyped xml) and @f is an integer type variable that stores the value returned by the **exist()** method. The **exist()** method returns True (1) if the date value stored in the XML instance is `2002-01-01`.  
   
-```  
-declare @x xml;  
-declare @f bit;  
-set @x = '<root Somedate = "2002-01-01Z"/>';  
-set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
-select @f;  
+```sql  
+DECLARE @x XML;  
+DECLARE @f BIT;  
+SET @x = '<root Somedate = "2002-01-01Z"/>';  
+SET @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
+SELECT @f;  
 ```  
   
  In comparing dates in the **exist()** method, note the following:  
   
 -   The code `cast as xs:date?` is used to cast the value to **xs:date** type for purposes of comparison.  
   
--   The value of the **@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
+-   The value of the **\@Somedate** attribute is untyped. In comparing this value, it is implicitly cast to the type on the right side of the comparison, the **xs:date** type.  
   
 -   Instead of **cast as xs:date()**, you can use the **xs:date()** constructor function. For more information, see [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md).  
   
  The following example is similar to the previous one, except it has a <`Somedate`> element.  
   
-```  
-DECLARE @x xml;  
-DECLARE @f bit;  
+```sql
+DECLARE @x XML;  
+DECLARE @f BIT;  
 SET @x = '<Somedate>2002-01-01Z</Somedate>';  
 SET @f = @x.exist('/Somedate[(text()[1] cast as xs:date ?) = xs:date("2002-01-01Z") ]')  
 SELECT @f;  
@@ -92,13 +93,13 @@ SELECT @f;
   
  The **exist()** method specified against the @x variable returns 1 (True) if the manufacturing instructions document includes a <`Location`> element that has `LocationID=50`. Otherwise, the method returns 0 (False).  
   
-```  
-DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
+```sql
+DECLARE @x XML (Production.ManuInstructionsSchemaCollection);  
 SELECT @x=Instructions  
 FROM Production.ProductModel  
 WHERE ProductModelID=67;  
 --SELECT @x  
-DECLARE @f int;  
+DECLARE @f INT;  
 SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /AWMI:root/AWMI:Location[@LocationID=50]  
 ');  
@@ -108,7 +109,7 @@ SELECT @f;
 ### Example: Specifying the exist() method against an xml type column  
  The following query retrieves product model IDs whose catalog descriptions do not include the specifications, <`Specifications`> element:  
   
-```  
+```sql
 SELECT ProductModelID, CatalogDescription.query('  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
@@ -134,7 +135,7 @@ WHERE CatalogDescription.exist('
   
  The query specifies **query()** and **exist()** methods of the xml data type and both these methods declare the same namespaces in the query prolog. In this case, you may want to use WITH XMLNAMESPACES to declare the prefix and use it in the query.  
   
-```  
+```sql
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   

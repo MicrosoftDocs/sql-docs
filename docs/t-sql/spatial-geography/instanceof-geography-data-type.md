@@ -1,4 +1,5 @@
 ---
+description: "InstanceOf (geography Data Type)"
 title: "InstanceOf (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "InstanceOf method"
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # InstanceOf (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Tests if the **geography** instance is the same as the specified type.  
   
@@ -31,7 +31,9 @@ Tests if the **geography** instance is the same as the specified type.
 .InstanceOf ( 'geography_type')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *geography_type*  
 The **nvarchar(4000)** string specifying one of 16 types exposed in the **geography** type hierarchy.  
   

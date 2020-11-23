@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_dms_workers (Transact-SQL)"
 title: "sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -11,11 +12,10 @@ dev_langs:
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_dms_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds information about all workers completing DMS steps.  
   
@@ -43,9 +43,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |source_info|**nvarchar(4000)**|For a reader, specification of the source tables and columns.||  
 |destination_info|**nvarchar(4000)**|For a writer, specification of the destination tables.||  
   
- For information about the maximum rows retained by this view, see [Maximum System View Values](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9).  
+ For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic..  
   
 ## See Also  
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

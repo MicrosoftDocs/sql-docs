@@ -1,19 +1,19 @@
 ---
-title: "Using Bulk Copy API for Batch Insert Operation for MSSQL JDBC Driver | Microsoft Docs"
+title: "Bulk copy API for batch insert in JDBC"
+description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch insert operations against Azure Data Warehouse for faster loading of data into the database."
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using Bulk Copy API for Batch Insert Operation
+# Using bulk copy API for batch insert operation
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -21,14 +21,14 @@ Microsoft JDBC Driver 7.0 for SQL Server supports using Bulk Copy API for batch 
 
 This feature is only applicable to PreparedStatement and CallableStatement's `executeBatch()` & `executeLargeBatch()` APIs.
 
-## Pre-Requisites
+## Prerequisites
 
 There are two prerequisites to enable Bulk Copy API for batch insert.
 
 * The server must be Azure Data Warehouse.
 * The query must be an insert query (the query may contain comments, but the query must start with the INSERT keyword for this feature to come into effect).
 
-## Enabling Bulk Copy API for batch insert
+## Enabling bulk copy API for batch insert
 
 There are three ways to enable Bulk Copy API for batch insert.
 
@@ -66,7 +66,7 @@ If the query fails because of non "SQL server" related errors, the driver will l
 
 ## Example
 
-Below is an example code that demonstrates the use case for a batch insert operation against Azure DW of a thousand rows, for both (regular vs Bulk Copy API) scenarios.
+Below is an example code that demonstrates the use case for a batch insert operation against Azure Synapse Analytics (SQL DW) of a thousand rows, for both (regular vs Bulk Copy API) scenarios.
 
 ```java
     public static void main(String[] args) throws Exception
@@ -135,6 +135,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## See Also
+## See also
 
-[Improving Performance and Reliability with the JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Improving performance and reliability with the JDBC driver](improving-performance-and-reliability-with-the-jdbc-driver.md)

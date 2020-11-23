@@ -1,7 +1,7 @@
 ---
-title: "Overview of PowerShell Cmdlets for availability groups"
+title: "PowerShell Cmdlets for availability groups"
 description: "A reference for the different PowerShell cmdlets available to manage Always On availability groups. "
-ms.custom: "seodec18"
+ms.custom: seo-lt-2019
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,31 +14,14 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Overview of PowerShell Cmdlets for Always On Availability Groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell is a task-based command-line shell and scripting language designed especially for system administration. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a set of PowerShell cmdlets in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] that enable you to deploy, manage, and monitor availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  
 >  A PowerShell cmdlet can complete by successfully initiating an action. This does not indicate that the intended work, such as the fail over of an availability group, has completed. When scripting a sequence of actions, you might have to check the status of actions, and wait for them to complete.  
-  
- This topic introduces the cmdlets for the following sets of tasks:  
-  
--   [Configuring a server instance for Always On Availability Groups](#ConfiguringServerInstance)  
-  
--   [Backing up and restoring databases and transaction logs](#BnRcmdlets)  
-  
--   [Creating and managing an availability group](#DeployManageAGs)  
-  
--   [Creating and managing an availability group listener](#AGlisteners)  
-  
--   [Creating and managing an availability replica](#DeployManageARs)  
-  
--   [Adding and managing an availability database](#DeployManageDbs)  
-  
--   [Monitoring availability group health](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  For a list of topics in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
@@ -118,6 +101,5 @@ manager: craigg
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
+ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.sysmessages (Transact-SQL)"
 title: "sys.sysmessages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysmessages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each system error or warning that can be returned by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] displays the error description on the user's screen.  
   

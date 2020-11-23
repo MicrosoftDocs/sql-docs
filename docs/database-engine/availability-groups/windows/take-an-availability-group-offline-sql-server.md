@@ -1,5 +1,6 @@
 ---
 title: "Take an Availability Group Offline (SQL Server) | Microsoft Docs"
+description: Learn how to take an Always On availability group from the ONLINE state to the OFFLINE state by using Transact-SQL in SQL Server.
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -11,45 +12,26 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Take an Availability Group Offline (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to take an Always On availability group from the ONLINE state to the OFFLINE state by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] and later versions. There is no data loss for synchronous-commit databases because if any synchronous-commit replica is not synchronized, the OFFLINE operation raises an error and leaves the availability group ONLINE. Keeping the availability group online protects unsynchronized synchronous-commit databases from possible data loss. After an availability group goes offline, its databases become unavailable to clients and you cannot bring the availability group back online. Therefore, take an availability group offline only to migrate the availability group resources from one WSFC cluster to another.  
   
- During a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], if any applications connect directly to the primary replica of an availability group, the availability group must be taken offline. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade with minimal downtime of availability groups. The typical scenario is to use cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] for OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](https://msdn.microsoft.com/library/jj873730.aspx).  
+ During a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], if any applications connect directly to the primary replica of an availability group, the availability group must be taken offline. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade with minimal downtime of availability groups. The typical scenario is to use cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] for OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](/previous-versions/sql/sql-server-2012/jj873730(v=msdn.10)).  
   
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To take an availability group offline, using:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Follow Up:**  [After the Availability Group Goes Offline](#FollowUp)  
-  
--   [Related Content](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 > [!CAUTION]  
->  Use the OFFLINE option only for a cross-cluster migration of availability group resources.  
+>  Use the OFFLINE option for a cross-cluster migration of availability group resources or for failing over a read-scale availability group.
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
--   The server instance on which you enter the OFFLINE command must be running [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] or above (Enterprise edition or above).  
-  
+-   The server instance on which you enter the OFFLINE command must be running [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] or above (Enterprise edition or above).    
 -   The availability group must currently be online.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
  Before you take the availability group offline, delete the availability group listener or listeners. For more information, see [Remove an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
@@ -86,9 +68,8 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [SQL Server 2012 Technical Articles](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
 ## See Also  
  [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  
   

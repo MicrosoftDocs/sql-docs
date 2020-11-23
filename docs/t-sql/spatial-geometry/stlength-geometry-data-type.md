@@ -1,4 +1,5 @@
 ---
+description: "STLength (geometry Data Type)"
 title: "STLength (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STLength (geometry Data Type)"
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STLength (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the total length of the elements in a **geometry** instance.
   
@@ -31,7 +31,9 @@ Returns the total length of the elements in a **geometry** instance.
 .STLength ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **float**  
   
  CLR return type: **SqlDouble**  

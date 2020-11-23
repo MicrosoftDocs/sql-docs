@@ -1,4 +1,5 @@
 ---
+description: "+ (Concatenate) (SSIS Expression)"
 title: "+ (Concatenate) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "+ (concatenate operator)"
   - "concatenate operator (+)"
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # + (Concatenate) (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Concatenates two expressions into one expression.  
   
 ## Syntax  

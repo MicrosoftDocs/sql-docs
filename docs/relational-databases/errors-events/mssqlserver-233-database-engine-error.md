@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_233 | Microsoft Docs"
+description: The SQL Server client cannot connect to the server. See an explanation of error 233 and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_233
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|233|  
 |Event Source|MSSQLSERVER|  

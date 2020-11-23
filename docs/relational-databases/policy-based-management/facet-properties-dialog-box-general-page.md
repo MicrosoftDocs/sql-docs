@@ -1,6 +1,7 @@
 ---
-title: "Facet Properties Dialog Box, General Page | Microsoft Docs"
-ms.custom: ""
+title: "Facet Properties dialog box, General Page"
+description: Describes the 'General Page' of the 'Facet Properties' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Facet Properties Dialog Box, General Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to view the properties of a Policy-Based Management facet. Each facet can be applied to one or more target types, for example: server, database, or table. Use this page to view which target types are related to this facet. The properties of a facet are defined when a facet is created and cannot be changed by using this page.  
   
 ## Options  

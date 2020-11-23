@@ -1,4 +1,5 @@
 ---
+description: "InstanceOf (geometry Data Type)"
 title: "InstanceOf (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "InstanceOf (geometry Data Type)"
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # InstanceOf (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A method that tests if the **geometry** instance is the same as the specified type. Returns 1 if the type of a **geometry** instance is the same as the specified type. This method also returns 1 if the specified type is an ancestor of the instance type. Otherwise, this method returns 0.
   
@@ -31,7 +31,9 @@ A method that tests if the **geometry** instance is the same as the specified ty
 .InstanceOf (geometry_type )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *geometry_type*  
 **nvarchar(4000)** string specifying one of 15 types exposed in the **geometry** type hierarchy.  
   

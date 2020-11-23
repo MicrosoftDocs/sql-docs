@@ -1,4 +1,5 @@
 ---
+description: "semanticsimilaritydetailstable (Transact-SQL)"
 title: "semanticsimilaritydetailstable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "semanticsimilaritydetailstable function"
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # semanticsimilaritydetailstable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a table of zero, one, or more rows of key phrases that are common across two documents (a source document and a matched document) whose content is semantically similar.  
   

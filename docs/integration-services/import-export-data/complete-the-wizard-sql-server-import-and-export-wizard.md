@@ -1,4 +1,5 @@
 ---
+description: "Complete the Wizard (SQL Server Import and Export Wizard)"
 title: "Complete the Wizard (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -9,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.completewizard.f1"
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Complete the Wizard (SQL Server Import and Export Wizard)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 After you specify whether you want to run the copy operation immediately, and after you optionally save the package that the wizard created, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Complete the Wizard**. On this page, you review the choices that you made in the wizard, and then click **Finish** to start the copy operation.
  
 ## Screen shot of the Complete the Wizard page 

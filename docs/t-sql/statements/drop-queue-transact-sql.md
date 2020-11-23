@@ -1,4 +1,5 @@
 ---
+description: "DROP QUEUE (Transact-SQL)"
 title: "DROP QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,12 +20,11 @@ helpviewer_keywords:
   - "DROP QUEUE statement"
   - "removing queues"
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DROP QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops an existing queue.  
   
@@ -32,19 +32,17 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 DROP QUEUE <object>  
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  The name of the database that contains the queue to drop. When no *database_name* is provided, defaults to the current database.  
   
@@ -63,9 +61,8 @@ DROP QUEUE <object>
 ## Examples  
  The following example drops the **ExpenseQueue** queue from the current database.  
   
-```  
+```sql  
 DROP QUEUE ExpenseQueue ;  
-  
 ```  
   
 ## See Also  

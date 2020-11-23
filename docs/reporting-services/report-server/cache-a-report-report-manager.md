@@ -1,8 +1,9 @@
 ---
 title: "Cache a Report (Report Manager) | Microsoft Docs"
+description: Learn how to schedule the expiration of a cached report in Report Manager. Caching a report speeds up viewing while it remains cached.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "schedules [Reporting Services], report expiration"
   - "expiration [Reporting Services]"
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Cache a Report (Report Manager)
   One way to improve performance is to configure caching properties for a report. When a report is cached, a copy of the rendered report is saved for a short period of time. The first user who requests the report must wait for all processing to complete before viewing the report. Subsequent users who request the report within the caching period can view it right away because processing has already occurred.  
@@ -24,7 +25,7 @@ ms.author: maghan
   
 ### To schedule the expiration of a cached report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](../web-portal-ssrs-native-mode.md).  
   
 2.  In Report Manager, navigate to the **Contents** page. Navigate to the report for which you want to set caching properties, hover over the item, and click the drop-down arrow.  
   
@@ -45,5 +46,4 @@ ms.author: maghan
 ## See Also  
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
-  
   

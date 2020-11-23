@@ -1,10 +1,11 @@
 ---
+description: "DROP EXTERNAL LIBRARY (Transact-SQL)"
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/27/2018
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP EXTERNAL LIBRARY"
@@ -16,19 +17,26 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Deletes an existing package library. Package libraries are used by supported external runtimes, such as R, Python, or Java.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4. 
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 and later.
+::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current"
+> [!NOTE]
+> In Azure SQL Managed Instance, R and Python languages are supported.
+::: moniker-end
 
 ## Syntax
 
-```sql
+```syntaxsql
 DROP EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ];
 ```
@@ -55,12 +63,17 @@ To delete a library requires the privilege ALTER ANY EXTERNAL LIBRARY. By defaul
 
 An informational message is returned if the statement was successful.
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks
 
 Unlike other `DROP` statements in SQL Server, this statement supports specifying an optional authorization clause. This allows **dbo** or users in the **db_owner** role to drop a package library uploaded by a regular user in the database.
 
+A number of packages, referred to as *system packages*, are pre-installed in a SQL instance. System packages cannot be added, updated, or removed by the user.
+
 ## Examples
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Add the custom R package, `customPackage`, to a database:
 
 ```sql
@@ -69,6 +82,7 @@ FROM (CONTENT = 'C:\temp\customPackage_v1.1.zip')
 WITH (LANGUAGE = 'R');
 GO
 ```
+::: moniker-end
 
 Delete the `customPackage` library.
 
@@ -82,4 +96,3 @@ DROP EXTERNAL LIBRARY customPackage;
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

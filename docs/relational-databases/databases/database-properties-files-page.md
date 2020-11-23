@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Files Page) | Microsoft Docs"
+description: "Find out how to view or modify a database's properties and how to create a new database in SQL Server Management Studio."
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -12,13 +13,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Properties (Files Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to create a new database, or view or modify properties for the selected database. This topic applies to the **Database Properties (Files Page)** for existing databases, and to the **New Database (General Page)**.  
   
-## UIElement List  
+## UI element list  
  **Database name**  
  Add or display the name of the database.  
   

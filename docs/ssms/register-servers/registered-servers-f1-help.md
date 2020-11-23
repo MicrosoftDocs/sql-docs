@@ -1,9 +1,10 @@
 ---
-title: "Registered Servers F1 Help | Microsoft Docs"
-ms.custom: ""
+description: "Registered Servers F1 Help"
+title: "Registered Servers F1 Help"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: "reference"
@@ -12,15 +13,14 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], help"
   - "SQL Server Management Studio Help [SQL Server], registered servers"
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Registered Servers F1 Help
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   This section contains the F1 Help for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. It describes the various options.
   
- To learn about Registered Servers and get links to what to do with them, go to the [Register Servers](../../tools/sql-server-management-studio/register-servers.md) topic. 
+ To learn about Registered Servers and get links to what to do with them, go to the [Register Servers](./register-servers.md) topic. 
  
 
  Click to save the Registered Servers settings. 
@@ -141,4 +141,3 @@ manager: craigg
 
  
  
-  

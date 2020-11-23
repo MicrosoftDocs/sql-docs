@@ -1,5 +1,6 @@
 ---
 title: "Configure Resource Governor Using a Template | Microsoft Docs"
+description: Learn how to configure Resource Governor by using a template that is provided in SQL Server Management Studio. You must have the CONTROL SERVER permission.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -11,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Configure Resource Governor Using a Template
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   You can configure Resource Governor by using a template that is provided in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   **Before you begin:**  [Permissions](#Permissions)  
@@ -41,7 +41,7 @@ manager: craigg
 5.  To save the changes that you make to the template, click **OK**.  
   
 6.  To run the query, click **Execute**.  
-  
+
 ## See Also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Enable Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   

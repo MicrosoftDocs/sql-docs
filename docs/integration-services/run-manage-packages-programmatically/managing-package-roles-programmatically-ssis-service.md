@@ -1,4 +1,5 @@
 ---
+description: "Managing Package Roles Programmatically (SSIS Service)"
 title: "Managing Package Roles Programmatically (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -12,11 +13,14 @@ helpviewer_keywords:
   - "roles [Integration Services]"
   - "packages [Integration Services], roles"
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Managing Package Roles Programmatically (SSIS Service)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   As you work programmatically with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, you may want to determine which roles are available to apply to packages, or to determine or set the roles applied to an individual package. The <xref:Microsoft.SqlServer.Dts.Runtime.Application> class of the <xref:Microsoft.SqlServer.Dts.Runtime> namespace provides a variety of methods to satisfy these requirements.  
   
  Roles apply only to packages stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database. For more information about package roles, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  

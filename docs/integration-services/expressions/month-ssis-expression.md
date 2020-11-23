@@ -1,4 +1,5 @@
 ---
+description: "MONTH (SSIS Expression)"
 title: "MONTH (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "dates [Integration Services], MONTH"
   - "MONTH function"
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # MONTH (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Returns an integer that represents the month datepart of a date.  
   
 ## Syntax  

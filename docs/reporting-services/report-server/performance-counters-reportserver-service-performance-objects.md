@@ -1,8 +1,9 @@
 ---
 title: "Performance Counters - ReportServer Service, Performance Objects | Microsoft Docs"
-ms.date: 03/07/2017
+description: Learn about performance counters for the ReportServer:Service and ReportServerSharePoint:Service performance objects, part of a SQL Server 2012 deployment.
+ms.date: 06/26/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -10,8 +11,10 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Server service, performance counters"
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+
 ---
 # Performance Counters - ReportServer Service,  Performance Objects
   This topic describes performance counters for the **ReportServer:Service** and **ReportServerSharePoint:Service** performance objects that are part of a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] deployment.  
@@ -19,7 +22,7 @@ ms.author: maghan
 > [!NOTE]  
 >  The performance objects are used to monitor events on the local report server. If you are running a report server in a scale-out deployment, the counts apply to the current server and not the scale-out deployment as a whole.  
   
- The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ The performance objects are available in the Windows Performance Monitor (**Perfmon.exe**). For more information, see the Windows documentation. [Runtime Profiling](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  In this topic:  
   
@@ -38,7 +41,7 @@ ms.author: maghan
   
  The following table lists the counters that are included in the **ReportServer:Service** performance object.  
   
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -71,7 +74,7 @@ ms.author: maghan
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint Mode Report Server)  
  The **ReportServerSharePoint:Service** performance object was added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -84,7 +87,7 @@ ms.author: maghan
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName "ReportServerSharePoint:Service":  
+ ![PowerShell related content](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") The following Windows PowerShell script will return the list of performance counters for the CounterSetName "ReportServerSharePoint:Service":  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -94,5 +97,4 @@ ms.author: maghan
  [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects &#40;Native Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
-  
   

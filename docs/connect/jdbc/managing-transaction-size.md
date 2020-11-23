@@ -1,18 +1,18 @@
 ---
-title: "Managing Transaction Size | Microsoft Docs"
+description: "Managing transaction size"
+title: "Managing transaction size | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
-# Managing Transaction Size
+# Managing transaction size
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   When you work with transactions, it is important to keep your transactions as brief as possible. The default mode of auto-commit, which you can enable or disable by using the [setAutoCommit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md) method, will commit every action for you. This is the easiest mode to work with for most developers.  
@@ -23,7 +23,7 @@ manager: craigg
   
  Additionally, be sure to use the lock time out setting if your application expects some blocking issues and needs to time out from these. You can do this by using the [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md) method. The default for the lock time out is -1, which means that it will block indefinitely while waiting for the lock. You can set the lock time out to 30 seconds, which will cause the blocked connection to time out in 30 seconds if blocked by another connection.  
   
-## See Also  
- [Improving Performance and Reliability with the JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+## See also  
+ [Improving performance and reliability with the JDBC driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: "History Cleanup Task"
 title: "History Cleanup Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,14 @@ helpviewer_keywords:
   - "history tables [SQL Server]"
   - "History Cleanup task [Integration Services]"
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # History Cleanup Task
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The History Cleanup task deletes entries in the following history tables in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb database.  
   
 -   backupfile  
@@ -51,10 +55,9 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  
-  
   

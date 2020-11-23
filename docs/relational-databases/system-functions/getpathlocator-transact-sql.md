@@ -1,4 +1,5 @@
 ---
+description: "GetPathLocator (Transact-SQL)"
 title: "GetPathLocator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # GetPathLocator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the path locator ID value for the specified file or directory in a FileTable.  
   

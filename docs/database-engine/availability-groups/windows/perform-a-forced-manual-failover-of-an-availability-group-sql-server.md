@@ -1,7 +1,7 @@
 ---
-title: "Perform a forced manual failover of an Availability Group"
+title: "Manually force a failover of an availability group"
 description: "This topic describes how to perform a forced failover of an Always On availability group (with possible data loss) by using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Perform a Forced Manual Failover of an Always On Availability Group (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to perform a forced failover (with possible data loss) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A forced failover is a form of manual failover that is intended strictly for disaster recovery, when a [planned manual failover](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) is not possible. If you force failover to an unsynchronized secondary replica, some data loss is possible. Therefore, we strongly recommend that you force failover only if you must restore service to the availability group immediately and you are willing to risk losing data.  
   
  After a forced failover, the failover target to which the availability group was failed over becomes the new primary replica. The secondary databases in the remaining secondary replicas are suspended and must be manually resumed. When the former primary replica becomes available, it transitions to the secondary role, causing the former primary databases to become secondary databases and transition into the SUSPENDED state. Before you resume a given secondary database, you might be able to recover lost data from it. However, notice that transaction log truncation is delayed on a given primary database while any of its secondary databases is suspended.  
@@ -43,43 +42,14 @@ manager: craigg
 > [!NOTE]  
 >  For more information about the prerequisites and recommendations for forcing failover and for an example scenario that uses a forced failover to recover from a catastrophic failure, see [Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failure](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy), later in this topic.  
   
--   **Before you begin:**  
   
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Potential Ways to Avoid Data Loss After Quorum is Forced](#WaysToAvoidDataLoss)  
-  
-     [Security](#Security)  
-  
--   **To force failover (with possible data loss), using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:** [Essential Tasks After a Forced Failover](#FollowUp)  
-  
--   **Example Scenario:** [Using a Forced Failover to Recover from a Catastrophic Failure](#ExampleRecoveryFromCatastrophy)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   The only time that you cannot perform a forced failover is when Windows Server Failover Clustering (WSFC) cluster lacks quorum.  
   
 -   Data loss is possible during the forced failover of an availability group. In addition, if the primary replica is running when you initiate a forced failover, clients might still be connected to former primary databases. Therefore, we strongly recommend that you force failover only if the primary replica is no longer running and if you are willing to risk losing data in order to restore access to databases in the availability group.  
   
--   When a secondary database in the REVERTING or INITIALIZING state, forcing failover would cause the database to fail to start as a primary database. If the database was in the INTIAILIZGING state the you will need to apply the missing log records from a database backup or fully restore the database from scratch. If the database was in the REVERTING state you will need to fully restore the database from backups.  
+-   When a secondary database is in the REVERTING or INITIALIZING state, forcing failover would cause the database to fail to start as a primary database. If the database was in the INITIALIZING state then you will need to apply the missing log records from a database backup or fully restore the database from scratch. If the database was in the REVERTING state you will need to fully restore the database from backups.  
   
 -   A failover command returns as soon as the failover target has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over.  
   
@@ -88,17 +58,17 @@ manager: craigg
     > [!NOTE]  
     >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   The WSFC cluster has quorum. If the cluster lacks quorum, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   You must be able to connect to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
   
 -   Do not force failover while the primary replica is still running.  
   
--   If possible, force failover only to a failover target whose secondary databases are either in the NOT SYNCHRONIZED, SYNCHRONIZED, or SYNCHRONIZING state. For information about the implications of forcing failover when a secondary database is in the INTIAILIZGING or REVERTING state, see [Limitations and Restrictions](#Restrictions), earlier in this topic.  
+-   If possible, force failover only to a failover target whose secondary databases are either in the NOT SYNCHRONIZED, SYNCHRONIZED, or SYNCHRONIZING state. For information about the implications of forcing failover when a secondary database is in the INITIALIZING or REVERTING state, see [Limitations and Restrictions](#Restrictions), earlier in this topic.  
   
 -   Typically, the latency of a given secondary database, relative to the primary database, should be similar on different asynchronous-commit secondary replicas. However, when forcing failover, data loss can be a significant concern. Therefore, consider taking time to determine the relative latency of the copies of the databases on different secondary replicas. To determine which copy of a given secondary database has the least latency, compare their end-of-log LSNs. A higher the end-of-log LSN indicates less latency.  
   
@@ -107,7 +77,7 @@ manager: craigg
   
 -   If clients are able to connect to the original primary, a forced failover incurs some risk of split brain behavior. Before you force failover, we strongly recommend that you prevent clients from accessing the original primary replica. Otherwise, after failover is forced, the original primary databases and the current primary databases could be updated independently of the other.  
   
-###  <a name="WaysToAvoidDataLoss"></a> Potential Ways to Avoid Data Loss After Quorum is Forced  
+##  <a name="WaysToAvoidDataLoss"></a> Potential Ways to Avoid Data Loss After Quorum is Forced  
  Under some failure conditions after quorum is lost, you can avoid prevent data loss, as follows:  
   
 -   **If the original primary replica comes online**  
@@ -134,9 +104,8 @@ manager: craigg
     > [!NOTE]  
     >  When you force failover to a secondary replica, the amount of data loss will depend on how far the failover target is lagging behind the primary replica. Unfortunately, when the WSFC cluster lacks quorum or quorum has been forced, you cannot assess the amount of potential data loss. Note, however, that once the WSFC cluster regains a healthy quorum, you could begin to track potential data loss. For more information, see "Tracking Potential Data Loss" in [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -203,13 +172,13 @@ manager: craigg
         ```  
   
     > [!NOTE]  
-    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  After forcing an availability group to fail over, complete the necessary follow-up steps. For more information, see [Follow Up: Essential Tasks After a Forced Failover](#FollowUp), later in this topic.  
   
  **To set up and use the SQL Server PowerShell provider**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Follow Up: Essential Tasks After a Forced Failover  
   
@@ -291,7 +260,7 @@ manager: craigg
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  The following figure illustrates the series of actions performed at the remote data center in response a catastrophic failure at the main data center.  
   
- ![Steps for responding to failure of main data cente](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data cente")  
+ ![Steps for responding to failure of main data center](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
   
  The steps in this figure indicate the following steps:  
   
@@ -343,15 +312,15 @@ manager: craigg
   
 -   **Blogs:**  
   
-     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](/archive/blogs/psssql/)  
   
 -   **Whitepapers:**  
   
-     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft White Papers for SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -362,5 +331,4 @@ manager: craigg
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Monitoring of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
-  
   

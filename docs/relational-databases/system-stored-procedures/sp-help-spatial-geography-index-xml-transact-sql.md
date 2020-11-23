@@ -1,4 +1,5 @@
 ---
+description: "sp_help_spatial_geography_index_xml (Transact-SQL)"
 title: "sp_help_spatial_geography_index_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geography_index_xml procedure"
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_spatial_geography_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the name and value for a specified set of properties about a **geography** spatial index. You can choose to return a core set of properties or all properties of the index.  
   
@@ -52,7 +52,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Properties containing NULL values are not included in the return set.  
   
 ## Example  
- The following example uses `sp_help_spatial_geography_index_xml` to investigate the spatial index **SIndx_SpatialTable_geography_col2** defined on table **geography_col** for the given query sample in **@qs**. This example returns the core properties of the specified index in an XML fragment that displays the name and value of the properties selected.  
+ The following example uses `sp_help_spatial_geography_index_xml` to investigate the spatial index **SIndx_SpatialTable_geography_col2** defined on table **geography_col** for the given query sample in **\@qs**. This example returns the core properties of the specified index in an XML fragment that displays the name and value of the properties selected.  
   
  An [XQuery](../../xquery/xquery-basics.md) is then run on the result set, returning a specific property.  
   
@@ -71,11 +71,10 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## Requirements  
   
 ## See Also  
- [Spatial Index Stored Procedures](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Spatial Index Stored Procedures](./spatial-index-stored-procedures-arguments-and-properties.md)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [XQuery Basics](../../xquery/xquery-basics.md)   
  [XQuery Language Reference](../../xquery/xquery-language-reference-sql-server.md)  
-  
   

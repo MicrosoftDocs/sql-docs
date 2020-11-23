@@ -1,4 +1,5 @@
 ---
+description: "GRANT Symmetric Key Permissions (Transact-SQL)"
 title: "GRANT Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Grants permissions on a symmetric key. 
   
@@ -30,8 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 GRANT permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -48,7 +47,9 @@ GRANT permission [ ,...n ]
     | Database_user_with_no_login   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a symmetric key. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -124,7 +125,7 @@ GRANT permission [ ,...n ]
 ## Examples  
  The following example grants `ALTER` permission on the symmetric key `SamInventory42` to the database user `HamidS`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GRANT ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_trace_geteventinfo (Transact-SQL)"
 title: "sys.fn_trace_geteventinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_trace_geteventinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about an event being traced.  
   

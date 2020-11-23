@@ -1,4 +1,5 @@
 ---
+description: "PreConnect:Starting Event Class"
 title: "PreConnect:Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PreConnect:Starting Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The PreConnect:Starting event class indicates when a LOGON trigger or the Resource Governor classifier function starts execution.  
   
 ## PreConnect:Starting Event Class Data Columns  

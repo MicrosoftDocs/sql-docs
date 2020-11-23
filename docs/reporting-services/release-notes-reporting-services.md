@@ -1,14 +1,15 @@
 ---
-title: "Release notes for (SSRS) 2017 and later | Microsoft Docs"
-ms.date: 09/01/2018
+title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
+description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
+ms.date: 10/11/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
@@ -45,6 +46,83 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## SQL Server 2019 Reporting Services
+
+## 15.0.7545.4810, 2020/08/31 
+*(Product Version: 15.0.1102.861)*
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates  | &nbsp; |
+| Constrained Comment attachment support to no longer allow PDF documents  | &nbsp; |
+| Fixed filename truncation when exporting reports containing a period in the name  | &nbsp; |
+| Fixed an issue related to Subscriptions and the zh-TW culture that resulted in invalid date format errors  | &nbsp; |
+| Fixed an issue with certain reports where accessing the parameters option leads to indefinite spinny  | &nbsp; |
+| Fixed issues relating to single quotes in report names  | &nbsp; |
+| Fixed an issue in URL Access causing FindString to not locate matches  | &nbsp; |
+| Fixed an issue where alt text for PDF export were not correctly encoded for multi-byte characters  | &nbsp; |
+| Fixed unwanted appearance of an empty image under a linear element  | &nbsp; |
+| Fixed erroneous Unsupported error for Custom Authentication in Web Edition  | &nbsp; |
+| Fixed an issue where a screen reader was reading an extra row and extra column in a Tablix  | &nbsp; |
+| Fixed an image truncation issue with fit to size when zoomed to whole page  | &nbsp; |
+| Command line upgrade no longer requires EULA flag  | &nbsp; |
+
+## 15.0.7243.37714, 2019/11/01
+*(Product Version: 15.0.1102.675)*
+
+Initial release.
+
+
+## SQL Server 2017 Reporting Services
+
+## 14.0.600.1669, 2020/08/31 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates  | &nbsp; |
+| Constrained Comment attachment support to no longer allow PDF documents  | &nbsp; |
+| Fixed filename truncation when exporting reports containing a period in the name  | &nbsp; |
+| Fixed an issue related to Subscriptions and the zh-TW culture that resulted in invalid date format errors  | &nbsp; |
+
+## 14.0.600.1572, 2020/04/06 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Updated JQuery UI to 1.12  | &nbsp; |
+| Fixed URL case-sensitivity  | &nbsp; |
+| Fixed Parameter placement when there are many parameters  | &nbsp; |
+| Fixed FindString not working in HTML5 rendering  | &nbsp; |
+| Analysis Services Client Libraries updated to address TLS 1.0/1.1 deprecation | &nbsp; |
+
+## 14.0.600.1451, 2019/11/13 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates | &nbsp; |
+| Paginated reports didn't work properly with filter parameters when snapshot is enabled  | &nbsp; |
+| Users with Browser role and default settings didn't have permissions to download Excel files  | &nbsp; |
+| Upgrading to Power BI Report Server from SQL Server 2016 Reporting Services failed during upgrade | &nbsp; |
+| After upgrading from SQL Server 2012 Reporting Services, subscriptions failed with “An invalid character was found in the mail header: ','” message | &nbsp; |
+| Configuration tool: canceling modal windows in Database section would restart the Reporting Services service | &nbsp; |
+| BorderStyle property expression of Textbox controls weren't rendered to Excel format  | &nbsp; |
+| Pagination issue that could get certain reports stuck with rendering the same page without ever reaching the last page of the report | &nbsp; |
+
+## 14.0.600.1274, 2019/07/01
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates | &nbsp; |
+| Unable to select weekdays when creating a shared weekly schedule | &nbsp; |
+| Report does not display carriage returns properly in Word format | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 no longer works with recent SSRS 2017 upgrades | &nbsp; |
+| An error occurred when invoking the authorization extension for shared Dataset | &nbsp; |
+| Logic changed on stored procedure GetAllProperties in SSRS 2017 and PBIRS, which causes the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
+| Simple Grid Row Header in Mobile Report disappears when an Item within the Grid is clicked | &nbsp; |
+| Unable to use date field in Data Driven Subscription parameter | &nbsp; |
+| Nested tablix shows small font or partial font in SSRS 2016 and later | &nbsp; |
+| Subscriptions with DateTime Parameter error out after user with different Locale edits the Subscription | &nbsp; |
+| Creating a Data-driven Subscription with Null Delivery Extension is failing with "A delivery error has occurred" | &nbsp; |
+| URL encoding is incorrect when setting the value in Excel\Word format | &nbsp; |
 
 ## 14.0.600.1109, 2019/02/12
 
@@ -81,7 +159,7 @@ The following issue has been fixed:
 | Text size is not scaling if pageHeight is less than 0.5 inches. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
-| Users added to SCOM Reporting Role have access blocked to SSRS web portal. | &nbsp; |
+| Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
 | Thai character is not exported correctly into the PDF. | &nbsp; |
 | Browser Role Behavior Change. | &nbsp; |
 | rc:Toolbar=false does not work in Express edition. | &nbsp; |

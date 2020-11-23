@@ -1,4 +1,5 @@
 ---
+description: "STNumPoints (geography Data Type)"
 title: "STNumPoints (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumPoints method"
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STNumPoints (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the total number of points in each of the figures in a **geography** instance.  
   
@@ -31,7 +31,9 @@ manager: craigg
 .STNumPoints ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **int**  
   
  CLR return type: **SqlInt32**  

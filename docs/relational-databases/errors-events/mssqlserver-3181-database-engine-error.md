@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_3181"
 title: "MSSQLSERVER_3181 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -11,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: e6d2e716-5263-477c-ad0e-7bcbfef4c1f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_3181
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|3181|  
 |Event Source|MSSQLSERVER|  

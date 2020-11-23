@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_get_max_lsn (Transact-SQL)"
 title: "sys.fn_cdc_get_max_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_cdc_get_max_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the maximum log sequence number (LSN) from the start_lsn column in the [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) system table. You can use this function to return the high endpoint of the change data capture timeline for any capture instance.  
   

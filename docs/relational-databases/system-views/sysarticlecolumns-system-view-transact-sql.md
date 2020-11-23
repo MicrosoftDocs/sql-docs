@@ -1,4 +1,5 @@
 ---
+description: "sysarticlecolumns (System View) (Transact-SQL)"
 title: "sysarticlecolumns (System View) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysarticlecolumns (System View) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **sysarticlecolumns** view exposes additional information about columns in published articles. This view is stored in the distribution database.  
   

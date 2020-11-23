@@ -1,5 +1,6 @@
 ---
-title: "Attributes (Master Data Services) | Microsoft Docs"
+title: Attributes
+description: Learn about attributes, which are objects in Master Data Services entities. Attribute values describe the members of the entity.
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -15,13 +16,12 @@ helpviewer_keywords:
   - "attributes [Master Data Services], free-form attributes"
   - "attributes [Master Data Services]"
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Attributes (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Attributes are objects that are contained in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] entities. Attribute values describe the members of the entity. An attribute can be used to describe a leaf member, a consolidated member, or a collection.  
   

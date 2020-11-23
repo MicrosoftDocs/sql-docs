@@ -1,5 +1,6 @@
 ---
-title: "Server Configuration (MDS Configuration Manager) | Microsoft Docs"
+description: "Server Configuration (MDS Configuration Manager)"
+title: Server Configuration
 ms.custom: ""
 ms.date: "01/26/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.srvinfopg.f1"
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Server Configuration (MDS Configuration Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Use the **Server Configuration** page to view configuration information for the local server computer.  
   

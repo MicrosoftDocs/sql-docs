@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVER ROLE (Transact-SQL)"
 title: "CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
@@ -24,10 +25,9 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new user-defined server role.  
   
@@ -35,11 +35,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql  
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *role_name*  
  Is the name of the server role to be created.  
   
@@ -73,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
 ### A. Creating a server role that is owned by a login  
  The following example creates the server role `buyers` that is owned by login `BenMiller`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;  
 GO  
@@ -82,7 +84,7 @@ GO
 ### B. Creating a server role that is owned by a fixed server role  
  The following example creates the server role `auditors` that is owned the `securityadmin` fixed server role.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;  
 GO  

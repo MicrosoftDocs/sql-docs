@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)"
 title: "sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a policy category subscription for the current database.  
   

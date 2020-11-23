@@ -1,5 +1,6 @@
 ---
 title: "Audit Logout Event Class | Microsoft Docs"
+description: The Audit Logout event class indicates that a user has signed out of SQL Server. This article describes audit logout event class data columns.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,11 +12,10 @@ helpviewer_keywords:
 ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Logout Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Logout** event class indicates that a user has logged out of (logged off) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Events in this class are fired by new connections or by connections that are reused from a connection pool.  
   
 ## Audit Logout Event Class Data Columns  
@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**ServerName**|**nvarchar**|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26||  
 |**SessionLoginName**|**Nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |**SPID**|**int**|ID of the session on which the event occurred.|12|Yes|  
-|**StartTime**|**datetime**|Time at which the event started, if available.|14|Yes|  
+|**StartTime**|**datetime**|StartTime of the related Audit Login event, if available.|14|Yes|  
 |**Success**|**int**|1 = success. 0 = failure. For example, a value of 1 indicates success of a permissions check and a value of 0 indicates failure of that check.|23|Yes|  
 |**Writes**|**bigint**|Number of logical write I/Os issued by the user during the connection.|17|Yes|  
 |**GroupID**|**int**|ID of the workload group where the SQL Trace event fires.|66|Yes|  

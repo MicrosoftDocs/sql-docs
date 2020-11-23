@@ -1,4 +1,5 @@
 ---
+description: "sp_addrolemember (Transact-SQL)"
 title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/30/2019"
@@ -17,11 +18,10 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Adds a database user, database role, Windows login, or Windows group to a database role in the current database.  
   
@@ -32,10 +32,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```
+```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
-
 ```    
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments  
  [ @rolename= ] '*role*'  
@@ -52,7 +53,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  A role cannot include itself as a member. Such "circular" definitions are not valid, even when membership is only indirectly implied by one or more intermediate memberships.  
   
- sp_addrolemember cannot add a fixed database role, fixed server role, or dbo to a role. sp_addrolemember cannot be executed within a user-defined transaction.  
+ sp_addrolemember cannot add a fixed database role, fixed server role, or dbo to a role.
   
  Only use sp_addrolemember to add a member to a database role. To add a member to a server role, use [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
@@ -75,7 +76,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 > [!NOTE]  
 >  Because `Contoso\Mary5` is known as the database user `Mary5` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, the user name `Mary5` must be specified. The statement will fail unless a `Contoso\Mary5` login exists. Test by using a login from your domain.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;  
@@ -85,7 +86,7 @@ GO
 ### B. Adding a database user  
  The following example adds the database user `Mary5` to the `Production` database role in the current database.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
@@ -97,7 +98,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 > [!NOTE]  
 >  Because the login `LoginMary` is known as the database user `UserMary` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, the user name `UserMary` must be specified. The statement will fail unless a `Mary5` login exists. Logins and users usually have the same name. This example uses different names to differentiate the actions affecting the login vs. the user.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE USER UserMary FOR LOGIN LoginMary ;  
@@ -108,7 +109,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ### D. Adding a database user  
  The following example adds the database user `UserMary` to the `Production` database role in the current database.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   

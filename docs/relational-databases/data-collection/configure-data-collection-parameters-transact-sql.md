@@ -1,7 +1,7 @@
 ---
-title: "Configure Data Collection Parameters (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
+description: "Configure Data Collection Parameters (Transact-SQL)"
+title: "Configure Data Collection Parameters (T-SQL)"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+ms.custom: "seo-lt-2019"
 ---
 # Configure Data Collection Parameters (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Before you create a custom collection set, you must first configure data collection parameters. You can do this by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
   
 > [!NOTE]  
@@ -25,7 +25,7 @@ manager: craigg
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to the database where you want to create a custom collection set.  
   
 2.  In Query Editor, issue the following statements.  
-  
+
     ```sql  
     USE msdb;  
     EXEC sp_syscollector_set_warehouse_instance_name N'INSTANCE_NAME';-- where instance name is the name of the SQL Server instance  

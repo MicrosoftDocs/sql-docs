@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_io_backup_tapes (Transact-SQL)"
 title: "sys.dm_io_backup_tapes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_io_backup_tapes dynamic management view"
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_io_backup_tapes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the list of tape devices and the status of mount requests for backups.   
  
@@ -51,7 +51,7 @@ manager: craigg
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [I O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [I/O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

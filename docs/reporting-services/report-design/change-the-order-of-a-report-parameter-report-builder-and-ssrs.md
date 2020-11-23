@@ -1,15 +1,16 @@
 ---
-title: "Change the Order of a Report Parameter (Report Builder and SSRS) | Microsoft Docs"
+title: "Change the Order of a Report Parameter (Report Builder) | Microsoft Docs"
+description: Learn how to change the order of report parameters when you have a dependent parameter that is listed out of order in Report Builder.
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Change the Order of a Report Parameter (Report Builder and SSRS)
   Change the order of report parameters when you have a dependent parameter that is listed before the parameter it is dependent on. Parameter order is important when you have cascading parameters, or when you want to show users the default value for one parameter before they choose values for other parameters. A dependent report parameter contains a reference, in either its default values query or valid values query, to a query parameter that points to a report parameter that is after it in the parameter list in the **Report Data** pane.  

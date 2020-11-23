@@ -1,7 +1,8 @@
 ---
+description: "DROP WORKLOAD Classifier (Transact-SQL)"
 title: "DROP WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2019"
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -16,37 +17,32 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "DROP WORKLOAD CLASSIFIER statement"
-ms.assetid: 
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
-# DROP WORKLOAD CLASSIFIER (Transact-SQL) (Preview)
+# DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-Drops an existing user-defined Workload Management Classifier.  
+Drops an existing user-defined workload management classifier.  If requests are running or in the request queue in suspended state, they will keep their classification and the classifier can be dropped immediately. Dropping and recreating the classifier with different importance will not affect an already classified request.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## Syntax  
 
-```
+```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## Arguments
 
 *classifier_name*  
-Specifies the name by which the workload classifier is identified.  classifier_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
+Specifies the name by which the workload classifier is identified.
   
-## Remarks
-
-The DROP WORKLOAD CLASSIFIER statement is not allowed on system workload classifiers.
-
-If requests are running or in the request queue in suspended state, they will keep their classification and the classifier can be dropped immediately.  Dropping and recreating the classifier with different importance will not affect an already classified request.
-
 ## Permissions
 
 Requires CONTROL DATABASE permission.  
@@ -65,4 +61,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## See Also
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[SQL Data Warehouse Workload Classification](/azure/sql-data-warehouse/classification)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

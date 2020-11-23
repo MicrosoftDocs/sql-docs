@@ -1,4 +1,5 @@
 ---
+description: "Configuring the Script Task in the Script Task Editor"
 title: "Configuring the Script Task in the Script Task Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -14,11 +15,14 @@ helpviewer_keywords:
   - "Script Task Editor"
   - "SSIS Script task, configuring"
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configuring the Script Task in the Script Task Editor
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Before you write custom code in the Script task, you configure its principal properties in the three pages of the **Script Task Editor**. You can configure additional task properties that are not unique to the Script task by using the Properties window.  
   
 > [!NOTE]  

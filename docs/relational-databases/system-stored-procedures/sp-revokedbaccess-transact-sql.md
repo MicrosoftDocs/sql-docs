@@ -1,4 +1,5 @@
 ---
+description: "sp_revokedbaccess (Transact-SQL)"
 title: "sp_revokedbaccess (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_revokedbaccess (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a database user from the current database.  
   

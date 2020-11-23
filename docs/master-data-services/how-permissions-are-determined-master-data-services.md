@@ -1,5 +1,6 @@
 ---
-title: "How Permissions Are Determined (Master Data Services) | Microsoft Docs"
+description: "How Permissions Are Determined (Master Data Services)"
+title: How Permissions Are Determined
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Master Data Services], determining permissions"
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # How Permissions Are Determined (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], the simplest way to configure security is to assign model object permissions to a group that the user is a member of.  
   

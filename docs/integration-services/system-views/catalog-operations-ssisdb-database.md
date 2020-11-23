@@ -1,4 +1,5 @@
 ---
+description: "catalog.operations (SSISDB Database)"
 title: "catalog.operations (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,12 +12,15 @@ helpviewer_keywords:
   - "operations view [Integration Services]"
   - "catalog.operations view [Integration Services]"
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.operations (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the details of all operations in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   

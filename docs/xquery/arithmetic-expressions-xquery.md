@@ -1,5 +1,6 @@
 ---
 title: "Arithmetic Expressions (XQuery) | Microsoft Docs"
+description: Learn about arithmetic expressions in XQuery and which arithmetic operators are supported.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Arithmetic Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   All arithmetic operators are supported, except for **idiv**. The following examples illustrate the basic use of arithmetic operators:  
   

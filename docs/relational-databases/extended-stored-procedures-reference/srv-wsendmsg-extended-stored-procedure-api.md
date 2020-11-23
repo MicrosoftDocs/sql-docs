@@ -1,5 +1,6 @@
 ---
 title: "srv_wsendmsg (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_wsendmsg in the Extended Stored Procedure API can send a Unicode message to the client.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_wsendmsg (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

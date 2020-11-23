@@ -1,7 +1,8 @@
 ---
-title: "Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Piecemeal restore: some filegroups (full recovery model)"
+description: This example shows a piecemeal restore of only some filegroups in SQL Server of a database using the full recovery model.
+ms.custom: seo-lt-2019
+ms.date: "12/17/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -12,12 +13,11 @@ helpviewer_keywords:
   - "piecemeal restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], piecemeal"
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: cawrites
+ms.author: chadam
 ---
 # Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic is relevant for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases under the full recovery model that contain multiple files or filegroups.  
   
@@ -45,9 +45,9 @@ manager: craigg
     ```  
     RESTORE DATABASE adb FILEGROUP='Primary' FROM backup   
     WITH PARTIAL, NORECOVERY  
-    RESTORE LOG adb FROM backup1 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup2 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup1 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup2 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
@@ -66,17 +66,17 @@ manager: craigg
      At this point the primary and filegroups `A` and `C` are online. Files in filegroup `B` remain recovery pending, with the filegroup offline.  
   
 4.  Online restore of filegroup `B`.  
+
+   Files in filegroup `B` are restored any time thereafter.  
   
-     Files in filegroup `B` are restored any time thereafter.  
+   > [!NOTE]  
+   >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
   
-    > [!NOTE]  
-    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
+   ```  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
-    ```  
-  
-     All filegroups are now online.  
+   All filegroups are now online.  
   
 ## Additional Examples  
   

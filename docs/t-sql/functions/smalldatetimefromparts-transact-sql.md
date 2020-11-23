@@ -1,4 +1,5 @@
 ---
+description: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
 title: "SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,13 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "SMALLDATETIMEFROMPARTS function"
 ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMALLDATETIMEFROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a **smalldatetime** value for the specified date and time.  
   
@@ -29,11 +29,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *year*  
  Integer expression specifying a year.  
   
@@ -59,7 +61,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## Examples  
   
-```  
+```sql  
 SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result  
 ```  
   
@@ -68,7 +70,7 @@ SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result
 ```  
 Result  
 ---------------------------  
-2011-01-01 00:00:00  
+2010-12-31 23:59:00  
   
 (1 row(s) affected)  
 ```  

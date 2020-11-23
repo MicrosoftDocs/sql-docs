@@ -1,5 +1,6 @@
 ---
-title: "Create an Entity Administrator (Master Data Services) | Microsoft Docs"
+description: "Create an Entity Administrator (Master Data Services)"
+title: Create an Entity Administrator
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Entity Administrator (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create an entity administrator when you want a group or user to have all permissions to all objects in one or more entities, or have the permission to approve pending change sets.  
   

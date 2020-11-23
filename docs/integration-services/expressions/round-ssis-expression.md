@@ -1,4 +1,5 @@
 ---
+description: "ROUND (SSIS Expression)"
 title: "ROUND (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -11,11 +12,14 @@ helpviewer_keywords:
   - "rounding expressions"
   - "ROUND function [SSIS]"
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ROUND (SSIS Expression)
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   Returns a numeric expression that is rounded to the specified length or precision. The length parameter must evaluate to an integer.  
   
 ## Syntax  

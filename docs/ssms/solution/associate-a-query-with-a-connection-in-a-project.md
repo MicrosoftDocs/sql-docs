@@ -1,6 +1,7 @@
 ---
-title: "Associate a Query with a Connection in a Project | Microsoft Docs"
-ms.custom: ""
+description: "Associate a Query with a Connection in a Project"
+title: "Associate a Query with a Connection in a Project"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -13,12 +14,11 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], query connections"
   - "query associations [SQL Server Management Studio]"
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Associate a Query with a Connection in a Project
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 If a query was created without a connection, or if a query is moved from one project to another it will not be associated with a connection in the current project.  
   
 ### To associate a query with a connection in a project  

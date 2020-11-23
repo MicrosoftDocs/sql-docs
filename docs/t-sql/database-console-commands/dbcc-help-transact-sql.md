@@ -1,4 +1,5 @@
 ---
+description: "DBCC HELP (Transact-SQL)"
 title: "DBCC HELP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -18,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC HELP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Returns syntax information for the specified DBCC command.
   
@@ -29,13 +29,15 @@ Returns syntax information for the specified DBCC command.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )  
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
- *dbcc_statement* | *@dbcc_statement_var*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ *dbcc_statement* | *\@dbcc_statement_var*  
  Is the name of the DBCC command for which to receive syntax information. Provide only the part of the DBCC command that follows DBCC, for example, CHECKDB instead of DBCC CHECKDB.  
   
  ?  

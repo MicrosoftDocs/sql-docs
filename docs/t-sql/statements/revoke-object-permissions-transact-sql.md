@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Object Permissions (Transact-SQL)"
 title: "REVOKE Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on a table, view, table-valued function, stored procedure, extended stored procedure, scalar function, aggregate function, service queue, or synonym. 
   
@@ -28,8 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         { FROM | TO } <database_principal> [ ,...n ]   
@@ -50,7 +49,9 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
     | Database_user_with_no_login      
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be revoked on a schema-contained object. For a list of the permissions, see the Remarks section later in this topic.  
   
@@ -148,7 +149,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 ### A. Revoking SELECT permission on a table  
  The following example revokes `SELECT` permission from the user `RosaQdM` on the table `Person.Address` in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;  
 GO  
@@ -157,7 +158,7 @@ GO
 ### B. Revoking EXECUTE permission on a stored procedure  
  The following example revokes `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` from an application role called `Recruiting11`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     FROM Recruiting11;  
@@ -167,7 +168,7 @@ GO
 ### C. Revoking REFERENCES permission on a view with CASCADE  
  The following example revokes `REFERENCES` permission on the column `BusinessEntityID` in the view `HumanResources.vEmployee` from the user `Wanida` with `CASCADE`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     FROM Wanida CASCADE;  

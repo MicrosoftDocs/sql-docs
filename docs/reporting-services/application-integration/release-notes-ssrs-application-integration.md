@@ -1,23 +1,58 @@
 ---
-title: "Release Notes for the Report Viewer controls of SSRS"
-ms.date: 09/20/2018
+title: "Release Notes for Report Viewer controls"
+description: The release notes for the Report Viewer controls of WebForms and WinForms, related to Reporting Services.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: RhysSchmidtke
 ms.author: rhys
 ---
-# Release Notes for the Report Viewer controls for WebForms and WinForms of SSRS
+# Release Notes for Report Viewer controls for WebForms and WinForms of SSRS
 
 These are the release notes for the Report Viewer controls of WebForms and WinForms, related to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 For the release notes for SSRS, see [Release notes for SQL Server Reporting Services (SSRS) 2017 and later](../release-notes-reporting-services.md).
 
-## 15.900.148
+## 150.1404.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug Fixes | Fixed an issue with tab ordering of the toolbar in WebForms. |
+|           | Improved HTML rendering accessibility for tables. |
+| &nbsp; | &nbsp; |
+
+## 150.1400.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug Fixes | Fixed an issue where the viewer control would not load in design mode. |
+| &nbsp; | &nbsp; |
+
+## 150.1358.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug Fixes | Reverted a change that removed the Microsoft.ReportViewer.Design assemblies from the project references. |
+|           | As part of other changes, two assemblies were changed from 15.0 version to 15.3. This has been reverted. |
+| &nbsp; | &nbsp; |
+
+## 150.1357.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug fixes  | Proper print preview for High DPI monitor |
+|            | Print dialog would show outside of visible space |
+|            | Large number of parameters resulted in parameter scroll bars and drop-down lists not working correctly |
+|            | Fixed issue with Null and date time parameters |
+|            | Updated JQuery to version 3.3.1 |
+|            | Fixed overlapping with tablix cells in HTML rendering |
+|            | Removed the design time project references to eliminate erroneous VS assemblies being added to the projects |
+|            | Accessibility fix for tool bar to narrate only for active items |
+| &nbsp; | &nbsp; |
+
+## 150.900.148
 
 | Change description | Details |
 | :----------------- | :------ |

@@ -1,4 +1,5 @@
 ---
+description: "System Variables"
 title: "System Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,11 +15,14 @@ helpviewer_keywords:
   - "event handlers [Integration Services], variables"
   - "variables [Integration Services], system"
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # System Variables
+
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a set of system variables that store information about the running package and its objects. These variables can be used in expressions and property expressions to customize packages, containers, tasks, and event handlers.  
   
  All variables-system and user-defined- can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters.  
@@ -99,6 +103,5 @@ manager: craigg
  This rule applies to user-defined variables as well. But, whereas the data types of system variables cannot be changed and you have to tailor your use of these variables to fit the data types, user-defined are more flexible. The user-defined variables that are used in parameter bindings are usually defined with data types that are compatible with the data types of parameters to which they are mapped.  
   
 ## Related Tasks  
- [Map Query Parameters to Variables in an Execute SQL Task](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [Map Query Parameters to Variables in an Execute SQL Task](./control-flow/execute-sql-task.md)  
   

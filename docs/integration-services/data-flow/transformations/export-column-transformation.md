@@ -1,4 +1,5 @@
 ---
+description: "Export Column Transformation"
 title: "Export Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -19,11 +20,14 @@ helpviewer_keywords:
   - "inserting data"
   - "truncate options [Integration Services]"
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Export Column Transformation
+
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
   The Export Column transformation reads data in a data flow and inserts the data into a file. For example, if the data flow contains product information, such as a picture of each product, you could use the Export Column transformation to save the images to files.  
   
 ## Append and Truncate Options  
@@ -60,7 +64,7 @@ manager: craigg
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -109,5 +113,4 @@ manager: craigg
   
  **Apply**  
  Apply the error handling option to the selected cells.  
-  
   

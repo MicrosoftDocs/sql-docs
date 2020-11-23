@@ -1,8 +1,9 @@
 ---
+description: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)"
 title: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +16,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SecureConnectionLevel property"
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - SecureConnectionLevel
   Returns the secure connection level specified in the RSReportServer.config file. Read-only.  
@@ -32,7 +33,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## Property Values  
- An **Integer** value that represents the secure connection level. The return values indicate that the SSL is either configured or not. A value of greater than or equal to 1 indicates that SSL is turned on. A value of 0 indicates that SSL is turned off.  
+ An **Integer** value that represents the secure connection level. The return values indicate that the TLS is either configured or not. A value of greater than or equal to 1 indicates that TLS is turned on. A value of 0 indicates that TLS is turned off.  
   
 ## Example Code  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

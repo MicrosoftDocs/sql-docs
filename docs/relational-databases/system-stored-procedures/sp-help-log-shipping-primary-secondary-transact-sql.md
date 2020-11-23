@@ -1,4 +1,5 @@
 ---
+description: "sp_help_log_shipping_primary_secondary (Transact-SQL)"
 title: "sp_help_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_help_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure returns information regarding all the secondary databases for a given primary database.  
   

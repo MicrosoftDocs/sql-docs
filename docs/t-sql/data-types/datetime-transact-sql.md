@@ -1,4 +1,5 @@
 ---
+description: "datetime (Transact-SQL)"
 title: "datetime (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -21,11 +22,10 @@ helpviewer_keywords:
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Defines a date that is combined with a time of day with fractional seconds that is based on a 24-hour clock.
   

@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Asymmetric Key Permissions (Transact-SQL)"
 title: "REVOKE Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions on an asymmetric key.  
   
@@ -27,7 +27,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   
@@ -36,7 +36,9 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
     [ AS revoking_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the ability to grant the specified permission will be revoked.  
   

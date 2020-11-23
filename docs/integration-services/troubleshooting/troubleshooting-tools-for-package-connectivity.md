@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting Tools for Package Connectivity"
 title: "Troubleshooting Tools for Package Connectivity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
@@ -15,11 +16,14 @@ helpviewer_keywords:
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Troubleshooting Tools for Package Connectivity
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot connectivity between packages and the data sources from which packages extract and load data.  
   
 ## Troubleshooting Issues with External Data Providers  

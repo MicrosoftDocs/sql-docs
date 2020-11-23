@@ -1,4 +1,5 @@
 ---
+description: "Partition Processing Destination"
 title: "Partition Processing Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,12 +18,15 @@ helpviewer_keywords:
   - "Partition Processing destination [Integration Services]"
   - "destinations [Integration Services], Partition Processing"
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Partition Processing Destination
-  The Partition Processing destination loads and processes an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] partition. For more information about partitions, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
+
+
+  The Partition Processing destination loads and processes an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] partition. For more information about partitions, see [Partitions &#40;Analysis Services - Multidimensional Data&#41;](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  The Partition Processing destination includes the following features:  
   
@@ -32,7 +36,7 @@ manager: craigg
   
 -   Mapping of input columns to partition columns.  
   
- For more information about processing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+ For more information about processing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, see [Processing Options and Settings &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
   
 > [!NOTE]  
 >  Tasks described here do not apply to Analysis Services tabular models.  You cannot map input columns to partition columns for tabular models. You can instead use the Analysis Services Execute DDL task [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) to process the partition.  
@@ -174,4 +178,4 @@ manager: craigg
  Select a path for the error log.  
   
 ## See Also  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)

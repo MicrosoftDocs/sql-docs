@@ -1,4 +1,5 @@
 ---
+description: "sys.sysremotelogins (Transact-SQL)"
 title: "sys.sysremotelogins (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -20,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysremotelogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each remote user that is permitted to call remote stored procedures on an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

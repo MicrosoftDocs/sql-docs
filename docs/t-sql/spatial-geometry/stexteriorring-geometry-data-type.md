@@ -1,4 +1,5 @@
 ---
+description: "STExteriorRing (geometry Data Type)"
 title: "STExteriorRing (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -15,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STExteriorRing (geometry Data Type)"
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STExteriorRing (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the exterior ring of a **geometry** instance that is a polygon.
   
@@ -31,7 +31,9 @@ Returns the exterior ring of a **geometry** instance that is a polygon.
 .STExteriorRing ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  
   
  CLR return type: **SqlGeometry**  

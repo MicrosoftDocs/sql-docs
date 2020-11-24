@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "execution plans [SQL Server], saving"
   - "saving execution plans"
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Save an Execution Plan in XML Format

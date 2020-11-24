@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "joins [SQL Server], about joins"
   - "join hints [SQL Server]"
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Joins (SQL Server)

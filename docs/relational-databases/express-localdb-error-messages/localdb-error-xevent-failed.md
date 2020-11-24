@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_XEVENT_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

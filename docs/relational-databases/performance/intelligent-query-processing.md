@@ -313,15 +313,15 @@ SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT	O_OrderKey,
-	O_CustKey,
-	O_OrderStatus,
-	L_QUANTITY
-FROM	
-	ORDERS,
-	@LINEITEMS
-WHERE	O_ORDERKEY	=	L_ORDERKEY
-	AND O_OrderStatus = 'O'
+SELECT O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE    O_ORDERKEY    =    L_ORDERKEY
+    AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
 

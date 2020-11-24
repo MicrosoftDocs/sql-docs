@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "plan guides [SQL Server], enabling"
   - "disabling plan guides"
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Enable or Disable a Plan Guide
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

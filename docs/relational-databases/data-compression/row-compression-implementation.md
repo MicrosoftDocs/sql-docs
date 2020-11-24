@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "compression [SQL Server], row"
   - "row compression [Database Engine]"
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Row Compression Implementation

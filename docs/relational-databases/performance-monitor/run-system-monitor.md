@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "starting Windows NT System Monitor"
   - "RPC"
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # Run System Monitor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

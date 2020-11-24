@@ -29,4 +29,4 @@ This topic describes how to change a server's registration in [!INCLUDE[ssCurren
 
 ## See Also
 
-[Register Servers](../../tools/sql-server-management-studio/register-servers.md)
+[Register Servers](./register-servers.md)

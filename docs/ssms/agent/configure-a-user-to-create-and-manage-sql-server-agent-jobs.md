@@ -24,7 +24,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> On [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+> On [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Managed Instance T-SQL differences from SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 This topic describes how to configure a user to create or execute [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.  
 
@@ -63,7 +63,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 3.  Right-click **Proxies** and select **New Proxy**.  
   
-4.  On the **General** page of the **New Proxy Account** dialog, specify the proxy name, credential name, and description for the new proxy. Note that you must create a credential first before creating a SQL Server Agent proxy. For more information about creating a credential, see [How to: Create a Credential](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) and [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d).  
+4.  On the **General** page of the **New Proxy Account** dialog, specify the proxy name, credential name, and description for the new proxy. Note that you must create a credential first before creating a SQL Server Agent proxy. For more information about creating a credential, see [How to: Create a Credential](../../relational-databases/security/authentication-access/create-a-credential.md) and [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md).  
   
 5.  Check the appropriate subsystems for this proxy.
     1. [Operating system (CmdExec)](create-a-cmdexec-job-step.md)
@@ -75,5 +75,4 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 6.  On the **Principals** page, add or remove logins or roles to grant or remove access to the proxy account.  
 
 ## See Also
-- [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)  
-
+- [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)

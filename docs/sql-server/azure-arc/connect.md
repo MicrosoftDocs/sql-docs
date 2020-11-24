@@ -16,8 +16,12 @@ You can connect your SQL Server instance on premises to Azure Arc by following t
 ## Prerequisites
 
 * Your machine has at least one instance of SQL Server installed
-* For Windows machines, you have installed Azure PowerShell. Follow the instructions to [install Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps).
+* For Windows machines, you have installed Azure PowerShell. Follow the instructions to [install Azure PowerShell](/powershell/azure/install-az-ps).
 * For Linux machines, you have downloaded Azure CLI and connected your Azure account. Follow the instructions to [install Azure CLI](/cli/azure/install-azure-cli-apt).
+* The **Microsoft.AzureData** resource provider has been registered. For more information on resource providers, see Azure resource providers and types.
+    * On PowerShell, run `Register-AzResourceProvider -ProviderNamespace Microsoft.AzureData`
+    * On Linux, run `az provider register --namespace 'Microsoft.AzureData`
+
 
 
 ## Generate a registration script for SQL Server
@@ -33,7 +37,7 @@ In this step you generate a script that discovers all SQL Server instances insta
 3. Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
 
 > [!IMPORTANT]
-> If the machine hosting the SQL Server instance is already [connected to Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding __Machine - Azure Arc__ resource.
+> If the machine hosting the SQL Server instance is already [connected to Azure Arc](/azure/azure-arc/servers/onboard-portal), make sure to select the same resource group that contains the corresponding __Machine - Azure Arc__ resource.
 
 ![Server details](media/join/server-details-sql-server-azure-arc.png)
 
@@ -50,7 +54,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ### Windows
 
-1. Launch an admin instance of __powershell.exe__ and sign in your PowerShell module with your Azure credentials. Follow the [sign in instructions](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in).
+1. Launch an admin instance of __powershell.exe__ and sign in your PowerShell module with your Azure credentials. Follow the [sign in instructions](/powershell/azure/install-az-ps#sign-in).
 
 2. Execute the downloaded script
 
@@ -63,7 +67,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ### Linux
 
-1. Use Azure CLI to sign in with your Azure credentials. Follow the [sign in instructions](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)
+1. Use Azure CLI to sign in with your Azure credentials. Follow the [sign in instructions](/cli/azure/authenticate-azure-cli)
 
 2. Grant the execution permission to the downloaded script and execute it.
 

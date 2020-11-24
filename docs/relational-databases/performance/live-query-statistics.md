@@ -31,7 +31,7 @@ ms.author: jrasnick
   
 > [!WARNING]  
 > This feature is primarily intended for troubleshooting purposes. Using this feature can moderately slow the overall query performance, especially in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
-> This feature can be used with the [Transact-SQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+> This feature can be used with the [Transact-SQL Debugger](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 ## To view live query statistics for one query 
   
@@ -73,4 +73,4 @@ On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers, requires the `VI
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [Trace flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md)   
+ [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md)

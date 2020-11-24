@@ -59,7 +59,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
 |end_checkpoint_id|**bigint**|ID of the end checkpoint.|  
 |last_updated_checkpoint_id|**bigint**|ID of the last checkpoint that updated this file.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => ENCRYPTED WITH KEY 1<br /><br /> 2 => ENCRYPTED WITH KEY 2. Valid only for active files.|  
+|encryption_status_desc|**nvarchar(60)**|0 => UNENCRYPTED<br /><br /> 1 => ENCRYPTED WITH KEY 1<br /><br /> 2 => ENCRYPTED WITH KEY 2. Valid only for active files.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  The following table describes the columns for `sys.dm_db_xtp_checkpoint_files`, for **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  

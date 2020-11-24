@@ -2,7 +2,7 @@
 title: "Set up Transparent Data Encryption (TDE) Extensible Key Management with Azure Key Vault"
 description: Install and configure the SQL Server Connector for Azure Key Vault. 
 ms.custom: seo-lt-2019
-ms.date: "08/12/2020"
+ms.date: "10/08/2020"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Connector, setup"
   - "SQL Server Connector"
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: VanMSFT
-ms.author: vanto
+author: Rupp29
+ms.author: arupp
 ---
 # Set up SQL Server TDE Extensible Key Management by using Azure Key Vault
 
@@ -28,7 +28,7 @@ Before you begin using Azure Key Vault with your SQL Server instance, be sure th
   
 - You must have an Azure subscription.
   
-- Install [Azure PowerShell version 5.2.0 or later](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+- Install [Azure PowerShell version 5.2.0 or later](/powershell/azure/).  
 
 - Create an Azure Active Directory (Azure AD) instance.
 
@@ -55,7 +55,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
       ![Screenshot of the "All Azure services" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
-1. Register an application with Azure Active Directory by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).)
+1. Register an application with Azure Active Directory by doing the following. (For detailed step-by-step instructions, see the "Get an identity for the application" section of the [Azure Key Vault blog post](/archive/blogs/kv/azure-key-vault-step-by-step).)
 
     a. On the **Azure Active Directory Overview** pane, select **App registrations**.
 
@@ -79,7 +79,7 @@ To grant your SQL Server instance access permissions to your Azure key vault, yo
 
     f. On the **Certificates & secrets** pane, under **"Value"**, select the **Copy** button next to the value of the client secret to be used to create an asymmetric key in SQL Server.
 
-    ![Screenshot of the "Certificates & secrets" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+    ![Screenshot of the secret value](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
 
     g. In the left pane, select **Overview** and then, in the **Application (client) ID** box, copy the value to be used to create an asymmetric key in SQL Server.
 
@@ -154,7 +154,7 @@ The key vault and key that you create here are used by the SQL Server Database E
 > [!IMPORTANT]
 > The subscription where the key vault is created must be in the same default Azure AD instance where the Azure AD service principal was created. If you want to use an Azure AD instance other than your default instance for creating a service principal for the SQL Server Connector, you must change the default Azure AD instance in your Azure account before you create your key vault. To learn how to change the default Azure AD instance to the one you want to use, see the "Frequently asked questions" section of [SQL Server Connector maintenance & troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
-1. Install and sign in to [Azure PowerShell 5.2.0 or later](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) by using the following command:  
+1. Install and sign in to [Azure PowerShell 5.2.0 or later](/powershell/azure/) by using the following command:  
   
     ```powershell  
     Connect-AzAccount  
@@ -260,7 +260,7 @@ To ensure quick key recovery and be able to access your data outside of Azure, w
 
 - Create your encryption key locally on a local hardware security module (HSM) device. Be sure to use an asymmetric RSA 2048 key so that it's supported by SQL Server.
 - Import the encryption key to your Azure key vault. This process is described in the next sections.
-- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup. For more information, see the [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) command.
+- Before you use the key in your Azure key vault for the first time, do an Azure key vault key backup. For more information, see the [Backup-AzureKeyVaultKey]() command.
 - Whenever you make any changes to the key (for example, adding ACLs, tags, or key attributes), be sure to do another Azure key vault key backup.
 
   > [!NOTE]
@@ -333,8 +333,8 @@ Download the SQL Server Connector from the [Microsoft Download Center](https://g
 > - SQL Server Connector versions 1.0.0.440 and older have been replaced and are no longer supported in production environments and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under [Upgrade of SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
 > - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
 > - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
-> - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, refer to [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
-> - **Starting with version 1.0.7.0, the SQL Server Connector supports filtering messages and network request retry logic.**
+> - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> - **Starting with version 1.0.5.0 (TimeStamp: September 2020), the SQL Server Connector supports filtering messages and network request retry logic.**
   
   ![Screenshot of the SQL Server Connector installation wizard](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   
@@ -460,7 +460,7 @@ For a note about the minimum permission levels needed for each action in this se
 1. Alter the new login, and map the EKM credentials to the new login.
 
      ```sql  
-    --Now drop the credential mapping from the original association
+    --Now add the credential mapping to the new Login
     ALTER LOGIN TDE_Login
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```  

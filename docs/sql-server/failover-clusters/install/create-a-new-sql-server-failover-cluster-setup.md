@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "clusters [SQL Server], creating"
   - "removing nodes"
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 
 # Create a New Always On Failover Cluster Instance (Setup)

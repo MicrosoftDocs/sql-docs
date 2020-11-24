@@ -46,7 +46,7 @@ This article describes how to determine who has permissions to various objects i
 
 Fixed Server Roles and Fixed Database Roles have preconfigured permissions that cannot be changed. To determine who is a member of a fixed server role, execute the following query:    
 > [!NOTE]
->  Does not apply to SQL Database or SQL Data Warehouse where server level permission is not available. The `is_fixed_role` column of `sys.server_principals` was added in SQL Server 2012. It is not needed for older versions of SQL Server.  
+>  Does not apply to SQL Database or Azure Synapse Analytics where server level permission is not available. The `is_fixed_role` column of `sys.server_principals` was added in SQL Server 2012. It is not needed for older versions of SQL Server.  
 > ```sql
 > SELECT SP1.name AS ServerRoleName, 
 >  isnull (SP2.name, 'No members') AS LoginName   
@@ -101,7 +101,7 @@ Remember that a Windows user might be a member of more than one Windows group (e
 
 The following query returns a list of the permissions that have been granted or denied at the server level. This query should be executed in the master database.   
 > [!NOTE]
->  Server-level permissions cannot be granted or queried on SQL Database or SQL Data Warehouse.   
+>  Server-level permissions cannot be granted or queried on SQL Database or Azure Synapse Analytics.   
 > ```sql
 > SELECT pr.type_desc, pr.name, 
 >  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

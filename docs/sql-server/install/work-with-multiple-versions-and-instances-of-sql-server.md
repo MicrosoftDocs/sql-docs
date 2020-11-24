@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "32-bit edition [SQL Server]"
   - "editions [SQL Server], side-by-side installations"
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ---
 # Work with multiple versions and instances of SQL Server
 
@@ -120,4 +120,4 @@ When a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluste
 * [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
 * [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
 * [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
-* [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)
+* [Backward Compatibility_deleted](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))

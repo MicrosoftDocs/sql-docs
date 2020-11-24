@@ -8,7 +8,7 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
@@ -190,4 +190,4 @@ After you have a local repository with the packages you need, move the package r
 ## See also
 
 + [Get R package information](../package-management/r-package-information.md)
-+ [R tutorials](../tutorials/sql-server-r-tutorials.md)
++ [R tutorials](../tutorials/r-tutorials.md)

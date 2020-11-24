@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### To turn statement completion options off by default  
 
 > [!NOTE]
-> SQL Data Warehouse does not support IntelliSense.
+> Azure Synapse Analytics does not support IntelliSense.
 >
 >
   

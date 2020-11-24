@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], metadata"
   - "users [SQL Server], orphaned"
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Troubleshoot orphaned users (SQL Server)
@@ -67,9 +67,9 @@ WHERE sp.SID IS NULL
   
  The output lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication  users and corresponding security identifiers (SID) in the current database that are not linked to any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
 
-**For SQL Database and SQL Data Warehouse**
+**For SQL Database and Azure Synapse Analytics**
 
-The `sys.server_principals` table is not available in SQL Database or SQL Data Warehouse. Identify orphaned users in those environments with the following steps:
+The `sys.server_principals` table is not available in SQL Database or Azure Synapse Analytics. Identify orphaned users in those environments with the following steps:
 
 1. Connect to the `master` database and select the SID's for the logins with the following query:
     ```

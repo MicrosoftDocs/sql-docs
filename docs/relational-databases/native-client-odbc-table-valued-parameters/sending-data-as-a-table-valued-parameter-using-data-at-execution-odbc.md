@@ -179,9 +179,9 @@ from @Items
     }  
     ```  
   
-## Example  
+## Examples  
   
-### Description  
+### A. Use row streaming, one row per call
  This sample shows that you can use row streaming, one row per call to SQLPutData, with ODBC TVP, similar to how you might use BCP.exe to load data into a database.  
   
  Before building the sample, change the server name in the connection string.  
@@ -209,7 +209,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### Code  
+#### Code  
   
 ```cpp
 #define UNICODE  
@@ -367,9 +367,7 @@ EXIT:
 }  
 ```  
   
-## Example  
-  
-### Description  
+### B. Use row streaming, multiple rows per call  
  This sample shows that you can use row streaming, multiple rows per call to SQLPutData, with ODBC TVP, similar to how you might use BCP.exe to load data into a database.  
   
  Before building the sample, change the server name in the connection string.  
@@ -397,7 +395,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### Code  
+#### Code  
   
 ```cpp
 #define UNICODE  
@@ -576,6 +574,5 @@ EXIT:
 ```  
   
 ## See Also  
- [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [ODBC Table-Valued Parameter Programming Examples](./table-valued-parameters-odbc.md)  
   

@@ -161,7 +161,7 @@ In a report, you can use a shared dataset that has a predefined query, or you ca
   
 7.  Click **Next**.  
   
-## <a name="DLayout"></a>1c. Organize Data into Groups  
+## <a name="DLayout"></a>1c. Organize Drillthrough Report Data into Groups  
 When you select the fields on which to group the data, you design a matrix with rows and columns that displays detail and aggregated data.  
   
 #### To organize data into groups  
@@ -187,7 +187,7 @@ When you select the fields on which to group the data, you design a matrix with 
   
 6.  Click **Next**.  
   
-## <a name="DTotals"></a>1d. Add Subtotals and Totals  
+## <a name="DTotals"></a>1d. Add Drillthrough Report Subtotals and Totals  
 After you create groups, you can add and format rows where the aggregate values for the fields will display. You can also choose whether to show all the data or to let a user expand and collapse grouped data interactively.  
   
 #### To add subtotals and totals  
@@ -275,7 +275,7 @@ A report title appears at the top of the report. You can place the report title 
   
 The report title includes the name of the first product category. Later, after you run this report as a drillthrough report, the product category name will dynamically change to reflect the name of the product category that was clicked in the main report.  
   
-## <a name="DParameter"></a>5. Update Parameter Properties  
+## <a name="DParameter"></a>5. Set Hidden Parameter Property  
 By default parameters are visible, which is not appropriate for this report. You will update the parameter properties for the drillthrough report.  
   
 #### To hide a parameter  
@@ -344,7 +344,7 @@ From the **Getting Started** dialog box, create a matrix report by using the **T
  
 2.  In the **Getting Started** dialog box, verify that **New Report** is selected, and then click **Table or Matrix Wizard**.  
   
-## <a name="MConnection"></a>1a. Specify a Data Connection  
+## <a name="MConnection"></a>1a. Add embedded data source  
 You will add an embedded data source to the main report.  
   
 #### To create an embedded data source  
@@ -383,7 +383,7 @@ You will add an embedded data source to the main report.
   
 14. Click **Next**.  
   
-## <a name="MMDXQuery"></a>1b. Create an MDX Query  
+## <a name="MMDXQuery"></a>1b. Create embedded dataset  
 Next, create an embedded dataset. To do so, you will use the query designer to create filters, parameters, and calculated members as well as the dataset itself.  
   
 #### To create query filters  
@@ -481,7 +481,7 @@ Next, create an embedded dataset. To do so, you will use the query designer to c
   
 6.  Click **Next**.  
   
-## <a name="MLayout"></a>1c. Organize Data into Groups  
+## <a name="MLayout"></a>1c. Organize Main Report Data into Groups  
 When you select the fields on which to group data, you design a matrix with rows and columns that displays detail and aggregated data.  
   
 #### To organize data into groups  
@@ -500,7 +500,7 @@ When you select the fields on which to group data, you design a matrix with rows
   
     Steps 3 and 4 specify the data to display in the matrix.  
   
-## <a name="MTotals"></a>1d. Add Subtotals and Totals  
+## <a name="MTotals"></a>1d. Add Main Report Subtotals and Totals  
 You can show subtotals and grand totals in reports. The data in the main report displays as an indicator; you will remove the grand total after you complete the wizard.  
   
 #### To add subtotals and grand totals  
@@ -601,7 +601,7 @@ Use indicators to show the state of quantities and sales for Online and Reseller
   
 6.  To preview your report, click **Run**.  
   
-## <a name="MParameter"></a>5. Update Parameter Properties  
+## <a name="MParameter"></a>5. Set Internal Parameter Property  
 By default, parameters are visible, which is not appropriate for this report. You will update the parameter properties to make the parameter internal.  
   
 #### To make the parameter internal  

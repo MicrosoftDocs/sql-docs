@@ -34,7 +34,7 @@ ms.author: "sstein"
 ###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
  DAC registration can only be performed on a database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], or [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) or later. DAC registration cannot be performed if a DAC is already registered for the database. For example, if the database was created by deploying a DAC, you cannot run the **Register Data-tier Application Wizard**.  
   
- You cannot register a DAC if the database has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
+ You cannot register a DAC if the database has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)).  
   
 ###  <a name="Permissions"></a> Permissions  
  Registering a DAC in an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)] requires at least ALTER ANY LOGIN and database scope VIEW DEFINITION permissions, SELECT permissions on **sys.sql_expression_dependencies**, and membership in the **dbcreator** fixed server role. Members of the **sysadmin** fixed server role or the built-in SQL Server system administrator account named **sa** can also register a DAC. Registering a DAC that does not contain logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the **dbmanager** or **serveradmin** roles. Registering a DAC that contains logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires membership in the **loginmanager** or **serveradmin** roles.  
@@ -172,5 +172,4 @@ $registerunit.Register()
   
 ## See Also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # azdata notebook
 
-Applies to `azdata`
+Applies to [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
@@ -34,7 +34,7 @@ View notebook.  This shows all cells.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
-View notebook.  This shows all cells unless a cell with error in it's output is encountered.  In that case the output stops.
+View notebook.  This shows all cells unless a cell with error in its output is encountered.  In that case the output stops.
 ```bash
 azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```

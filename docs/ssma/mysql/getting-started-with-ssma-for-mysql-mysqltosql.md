@@ -67,7 +67,7 @@ SQL Server or Azure SQL Database Metadata Explorer shows information about an in
   
 You can use this Metadata Explorer to select converted MySQL database objects, and then synchronize those objects with the instance of SQL Server or Azure SQL Database.  
   
-For more information, see [Synchronization (MySQL to SQL Server / Azure SQL Database)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+For more information, see [Synchronization (MySQL to SQL Server / Azure SQL Database)](./loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ### Metadata  
 To the right of each metadata explorer are tabs that describe the selected object. For example, if you select a table in MySQL Metadata Explorer, nine tabs will appear: **Table**, **SQL**, **Type Mapping**, **Data**, **Settings**, **Charset Mapping**, **SQL Modes**, **Properties**, and **Report**. The **Report** tab contains information only after you create a report that contains the selected object. If you select a table in SQL Server Metadata Explorer, three tabs will appear: **Table**, **SQL** and **Data**.  
@@ -119,4 +119,3 @@ The **View** menu provides commands to toggle the visibility of the Output pane 
 ## See Also  
 [User Interface Reference &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
 [Migrating MySQL Data into SQL Server - Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
-  

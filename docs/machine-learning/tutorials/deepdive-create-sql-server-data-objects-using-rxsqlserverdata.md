@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Create SQL Server data objects using RxSqlServerData (SQL Server and RevoScaleR tutorial)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This is tutorial 2 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This is tutorial 2 of the [RevoScaleR tutorial series](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
 This tutorial is a continuation of database creation: adding tables and loading data. If a DBA created the database and login in [tutorial two](deepdive-work-with-sql-server-data-using-r.md), you can add tables using an R IDE like RStudio or a built-in tool like **Rgui**.
 
@@ -98,7 +98,7 @@ Because you've already defined the connection string and other parameters as var
 
 Now that you have created the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, you can load data into them using the appropriate **Rx** function.
 
-The **RevoScaleR** package contains functions specific to data source types. For text data, use [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) to generate the data source object. There are additional functions for creating data source objects from Hadoop data, ODBC data, and so forth.
+The **RevoScaleR** package contains functions specific to data source types. For text data, use [RxTextData](/machine-learning-server/r-reference/revoscaler/rxtextdata) to generate the data source object. There are additional functions for creating data source objects from Hadoop data, ODBC data, and so forth.
 
 > [!NOTE]
 > For this section, you must have **Execute DDL** permissions on the database.
@@ -111,7 +111,7 @@ The **RevoScaleR** package contains functions specific to data source types. For
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    Notice the call to **rxGetOption**, which is the GET method associated with [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) in **RevoScaleR**. Use this utility to set and list options related to local and remote compute contexts, such as the default shared directory, or the number of processors (cores) to use in computations.
+    Notice the call to **rxGetOption**, which is the GET method associated with [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions) in **RevoScaleR**. Use this utility to set and list options related to local and remote compute contexts, such as the default shared directory, or the number of processors (cores) to use in computations.
     
     This particular call gets the samples from the correct library, regardless of where you are running your code. For example, try running the function on SQL Server, and on your development computer, and see how the paths differ.
   
@@ -132,7 +132,7 @@ The **RevoScaleR** package contains functions specific to data source types. For
   
     You can see that, although the R data objects have been created in your local workspace, the tables have not been created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Also, no data has been loaded from the text file into the R variable.
   
-4. Insert the data by calling the function [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) function.
+4. Insert the data by calling the function [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) function.
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -184,7 +184,7 @@ Again, if the connection was successful, you should see a message indicating com
 
 ## More about rxDataStep
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) is a powerful function that can perform multiple transformations on an R data frame. You can also use rxDataStep to convert data into the representation required by the destination: in this case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) is a powerful function that can perform multiple transformations on an R data frame. You can also use rxDataStep to convert data into the representation required by the destination: in this case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Optionally, you can specify transformations on the data, by using R functions in the arguments to **rxDataStep**. Examples of these operations are provided later in this tutorial.
 

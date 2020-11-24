@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  A complete sample shows how to set the rowset properties to obtain a FAST_FORWARD cursor. After the properties are set, a SELECT statement is executed to retrieve and display the **Name** column of the **Purchasing.Vendor** table in the **AdventureWorks** database.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](/windows/win32/seccrypto/cryptography-reference).  
   
 ### To obtain FAST_FORWARD cursor  
   
@@ -403,5 +403,4 @@ void Cleanup() {
    OleUninitialize();  
 }  
 ```  
-  
   

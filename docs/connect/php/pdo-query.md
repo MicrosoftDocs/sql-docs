@@ -56,7 +56,7 @@ If all the data in a result set is not fetched, the next PDO::query call will no
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## Example  
+## Query example  
 This example shows several queries.  
   
 ```  
@@ -112,7 +112,7 @@ $stmt = null;
 ?>  
 ```
 
-## Example
+## Sql_variant example
 This code sample shows how to create a table of [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) types and fetch the inserted data.
 
 ```

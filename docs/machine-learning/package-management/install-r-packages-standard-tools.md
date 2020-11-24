@@ -8,7 +8,7 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
+
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 
@@ -123,4 +123,4 @@ As an alternative to **miniCRAN**, you can perform these steps manually:
 
 + [Get R package information](r-package-information.md)
 + [Tips for using R packages](tips-for-using-r-packages.md)
-+ [SQL Server R language tutorials](../tutorials/sql-server-r-tutorials.md)
++ [SQL Server R language tutorials](../tutorials/r-tutorials.md)

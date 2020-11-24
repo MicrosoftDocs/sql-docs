@@ -8,12 +8,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/22/2020
 ---
 
 # SQL Database Projects extension (Preview)
 
 The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. 
+
 
 ## Features
 
@@ -26,6 +27,10 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 7. Build single project.
 8. Deploy single project.
 9. Load connection details (SQL Windows authentication) and SQLCMD variables from deployment profile.
+
+Watch this short 10-minute video for an introduction to the SQL Database Projects extension in Azure Data Studio:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Build-SQL-Database-Projects-Easily-in-Azure-Data-Studio/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Install the SQL Database Projects extension
 
@@ -46,14 +51,11 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 
 ## Known limitations
 
-1. Adding project references and loading existing project references in Azure Data Studio viewlet is not currently supported.
-2. Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected.
-3. Pre-Post deploy script adding and loading in viewlet is not supported as of today, however if you manually add these files in project they will be honored at build time.
-4. SQLCLR objects in project are not supported in .NET Core version of DacFx.
-5. Tasks (build/publish) are not user-defined.
-6. Publish targets defined by DacFx.
-7. Source control integration and new project creation do not automatically create .gitignore file.
-8. WSL environment support is limited.
+- Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected.
+- SQLCLR objects in project are not supported in .NET Core version of DacFx.
+- Tasks (build/publish) are not user-defined.
+- Publish targets defined by DacFx.
+- WSL environment support is limited.
 
 ## Next steps
 

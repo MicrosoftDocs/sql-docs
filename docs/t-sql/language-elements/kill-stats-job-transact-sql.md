@@ -33,8 +33,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 KILL STATS JOB job_id   
 ```  
   
@@ -55,7 +54,7 @@ KILL STATS JOB job_id
 ## Examples  
  The following example shows how to terminate the statistics update associated with a job where the *job_id* = `53`.  
   
-```  
+```sql  
 KILL STATS JOB 53;  
 GO  
 ```  

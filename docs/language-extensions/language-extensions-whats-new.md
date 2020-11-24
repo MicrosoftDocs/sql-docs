@@ -4,22 +4,31 @@ titleSuffix:
 description: Learn about what's new in SQL Server Language Extensions that expands, extends, and deepens the integration between external languages and the data platform. 
 author: dphansen
 ms.author: davidph 
-ms.date: 11/05/2019
+ms.date: 11/09/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
+
 # What's new in SQL Server Language Extensions?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
-[Language Extension](language-extensions-overview.md) capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between external languages and the data platform. 
+[Language Extension](language-extensions-overview.md) capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between external languages and the data platform.
 
-## New in SQL Server 2019 
+## SQL Server 2019
 
-This release adds the support for Language Extensions in SQL Server. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
+The new capabilities for [Language Extension](language-extensions-overview.md) in SQL Server 2019 can be found below. For more information about all of the features in this release, see [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) and [Release Notes for SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
 
-- The default Java Runtime on Windows and Linux is Open Zulu JRE and is included with the [SQL Server Language Extensions installation on Windows](install/install-sql-server-language-extensions-on-windows.md) and [SQL Server Language Extensions installation on Linux](../linux/sql-server-linux-setup-language-extensions.md).
+### New Python and R language extensions
+
+- A [Python custom runtime](../machine-learning/install/custom-runtime-python.md) is available with Language Extensions. For more information, see how to [Install a Python custom runtime on Windows](../machine-learning/install/custom-runtime-python.md?view=sql-server-ver15&preserve-view=true) or [Install a Python custom runtime on Linux](../machine-learning/install/custom-runtime-python.md?view=sql-server-linux-ver15&preserve-view=true).
+
+- An [R custom runtime](../machine-learning/install/custom-runtime-r.md) is available with Language Extensions. For more information, see how to [Install a R custom runtime on Windows](../machine-learning/install/custom-runtime-r.md?view=sql-server-ver15&preserve-view=true) or [Install a R custom runtime on Linux](../machine-learning/install/custom-runtime-r.md?view=sql-server-linux-ver15&preserve-view=true).
+
+### New Java language extension
+
+- The default Java Runtime on Windows and Linux is Open Zulu JRE and is included with the [SQL Server Language Extensions installation on Windows](install/windows-java.md) and [SQL Server Language Extensions installation on Linux](../linux/sql-server-linux-setup-language-extensions-java.md).
 - Supported [Java data types](how-to/java-to-sql-data-types.md).
 - [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) for registering external language (for example, Java) in SQL Server.
 - [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md).
@@ -28,4 +37,4 @@ This release adds the support for Language Extensions in SQL Server. For more in
 
 ## Next steps
 
-+ Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions.md)
++ Install [SQL Server Language Extensions on Windows](install/windows-java.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions-java.md).

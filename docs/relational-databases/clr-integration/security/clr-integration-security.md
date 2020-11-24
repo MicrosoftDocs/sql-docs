@@ -42,10 +42,10 @@ ms.author: "jroth"
  [Host Protection Attributes and CLR Integration Programming](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Provides information about the host protection attribute (HPA) values that are disallowed in SAFE and EXTERNAL_ACCESS assemblies.  
   
- [Links in CLR Integration Security](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Links in CLR Integration Security]()  
  Describes how pieces of user-code can call each other in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Impersonation and CLR Integration Security](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Impersonation and CLR Integration Security](../data-access/impersonation-and-credentials-for-connections.md)  
  Discusses how managed code accesses external resources using impersonation.  
   
  Discusses issues that arise when a managed method invokes a method in a class contained in another assembly.  
@@ -55,5 +55,4 @@ ms.author: "jroth"
   
 ## See Also  
  [Managing CLR Integration Assemblies](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
-  
   

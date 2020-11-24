@@ -16,7 +16,7 @@ Azure Data Studio tracks issues and feature requests using on a [GitHub reposito
 
 ## If you've experienced any issue
 
-Report issues to [Github Issue Tracker](https://github.com/Microsoft/azuredatastudio/issues) and let us know any details that will help reproduce the error. Please include any [log information](#How-to-set-the-logging-level) from the log file.
+Report issues to [Github Issue Tracker](https://github.com/Microsoft/azuredatastudio/issues) and let us know any details that will help reproduce the error. Please include any [log information](#how-to-set-the-logging-level) from the log file.
 
 ## Writing good bug reports and feature requests
 

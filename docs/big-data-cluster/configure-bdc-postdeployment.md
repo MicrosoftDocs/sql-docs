@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 > [!NOTE]
-> Post-deplyoment settings configuration is only available in BDC CU9 and later deployments. Settings configuration **does not** include scale, storage, or endpoint configuration.
+> Post-deplyoment settings configuration is only available in BDC CU9 and later deployments. Settings configuration **does not** include scale, storage, or endpoint configuration. Options and instructions to configure BDC prior to CU9 can be found [here](configure-bdc-pre-configuration.md)
 
 Cluster, service, and resource scoped settings for Big Data Clusters can be configured post-deployment through the azdata CLI. This functionality allows BDC adminstrators to adjust configurations to always meet workload requirements. This article goes over example steps to configure a BDC to meet Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
 

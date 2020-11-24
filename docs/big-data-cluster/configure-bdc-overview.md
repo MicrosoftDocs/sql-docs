@@ -38,8 +38,9 @@ How to:
 
 - [Configure Big Data Clusters at deplyoment time](configure-bdc-deployment.md)
 - [Configure Big Data Clusters post-deployment](configure-bdc-postdeployment.md)
+- [Configure Big Data Clusters - CU8 release and earlier](configure-bdc-pre-configuration.md)
 
 Reference: 
 - [SQL Server Big Data Clusters configuration properties](reference-config-bdc-overview.md)
-- [SQL Server master instance configuration properties](reference-config-master-instance.md)
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
+- [SQL Server Master Instance Configuration Properties - Pre CU9 Release](reference-config-master-instance.md)

@@ -130,10 +130,10 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
 1. Upon successful deployment, you can log in and list the external cluster endpoints:
 
-```console
-   azdata login -n mssql-cluster
-   azdata bdc endpoint list
-```
+   ```console
+      azdata login -n mssql-cluster
+      azdata bdc endpoint list
+   ```
 
 ## OpenShift specific settings in the deployment configuration files
 

@@ -208,14 +208,30 @@ The **SQL Server registry** service (Preview) is available in a subset of the Az
 
 | **Region** | **Data residency** |
 |:--|:--|
-|East US| Geo|
-|East US 2| Geo|
-|West US 2| Geo|
-|Australia East| Geo|
-|Southeast Asia| Single region|
-|North Europe| Geo|
-|West Europe| Geo|
-|UK South| Geo|
+|Australia East|Geo|
+|Australia Southeast|Geo|
+|Canada Central|Geo|
+|France Central|Geo|
+|Japan East|Geo|
+|Japan West|Geo|
+|Korea Central|Geo|
+|Korea South|Geo|
+|North Central US|Geo|
+|North Europe|Geo|
+|South Central US|Geo|
+|Southeast Asia|Single region|
+|South India|Geo|
+|South Africa North|Geo|
+|UK South|Geo|
+|UK West|Geo|
+|West US|Geo|
+|East US|Geo|
+|Central US|Geo|
+|East Asia|Geo|
+|West Europe|Geo|
+|West Central US|Geo|
+|West US 2|Geo|
+|East US 2|Geo|
 
 In the regions with geopgraphic residency, the SQL registry service maintains data backups in a geo-redundant storage account (GRS).  In the regions with the single region residency, the SQL registry service maintains data backups in a zone-redundant storage account (ZRS). For more information, see the [Trust Center](https://azuredatacentermap.azurewebsites.net/).
 

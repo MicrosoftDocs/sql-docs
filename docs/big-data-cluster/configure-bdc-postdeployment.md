@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 > [!NOTE]
-> Post-deplyoment settings configuration is only available in BDC CU9 and later deployments. Settings configuration **does not** include scale, storage, or endpoint configuration. Options and instructions to configure BDC prior to CU9 can be found [here](configure-bdc-pre-configuration.md)
+> Post-deplyoment settings configuration is only available in BDC CU9 and later deployments. Settings configuration **does not** include scale, storage, or endpoint configuration. Options and instructions to configure BDC prior to CU9 can be found [here](configure-bdc-pre-configuration.md).
 
 Cluster, service, and resource scoped settings for Big Data Clusters can be configured post-deployment through the azdata CLI. This functionality allows BDC adminstrators to adjust configurations to always meet workload requirements. This article goes over example steps to configure a BDC to meet Spark workload requirements. The post-deployment configuration functionality follows a set, diff, apply flow.
 
@@ -41,14 +41,14 @@ Spark Service
 Update the default number of cores to 2 and default memory to 7424m for the Spark service.
 
 ```bash
-azdata bdc spark config settings set spark-defaults-conf.spark.driver.cores=2, spark-defaults-conf.spark.driver.memory=7424m
+azdata bdc spark settings set spark-defaults-conf.spark.driver.cores=2, spark-defaults-conf.spark.driver.memory=7424m
 ```
 
 ### **Change the default number of cores and memory for the Spark executors in the Storage Pool**
 Update the default number of executor cores to 4 for the Storage Pool.
 
 ```bash
-azdata bdc spark config settings set spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
+azdata bdc spark settings set spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
 ### **View the pending settings changes staged in the BDC**
@@ -56,7 +56,7 @@ View the pending settings changes for the Spark service only and across the enti
 
 #### **Pending Spark Service Settings**
 ```bash
-azdata bdc spark config settings show --filter-option=pending --include-details
+azdata bdc spark settings show --filter-option=pending --include-details
 ```
 Spark Service 
 |Setting|Running Value|Configured Value|Configurable|Configured |Last Updated Time|
@@ -66,7 +66,7 @@ Spark Service
 
 #### **All Pending Settings**
 ```bash
-azdata bdc config settings show --filter-option=pending --include-details --recursive
+azdata bdc settings show --filter-option=pending --include-details --recursive
 ```
 
 Spark Service Settings - Pending
@@ -80,12 +80,12 @@ Storage-0 Resource Spark Settings - Pending
 | --- | --- | --- | --- | --- | --- |
 |`spark-defaults-conf.spark.executor.cores`|`1`| `4` | `true` | `true` |
 
-### **Upgrade the BDC with the pending configuration settings**
+### **Apply the pending settings to the BDC**
 ```bash
-azdata bdc config upgrade
+azdata bdc settings apply
 ```
 
-### **Monitor the status of the BDC upgrade**
+### **Monitor the status of the BDC configuration update**
 ```bash
 azdata bdc status show -all
 ```
@@ -96,13 +96,13 @@ azdata bdc status show -all
 If you determine that you no longer want to change the pending configuration settings, you can unstage these settings. This will revert the pending settings at all scopes.
 
 ```bash
-azdata bdc config settings revert
+azdata bdc settings revert
 ```
 
 ### **Abort the configuration upgrade**
-If the configuration upgrade fails for any of the components, you can abort the upgrade process and return the BDC back to its prior configurations. Settings that were staged for change during the upgrade will again be listed as pending settings.
+If the configuration upgrade fails for any of the components, you can cancel the upgrade process and return the BDC back to its prior configurations. Settings that were staged for change during the upgrade will again be listed as pending settings.
 
 ```bash
-azdata bdc config abort-upgrade
+azdata bdc settings cancel-apply
 ```
 

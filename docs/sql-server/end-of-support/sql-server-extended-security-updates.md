@@ -2,7 +2,7 @@
 title: "What are Extended Security Updates?"
 description: Learn how to use the SQL Server registry to get extended security updates for your end-of-support and end-of-life SQL Server products, such as SQL Server 2008, and SQL Server 2008 R2. 
 ms.custom: ""
-ms.date: "11/23/2020"
+ms.date: "11/24/2020"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual

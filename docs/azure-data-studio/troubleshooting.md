@@ -16,22 +16,22 @@ Azure Data Studio tracks issues and feature requests using on a [GitHub reposito
 
 ## If you've experienced any issue
 
-Report issues to [Github Issue Tracker](https://github.com/Microsoft/azuredatastudio/issues) and let us know any details that will help reproduce the error. Please include any [log information](#how-to-set-the-logging-level) from the log file.
+Report issues to [GitHub Issue Tracker](https://github.com/Microsoft/azuredatastudio/issues) and let us know any details that will help reproduce the error. Include any [log information](#how-to-set-the-logging-level) from the log file.
 
 ## Writing good bug reports and feature requests
 
 File a single issue per problem and feature request.
 
-* Do not enumerate multiple bugs or feature requests in the same issue.
-* Do not add your issue as a comment to an existing issue unless it's for the identical input. Many issues look similar, but have different causes.
+* Don't enumerate multiple bugs or feature requests in the same issue.
+* Don't add your issue as a comment to an existing issue unless it's for the identical input. Many issues look similar, but have different causes.
 
 The more information you can provide, the more likely someone will be successful reproducing the issue and finding a fix. 
 
-Please include the following with each issue. 
+Include the following information with each issue:
 
 * Version of Azure Data Studio
 * Reproducible steps (1... 2... 3...) and what you expected versus what you actually saw. 
-* Images, animations, or a link to a video. Note that images and animations illustrate repro-steps but *do not* replace them.
+* Images, animations, or a link to a video. Images and animations illustrate repro-steps but don't replace them.
 * A code snippet that demonstrates the issue or a link to a code repository we can easily pull down onto our machine to recreate the issue. 
 
 > [!NOTE]
@@ -55,21 +55,21 @@ If you want to enable debug logging for startup then set the log level to `Debug
 
 ### MSSQL (Built-In Extension)
 
-If the `Mssql: Log Debug Info` user setting is set to true then debug log info will be sent to the `MSSQL` output channel.
+If the `Mssql: Log Debug Info` user setting is set to true, then debug log info will be sent to the `MSSQL` output channel.
 
 The `Mssql: Tracing Level` user setting is used to control the verbosity of the logging.
 
 ## Debug log location
-From Azure Data Studio run the `Developer: Open Logs Folder` command to open the path to the logs. There's many different type of log files that write there, a few of the commonly used ones are:
+From Azure Data Studio, run the `Developer: Open Logs Folder` command to open the path to the logs. There's many different types of log files that write there, a few of the commonly used ones are:
 
-1. `renderer#.log` (e.g. renderer1.log) - this is the log file for the main process.
-1. `telemetry.log` - When the log level is set to `Trace` this will contain the telemetry events sent by Azure Data Studio
+1. `renderer#.log` (for example, renderer1.log) - this file is the log file for the main process.
+1. `telemetry.log` - When the log level is set to `Trace` this file will contain the telemetry events sent by Azure Data Studio
 1. `exthost#/exthost.log` - Log file for the extension host process (this is only the process itself, not the extensions running inside it)
-1. `exthost#/Microsoft.mssql` - Logs for the mssql extension which contains much of the core logic for MSSQL related features
+1. `exthost#/Microsoft.mssql` - Logs for the mssql extension, which contains much of the core logic for MSSQL-related features
    * sqltools.log is the log for SQL Tools Service
 1. `exthost#/output_logging_#######` - these folders contain the messages displayed in the `Output` panel in Azure Data Studio. Each file is named `#-<Channel Name>` so for example the `Notebooks` output channel may output to a file named `3-Notebooks.log`.
 
-If asked to provide logs please zip up the entire folder to ensure that the correct logs are included. 
+If you are asked to provide logs, zip up the entire folder to ensure that the correct logs are included. 
 
 ## Next Steps
 - [Report an issue](https://github.com/Microsoft/azuredatastudio/issues)

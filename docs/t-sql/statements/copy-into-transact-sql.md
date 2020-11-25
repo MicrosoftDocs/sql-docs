@@ -256,7 +256,7 @@ DATEFORMAT only applies to CSV and specifies the date format of the date mapping
 *ENCODING* only applies to CSV. Default is UTF8. Specifies the data encoding standard for the files loaded by the COPY command. 
 
 *IDENTITY_INSERT = ‘ON’ | ‘OFF’*</br>
-IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. SQL DW will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
+IDENTITY_INSERT specifies whether the identity value or values in the imported data file are to be used for the identity column. If IDENTITY_INSERT is OFF (default), the identity values for this column are verified, but not imported. Azure Synapse Analytics will automatically assign unique values based on the seed and increment values specified during table creation. Note the following behavior with the COPY command:
 
 - If IDENTITY_INSERT is OFF, and table has an identity column
   - A column list must be specified which does not map an input field to the identity column.
@@ -435,7 +435,7 @@ Authenticating using Managed Identity (MSI) is not supported with the COPY state
 
 MSI authentication is required when the storage account is associated with a VNet. You must use BCP/Bulk insert to load data instead of COPY or PolyBase if your storage account is attached to a VNet.
 
-This limitation is only applicable to SQL pools belonging to a Synapse workspace (preview). We will enable MSI support in Synapse workspaces in an upcoming release. 
+This limitation is only applicable to SQL pools belonging to a Synapse workspace. We will enable MSI support in Synapse workspaces in an upcoming release. 
 
 Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 

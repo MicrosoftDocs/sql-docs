@@ -949,7 +949,7 @@ Provides the syntax and related information for changing the attributes of a dat
 
 ## Syntax
 
-### [SQL pool](#tab/sqlpool)
+### [Dedicated SQL pool](#tab/sqlpool)
 ```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -973,7 +973,7 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
-### [SQL on-demand (preview)](#tab/sqlod)
+### [Serverless SQL pool](#tab/sqlod)
 ```syntaxsql
 ALTER DATABASE { database_name | Current } 
 { 

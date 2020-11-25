@@ -51,7 +51,7 @@ IDENTITY [ (seed , increment) ]
  Is the incremental value that is added to the identity value of the previous row that was loaded.
 
  > [!NOTE]
- > In Azure Synapse Analytics values for identity are not incremental due to the distributed architecture of the data warehouse. Please see [Using IDENTITY to create surrogate keys in Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values) for more information.
+ > In Azure Synapse Analytics values for identity are not incremental due to the distributed architecture of the data warehouse. Please see [Using IDENTITY to create surrogate keys in a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values) for more information.
   
  You must specify both the seed and increment or neither. If neither is specified, the default is (1,1).  
   
@@ -67,7 +67,7 @@ IDENTITY [ (seed , increment) ]
 -   **Uniqueness of the value** - Uniqueness must be enforced by using a **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. - 
  
 > [!NOTE]
-> Azure Synapse Analytics does not support **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. Please see [Using IDENTITY to create surrogate keys in Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) for more information.
+> Azure Synapse Analytics does not support **PRIMARY KEY** or **UNIQUE** constraint or **UNIQUE** index. Please see [Using IDENTITY to create surrogate keys in a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key) for more information.
 
 -   **Consecutive values within a transaction** - A transaction inserting multiple rows is not guaranteed to get consecutive values for the rows because other concurrent inserts might occur on the table. If values must be consecutive then the transaction should use an exclusive lock on the table or use the **SERIALIZABLE** isolation level.  
   

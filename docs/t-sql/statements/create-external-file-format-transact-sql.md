@@ -63,7 +63,7 @@ WITH (
 {  
     FIELD_TERMINATOR = field_terminator  
     | STRING_DELIMITER = string_delimiter 
-    | First_Row = integer -- ONLY AVAILABLE SQL DW
+    | First_Row = integer -- ONLY AVAILABLE FOR AZURE SYNAPSE ANALYTICS
     | DATE_FORMAT = datetime_format  
     | USE_TYPE_DEFAULT = { TRUE | FALSE } 
     | Encoding = {'UTF8' | 'UTF16'} 
@@ -411,7 +411,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
+### E. Create a Delimited Text File Skipping Header Row (Azure Synapse Analytics Only)
  This example creates an external file format for CSV file with a single header row. 
   
 ```sql  

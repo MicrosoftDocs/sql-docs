@@ -297,8 +297,8 @@ This short example creates three users and an external table with six rows. It t
 
 ### Prerequisites
 
-1. You must have a SQL pool. See [Create a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
-1. The server hosting your SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. You must have a dedicated SQL pool. See [Create a dedicated SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. The server hosting your dedicated SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Create a file system for your Azure Storage account. Use Storage Explorer to view your storage account. Right click on containers and select *Create file system*.  
 
 Once you have the prerequisites in place, create three user accounts that will demonstrate different access capabilities.
@@ -312,7 +312,7 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
---run in master and your SQL pool database
+--run in master and your dedicated SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;

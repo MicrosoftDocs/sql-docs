@@ -1,5 +1,5 @@
 ---
-title: "Protecting Connection Information"
+title: "Protecting connection information"
 description: Learn about security vulnerabilities in connection strings, which can arise due to how connection strings are constructed and persisted and authentication type.
 ms.date: "11/13/2020"
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4

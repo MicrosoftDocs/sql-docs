@@ -82,7 +82,7 @@ The Microsoft SqlClient Data Provider for SQL Server type of a `Parameter` objec
 > Conversions from decimal to other types are narrowing conversions that round the decimal value to the nearest integer value toward zero. If the result of the conversion is not representable in the destination type, an <xref:System.OverflowException> is thrown.
 
 > [!NOTE]
-> When you send a null parameter value to the server, you must specify <xref:System.DBNull>, not `null` (`Nothing` in Visual Basic). The null value in the system is an empty object that has no value. <xref:System.DBNull> is used to represent null values. For more information about database nulls, see [Handling Null Values](./sql/handling-null-values.md).
+> When you send a null parameter value to the server, you must specify <xref:System.DBNull>, not `null` (`Nothing` in Visual Basic). The null value in the system is an empty object that has no value. <xref:System.DBNull> is used to represent null values.
 
 ## Deriving parameter information
 

@@ -111,7 +111,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specifies the column by which the rowset is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, scalar function, or user-defined variable.  
   
  \<ORDER BY clause>  
- Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window functioncalculation is performed.  
+ Defines the logical order of the rows within each partition of the result set. That is, it specifies the logical order in which the window function calculation is performed.  
   
  *order_by_expression*  
  Specifies a column or expression on which to sort. *order_by_expression* can only refer to columns made available by the FROM clause. An integer cannot be specified to represent a column name or alias.  

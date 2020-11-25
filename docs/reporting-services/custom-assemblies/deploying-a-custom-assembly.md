@@ -23,7 +23,7 @@ ms.author: maggies
 > [!NOTE]  
 >  There are two preview modes for Report Designer: the Preview tab and the pop-up preview window that is launched when your report project is started in **DebugLocal** mode. The Preview tab executes all report expressions using the **FullTrust** permission set and does not apply security policy settings. The pop-up preview window is meant to simulate the report server functionality and therefore has a policy configuration file that you or an administrator must modify to use custom assemblies in Report Designer. This pop-up preview also locks the custom assembly. Therefore, you need to close the preview window in order to modify or update your custom assembly code.  
   
-### To deploy a custom assembly in Reporting Services  
+## To deploy a custom assembly in Reporting Services  
   
 1.  Copy your custom assembly from your build location to the report server bin folder or the Report Designer folder. 
 

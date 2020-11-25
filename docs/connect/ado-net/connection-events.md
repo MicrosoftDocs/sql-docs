@@ -1,5 +1,5 @@
 ---
-title: "Connection Events"
+title: "Connection events"
 description: The connection events to retrieve informational messages from a data source and determine if its state is changed.
 ms.date: "11/13/2020"
 dev_langs: 

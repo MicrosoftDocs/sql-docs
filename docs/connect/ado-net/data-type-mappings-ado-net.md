@@ -1,5 +1,5 @@
 ---
-title: "Data Type Mappings"
+title: "Data type mappings"
 description: "Describes the data types are used by Microsoft SqlClient Data Provider for SQL Server."
 ms.date: "11/13/2020"
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a

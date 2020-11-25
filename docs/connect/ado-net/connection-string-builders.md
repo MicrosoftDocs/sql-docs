@@ -1,5 +1,5 @@
 ---
-title: "Connection String Builders"
+title: "Connection string builders"
 description: Learn about the connection string builder classes used for different providers in ADO.NET, all of which inherit from DbConnectionStringBuilder.
 ms.date: "11/13/2020"
 dev_langs: 

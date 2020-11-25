@@ -1,5 +1,5 @@
 ---
-title: "Establishing Connection"
+title: "Establishing connection"
 description: Guideline for connecting to a SQL Server by SqlClient provider.
 ms.date: "11/13/2020"
 dev_langs: 

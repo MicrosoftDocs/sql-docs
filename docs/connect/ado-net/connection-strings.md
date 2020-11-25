@@ -1,5 +1,5 @@
 ---
-title: "Connection Strings"
+title: "Connection strings"
 description: Learn about connection strings in the Microsoft SqlClient Data Provider for SQL Server, which contain initialization information passed as a parameter from a data provider to a data source.
 ms.date: "11/13/2020"
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490

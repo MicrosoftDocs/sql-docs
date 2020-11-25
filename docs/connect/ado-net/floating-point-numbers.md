@@ -1,5 +1,5 @@
 ---
-title: "Floating-Point Numbers"
+title: "Floating-Point numbers"
 description: Learn some of the issues when working with floating-point numbers in the Microsoft SqlClient Data Provider for SQL Server.
 ms.date: "11/13/2020"
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91

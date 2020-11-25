@@ -1,5 +1,5 @@
 ---
-title: "Connection String Syntax"
+title: "Connection string syntax"
 description: Learn about syntax of connection strings in the Microsoft SqlClient Data Provider for SQL Server. The syntax for each provider is documented in its ConnectionString property.
 ms.date: "11/13/2020"
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e

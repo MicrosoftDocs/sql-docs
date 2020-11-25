@@ -1,5 +1,5 @@
 ---
-title: "Enabling event tracing in SqlClient"
+title: "Enable event tracing in SqlClient"
 description: "Describes how to enable event tracing in SqlClient by implementing an event listener and how to access the event data."
 ms.date: "11/23/2020"
 dev_langs: 
@@ -12,7 +12,7 @@ author: johnnypham
 ms.author: v-jopha
 ms.reviewer: 
 ---
-# Enabling event tracing in SqlClient
+# Enable event tracing in SqlClient
 
 [!INCLUDE [appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -99,28 +99,41 @@ class Program
 }
 ```
 
-### Using Xperf to collect trace log
+### Use Xperf to collect trace log
 
 1. Start tracing using the following command line.
-```
-xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
-```
-2. Run the native SNI tracing example to connect to SQL Server.
-3. Stop tracing using the following command line.
-```
-xperf -stop trace
-```
-4. Use PerfView to open the myTrace.etl file specified in Step 1. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names. 
-![Use PerfView to view SNI trace file](media/view-event-trace-native-sni.png)
 
-### Using PerfView to collect trace log
+   ```
+   xperf -start trace -f myTrace.etl -on *Microsoft.Data.SqlClient.EventSource
+   ```
+   
+2. Run the native SNI tracing example to connect to SQL Server.
+
+3. Stop tracing using the following command line.
+
+   ```
+   xperf -stop trace
+   ```
+   
+4. Use PerfView to open the myTrace.etl file specified in Step 1. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names. 
+
+   ![Use PerfView to view SNI trace file](media/view-event-trace-native-sni.png)
+
+
+### Use PerfView to collect trace log
 
 1. Start PerfView and run `Collect > Collect` from menu bar.
+
 2. Configure trace file name, output path, and provider name.
-![Configure Prefview before collection](media/collect-event-trace-native-sni.png)
+
+   ![Configure Prefview before collection](media/collect-event-trace-native-sni.png)
+   
 3. Start collection.
+
 4. Run the native SNI tracing example to connect to SQL Server.
+
 5. Stop collection from PerfView. It will take a while to generate PerfViewData.etl file according to configuration in Step 2.
+
 6. Open the etl file in PerfView. The SNI tracing log can be found with `Microsoft.Data.SqlClient.EventSource/SNIScope` and `Microsoft.Data.SqlClient.EventSource/SNITrace` event names. 
 
 

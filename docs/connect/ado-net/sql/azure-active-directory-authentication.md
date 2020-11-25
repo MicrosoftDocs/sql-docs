@@ -38,7 +38,7 @@ For information about Azure AD authentication beyond what the following sections
 
 ## Setting Azure Active Directory authentication
 
-When the application is connecting to Azure SQL data sources by using Azure AD authentication, it needs to provide a valid authentication mode. This table lists the supported authentication modes, which you can specify by using the `Authentication` connection property in the connection string:
+When the application is connecting to Azure SQL data sources by using Azure AD authentication, it needs to provide a valid authentication mode. The following table lists the supported authentication modes. The application specifies a mode by using the `Authentication` connection property in the connection string.
 
 | Value | Description  | Framework    | Microsoft.Data.SqlClient version |
 |:--|:--|:--|:--:|
@@ -82,7 +82,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString1)) {
     conn.Open();
 }
 
-// User ID is optional for .NET Core and .NET Standard
+// User ID is optional for .NET Core and .NET Standard.
 string ConnectionString2 = @"Server=demo.database.windows.net; Authentication=Active Directory Integrated; Database=testdb; User Id=user@domain.com";
 
 using (SqlConnection conn = new SqlConnection(ConnectionString2)) {
@@ -140,7 +140,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 With [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) for .NET (MSAL.NET), `Active Directory Device Code Flow` authentication enables the client application to connect to Azure SQL data sources from devices and operating systems that don't have an interactive web browser. Interactive authentication will be performed on another device. For more information about device code flow authentication, see [OAuth 2.0 Device Code Flow](/azure/active-directory/develop/v2-oauth2-device-code). 
 
-When this mode is in use, the you can't set the `Credential` property of `SqlConnection`. Also, the username and password must not be specified in the connection string. 
+When this mode is in use, you can't set the `Credential` property of `SqlConnection`. Also, the username and password must not be specified in the connection string. 
 
 The following code snippet is an example of using `Active Directory Device Code Flow` authentication.
 
@@ -160,7 +160,7 @@ using (SqlConnection conn = new SqlConnection(ConnectionString)) {
 
 There are two types of managed identities: 
 
-- _System-assigned managed identity_ is an identity created on a service instance in Azure AD. It's tied to the lifecycle of that service instance. 
+- _System-assigned managed identity_ is created on a service instance in Azure AD. It's tied to the lifecycle of that service instance. 
 - _User-assigned managed identity_ is created as a standalone Azure resource. It can be assigned to one or more instances of an Azure service. 
 
 For more information about managed identities, see [About managed identities for Azure resources](/azure/active-directory/managed-identities-azure-resources/overview).

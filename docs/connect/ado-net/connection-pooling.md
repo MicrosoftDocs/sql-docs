@@ -11,7 +11,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Connection Pooling
+# Connection pooling
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -26,4 +26,4 @@ Provides an overview of connection pooling and describes how connection pooling 
 
 ## See also
 
-- [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md)
+- [Retrieving and Modifying Data in ADO.NET](retrieving-modifying-data.md)

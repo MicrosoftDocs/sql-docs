@@ -1,5 +1,5 @@
 ---
-title: "Establishing the Connection"
+title: "Establishing Connection"
 description: Guideline for connecting to a SQL Server by SqlClient provider.
 ms.date: "11/13/2020"
 dev_langs: 
@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Establishing the Connection
+# Establishing connection
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -49,5 +49,5 @@ The security identity for ASP.NET applications can be set to one of several diff
 
 ## See also
 
-- [Connecting to a Data Source](connecting-to-a-data-source.md)
+- [Connecting to a Data Source](connecting-to-data-source.md)
 - [Connection Strings](connection-strings.md)

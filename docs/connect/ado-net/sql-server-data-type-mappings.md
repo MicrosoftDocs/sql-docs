@@ -11,7 +11,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# SQL Server Data Type Mappings
+# SQL Server data type mappings
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -67,4 +67,4 @@ For more information about SQL Server data types, see [Data types (Transact-SQL)
 
 - [SQL Server Data Types and ADO.NET](./sql/sql-server-data-types.md)
 - [SQL Server Binary and Large-Value Data](./sql/sql-server-binary-large-value-data.md)
-- [Data Type Mappings in ADO.NET](data-type-mappings-in-ado-net.md)
+- [Data Type Mappings in ADO.NET](data-type-mappings-ado-net.md)

@@ -1,5 +1,5 @@
 ---
-title: "Connection Strings and Configuration Files"
+title: "Connection Strings And Configuration Files"
 description: Learn how to store connection strings for ADO.NET applications in an application configuration file, as a best practice for security and maintenance.
 ms.date: "11/13/2020"
 dev_langs: 
@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Connection Strings and Configuration Files
+# Connection strings and configuration files
 
 [!INCLUDE[appliesto-netfx-netcore-xxxx-md](../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 

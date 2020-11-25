@@ -1,5 +1,5 @@
 ---
-title: "Connecting to a Data Source"
+title: "Connecting To Data Source"
 description: Learn about Connection objects, used to connect to data sources in ADO.NET. The Connection object you choose depends on the type of data source.
 ms.date: "11/13/2020"
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
@@ -11,7 +11,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Connecting to a Data Source in ADO.NET
+# Connecting to a data source in ADO.NET
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -23,7 +23,7 @@ The Microsoft SqlClient Data Provider for SQL Server includes a <xref:Microsoft.
 
 ## In This Section  
 
-[Establishing the Connection](establishing-the-connection.md)\
+[Establishing the Connection](establishing-connection.md)\
 Describes how to use a **Connection** object to establish a connection to a data source.
 
 [Connection Events](connection-events.md)\

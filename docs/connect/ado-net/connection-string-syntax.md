@@ -11,7 +11,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Connection String Syntax
+# Connection string syntax
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -122,4 +122,4 @@ For more information, see [Using Encryption Without Validation](/sql/relational-
 ## See also
 
 - [Connection Strings](connection-strings.md)
-- [Connecting to a Data Source](connecting-to-a-data-source.md)
+- [Connecting to a Data Source](connecting-to-data-source.md)

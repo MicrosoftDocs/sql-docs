@@ -1,5 +1,5 @@
 ---
-title: "Retrieving and Modifying Data"
+title: "Retrieving And Modifying Data"
 description: In the .NET Framework, Microsoft SqlClient Data Provider for SQL Server serves as a bridge between an application and a data source to read and update data.
 ms.date: "11/13/2020"
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
@@ -11,7 +11,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Retrieving and Modifying Data in ADO.NET
+# Retrieving and modifying data in ADO.NET
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -21,7 +21,7 @@ A primary function of any database application is connecting to a data source an
 
 ## In This Section
 
-[Connecting to a Data Source](connecting-to-a-data-source.md)
+[Connecting to a Data Source](connecting-to-data-source.md)
 Describes how to establish a connection to a data source and how to work with connection events.
 
 [Connection Strings](connection-strings.md)
@@ -32,5 +32,5 @@ Describes connection pooling for the Microsoft SqlClient Data Provider for SQL S
 
 ## See also
 
-- [Data Type Mappings in ADO.NET](data-type-mappings-in-ado-net.md)
+- [Data Type Mappings in ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server and ADO.NET](./sql/index.md)

@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Connection Events
+# Connection events
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -57,4 +57,4 @@ The following code example uses the **StateChange** event to write a message to 
 
 ## See also
 
-- [Connecting to a Data Source](connecting-to-a-data-source.md)
+- [Connecting to a Data Source](connecting-to-data-source.md)

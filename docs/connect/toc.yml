@@ -45,21 +45,21 @@
       href: ../connect/ado-net/appcontext-switches.md
     - name: Finding additional information
       href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
-  - name: Data Type Mappings in ADO.NET
-    href: ../connect/ado-net/data-type-mappings-in-ado-net.md
+  - name: Data Type Mappings In ADO.NET
+    href: ../connect/ado-net/data-type-mappings-ado-net.md
     items:
     - name: SQL Server Data Type Mappings
       href: ../connect/ado-net/sql-server-data-type-mappings.md
     - name: Floating-Point Numbers
       href: ../connect/ado-net/floating-point-numbers.md
-  - name: Retrieving and Modifying Data in ADO.NET
-    href: ../connect/ado-net/retrieving-and-modifying-data.md
+  - name: Retrieving and Modifying Data In ADO.NET
+    href: ../connect/ado-net/retrieving-modifying-data.md
     items:
-    - name: Connecting to a Data Source
-      href: ../connect/ado-net/connecting-to-a-data-source.md
+    - name: Connecting To Data Source
+      href: ../connect/ado-net/connecting-to-data-source.md
       items:
-      - name: Establishing the Connection
-        href: ../connect/ado-net/establishing-the-connection.md
+      - name: Establishing Connection
+        href: ../connect/ado-net/establishing-connection.md
       - name: Connection Events
         href: ../connect/ado-net/connection-events.md
     - name: Connection Strings
@@ -67,7 +67,7 @@
       items:
       - name: Connection String Builders
         href: ../connect/ado-net/connection-string-builders.md
-      - name: Connection Strings and Configuration Files
+      - name: Connection Strings And Configuration Files
         href: ../connect/ado-net/connection-strings-and-configuration-files.md
       - name: Connection String Syntax
         href: ../connect/ado-net/connection-string-syntax.md

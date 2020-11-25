@@ -3,7 +3,7 @@ title: Install from a command prompt
 description: Run SQL Server command line setup to add Machine Learning Services with Python and R to a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/12/2020  
+ms.date: 11/25/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -31,9 +31,9 @@ You can specify silent, basic, or full interaction with the Setup user interface
 
 ## Command line arguments
 
-The FEATURES argument is required, as are licensing term agreements. 
+The **/FEATURES** argument is required, as are licensing term agreements. 
 
-When installing through the command prompt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports full quiet mode by using the /Q parameter, or Quiet Simple mode by using the /QS parameter. The /QS switch only shows progress, does not accept any input, and displays no error messages if encountered. The /QS parameter is only supported when /Action=install is specified.
+When installing through the command prompt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports full quiet mode by using the **/Q** parameter, or Quiet Simple mode by using the **/QS** parameter. The **/QS** switch only shows progress, does not accept any input, and displays no error messages if encountered. The **/QS** parameter is only supported when **/Action=install** is specified.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | Arguments | Description |

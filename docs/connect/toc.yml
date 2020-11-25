@@ -45,6 +45,39 @@
       href: ../connect/ado-net/appcontext-switches.md
     - name: Finding additional information
       href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+  - name: Data Type Mappings In ADO.NET
+    href: ../connect/ado-net/data-type-mappings-ado-net.md
+    items:
+    - name: SQL Server Data Type Mappings
+      href: ../connect/ado-net/sql-server-data-type-mappings.md
+    - name: Floating-Point Numbers
+      href: ../connect/ado-net/floating-point-numbers.md
+  - name: Retrieving and Modifying Data In ADO.NET
+    href: ../connect/ado-net/retrieving-modifying-data.md
+    items:
+    - name: Connecting To Data Source
+      href: ../connect/ado-net/connecting-to-data-source.md
+      items:
+      - name: Establishing Connection
+        href: ../connect/ado-net/establishing-connection.md
+      - name: Connection Events
+        href: ../connect/ado-net/connection-events.md
+    - name: Connection Strings
+      href: ../connect/ado-net/connection-strings.md
+      items:
+      - name: Connection String Builders
+        href: ../connect/ado-net/connection-string-builders.md
+      - name: Connection Strings And Configuration Files
+        href: ../connect/ado-net/connection-strings-and-configuration-files.md
+      - name: Connection String Syntax
+        href: ../connect/ado-net/connection-string-syntax.md
+      - name: Protecting Connection Information
+        href: ../connect/ado-net/protecting-connection-information.md
+    - name: Connection Pooling
+      href: ../connect/ado-net/connection-pooling.md
+      items:
+        - name: SQL Server Connection Pooling (ADO.NET)
+          href: ../connect/ado-net/sql-server-connection-pooling.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:

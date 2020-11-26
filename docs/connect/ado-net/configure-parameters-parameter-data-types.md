@@ -47,7 +47,7 @@ The data type of a parameter is specific to the Microsoft SqlClient Data Provide
 
 The Microsoft SqlClient Data Provider for SQL Server type of a `Parameter` object is inferred from the .NET Framework type of the `Value` of the `Parameter` object, or from the `DbType` of the `Parameter` object. The following table shows the inferred `Parameter` type based on the object passed as the `Parameter` value or the specified `DbType`.
 
-|.NET Framework type|DbType|SqlDbType|
+|.NET type|DbType|SqlDbType|
 |-------------------------|------------|---------------|
 |<xref:System.Boolean>|Boolean|Bit|
 |<xref:System.Byte>|Byte|TinyInt|

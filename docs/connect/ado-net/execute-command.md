@@ -47,6 +47,8 @@ The following code example demonstrates how to create a <xref:Microsoft.Data.Sql
 
 ### Troubleshooting Commands
 
+[!INCLUDE[appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
+
 The Microsoft SqlClient Data Provider for SQL Server adds **performance counters** to enable you to detect intermittent problems related to failed command executions.
 
 ## See also

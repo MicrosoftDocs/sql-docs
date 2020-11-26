@@ -10,8 +10,8 @@ ms.topic: quickstart
 helpviewer_keywords: 
   - "upgrading SQL Server"
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upgrade SQL Server

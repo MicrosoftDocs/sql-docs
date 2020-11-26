@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "errors [SQL Server], Setup"
   - "logs [SQL Server], Setup"
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # View and Read SQL Server Setup Log Files

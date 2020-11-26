@@ -107,10 +107,11 @@ This release includes minor fixes and enhancements. The following articles inclu
 
 - [Manage big data cluster access in Active Directory mode](manage-user-access.md)
 - [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](active-directory-deploy.md)
-- [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
-- [Configure a SQL Server Big Data Cluster](configure-cluster.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on AKS in Active Directory mode](active-directory-deployment-aks.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] with high availability](deployment-high-availability.md)
+- [Configure [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](configure-cluster.md)
 - [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
-- [SQL Server master instance configuration properties.](reference-config-master-instance.md)
+- [SQL Server master instance configuration properties](reference-config-master-instance.md)
 - [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
 - [Kubernetes RBAC model & impact on users and service accounts managing BDC](kubernetes-rbac.md)
 

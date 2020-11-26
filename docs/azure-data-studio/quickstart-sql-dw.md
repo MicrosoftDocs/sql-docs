@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu, jrasnick
+ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
 ---

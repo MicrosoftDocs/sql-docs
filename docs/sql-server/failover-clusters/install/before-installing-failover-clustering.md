@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "installing failover clusters"
   - "failover clustering [SQL Server], preinstallation checklist"
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Before Installing Failover Clustering
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

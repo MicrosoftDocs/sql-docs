@@ -137,7 +137,13 @@
       - name: Prerequisites
         href: big-data-cluster/active-directory-prerequisites.md
       - name: Deploy
-        href: big-data-cluster/active-directory-deploy.md
+        items:
+          - name: Simple AD deployment
+            href: big-data-cluster/active-directory-deploy.md
+          - name: Plan AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks.md
+          - name: Tutorial - AD on AKS
+            href: big-data-cluster/active-directory-deployment-aks-tutorial.md
       - name: Connect
         href: big-data-cluster/active-directory-connect.md
       - name: Multiple BDCs in the same AD domain
@@ -1870,15 +1876,6 @@
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
     - name: Edge constraints
       href: relational-databases/tables/graph-edge-constraints.md
-      items:
-      - name: Create
-        href: relational-databases/tables/create-edge-constraints.md
-      - name: Delete
-        href: relational-databases/tables/delete-edge-constraint.md
-      - name: Modify
-        href: relational-databases/tables/modify-edge-constraint.md
-      - name: View
-        href: relational-databases/tables/view-edge-constraint-properties.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
@@ -7082,7 +7079,7 @@
       items:
       - name: Query scenarios
         href: relational-databases/polybase/polybase-queries.md
-      - name: Push-down computation
+      - name: Pushdown computation
         href: relational-databases/polybase/polybase-pushdown-computation.md
       - name: Scale-out groups
         href: relational-databases/polybase/polybase-scale-out-groups.md
@@ -9996,11 +9993,11 @@
         href: linux/sql-server-linux-setup-full-text-search.md
       - name: Install SQL Server Integration Services
         href: linux/sql-server-linux-setup-ssis.md
-      - name: Install SQL Server Machine Learning Services
+      - name: Install SQL Server Machine Learning Services (Python and R)
         href: linux/sql-server-linux-setup-machine-learning.md
-      - name: Install SQL Server Machine Learning Services on Docker
+      - name: Install SQL Server Machine Learning Services (Python and R) on Docker
         href: linux/sql-server-linux-setup-machine-learning-docker.md
-      - name: Install SQL Server Language Extensions
+      - name: Install SQL Server Java Language Extension
         href: linux/sql-server-linux-setup-language-extensions-java.md
       - name: Configure repositories
         href: linux/sql-server-linux-change-repo.md
@@ -13601,10 +13598,14 @@
         href: relational-databases/system-stored-procedures/sp-oastop-transact-sql.md
     - name: PolyBase
       items:
-      - name: polybase_join_group
+      - name: sp_polybase_join_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md
       - name: sp_polybase_leave_group
         href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
+      - name: sp_data_source_table_columns
+        href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
+      - name: sp_data_source_objects
+        href: relational-databases/system-stored-procedures/sp-data-source-objects.md
     - name: Policy-Based Management
       href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
       items:

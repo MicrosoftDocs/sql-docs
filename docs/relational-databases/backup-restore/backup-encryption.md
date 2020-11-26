@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 ---
 # Backup Encryption
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

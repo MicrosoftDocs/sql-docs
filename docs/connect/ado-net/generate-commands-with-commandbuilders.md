@@ -92,5 +92,5 @@ The following example recreates the table in the dataset. The **RefreshSchema** 
 
 ## See also
 
-- [Commands and Parameters](commands-parameters.md)
-- [Executing a Command](execute-command.md)
+- [Commands and parameters](commands-parameters.md)
+- [Executing a command](execute-command.md)

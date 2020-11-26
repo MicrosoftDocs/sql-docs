@@ -36,5 +36,5 @@ The following code example executes the stored procedure created by the sample c
 
 ## See also
 
-- [Using Commands to Modify Data](use-commands-to-modify-data.md)
-- [Commands and Parameters](commands-parameters.md)
+- [Using commands to modify data](use-commands-to-modify-data.md)
+- [Commands and parameters](commands-parameters.md)

@@ -11,7 +11,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Using Commands to modify data
+# Using commands to modify data
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -23,15 +23,15 @@ In addition to using **ExecuteNonQuery** to modify schema, you can also use this
 
 Although rows are not returned by the **ExecuteNonQuery** method, input and output parameters and return values can be passed and returned via the **Parameters** collection of the **Command** object.
 
-## In This Section
+## In this section
 
-[Updating Data in a Data Source](update-data-inside-data-source.md)
+[Updating data in a data source](update-data-inside-data-source.md)
 Describes how to execute commands or stored procedures that modify data in a database.
 
-[Performing Catalog Operations](perform-catalog-operations.md)
+[Performing catalog operations](perform-catalog-operations.md)
 Describes how to execute commands that modify database schema.
 
 ## See also
 
-- [Retrieving and Modifying Data in ADO.NET](retrieving-modifying-data.md)
-- [Commands and Parameters](commands-parameters.md)
+- [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
+- [Commands and parameters](commands-parameters.md)

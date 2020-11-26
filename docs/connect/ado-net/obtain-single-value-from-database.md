@@ -27,5 +27,5 @@ The following code example inserts a new value in the database using a <xref:Mic
 
 ## See also
 
-- [Commands and Parameters](commands-parameters.md)
-- [Executing a Command](execute-command.md)
+- [Commands and parameters](commands-parameters.md)
+- [Executing a command](execute-command.md)

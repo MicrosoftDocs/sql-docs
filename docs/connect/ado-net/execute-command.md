@@ -51,4 +51,4 @@ The Microsoft SqlClient Data Provider for SQL Server adds **performance counters
 
 ## See also
 
-- [Commands and Parameters](commands-parameters.md)
+- [Commands and parameters](commands-parameters.md)

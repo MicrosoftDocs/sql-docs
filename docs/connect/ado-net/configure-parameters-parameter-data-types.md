@@ -48,7 +48,7 @@ The data type of a parameter is specific to the Microsoft SqlClient Data Provide
 The Microsoft SqlClient Data Provider for SQL Server type of a `Parameter` object is inferred from the .NET Framework type of the `Value` of the `Parameter` object, or from the `DbType` of the `Parameter` object. The following table shows the inferred `Parameter` type based on the object passed as the `Parameter` value or the specified `DbType`.
 
 |.NET Framework type|DbType|SqlDbType|
-|-------------------------|------------|---------------|---------------|--------------|----------------|
+|-------------------------|------------|---------------|
 |<xref:System.Boolean>|Boolean|Bit|
 |<xref:System.Byte>|Byte|TinyInt|
 |byte[]|Binary|VarBinary. This implicit conversion will fail if the byte array is larger than the maximum size of a VarBinary, which is 8000 bytes. For byte arrays larger than 8000 bytes, explicitly set the <xref:System.Data.SqlDbType>.|
@@ -117,5 +117,5 @@ This example demonstrates how to call a SQL Server stored procedure in the `Nort
 
 ## See also
 
-- [Commands and Parameters](commands-parameters.md)
-- [Data Type Mappings in ADO.NET](data-type-mappings-ado-net.md)
+- [Commands and parameters](commands-parameters.md)
+- [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)

@@ -79,7 +79,7 @@
         - name: SQL Server Connection Pooling (ADO.NET)
           href: ../connect/ado-net/sql-server-connection-pooling.md
     - name: Transactions and concurrency
-      href: ../connection/ado-net/transactions-and-concurrency.md
+      href: ../connect/ado-net/transactions-and-concurrency.md
       items:
       - name: Local transactions
         href: ../connect/ado-net/local-transactions.md

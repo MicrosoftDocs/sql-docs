@@ -1,6 +1,6 @@
 ---
 title: "Transactions and concurrency"
-description: In the .NET Framework, Microsoft SqlClient Data Provider for SQL Server serves as a bridge between an application and a data source to read and update data.
+description: Describes how to use Microsoft SqlClient Data Provider for SQL Server with transactions and concurrency.
 ms.date: "11/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity

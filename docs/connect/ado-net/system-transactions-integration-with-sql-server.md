@@ -46,7 +46,7 @@ The following table describes the possible values.
 |Keyword|Description|  
 |-------------|-----------------|  
 |Implicit Unbind|The default. The connection detaches from the transaction when it ends, switching back to autocommit mode.|
-|Explicit Unbind|The connection remains attached to the transaction until the transaction is closed. The connection will fail if the associated transaction is not active or does not match <xref:Microsoft.Transactions.Transaction.Current%2A>.|
+|Explicit Unbind|The connection remains attached to the transaction until the transaction is closed. The connection will fail if the associated transaction is not active or does not match <xref:System.Transactions.Transaction.Current%2A>.|
 
 ## Using TransactionScope
 

@@ -78,6 +78,17 @@
       items:
         - name: SQL Server Connection Pooling (ADO.NET)
           href: ../connect/ado-net/sql-server-connection-pooling.md
+    - name: Transactions and concurrency
+      href: ../connection/ado-net/transactions-and-concurrency.md
+      items:
+      - name: Local transactions
+        href: ../connect/ado-net/local-transactions.md
+      - name: Distributed transactions
+        href: ../connect/ado-net/distributed-transactions.md
+      - name: System.Transactions integration with SQL Server
+        href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
+      - name: Optimistic concurrency
+        href: ../connect/ado-net/optimistic-concurrency.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:

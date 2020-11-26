@@ -31,19 +31,11 @@ Defines a collation of a database or table column, or a collation cast operation
 
 ## Syntax
 
-### [[!INCLUDE[sss-dedicated-pool-md.md](../../includes/sss-dedicated-pool-md.md)]](#tab/dedicated)
 ```syntaxsql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
 ```
-### [[!INCLUDE[sssod-md.md](../../includes/sssod-md.md)]](#tab/serverless)
-```syntaxsql
-COLLATE { <collation_name> | database_default }
-<collation_name> :: =
-  { SQL_collation_name }
-```
----
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

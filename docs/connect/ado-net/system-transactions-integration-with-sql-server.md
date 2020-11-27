@@ -1,6 +1,6 @@
 ---
 title: "System.Transactions integration with SQL Server"
-description: Describes System.Transactions integration with SQL Server for working with distributed transactions.
+description: "Describes System.Transactions integration with SQL Server for working with distributed transactions."
 ms.date: "11/25/2020"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,11 +20,11 @@ The .NET Framework version 2.0 introduced a transaction framework that can be ac
   
 In addition to the programmability enhancements, <xref:System.Transactions> and ADO.NET can work together to coordinate optimizations when you work with transactions. A promotable transaction is a lightweight (local) transaction that can be automatically promoted to a fully distributed transaction on an as-needed basis.
 
-The **Microsoft SqlClient Data Provider for SQL Server** supports promotable transactions when you work with SQL Server. A promotable transaction does not invoke the added overhead of a distributed transaction unless the added overhead is required. Promotable transactions are automatic and require no intervention from the developer.
+The Microsoft SqlClient Data Provider for SQL Server supports promotable transactions when you work with SQL Server. A promotable transaction does not invoke the added overhead of a distributed transaction unless the added overhead is required. Promotable transactions are automatic and require no intervention from the developer.
 
 ## Creating promotable transactions
 
-The **Microsoft SqlClient Data Provider for SQL Server** provides support for promotable transactions, which are handled through the classes in the <xref:System.Transactions> namespace. Promotable transactions optimize distributed transactions by deferring creating a distributed transaction until it is needed. If only one resource manager is required, no distributed transaction occurs.
+The Microsoft SqlClient Data Provider for SQL Server provides support for promotable transactions, which are handled through the classes in the <xref:System.Transactions> namespace. Promotable transactions optimize distributed transactions by deferring creating a distributed transaction until it is needed. If only one resource manager is required, no distributed transaction occurs.
 
 > [!NOTE]
 > In a partially trusted scenario, the <xref:System.Transactions.DistributedTransactionPermission> is required when a transaction is promoted to a distributed transaction.

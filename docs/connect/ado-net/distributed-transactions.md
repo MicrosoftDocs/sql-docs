@@ -1,6 +1,6 @@
 ---
 title: "Distributed transactions"
-description: Describes how to perform distributed transactions in ADO.NET.
+description: "Describes how to perform distributed transactions in ADO.NET"
 ms.date: "11/25/2020"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -27,7 +27,7 @@ In the .NET Framework and .NET Core, distributed transactions are managed throug
 
 ADO.NET 2.0 introduced support for enlisting in a distributed transaction using the `EnlistTransaction` method, which enlists a connection in a <xref:System.Transactions.Transaction> instance. In previous versions of ADO.NET, explicit enlistment in distributed transactions was performed using the `EnlistDistributedTransaction` method of a connection to enlist a connection in a <xref:System.EnterpriseServices.ITransaction> instance, which is supported for backwards compatibility. For more information on Enterprise Services transactions, see [Interoperability with Enterprise Services and COM+ Transactions](/dotnet/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).
 
-When using a <xref:System.Transactions> transaction with the **Microsoft SqlClient Data Provider for SQL Server** against a SQL Server database, a lightweight <xref:System.Transactions.Transaction> will automatically be used. The transaction can then be promoted to a full distributed transaction on an as-needed basis. For more information, see [System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md).
+When using a <xref:System.Transactions> transaction with the Microsoft SqlClient Data Provider for SQL Server against a SQL Server database, a lightweight <xref:System.Transactions.Transaction> will automatically be used. The transaction can then be promoted to a full distributed transaction on an as-needed basis. For more information, see [System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md).
 
 ## Automatically enlisting in a distributed transaction
 
@@ -35,7 +35,7 @@ Automatic enlistment is the default (and preferred) way of integrating ADO.NET c
 
 ## Manually enlisting in a distributed transaction
 
-If auto-enlistment is disabled or you need to enlist a transaction that was started after the connection was opened, you can enlist in an existing distributed transaction using the `EnlistTransaction` method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object for the **Microsoft SqlClient Data Provider for SQL Server**. Enlisting in an existing distributed transaction ensures that, if the transaction is committed or rolled back, modifications made by the code at the data source will be committed or rolled back as well.
+If auto-enlistment is disabled or you need to enlist a transaction that was started after the connection was opened, you can enlist in an existing distributed transaction using the `EnlistTransaction` method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object for the Microsoft SqlClient Data Provider for SQL Server. Enlisting in an existing distributed transaction ensures that, if the transaction is committed or rolled back, modifications made by the code at the data source will be committed or rolled back as well.
 
 Enlisting in distributed transactions is particularly applicable when pooling business objects. If a business object is pooled with an open connection, automatic transaction enlistment only occurs when that connection is opened. If multiple transactions are performed using the pooled business object, the open connection for that object will not automatically enlist in newly initiated transactions. In this case, you can disable automatic transaction enlistment for the connection and enlist the connection in transactions using `EnlistTransaction`.
 
@@ -45,7 +45,7 @@ Enlisting in distributed transactions is particularly applicable when pooling bu
 > Once a connection is explicitly enlisted on a transaction, it cannot be un-enlisted or enlisted in another transaction until the first transaction finishes.
 
 > [!CAUTION]
-> `EnlistTransaction` throws an exception if the connection has already begun a transaction using the connection's <xref:Microsoft.Data.SqlClient.SqlConnection.BeginTransaction%2A> method. However, if the transaction is a local transaction started at the data source (for example, executing the BEGIN TRANSACTION statement explicitly using a <xref:Microsoft.Data.SqlClient.SqlCommand>), `EnlistTransaction` will roll back the local transaction and enlist in the existing distributed transaction as requested. You will not receive notice that the local transaction was rolled back, and must manage any local transactions not started using <xref:Microsoft.Data.SqlClient.SqlConnection.BeginTransaction%2A>. If you are using the **Microsoft SqlClient Data Provider for SQL Server** with SQL Server, an attempt to enlist will throw an exception. All other cases will go undetected.  
+> `EnlistTransaction` throws an exception if the connection has already begun a transaction using the connection's <xref:Microsoft.Data.SqlClient.SqlConnection.BeginTransaction%2A> method. However, if the transaction is a local transaction started at the data source (for example, executing the BEGIN TRANSACTION statement explicitly using a <xref:Microsoft.Data.SqlClient.SqlCommand>), `EnlistTransaction` will roll back the local transaction and enlist in the existing distributed transaction as requested. You will not receive notice that the local transaction was rolled back, and must manage any local transactions not started using <xref:Microsoft.Data.SqlClient.SqlConnection.BeginTransaction%2A>. If you are using the Microsoft SqlClient Data Provider for SQL Server with SQL Server, an attempt to enlist will throw an exception. All other cases will go undetected.  
 
 ## Promotable transactions in SQL Server
 

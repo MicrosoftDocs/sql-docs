@@ -1,6 +1,6 @@
 ---
 title: "Local transactions"
-description: Demonstrates how to perform transactions against a database
+description: "Demonstrates how to perform transactions against a database with Microsoft SqlClient Data Provider for SQL Server."
 ms.date: "11/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,7 +22,7 @@ Transactions in ADO.NET are used when you want to bind multiple tasks together s
 
 A transaction is considered to be a local transaction when it is a single-phase transaction and is handled by the database directly. A transaction is considered to be a distributed transaction when it is coordinated by a transaction monitor and uses fail-safe mechanisms (such as two-phase commit) for transaction resolution.
 
-The **Microsoft SqlClient Data Provider for SQL Server** has its own <xref:Microsoft.Data.SqlClient.SqlTransaction> object for performing local transactions in SQL Server databases. Other .NET data providers also provide their own `Transaction` objects. See <xref:System.Data.SqlClient> and <xref:System.Data.OracleClient> for more information. In addition, there is a <xref:System.Data.Common.DbTransaction> class that is available for writing provider-independent code that requires transactions.
+The Microsoft SqlClient Data Provider for SQL Server has its own <xref:Microsoft.Data.SqlClient.SqlTransaction> object for performing local transactions in SQL Server databases. Other .NET data providers also provide their own `Transaction` objects. See <xref:System.Data.SqlClient> and <xref:System.Data.OracleClient> for more information. In addition, there is a <xref:System.Data.Common.DbTransaction> class that is available for writing provider-independent code that requires transactions.
 
 > [!NOTE]
 > Transactions are most efficient when they are performed on the server. If you are working with a SQL Server database that makes extensive use of explicit transactions, consider writing them as stored procedures using the Transact-SQL BEGIN TRANSACTION statement.
@@ -48,7 +48,7 @@ The scope of the transaction is limited to the connection. The following example
 
 4. Call the <xref:Microsoft.Data.SqlClient.SqlTransaction.Commit%2A> method of the <xref:Microsoft.Data.SqlClient.SqlTransaction> object to complete the transaction, or call the <xref:Microsoft.Data.SqlClient.SqlTransaction.Rollback%2A> method to end the transaction. If the connection is closed or disposed before either the <xref:Microsoft.Data.SqlClient.SqlTransaction.Commit%2A> or <xref:Microsoft.Data.SqlClient.SqlTransaction.Rollback%2A> methods have been executed, the transaction is rolled back.
 
-The following code example demonstrates transactional logic using **Microsoft SqlClient Data Provider for SQL Server**.
+The following code example demonstrates transactional logic using the Microsoft SqlClient Data Provider for SQL Server.  
 
 [!code-csharp[SqlTransactionLocal#1](~/../sqlclient/doc/samples/SqlTransactionLocal.cs#1)]
 

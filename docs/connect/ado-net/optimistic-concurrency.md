@@ -1,6 +1,6 @@
 ---
 title: "Optimistic concurrency"
-description: Describes optimistic and pessimistic concurrency, and how you can test for concurrency violations.
+description: "Describes optimistic and pessimistic concurrency, and how you can test for concurrency violations."
 ms.date: "11/25/2020"
 ms.prod: sql
 ms.prod_service: connectivity

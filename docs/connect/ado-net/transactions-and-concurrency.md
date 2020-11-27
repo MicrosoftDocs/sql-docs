@@ -43,7 +43,7 @@ Transactions involving different resource managers, such as a transaction betwee
 
 ## See also
 
-- [Transaction Fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals)
+- [Transaction fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals)
 - [Connecting to data source](connecting-to-data-source.md)
 - [Commands and Parameters](kz-todo)
 - [DataAdapters and DataReaders]( kz-todo)

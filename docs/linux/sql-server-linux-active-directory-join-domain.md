@@ -73,6 +73,39 @@ If any of these name checks fail, update your domain search list. The following 
    nameserver **<AD domain controller IP address>**
    ```
 
+### Ubuntu 18.04
+
+1. Edit the [sudo vi /etc/netplan/******.yaml] file, so that your Active Directory domain is in the domain search list:
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > The network interface, `eth0`, might differ for different machines. To find out which one you're using, run **ifconfig**. Then copy the interface that has an IP address and transmitted and received bytes.
+
+1. After editing this file, restart the network service:
+
+   ```bash
+   sudo netplan apply
+   ```
+
+1. Next, check that your **/etc/resolv.conf** file contains a line like the following example:
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
 ### RHEL 7.x
 
 1. Edit the **/etc/sysconfig/network-scripts/ifcfg-eth0** file, so that your Active Directory domain is in the domain search list. Or edit another interface config file as appropriate:
@@ -158,10 +191,17 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
+   ```
+
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
    ```
 
 1. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.

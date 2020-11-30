@@ -22,7 +22,7 @@ Transactions in ADO.NET are used when you want to bind multiple tasks together s
 
 A transaction is considered to be a local transaction when it is a single-phase transaction and is handled by the database directly. A transaction is considered to be a distributed transaction when it is coordinated by a transaction monitor and uses fail-safe mechanisms (such as two-phase commit) for transaction resolution.
 
-The Microsoft SqlClient Data Provider for SQL Server has its own <xref:Microsoft.Data.SqlClient.SqlTransaction> object for performing local transactions in SQL Server databases. Other .NET data providers also provide their own `Transaction` objects. See <xref:System.Data.SqlClient> and <xref:System.Data.OracleClient> for more information. In addition, there is a <xref:System.Data.Common.DbTransaction> class that is available for writing provider-independent code that requires transactions.
+The Microsoft SqlClient Data Provider for SQL Server has its own <xref:Microsoft.Data.SqlClient.SqlTransaction> object for performing local transactions in SQL Server databases. Other .NET data providers also provide their own `Transaction` objects. In addition, there is a <xref:System.Data.Common.DbTransaction> class that is available for writing provider-independent code that requires transactions.
 
 > [!NOTE]
 > Transactions are most efficient when they are performed on the server. If you are working with a SQL Server database that makes extensive use of explicit transactions, consider writing them as stored procedures using the Transact-SQL BEGIN TRANSACTION statement.
@@ -57,4 +57,4 @@ The following code example demonstrates transactional logic using the Microsoft 
 - [Transactions and concurrency](transactions-and-concurrency.md)
 - [Distributed transactions](distributed-transactions.md)
 - [System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md)
-- [ADO.NET Overview](/dotnet/framework/data/adonet/)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

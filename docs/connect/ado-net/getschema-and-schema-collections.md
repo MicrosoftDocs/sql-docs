@@ -26,11 +26,11 @@ You can query the Microsoft SqlClient Data Provider for SQL Server to determine 
 
 ### Retrieving schema collections example
 
-The following examples demonstrate how to use the <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of the Microsoft SqlClient Data Provider for SQL Server <xref:System.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:  
+The following examples demonstrate how to use the <xref:Microsoft.Data.SqlClient.SqlConnection.GetSchema%2A> method of the Microsoft SqlClient Data Provider for SQL Server <xref:Microsoft.Data.SqlClient.SqlConnection> class to retrieve schema information about all of the tables contained in the **AdventureWorks** sample database:  
 
 [!code-csharp[SqlClient GetSchema#1](~/../sqlclient/doc/samples/SqlConnection_GetSchema_Tables.cs#1)]  
 
 ## See also
 
 - [Retrieving database schema information](retrieving-database-schema-information.md)
-- [ADO.NET Overview](/dotnet/framework/data/adonet/)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

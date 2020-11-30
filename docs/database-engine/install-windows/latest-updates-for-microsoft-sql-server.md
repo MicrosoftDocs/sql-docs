@@ -45,8 +45,6 @@ Each of the following links provides information for all of the applicable produ
 |SQL Server 2008 R2 |SP2 [(KB 2630458)](https://support.microsoft.com/kb/2630458)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 13 [(KB 2967540)](https://support.microsoft.com/kb/2967540)|6/30/2014|[SQL Server 2008 R2 SP2 Installation](https://www.microsoft.com/download/details.aspx?id=30437)|
 |SQL Server 2008 |SP4 [(KB 2979596)](https://support.microsoft.com/kb/2979596)|[4057114](https://support.microsoft.com/help/4057114/security-update-for-vulnerabilities-in-sql-server)|N/A|N/A|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
 |SQL Server 2008|SP3 [(KB 2546951)](https://support.microsoft.com/kb/2546951)|[MS 15-058](/security-updates/SecurityBulletins/2015/ms15-058)|CU 17 [(KB 2958696)](https://support.microsoft.com/kb/2958696)|5/19/2014|[SQL Server 2008 Servicing](/previous-versions/sql/sql-server-2008/dd638062(v=sql.100))|
-|SQL Server 2005 |SP4 [(KB 2463332)](https://support.microsoft.com/kb/2463332)|N/A|N/A|N/A|[SQL Server 2005 Installation](/previous-versions/sql/sql-server-2005/ms143516(v=sql.90))|
-|SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[SQL Server 2000 Installation](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
 **Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
@@ -62,7 +60,6 @@ Each of the following links provides information for all of the applicable produ
 ### Additional resources
 
 - [SQL Server documentation](../../sql-server/index.yml)
-- [SQL Customer Advisory Team Site](/archive/blogs/sqlcat/)
-- [SQL Server Product Information Center](https://www.microsoft.com/sqlserver/default.aspx)
+- [SQL Server product information center](https://www.microsoft.com/sqlserver/default.aspx)
 - [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/)
 - [SQL Server release blogs](https://aka.ms/sqlreleases)

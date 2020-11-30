@@ -1,33 +1,30 @@
 ---
-description: "Latest updates for Microsoft SQL Server"
-title: Latest updates for Microsoft SQL Server
-TOCTitle: Latest updates for Microsoft SQL Server
-ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
-ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
-ms:contentKeyID: 31804705
-ms.date: 09/02/2020
+description: A list of the latest cumulative updates and service packs, with build numbers for Microsoft SQL Server.
+title: Latest updates for SQL Server
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
-mtps_version: v=MSDN.10
 ---
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 # Latest updates for Microsoft SQL Server
 
 Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
 
-This page tracks the latest updates to all supported versions of SQL Server. 
+This page tracks the latest updates to all versions of SQL Server since SQL Server 2000.
 
-For information about previous updates, see the [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/). 
+For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql).
 
-For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](https://support.microsoft.com/lifecycle/). 
+For information about previous updates, see the [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/).
 
 ## Latest updates
 
-Each of the following links provides information for all of the applicable products and technologies listed in the **Applies To** section of this page.
+Each of the following links provides information for all of the applicable products and technologies.
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|

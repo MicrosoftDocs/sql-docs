@@ -1,5 +1,5 @@
 ---
-title: COPY INTO (Transact-SQL) (preview) 
+title: COPY INTO (Transact-SQL)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Use the COPY statement in Azure Synapse Analytics for loading from external storage accounts.
 ms.date: 09/25/2020
@@ -39,7 +39,7 @@ Visit the following documentation for comprehensive examples and quickstarts usi
 
 - [Quickstart: Bulk load data using the COPY statement](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
 - [Quickstart: Examples using the COPY statement and its supported authentication methods](/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
-- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI (Workspace preview)](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
+- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI](/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## Syntax  
 
@@ -427,7 +427,7 @@ There is no need to split Parquet and ORC files because the COPY command will au
 ### Are there any limitations on the number or size of files?
 There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.
 
-### Are there any limitations with COPY using Synapse workspaces (preview)?
+### Are there any limitations with COPY using Synapse workspaces?
 
 Authenticating using Managed Identity (MSI) is not supported with the COPY statement or PolyBase (including when used in pipelines). You may run into a similiar error message:
 

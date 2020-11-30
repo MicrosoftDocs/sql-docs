@@ -10,9 +10,9 @@ ms.author: tmichael
 ms.reviewer: hristins
 ---
 
-[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
-
 # Latest updates for Microsoft SQL Server
+
+[!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
 

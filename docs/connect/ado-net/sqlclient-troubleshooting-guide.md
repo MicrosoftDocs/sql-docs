@@ -20,9 +20,9 @@ ms.reviewer: v-jizho2
 
 ## Exceptions when connecting to SQL Server
 
-There are various reasons when connection can fail to be established. Below are some troubleshooting tips that can be used as a guide to analyze and solve the problem.
+There are various reasons why connection can fail to be established. Below are some troubleshooting tips that can be used as a guide to analyze and solve many of the problems.
 
-### Unable to load Native SNI (Server Name Indication) library
+### Unable to load native SNI (Server Name Indication) library
 
 #### Issues in .NET Framework applications
 
@@ -38,13 +38,13 @@ TypeInitializationException: The type initializer for 'Microsoft.Data.SqlClient.
 DllNotFoundException: Unable to load DLL 'Microsoft.Data.SqlClient.SNI.x86.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
 ```
 
-SNI is the native C++ library that SqlClient depends on for various network operations. In .NET Framework applications that are built on old MSBuild Project SDK, native DLLs aren't managed with restore commands. And so a ".targets" file is included in the "Microsoft.Data.SqlClient.SNI" NuGet package that defines necessary "Copy" operations.
+SNI is the native C++ library that SqlClient depends on for various network operations when running on Windows. In .NET Framework applications that are built with the MSBuild Project SDK, native DLLs aren't managed with restore commands. So a ".targets" file is included in the "Microsoft.Data.SqlClient.SNI" NuGet package that defines the necessary "Copy" operations.
 
-The included ".targets" file is autoreferenced when a direct dependency is made to "Microsoft.Data.SqlClient" library. In scenarios where a transitive reference is made, this ".targets" file should be manually referenced to ensure "Copy" operations can execute when necessary.
+The included ".targets" file is auto-referenced when a direct dependency is made to the "Microsoft.Data.SqlClient" library. In scenarios where a transitive (indirect) reference is made, this ".targets" file should be manually referenced to ensure "Copy" operations can execute when necessary.
 
-**Recommended Solution:** Make sure that ".targets" file is referenced in application's ".csproj" file to ensure "Copy" operations get executed.
+**Recommended Solution:** Make sure the ".targets" file is referenced in the application's ".csproj" file to ensure "Copy" operations are executed.
 
-These targets cover Microsoft's well-known, and commonly used targets only. If an external tool or application defines custom targets to copy binaries, new targets must be defined by tool maintainers to ensure native SNI DLLs are copied along-side driver binaries and are available when executing client applications.
+These targets cover Microsoft's well-known and commonly used targets only. If an external tool or application defines custom targets to copy binaries, new targets must be defined by tool maintainers to ensure native SNI DLLs are copied along-side the Microsoft.Data.SqlClient.dll binaries and are available when executing client applications.
 
 #### Issues in .NET Core applications
 
@@ -57,11 +57,11 @@ System.TypeInitializationException: The type initializer for 'Microsoft.Data.Sql
 ```
 
 > [!NOTE]
-> This error could occur in Windows applications only. If it's captured in Unix environment, you must ensure your application is built appropriately for Unix runtime and not for Windows.
+> This error may occur on Windows applications only. If it occurs in a Unix environment, you must ensure your application is built to appropriately target a Unix runtime and not for Windows.
 
-SNI is the native C++ library that SqlClient depends on for various network operations. Microsoft.Data.SqlClient doesn't manage loading/unloading of this library in .NET Core.
+SNI is the native C++ library that SqlClient depends on for various network operations when running on Windows. Microsoft.Data.SqlClient doesn't manage loading/unloading of this library in .NET Core.
 
-**Recommended Solution:** Ensure "Execute" permissions are granted to filesystem from where native runtime libraries are loaded in .NET Core process. If that doesn't solve the issue, you could contact [dotnet/runtime](https://github.com/dotnet/runtime) team for further support.
+**Recommended Solution:** Ensure "Execute" permissions are granted on the filesystem where native runtime libraries are loaded in the .NET Core process. If that doesn't solve the issue, you can file an issue in the [dotnet/runtime](https://github.com/dotnet/runtime) repository for further support.
 
 #### Native SNI (pdb not found) errors
 
@@ -98,15 +98,15 @@ Verify that the instance name is correct and that SQL Server is configured to al
  ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (00000005, 0xFFFDFFFF): Name does not resolve
 ```
 
-#### Possible Reasons
+#### Possible reasons
 
 - TCP/Named Pipes Protocol isn't enabled on SQL Server
 
-  **Recommended Solution:** Enable TCP/Named Pipes Protocol on SQL Server instance from SQL Server Configuration Manager console.
+  **Recommended Solution:** Enable the TCP/Named Pipes Protocol on the SQL Server instance from the SQL Server Configuration Manager console.
 
 - Hostname not known
 
-  **Recommended Solution:** Ensure hostname resolves to Server's IP address from the client where connection is being made.
+  **Recommended Solution:** Ensure the hostname resolves to the Server's IP address from the client where the connection is being initiated.
 
 
 ### Login-phase errors
@@ -131,17 +131,17 @@ The duration spent while attempting to connect to this server was - [Pre-Login] 
 at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action1 wrapCloseInAction)
 ```
 
-#### Possible Reasons and Solutions
+#### Possible reasons and solutions
 
 - SQL Server doesn't support TLS 1.2
 
-  This cause of error applies to client environments like docker image containers, Unix clients, or Windows clients where TLS 1.2 is the minimum supported TLS protocol.
+  This error typically occurs in client environments like docker image containers, Unix clients, or Windows clients where TLS 1.2 is the minimum supported TLS protocol.
 
-  **Recommended Solution:** Install latest updates on supported versions of SQL Server<sup>1</sup> and ensure TLS 1.2 protocol is enabled on server.
+  **Recommended Solution:** Install the latest updates on supported versions of SQL Server<sup>1</sup> and ensure the TLS 1.2 protocol is enabled on the server.
 
   _<sup>1</sup> View [SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md) for the list of supported SQL Server versions with different versions of Microsoft.Data.SqlClient._
 
-  **Insecure solution:** Configure TLS/SSL settings in docker image/client environment to connect with TLS 1.0.
+  **Insecure solution:** Configure TLS/SSL settings in the docker image/client environment to connect with TLS 1.0.
 
   ```docker
   MinProtocol = TLSv1
@@ -149,23 +149,23 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
   ```
 
   > [!NOTE]
-  > When connecting with Microsoft.Data.SqlClient v2.0+ from a Windows/Linux environment with TLS 1.0 or TLS 1.1, a security warning message will be thrown if target SQL Server and client cannot negotiate on minimum TLS 1.2 protocol for establishing connection:
+  > When connecting with Microsoft.Data.SqlClient v2.0+ from a Windows/Linux environment with TLS 1.0 or TLS 1.1, a security warning message will be thrown if the target SQL Server and client cannot negotiate a minimum of TLS version 1.2 when establishing the connection:
   `Security Warning: The negotiated <TLS1.0 | TLS1.1> is an insecure protocol and is supported for backward compatibility only. The recommended protocol version is TLS 1.2 and later.`
 
 - SQL Server enforced encryption
 
-  If the target Server is an Azure SQL instance or an On-Premise SQL Server with "Forces Encryption" property turned on, an encrypted connection will be made. For which client must establish trust with server.
+  If the target Server is an Azure SQL instance or an On-Premise SQL Server with the "Force Encryption" property turned on, an encrypted connection will be made, for which the client must establish trust with the server.
 
-  **Recommended Solution:** Below are available options to fix this issue:
+  **Recommended Solution:** There are two available options to fix this issue:
 
-    1. Install target SQL Server's TLS/SSL certificate in client environment, as it will be validated, is encryption is needed.
-    2. Set "Trust Server Certificate = true" property in connection string.
+    1. Install the target SQL Server's TLS/SSL certificate in the client environment. It will be validated if encryption is needed.
+    2. Set the "Trust Server Certificate = true" property in the connection string.
 
-  **Insecure solution:** Disable "Force Encryption" setting on SQL Server.
+  **Insecure solution:** Disable the "Force Encryption" setting on SQL Server.
 
 - TLS/SSL Certificates not signed with SHA-256 or above.
 
-  **Recommended Solution:** Generate a new TLS/SSL Certificate for server whose hash is signed with at-least SHA-256 hashing algorithm.
+  **Recommended Solution:** Generate a new TLS/SSL Certificate for the server whose hash is signed with at-least the SHA-256 hashing algorithm.
 
 ### Connection Pool exhaustion errors
 
@@ -176,7 +176,7 @@ System.InvalidOperationException: Timeout expired. The timeout period elapsed pr
 This may have occurred because all pooled connections were in use and max pool size was reached.
 ```
 
-#### Possible Reasons and Solutions
+#### Possible reasons and solutions
 
 Client application is opening more connections than the connection pool can hold active at a given time.
 
@@ -184,4 +184,4 @@ Client application is opening more connections than the connection pool can hold
 
 ## Contact Support
 
-If this guide doesn't solve your connectivity issues, you may view existing issues in [dotnet/sqlclient](https://github.com/dotnet/SqlClient) repository and open a new issue if needed.
+If this guide doesn't solve your connectivity issues, you may view existing issues in the [dotnet/sqlclient](https://github.com/dotnet/SqlClient) repository and open a new issue if needed.

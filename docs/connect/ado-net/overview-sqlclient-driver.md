@@ -28,7 +28,7 @@ ms.reviewer: v-kaywon
 |[Download Microsoft SqlClient Data Provider for SQL Server](download-microsoft-sqlclient-data-provider.md)|Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server.|
 |[Enabling event tracing in SqlClient](enable-eventsource-tracing.md)|Describes how to use event tracing to debug and test the driver.|
 |[AppContext switches in SqlClient](appcontext-switches.md)|Describes the AppContext switches supported by the driver.|
-|[SqlClient troubleshooting guide](sqlclient-troubleshooting-guide.md)|Page that provides resolutions to commonly observed problems.|
+|[SqlClient troubleshooting guide](sqlclient-troubleshooting-guide.md)|Provides resolutions to commonly observed problems.|
 |[SqlClient driver support lifecycle](sqlclient-driver-support-lifecycle.md)|Page that contains product support lifecycle information.|
 |[Finding additional SqlClient driver information](find-additional-sqlclient-driver-information.md)|Page that contains useful information about the driver.|
 

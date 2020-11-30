@@ -61,13 +61,13 @@ Current releases are supported for three months after a subsequent Current or LT
 
 ### Support for .NET Framework applications
 
-Microsoft.Data.SqlClient supports all Operating systems supported by .NET Framework v4.6 and above.
+Microsoft.Data.SqlClient supports all operating systems supported by .NET Framework v4.6 and above.
 
 [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
 ### Support for .NET Core applications
 
-Microsoft.Data.SqlClient supports all Operating systems supported by .NET Core v2.1 and above.
+Microsoft.Data.SqlClient supports all operating systems supported by .NET Core v2.1 and above.
 
 [.NET Core supported OS lifecycle policy](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md).
 

@@ -37,3 +37,4 @@ Describes issues that developers frequently encounter when working with floating
 ## See also
 
 - [SQL Server Data Types and ADO.NET](./sql/sql-server-data-types.md)
+- [Configuring Parameters](configure-parameters.md)

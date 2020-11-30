@@ -49,5 +49,5 @@ The security identity for ASP.NET applications can be set to one of several diff
 
 ## See also
 
-- [Connecting to a Data Source](connecting-to-data-source.md)
-- [Connection Strings](connection-strings.md)
+- [Connecting to a data source](connecting-to-data-source.md)
+- [Connection strings](connection-strings.md)

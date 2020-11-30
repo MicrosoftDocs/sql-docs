@@ -123,5 +123,5 @@ We recommend that you take advantage of security mechanisms that you can use ins
 
 ## See also
 
-- [Connection Pooling](connection-pooling.md)
+- [Connection pooling](connection-pooling.md)
 - [SQL Server and ADO.NET](./sql/index.md)

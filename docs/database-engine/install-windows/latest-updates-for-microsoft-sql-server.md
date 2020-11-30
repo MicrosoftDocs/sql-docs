@@ -14,13 +14,9 @@ ms.reviewer: hristins
 
 [!INCLUDE [sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Find and manage updates in one place for your SQL Server Products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
-
-This page tracks the latest updates to all versions of SQL Server since SQL Server 2000.
+This article lists the latest updates for SQL Server products. Follow the [SQL Server Release Blog](https://aka.ms/sqlreleases) to receive information about updates and to download the updates.
 
 For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](/lifecycle/products/?terms=sql).
-
-For information about previous updates, see the [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/).
 
 ## Latest updates
 
@@ -61,5 +57,5 @@ Each of the following links provides information for all of the applicable produ
 
 - [SQL Server documentation](../../sql-server/index.yml)
 - [SQL Server product information center](https://www.microsoft.com/sqlserver/default.aspx)
-- [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/)
 - [SQL Server release blogs](https://aka.ms/sqlreleases)
+- [SQL Server builds blog (external)](https://sqlserverbuilds.blogspot.com/)

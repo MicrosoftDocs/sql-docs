@@ -1,5 +1,5 @@
 ---
-title: "Configuring parameters and parameter data types"
+title: "Configuring parameters"
 description: Command objects use parameters to pass values to SQL statements or stored procedures, providing type checking and validation in ADO.NET.
 ms.date: "11/25/2020"
 dev_langs: 
@@ -13,7 +13,7 @@ author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
 ---
-# Configuring parameters and parameter data types
+# Configuring parameters
 
 [!INCLUDE[appliesto-netfx-netcore-netst-md](../../includes/appliesto-netfx-netcore-netst-md.md)]
 

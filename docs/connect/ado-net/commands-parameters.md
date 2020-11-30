@@ -26,7 +26,7 @@ You can also configure those objects as properties of the command. You can also 
 [Executing a Command](execute-command.md)
 Describes the ADO.NET `Command` object and how to use it to execute queries and commands against a data source.
 
-[Configuring parameters and parameter data types](configure-parameters-parameter-data-types.md)
+[Configuring parameters](configure-parameters.md)
 Describes working with `Command` parameters, including direction, data types, and parameter syntax.
 
 [Generating commands with CommandBuilders](generate-commands-with-commandbuilders.md)  

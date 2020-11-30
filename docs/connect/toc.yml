@@ -83,8 +83,8 @@
       items:
       - name: Executing a Command
         href: ../connect/ado-net/execute-command.md
-      - name: Configuring Parameters and Parameter Data Types
-        href: ../connect/ado-net/configure-parameters-parameter-data-types.md
+      - name: Configuring Parameters
+        href: ../connect/ado-net/configure-parameters.md
       - name: Generating Commands with CommandBuilders
         href: ../connect/ado-net/generate-commands-with-commandbuilders.md
       - name: Obtaining a Single Value from a Database

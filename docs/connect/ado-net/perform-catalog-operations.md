@@ -21,6 +21,8 @@ ms.reviewer: v-chmalh
 
 To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object. Execute the command with the <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> method of the <xref:Microsoft.Data.SqlClient.SqlCommand> object.
 
+## Example
+
 The following code example creates a stored procedure in a Microsoft SQL Server database.
 
 [!code-csharp[DataWorks SqlCommand.ExecuteNonQuery#3](~/../sqlclient/doc/samples/SqlCommand_ExecuteNonQuery_SP_DML.cs#3)]

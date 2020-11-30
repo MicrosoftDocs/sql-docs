@@ -3,7 +3,7 @@ title: Install Python custom runtime
 description: Learn how to install a Python custom runtime for SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/20/2020
+ms.date: 11/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -13,11 +13,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # Install a Python custom runtime for SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-This article describes how to install a custom runtime for running Python scripts with SQL Server. The custom runtime uses language extension technology built on an extensibility framework for executing external code. The custom runtime for Python can be used in the following scenarios:
+This article describes how to install a custom Python runtime for running external Python scripts with SQL Server. The custom runtime uses the [SQL Server Language Extensions](../../language-extensions/language-extensions-overview.md).
 
-+ An installation of SQL Server with extensibility framework.
-
-+ An installation of Machine Learning Services with SQL Server 2019. The language extension can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
+The custom Python runtime allows you to use your own version of the Python runtime with SQL Server instead of the default runtime version installed with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
@@ -312,30 +310,6 @@ import sys
 print(sys.path)
 print(sys.version)
 print(sys.executable)'
-```
-
-## Verify parameters and datasets of different data types
-
-This script tests different data types for input/output parameters and datasets.
-
-```sql
-DECLARE @sumVal int = 12;
-DECLARE @charVal VARCHAR(30) = N'Hello'
-
-EXEC sp_execute_external_script
-@language =N'myPython',
-@script=N'
-print(sumVal)
-print(charVal)
-sumVal = sumVal + 300
-OutputDataSet = InputDataSet'
-,@input_data_1 = N'SELECT 1, CAST(1.4 as real), ''Hi'', CAST(''1'' as bit)'
-,@params = N'@sumVal int OUTPUT, @charVal VARCHAR(30)'
-,@sumVal = @sumVal OUTPUT
-,@charVal = @charVal
-WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit));
-
-PRINT @sumVal
 ```
 
 ## Next steps

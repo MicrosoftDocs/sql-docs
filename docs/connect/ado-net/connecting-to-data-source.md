@@ -31,5 +31,5 @@ Describes how to use an **InfoMessage** event to retrieve informational messages
 
 ## See also
 
-- [Connection Strings](connection-strings.md)
-- [Connection Pooling](connection-pooling.md)
+- [Connection strings](connection-strings.md)
+- [Connection pooling](connection-pooling.md)

@@ -57,4 +57,4 @@ The following code example uses the **StateChange** event to write a message to 
 
 ## See also
 
-- [Connecting to a Data Source](connecting-to-data-source.md)
+- [Connecting to a data source](connecting-to-data-source.md)

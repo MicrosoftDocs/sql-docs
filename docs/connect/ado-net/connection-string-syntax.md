@@ -121,5 +121,5 @@ For more information, see [Using Encryption Without Validation](/sql/relational-
 
 ## See also
 
-- [Connection Strings](connection-strings.md)
-- [Connecting to a Data Source](connecting-to-data-source.md)
+- [Connection strings](connection-strings.md)
+- [Connecting to a data source](connecting-to-data-source.md)

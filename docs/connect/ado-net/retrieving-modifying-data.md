@@ -19,18 +19,18 @@ ms.reviewer: v-chmalh
 
 A primary function of any database application is connecting to a data source and retrieving the data that it contains. The SqlClient data provider serves as a bridge between an application and a data source, allowing you to execute commands as well as to retrieve data by using a **DataReader** or a **DataAdapter**. A key function of any database application is the ability to update the data that is stored in the database. In the Microsoft SqlClient Data Provider for SQL Server, updating data involves using the **DataAdapter** and <xref:System.Data.DataSet>, and **Command** objects; and it may also involve using transactions.
 
-## In This Section
+## In this section
 
-[Connecting to a Data Source](connecting-to-data-source.md)
+[Connecting to a data source](connecting-to-data-source.md)
 Describes how to establish a connection to a data source and how to work with connection events.
 
-[Connection Strings](connection-strings.md)
+[Connection strings](connection-strings.md)
 Contains topics describing various aspects of using connection strings, including connection string keywords, security info, and storing and retrieving them.
 
-[Connection Pooling](connection-pooling.md)
+[Connection pooling](connection-pooling.md)
 Describes connection pooling for the Microsoft SqlClient Data Provider for SQL Server.
 
 ## See also
 
-- [Data Type Mappings in ADO.NET](data-type-mappings-ado-net.md)
+- [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
 - [SQL Server and ADO.NET](./sql/index.md)

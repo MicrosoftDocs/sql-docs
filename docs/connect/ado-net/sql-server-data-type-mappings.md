@@ -67,4 +67,5 @@ For more information about SQL Server data types, see [Data types (Transact-SQL)
 
 - [SQL Server Data Types and ADO.NET](./sql/sql-server-data-types.md)
 - [SQL Server Binary and Large-Value Data](./sql/sql-server-binary-large-value-data.md)
+- [Configuring Parameters](configure-parameters.md)
 - [Data Type Mappings in ADO.NET](data-type-mappings-ado-net.md)

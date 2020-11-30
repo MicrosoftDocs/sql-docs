@@ -54,16 +54,15 @@ Each of the following links provides information for all of the applicable produ
 
 ### Knowledge base
 
-  - KB 935897: [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](https://support.microsoft.com/kb/935897)
-  - KB 824684: [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/kb/824684)
-  - KB 822499: [Naming schema for Microsoft SQL Server software update packages](https://support.microsoft.com/kb/822499)
-  - KB 321185: [How to determine the version and edition of SQL Server and its components](https://support.microsoft.com/kb/321185)
+- KB 935897: [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](https://support.microsoft.com/kb/935897)
+- KB 824684: [Description of the standard terminology that is used to describe Microsoft software updates](https://support.microsoft.com/kb/824684)
+- KB 822499: [Naming schema for Microsoft SQL Server software update packages](https://support.microsoft.com/kb/822499)
+- KB 321185: [How to determine the version and edition of SQL Server and its components](https://support.microsoft.com/kb/321185)
 
 ### Additional resources
 
-  - [SQL Customer Advisory Team Site](/archive/blogs/sqlcat/)
-  - [SQL Server DevCenter](../../sql-server/index.yml)
-  - [SQL Server TechCenter](../../sql-server/index.yml)
-  - [SQL Server Product Information Center](https://www.microsoft.com/sqlserver/default.aspx)
-  - [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/)
-  - [SQL Server release blogs](https://aka.ms/sqlreleases)
+- [SQL Server documentation](../../sql-server/index.yml)
+- [SQL Customer Advisory Team Site](/archive/blogs/sqlcat/)
+- [SQL Server Product Information Center](https://www.microsoft.com/sqlserver/default.aspx)
+- [SQL Server builds blog](https://sqlserverbuilds.blogspot.com/)
+- [SQL Server release blogs](https://aka.ms/sqlreleases)

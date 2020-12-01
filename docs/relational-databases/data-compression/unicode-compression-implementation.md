@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Unicode data compression"
   - "compression [SQL Server], Unicode data"
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
-author: MikeRayMSFT
-ms.author: mikeray
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unicode Compression Implementation

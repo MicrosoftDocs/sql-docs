@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: performance
 ms.topic: "reference"
 ms.assetid: 626b73d3-a257-4b45-82fb-c6299faa0001
-author: "stevestein"
-ms.author: "sstein"
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

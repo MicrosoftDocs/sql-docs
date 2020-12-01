@@ -5,7 +5,7 @@ ms.custom: seo-dt-2019
 ms.date: "04/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: wiassaf
 ms.technology: performance
 ms.topic: "language-reference"
 f1_keywords:

@@ -30,6 +30,12 @@ Contains topics describing various aspects of using connection strings, includin
 [Connection pooling](connection-pooling.md)
 Describes connection pooling for the Microsoft SqlClient Data Provider for SQL Server.
 
+[Commands and Parameters](commands-parameters.md)  
+Contains topics describing how to create commands and command builders, configure parameters, and how to execute commands to retrieve and modify data.  
+		  
+[DataAdapters and DataReaders](dataadapters-datareaders.md)  
+Contains topics describing DataReaders, DataAdapters, parameters, handling DataAdapter events and performing batch operations.  
+
 ## See also
 
 - [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)

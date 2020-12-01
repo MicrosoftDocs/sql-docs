@@ -52,7 +52,7 @@ Following settings are supported in [!INCLUDE[sssdsfull](../../includes/sssdsful
 - Specify the number of minutes that a paused resumable index operation is paused before it is automatically aborted by the SQL Server engine.
 - Enable or disable waiting for locks at low priority for asynchronous statistics update
 
-This setting is only available in Azure Synapse Analytics (Formerly SQL DW).
+This setting is only available in Azure Synapse Analytics.
 - Set the compatibility level of a user database
 
 ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -107,7 +107,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` changed to `BATCH_MODE_ADAPTIVE_JOINS`
 
 ```SQL
--- Syntax for Azure Synapse Analytics (Formerly SQL DW)
+-- Syntax for Azure Synapse Analytics
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -398,7 +398,7 @@ Allows you to control whether a [Row-Level Security](../../relational-databases/
 
 DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
-**APPLIES TO**: Azure Synapse Analytics only (Formerly SQL DW)
+**APPLIES TO**: Azure Synapse Analytics only
 
 Sets Transact-SQL and query processing behaviors to be compatible with the specified version of the database engine.  Once it's set, when a query is executed on that database, only the compatible features will be exercised.  A database's compatibility level is set to AUTO by default when it's first created.  The compatibility level is preserved even after database pause/resume, backup/restore operations. 
 

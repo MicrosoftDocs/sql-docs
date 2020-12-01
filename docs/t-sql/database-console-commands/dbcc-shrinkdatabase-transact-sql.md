@@ -49,7 +49,7 @@ DBCC SHRINKDATABASE
 ```  
 
 ```syntaxsql
--- Azure Synapse Analytics (formerly SQL DW)
+-- Azure Synapse Analytics
 
 DBCC SHRINKDATABASE   
 ( database_name   

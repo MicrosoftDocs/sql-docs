@@ -9,7 +9,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 11/30/2020
+ms.date: 12/01/2020
 ---
 # Support for Report Viewer current branch versions
 
@@ -32,10 +32,7 @@ Some features of the Report Viewer control rely on the operating system’s defa
 | Windows Server 2012 | Windows Server 2012 R2 |
 | Windows Server 2012 R2 | Windows Server 2012 R2 |
 | Windows Server 2012 R2 | Windows Server 2012 |
-| Windows Server 2016 | Windows Server 2016 |
-| Windows Server 2016 | Windows Server 2019 |
-| Windows Server 2019 | Windows Server 2019 |
-| Windows Server 2019 | Windows Server 2016 |
+| Windows Server 2016 and later | Windows Server 2016 and later |
 
 ## Next steps
 

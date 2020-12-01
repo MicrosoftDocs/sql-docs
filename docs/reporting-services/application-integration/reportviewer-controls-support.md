@@ -15,12 +15,12 @@ ms.date: 11/30/2020
 
 **_Applies to: Microsoft Report Viewer versions 150.900.148 and later_**
 
-The **Microsoft Report Viewer control** is compatible with SQL Server Reporting Services and Power BI Report Server that follow the Microsoft modern [support lifecycle policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy). This information applies to both the **ASP.net** and **WinForms** versions distributed through [NuGet](https://www.nuget.org/). All released versions are available through [NuGet](https://www.nuget.org/). Patches, features, or other updates are rolled-forward to the latest version. Latest versions must be applied to receive changes. The Report Viewer continues to receive **Security and Critical Updates**, with at least one year advanced notice of any support policy changes.
+The **Microsoft Report Viewer control** is compatible with SQL Server Reporting Services and Power BI Report Server that follow the Microsoft modern [support lifecycle policy](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy). This information applies to both the **ASP.NET** and **WinForms** versions distributed through [NuGet](https://www.nuget.org/). All released versions are available through [NuGet](https://www.nuget.org/). Patches, features, or other updates are rolled-forward to the latest version. Latest versions must be applied to receive changes. The Report Viewer continues to receive **Security and Critical Updates**, with at least one year advanced notice of any support policy changes.
 
 For a version history of the Report Viewer control, see the following links:
 
 - [Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/)
-- [ASP.Net Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- [ASP.NET Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
 
 ## Supported combinations of application server and report server
 

@@ -45,7 +45,7 @@ Transactions involving different resource managers, such as a transaction betwee
 
 - [Transaction fundamentals](/dotnet/framework/data/transactions/transaction-fundamentals)
 - [Connecting to data source](connecting-to-data-source.md)
-- [Commands and Parameters](kz-todo)
-- [DataAdapters and DataReaders]( kz-todo)
+- [Commands and Parameters](commands-parameters.md)
+- [DataAdapters and DataReaders](dataadapters-datareaders.md)
 - [DbProviderFactories]( kz-todo)
-- [ADO.NET Overview](/dotnet/framework/data/adonet/)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

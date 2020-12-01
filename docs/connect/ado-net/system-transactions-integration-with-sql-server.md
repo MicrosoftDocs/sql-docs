@@ -80,4 +80,4 @@ Later, the <xref:System.Transactions.TransactionScope.Complete%2A> method is inv
 ## See also
 
 - [Transactions and concurrency](transactions-and-concurrency.md)
-- [ADO.NET Overview](/dotnet/framework/data/adonet/)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

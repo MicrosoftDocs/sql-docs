@@ -108,7 +108,7 @@ The **RowUpdated** event of the <xref:System.Data.Common.DataAdapter> object can
 
 The <xref:System.Data.Common.RowUpdatedEventArgs> object returns a **RecordsAffected** property containing the number of rows affected by a particular update command for a modified row in a table. By setting the update command to test for optimistic concurrency, the **RecordsAffected** property will, as a result, return a value of 0 when an optimistic concurrency violation has occurred, because no records were updated. If this is the case, an exception is thrown.
 
-The **RowUpdated** event enables you to handle this occurrence and avoid the exception by setting an appropriate **RowUpdatedEventArgs.Status** value, such as **UpdateStatus.SkipCurrentRow**. For more information about the **RowUpdated** event, see [Handling DataAdapter Events](kz-todo).
+The **RowUpdated** event enables you to handle this occurrence and avoid the exception by setting an appropriate **RowUpdatedEventArgs.Status** value, such as **UpdateStatus.SkipCurrentRow**. For more information about the **RowUpdated** event, see [Handling DataAdapter Events](handle-dataadapter-events.md).
 
 Optionally, you can set **DataAdapter.ContinueUpdateOnError** to **true**, before calling **Update**, and respond to the error information stored in the **RowError** property of a particular row when the **Update** is completed. For more information, see [Row Error Information](/dotnet/framework/data/adonet/dataset-datatable-dataview/row-error-information).
 
@@ -123,6 +123,6 @@ Note that the parameter values passed to the WHERE clause of the UPDATE command 
 ## See also
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [Updating Data Sources with DataAdapters](kz-todo)
+- [Updating Data Sources with DataAdapters](update-data-sources-with-dataadapters.md)
 - [Transactions and concurrency](transactions-and-concurrency.md)
-- [ADO.NET Overview](/dotnet/framework/data/adonet/)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

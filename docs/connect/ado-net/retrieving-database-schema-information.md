@@ -32,7 +32,7 @@ Describes schema restrictions that can be used with **GetSchema**.
 Describes all of the common schema collections supported by all of the .NET Framework managed providers.  
   
 [SQL Server schema collections](sql-server-schema-collections.md)  
-Describes the schema collection supported by the Microsoft SqlClient Data Provider for SQL Server. 
+Describes the additional schema collections supported by the Microsoft SqlClient Data Provider for SQL Server. 
 
 ## Reference
 
@@ -51,4 +51,4 @@ Describes the **GetSchemaTable** method of the <xref:Microsoft.Data.SqlClient.Sq
 ## See also
 
 - [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
-- [ADO.NET Overview](ado-net-overview.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

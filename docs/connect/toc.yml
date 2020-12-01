@@ -107,6 +107,17 @@
         href: ../connect/ado-net/system-transactions-integration-with-sql-server.md
       - name: Optimistic concurrency
         href: ../connect/ado-net/optimistic-concurrency.md
+    - name: Retrieving database schema information
+      href: ../connect/ado-net/retrieving-database-schema-information.md
+      items:
+      - name: GetSchema and schema collections
+        href: ../connect/ado-net/getschema-and-schema-collections.md
+      - name: Schema restrictions
+        href: ../connect/ado-net/schema-restrictions.md
+      - name: Common schema collections
+        href: ../connect/ado-net/common-schema-collections.md
+      - name: SQL Server schema collections
+        href: ../connect/ado-net/sql-server-schema-collections.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/sql/index.md
     items:

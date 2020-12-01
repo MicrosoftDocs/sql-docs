@@ -178,4 +178,4 @@ The following examples demonstrate how to use the <xref:Microsoft.Data.SqlClient
   
 ## See also
 
-- [ADO.NET Overview](/dotnet/framework/data/adonet/)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

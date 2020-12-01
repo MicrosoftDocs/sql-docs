@@ -59,4 +59,4 @@ SQL Server supports promotable transactions in which a local lightweight transac
 
 - [Transactions and concurrency](transactions-and-concurrency.md)
 - [System.Transactions integration with SQL Server](system-transactions-integration-with-sql-server.md)
-- [ADO.NET Overview](/dotnet/framework/data/adonet/)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

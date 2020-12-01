@@ -56,7 +56,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Generate Scripts Wizard | The wizard fails when attempting to enumerate database objects on SQL Server 2014 and older. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Use SSMS 18.6 to select objects in the generate scripts wizard for SQL 2014 and older. |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/A |
 | Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. Workaround: Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect | N/A |
-| Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics SQL on-demand, you need to use SSMS 18.7 or later. |
+| Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics serverless SQL pool, you need to use SSMS 18.7 or later. |
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
@@ -124,7 +124,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue where trying to connect to an Azure SQL DB, which could take several seconds (SQL login in a user database). |
 | General SSMS | Fixed an issue where SSMS was not handling/displaying deadlock captured (.xdl files). |
 | General SSMS | Fixed an issue where trying to open error log settings for SQL Server 2008 R2 and below failed with ErrorLogSizeKb property not found. |
-| General SSMS | General fixes and improvements around [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) support. |
+| General SSMS | General fixes and improvements around [Azure Synapse Analytics serverless SQL pool](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) support. |
 | Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
 | Import/Export Data-Tier Application | Fixed the default service tier to be Standard S0 when importing a bacpac (same as Azure portal and SqlPackage.exe behavior). |
 | Import Flat File | Fixed an issue where the wizard was not detecting that the file could be in use by another application and instead was throwing an error. See [SQL Server User Feedback](https://feedback.azure.com/forums/908035/suggestions/40761574). |
@@ -156,7 +156,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Generate Scripts Wizard | The wizard fails when attempting to enumerate database objects on SQL Server 2014 and older. See [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Use SSMS 18.6 to select objects in the generate scripts wizard for SQL 2014 and older. |
 | Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". | N/A |
 | Integration Services | Remote connections to Integration services may fail with "The specified service does not exist as an installed service." on newer Operating system. Workaround: Identify the Integration services-related registry location under Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID and within these hives, rename the registry key named 'LocalService' to 'LocalService_A' for the specific version of Integration services that we are trying to connect | N/A |
-| Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics SQL on-demand](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics SQL on-demand, you need SSMS 18.7 or later. |
+| Object Explorer | Releases of SSMS before 18.7 have a breaking change in object explorer due to the engine's changes related to [Azure Synapse Analytics serverless SQL pool](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | To continue utilizing object explorer in SSMS with Azure Synapse Analytics serverless SQL pool, you need SSMS 18.7 or later. |
 | Query Store | The object explorer node for Query Store throws an error on right-click. | Access items directly by expanding the node and right-clicking individual child options. |
 
 ### 18.6
@@ -180,7 +180,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Import Flat File | Added support for Fixed Width files and file type detection for .csv/.tsv files to ensure they are parsed as csv/tsv files respectively. |
 | Integration Services | Added support for Azure SQL Managed Instance agent jobs to execute an SSIS package from package store in Azure-SSIS IR. |
 | SMO / Scripting | Added support to script Dynamic Data Masking on [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (formerly SQL Azure DW). |
-| SMO / Scripting | Added support to script Security Policy on [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (formerly SQL DW). |
+| SMO / Scripting | Added support to script Security Policy on [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is). |
 
 #### Bug fixes in 18.6
 
@@ -273,7 +273,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Added new DwMaterializedViewDistribution property to View object. |
 | SMO/Scripting | Removed support for *Feature Restriction* (this preview feature has been removed from SQL Azure and SQL on-prem). |
 | SMO/Scripting | Added *Notebook* as a destination for Generate Scripts wizard. |
-| SMO/Scripting | Added support for *SQL On Demand*. |
+| SMO/Scripting | Added support for *Azure Synapse Analytics serverless SQL pool*. |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Platform, Name, and engineEdition fields can now contain usual comma-separated lists (*platform*: \[*Windows*, *Linux*\]), not only regular expressions (*platform*: *\/Windows\|Linux\/*)
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Added 13 assessment rules. For more details, go to [GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-assessment-api)). |
 
@@ -296,9 +296,9 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Updating the version of MSODBC and MSOLEDB drivers. |
 | General SSMS | Addressed at least two common sources hangs and crashes in SSMS. |
 | General SSMS | Addressed one more case where *Restore dialog* hangs when selecting the Browse button. |
-| General SSMS | Fixed *New Database GUI* for SQL On Demand. |
-| General SSMS | Fixed *New External Table...* and *New External Data Source...* templates for SQL On Demand. |
-| General SSMS | Fixed database properties, connection properties, hiding reports and rename for SQL On Demand. |
+| General SSMS | Fixed *New Database GUI* for Azure Synapse Analytics serverless SQL pool. |
+| General SSMS | Fixed *New External Table...* and *New External Data Source...* templates for Azure Synapse Analytics serverless SQL pool. |
+| General SSMS | Fixed database properties, connection properties, hiding reports and rename for Azure Synapse Analytics serverless SQL pool. |
 | General SSMS | Always Encrypted: Fixed an issue where the key name dropdown becomes read-only on selecting new enclave enabled key. |
 | General SSMS | Cleaned up the *Database Property Options* grid, which was showing two *Miscellaneous Categories*. |
 | General SSMS | Fixed an issue where the scroll bar started from middle in "Database Properties Options" grid. |
@@ -325,7 +325,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | SQL Agent | Fixed the tab ordering on the Job Step page. |
 | SQL Agent | Reversed the position of the "Next" and "Previous" buttons on the Job Step page to put them in a logical order. |
 | SQL Agent | Adjusted the Job Schedule window to not clip the UI. |
-| SMO/Scripting | Fixed database scripting for SQL On Demand. |
+| SMO/Scripting | Fixed database scripting for Azure Synapse Analytics serverless SQL pool. |
 | SMO/Scripting | Removing explicit sqlvariant cast (illegal T-SQL syntax for SqlOnDemand) which fixes scripting for SqlOnDemand. |
 | SMO/Scripting | Fixed an issue where FILLFACTOR on indexes for SQL Azure was skipped. |
 | SMO/Scripting | Fixed an issue related to scripting External objects. |
@@ -365,7 +365,7 @@ SSMS 18.7 is the latest general availability (GA) release of SSMS. If you need a
 | Query Store | Added support for the new Custom Capture Policies. |
 | Query Store | Added **Wait Statistics Capture Mode** to the **Query Store** **Database Properties** options. |
 | SMO/Scripting | Support Script of materialized view in SQL DW. |
-| SMO/Scripting | Added support for *SQL On Demand*. |
+| SMO/Scripting | Added support for *Azure Synapse Analytics serverless SQL pool*. |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Added 50 assessment rules (see details on GitHub). |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Added base math expressions and comparisons to rules conditions. |
 | SMO/Scripting | [SQL Assessment API](../tools/sql-assessment-api/sql-assessment-api-overview.md) - Added support for RegisteredServer object. |

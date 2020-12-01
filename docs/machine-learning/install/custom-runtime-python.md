@@ -24,13 +24,17 @@ The custom Python runtime allows you to use your own version of the Python runti
 
 ## Pre-install checklist
 
-Before installing a Python custom runtime, install the following:
+Before installing a custom Python runtime, install the following:
 
-+ [SQL Server 2019  Cumulative Update (CU) 3 for Windows](../../database-engine/install-windows/install-sql-server.md).
++ [Cumulative Update (CU) 3 or later for SQL Server 2019](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
-+ [SQL Server Language Extensions on Windows with the extensibility framework](../../language-extensions/install/windows-java.md).
++ [Python 3.7](https://www.python.org/downloads/).
 
-+ [Python 3.7]( https://www.python.org/downloads/release/python-379/).
+    The Python language extension used for the custom Python runtime currently support Python 3.7 only. If you would like to use a different version of Python, follow the instruction in the [Python Language Extension GitHub repo](https://github.com/microsoft/sql-server-language-extensions/tree/master/language-extensions/python) to modify and rebuild the extension.
+
+    During the installation of Python, add Python to the PATH.
+
+    ![Add Python 3.7 to path.](../install/media/python-379.png)
 
 ## Add SQL Server Language Extensions for Windows
 

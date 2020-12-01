@@ -58,4 +58,4 @@ Each of the following links provides information for all of the applicable produ
 - [SQL Server documentation](../../sql-server/index.yml)
 - [SQL Server product information center](https://www.microsoft.com/sqlserver/default.aspx)
 - [SQL Server release blogs](https://aka.ms/sqlreleases)
-- [SQL Server builds blog (external)](https://sqlserverbuilds.blogspot.com/)
+- [How to determine the version, edition, and update level of SQL Server and its components](https://support.microsoft.com/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an)

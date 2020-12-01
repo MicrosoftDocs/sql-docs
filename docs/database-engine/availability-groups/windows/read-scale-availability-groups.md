@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid:
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ---
 # Use read-scale with Always On availability groups
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

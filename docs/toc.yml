@@ -1740,7 +1740,7 @@
         href: relational-databases/indexes/columnstore-indexes-query-performance.md
       - name: Real-time operational analytics
         href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-      - name: Data Warehouse
+      - name: Azure Synapse Analytics
         href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
       - name: Defragment
         href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -1876,15 +1876,6 @@
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
     - name: Edge constraints
       href: relational-databases/tables/graph-edge-constraints.md
-      items:
-      - name: Create
-        href: relational-databases/tables/create-edge-constraints.md
-      - name: Delete
-        href: relational-databases/tables/delete-edge-constraint.md
-      - name: Modify
-        href: relational-databases/tables/modify-edge-constraint.md
-      - name: View
-        href: relational-databases/tables/view-edge-constraint-properties.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
       items:
@@ -10278,7 +10269,7 @@
           href: samples/wide-world-importers-oltp-install-configure.md
         - name: SQL Server features
           href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-      - name: Data Warehouse
+      - name: Azure Synapse Analytics
         items:
         - name: Database catalog
           href: samples/wide-world-importers-dw-database-catalog.md

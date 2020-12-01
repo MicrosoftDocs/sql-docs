@@ -28,6 +28,8 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 * [ADO.NET Overview](/dotnet/framework/data/adonet/)
 * [Getting started with the SqlClient driver](get-started-sqlclient-driver.md)
 * [Overview of the SqlClient driver](overview-sqlclient-driver.md)
+* [Data type mappings in ADO.NET](data-type-mappings-ado-net.md)
+* [Retrieving and modifying data in ADO.NET](retrieving-modifying-data.md)
 * [SQL Server and ADO.NET](./sql/index.md)
 
 ## Community

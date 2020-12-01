@@ -29,7 +29,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ## <a name="Enabling"></a> Enabling the Query Store
 
- Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics (SQL DW) databases, and is enabled by default for new Azure SQL Database databases.
+ Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics databases, and is enabled by default for new Azure SQL Database databases.
 
 ### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Plan Cache object"
   - "SQLServer:Plan Cache"
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-author: julieMSFT
-ms.author: jrasnick
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ---
 # SQL Server, Plan Cache Object
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

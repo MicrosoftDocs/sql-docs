@@ -5,7 +5,7 @@ ms.custom: seo-dt-2019
 ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: "wiassaf"
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -304,24 +304,24 @@ You can also disable table variable deferred compilation for a specific query by
 
 ```sql
 DECLARE @LINEITEMS TABLE 
-	(L_OrderKey INT NOT NULL,
-	 L_Quantity INT NOT NULL
-	);
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
 
 INSERT @LINEITEMS
 SELECT L_OrderKey, L_Quantity
 FROM dbo.lineitem
 WHERE L_Quantity = 5;
 
-SELECT	O_OrderKey,
-	O_CustKey,
-	O_OrderStatus,
-	L_QUANTITY
-FROM	
-	ORDERS,
-	@LINEITEMS
-WHERE	O_ORDERKEY	=	L_ORDERKEY
-	AND O_OrderStatus = 'O'
+SELECT O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE    O_ORDERKEY    =    L_ORDERKEY
+    AND O_OrderStatus = 'O'
 OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
 ```
 

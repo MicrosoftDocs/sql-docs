@@ -43,6 +43,8 @@
       href: ../connect/ado-net/enable-eventsource-tracing.md
     - name: AppContext switches
       href: ../connect/ado-net/appcontext-switches.md
+    - name: Troubleshooting guide
+      href: ../connect/ado-net/sqlclient-troubleshooting-guide.md
     - name: Finding additional information
       href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
   - name: Data Type Mappings In ADO.NET

@@ -9,7 +9,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 06/03/2020
+ms.date: 11/30/2020
 ---
 # Support for Report Viewer current branch versions
 
@@ -22,4 +22,21 @@ For a version history of the Report Viewer control, see the following links:
 - [Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/)
 - [ASP.Net Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
 
-For more information about the current version of the Report Viewer control, you can review the following [blog](/archive/blogs/sqlrsteamblog/report-viewer-2016-control-update-now-available).
+## Supported combinations of application server and report server
+
+Some features of the Report Viewer control rely on the operating system’s default behaviors. Thus, they may require running the same version for both the client (the application server running the Report Viewer control) and the server (running Reporting Services). The following combinations of application server and report server are supported:
+
+| Application server | Report server |
+| :----------------- | :------ |
+| Windows Server 2012 | Windows Server 2012 |
+| Windows Server 2012 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 R2 |
+| Windows Server 2012 R2 | Windows Server 2012 |
+| Windows Server 2016 | Windows Server 2016 |
+| Windows Server 2016 | Windows Server 2019 |
+| Windows Server 2019 | Windows Server 2019 |
+| Windows Server 2019 | Windows Server 2016 |
+
+## Next steps
+
+For more information about the Report Viewer control, see [Get started integrating Reporting Services using the Report Viewer controls](integrating-reporting-services-using-reportviewer-controls-get-started.md).

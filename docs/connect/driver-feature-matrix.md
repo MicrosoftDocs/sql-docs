@@ -2,7 +2,7 @@
 title: "Driver feature support matrix"
 description: "Learn which popular features are supported in drivers for SQL Server and where to find information about them."
 ms.custom: ""
-ms.date: 08/05/2020
+ms.date: 11/30/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -37,7 +37,7 @@ We wish all drivers supported every feature and spend effort to ensure feature p
 | [Azure Active Directory Password authentication](/azure/sql-database/sql-database-aad-authentication) | Yes | Yes | | Yes |
 | [Azure Active Directory Integrated authentication](/azure/sql-database/sql-database-aad-authentication) | Yes | Yes | | Yes |
 | [Azure Active Directory Interactive (MFA) authentication](/azure/sql-database/sql-database-aad-authentication) | Yes | Yes | | Yes |
-| [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | | | | |
+| [Azure Active Directory Managed Identity authentication](/azure/active-directory/managed-identities-azure-resources/overview) | Yes | Yes | | |
 | [Azure Active Directory Service Principal authentication](/azure/active-directory/develop/app-objects-and-service-principals) | Yes | Yes | | |
 | [Windows-Integrated authentication](/windows-server/security/windows-authentication/windows-authentication-overview) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](ado-net/sql/authentication-sql-server.md) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) | [Yes](/dotnet/framework/data/adonet/sql/authentication-in-sql-server) |
 | [Bulk Copy](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Yes](ado-net/sql/bulk-copy-operations-sql-server.md) | [Yes](ado-net/sql/bulk-copy-operations-sql-server.md) | [Yes](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) | [Yes](/dotnet/framework/data/adonet/sql/bulk-copy-operations-in-sql-server) |
